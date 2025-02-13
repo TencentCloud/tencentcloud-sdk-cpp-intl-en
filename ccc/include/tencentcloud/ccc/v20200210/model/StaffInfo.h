@@ -49,18 +49,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Agent name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Name Agent name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Agent name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _name Agent name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -94,19 +90,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MailHasBeenSet() const;
 
                     /**
-                     * 获取Agent's Telephone Number
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Phone Agent's Telephone Number
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Agent phone number.
+                     * @return Phone Agent phone number.
                      * 
                      */
                     std::string GetPhone() const;
 
                     /**
-                     * 设置Agent's Telephone Number
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _phone Agent's Telephone Number
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Agent phone number.
+                     * @param _phone Agent phone number.
                      * 
                      */
                     void SetPhone(const std::string& _phone);
@@ -120,18 +112,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Agent nickname.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Nick Agent nickname.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetNick() const;
 
                     /**
                      * 设置Agent nickname.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _nick Agent nickname.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetNick(const std::string& _nick);
@@ -144,19 +132,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NickHasBeenSet() const;
 
                     /**
-                     * 获取Agent ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StaffNumber Agent ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Agent id.
+                     * @return StaffNumber Agent id.
                      * 
                      */
                     std::string GetStaffNumber() const;
 
                     /**
-                     * 设置Agent ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _staffNumber Agent ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Agent id.
+                     * @param _staffNumber Agent id.
                      * 
                      */
                     void SetStaffNumber(const std::string& _staffNumber);
@@ -169,15 +153,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StaffNumberHasBeenSet() const;
 
                     /**
-                     * 获取User Role ID
-                     * @return RoleId User Role ID
+                     * 获取User role id.
+                     * @return RoleId User role id.
                      * 
                      */
                     uint64_t GetRoleId() const;
 
                     /**
-                     * 设置User Role ID
-                     * @param _roleId User Role ID
+                     * 设置User role id.
+                     * @param _roleId User role id.
                      * 
                      */
                     void SetRoleId(const uint64_t& _roleId);
@@ -190,19 +174,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RoleIdHasBeenSet() const;
 
                     /**
-                     * 获取Affiliated Skill Group List.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SkillGroupList Affiliated Skill Group List.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Affiliated skill group list.
+                     * @return SkillGroupList Affiliated skill group list.
                      * 
                      */
                     std::vector<SkillGroupItem> GetSkillGroupList() const;
 
                     /**
-                     * 设置Affiliated Skill Group List.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _skillGroupList Affiliated Skill Group List.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Affiliated skill group list.
+                     * @param _skillGroupList Affiliated skill group list.
                      * 
                      */
                     void SetSkillGroupList(const std::vector<SkillGroupItem>& _skillGroupList);
@@ -216,18 +196,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Last modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return LastModifyTimestamp Last modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetLastModifyTimestamp() const;
 
                     /**
                      * 设置Last modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _lastModifyTimestamp Last modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLastModifyTimestamp(const int64_t& _lastModifyTimestamp);
@@ -239,11 +215,31 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool LastModifyTimestampHasBeenSet() const;
 
+                    /**
+                     * 获取Agent extension number (starting with 1 to 8, 4 - 6 digits).
+                     * @return ExtensionNumber Agent extension number (starting with 1 to 8, 4 - 6 digits).
+                     * 
+                     */
+                    std::string GetExtensionNumber() const;
+
+                    /**
+                     * 设置Agent extension number (starting with 1 to 8, 4 - 6 digits).
+                     * @param _extensionNumber Agent extension number (starting with 1 to 8, 4 - 6 digits).
+                     * 
+                     */
+                    void SetExtensionNumber(const std::string& _extensionNumber);
+
+                    /**
+                     * 判断参数 ExtensionNumber 是否已赋值
+                     * @return ExtensionNumber 是否已赋值
+                     * 
+                     */
+                    bool ExtensionNumberHasBeenSet() const;
+
                 private:
 
                     /**
                      * Agent name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -255,45 +251,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_mailHasBeenSet;
 
                     /**
-                     * Agent's Telephone Number
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Agent phone number.
                      */
                     std::string m_phone;
                     bool m_phoneHasBeenSet;
 
                     /**
                      * Agent nickname.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_nick;
                     bool m_nickHasBeenSet;
 
                     /**
-                     * Agent ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Agent id.
                      */
                     std::string m_staffNumber;
                     bool m_staffNumberHasBeenSet;
 
                     /**
-                     * User Role ID
+                     * User role id.
                      */
                     uint64_t m_roleId;
                     bool m_roleIdHasBeenSet;
 
                     /**
-                     * Affiliated Skill Group List.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Affiliated skill group list.
                      */
                     std::vector<SkillGroupItem> m_skillGroupList;
                     bool m_skillGroupListHasBeenSet;
 
                     /**
                      * Last modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_lastModifyTimestamp;
                     bool m_lastModifyTimestampHasBeenSet;
+
+                    /**
+                     * Agent extension number (starting with 1 to 8, 4 - 6 digits).
+                     */
+                    std::string m_extensionNumber;
+                    bool m_extensionNumberHasBeenSet;
 
                 };
             }

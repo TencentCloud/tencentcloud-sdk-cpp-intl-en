@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * AI to human configuration item.
                 */
                 class AITransferItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TransferFunctionName 
+                     * 获取Name of the function calling for transfer to human.
+                     * @return TransferFunctionName Name of the function calling for transfer to human.
                      * 
                      */
                     std::string GetTransferFunctionName() const;
 
                     /**
-                     * 设置
-                     * @param _transferFunctionName 
+                     * 设置Name of the function calling for transfer to human.
+                     * @param _transferFunctionName Name of the function calling for transfer to human.
                      * 
                      */
                     void SetTransferFunctionName(const std::string& _transferFunctionName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TransferFunctionNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TransferFunctionDesc 
+                     * 获取Takes effect when transferfunctionenable is true; the description of transfer_to_human function calling defaults to "transfer to human when the user has to transfer to human (like says transfer to human) or you are instructed to do so.".
+                     * @return TransferFunctionDesc Takes effect when transferfunctionenable is true; the description of transfer_to_human function calling defaults to "transfer to human when the user has to transfer to human (like says transfer to human) or you are instructed to do so.".
                      * 
                      */
                     std::string GetTransferFunctionDesc() const;
 
                     /**
-                     * 设置
-                     * @param _transferFunctionDesc 
+                     * 设置Takes effect when transferfunctionenable is true; the description of transfer_to_human function calling defaults to "transfer to human when the user has to transfer to human (like says transfer to human) or you are instructed to do so.".
+                     * @param _transferFunctionDesc Takes effect when transferfunctionenable is true; the description of transfer_to_human function calling defaults to "transfer to human when the user has to transfer to human (like says transfer to human) or you are instructed to do so.".
                      * 
                      */
                     void SetTransferFunctionDesc(const std::string& _transferFunctionDesc);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool TransferFunctionDescHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TransferSkillGroupId 
+                     * 获取Skill group id for transferring to human agent.
+                     * @return TransferSkillGroupId Skill group id for transferring to human agent.
                      * 
                      */
                     uint64_t GetTransferSkillGroupId() const;
 
                     /**
-                     * 设置
-                     * @param _transferSkillGroupId 
+                     * 设置Skill group id for transferring to human agent.
+                     * @param _transferSkillGroupId Skill group id for transferring to human agent.
                      * 
                      */
                     void SetTransferSkillGroupId(const uint64_t& _transferSkillGroupId);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Name of the function calling for transfer to human.
                      */
                     std::string m_transferFunctionName;
                     bool m_transferFunctionNameHasBeenSet;
 
                     /**
-                     * 
+                     * Takes effect when transferfunctionenable is true; the description of transfer_to_human function calling defaults to "transfer to human when the user has to transfer to human (like says transfer to human) or you are instructed to do so.".
                      */
                     std::string m_transferFunctionDesc;
                     bool m_transferFunctionDescHasBeenSet;
 
                     /**
-                     * 
+                     * Skill group id for transferring to human agent.
                      */
                     uint64_t m_transferSkillGroupId;
                     bool m_transferSkillGroupIdHasBeenSet;

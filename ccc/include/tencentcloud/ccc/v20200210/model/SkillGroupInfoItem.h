@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Skill group ID.
-                     * @return SkillGroupId Skill group ID.
+                     * 获取Skill group id.
+                     * @return SkillGroupId Skill group id.
                      * 
                      */
                     int64_t GetSkillGroupId() const;
 
                     /**
-                     * 设置Skill group ID.
-                     * @param _skillGroupId Skill group ID.
+                     * 设置Skill group id.
+                     * @param _skillGroupId Skill group id.
                      * 
                      */
                     void SetSkillGroupId(const int64_t& _skillGroupId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool SkillGroupNameHasBeenSet() const;
 
                     /**
-                     * 获取(Deprecated) Type: IM, TEL, ALL (full media).
-                     * @return Type (Deprecated) Type: IM, TEL, ALL (full media).
+                     * 获取(Deprecated) type: im, tel, all (full media).
+                     * @return Type (Deprecated) type: im, tel, all (full media).
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置(Deprecated) Type: IM, TEL, ALL (full media).
-                     * @param _type (Deprecated) Type: IM, TEL, ALL (full media).
+                     * 设置(Deprecated) type: im, tel, all (full media).
+                     * @param _type (Deprecated) type: im, tel, all (full media).
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -111,18 +111,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Session allocation policy.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RoutePolicy Session allocation policy.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRoutePolicy() const;
 
                     /**
                      * 设置Session allocation policy.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _routePolicy Session allocation policy.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRoutePolicy(const std::string& _routePolicy);
@@ -135,19 +131,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool RoutePolicyHasBeenSet() const;
 
                     /**
-                     * 获取Should the conversation allocation prioritize the last service seat?
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UsingLastSeat Should the conversation allocation prioritize the last service seat?
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether the session is allocated to the last serviced agent first.
+                     * @return UsingLastSeat Whether the session is allocated to the last serviced agent first.
                      * 
                      */
                     int64_t GetUsingLastSeat() const;
 
                     /**
-                     * 设置Should the conversation allocation prioritize the last service seat?
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _usingLastSeat Should the conversation allocation prioritize the last service seat?
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether the session is allocated to the last serviced agent first.
+                     * @param _usingLastSeat Whether the session is allocated to the last serviced agent first.
                      * 
                      */
                     void SetUsingLastSeat(const int64_t& _usingLastSeat);
@@ -161,18 +153,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Maximum concurrency number of single client service (default 1 for telephone type).
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MaxConcurrency Maximum concurrency number of single client service (default 1 for telephone type).
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetMaxConcurrency() const;
 
                     /**
                      * 设置Maximum concurrency number of single client service (default 1 for telephone type).
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _maxConcurrency Maximum concurrency number of single client service (default 1 for telephone type).
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMaxConcurrency(const int64_t& _maxConcurrency);
@@ -186,18 +174,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Last modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return LastModifyTimestamp Last modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetLastModifyTimestamp() const;
 
                     /**
                      * 设置Last modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _lastModifyTimestamp Last modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLastModifyTimestamp(const int64_t& _lastModifyTimestamp);
@@ -210,19 +194,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool LastModifyTimestampHasBeenSet() const;
 
                     /**
-                     * 获取Skill group type 0-phone, 1-online, 3-audio, 4-video.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SkillGroupType Skill group type 0-phone, 1-online, 3-audio, 4-video.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Skill group type 0-cell phone, 1-online, 3-audio, 4-video.	.	
+                     * @return SkillGroupType Skill group type 0-cell phone, 1-online, 3-audio, 4-video.	.	
                      * 
                      */
                     int64_t GetSkillGroupType() const;
 
                     /**
-                     * 设置Skill group type 0-phone, 1-online, 3-audio, 4-video.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _skillGroupType Skill group type 0-phone, 1-online, 3-audio, 4-video.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Skill group type 0-cell phone, 1-online, 3-audio, 4-video.	.	
+                     * @param _skillGroupType Skill group type 0-cell phone, 1-online, 3-audio, 4-video.	.	
                      * 
                      */
                     void SetSkillGroupType(const int64_t& _skillGroupType);
@@ -235,19 +215,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SkillGroupTypeHasBeenSet() const;
 
                     /**
-                     * 获取Extension number within the skill group
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Alias Extension number within the skill group
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Intra-Skill group line number.
+                     * @return Alias Intra-Skill group line number.
                      * 
                      */
                     std::string GetAlias() const;
 
                     /**
-                     * 设置Extension number within the skill group
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _alias Extension number within the skill group
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Intra-Skill group line number.
+                     * @param _alias Intra-Skill group line number.
                      * 
                      */
                     void SetAlias(const std::string& _alias);
@@ -262,7 +238,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Skill group ID.
+                     * Skill group id.
                      */
                     int64_t m_skillGroupId;
                     bool m_skillGroupIdHasBeenSet;
@@ -274,49 +250,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_skillGroupNameHasBeenSet;
 
                     /**
-                     * (Deprecated) Type: IM, TEL, ALL (full media).
+                     * (Deprecated) type: im, tel, all (full media).
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
                      * Session allocation policy.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_routePolicy;
                     bool m_routePolicyHasBeenSet;
 
                     /**
-                     * Should the conversation allocation prioritize the last service seat?
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether the session is allocated to the last serviced agent first.
                      */
                     int64_t m_usingLastSeat;
                     bool m_usingLastSeatHasBeenSet;
 
                     /**
                      * Maximum concurrency number of single client service (default 1 for telephone type).
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_maxConcurrency;
                     bool m_maxConcurrencyHasBeenSet;
 
                     /**
                      * Last modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_lastModifyTimestamp;
                     bool m_lastModifyTimestampHasBeenSet;
 
                     /**
-                     * Skill group type 0-phone, 1-online, 3-audio, 4-video.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Skill group type 0-cell phone, 1-online, 3-audio, 4-video.	.	
                      */
                     int64_t m_skillGroupType;
                     bool m_skillGroupTypeHasBeenSet;
 
                     /**
-                     * Extension number within the skill group
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Intra-Skill group line number.
                      */
                     std::string m_alias;
                     bool m_aliasHasBeenSet;

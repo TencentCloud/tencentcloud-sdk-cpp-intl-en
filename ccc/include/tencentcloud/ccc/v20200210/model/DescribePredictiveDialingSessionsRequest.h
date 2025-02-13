@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 获取Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
-                     * 设置Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @param _sdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 设置Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @param _sdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Generated task ID.
-                     * @return CampaignId Generated task ID.
+                     * 获取Generated task id.
+                     * @return CampaignId Generated task id.
                      * 
                      */
                     int64_t GetCampaignId() const;
 
                     /**
-                     * 设置Generated task ID.
-                     * @param _campaignId Generated task ID.
+                     * 设置Generated task id.
+                     * @param _campaignId Generated task id.
                      * 
                      */
                     void SetCampaignId(const int64_t& _campaignId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool CampaignIdHasBeenSet() const;
 
                     /**
-                     * 获取Page size, maximum of 1000
-                     * @return PageSize Page size, maximum of 1000
+                     * 获取Page size, maximum of 1000.
+                     * @return PageSize Page size, maximum of 1000.
                      * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
-                     * 设置Page size, maximum of 1000
-                     * @param _pageSize Page size, maximum of 1000
+                     * 设置Page size, maximum of 1000.
+                     * @param _pageSize Page size, maximum of 1000.
                      * 
                      */
                     void SetPageSize(const int64_t& _pageSize);
@@ -129,19 +129,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      */
                     int64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * Generated task ID.
+                     * Generated task id.
                      */
                     int64_t m_campaignId;
                     bool m_campaignIdHasBeenSet;
 
                     /**
-                     * Page size, maximum of 1000
+                     * Page size, maximum of 1000.
                      */
                     int64_t m_pageSize;
                     bool m_pageSizeHasBeenSet;

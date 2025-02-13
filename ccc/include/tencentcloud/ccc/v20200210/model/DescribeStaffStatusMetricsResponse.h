@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Real-time information on agent status.
-                     * @return Metrics Real-time information on agent status.
+                     * 获取Real-Time information on agent status.
+                     * @return Metrics Real-Time information on agent status.
                      * 
                      */
                     std::vector<StaffStatusMetrics> GetMetrics() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Real-time information on agent status.
+                     * Real-Time information on agent status.
                      */
                     std::vector<StaffStatusMetrics> m_metrics;
                     bool m_metricsHasBeenSet;

@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task Name
-                     * @return Name Task Name
+                     * 获取Task name.
+                     * @return Name Task name.
                      * 
                      */
                     std::string GetName() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Agent Account
-                     * @return Agent Agent Account
+                     * 获取Agent account.
+                     * @return Agent Agent account.
                      * 
                      */
                     std::string GetAgent() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool AgentHasBeenSet() const;
 
                     /**
-                     * 获取Single-round Concurrent Call Volume 1-20
-                     * @return ConcurrencyNumber Single-round Concurrent Call Volume 1-20
+                     * 获取Single-Round concurrent call volume 1-20.
+                     * @return ConcurrencyNumber Single-Round concurrent call volume 1-20.
                      * 
                      */
                     int64_t GetConcurrencyNumber() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool ConcurrencyNumberHasBeenSet() const;
 
                     /**
-                     * 获取Task start time. Unix timestamp. The task will automatically start after this time.
-                     * @return StartTime Task start time. Unix timestamp. The task will automatically start after this time.
+                     * 获取Task start time. unix timestamp. the task will automatically start after this time.
+                     * @return StartTime Task start time. unix timestamp. the task will automatically start after this time.
                      * 
                      */
                     int64_t GetStartTime() const;
@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Task termination time. Unix timestamp. The task will automatically terminate after this time.
-                     * @return EndTime Task termination time. Unix timestamp. The task will automatically terminate after this time.
+                     * 获取Task termination time. unix timestamp. the task will automatically terminate after this time.
+                     * @return EndTime Task termination time. unix timestamp. the task will automatically terminate after this time.
                      * 
                      */
                     int64_t GetEndTime() const;
@@ -128,8 +128,8 @@ namespace TencentCloud
                     bool CallOrderHasBeenSet() const;
 
                     /**
-                     * 获取Caller Custom Data, Maximum Length 1024
-                     * @return UUI Caller Custom Data, Maximum Length 1024
+                     * 获取Caller custom data, maximum length 1024.
+                     * @return UUI Caller custom data, maximum length 1024.
                      * 
                      */
                     std::string GetUUI() const;
@@ -142,8 +142,8 @@ namespace TencentCloud
                     bool UUIHasBeenSet() const;
 
                     /**
-                     * 获取Task status 0 Not started 1 Running 2 Completed 3 Terminated
-                     * @return State Task status 0 Not started 1 Running 2 Completed 3 Terminated
+                     * 获取Task status 0 not started 1 running 2 completed 3 terminated.
+                     * @return State Task status 0 not started 1 running 2 completed 3 terminated.
                      * 
                      */
                     int64_t GetState() const;
@@ -156,8 +156,8 @@ namespace TencentCloud
                     bool StateHasBeenSet() const;
 
                     /**
-                     * 获取Total number of called parties
-                     * @return TotalCalleeCount Total number of called parties
+                     * 获取Total number of called parties.
+                     * @return TotalCalleeCount Total number of called parties.
                      * 
                      */
                     int64_t GetTotalCalleeCount() const;
@@ -170,8 +170,8 @@ namespace TencentCloud
                     bool TotalCalleeCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of called parties
-                     * @return CalledCalleeCount Number of called parties
+                     * 获取Number of calls made and received.
+                     * @return CalledCalleeCount Number of calls made and received.
                      * 
                      */
                     int64_t GetCalledCalleeCount() const;
@@ -186,31 +186,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task Name
+                     * Task name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Agent Account
+                     * Agent account.
                      */
                     std::string m_agent;
                     bool m_agentHasBeenSet;
 
                     /**
-                     * Single-round Concurrent Call Volume 1-20
+                     * Single-Round concurrent call volume 1-20.
                      */
                     int64_t m_concurrencyNumber;
                     bool m_concurrencyNumberHasBeenSet;
 
                     /**
-                     * Task start time. Unix timestamp. The task will automatically start after this time.
+                     * Task start time. unix timestamp. the task will automatically start after this time.
                      */
                     int64_t m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Task termination time. Unix timestamp. The task will automatically terminate after this time.
+                     * Task termination time. unix timestamp. the task will automatically terminate after this time.
                      */
                     int64_t m_endTime;
                     bool m_endTimeHasBeenSet;
@@ -222,25 +222,25 @@ namespace TencentCloud
                     bool m_callOrderHasBeenSet;
 
                     /**
-                     * Caller Custom Data, Maximum Length 1024
+                     * Caller custom data, maximum length 1024.
                      */
                     std::string m_uUI;
                     bool m_uUIHasBeenSet;
 
                     /**
-                     * Task status 0 Not started 1 Running 2 Completed 3 Terminated
+                     * Task status 0 not started 1 running 2 completed 3 terminated.
                      */
                     int64_t m_state;
                     bool m_stateHasBeenSet;
 
                     /**
-                     * Total number of called parties
+                     * Total number of called parties.
                      */
                     int64_t m_totalCalleeCount;
                     bool m_totalCalleeCountHasBeenSet;
 
                     /**
-                     * Number of called parties
+                     * Number of calls made and received.
                      */
                     int64_t m_calledCalleeCount;
                     bool m_calledCalleeCountHasBeenSet;

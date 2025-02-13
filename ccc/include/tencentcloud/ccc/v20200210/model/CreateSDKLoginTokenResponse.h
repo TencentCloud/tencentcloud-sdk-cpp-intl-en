@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取SDK log-in Token.
-                     * @return Token SDK log-in Token.
+                     * 获取SDK log-in token.
+                     * @return Token SDK log-in token.
                      * 
                      */
                     std::string GetToken() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool TokenHasBeenSet() const;
 
                     /**
-                     * 获取Expiry timestamp. Unix timestamp.
-                     * @return ExpiredTime Expiry timestamp. Unix timestamp.
+                     * 获取Expiry timestamp. unix timestamp.
+                     * @return ExpiredTime Expiry timestamp. unix timestamp.
                      * 
                      */
                     int64_t GetExpiredTime() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool ExpiredTimeHasBeenSet() const;
 
                     /**
-                     * 获取The path in which the SDK is loaded will change with its release.
-                     * @return SdkURL The path in which the SDK is loaded will change with its release.
+                     * 获取The path in which the sdk is loaded will change with its release.
+                     * @return SdkURL The path in which the sdk is loaded will change with its release.
                      * 
                      */
                     std::string GetSdkURL() const;
@@ -88,19 +88,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * SDK log-in Token.
+                     * SDK log-in token.
                      */
                     std::string m_token;
                     bool m_tokenHasBeenSet;
 
                     /**
-                     * Expiry timestamp. Unix timestamp.
+                     * Expiry timestamp. unix timestamp.
                      */
                     int64_t m_expiredTime;
                     bool m_expiredTimeHasBeenSet;
 
                     /**
-                     * The path in which the SDK is loaded will change with its release.
+                     * The path in which the sdk is loaded will change with its release.
                      */
                     std::string m_sdkURL;
                     bool m_sdkURLHasBeenSet;

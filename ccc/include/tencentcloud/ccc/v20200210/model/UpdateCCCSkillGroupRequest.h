@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application ID (required).
-                     * @return SdkAppId Application ID (required).
+                     * 获取Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
-                     * 设置Application ID (required).
-                     * @param _sdkAppId Application ID (required).
+                     * 设置Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @param _sdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Skill group ID.
-                     * @return SkillGroupID Skill group ID.
+                     * 获取Skill group id.
+                     * @return SkillGroupID Skill group id.
                      * 
                      */
                     int64_t GetSkillGroupID() const;
 
                     /**
-                     * 设置Skill group ID.
-                     * @param _skillGroupID Skill group ID.
+                     * 设置Skill group id.
+                     * @param _skillGroupID Skill group id.
                      * 
                      */
                     void SetSkillGroupID(const int64_t& _skillGroupID);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool SkillGroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Modified maximum concurrency and the maximum synchronization is 2.
-                     * @return MaxConcurrency Modified maximum concurrency and the maximum synchronization is 2.
+                     * 获取Modified maximum concurrency, with the maximum synchronization being 2.
+                     * @return MaxConcurrency Modified maximum concurrency, with the maximum synchronization being 2.
                      * 
                      */
                     int64_t GetMaxConcurrency() const;
 
                     /**
-                     * 设置Modified maximum concurrency and the maximum synchronization is 2.
-                     * @param _maxConcurrency Modified maximum concurrency and the maximum synchronization is 2.
+                     * 设置Modified maximum concurrency, with the maximum synchronization being 2.
+                     * @param _maxConcurrency Modified maximum concurrency, with the maximum synchronization being 2.
                      * 
                      */
                     void SetMaxConcurrency(const int64_t& _maxConcurrency);
@@ -150,13 +150,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Application ID (required).
+                     * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      */
                     uint64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * Skill group ID.
+                     * Skill group id.
                      */
                     int64_t m_skillGroupID;
                     bool m_skillGroupIDHasBeenSet;
@@ -168,7 +168,7 @@ namespace TencentCloud
                     bool m_skillGroupNameHasBeenSet;
 
                     /**
-                     * Modified maximum concurrency and the maximum synchronization is 2.
+                     * Modified maximum concurrency, with the maximum synchronization being 2.
                      */
                     int64_t m_maxConcurrency;
                     bool m_maxConcurrencyHasBeenSet;

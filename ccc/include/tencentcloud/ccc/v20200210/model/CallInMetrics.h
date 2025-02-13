@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of IVR residency.
-                     * @return IvrCount Number of IVR residency.
+                     * 获取Number of ivr residency.
+                     * @return IvrCount Number of ivr residency.
                      * 
                      */
                     int64_t GetIvrCount() const;
 
                     /**
-                     * 设置Number of IVR residency.
-                     * @param _ivrCount Number of IVR residency.
+                     * 设置Number of ivr residency.
+                     * @param _ivrCount Number of ivr residency.
                      * 
                      */
                     void SetIvrCount(const int64_t& _ivrCount);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool RingCountHasBeenSet() const;
 
                     /**
-                     * 获取Number in connection.
-                     * @return AcceptCount Number in connection.
+                     * 获取Number of connections.
+                     * @return AcceptCount Number of connections.
                      * 
                      */
                     int64_t GetAcceptCount() const;
 
                     /**
-                     * 设置Number in connection.
-                     * @param _acceptCount Number in connection.
+                     * 设置Number of connections.
+                     * @param _acceptCount Number of connections.
                      * 
                      */
                     void SetAcceptCount(const int64_t& _acceptCount);
@@ -280,7 +280,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of IVR residency.
+                     * Number of ivr residency.
                      */
                     int64_t m_ivrCount;
                     bool m_ivrCountHasBeenSet;
@@ -298,7 +298,7 @@ namespace TencentCloud
                     bool m_ringCountHasBeenSet;
 
                     /**
-                     * Number in connection.
+                     * Number of connections.
                      */
                     int64_t m_acceptCount;
                     bool m_acceptCountHasBeenSet;

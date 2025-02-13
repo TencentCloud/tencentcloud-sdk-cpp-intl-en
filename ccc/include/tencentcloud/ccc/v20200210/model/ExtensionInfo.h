@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID.
-                     * @return SdkAppId Instance ID.
+                     * 获取Instance id.
+                     * @return SdkAppId Instance id.
                      * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param _sdkAppId Instance ID.
+                     * 设置Instance id.
+                     * @param _sdkAppId Instance id.
                      * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool FullExtensionIdHasBeenSet() const;
 
                     /**
-                     * 获取Extension
-                     * @return ExtensionId Extension
+                     * 获取Extension.
+                     * @return ExtensionId Extension.
                      * 
                      */
                     std::string GetExtensionId() const;
 
                     /**
-                     * 设置Extension
-                     * @param _extensionId Extension
+                     * 设置Extension.
+                     * @param _extensionId Extension.
                      * 
                      */
                     void SetExtensionId(const std::string& _extensionId);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool ExtensionNameHasBeenSet() const;
 
                     /**
-                     * 获取Creation Time
-                     * @return CreateTime Creation Time
+                     * 获取Creation time.
+                     * @return CreateTime Creation time.
                      * 
                      */
                     int64_t GetCreateTime() const;
 
                     /**
-                     * 设置Creation Time
-                     * @param _createTime Creation Time
+                     * 设置Creation time.
+                     * @param _createTime Creation time.
                      * 
                      */
                     void SetCreateTime(const int64_t& _createTime);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool ModifyTimeHasBeenSet() const;
 
                     /**
-                     * 获取Telephone status (0 Offline, 100 Free, 200 Busy).
-                     * @return Status Telephone status (0 Offline, 100 Free, 200 Busy).
+                     * 获取Telephone status (0 offline, 100 free, 200 busy).
+                     * @return Status Telephone status (0 offline, 100 free, 200 busy).
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Telephone status (0 Offline, 100 Free, 200 Busy).
-                     * @param _status Telephone status (0 Offline, 100 Free, 200 Busy).
+                     * 设置Telephone status (0 offline, 100 free, 200 busy).
+                     * @param _status Telephone status (0 offline, 100 free, 200 busy).
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool RegisterHasBeenSet() const;
 
                     /**
-                     * 获取Bind Agent Email
-                     * @return Relation Bind Agent Email
+                     * 获取Bind agent email.
+                     * @return Relation Bind agent email.
                      * 
                      */
                     std::string GetRelation() const;
 
                     /**
-                     * 设置Bind Agent Email
-                     * @param _relation Bind Agent Email
+                     * 设置Bind agent email.
+                     * @param _relation Bind agent email.
                      * 
                      */
                     void SetRelation(const std::string& _relation);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool RelationHasBeenSet() const;
 
                     /**
-                     * 获取Bind Agent Name
-                     * @return RelationName Bind Agent Name
+                     * 获取Bind agent name.
+                     * @return RelationName Bind agent name.
                      * 
                      */
                     std::string GetRelationName() const;
 
                     /**
-                     * 设置Bind Agent Name
-                     * @param _relationName Bind Agent Name
+                     * 设置Bind agent name.
+                     * @param _relationName Bind agent name.
                      * 
                      */
                     void SetRelationName(const std::string& _relationName);
@@ -280,7 +280,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID.
+                     * Instance id.
                      */
                     int64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
@@ -292,7 +292,7 @@ namespace TencentCloud
                     bool m_fullExtensionIdHasBeenSet;
 
                     /**
-                     * Extension
+                     * Extension.
                      */
                     std::string m_extensionId;
                     bool m_extensionIdHasBeenSet;
@@ -310,7 +310,7 @@ namespace TencentCloud
                     bool m_extensionNameHasBeenSet;
 
                     /**
-                     * Creation Time
+                     * Creation time.
                      */
                     int64_t m_createTime;
                     bool m_createTimeHasBeenSet;
@@ -322,7 +322,7 @@ namespace TencentCloud
                     bool m_modifyTimeHasBeenSet;
 
                     /**
-                     * Telephone status (0 Offline, 100 Free, 200 Busy).
+                     * Telephone status (0 offline, 100 free, 200 busy).
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
@@ -334,13 +334,13 @@ namespace TencentCloud
                     bool m_registerHasBeenSet;
 
                     /**
-                     * Bind Agent Email
+                     * Bind agent email.
                      */
                     std::string m_relation;
                     bool m_relationHasBeenSet;
 
                     /**
-                     * Bind Agent Name
+                     * Bind agent name.
                      */
                     std::string m_relationName;
                     bool m_relationNameHasBeenSet;

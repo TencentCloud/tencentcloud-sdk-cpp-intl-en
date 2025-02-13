@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 获取Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
-                     * 设置Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @param _sdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 设置Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @param _sdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool EmailHasBeenSet() const;
 
                     /**
-                     * 获取The set password 
-                     * @return Password The set password 
+                     * 获取The set password.
+                     * @return Password The set password.
                      * 
                      */
                     std::string GetPassword() const;
 
                     /**
-                     * 设置The set password 
-                     * @param _password The set password 
+                     * 设置The set password.
+                     * @param _password The set password.
                      * 
                      */
                     void SetPassword(const std::string& _password);
@@ -108,7 +108,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      */
                     uint64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_emailHasBeenSet;
 
                     /**
-                     * The set password 
+                     * The set password.
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;

@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取File Alias (can be duplicated)
-                     * @return CustomFileName File Alias (can be duplicated)
+                     * 获取File alias (can be duplicated).
+                     * @return CustomFileName File alias (can be duplicated).
                      * 
                      */
                     std::string GetCustomFileName() const;
 
                     /**
-                     * 设置File Alias (can be duplicated)
-                     * @param _customFileName File Alias (can be duplicated)
+                     * 设置File alias (can be duplicated).
+                     * @param _customFileName File alias (can be duplicated).
                      * 
                      */
                     void SetCustomFileName(const std::string& _customFileName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CustomFileNameHasBeenSet() const;
 
                     /**
-                     * 获取Audio File Link (supports mp3 and wav formats, file size not exceeding 5MB)
-                     * @return AudioUrl Audio File Link (supports mp3 and wav formats, file size not exceeding 5MB)
+                     * 获取Audio file link (supports mp3 and wav formats, file size not exceeding 5mb).
+                     * @return AudioUrl Audio file link (supports mp3 and wav formats, file size not exceeding 5mb).
                      * 
                      */
                     std::string GetAudioUrl() const;
 
                     /**
-                     * 设置Audio File Link (supports mp3 and wav formats, file size not exceeding 5MB)
-                     * @param _audioUrl Audio File Link (supports mp3 and wav formats, file size not exceeding 5MB)
+                     * 设置Audio file link (supports mp3 and wav formats, file size not exceeding 5mb).
+                     * @param _audioUrl Audio file link (supports mp3 and wav formats, file size not exceeding 5mb).
                      * 
                      */
                     void SetAudioUrl(const std::string& _audioUrl);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * File Alias (can be duplicated)
+                     * File alias (can be duplicated).
                      */
                     std::string m_customFileName;
                     bool m_customFileNameHasBeenSet;
 
                     /**
-                     * Audio File Link (supports mp3 and wav formats, file size not exceeding 5MB)
+                     * Audio file link (supports mp3 and wav formats, file size not exceeding 5mb).
                      */
                     std::string m_audioUrl;
                     bool m_audioUrlHasBeenSet;

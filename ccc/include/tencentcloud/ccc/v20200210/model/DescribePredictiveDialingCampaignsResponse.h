@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Total data volume.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Total data volume.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -61,10 +59,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Data
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CampaignList Data
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Data.
+                     * @return CampaignList Data.
                      * 
                      */
                     std::vector<DescribePredictiveDialingCampaignsElement> GetCampaignList() const;
@@ -80,14 +76,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Total data volume.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Data
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Data.
                      */
                     std::vector<DescribePredictiveDialingCampaignsElement> m_campaignList;
                     bool m_campaignListHasBeenSet;

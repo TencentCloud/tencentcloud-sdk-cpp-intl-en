@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取TCCC instance application ID.
-                     * @return SdkAppId TCCC instance application ID.
+                     * 获取Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
-                     * 设置TCCC instance application ID.
-                     * @param _sdkAppId TCCC instance application ID.
+                     * 设置Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @param _sdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Extension
-                     * @return ExtensionId Extension
+                     * 获取Extension.
+                     * @return ExtensionId Extension.
                      * 
                      */
                     std::string GetExtensionId() const;
 
                     /**
-                     * 设置Extension
-                     * @param _extensionId Extension
+                     * 设置Extension.
+                     * @param _extensionId Extension.
                      * 
                      */
                     void SetExtensionId(const std::string& _extensionId);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * TCCC instance application ID.
+                     * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      */
                     uint64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * Extension
+                     * Extension.
                      */
                     std::string m_extensionId;
                     bool m_extensionIdHasBeenSet;

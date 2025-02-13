@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取TCCC instance application ID.
-                     * @return SdkAppId TCCC instance application ID.
+                     * 获取Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
-                     * 设置TCCC instance application ID.
-                     * @param _sdkAppId TCCC instance application ID.
+                     * 设置Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @param _sdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Page number (starting from 0)
-                     * @return PageNumber Page number (starting from 0)
+                     * 获取Page number (starting from 0).
+                     * @return PageNumber Page number (starting from 0).
                      * 
                      */
                     int64_t GetPageNumber() const;
 
                     /**
-                     * 设置Page number (starting from 0)
-                     * @param _pageNumber Page number (starting from 0)
+                     * 设置Page number (starting from 0).
+                     * @param _pageNumber Page number (starting from 0).
                      * 
                      */
                     void SetPageNumber(const int64_t& _pageNumber);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool PageNumberHasBeenSet() const;
 
                     /**
-                     * 获取Filtering extension number list
-                     * @return ExtensionIds Filtering extension number list
+                     * 获取Filtering extension number list.
+                     * @return ExtensionIds Filtering extension number list.
                      * 
                      */
                     std::vector<std::string> GetExtensionIds() const;
 
                     /**
-                     * 设置Filtering extension number list
-                     * @param _extensionIds Filtering extension number list
+                     * 设置Filtering extension number list.
+                     * @param _extensionIds Filtering extension number list.
                      * 
                      */
                     void SetExtensionIds(const std::vector<std::string>& _extensionIds);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool ExtensionIdsHasBeenSet() const;
 
                     /**
-                     * 获取Page size
-                     * @return PageSize Page size
+                     * 获取Page size.
+                     * @return PageSize Page size.
                      * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
-                     * 设置Page size
-                     * @param _pageSize Page size
+                     * 设置Page size.
+                     * @param _pageSize Page size.
                      * 
                      */
                     void SetPageSize(const int64_t& _pageSize);
@@ -171,25 +171,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * TCCC instance application ID.
+                     * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      */
                     uint64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * Page number (starting from 0)
+                     * Page number (starting from 0).
                      */
                     int64_t m_pageNumber;
                     bool m_pageNumberHasBeenSet;
 
                     /**
-                     * Filtering extension number list
+                     * Filtering extension number list.
                      */
                     std::vector<std::string> m_extensionIds;
                     bool m_extensionIdsHasBeenSet;
 
                     /**
-                     * Page size
+                     * Page size.
                      */
                     int64_t m_pageSize;
                     bool m_pageSizeHasBeenSet;

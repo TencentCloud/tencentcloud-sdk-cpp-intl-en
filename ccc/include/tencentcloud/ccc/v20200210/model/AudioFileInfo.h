@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取File ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FileId File ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取File id.
+                     * @return FileId File id.
                      * 
                      */
                     uint64_t GetFileId() const;
 
                     /**
-                     * 设置File ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fileId File ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置File id.
+                     * @param _fileId File id.
                      * 
                      */
                     void SetFileId(const uint64_t& _fileId);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取File alias
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CustomFileName File alias
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取File alias.
+                     * @return CustomFileName File alias.
                      * 
                      */
                     std::string GetCustomFileName() const;
 
                     /**
-                     * 设置File alias
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _customFileName File alias
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置File alias.
+                     * @param _customFileName File alias.
                      * 
                      */
                     void SetCustomFileName(const std::string& _customFileName);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CustomFileNameHasBeenSet() const;
 
                     /**
-                     * 获取Filename
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AudioFileName Filename
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Filename.
+                     * @return AudioFileName Filename.
                      * 
                      */
                     std::string GetAudioFileName() const;
 
                     /**
-                     * 设置Filename
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _audioFileName Filename
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Filename.
+                     * @param _audioFileName Filename.
                      * 
                      */
                     void SetAudioFileName(const std::string& _audioFileName);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AudioFileNameHasBeenSet() const;
 
                     /**
-                     * 获取Review status, 0-Not reviewed, 1-Approved, 2-Rejected
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Review status, 0-Not reviewed, 1-Approved, 2-Rejected
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Review status: 0 - unreviewed, 1 - approved, 2 - rejected.
+                     * @return Status Review status: 0 - unreviewed, 1 - approved, 2 - rejected.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Review status, 0-Not reviewed, 1-Approved, 2-Rejected
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status Review status, 0-Not reviewed, 1-Approved, 2-Rejected
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Review status: 0 - unreviewed, 1 - approved, 2 - rejected.
+                     * @param _status Review status: 0 - unreviewed, 1 - approved, 2 - rejected.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -149,29 +133,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * File ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * File id.
                      */
                     uint64_t m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * File alias
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * File alias.
                      */
                     std::string m_customFileName;
                     bool m_customFileNameHasBeenSet;
 
                     /**
-                     * Filename
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Filename.
                      */
                     std::string m_audioFileName;
                     bool m_audioFileNameHasBeenSet;
 
                     /**
-                     * Review status, 0-Not reviewed, 1-Approved, 2-Rejected
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Review status: 0 - unreviewed, 1 - approved, 2 - rejected.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;

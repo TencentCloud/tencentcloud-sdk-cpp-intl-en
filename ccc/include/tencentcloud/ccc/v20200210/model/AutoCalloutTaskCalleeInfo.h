@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CalleeHasBeenSet() const;
 
                     /**
-                     * 获取Call status 0 - Initial, 1 - Answered, 2 - Unanswered, 3 - Calling, 4 - Pending Retry.
-                     * @return State Call status 0 - Initial, 1 - Answered, 2 - Unanswered, 3 - Calling, 4 - Pending Retry.
+                     * 获取Call status 0 - initial, 1 - answered, 2 - unanswered, 3 - calling, 4 - pending retry.
+                     * @return State Call status 0 - initial, 1 - answered, 2 - unanswered, 3 - calling, 4 - pending retry.
                      * 
                      */
                     uint64_t GetState() const;
 
                     /**
-                     * 设置Call status 0 - Initial, 1 - Answered, 2 - Unanswered, 3 - Calling, 4 - Pending Retry.
-                     * @param _state Call status 0 - Initial, 1 - Answered, 2 - Unanswered, 3 - Calling, 4 - Pending Retry.
+                     * 设置Call status 0 - initial, 1 - answered, 2 - unanswered, 3 - calling, 4 - pending retry.
+                     * @param _state Call status 0 - initial, 1 - answered, 2 - unanswered, 3 - calling, 4 - pending retry.
                      * 
                      */
                     void SetState(const uint64_t& _state);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool StateHasBeenSet() const;
 
                     /**
-                     * 获取List of session IDs.
-                     * @return Sessions List of session IDs.
+                     * 获取List of session ids.
+                     * @return Sessions List of session ids.
                      * 
                      */
                     std::vector<std::string> GetSessions() const;
 
                     /**
-                     * 设置List of session IDs.
-                     * @param _sessions List of session IDs.
+                     * 设置List of session ids.
+                     * @param _sessions List of session ids.
                      * 
                      */
                     void SetSessions(const std::vector<std::string>& _sessions);
@@ -118,13 +118,13 @@ namespace TencentCloud
                     bool m_calleeHasBeenSet;
 
                     /**
-                     * Call status 0 - Initial, 1 - Answered, 2 - Unanswered, 3 - Calling, 4 - Pending Retry.
+                     * Call status 0 - initial, 1 - answered, 2 - unanswered, 3 - calling, 4 - pending retry.
                      */
                     uint64_t m_state;
                     bool m_stateHasBeenSet;
 
                     /**
-                     * List of session IDs.
+                     * List of session ids.
                      */
                     std::vector<std::string> m_sessions;
                     bool m_sessionsHasBeenSet;

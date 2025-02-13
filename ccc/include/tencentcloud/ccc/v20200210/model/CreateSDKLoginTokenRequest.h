@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 获取Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
-                     * 设置Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @param _sdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 设置Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @param _sdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SeatUserIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether the generated token is for one-time verification?
-                     * @return OnlyOnce Whether the generated token is for one-time verification?
+                     * 获取Whether the generated token is for one-time verification?.
+                     * @return OnlyOnce Whether the generated token is for one-time verification?.
                      * 
                      */
                     bool GetOnlyOnce() const;
 
                     /**
-                     * 设置Whether the generated token is for one-time verification?
-                     * @param _onlyOnce Whether the generated token is for one-time verification?
+                     * 设置Whether the generated token is for one-time verification?.
+                     * @param _onlyOnce Whether the generated token is for one-time verification?.
                      * 
                      */
                     void SetOnlyOnce(const bool& _onlyOnce);
@@ -108,7 +108,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      */
                     int64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_seatUserIdHasBeenSet;
 
                     /**
-                     * Whether the generated token is for one-time verification?
+                     * Whether the generated token is for one-time verification?.
                      */
                     bool m_onlyOnce;
                     bool m_onlyOnceHasBeenSet;

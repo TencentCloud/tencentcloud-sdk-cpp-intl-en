@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取IM - Text | TEL - Cell phone | ALL - Full media.
-                     * @return Type IM - Text | TEL - Cell phone | ALL - Full media.
+                     * 获取IM - text | tel - cell phone | all - full media.
+                     * @return Type IM - text | tel - cell phone | all - full media.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置IM - Text | TEL - Cell phone | ALL - Full media.
-                     * @param _type IM - Text | TEL - Cell phone | ALL - Full media.
+                     * 设置IM - text | tel - cell phone | all - full media.
+                     * @param _type IM - text | tel - cell phone | all - full media.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取IN - Inbound | OUT - Outbound.
-                     * @return Direct IN - Inbound | OUT - Outbound.
+                     * 获取IN - inbound | out - outbound.
+                     * @return Direct IN - inbound | out - outbound.
                      * 
                      */
                     std::string GetDirect() const;
 
                     /**
-                     * 设置IN - Inbound | OUT - Outbound.
-                     * @param _direct IN - Inbound | OUT - Outbound.
+                     * 设置IN - inbound | out - outbound.
+                     * @param _direct IN - inbound | out - outbound.
                      * 
                      */
                     void SetDirect(const std::string& _direct);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * IM - Text | TEL - Cell phone | ALL - Full media.
+                     * IM - text | tel - cell phone | all - full media.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * IN - Inbound | OUT - Outbound.
+                     * IN - inbound | out - outbound.
                      */
                     std::string m_direct;
                     bool m_directHasBeenSet;

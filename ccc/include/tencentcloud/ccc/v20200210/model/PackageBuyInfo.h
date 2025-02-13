@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Package ID.
-                     * @return PackageId Package ID.
+                     * 获取Package id.
+                     * @return PackageId Package id.
                      * 
                      */
                     std::string GetPackageId() const;
 
                     /**
-                     * 设置Package ID.
-                     * @param _packageId Package ID.
+                     * 设置Package id.
+                     * @param _packageId Package id.
                      * 
                      */
                     void SetPackageId(const std::string& _packageId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool PackageIdHasBeenSet() const;
 
                     /**
-                     * 获取Package type, 0 - Outbound call package | 1 - 400 inbound call package.
-                     * @return Type Package type, 0 - Outbound call package | 1 - 400 inbound call package.
+                     * 获取Package type, 0 - outbound call package | 1 - 400 inbound call package.
+                     * @return Type Package type, 0 - outbound call package | 1 - 400 inbound call package.
                      * 
                      */
                     int64_t GetType() const;
 
                     /**
-                     * 设置Package type, 0 - Outbound call package | 1 - 400 inbound call package.
-                     * @param _type Package type, 0 - Outbound call package | 1 - 400 inbound call package.
+                     * 设置Package type, 0 - outbound call package | 1 - 400 inbound call package.
+                     * @param _type Package type, 0 - outbound call package | 1 - 400 inbound call package.
                      * 
                      */
                     void SetType(const int64_t& _type);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Total package.
-                     * @return CapacitySize Total package.
+                     * 获取<TOTAL_PACKAGE>.
+                     * @return CapacitySize <TOTAL_PACKAGE>.
                      * 
                      */
                     int64_t GetCapacitySize() const;
 
                     /**
-                     * 设置Total package.
-                     * @param _capacitySize Total package.
+                     * 设置<TOTAL_PACKAGE>.
+                     * @param _capacitySize <TOTAL_PACKAGE>.
                      * 
                      */
                     void SetCapacitySize(const int64_t& _capacitySize);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool CapacitySizeHasBeenSet() const;
 
                     /**
-                     * 获取Remaining package.
-                     * @return CapacityRemain Remaining package.
+                     * 获取Remaining package balance.
+                     * @return CapacityRemain Remaining package balance.
                      * 
                      */
                     int64_t GetCapacityRemain() const;
 
                     /**
-                     * 设置Remaining package.
-                     * @param _capacityRemain Remaining package.
+                     * 设置Remaining package balance.
+                     * @param _capacityRemain Remaining package balance.
                      * 
                      */
                     void SetCapacityRemain(const int64_t& _capacityRemain);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool BuyTimeHasBeenSet() const;
 
                     /**
-                     * 获取End timestamp.
-                     * @return EndTime End timestamp.
+                     * 获取Deadline timestamp.
+                     * @return EndTime Deadline timestamp.
                      * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
-                     * 设置End timestamp.
-                     * @param _endTime End timestamp.
+                     * 设置Deadline timestamp.
+                     * @param _endTime Deadline timestamp.
                      * 
                      */
                     void SetEndTime(const int64_t& _endTime);
@@ -175,25 +175,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Package ID.
+                     * Package id.
                      */
                     std::string m_packageId;
                     bool m_packageIdHasBeenSet;
 
                     /**
-                     * Package type, 0 - Outbound call package | 1 - 400 inbound call package.
+                     * Package type, 0 - outbound call package | 1 - 400 inbound call package.
                      */
                     int64_t m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Total package.
+                     * <TOTAL_PACKAGE>.
                      */
                     int64_t m_capacitySize;
                     bool m_capacitySizeHasBeenSet;
 
                     /**
-                     * Remaining package.
+                     * Remaining package balance.
                      */
                     int64_t m_capacityRemain;
                     bool m_capacityRemainHasBeenSet;
@@ -205,7 +205,7 @@ namespace TencentCloud
                     bool m_buyTimeHasBeenSet;
 
                     /**
-                     * End timestamp.
+                     * Deadline timestamp.
                      */
                     int64_t m_endTime;
                     bool m_endTimeHasBeenSet;

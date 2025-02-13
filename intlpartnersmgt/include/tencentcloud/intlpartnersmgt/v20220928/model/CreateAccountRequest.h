@@ -239,18 +239,18 @@ Parameter value is not allowed to be 7,380,86.
                     bool ExtendedHasBeenSet() const;
 
                     /**
-                     * 获取VerifyCode. This field is required. 
+                     * 获取VerifyCode. This parameter is required. 
 Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
-                     * @return VerifyCode VerifyCode. This field is required. 
+                     * @return VerifyCode VerifyCode. This parameter is required. 
 Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
                      * 
                      */
                     std::string GetVerifyCode() const;
 
                     /**
-                     * 设置VerifyCode. This field is required. 
+                     * 设置VerifyCode. This parameter is required. 
 Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
-                     * @param _verifyCode VerifyCode. This field is required. 
+                     * @param _verifyCode VerifyCode. This parameter is required. 
 Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
                      * 
                      */
@@ -321,7 +321,7 @@ Parameter value is not allowed to be 7,380,86.
                     bool m_extendedHasBeenSet;
 
                     /**
-                     * VerifyCode. This field is required. 
+                     * VerifyCode. This parameter is required. 
 Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
                      */
                     std::string m_verifyCode;

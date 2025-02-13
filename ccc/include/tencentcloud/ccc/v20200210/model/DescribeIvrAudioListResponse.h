@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number
-                     * @return TotalCount Total number
+                     * 获取Total quantity.
+                     * @return TotalCount Total quantity.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取File Information
-                     * @return FileInfo File Information
+                     * 获取File information.
+                     * @return FileInfo File information.
                      * 
                      */
                     std::vector<AudioFileInfo> GetFileInfo() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number
+                     * Total quantity.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * File Information
+                     * File information.
                      */
                     std::vector<AudioFileInfo> m_fileInfo;
                     bool m_fileInfoHasBeenSet;

@@ -46,10 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of failed uploads
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FailedFileList List of failed uploads
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List of files that failed to be uploaded.
+                     * @return FailedFileList List of files that failed to be uploaded.
                      * 
                      */
                     std::vector<UploadIvrAudioFailedInfo> GetFailedFileList() const;
@@ -62,10 +60,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FailedFileListHasBeenSet() const;
 
                     /**
-                     * 获取List of successful uploads
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SuccessFileList List of successful uploads
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List of successfully uploaded files.
+                     * @return SuccessFileList List of successfully uploaded files.
                      * 
                      */
                     std::vector<AudioFileInfo> GetSuccessFileList() const;
@@ -80,15 +76,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * List of failed uploads
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List of files that failed to be uploaded.
                      */
                     std::vector<UploadIvrAudioFailedInfo> m_failedFileList;
                     bool m_failedFileListHasBeenSet;
 
                     /**
-                     * List of successful uploads
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List of successfully uploaded files.
                      */
                     std::vector<AudioFileInfo> m_successFileList;
                     bool m_successFileListHasBeenSet;

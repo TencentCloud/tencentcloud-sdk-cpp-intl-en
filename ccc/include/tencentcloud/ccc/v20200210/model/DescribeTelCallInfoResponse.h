@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of minutes consumed by Outbound Package.
-                     * @return TelCallOutCount Number of minutes consumed by Outbound Package.
+                     * 获取Number of minutes consumed by outbound package.
+                     * @return TelCallOutCount Number of minutes consumed by outbound package.
                      * 
                      */
                     int64_t GetTelCallOutCount() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool TelCallOutCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of minutes consumed by Inbound Package.
-                     * @return TelCallInCount Number of minutes consumed by Inbound Package.
+                     * 获取Number of minutes consumed by inbound package.
+                     * @return TelCallInCount Number of minutes consumed by inbound package.
                      * 
                      */
                     int64_t GetTelCallInCount() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool SeatUsedCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of minutes consumed by Audio package.
-                     * @return VoipCallInCount Number of minutes consumed by Audio package.
+                     * 获取Number of minutes consumed by audio package.
+                     * @return VoipCallInCount Number of minutes consumed by audio package.
                      * @deprecated
                      */
                     int64_t GetVoipCallInCount() const;
@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool VoipCallInCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of minutes consumed by Audio package.
-                     * @return VOIPCallInCount Number of minutes consumed by Audio package.
+                     * 获取Number of minutes consumed by audio package.
+                     * @return VOIPCallInCount Number of minutes consumed by audio package.
                      * 
                      */
                     int64_t GetVOIPCallInCount() const;
@@ -114,8 +114,8 @@ namespace TencentCloud
                     bool VOIPCallInCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of minutes consumed by Offline Speech-to-Text Package.
-                     * @return AsrOfflineCount Number of minutes consumed by Offline Speech-to-Text Package.
+                     * 获取Number of minutes consumed by offline speech-to-text package.
+                     * @return AsrOfflineCount Number of minutes consumed by offline speech-to-text package.
                      * 
                      */
                     int64_t GetAsrOfflineCount() const;
@@ -128,8 +128,8 @@ namespace TencentCloud
                     bool AsrOfflineCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of minutes consumed by Real-time Speech-to-Text Package.
-                     * @return AsrRealtimeCount Number of minutes consumed by Real-time Speech-to-Text Package.
+                     * 获取Number of minutes consumed by real-time speech-to-text package.
+                     * @return AsrRealtimeCount Number of minutes consumed by real-time speech-to-text package.
                      * 
                      */
                     int64_t GetAsrRealtimeCount() const;
@@ -144,13 +144,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of minutes consumed by Outbound Package.
+                     * Number of minutes consumed by outbound package.
                      */
                     int64_t m_telCallOutCount;
                     bool m_telCallOutCountHasBeenSet;
 
                     /**
-                     * Number of minutes consumed by Inbound Package.
+                     * Number of minutes consumed by inbound package.
                      */
                     int64_t m_telCallInCount;
                     bool m_telCallInCountHasBeenSet;
@@ -162,25 +162,25 @@ namespace TencentCloud
                     bool m_seatUsedCountHasBeenSet;
 
                     /**
-                     * Number of minutes consumed by Audio package.
+                     * Number of minutes consumed by audio package.
                      */
                     int64_t m_voipCallInCount;
                     bool m_voipCallInCountHasBeenSet;
 
                     /**
-                     * Number of minutes consumed by Audio package.
+                     * Number of minutes consumed by audio package.
                      */
                     int64_t m_vOIPCallInCount;
                     bool m_vOIPCallInCountHasBeenSet;
 
                     /**
-                     * Number of minutes consumed by Offline Speech-to-Text Package.
+                     * Number of minutes consumed by offline speech-to-text package.
                      */
                     int64_t m_asrOfflineCount;
                     bool m_asrOfflineCountHasBeenSet;
 
                     /**
-                     * Number of minutes consumed by Real-time Speech-to-Text Package.
+                     * Number of minutes consumed by real-time speech-to-text package.
                      */
                     int64_t m_asrRealtimeCount;
                     bool m_asrRealtimeCountHasBeenSet;

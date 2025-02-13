@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 获取Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
-                     * 设置Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @param _sdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 设置Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @param _sdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool StaffsHasBeenSet() const;
 
                     /**
-                     * 获取Whether to send a password mail or not (the default is true)
-                     * @return SendPassword Whether to send a password mail or not (the default is true)
+                     * 获取Whether to send a password mail or not (the default is true).
+                     * @return SendPassword Whether to send a password mail or not (the default is true).
                      * 
                      */
                     bool GetSendPassword() const;
 
                     /**
-                     * 设置Whether to send a password mail or not (the default is true)
-                     * @param _sendPassword Whether to send a password mail or not (the default is true)
+                     * 设置Whether to send a password mail or not (the default is true).
+                     * @param _sendPassword Whether to send a password mail or not (the default is true).
                      * 
                      */
                     void SetSendPassword(const bool& _sendPassword);
@@ -109,7 +109,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      */
                     int64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
@@ -121,7 +121,7 @@ namespace TencentCloud
                     bool m_staffsHasBeenSet;
 
                     /**
-                     * Whether to send a password mail or not (the default is true)
+                     * Whether to send a password mail or not (the default is true).
                      */
                     bool m_sendPassword;
                     bool m_sendPasswordHasBeenSet;

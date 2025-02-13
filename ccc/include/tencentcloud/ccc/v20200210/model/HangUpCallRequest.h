@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取TCCC instance application ID.
-                     * @return SdkAppId TCCC instance application ID.
+                     * 获取Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
-                     * 设置TCCC instance application ID.
-                     * @param _sdkAppId TCCC instance application ID.
+                     * 设置Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @param _sdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Session ID.
-                     * @return SessionId Session ID.
+                     * 获取Session id.
+                     * @return SessionId Session id.
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置Session ID.
-                     * @param _sessionId Session ID.
+                     * 设置Session id.
+                     * @param _sessionId Session id.
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * TCCC instance application ID.
+                     * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      */
                     uint64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * Session ID.
+                     * Session id.
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;

@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Log-in link.
-                     * @return URL Log-in link.
+                     * 获取Log-In link.
+                     * @return URL Log-In link.
                      * 
                      */
                     std::string GetURL() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Log-in link.
+                     * Log-In link.
                      */
                     std::string m_uRL;
                     bool m_uRLHasBeenSet;

@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of customer service staff that can't be deleted when being online.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return OnlineStaffList List of customer service staff that can't be deleted when being online.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取List of customer service staff that cannot be deleted when they are online.
+                     * @return OnlineStaffList List of customer service staff that cannot be deleted when they are online.
                      * 
                      */
                     std::vector<std::string> GetOnlineStaffList() const;
@@ -62,8 +60,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * List of customer service staff that can't be deleted when being online.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * List of customer service staff that cannot be deleted when they are online.
                      */
                     std::vector<std::string> m_onlineStaffList;
                     bool m_onlineStaffListHasBeenSet;

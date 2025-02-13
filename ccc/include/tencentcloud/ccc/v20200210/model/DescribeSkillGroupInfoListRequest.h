@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 获取Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
-                     * 设置Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @param _sdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 设置Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @param _sdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool PageSizeHasBeenSet() const;
 
                     /**
-                     * 获取Page number starting from 0.
-                     * @return PageNumber Page number starting from 0.
+                     * 获取<Page number starting from 0.>.
+                     * @return PageNumber <Page number starting from 0.>.
                      * 
                      */
                     int64_t GetPageNumber() const;
 
                     /**
-                     * 设置Page number starting from 0.
-                     * @param _pageNumber Page number starting from 0.
+                     * 设置<Page number starting from 0.>.
+                     * @param _pageNumber <Page number starting from 0.>.
                      * 
                      */
                     void SetPageNumber(const int64_t& _pageNumber);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool PageNumberHasBeenSet() const;
 
                     /**
-                     * 获取Using skill group ID when querying a single skill group.
-                     * @return SkillGroupId Using skill group ID when querying a single skill group.
+                     * 获取Using skill group id when querying a single skill group.
+                     * @return SkillGroupId Using skill group id when querying a single skill group.
                      * 
                      */
                     int64_t GetSkillGroupId() const;
 
                     /**
-                     * 设置Using skill group ID when querying a single skill group.
-                     * @param _skillGroupId Using skill group ID when querying a single skill group.
+                     * 设置Using skill group id when querying a single skill group.
+                     * @param _skillGroupId Using skill group id when querying a single skill group.
                      * 
                      */
                     void SetSkillGroupId(const int64_t& _skillGroupId);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool SkillGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Used when querying skill groups with a modified time greater or equal to ModifiedTime.
-                     * @return ModifiedTime Used when querying skill groups with a modified time greater or equal to ModifiedTime.
+                     * 获取Used when querying skill groups with a modified time greater or equal to modifiedtime.
+                     * @return ModifiedTime Used when querying skill groups with a modified time greater or equal to modifiedtime.
                      * 
                      */
                     int64_t GetModifiedTime() const;
 
                     /**
-                     * 设置Used when querying skill groups with a modified time greater or equal to ModifiedTime.
-                     * @param _modifiedTime Used when querying skill groups with a modified time greater or equal to ModifiedTime.
+                     * 设置Used when querying skill groups with a modified time greater or equal to modifiedtime.
+                     * @param _modifiedTime Used when querying skill groups with a modified time greater or equal to modifiedtime.
                      * 
                      */
                     void SetModifiedTime(const int64_t& _modifiedTime);
@@ -171,7 +171,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      */
                     int64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
@@ -183,19 +183,19 @@ namespace TencentCloud
                     bool m_pageSizeHasBeenSet;
 
                     /**
-                     * Page number starting from 0.
+                     * <Page number starting from 0.>.
                      */
                     int64_t m_pageNumber;
                     bool m_pageNumberHasBeenSet;
 
                     /**
-                     * Using skill group ID when querying a single skill group.
+                     * Using skill group id when querying a single skill group.
                      */
                     int64_t m_skillGroupId;
                     bool m_skillGroupIdHasBeenSet;
 
                     /**
-                     * Used when querying skill groups with a modified time greater or equal to ModifiedTime.
+                     * Used when querying skill groups with a modified time greater or equal to modifiedtime.
                      */
                     int64_t m_modifiedTime;
                     bool m_modifiedTimeHasBeenSet;

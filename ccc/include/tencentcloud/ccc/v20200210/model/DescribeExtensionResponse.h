@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Extension
-                     * @return ExtensionId Extension
+                     * 获取Extension.
+                     * @return ExtensionId Extension.
                      * 
                      */
                     std::string GetExtensionId() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool ExtensionIdHasBeenSet() const;
 
                     /**
-                     * 获取Domain name
-                     * @return ExtensionDomain Domain name
+                     * 获取Domain name.
+                     * @return ExtensionDomain Domain name.
                      * 
                      */
                     std::string GetExtensionDomain() const;
@@ -116,13 +116,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Extension
+                     * Extension.
                      */
                     std::string m_extensionId;
                     bool m_extensionIdHasBeenSet;
 
                     /**
-                     * Domain name
+                     * Domain name.
                      */
                     std::string m_extensionDomain;
                     bool m_extensionDomainHasBeenSet;

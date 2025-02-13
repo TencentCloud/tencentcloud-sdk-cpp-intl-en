@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Newly created session ID.
-                     * @return SessionId Newly created session ID.
+                     * 获取Newly created session id.
+                     * @return SessionId Newly created session id.
                      * 
                      */
                     std::string GetSessionId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Newly created session ID.
+                     * Newly created session id.
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;

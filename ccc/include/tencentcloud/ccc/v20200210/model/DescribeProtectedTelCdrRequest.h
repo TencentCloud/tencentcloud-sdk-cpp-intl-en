@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start timestamp. Unix second-level timestamp.
-                     * @return StartTimeStamp Start timestamp. Unix second-level timestamp.
+                     * 获取Start timestamp. unix second-level timestamp.
+                     * @return StartTimeStamp Start timestamp. unix second-level timestamp.
                      * 
                      */
                     int64_t GetStartTimeStamp() const;
 
                     /**
-                     * 设置Start timestamp. Unix second-level timestamp.
-                     * @param _startTimeStamp Start timestamp. Unix second-level timestamp.
+                     * 设置Start timestamp. unix second-level timestamp.
+                     * @param _startTimeStamp Start timestamp. unix second-level timestamp.
                      * 
                      */
                     void SetStartTimeStamp(const int64_t& _startTimeStamp);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool StartTimeStampHasBeenSet() const;
 
                     /**
-                     * 获取End timestamp. Unix second-level timestamp.
-                     * @return EndTimeStamp End timestamp. Unix second-level timestamp.
+                     * 获取End timestamp. unix second-level timestamp.
+                     * @return EndTimeStamp End timestamp. unix second-level timestamp.
                      * 
                      */
                     int64_t GetEndTimeStamp() const;
 
                     /**
-                     * 设置End timestamp. Unix second-level timestamp.
-                     * @param _endTimeStamp End timestamp. Unix second-level timestamp.
+                     * 设置End timestamp. unix second-level timestamp.
+                     * @param _endTimeStamp End timestamp. unix second-level timestamp.
                      * 
                      */
                     void SetEndTimeStamp(const int64_t& _endTimeStamp);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool EndTimeStampHasBeenSet() const;
 
                     /**
-                     * 获取For the Application ID, go to https://console.cloud.tencent.com/ccc.
-                     * @return SdkAppId For the Application ID, go to https://console.cloud.tencent.com/ccc.
+                     * 获取For the application id, you can check https://console.cloud.tencent.com/ccc.
+                     * @return SdkAppId For the application id, you can check https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
-                     * 设置For the Application ID, go to https://console.cloud.tencent.com/ccc.
-                     * @param _sdkAppId For the Application ID, go to https://console.cloud.tencent.com/ccc.
+                     * 设置For the application id, you can check https://console.cloud.tencent.com/ccc.
+                     * @param _sdkAppId For the application id, you can check https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
@@ -150,19 +150,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Start timestamp. Unix second-level timestamp.
+                     * Start timestamp. unix second-level timestamp.
                      */
                     int64_t m_startTimeStamp;
                     bool m_startTimeStampHasBeenSet;
 
                     /**
-                     * End timestamp. Unix second-level timestamp.
+                     * End timestamp. unix second-level timestamp.
                      */
                     int64_t m_endTimeStamp;
                     bool m_endTimeStampHasBeenSet;
 
                     /**
-                     * For the Application ID, go to https://console.cloud.tencent.com/ccc.
+                     * For the application id, you can check https://console.cloud.tencent.com/ccc.
                      */
                     uint64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;

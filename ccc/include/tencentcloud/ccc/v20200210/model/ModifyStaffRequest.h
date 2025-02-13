@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application ID
-                     * @return SdkAppId Application ID
+                     * 获取Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
-                     * 设置Application ID
-                     * @param _sdkAppId Application ID
+                     * 设置Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @param _sdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool NickHasBeenSet() const;
 
                     /**
-                     * 获取Agent ID
-                     * @return StaffNo Agent ID
+                     * 获取Agent id.
+                     * @return StaffNo Agent id.
                      * 
                      */
                     std::string GetStaffNo() const;
 
                     /**
-                     * 设置Agent ID
-                     * @param _staffNo Agent ID
+                     * 设置Agent id.
+                     * @param _staffNo Agent id.
                      * 
                      */
                     void SetStaffNo(const std::string& _staffNo);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool StaffNoHasBeenSet() const;
 
                     /**
-                     * 获取Bind skill group ID list.
-                     * @return SkillGroupIds Bind skill group ID list.
+                     * 获取Bind skill group id list.
+                     * @return SkillGroupIds Bind skill group id list.
                      * 
                      */
                     std::vector<int64_t> GetSkillGroupIds() const;
 
                     /**
-                     * 设置Bind skill group ID list.
-                     * @param _skillGroupIds Bind skill group ID list.
+                     * 设置Bind skill group id list.
+                     * @param _skillGroupIds Bind skill group id list.
                      * 
                      */
                     void SetSkillGroupIds(const std::vector<int64_t>& _skillGroupIds);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool UseMobileCallOutHasBeenSet() const;
 
                     /**
-                     * 获取Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always.
-                     * @return UseMobileAccept Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always.
+                     * 获取Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always.
+                     * @return UseMobileAccept Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always.
                      * 
                      */
                     int64_t GetUseMobileAccept() const;
 
                     /**
-                     * 设置Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always.
-                     * @param _useMobileAccept Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always.
+                     * 设置Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always.
+                     * @param _useMobileAccept Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always.
                      * 
                      */
                     void SetUseMobileAccept(const int64_t& _useMobileAccept);
@@ -231,10 +231,31 @@ namespace TencentCloud
                      */
                     bool UseMobileAcceptHasBeenSet() const;
 
+                    /**
+                     * 获取Agent extension number (starting with 1 to 8, 4 - 6 digits).
+                     * @return ExtensionNumber Agent extension number (starting with 1 to 8, 4 - 6 digits).
+                     * 
+                     */
+                    std::string GetExtensionNumber() const;
+
+                    /**
+                     * 设置Agent extension number (starting with 1 to 8, 4 - 6 digits).
+                     * @param _extensionNumber Agent extension number (starting with 1 to 8, 4 - 6 digits).
+                     * 
+                     */
+                    void SetExtensionNumber(const std::string& _extensionNumber);
+
+                    /**
+                     * 判断参数 ExtensionNumber 是否已赋值
+                     * @return ExtensionNumber 是否已赋值
+                     * 
+                     */
+                    bool ExtensionNumberHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Application ID
+                     * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      */
                     uint64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
@@ -264,13 +285,13 @@ namespace TencentCloud
                     bool m_nickHasBeenSet;
 
                     /**
-                     * Agent ID
+                     * Agent id.
                      */
                     std::string m_staffNo;
                     bool m_staffNoHasBeenSet;
 
                     /**
-                     * Bind skill group ID list.
+                     * Bind skill group id list.
                      */
                     std::vector<int64_t> m_skillGroupIds;
                     bool m_skillGroupIdsHasBeenSet;
@@ -282,10 +303,16 @@ namespace TencentCloud
                     bool m_useMobileCallOutHasBeenSet;
 
                     /**
-                     * Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always.
+                     * Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always.
                      */
                     int64_t m_useMobileAccept;
                     bool m_useMobileAcceptHasBeenSet;
+
+                    /**
+                     * Agent extension number (starting with 1 to 8, 4 - 6 digits).
+                     */
+                    std::string m_extensionNumber;
+                    bool m_extensionNumberHasBeenSet;
 
                 };
             }

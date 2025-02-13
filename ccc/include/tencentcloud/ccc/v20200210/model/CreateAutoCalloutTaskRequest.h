@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 获取Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
-                     * 设置Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @param _sdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 设置Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @param _sdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Task starting timestamp. Unix second-level timestamp.
-                     * @return NotBefore Task starting timestamp. Unix second-level timestamp.
+                     * 获取Task starting timestamp. unix second-level timestamp.
+                     * @return NotBefore Task starting timestamp. unix second-level timestamp.
                      * 
                      */
                     int64_t GetNotBefore() const;
 
                     /**
-                     * 设置Task starting timestamp. Unix second-level timestamp.
-                     * @param _notBefore Task starting timestamp. Unix second-level timestamp.
+                     * 设置Task starting timestamp. unix second-level timestamp.
+                     * @param _notBefore Task starting timestamp. unix second-level timestamp.
                      * 
                      */
                     void SetNotBefore(const int64_t& _notBefore);
@@ -171,15 +171,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Task description.
-                     * @return Description Task description.
+                     * 获取<Task description>.
+                     * @return Description <Task description>.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Task description.
-                     * @param _description Task description.
+                     * 设置<Task description>.
+                     * @param _description <Task description>.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -192,15 +192,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Task stop timestamp. Unix second-level timestamp.
-                     * @return NotAfter Task stop timestamp. Unix second-level timestamp.
+                     * 获取Task stop timestamp. unix second-level timestamp.
+                     * @return NotAfter Task stop timestamp. unix second-level timestamp.
                      * 
                      */
                     int64_t GetNotAfter() const;
 
                     /**
-                     * 设置Task stop timestamp. Unix second-level timestamp.
-                     * @param _notAfter Task stop timestamp. Unix second-level timestamp.
+                     * 设置Task stop timestamp. unix second-level timestamp.
+                     * @param _notAfter Task stop timestamp. unix second-level timestamp.
                      * 
                      */
                     void SetNotAfter(const int64_t& _notAfter);
@@ -213,15 +213,15 @@ namespace TencentCloud
                     bool NotAfterHasBeenSet() const;
 
                     /**
-                     * 获取Maximum attempts, 1-3 times
-                     * @return Tries Maximum attempts, 1-3 times
+                     * 获取Maximum attempts, 1-3 times.
+                     * @return Tries Maximum attempts, 1-3 times.
                      * 
                      */
                     uint64_t GetTries() const;
 
                     /**
-                     * 设置Maximum attempts, 1-3 times
-                     * @param _tries Maximum attempts, 1-3 times
+                     * 设置Maximum attempts, 1-3 times.
+                     * @param _tries Maximum attempts, 1-3 times.
                      * 
                      */
                     void SetTries(const uint64_t& _tries);
@@ -299,13 +299,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      */
                     uint64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * Task starting timestamp. Unix second-level timestamp.
+                     * Task starting timestamp. unix second-level timestamp.
                      */
                     int64_t m_notBefore;
                     bool m_notBeforeHasBeenSet;
@@ -335,19 +335,19 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Task description.
+                     * <Task description>.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Task stop timestamp. Unix second-level timestamp.
+                     * Task stop timestamp. unix second-level timestamp.
                      */
                     int64_t m_notAfter;
                     bool m_notAfterHasBeenSet;
 
                     /**
-                     * Maximum attempts, 1-3 times
+                     * Maximum attempts, 1-3 times.
                      */
                     uint64_t m_tries;
                     bool m_triesHasBeenSet;

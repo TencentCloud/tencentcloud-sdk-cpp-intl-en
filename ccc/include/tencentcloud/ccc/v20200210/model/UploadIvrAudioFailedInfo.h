@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filename
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FileName Filename
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Filename.
+                     * @return FileName Filename.
                      * 
                      */
                     std::string GetFileName() const;
 
                     /**
-                     * 设置Filename
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fileName Filename
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Filename.
+                     * @param _fileName Filename.
                      * 
                      */
                     void SetFileName(const std::string& _fileName);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FileNameHasBeenSet() const;
 
                     /**
-                     * 获取Reason for failure
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FailedMsg Reason for failure
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Reason for failure.
+                     * @return FailedMsg Reason for failure.
                      * 
                      */
                     std::string GetFailedMsg() const;
 
                     /**
-                     * 设置Reason for failure
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _failedMsg Reason for failure
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Reason for failure.
+                     * @param _failedMsg Reason for failure.
                      * 
                      */
                     void SetFailedMsg(const std::string& _failedMsg);
@@ -99,15 +91,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Filename
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Filename.
                      */
                     std::string m_fileName;
                     bool m_fileNameHasBeenSet;
 
                     /**
-                     * Reason for failure
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Reason for failure.
                      */
                     std::string m_failedMsg;
                     bool m_failedMsgHasBeenSet;

@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Skill group ID.
-                     * @return SkillGroupId Skill group ID.
+                     * 获取Skill group id.
+                     * @return SkillGroupId Skill group id.
                      * 
                      */
                     int64_t GetSkillGroupId() const;
 
                     /**
-                     * 设置Skill group ID.
-                     * @param _skillGroupId Skill group ID.
+                     * 设置Skill group id.
+                     * @param _skillGroupId Skill group id.
                      * 
                      */
                     void SetSkillGroupId(const int64_t& _skillGroupId);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Skill group ID.
+                     * Skill group id.
                      */
                     int64_t m_skillGroupId;
                     bool m_skillGroupIdHasBeenSet;

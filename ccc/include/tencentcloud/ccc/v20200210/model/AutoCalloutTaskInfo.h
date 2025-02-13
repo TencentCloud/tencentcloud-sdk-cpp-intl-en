@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task Name
-                     * @return Name Task Name
+                     * 获取Task name.
+                     * @return Name Task name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Task Name
-                     * @param _name Task Name
+                     * 设置Task name.
+                     * @param _name Task name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Number of calls.
-                     * @return CalleeCount Number of calls.
+                     * 获取Number of called parties.
+                     * @return CalleeCount Number of called parties.
                      * 
                      */
                     uint64_t GetCalleeCount() const;
 
                     /**
-                     * 设置Number of calls.
-                     * @param _calleeCount Number of calls.
+                     * 设置Number of called parties.
+                     * @param _calleeCount Number of called parties.
                      * 
                      */
                     void SetCalleeCount(const uint64_t& _calleeCount);
@@ -131,18 +131,22 @@ namespace TencentCloud
                     bool NotBeforeHasBeenSet() const;
 
                     /**
-                     * 获取End timestamp.
+                     * 获取End timestamp
+.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return NotAfter End timestamp.
+                     * @return NotAfter End timestamp
+.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetNotAfter() const;
 
                     /**
-                     * 设置End timestamp.
+                     * 设置End timestamp
+.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _notAfter End timestamp.
+                     * @param _notAfter End timestamp
+.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -177,35 +181,35 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IvrIdHasBeenSet() const;
 
                     /**
-                     * 获取Task status:
-0 Initial: Task created, calling not started
-1 Running
-2  Completed: All calls in the task are completed
-3 Ending: The task is due, but some calls are still not finished
-4 Ended: Task terminated due to expiration
-                     * @return State Task status:
-0 Initial: Task created, calling not started
-1 Running
-2  Completed: All calls in the task are completed
-3 Ending: The task is due, but some calls are still not finished
-4 Ended: Task terminated due to expiration
+                     * 获取Task status:.
+0 initial: task creation, call not started.
+1 running.
+2 completed: all calls in the task are completed.
+3 ending: the task has expired, but there are still some calls not ended.
+4 ended: task terminated due to expiration.
+                     * @return State Task status:.
+0 initial: task creation, call not started.
+1 running.
+2 completed: all calls in the task are completed.
+3 ending: the task has expired, but there are still some calls not ended.
+4 ended: task terminated due to expiration.
                      * 
                      */
                     uint64_t GetState() const;
 
                     /**
-                     * 设置Task status:
-0 Initial: Task created, calling not started
-1 Running
-2  Completed: All calls in the task are completed
-3 Ending: The task is due, but some calls are still not finished
-4 Ended: Task terminated due to expiration
-                     * @param _state Task status:
-0 Initial: Task created, calling not started
-1 Running
-2  Completed: All calls in the task are completed
-3 Ending: The task is due, but some calls are still not finished
-4 Ended: Task terminated due to expiration
+                     * 设置Task status:.
+0 initial: task creation, call not started.
+1 running.
+2 completed: all calls in the task are completed.
+3 ending: the task has expired, but there are still some calls not ended.
+4 ended: task terminated due to expiration.
+                     * @param _state Task status:.
+0 initial: task creation, call not started.
+1 running.
+2 completed: all calls in the task are completed.
+3 ending: the task has expired, but there are still some calls not ended.
+4 ended: task terminated due to expiration.
                      * 
                      */
                     void SetState(const uint64_t& _state);
@@ -218,15 +222,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool StateHasBeenSet() const;
 
                     /**
-                     * 获取Task ID.
-                     * @return TaskId Task ID.
+                     * 获取<Task id>.
+                     * @return TaskId <Task id>.
                      * 
                      */
                     uint64_t GetTaskId() const;
 
                     /**
-                     * 设置Task ID.
-                     * @param _taskId Task ID.
+                     * 设置<Task id>.
+                     * @param _taskId <Task id>.
                      * 
                      */
                     void SetTaskId(const uint64_t& _taskId);
@@ -241,13 +245,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Task Name
+                     * Task name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Number of calls.
+                     * Number of called parties.
                      */
                     uint64_t m_calleeCount;
                     bool m_calleeCountHasBeenSet;
@@ -265,7 +269,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_notBeforeHasBeenSet;
 
                     /**
-                     * End timestamp.
+                     * End timestamp
+.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_notAfter;
@@ -278,18 +283,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_ivrIdHasBeenSet;
 
                     /**
-                     * Task status:
-0 Initial: Task created, calling not started
-1 Running
-2  Completed: All calls in the task are completed
-3 Ending: The task is due, but some calls are still not finished
-4 Ended: Task terminated due to expiration
+                     * Task status:.
+0 initial: task creation, call not started.
+1 running.
+2 completed: all calls in the task are completed.
+3 ending: the task has expired, but there are still some calls not ended.
+4 ended: task terminated due to expiration.
                      */
                     uint64_t m_state;
                     bool m_stateHasBeenSet;
 
                     /**
-                     * Task ID.
+                     * <Task id>.
                      */
                     uint64_t m_taskId;
                     bool m_taskIdHasBeenSet;

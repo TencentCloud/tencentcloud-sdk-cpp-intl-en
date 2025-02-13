@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Generated task ID.
-                     * @return CampaignId Generated task ID.
+                     * 获取Generated task id.
+                     * @return CampaignId Generated task id.
                      * 
                      */
                     int64_t GetCampaignId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Generated task ID.
+                     * Generated task id.
                      */
                     int64_t m_campaignId;
                     bool m_campaignIdHasBeenSet;

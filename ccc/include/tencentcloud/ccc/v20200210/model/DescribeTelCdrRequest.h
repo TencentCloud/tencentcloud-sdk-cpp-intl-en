@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start timestamp, Unix Timestamp in Seconds. Supports up to the past 180 days.
-                     * @return StartTimeStamp Start timestamp, Unix Timestamp in Seconds. Supports up to the past 180 days.
+                     * 获取Start timestamp, unix timestamp in seconds. supports up to the past 180 days.
+                     * @return StartTimeStamp Start timestamp, unix timestamp in seconds. supports up to the past 180 days.
                      * 
                      */
                     int64_t GetStartTimeStamp() const;
 
                     /**
-                     * 设置Start timestamp, Unix Timestamp in Seconds. Supports up to the past 180 days.
-                     * @param _startTimeStamp Start timestamp, Unix Timestamp in Seconds. Supports up to the past 180 days.
+                     * 设置Start timestamp, unix timestamp in seconds. supports up to the past 180 days.
+                     * @param _startTimeStamp Start timestamp, unix timestamp in seconds. supports up to the past 180 days.
                      * 
                      */
                     void SetStartTimeStamp(const int64_t& _startTimeStamp);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool StartTimeStampHasBeenSet() const;
 
                     /**
-                     * 获取End timestamp, Unix Timestamp in Seconds. The range between the end time and start time is less than 90 days.
-                     * @return EndTimeStamp End timestamp, Unix Timestamp in Seconds. The range between the end time and start time is less than 90 days.
+                     * 获取End timestamp, unix timestamp in seconds. the range between the end time and start time is less than 90 days.
+                     * @return EndTimeStamp End timestamp, unix timestamp in seconds. the range between the end time and start time is less than 90 days.
                      * 
                      */
                     int64_t GetEndTimeStamp() const;
 
                     /**
-                     * 设置End timestamp, Unix Timestamp in Seconds. The range between the end time and start time is less than 90 days.
-                     * @param _endTimeStamp End timestamp, Unix Timestamp in Seconds. The range between the end time and start time is less than 90 days.
+                     * 设置End timestamp, unix timestamp in seconds. the range between the end time and start time is less than 90 days.
+                     * @param _endTimeStamp End timestamp, unix timestamp in seconds. the range between the end time and start time is less than 90 days.
                      * 
                      */
                     void SetEndTimeStamp(const int64_t& _endTimeStamp);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool EndTimeStampHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID (deprecated).
-                     * @return InstanceId Instance ID (deprecated).
+                     * 获取Instance id (deprecated).
+                     * @return InstanceId Instance id (deprecated).
                      * @deprecated
                      */
                     int64_t GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID (deprecated).
-                     * @param _instanceId Instance ID (deprecated).
+                     * 设置Instance id (deprecated).
+                     * @param _instanceId Instance id (deprecated).
                      * @deprecated
                      */
                     void SetInstanceId(const int64_t& _instanceId);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 获取Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
-                     * 设置Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @param _sdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 设置Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @param _sdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool PageSizeHasBeenSet() const;
 
                     /**
-                     * 获取Page number (required), starting from 0.
-                     * @return PageNumber Page number (required), starting from 0.
+                     * 获取<Page number (required), starting from 0.>.
+                     * @return PageNumber <Page number (required), starting from 0.>.
                      * 
                      */
                     int64_t GetPageNumber() const;
 
                     /**
-                     * 设置Page number (required), starting from 0.
-                     * @param _pageNumber Page number (required), starting from 0.
+                     * 设置<Page number (required), starting from 0.>.
+                     * @param _pageNumber <Page number (required), starting from 0.>.
                      * 
                      */
                     void SetPageNumber(const int64_t& _pageNumber);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool PageNumberHasBeenSet() const;
 
                     /**
-                     * 获取Filter by Phone Number.
-                     * @return Phones Filter by Phone Number.
+                     * 获取Filter by phone number.
+                     * @return Phones Filter by phone number.
                      * 
                      */
                     std::vector<std::string> GetPhones() const;
 
                     /**
-                     * 设置Filter by Phone Number.
-                     * @param _phones Filter by Phone Number.
+                     * 设置Filter by phone number.
+                     * @param _phones Filter by phone number.
                      * 
                      */
                     void SetPhones(const std::vector<std::string>& _phones);
@@ -232,15 +232,15 @@ namespace TencentCloud
                     bool PhonesHasBeenSet() const;
 
                     /**
-                     * 获取Filter by SessionId.
-                     * @return SessionIds Filter by SessionId.
+                     * 获取Filter by sessionid.
+                     * @return SessionIds Filter by sessionid.
                      * 
                      */
                     std::vector<std::string> GetSessionIds() const;
 
                     /**
-                     * 设置Filter by SessionId.
-                     * @param _sessionIds Filter by SessionId.
+                     * 设置Filter by sessionid.
+                     * @param _sessionIds Filter by sessionid.
                      * 
                      */
                     void SetSessionIds(const std::vector<std::string>& _sessionIds);
@@ -255,19 +255,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Start timestamp, Unix Timestamp in Seconds. Supports up to the past 180 days.
+                     * Start timestamp, unix timestamp in seconds. supports up to the past 180 days.
                      */
                     int64_t m_startTimeStamp;
                     bool m_startTimeStampHasBeenSet;
 
                     /**
-                     * End timestamp, Unix Timestamp in Seconds. The range between the end time and start time is less than 90 days.
+                     * End timestamp, unix timestamp in seconds. the range between the end time and start time is less than 90 days.
                      */
                     int64_t m_endTimeStamp;
                     bool m_endTimeStampHasBeenSet;
 
                     /**
-                     * Instance ID (deprecated).
+                     * Instance id (deprecated).
                      */
                     int64_t m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -285,7 +285,7 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      */
                     int64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
@@ -297,19 +297,19 @@ namespace TencentCloud
                     bool m_pageSizeHasBeenSet;
 
                     /**
-                     * Page number (required), starting from 0.
+                     * <Page number (required), starting from 0.>.
                      */
                     int64_t m_pageNumber;
                     bool m_pageNumberHasBeenSet;
 
                     /**
-                     * Filter by Phone Number.
+                     * Filter by phone number.
                      */
                     std::vector<std::string> m_phones;
                     bool m_phonesHasBeenSet;
 
                     /**
-                     * Filter by SessionId.
+                     * Filter by sessionid.
                      */
                     std::vector<std::string> m_sessionIds;
                     bool m_sessionIdsHasBeenSet;

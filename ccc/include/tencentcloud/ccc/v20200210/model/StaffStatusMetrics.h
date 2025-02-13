@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool EmailHasBeenSet() const;
 
                     /**
-                     * 获取Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
-                     * @return Status Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
+                     * 获取Agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline.
+                     * @return Status Agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
-                     * @param _status Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
+                     * 设置Agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline.
+                     * @param _status Agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Supplementary Information on Agent Status
-                     * @return StatusExtra Supplementary Information on Agent Status
+                     * 获取Supplementary information on agent status.
+                     * @return StatusExtra Supplementary information on agent status.
                      * 
                      */
                     StaffStatusExtra GetStatusExtra() const;
 
                     /**
-                     * 设置Supplementary Information on Agent Status
-                     * @param _statusExtra Supplementary Information on Agent Status
+                     * 设置Supplementary information on agent status.
+                     * @param _statusExtra Supplementary information on agent status.
                      * 
                      */
                     void SetStatusExtra(const StaffStatusExtra& _statusExtra);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool StatusExtraHasBeenSet() const;
 
                     /**
-                     * 获取Total Online duration of the day.
-                     * @return OnlineDuration Total Online duration of the day.
+                     * 获取Total online duration of the day.
+                     * @return OnlineDuration Total online duration of the day.
                      * 
                      */
                     int64_t GetOnlineDuration() const;
 
                     /**
-                     * 设置Total Online duration of the day.
-                     * @param _onlineDuration Total Online duration of the day.
+                     * 设置Total online duration of the day.
+                     * @param _onlineDuration Total online duration of the day.
                      * 
                      */
                     void SetOnlineDuration(const int64_t& _onlineDuration);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool OnlineDurationHasBeenSet() const;
 
                     /**
-                     * 获取Total Available duration of the day.
-                     * @return FreeDuration Total Available duration of the day.
+                     * 获取Total available duration of the day.
+                     * @return FreeDuration Total available duration of the day.
                      * 
                      */
                     int64_t GetFreeDuration() const;
 
                     /**
-                     * 设置Total Available duration of the day.
-                     * @param _freeDuration Total Available duration of the day.
+                     * 设置Total available duration of the day.
+                     * @param _freeDuration Total available duration of the day.
                      * 
                      */
                     void SetFreeDuration(const int64_t& _freeDuration);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool FreeDurationHasBeenSet() const;
 
                     /**
-                     * 获取Total Busy duration of the day.
-                     * @return BusyDuration Total Busy duration of the day.
+                     * 获取Total busy duration of the day.
+                     * @return BusyDuration Total busy duration of the day.
                      * 
                      */
                     int64_t GetBusyDuration() const;
 
                     /**
-                     * 设置Total Busy duration of the day.
-                     * @param _busyDuration Total Busy duration of the day.
+                     * 设置Total busy duration of the day.
+                     * @param _busyDuration Total busy duration of the day.
                      * 
                      */
                     void SetBusyDuration(const int64_t& _busyDuration);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool BusyDurationHasBeenSet() const;
 
                     /**
-                     * 获取Total Not Ready status duration of the day.
-                     * @return NotReadyDuration Total Not Ready status duration of the day.
+                     * 获取Total not ready status duration of the day.
+                     * @return NotReadyDuration Total not ready status duration of the day.
                      * 
                      */
                     int64_t GetNotReadyDuration() const;
 
                     /**
-                     * 设置Total Not Ready status duration of the day.
-                     * @param _notReadyDuration Total Not Ready status duration of the day.
+                     * 设置Total not ready status duration of the day.
+                     * @param _notReadyDuration Total not ready status duration of the day.
                      * 
                      */
                     void SetNotReadyDuration(const int64_t& _notReadyDuration);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool NotReadyDurationHasBeenSet() const;
 
                     /**
-                     * 获取Total Break duration of the day.
-                     * @return RestDuration Total Break duration of the day.
+                     * 获取Total break duration of the day.
+                     * @return RestDuration Total break duration of the day.
                      * 
                      */
                     int64_t GetRestDuration() const;
 
                     /**
-                     * 设置Total Break duration of the day.
-                     * @param _restDuration Total Break duration of the day.
+                     * 设置Total break duration of the day.
+                     * @param _restDuration Total break duration of the day.
                      * 
                      */
                     void SetRestDuration(const int64_t& _restDuration);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool RestDurationHasBeenSet() const;
 
                     /**
-                     * 获取Total After Call Work duration of the day.
-                     * @return AfterCallWorkDuration Total After Call Work duration of the day.
+                     * 获取Adjust the total duration of after-call work for the day.
+                     * @return AfterCallWorkDuration Adjust the total duration of after-call work for the day.
                      * 
                      */
                     int64_t GetAfterCallWorkDuration() const;
 
                     /**
-                     * 设置Total After Call Work duration of the day.
-                     * @param _afterCallWorkDuration Total After Call Work duration of the day.
+                     * 设置Adjust the total duration of after-call work for the day.
+                     * @param _afterCallWorkDuration Adjust the total duration of after-call work for the day.
                      * 
                      */
                     void SetAfterCallWorkDuration(const int64_t& _afterCallWorkDuration);
@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool AfterCallWorkDurationHasBeenSet() const;
 
                     /**
-                     * 获取Reason for Break.
-                     * @return Reason Reason for Break.
+                     * 获取Reason for break.
+                     * @return Reason Reason for break.
                      * 
                      */
                     std::string GetReason() const;
 
                     /**
-                     * 设置Reason for Break.
-                     * @param _reason Reason for Break.
+                     * 设置Reason for break.
+                     * @param _reason Reason for break.
                      * 
                      */
                     void SetReason(const std::string& _reason);
@@ -258,15 +258,15 @@ namespace TencentCloud
                     bool ReasonHasBeenSet() const;
 
                     /**
-                     * 获取Whether to reserve Break status.
-                     * @return ReserveRest Whether to reserve Break status.
+                     * 获取Whether to reserve break status.
+                     * @return ReserveRest Whether to reserve break status.
                      * 
                      */
                     bool GetReserveRest() const;
 
                     /**
-                     * 设置Whether to reserve Break status.
-                     * @param _reserveRest Whether to reserve Break status.
+                     * 设置Whether to reserve break status.
+                     * @param _reserveRest Whether to reserve break status.
                      * 
                      */
                     void SetReserveRest(const bool& _reserveRest);
@@ -279,15 +279,15 @@ namespace TencentCloud
                     bool ReserveRestHasBeenSet() const;
 
                     /**
-                     * 获取Whether to reserve Not Ready status.
-                     * @return ReserveNotReady Whether to reserve Not Ready status.
+                     * 获取Whether to reserve not ready status.
+                     * @return ReserveNotReady Whether to reserve not ready status.
                      * 
                      */
                     bool GetReserveNotReady() const;
 
                     /**
-                     * 设置Whether to reserve Not Ready status.
-                     * @param _reserveNotReady Whether to reserve Not Ready status.
+                     * 设置Whether to reserve not ready status.
+                     * @param _reserveNotReady Whether to reserve not ready status.
                      * 
                      */
                     void SetReserveNotReady(const bool& _reserveNotReady);
@@ -300,15 +300,15 @@ namespace TencentCloud
                     bool ReserveNotReadyHasBeenSet() const;
 
                     /**
-                     * 获取Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always.
-                     * @return UseMobileAccept Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always.
+                     * 获取Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always.
+                     * @return UseMobileAccept Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always.
                      * 
                      */
                     int64_t GetUseMobileAccept() const;
 
                     /**
-                     * 设置Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always.
-                     * @param _useMobileAccept Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always.
+                     * 设置Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always.
+                     * @param _useMobileAccept Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always.
                      * 
                      */
                     void SetUseMobileAccept(const int64_t& _useMobileAccept);
@@ -343,18 +343,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Last online timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * @return LastOnlineTimestamp Last online timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetLastOnlineTimestamp() const;
 
                     /**
                      * 设置Last online timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _lastOnlineTimestamp Last online timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLastOnlineTimestamp(const int64_t& _lastOnlineTimestamp);
@@ -368,18 +368,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Last status timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * @return LastStatusTimestamp Last status timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetLastStatusTimestamp() const;
 
                     /**
                      * 设置Last status timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _lastStatusTimestamp Last status timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLastStatusTimestamp(const int64_t& _lastStatusTimestamp);
@@ -400,73 +400,73 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_emailHasBeenSet;
 
                     /**
-                     * Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
+                     * Agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Supplementary Information on Agent Status
+                     * Supplementary information on agent status.
                      */
                     StaffStatusExtra m_statusExtra;
                     bool m_statusExtraHasBeenSet;
 
                     /**
-                     * Total Online duration of the day.
+                     * Total online duration of the day.
                      */
                     int64_t m_onlineDuration;
                     bool m_onlineDurationHasBeenSet;
 
                     /**
-                     * Total Available duration of the day.
+                     * Total available duration of the day.
                      */
                     int64_t m_freeDuration;
                     bool m_freeDurationHasBeenSet;
 
                     /**
-                     * Total Busy duration of the day.
+                     * Total busy duration of the day.
                      */
                     int64_t m_busyDuration;
                     bool m_busyDurationHasBeenSet;
 
                     /**
-                     * Total Not Ready status duration of the day.
+                     * Total not ready status duration of the day.
                      */
                     int64_t m_notReadyDuration;
                     bool m_notReadyDurationHasBeenSet;
 
                     /**
-                     * Total Break duration of the day.
+                     * Total break duration of the day.
                      */
                     int64_t m_restDuration;
                     bool m_restDurationHasBeenSet;
 
                     /**
-                     * Total After Call Work duration of the day.
+                     * Adjust the total duration of after-call work for the day.
                      */
                     int64_t m_afterCallWorkDuration;
                     bool m_afterCallWorkDurationHasBeenSet;
 
                     /**
-                     * Reason for Break.
+                     * Reason for break.
                      */
                     std::string m_reason;
                     bool m_reasonHasBeenSet;
 
                     /**
-                     * Whether to reserve Break status.
+                     * Whether to reserve break status.
                      */
                     bool m_reserveRest;
                     bool m_reserveRestHasBeenSet;
 
                     /**
-                     * Whether to reserve Not Ready status.
+                     * Whether to reserve not ready status.
                      */
                     bool m_reserveNotReady;
                     bool m_reserveNotReadyHasBeenSet;
 
                     /**
-                     * Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always.
+                     * Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always.
                      */
                     int64_t m_useMobileAccept;
                     bool m_useMobileAcceptHasBeenSet;
@@ -479,14 +479,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Last online timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_lastOnlineTimestamp;
                     bool m_lastOnlineTimestampHasBeenSet;
 
                     /**
                      * Last status timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_lastStatusTimestamp;
                     bool m_lastStatusTimestampHasBeenSet;

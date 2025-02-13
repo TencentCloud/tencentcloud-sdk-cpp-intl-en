@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Task list.
-                     * @return Tasks Task list.
+                     * 获取<Task list>.
+                     * @return Tasks <Task list>.
                      * 
                      */
                     std::vector<AutoCalloutTaskInfo> GetTasks() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Task list.
+                     * <Task list>.
                      */
                     std::vector<AutoCalloutTaskInfo> m_tasks;
                     bool m_tasksHasBeenSet;

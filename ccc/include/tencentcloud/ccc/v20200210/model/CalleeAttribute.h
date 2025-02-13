@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool CalleeHasBeenSet() const;
 
                     /**
-                     * 获取Associate data.
-                     * @return UUI Associate data.
+                     * 获取Accompanying data.
+                     * @return UUI Accompanying data.
                      * 
                      */
                     std::string GetUUI() const;
 
                     /**
-                     * 设置Associate data.
-                     * @param _uUI Associate data.
+                     * 设置Accompanying data.
+                     * @param _uUI Accompanying data.
                      * 
                      */
                     void SetUUI(const std::string& _uUI);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool UUIHasBeenSet() const;
 
                     /**
-                     * 获取Parameter
-                     * @return Variables Parameter
+                     * 获取Parameter.
+                     * @return Variables Parameter.
                      * 
                      */
                     std::vector<Variable> GetVariables() const;
 
                     /**
-                     * 设置Parameter
-                     * @param _variables Parameter
+                     * 设置Parameter.
+                     * @param _variables Parameter.
                      * 
                      */
                     void SetVariables(const std::vector<Variable>& _variables);
@@ -119,13 +119,13 @@ namespace TencentCloud
                     bool m_calleeHasBeenSet;
 
                     /**
-                     * Associate data.
+                     * Accompanying data.
                      */
                     std::string m_uUI;
                     bool m_uUIHasBeenSet;
 
                     /**
-                     * Parameter
+                     * Parameter.
                      */
                     std::vector<Variable> m_variables;
                     bool m_variablesHasBeenSet;

@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Skill Group Information List.
-                     * @return SkillGroupList Skill Group Information List.
+                     * 获取Skill group information list.
+                     * @return SkillGroupList Skill group information list.
                      * 
                      */
                     std::vector<SkillGroupInfoItem> GetSkillGroupList() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Skill Group Information List.
+                     * Skill group information list.
                      */
                     std::vector<SkillGroupInfoItem> m_skillGroupList;
                     bool m_skillGroupListHasBeenSet;

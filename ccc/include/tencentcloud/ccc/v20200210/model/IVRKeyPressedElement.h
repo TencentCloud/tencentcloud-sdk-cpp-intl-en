@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Key.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Key Key.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Hit keyword or press.
+                     * @return Key Hit keyword or press.
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置Key.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _key Key.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Hit keyword or press.
+                     * @param _key Hit keyword or press.
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -72,19 +68,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取Tag associated with key.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Label Tag associated with key.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Tag associated with the key.
+                     * @return Label Tag associated with the key.
                      * 
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置Tag associated with key.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _label Tag associated with key.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Tag associated with the key.
+                     * @param _label Tag associated with the key.
                      * 
                      */
                     void SetLabel(const std::string& _label);
@@ -96,21 +88,127 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool LabelHasBeenSet() const;
 
+                    /**
+                     * 获取UNIX millisecond timestamp.
+                     * @return Timestamp UNIX millisecond timestamp.
+                     * 
+                     */
+                    int64_t GetTimestamp() const;
+
+                    /**
+                     * 设置UNIX millisecond timestamp.
+                     * @param _timestamp UNIX millisecond timestamp.
+                     * 
+                     */
+                    void SetTimestamp(const int64_t& _timestamp);
+
+                    /**
+                     * 判断参数 Timestamp 是否已赋值
+                     * @return Timestamp 是否已赋值
+                     * 
+                     */
+                    bool TimestampHasBeenSet() const;
+
+                    /**
+                     * 获取Node tags.
+                     * @return NodeLabel Node tags.
+                     * 
+                     */
+                    std::string GetNodeLabel() const;
+
+                    /**
+                     * 设置Node tags.
+                     * @param _nodeLabel Node tags.
+                     * 
+                     */
+                    void SetNodeLabel(const std::string& _nodeLabel);
+
+                    /**
+                     * 判断参数 NodeLabel 是否已赋值
+                     * @return NodeLabel 是否已赋值
+                     * 
+                     */
+                    bool NodeLabelHasBeenSet() const;
+
+                    /**
+                     * 获取User'S original input.
+                     * @return OriginalContent User'S original input.
+                     * 
+                     */
+                    std::string GetOriginalContent() const;
+
+                    /**
+                     * 设置User'S original input.
+                     * @param _originalContent User'S original input.
+                     * 
+                     */
+                    void SetOriginalContent(const std::string& _originalContent);
+
+                    /**
+                     * 判断参数 OriginalContent 是否已赋值
+                     * @return OriginalContent 是否已赋值
+                     * 
+                     */
+                    bool OriginalContentHasBeenSet() const;
+
+                    /**
+                     * 获取TTS prompt content.
+                     * @return TTSPrompt TTS prompt content.
+                     * 
+                     */
+                    std::string GetTTSPrompt() const;
+
+                    /**
+                     * 设置TTS prompt content.
+                     * @param _tTSPrompt TTS prompt content.
+                     * 
+                     */
+                    void SetTTSPrompt(const std::string& _tTSPrompt);
+
+                    /**
+                     * 判断参数 TTSPrompt 是否已赋值
+                     * @return TTSPrompt 是否已赋值
+                     * 
+                     */
+                    bool TTSPromptHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Key.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Hit keyword or press.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * Tag associated with key.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Tag associated with the key.
                      */
                     std::string m_label;
                     bool m_labelHasBeenSet;
+
+                    /**
+                     * UNIX millisecond timestamp.
+                     */
+                    int64_t m_timestamp;
+                    bool m_timestampHasBeenSet;
+
+                    /**
+                     * Node tags.
+                     */
+                    std::string m_nodeLabel;
+                    bool m_nodeLabelHasBeenSet;
+
+                    /**
+                     * User'S original input.
+                     */
+                    std::string m_originalContent;
+                    bool m_originalContentHasBeenSet;
+
+                    /**
+                     * TTS prompt content.
+                     */
+                    std::string m_tTSPrompt;
+                    bool m_tTSPromptHasBeenSet;
 
                 };
             }

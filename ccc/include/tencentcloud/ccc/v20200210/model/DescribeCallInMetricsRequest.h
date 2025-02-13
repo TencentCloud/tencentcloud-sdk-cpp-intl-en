@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 获取Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
-                     * 设置Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @param _sdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 设置Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @param _sdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to return skill group dimension information or not (the default is "Yes").
-                     * @return EnabledSkillGroup Whether to return skill group dimension information or not (the default is "Yes").
+                     * 获取Whether to return skill group dimension information or not (the default is "yes").
+                     * @return EnabledSkillGroup Whether to return skill group dimension information or not (the default is "yes").
                      * 
                      */
                     bool GetEnabledSkillGroup() const;
 
                     /**
-                     * 设置Whether to return skill group dimension information or not (the default is "Yes").
-                     * @param _enabledSkillGroup Whether to return skill group dimension information or not (the default is "Yes").
+                     * 设置Whether to return skill group dimension information or not (the default is "yes").
+                     * @param _enabledSkillGroup Whether to return skill group dimension information or not (the default is "yes").
                      * 
                      */
                     void SetEnabledSkillGroup(const bool& _enabledSkillGroup);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool EnabledSkillGroupHasBeenSet() const;
 
                     /**
-                     * 获取Whether to return line dimension information or not (the default is "No").
-                     * @return EnabledNumber Whether to return line dimension information or not (the default is "No").
+                     * 获取Whether to return line dimension information or not (the default is "no").
+                     * @return EnabledNumber Whether to return line dimension information or not (the default is "no").
                      * 
                      */
                     bool GetEnabledNumber() const;
 
                     /**
-                     * 设置Whether to return line dimension information or not (the default is "No").
-                     * @param _enabledNumber Whether to return line dimension information or not (the default is "No").
+                     * 设置Whether to return line dimension information or not (the default is "no").
+                     * @param _enabledNumber Whether to return line dimension information or not (the default is "no").
                      * 
                      */
                     void SetEnabledNumber(const bool& _enabledNumber);
@@ -129,19 +129,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      */
                     int64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * Whether to return skill group dimension information or not (the default is "Yes").
+                     * Whether to return skill group dimension information or not (the default is "yes").
                      */
                     bool m_enabledSkillGroup;
                     bool m_enabledSkillGroupHasBeenSet;
 
                     /**
-                     * Whether to return line dimension information or not (the default is "No").
+                     * Whether to return line dimension information or not (the default is "no").
                      */
                     bool m_enabledNumber;
                     bool m_enabledNumberHasBeenSet;

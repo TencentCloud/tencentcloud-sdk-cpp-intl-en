@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool DisabledHasBeenSet() const;
 
                     /**
-                     * 获取TCCC instance application ID.
-                     * @return SdkAppId TCCC instance application ID.
+                     * 获取TCCC instance application id.
+                     * @return SdkAppId TCCC instance application id.
                      * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
-                     * 设置TCCC instance application ID.
-                     * @param _sdkAppId TCCC instance application ID.
+                     * 设置TCCC instance application id.
+                     * @param _sdkAppId TCCC instance application id.
                      * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_disabledHasBeenSet;
 
                     /**
-                     * TCCC instance application ID.
+                     * TCCC instance application id.
                      */
                     uint64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;

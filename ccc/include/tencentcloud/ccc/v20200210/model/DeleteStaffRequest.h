@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 获取Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
-                     * 设置Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @param _sdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 设置Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @param _sdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Customer service emails, supports up to 200 at a time.
-                     * @return StaffList Customer service emails, supports up to 200 at a time.
+                     * 获取List of customer service emails to be deleted, supports up to 200 at a time.
+                     * @return StaffList List of customer service emails to be deleted, supports up to 200 at a time.
                      * 
                      */
                     std::vector<std::string> GetStaffList() const;
 
                     /**
-                     * 设置Customer service emails, supports up to 200 at a time.
-                     * @param _staffList Customer service emails, supports up to 200 at a time.
+                     * 设置List of customer service emails to be deleted, supports up to 200 at a time.
+                     * @param _staffList List of customer service emails to be deleted, supports up to 200 at a time.
                      * 
                      */
                     void SetStaffList(const std::vector<std::string>& _staffList);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      */
                     int64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * Customer service emails, supports up to 200 at a time.
+                     * List of customer service emails to be deleted, supports up to 200 at a time.
                      */
                     std::vector<std::string> m_staffList;
                     bool m_staffListHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 获取Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
-                     * 设置Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @param _sdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 设置Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @param _sdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter agent list. By default, do not pass all returned agent information.
-                     * @return StaffList Filter agent list. By default, do not pass all returned agent information.
+                     * 获取Filter agent list. by default, do not pass all returned agent information.
+                     * @return StaffList Filter agent list. by default, do not pass all returned agent information.
                      * 
                      */
                     std::vector<std::string> GetStaffList() const;
 
                     /**
-                     * 设置Filter agent list. By default, do not pass all returned agent information.
-                     * @param _staffList Filter agent list. By default, do not pass all returned agent information.
+                     * 设置Filter agent list. by default, do not pass all returned agent information.
+                     * @param _staffList Filter agent list. by default, do not pass all returned agent information.
                      * 
                      */
                     void SetStaffList(const std::vector<std::string>& _staffList);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool StaffListHasBeenSet() const;
 
                     /**
-                     * 获取Filter skill group ID list.
-                     * @return GroupIdList Filter skill group ID list.
+                     * 获取Filter skill group id list.
+                     * @return GroupIdList Filter skill group id list.
                      * 
                      */
                     std::vector<int64_t> GetGroupIdList() const;
 
                     /**
-                     * 设置Filter skill group ID list.
-                     * @param _groupIdList Filter skill group ID list.
+                     * 设置Filter skill group id list.
+                     * @param _groupIdList Filter skill group id list.
                      * 
                      */
                     void SetGroupIdList(const std::vector<int64_t>& _groupIdList);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool GroupIdListHasBeenSet() const;
 
                     /**
-                     * 获取Filter agent status list Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
-                     * @return StatusList Filter agent status list Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
+                     * 获取Filter agent status list agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline . 
+                     * @return StatusList Filter agent status list agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline . 
                      * 
                      */
                     std::vector<std::string> GetStatusList() const;
 
                     /**
-                     * 设置Filter agent status list Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
-                     * @param _statusList Filter agent status list Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
+                     * 设置Filter agent status list agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline . 
+                     * @param _statusList Filter agent status list agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline . 
                      * 
                      */
                     void SetStatusList(const std::vector<std::string>& _statusList);
@@ -129,25 +129,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      */
                     int64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * Filter agent list. By default, do not pass all returned agent information.
+                     * Filter agent list. by default, do not pass all returned agent information.
                      */
                     std::vector<std::string> m_staffList;
                     bool m_staffListHasBeenSet;
 
                     /**
-                     * Filter skill group ID list.
+                     * Filter skill group id list.
                      */
                     std::vector<int64_t> m_groupIdList;
                     bool m_groupIdListHasBeenSet;
 
                     /**
-                     * Filter agent status list Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
+                     * Filter agent status list agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline . 
                      */
                     std::vector<std::string> m_statusList;
                     bool m_statusListHasBeenSet;

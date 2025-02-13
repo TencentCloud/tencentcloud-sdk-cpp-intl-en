@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool NumberHasBeenSet() const;
 
                     /**
-                     * 获取Line-related metrics.
-                     * @return Metrics Line-related metrics.
+                     * 获取Line-Related metrics.
+                     * @return Metrics Line-Related metrics.
                      * 
                      */
                     CallInMetrics GetMetrics() const;
 
                     /**
-                     * 设置Line-related metrics.
-                     * @param _metrics Line-related metrics.
+                     * 设置Line-Related metrics.
+                     * @param _metrics Line-Related metrics.
                      * 
                      */
                     void SetMetrics(const CallInMetrics& _metrics);
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_numberHasBeenSet;
 
                     /**
-                     * Line-related metrics.
+                     * Line-Related metrics.
                      */
                     CallInMetrics m_metrics;
                     bool m_metricsHasBeenSet;

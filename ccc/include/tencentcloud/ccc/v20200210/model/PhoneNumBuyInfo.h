@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Telephone Number
-                     * @return PhoneNum Telephone Number
+                     * 获取Telephone number.
+                     * @return PhoneNum Telephone number.
                      * 
                      */
                     std::string GetPhoneNum() const;
 
                     /**
-                     * 设置Telephone Number
-                     * @param _phoneNum Telephone Number
+                     * 设置Telephone number.
+                     * @param _phoneNum Telephone number.
                      * 
                      */
                     void SetPhoneNum(const std::string& _phoneNum);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool PhoneNumHasBeenSet() const;
 
                     /**
-                     * 获取Number type, 0 - Landline | 1 - Virtual Business Number | 2 - ISP Number | 3 - 400 Number.
-                     * @return Type Number type, 0 - Landline | 1 - Virtual Business Number | 2 - ISP Number | 3 - 400 Number.
+                     * 获取Number type, 0 - landline | 1 - virtual business number | 2 - ISP number | 3 - 400 number.
+                     * @return Type Number type, 0 - landline | 1 - virtual business number | 2 - ISP number | 3 - 400 number.
                      * 
                      */
                     int64_t GetType() const;
 
                     /**
-                     * 设置Number type, 0 - Landline | 1 - Virtual Business Number | 2 - ISP Number | 3 - 400 Number.
-                     * @param _type Number type, 0 - Landline | 1 - Virtual Business Number | 2 - ISP Number | 3 - 400 Number.
+                     * 设置Number type, 0 - landline | 1 - virtual business number | 2 - ISP number | 3 - 400 number.
+                     * @param _type Number type, 0 - landline | 1 - virtual business number | 2 - ISP number | 3 - 400 number.
                      * 
                      */
                     void SetType(const int64_t& _type);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Call type of the number, 1 - Inbound | 2 - Outbound | 3 - Inbound and outbound.
-                     * @return CallType Call type of the number, 1 - Inbound | 2 - Outbound | 3 - Inbound and outbound.
+                     * 获取Call type of the number, 1 - inbound | 2 - outbound | 3 - inbound and outbound.
+                     * @return CallType Call type of the number, 1 - inbound | 2 - outbound | 3 - inbound and outbound.
                      * 
                      */
                     int64_t GetCallType() const;
 
                     /**
-                     * 设置Call type of the number, 1 - Inbound | 2 - Outbound | 3 - Inbound and outbound.
-                     * @param _callType Call type of the number, 1 - Inbound | 2 - Outbound | 3 - Inbound and outbound.
+                     * 设置Call type of the number, 1 - inbound | 2 - outbound | 3 - inbound and outbound.
+                     * @param _callType Call type of the number, 1 - inbound | 2 - outbound | 3 - inbound and outbound.
                      * 
                      */
                     void SetCallType(const int64_t& _callType);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool BuyTimeHasBeenSet() const;
 
                     /**
-                     * 获取End timestamp.
-                     * @return EndTime End timestamp.
+                     * 获取Deadline timestamp.
+                     * @return EndTime Deadline timestamp.
                      * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
-                     * 设置End timestamp.
-                     * @param _endTime End timestamp.
+                     * 设置Deadline timestamp.
+                     * @param _endTime Deadline timestamp.
                      * 
                      */
                     void SetEndTime(const int64_t& _endTime);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Number status, 1-Normal | 2-Suspended due to non-payment | 4-Admin suspended | 5-Suspended due to violation.
-                     * @return State Number status, 1-Normal | 2-Suspended due to non-payment | 4-Admin suspended | 5-Suspended due to violation.
+                     * 获取Number status, 1-normal | 2-suspended due to non-payment | 4-admin suspended | 5-suspended due to violation.
+                     * @return State Number status, 1-normal | 2-suspended due to non-payment | 4-admin suspended | 5-suspended due to violation.
                      * 
                      */
                     int64_t GetState() const;
 
                     /**
-                     * 设置Number status, 1-Normal | 2-Suspended due to non-payment | 4-Admin suspended | 5-Suspended due to violation.
-                     * @param _state Number status, 1-Normal | 2-Suspended due to non-payment | 4-Admin suspended | 5-Suspended due to violation.
+                     * 设置Number status, 1-normal | 2-suspended due to non-payment | 4-admin suspended | 5-suspended due to violation.
+                     * @param _state Number status, 1-normal | 2-suspended due to non-payment | 4-admin suspended | 5-suspended due to violation.
                      * 
                      */
                     void SetState(const int64_t& _state);
@@ -175,19 +175,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Telephone Number
+                     * Telephone number.
                      */
                     std::string m_phoneNum;
                     bool m_phoneNumHasBeenSet;
 
                     /**
-                     * Number type, 0 - Landline | 1 - Virtual Business Number | 2 - ISP Number | 3 - 400 Number.
+                     * Number type, 0 - landline | 1 - virtual business number | 2 - ISP number | 3 - 400 number.
                      */
                     int64_t m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Call type of the number, 1 - Inbound | 2 - Outbound | 3 - Inbound and outbound.
+                     * Call type of the number, 1 - inbound | 2 - outbound | 3 - inbound and outbound.
                      */
                     int64_t m_callType;
                     bool m_callTypeHasBeenSet;
@@ -199,13 +199,13 @@ namespace TencentCloud
                     bool m_buyTimeHasBeenSet;
 
                     /**
-                     * End timestamp.
+                     * Deadline timestamp.
                      */
                     int64_t m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Number status, 1-Normal | 2-Suspended due to non-payment | 4-Admin suspended | 5-Suspended due to violation.
+                     * Number status, 1-normal | 2-suspended due to non-payment | 4-admin suspended | 5-suspended due to violation.
                      */
                     int64_t m_state;
                     bool m_stateHasBeenSet;

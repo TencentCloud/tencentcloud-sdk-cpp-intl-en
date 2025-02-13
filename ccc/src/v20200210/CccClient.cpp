@@ -212,6 +212,49 @@ CccClient::BindStaffSkillGroupListOutcomeCallable CccClient::BindStaffSkillGroup
     return task->get_future();
 }
 
+CccClient::CreateAIAgentCallOutcome CccClient::CreateAIAgentCall(const CreateAIAgentCallRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateAIAgentCall");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateAIAgentCallResponse rsp = CreateAIAgentCallResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateAIAgentCallOutcome(rsp);
+        else
+            return CreateAIAgentCallOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateAIAgentCallOutcome(outcome.GetError());
+    }
+}
+
+void CccClient::CreateAIAgentCallAsync(const CreateAIAgentCallRequest& request, const CreateAIAgentCallAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateAIAgentCall(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CccClient::CreateAIAgentCallOutcomeCallable CccClient::CreateAIAgentCallCallable(const CreateAIAgentCallRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateAIAgentCallOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateAIAgentCall(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CccClient::CreateAICallOutcome CccClient::CreateAICall(const CreateAICallRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateAICall");
@@ -556,6 +599,49 @@ CccClient::CreateIVRSessionOutcomeCallable CccClient::CreateIVRSessionCallable(c
     return task->get_future();
 }
 
+CccClient::CreateOwnNumberApplyOutcome CccClient::CreateOwnNumberApply(const CreateOwnNumberApplyRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateOwnNumberApply");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateOwnNumberApplyResponse rsp = CreateOwnNumberApplyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateOwnNumberApplyOutcome(rsp);
+        else
+            return CreateOwnNumberApplyOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateOwnNumberApplyOutcome(outcome.GetError());
+    }
+}
+
+void CccClient::CreateOwnNumberApplyAsync(const CreateOwnNumberApplyRequest& request, const CreateOwnNumberApplyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateOwnNumberApply(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CccClient::CreateOwnNumberApplyOutcomeCallable CccClient::CreateOwnNumberApplyCallable(const CreateOwnNumberApplyRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateOwnNumberApplyOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateOwnNumberApply(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CccClient::CreatePredictiveDialingCampaignOutcome CccClient::CreatePredictiveDialingCampaign(const CreatePredictiveDialingCampaignRequest &request)
 {
     auto outcome = MakeRequest(request, "CreatePredictiveDialingCampaign");
@@ -807,6 +893,49 @@ CccClient::DeleteStaffOutcomeCallable CccClient::DeleteStaffCallable(const Delet
         [this, request]()
         {
             return this->DeleteStaff(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CccClient::DescribeAICallExtractResultOutcome CccClient::DescribeAICallExtractResult(const DescribeAICallExtractResultRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAICallExtractResult");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAICallExtractResultResponse rsp = DescribeAICallExtractResultResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAICallExtractResultOutcome(rsp);
+        else
+            return DescribeAICallExtractResultOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAICallExtractResultOutcome(outcome.GetError());
+    }
+}
+
+void CccClient::DescribeAICallExtractResultAsync(const DescribeAICallExtractResultRequest& request, const DescribeAICallExtractResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeAICallExtractResult(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CccClient::DescribeAICallExtractResultOutcomeCallable CccClient::DescribeAICallExtractResultCallable(const DescribeAICallExtractResultRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeAICallExtractResultOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeAICallExtractResult(request);
         }
     );
 
@@ -1631,6 +1760,49 @@ CccClient::DescribeTelCdrOutcomeCallable CccClient::DescribeTelCdrCallable(const
     return task->get_future();
 }
 
+CccClient::DescribeTelRecordAsrOutcome CccClient::DescribeTelRecordAsr(const DescribeTelRecordAsrRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeTelRecordAsr");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeTelRecordAsrResponse rsp = DescribeTelRecordAsrResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeTelRecordAsrOutcome(rsp);
+        else
+            return DescribeTelRecordAsrOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeTelRecordAsrOutcome(outcome.GetError());
+    }
+}
+
+void CccClient::DescribeTelRecordAsrAsync(const DescribeTelRecordAsrRequest& request, const DescribeTelRecordAsrAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeTelRecordAsr(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CccClient::DescribeTelRecordAsrOutcomeCallable CccClient::DescribeTelRecordAsrCallable(const DescribeTelRecordAsrRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeTelRecordAsrOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeTelRecordAsr(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CccClient::DescribeTelSessionOutcome CccClient::DescribeTelSession(const DescribeTelSessionRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeTelSession");
@@ -1796,6 +1968,49 @@ CccClient::ModifyExtensionOutcomeCallable CccClient::ModifyExtensionCallable(con
         [this, request]()
         {
             return this->ModifyExtension(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CccClient::ModifyOwnNumberApplyOutcome CccClient::ModifyOwnNumberApply(const ModifyOwnNumberApplyRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyOwnNumberApply");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyOwnNumberApplyResponse rsp = ModifyOwnNumberApplyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyOwnNumberApplyOutcome(rsp);
+        else
+            return ModifyOwnNumberApplyOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyOwnNumberApplyOutcome(outcome.GetError());
+    }
+}
+
+void CccClient::ModifyOwnNumberApplyAsync(const ModifyOwnNumberApplyRequest& request, const ModifyOwnNumberApplyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyOwnNumberApply(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CccClient::ModifyOwnNumberApplyOutcomeCallable CccClient::ModifyOwnNumberApplyCallable(const ModifyOwnNumberApplyRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyOwnNumberApplyOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyOwnNumberApply(request);
         }
     );
 

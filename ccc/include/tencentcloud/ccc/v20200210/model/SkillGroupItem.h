@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Skill group ID.
-                     * @return SkillGroupId Skill group ID.
+                     * 获取Skill group id.
+                     * @return SkillGroupId Skill group id.
                      * 
                      */
                     int64_t GetSkillGroupId() const;
 
                     /**
-                     * 设置Skill group ID.
-                     * @param _skillGroupId Skill group ID.
+                     * 设置Skill group id.
+                     * @param _skillGroupId Skill group id.
                      * 
                      */
                     void SetSkillGroupId(const int64_t& _skillGroupId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool SkillGroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Priority
-                     * @return Priority Priority
+                     * 获取Priority.
+                     * @return Priority Priority.
                      * 
                      */
                     int64_t GetPriority() const;
 
                     /**
-                     * 设置Priority
-                     * @param _priority Priority
+                     * 设置Priority.
+                     * @param _priority Priority.
                      * 
                      */
                     void SetPriority(const int64_t& _priority);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool PriorityHasBeenSet() const;
 
                     /**
-                     * 获取Type: IM, TEL, ALL (full media).
-                     * @return Type Type: IM, TEL, ALL (full media).
+                     * 获取Type: im, tel, all (full media).
+                     * @return Type Type: im, tel, all (full media).
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Type: IM, TEL, ALL (full media).
-                     * @param _type Type: IM, TEL, ALL (full media).
+                     * 设置Type: im, tel, all (full media).
+                     * @param _type Type: im, tel, all (full media).
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -133,7 +133,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Skill group ID.
+                     * Skill group id.
                      */
                     int64_t m_skillGroupId;
                     bool m_skillGroupIdHasBeenSet;
@@ -145,13 +145,13 @@ namespace TencentCloud
                     bool m_skillGroupNameHasBeenSet;
 
                     /**
-                     * Priority
+                     * Priority.
                      */
                     int64_t m_priority;
                     bool m_priorityHasBeenSet;
 
                     /**
-                     * Type: IM, TEL, ALL (full media).
+                     * Type: im, tel, all (full media).
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

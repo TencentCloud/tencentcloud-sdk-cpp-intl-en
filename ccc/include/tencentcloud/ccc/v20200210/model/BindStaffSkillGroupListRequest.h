@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 获取Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
-                     * 设置Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @param _sdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 设置Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @param _sdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool StaffEmailHasBeenSet() const;
 
                     /**
-                     * 获取Bound skill group list
-                     * @return SkillGroupList Bound skill group list
+                     * 获取Bound skill group list.
+                     * @return SkillGroupList Bound skill group list.
                      * @deprecated
                      */
                     std::vector<int64_t> GetSkillGroupList() const;
 
                     /**
-                     * 设置Bound skill group list
-                     * @param _skillGroupList Bound skill group list
+                     * 设置Bound skill group list.
+                     * @param _skillGroupList Bound skill group list.
                      * @deprecated
                      */
                     void SetSkillGroupList(const std::vector<int64_t>& _skillGroupList);
@@ -130,7 +130,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      */
                     int64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
@@ -142,7 +142,7 @@ namespace TencentCloud
                     bool m_staffEmailHasBeenSet;
 
                     /**
-                     * Bound skill group list
+                     * Bound skill group list.
                      */
                     std::vector<int64_t> m_skillGroupList;
                     bool m_skillGroupListHasBeenSet;

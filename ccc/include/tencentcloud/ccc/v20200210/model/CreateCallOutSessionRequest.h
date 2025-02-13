@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application ID
-                     * @return SdkAppId Application ID
+                     * 获取Application id.
+                     * @return SdkAppId Application id.
                      * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
-                     * 设置Application ID
-                     * @param _sdkAppId Application ID
+                     * 设置Application id.
+                     * @param _sdkAppId Application id.
                      * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Customer Service User ID usually refers to the customer service email.
-                     * @return UserId Customer Service User ID usually refers to the customer service email.
+                     * 获取Customer service user id usually refers to the customer service email.
+                     * @return UserId Customer service user id usually refers to the customer service email.
                      * 
                      */
                     std::string GetUserId() const;
 
                     /**
-                     * 设置Customer Service User ID usually refers to the customer service email.
-                     * @param _userId Customer Service User ID usually refers to the customer service email.
+                     * 设置Customer service user id usually refers to the customer service email.
+                     * @param _userId Customer service user id usually refers to the customer service email.
                      * 
                      */
                     void SetUserId(const std::string& _userId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool CalleeHasBeenSet() const;
 
                     /**
-                     * 获取Caller number (obsolete one and use Callers) must be preceded by 0086.
-                     * @return Caller Caller number (obsolete one and use Callers) must be preceded by 0086.
+                     * 获取Caller number (obsolete one and use callers) must be preceded by 0086.
+                     * @return Caller Caller number (obsolete one and use callers) must be preceded by 0086.
                      * 
                      */
                     std::string GetCaller() const;
 
                     /**
-                     * 设置Caller number (obsolete one and use Callers) must be preceded by 0086.
-                     * @param _caller Caller number (obsolete one and use Callers) must be preceded by 0086.
+                     * 设置Caller number (obsolete one and use callers) must be preceded by 0086.
+                     * @param _caller Caller number (obsolete one and use callers) must be preceded by 0086.
                      * 
                      */
                     void SetCaller(const std::string& _caller);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool CallerHasBeenSet() const;
 
                     /**
-                     * 获取Designated caller number list. If the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
-                     * @return Callers Designated caller number list. If the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
+                     * 获取Designated caller number list. if the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
+                     * @return Callers Designated caller number list. if the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
                      * 
                      */
                     std::vector<std::string> GetCallers() const;
 
                     /**
-                     * 设置Designated caller number list. If the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
-                     * @param _callers Designated caller number list. If the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
+                     * 设置Designated caller number list. if the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
+                     * @param _callers Designated caller number list. if the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
                      * 
                      */
                     void SetCallers(const std::vector<std::string>& _callers);
@@ -213,13 +213,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Application ID
+                     * Application id.
                      */
                     uint64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * Customer Service User ID usually refers to the customer service email.
+                     * Customer service user id usually refers to the customer service email.
                      */
                     std::string m_userId;
                     bool m_userIdHasBeenSet;
@@ -231,13 +231,13 @@ namespace TencentCloud
                     bool m_calleeHasBeenSet;
 
                     /**
-                     * Caller number (obsolete one and use Callers) must be preceded by 0086.
+                     * Caller number (obsolete one and use callers) must be preceded by 0086.
                      */
                     std::string m_caller;
                     bool m_callerHasBeenSet;
 
                     /**
-                     * Designated caller number list. If the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
+                     * Designated caller number list. if the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
                      */
                     std::vector<std::string> m_callers;
                     bool m_callersHasBeenSet;

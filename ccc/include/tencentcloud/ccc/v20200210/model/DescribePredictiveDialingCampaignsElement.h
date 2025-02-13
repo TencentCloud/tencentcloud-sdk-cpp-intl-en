@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task ID
-Note: This field may return null if no valid value is obtained.
-                     * @return CampaignId Task ID
-Note: This field may return null if no valid value is obtained.
+                     * 获取<Task id>.
+                     * @return CampaignId <Task id>.
                      * 
                      */
                     int64_t GetCampaignId() const;
 
                     /**
-                     * 设置Task ID
-Note: This field may return null if no valid value is obtained.
-                     * @param _campaignId Task ID
-Note: This field may return null if no valid value is obtained.
+                     * 设置<Task id>.
+                     * @param _campaignId <Task id>.
                      * 
                      */
                     void SetCampaignId(const int64_t& _campaignId);
@@ -72,19 +68,15 @@ Note: This field may return null if no valid value is obtained.
                     bool CampaignIdHasBeenSet() const;
 
                     /**
-                     * 获取Task Name
-Note: This field might return null if no valid values can be obtained.
-                     * @return Name Task Name
-Note: This field might return null if no valid values can be obtained.
+                     * 获取Task name.
+                     * @return Name Task name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Task Name
-Note: This field might return null if no valid values can be obtained.
-                     * @param _name Task Name
-Note: This field might return null if no valid values can be obtained.
+                     * 设置Task name.
+                     * @param _name Task name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -97,19 +89,15 @@ Note: This field might return null if no valid values can be obtained.
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Task status 0 - Ready to start, 1 - In progress, 2 - Paused, 3 - Terminated, 4 - Completed.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Status Task status 0 - Ready to start, 1 - In progress, 2 - Paused, 3 - Terminated, 4 - Completed.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Task status 0 - ready to start, 1 - in progress, 2 - paused, 3 - terminated, 4 - completed.
+                     * @return Status Task status 0 - ready to start, 1 - in progress, 2 - paused, 3 - terminated, 4 - completed.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Task status 0 - Ready to start, 1 - In progress, 2 - Paused, 3 - Terminated, 4 - Completed.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _status Task status 0 - Ready to start, 1 - In progress, 2 - Paused, 3 - Terminated, 4 - Completed.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Task status 0 - ready to start, 1 - in progress, 2 - paused, 3 - terminated, 4 - completed.
+                     * @param _status Task status 0 - ready to start, 1 - in progress, 2 - paused, 3 - terminated, 4 - completed.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -122,19 +110,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Task status reasons 0 - Normal, 1 - Manually ended, 2 - Ended due to overtime.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return StatusReason Task status reasons 0 - Normal, 1 - Manually ended, 2 - Ended due to overtime.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Task status reasons 0 - normal, 1 - manually ended, 2 - ended due to overtime.
+                     * @return StatusReason Task status reasons 0 - normal, 1 - manually ended, 2 - ended due to overtime.
                      * 
                      */
                     int64_t GetStatusReason() const;
 
                     /**
-                     * 设置Task status reasons 0 - Normal, 1 - Manually ended, 2 - Ended due to overtime.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _statusReason Task status reasons 0 - Normal, 1 - Manually ended, 2 - Ended due to overtime.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Task status reasons 0 - normal, 1 - manually ended, 2 - ended due to overtime.
+                     * @param _statusReason Task status reasons 0 - normal, 1 - manually ended, 2 - ended due to overtime.
                      * 
                      */
                     void SetStatusReason(const int64_t& _statusReason);
@@ -148,18 +132,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of called numbers.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CalleeCount Number of called numbers.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetCalleeCount() const;
 
                     /**
                      * 设置Number of called numbers.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _calleeCount Number of called numbers.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCalleeCount(const int64_t& _calleeCount);
@@ -173,18 +153,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of completed calls.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FinishedCalleeCount Number of completed calls.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetFinishedCalleeCount() const;
 
                     /**
                      * 设置Number of completed calls.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _finishedCalleeCount Number of completed calls.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFinishedCalleeCount(const int64_t& _finishedCalleeCount);
@@ -198,18 +174,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Running priority of multiple tasks in the same application, from high to low 1 - 5.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Priority Running priority of multiple tasks in the same application, from high to low 1 - 5.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetPriority() const;
 
                     /**
                      * 设置Running priority of multiple tasks in the same application, from high to low 1 - 5.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _priority Running priority of multiple tasks in the same application, from high to low 1 - 5.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPriority(const int64_t& _priority);
@@ -223,18 +195,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取ID of the used skill group of agents.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SkillGroupId ID of the used skill group of agents.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetSkillGroupId() const;
 
                     /**
                      * 设置ID of the used skill group of agents.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _skillGroupId ID of the used skill group of agents.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSkillGroupId(const int64_t& _skillGroupId);
@@ -249,57 +217,49 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Task ID
-Note: This field may return null if no valid value is obtained.
+                     * <Task id>.
                      */
                     int64_t m_campaignId;
                     bool m_campaignIdHasBeenSet;
 
                     /**
-                     * Task Name
-Note: This field might return null if no valid values can be obtained.
+                     * Task name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Task status 0 - Ready to start, 1 - In progress, 2 - Paused, 3 - Terminated, 4 - Completed.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Task status 0 - ready to start, 1 - in progress, 2 - paused, 3 - terminated, 4 - completed.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Task status reasons 0 - Normal, 1 - Manually ended, 2 - Ended due to overtime.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Task status reasons 0 - normal, 1 - manually ended, 2 - ended due to overtime.
                      */
                     int64_t m_statusReason;
                     bool m_statusReasonHasBeenSet;
 
                     /**
                      * Number of called numbers.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_calleeCount;
                     bool m_calleeCountHasBeenSet;
 
                     /**
                      * Number of completed calls.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_finishedCalleeCount;
                     bool m_finishedCalleeCountHasBeenSet;
 
                     /**
                      * Running priority of multiple tasks in the same application, from high to low 1 - 5.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_priority;
                     bool m_priorityHasBeenSet;
 
                     /**
                      * ID of the used skill group of agents.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_skillGroupId;
                     bool m_skillGroupIdHasBeenSet;

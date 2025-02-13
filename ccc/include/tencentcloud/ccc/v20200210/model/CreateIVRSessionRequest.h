@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 获取Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
-                     * 设置Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @param _sdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 设置Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @param _sdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool CalleeHasBeenSet() const;
 
                     /**
-                     * 获取Specified IVR Id. Currently, it supports inbound and automatic outbound types
-                     * @return IVRId Specified IVR Id. Currently, it supports inbound and automatic outbound types
+                     * 获取Specified ivr id. currently, it supports inbound and automatic outbound types.
+                     * @return IVRId Specified ivr id. currently, it supports inbound and automatic outbound types.
                      * 
                      */
                     int64_t GetIVRId() const;
 
                     /**
-                     * 设置Specified IVR Id. Currently, it supports inbound and automatic outbound types
-                     * @param _iVRId Specified IVR Id. Currently, it supports inbound and automatic outbound types
+                     * 设置Specified ivr id. currently, it supports inbound and automatic outbound types.
+                     * @param _iVRId Specified ivr id. currently, it supports inbound and automatic outbound types.
                      * 
                      */
                     void SetIVRId(const int64_t& _iVRId);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool CallersHasBeenSet() const;
 
                     /**
-                     * 获取Custom variable
-                     * @return Variables Custom variable
+                     * 获取Custom variable.
+                     * @return Variables Custom variable.
                      * 
                      */
                     std::vector<Variable> GetVariables() const;
 
                     /**
-                     * 设置Custom variable
-                     * @param _variables Custom variable
+                     * 设置Custom variable.
+                     * @param _variables Custom variable.
                      * 
                      */
                     void SetVariables(const std::vector<Variable>& _variables);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool VariablesHasBeenSet() const;
 
                     /**
-                     * 获取User Data
-                     * @return UUI User Data
+                     * 获取User data.
+                     * @return UUI User data.
                      * 
                      */
                     std::string GetUUI() const;
 
                     /**
-                     * 设置User Data
-                     * @param _uUI User Data
+                     * 设置User data.
+                     * @param _uUI User data.
                      * 
                      */
                     void SetUUI(const std::string& _uUI);
@@ -172,7 +172,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      */
                     int64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
@@ -184,7 +184,7 @@ namespace TencentCloud
                     bool m_calleeHasBeenSet;
 
                     /**
-                     * Specified IVR Id. Currently, it supports inbound and automatic outbound types
+                     * Specified ivr id. currently, it supports inbound and automatic outbound types.
                      */
                     int64_t m_iVRId;
                     bool m_iVRIdHasBeenSet;
@@ -196,13 +196,13 @@ namespace TencentCloud
                     bool m_callersHasBeenSet;
 
                     /**
-                     * Custom variable
+                     * Custom variable.
                      */
                     std::vector<Variable> m_variables;
                     bool m_variablesHasBeenSet;
 
                     /**
-                     * User Data
+                     * User data.
                      */
                     std::string m_uUI;
                     bool m_uUIHasBeenSet;

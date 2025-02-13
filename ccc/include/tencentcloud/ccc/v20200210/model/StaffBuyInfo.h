@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of agents purchased
-                     * @return Num Number of agents purchased
+                     * 获取Number of agents purchased.
+                     * @return Num Number of agents purchased.
                      * 
                      */
                     int64_t GetNum() const;
 
                     /**
-                     * 设置Number of agents purchased
-                     * @param _num Number of agents purchased
+                     * 设置Number of agents purchased.
+                     * @param _num Number of agents purchased.
                      * 
                      */
                     void SetNum(const int64_t& _num);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool BuyTimeHasBeenSet() const;
 
                     /**
-                     * 获取End timestamp.
-                     * @return EndTime End timestamp.
+                     * 获取Deadline timestamp.
+                     * @return EndTime Deadline timestamp.
                      * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
-                     * 设置End timestamp.
-                     * @param _endTime End timestamp.
+                     * 设置Deadline timestamp.
+                     * @param _endTime Deadline timestamp.
                      * 
                      */
                     void SetEndTime(const int64_t& _endTime);
@@ -110,19 +110,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Number of office telephones purchased.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SipNum Number of office telephones purchased.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Quantity of office telephones purchased.
+                     * @return SipNum Quantity of office telephones purchased.
                      * 
                      */
                     int64_t GetSipNum() const;
 
                     /**
-                     * 设置Number of office telephones purchased.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _sipNum Number of office telephones purchased.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Quantity of office telephones purchased.
+                     * @param _sipNum Quantity of office telephones purchased.
                      * 
                      */
                     void SetSipNum(const int64_t& _sipNum);
@@ -137,7 +133,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Number of agents purchased
+                     * Number of agents purchased.
                      */
                     int64_t m_num;
                     bool m_numHasBeenSet;
@@ -149,14 +145,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_buyTimeHasBeenSet;
 
                     /**
-                     * End timestamp.
+                     * Deadline timestamp.
                      */
                     int64_t m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Number of office telephones purchased.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Quantity of office telephones purchased.
                      */
                     int64_t m_sipNum;
                     bool m_sipNumHasBeenSet;

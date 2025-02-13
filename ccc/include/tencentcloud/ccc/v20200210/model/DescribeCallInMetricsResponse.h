@@ -76,9 +76,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Circuit dimension metrics.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return NumberMetrics Circuit dimension metrics.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<CallInNumberMetrics> GetNumberMetrics() const;
@@ -91,10 +89,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool NumberMetricsHasBeenSet() const;
 
                     /**
-                     * 获取Skill group dimension metrics
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SkillGroupMetrics Skill group dimension metrics
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Skill group dimension metrics.
+                     * @return SkillGroupMetrics Skill group dimension metrics.
                      * 
                      */
                     std::vector<CallInSkillGroupMetrics> GetSkillGroupMetrics() const;
@@ -122,14 +118,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Circuit dimension metrics.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<CallInNumberMetrics> m_numberMetrics;
                     bool m_numberMetricsHasBeenSet;
 
                     /**
-                     * Skill group dimension metrics
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Skill group dimension metrics.
                      */
                     std::vector<CallInSkillGroupMetrics> m_skillGroupMetrics;
                     bool m_skillGroupMetricsHasBeenSet;

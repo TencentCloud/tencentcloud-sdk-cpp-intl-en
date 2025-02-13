@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application ID (required).
-                     * @return SdkAppId Application ID (required).
+                     * 获取Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
-                     * 设置Application ID (required).
-                     * @param _sdkAppId Application ID (required).
+                     * 设置Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @param _sdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SkillGroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Skill group type 0-Cell phone, 1-Online, 3-Audio, 4-Video.
-                     * @return SkillGroupType Skill group type 0-Cell phone, 1-Online, 3-Audio, 4-Video.
+                     * 获取Skill group type 0-cell phone, 1-online, 3-audio, 4-video.
+                     * @return SkillGroupType Skill group type 0-cell phone, 1-online, 3-audio, 4-video.
                      * 
                      */
                     int64_t GetSkillGroupType() const;
 
                     /**
-                     * 设置Skill group type 0-Cell phone, 1-Online, 3-Audio, 4-Video.
-                     * @param _skillGroupType Skill group type 0-Cell phone, 1-Online, 3-Audio, 4-Video.
+                     * 设置Skill group type 0-cell phone, 1-online, 3-audio, 4-video.
+                     * @param _skillGroupType Skill group type 0-cell phone, 1-online, 3-audio, 4-video.
                      * 
                      */
                     void SetSkillGroupType(const int64_t& _skillGroupType);
@@ -106,19 +106,19 @@ namespace TencentCloud
                     bool SkillGroupTypeHasBeenSet() const;
 
                     /**
-                     * 获取The maximum number of people received by the skill group (the maximum number of people that one seat in this skill group can receive) is set to 1 by default. 1. If the skill group type is online, the maximum could be set to one and above.
-2. If the skill group type is phone, audio, or video, then the maximum must be 1
-                     * @return MaxConcurrency The maximum number of people received by the skill group (the maximum number of people that one seat in this skill group can receive) is set to 1 by default. 1. If the skill group type is online, the maximum could be set to one and above.
-2. If the skill group type is phone, audio, or video, then the maximum must be 1
+                     * 获取The maximum number of people received by the skill group (the maximum number of people that one agent in this skill group can receive) is set to 1 by default. if the skill group type is online, the maximum can be set to one or more.
+2. if the skill group type is phone, audio, or video, then the reception limit must be 1.
+                     * @return MaxConcurrency The maximum number of people received by the skill group (the maximum number of people that one agent in this skill group can receive) is set to 1 by default. if the skill group type is online, the maximum can be set to one or more.
+2. if the skill group type is phone, audio, or video, then the reception limit must be 1.
                      * 
                      */
                     uint64_t GetMaxConcurrency() const;
 
                     /**
-                     * 设置The maximum number of people received by the skill group (the maximum number of people that one seat in this skill group can receive) is set to 1 by default. 1. If the skill group type is online, the maximum could be set to one and above.
-2. If the skill group type is phone, audio, or video, then the maximum must be 1
-                     * @param _maxConcurrency The maximum number of people received by the skill group (the maximum number of people that one seat in this skill group can receive) is set to 1 by default. 1. If the skill group type is online, the maximum could be set to one and above.
-2. If the skill group type is phone, audio, or video, then the maximum must be 1
+                     * 设置The maximum number of people received by the skill group (the maximum number of people that one agent in this skill group can receive) is set to 1 by default. if the skill group type is online, the maximum can be set to one or more.
+2. if the skill group type is phone, audio, or video, then the reception limit must be 1.
+                     * @param _maxConcurrency The maximum number of people received by the skill group (the maximum number of people that one agent in this skill group can receive) is set to 1 by default. if the skill group type is online, the maximum can be set to one or more.
+2. if the skill group type is phone, audio, or video, then the reception limit must be 1.
                      * 
                      */
                     void SetMaxConcurrency(const uint64_t& _maxConcurrency);
@@ -133,7 +133,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Application ID (required).
+                     * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      */
                     int64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
@@ -145,14 +145,14 @@ namespace TencentCloud
                     bool m_skillGroupNameHasBeenSet;
 
                     /**
-                     * Skill group type 0-Cell phone, 1-Online, 3-Audio, 4-Video.
+                     * Skill group type 0-cell phone, 1-online, 3-audio, 4-video.
                      */
                     int64_t m_skillGroupType;
                     bool m_skillGroupTypeHasBeenSet;
 
                     /**
-                     * The maximum number of people received by the skill group (the maximum number of people that one seat in this skill group can receive) is set to 1 by default. 1. If the skill group type is online, the maximum could be set to one and above.
-2. If the skill group type is phone, audio, or video, then the maximum must be 1
+                     * The maximum number of people received by the skill group (the maximum number of people that one agent in this skill group can receive) is set to 1 by default. if the skill group type is online, the maximum can be set to one or more.
+2. if the skill group type is phone, audio, or video, then the reception limit must be 1.
                      */
                     uint64_t m_maxConcurrency;
                     bool m_maxConcurrencyHasBeenSet;

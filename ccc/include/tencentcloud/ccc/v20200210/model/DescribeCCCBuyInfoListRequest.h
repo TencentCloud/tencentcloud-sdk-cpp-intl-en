@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application ID list, query all applications when not transmitted.
-                     * @return SdkAppIds Application ID list, query all applications when not transmitted.
+                     * 获取Application id list, query all applications when not transmitted.
+                     * @return SdkAppIds Application id list, query all applications when not transmitted.
                      * 
                      */
                     std::vector<int64_t> GetSdkAppIds() const;
 
                     /**
-                     * 设置Application ID list, query all applications when not transmitted.
-                     * @param _sdkAppIds Application ID list, query all applications when not transmitted.
+                     * 设置Application id list, query all applications when not transmitted.
+                     * @param _sdkAppIds Application id list, query all applications when not transmitted.
                      * 
                      */
                     void SetSdkAppIds(const std::vector<int64_t>& _sdkAppIds);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Application ID list, query all applications when not transmitted.
+                     * Application id list, query all applications when not transmitted.
                      */
                     std::vector<int64_t> m_sdkAppIds;
                     bool m_sdkAppIdsHasBeenSet;

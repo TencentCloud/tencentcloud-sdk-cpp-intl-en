@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Agent email.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Mail Agent email.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMail() const;
 
                     /**
                      * 设置Agent email.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _mail Agent email.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMail(const std::string& _mail);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MailHasBeenSet() const;
 
                     /**
-                     * 获取Agent Telephone
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Phone Agent Telephone
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Agent phone number.
+                     * @return Phone Agent phone number.
                      * 
                      */
                     std::string GetPhone() const;
 
                     /**
-                     * 设置Agent Telephone
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _phone Agent Telephone
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Agent phone number.
+                     * @param _phone Agent phone number.
                      * 
                      */
                     void SetPhone(const std::string& _phone);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PhoneHasBeenSet() const;
 
                     /**
-                     * 获取Ring timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RingTimestamp Ring timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Ringing timestamp, unix second-level timestamp.
+                     * @return RingTimestamp Ringing timestamp, unix second-level timestamp.
                      * 
                      */
                     int64_t GetRingTimestamp() const;
 
                     /**
-                     * 设置Ring timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ringTimestamp Ring timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Ringing timestamp, unix second-level timestamp.
+                     * @param _ringTimestamp Ringing timestamp, unix second-level timestamp.
                      * 
                      */
                     void SetRingTimestamp(const int64_t& _ringTimestamp);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RingTimestampHasBeenSet() const;
 
                     /**
-                     * 获取Answer timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AcceptTimestamp Answer timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Answer timestamp. unix second-level timestamp.
+                     * @return AcceptTimestamp Answer timestamp. unix second-level timestamp.
                      * 
                      */
                     int64_t GetAcceptTimestamp() const;
 
                     /**
-                     * 设置Answer timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _acceptTimestamp Answer timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Answer timestamp. unix second-level timestamp.
+                     * @param _acceptTimestamp Answer timestamp. unix second-level timestamp.
                      * 
                      */
                     void SetAcceptTimestamp(const int64_t& _acceptTimestamp);
@@ -147,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AcceptTimestampHasBeenSet() const;
 
                     /**
-                     * 获取End timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EndedTimestamp End timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取End timestamp. unix second-level timestamp.
+                     * @return EndedTimestamp End timestamp. unix second-level timestamp.
                      * 
                      */
                     int64_t GetEndedTimestamp() const;
 
                     /**
-                     * 设置End timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _endedTimestamp End timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置End timestamp. unix second-level timestamp.
+                     * @param _endedTimestamp End timestamp. unix second-level timestamp.
                      * 
                      */
                     void SetEndedTimestamp(const int64_t& _endedTimestamp);
@@ -172,19 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EndedTimestampHasBeenSet() const;
 
                     /**
-                     * 获取Recording ID, which can be used to index the recording on the agent side
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RecordId Recording ID, which can be used to index the recording on the agent side
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Recording id can be indexed to the agent side recording.
+                     * @return RecordId Recording id can be indexed to the agent side recording.
                      * 
                      */
                     std::string GetRecordId() const;
 
                     /**
-                     * 设置Recording ID, which can be used to index the recording on the agent side
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _recordId Recording ID, which can be used to index the recording on the agent side
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Recording id can be indexed to the agent side recording.
+                     * @param _recordId Recording id can be indexed to the agent side recording.
                      * 
                      */
                     void SetRecordId(const std::string& _recordId);
@@ -197,19 +173,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RecordIdHasBeenSet() const;
 
                     /**
-                     * 获取Participant type: "staffSeat", "outboundSeat", "staffPhoneSeat".
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Type Participant type: "staffSeat", "outboundSeat", "staffPhoneSeat".
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Participant type: "staffseat", "outboundseat", "staffphoneseat".
+                     * @return Type Participant type: "staffseat", "outboundseat", "staffphoneseat".
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Participant type: "staffSeat", "outboundSeat", "staffPhoneSeat".
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _type Participant type: "staffSeat", "outboundSeat", "staffPhoneSeat".
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Participant type: "staffseat", "outboundseat", "staffphoneseat".
+                     * @param _type Participant type: "staffseat", "outboundseat", "staffphoneseat".
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -222,19 +194,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Transfer Source Agent Information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TransferFrom Transfer Source Agent Information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Transfer source agent information.
+                     * @return TransferFrom Transfer source agent information.
                      * 
                      */
                     std::string GetTransferFrom() const;
 
                     /**
-                     * 设置Transfer Source Agent Information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _transferFrom Transfer Source Agent Information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Transfer source agent information.
+                     * @param _transferFrom Transfer source agent information.
                      * 
                      */
                     void SetTransferFrom(const std::string& _transferFrom);
@@ -247,19 +215,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TransferFromHasBeenSet() const;
 
                     /**
-                     * 获取Transfer source participant type is consistent with the Type value.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TransferFromType Transfer source participant type is consistent with the Type value.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Transfer source participant type is consistent with the type value.
+                     * @return TransferFromType Transfer source participant type is consistent with the type value.
                      * 
                      */
                     std::string GetTransferFromType() const;
 
                     /**
-                     * 设置Transfer source participant type is consistent with the Type value.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _transferFromType Transfer source participant type is consistent with the Type value.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Transfer source participant type is consistent with the type value.
+                     * @param _transferFromType Transfer source participant type is consistent with the type value.
                      * 
                      */
                     void SetTransferFromType(const std::string& _transferFromType);
@@ -272,19 +236,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TransferFromTypeHasBeenSet() const;
 
                     /**
-                     * 获取Transfer Destination Agent Information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TransferTo Transfer Destination Agent Information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Transfer destination agent information.
+                     * @return TransferTo Transfer destination agent information.
                      * 
                      */
                     std::string GetTransferTo() const;
 
                     /**
-                     * 设置Transfer Destination Agent Information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _transferTo Transfer Destination Agent Information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Transfer destination agent information.
+                     * @param _transferTo Transfer destination agent information.
                      * 
                      */
                     void SetTransferTo(const std::string& _transferTo);
@@ -297,19 +257,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TransferToHasBeenSet() const;
 
                     /**
-                     * 获取Transfer destination participant type is consistent with Type values.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TransferToType Transfer destination participant type is consistent with Type values.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Transfer destination participant type, which is consistent with type values.
+                     * @return TransferToType Transfer destination participant type, which is consistent with type values.
                      * 
                      */
                     std::string GetTransferToType() const;
 
                     /**
-                     * 设置Transfer destination participant type is consistent with Type values.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _transferToType Transfer destination participant type is consistent with Type values.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Transfer destination participant type, which is consistent with type values.
+                     * @param _transferToType Transfer destination participant type, which is consistent with type values.
                      * 
                      */
                     void SetTransferToType(const std::string& _transferToType);
@@ -322,19 +278,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TransferToTypeHasBeenSet() const;
 
                     /**
-                     * 获取Skill group ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SkillGroupId Skill group ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Skill group id.
+                     * @return SkillGroupId Skill group id.
                      * 
                      */
                     int64_t GetSkillGroupId() const;
 
                     /**
-                     * 设置Skill group ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _skillGroupId Skill group ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Skill group id.
+                     * @param _skillGroupId Skill group id.
                      * 
                      */
                     void SetSkillGroupId(const int64_t& _skillGroupId);
@@ -348,18 +300,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Ending status.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EndStatusString Ending status.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetEndStatusString() const;
 
                     /**
                      * 设置Ending status.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _endStatusString Ending status.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetEndStatusString(const std::string& _endStatusString);
@@ -372,19 +320,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EndStatusStringHasBeenSet() const;
 
                     /**
-                     * 获取Recording URL.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RecordURL Recording URL.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Recording url.
+                     * @return RecordURL Recording url.
                      * 
                      */
                     std::string GetRecordURL() const;
 
                     /**
-                     * 设置Recording URL.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _recordURL Recording URL.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Recording url.
+                     * @param _recordURL Recording url.
                      * 
                      */
                     void SetRecordURL(const std::string& _recordURL);
@@ -398,18 +342,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Participant sequence number, starting from 0.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Sequence Participant sequence number, starting from 0.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetSequence() const;
 
                     /**
                      * 设置Participant sequence number, starting from 0.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _sequence Participant sequence number, starting from 0.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSequence(const int64_t& _sequence);
@@ -422,19 +362,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SequenceHasBeenSet() const;
 
                     /**
-                     * 获取Start timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StartTimestamp Start timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Start timestamp. unix second-level timestamp.
+                     * @return StartTimestamp Start timestamp. unix second-level timestamp.
                      * 
                      */
                     int64_t GetStartTimestamp() const;
 
                     /**
-                     * 设置Start timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _startTimestamp Start timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Start timestamp. unix second-level timestamp.
+                     * @param _startTimestamp Start timestamp. unix second-level timestamp.
                      * 
                      */
                     void SetStartTimestamp(const int64_t& _startTimestamp);
@@ -447,19 +383,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StartTimestampHasBeenSet() const;
 
                     /**
-                     * 获取Skill Group name.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SkillGroupName Skill Group name.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Skill group name.
+                     * @return SkillGroupName Skill group name.
                      * 
                      */
                     std::string GetSkillGroupName() const;
 
                     /**
-                     * 设置Skill Group name.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _skillGroupName Skill Group name.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Skill group name.
+                     * @param _skillGroupName Skill group name.
                      * 
                      */
                     void SetSkillGroupName(const std::string& _skillGroupName);
@@ -472,19 +404,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SkillGroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Address of the third party COS for transferring recording.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CustomRecordURL Address of the third party COS for transferring recording.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Address of the third-party cos for transferring recording.
+                     * @return CustomRecordURL Address of the third-party cos for transferring recording.
                      * 
                      */
                     std::string GetCustomRecordURL() const;
 
                     /**
-                     * 设置Address of the third party COS for transferring recording.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _customRecordURL Address of the third party COS for transferring recording.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Address of the third-party cos for transferring recording.
+                     * @param _customRecordURL Address of the third-party cos for transferring recording.
                      * 
                      */
                     void SetCustomRecordURL(const std::string& _customRecordURL);
@@ -500,126 +428,108 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Agent email.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_mail;
                     bool m_mailHasBeenSet;
 
                     /**
-                     * Agent Telephone
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Agent phone number.
                      */
                     std::string m_phone;
                     bool m_phoneHasBeenSet;
 
                     /**
-                     * Ring timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Ringing timestamp, unix second-level timestamp.
                      */
                     int64_t m_ringTimestamp;
                     bool m_ringTimestampHasBeenSet;
 
                     /**
-                     * Answer timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Answer timestamp. unix second-level timestamp.
                      */
                     int64_t m_acceptTimestamp;
                     bool m_acceptTimestampHasBeenSet;
 
                     /**
-                     * End timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * End timestamp. unix second-level timestamp.
                      */
                     int64_t m_endedTimestamp;
                     bool m_endedTimestampHasBeenSet;
 
                     /**
-                     * Recording ID, which can be used to index the recording on the agent side
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Recording id can be indexed to the agent side recording.
                      */
                     std::string m_recordId;
                     bool m_recordIdHasBeenSet;
 
                     /**
-                     * Participant type: "staffSeat", "outboundSeat", "staffPhoneSeat".
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Participant type: "staffseat", "outboundseat", "staffphoneseat".
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Transfer Source Agent Information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Transfer source agent information.
                      */
                     std::string m_transferFrom;
                     bool m_transferFromHasBeenSet;
 
                     /**
-                     * Transfer source participant type is consistent with the Type value.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Transfer source participant type is consistent with the type value.
                      */
                     std::string m_transferFromType;
                     bool m_transferFromTypeHasBeenSet;
 
                     /**
-                     * Transfer Destination Agent Information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Transfer destination agent information.
                      */
                     std::string m_transferTo;
                     bool m_transferToHasBeenSet;
 
                     /**
-                     * Transfer destination participant type is consistent with Type values.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Transfer destination participant type, which is consistent with type values.
                      */
                     std::string m_transferToType;
                     bool m_transferToTypeHasBeenSet;
 
                     /**
-                     * Skill group ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Skill group id.
                      */
                     int64_t m_skillGroupId;
                     bool m_skillGroupIdHasBeenSet;
 
                     /**
                      * Ending status.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_endStatusString;
                     bool m_endStatusStringHasBeenSet;
 
                     /**
-                     * Recording URL.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Recording url.
                      */
                     std::string m_recordURL;
                     bool m_recordURLHasBeenSet;
 
                     /**
                      * Participant sequence number, starting from 0.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_sequence;
                     bool m_sequenceHasBeenSet;
 
                     /**
-                     * Start timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Start timestamp. unix second-level timestamp.
                      */
                     int64_t m_startTimestamp;
                     bool m_startTimestampHasBeenSet;
 
                     /**
-                     * Skill Group name.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Skill group name.
                      */
                     std::string m_skillGroupName;
                     bool m_skillGroupNameHasBeenSet;
 
                     /**
-                     * Address of the third party COS for transferring recording.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Address of the third-party cos for transferring recording.
                      */
                     std::string m_customRecordURL;
                     bool m_customRecordURLHasBeenSet;

@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task ID.
-                     * @return CampaignId Task ID.
+                     * 获取Task id.
+                     * @return CampaignId Task id.
                      * 
                      */
                     int64_t GetCampaignId() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool CampaignIdHasBeenSet() const;
 
                     /**
-                     * 获取Task Name
-                     * @return Name Task Name
+                     * 获取Task name.
+                     * @return Name Task name.
                      * 
                      */
                     std::string GetName() const;
@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool SkillGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Specified IVR ID.
-                     * @return IVRId Specified IVR ID.
+                     * 获取Specified ivr id.
+                     * @return IVRId Specified ivr id.
                      * 
                      */
                     int64_t GetIVRId() const;
@@ -170,8 +170,8 @@ namespace TencentCloud
                     bool RetryIntervalHasBeenSet() const;
 
                     /**
-                     * 获取Task start time. Unix timestamp. The task will automatically start after this time.
-                     * @return StartTime Task start time. Unix timestamp. The task will automatically start after this time.
+                     * 获取Task start time. unix timestamp. the task will automatically start after this time.
+                     * @return StartTime Task start time. unix timestamp. the task will automatically start after this time.
                      * 
                      */
                     int64_t GetStartTime() const;
@@ -184,8 +184,8 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Task termination time. Unix timestamp. The task will automatically terminate after this time.
-                     * @return EndTime Task termination time. Unix timestamp. The task will automatically terminate after this time.
+                     * 获取Task termination time. unix timestamp. the task will automatically terminate after this time.
+                     * @return EndTime Task termination time. unix timestamp. the task will automatically terminate after this time.
                      * 
                      */
                     int64_t GetEndTime() const;
@@ -200,13 +200,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task ID.
+                     * Task id.
                      */
                     int64_t m_campaignId;
                     bool m_campaignIdHasBeenSet;
 
                     /**
-                     * Task Name
+                     * Task name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -224,7 +224,7 @@ namespace TencentCloud
                     bool m_skillGroupIdHasBeenSet;
 
                     /**
-                     * Specified IVR ID.
+                     * Specified ivr id.
                      */
                     int64_t m_iVRId;
                     bool m_iVRIdHasBeenSet;
@@ -254,13 +254,13 @@ namespace TencentCloud
                     bool m_retryIntervalHasBeenSet;
 
                     /**
-                     * Task start time. Unix timestamp. The task will automatically start after this time.
+                     * Task start time. unix timestamp. the task will automatically start after this time.
                      */
                     int64_t m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Task termination time. Unix timestamp. The task will automatically terminate after this time.
+                     * Task termination time. unix timestamp. the task will automatically terminate after this time.
                      */
                     int64_t m_endTime;
                     bool m_endTimeHasBeenSet;

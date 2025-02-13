@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 获取Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
-                     * 设置Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @param _sdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 设置Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @param _sdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Page size
-                     * @return PageSize Page size
+                     * 获取<Page size>.
+                     * @return PageSize <Page size>.
                      * 
                      */
                     uint64_t GetPageSize() const;
 
                     /**
-                     * 设置Page size
-                     * @param _pageSize Page size
+                     * 设置<Page size>.
+                     * @param _pageSize <Page size>.
                      * 
                      */
                     void SetPageSize(const uint64_t& _pageSize);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool PageSizeHasBeenSet() const;
 
                     /**
-                     * 获取Page number
-                     * @return PageNumber Page number
+                     * 获取Page number.
+                     * @return PageNumber Page number.
                      * 
                      */
                     uint64_t GetPageNumber() const;
 
                     /**
-                     * 设置Page number
-                     * @param _pageNumber Page number
+                     * 设置Page number.
+                     * @param _pageNumber Page number.
                      * 
                      */
                     void SetPageNumber(const uint64_t& _pageNumber);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      */
                     uint64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * Page size
+                     * <Page size>.
                      */
                     uint64_t m_pageSize;
                     bool m_pageSizeHasBeenSet;
 
                     /**
-                     * Page number
+                     * Page number.
                      */
                     uint64_t m_pageNumber;
                     bool m_pageNumberHasBeenSet;

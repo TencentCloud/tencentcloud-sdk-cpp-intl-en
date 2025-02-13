@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Phone call information.
+                * Phone call information
                 */
                 class TelCdrInfo : public AbstractModel
                 {
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool CalleeHasBeenSet() const;
 
                     /**
-                     * 获取Call initiation timestamp, Unix timestamp.
-                     * @return Time Call initiation timestamp, Unix timestamp.
+                     * 获取Call initiation timestamp, unix timestamp.
+                     * @return Time Call initiation timestamp, unix timestamp.
                      * 
                      */
                     int64_t GetTime() const;
 
                     /**
-                     * 设置Call initiation timestamp, Unix timestamp.
-                     * @param _time Call initiation timestamp, Unix timestamp.
+                     * 设置Call initiation timestamp, unix timestamp.
+                     * @param _time Call initiation timestamp, unix timestamp.
                      * 
                      */
                     void SetTime(const int64_t& _time);
@@ -113,15 +113,15 @@ namespace TencentCloud
                     bool TimeHasBeenSet() const;
 
                     /**
-                     * 获取Call direction: 0 - Inbound, 1 - Outbound.
-                     * @return Direction Call direction: 0 - Inbound, 1 - Outbound.
+                     * 获取Call direction: 0 - inbound, 1 - outbound.
+                     * @return Direction Call direction: 0 - inbound, 1 - outbound.
                      * 
                      */
                     int64_t GetDirection() const;
 
                     /**
-                     * 设置Call direction: 0 - Inbound, 1 - Outbound.
-                     * @param _direction Call direction: 0 - Inbound, 1 - Outbound.
+                     * 设置Call direction: 0 - inbound, 1 - outbound.
+                     * @param _direction Call direction: 0 - inbound, 1 - outbound.
                      * 
                      */
                     void SetDirection(const int64_t& _direction);
@@ -155,15 +155,15 @@ namespace TencentCloud
                     bool DurationHasBeenSet() const;
 
                     /**
-                     * 获取Recording Information.
-                     * @return RecordURL Recording Information.
+                     * 获取Recording information.
+                     * @return RecordURL Recording information.
                      * 
                      */
                     std::string GetRecordURL() const;
 
                     /**
-                     * 设置Recording Information.
-                     * @param _recordURL Recording Information.
+                     * 设置Recording information.
+                     * @param _recordURL Recording information.
                      * 
                      */
                     void SetRecordURL(const std::string& _recordURL);
@@ -176,19 +176,15 @@ namespace TencentCloud
                     bool RecordURLHasBeenSet() const;
 
                     /**
-                     * 获取Recording ID.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return RecordId Recording ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Recording id.
+                     * @return RecordId Recording id.
                      * 
                      */
                     std::string GetRecordId() const;
 
                     /**
-                     * 设置Recording ID.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _recordId Recording ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Recording id.
+                     * @param _recordId Recording id.
                      * 
                      */
                     void SetRecordId(const std::string& _recordId);
@@ -201,15 +197,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool RecordIdHasBeenSet() const;
 
                     /**
-                     * 获取Agent Information
-                     * @return SeatUser Agent Information
+                     * 获取Agent information.
+                     * @return SeatUser Agent information.
                      * 
                      */
                     SeatUserInfo GetSeatUser() const;
 
                     /**
-                     * 设置Agent Information
-                     * @param _seatUser Agent Information
+                     * 设置Agent information.
+                     * @param _seatUser Agent information.
                      * 
                      */
                     void SetSeatUser(const SeatUserInfo& _seatUser);
@@ -222,227 +218,227 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SeatUserHasBeenSet() const;
 
                     /**
-                     * 获取EndStatus corresponds one-to-one with EndStatusString, specific enumerations are as follows:
+                     * 获取EndStatus corresponds one-to-one with endstatusstring, with specific enumerations as follows:.
 
-**Scenario	         EndStatus	EndStatusString	Status Description**
+**Scenario	EndStatus	EndStatusString	Status description**.
 
-Incoming & Outgoing Calls	1	        ok	                        Normal End
+Inbound call & call	1	ok	end properly.
 
-Incoming & Outgoing Calls	0	        error	                System Error
+Inbound call & call | 0 | error | system error.
 
-Incoming Call	             102	        ivrGiveUp	        User Gave Up During IVR
+Inbound call | 102 | ivrgiveup | user gives up during ivr.
 
-Incoming Call	             103	        waitingGiveUp	       User Gave Up During Queue
+Inbound call | 103 | waitinggiveup | user gives up during session queue.
 
-Incoming Call	             104	        ringingGiveUp	       User Gave Up During Ringing
+Inbound call | 104 | ringinggiveup | user gives up during session ringing.
 
-Incoming Call	             105	        noSeatOnline	       No Seat Online
+Inbound call | 105 | noseatonline | no agent online.
 
-Incoming Call              106	       notWorkTime	       Non-Working Hours   
+Inbound call              106	       non - working hour      non - working hour.   
 
-Incoming Call	            107	       ivrEnd	               Ended Directly After IVR
+Inbound call              107	       ivrend                   end directly after ivr.
 
-Incoming Call	            100	      blackList Incoming blocklist  
+Inbound call              100	       blocklist call - in      call - in blocklist. 
 
-Outgoing Call               2	              unconnected	Unconnected
+Outgoing call            2                 unconnected            unconnected.
 
-Outgoing Call             108	        restrictedCallee	Callee restricted due to high risk
+Outgoing call            108           restricted callee      callee restricted due to high - risk.
 
-Outgoing Call             109	        tooManyRequest	    Frequency limit exceeded
+Outgoing call         109        toomanyrequest        overfrequency.
 
-Outgoing Call             110	        restrictedArea	    Call to restricted area
+Outgoing call         110        restrictedarea        outbound blind area.
 
-Outgoing Call             111	        restrictedTime	Call time restricted
+Outgoing call         111        restrictedtime        outbound time restriction.
                          
-Outgoing Call             201            unknown	Unknown status
+Outgoing call         201        unknown               unknown status.
 
-Outgoing Call             202            notAnswer	Missed call
+Outgoing call         202        notanswer             unanswered.
 
-Outgoing Call            203	    userReject	Reject/Hang Up
+Outgoing call - 203 - userreject: reject call.
 
-Outgoing Call	          204	    powerOff	Shutting down
+Outgoing call - 204 - poweroff: power off.
 
-Outgoing Call           205            numberNotExist	Disconnected Number
+Outgoing call - 205 - numbernotexist: nonexistent number.
 
-Outgoing Call	         206	           busy	During the call
+Outgoing call - 206 - busy: call in progress.
 
-Outgoing Call   	        207	           outOfCredit	Overdue Payment
+Outgoing call - 207 - outofcredit: arrears.
 
-Outgoing Call	         208	           operatorError	 ISP Carrier Line Anomaly
+Outgoing call - 208 - operatorerror - ISP line exception.
 
-Outgoing Call         	209	           callerCancel	Caller Cancelled
+Outgoing call - 209 - callercancel - caller cancellation.
 
-Outgoing Call	        210	           notInService	Out of Service Area
+Outgoing call - 210 - notinservice - not in service area.
 
-Incoming & Outgoing Calls	211    clientError    Client Error
+Inbound and outgoing call - 211 - clienterror - client error.
+Outgoing call - 212 - carrierblocked - ISP blocking.
+                     * @return EndStatus EndStatus corresponds one-to-one with endstatusstring, with specific enumerations as follows:.
 
-                     * @return EndStatus EndStatus corresponds one-to-one with EndStatusString, specific enumerations are as follows:
+**Scenario	EndStatus	EndStatusString	Status description**.
 
-**Scenario	         EndStatus	EndStatusString	Status Description**
+Inbound call & call	1	ok	end properly.
 
-Incoming & Outgoing Calls	1	        ok	                        Normal End
+Inbound call & call | 0 | error | system error.
 
-Incoming & Outgoing Calls	0	        error	                System Error
+Inbound call | 102 | ivrgiveup | user gives up during ivr.
 
-Incoming Call	             102	        ivrGiveUp	        User Gave Up During IVR
+Inbound call | 103 | waitinggiveup | user gives up during session queue.
 
-Incoming Call	             103	        waitingGiveUp	       User Gave Up During Queue
+Inbound call | 104 | ringinggiveup | user gives up during session ringing.
 
-Incoming Call	             104	        ringingGiveUp	       User Gave Up During Ringing
+Inbound call | 105 | noseatonline | no agent online.
 
-Incoming Call	             105	        noSeatOnline	       No Seat Online
+Inbound call              106	       non - working hour      non - working hour.   
 
-Incoming Call              106	       notWorkTime	       Non-Working Hours   
+Inbound call              107	       ivrend                   end directly after ivr.
 
-Incoming Call	            107	       ivrEnd	               Ended Directly After IVR
+Inbound call              100	       blocklist call - in      call - in blocklist. 
 
-Incoming Call	            100	      blackList Incoming blocklist  
+Outgoing call            2                 unconnected            unconnected.
 
-Outgoing Call               2	              unconnected	Unconnected
+Outgoing call            108           restricted callee      callee restricted due to high - risk.
 
-Outgoing Call             108	        restrictedCallee	Callee restricted due to high risk
+Outgoing call         109        toomanyrequest        overfrequency.
 
-Outgoing Call             109	        tooManyRequest	    Frequency limit exceeded
+Outgoing call         110        restrictedarea        outbound blind area.
 
-Outgoing Call             110	        restrictedArea	    Call to restricted area
-
-Outgoing Call             111	        restrictedTime	Call time restricted
+Outgoing call         111        restrictedtime        outbound time restriction.
                          
-Outgoing Call             201            unknown	Unknown status
+Outgoing call         201        unknown               unknown status.
 
-Outgoing Call             202            notAnswer	Missed call
+Outgoing call         202        notanswer             unanswered.
 
-Outgoing Call            203	    userReject	Reject/Hang Up
+Outgoing call - 203 - userreject: reject call.
 
-Outgoing Call	          204	    powerOff	Shutting down
+Outgoing call - 204 - poweroff: power off.
 
-Outgoing Call           205            numberNotExist	Disconnected Number
+Outgoing call - 205 - numbernotexist: nonexistent number.
 
-Outgoing Call	         206	           busy	During the call
+Outgoing call - 206 - busy: call in progress.
 
-Outgoing Call   	        207	           outOfCredit	Overdue Payment
+Outgoing call - 207 - outofcredit: arrears.
 
-Outgoing Call	         208	           operatorError	 ISP Carrier Line Anomaly
+Outgoing call - 208 - operatorerror - ISP line exception.
 
-Outgoing Call         	209	           callerCancel	Caller Cancelled
+Outgoing call - 209 - callercancel - caller cancellation.
 
-Outgoing Call	        210	           notInService	Out of Service Area
+Outgoing call - 210 - notinservice - not in service area.
 
-Incoming & Outgoing Calls	211    clientError    Client Error
-
+Inbound and outgoing call - 211 - clienterror - client error.
+Outgoing call - 212 - carrierblocked - ISP blocking.
                      * 
                      */
                     int64_t GetEndStatus() const;
 
                     /**
-                     * 设置EndStatus corresponds one-to-one with EndStatusString, specific enumerations are as follows:
+                     * 设置EndStatus corresponds one-to-one with endstatusstring, with specific enumerations as follows:.
 
-**Scenario	         EndStatus	EndStatusString	Status Description**
+**Scenario	EndStatus	EndStatusString	Status description**.
 
-Incoming & Outgoing Calls	1	        ok	                        Normal End
+Inbound call & call	1	ok	end properly.
 
-Incoming & Outgoing Calls	0	        error	                System Error
+Inbound call & call | 0 | error | system error.
 
-Incoming Call	             102	        ivrGiveUp	        User Gave Up During IVR
+Inbound call | 102 | ivrgiveup | user gives up during ivr.
 
-Incoming Call	             103	        waitingGiveUp	       User Gave Up During Queue
+Inbound call | 103 | waitinggiveup | user gives up during session queue.
 
-Incoming Call	             104	        ringingGiveUp	       User Gave Up During Ringing
+Inbound call | 104 | ringinggiveup | user gives up during session ringing.
 
-Incoming Call	             105	        noSeatOnline	       No Seat Online
+Inbound call | 105 | noseatonline | no agent online.
 
-Incoming Call              106	       notWorkTime	       Non-Working Hours   
+Inbound call              106	       non - working hour      non - working hour.   
 
-Incoming Call	            107	       ivrEnd	               Ended Directly After IVR
+Inbound call              107	       ivrend                   end directly after ivr.
 
-Incoming Call	            100	      blackList Incoming blocklist  
+Inbound call              100	       blocklist call - in      call - in blocklist. 
 
-Outgoing Call               2	              unconnected	Unconnected
+Outgoing call            2                 unconnected            unconnected.
 
-Outgoing Call             108	        restrictedCallee	Callee restricted due to high risk
+Outgoing call            108           restricted callee      callee restricted due to high - risk.
 
-Outgoing Call             109	        tooManyRequest	    Frequency limit exceeded
+Outgoing call         109        toomanyrequest        overfrequency.
 
-Outgoing Call             110	        restrictedArea	    Call to restricted area
+Outgoing call         110        restrictedarea        outbound blind area.
 
-Outgoing Call             111	        restrictedTime	Call time restricted
+Outgoing call         111        restrictedtime        outbound time restriction.
                          
-Outgoing Call             201            unknown	Unknown status
+Outgoing call         201        unknown               unknown status.
 
-Outgoing Call             202            notAnswer	Missed call
+Outgoing call         202        notanswer             unanswered.
 
-Outgoing Call            203	    userReject	Reject/Hang Up
+Outgoing call - 203 - userreject: reject call.
 
-Outgoing Call	          204	    powerOff	Shutting down
+Outgoing call - 204 - poweroff: power off.
 
-Outgoing Call           205            numberNotExist	Disconnected Number
+Outgoing call - 205 - numbernotexist: nonexistent number.
 
-Outgoing Call	         206	           busy	During the call
+Outgoing call - 206 - busy: call in progress.
 
-Outgoing Call   	        207	           outOfCredit	Overdue Payment
+Outgoing call - 207 - outofcredit: arrears.
 
-Outgoing Call	         208	           operatorError	 ISP Carrier Line Anomaly
+Outgoing call - 208 - operatorerror - ISP line exception.
 
-Outgoing Call         	209	           callerCancel	Caller Cancelled
+Outgoing call - 209 - callercancel - caller cancellation.
 
-Outgoing Call	        210	           notInService	Out of Service Area
+Outgoing call - 210 - notinservice - not in service area.
 
-Incoming & Outgoing Calls	211    clientError    Client Error
+Inbound and outgoing call - 211 - clienterror - client error.
+Outgoing call - 212 - carrierblocked - ISP blocking.
+                     * @param _endStatus EndStatus corresponds one-to-one with endstatusstring, with specific enumerations as follows:.
 
-                     * @param _endStatus EndStatus corresponds one-to-one with EndStatusString, specific enumerations are as follows:
+**Scenario	EndStatus	EndStatusString	Status description**.
 
-**Scenario	         EndStatus	EndStatusString	Status Description**
+Inbound call & call	1	ok	end properly.
 
-Incoming & Outgoing Calls	1	        ok	                        Normal End
+Inbound call & call | 0 | error | system error.
 
-Incoming & Outgoing Calls	0	        error	                System Error
+Inbound call | 102 | ivrgiveup | user gives up during ivr.
 
-Incoming Call	             102	        ivrGiveUp	        User Gave Up During IVR
+Inbound call | 103 | waitinggiveup | user gives up during session queue.
 
-Incoming Call	             103	        waitingGiveUp	       User Gave Up During Queue
+Inbound call | 104 | ringinggiveup | user gives up during session ringing.
 
-Incoming Call	             104	        ringingGiveUp	       User Gave Up During Ringing
+Inbound call | 105 | noseatonline | no agent online.
 
-Incoming Call	             105	        noSeatOnline	       No Seat Online
+Inbound call              106	       non - working hour      non - working hour.   
 
-Incoming Call              106	       notWorkTime	       Non-Working Hours   
+Inbound call              107	       ivrend                   end directly after ivr.
 
-Incoming Call	            107	       ivrEnd	               Ended Directly After IVR
+Inbound call              100	       blocklist call - in      call - in blocklist. 
 
-Incoming Call	            100	      blackList Incoming blocklist  
+Outgoing call            2                 unconnected            unconnected.
 
-Outgoing Call               2	              unconnected	Unconnected
+Outgoing call            108           restricted callee      callee restricted due to high - risk.
 
-Outgoing Call             108	        restrictedCallee	Callee restricted due to high risk
+Outgoing call         109        toomanyrequest        overfrequency.
 
-Outgoing Call             109	        tooManyRequest	    Frequency limit exceeded
+Outgoing call         110        restrictedarea        outbound blind area.
 
-Outgoing Call             110	        restrictedArea	    Call to restricted area
-
-Outgoing Call             111	        restrictedTime	Call time restricted
+Outgoing call         111        restrictedtime        outbound time restriction.
                          
-Outgoing Call             201            unknown	Unknown status
+Outgoing call         201        unknown               unknown status.
 
-Outgoing Call             202            notAnswer	Missed call
+Outgoing call         202        notanswer             unanswered.
 
-Outgoing Call            203	    userReject	Reject/Hang Up
+Outgoing call - 203 - userreject: reject call.
 
-Outgoing Call	          204	    powerOff	Shutting down
+Outgoing call - 204 - poweroff: power off.
 
-Outgoing Call           205            numberNotExist	Disconnected Number
+Outgoing call - 205 - numbernotexist: nonexistent number.
 
-Outgoing Call	         206	           busy	During the call
+Outgoing call - 206 - busy: call in progress.
 
-Outgoing Call   	        207	           outOfCredit	Overdue Payment
+Outgoing call - 207 - outofcredit: arrears.
 
-Outgoing Call	         208	           operatorError	 ISP Carrier Line Anomaly
+Outgoing call - 208 - operatorerror - ISP line exception.
 
-Outgoing Call         	209	           callerCancel	Caller Cancelled
+Outgoing call - 209 - callercancel - caller cancellation.
 
-Outgoing Call	        210	           notInService	Out of Service Area
+Outgoing call - 210 - notinservice - not in service area.
 
-Incoming & Outgoing Calls	211    clientError    Client Error
-
+Inbound and outgoing call - 211 - clienterror - client error.
+Outgoing call - 212 - carrierblocked - ISP blocking.
                      * 
                      */
                     void SetEndStatus(const int64_t& _endStatus);
@@ -476,15 +472,15 @@ Incoming & Outgoing Calls	211    clientError    Client Error
                     bool SkillGroupHasBeenSet() const;
 
                     /**
-                     * 获取Caller's location.
-                     * @return CallerLocation Caller's location.
+                     * 获取Caller'S location.
+                     * @return CallerLocation Caller'S location.
                      * 
                      */
                     std::string GetCallerLocation() const;
 
                     /**
-                     * 设置Caller's location.
-                     * @param _callerLocation Caller's location.
+                     * 设置Caller'S location.
+                     * @param _callerLocation Caller'S location.
                      * 
                      */
                     void SetCallerLocation(const std::string& _callerLocation);
@@ -497,19 +493,15 @@ Incoming & Outgoing Calls	211    clientError    Client Error
                     bool CallerLocationHasBeenSet() const;
 
                     /**
-                     * 获取Time spent in IVR stage.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return IVRDuration Time spent in IVR stage.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Time spent in ivr stage.
+                     * @return IVRDuration Time spent in ivr stage.
                      * 
                      */
                     int64_t GetIVRDuration() const;
 
                     /**
-                     * 设置Time spent in IVR stage.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _iVRDuration Time spent in IVR stage.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Time spent in ivr stage.
+                     * @param _iVRDuration Time spent in ivr stage.
                      * 
                      */
                     void SetIVRDuration(const int64_t& _iVRDuration);
@@ -522,19 +514,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IVRDurationHasBeenSet() const;
 
                     /**
-                     * 获取Ring timestamp. UNIX second-level timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return RingTimestamp Ring timestamp. UNIX second-level timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Ring timestamp. unix second-level timestamp.
+                     * @return RingTimestamp Ring timestamp. unix second-level timestamp.
                      * 
                      */
                     int64_t GetRingTimestamp() const;
 
                     /**
-                     * 设置Ring timestamp. UNIX second-level timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _ringTimestamp Ring timestamp. UNIX second-level timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Ring timestamp. unix second-level timestamp.
+                     * @param _ringTimestamp Ring timestamp. unix second-level timestamp.
                      * 
                      */
                     void SetRingTimestamp(const int64_t& _ringTimestamp);
@@ -547,19 +535,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool RingTimestampHasBeenSet() const;
 
                     /**
-                     * 获取Answer timestamp. UNIX second-Level timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AcceptTimestamp Answer timestamp. UNIX second-Level timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Answer timestamp. unix second-level timestamp.
+                     * @return AcceptTimestamp Answer timestamp. unix second-level timestamp.
                      * 
                      */
                     int64_t GetAcceptTimestamp() const;
 
                     /**
-                     * 设置Answer timestamp. UNIX second-Level timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _acceptTimestamp Answer timestamp. UNIX second-Level timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Answer timestamp. unix second-level timestamp.
+                     * @param _acceptTimestamp Answer timestamp. unix second-level timestamp.
                      * 
                      */
                     void SetAcceptTimestamp(const int64_t& _acceptTimestamp);
@@ -572,19 +556,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AcceptTimestampHasBeenSet() const;
 
                     /**
-                     * 获取End timestamp. UNIX second-level timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return EndedTimestamp End timestamp. UNIX second-level timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取End timestamp. unix second-level timestamp.
+                     * @return EndedTimestamp End timestamp. unix second-level timestamp.
                      * 
                      */
                     int64_t GetEndedTimestamp() const;
 
                     /**
-                     * 设置End timestamp. UNIX second-level timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _endedTimestamp End timestamp. UNIX second-level timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置End timestamp. unix second-level timestamp.
+                     * @param _endedTimestamp End timestamp. unix second-level timestamp.
                      * 
                      */
                     void SetEndedTimestamp(const int64_t& _endedTimestamp);
@@ -597,19 +577,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool EndedTimestampHasBeenSet() const;
 
                     /**
-                     * 获取IVR key information, e.g. ["1","2","3"]
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return IVRKeyPressed IVR key information, e.g. ["1","2","3"]
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取IVR key information, e.g. ["1","2","3"].
+                     * @return IVRKeyPressed IVR key information, e.g. ["1","2","3"].
                      * 
                      */
                     std::vector<std::string> GetIVRKeyPressed() const;
 
                     /**
-                     * 设置IVR key information, e.g. ["1","2","3"]
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _iVRKeyPressed IVR key information, e.g. ["1","2","3"]
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置IVR key information, e.g. ["1","2","3"].
+                     * @param _iVRKeyPressed IVR key information, e.g. ["1","2","3"].
                      * 
                      */
                     void SetIVRKeyPressed(const std::vector<std::string>& _iVRKeyPressed);
@@ -622,19 +598,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IVRKeyPressedHasBeenSet() const;
 
                     /**
-                     * 获取Hanging Up Party seat Seat user Users system system
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HungUpSide Hanging Up Party seat Seat user Users system system
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Hang-Up side, seat, user, system.
+                     * @return HungUpSide Hang-Up side, seat, user, system.
                      * 
                      */
                     std::string GetHungUpSide() const;
 
                     /**
-                     * 设置Hanging Up Party seat Seat user Users system system
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hungUpSide Hanging Up Party seat Seat user Users system system
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Hang-Up side, seat, user, system.
+                     * @param _hungUpSide Hang-Up side, seat, user, system.
                      * 
                      */
                     void SetHungUpSide(const std::string& _hungUpSide);
@@ -647,19 +619,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HungUpSideHasBeenSet() const;
 
                     /**
-                     * 获取List of Service Participants
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ServeParticipants List of Service Participants
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Service participant list.
+                     * @return ServeParticipants Service participant list.
                      * 
                      */
                     std::vector<ServeParticipant> GetServeParticipants() const;
 
                     /**
-                     * 设置List of Service Participants
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _serveParticipants List of Service Participants
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Service participant list.
+                     * @param _serveParticipants Service participant list.
                      * 
                      */
                     void SetServeParticipants(const std::vector<ServeParticipant>& _serveParticipants);
@@ -672,19 +640,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ServeParticipantsHasBeenSet() const;
 
                     /**
-                     * 获取Skill group ID.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SkillGroupId Skill group ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Skill group id.
+                     * @return SkillGroupId Skill group id.
                      * 
                      */
                     int64_t GetSkillGroupId() const;
 
                     /**
-                     * 设置Skill group ID.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _skillGroupId Skill group ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Skill group id.
+                     * @param _skillGroupId Skill group id.
                      * 
                      */
                     void SetSkillGroupId(const int64_t& _skillGroupId);
@@ -697,231 +661,227 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SkillGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取EndStatus corresponds one-to-one with EndStatusString, specific enumerations are as follows:
+                     * 获取EndStatus corresponds one-to-one with endstatusstring, with specific enumerations as follows:.
 
-**Scenario	         EndStatus	EndStatusString	Status Description**
+**Scenario	EndStatus	EndStatusString	Status description**.
 
-Incoming & Outgoing Calls	1	        ok	                        Normal End
+Inbound call & call	1	ok	end properly.
 
-Incoming & Outgoing Calls	0	        error	                System Error
+Inbound call & call | 0 | error | system error.
 
-Incoming Call	             102	        ivrGiveUp	        User Gave Up During IVR
+Inbound call | 102 | ivrgiveup | user gives up during ivr.
 
-Incoming Call	             103	        waitingGiveUp	       User Gave Up During Queue
+Inbound call | 103 | waitinggiveup | user gives up during session queue.
 
-Incoming Call	             104	        ringingGiveUp	       User Gave Up During Ringing
+Inbound call | 104 | ringinggiveup | user gives up during session ringing.
 
-Incoming Call	             105	        noSeatOnline	       No Seat Online
+Inbound call | 105 | noseatonline | no agent online.
 
-Incoming Call              106	       notWorkTime	       Non-Working Hours   
+Inbound call              106	       non - working hour      non - working hour.   
 
-Incoming Call	            107	       ivrEnd	               Ended Directly After IVR
+Inbound call              107	       ivrend                   end directly after ivr.
 
-Incoming Call	            100	      blackList Incoming blocklist  
+Inbound call              100	       blocklist call - in      call - in blocklist. 
 
-Outgoing Call               2	              unconnected	Unconnected
+Outgoing call            2                 unconnected            unconnected.
 
-Outgoing Call             108	        restrictedCallee	Callee restricted due to high risk
+Outgoing call            108           restricted callee      callee restricted due to high - risk.
 
-Outgoing Call             109	        tooManyRequest	    Frequency limit exceeded
+Outgoing call         109        toomanyrequest        overfrequency.
 
-Outgoing Call             110	        restrictedArea	    Call to restricted area
+Outgoing call         110        restrictedarea        outbound blind area.
 
-Outgoing Call             111	        restrictedTime	Call time restricted
+Outgoing call         111        restrictedtime        outbound time restriction.
                          
-Outgoing Call             201            unknown	Unknown status
+Outgoing call         201        unknown               unknown status.
 
-Outgoing Call             202            notAnswer	Missed call
+Outgoing call         202        notanswer             unanswered.
 
-Outgoing Call            203	    userReject	Reject/Hang Up
+Outgoing call - 203 - userreject: reject call.
 
-Outgoing Call	          204	    powerOff	Shutting down
+Outgoing call - 204 - poweroff: power off.
 
-Outgoing Call           205            numberNotExist	Disconnected Number
+Outgoing call - 205 - numbernotexist: nonexistent number.
 
-Phone Call Out	         206	           busy	In Call
+Outgoing call - 206 - busy: call in progress.
 
-Outgoing Call   	        207	           outOfCredit	Overdue Payment
+Outgoing call - 207 - outofcredit: arrears.
 
-Outgoing Call	         208	           operatorError	 ISP Carrier Line Anomaly
+Outgoing call - 208 - operatorerror - ISP line exception.
 
-Outgoing Call         	209	           callerCancel	Caller Cancelled
+Outgoing call - 209 - callercancel - caller cancellation.
 
-Outgoing Call	        210	           notInService	Out of Service Area
+Outgoing call - 210 - notinservice - not in service area.
 
-Phone Call In & Out	211    clientError    Client Error
+Inbound and outgoing call - 211 - clienterror - client error.
+Outgoing call - 212 - carrierblocked - ISP blocking.
+                     * @return EndStatusString EndStatus corresponds one-to-one with endstatusstring, with specific enumerations as follows:.
 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EndStatusString EndStatus corresponds one-to-one with EndStatusString, specific enumerations are as follows:
+**Scenario	EndStatus	EndStatusString	Status description**.
 
-**Scenario	         EndStatus	EndStatusString	Status Description**
+Inbound call & call	1	ok	end properly.
 
-Incoming & Outgoing Calls	1	        ok	                        Normal End
+Inbound call & call | 0 | error | system error.
 
-Incoming & Outgoing Calls	0	        error	                System Error
+Inbound call | 102 | ivrgiveup | user gives up during ivr.
 
-Incoming Call	             102	        ivrGiveUp	        User Gave Up During IVR
+Inbound call | 103 | waitinggiveup | user gives up during session queue.
 
-Incoming Call	             103	        waitingGiveUp	       User Gave Up During Queue
+Inbound call | 104 | ringinggiveup | user gives up during session ringing.
 
-Incoming Call	             104	        ringingGiveUp	       User Gave Up During Ringing
+Inbound call | 105 | noseatonline | no agent online.
 
-Incoming Call	             105	        noSeatOnline	       No Seat Online
+Inbound call              106	       non - working hour      non - working hour.   
 
-Incoming Call              106	       notWorkTime	       Non-Working Hours   
+Inbound call              107	       ivrend                   end directly after ivr.
 
-Incoming Call	            107	       ivrEnd	               Ended Directly After IVR
+Inbound call              100	       blocklist call - in      call - in blocklist. 
 
-Incoming Call	            100	      blackList Incoming blocklist  
+Outgoing call            2                 unconnected            unconnected.
 
-Outgoing Call               2	              unconnected	Unconnected
+Outgoing call            108           restricted callee      callee restricted due to high - risk.
 
-Outgoing Call             108	        restrictedCallee	Callee restricted due to high risk
+Outgoing call         109        toomanyrequest        overfrequency.
 
-Outgoing Call             109	        tooManyRequest	    Frequency limit exceeded
+Outgoing call         110        restrictedarea        outbound blind area.
 
-Outgoing Call             110	        restrictedArea	    Call to restricted area
-
-Outgoing Call             111	        restrictedTime	Call time restricted
+Outgoing call         111        restrictedtime        outbound time restriction.
                          
-Outgoing Call             201            unknown	Unknown status
+Outgoing call         201        unknown               unknown status.
 
-Outgoing Call             202            notAnswer	Missed call
+Outgoing call         202        notanswer             unanswered.
 
-Outgoing Call            203	    userReject	Reject/Hang Up
+Outgoing call - 203 - userreject: reject call.
 
-Outgoing Call	          204	    powerOff	Shutting down
+Outgoing call - 204 - poweroff: power off.
 
-Outgoing Call           205            numberNotExist	Disconnected Number
+Outgoing call - 205 - numbernotexist: nonexistent number.
 
-Phone Call Out	         206	           busy	In Call
+Outgoing call - 206 - busy: call in progress.
 
-Outgoing Call   	        207	           outOfCredit	Overdue Payment
+Outgoing call - 207 - outofcredit: arrears.
 
-Outgoing Call	         208	           operatorError	 ISP Carrier Line Anomaly
+Outgoing call - 208 - operatorerror - ISP line exception.
 
-Outgoing Call         	209	           callerCancel	Caller Cancelled
+Outgoing call - 209 - callercancel - caller cancellation.
 
-Outgoing Call	        210	           notInService	Out of Service Area
+Outgoing call - 210 - notinservice - not in service area.
 
-Phone Call In & Out	211    clientError    Client Error
-
-Note: This field may return null, indicating that no valid values can be obtained.
+Inbound and outgoing call - 211 - clienterror - client error.
+Outgoing call - 212 - carrierblocked - ISP blocking.
                      * 
                      */
                     std::string GetEndStatusString() const;
 
                     /**
-                     * 设置EndStatus corresponds one-to-one with EndStatusString, specific enumerations are as follows:
+                     * 设置EndStatus corresponds one-to-one with endstatusstring, with specific enumerations as follows:.
 
-**Scenario	         EndStatus	EndStatusString	Status Description**
+**Scenario	EndStatus	EndStatusString	Status description**.
 
-Incoming & Outgoing Calls	1	        ok	                        Normal End
+Inbound call & call	1	ok	end properly.
 
-Incoming & Outgoing Calls	0	        error	                System Error
+Inbound call & call | 0 | error | system error.
 
-Incoming Call	             102	        ivrGiveUp	        User Gave Up During IVR
+Inbound call | 102 | ivrgiveup | user gives up during ivr.
 
-Incoming Call	             103	        waitingGiveUp	       User Gave Up During Queue
+Inbound call | 103 | waitinggiveup | user gives up during session queue.
 
-Incoming Call	             104	        ringingGiveUp	       User Gave Up During Ringing
+Inbound call | 104 | ringinggiveup | user gives up during session ringing.
 
-Incoming Call	             105	        noSeatOnline	       No Seat Online
+Inbound call | 105 | noseatonline | no agent online.
 
-Incoming Call              106	       notWorkTime	       Non-Working Hours   
+Inbound call              106	       non - working hour      non - working hour.   
 
-Incoming Call	            107	       ivrEnd	               Ended Directly After IVR
+Inbound call              107	       ivrend                   end directly after ivr.
 
-Incoming Call	            100	      blackList Incoming blocklist  
+Inbound call              100	       blocklist call - in      call - in blocklist. 
 
-Outgoing Call               2	              unconnected	Unconnected
+Outgoing call            2                 unconnected            unconnected.
 
-Outgoing Call             108	        restrictedCallee	Callee restricted due to high risk
+Outgoing call            108           restricted callee      callee restricted due to high - risk.
 
-Outgoing Call             109	        tooManyRequest	    Frequency limit exceeded
+Outgoing call         109        toomanyrequest        overfrequency.
 
-Outgoing Call             110	        restrictedArea	    Call to restricted area
+Outgoing call         110        restrictedarea        outbound blind area.
 
-Outgoing Call             111	        restrictedTime	Call time restricted
+Outgoing call         111        restrictedtime        outbound time restriction.
                          
-Outgoing Call             201            unknown	Unknown status
+Outgoing call         201        unknown               unknown status.
 
-Outgoing Call             202            notAnswer	Missed call
+Outgoing call         202        notanswer             unanswered.
 
-Outgoing Call            203	    userReject	Reject/Hang Up
+Outgoing call - 203 - userreject: reject call.
 
-Outgoing Call	          204	    powerOff	Shutting down
+Outgoing call - 204 - poweroff: power off.
 
-Outgoing Call           205            numberNotExist	Disconnected Number
+Outgoing call - 205 - numbernotexist: nonexistent number.
 
-Phone Call Out	         206	           busy	In Call
+Outgoing call - 206 - busy: call in progress.
 
-Outgoing Call   	        207	           outOfCredit	Overdue Payment
+Outgoing call - 207 - outofcredit: arrears.
 
-Outgoing Call	         208	           operatorError	 ISP Carrier Line Anomaly
+Outgoing call - 208 - operatorerror - ISP line exception.
 
-Outgoing Call         	209	           callerCancel	Caller Cancelled
+Outgoing call - 209 - callercancel - caller cancellation.
 
-Outgoing Call	        210	           notInService	Out of Service Area
+Outgoing call - 210 - notinservice - not in service area.
 
-Phone Call In & Out	211    clientError    Client Error
+Inbound and outgoing call - 211 - clienterror - client error.
+Outgoing call - 212 - carrierblocked - ISP blocking.
+                     * @param _endStatusString EndStatus corresponds one-to-one with endstatusstring, with specific enumerations as follows:.
 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _endStatusString EndStatus corresponds one-to-one with EndStatusString, specific enumerations are as follows:
+**Scenario	EndStatus	EndStatusString	Status description**.
 
-**Scenario	         EndStatus	EndStatusString	Status Description**
+Inbound call & call	1	ok	end properly.
 
-Incoming & Outgoing Calls	1	        ok	                        Normal End
+Inbound call & call | 0 | error | system error.
 
-Incoming & Outgoing Calls	0	        error	                System Error
+Inbound call | 102 | ivrgiveup | user gives up during ivr.
 
-Incoming Call	             102	        ivrGiveUp	        User Gave Up During IVR
+Inbound call | 103 | waitinggiveup | user gives up during session queue.
 
-Incoming Call	             103	        waitingGiveUp	       User Gave Up During Queue
+Inbound call | 104 | ringinggiveup | user gives up during session ringing.
 
-Incoming Call	             104	        ringingGiveUp	       User Gave Up During Ringing
+Inbound call | 105 | noseatonline | no agent online.
 
-Incoming Call	             105	        noSeatOnline	       No Seat Online
+Inbound call              106	       non - working hour      non - working hour.   
 
-Incoming Call              106	       notWorkTime	       Non-Working Hours   
+Inbound call              107	       ivrend                   end directly after ivr.
 
-Incoming Call	            107	       ivrEnd	               Ended Directly After IVR
+Inbound call              100	       blocklist call - in      call - in blocklist. 
 
-Incoming Call	            100	      blackList Incoming blocklist  
+Outgoing call            2                 unconnected            unconnected.
 
-Outgoing Call               2	              unconnected	Unconnected
+Outgoing call            108           restricted callee      callee restricted due to high - risk.
 
-Outgoing Call             108	        restrictedCallee	Callee restricted due to high risk
+Outgoing call         109        toomanyrequest        overfrequency.
 
-Outgoing Call             109	        tooManyRequest	    Frequency limit exceeded
+Outgoing call         110        restrictedarea        outbound blind area.
 
-Outgoing Call             110	        restrictedArea	    Call to restricted area
-
-Outgoing Call             111	        restrictedTime	Call time restricted
+Outgoing call         111        restrictedtime        outbound time restriction.
                          
-Outgoing Call             201            unknown	Unknown status
+Outgoing call         201        unknown               unknown status.
 
-Outgoing Call             202            notAnswer	Missed call
+Outgoing call         202        notanswer             unanswered.
 
-Outgoing Call            203	    userReject	Reject/Hang Up
+Outgoing call - 203 - userreject: reject call.
 
-Outgoing Call	          204	    powerOff	Shutting down
+Outgoing call - 204 - poweroff: power off.
 
-Outgoing Call           205            numberNotExist	Disconnected Number
+Outgoing call - 205 - numbernotexist: nonexistent number.
 
-Phone Call Out	         206	           busy	In Call
+Outgoing call - 206 - busy: call in progress.
 
-Outgoing Call   	        207	           outOfCredit	Overdue Payment
+Outgoing call - 207 - outofcredit: arrears.
 
-Outgoing Call	         208	           operatorError	 ISP Carrier Line Anomaly
+Outgoing call - 208 - operatorerror - ISP line exception.
 
-Outgoing Call         	209	           callerCancel	Caller Cancelled
+Outgoing call - 209 - callercancel - caller cancellation.
 
-Outgoing Call	        210	           notInService	Out of Service Area
+Outgoing call - 210 - notinservice - not in service area.
 
-Phone Call In & Out	211    clientError    Client Error
-
-Note: This field may return null, indicating that no valid values can be obtained.
+Inbound and outgoing call - 211 - clienterror - client error.
+Outgoing call - 212 - carrierblocked - ISP blocking.
                      * 
                      */
                     void SetEndStatusString(const std::string& _endStatusString);
@@ -934,19 +894,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EndStatusStringHasBeenSet() const;
 
                     /**
-                     * 获取Session start timestamp. UNIX second-level timestamp.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return StartTimestamp Session start timestamp. UNIX second-level timestamp.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Session start timestamp. unix second-level timestamp.
+                     * @return StartTimestamp Session start timestamp. unix second-level timestamp.
                      * 
                      */
                     int64_t GetStartTimestamp() const;
 
                     /**
-                     * 设置Session start timestamp. UNIX second-level timestamp.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _startTimestamp Session start timestamp. UNIX second-level timestamp.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Session start timestamp. unix second-level timestamp.
+                     * @param _startTimestamp Session start timestamp. unix second-level timestamp.
                      * 
                      */
                     void SetStartTimestamp(const int64_t& _startTimestamp);
@@ -959,19 +915,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool StartTimestampHasBeenSet() const;
 
                     /**
-                     * 获取Queue entry time. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return QueuedTimestamp Queue entry time. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Queue entry time. unix second-level timestamp.
+                     * @return QueuedTimestamp Queue entry time. unix second-level timestamp.
                      * 
                      */
                     int64_t GetQueuedTimestamp() const;
 
                     /**
-                     * 设置Queue entry time. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _queuedTimestamp Queue entry time. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Queue entry time. unix second-level timestamp.
+                     * @param _queuedTimestamp Queue entry time. unix second-level timestamp.
                      * 
                      */
                     void SetQueuedTimestamp(const int64_t& _queuedTimestamp);
@@ -984,19 +936,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool QueuedTimestampHasBeenSet() const;
 
                     /**
-                     * 获取Post-IVR key information (e.g. [{"Key":"1","Label":"Very Satisfied"}])
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return PostIVRKeyPressed Post-IVR key information (e.g. [{"Key":"1","Label":"Very Satisfied"}])
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Post-IVR key information (e.g. [{"key":"1","label":"very satisfied"}]).
+                     * @return PostIVRKeyPressed Post-IVR key information (e.g. [{"key":"1","label":"very satisfied"}]).
                      * 
                      */
                     std::vector<IVRKeyPressedElement> GetPostIVRKeyPressed() const;
 
                     /**
-                     * 设置Post-IVR key information (e.g. [{"Key":"1","Label":"Very Satisfied"}])
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _postIVRKeyPressed Post-IVR key information (e.g. [{"Key":"1","Label":"Very Satisfied"}])
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Post-IVR key information (e.g. [{"key":"1","label":"very satisfied"}]).
+                     * @param _postIVRKeyPressed Post-IVR key information (e.g. [{"key":"1","label":"very satisfied"}]).
                      * 
                      */
                     void SetPostIVRKeyPressed(const std::vector<IVRKeyPressedElement>& _postIVRKeyPressed);
@@ -1009,19 +957,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool PostIVRKeyPressedHasBeenSet() const;
 
                     /**
-                     * 获取Queue Skill Group ID.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return QueuedSkillGroupId Queue Skill Group ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Queue skill group id.
+                     * @return QueuedSkillGroupId Queue skill group id.
                      * 
                      */
                     int64_t GetQueuedSkillGroupId() const;
 
                     /**
-                     * 设置Queue Skill Group ID.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _queuedSkillGroupId Queue Skill Group ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Queue skill group id.
+                     * @param _queuedSkillGroupId Queue skill group id.
                      * 
                      */
                     void SetQueuedSkillGroupId(const int64_t& _queuedSkillGroupId);
@@ -1034,19 +978,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool QueuedSkillGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Session ID.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return SessionId Session ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Session id.
+                     * @return SessionId Session id.
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置Session ID.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _sessionId Session ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Session id.
+                     * @param _sessionId Session id.
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -1059,19 +999,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取Caller number protection ID. (Effective when the number protection map feature is activated, and the Caller field is empty).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProtectedCaller Caller number protection ID. (Effective when the number protection map feature is activated, and the Caller field is empty).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Caller number protection id. effective when the number protection map feature is activated, and the caller field is empty.
+                     * @return ProtectedCaller Caller number protection id. effective when the number protection map feature is activated, and the caller field is empty.
                      * 
                      */
                     std::string GetProtectedCaller() const;
 
                     /**
-                     * 设置Caller number protection ID. (Effective when the number protection map feature is activated, and the Caller field is empty).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _protectedCaller Caller number protection ID. (Effective when the number protection map feature is activated, and the Caller field is empty).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Caller number protection id. effective when the number protection map feature is activated, and the caller field is empty.
+                     * @param _protectedCaller Caller number protection id. effective when the number protection map feature is activated, and the caller field is empty.
                      * 
                      */
                     void SetProtectedCaller(const std::string& _protectedCaller);
@@ -1084,19 +1020,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProtectedCallerHasBeenSet() const;
 
                     /**
-                     * 获取Called number protection ID (Effective when the number protection map feature is activated, and the Callee field is empty).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProtectedCallee Called number protection ID (Effective when the number protection map feature is activated, and the Callee field is empty).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Called number protection id. effective when the number protection map feature is activated, and the callee field is empty.
+                     * @return ProtectedCallee Called number protection id. effective when the number protection map feature is activated, and the callee field is empty.
                      * 
                      */
                     std::string GetProtectedCallee() const;
 
                     /**
-                     * 设置Called number protection ID (Effective when the number protection map feature is activated, and the Callee field is empty).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _protectedCallee Called number protection ID (Effective when the number protection map feature is activated, and the Callee field is empty).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Called number protection id. effective when the number protection map feature is activated, and the callee field is empty.
+                     * @param _protectedCallee Called number protection id. effective when the number protection map feature is activated, and the callee field is empty.
                      * 
                      */
                     void SetProtectedCallee(const std::string& _protectedCallee);
@@ -1109,19 +1041,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProtectedCalleeHasBeenSet() const;
 
                     /**
-                     * 获取Customer custom data. (User-to-User Interface)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Uui Customer custom data. (User-to-User Interface)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Customer custom data. (user - to - user interface).
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return Uui Customer custom data. (user - to - user interface).
+Note: this field may return null, indicating that no valid values can be obtained.
                      * @deprecated
                      */
                     std::string GetUui() const;
 
                     /**
-                     * 设置Customer custom data. (User-to-User Interface)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _uui Customer custom data. (User-to-User Interface)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Customer custom data. (user - to - user interface).
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param _uui Customer custom data. (user - to - user interface).
+Note: this field may return null, indicating that no valid values can be obtained.
                      * @deprecated
                      */
                     void SetUui(const std::string& _uui);
@@ -1134,19 +1066,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UuiHasBeenSet() const;
 
                     /**
-                     * 获取Customer custom data. (User-to-User Interface)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UUI Customer custom data. (User-to-User Interface)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Customer custom data. (user - to - user interface).
+                     * @return UUI Customer custom data. (user - to - user interface).
                      * 
                      */
                     std::string GetUUI() const;
 
                     /**
-                     * 设置Customer custom data. (User-to-User Interface)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _uUI Customer custom data. (User-to-User Interface)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Customer custom data. (user - to - user interface).
+                     * @param _uUI Customer custom data. (user - to - user interface).
                      * 
                      */
                     void SetUUI(const std::string& _uUI);
@@ -1159,19 +1087,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UUIHasBeenSet() const;
 
                     /**
-                     * 获取IVR key information (e.g.?[{"Key":"1","Label":"highly satisfied"}])
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IVRKeyPressedEx IVR key information (e.g.?[{"Key":"1","Label":"highly satisfied"}])
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取IVR key information (e.g. [{"key":"1","label":"very satisfied"}]).
+                     * @return IVRKeyPressedEx IVR key information (e.g. [{"key":"1","label":"very satisfied"}]).
                      * 
                      */
                     std::vector<IVRKeyPressedElement> GetIVRKeyPressedEx() const;
 
                     /**
-                     * 设置IVR key information (e.g.?[{"Key":"1","Label":"highly satisfied"}])
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _iVRKeyPressedEx IVR key information (e.g.?[{"Key":"1","Label":"highly satisfied"}])
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置IVR key information (e.g. [{"key":"1","label":"very satisfied"}]).
+                     * @param _iVRKeyPressedEx IVR key information (e.g. [{"key":"1","label":"very satisfied"}]).
                      * 
                      */
                     void SetIVRKeyPressedEx(const std::vector<IVRKeyPressedElement>& _iVRKeyPressedEx);
@@ -1184,19 +1108,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IVRKeyPressedExHasBeenSet() const;
 
                     /**
-                     * 获取Access to the ASR text information address of the recording.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AsrUrl Access to the ASR text information address of the recording.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Access to the asr text information address of the recording.
+                     * @return AsrUrl Access to the asr text information address of the recording.
                      * 
                      */
                     std::string GetAsrUrl() const;
 
                     /**
-                     * 设置Access to the ASR text information address of the recording.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _asrUrl Access to the ASR text information address of the recording.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Access to the asr text information address of the recording.
+                     * @param _asrUrl Access to the asr text information address of the recording.
                      * 
                      */
                     void SetAsrUrl(const std::string& _asrUrl);
@@ -1209,19 +1129,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AsrUrlHasBeenSet() const;
 
                     /**
-                     * 获取Address of the third party COS for transferring recording.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CustomRecordURL Address of the third party COS for transferring recording.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取ASRUrl status: complete.
+Completed;.
+Processing.
+Generating.
+NotExists.
+No record (offline asr generation is not enabled or no package is available).
+                     * @return AsrStatus ASRUrl status: complete.
+Completed;.
+Processing.
+Generating.
+NotExists.
+No record (offline asr generation is not enabled or no package is available).
+                     * 
+                     */
+                    std::string GetAsrStatus() const;
+
+                    /**
+                     * 设置ASRUrl status: complete.
+Completed;.
+Processing.
+Generating.
+NotExists.
+No record (offline asr generation is not enabled or no package is available).
+                     * @param _asrStatus ASRUrl status: complete.
+Completed;.
+Processing.
+Generating.
+NotExists.
+No record (offline asr generation is not enabled or no package is available).
+                     * 
+                     */
+                    void SetAsrStatus(const std::string& _asrStatus);
+
+                    /**
+                     * 判断参数 AsrStatus 是否已赋值
+                     * @return AsrStatus 是否已赋值
+                     * 
+                     */
+                    bool AsrStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Address of the third-party cos for transferring recording.
+                     * @return CustomRecordURL Address of the third-party cos for transferring recording.
                      * 
                      */
                     std::string GetCustomRecordURL() const;
 
                     /**
-                     * 设置Address of the third party COS for transferring recording.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _customRecordURL Address of the third party COS for transferring recording.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Address of the third-party cos for transferring recording.
+                     * @param _customRecordURL Address of the third-party cos for transferring recording.
                      * 
                      */
                     void SetCustomRecordURL(const std::string& _customRecordURL);
@@ -1234,19 +1191,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CustomRecordURLHasBeenSet() const;
 
                     /**
-                     * 获取Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Remark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Remarks.
+                     * @return Remark Remarks.
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _remark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Remarks.
+                     * @param _remark Remarks.
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -1260,18 +1213,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Queue skill group name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return QueuedSkillGroupName Queue skill group name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetQueuedSkillGroupName() const;
 
                     /**
                      * 设置Queue skill group name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _queuedSkillGroupName Queue skill group name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetQueuedSkillGroupName(const std::string& _queuedSkillGroupName);
@@ -1284,19 +1233,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool QueuedSkillGroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Audio message recording URL during call.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VoicemailRecordURL Audio message recording URL during call.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Audio message recording url during call.
+                     * @return VoicemailRecordURL Audio message recording url during call.
                      * 
                      */
                     std::vector<std::string> GetVoicemailRecordURL() const;
 
                     /**
-                     * 设置Audio message recording URL during call.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _voicemailRecordURL Audio message recording URL during call.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Audio message recording url during call.
+                     * @param _voicemailRecordURL Audio message recording url during call.
                      * 
                      */
                     void SetVoicemailRecordURL(const std::vector<std::string>& _voicemailRecordURL);
@@ -1309,19 +1254,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VoicemailRecordURLHasBeenSet() const;
 
                     /**
-                     * 获取Text Information address of ASR audio message during a call.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VoicemailAsrURL Text Information address of ASR audio message during a call.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Text information address of asr audio message during a call.
+                     * @return VoicemailAsrURL Text information address of asr audio message during a call.
                      * 
                      */
                     std::vector<std::string> GetVoicemailAsrURL() const;
 
                     /**
-                     * 设置Text Information address of ASR audio message during a call.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _voicemailAsrURL Text Information address of ASR audio message during a call.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Text information address of asr audio message during a call.
+                     * @param _voicemailAsrURL Text information address of asr audio message during a call.
                      * 
                      */
                     void SetVoicemailAsrURL(const std::vector<std::string>& _voicemailAsrURL);
@@ -1348,13 +1289,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_calleeHasBeenSet;
 
                     /**
-                     * Call initiation timestamp, Unix timestamp.
+                     * Call initiation timestamp, unix timestamp.
                      */
                     int64_t m_time;
                     bool m_timeHasBeenSet;
 
                     /**
-                     * Call direction: 0 - Inbound, 1 - Outbound.
+                     * Call direction: 0 - inbound, 1 - outbound.
                      */
                     int64_t m_direction;
                     bool m_directionHasBeenSet;
@@ -1366,79 +1307,78 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_durationHasBeenSet;
 
                     /**
-                     * Recording Information.
+                     * Recording information.
                      */
                     std::string m_recordURL;
                     bool m_recordURLHasBeenSet;
 
                     /**
-                     * Recording ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Recording id.
                      */
                     std::string m_recordId;
                     bool m_recordIdHasBeenSet;
 
                     /**
-                     * Agent Information
+                     * Agent information.
                      */
                     SeatUserInfo m_seatUser;
                     bool m_seatUserHasBeenSet;
 
                     /**
-                     * EndStatus corresponds one-to-one with EndStatusString, specific enumerations are as follows:
+                     * EndStatus corresponds one-to-one with endstatusstring, with specific enumerations as follows:.
 
-**Scenario	         EndStatus	EndStatusString	Status Description**
+**Scenario	EndStatus	EndStatusString	Status description**.
 
-Incoming & Outgoing Calls	1	        ok	                        Normal End
+Inbound call & call	1	ok	end properly.
 
-Incoming & Outgoing Calls	0	        error	                System Error
+Inbound call & call | 0 | error | system error.
 
-Incoming Call	             102	        ivrGiveUp	        User Gave Up During IVR
+Inbound call | 102 | ivrgiveup | user gives up during ivr.
 
-Incoming Call	             103	        waitingGiveUp	       User Gave Up During Queue
+Inbound call | 103 | waitinggiveup | user gives up during session queue.
 
-Incoming Call	             104	        ringingGiveUp	       User Gave Up During Ringing
+Inbound call | 104 | ringinggiveup | user gives up during session ringing.
 
-Incoming Call	             105	        noSeatOnline	       No Seat Online
+Inbound call | 105 | noseatonline | no agent online.
 
-Incoming Call              106	       notWorkTime	       Non-Working Hours   
+Inbound call              106	       non - working hour      non - working hour.   
 
-Incoming Call	            107	       ivrEnd	               Ended Directly After IVR
+Inbound call              107	       ivrend                   end directly after ivr.
 
-Incoming Call	            100	      blackList Incoming blocklist  
+Inbound call              100	       blocklist call - in      call - in blocklist. 
 
-Outgoing Call               2	              unconnected	Unconnected
+Outgoing call            2                 unconnected            unconnected.
 
-Outgoing Call             108	        restrictedCallee	Callee restricted due to high risk
+Outgoing call            108           restricted callee      callee restricted due to high - risk.
 
-Outgoing Call             109	        tooManyRequest	    Frequency limit exceeded
+Outgoing call         109        toomanyrequest        overfrequency.
 
-Outgoing Call             110	        restrictedArea	    Call to restricted area
+Outgoing call         110        restrictedarea        outbound blind area.
 
-Outgoing Call             111	        restrictedTime	Call time restricted
+Outgoing call         111        restrictedtime        outbound time restriction.
                          
-Outgoing Call             201            unknown	Unknown status
+Outgoing call         201        unknown               unknown status.
 
-Outgoing Call             202            notAnswer	Missed call
+Outgoing call         202        notanswer             unanswered.
 
-Outgoing Call            203	    userReject	Reject/Hang Up
+Outgoing call - 203 - userreject: reject call.
 
-Outgoing Call	          204	    powerOff	Shutting down
+Outgoing call - 204 - poweroff: power off.
 
-Outgoing Call           205            numberNotExist	Disconnected Number
+Outgoing call - 205 - numbernotexist: nonexistent number.
 
-Outgoing Call	         206	           busy	During the call
+Outgoing call - 206 - busy: call in progress.
 
-Outgoing Call   	        207	           outOfCredit	Overdue Payment
+Outgoing call - 207 - outofcredit: arrears.
 
-Outgoing Call	         208	           operatorError	 ISP Carrier Line Anomaly
+Outgoing call - 208 - operatorerror - ISP line exception.
 
-Outgoing Call         	209	           callerCancel	Caller Cancelled
+Outgoing call - 209 - callercancel - caller cancellation.
 
-Outgoing Call	        210	           notInService	Out of Service Area
+Outgoing call - 210 - notinservice - not in service area.
 
-Incoming & Outgoing Calls	211    clientError    Client Error
-
+Inbound and outgoing call - 211 - clienterror - client error.
+Outgoing call - 212 - carrierblocked - ISP blocking.
                      */
                     int64_t m_endStatus;
                     bool m_endStatusHasBeenSet;
@@ -1450,235 +1390,222 @@ Incoming & Outgoing Calls	211    clientError    Client Error
                     bool m_skillGroupHasBeenSet;
 
                     /**
-                     * Caller's location.
+                     * Caller'S location.
                      */
                     std::string m_callerLocation;
                     bool m_callerLocationHasBeenSet;
 
                     /**
-                     * Time spent in IVR stage.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Time spent in ivr stage.
                      */
                     int64_t m_iVRDuration;
                     bool m_iVRDurationHasBeenSet;
 
                     /**
-                     * Ring timestamp. UNIX second-level timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Ring timestamp. unix second-level timestamp.
                      */
                     int64_t m_ringTimestamp;
                     bool m_ringTimestampHasBeenSet;
 
                     /**
-                     * Answer timestamp. UNIX second-Level timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Answer timestamp. unix second-level timestamp.
                      */
                     int64_t m_acceptTimestamp;
                     bool m_acceptTimestampHasBeenSet;
 
                     /**
-                     * End timestamp. UNIX second-level timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * End timestamp. unix second-level timestamp.
                      */
                     int64_t m_endedTimestamp;
                     bool m_endedTimestampHasBeenSet;
 
                     /**
-                     * IVR key information, e.g. ["1","2","3"]
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * IVR key information, e.g. ["1","2","3"].
                      */
                     std::vector<std::string> m_iVRKeyPressed;
                     bool m_iVRKeyPressedHasBeenSet;
 
                     /**
-                     * Hanging Up Party seat Seat user Users system system
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Hang-Up side, seat, user, system.
                      */
                     std::string m_hungUpSide;
                     bool m_hungUpSideHasBeenSet;
 
                     /**
-                     * List of Service Participants
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Service participant list.
                      */
                     std::vector<ServeParticipant> m_serveParticipants;
                     bool m_serveParticipantsHasBeenSet;
 
                     /**
-                     * Skill group ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Skill group id.
                      */
                     int64_t m_skillGroupId;
                     bool m_skillGroupIdHasBeenSet;
 
                     /**
-                     * EndStatus corresponds one-to-one with EndStatusString, specific enumerations are as follows:
+                     * EndStatus corresponds one-to-one with endstatusstring, with specific enumerations as follows:.
 
-**Scenario	         EndStatus	EndStatusString	Status Description**
+**Scenario	EndStatus	EndStatusString	Status description**.
 
-Incoming & Outgoing Calls	1	        ok	                        Normal End
+Inbound call & call	1	ok	end properly.
 
-Incoming & Outgoing Calls	0	        error	                System Error
+Inbound call & call | 0 | error | system error.
 
-Incoming Call	             102	        ivrGiveUp	        User Gave Up During IVR
+Inbound call | 102 | ivrgiveup | user gives up during ivr.
 
-Incoming Call	             103	        waitingGiveUp	       User Gave Up During Queue
+Inbound call | 103 | waitinggiveup | user gives up during session queue.
 
-Incoming Call	             104	        ringingGiveUp	       User Gave Up During Ringing
+Inbound call | 104 | ringinggiveup | user gives up during session ringing.
 
-Incoming Call	             105	        noSeatOnline	       No Seat Online
+Inbound call | 105 | noseatonline | no agent online.
 
-Incoming Call              106	       notWorkTime	       Non-Working Hours   
+Inbound call              106	       non - working hour      non - working hour.   
 
-Incoming Call	            107	       ivrEnd	               Ended Directly After IVR
+Inbound call              107	       ivrend                   end directly after ivr.
 
-Incoming Call	            100	      blackList Incoming blocklist  
+Inbound call              100	       blocklist call - in      call - in blocklist. 
 
-Outgoing Call               2	              unconnected	Unconnected
+Outgoing call            2                 unconnected            unconnected.
 
-Outgoing Call             108	        restrictedCallee	Callee restricted due to high risk
+Outgoing call            108           restricted callee      callee restricted due to high - risk.
 
-Outgoing Call             109	        tooManyRequest	    Frequency limit exceeded
+Outgoing call         109        toomanyrequest        overfrequency.
 
-Outgoing Call             110	        restrictedArea	    Call to restricted area
+Outgoing call         110        restrictedarea        outbound blind area.
 
-Outgoing Call             111	        restrictedTime	Call time restricted
+Outgoing call         111        restrictedtime        outbound time restriction.
                          
-Outgoing Call             201            unknown	Unknown status
+Outgoing call         201        unknown               unknown status.
 
-Outgoing Call             202            notAnswer	Missed call
+Outgoing call         202        notanswer             unanswered.
 
-Outgoing Call            203	    userReject	Reject/Hang Up
+Outgoing call - 203 - userreject: reject call.
 
-Outgoing Call	          204	    powerOff	Shutting down
+Outgoing call - 204 - poweroff: power off.
 
-Outgoing Call           205            numberNotExist	Disconnected Number
+Outgoing call - 205 - numbernotexist: nonexistent number.
 
-Phone Call Out	         206	           busy	In Call
+Outgoing call - 206 - busy: call in progress.
 
-Outgoing Call   	        207	           outOfCredit	Overdue Payment
+Outgoing call - 207 - outofcredit: arrears.
 
-Outgoing Call	         208	           operatorError	 ISP Carrier Line Anomaly
+Outgoing call - 208 - operatorerror - ISP line exception.
 
-Outgoing Call         	209	           callerCancel	Caller Cancelled
+Outgoing call - 209 - callercancel - caller cancellation.
 
-Outgoing Call	        210	           notInService	Out of Service Area
+Outgoing call - 210 - notinservice - not in service area.
 
-Phone Call In & Out	211    clientError    Client Error
-
-Note: This field may return null, indicating that no valid values can be obtained.
+Inbound and outgoing call - 211 - clienterror - client error.
+Outgoing call - 212 - carrierblocked - ISP blocking.
                      */
                     std::string m_endStatusString;
                     bool m_endStatusStringHasBeenSet;
 
                     /**
-                     * Session start timestamp. UNIX second-level timestamp.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Session start timestamp. unix second-level timestamp.
                      */
                     int64_t m_startTimestamp;
                     bool m_startTimestampHasBeenSet;
 
                     /**
-                     * Queue entry time. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Queue entry time. unix second-level timestamp.
                      */
                     int64_t m_queuedTimestamp;
                     bool m_queuedTimestampHasBeenSet;
 
                     /**
-                     * Post-IVR key information (e.g. [{"Key":"1","Label":"Very Satisfied"}])
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Post-IVR key information (e.g. [{"key":"1","label":"very satisfied"}]).
                      */
                     std::vector<IVRKeyPressedElement> m_postIVRKeyPressed;
                     bool m_postIVRKeyPressedHasBeenSet;
 
                     /**
-                     * Queue Skill Group ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Queue skill group id.
                      */
                     int64_t m_queuedSkillGroupId;
                     bool m_queuedSkillGroupIdHasBeenSet;
 
                     /**
-                     * Session ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Session id.
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * Caller number protection ID. (Effective when the number protection map feature is activated, and the Caller field is empty).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Caller number protection id. effective when the number protection map feature is activated, and the caller field is empty.
                      */
                     std::string m_protectedCaller;
                     bool m_protectedCallerHasBeenSet;
 
                     /**
-                     * Called number protection ID (Effective when the number protection map feature is activated, and the Callee field is empty).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Called number protection id. effective when the number protection map feature is activated, and the callee field is empty.
                      */
                     std::string m_protectedCallee;
                     bool m_protectedCalleeHasBeenSet;
 
                     /**
-                     * Customer custom data. (User-to-User Interface)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Customer custom data. (user - to - user interface).
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_uui;
                     bool m_uuiHasBeenSet;
 
                     /**
-                     * Customer custom data. (User-to-User Interface)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Customer custom data. (user - to - user interface).
                      */
                     std::string m_uUI;
                     bool m_uUIHasBeenSet;
 
                     /**
-                     * IVR key information (e.g.?[{"Key":"1","Label":"highly satisfied"}])
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * IVR key information (e.g. [{"key":"1","label":"very satisfied"}]).
                      */
                     std::vector<IVRKeyPressedElement> m_iVRKeyPressedEx;
                     bool m_iVRKeyPressedExHasBeenSet;
 
                     /**
-                     * Access to the ASR text information address of the recording.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Access to the asr text information address of the recording.
                      */
                     std::string m_asrUrl;
                     bool m_asrUrlHasBeenSet;
 
                     /**
-                     * Address of the third party COS for transferring recording.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * ASRUrl status: complete.
+Completed;.
+Processing.
+Generating.
+NotExists.
+No record (offline asr generation is not enabled or no package is available).
+                     */
+                    std::string m_asrStatus;
+                    bool m_asrStatusHasBeenSet;
+
+                    /**
+                     * Address of the third-party cos for transferring recording.
                      */
                     std::string m_customRecordURL;
                     bool m_customRecordURLHasBeenSet;
 
                     /**
-                     * Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Remarks.
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
                      * Queue skill group name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_queuedSkillGroupName;
                     bool m_queuedSkillGroupNameHasBeenSet;
 
                     /**
-                     * Audio message recording URL during call.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Audio message recording url during call.
                      */
                     std::vector<std::string> m_voicemailRecordURL;
                     bool m_voicemailRecordURLHasBeenSet;
 
                     /**
-                     * Text Information address of ASR audio message during a call.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Text information address of asr audio message during a call.
                      */
                     std::vector<std::string> m_voicemailAsrURL;
                     bool m_voicemailAsrURLHasBeenSet;

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task Name
-                     * @return Name Task Name
+                     * 获取Task name.
+                     * @return Name Task name.
                      * 
                      */
                     std::string GetName() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Task Description.
-                     * @return Description Task Description.
+                     * 获取<Task description>.
+                     * @return Description <Task description>.
                      * 
                      */
                     std::string GetDescription() const;
@@ -161,13 +161,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Task Name
+                     * Task name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Task Description.
+                     * <Task description>.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 获取Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
-                     * 设置Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @param _sdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 设置Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @param _sdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Page size, upper limit 50
-                     * @return PageSize Page size, upper limit 50
+                     * 获取Page size, upper limit 50.
+                     * @return PageSize Page size, upper limit 50.
                      * 
                      */
                     uint64_t GetPageSize() const;
 
                     /**
-                     * 设置Page size, upper limit 50
-                     * @param _pageSize Page size, upper limit 50
+                     * 设置Page size, upper limit 50.
+                     * @param _pageSize Page size, upper limit 50.
                      * 
                      */
                     void SetPageSize(const uint64_t& _pageSize);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool PageNumberHasBeenSet() const;
 
                     /**
-                     * 获取File alias
-                     * @return CustomFileName File alias
+                     * 获取File alias.
+                     * @return CustomFileName File alias.
                      * 
                      */
                     std::vector<std::string> GetCustomFileName() const;
 
                     /**
-                     * 设置File alias
-                     * @param _customFileName File alias
+                     * 设置File alias.
+                     * @param _customFileName File alias.
                      * 
                      */
                     void SetCustomFileName(const std::vector<std::string>& _customFileName);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool CustomFileNameHasBeenSet() const;
 
                     /**
-                     * 获取Filename
-                     * @return AudioFileName Filename
+                     * 获取Filename.
+                     * @return AudioFileName Filename.
                      * 
                      */
                     std::vector<std::string> GetAudioFileName() const;
 
                     /**
-                     * 设置Filename
-                     * @param _audioFileName Filename
+                     * 设置Filename.
+                     * @param _audioFileName Filename.
                      * 
                      */
                     void SetAudioFileName(const std::vector<std::string>& _audioFileName);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool AudioFileNameHasBeenSet() const;
 
                     /**
-                     * 获取File ID
-                     * @return FileId File ID
+                     * 获取File id.
+                     * @return FileId File id.
                      * 
                      */
                     std::vector<uint64_t> GetFileId() const;
 
                     /**
-                     * 设置File ID
-                     * @param _fileId File ID
+                     * 设置File id.
+                     * @param _fileId File id.
                      * 
                      */
                     void SetFileId(const std::vector<uint64_t>& _fileId);
@@ -171,13 +171,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      */
                     int64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * Page size, upper limit 50
+                     * Page size, upper limit 50.
                      */
                     uint64_t m_pageSize;
                     bool m_pageSizeHasBeenSet;
@@ -189,19 +189,19 @@ namespace TencentCloud
                     bool m_pageNumberHasBeenSet;
 
                     /**
-                     * File alias
+                     * File alias.
                      */
                     std::vector<std::string> m_customFileName;
                     bool m_customFileNameHasBeenSet;
 
                     /**
-                     * Filename
+                     * Filename.
                      */
                     std::vector<std::string> m_audioFileName;
                     bool m_audioFileNameHasBeenSet;
 
                     /**
-                     * File ID
+                     * File id.
                      */
                     std::vector<uint64_t> m_fileId;
                     bool m_fileIdHasBeenSet;

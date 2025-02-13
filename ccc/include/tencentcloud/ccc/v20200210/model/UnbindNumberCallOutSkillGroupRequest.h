@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 获取Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
-                     * 设置Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @param _sdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 设置Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @param _sdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool NumberHasBeenSet() const;
 
                     /**
-                     * 获取List of skill group IDs to be unbound.
-                     * @return SkillGroupIds List of skill group IDs to be unbound.
+                     * 获取List of skill group ids to be unbound.
+                     * @return SkillGroupIds List of skill group ids to be unbound.
                      * 
                      */
                     std::vector<uint64_t> GetSkillGroupIds() const;
 
                     /**
-                     * 设置List of skill group IDs to be unbound.
-                     * @param _skillGroupIds List of skill group IDs to be unbound.
+                     * 设置List of skill group ids to be unbound.
+                     * @param _skillGroupIds List of skill group ids to be unbound.
                      * 
                      */
                     void SetSkillGroupIds(const std::vector<uint64_t>& _skillGroupIds);
@@ -108,7 +108,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      */
                     uint64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_numberHasBeenSet;
 
                     /**
-                     * List of skill group IDs to be unbound.
+                     * List of skill group ids to be unbound.
                      */
                     std::vector<uint64_t> m_skillGroupIds;
                     bool m_skillGroupIdsHasBeenSet;

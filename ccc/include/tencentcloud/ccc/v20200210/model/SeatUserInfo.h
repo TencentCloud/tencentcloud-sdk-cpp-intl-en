@@ -90,18 +90,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Worker number.
-Note: This field may return null, indicating that no valid value could be obtained.
                      * @return StaffNumber Worker number.
-Note: This field may return null, indicating that no valid value could be obtained.
                      * 
                      */
                     std::string GetStaffNumber() const;
 
                     /**
                      * 设置Worker number.
-Note: This field may return null, indicating that no valid value could be obtained.
                      * @param _staffNumber Worker number.
-Note: This field may return null, indicating that no valid value could be obtained.
                      * 
                      */
                     void SetStaffNumber(const std::string& _staffNumber);
@@ -114,15 +110,15 @@ Note: This field may return null, indicating that no valid value could be obtain
                     bool StaffNumberHasBeenSet() const;
 
                     /**
-                     * 获取Agent's Telephone Number (With 0086 Prefix)
-                     * @return Phone Agent's Telephone Number (With 0086 Prefix)
+                     * 获取Agent'S telephone number (with 0086 prefix).
+                     * @return Phone Agent'S telephone number (with 0086 prefix).
                      * 
                      */
                     std::string GetPhone() const;
 
                     /**
-                     * 设置Agent's Telephone Number (With 0086 Prefix)
-                     * @param _phone Agent's Telephone Number (With 0086 Prefix)
+                     * 设置Agent'S telephone number (with 0086 prefix).
+                     * @param _phone Agent'S telephone number (with 0086 prefix).
                      * 
                      */
                     void SetPhone(const std::string& _phone);
@@ -156,15 +152,15 @@ Note: This field may return null, indicating that no valid value could be obtain
                     bool NickHasBeenSet() const;
 
                     /**
-                     * 获取User ID
-                     * @return UserId User ID
+                     * 获取User id.
+                     * @return UserId User id.
                      * 
                      */
                     std::string GetUserId() const;
 
                     /**
-                     * 设置User ID
-                     * @param _userId User ID
+                     * 设置User id.
+                     * @param _userId User id.
                      * 
                      */
                     void SetUserId(const std::string& _userId);
@@ -177,19 +173,15 @@ Note: This field may return null, indicating that no valid value could be obtain
                     bool UserIdHasBeenSet() const;
 
                     /**
-                     * 获取List of skill groups associated with the seat
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SkillGroupNameList List of skill groups associated with the seat
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List of skill groups associated with the agent.
+                     * @return SkillGroupNameList List of skill groups associated with the agent.
                      * 
                      */
                     std::vector<std::string> GetSkillGroupNameList() const;
 
                     /**
-                     * 设置List of skill groups associated with the seat
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _skillGroupNameList List of skill groups associated with the seat
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置List of skill groups associated with the agent.
+                     * @param _skillGroupNameList List of skill groups associated with the agent.
                      * 
                      */
                     void SetSkillGroupNameList(const std::vector<std::string>& _skillGroupNameList);
@@ -202,31 +194,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SkillGroupNameListHasBeenSet() const;
 
                     /**
-                     * 获取1: Admin.
-2: Quality inspector.
-3: Ordinary agent.
-else: Custom Role ID.
-Note: This field may return null, indicating that no valid value could be obtained.
-                     * @return Role 1: Admin.
-2: Quality inspector.
-3: Ordinary agent.
-else: Custom Role ID.
-Note: This field may return null, indicating that no valid value could be obtained.
+                     * 获取1: admin.
+2: quality inspector.
+3: ordinary agent.
+Else: custom role id.
+                     * @return Role 1: admin.
+2: quality inspector.
+3: ordinary agent.
+Else: custom role id.
                      * 
                      */
                     int64_t GetRole() const;
 
                     /**
-                     * 设置1: Admin.
-2: Quality inspector.
-3: Ordinary agent.
-else: Custom Role ID.
-Note: This field may return null, indicating that no valid value could be obtained.
-                     * @param _role 1: Admin.
-2: Quality inspector.
-3: Ordinary agent.
-else: Custom Role ID.
-Note: This field may return null, indicating that no valid value could be obtained.
+                     * 设置1: admin.
+2: quality inspector.
+3: ordinary agent.
+Else: custom role id.
+                     * @param _role 1: admin.
+2: quality inspector.
+3: ordinary agent.
+Else: custom role id.
                      * 
                      */
                     void SetRole(const int64_t& _role);
@@ -237,6 +225,27 @@ Note: This field may return null, indicating that no valid value could be obtain
                      * 
                      */
                     bool RoleHasBeenSet() const;
+
+                    /**
+                     * 获取Agent extension number (starting with 1 to 8, 4 - 6 digits).
+                     * @return ExtensionNumber Agent extension number (starting with 1 to 8, 4 - 6 digits).
+                     * 
+                     */
+                    std::string GetExtensionNumber() const;
+
+                    /**
+                     * 设置Agent extension number (starting with 1 to 8, 4 - 6 digits).
+                     * @param _extensionNumber Agent extension number (starting with 1 to 8, 4 - 6 digits).
+                     * 
+                     */
+                    void SetExtensionNumber(const std::string& _extensionNumber);
+
+                    /**
+                     * 判断参数 ExtensionNumber 是否已赋值
+                     * @return ExtensionNumber 是否已赋值
+                     * 
+                     */
+                    bool ExtensionNumberHasBeenSet() const;
 
                 private:
 
@@ -254,13 +263,12 @@ Note: This field may return null, indicating that no valid value could be obtain
 
                     /**
                      * Worker number.
-Note: This field may return null, indicating that no valid value could be obtained.
                      */
                     std::string m_staffNumber;
                     bool m_staffNumberHasBeenSet;
 
                     /**
-                     * Agent's Telephone Number (With 0086 Prefix)
+                     * Agent'S telephone number (with 0086 prefix).
                      */
                     std::string m_phone;
                     bool m_phoneHasBeenSet;
@@ -272,27 +280,31 @@ Note: This field may return null, indicating that no valid value could be obtain
                     bool m_nickHasBeenSet;
 
                     /**
-                     * User ID
+                     * User id.
                      */
                     std::string m_userId;
                     bool m_userIdHasBeenSet;
 
                     /**
-                     * List of skill groups associated with the seat
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List of skill groups associated with the agent.
                      */
                     std::vector<std::string> m_skillGroupNameList;
                     bool m_skillGroupNameListHasBeenSet;
 
                     /**
-                     * 1: Admin.
-2: Quality inspector.
-3: Ordinary agent.
-else: Custom Role ID.
-Note: This field may return null, indicating that no valid value could be obtained.
+                     * 1: admin.
+2: quality inspector.
+3: ordinary agent.
+Else: custom role id.
                      */
                     int64_t m_role;
                     bool m_roleHasBeenSet;
+
+                    /**
+                     * Agent extension number (starting with 1 to 8, 4 - 6 digits).
+                     */
+                    std::string m_extensionNumber;
+                    bool m_extensionNumberHasBeenSet;
 
                 };
             }

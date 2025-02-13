@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application ID
-                     * @return SdkAppId Application ID
+                     * 获取Application id.
+                     * @return SdkAppId Application id.
                      * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
-                     * 设置Application ID
-                     * @param _sdkAppId Application ID
+                     * 设置Application id.
+                     * @param _sdkAppId Application id.
                      * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Application Name
-                     * @return Name Application Name
+                     * 获取Application name.
+                     * @return Name Application name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Application Name
-                     * @param _name Application Name
+                     * 设置Application name.
+                     * @param _name Application name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Agent Purchase Count (still within the validity period)
-                     * @return StaffBuyNum Agent Purchase Count (still within the validity period)
+                     * 获取Agent purchase count (still within the validity period).
+                     * @return StaffBuyNum Agent purchase count (still within the validity period).
                      * 
                      */
                     int64_t GetStaffBuyNum() const;
 
                     /**
-                     * 设置Agent Purchase Count (still within the validity period)
-                     * @param _staffBuyNum Agent Purchase Count (still within the validity period)
+                     * 设置Agent purchase count (still within the validity period).
+                     * @param _staffBuyNum Agent purchase count (still within the validity period).
                      * 
                      */
                     void SetStaffBuyNum(const int64_t& _staffBuyNum);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool StaffBuyNumHasBeenSet() const;
 
                     /**
-                     * 获取Agent Purchase List (still within the validity period)
-                     * @return StaffBuyList Agent Purchase List (still within the validity period)
+                     * 获取Agent purchase list (still within the validity period).
+                     * @return StaffBuyList Agent purchase list (still within the validity period).
                      * 
                      */
                     std::vector<StaffBuyInfo> GetStaffBuyList() const;
 
                     /**
-                     * 设置Agent Purchase List (still within the validity period)
-                     * @param _staffBuyList Agent Purchase List (still within the validity period)
+                     * 设置Agent purchase list (still within the validity period).
+                     * @param _staffBuyList Agent purchase list (still within the validity period).
                      * 
                      */
                     void SetStaffBuyList(const std::vector<StaffBuyInfo>& _staffBuyList);
@@ -155,18 +155,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Number of office telephones purchased (still within the validity period).
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SipBuyNum Number of office telephones purchased (still within the validity period).
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetSipBuyNum() const;
 
                     /**
                      * 设置Number of office telephones purchased (still within the validity period).
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _sipBuyNum Number of office telephones purchased (still within the validity period).
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSipBuyNum(const int64_t& _sipBuyNum);
@@ -181,25 +177,25 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Application ID
+                     * Application id.
                      */
                     int64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * Application Name
+                     * Application name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Agent Purchase Count (still within the validity period)
+                     * Agent purchase count (still within the validity period).
                      */
                     int64_t m_staffBuyNum;
                     bool m_staffBuyNumHasBeenSet;
 
                     /**
-                     * Agent Purchase List (still within the validity period)
+                     * Agent purchase list (still within the validity period).
                      */
                     std::vector<StaffBuyInfo> m_staffBuyList;
                     bool m_staffBuyListHasBeenSet;
@@ -212,7 +208,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Number of office telephones purchased (still within the validity period).
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_sipBuyNum;
                     bool m_sipBuyNumHasBeenSet;

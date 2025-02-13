@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @return SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 获取Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
-                     * 设置Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-                     * @param _sdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * 设置Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * @param _sdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Task Name
-                     * @return Name Task Name
+                     * 获取Task name.
+                     * @return Name Task name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Task Name
-                     * @param _name Task Name
+                     * 设置Task name.
+                     * @param _name Task name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Agent Account
-                     * @return Agent Agent Account
+                     * 获取Agent account.
+                     * @return Agent Agent account.
                      * 
                      */
                     std::string GetAgent() const;
 
                     /**
-                     * 设置Agent Account
-                     * @param _agent Agent Account
+                     * 设置Agent account.
+                     * @param _agent Agent account.
                      * 
                      */
                     void SetAgent(const std::string& _agent);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool AgentHasBeenSet() const;
 
                     /**
-                     * 获取Single-round Concurrent Call Volume 1-20
-                     * @return ConcurrencyNumber Single-round Concurrent Call Volume 1-20
+                     * 获取Single-Round concurrent call volume 1-20.
+                     * @return ConcurrencyNumber Single-Round concurrent call volume 1-20.
                      * 
                      */
                     int64_t GetConcurrencyNumber() const;
 
                     /**
-                     * 设置Single-round Concurrent Call Volume 1-20
-                     * @param _concurrencyNumber Single-round Concurrent Call Volume 1-20
+                     * 设置Single-Round concurrent call volume 1-20.
+                     * @param _concurrencyNumber Single-Round concurrent call volume 1-20.
                      * 
                      */
                     void SetConcurrencyNumber(const int64_t& _concurrencyNumber);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool ConcurrencyNumberHasBeenSet() const;
 
                     /**
-                     * 获取Task start time. Unix timestamp. The task will automatically start after this time.
-                     * @return StartTime Task start time. Unix timestamp. The task will automatically start after this time.
+                     * 获取Task start time. unix timestamp. the task will automatically start after this time.
+                     * @return StartTime Task start time. unix timestamp. the task will automatically start after this time.
                      * 
                      */
                     int64_t GetStartTime() const;
 
                     /**
-                     * 设置Task start time. Unix timestamp. The task will automatically start after this time.
-                     * @param _startTime Task start time. Unix timestamp. The task will automatically start after this time.
+                     * 设置Task start time. unix timestamp. the task will automatically start after this time.
+                     * @param _startTime Task start time. unix timestamp. the task will automatically start after this time.
                      * 
                      */
                     void SetStartTime(const int64_t& _startTime);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Task termination time. Unix timestamp. The task will automatically terminate after this time.
-                     * @return EndTime Task termination time. Unix timestamp. The task will automatically terminate after this time.
+                     * 获取Task termination time. unix timestamp. the task will automatically terminate after this time.
+                     * @return EndTime Task termination time. unix timestamp. the task will automatically terminate after this time.
                      * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
-                     * 设置Task termination time. Unix timestamp. The task will automatically terminate after this time.
-                     * @param _endTime Task termination time. Unix timestamp. The task will automatically terminate after this time.
+                     * 设置Task termination time. unix timestamp. the task will automatically terminate after this time.
+                     * @param _endTime Task termination time. unix timestamp. the task will automatically terminate after this time.
                      * 
                      */
                     void SetEndTime(const int64_t& _endTime);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Called list supporting E.164 or number formats without country code.
-                     * @return Callees Called list supporting E.164 or number formats without country code.
+                     * 获取Called list supporting e.164 or number formats without country code.
+                     * @return Callees Called list supporting e.164 or number formats without country code.
                      * 
                      */
                     std::vector<std::string> GetCallees() const;
 
                     /**
-                     * 设置Called list supporting E.164 or number formats without country code.
-                     * @param _callees Called list supporting E.164 or number formats without country code.
+                     * 设置Called list supporting e.164 or number formats without country code.
+                     * @param _callees Called list supporting e.164 or number formats without country code.
                      * 
                      */
                     void SetCallees(const std::vector<std::string>& _callees);
@@ -232,15 +232,15 @@ namespace TencentCloud
                     bool CallOrderHasBeenSet() const;
 
                     /**
-                     * 获取Caller Custom Data, Maximum Length 1024
-                     * @return UUI Caller Custom Data, Maximum Length 1024
+                     * 获取Caller custom data, maximum length 1024.
+                     * @return UUI Caller custom data, maximum length 1024.
                      * 
                      */
                     std::string GetUUI() const;
 
                     /**
-                     * 设置Caller Custom Data, Maximum Length 1024
-                     * @param _uUI Caller Custom Data, Maximum Length 1024
+                     * 设置Caller custom data, maximum length 1024.
+                     * @param _uUI Caller custom data, maximum length 1024.
                      * 
                      */
                     void SetUUI(const std::string& _uUI);
@@ -255,43 +255,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+                     * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
                      */
                     uint64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * Task Name
+                     * Task name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Agent Account
+                     * Agent account.
                      */
                     std::string m_agent;
                     bool m_agentHasBeenSet;
 
                     /**
-                     * Single-round Concurrent Call Volume 1-20
+                     * Single-Round concurrent call volume 1-20.
                      */
                     int64_t m_concurrencyNumber;
                     bool m_concurrencyNumberHasBeenSet;
 
                     /**
-                     * Task start time. Unix timestamp. The task will automatically start after this time.
+                     * Task start time. unix timestamp. the task will automatically start after this time.
                      */
                     int64_t m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Task termination time. Unix timestamp. The task will automatically terminate after this time.
+                     * Task termination time. unix timestamp. the task will automatically terminate after this time.
                      */
                     int64_t m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Called list supporting E.164 or number formats without country code.
+                     * Called list supporting e.164 or number formats without country code.
                      */
                     std::vector<std::string> m_callees;
                     bool m_calleesHasBeenSet;
@@ -309,7 +309,7 @@ namespace TencentCloud
                     bool m_callOrderHasBeenSet;
 
                     /**
-                     * Caller Custom Data, Maximum Length 1024
+                     * Caller custom data, maximum length 1024.
                      */
                     std::string m_uUI;
                     bool m_uUIHasBeenSet;

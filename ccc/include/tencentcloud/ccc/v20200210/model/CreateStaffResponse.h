@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Error agent list and error information.
-Note: This field may return null, indicating that no valid value could be obtained.
                      * @return ErrorStaffList Error agent list and error information.
-Note: This field may return null, indicating that no valid value could be obtained.
                      * 
                      */
                     std::vector<ErrStaffItem> GetErrorStaffList() const;
@@ -64,7 +62,6 @@ Note: This field may return null, indicating that no valid value could be obtain
 
                     /**
                      * Error agent list and error information.
-Note: This field may return null, indicating that no valid value could be obtained.
                      */
                     std::vector<ErrStaffItem> m_errorStaffList;
                     bool m_errorStaffListHasBeenSet;

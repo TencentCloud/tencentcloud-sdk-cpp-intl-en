@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/ccc/v20200210/model/AITransferItem.h>
 #include <tencentcloud/ccc/v20200210/model/Variable.h>
+#include <tencentcloud/ccc/v20200210/model/AICallExtractConfigElement.h>
 
 
 namespace TencentCloud
@@ -230,12 +231,12 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
                     /**
                      * 获取Model interface protocol types, currently compatible with three protocol types:
 
-- OpenAI protocol (including GPT, Hunyuan, DeepSeek, etc.):"openai"
+- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
 - Azure protocol:"azure"
 - Minimax protocol:"minimax"
                      * @return LLMType Model interface protocol types, currently compatible with three protocol types:
 
-- OpenAI protocol (including GPT, Hunyuan, DeepSeek, etc.):"openai"
+- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
 - Azure protocol:"azure"
 - Minimax protocol:"minimax"
                      * 
@@ -245,12 +246,12 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
                     /**
                      * 设置Model interface protocol types, currently compatible with three protocol types:
 
-- OpenAI protocol (including GPT, Hunyuan, DeepSeek, etc.):"openai"
+- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
 - Azure protocol:"azure"
 - Minimax protocol:"minimax"
                      * @param _lLMType Model interface protocol types, currently compatible with three protocol types:
 
-- OpenAI protocol (including GPT, Hunyuan, DeepSeek, etc.):"openai"
+- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
 - Azure protocol:"azure"
 - Minimax protocol:"minimax"
                      * 
@@ -268,7 +269,7 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
                      * 获取Model name, such as
 
 - OpenAI protocol
-"gpt-4o-mini","gpt-4o","hunyuan-standard", "hunyuan-turbo","deepseek-chat";
+"gpt-4o-mini","gpt-4o","deepseek-chat";
 
 - Azure protocol
 "gpt-4o-mini", "gpt-4o";
@@ -278,7 +279,7 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
                      * @return Model Model name, such as
 
 - OpenAI protocol
-"gpt-4o-mini","gpt-4o","hunyuan-standard", "hunyuan-turbo","deepseek-chat";
+"gpt-4o-mini","gpt-4o","deepseek-chat";
 
 - Azure protocol
 "gpt-4o-mini", "gpt-4o";
@@ -293,7 +294,7 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
                      * 设置Model name, such as
 
 - OpenAI protocol
-"gpt-4o-mini","gpt-4o","hunyuan-standard", "hunyuan-turbo","deepseek-chat";
+"gpt-4o-mini","gpt-4o","deepseek-chat";
 
 - Azure protocol
 "gpt-4o-mini", "gpt-4o";
@@ -303,7 +304,7 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
                      * @param _model Model name, such as
 
 - OpenAI protocol
-"gpt-4o-mini","gpt-4o","hunyuan-standard", "hunyuan-turbo","deepseek-chat";
+"gpt-4o-mini","gpt-4o","deepseek-chat";
 
 - Azure protocol
 "gpt-4o-mini", "gpt-4o";
@@ -371,7 +372,6 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
 
 - OpenAI protocol
 GPT:"https://api.openai.com/v1/"
-Hunyuan:"https://api.hunyuan.cloud.tencent.com/v1"
 Deepseek:"https://api.deepseek.com/v1"
 
 - Azure protocol
@@ -383,7 +383,6 @@ Deepseek:"https://api.deepseek.com/v1"
 
 - OpenAI protocol
 GPT:"https://api.openai.com/v1/"
-Hunyuan:"https://api.hunyuan.cloud.tencent.com/v1"
 Deepseek:"https://api.deepseek.com/v1"
 
 - Azure protocol
@@ -400,7 +399,6 @@ Deepseek:"https://api.deepseek.com/v1"
 
 - OpenAI protocol
 GPT:"https://api.openai.com/v1/"
-Hunyuan:"https://api.hunyuan.cloud.tencent.com/v1"
 Deepseek:"https://api.deepseek.com/v1"
 
 - Azure protocol
@@ -412,7 +410,6 @@ Deepseek:"https://api.deepseek.com/v1"
 
 - OpenAI protocol
 GPT:"https://api.openai.com/v1/"
-Hunyuan:"https://api.hunyuan.cloud.tencent.com/v1"
 Deepseek:"https://api.deepseek.com/v1"
 
 - Azure protocol
@@ -589,15 +586,15 @@ HoaiMy
                     bool VoiceTypeHasBeenSet() const;
 
                     /**
-                     * 获取List of calling numbers.
-                     * @return Callers List of calling numbers.
+                     * 获取Caller number list
+                     * @return Callers Caller number list
                      * 
                      */
                     std::vector<std::string> GetCallers() const;
 
                     /**
-                     * 设置List of calling numbers.
-                     * @param _callers List of calling numbers.
+                     * 设置Caller number list
+                     * @param _callers Caller number list
                      * 
                      */
                     void SetCallers(const std::vector<std::string>& _callers);
@@ -654,6 +651,27 @@ HoaiMy
                      * 
                      */
                     bool WelcomeTypeHasBeenSet() const;
+
+                    /**
+                     * 获取0: interruptible by default, 1: high priority and not interruptible.
+                     * @return WelcomeMessagePriority 0: interruptible by default, 1: high priority and not interruptible.
+                     * 
+                     */
+                    int64_t GetWelcomeMessagePriority() const;
+
+                    /**
+                     * 设置0: interruptible by default, 1: high priority and not interruptible.
+                     * @param _welcomeMessagePriority 0: interruptible by default, 1: high priority and not interruptible.
+                     * 
+                     */
+                    void SetWelcomeMessagePriority(const int64_t& _welcomeMessagePriority);
+
+                    /**
+                     * 判断参数 WelcomeMessagePriority 是否已赋值
+                     * @return WelcomeMessagePriority 是否已赋值
+                     * 
+                     */
+                    bool WelcomeMessagePriorityHasBeenSet() const;
 
                     /**
                      * 获取Maximum Waiting Duration (milliseconds), default is 60 seconds, if the user does not speak within this time, the call is automatically terminated
@@ -790,15 +808,15 @@ Currently, the supported languages are as follows. The English name of the langu
                     bool LanguagesHasBeenSet() const;
 
                     /**
-                     * 获取Interrupt AI speech mode, default is 0, 0 indicates the server interrupts automatically, 1 indicates the server does not interrupt, interruption signal sent by the client side.
-                     * @return InterruptMode Interrupt AI speech mode, default is 0, 0 indicates the server interrupts automatically, 1 indicates the server does not interrupt, interruption signal sent by the client side.
+                     * 获取Interrupt ai speaking mode. default is 0. 0 indicates automatic interruption and 1 indicates no interruption.
+                     * @return InterruptMode Interrupt ai speaking mode. default is 0. 0 indicates automatic interruption and 1 indicates no interruption.
                      * 
                      */
                     int64_t GetInterruptMode() const;
 
                     /**
-                     * 设置Interrupt AI speech mode, default is 0, 0 indicates the server interrupts automatically, 1 indicates the server does not interrupt, interruption signal sent by the client side.
-                     * @param _interruptMode Interrupt AI speech mode, default is 0, 0 indicates the server interrupts automatically, 1 indicates the server does not interrupt, interruption signal sent by the client side.
+                     * 设置Interrupt ai speaking mode. default is 0. 0 indicates automatic interruption and 1 indicates no interruption.
+                     * @param _interruptMode Interrupt ai speaking mode. default is 0. 0 indicates automatic interruption and 1 indicates no interruption.
                      * 
                      */
                     void SetInterruptMode(const int64_t& _interruptMode);
@@ -874,15 +892,15 @@ Currently, the supported languages are as follows. The English name of the langu
                     bool EndFunctionDescHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TransferFunctionEnable 
+                     * 获取Whether the model supports (or enables) transfer_to_human function calling.
+                     * @return TransferFunctionEnable Whether the model supports (or enables) transfer_to_human function calling.
                      * 
                      */
                     bool GetTransferFunctionEnable() const;
 
                     /**
-                     * 设置
-                     * @param _transferFunctionEnable 
+                     * 设置Whether the model supports (or enables) transfer_to_human function calling.
+                     * @param _transferFunctionEnable Whether the model supports (or enables) transfer_to_human function calling.
                      * 
                      */
                     void SetTransferFunctionEnable(const bool& _transferFunctionEnable);
@@ -895,15 +913,15 @@ Currently, the supported languages are as follows. The English name of the langu
                     bool TransferFunctionEnableHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TransferItems 
+                     * 获取Takes effect when transferfunctionenable is true: transfer to human configuration.
+                     * @return TransferItems Takes effect when transferfunctionenable is true: transfer to human configuration.
                      * 
                      */
                     std::vector<AITransferItem> GetTransferItems() const;
 
                     /**
-                     * 设置
-                     * @param _transferItems 
+                     * 设置Takes effect when transferfunctionenable is true: transfer to human configuration.
+                     * @param _transferItems Takes effect when transferfunctionenable is true: transfer to human configuration.
                      * 
                      */
                     void SetTransferItems(const std::vector<AITransferItem>& _transferItems);
@@ -958,15 +976,15 @@ Currently, the supported languages are as follows. The English name of the langu
                     bool NotifyMessageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return NotifyMaxCount 
+                     * 获取Maximum number of times to trigger ai prompt sound, unlimited by default.
+                     * @return NotifyMaxCount Maximum number of times to trigger ai prompt sound, unlimited by default.
                      * 
                      */
                     uint64_t GetNotifyMaxCount() const;
 
                     /**
-                     * 设置
-                     * @param _notifyMaxCount 
+                     * 设置Maximum number of times to trigger ai prompt sound, unlimited by default.
+                     * @param _notifyMaxCount Maximum number of times to trigger ai prompt sound, unlimited by default.
                      * 
                      */
                     void SetNotifyMaxCount(const uint64_t& _notifyMaxCount);
@@ -998,35 +1016,6 @@ For configuration, please refer to <a href="https://intl.cloud.tencent.com/docum
 </code></pre>
 
   </div></div><ul>
-<li>Minimax TTS<br>
-For configuration, please refer to the <a href="https://platform.minimaxi.com/document/T2A%20V2?key=66719005a427f0c8a5701643" target="_blank">Minimax TTS documentation link</a>. Note that Minimax TTS has frequency limits, and exceeding the limit may cause response delays, <a href="https://platform.minimaxi.com/document/Rate%20limits?key=66b19417290299a26b234572" target="_blank">Minimax TTS frequency limit related documentation link</a>.</li>
-</ul>
-<div><div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
-        &quot;TTSType&quot;: &quot;minimax&quot;,  // String TTS type,
-        &quot;Model&quot;: &quot;speech-01-turbo&quot;,
-        &quot;APIUrl&quot;: &quot;https://api.minimax.chat/v1/t2a_v2&quot;,
-        &quot;APIKey&quot;: &quot;eyxxxx&quot;,
-        &quot;GroupId&quot;: &quot;181000000000000&quot;,
-        &quot;VoiceType&quot;:&quot;female-tianmei-yujie&quot;,
-        &quot;Speed&quot;: 1.2
-}
-</code></pre>
-</div></div><ul>
-<li>Volcano TTS</li>
-</ul>
-<p>For type of sound quality configuration, refer to the<a href="https://www.volcengine.com/docs/6561/162929" target="_blank">Volcano TTS documentation</a><br>
-TTS Sound Quality List - Voice Technology - Volcano Engine<br>
-Large Model TTS Sound Quality List - Voice Technology - Volcano Engine</p>
-<div><div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
-    &quot;TTSType&quot;: &quot;volcengine&quot;,  // Required: String TTS type
-    &quot;AppId&quot; : &quot;xxxxxxxx&quot;,   // Required: String Volcano Engine assigned AppId
-    &quot;Token&quot; : &quot;TY9d4sQXHxxxxxxx&quot;, // Required: String type Volcano Engine access token
-    &quot;Speed&quot; : 1.0,            // Optional parameter: Playback speed, default is 1.0
-    &quot;Volume&quot;: 1.0,            // Optional parameter: Volume, default is 1.0
-    &quot;Cluster&quot; : &quot;volcano_tts&quot;, // Optional parameter: Business cluster, default is volcano_tts
-    &quot;VoiceType&quot; : &quot;zh_male_aojiaobazong_moon_bigtts&quot;   // Sound quality type, default is the sound quality of the large model TTS. If using normal TTS, fill in the corresponding sound quality type. Incorrect sound quality type will result in no sound.
-}
-</code></pre>
 
 </div></div><ul>
 <li>Azure TTS<br>
@@ -1077,35 +1066,6 @@ For configuration, please refer to <a href="https://intl.cloud.tencent.com/docum
 </code></pre>
 
   </div></div><ul>
-<li>Minimax TTS<br>
-For configuration, please refer to the <a href="https://platform.minimaxi.com/document/T2A%20V2?key=66719005a427f0c8a5701643" target="_blank">Minimax TTS documentation link</a>. Note that Minimax TTS has frequency limits, and exceeding the limit may cause response delays, <a href="https://platform.minimaxi.com/document/Rate%20limits?key=66b19417290299a26b234572" target="_blank">Minimax TTS frequency limit related documentation link</a>.</li>
-</ul>
-<div><div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
-        &quot;TTSType&quot;: &quot;minimax&quot;,  // String TTS type,
-        &quot;Model&quot;: &quot;speech-01-turbo&quot;,
-        &quot;APIUrl&quot;: &quot;https://api.minimax.chat/v1/t2a_v2&quot;,
-        &quot;APIKey&quot;: &quot;eyxxxx&quot;,
-        &quot;GroupId&quot;: &quot;181000000000000&quot;,
-        &quot;VoiceType&quot;:&quot;female-tianmei-yujie&quot;,
-        &quot;Speed&quot;: 1.2
-}
-</code></pre>
-</div></div><ul>
-<li>Volcano TTS</li>
-</ul>
-<p>For type of sound quality configuration, refer to the<a href="https://www.volcengine.com/docs/6561/162929" target="_blank">Volcano TTS documentation</a><br>
-TTS Sound Quality List - Voice Technology - Volcano Engine<br>
-Large Model TTS Sound Quality List - Voice Technology - Volcano Engine</p>
-<div><div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
-    &quot;TTSType&quot;: &quot;volcengine&quot;,  // Required: String TTS type
-    &quot;AppId&quot; : &quot;xxxxxxxx&quot;,   // Required: String Volcano Engine assigned AppId
-    &quot;Token&quot; : &quot;TY9d4sQXHxxxxxxx&quot;, // Required: String type Volcano Engine access token
-    &quot;Speed&quot; : 1.0,            // Optional parameter: Playback speed, default is 1.0
-    &quot;Volume&quot;: 1.0,            // Optional parameter: Volume, default is 1.0
-    &quot;Cluster&quot; : &quot;volcano_tts&quot;, // Optional parameter: Business cluster, default is volcano_tts
-    &quot;VoiceType&quot; : &quot;zh_male_aojiaobazong_moon_bigtts&quot;   // Sound quality type, default is the sound quality of the large model TTS. If using normal TTS, fill in the corresponding sound quality type. Incorrect sound quality type will result in no sound.
-}
-</code></pre>
 
 </div></div><ul>
 <li>Azure TTS<br>
@@ -1161,35 +1121,6 @@ For configuration, please refer to <a href="https://intl.cloud.tencent.com/docum
 </code></pre>
 
   </div></div><ul>
-<li>Minimax TTS<br>
-For configuration, please refer to the <a href="https://platform.minimaxi.com/document/T2A%20V2?key=66719005a427f0c8a5701643" target="_blank">Minimax TTS documentation link</a>. Note that Minimax TTS has frequency limits, and exceeding the limit may cause response delays, <a href="https://platform.minimaxi.com/document/Rate%20limits?key=66b19417290299a26b234572" target="_blank">Minimax TTS frequency limit related documentation link</a>.</li>
-</ul>
-<div><div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
-        &quot;TTSType&quot;: &quot;minimax&quot;,  // String TTS type,
-        &quot;Model&quot;: &quot;speech-01-turbo&quot;,
-        &quot;APIUrl&quot;: &quot;https://api.minimax.chat/v1/t2a_v2&quot;,
-        &quot;APIKey&quot;: &quot;eyxxxx&quot;,
-        &quot;GroupId&quot;: &quot;181000000000000&quot;,
-        &quot;VoiceType&quot;:&quot;female-tianmei-yujie&quot;,
-        &quot;Speed&quot;: 1.2
-}
-</code></pre>
-</div></div><ul>
-<li>Volcano TTS</li>
-</ul>
-<p>For type of sound quality configuration, refer to the<a href="https://www.volcengine.com/docs/6561/162929" target="_blank">Volcano TTS documentation</a><br>
-TTS Sound Quality List - Voice Technology - Volcano Engine<br>
-Large Model TTS Sound Quality List - Voice Technology - Volcano Engine</p>
-<div><div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
-    &quot;TTSType&quot;: &quot;volcengine&quot;,  // Required: String TTS type
-    &quot;AppId&quot; : &quot;xxxxxxxx&quot;,   // Required: String Volcano Engine assigned AppId
-    &quot;Token&quot; : &quot;TY9d4sQXHxxxxxxx&quot;, // Required: String type Volcano Engine access token
-    &quot;Speed&quot; : 1.0,            // Optional parameter: Playback speed, default is 1.0
-    &quot;Volume&quot;: 1.0,            // Optional parameter: Volume, default is 1.0
-    &quot;Cluster&quot; : &quot;volcano_tts&quot;, // Optional parameter: Business cluster, default is volcano_tts
-    &quot;VoiceType&quot; : &quot;zh_male_aojiaobazong_moon_bigtts&quot;   // Sound quality type, default is the sound quality of the large model TTS. If using normal TTS, fill in the corresponding sound quality type. Incorrect sound quality type will result in no sound.
-}
-</code></pre>
 
 </div></div><ul>
 <li>Azure TTS<br>
@@ -1240,35 +1171,6 @@ For configuration, please refer to <a href="https://intl.cloud.tencent.com/docum
 </code></pre>
 
   </div></div><ul>
-<li>Minimax TTS<br>
-For configuration, please refer to the <a href="https://platform.minimaxi.com/document/T2A%20V2?key=66719005a427f0c8a5701643" target="_blank">Minimax TTS documentation link</a>. Note that Minimax TTS has frequency limits, and exceeding the limit may cause response delays, <a href="https://platform.minimaxi.com/document/Rate%20limits?key=66b19417290299a26b234572" target="_blank">Minimax TTS frequency limit related documentation link</a>.</li>
-</ul>
-<div><div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
-        &quot;TTSType&quot;: &quot;minimax&quot;,  // String TTS type,
-        &quot;Model&quot;: &quot;speech-01-turbo&quot;,
-        &quot;APIUrl&quot;: &quot;https://api.minimax.chat/v1/t2a_v2&quot;,
-        &quot;APIKey&quot;: &quot;eyxxxx&quot;,
-        &quot;GroupId&quot;: &quot;181000000000000&quot;,
-        &quot;VoiceType&quot;:&quot;female-tianmei-yujie&quot;,
-        &quot;Speed&quot;: 1.2
-}
-</code></pre>
-</div></div><ul>
-<li>Volcano TTS</li>
-</ul>
-<p>For type of sound quality configuration, refer to the<a href="https://www.volcengine.com/docs/6561/162929" target="_blank">Volcano TTS documentation</a><br>
-TTS Sound Quality List - Voice Technology - Volcano Engine<br>
-Large Model TTS Sound Quality List - Voice Technology - Volcano Engine</p>
-<div><div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
-    &quot;TTSType&quot;: &quot;volcengine&quot;,  // Required: String TTS type
-    &quot;AppId&quot; : &quot;xxxxxxxx&quot;,   // Required: String Volcano Engine assigned AppId
-    &quot;Token&quot; : &quot;TY9d4sQXHxxxxxxx&quot;, // Required: String type Volcano Engine access token
-    &quot;Speed&quot; : 1.0,            // Optional parameter: Playback speed, default is 1.0
-    &quot;Volume&quot;: 1.0,            // Optional parameter: Volume, default is 1.0
-    &quot;Cluster&quot; : &quot;volcano_tts&quot;, // Optional parameter: Business cluster, default is volcano_tts
-    &quot;VoiceType&quot; : &quot;zh_male_aojiaobazong_moon_bigtts&quot;   // Sound quality type, default is the sound quality of the large model TTS. If using normal TTS, fill in the corresponding sound quality type. Incorrect sound quality type will result in no sound.
-}
-</code></pre>
 
 </div></div><ul>
 <li>Azure TTS<br>
@@ -1312,15 +1214,15 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
                     bool CustomTTSConfigHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PromptVariables 
+                     * 获取Prompt word variable.
+                     * @return PromptVariables Prompt word variable.
                      * 
                      */
                     std::vector<Variable> GetPromptVariables() const;
 
                     /**
-                     * 设置
-                     * @param _promptVariables 
+                     * 设置Prompt word variable.
+                     * @param _promptVariables Prompt word variable.
                      * 
                      */
                     void SetPromptVariables(const std::vector<Variable>& _promptVariables);
@@ -1331,6 +1233,48 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
                      * 
                      */
                     bool PromptVariablesHasBeenSet() const;
+
+                    /**
+                     * 获取Automatic speech recognition vad time ranges from 240 to 2000, with a default of 1000, measured in milliseconds. smaller values will make automatic speech recognition segment faster.
+                     * @return VadSilenceTime Automatic speech recognition vad time ranges from 240 to 2000, with a default of 1000, measured in milliseconds. smaller values will make automatic speech recognition segment faster.
+                     * 
+                     */
+                    int64_t GetVadSilenceTime() const;
+
+                    /**
+                     * 设置Automatic speech recognition vad time ranges from 240 to 2000, with a default of 1000, measured in milliseconds. smaller values will make automatic speech recognition segment faster.
+                     * @param _vadSilenceTime Automatic speech recognition vad time ranges from 240 to 2000, with a default of 1000, measured in milliseconds. smaller values will make automatic speech recognition segment faster.
+                     * 
+                     */
+                    void SetVadSilenceTime(const int64_t& _vadSilenceTime);
+
+                    /**
+                     * 判断参数 VadSilenceTime 是否已赋值
+                     * @return VadSilenceTime 是否已赋值
+                     * 
+                     */
+                    bool VadSilenceTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Call content extraction configuration.
+                     * @return ExtractConfig Call content extraction configuration.
+                     * 
+                     */
+                    std::vector<AICallExtractConfigElement> GetExtractConfig() const;
+
+                    /**
+                     * 设置Call content extraction configuration.
+                     * @param _extractConfig Call content extraction configuration.
+                     * 
+                     */
+                    void SetExtractConfig(const std::vector<AICallExtractConfigElement>& _extractConfig);
+
+                    /**
+                     * 判断参数 ExtractConfig 是否已赋值
+                     * @return ExtractConfig 是否已赋值
+                     * 
+                     */
+                    bool ExtractConfigHasBeenSet() const;
 
                 private:
 
@@ -1385,7 +1329,7 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
                     /**
                      * Model interface protocol types, currently compatible with three protocol types:
 
-- OpenAI protocol (including GPT, Hunyuan, DeepSeek, etc.):"openai"
+- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
 - Azure protocol:"azure"
 - Minimax protocol:"minimax"
                      */
@@ -1396,7 +1340,7 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
                      * Model name, such as
 
 - OpenAI protocol
-"gpt-4o-mini","gpt-4o","hunyuan-standard", "hunyuan-turbo","deepseek-chat";
+"gpt-4o-mini","gpt-4o","deepseek-chat";
 
 - Azure protocol
 "gpt-4o-mini", "gpt-4o";
@@ -1424,7 +1368,6 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
 
 - OpenAI protocol
 GPT:"https://api.openai.com/v1/"
-Hunyuan:"https://api.hunyuan.cloud.tencent.com/v1"
 Deepseek:"https://api.deepseek.com/v1"
 
 - Azure protocol
@@ -1477,7 +1420,7 @@ HoaiMy
                     bool m_voiceTypeHasBeenSet;
 
                     /**
-                     * List of calling numbers.
+                     * Caller number list
                      */
                     std::vector<std::string> m_callers;
                     bool m_callersHasBeenSet;
@@ -1494,6 +1437,12 @@ HoaiMy
                      */
                     int64_t m_welcomeType;
                     bool m_welcomeTypeHasBeenSet;
+
+                    /**
+                     * 0: interruptible by default, 1: high priority and not interruptible.
+                     */
+                    int64_t m_welcomeMessagePriority;
+                    bool m_welcomeMessagePriorityHasBeenSet;
 
                     /**
                      * Maximum Waiting Duration (milliseconds), default is 60 seconds, if the user does not speak within this time, the call is automatically terminated
@@ -1531,7 +1480,7 @@ Currently, the supported languages are as follows. The English name of the langu
                     bool m_languagesHasBeenSet;
 
                     /**
-                     * Interrupt AI speech mode, default is 0, 0 indicates the server interrupts automatically, 1 indicates the server does not interrupt, interruption signal sent by the client side.
+                     * Interrupt ai speaking mode. default is 0. 0 indicates automatic interruption and 1 indicates no interruption.
                      */
                     int64_t m_interruptMode;
                     bool m_interruptModeHasBeenSet;
@@ -1555,13 +1504,13 @@ Currently, the supported languages are as follows. The English name of the langu
                     bool m_endFunctionDescHasBeenSet;
 
                     /**
-                     * 
+                     * Whether the model supports (or enables) transfer_to_human function calling.
                      */
                     bool m_transferFunctionEnable;
                     bool m_transferFunctionEnableHasBeenSet;
 
                     /**
-                     * 
+                     * Takes effect when transferfunctionenable is true: transfer to human configuration.
                      */
                     std::vector<AITransferItem> m_transferItems;
                     bool m_transferItemsHasBeenSet;
@@ -1579,7 +1528,7 @@ Currently, the supported languages are as follows. The English name of the langu
                     bool m_notifyMessageHasBeenSet;
 
                     /**
-                     * 
+                     * Maximum number of times to trigger ai prompt sound, unlimited by default.
                      */
                     uint64_t m_notifyMaxCount;
                     bool m_notifyMaxCountHasBeenSet;
@@ -1604,35 +1553,6 @@ For configuration, please refer to <a href="https://intl.cloud.tencent.com/docum
 </code></pre>
 
   </div></div><ul>
-<li>Minimax TTS<br>
-For configuration, please refer to the <a href="https://platform.minimaxi.com/document/T2A%20V2?key=66719005a427f0c8a5701643" target="_blank">Minimax TTS documentation link</a>. Note that Minimax TTS has frequency limits, and exceeding the limit may cause response delays, <a href="https://platform.minimaxi.com/document/Rate%20limits?key=66b19417290299a26b234572" target="_blank">Minimax TTS frequency limit related documentation link</a>.</li>
-</ul>
-<div><div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
-        &quot;TTSType&quot;: &quot;minimax&quot;,  // String TTS type,
-        &quot;Model&quot;: &quot;speech-01-turbo&quot;,
-        &quot;APIUrl&quot;: &quot;https://api.minimax.chat/v1/t2a_v2&quot;,
-        &quot;APIKey&quot;: &quot;eyxxxx&quot;,
-        &quot;GroupId&quot;: &quot;181000000000000&quot;,
-        &quot;VoiceType&quot;:&quot;female-tianmei-yujie&quot;,
-        &quot;Speed&quot;: 1.2
-}
-</code></pre>
-</div></div><ul>
-<li>Volcano TTS</li>
-</ul>
-<p>For type of sound quality configuration, refer to the<a href="https://www.volcengine.com/docs/6561/162929" target="_blank">Volcano TTS documentation</a><br>
-TTS Sound Quality List - Voice Technology - Volcano Engine<br>
-Large Model TTS Sound Quality List - Voice Technology - Volcano Engine</p>
-<div><div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
-    &quot;TTSType&quot;: &quot;volcengine&quot;,  // Required: String TTS type
-    &quot;AppId&quot; : &quot;xxxxxxxx&quot;,   // Required: String Volcano Engine assigned AppId
-    &quot;Token&quot; : &quot;TY9d4sQXHxxxxxxx&quot;, // Required: String type Volcano Engine access token
-    &quot;Speed&quot; : 1.0,            // Optional parameter: Playback speed, default is 1.0
-    &quot;Volume&quot;: 1.0,            // Optional parameter: Volume, default is 1.0
-    &quot;Cluster&quot; : &quot;volcano_tts&quot;, // Optional parameter: Business cluster, default is volcano_tts
-    &quot;VoiceType&quot; : &quot;zh_male_aojiaobazong_moon_bigtts&quot;   // Sound quality type, default is the sound quality of the large model TTS. If using normal TTS, fill in the corresponding sound quality type. Incorrect sound quality type will result in no sound.
-}
-</code></pre>
 
 </div></div><ul>
 <li>Azure TTS<br>
@@ -1669,10 +1589,22 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
                     bool m_customTTSConfigHasBeenSet;
 
                     /**
-                     * 
+                     * Prompt word variable.
                      */
                     std::vector<Variable> m_promptVariables;
                     bool m_promptVariablesHasBeenSet;
+
+                    /**
+                     * Automatic speech recognition vad time ranges from 240 to 2000, with a default of 1000, measured in milliseconds. smaller values will make automatic speech recognition segment faster.
+                     */
+                    int64_t m_vadSilenceTime;
+                    bool m_vadSilenceTimeHasBeenSet;
+
+                    /**
+                     * Call content extraction configuration.
+                     */
+                    std::vector<AICallExtractConfigElement> m_extractConfig;
+                    bool m_extractConfigHasBeenSet;
 
                 };
             }

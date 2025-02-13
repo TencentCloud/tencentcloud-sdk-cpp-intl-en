@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Session ID.
-                     * @return SessionID Session ID.
+                     * 获取Session id.
+                     * @return SessionID Session id.
                      * 
                      */
                     std::string GetSessionID() const;
 
                     /**
-                     * 设置Session ID.
-                     * @param _sessionID Session ID.
+                     * 设置Session id.
+                     * @param _sessionID Session id.
                      * 
                      */
                     void SetSessionID(const std::string& _sessionID);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SessionIDHasBeenSet() const;
 
                     /**
-                     * 获取Temporary room ID for session.
-                     * @return RoomID Temporary room ID for session.
+                     * 获取Temporary room id for session.
+                     * @return RoomID Temporary room id for session.
                      * 
                      */
                     std::string GetRoomID() const;
 
                     /**
-                     * 设置Temporary room ID for session.
-                     * @param _roomID Temporary room ID for session.
+                     * 设置Temporary room id for session.
+                     * @param _roomID Temporary room id for session.
                      * 
                      */
                     void SetRoomID(const std::string& _roomID);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool CalleeHasBeenSet() const;
 
                     /**
-                     * 获取Start time. Unix timestamp.
-                     * @return StartTimestamp Start time. Unix timestamp.
+                     * 获取Start time. unix timestamp.
+                     * @return StartTimestamp Start time. unix timestamp.
                      * 
                      */
                     std::string GetStartTimestamp() const;
 
                     /**
-                     * 设置Start time. Unix timestamp.
-                     * @param _startTimestamp Start time. Unix timestamp.
+                     * 设置Start time. unix timestamp.
+                     * @param _startTimestamp Start time. unix timestamp.
                      * 
                      */
                     void SetStartTimestamp(const std::string& _startTimestamp);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool StartTimestampHasBeenSet() const;
 
                     /**
-                     * 获取Answer time. Unix timestamp.
-                     * @return AcceptTimestamp Answer time. Unix timestamp.
+                     * 获取Answer time. unix timestamp.
+                     * @return AcceptTimestamp Answer time. unix timestamp.
                      * 
                      */
                     std::string GetAcceptTimestamp() const;
 
                     /**
-                     * 设置Answer time. Unix timestamp.
-                     * @param _acceptTimestamp Answer time. Unix timestamp.
+                     * 设置Answer time. unix timestamp.
+                     * @param _acceptTimestamp Answer time. unix timestamp.
                      * 
                      */
                     void SetAcceptTimestamp(const std::string& _acceptTimestamp);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool StaffEmailHasBeenSet() const;
 
                     /**
-                     * 获取Agent ID
-                     * @return StaffNumber Agent ID
+                     * 获取Agent id.
+                     * @return StaffNumber Agent id.
                      * 
                      */
                     std::string GetStaffNumber() const;
 
                     /**
-                     * 设置Agent ID
-                     * @param _staffNumber Agent ID
+                     * 设置Agent id.
+                     * @param _staffNumber Agent id.
                      * 
                      */
                     void SetStaffNumber(const std::string& _staffNumber);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool StaffNumberHasBeenSet() const;
 
                     /**
-                     * 获取Agent Status inProgress Ongoing
-                     * @return SessionStatus Agent Status inProgress Ongoing
+                     * 获取Agent status inprogress ongoing.
+                     * @return SessionStatus Agent status inprogress ongoing.
                      * 
                      */
                     std::string GetSessionStatus() const;
 
                     /**
-                     * 设置Agent Status inProgress Ongoing
-                     * @param _sessionStatus Agent Status inProgress Ongoing
+                     * 设置Agent status inprogress ongoing.
+                     * @param _sessionStatus Agent status inprogress ongoing.
                      * 
                      */
                     void SetSessionStatus(const std::string& _sessionStatus);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool SessionStatusHasBeenSet() const;
 
                     /**
-                     * 获取Session call direction, 0 - Inbound | 1 - Outbound.
-                     * @return Direction Session call direction, 0 - Inbound | 1 - Outbound.
+                     * 获取Session call direction, 0 - inbound | 1 - outbound.
+                     * @return Direction Session call direction, 0 - inbound | 1 - outbound.
                      * 
                      */
                     int64_t GetDirection() const;
 
                     /**
-                     * 设置Session call direction, 0 - Inbound | 1 - Outbound.
-                     * @param _direction Session call direction, 0 - Inbound | 1 - Outbound.
+                     * 设置Session call direction, 0 - inbound | 1 - outbound.
+                     * @param _direction Session call direction, 0 - inbound | 1 - outbound.
                      * 
                      */
                     void SetDirection(const int64_t& _direction);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool DirectionHasBeenSet() const;
 
                     /**
-                     * 获取Ring time. Unix timestamp.
-                     * @return RingTimestamp Ring time. Unix timestamp.
+                     * 获取Ring time. unix timestamp.
+                     * @return RingTimestamp Ring time. unix timestamp.
                      * 
                      */
                     int64_t GetRingTimestamp() const;
 
                     /**
-                     * 设置Ring time. Unix timestamp.
-                     * @param _ringTimestamp Ring time. Unix timestamp.
+                     * 设置Ring time. unix timestamp.
+                     * @param _ringTimestamp Ring time. unix timestamp.
                      * 
                      */
                     void SetRingTimestamp(const int64_t& _ringTimestamp);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool RingTimestampHasBeenSet() const;
 
                     /**
-                     * 获取Caller number protection ID. Effective when the number protection map feature is activated, and the Caller field is empty.
-                     * @return ProtectedCaller Caller number protection ID. Effective when the number protection map feature is activated, and the Caller field is empty.
+                     * 获取Caller number protection id. effective when the number protection map feature is activated, and the caller field is empty.
+                     * @return ProtectedCaller Caller number protection id. effective when the number protection map feature is activated, and the caller field is empty.
                      * 
                      */
                     std::string GetProtectedCaller() const;
 
                     /**
-                     * 设置Caller number protection ID. Effective when the number protection map feature is activated, and the Caller field is empty.
-                     * @param _protectedCaller Caller number protection ID. Effective when the number protection map feature is activated, and the Caller field is empty.
+                     * 设置Caller number protection id. effective when the number protection map feature is activated, and the caller field is empty.
+                     * @param _protectedCaller Caller number protection id. effective when the number protection map feature is activated, and the caller field is empty.
                      * 
                      */
                     void SetProtectedCaller(const std::string& _protectedCaller);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool ProtectedCallerHasBeenSet() const;
 
                     /**
-                     * 获取Called number protection ID. Effective when the number protection map feature is activated, and the Callee field is empty.
-                     * @return ProtectedCallee Called number protection ID. Effective when the number protection map feature is activated, and the Callee field is empty.
+                     * 获取Called number protection id. effective when the number protection map feature is activated, and the callee field is empty.
+                     * @return ProtectedCallee Called number protection id. effective when the number protection map feature is activated, and the callee field is empty.
                      * 
                      */
                     std::string GetProtectedCallee() const;
 
                     /**
-                     * 设置Called number protection ID. Effective when the number protection map feature is activated, and the Callee field is empty.
-                     * @param _protectedCallee Called number protection ID. Effective when the number protection map feature is activated, and the Callee field is empty.
+                     * 设置Called number protection id. effective when the number protection map feature is activated, and the callee field is empty.
+                     * @param _protectedCallee Called number protection id. effective when the number protection map feature is activated, and the callee field is empty.
                      * 
                      */
                     void SetProtectedCallee(const std::string& _protectedCallee);
@@ -322,13 +322,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Session ID.
+                     * Session id.
                      */
                     std::string m_sessionID;
                     bool m_sessionIDHasBeenSet;
 
                     /**
-                     * Temporary room ID for session.
+                     * Temporary room id for session.
                      */
                     std::string m_roomID;
                     bool m_roomIDHasBeenSet;
@@ -346,13 +346,13 @@ namespace TencentCloud
                     bool m_calleeHasBeenSet;
 
                     /**
-                     * Start time. Unix timestamp.
+                     * Start time. unix timestamp.
                      */
                     std::string m_startTimestamp;
                     bool m_startTimestampHasBeenSet;
 
                     /**
-                     * Answer time. Unix timestamp.
+                     * Answer time. unix timestamp.
                      */
                     std::string m_acceptTimestamp;
                     bool m_acceptTimestampHasBeenSet;
@@ -364,37 +364,37 @@ namespace TencentCloud
                     bool m_staffEmailHasBeenSet;
 
                     /**
-                     * Agent ID
+                     * Agent id.
                      */
                     std::string m_staffNumber;
                     bool m_staffNumberHasBeenSet;
 
                     /**
-                     * Agent Status inProgress Ongoing
+                     * Agent status inprogress ongoing.
                      */
                     std::string m_sessionStatus;
                     bool m_sessionStatusHasBeenSet;
 
                     /**
-                     * Session call direction, 0 - Inbound | 1 - Outbound.
+                     * Session call direction, 0 - inbound | 1 - outbound.
                      */
                     int64_t m_direction;
                     bool m_directionHasBeenSet;
 
                     /**
-                     * Ring time. Unix timestamp.
+                     * Ring time. unix timestamp.
                      */
                     int64_t m_ringTimestamp;
                     bool m_ringTimestampHasBeenSet;
 
                     /**
-                     * Caller number protection ID. Effective when the number protection map feature is activated, and the Caller field is empty.
+                     * Caller number protection id. effective when the number protection map feature is activated, and the caller field is empty.
                      */
                     std::string m_protectedCaller;
                     bool m_protectedCallerHasBeenSet;
 
                     /**
-                     * Called number protection ID. Effective when the number protection map feature is activated, and the Callee field is empty.
+                     * Called number protection id. effective when the number protection map feature is activated, and the callee field is empty.
                      */
                     std::string m_protectedCallee;
                     bool m_protectedCalleeHasBeenSet;
