@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The total number of records that meet the conditions.
-                     * @return TotalCount The total number of records that meet the conditions.
+                     * 获取The total number of carousel broadcast playlists that meet the filter criteria. deprecated. for batch inquiries, please use the scrolltoken parameter.
+                     * @return TotalCount The total number of carousel broadcast playlists that meet the filter criteria. deprecated. for batch inquiries, please use the scrolltoken parameter.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取The information of the playlists.
-                     * @return RoundPlaySet The information of the playlists.
+                     * 获取The details of the playlist.
+                     * @return RoundPlaySet The details of the playlist.
                      * 
                      */
                     std::vector<RoundPlayInfo> GetRoundPlaySet() const;
@@ -72,19 +72,39 @@ namespace TencentCloud
                      */
                     bool RoundPlaySetHasBeenSet() const;
 
+                    /**
+                     * 获取Scrolling identifier. if a request does not return all the data entries, this field indicates the id of the next entry. if this field is empty, there is no more data.
+                     * @return ScrollToken Scrolling identifier. if a request does not return all the data entries, this field indicates the id of the next entry. if this field is empty, there is no more data.
+                     * 
+                     */
+                    std::string GetScrollToken() const;
+
+                    /**
+                     * 判断参数 ScrollToken 是否已赋值
+                     * @return ScrollToken 是否已赋值
+                     * 
+                     */
+                    bool ScrollTokenHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The total number of records that meet the conditions.
+                     * The total number of carousel broadcast playlists that meet the filter criteria. deprecated. for batch inquiries, please use the scrolltoken parameter.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * The information of the playlists.
+                     * The details of the playlist.
                      */
                     std::vector<RoundPlayInfo> m_roundPlaySet;
                     bool m_roundPlaySetHasBeenSet;
+
+                    /**
+                     * Scrolling identifier. if a request does not return all the data entries, this field indicates the id of the next entry. if this field is empty, there is no more data.
+                     */
+                    std::string m_scrollToken;
+                    bool m_scrollTokenHasBeenSet;
 
                 };
             }

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/vod/v20180717/model/DescribeRoundPlaysResponse.h>
+#include <tencentcloud/vod/v20180717/model/HandleCurrentPlaylistResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,14 +23,12 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
 using namespace std;
 
-DescribeRoundPlaysResponse::DescribeRoundPlaysResponse() :
-    m_totalCountHasBeenSet(false),
-    m_roundPlaySetHasBeenSet(false),
-    m_scrollTokenHasBeenSet(false)
+HandleCurrentPlaylistResponse::HandleCurrentPlaylistResponse() :
+    m_roundPlaylistHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DescribeRoundPlaysResponse::Deserialize(const string &payload)
+CoreInternalOutcome HandleCurrentPlaylistResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -64,85 +62,49 @@ CoreInternalOutcome DescribeRoundPlaysResponse::Deserialize(const string &payloa
     }
 
 
-    if (rsp.HasMember("TotalCount") && !rsp["TotalCount"].IsNull())
+    if (rsp.HasMember("RoundPlaylist") && !rsp["RoundPlaylist"].IsNull())
     {
-        if (!rsp["TotalCount"].IsInt64())
-        {
-            return CoreInternalOutcome(Core::Error("response `TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
-        }
-        m_totalCount = rsp["TotalCount"].GetInt64();
-        m_totalCountHasBeenSet = true;
-    }
+        if (!rsp["RoundPlaylist"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `RoundPlaylist` is not array type"));
 
-    if (rsp.HasMember("RoundPlaySet") && !rsp["RoundPlaySet"].IsNull())
-    {
-        if (!rsp["RoundPlaySet"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `RoundPlaySet` is not array type"));
-
-        const rapidjson::Value &tmpValue = rsp["RoundPlaySet"];
+        const rapidjson::Value &tmpValue = rsp["RoundPlaylist"];
         for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            RoundPlayInfo item;
+            RoundPlayListItemInfo item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
             if (!outcome.IsSuccess())
             {
                 outcome.GetError().SetRequestId(requestId);
                 return outcome;
             }
-            m_roundPlaySet.push_back(item);
+            m_roundPlaylist.push_back(item);
         }
-        m_roundPlaySetHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("ScrollToken") && !rsp["ScrollToken"].IsNull())
-    {
-        if (!rsp["ScrollToken"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `ScrollToken` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_scrollToken = string(rsp["ScrollToken"].GetString());
-        m_scrollTokenHasBeenSet = true;
+        m_roundPlaylistHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string DescribeRoundPlaysResponse::ToJsonString() const
+string HandleCurrentPlaylistResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_totalCountHasBeenSet)
+    if (m_roundPlaylistHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "TotalCount";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_totalCount, allocator);
-    }
-
-    if (m_roundPlaySetHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "RoundPlaySet";
+        string key = "RoundPlaylist";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
-        for (auto itr = m_roundPlaySet.begin(); itr != m_roundPlaySet.end(); ++itr, ++i)
+        for (auto itr = m_roundPlaylist.begin(); itr != m_roundPlaylist.end(); ++itr, ++i)
         {
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
-    }
-
-    if (m_scrollTokenHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "ScrollToken";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_scrollToken.c_str(), allocator).Move(), allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -157,34 +119,14 @@ string DescribeRoundPlaysResponse::ToJsonString() const
 }
 
 
-int64_t DescribeRoundPlaysResponse::GetTotalCount() const
+vector<RoundPlayListItemInfo> HandleCurrentPlaylistResponse::GetRoundPlaylist() const
 {
-    return m_totalCount;
+    return m_roundPlaylist;
 }
 
-bool DescribeRoundPlaysResponse::TotalCountHasBeenSet() const
+bool HandleCurrentPlaylistResponse::RoundPlaylistHasBeenSet() const
 {
-    return m_totalCountHasBeenSet;
-}
-
-vector<RoundPlayInfo> DescribeRoundPlaysResponse::GetRoundPlaySet() const
-{
-    return m_roundPlaySet;
-}
-
-bool DescribeRoundPlaysResponse::RoundPlaySetHasBeenSet() const
-{
-    return m_roundPlaySetHasBeenSet;
-}
-
-string DescribeRoundPlaysResponse::GetScrollToken() const
-{
-    return m_scrollToken;
-}
-
-bool DescribeRoundPlaysResponse::ScrollTokenHasBeenSet() const
-{
-    return m_scrollTokenHasBeenSet;
+    return m_roundPlaylistHasBeenSet;
 }
 
 

@@ -28,7 +28,10 @@ RoundPlayInfo::RoundPlayInfo() :
     m_descHasBeenSet(false),
     m_statusHasBeenSet(false),
     m_playBackModeHasBeenSet(false),
-    m_urlHasBeenSet(false)
+    m_urlHasBeenSet(false),
+    m_createTimeHasBeenSet(false),
+    m_updateTimeHasBeenSet(false),
+    m_expiredTimeHasBeenSet(false)
 {
 }
 
@@ -127,6 +130,36 @@ CoreInternalOutcome RoundPlayInfo::Deserialize(const rapidjson::Value &value)
         m_urlHasBeenSet = true;
     }
 
+    if (value.HasMember("CreateTime") && !value["CreateTime"].IsNull())
+    {
+        if (!value["CreateTime"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `RoundPlayInfo.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_createTime = string(value["CreateTime"].GetString());
+        m_createTimeHasBeenSet = true;
+    }
+
+    if (value.HasMember("UpdateTime") && !value["UpdateTime"].IsNull())
+    {
+        if (!value["UpdateTime"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `RoundPlayInfo.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_updateTime = string(value["UpdateTime"].GetString());
+        m_updateTimeHasBeenSet = true;
+    }
+
+    if (value.HasMember("ExpiredTime") && !value["ExpiredTime"].IsNull())
+    {
+        if (!value["ExpiredTime"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `RoundPlayInfo.ExpiredTime` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_expiredTime = string(value["ExpiredTime"].GetString());
+        m_expiredTimeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -203,6 +236,30 @@ void RoundPlayInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::A
         string key = "Url";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_url.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_createTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CreateTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_updateTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UpdateTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_updateTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_expiredTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExpiredTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_expiredTime.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -334,5 +391,53 @@ void RoundPlayInfo::SetUrl(const string& _url)
 bool RoundPlayInfo::UrlHasBeenSet() const
 {
     return m_urlHasBeenSet;
+}
+
+string RoundPlayInfo::GetCreateTime() const
+{
+    return m_createTime;
+}
+
+void RoundPlayInfo::SetCreateTime(const string& _createTime)
+{
+    m_createTime = _createTime;
+    m_createTimeHasBeenSet = true;
+}
+
+bool RoundPlayInfo::CreateTimeHasBeenSet() const
+{
+    return m_createTimeHasBeenSet;
+}
+
+string RoundPlayInfo::GetUpdateTime() const
+{
+    return m_updateTime;
+}
+
+void RoundPlayInfo::SetUpdateTime(const string& _updateTime)
+{
+    m_updateTime = _updateTime;
+    m_updateTimeHasBeenSet = true;
+}
+
+bool RoundPlayInfo::UpdateTimeHasBeenSet() const
+{
+    return m_updateTimeHasBeenSet;
+}
+
+string RoundPlayInfo::GetExpiredTime() const
+{
+    return m_expiredTime;
+}
+
+void RoundPlayInfo::SetExpiredTime(const string& _expiredTime)
+{
+    m_expiredTime = _expiredTime;
+    m_expiredTimeHasBeenSet = true;
+}
+
+bool RoundPlayInfo::ExpiredTimeHasBeenSet() const
+{
+    return m_expiredTimeHasBeenSet;
 }
 

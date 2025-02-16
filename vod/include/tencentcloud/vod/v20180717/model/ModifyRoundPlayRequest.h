@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The playlist ID, which is unique.
-                     * @return RoundPlayId The playlist ID, which is unique.
+                     * 获取The unique identifier of the playlist.
+                     * @return RoundPlayId The unique identifier of the playlist.
                      * 
                      */
                     std::string GetRoundPlayId() const;
 
                     /**
-                     * 设置The playlist ID, which is unique.
-                     * @param _roundPlayId The playlist ID, which is unique.
+                     * 设置The unique identifier of the playlist.
+                     * @param _roundPlayId The unique identifier of the playlist.
                      * 
                      */
                     void SetRoundPlayId(const std::string& _roundPlayId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool RoundPlayIdHasBeenSet() const;
 
                     /**
-                     * 获取<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 获取<B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, for customers who enable vod, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
+                     * @return SubAppId <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, for customers who enable vod, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @param _subAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 设置<B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, for customers who enable vod, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
+                     * @param _subAppId <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, for customers who enable vod, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
-                     * @return StartTime The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+                     * 获取The playback start time, in [iso 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+                     * @return StartTime The playback start time, in [iso 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
-                     * @param _startTime The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+                     * 设置The playback start time, in [iso 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+                     * @param _startTime The playback start time, in [iso 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -107,19 +107,19 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取The files on the list.
-<li>Array length limit: 100.</li>
-                     * @return RoundPlaylist The files on the list.
-<li>Array length limit: 100.</li>
+                     * 获取The program list.
+<Li>Array length limit: 100.</li>.
+                     * @return RoundPlaylist The program list.
+<Li>Array length limit: 100.</li>.
                      * 
                      */
                     std::vector<RoundPlayListItemInfo> GetRoundPlaylist() const;
 
                     /**
-                     * 设置The files on the list.
-<li>Array length limit: 100.</li>
-                     * @param _roundPlaylist The files on the list.
-<li>Array length limit: 100.</li>
+                     * 设置The program list.
+<Li>Array length limit: 100.</li>.
+                     * @param _roundPlaylist The program list.
+<Li>Array length limit: 100.</li>.
                      * 
                      */
                     void SetRoundPlaylist(const std::vector<RoundPlayListItemInfo>& _roundPlaylist);
@@ -174,23 +174,15 @@ namespace TencentCloud
                     bool DescHasBeenSet() const;
 
                     /**
-                     * 获取Playback status, optional values: 
-<li>Disabled: End playback, and the carousel task cannot be started again after the end. </li>
-
-                     * @return Status Playback status, optional values: 
-<li>Disabled: End playback, and the carousel task cannot be started again after the end. </li>
-
+                     * 获取Playback status, optional values:<li>disabled: stop playback.</li><li>enabled: start playback after the duration has elapsed.</li>.
+                     * @return Status Playback status, optional values:<li>disabled: stop playback.</li><li>enabled: start playback after the duration has elapsed.</li>.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Playback status, optional values: 
-<li>Disabled: End playback, and the carousel task cannot be started again after the end. </li>
-
-                     * @param _status Playback status, optional values: 
-<li>Disabled: End playback, and the carousel task cannot be started again after the end. </li>
-
+                     * 设置Playback status, optional values:<li>disabled: stop playback.</li><li>enabled: start playback after the duration has elapsed.</li>.
+                     * @param _status Playback status, optional values:<li>disabled: stop playback.</li><li>enabled: start playback after the duration has elapsed.</li>.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -203,23 +195,23 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Play mode, optional values:
-<li>Loop: Play the playlist in a loop;</li>
-<li>Linear: Play once, stop playing after the playlist is played. </li>
-                     * @return PlayBackMode Play mode, optional values:
-<li>Loop: Play the playlist in a loop;</li>
-<li>Linear: Play once, stop playing after the playlist is played. </li>
+                     * 获取Play mode, optional values:.
+<Li>Loop: loop the playlist;</li>.
+<Li>Linear: single play, stop playback after the playlist finishes.</li>.
+                     * @return PlayBackMode Play mode, optional values:.
+<Li>Loop: loop the playlist;</li>.
+<Li>Linear: single play, stop playback after the playlist finishes.</li>.
                      * 
                      */
                     std::string GetPlayBackMode() const;
 
                     /**
-                     * 设置Play mode, optional values:
-<li>Loop: Play the playlist in a loop;</li>
-<li>Linear: Play once, stop playing after the playlist is played. </li>
-                     * @param _playBackMode Play mode, optional values:
-<li>Loop: Play the playlist in a loop;</li>
-<li>Linear: Play once, stop playing after the playlist is played. </li>
+                     * 设置Play mode, optional values:.
+<Li>Loop: loop the playlist;</li>.
+<Li>Linear: single play, stop playback after the playlist finishes.</li>.
+                     * @param _playBackMode Play mode, optional values:.
+<Li>Loop: loop the playlist;</li>.
+<Li>Linear: single play, stop playback after the playlist finishes.</li>.
                      * 
                      */
                     void SetPlayBackMode(const std::string& _playBackMode);
@@ -231,29 +223,50 @@ namespace TencentCloud
                      */
                     bool PlayBackModeHasBeenSet() const;
 
+                    /**
+                     * 获取Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback will stop after expiration. "9999-12-31t23:59:59+08:00" means no expiration.
+                     * @return ExpiredTime Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback will stop after expiration. "9999-12-31t23:59:59+08:00" means no expiration.
+                     * 
+                     */
+                    std::string GetExpiredTime() const;
+
+                    /**
+                     * 设置Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback will stop after expiration. "9999-12-31t23:59:59+08:00" means no expiration.
+                     * @param _expiredTime Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback will stop after expiration. "9999-12-31t23:59:59+08:00" means no expiration.
+                     * 
+                     */
+                    void SetExpiredTime(const std::string& _expiredTime);
+
+                    /**
+                     * 判断参数 ExpiredTime 是否已赋值
+                     * @return ExpiredTime 是否已赋值
+                     * 
+                     */
+                    bool ExpiredTimeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The playlist ID, which is unique.
+                     * The unique identifier of the playlist.
                      */
                     std::string m_roundPlayId;
                     bool m_roundPlayIdHasBeenSet;
 
                     /**
-                     * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, for customers who enable vod, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+                     * The playback start time, in [iso 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * The files on the list.
-<li>Array length limit: 100.</li>
+                     * The program list.
+<Li>Array length limit: 100.</li>.
                      */
                     std::vector<RoundPlayListItemInfo> m_roundPlaylist;
                     bool m_roundPlaylistHasBeenSet;
@@ -271,20 +284,24 @@ namespace TencentCloud
                     bool m_descHasBeenSet;
 
                     /**
-                     * Playback status, optional values: 
-<li>Disabled: End playback, and the carousel task cannot be started again after the end. </li>
-
+                     * Playback status, optional values:<li>disabled: stop playback.</li><li>enabled: start playback after the duration has elapsed.</li>.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Play mode, optional values:
-<li>Loop: Play the playlist in a loop;</li>
-<li>Linear: Play once, stop playing after the playlist is played. </li>
+                     * Play mode, optional values:.
+<Li>Loop: loop the playlist;</li>.
+<Li>Linear: single play, stop playback after the playlist finishes.</li>.
                      */
                     std::string m_playBackMode;
                     bool m_playBackModeHasBeenSet;
+
+                    /**
+                     * Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback will stop after expiration. "9999-12-31t23:59:59+08:00" means no expiration.
+                     */
+                    std::string m_expiredTime;
+                    bool m_expiredTimeHasBeenSet;
 
                 };
             }

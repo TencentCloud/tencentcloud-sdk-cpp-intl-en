@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool RoundPlayIdHasBeenSet() const;
 
                     /**
-                     * 获取The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
-                     * @return StartTime The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+                     * 获取The playback start time, in [ISO 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+                     * @return StartTime The playback start time, in [ISO 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
-                     * @param _startTime The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+                     * 设置The playback start time, in [ISO 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+                     * @param _startTime The playback start time, in [ISO 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -239,6 +239,69 @@ Default value: Loop.
                      */
                     bool UrlHasBeenSet() const;
 
+                    /**
+                     * 获取Creation time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+                     * @return CreateTime Creation time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+                     * 
+                     */
+                    std::string GetCreateTime() const;
+
+                    /**
+                     * 设置Creation time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+                     * @param _createTime Creation time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+                     * 
+                     */
+                    void SetCreateTime(const std::string& _createTime);
+
+                    /**
+                     * 判断参数 CreateTime 是否已赋值
+                     * @return CreateTime 是否已赋值
+                     * 
+                     */
+                    bool CreateTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Update time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+                     * @return UpdateTime Update time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+                     * 
+                     */
+                    std::string GetUpdateTime() const;
+
+                    /**
+                     * 设置Update time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+                     * @param _updateTime Update time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+                     * 
+                     */
+                    void SetUpdateTime(const std::string& _updateTime);
+
+                    /**
+                     * 判断参数 UpdateTime 是否已赋值
+                     * @return UpdateTime 是否已赋值
+                     * 
+                     */
+                    bool UpdateTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback of the playlist will stop after expiration. "9999-12-31t23:59:59+08:00" means never expire.
+                     * @return ExpiredTime Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback of the playlist will stop after expiration. "9999-12-31t23:59:59+08:00" means never expire.
+                     * 
+                     */
+                    std::string GetExpiredTime() const;
+
+                    /**
+                     * 设置Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback of the playlist will stop after expiration. "9999-12-31t23:59:59+08:00" means never expire.
+                     * @param _expiredTime Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback of the playlist will stop after expiration. "9999-12-31t23:59:59+08:00" means never expire.
+                     * 
+                     */
+                    void SetExpiredTime(const std::string& _expiredTime);
+
+                    /**
+                     * 判断参数 ExpiredTime 是否已赋值
+                     * @return ExpiredTime 是否已赋值
+                     * 
+                     */
+                    bool ExpiredTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -248,7 +311,7 @@ Default value: Loop.
                     bool m_roundPlayIdHasBeenSet;
 
                     /**
-                     * The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+                     * The playback start time, in [ISO 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
@@ -294,6 +357,24 @@ Default value: Loop.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
+
+                    /**
+                     * Creation time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+                     */
+                    std::string m_createTime;
+                    bool m_createTimeHasBeenSet;
+
+                    /**
+                     * Update time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+                     */
+                    std::string m_updateTime;
+                    bool m_updateTimeHasBeenSet;
+
+                    /**
+                     * Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback of the playlist will stop after expiration. "9999-12-31t23:59:59+08:00" means never expire.
+                     */
+                    std::string m_expiredTime;
+                    bool m_expiredTimeHasBeenSet;
 
                 };
             }
