@@ -280,15 +280,15 @@ namespace TencentCloud
                     bool IsEipDirectConnectionHasBeenSet() const;
 
                     /**
-                     * 获取IP type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (general elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (Anti DDoS EIP).
-                     * @return AddressType IP type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (general elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (Anti DDoS EIP).
+                     * 获取EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public IP), `EIP` (elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (anti-DDoS EIP).
+                     * @return AddressType EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public IP), `EIP` (elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (anti-DDoS EIP).
                      * 
                      */
                     std::string GetAddressType() const;
 
                     /**
-                     * 设置IP type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (general elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (Anti DDoS EIP).
-                     * @param _addressType IP type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (general elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (Anti DDoS EIP).
+                     * 设置EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public IP), `EIP` (elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (anti-DDoS EIP).
+                     * @param _addressType EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public IP), `EIP` (elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (anti-DDoS EIP).
                      * 
                      */
                     void SetAddressType(const std::string& _addressType);
@@ -550,15 +550,19 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Egress 
+                     * 获取Static single-line IP network egress
+Note: This field may return null, indicating that no valid value was found.
+                     * @return Egress Static single-line IP network egress
+Note: This field may return null, indicating that no valid value was found.
                      * 
                      */
                     std::string GetEgress() const;
 
                     /**
-                     * 设置
-                     * @param _egress 
+                     * 设置Static single-line IP network egress
+Note: This field may return null, indicating that no valid value was found.
+                     * @param _egress Static single-line IP network egress
+Note: This field may return null, indicating that no valid value was found.
                      * 
                      */
                     void SetEgress(const std::string& _egress);
@@ -592,15 +596,23 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool AntiDDoSPackageIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RenewFlag 
+                     * 获取Indicates whether the current EIP is auto-renewed. This field is displayed only for EIPs with monthly prepaid bandwidth. Valid values are as follows:
+<li>NOTIFY_AND_MANUAL_RENEW: Normal renewal</li><li>NOTIFY_AND_AUTO_RENEW: Automatic renewal</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: No renewal upon expiration</li>
+
+                     * @return RenewFlag Indicates whether the current EIP is auto-renewed. This field is displayed only for EIPs with monthly prepaid bandwidth. Valid values are as follows:
+<li>NOTIFY_AND_MANUAL_RENEW: Normal renewal</li><li>NOTIFY_AND_AUTO_RENEW: Automatic renewal</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: No renewal upon expiration</li>
+
                      * 
                      */
                     std::string GetRenewFlag() const;
 
                     /**
-                     * 设置
-                     * @param _renewFlag 
+                     * 设置Indicates whether the current EIP is auto-renewed. This field is displayed only for EIPs with monthly prepaid bandwidth. Valid values are as follows:
+<li>NOTIFY_AND_MANUAL_RENEW: Normal renewal</li><li>NOTIFY_AND_AUTO_RENEW: Automatic renewal</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: No renewal upon expiration</li>
+
+                     * @param _renewFlag Indicates whether the current EIP is auto-renewed. This field is displayed only for EIPs with monthly prepaid bandwidth. Valid values are as follows:
+<li>NOTIFY_AND_MANUAL_RENEW: Normal renewal</li><li>NOTIFY_AND_AUTO_RENEW: Automatic renewal</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: No renewal upon expiration</li>
+
                      * 
                      */
                     void SetRenewFlag(const std::string& _renewFlag);
@@ -613,15 +625,19 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool RenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BandwidthPackageId 
+                     * 获取Indicates the ID of the Bandwidth Package associated with the current public IP. If the public IP is not billed by Bandwidth Package, this field is empty.
+Note: This field may return null, indicating that no valid value was found.
+                     * @return BandwidthPackageId Indicates the ID of the Bandwidth Package associated with the current public IP. If the public IP is not billed by Bandwidth Package, this field is empty.
+Note: This field may return null, indicating that no valid value was found.
                      * 
                      */
                     std::string GetBandwidthPackageId() const;
 
                     /**
-                     * 设置
-                     * @param _bandwidthPackageId 
+                     * 设置Indicates the ID of the Bandwidth Package associated with the current public IP. If the public IP is not billed by Bandwidth Package, this field is empty.
+Note: This field may return null, indicating that no valid value was found.
+                     * @param _bandwidthPackageId Indicates the ID of the Bandwidth Package associated with the current public IP. If the public IP is not billed by Bandwidth Package, this field is empty.
+Note: This field may return null, indicating that no valid value was found.
                      * 
                      */
                     void SetBandwidthPackageId(const std::string& _bandwidthPackageId);
@@ -632,6 +648,56 @@ Note: this field may return `null`, indicating that no valid value was found.
                      * 
                      */
                     bool BandwidthPackageIdHasBeenSet() const;
+
+                    /**
+                     * 获取Indicates the unique ID of the VPC to which the traditional EIPv6 belongs.
+Note: This field may return null, indicating that no valid value was found.
+                     * @return UnVpcId Indicates the unique ID of the VPC to which the traditional EIPv6 belongs.
+Note: This field may return null, indicating that no valid value was found.
+                     * 
+                     */
+                    std::string GetUnVpcId() const;
+
+                    /**
+                     * 设置Indicates the unique ID of the VPC to which the traditional EIPv6 belongs.
+Note: This field may return null, indicating that no valid value was found.
+                     * @param _unVpcId Indicates the unique ID of the VPC to which the traditional EIPv6 belongs.
+Note: This field may return null, indicating that no valid value was found.
+                     * 
+                     */
+                    void SetUnVpcId(const std::string& _unVpcId);
+
+                    /**
+                     * 判断参数 UnVpcId 是否已赋值
+                     * @return UnVpcId 是否已赋值
+                     * 
+                     */
+                    bool UnVpcIdHasBeenSet() const;
+
+                    /**
+                     * 获取Indicates the unique ID of the CDC.
+Note: This field may return 'null', indicating that no valid value was found.
+                     * @return DedicatedClusterId Indicates the unique ID of the CDC.
+Note: This field may return 'null', indicating that no valid value was found.
+                     * 
+                     */
+                    std::string GetDedicatedClusterId() const;
+
+                    /**
+                     * 设置Indicates the unique ID of the CDC.
+Note: This field may return 'null', indicating that no valid value was found.
+                     * @param _dedicatedClusterId Indicates the unique ID of the CDC.
+Note: This field may return 'null', indicating that no valid value was found.
+                     * 
+                     */
+                    void SetDedicatedClusterId(const std::string& _dedicatedClusterId);
+
+                    /**
+                     * 判断参数 DedicatedClusterId 是否已赋值
+                     * @return DedicatedClusterId 是否已赋值
+                     * 
+                     */
+                    bool DedicatedClusterIdHasBeenSet() const;
 
                 private:
 
@@ -702,7 +768,7 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool m_isEipDirectConnectionHasBeenSet;
 
                     /**
-                     * IP type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (general elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (Anti DDoS EIP).
+                     * EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public IP), `EIP` (elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (anti-DDoS EIP).
                      */
                     std::string m_addressType;
                     bool m_addressTypeHasBeenSet;
@@ -777,7 +843,8 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Static single-line IP network egress
+Note: This field may return null, indicating that no valid value was found.
                      */
                     std::string m_egress;
                     bool m_egressHasBeenSet;
@@ -789,16 +856,33 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool m_antiDDoSPackageIdHasBeenSet;
 
                     /**
-                     * 
+                     * Indicates whether the current EIP is auto-renewed. This field is displayed only for EIPs with monthly prepaid bandwidth. Valid values are as follows:
+<li>NOTIFY_AND_MANUAL_RENEW: Normal renewal</li><li>NOTIFY_AND_AUTO_RENEW: Automatic renewal</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: No renewal upon expiration</li>
+
                      */
                     std::string m_renewFlag;
                     bool m_renewFlagHasBeenSet;
 
                     /**
-                     * 
+                     * Indicates the ID of the Bandwidth Package associated with the current public IP. If the public IP is not billed by Bandwidth Package, this field is empty.
+Note: This field may return null, indicating that no valid value was found.
                      */
                     std::string m_bandwidthPackageId;
                     bool m_bandwidthPackageIdHasBeenSet;
+
+                    /**
+                     * Indicates the unique ID of the VPC to which the traditional EIPv6 belongs.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    std::string m_unVpcId;
+                    bool m_unVpcIdHasBeenSet;
+
+                    /**
+                     * Indicates the unique ID of the CDC.
+Note: This field may return 'null', indicating that no valid value was found.
+                     */
+                    std::string m_dedicatedClusterId;
+                    bool m_dedicatedClusterIdHasBeenSet;
 
                 };
             }

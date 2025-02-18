@@ -31,6 +31,10 @@
 #include <tencentcloud/vpc/v20170312/model/AdjustPublicAddressResponse.h>
 #include <tencentcloud/vpc/v20170312/model/AllocateAddressesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/AllocateAddressesResponse.h>
+#include <tencentcloud/vpc/v20170312/model/AllocateIPv6AddressesRequest.h>
+#include <tencentcloud/vpc/v20170312/model/AllocateIPv6AddressesResponse.h>
+#include <tencentcloud/vpc/v20170312/model/AllocateIp6AddressesBandwidthRequest.h>
+#include <tencentcloud/vpc/v20170312/model/AllocateIp6AddressesBandwidthResponse.h>
 #include <tencentcloud/vpc/v20170312/model/AssignIpv6AddressesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/AssignIpv6AddressesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/AssignIpv6CidrBlockRequest.h>
@@ -43,6 +47,8 @@
 #include <tencentcloud/vpc/v20170312/model/AssociateAddressResponse.h>
 #include <tencentcloud/vpc/v20170312/model/AssociateDirectConnectGatewayNatGatewayRequest.h>
 #include <tencentcloud/vpc/v20170312/model/AssociateDirectConnectGatewayNatGatewayResponse.h>
+#include <tencentcloud/vpc/v20170312/model/AssociateIPv6AddressRequest.h>
+#include <tencentcloud/vpc/v20170312/model/AssociateIPv6AddressResponse.h>
 #include <tencentcloud/vpc/v20170312/model/AssociateNatGatewayAddressRequest.h>
 #include <tencentcloud/vpc/v20170312/model/AssociateNatGatewayAddressResponse.h>
 #include <tencentcloud/vpc/v20170312/model/AssociateNetworkAclSubnetsRequest.h>
@@ -261,6 +267,10 @@
 #include <tencentcloud/vpc/v20170312/model/DescribeGatewayFlowQosResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeHaVipsRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeHaVipsResponse.h>
+#include <tencentcloud/vpc/v20170312/model/DescribeIPv6AddressesRequest.h>
+#include <tencentcloud/vpc/v20170312/model/DescribeIPv6AddressesResponse.h>
+#include <tencentcloud/vpc/v20170312/model/DescribeIp6AddressesRequest.h>
+#include <tencentcloud/vpc/v20170312/model/DescribeIp6AddressesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeIpGeolocationDatabaseUrlRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeIpGeolocationDatabaseUrlResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeIpGeolocationInfosRequest.h>
@@ -367,6 +377,8 @@
 #include <tencentcloud/vpc/v20170312/model/DisassociateAddressResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DisassociateDirectConnectGatewayNatGatewayRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DisassociateDirectConnectGatewayNatGatewayResponse.h>
+#include <tencentcloud/vpc/v20170312/model/DisassociateIPv6AddressRequest.h>
+#include <tencentcloud/vpc/v20170312/model/DisassociateIPv6AddressResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DisassociateNatGatewayAddressRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DisassociateNatGatewayAddressResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DisassociateNetworkAclSubnetsRequest.h>
@@ -445,6 +457,12 @@
 #include <tencentcloud/vpc/v20170312/model/ModifyGatewayFlowQosResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyHaVipAttributeRequest.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyHaVipAttributeResponse.h>
+#include <tencentcloud/vpc/v20170312/model/ModifyIPv6AddressesAttributesRequest.h>
+#include <tencentcloud/vpc/v20170312/model/ModifyIPv6AddressesAttributesResponse.h>
+#include <tencentcloud/vpc/v20170312/model/ModifyIPv6AddressesBandwidthRequest.h>
+#include <tencentcloud/vpc/v20170312/model/ModifyIPv6AddressesBandwidthResponse.h>
+#include <tencentcloud/vpc/v20170312/model/ModifyIp6AddressesBandwidthRequest.h>
+#include <tencentcloud/vpc/v20170312/model/ModifyIp6AddressesBandwidthResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyIpv6AddressesAttributeRequest.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyIpv6AddressesAttributeResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyLocalGatewayRequest.h>
@@ -507,6 +525,10 @@
 #include <tencentcloud/vpc/v20170312/model/RejectAttachCcnInstancesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ReleaseAddressesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/ReleaseAddressesResponse.h>
+#include <tencentcloud/vpc/v20170312/model/ReleaseIPv6AddressesRequest.h>
+#include <tencentcloud/vpc/v20170312/model/ReleaseIPv6AddressesResponse.h>
+#include <tencentcloud/vpc/v20170312/model/ReleaseIp6AddressesBandwidthRequest.h>
+#include <tencentcloud/vpc/v20170312/model/ReleaseIp6AddressesBandwidthResponse.h>
 #include <tencentcloud/vpc/v20170312/model/RemoveBandwidthPackageResourcesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/RemoveBandwidthPackageResourcesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/RenewVpnGatewayRequest.h>
@@ -577,6 +599,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AllocateAddressesResponse> AllocateAddressesOutcome;
                 typedef std::future<AllocateAddressesOutcome> AllocateAddressesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::AllocateAddressesRequest&, AllocateAddressesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AllocateAddressesAsyncHandler;
+                typedef Outcome<Core::Error, Model::AllocateIPv6AddressesResponse> AllocateIPv6AddressesOutcome;
+                typedef std::future<AllocateIPv6AddressesOutcome> AllocateIPv6AddressesOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::AllocateIPv6AddressesRequest&, AllocateIPv6AddressesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AllocateIPv6AddressesAsyncHandler;
+                typedef Outcome<Core::Error, Model::AllocateIp6AddressesBandwidthResponse> AllocateIp6AddressesBandwidthOutcome;
+                typedef std::future<AllocateIp6AddressesBandwidthOutcome> AllocateIp6AddressesBandwidthOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::AllocateIp6AddressesBandwidthRequest&, AllocateIp6AddressesBandwidthOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AllocateIp6AddressesBandwidthAsyncHandler;
                 typedef Outcome<Core::Error, Model::AssignIpv6AddressesResponse> AssignIpv6AddressesOutcome;
                 typedef std::future<AssignIpv6AddressesOutcome> AssignIpv6AddressesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::AssignIpv6AddressesRequest&, AssignIpv6AddressesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AssignIpv6AddressesAsyncHandler;
@@ -595,6 +623,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AssociateDirectConnectGatewayNatGatewayResponse> AssociateDirectConnectGatewayNatGatewayOutcome;
                 typedef std::future<AssociateDirectConnectGatewayNatGatewayOutcome> AssociateDirectConnectGatewayNatGatewayOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::AssociateDirectConnectGatewayNatGatewayRequest&, AssociateDirectConnectGatewayNatGatewayOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AssociateDirectConnectGatewayNatGatewayAsyncHandler;
+                typedef Outcome<Core::Error, Model::AssociateIPv6AddressResponse> AssociateIPv6AddressOutcome;
+                typedef std::future<AssociateIPv6AddressOutcome> AssociateIPv6AddressOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::AssociateIPv6AddressRequest&, AssociateIPv6AddressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AssociateIPv6AddressAsyncHandler;
                 typedef Outcome<Core::Error, Model::AssociateNatGatewayAddressResponse> AssociateNatGatewayAddressOutcome;
                 typedef std::future<AssociateNatGatewayAddressOutcome> AssociateNatGatewayAddressOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::AssociateNatGatewayAddressRequest&, AssociateNatGatewayAddressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AssociateNatGatewayAddressAsyncHandler;
@@ -922,6 +953,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeHaVipsResponse> DescribeHaVipsOutcome;
                 typedef std::future<DescribeHaVipsOutcome> DescribeHaVipsOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DescribeHaVipsRequest&, DescribeHaVipsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHaVipsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeIPv6AddressesResponse> DescribeIPv6AddressesOutcome;
+                typedef std::future<DescribeIPv6AddressesOutcome> DescribeIPv6AddressesOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::DescribeIPv6AddressesRequest&, DescribeIPv6AddressesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIPv6AddressesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeIp6AddressesResponse> DescribeIp6AddressesOutcome;
+                typedef std::future<DescribeIp6AddressesOutcome> DescribeIp6AddressesOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::DescribeIp6AddressesRequest&, DescribeIp6AddressesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIp6AddressesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeIpGeolocationDatabaseUrlResponse> DescribeIpGeolocationDatabaseUrlOutcome;
                 typedef std::future<DescribeIpGeolocationDatabaseUrlOutcome> DescribeIpGeolocationDatabaseUrlOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DescribeIpGeolocationDatabaseUrlRequest&, DescribeIpGeolocationDatabaseUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIpGeolocationDatabaseUrlAsyncHandler;
@@ -1081,6 +1118,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DisassociateDirectConnectGatewayNatGatewayResponse> DisassociateDirectConnectGatewayNatGatewayOutcome;
                 typedef std::future<DisassociateDirectConnectGatewayNatGatewayOutcome> DisassociateDirectConnectGatewayNatGatewayOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DisassociateDirectConnectGatewayNatGatewayRequest&, DisassociateDirectConnectGatewayNatGatewayOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisassociateDirectConnectGatewayNatGatewayAsyncHandler;
+                typedef Outcome<Core::Error, Model::DisassociateIPv6AddressResponse> DisassociateIPv6AddressOutcome;
+                typedef std::future<DisassociateIPv6AddressOutcome> DisassociateIPv6AddressOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::DisassociateIPv6AddressRequest&, DisassociateIPv6AddressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisassociateIPv6AddressAsyncHandler;
                 typedef Outcome<Core::Error, Model::DisassociateNatGatewayAddressResponse> DisassociateNatGatewayAddressOutcome;
                 typedef std::future<DisassociateNatGatewayAddressOutcome> DisassociateNatGatewayAddressOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DisassociateNatGatewayAddressRequest&, DisassociateNatGatewayAddressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisassociateNatGatewayAddressAsyncHandler;
@@ -1198,6 +1238,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyHaVipAttributeResponse> ModifyHaVipAttributeOutcome;
                 typedef std::future<ModifyHaVipAttributeOutcome> ModifyHaVipAttributeOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::ModifyHaVipAttributeRequest&, ModifyHaVipAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyHaVipAttributeAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyIPv6AddressesAttributesResponse> ModifyIPv6AddressesAttributesOutcome;
+                typedef std::future<ModifyIPv6AddressesAttributesOutcome> ModifyIPv6AddressesAttributesOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::ModifyIPv6AddressesAttributesRequest&, ModifyIPv6AddressesAttributesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyIPv6AddressesAttributesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyIPv6AddressesBandwidthResponse> ModifyIPv6AddressesBandwidthOutcome;
+                typedef std::future<ModifyIPv6AddressesBandwidthOutcome> ModifyIPv6AddressesBandwidthOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::ModifyIPv6AddressesBandwidthRequest&, ModifyIPv6AddressesBandwidthOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyIPv6AddressesBandwidthAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyIp6AddressesBandwidthResponse> ModifyIp6AddressesBandwidthOutcome;
+                typedef std::future<ModifyIp6AddressesBandwidthOutcome> ModifyIp6AddressesBandwidthOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::ModifyIp6AddressesBandwidthRequest&, ModifyIp6AddressesBandwidthOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyIp6AddressesBandwidthAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyIpv6AddressesAttributeResponse> ModifyIpv6AddressesAttributeOutcome;
                 typedef std::future<ModifyIpv6AddressesAttributeOutcome> ModifyIpv6AddressesAttributeOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::ModifyIpv6AddressesAttributeRequest&, ModifyIpv6AddressesAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyIpv6AddressesAttributeAsyncHandler;
@@ -1291,6 +1340,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ReleaseAddressesResponse> ReleaseAddressesOutcome;
                 typedef std::future<ReleaseAddressesOutcome> ReleaseAddressesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::ReleaseAddressesRequest&, ReleaseAddressesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReleaseAddressesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ReleaseIPv6AddressesResponse> ReleaseIPv6AddressesOutcome;
+                typedef std::future<ReleaseIPv6AddressesOutcome> ReleaseIPv6AddressesOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::ReleaseIPv6AddressesRequest&, ReleaseIPv6AddressesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReleaseIPv6AddressesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ReleaseIp6AddressesBandwidthResponse> ReleaseIp6AddressesBandwidthOutcome;
+                typedef std::future<ReleaseIp6AddressesBandwidthOutcome> ReleaseIp6AddressesBandwidthOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::ReleaseIp6AddressesBandwidthRequest&, ReleaseIp6AddressesBandwidthOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReleaseIp6AddressesBandwidthAsyncHandler;
                 typedef Outcome<Core::Error, Model::RemoveBandwidthPackageResourcesResponse> RemoveBandwidthPackageResourcesOutcome;
                 typedef std::future<RemoveBandwidthPackageResourcesOutcome> RemoveBandwidthPackageResourcesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::RemoveBandwidthPackageResourcesRequest&, RemoveBandwidthPackageResourcesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RemoveBandwidthPackageResourcesAsyncHandler;
@@ -1400,6 +1455,31 @@ namespace TencentCloud
                 AllocateAddressesOutcomeCallable AllocateAddressesCallable(const Model::AllocateAddressesRequest& request);
 
                 /**
+                 *This API is used to apply for one or more Elastic IPv6 (EIPv6) instances.
+
+- EIPv6 is a fixed public IPv6 address that can be independently applied for and held in a Tencent Cloud region, providing a consistent product experience with Elastic IPv4.
+- You can quickly bind an EIPv6 instance to the private IPv6 address of a cloud resource, so as to quickly enable IPv6 public bandwidth for the cloud resource.
+- You can also bind an EIPv6 instance to other cloud resources as needed, so as to shield instance failures.
+                 * @param req AllocateIPv6AddressesRequest
+                 * @return AllocateIPv6AddressesOutcome
+                 */
+                AllocateIPv6AddressesOutcome AllocateIPv6Addresses(const Model::AllocateIPv6AddressesRequest &request);
+                void AllocateIPv6AddressesAsync(const Model::AllocateIPv6AddressesRequest& request, const AllocateIPv6AddressesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AllocateIPv6AddressesOutcomeCallable AllocateIPv6AddressesCallable(const Model::AllocateIPv6AddressesRequest& request);
+
+                /**
+                 *This API is used to allocate IPv6 public network bandwidth for classic elastic public IPv6 addresses.
+
+- Classic elastic public IPv6 addresses only have the private network communication capability by default. They can have the IPv6 public network communication capability and be displayed in the list of Classic Elastic Public IPv6 only after IPv6 public network bandwidth is allocated in the console or by calling this API. 
+- You can allocate public network bandwidth for one or multiple Classic elastic public IPv6 addresses each time.
+                 * @param req AllocateIp6AddressesBandwidthRequest
+                 * @return AllocateIp6AddressesBandwidthOutcome
+                 */
+                AllocateIp6AddressesBandwidthOutcome AllocateIp6AddressesBandwidth(const Model::AllocateIp6AddressesBandwidthRequest &request);
+                void AllocateIp6AddressesBandwidthAsync(const Model::AllocateIp6AddressesBandwidthRequest& request, const AllocateIp6AddressesBandwidthAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AllocateIp6AddressesBandwidthOutcomeCallable AllocateIp6AddressesBandwidthCallable(const Model::AllocateIp6AddressesBandwidthRequest& request);
+
+                /**
                  *This API is used to apply for an IPv6 address for the ENI. <br />
 This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
 * The number of IPs bound with an ENI is limited. For more information, see <a href="/document/product/576/18527">ENI Use Limits</a>.
@@ -1472,6 +1552,18 @@ This API is completed asynchronously. If you need to query the execution result 
                 AssociateDirectConnectGatewayNatGatewayOutcome AssociateDirectConnectGatewayNatGateway(const Model::AssociateDirectConnectGatewayNatGatewayRequest &request);
                 void AssociateDirectConnectGatewayNatGatewayAsync(const Model::AssociateDirectConnectGatewayNatGatewayRequest& request, const AssociateDirectConnectGatewayNatGatewayAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 AssociateDirectConnectGatewayNatGatewayOutcomeCallable AssociateDirectConnectGatewayNatGatewayCallable(const Model::AssociateDirectConnectGatewayNatGatewayRequest& request);
+
+                /**
+                 *This API is used to bind an EIPv6 instance to the private IPv6 address configured on the CVM or ENI.
+
+- Binding an EIPv6 to the CVM essentially indicates binding the EIPv6 to the private IPv6 address configured on the ENI of the CVM.
+- Before binding an EIPv6 to the private IPv6 of a specified ENI, ensure that the private IPv6 address is unbound before the binding operation is performed.
+                 * @param req AssociateIPv6AddressRequest
+                 * @return AssociateIPv6AddressOutcome
+                 */
+                AssociateIPv6AddressOutcome AssociateIPv6Address(const Model::AssociateIPv6AddressRequest &request);
+                void AssociateIPv6AddressAsync(const Model::AssociateIPv6AddressRequest& request, const AssociateIPv6AddressAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AssociateIPv6AddressOutcomeCallable AssociateIPv6AddressCallable(const Model::AssociateIPv6AddressRequest& request);
 
                 /**
                  *This API is used to bind an EIP to a NAT gateway.
@@ -2575,6 +2667,27 @@ A service provider can query all review requests created by any `APPID` under it
                 DescribeHaVipsOutcomeCallable DescribeHaVipsCallable(const Model::DescribeHaVipsRequest& request);
 
                 /**
+                 *This API is used to query detailed information of one or more EIPv6 instances.
+
+- You can query EIPv6 and traditional EIPv6 instance information in a specified region.
+- The system returns a certain number (as specified by the Limit, the default value is 20) of EIPv6 instances of the current user if the parameter is empty.
+                 * @param req DescribeIPv6AddressesRequest
+                 * @return DescribeIPv6AddressesOutcome
+                 */
+                DescribeIPv6AddressesOutcome DescribeIPv6Addresses(const Model::DescribeIPv6AddressesRequest &request);
+                void DescribeIPv6AddressesAsync(const Model::DescribeIPv6AddressesRequest& request, const DescribeIPv6AddressesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeIPv6AddressesOutcomeCallable DescribeIPv6AddressesCallable(const Model::DescribeIPv6AddressesRequest& request);
+
+                /**
+                 *This API is used to query the detailed information on one or multiple classic elastic public IPv6 instances.
+                 * @param req DescribeIp6AddressesRequest
+                 * @return DescribeIp6AddressesOutcome
+                 */
+                DescribeIp6AddressesOutcome DescribeIp6Addresses(const Model::DescribeIp6AddressesRequest &request);
+                void DescribeIp6AddressesAsync(const Model::DescribeIp6AddressesRequest& request, const DescribeIp6AddressesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeIp6AddressesOutcomeCallable DescribeIp6AddressesCallable(const Model::DescribeIp6AddressesRequest& request);
+
+                /**
                  *This API is used to obtain the download link of an IP location database.
 <font color="#FF0000">This API will be discontinued soon and is only available for existing users.</font>
                  * @param req DescribeIpGeolocationDatabaseUrlRequest
@@ -3065,6 +3178,18 @@ This API is completed asynchronously. If you need to query the execution result 
                 DisassociateDirectConnectGatewayNatGatewayOutcomeCallable DisassociateDirectConnectGatewayNatGatewayCallable(const Model::DisassociateDirectConnectGatewayNatGatewayRequest& request);
 
                 /**
+                 *This API is used to unbind an EIPv6 instance.
+
+- You can unbind EIPv6 instances bound to Cloud Virtual Machine (CVM) or Elastic Network Interface (ENI).
+- Only EIPv6 instances in BIND or BIND_ENI status can be unbound.
+                 * @param req DisassociateIPv6AddressRequest
+                 * @return DisassociateIPv6AddressOutcome
+                 */
+                DisassociateIPv6AddressOutcome DisassociateIPv6Address(const Model::DisassociateIPv6AddressRequest &request);
+                void DisassociateIPv6AddressAsync(const Model::DisassociateIPv6AddressRequest& request, const DisassociateIPv6AddressAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DisassociateIPv6AddressOutcomeCallable DisassociateIPv6AddressCallable(const Model::DisassociateIPv6AddressRequest& request);
+
+                /**
                  *This API is used to unbind an EIP from a NAT gateway.
                  * @param req DisassociateNatGatewayAddressRequest
                  * @return DisassociateNatGatewayAddressOutcome
@@ -3427,6 +3552,38 @@ This API is completed asynchronously. If you need to query the execution result 
                 ModifyHaVipAttributeOutcomeCallable ModifyHaVipAttributeCallable(const Model::ModifyHaVipAttributeRequest& request);
 
                 /**
+                 *This API is used to modify the name of an EIPv6 instance.
+
+- You can modify the name of both EIPv6 and traditional EIPv6 instances.
+                 * @param req ModifyIPv6AddressesAttributesRequest
+                 * @return ModifyIPv6AddressesAttributesOutcome
+                 */
+                ModifyIPv6AddressesAttributesOutcome ModifyIPv6AddressesAttributes(const Model::ModifyIPv6AddressesAttributesRequest &request);
+                void ModifyIPv6AddressesAttributesAsync(const Model::ModifyIPv6AddressesAttributesRequest& request, const ModifyIPv6AddressesAttributesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyIPv6AddressesAttributesOutcomeCallable ModifyIPv6AddressesAttributesCallable(const Model::ModifyIPv6AddressesAttributesRequest& request);
+
+                /**
+                 *This API is used to modify the bandwidth cap of an EIPv6 instance.
+                 * @param req ModifyIPv6AddressesBandwidthRequest
+                 * @return ModifyIPv6AddressesBandwidthOutcome
+                 */
+                ModifyIPv6AddressesBandwidthOutcome ModifyIPv6AddressesBandwidth(const Model::ModifyIPv6AddressesBandwidthRequest &request);
+                void ModifyIPv6AddressesBandwidthAsync(const Model::ModifyIPv6AddressesBandwidthRequest& request, const ModifyIPv6AddressesBandwidthAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyIPv6AddressesBandwidthOutcomeCallable ModifyIPv6AddressesBandwidthCallable(const Model::ModifyIPv6AddressesBandwidthRequest& request);
+
+                /**
+                 *This API is used to adjust the bandwidth limit of a classic elastic public IPv6 instance.
+
+- You can adjust the bandwidth limit of only classic elastic public IPv6 instances.
+- To adjust the bandwidth limit of an elastic public IPv6 instance, call the ModifyIPv6AddressesBandwidth API.
+                 * @param req ModifyIp6AddressesBandwidthRequest
+                 * @return ModifyIp6AddressesBandwidthOutcome
+                 */
+                ModifyIp6AddressesBandwidthOutcome ModifyIp6AddressesBandwidth(const Model::ModifyIp6AddressesBandwidthRequest &request);
+                void ModifyIp6AddressesBandwidthAsync(const Model::ModifyIp6AddressesBandwidthRequest& request, const ModifyIp6AddressesBandwidthAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyIp6AddressesBandwidthOutcomeCallable ModifyIp6AddressesBandwidthCallable(const Model::ModifyIp6AddressesBandwidthRequest& request);
+
+                /**
                  *This API (ModifyIpv6AddressesAttribute) is used to modify the private IPv6 address attributes of an ENI.
                  * @param req ModifyIpv6AddressesAttributeRequest
                  * @return ModifyIpv6AddressesAttributeOutcome
@@ -3726,6 +3883,30 @@ This API is completed asynchronously. If you need to query the execution result 
                 ReleaseAddressesOutcome ReleaseAddresses(const Model::ReleaseAddressesRequest &request);
                 void ReleaseAddressesAsync(const Model::ReleaseAddressesRequest& request, const ReleaseAddressesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ReleaseAddressesOutcomeCallable ReleaseAddressesCallable(const Model::ReleaseAddressesRequest& request);
+
+                /**
+                 *This API is used to release one or more EIPv6 instances.
+
+- You can release the obtained EIPv6 instances. To use them again, please reapply.
+- Only EIPv6 instances in UNBIND status can be released.
+                 * @param req ReleaseIPv6AddressesRequest
+                 * @return ReleaseIPv6AddressesOutcome
+                 */
+                ReleaseIPv6AddressesOutcome ReleaseIPv6Addresses(const Model::ReleaseIPv6AddressesRequest &request);
+                void ReleaseIPv6AddressesAsync(const Model::ReleaseIPv6AddressesRequest& request, const ReleaseIPv6AddressesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ReleaseIPv6AddressesOutcomeCallable ReleaseIPv6AddressesCallable(const Model::ReleaseIPv6AddressesRequest& request);
+
+                /**
+                 *This API is used to release the IPv6 public network bandwidth of classic elastic public IPv6 instances.
+
+- Classic elastic public IPv6 addresses still have the IPv6 private network communication capability after the public network bandwidth is released.
+- To allocate IPV6 public network bandwidth, call the AllocateIp6AddressesBandwidth API.
+                 * @param req ReleaseIp6AddressesBandwidthRequest
+                 * @return ReleaseIp6AddressesBandwidthOutcome
+                 */
+                ReleaseIp6AddressesBandwidthOutcome ReleaseIp6AddressesBandwidth(const Model::ReleaseIp6AddressesBandwidthRequest &request);
+                void ReleaseIp6AddressesBandwidthAsync(const Model::ReleaseIp6AddressesBandwidthRequest& request, const ReleaseIp6AddressesBandwidthAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ReleaseIp6AddressesBandwidthOutcomeCallable ReleaseIp6AddressesBandwidthCallable(const Model::ReleaseIp6AddressesBandwidthRequest& request);
 
                 /**
                  *This API is used to delete a bandwidth package resource, including [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1), [Cloud Load Balancer](https://intl.cloud.tencent.com/document/product/214/517?from_cn_redirect=1), and so on.

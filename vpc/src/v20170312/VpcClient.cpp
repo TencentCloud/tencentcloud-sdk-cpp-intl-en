@@ -212,6 +212,92 @@ VpcClient::AllocateAddressesOutcomeCallable VpcClient::AllocateAddressesCallable
     return task->get_future();
 }
 
+VpcClient::AllocateIPv6AddressesOutcome VpcClient::AllocateIPv6Addresses(const AllocateIPv6AddressesRequest &request)
+{
+    auto outcome = MakeRequest(request, "AllocateIPv6Addresses");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AllocateIPv6AddressesResponse rsp = AllocateIPv6AddressesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AllocateIPv6AddressesOutcome(rsp);
+        else
+            return AllocateIPv6AddressesOutcome(o.GetError());
+    }
+    else
+    {
+        return AllocateIPv6AddressesOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::AllocateIPv6AddressesAsync(const AllocateIPv6AddressesRequest& request, const AllocateIPv6AddressesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->AllocateIPv6Addresses(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::AllocateIPv6AddressesOutcomeCallable VpcClient::AllocateIPv6AddressesCallable(const AllocateIPv6AddressesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<AllocateIPv6AddressesOutcome()>>(
+        [this, request]()
+        {
+            return this->AllocateIPv6Addresses(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::AllocateIp6AddressesBandwidthOutcome VpcClient::AllocateIp6AddressesBandwidth(const AllocateIp6AddressesBandwidthRequest &request)
+{
+    auto outcome = MakeRequest(request, "AllocateIp6AddressesBandwidth");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AllocateIp6AddressesBandwidthResponse rsp = AllocateIp6AddressesBandwidthResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AllocateIp6AddressesBandwidthOutcome(rsp);
+        else
+            return AllocateIp6AddressesBandwidthOutcome(o.GetError());
+    }
+    else
+    {
+        return AllocateIp6AddressesBandwidthOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::AllocateIp6AddressesBandwidthAsync(const AllocateIp6AddressesBandwidthRequest& request, const AllocateIp6AddressesBandwidthAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->AllocateIp6AddressesBandwidth(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::AllocateIp6AddressesBandwidthOutcomeCallable VpcClient::AllocateIp6AddressesBandwidthCallable(const AllocateIp6AddressesBandwidthRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<AllocateIp6AddressesBandwidthOutcome()>>(
+        [this, request]()
+        {
+            return this->AllocateIp6AddressesBandwidth(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VpcClient::AssignIpv6AddressesOutcome VpcClient::AssignIpv6Addresses(const AssignIpv6AddressesRequest &request)
 {
     auto outcome = MakeRequest(request, "AssignIpv6Addresses");
@@ -463,6 +549,49 @@ VpcClient::AssociateDirectConnectGatewayNatGatewayOutcomeCallable VpcClient::Ass
         [this, request]()
         {
             return this->AssociateDirectConnectGatewayNatGateway(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::AssociateIPv6AddressOutcome VpcClient::AssociateIPv6Address(const AssociateIPv6AddressRequest &request)
+{
+    auto outcome = MakeRequest(request, "AssociateIPv6Address");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AssociateIPv6AddressResponse rsp = AssociateIPv6AddressResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AssociateIPv6AddressOutcome(rsp);
+        else
+            return AssociateIPv6AddressOutcome(o.GetError());
+    }
+    else
+    {
+        return AssociateIPv6AddressOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::AssociateIPv6AddressAsync(const AssociateIPv6AddressRequest& request, const AssociateIPv6AddressAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->AssociateIPv6Address(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::AssociateIPv6AddressOutcomeCallable VpcClient::AssociateIPv6AddressCallable(const AssociateIPv6AddressRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<AssociateIPv6AddressOutcome()>>(
+        [this, request]()
+        {
+            return this->AssociateIPv6Address(request);
         }
     );
 
@@ -5157,6 +5286,92 @@ VpcClient::DescribeHaVipsOutcomeCallable VpcClient::DescribeHaVipsCallable(const
     return task->get_future();
 }
 
+VpcClient::DescribeIPv6AddressesOutcome VpcClient::DescribeIPv6Addresses(const DescribeIPv6AddressesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeIPv6Addresses");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeIPv6AddressesResponse rsp = DescribeIPv6AddressesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeIPv6AddressesOutcome(rsp);
+        else
+            return DescribeIPv6AddressesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeIPv6AddressesOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::DescribeIPv6AddressesAsync(const DescribeIPv6AddressesRequest& request, const DescribeIPv6AddressesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeIPv6Addresses(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::DescribeIPv6AddressesOutcomeCallable VpcClient::DescribeIPv6AddressesCallable(const DescribeIPv6AddressesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeIPv6AddressesOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeIPv6Addresses(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::DescribeIp6AddressesOutcome VpcClient::DescribeIp6Addresses(const DescribeIp6AddressesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeIp6Addresses");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeIp6AddressesResponse rsp = DescribeIp6AddressesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeIp6AddressesOutcome(rsp);
+        else
+            return DescribeIp6AddressesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeIp6AddressesOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::DescribeIp6AddressesAsync(const DescribeIp6AddressesRequest& request, const DescribeIp6AddressesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeIp6Addresses(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::DescribeIp6AddressesOutcomeCallable VpcClient::DescribeIp6AddressesCallable(const DescribeIp6AddressesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeIp6AddressesOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeIp6Addresses(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VpcClient::DescribeIpGeolocationDatabaseUrlOutcome VpcClient::DescribeIpGeolocationDatabaseUrl(const DescribeIpGeolocationDatabaseUrlRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeIpGeolocationDatabaseUrl");
@@ -7436,6 +7651,49 @@ VpcClient::DisassociateDirectConnectGatewayNatGatewayOutcomeCallable VpcClient::
     return task->get_future();
 }
 
+VpcClient::DisassociateIPv6AddressOutcome VpcClient::DisassociateIPv6Address(const DisassociateIPv6AddressRequest &request)
+{
+    auto outcome = MakeRequest(request, "DisassociateIPv6Address");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DisassociateIPv6AddressResponse rsp = DisassociateIPv6AddressResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DisassociateIPv6AddressOutcome(rsp);
+        else
+            return DisassociateIPv6AddressOutcome(o.GetError());
+    }
+    else
+    {
+        return DisassociateIPv6AddressOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::DisassociateIPv6AddressAsync(const DisassociateIPv6AddressRequest& request, const DisassociateIPv6AddressAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DisassociateIPv6Address(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::DisassociateIPv6AddressOutcomeCallable VpcClient::DisassociateIPv6AddressCallable(const DisassociateIPv6AddressRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DisassociateIPv6AddressOutcome()>>(
+        [this, request]()
+        {
+            return this->DisassociateIPv6Address(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VpcClient::DisassociateNatGatewayAddressOutcome VpcClient::DisassociateNatGatewayAddress(const DisassociateNatGatewayAddressRequest &request)
 {
     auto outcome = MakeRequest(request, "DisassociateNatGatewayAddress");
@@ -9113,6 +9371,135 @@ VpcClient::ModifyHaVipAttributeOutcomeCallable VpcClient::ModifyHaVipAttributeCa
     return task->get_future();
 }
 
+VpcClient::ModifyIPv6AddressesAttributesOutcome VpcClient::ModifyIPv6AddressesAttributes(const ModifyIPv6AddressesAttributesRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyIPv6AddressesAttributes");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyIPv6AddressesAttributesResponse rsp = ModifyIPv6AddressesAttributesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyIPv6AddressesAttributesOutcome(rsp);
+        else
+            return ModifyIPv6AddressesAttributesOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyIPv6AddressesAttributesOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::ModifyIPv6AddressesAttributesAsync(const ModifyIPv6AddressesAttributesRequest& request, const ModifyIPv6AddressesAttributesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyIPv6AddressesAttributes(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::ModifyIPv6AddressesAttributesOutcomeCallable VpcClient::ModifyIPv6AddressesAttributesCallable(const ModifyIPv6AddressesAttributesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyIPv6AddressesAttributesOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyIPv6AddressesAttributes(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::ModifyIPv6AddressesBandwidthOutcome VpcClient::ModifyIPv6AddressesBandwidth(const ModifyIPv6AddressesBandwidthRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyIPv6AddressesBandwidth");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyIPv6AddressesBandwidthResponse rsp = ModifyIPv6AddressesBandwidthResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyIPv6AddressesBandwidthOutcome(rsp);
+        else
+            return ModifyIPv6AddressesBandwidthOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyIPv6AddressesBandwidthOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::ModifyIPv6AddressesBandwidthAsync(const ModifyIPv6AddressesBandwidthRequest& request, const ModifyIPv6AddressesBandwidthAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyIPv6AddressesBandwidth(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::ModifyIPv6AddressesBandwidthOutcomeCallable VpcClient::ModifyIPv6AddressesBandwidthCallable(const ModifyIPv6AddressesBandwidthRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyIPv6AddressesBandwidthOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyIPv6AddressesBandwidth(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::ModifyIp6AddressesBandwidthOutcome VpcClient::ModifyIp6AddressesBandwidth(const ModifyIp6AddressesBandwidthRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyIp6AddressesBandwidth");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyIp6AddressesBandwidthResponse rsp = ModifyIp6AddressesBandwidthResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyIp6AddressesBandwidthOutcome(rsp);
+        else
+            return ModifyIp6AddressesBandwidthOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyIp6AddressesBandwidthOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::ModifyIp6AddressesBandwidthAsync(const ModifyIp6AddressesBandwidthRequest& request, const ModifyIp6AddressesBandwidthAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyIp6AddressesBandwidth(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::ModifyIp6AddressesBandwidthOutcomeCallable VpcClient::ModifyIp6AddressesBandwidthCallable(const ModifyIp6AddressesBandwidthRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyIp6AddressesBandwidthOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyIp6AddressesBandwidth(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VpcClient::ModifyIpv6AddressesAttributeOutcome VpcClient::ModifyIpv6AddressesAttribute(const ModifyIpv6AddressesAttributeRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyIpv6AddressesAttribute");
@@ -10439,6 +10826,92 @@ VpcClient::ReleaseAddressesOutcomeCallable VpcClient::ReleaseAddressesCallable(c
         [this, request]()
         {
             return this->ReleaseAddresses(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::ReleaseIPv6AddressesOutcome VpcClient::ReleaseIPv6Addresses(const ReleaseIPv6AddressesRequest &request)
+{
+    auto outcome = MakeRequest(request, "ReleaseIPv6Addresses");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ReleaseIPv6AddressesResponse rsp = ReleaseIPv6AddressesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ReleaseIPv6AddressesOutcome(rsp);
+        else
+            return ReleaseIPv6AddressesOutcome(o.GetError());
+    }
+    else
+    {
+        return ReleaseIPv6AddressesOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::ReleaseIPv6AddressesAsync(const ReleaseIPv6AddressesRequest& request, const ReleaseIPv6AddressesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ReleaseIPv6Addresses(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::ReleaseIPv6AddressesOutcomeCallable VpcClient::ReleaseIPv6AddressesCallable(const ReleaseIPv6AddressesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ReleaseIPv6AddressesOutcome()>>(
+        [this, request]()
+        {
+            return this->ReleaseIPv6Addresses(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::ReleaseIp6AddressesBandwidthOutcome VpcClient::ReleaseIp6AddressesBandwidth(const ReleaseIp6AddressesBandwidthRequest &request)
+{
+    auto outcome = MakeRequest(request, "ReleaseIp6AddressesBandwidth");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ReleaseIp6AddressesBandwidthResponse rsp = ReleaseIp6AddressesBandwidthResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ReleaseIp6AddressesBandwidthOutcome(rsp);
+        else
+            return ReleaseIp6AddressesBandwidthOutcome(o.GetError());
+    }
+    else
+    {
+        return ReleaseIp6AddressesBandwidthOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::ReleaseIp6AddressesBandwidthAsync(const ReleaseIp6AddressesBandwidthRequest& request, const ReleaseIp6AddressesBandwidthAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ReleaseIp6AddressesBandwidth(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::ReleaseIp6AddressesBandwidthOutcomeCallable VpcClient::ReleaseIp6AddressesBandwidthCallable(const ReleaseIp6AddressesBandwidthRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ReleaseIp6AddressesBandwidthOutcome()>>(
+        [this, request]()
+        {
+            return this->ReleaseIp6AddressesBandwidth(request);
         }
     );
 

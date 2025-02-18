@@ -45,7 +45,9 @@ Address::Address() :
     m_egressHasBeenSet(false),
     m_antiDDoSPackageIdHasBeenSet(false),
     m_renewFlagHasBeenSet(false),
-    m_bandwidthPackageIdHasBeenSet(false)
+    m_bandwidthPackageIdHasBeenSet(false),
+    m_unVpcIdHasBeenSet(false),
+    m_dedicatedClusterIdHasBeenSet(false)
 {
 }
 
@@ -321,6 +323,26 @@ CoreInternalOutcome Address::Deserialize(const rapidjson::Value &value)
         m_bandwidthPackageIdHasBeenSet = true;
     }
 
+    if (value.HasMember("UnVpcId") && !value["UnVpcId"].IsNull())
+    {
+        if (!value["UnVpcId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Address.UnVpcId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_unVpcId = string(value["UnVpcId"].GetString());
+        m_unVpcIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("DedicatedClusterId") && !value["DedicatedClusterId"].IsNull())
+    {
+        if (!value["DedicatedClusterId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Address.DedicatedClusterId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_dedicatedClusterId = string(value["DedicatedClusterId"].GetString());
+        m_dedicatedClusterIdHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -534,6 +556,22 @@ void Address::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Allocat
         string key = "BandwidthPackageId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_bandwidthPackageId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_unVpcIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UnVpcId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_unVpcId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_dedicatedClusterIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DedicatedClusterId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_dedicatedClusterId.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -937,5 +975,37 @@ void Address::SetBandwidthPackageId(const string& _bandwidthPackageId)
 bool Address::BandwidthPackageIdHasBeenSet() const
 {
     return m_bandwidthPackageIdHasBeenSet;
+}
+
+string Address::GetUnVpcId() const
+{
+    return m_unVpcId;
+}
+
+void Address::SetUnVpcId(const string& _unVpcId)
+{
+    m_unVpcId = _unVpcId;
+    m_unVpcIdHasBeenSet = true;
+}
+
+bool Address::UnVpcIdHasBeenSet() const
+{
+    return m_unVpcIdHasBeenSet;
+}
+
+string Address::GetDedicatedClusterId() const
+{
+    return m_dedicatedClusterId;
+}
+
+void Address::SetDedicatedClusterId(const string& _dedicatedClusterId)
+{
+    m_dedicatedClusterId = _dedicatedClusterId;
+    m_dedicatedClusterIdHasBeenSet = true;
+}
+
+bool Address::DedicatedClusterIdHasBeenSet() const
+{
+    return m_dedicatedClusterIdHasBeenSet;
 }
 
