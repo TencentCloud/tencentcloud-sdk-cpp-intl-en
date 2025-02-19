@@ -513,6 +513,49 @@ OcrClient::PermitOCROutcomeCallable OcrClient::PermitOCRCallable(const PermitOCR
     return task->get_future();
 }
 
+OcrClient::RecognizeBrazilDriverLicenseOCROutcome OcrClient::RecognizeBrazilDriverLicenseOCR(const RecognizeBrazilDriverLicenseOCRRequest &request)
+{
+    auto outcome = MakeRequest(request, "RecognizeBrazilDriverLicenseOCR");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RecognizeBrazilDriverLicenseOCRResponse rsp = RecognizeBrazilDriverLicenseOCRResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RecognizeBrazilDriverLicenseOCROutcome(rsp);
+        else
+            return RecognizeBrazilDriverLicenseOCROutcome(o.GetError());
+    }
+    else
+    {
+        return RecognizeBrazilDriverLicenseOCROutcome(outcome.GetError());
+    }
+}
+
+void OcrClient::RecognizeBrazilDriverLicenseOCRAsync(const RecognizeBrazilDriverLicenseOCRRequest& request, const RecognizeBrazilDriverLicenseOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RecognizeBrazilDriverLicenseOCR(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OcrClient::RecognizeBrazilDriverLicenseOCROutcomeCallable OcrClient::RecognizeBrazilDriverLicenseOCRCallable(const RecognizeBrazilDriverLicenseOCRRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RecognizeBrazilDriverLicenseOCROutcome()>>(
+        [this, request]()
+        {
+            return this->RecognizeBrazilDriverLicenseOCR(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 OcrClient::RecognizeGeneralInvoiceOutcome OcrClient::RecognizeGeneralInvoice(const RecognizeGeneralInvoiceRequest &request)
 {
     auto outcome = MakeRequest(request, "RecognizeGeneralInvoice");

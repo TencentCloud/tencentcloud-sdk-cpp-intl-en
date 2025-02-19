@@ -45,6 +45,8 @@
 #include <tencentcloud/ocr/v20181119/model/MainlandPermitOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/PermitOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/PermitOCRResponse.h>
+#include <tencentcloud/ocr/v20181119/model/RecognizeBrazilDriverLicenseOCRRequest.h>
+#include <tencentcloud/ocr/v20181119/model/RecognizeBrazilDriverLicenseOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizeGeneralInvoiceRequest.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizeGeneralInvoiceResponse.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizeIndonesiaIDCardOCRRequest.h>
@@ -132,6 +134,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::PermitOCRResponse> PermitOCROutcome;
                 typedef std::future<PermitOCROutcome> PermitOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::PermitOCRRequest&, PermitOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> PermitOCRAsyncHandler;
+                typedef Outcome<Core::Error, Model::RecognizeBrazilDriverLicenseOCRResponse> RecognizeBrazilDriverLicenseOCROutcome;
+                typedef std::future<RecognizeBrazilDriverLicenseOCROutcome> RecognizeBrazilDriverLicenseOCROutcomeCallable;
+                typedef std::function<void(const OcrClient*, const Model::RecognizeBrazilDriverLicenseOCRRequest&, RecognizeBrazilDriverLicenseOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizeBrazilDriverLicenseOCRAsyncHandler;
                 typedef Outcome<Core::Error, Model::RecognizeGeneralInvoiceResponse> RecognizeGeneralInvoiceOutcome;
                 typedef std::future<RecognizeGeneralInvoiceOutcome> RecognizeGeneralInvoiceOutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::RecognizeGeneralInvoiceRequest&, RecognizeGeneralInvoiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizeGeneralInvoiceAsyncHandler;
@@ -367,6 +372,15 @@ A maximum of 10 requests can be initiated per second for this API.
                 PermitOCROutcome PermitOCR(const Model::PermitOCRRequest &request);
                 void PermitOCRAsync(const Model::PermitOCRRequest& request, const PermitOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 PermitOCROutcomeCallable PermitOCRCallable(const Model::PermitOCRRequest& request);
+
+                /**
+                 *This interface supports identification of the front and back of Brazilian driver's license. The identification fields include name, driver's license category, number, validity period, etc.
+                 * @param req RecognizeBrazilDriverLicenseOCRRequest
+                 * @return RecognizeBrazilDriverLicenseOCROutcome
+                 */
+                RecognizeBrazilDriverLicenseOCROutcome RecognizeBrazilDriverLicenseOCR(const Model::RecognizeBrazilDriverLicenseOCRRequest &request);
+                void RecognizeBrazilDriverLicenseOCRAsync(const Model::RecognizeBrazilDriverLicenseOCRRequest& request, const RecognizeBrazilDriverLicenseOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RecognizeBrazilDriverLicenseOCROutcomeCallable RecognizeBrazilDriverLicenseOCRCallable(const Model::RecognizeBrazilDriverLicenseOCRRequest& request);
 
                 /**
                  *This API is used to recognize various types of invoices or tickets in an image or PDF file. You can also specify a type. 14 types of standard expense reimbursement invoices are supported, including value-added tax (VAT) invoice (special, general, roll, blockchain, and toll), fully digitalized electronic invoice (special and general), non-tax revenue invoice (general receipt and general payment voucher), quota invoice, general machine-printed invoice, car sales invoice (motor vehicle sales invoice and used car invoice), train ticket, taxi receipt, itinerary/receipt of e-ticket for air transportation, bus ticket, ship ticket, toll receipt, and medical invoice (inpatient and outpatient). This API can also be used for intelligent recognition of other types of invoices. To try now, click [here](https://intl.cloud.tencent.com/product/ocr?from_cn_redirect=1).

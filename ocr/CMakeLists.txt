@@ -29,6 +29,7 @@ set(ocr_public_header_model
   include/tencentcloud/ocr/v20181119/model/OtherInvoiceList.h
   include/tencentcloud/ocr/v20181119/model/RecognizeMacaoIDCardOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/PermitOCRResponse.h
+  include/tencentcloud/ocr/v20181119/model/RecognizeBrazilDriverLicenseOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/Rect.h
   include/tencentcloud/ocr/v20181119/model/LicensePlateInfo.h
   include/tencentcloud/ocr/v20181119/model/VatRollItem.h
@@ -76,6 +77,7 @@ set(ocr_public_header_model
   include/tencentcloud/ocr/v20181119/model/TrainTicket.h
   include/tencentcloud/ocr/v20181119/model/RecognizeThaiIDCardOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/MotorVehicleSaleInvoice.h
+  include/tencentcloud/ocr/v20181119/model/RecognizeKoreanIDCardOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/TableOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/PassportRecognizeInfos.h
   include/tencentcloud/ocr/v20181119/model/RecognizeSingaporeIDCardOCRRequest.h
@@ -118,7 +120,7 @@ set(ocr_public_header_model
   include/tencentcloud/ocr/v20181119/model/SmartStructuralProResponse.h
   include/tencentcloud/ocr/v20181119/model/TableOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/DetectedWordCoordPoint.h
-  include/tencentcloud/ocr/v20181119/model/RecognizeKoreanIDCardOCRRequest.h
+  include/tencentcloud/ocr/v20181119/model/RecognizeBrazilDriverLicenseOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/RecognizeIndonesiaIDCardOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/VinOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/MLIDCardOCRResponse.h
@@ -141,6 +143,7 @@ set(ocr_src
   src/v20181119/model/OtherInvoiceList.cpp
   src/v20181119/model/RecognizeMacaoIDCardOCRResponse.cpp
   src/v20181119/model/PermitOCRResponse.cpp
+  src/v20181119/model/RecognizeBrazilDriverLicenseOCRRequest.cpp
   src/v20181119/model/Rect.cpp
   src/v20181119/model/LicensePlateInfo.cpp
   src/v20181119/model/VatRollItem.cpp
@@ -188,6 +191,7 @@ set(ocr_src
   src/v20181119/model/TrainTicket.cpp
   src/v20181119/model/RecognizeThaiIDCardOCRRequest.cpp
   src/v20181119/model/MotorVehicleSaleInvoice.cpp
+  src/v20181119/model/RecognizeKoreanIDCardOCRRequest.cpp
   src/v20181119/model/TableOCRRequest.cpp
   src/v20181119/model/PassportRecognizeInfos.cpp
   src/v20181119/model/RecognizeSingaporeIDCardOCRRequest.cpp
@@ -230,7 +234,7 @@ set(ocr_src
   src/v20181119/model/SmartStructuralProResponse.cpp
   src/v20181119/model/TableOCRResponse.cpp
   src/v20181119/model/DetectedWordCoordPoint.cpp
-  src/v20181119/model/RecognizeKoreanIDCardOCRRequest.cpp
+  src/v20181119/model/RecognizeBrazilDriverLicenseOCRResponse.cpp
   src/v20181119/model/RecognizeIndonesiaIDCardOCRRequest.cpp
   src/v20181119/model/VinOCRRequest.cpp
   src/v20181119/model/MLIDCardOCRResponse.cpp

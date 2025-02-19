@@ -90,6 +90,48 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
+                     * 获取Intelligent description title.
+                     * @return Title Intelligent description title.
+                     * 
+                     */
+                    std::string GetTitle() const;
+
+                    /**
+                     * 设置Intelligent description title.
+                     * @param _title Intelligent description title.
+                     * 
+                     */
+                    void SetTitle(const std::string& _title);
+
+                    /**
+                     * 判断参数 Title 是否已赋值
+                     * @return Title 是否已赋值
+                     * 
+                     */
+                    bool TitleHasBeenSet() const;
+
+                    /**
+                     * 获取Intelligent description keywords.
+                     * @return Keywords Intelligent description keywords.
+                     * 
+                     */
+                    std::vector<std::string> GetKeywords() const;
+
+                    /**
+                     * 设置Intelligent description keywords.
+                     * @param _keywords Intelligent description keywords.
+                     * 
+                     */
+                    void SetKeywords(const std::vector<std::string>& _keywords);
+
+                    /**
+                     * 判断参数 Keywords 是否已赋值
+                     * @return Keywords 是否已赋值
+                     * 
+                     */
+                    bool KeywordsHasBeenSet() const;
+
+                    /**
                      * 获取Segmentation result.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Paragraphs Segmentation result.
@@ -127,6 +169,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
+
+                    /**
+                     * Intelligent description title.
+                     */
+                    std::string m_title;
+                    bool m_titleHasBeenSet;
+
+                    /**
+                     * Intelligent description keywords.
+                     */
+                    std::vector<std::string> m_keywords;
+                    bool m_keywordsHasBeenSet;
 
                     /**
                      * Segmentation result.

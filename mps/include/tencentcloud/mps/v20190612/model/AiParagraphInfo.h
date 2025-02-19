@@ -72,6 +72,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SummaryHasBeenSet() const;
 
                     /**
+                     * 获取Segment title.
+                     * @return Title Segment title.
+                     * 
+                     */
+                    std::string GetTitle() const;
+
+                    /**
+                     * 设置Segment title.
+                     * @param _title Segment title.
+                     * 
+                     */
+                    void SetTitle(const std::string& _title);
+
+                    /**
+                     * 判断参数 Title 是否已赋值
+                     * @return Title 是否已赋值
+                     * 
+                     */
+                    bool TitleHasBeenSet() const;
+
+                    /**
+                     * 获取Segment keywords.
+                     * @return Keywords Segment keywords.
+                     * 
+                     */
+                    std::vector<std::string> GetKeywords() const;
+
+                    /**
+                     * 设置Segment keywords.
+                     * @param _keywords Segment keywords.
+                     * 
+                     */
+                    void SetKeywords(const std::vector<std::string>& _keywords);
+
+                    /**
+                     * 判断参数 Keywords 是否已赋值
+                     * @return Keywords 是否已赋值
+                     * 
+                     */
+                    bool KeywordsHasBeenSet() const;
+
+                    /**
                      * 获取Segmentation start time point, in seconds.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StartTimeOffset Segmentation start time point, in seconds.
@@ -129,6 +171,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_summary;
                     bool m_summaryHasBeenSet;
+
+                    /**
+                     * Segment title.
+                     */
+                    std::string m_title;
+                    bool m_titleHasBeenSet;
+
+                    /**
+                     * Segment keywords.
+                     */
+                    std::vector<std::string> m_keywords;
+                    bool m_keywordsHasBeenSet;
 
                     /**
                      * Segmentation start time point, in seconds.
