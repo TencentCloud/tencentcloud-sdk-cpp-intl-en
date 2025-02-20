@@ -65,19 +65,23 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter conditions. Each filter condition can have up to 20 entries. See below for details:
-<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
-                     * @return Filters Filter conditions. Each filter condition can have up to 20 entries. See below for details:
-<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
+                     * 获取Filter criteria. the maximum value of filters.values is 20. the detailed filter criteria are as follows:
+.
+<Li>Rule-Id: filter by rule id.</li>.
+                     * @return Filters Filter criteria. the maximum value of filters.values is 20. the detailed filter criteria are as follows:
+.
+<Li>Rule-Id: filter by rule id.</li>.
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter conditions. Each filter condition can have up to 20 entries. See below for details:
-<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
-                     * @param _filters Filter conditions. Each filter condition can have up to 20 entries. See below for details:
-<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
+                     * 设置Filter criteria. the maximum value of filters.values is 20. the detailed filter criteria are as follows:
+.
+<Li>Rule-Id: filter by rule id.</li>.
+                     * @param _filters Filter criteria. the maximum value of filters.values is 20. the detailed filter criteria are as follows:
+.
+<Li>Rule-Id: filter by rule id.</li>.
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -98,8 +102,9 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Filter conditions. Each filter condition can have up to 20 entries. See below for details:
-<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
+                     * Filter criteria. the maximum value of filters.values is 20. the detailed filter criteria are as follows:
+.
+<Li>Rule-Id: filter by rule id.</li>.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

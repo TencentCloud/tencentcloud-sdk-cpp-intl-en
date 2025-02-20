@@ -44,15 +44,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the site.
-                     * @return ZoneId ID of the site.
+                     * 获取Zone id.
+.
+If you want to quickly submit targets urls under different sites, you can set it to *, but the account calling this api must have permission for all site resources under the main account.
+                     * @return ZoneId Zone id.
+.
+If you want to quickly submit targets urls under different sites, you can set it to *, but the account calling this api must have permission for all site resources under the main account.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置ID of the site.
-                     * @param _zoneId ID of the site.
+                     * 设置Zone id.
+.
+If you want to quickly submit targets urls under different sites, you can set it to *, but the account calling this api must have permission for all site resources under the main account.
+                     * @param _zoneId Zone id.
+.
+If you want to quickly submit targets urls under different sites, you can set it to *, but the account calling this api must have permission for all site resources under the main account.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -196,7 +204,9 @@ Note that if it’s enabled, the purging is based on the converted URLs.
                 private:
 
                     /**
-                     * ID of the site.
+                     * Zone id.
+.
+If you want to quickly submit targets urls under different sites, you can set it to *, but the account calling this api must have permission for all site resources under the main account.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;

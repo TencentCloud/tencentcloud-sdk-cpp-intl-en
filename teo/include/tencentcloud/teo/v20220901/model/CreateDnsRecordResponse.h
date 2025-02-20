@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ID of the DNS record.
-                     * @return RecordId The ID of the DNS record.
+                     * 获取DNS record id.
+                     * @return RecordId DNS record id.
                      * 
                      */
                     std::string GetRecordId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The ID of the DNS record.
+                     * DNS record id.
                      */
                     std::string m_recordId;
                     bool m_recordIdHasBeenSet;

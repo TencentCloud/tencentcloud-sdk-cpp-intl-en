@@ -43,6 +43,8 @@
 #include <tencentcloud/teo/v20220901/model/CreateCLSIndexResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateConfigGroupVersionRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateConfigGroupVersionResponse.h>
+#include <tencentcloud/teo/v20220901/model/CreateContentIdentifierRequest.h>
+#include <tencentcloud/teo/v20220901/model/CreateContentIdentifierResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateCustomizeErrorPageRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateCustomizeErrorPageResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateDnsRecordRequest.h>
@@ -55,6 +57,8 @@
 #include <tencentcloud/teo/v20220901/model/CreateL4ProxyResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateL4ProxyRulesRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateL4ProxyRulesResponse.h>
+#include <tencentcloud/teo/v20220901/model/CreateL7AccRulesRequest.h>
+#include <tencentcloud/teo/v20220901/model/CreateL7AccRulesResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateLoadBalancerRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateLoadBalancerResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateOriginGroupRequest.h>
@@ -85,6 +89,8 @@
 #include <tencentcloud/teo/v20220901/model/DeleteApplicationProxyResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteApplicationProxyRuleRequest.h>
 #include <tencentcloud/teo/v20220901/model/DeleteApplicationProxyRuleResponse.h>
+#include <tencentcloud/teo/v20220901/model/DeleteContentIdentifierRequest.h>
+#include <tencentcloud/teo/v20220901/model/DeleteContentIdentifierResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteCustomErrorPageRequest.h>
 #include <tencentcloud/teo/v20220901/model/DeleteCustomErrorPageResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteDnsRecordsRequest.h>
@@ -97,6 +103,8 @@
 #include <tencentcloud/teo/v20220901/model/DeleteL4ProxyResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteL4ProxyRulesRequest.h>
 #include <tencentcloud/teo/v20220901/model/DeleteL4ProxyRulesResponse.h>
+#include <tencentcloud/teo/v20220901/model/DeleteL7AccRulesRequest.h>
+#include <tencentcloud/teo/v20220901/model/DeleteL7AccRulesResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteLoadBalancerRequest.h>
 #include <tencentcloud/teo/v20220901/model/DeleteLoadBalancerResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteOriginGroupRequest.h>
@@ -127,6 +135,8 @@
 #include <tencentcloud/teo/v20220901/model/DescribeConfigGroupVersionDetailResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeConfigGroupVersionsRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeConfigGroupVersionsResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeContentIdentifiersRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeContentIdentifiersResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeContentQuotaRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeContentQuotaResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeCustomErrorPagesRequest.h>
@@ -161,6 +171,10 @@
 #include <tencentcloud/teo/v20220901/model/DescribeL4ProxyResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeL4ProxyRulesRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeL4ProxyRulesResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeL7AccRulesRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeL7AccRulesResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeL7AccSettingRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeL7AccSettingResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeLoadBalancerListRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeLoadBalancerListResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeOriginGroupRequest.h>
@@ -235,6 +249,8 @@
 #include <tencentcloud/teo/v20220901/model/ModifyApplicationProxyRuleStatusResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyApplicationProxyStatusRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyApplicationProxyStatusResponse.h>
+#include <tencentcloud/teo/v20220901/model/ModifyContentIdentifierRequest.h>
+#include <tencentcloud/teo/v20220901/model/ModifyContentIdentifierResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyCustomErrorPageRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyCustomErrorPageResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyDnsRecordsRequest.h>
@@ -257,6 +273,10 @@
 #include <tencentcloud/teo/v20220901/model/ModifyL4ProxyRulesStatusResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyL4ProxyStatusRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyL4ProxyStatusResponse.h>
+#include <tencentcloud/teo/v20220901/model/ModifyL7AccRuleRequest.h>
+#include <tencentcloud/teo/v20220901/model/ModifyL7AccRuleResponse.h>
+#include <tencentcloud/teo/v20220901/model/ModifyL7AccSettingRequest.h>
+#include <tencentcloud/teo/v20220901/model/ModifyL7AccSettingResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyLoadBalancerRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyLoadBalancerResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyOriginGroupRequest.h>
@@ -327,6 +347,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateConfigGroupVersionResponse> CreateConfigGroupVersionOutcome;
                 typedef std::future<CreateConfigGroupVersionOutcome> CreateConfigGroupVersionOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateConfigGroupVersionRequest&, CreateConfigGroupVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateConfigGroupVersionAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateContentIdentifierResponse> CreateContentIdentifierOutcome;
+                typedef std::future<CreateContentIdentifierOutcome> CreateContentIdentifierOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::CreateContentIdentifierRequest&, CreateContentIdentifierOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateContentIdentifierAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateCustomizeErrorPageResponse> CreateCustomizeErrorPageOutcome;
                 typedef std::future<CreateCustomizeErrorPageOutcome> CreateCustomizeErrorPageOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateCustomizeErrorPageRequest&, CreateCustomizeErrorPageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCustomizeErrorPageAsyncHandler;
@@ -345,6 +368,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateL4ProxyRulesResponse> CreateL4ProxyRulesOutcome;
                 typedef std::future<CreateL4ProxyRulesOutcome> CreateL4ProxyRulesOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateL4ProxyRulesRequest&, CreateL4ProxyRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateL4ProxyRulesAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateL7AccRulesResponse> CreateL7AccRulesOutcome;
+                typedef std::future<CreateL7AccRulesOutcome> CreateL7AccRulesOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::CreateL7AccRulesRequest&, CreateL7AccRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateL7AccRulesAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateLoadBalancerResponse> CreateLoadBalancerOutcome;
                 typedef std::future<CreateLoadBalancerOutcome> CreateLoadBalancerOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateLoadBalancerRequest&, CreateLoadBalancerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLoadBalancerAsyncHandler;
@@ -390,6 +416,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteApplicationProxyRuleResponse> DeleteApplicationProxyRuleOutcome;
                 typedef std::future<DeleteApplicationProxyRuleOutcome> DeleteApplicationProxyRuleOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DeleteApplicationProxyRuleRequest&, DeleteApplicationProxyRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteApplicationProxyRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteContentIdentifierResponse> DeleteContentIdentifierOutcome;
+                typedef std::future<DeleteContentIdentifierOutcome> DeleteContentIdentifierOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DeleteContentIdentifierRequest&, DeleteContentIdentifierOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteContentIdentifierAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteCustomErrorPageResponse> DeleteCustomErrorPageOutcome;
                 typedef std::future<DeleteCustomErrorPageOutcome> DeleteCustomErrorPageOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DeleteCustomErrorPageRequest&, DeleteCustomErrorPageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCustomErrorPageAsyncHandler;
@@ -408,6 +437,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteL4ProxyRulesResponse> DeleteL4ProxyRulesOutcome;
                 typedef std::future<DeleteL4ProxyRulesOutcome> DeleteL4ProxyRulesOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DeleteL4ProxyRulesRequest&, DeleteL4ProxyRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteL4ProxyRulesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteL7AccRulesResponse> DeleteL7AccRulesOutcome;
+                typedef std::future<DeleteL7AccRulesOutcome> DeleteL7AccRulesOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DeleteL7AccRulesRequest&, DeleteL7AccRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteL7AccRulesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteLoadBalancerResponse> DeleteLoadBalancerOutcome;
                 typedef std::future<DeleteLoadBalancerOutcome> DeleteLoadBalancerOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DeleteLoadBalancerRequest&, DeleteLoadBalancerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLoadBalancerAsyncHandler;
@@ -453,6 +485,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeConfigGroupVersionsResponse> DescribeConfigGroupVersionsOutcome;
                 typedef std::future<DescribeConfigGroupVersionsOutcome> DescribeConfigGroupVersionsOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeConfigGroupVersionsRequest&, DescribeConfigGroupVersionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeConfigGroupVersionsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeContentIdentifiersResponse> DescribeContentIdentifiersOutcome;
+                typedef std::future<DescribeContentIdentifiersOutcome> DescribeContentIdentifiersOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeContentIdentifiersRequest&, DescribeContentIdentifiersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeContentIdentifiersAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeContentQuotaResponse> DescribeContentQuotaOutcome;
                 typedef std::future<DescribeContentQuotaOutcome> DescribeContentQuotaOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeContentQuotaRequest&, DescribeContentQuotaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeContentQuotaAsyncHandler;
@@ -504,6 +539,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeL4ProxyRulesResponse> DescribeL4ProxyRulesOutcome;
                 typedef std::future<DescribeL4ProxyRulesOutcome> DescribeL4ProxyRulesOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeL4ProxyRulesRequest&, DescribeL4ProxyRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeL4ProxyRulesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeL7AccRulesResponse> DescribeL7AccRulesOutcome;
+                typedef std::future<DescribeL7AccRulesOutcome> DescribeL7AccRulesOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeL7AccRulesRequest&, DescribeL7AccRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeL7AccRulesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeL7AccSettingResponse> DescribeL7AccSettingOutcome;
+                typedef std::future<DescribeL7AccSettingOutcome> DescribeL7AccSettingOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeL7AccSettingRequest&, DescribeL7AccSettingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeL7AccSettingAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeLoadBalancerListResponse> DescribeLoadBalancerListOutcome;
                 typedef std::future<DescribeLoadBalancerListOutcome> DescribeLoadBalancerListOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeLoadBalancerListRequest&, DescribeLoadBalancerListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLoadBalancerListAsyncHandler;
@@ -615,6 +656,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyApplicationProxyStatusResponse> ModifyApplicationProxyStatusOutcome;
                 typedef std::future<ModifyApplicationProxyStatusOutcome> ModifyApplicationProxyStatusOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyApplicationProxyStatusRequest&, ModifyApplicationProxyStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyApplicationProxyStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyContentIdentifierResponse> ModifyContentIdentifierOutcome;
+                typedef std::future<ModifyContentIdentifierOutcome> ModifyContentIdentifierOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ModifyContentIdentifierRequest&, ModifyContentIdentifierOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyContentIdentifierAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyCustomErrorPageResponse> ModifyCustomErrorPageOutcome;
                 typedef std::future<ModifyCustomErrorPageOutcome> ModifyCustomErrorPageOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyCustomErrorPageRequest&, ModifyCustomErrorPageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCustomErrorPageAsyncHandler;
@@ -648,6 +692,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyL4ProxyStatusResponse> ModifyL4ProxyStatusOutcome;
                 typedef std::future<ModifyL4ProxyStatusOutcome> ModifyL4ProxyStatusOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyL4ProxyStatusRequest&, ModifyL4ProxyStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyL4ProxyStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyL7AccRuleResponse> ModifyL7AccRuleOutcome;
+                typedef std::future<ModifyL7AccRuleOutcome> ModifyL7AccRuleOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ModifyL7AccRuleRequest&, ModifyL7AccRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyL7AccRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyL7AccSettingResponse> ModifyL7AccSettingOutcome;
+                typedef std::future<ModifyL7AccSettingOutcome> ModifyL7AccSettingOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ModifyL7AccSettingRequest&, ModifyL7AccSettingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyL7AccSettingAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyLoadBalancerResponse> ModifyLoadBalancerOutcome;
                 typedef std::future<ModifyLoadBalancerOutcome> ModifyLoadBalancerOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyLoadBalancerRequest&, ModifyLoadBalancerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLoadBalancerAsyncHandler;
@@ -783,6 +833,15 @@ For sites connected via the CNAME, if you have not verified the ownership of the
                 CreateConfigGroupVersionOutcomeCallable CreateConfigGroupVersionCallable(const Model::CreateConfigGroupVersionRequest& request);
 
                 /**
+                 *This API is used to create content identifiers, where you can set descriptions, tags, and other information. It is also necessary to bind an enterprise edition package for billing data statistics. A content identifier can only bind one billing package, while a billing package can bind multiple content identifiers. This feature is only available to the allowlist.
+                 * @param req CreateContentIdentifierRequest
+                 * @return CreateContentIdentifierOutcome
+                 */
+                CreateContentIdentifierOutcome CreateContentIdentifier(const Model::CreateContentIdentifierRequest &request);
+                void CreateContentIdentifierAsync(const Model::CreateContentIdentifierRequest& request, const CreateContentIdentifierAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateContentIdentifierOutcomeCallable CreateContentIdentifierCallable(const Model::CreateContentIdentifierRequest& request);
+
+                /**
                  *This API is used to create a custom response page.
                  * @param req CreateCustomizeErrorPageRequest
                  * @return CreateCustomizeErrorPageOutcome
@@ -792,7 +851,7 @@ For sites connected via the CNAME, if you have not verified the ownership of the
                 CreateCustomizeErrorPageOutcomeCallable CreateCustomizeErrorPageCallable(const Model::CreateCustomizeErrorPageRequest& request);
 
                 /**
-                 *This API is used to create a DNS record.
+                 *After creating a site and the site is accessed in NS mode, you can create DNS records through this API.
                  * @param req CreateDnsRecordRequest
                  * @return CreateDnsRecordOutcome
                  */
@@ -835,6 +894,15 @@ For sites connected via the CNAME, if you have not verified the ownership of the
                 CreateL4ProxyRulesOutcome CreateL4ProxyRules(const Model::CreateL4ProxyRulesRequest &request);
                 void CreateL4ProxyRulesAsync(const Model::CreateL4ProxyRulesRequest& request, const CreateL4ProxyRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateL4ProxyRulesOutcomeCallable CreateL4ProxyRulesCallable(const Model::CreateL4ProxyRulesRequest& request);
+
+                /**
+                 *This API is used to create rules in the [rule engine](https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1). Batch creation is supported.
+                 * @param req CreateL7AccRulesRequest
+                 * @return CreateL7AccRulesOutcome
+                 */
+                CreateL7AccRulesOutcome CreateL7AccRules(const Model::CreateL7AccRulesRequest &request);
+                void CreateL7AccRulesAsync(const Model::CreateL7AccRulesRequest& request, const CreateL7AccRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateL7AccRulesOutcomeCallable CreateL7AccRulesCallable(const Model::CreateL7AccRulesRequest& request);
 
                 /**
                  *This API is used to create a LoadBalancer. For details, see [Quickly Create Load Balancers](https://intl.cloud.tencent.com/document/product/1552/104223?from_cn_redirect=1). The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
@@ -904,7 +972,7 @@ An entity (a Layer 7 domain name or a Layer 4 proxy instance) under the combinat
                 CreateRealtimeLogDeliveryTaskOutcomeCallable CreateRealtimeLogDeliveryTaskCallable(const Model::CreateRealtimeLogDeliveryTaskRequest& request);
 
                 /**
-                 *This API is used to create a rule in the rule engine.
+                 *This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [CreateL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115822?from_cn_redirect=1).
                  * @param req CreateRuleRequest
                  * @return CreateRuleOutcome
                  */
@@ -978,6 +1046,15 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DeleteApplicationProxyRuleOutcomeCallable DeleteApplicationProxyRuleCallable(const Model::DeleteApplicationProxyRuleRequest& request);
 
                 /**
+                 *Delete the specified content identifier. This feature is only available to the allowlist.
+                 * @param req DeleteContentIdentifierRequest
+                 * @return DeleteContentIdentifierOutcome
+                 */
+                DeleteContentIdentifierOutcome DeleteContentIdentifier(const Model::DeleteContentIdentifierRequest &request);
+                void DeleteContentIdentifierAsync(const Model::DeleteContentIdentifierRequest& request, const DeleteContentIdentifierAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteContentIdentifierOutcomeCallable DeleteContentIdentifierCallable(const Model::DeleteContentIdentifierRequest& request);
+
+                /**
                  *This API is used to delete a custom response page.
                  * @param req DeleteCustomErrorPageRequest
                  * @return DeleteCustomErrorPageOutcome
@@ -987,7 +1064,7 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DeleteCustomErrorPageOutcomeCallable DeleteCustomErrorPageCallable(const Model::DeleteCustomErrorPageRequest& request);
 
                 /**
-                 *This API is used to delete DNS records in batches.
+                 *You can use this API to batch delete DNS records.
                  * @param req DeleteDnsRecordsRequest
                  * @return DeleteDnsRecordsOutcome
                  */
@@ -1032,6 +1109,15 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DeleteL4ProxyRulesOutcomeCallable DeleteL4ProxyRulesCallable(const Model::DeleteL4ProxyRulesRequest& request);
 
                 /**
+                 *This API is used to delete rules of the [rule engine](https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1), supporting batch deletion.
+                 * @param req DeleteL7AccRulesRequest
+                 * @return DeleteL7AccRulesOutcome
+                 */
+                DeleteL7AccRulesOutcome DeleteL7AccRules(const Model::DeleteL7AccRulesRequest &request);
+                void DeleteL7AccRulesAsync(const Model::DeleteL7AccRulesRequest& request, const DeleteL7AccRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteL7AccRulesOutcomeCallable DeleteL7AccRulesCallable(const Model::DeleteL7AccRulesRequest& request);
+
+                /**
                  *This API is used to delete a LoadBalancer. If the LoadBalancer is referenced by other services (for example, Layer-4 proxy), the LoadBalancer cannot be deleted until the reference relationship is removed. The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
                  * @param req DeleteLoadBalancerRequest
                  * @return DeleteLoadBalancerOutcome
@@ -1059,7 +1145,7 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DeleteRealtimeLogDeliveryTaskOutcomeCallable DeleteRealtimeLogDeliveryTaskCallable(const Model::DeleteRealtimeLogDeliveryTaskRequest& request);
 
                 /**
-                 *This API is used to batch delete rules from the rule engine.
+                 *This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [DeleteL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115821?from_cn_redirect=1).
                  * @param req DeleteRulesRequest
                  * @return DeleteRulesOutcome
                  */
@@ -1167,6 +1253,15 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DescribeConfigGroupVersionsOutcomeCallable DescribeConfigGroupVersionsCallable(const Model::DescribeConfigGroupVersionsRequest& request);
 
                 /**
+                 *Batch query content identifiers, which can be filtered by ID, description, status, or Tag. Deleted content identifiers queried by status are retained for only three months. This feature is only open to the allowlist.
+                 * @param req DescribeContentIdentifiersRequest
+                 * @return DescribeContentIdentifiersOutcome
+                 */
+                DescribeContentIdentifiersOutcome DescribeContentIdentifiers(const Model::DescribeContentIdentifiersRequest &request);
+                void DescribeContentIdentifiersAsync(const Model::DescribeContentIdentifiersRequest& request, const DescribeContentIdentifiersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeContentIdentifiersOutcomeCallable DescribeContentIdentifiersCallable(const Model::DescribeContentIdentifiersRequest& request);
+
+                /**
                  *This API is used to query content management quotas.
                  * @param req DescribeContentQuotaRequest
                  * @return DescribeContentQuotaOutcome
@@ -1230,7 +1325,7 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DescribeDeployHistoryOutcomeCallable DescribeDeployHistoryCallable(const Model::DescribeDeployHistoryRequest& request);
 
                 /**
-                 *This API is used to query DNS records. Paging, sorting and filtering are supported.
+                 *This API is used to view DNS record information under a site, including DNS record name, record type, and record content. It supports querying specific DNS record information by specifying filter conditions.
                  * @param req DescribeDnsRecordsRequest
                  * @return DescribeDnsRecordsOutcome
                  */
@@ -1275,7 +1370,7 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DescribeFunctionsOutcomeCallable DescribeFunctionsCallable(const Model::DescribeFunctionsRequest& request);
 
                 /**
-                 *This API is used to query detailed domain name configuration.
+                 *This API is an old version. EdgeOne has fully upgraded the APIs related to the rule engine. You can obtain detailed configurations of domain names through [DescribeL7AccSetting](https://intl.cloud.tencent.com/document/product/1552/115819?from_cn_redirect=1) and [DescribeL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1).
                  * @param req DescribeHostsSettingRequest
                  * @return DescribeHostsSettingOutcome
                  */
@@ -1318,6 +1413,24 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DescribeL4ProxyRulesOutcome DescribeL4ProxyRules(const Model::DescribeL4ProxyRulesRequest &request);
                 void DescribeL4ProxyRulesAsync(const Model::DescribeL4ProxyRulesRequest& request, const DescribeL4ProxyRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeL4ProxyRulesOutcomeCallable DescribeL4ProxyRulesCallable(const Model::DescribeL4ProxyRulesRequest& request);
+
+                /**
+                 *This API is used to query the rule list of the rule engine (https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1).
+                 * @param req DescribeL7AccRulesRequest
+                 * @return DescribeL7AccRulesOutcome
+                 */
+                DescribeL7AccRulesOutcome DescribeL7AccRules(const Model::DescribeL7AccRulesRequest &request);
+                void DescribeL7AccRulesAsync(const Model::DescribeL7AccRulesRequest& request, const DescribeL7AccRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeL7AccRulesOutcomeCallable DescribeL7AccRulesCallable(const Model::DescribeL7AccRulesRequest& request);
+
+                /**
+                 *This API is used to query the global configuration of [Site Acceleration](https://intl.cloud.tencent.com/document/product/1552/96193?from_cn_redirect=1).
+                 * @param req DescribeL7AccSettingRequest
+                 * @return DescribeL7AccSettingOutcome
+                 */
+                DescribeL7AccSettingOutcome DescribeL7AccSetting(const Model::DescribeL7AccSettingRequest &request);
+                void DescribeL7AccSettingAsync(const Model::DescribeL7AccSettingRequest& request, const DescribeL7AccSettingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeL7AccSettingOutcomeCallable DescribeL7AccSettingCallable(const Model::DescribeL7AccSettingRequest& request);
 
                 /**
                  *This API is used to query the LoadBalancer list. The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
@@ -1392,7 +1505,7 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DescribeRealtimeLogDeliveryTasksOutcomeCallable DescribeRealtimeLogDeliveryTasksCallable(const Model::DescribeRealtimeLogDeliveryTasksRequest& request);
 
                 /**
-                 *This API is used to query the rules in the rule engine.
+                 *This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [DescribeL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1).
                  * @param req DescribeRulesRequest
                  * @return DescribeRulesOutcome
                  */
@@ -1401,7 +1514,7 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DescribeRulesOutcomeCallable DescribeRulesCallable(const Model::DescribeRulesRequest& request);
 
                 /**
-                 *This API is used to return the list of the settings of the rule engine that can be used for request match and their detailed recommended configuration information.
+                 *This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [RuleEngineAction](https://intl.cloud.tencent.com/document/product/1552/80721?from_cn_redirect=1#RuleEngineAction).
                  * @param req DescribeRulesSettingRequest
                  * @return DescribeRulesSettingOutcome
                  */
@@ -1494,7 +1607,7 @@ This API is used to query the configuration information of an IP group, includin
                 DescribeZoneConfigImportResultOutcomeCallable DescribeZoneConfigImportResultCallable(const Model::DescribeZoneConfigImportResultRequest& request);
 
                 /**
-                 *This API is used to query the site configuration.
+                 *This API is an old version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [DescribeL7AccSetting](https://intl.cloud.tencent.com/document/product/1552/115819?from_cn_redirect=1).
                  * @param req DescribeZoneSettingRequest
                  * @return DescribeZoneSettingOutcome
                  */
@@ -1667,6 +1780,15 @@ After the environment variables are set, they can be used in the function code. 
                 ModifyApplicationProxyStatusOutcomeCallable ModifyApplicationProxyStatusCallable(const Model::ModifyApplicationProxyStatusRequest& request);
 
                 /**
+                 *Modify content identifier, only description modification is supported. This feature is only open to the allowlist.
+                 * @param req ModifyContentIdentifierRequest
+                 * @return ModifyContentIdentifierOutcome
+                 */
+                ModifyContentIdentifierOutcome ModifyContentIdentifier(const Model::ModifyContentIdentifierRequest &request);
+                void ModifyContentIdentifierAsync(const Model::ModifyContentIdentifierRequest& request, const ModifyContentIdentifierAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyContentIdentifierOutcomeCallable ModifyContentIdentifierCallable(const Model::ModifyContentIdentifierRequest& request);
+
+                /**
                  *This API is used to modify a custom response page.
                  * @param req ModifyCustomErrorPageRequest
                  * @return ModifyCustomErrorPageOutcome
@@ -1676,7 +1798,7 @@ After the environment variables are set, they can be used in the function code. 
                 ModifyCustomErrorPageOutcomeCallable ModifyCustomErrorPageCallable(const Model::ModifyCustomErrorPageRequest& request);
 
                 /**
-                 *You can use this interface to batch modify DNS records.
+                 *This API is used to bulk modify DNS records.
                  * @param req ModifyDnsRecordsRequest
                  * @return ModifyDnsRecordsOutcome
                  */
@@ -1685,7 +1807,7 @@ After the environment variables are set, they can be used in the function code. 
                 ModifyDnsRecordsOutcomeCallable ModifyDnsRecordsCallable(const Model::ModifyDnsRecordsRequest& request);
 
                 /**
-                 *You can use this interface to batch modify the status of DNS records, enabling and disabling records in bulk.
+                 *You can batch modify the status of DNS records through this API, enabling and disabling records in bulk.
                  * @param req ModifyDnsRecordsStatusRequest
                  * @return ModifyDnsRecordsStatusOutcome
                  */
@@ -1768,6 +1890,24 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
                 ModifyL4ProxyStatusOutcomeCallable ModifyL4ProxyStatusCallable(const Model::ModifyL4ProxyStatusRequest& request);
 
                 /**
+                 *This API is used to modify rules in the [rule engine](https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1), supporting only one rule modification per request.
+                 * @param req ModifyL7AccRuleRequest
+                 * @return ModifyL7AccRuleOutcome
+                 */
+                ModifyL7AccRuleOutcome ModifyL7AccRule(const Model::ModifyL7AccRuleRequest &request);
+                void ModifyL7AccRuleAsync(const Model::ModifyL7AccRuleRequest& request, const ModifyL7AccRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyL7AccRuleOutcomeCallable ModifyL7AccRuleCallable(const Model::ModifyL7AccRuleRequest& request);
+
+                /**
+                 *This API is used to modify the global configuration of [Site Acceleration](https://intl.cloud.tencent.com/document/product/1552/96193?from_cn_redirect=1).
+                 * @param req ModifyL7AccSettingRequest
+                 * @return ModifyL7AccSettingOutcome
+                 */
+                ModifyL7AccSettingOutcome ModifyL7AccSetting(const Model::ModifyL7AccSettingRequest &request);
+                void ModifyL7AccSettingAsync(const Model::ModifyL7AccSettingRequest& request, const ModifyL7AccSettingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyL7AccSettingOutcomeCallable ModifyL7AccSettingCallable(const Model::ModifyL7AccSettingRequest& request);
+
+                /**
                  *This API is used to modify LoadBalancer configuration. The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
                  * @param req ModifyLoadBalancerRequest
                  * @return ModifyLoadBalancerOutcome
@@ -1804,7 +1944,7 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
                 ModifyRealtimeLogDeliveryTaskOutcomeCallable ModifyRealtimeLogDeliveryTaskCallable(const Model::ModifyRealtimeLogDeliveryTaskRequest& request);
 
                 /**
-                 *This API is used to modify a rule in the rule engine.
+                 *This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [ModifyL7AccRule](https://intl.cloud.tencent.com/document/product/1552/115818?from_cn_redirect=1).
                  * @param req ModifyRuleRequest
                  * @return ModifyRuleOutcome
                  */
@@ -1840,7 +1980,7 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
                 ModifyZoneOutcomeCallable ModifyZoneCallable(const Model::ModifyZoneRequest& request);
 
                 /**
-                 *This API is used to modify the site configuration.
+                 *This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [ModifyL7AccSetting](https://intl.cloud.tencent.com/document/product/1552/115817?from_cn_redirect=1).
                  * @param req ModifyZoneSettingRequest
                  * @return ModifyZoneSettingOutcome
                  */

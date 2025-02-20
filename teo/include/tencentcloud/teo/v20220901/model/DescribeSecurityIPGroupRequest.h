@@ -64,23 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the ID of a security IP group.
-<li>When this parameter is provided, only the configuration of the security IP group with the specified ID is queried.</li>
-<li>When this parameter is not provided, information of all security IP groups under the site is returned.</li>
-                     * @return GroupIds Specifies the ID of a security IP group.
-<li>When this parameter is provided, only the configuration of the security IP group with the specified ID is queried.</li>
-<li>When this parameter is not provided, information of all security IP groups under the site is returned.</li>
+                     * 获取Specifies the security ip group id. <li>when this parameter is provided, only the configuration of the specified security ip group id is queried;</li> <li>when this parameter is not provided, information of all security ip groups under the site is returned.</li>.
+                     * @return GroupIds Specifies the security ip group id. <li>when this parameter is provided, only the configuration of the specified security ip group id is queried;</li> <li>when this parameter is not provided, information of all security ip groups under the site is returned.</li>.
                      * 
                      */
                     std::vector<int64_t> GetGroupIds() const;
 
                     /**
-                     * 设置Specifies the ID of a security IP group.
-<li>When this parameter is provided, only the configuration of the security IP group with the specified ID is queried.</li>
-<li>When this parameter is not provided, information of all security IP groups under the site is returned.</li>
-                     * @param _groupIds Specifies the ID of a security IP group.
-<li>When this parameter is provided, only the configuration of the security IP group with the specified ID is queried.</li>
-<li>When this parameter is not provided, information of all security IP groups under the site is returned.</li>
+                     * 设置Specifies the security ip group id. <li>when this parameter is provided, only the configuration of the specified security ip group id is queried;</li> <li>when this parameter is not provided, information of all security ip groups under the site is returned.</li>.
+                     * @param _groupIds Specifies the security ip group id. <li>when this parameter is provided, only the configuration of the specified security ip group id is queried;</li> <li>when this parameter is not provided, information of all security ip groups under the site is returned.</li>.
                      * 
                      */
                     void SetGroupIds(const std::vector<int64_t>& _groupIds);
@@ -101,9 +93,7 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Specifies the ID of a security IP group.
-<li>When this parameter is provided, only the configuration of the security IP group with the specified ID is queried.</li>
-<li>When this parameter is not provided, information of all security IP groups under the site is returned.</li>
+                     * Specifies the security ip group id. <li>when this parameter is provided, only the configuration of the specified security ip group id is queried;</li> <li>when this parameter is not provided, information of all security ip groups under the site is returned.</li>.
                      */
                     std::vector<int64_t> m_groupIds;
                     bool m_groupIdsHasBeenSet;

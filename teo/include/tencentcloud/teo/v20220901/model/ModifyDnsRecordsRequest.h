@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Site ID.
-                     * @return ZoneId Site ID.
+                     * 获取Zone id.
+                     * @return ZoneId Zone id.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Site ID.
-                     * @param _zoneId Site ID.
+                     * 设置Zone id.
+                     * @param _zoneId Zone id.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取List of DNS record modification data, with a maximum of 100 modifications at a time.
-                     * @return DnsRecords List of DNS record modification data, with a maximum of 100 modifications at a time.
+                     * 获取DNS record modification data list, up to 100 entries can be modified at a time.
+                     * @return DnsRecords DNS record modification data list, up to 100 entries can be modified at a time.
                      * 
                      */
                     std::vector<DnsRecord> GetDnsRecords() const;
 
                     /**
-                     * 设置List of DNS record modification data, with a maximum of 100 modifications at a time.
-                     * @param _dnsRecords List of DNS record modification data, with a maximum of 100 modifications at a time.
+                     * 设置DNS record modification data list, up to 100 entries can be modified at a time.
+                     * @param _dnsRecords DNS record modification data list, up to 100 entries can be modified at a time.
                      * 
                      */
                     void SetDnsRecords(const std::vector<DnsRecord>& _dnsRecords);
@@ -88,13 +88,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Site ID.
+                     * Zone id.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * List of DNS record modification data, with a maximum of 100 modifications at a time.
+                     * DNS record modification data list, up to 100 entries can be modified at a time.
                      */
                     std::vector<DnsRecord> m_dnsRecords;
                     bool m_dnsRecordsHasBeenSet;

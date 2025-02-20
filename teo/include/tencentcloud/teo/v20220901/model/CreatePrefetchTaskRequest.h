@@ -96,21 +96,21 @@ Note: The number of tasks that can be submitted is limited by the quota of a bil
                     /**
                      * 获取Whether to encode a URL according to RFC3986. Enable this field when the URL contains non-ASCII characters.
                      * @return EncodeUrl Whether to encode a URL according to RFC3986. Enable this field when the URL contains non-ASCII characters.
-                     * 
+                     * @deprecated
                      */
                     bool GetEncodeUrl() const;
 
                     /**
                      * 设置Whether to encode a URL according to RFC3986. Enable this field when the URL contains non-ASCII characters.
                      * @param _encodeUrl Whether to encode a URL according to RFC3986. Enable this field when the URL contains non-ASCII characters.
-                     * 
+                     * @deprecated
                      */
                     void SetEncodeUrl(const bool& _encodeUrl);
 
                     /**
                      * 判断参数 EncodeUrl 是否已赋值
                      * @return EncodeUrl 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool EncodeUrlHasBeenSet() const;
 
