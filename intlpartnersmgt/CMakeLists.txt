@@ -22,6 +22,7 @@ set(intlpartnersmgt_public_header_model
   include/tencentcloud/intlpartnersmgt/v20220928/model/SummaryDetails.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryDirectCustomersCreditData.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillSummaryResponse.h
+  include/tencentcloud/intlpartnersmgt/v20220928/model/TradeTwoNode.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/CreateAndSendClientInvitationMailResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/CustomerBillDetailData.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/RegionSummaryOverviewItem.h
@@ -38,6 +39,7 @@ set(intlpartnersmgt_public_header_model
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryCreditQuotaRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryCustomerBillingQuotaData.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryPartnerCreditRequest.h
+  include/tencentcloud/intlpartnersmgt/v20220928/model/GetTradeConfigListRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryByProductRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/ModifyClientRemarkResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryPartnerCreditResponse.h
@@ -63,6 +65,7 @@ set(intlpartnersmgt_public_header_model
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryDirectCustomersCreditResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillDownloadUrlResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerUinRequest.h
+  include/tencentcloud/intlpartnersmgt/v20220928/model/TradeOneNode.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryVoucherAmountByUinRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerInfoResponse.h
@@ -87,6 +90,7 @@ set(intlpartnersmgt_public_header_model
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryByProductResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillDetailResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryByRegionResponse.h
+  include/tencentcloud/intlpartnersmgt/v20220928/model/GetTradeConfigListResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillDownloadUrlResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillDetailRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryCreditByUinListRequest.h
@@ -113,6 +117,7 @@ set(intlpartnersmgt_src
   src/v20220928/model/SummaryDetails.cpp
   src/v20220928/model/QueryDirectCustomersCreditData.cpp
   src/v20220928/model/DescribeCustomerBillSummaryResponse.cpp
+  src/v20220928/model/TradeTwoNode.cpp
   src/v20220928/model/CreateAndSendClientInvitationMailResponse.cpp
   src/v20220928/model/CustomerBillDetailData.cpp
   src/v20220928/model/RegionSummaryOverviewItem.cpp
@@ -129,6 +134,7 @@ set(intlpartnersmgt_src
   src/v20220928/model/QueryCreditQuotaRequest.cpp
   src/v20220928/model/QueryCustomerBillingQuotaData.cpp
   src/v20220928/model/QueryPartnerCreditRequest.cpp
+  src/v20220928/model/GetTradeConfigListRequest.cpp
   src/v20220928/model/DescribeBillSummaryByProductRequest.cpp
   src/v20220928/model/ModifyClientRemarkResponse.cpp
   src/v20220928/model/QueryPartnerCreditResponse.cpp
@@ -154,6 +160,7 @@ set(intlpartnersmgt_src
   src/v20220928/model/QueryDirectCustomersCreditResponse.cpp
   src/v20220928/model/DescribeBillDownloadUrlResponse.cpp
   src/v20220928/model/DescribeCustomerUinRequest.cpp
+  src/v20220928/model/TradeOneNode.cpp
   src/v20220928/model/DescribeBillSummaryResponse.cpp
   src/v20220928/model/QueryVoucherAmountByUinRequest.cpp
   src/v20220928/model/DescribeCustomerInfoResponse.cpp
@@ -178,6 +185,7 @@ set(intlpartnersmgt_src
   src/v20220928/model/DescribeBillSummaryByProductResponse.cpp
   src/v20220928/model/DescribeCustomerBillDetailResponse.cpp
   src/v20220928/model/DescribeBillSummaryByRegionResponse.cpp
+  src/v20220928/model/GetTradeConfigListResponse.cpp
   src/v20220928/model/DescribeCustomerBillDownloadUrlResponse.cpp
   src/v20220928/model/DescribeBillDetailRequest.cpp
   src/v20220928/model/QueryCreditByUinListRequest.cpp

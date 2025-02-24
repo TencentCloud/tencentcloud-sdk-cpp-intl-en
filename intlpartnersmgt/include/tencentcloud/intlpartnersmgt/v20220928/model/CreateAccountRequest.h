@@ -263,6 +263,48 @@ Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/
                      */
                     bool VerifyCodeHasBeenSet() const;
 
+                    /**
+                     * 获取Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181).
+                     * @return TradeOne Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181).
+                     * 
+                     */
+                    std::string GetTradeOne() const;
+
+                    /**
+                     * 设置Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181).
+                     * @param _tradeOne Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181).
+                     * 
+                     */
+                    void SetTradeOne(const std::string& _tradeOne);
+
+                    /**
+                     * 判断参数 TradeOne 是否已赋值
+                     * @return TradeOne 是否已赋值
+                     * 
+                     */
+                    bool TradeOneHasBeenSet() const;
+
+                    /**
+                     * 获取Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181).
+                     * @return TradeTwo Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181).
+                     * 
+                     */
+                    std::string GetTradeTwo() const;
+
+                    /**
+                     * 设置Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181).
+                     * @param _tradeTwo Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181).
+                     * 
+                     */
+                    void SetTradeTwo(const std::string& _tradeTwo);
+
+                    /**
+                     * 判断参数 TradeTwo 是否已赋值
+                     * @return TradeTwo 是否已赋值
+                     * 
+                     */
+                    bool TradeTwoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -326,6 +368,18 @@ Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/
                      */
                     std::string m_verifyCode;
                     bool m_verifyCodeHasBeenSet;
+
+                    /**
+                     * Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181).
+                     */
+                    std::string m_tradeOne;
+                    bool m_tradeOneHasBeenSet;
+
+                    /**
+                     * Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181).
+                     */
+                    std::string m_tradeTwo;
+                    bool m_tradeTwoHasBeenSet;
 
                 };
             }

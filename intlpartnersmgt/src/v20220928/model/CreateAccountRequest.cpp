@@ -31,7 +31,9 @@ CreateAccountRequest::CreateAccountRequest() :
     m_countryCodeHasBeenSet(false),
     m_areaHasBeenSet(false),
     m_extendedHasBeenSet(false),
-    m_verifyCodeHasBeenSet(false)
+    m_verifyCodeHasBeenSet(false),
+    m_tradeOneHasBeenSet(false),
+    m_tradeTwoHasBeenSet(false)
 {
 }
 
@@ -112,6 +114,22 @@ string CreateAccountRequest::ToJsonString() const
         string key = "VerifyCode";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_verifyCode.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_tradeOneHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TradeOne";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_tradeOne.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_tradeTwoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TradeTwo";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_tradeTwo.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -264,6 +282,38 @@ void CreateAccountRequest::SetVerifyCode(const string& _verifyCode)
 bool CreateAccountRequest::VerifyCodeHasBeenSet() const
 {
     return m_verifyCodeHasBeenSet;
+}
+
+string CreateAccountRequest::GetTradeOne() const
+{
+    return m_tradeOne;
+}
+
+void CreateAccountRequest::SetTradeOne(const string& _tradeOne)
+{
+    m_tradeOne = _tradeOne;
+    m_tradeOneHasBeenSet = true;
+}
+
+bool CreateAccountRequest::TradeOneHasBeenSet() const
+{
+    return m_tradeOneHasBeenSet;
+}
+
+string CreateAccountRequest::GetTradeTwo() const
+{
+    return m_tradeTwo;
+}
+
+void CreateAccountRequest::SetTradeTwo(const string& _tradeTwo)
+{
+    m_tradeTwo = _tradeTwo;
+    m_tradeTwoHasBeenSet = true;
+}
+
+bool CreateAccountRequest::TradeTwoHasBeenSet() const
+{
+    return m_tradeTwoHasBeenSet;
 }
 
 

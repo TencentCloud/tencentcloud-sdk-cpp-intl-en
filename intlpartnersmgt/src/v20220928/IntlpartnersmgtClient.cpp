@@ -814,6 +814,49 @@ IntlpartnersmgtClient::GetCountryCodesOutcomeCallable IntlpartnersmgtClient::Get
     return task->get_future();
 }
 
+IntlpartnersmgtClient::GetTradeConfigListOutcome IntlpartnersmgtClient::GetTradeConfigList(const GetTradeConfigListRequest &request)
+{
+    auto outcome = MakeRequest(request, "GetTradeConfigList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        GetTradeConfigListResponse rsp = GetTradeConfigListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return GetTradeConfigListOutcome(rsp);
+        else
+            return GetTradeConfigListOutcome(o.GetError());
+    }
+    else
+    {
+        return GetTradeConfigListOutcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::GetTradeConfigListAsync(const GetTradeConfigListRequest& request, const GetTradeConfigListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->GetTradeConfigList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IntlpartnersmgtClient::GetTradeConfigListOutcomeCallable IntlpartnersmgtClient::GetTradeConfigListCallable(const GetTradeConfigListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<GetTradeConfigListOutcome()>>(
+        [this, request]()
+        {
+            return this->GetTradeConfigList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 IntlpartnersmgtClient::ModifyClientRemarkOutcome IntlpartnersmgtClient::ModifyClientRemark(const ModifyClientRemarkRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyClientRemark");

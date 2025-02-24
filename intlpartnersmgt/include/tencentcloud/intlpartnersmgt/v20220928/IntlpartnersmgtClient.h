@@ -59,6 +59,8 @@
 #include <tencentcloud/intlpartnersmgt/v20220928/model/ForceQNResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/GetCountryCodesRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/GetCountryCodesResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/GetTradeConfigListRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/GetTradeConfigListResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/ModifyClientRemarkRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/ModifyClientRemarkResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryAccountVerificationStatusRequest.h>
@@ -157,6 +159,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::GetCountryCodesResponse> GetCountryCodesOutcome;
                 typedef std::future<GetCountryCodesOutcome> GetCountryCodesOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::GetCountryCodesRequest&, GetCountryCodesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetCountryCodesAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetTradeConfigListResponse> GetTradeConfigListOutcome;
+                typedef std::future<GetTradeConfigListOutcome> GetTradeConfigListOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::GetTradeConfigListRequest&, GetTradeConfigListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetTradeConfigListAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyClientRemarkResponse> ModifyClientRemarkOutcome;
                 typedef std::future<ModifyClientRemarkOutcome> ModifyClientRemarkOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::ModifyClientRemarkRequest&, ModifyClientRemarkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyClientRemarkAsyncHandler;
@@ -241,8 +246,10 @@ Callable roles: Reseller, Distributer, Second-level reseller
                 /**
                  *This API is used to create Tencent Cloud customer accounts for distributor/second-level resellers.After the account is created, it will be automatically bound to the partner account.Note:
 1. Create a Tencent Cloud account. The entered email address and mobile phone number need to be verified by the partner for validity.
-2.  Customers need to add personal information when logging in for the first time.
-3.  This interface needs to be applied for allowlist usage. Please contact the channel manager to initiate the application process.
+2. Customers need to add personal information when logging in for the first time.
+3. This interface needs to be applied for allowlist usage. Please contact the channel manager to initiate the application process.
+
+Callable roles: distributor, second-level reseller, reseller
                  * @param req CreateAccountRequest
                  * @return CreateAccountOutcome
                  */
@@ -383,6 +390,15 @@ Note:Reseller need to be allowlisted to use the API, please contact your busines
                 GetCountryCodesOutcome GetCountryCodes(const Model::GetCountryCodesRequest &request);
                 void GetCountryCodesAsync(const Model::GetCountryCodesRequest& request, const GetCountryCodesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 GetCountryCodesOutcomeCallable GetCountryCodesCallable(const Model::GetCountryCodesRequest& request);
+
+                /**
+                 *This API is used to query industry information, including layer-1 industry and layer-2 industry.
+                 * @param req GetTradeConfigListRequest
+                 * @return GetTradeConfigListOutcome
+                 */
+                GetTradeConfigListOutcome GetTradeConfigList(const Model::GetTradeConfigListRequest &request);
+                void GetTradeConfigListAsync(const Model::GetTradeConfigListRequest& request, const GetTradeConfigListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetTradeConfigListOutcomeCallable GetTradeConfigListCallable(const Model::GetTradeConfigListRequest& request);
 
                 /**
                  *This API is used to modify customer remarks.
