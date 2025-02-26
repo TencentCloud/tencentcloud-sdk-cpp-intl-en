@@ -43,27 +43,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
-                     * @return ServiceId Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
-                     * 
-                     */
-                    uint64_t GetServiceId() const;
-
-                    /**
-                     * 设置Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
-                     * @param _serviceId Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
-                     * 
-                     */
-                    void SetServiceId(const uint64_t& _serviceId);
-
-                    /**
-                     * 判断参数 ServiceId 是否已赋值
-                     * @return ServiceId 是否已赋值
-                     * 
-                     */
-                    bool ServiceIdHasBeenSet() const;
-
-                    /**
                      * 获取Uin of the delegated admin.
                      * @return MemberUin Uin of the delegated admin.
                      * 
@@ -84,19 +63,40 @@ namespace TencentCloud
                      */
                     bool MemberUinHasBeenSet() const;
 
-                private:
+                    /**
+                     * 获取Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+                     * @return ServiceId Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+                     * 
+                     */
+                    uint64_t GetServiceId() const;
 
                     /**
-                     * Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+                     * 设置Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+                     * @param _serviceId Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+                     * 
                      */
-                    uint64_t m_serviceId;
-                    bool m_serviceIdHasBeenSet;
+                    void SetServiceId(const uint64_t& _serviceId);
+
+                    /**
+                     * 判断参数 ServiceId 是否已赋值
+                     * @return ServiceId 是否已赋值
+                     * 
+                     */
+                    bool ServiceIdHasBeenSet() const;
+
+                private:
 
                     /**
                      * Uin of the delegated admin.
                      */
                     int64_t m_memberUin;
                     bool m_memberUinHasBeenSet;
+
+                    /**
+                     * Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+                     */
+                    uint64_t m_serviceId;
+                    bool m_serviceIdHasBeenSet;
 
                 };
             }

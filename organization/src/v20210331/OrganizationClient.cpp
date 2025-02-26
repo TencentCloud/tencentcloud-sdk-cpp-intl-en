@@ -40,6 +40,49 @@ OrganizationClient::OrganizationClient(const Credential &credential, const strin
 }
 
 
+OrganizationClient::AcceptJoinShareUnitInvitationOutcome OrganizationClient::AcceptJoinShareUnitInvitation(const AcceptJoinShareUnitInvitationRequest &request)
+{
+    auto outcome = MakeRequest(request, "AcceptJoinShareUnitInvitation");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AcceptJoinShareUnitInvitationResponse rsp = AcceptJoinShareUnitInvitationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AcceptJoinShareUnitInvitationOutcome(rsp);
+        else
+            return AcceptJoinShareUnitInvitationOutcome(o.GetError());
+    }
+    else
+    {
+        return AcceptJoinShareUnitInvitationOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::AcceptJoinShareUnitInvitationAsync(const AcceptJoinShareUnitInvitationRequest& request, const AcceptJoinShareUnitInvitationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->AcceptJoinShareUnitInvitation(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::AcceptJoinShareUnitInvitationOutcomeCallable OrganizationClient::AcceptJoinShareUnitInvitationCallable(const AcceptJoinShareUnitInvitationRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<AcceptJoinShareUnitInvitationOutcome()>>(
+        [this, request]()
+        {
+            return this->AcceptJoinShareUnitInvitation(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 OrganizationClient::AddExternalSAMLIdPCertificateOutcome OrganizationClient::AddExternalSAMLIdPCertificate(const AddExternalSAMLIdPCertificateRequest &request)
 {
     auto outcome = MakeRequest(request, "AddExternalSAMLIdPCertificate");
@@ -162,6 +205,135 @@ OrganizationClient::AddPermissionPolicyToRoleConfigurationOutcomeCallable Organi
         [this, request]()
         {
             return this->AddPermissionPolicyToRoleConfiguration(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+OrganizationClient::AddShareUnitOutcome OrganizationClient::AddShareUnit(const AddShareUnitRequest &request)
+{
+    auto outcome = MakeRequest(request, "AddShareUnit");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AddShareUnitResponse rsp = AddShareUnitResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AddShareUnitOutcome(rsp);
+        else
+            return AddShareUnitOutcome(o.GetError());
+    }
+    else
+    {
+        return AddShareUnitOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::AddShareUnitAsync(const AddShareUnitRequest& request, const AddShareUnitAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->AddShareUnit(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::AddShareUnitOutcomeCallable OrganizationClient::AddShareUnitCallable(const AddShareUnitRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<AddShareUnitOutcome()>>(
+        [this, request]()
+        {
+            return this->AddShareUnit(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+OrganizationClient::AddShareUnitMembersOutcome OrganizationClient::AddShareUnitMembers(const AddShareUnitMembersRequest &request)
+{
+    auto outcome = MakeRequest(request, "AddShareUnitMembers");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AddShareUnitMembersResponse rsp = AddShareUnitMembersResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AddShareUnitMembersOutcome(rsp);
+        else
+            return AddShareUnitMembersOutcome(o.GetError());
+    }
+    else
+    {
+        return AddShareUnitMembersOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::AddShareUnitMembersAsync(const AddShareUnitMembersRequest& request, const AddShareUnitMembersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->AddShareUnitMembers(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::AddShareUnitMembersOutcomeCallable OrganizationClient::AddShareUnitMembersCallable(const AddShareUnitMembersRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<AddShareUnitMembersOutcome()>>(
+        [this, request]()
+        {
+            return this->AddShareUnitMembers(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+OrganizationClient::AddShareUnitResourcesOutcome OrganizationClient::AddShareUnitResources(const AddShareUnitResourcesRequest &request)
+{
+    auto outcome = MakeRequest(request, "AddShareUnitResources");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AddShareUnitResourcesResponse rsp = AddShareUnitResourcesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AddShareUnitResourcesOutcome(rsp);
+        else
+            return AddShareUnitResourcesOutcome(o.GetError());
+    }
+    else
+    {
+        return AddShareUnitResourcesOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::AddShareUnitResourcesAsync(const AddShareUnitResourcesRequest& request, const AddShareUnitResourcesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->AddShareUnitResources(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::AddShareUnitResourcesOutcomeCallable OrganizationClient::AddShareUnitResourcesCallable(const AddShareUnitResourcesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<AddShareUnitResourcesOutcome()>>(
+        [this, request]()
+        {
+            return this->AddShareUnitResources(request);
         }
     );
 
@@ -1373,6 +1545,135 @@ OrganizationClient::DeleteSCIMCredentialOutcomeCallable OrganizationClient::Dele
     return task->get_future();
 }
 
+OrganizationClient::DeleteShareUnitOutcome OrganizationClient::DeleteShareUnit(const DeleteShareUnitRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteShareUnit");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteShareUnitResponse rsp = DeleteShareUnitResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteShareUnitOutcome(rsp);
+        else
+            return DeleteShareUnitOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteShareUnitOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::DeleteShareUnitAsync(const DeleteShareUnitRequest& request, const DeleteShareUnitAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteShareUnit(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::DeleteShareUnitOutcomeCallable OrganizationClient::DeleteShareUnitCallable(const DeleteShareUnitRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteShareUnitOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteShareUnit(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+OrganizationClient::DeleteShareUnitMembersOutcome OrganizationClient::DeleteShareUnitMembers(const DeleteShareUnitMembersRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteShareUnitMembers");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteShareUnitMembersResponse rsp = DeleteShareUnitMembersResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteShareUnitMembersOutcome(rsp);
+        else
+            return DeleteShareUnitMembersOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteShareUnitMembersOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::DeleteShareUnitMembersAsync(const DeleteShareUnitMembersRequest& request, const DeleteShareUnitMembersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteShareUnitMembers(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::DeleteShareUnitMembersOutcomeCallable OrganizationClient::DeleteShareUnitMembersCallable(const DeleteShareUnitMembersRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteShareUnitMembersOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteShareUnitMembers(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+OrganizationClient::DeleteShareUnitResourcesOutcome OrganizationClient::DeleteShareUnitResources(const DeleteShareUnitResourcesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteShareUnitResources");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteShareUnitResourcesResponse rsp = DeleteShareUnitResourcesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteShareUnitResourcesOutcome(rsp);
+        else
+            return DeleteShareUnitResourcesOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteShareUnitResourcesOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::DeleteShareUnitResourcesAsync(const DeleteShareUnitResourcesRequest& request, const DeleteShareUnitResourcesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteShareUnitResources(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::DeleteShareUnitResourcesOutcomeCallable OrganizationClient::DeleteShareUnitResourcesCallable(const DeleteShareUnitResourcesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteShareUnitResourcesOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteShareUnitResources(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 OrganizationClient::DeleteUserOutcome OrganizationClient::DeleteUser(const DeleteUserRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteUser");
@@ -1753,6 +2054,178 @@ OrganizationClient::DescribeOrganizationNodesOutcomeCallable OrganizationClient:
         [this, request]()
         {
             return this->DescribeOrganizationNodes(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+OrganizationClient::DescribeShareAreasOutcome OrganizationClient::DescribeShareAreas(const DescribeShareAreasRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeShareAreas");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeShareAreasResponse rsp = DescribeShareAreasResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeShareAreasOutcome(rsp);
+        else
+            return DescribeShareAreasOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeShareAreasOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::DescribeShareAreasAsync(const DescribeShareAreasRequest& request, const DescribeShareAreasAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeShareAreas(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::DescribeShareAreasOutcomeCallable OrganizationClient::DescribeShareAreasCallable(const DescribeShareAreasRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeShareAreasOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeShareAreas(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+OrganizationClient::DescribeShareUnitMembersOutcome OrganizationClient::DescribeShareUnitMembers(const DescribeShareUnitMembersRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeShareUnitMembers");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeShareUnitMembersResponse rsp = DescribeShareUnitMembersResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeShareUnitMembersOutcome(rsp);
+        else
+            return DescribeShareUnitMembersOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeShareUnitMembersOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::DescribeShareUnitMembersAsync(const DescribeShareUnitMembersRequest& request, const DescribeShareUnitMembersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeShareUnitMembers(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::DescribeShareUnitMembersOutcomeCallable OrganizationClient::DescribeShareUnitMembersCallable(const DescribeShareUnitMembersRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeShareUnitMembersOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeShareUnitMembers(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+OrganizationClient::DescribeShareUnitResourcesOutcome OrganizationClient::DescribeShareUnitResources(const DescribeShareUnitResourcesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeShareUnitResources");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeShareUnitResourcesResponse rsp = DescribeShareUnitResourcesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeShareUnitResourcesOutcome(rsp);
+        else
+            return DescribeShareUnitResourcesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeShareUnitResourcesOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::DescribeShareUnitResourcesAsync(const DescribeShareUnitResourcesRequest& request, const DescribeShareUnitResourcesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeShareUnitResources(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::DescribeShareUnitResourcesOutcomeCallable OrganizationClient::DescribeShareUnitResourcesCallable(const DescribeShareUnitResourcesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeShareUnitResourcesOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeShareUnitResources(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+OrganizationClient::DescribeShareUnitsOutcome OrganizationClient::DescribeShareUnits(const DescribeShareUnitsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeShareUnits");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeShareUnitsResponse rsp = DescribeShareUnitsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeShareUnitsOutcome(rsp);
+        else
+            return DescribeShareUnitsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeShareUnitsOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::DescribeShareUnitsAsync(const DescribeShareUnitsRequest& request, const DescribeShareUnitsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeShareUnits(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::DescribeShareUnitsOutcomeCallable OrganizationClient::DescribeShareUnitsCallable(const DescribeShareUnitsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeShareUnitsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeShareUnits(request);
         }
     );
 
@@ -3093,6 +3566,49 @@ OrganizationClient::QuitOrganizationOutcomeCallable OrganizationClient::QuitOrga
     return task->get_future();
 }
 
+OrganizationClient::RejectJoinShareUnitInvitationOutcome OrganizationClient::RejectJoinShareUnitInvitation(const RejectJoinShareUnitInvitationRequest &request)
+{
+    auto outcome = MakeRequest(request, "RejectJoinShareUnitInvitation");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RejectJoinShareUnitInvitationResponse rsp = RejectJoinShareUnitInvitationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RejectJoinShareUnitInvitationOutcome(rsp);
+        else
+            return RejectJoinShareUnitInvitationOutcome(o.GetError());
+    }
+    else
+    {
+        return RejectJoinShareUnitInvitationOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::RejectJoinShareUnitInvitationAsync(const RejectJoinShareUnitInvitationRequest& request, const RejectJoinShareUnitInvitationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RejectJoinShareUnitInvitation(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::RejectJoinShareUnitInvitationOutcomeCallable OrganizationClient::RejectJoinShareUnitInvitationCallable(const RejectJoinShareUnitInvitationRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RejectJoinShareUnitInvitationOutcome()>>(
+        [this, request]()
+        {
+            return this->RejectJoinShareUnitInvitation(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 OrganizationClient::RemoveExternalSAMLIdPCertificateOutcome OrganizationClient::RemoveExternalSAMLIdPCertificate(const RemoveExternalSAMLIdPCertificateRequest &request)
 {
     auto outcome = MakeRequest(request, "RemoveExternalSAMLIdPCertificate");
@@ -3602,6 +4118,49 @@ OrganizationClient::UpdateSCIMSynchronizationStatusOutcomeCallable OrganizationC
         [this, request]()
         {
             return this->UpdateSCIMSynchronizationStatus(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+OrganizationClient::UpdateShareUnitOutcome OrganizationClient::UpdateShareUnit(const UpdateShareUnitRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateShareUnit");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateShareUnitResponse rsp = UpdateShareUnitResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateShareUnitOutcome(rsp);
+        else
+            return UpdateShareUnitOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateShareUnitOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::UpdateShareUnitAsync(const UpdateShareUnitRequest& request, const UpdateShareUnitAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UpdateShareUnit(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::UpdateShareUnitOutcomeCallable OrganizationClient::UpdateShareUnitCallable(const UpdateShareUnitRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UpdateShareUnitOutcome()>>(
+        [this, request]()
+        {
+            return this->UpdateShareUnit(request);
         }
     );
 

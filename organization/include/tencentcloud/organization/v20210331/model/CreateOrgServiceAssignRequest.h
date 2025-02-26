@@ -43,27 +43,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
-                     * @return ServiceId Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
-                     * 
-                     */
-                    uint64_t GetServiceId() const;
-
-                    /**
-                     * 设置Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
-                     * @param _serviceId Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
-                     * 
-                     */
-                    void SetServiceId(const uint64_t& _serviceId);
-
-                    /**
-                     * 判断参数 ServiceId 是否已赋值
-                     * @return ServiceId 是否已赋值
-                     * 
-                     */
-                    bool ServiceIdHasBeenSet() const;
-
-                    /**
                      * 获取Uin list of the delegated admins, including up to 20 items.
                      * @return MemberUins Uin list of the delegated admins, including up to 20 items.
                      * 
@@ -83,6 +62,27 @@ namespace TencentCloud
                      * 
                      */
                     bool MemberUinsHasBeenSet() const;
+
+                    /**
+                     * 获取Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+                     * @return ServiceId Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+                     * 
+                     */
+                    uint64_t GetServiceId() const;
+
+                    /**
+                     * 设置Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+                     * @param _serviceId Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+                     * 
+                     */
+                    void SetServiceId(const uint64_t& _serviceId);
+
+                    /**
+                     * 判断参数 ServiceId 是否已赋值
+                     * @return ServiceId 是否已赋值
+                     * 
+                     */
+                    bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取Management scope of the delegated admin. Valid values: 1 (all members), 2 (partial members). Default value: 1.
@@ -150,16 +150,16 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
-                     */
-                    uint64_t m_serviceId;
-                    bool m_serviceIdHasBeenSet;
-
-                    /**
                      * Uin list of the delegated admins, including up to 20 items.
                      */
                     std::vector<int64_t> m_memberUins;
                     bool m_memberUinsHasBeenSet;
+
+                    /**
+                     * Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+                     */
+                    uint64_t m_serviceId;
+                    bool m_serviceIdHasBeenSet;
 
                     /**
                      * Management scope of the delegated admin. Valid values: 1 (all members), 2 (partial members). Default value: 1.

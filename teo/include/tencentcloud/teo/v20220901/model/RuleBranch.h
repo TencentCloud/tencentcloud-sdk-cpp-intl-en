@@ -49,19 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取[Match condition].
-](Https://Cloud.Tencent.Com/Document/Product/1552/90438#33f65828-C6c6-4b66-A011-25a20b548d5d).
-                     * @return Condition [Match condition].
-](Https://Cloud.Tencent.Com/Document/Product/1552/90438#33f65828-C6c6-4b66-A011-25a20b548d5d).
+                     * 获取[Match condition](https://www.tencentcloud.com/document/product/1145/54759).
+                     * @return Condition [Match condition](https://www.tencentcloud.com/document/product/1145/54759).
                      * 
                      */
                     std::string GetCondition() const;
 
                     /**
-                     * 设置[Match condition].
-](Https://Cloud.Tencent.Com/Document/Product/1552/90438#33f65828-C6c6-4b66-A011-25a20b548d5d).
-                     * @param _condition [Match condition].
-](Https://Cloud.Tencent.Com/Document/Product/1552/90438#33f65828-C6c6-4b66-A011-25a20b548d5d).
+                     * 设置[Match condition](https://www.tencentcloud.com/document/product/1145/54759).
+                     * @param _condition [Match condition](https://www.tencentcloud.com/document/product/1145/54759).
                      * 
                      */
                     void SetCondition(const std::string& _condition);
@@ -126,8 +122,7 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                 private:
 
                     /**
-                     * [Match condition].
-](Https://Cloud.Tencent.Com/Document/Product/1552/90438#33f65828-C6c6-4b66-A011-25a20b548d5d).
+                     * [Match condition](https://www.tencentcloud.com/document/product/1145/54759).
                      */
                     std::string m_condition;
                     bool m_conditionHasBeenSet;

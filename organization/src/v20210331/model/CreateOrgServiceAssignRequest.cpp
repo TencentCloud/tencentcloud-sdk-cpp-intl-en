@@ -23,8 +23,8 @@ using namespace TencentCloud::Organization::V20210331::Model;
 using namespace std;
 
 CreateOrgServiceAssignRequest::CreateOrgServiceAssignRequest() :
-    m_serviceIdHasBeenSet(false),
     m_memberUinsHasBeenSet(false),
+    m_serviceIdHasBeenSet(false),
     m_managementScopeHasBeenSet(false),
     m_managementScopeUinsHasBeenSet(false),
     m_managementScopeNodeIdsHasBeenSet(false)
@@ -38,14 +38,6 @@ string CreateOrgServiceAssignRequest::ToJsonString() const
     rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
-    if (m_serviceIdHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "ServiceId";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_serviceId, allocator);
-    }
-
     if (m_memberUinsHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -57,6 +49,14 @@ string CreateOrgServiceAssignRequest::ToJsonString() const
         {
             d[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
+    }
+
+    if (m_serviceIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ServiceId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_serviceId, allocator);
     }
 
     if (m_managementScopeHasBeenSet)
@@ -101,22 +101,6 @@ string CreateOrgServiceAssignRequest::ToJsonString() const
 }
 
 
-uint64_t CreateOrgServiceAssignRequest::GetServiceId() const
-{
-    return m_serviceId;
-}
-
-void CreateOrgServiceAssignRequest::SetServiceId(const uint64_t& _serviceId)
-{
-    m_serviceId = _serviceId;
-    m_serviceIdHasBeenSet = true;
-}
-
-bool CreateOrgServiceAssignRequest::ServiceIdHasBeenSet() const
-{
-    return m_serviceIdHasBeenSet;
-}
-
 vector<int64_t> CreateOrgServiceAssignRequest::GetMemberUins() const
 {
     return m_memberUins;
@@ -131,6 +115,22 @@ void CreateOrgServiceAssignRequest::SetMemberUins(const vector<int64_t>& _member
 bool CreateOrgServiceAssignRequest::MemberUinsHasBeenSet() const
 {
     return m_memberUinsHasBeenSet;
+}
+
+uint64_t CreateOrgServiceAssignRequest::GetServiceId() const
+{
+    return m_serviceId;
+}
+
+void CreateOrgServiceAssignRequest::SetServiceId(const uint64_t& _serviceId)
+{
+    m_serviceId = _serviceId;
+    m_serviceIdHasBeenSet = true;
+}
+
+bool CreateOrgServiceAssignRequest::ServiceIdHasBeenSet() const
+{
+    return m_serviceIdHasBeenSet;
 }
 
 uint64_t CreateOrgServiceAssignRequest::GetManagementScope() const

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/organization/v20210331/model/DeleteOrgServiceAssignRequest.h>
+#include <tencentcloud/organization/v20210331/model/RejectJoinShareUnitInvitationRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -22,33 +22,24 @@
 using namespace TencentCloud::Organization::V20210331::Model;
 using namespace std;
 
-DeleteOrgServiceAssignRequest::DeleteOrgServiceAssignRequest() :
-    m_memberUinHasBeenSet(false),
-    m_serviceIdHasBeenSet(false)
+RejectJoinShareUnitInvitationRequest::RejectJoinShareUnitInvitationRequest() :
+    m_unitIdHasBeenSet(false)
 {
 }
 
-string DeleteOrgServiceAssignRequest::ToJsonString() const
+string RejectJoinShareUnitInvitationRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
     rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
-    if (m_memberUinHasBeenSet)
+    if (m_unitIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "MemberUin";
+        string key = "UnitId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_memberUin, allocator);
-    }
-
-    if (m_serviceIdHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "ServiceId";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_serviceId, allocator);
+        d.AddMember(iKey, rapidjson::Value(m_unitId.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -59,36 +50,20 @@ string DeleteOrgServiceAssignRequest::ToJsonString() const
 }
 
 
-int64_t DeleteOrgServiceAssignRequest::GetMemberUin() const
+string RejectJoinShareUnitInvitationRequest::GetUnitId() const
 {
-    return m_memberUin;
+    return m_unitId;
 }
 
-void DeleteOrgServiceAssignRequest::SetMemberUin(const int64_t& _memberUin)
+void RejectJoinShareUnitInvitationRequest::SetUnitId(const string& _unitId)
 {
-    m_memberUin = _memberUin;
-    m_memberUinHasBeenSet = true;
+    m_unitId = _unitId;
+    m_unitIdHasBeenSet = true;
 }
 
-bool DeleteOrgServiceAssignRequest::MemberUinHasBeenSet() const
+bool RejectJoinShareUnitInvitationRequest::UnitIdHasBeenSet() const
 {
-    return m_memberUinHasBeenSet;
-}
-
-uint64_t DeleteOrgServiceAssignRequest::GetServiceId() const
-{
-    return m_serviceId;
-}
-
-void DeleteOrgServiceAssignRequest::SetServiceId(const uint64_t& _serviceId)
-{
-    m_serviceId = _serviceId;
-    m_serviceIdHasBeenSet = true;
-}
-
-bool DeleteOrgServiceAssignRequest::ServiceIdHasBeenSet() const
-{
-    return m_serviceIdHasBeenSet;
+    return m_unitIdHasBeenSet;
 }
 
 
