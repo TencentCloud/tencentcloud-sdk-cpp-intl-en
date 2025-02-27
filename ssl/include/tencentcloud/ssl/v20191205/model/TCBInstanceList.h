@@ -93,6 +93,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool EnvironmentsHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return Error Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetError() const;
+
+                    /**
+                     * 设置Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param _error Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetError(const std::string& _error);
+
+                    /**
+                     * 判断参数 Error 是否已赋值
+                     * @return Error 是否已赋值
+                     * 
+                     */
+                    bool ErrorHasBeenSet() const;
+
                 private:
 
                     /**
@@ -107,6 +132,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<TCBEnvironments> m_environments;
                     bool m_environmentsHasBeenSet;
+
+                    /**
+                     * Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_error;
+                    bool m_errorHasBeenSet;
 
                 };
             }

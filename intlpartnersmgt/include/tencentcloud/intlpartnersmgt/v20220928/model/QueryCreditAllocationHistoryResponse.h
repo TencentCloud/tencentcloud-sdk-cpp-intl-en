@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of records
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Total Total number of records
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Total number of historical records.
+                     * @return Total Total number of historical records.
                      * 
                      */
                     uint64_t GetTotal() const;
@@ -61,10 +59,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TotalHasBeenSet() const;
 
                     /**
-                     * 获取List of record details
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return History List of record details
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Detailed list of historical information.
+                     * @return History Detailed list of historical information.
                      * 
                      */
                     std::vector<QueryCreditAllocationHistoryData> GetHistory() const;
@@ -79,15 +75,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Total number of records
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Total number of historical records.
                      */
                     uint64_t m_total;
                     bool m_totalHasBeenSet;
 
                     /**
-                     * List of record details
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Detailed list of historical information.
                      */
                     std::vector<QueryCreditAllocationHistoryData> m_history;
                     bool m_historyHasBeenSet;

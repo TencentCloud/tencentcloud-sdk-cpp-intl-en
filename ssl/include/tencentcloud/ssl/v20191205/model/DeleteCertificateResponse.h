@@ -58,8 +58,10 @@ namespace TencentCloud
                     bool DeleteResultHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TaskId 
+                     * 获取Asynchronous deletion task id.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return TaskId Asynchronous deletion task id.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTaskId() const;
@@ -80,7 +82,8 @@ namespace TencentCloud
                     bool m_deleteResultHasBeenSet;
 
                     /**
-                     * 
+                     * Asynchronous deletion task id.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

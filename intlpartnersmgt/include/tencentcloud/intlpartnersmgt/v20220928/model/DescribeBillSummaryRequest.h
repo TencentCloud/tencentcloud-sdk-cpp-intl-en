@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Bill month in the format of "yyyy-mm".
-                     * @return Month Bill month in the format of "yyyy-mm".
+                     * 获取The month to which the bill belongs, formatted as YYYY-MM.
+                     * @return Month The month to which the bill belongs, formatted as YYYY-MM.
                      * 
                      */
                     std::string GetMonth() const;
 
                     /**
-                     * 设置Bill month in the format of "yyyy-mm".
-                     * @param _month Bill month in the format of "yyyy-mm".
+                     * 设置The month to which the bill belongs, formatted as YYYY-MM.
+                     * @param _month The month to which the bill belongs, formatted as YYYY-MM.
                      * 
                      */
                     void SetMonth(const std::string& _month);
@@ -108,7 +108,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Bill month in the format of "yyyy-mm".
+                     * The month to which the bill belongs, formatted as YYYY-MM.
                      */
                     std::string m_month;
                     bool m_monthHasBeenSet;

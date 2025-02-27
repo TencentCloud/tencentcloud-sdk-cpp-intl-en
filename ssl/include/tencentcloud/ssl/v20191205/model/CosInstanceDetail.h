@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_SSL_V20191205_MODEL_CDNINSTANCEDETAIL_H_
-#define TENCENTCLOUD_SSL_V20191205_MODEL_CDNINSTANCEDETAIL_H_
+#ifndef TENCENTCLOUD_SSL_V20191205_MODEL_COSINSTANCEDETAIL_H_
+#define TENCENTCLOUD_SSL_V20191205_MODEL_COSINSTANCEDETAIL_H_
 
 #include <string>
 #include <vector>
@@ -35,27 +35,27 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Details of a CDN instance
+                * COS instance description.
                 */
-                class CdnInstanceDetail : public AbstractModel
+                class CosInstanceDetail : public AbstractModel
                 {
                 public:
-                    CdnInstanceDetail();
-                    ~CdnInstanceDetail() = default;
+                    CosInstanceDetail();
+                    ~CosInstanceDetail() = default;
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
-                     * 获取The domain.
-                     * @return Domain The domain.
+                     * 获取Domain name.
+                     * @return Domain Domain name.
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置The domain.
-                     * @param _domain The domain.
+                     * 设置Domain name.
+                     * @param _domain Domain name.
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取The ID of the deployed certificate.
-                     * @return CertId The ID of the deployed certificate.
+                     * 获取Bound certificate id.
+                     * @return CertId Bound certificate id.
                      * 
                      */
                     std::string GetCertId() const;
 
                     /**
-                     * 设置The ID of the deployed certificate.
-                     * @param _certId The ID of the deployed certificate.
+                     * 设置Bound certificate id.
+                     * @param _certId Bound certificate id.
                      * 
                      */
                     void SetCertId(const std::string& _certId);
@@ -89,15 +89,19 @@ namespace TencentCloud
                     bool CertIdHasBeenSet() const;
 
                     /**
-                     * 获取Domain name status: rejected - the domain name failed the review or its registration has expired/been canceled; processing - deploying; online - started; offline - closed.
-                     * @return Status Domain name status: rejected - the domain name failed the review or its registration has expired/been canceled; processing - deploying; online - started; offline - closed.
+                     * 获取ENABLED: domain name online status.
+DISABLED: domain name offline status.
+                     * @return Status ENABLED: domain name online status.
+DISABLED: domain name offline status.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Domain name status: rejected - the domain name failed the review or its registration has expired/been canceled; processing - deploying; online - started; offline - closed.
-                     * @param _status Domain name status: rejected - the domain name failed the review or its registration has expired/been canceled; processing - deploying; online - started; offline - closed.
+                     * 设置ENABLED: domain name online status.
+DISABLED: domain name offline status.
+                     * @param _status ENABLED: domain name online status.
+DISABLED: domain name offline status.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -110,51 +114,79 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Domain billing status, where on indicates enable and off indicates disable.
-                     * @return HttpsBillingSwitch Domain billing status, where on indicates enable and off indicates disable.
+                     * 获取bucket name.
+                     * @return Bucket bucket name.
                      * 
                      */
-                    std::string GetHttpsBillingSwitch() const;
+                    std::string GetBucket() const;
 
                     /**
-                     * 设置Domain billing status, where on indicates enable and off indicates disable.
-                     * @param _httpsBillingSwitch Domain billing status, where on indicates enable and off indicates disable.
+                     * 设置bucket name.
+                     * @param _bucket bucket name.
                      * 
                      */
-                    void SetHttpsBillingSwitch(const std::string& _httpsBillingSwitch);
+                    void SetBucket(const std::string& _bucket);
 
                     /**
-                     * 判断参数 HttpsBillingSwitch 是否已赋值
-                     * @return HttpsBillingSwitch 是否已赋值
+                     * 判断参数 Bucket 是否已赋值
+                     * @return Bucket 是否已赋值
                      * 
                      */
-                    bool HttpsBillingSwitchHasBeenSet() const;
+                    bool BucketHasBeenSet() const;
+
+                    /**
+                     * 获取bucket region.
+                     * @return Region bucket region.
+                     * 
+                     */
+                    std::string GetRegion() const;
+
+                    /**
+                     * 设置bucket region.
+                     * @param _region bucket region.
+                     * 
+                     */
+                    void SetRegion(const std::string& _region);
+
+                    /**
+                     * 判断参数 Region 是否已赋值
+                     * @return Region 是否已赋值
+                     * 
+                     */
+                    bool RegionHasBeenSet() const;
 
                 private:
 
                     /**
-                     * The domain.
+                     * Domain name.
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * The ID of the deployed certificate.
+                     * Bound certificate id.
                      */
                     std::string m_certId;
                     bool m_certIdHasBeenSet;
 
                     /**
-                     * Domain name status: rejected - the domain name failed the review or its registration has expired/been canceled; processing - deploying; online - started; offline - closed.
+                     * ENABLED: domain name online status.
+DISABLED: domain name offline status.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Domain billing status, where on indicates enable and off indicates disable.
+                     * bucket name.
                      */
-                    std::string m_httpsBillingSwitch;
-                    bool m_httpsBillingSwitchHasBeenSet;
+                    std::string m_bucket;
+                    bool m_bucketHasBeenSet;
+
+                    /**
+                     * bucket region.
+                     */
+                    std::string m_region;
+                    bool m_regionHasBeenSet;
 
                 };
             }
@@ -162,4 +194,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_SSL_V20191205_MODEL_CDNINSTANCEDETAIL_H_
+#endif // !TENCENTCLOUD_SSL_V20191205_MODEL_COSINSTANCEDETAIL_H_

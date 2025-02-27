@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/ssl/v20191205/model/TkeInstanceList.h>
+#include <tencentcloud/ssl/v20191205/model/COSInstanceList.h>
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ssl::V20191205::Model;
 using namespace std;
 
-TkeInstanceList::TkeInstanceList() :
+COSInstanceList::COSInstanceList() :
     m_regionHasBeenSet(false),
     m_instanceListHasBeenSet(false),
     m_totalCountHasBeenSet(false),
@@ -28,7 +28,7 @@ TkeInstanceList::TkeInstanceList() :
 {
 }
 
-CoreInternalOutcome TkeInstanceList::Deserialize(const rapidjson::Value &value)
+CoreInternalOutcome COSInstanceList::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +37,7 @@ CoreInternalOutcome TkeInstanceList::Deserialize(const rapidjson::Value &value)
     {
         if (!value["Region"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `TkeInstanceList.Region` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `COSInstanceList.Region` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_region = string(value["Region"].GetString());
         m_regionHasBeenSet = true;
@@ -46,12 +46,12 @@ CoreInternalOutcome TkeInstanceList::Deserialize(const rapidjson::Value &value)
     if (value.HasMember("InstanceList") && !value["InstanceList"].IsNull())
     {
         if (!value["InstanceList"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `TkeInstanceList.InstanceList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `COSInstanceList.InstanceList` is not array type"));
 
         const rapidjson::Value &tmpValue = value["InstanceList"];
         for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            TkeInstanceDetail item;
+            CosInstanceDetail item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
             if (!outcome.IsSuccess())
             {
@@ -65,11 +65,11 @@ CoreInternalOutcome TkeInstanceList::Deserialize(const rapidjson::Value &value)
 
     if (value.HasMember("TotalCount") && !value["TotalCount"].IsNull())
     {
-        if (!value["TotalCount"].IsUint64())
+        if (!value["TotalCount"].IsInt64())
         {
-            return CoreInternalOutcome(Core::Error("response `TkeInstanceList.TotalCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `COSInstanceList.TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
-        m_totalCount = value["TotalCount"].GetUint64();
+        m_totalCount = value["TotalCount"].GetInt64();
         m_totalCountHasBeenSet = true;
     }
 
@@ -77,7 +77,7 @@ CoreInternalOutcome TkeInstanceList::Deserialize(const rapidjson::Value &value)
     {
         if (!value["Error"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `TkeInstanceList.Error` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `COSInstanceList.Error` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_error = string(value["Error"].GetString());
         m_errorHasBeenSet = true;
@@ -87,7 +87,7 @@ CoreInternalOutcome TkeInstanceList::Deserialize(const rapidjson::Value &value)
     return CoreInternalOutcome(true);
 }
 
-void TkeInstanceList::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
+void COSInstanceList::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_regionHasBeenSet)
@@ -132,66 +132,66 @@ void TkeInstanceList::ToJsonObject(rapidjson::Value &value, rapidjson::Document:
 }
 
 
-string TkeInstanceList::GetRegion() const
+string COSInstanceList::GetRegion() const
 {
     return m_region;
 }
 
-void TkeInstanceList::SetRegion(const string& _region)
+void COSInstanceList::SetRegion(const string& _region)
 {
     m_region = _region;
     m_regionHasBeenSet = true;
 }
 
-bool TkeInstanceList::RegionHasBeenSet() const
+bool COSInstanceList::RegionHasBeenSet() const
 {
     return m_regionHasBeenSet;
 }
 
-vector<TkeInstanceDetail> TkeInstanceList::GetInstanceList() const
+vector<CosInstanceDetail> COSInstanceList::GetInstanceList() const
 {
     return m_instanceList;
 }
 
-void TkeInstanceList::SetInstanceList(const vector<TkeInstanceDetail>& _instanceList)
+void COSInstanceList::SetInstanceList(const vector<CosInstanceDetail>& _instanceList)
 {
     m_instanceList = _instanceList;
     m_instanceListHasBeenSet = true;
 }
 
-bool TkeInstanceList::InstanceListHasBeenSet() const
+bool COSInstanceList::InstanceListHasBeenSet() const
 {
     return m_instanceListHasBeenSet;
 }
 
-uint64_t TkeInstanceList::GetTotalCount() const
+int64_t COSInstanceList::GetTotalCount() const
 {
     return m_totalCount;
 }
 
-void TkeInstanceList::SetTotalCount(const uint64_t& _totalCount)
+void COSInstanceList::SetTotalCount(const int64_t& _totalCount)
 {
     m_totalCount = _totalCount;
     m_totalCountHasBeenSet = true;
 }
 
-bool TkeInstanceList::TotalCountHasBeenSet() const
+bool COSInstanceList::TotalCountHasBeenSet() const
 {
     return m_totalCountHasBeenSet;
 }
 
-string TkeInstanceList::GetError() const
+string COSInstanceList::GetError() const
 {
     return m_error;
 }
 
-void TkeInstanceList::SetError(const string& _error)
+void COSInstanceList::SetError(const string& _error)
 {
     m_error = _error;
     m_errorHasBeenSet = true;
 }
 
-bool TkeInstanceList::ErrorHasBeenSet() const
+bool COSInstanceList::ErrorHasBeenSet() const
 {
     return m_errorHasBeenSet;
 }

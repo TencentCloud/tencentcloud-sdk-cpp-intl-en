@@ -218,27 +218,6 @@ Parameter value is not allowed to be 7,380,86.
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取Extension field, which is left empty by default.
-                     * @return Extended Extension field, which is left empty by default.
-                     * 
-                     */
-                    std::string GetExtended() const;
-
-                    /**
-                     * 设置Extension field, which is left empty by default.
-                     * @param _extended Extension field, which is left empty by default.
-                     * 
-                     */
-                    void SetExtended(const std::string& _extended);
-
-                    /**
-                     * 判断参数 Extended 是否已赋值
-                     * @return Extended 是否已赋值
-                     * 
-                     */
-                    bool ExtendedHasBeenSet() const;
-
-                    /**
                      * 获取VerifyCode. This parameter is required. 
 Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
                      * @return VerifyCode VerifyCode. This parameter is required. 
@@ -262,6 +241,27 @@ Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/
                      * 
                      */
                     bool VerifyCodeHasBeenSet() const;
+
+                    /**
+                     * 获取Extension field, which is left empty by default.
+                     * @return Extended Extension field, which is left empty by default.
+                     * 
+                     */
+                    std::string GetExtended() const;
+
+                    /**
+                     * 设置Extension field, which is left empty by default.
+                     * @param _extended Extension field, which is left empty by default.
+                     * 
+                     */
+                    void SetExtended(const std::string& _extended);
+
+                    /**
+                     * 判断参数 Extended 是否已赋值
+                     * @return Extended 是否已赋值
+                     * 
+                     */
+                    bool ExtendedHasBeenSet() const;
 
                     /**
                      * 获取Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
@@ -365,17 +365,17 @@ Parameter value is not allowed to be 7,380,86.
                     bool m_areaHasBeenSet;
 
                     /**
-                     * Extension field, which is left empty by default.
-                     */
-                    std::string m_extended;
-                    bool m_extendedHasBeenSet;
-
-                    /**
                      * VerifyCode. This parameter is required. 
 Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
                      */
                     std::string m_verifyCode;
                     bool m_verifyCodeHasBeenSet;
+
+                    /**
+                     * Extension field, which is left empty by default.
+                     */
+                    std::string m_extended;
+                    bool m_extendedHasBeenSet;
 
                     /**
                      * Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),

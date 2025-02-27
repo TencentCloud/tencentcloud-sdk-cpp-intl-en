@@ -73,7 +73,10 @@ Certificates::Certificates() :
     m_isDNSPODResolveHasBeenSet(false),
     m_isPackageHasBeenSet(false),
     m_keyPasswordCustomFlagHasBeenSet(false),
-    m_supportDownloadTypeHasBeenSet(false)
+    m_supportDownloadTypeHasBeenSet(false),
+    m_certRevokedTimeHasBeenSet(false),
+    m_hostingResourceTypesHasBeenSet(false),
+    m_hostingConfigHasBeenSet(false)
 {
 }
 
@@ -668,6 +671,46 @@ CoreInternalOutcome Certificates::Deserialize(const rapidjson::Value &value)
         m_supportDownloadTypeHasBeenSet = true;
     }
 
+    if (value.HasMember("CertRevokedTime") && !value["CertRevokedTime"].IsNull())
+    {
+        if (!value["CertRevokedTime"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Certificates.CertRevokedTime` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_certRevokedTime = string(value["CertRevokedTime"].GetString());
+        m_certRevokedTimeHasBeenSet = true;
+    }
+
+    if (value.HasMember("HostingResourceTypes") && !value["HostingResourceTypes"].IsNull())
+    {
+        if (!value["HostingResourceTypes"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `Certificates.HostingResourceTypes` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["HostingResourceTypes"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_hostingResourceTypes.push_back((*itr).GetString());
+        }
+        m_hostingResourceTypesHasBeenSet = true;
+    }
+
+    if (value.HasMember("HostingConfig") && !value["HostingConfig"].IsNull())
+    {
+        if (!value["HostingConfig"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `Certificates.HostingConfig` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_hostingConfig.Deserialize(value["HostingConfig"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_hostingConfigHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -1138,6 +1181,36 @@ void Certificates::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Al
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_supportDownloadType.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_certRevokedTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CertRevokedTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_certRevokedTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_hostingResourceTypesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HostingResourceTypes";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_hostingResourceTypes.begin(); itr != m_hostingResourceTypes.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_hostingConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HostingConfig";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_hostingConfig.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -1989,5 +2062,53 @@ void Certificates::SetSupportDownloadType(const SupportDownloadType& _supportDow
 bool Certificates::SupportDownloadTypeHasBeenSet() const
 {
     return m_supportDownloadTypeHasBeenSet;
+}
+
+string Certificates::GetCertRevokedTime() const
+{
+    return m_certRevokedTime;
+}
+
+void Certificates::SetCertRevokedTime(const string& _certRevokedTime)
+{
+    m_certRevokedTime = _certRevokedTime;
+    m_certRevokedTimeHasBeenSet = true;
+}
+
+bool Certificates::CertRevokedTimeHasBeenSet() const
+{
+    return m_certRevokedTimeHasBeenSet;
+}
+
+vector<string> Certificates::GetHostingResourceTypes() const
+{
+    return m_hostingResourceTypes;
+}
+
+void Certificates::SetHostingResourceTypes(const vector<string>& _hostingResourceTypes)
+{
+    m_hostingResourceTypes = _hostingResourceTypes;
+    m_hostingResourceTypesHasBeenSet = true;
+}
+
+bool Certificates::HostingResourceTypesHasBeenSet() const
+{
+    return m_hostingResourceTypesHasBeenSet;
+}
+
+HostingConfig Certificates::GetHostingConfig() const
+{
+    return m_hostingConfig;
+}
+
+void Certificates::SetHostingConfig(const HostingConfig& _hostingConfig)
+{
+    m_hostingConfig = _hostingConfig;
+    m_hostingConfigHasBeenSet = true;
+}
+
+bool Certificates::HostingConfigHasBeenSet() const
+{
+    return m_hostingConfigHasBeenSet;
 }
 

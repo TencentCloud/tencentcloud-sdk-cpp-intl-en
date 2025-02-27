@@ -100,6 +100,20 @@ namespace TencentCloud
                     bool EnNameHasBeenSet() const;
 
                     /**
+                     * 获取Surname in Thai
+                     * @return ThaiSurName Surname in Thai
+                     * 
+                     */
+                    std::string GetThaiSurName() const;
+
+                    /**
+                     * 判断参数 ThaiSurName 是否已赋值
+                     * @return ThaiSurName 是否已赋值
+                     * 
+                     */
+                    bool ThaiSurNameHasBeenSet() const;
+
+                    /**
                      * 获取Date of birth in Thai
                      * @return ThaiDOB Date of birth in Thai
                      * 
@@ -294,6 +308,12 @@ namespace TencentCloud
                      */
                     std::string m_enName;
                     bool m_enNameHasBeenSet;
+
+                    /**
+                     * Surname in Thai
+                     */
+                    std::string m_thaiSurName;
+                    bool m_thaiSurNameHasBeenSet;
 
                     /**
                      * Date of birth in Thai

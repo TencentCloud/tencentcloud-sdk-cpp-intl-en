@@ -29,6 +29,7 @@
 #include <tencentcloud/ssl/v20191205/model/Tags.h>
 #include <tencentcloud/ssl/v20191205/model/PreAuditInfo.h>
 #include <tencentcloud/ssl/v20191205/model/SupportDownloadType.h>
+#include <tencentcloud/ssl/v20191205/model/HostingConfig.h>
 
 
 namespace TencentCloud
@@ -52,19 +53,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取User UIN
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return OwnerUin User UIN
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取User uin.
+                     * @return OwnerUin User uin.
                      * 
                      */
                     std::string GetOwnerUin() const;
 
                     /**
-                     * 设置User UIN
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _ownerUin User UIN
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置User uin.
+                     * @param _ownerUin User uin.
                      * 
                      */
                     void SetOwnerUin(const std::string& _ownerUin);
@@ -77,19 +74,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool OwnerUinHasBeenSet() const;
 
                     /**
-                     * 获取Project ID
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ProjectId Project ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Project id.
+                     * @return ProjectId Project id.
                      * 
                      */
                     std::string GetProjectId() const;
 
                     /**
-                     * 设置Project ID
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _projectId Project ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Project id.
+                     * @param _projectId Project id.
                      * 
                      */
                     void SetProjectId(const std::string& _projectId);
@@ -102,19 +95,31 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Certificate source
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return From Certificate source
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Certificate source:.
+trustasia.
+upload.
+wosign.
+sheca.
+                     * @return From Certificate source:.
+trustasia.
+upload.
+wosign.
+sheca.
                      * 
                      */
                     std::string GetFrom() const;
 
                     /**
-                     * 设置Certificate source
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _from Certificate source
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Certificate source:.
+trustasia.
+upload.
+wosign.
+sheca.
+                     * @param _from Certificate source:.
+trustasia.
+upload.
+wosign.
+sheca.
                      * 
                      */
                     void SetFrom(const std::string& _from);
@@ -127,27 +132,351 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool FromHasBeenSet() const;
 
                     /**
-                     * 获取The certificate plan type. Valid values:
-null: Certificates uploaded by users (no plan type)
-`1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PackageType The certificate plan type. Valid values:
-null: Certificates uploaded by users (no plan type)
-`1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Certificate package type:.
+Null: user uploads a certificate (without package type),.
+2: trustasia tls rsa ca,. 
+3: securesite enhanced enterprise edition (ev pro),. 
+4: securesite enhanced (ev). 
+5: securesite enterprise professional edition (ov pro).
+6: securesite enterprise (ov). 
+7: securesite enterprise (ov) wildcard. 
+8: geotrust enhanced (ev). 
+9: geotrust enterprise (ov) cert. 
+10: geotrust enterprise (ov) wildcard cert. 
+11: trustasia domain name-based multiple domain names ssl certificate. 
+12: trustasia domain name-based (dv) wildcard cert. 
+13: trustasia enterprise wildcard (ov) ssl certificate (d3). 
+14: trustasia enterprise (ov) ssl certificate (d3). 
+15: trustasia enterprise multiple domain names (ov) ssl certificate (d3). 
+16: trustasia enhanced (ev) ssl certificate (d3). 
+17: trustasia enhanced multiple domain names (ev) ssl certificate (d3). 
+18: globalsign enterprise (ov) ssl certificate. 
+19: globalsign enterprise wildcard (ov) ssl certificate. 
+20: globalsign enhanced (ev) ssl certificate. 
+21: trustasia enterprise wildcard multiple domain names (ov) ssl certificate (d3). 
+22: globalsign enterprise multiple domain names (ov) ssl certificate. 
+23: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+24: globalsign enhanced multiple domain name (ev) ssl certificate.
+25: wotrus domain name cert.
+26: wotrus domain name multiple domain name cert.
+27: wotrus domain name wildcard cert.
+28: wotrus enterprise cert.
+29: wotrus enterprise multi - domain name certificate.
+30: wotrus enterprise wildcard certificate.
+31: wotrus enhanced certificate.
+32: wotrus enhanced multi - domain name certificate.
+33: wotrus - national cryptography domain - type certificate.
+34: wotrus-national cryptography domain certificate (multiple domain names).
+35: wotrus-national cryptography domain certificate (wildcard).
+37: wotrus-national cryptography enterprise certificate.
+38: wotrus-national cryptography enterprise certificate (multiple domain names).
+39: wotrus-national cryptography enterprise certificate (wildcard).
+40: wotrus - enhanced national cryptography certificate.
+41: wotrus - enhanced national cryptography certificate (multiple domain names).
+42: trustasia - domain name type certificate (wildcard multiple domain names).
+43: DNSPod - enterprise (ov) ssl certificate.
+44: DNSPod - enterprise (ov) wildcard ssl certificate.
+45: DNSPod - enterprise (ov) multiple domain names ssl certificate.
+46: DNSPod - enhanced (ev) ssl certificate.
+47: DNSPod - enhanced (ev) multiple domain names ssl certificate.
+48: DNSPod - domain name-based (dv) ssl certificate.
+49: DNSPod - domain name-based (dv) wildcard ssl certificate.
+50: DNSPod - domain name-based (dv) multiple domain names ssl certificate.
+51: DNSPod (national cryptography) - enterprise (ov) ssl certificate.
+52: DNSPod (national cryptography) - enterprise (ov) wildcard ssl certificate.
+53: DNSPod (national cryptography) - enterprise (ov) multiple domain names ssl certificate.
+54: DNSPod (national cryptography) - domain name-based (dv) ssl certificate.
+55: DNSPod (national cryptography) - domain name-based (dv) wildcard ssl certificate.
+56: DNSPod (national cryptography) - domain name-based (dv) multiple domain names ssl certificate.
+57: securesite enterprise professional edition multiple domain names (ov pro).
+58: securesite enterprise multiple domain names (ov).
+59: securesite enhanced professional edition multiple domain names (ev pro).
+60: securesite enhanced multiple domain names (ev).
+61: geotrust enhanced multiple domain names (ev).
+75: securesite enterprise (ov).
+76: securesite enterprise (ov) wildcard.
+77: securesite enhanced (ev).
+78: geotrust enterprise (ov).
+79: geotrust enterprise wildcard (ov).
+80: geotrust enhanced (ev).
+81: globalsign enterprise (ov) ssl certificate.
+82: globalsign enterprise wildcard (ov) ssl certificate.
+83: trustasia c1 dv free.
+85: globalsign enhanced (ev) ssl certificate.
+88: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+89: globalsign enterprise multiple domain names (ov) ssl certificate.
+90: globalsign enhanced multiple domain names (ev) ssl certificate.
+91: geotrust enhanced multiple domain names (ev).
+92: securesite enterprise pro multiple domain names (ov pro).
+93: securesite enterprise multiple domain names (ov).
+94: securesite enhanced pro multiple domain names (ev pro).
+95: securesite enhanced multiple domain names (ev).
+96: securesite ev pro.
+97: securesite enterprise professional edition (ov pro).
+98: cfca enterprise (ov) ssl certificate.
+99: cfca enterprise ov ssl certificate for multiple domain names.
+100: cfca ov wildcard ssl certificate.
+101: cfca enhanced (ev) ssl certificate.
+                     * @return PackageType Certificate package type:.
+Null: user uploads a certificate (without package type),.
+2: trustasia tls rsa ca,. 
+3: securesite enhanced enterprise edition (ev pro),. 
+4: securesite enhanced (ev). 
+5: securesite enterprise professional edition (ov pro).
+6: securesite enterprise (ov). 
+7: securesite enterprise (ov) wildcard. 
+8: geotrust enhanced (ev). 
+9: geotrust enterprise (ov) cert. 
+10: geotrust enterprise (ov) wildcard cert. 
+11: trustasia domain name-based multiple domain names ssl certificate. 
+12: trustasia domain name-based (dv) wildcard cert. 
+13: trustasia enterprise wildcard (ov) ssl certificate (d3). 
+14: trustasia enterprise (ov) ssl certificate (d3). 
+15: trustasia enterprise multiple domain names (ov) ssl certificate (d3). 
+16: trustasia enhanced (ev) ssl certificate (d3). 
+17: trustasia enhanced multiple domain names (ev) ssl certificate (d3). 
+18: globalsign enterprise (ov) ssl certificate. 
+19: globalsign enterprise wildcard (ov) ssl certificate. 
+20: globalsign enhanced (ev) ssl certificate. 
+21: trustasia enterprise wildcard multiple domain names (ov) ssl certificate (d3). 
+22: globalsign enterprise multiple domain names (ov) ssl certificate. 
+23: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+24: globalsign enhanced multiple domain name (ev) ssl certificate.
+25: wotrus domain name cert.
+26: wotrus domain name multiple domain name cert.
+27: wotrus domain name wildcard cert.
+28: wotrus enterprise cert.
+29: wotrus enterprise multi - domain name certificate.
+30: wotrus enterprise wildcard certificate.
+31: wotrus enhanced certificate.
+32: wotrus enhanced multi - domain name certificate.
+33: wotrus - national cryptography domain - type certificate.
+34: wotrus-national cryptography domain certificate (multiple domain names).
+35: wotrus-national cryptography domain certificate (wildcard).
+37: wotrus-national cryptography enterprise certificate.
+38: wotrus-national cryptography enterprise certificate (multiple domain names).
+39: wotrus-national cryptography enterprise certificate (wildcard).
+40: wotrus - enhanced national cryptography certificate.
+41: wotrus - enhanced national cryptography certificate (multiple domain names).
+42: trustasia - domain name type certificate (wildcard multiple domain names).
+43: DNSPod - enterprise (ov) ssl certificate.
+44: DNSPod - enterprise (ov) wildcard ssl certificate.
+45: DNSPod - enterprise (ov) multiple domain names ssl certificate.
+46: DNSPod - enhanced (ev) ssl certificate.
+47: DNSPod - enhanced (ev) multiple domain names ssl certificate.
+48: DNSPod - domain name-based (dv) ssl certificate.
+49: DNSPod - domain name-based (dv) wildcard ssl certificate.
+50: DNSPod - domain name-based (dv) multiple domain names ssl certificate.
+51: DNSPod (national cryptography) - enterprise (ov) ssl certificate.
+52: DNSPod (national cryptography) - enterprise (ov) wildcard ssl certificate.
+53: DNSPod (national cryptography) - enterprise (ov) multiple domain names ssl certificate.
+54: DNSPod (national cryptography) - domain name-based (dv) ssl certificate.
+55: DNSPod (national cryptography) - domain name-based (dv) wildcard ssl certificate.
+56: DNSPod (national cryptography) - domain name-based (dv) multiple domain names ssl certificate.
+57: securesite enterprise professional edition multiple domain names (ov pro).
+58: securesite enterprise multiple domain names (ov).
+59: securesite enhanced professional edition multiple domain names (ev pro).
+60: securesite enhanced multiple domain names (ev).
+61: geotrust enhanced multiple domain names (ev).
+75: securesite enterprise (ov).
+76: securesite enterprise (ov) wildcard.
+77: securesite enhanced (ev).
+78: geotrust enterprise (ov).
+79: geotrust enterprise wildcard (ov).
+80: geotrust enhanced (ev).
+81: globalsign enterprise (ov) ssl certificate.
+82: globalsign enterprise wildcard (ov) ssl certificate.
+83: trustasia c1 dv free.
+85: globalsign enhanced (ev) ssl certificate.
+88: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+89: globalsign enterprise multiple domain names (ov) ssl certificate.
+90: globalsign enhanced multiple domain names (ev) ssl certificate.
+91: geotrust enhanced multiple domain names (ev).
+92: securesite enterprise pro multiple domain names (ov pro).
+93: securesite enterprise multiple domain names (ov).
+94: securesite enhanced pro multiple domain names (ev pro).
+95: securesite enhanced multiple domain names (ev).
+96: securesite ev pro.
+97: securesite enterprise professional edition (ov pro).
+98: cfca enterprise (ov) ssl certificate.
+99: cfca enterprise ov ssl certificate for multiple domain names.
+100: cfca ov wildcard ssl certificate.
+101: cfca enhanced (ev) ssl certificate.
                      * 
                      */
                     std::string GetPackageType() const;
 
                     /**
-                     * 设置The certificate plan type. Valid values:
-null: Certificates uploaded by users (no plan type)
-`1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _packageType The certificate plan type. Valid values:
-null: Certificates uploaded by users (no plan type)
-`1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Certificate package type:.
+Null: user uploads a certificate (without package type),.
+2: trustasia tls rsa ca,. 
+3: securesite enhanced enterprise edition (ev pro),. 
+4: securesite enhanced (ev). 
+5: securesite enterprise professional edition (ov pro).
+6: securesite enterprise (ov). 
+7: securesite enterprise (ov) wildcard. 
+8: geotrust enhanced (ev). 
+9: geotrust enterprise (ov) cert. 
+10: geotrust enterprise (ov) wildcard cert. 
+11: trustasia domain name-based multiple domain names ssl certificate. 
+12: trustasia domain name-based (dv) wildcard cert. 
+13: trustasia enterprise wildcard (ov) ssl certificate (d3). 
+14: trustasia enterprise (ov) ssl certificate (d3). 
+15: trustasia enterprise multiple domain names (ov) ssl certificate (d3). 
+16: trustasia enhanced (ev) ssl certificate (d3). 
+17: trustasia enhanced multiple domain names (ev) ssl certificate (d3). 
+18: globalsign enterprise (ov) ssl certificate. 
+19: globalsign enterprise wildcard (ov) ssl certificate. 
+20: globalsign enhanced (ev) ssl certificate. 
+21: trustasia enterprise wildcard multiple domain names (ov) ssl certificate (d3). 
+22: globalsign enterprise multiple domain names (ov) ssl certificate. 
+23: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+24: globalsign enhanced multiple domain name (ev) ssl certificate.
+25: wotrus domain name cert.
+26: wotrus domain name multiple domain name cert.
+27: wotrus domain name wildcard cert.
+28: wotrus enterprise cert.
+29: wotrus enterprise multi - domain name certificate.
+30: wotrus enterprise wildcard certificate.
+31: wotrus enhanced certificate.
+32: wotrus enhanced multi - domain name certificate.
+33: wotrus - national cryptography domain - type certificate.
+34: wotrus-national cryptography domain certificate (multiple domain names).
+35: wotrus-national cryptography domain certificate (wildcard).
+37: wotrus-national cryptography enterprise certificate.
+38: wotrus-national cryptography enterprise certificate (multiple domain names).
+39: wotrus-national cryptography enterprise certificate (wildcard).
+40: wotrus - enhanced national cryptography certificate.
+41: wotrus - enhanced national cryptography certificate (multiple domain names).
+42: trustasia - domain name type certificate (wildcard multiple domain names).
+43: DNSPod - enterprise (ov) ssl certificate.
+44: DNSPod - enterprise (ov) wildcard ssl certificate.
+45: DNSPod - enterprise (ov) multiple domain names ssl certificate.
+46: DNSPod - enhanced (ev) ssl certificate.
+47: DNSPod - enhanced (ev) multiple domain names ssl certificate.
+48: DNSPod - domain name-based (dv) ssl certificate.
+49: DNSPod - domain name-based (dv) wildcard ssl certificate.
+50: DNSPod - domain name-based (dv) multiple domain names ssl certificate.
+51: DNSPod (national cryptography) - enterprise (ov) ssl certificate.
+52: DNSPod (national cryptography) - enterprise (ov) wildcard ssl certificate.
+53: DNSPod (national cryptography) - enterprise (ov) multiple domain names ssl certificate.
+54: DNSPod (national cryptography) - domain name-based (dv) ssl certificate.
+55: DNSPod (national cryptography) - domain name-based (dv) wildcard ssl certificate.
+56: DNSPod (national cryptography) - domain name-based (dv) multiple domain names ssl certificate.
+57: securesite enterprise professional edition multiple domain names (ov pro).
+58: securesite enterprise multiple domain names (ov).
+59: securesite enhanced professional edition multiple domain names (ev pro).
+60: securesite enhanced multiple domain names (ev).
+61: geotrust enhanced multiple domain names (ev).
+75: securesite enterprise (ov).
+76: securesite enterprise (ov) wildcard.
+77: securesite enhanced (ev).
+78: geotrust enterprise (ov).
+79: geotrust enterprise wildcard (ov).
+80: geotrust enhanced (ev).
+81: globalsign enterprise (ov) ssl certificate.
+82: globalsign enterprise wildcard (ov) ssl certificate.
+83: trustasia c1 dv free.
+85: globalsign enhanced (ev) ssl certificate.
+88: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+89: globalsign enterprise multiple domain names (ov) ssl certificate.
+90: globalsign enhanced multiple domain names (ev) ssl certificate.
+91: geotrust enhanced multiple domain names (ev).
+92: securesite enterprise pro multiple domain names (ov pro).
+93: securesite enterprise multiple domain names (ov).
+94: securesite enhanced pro multiple domain names (ev pro).
+95: securesite enhanced multiple domain names (ev).
+96: securesite ev pro.
+97: securesite enterprise professional edition (ov pro).
+98: cfca enterprise (ov) ssl certificate.
+99: cfca enterprise ov ssl certificate for multiple domain names.
+100: cfca ov wildcard ssl certificate.
+101: cfca enhanced (ev) ssl certificate.
+                     * @param _packageType Certificate package type:.
+Null: user uploads a certificate (without package type),.
+2: trustasia tls rsa ca,. 
+3: securesite enhanced enterprise edition (ev pro),. 
+4: securesite enhanced (ev). 
+5: securesite enterprise professional edition (ov pro).
+6: securesite enterprise (ov). 
+7: securesite enterprise (ov) wildcard. 
+8: geotrust enhanced (ev). 
+9: geotrust enterprise (ov) cert. 
+10: geotrust enterprise (ov) wildcard cert. 
+11: trustasia domain name-based multiple domain names ssl certificate. 
+12: trustasia domain name-based (dv) wildcard cert. 
+13: trustasia enterprise wildcard (ov) ssl certificate (d3). 
+14: trustasia enterprise (ov) ssl certificate (d3). 
+15: trustasia enterprise multiple domain names (ov) ssl certificate (d3). 
+16: trustasia enhanced (ev) ssl certificate (d3). 
+17: trustasia enhanced multiple domain names (ev) ssl certificate (d3). 
+18: globalsign enterprise (ov) ssl certificate. 
+19: globalsign enterprise wildcard (ov) ssl certificate. 
+20: globalsign enhanced (ev) ssl certificate. 
+21: trustasia enterprise wildcard multiple domain names (ov) ssl certificate (d3). 
+22: globalsign enterprise multiple domain names (ov) ssl certificate. 
+23: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+24: globalsign enhanced multiple domain name (ev) ssl certificate.
+25: wotrus domain name cert.
+26: wotrus domain name multiple domain name cert.
+27: wotrus domain name wildcard cert.
+28: wotrus enterprise cert.
+29: wotrus enterprise multi - domain name certificate.
+30: wotrus enterprise wildcard certificate.
+31: wotrus enhanced certificate.
+32: wotrus enhanced multi - domain name certificate.
+33: wotrus - national cryptography domain - type certificate.
+34: wotrus-national cryptography domain certificate (multiple domain names).
+35: wotrus-national cryptography domain certificate (wildcard).
+37: wotrus-national cryptography enterprise certificate.
+38: wotrus-national cryptography enterprise certificate (multiple domain names).
+39: wotrus-national cryptography enterprise certificate (wildcard).
+40: wotrus - enhanced national cryptography certificate.
+41: wotrus - enhanced national cryptography certificate (multiple domain names).
+42: trustasia - domain name type certificate (wildcard multiple domain names).
+43: DNSPod - enterprise (ov) ssl certificate.
+44: DNSPod - enterprise (ov) wildcard ssl certificate.
+45: DNSPod - enterprise (ov) multiple domain names ssl certificate.
+46: DNSPod - enhanced (ev) ssl certificate.
+47: DNSPod - enhanced (ev) multiple domain names ssl certificate.
+48: DNSPod - domain name-based (dv) ssl certificate.
+49: DNSPod - domain name-based (dv) wildcard ssl certificate.
+50: DNSPod - domain name-based (dv) multiple domain names ssl certificate.
+51: DNSPod (national cryptography) - enterprise (ov) ssl certificate.
+52: DNSPod (national cryptography) - enterprise (ov) wildcard ssl certificate.
+53: DNSPod (national cryptography) - enterprise (ov) multiple domain names ssl certificate.
+54: DNSPod (national cryptography) - domain name-based (dv) ssl certificate.
+55: DNSPod (national cryptography) - domain name-based (dv) wildcard ssl certificate.
+56: DNSPod (national cryptography) - domain name-based (dv) multiple domain names ssl certificate.
+57: securesite enterprise professional edition multiple domain names (ov pro).
+58: securesite enterprise multiple domain names (ov).
+59: securesite enhanced professional edition multiple domain names (ev pro).
+60: securesite enhanced multiple domain names (ev).
+61: geotrust enhanced multiple domain names (ev).
+75: securesite enterprise (ov).
+76: securesite enterprise (ov) wildcard.
+77: securesite enhanced (ev).
+78: geotrust enterprise (ov).
+79: geotrust enterprise wildcard (ov).
+80: geotrust enhanced (ev).
+81: globalsign enterprise (ov) ssl certificate.
+82: globalsign enterprise wildcard (ov) ssl certificate.
+83: trustasia c1 dv free.
+85: globalsign enhanced (ev) ssl certificate.
+88: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+89: globalsign enterprise multiple domain names (ov) ssl certificate.
+90: globalsign enhanced multiple domain names (ev) ssl certificate.
+91: geotrust enhanced multiple domain names (ev).
+92: securesite enterprise pro multiple domain names (ov pro).
+93: securesite enterprise multiple domain names (ov).
+94: securesite enhanced pro multiple domain names (ev pro).
+95: securesite enhanced multiple domain names (ev).
+96: securesite ev pro.
+97: securesite enterprise professional edition (ov pro).
+98: cfca enterprise (ov) ssl certificate.
+99: cfca enterprise ov ssl certificate for multiple domain names.
+100: cfca ov wildcard ssl certificate.
+101: cfca enhanced (ev) ssl certificate.
                      * 
                      */
                     void SetPackageType(const std::string& _packageType);
@@ -160,19 +489,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PackageTypeHasBeenSet() const;
 
                     /**
-                     * 获取Certificate type. `CA`: client certificate; `SVR`: server certificate
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CertificateType Certificate type. `CA`: client certificate; `SVR`: server certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Certificate type. ca = client certificate; svr = server certificate.
+                     * @return CertificateType Certificate type. ca = client certificate; svr = server certificate.
                      * 
                      */
                     std::string GetCertificateType() const;
 
                     /**
-                     * 设置Certificate type. `CA`: client certificate; `SVR`: server certificate
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _certificateType Certificate type. `CA`: client certificate; `SVR`: server certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Certificate type. ca = client certificate; svr = server certificate.
+                     * @param _certificateType Certificate type. ca = client certificate; svr = server certificate.
                      * 
                      */
                     void SetCertificateType(const std::string& _certificateType);
@@ -185,19 +510,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CertificateTypeHasBeenSet() const;
 
                     /**
-                     * 获取Issuer
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ProductZhName Issuer
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Certificate product name.
+                     * @return ProductZhName Certificate product name.
                      * 
                      */
                     std::string GetProductZhName() const;
 
                     /**
-                     * 设置Issuer
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _productZhName Issuer
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Certificate product name.
+                     * @param _productZhName Certificate product name.
                      * 
                      */
                     void SetProductZhName(const std::string& _productZhName);
@@ -210,19 +531,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ProductZhNameHasBeenSet() const;
 
                     /**
-                     * 获取Primary domain name
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Domain Primary domain name
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Primary domain name.
+                     * @return Domain Primary domain name.
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置Primary domain name
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _domain Primary domain name
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Primary domain name.
+                     * @param _domain Primary domain name.
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -235,19 +552,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取Alias
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Alias Alias
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Remark name.
+                     * @return Alias Remark name.
                      * 
                      */
                     std::string GetAlias() const;
 
                     /**
-                     * 设置Alias
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _alias Alias
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Remark name.
+                     * @param _alias Remark name.
                      * 
                      */
                     void SetAlias(const std::string& _alias);
@@ -260,19 +573,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AliasHasBeenSet() const;
 
                     /**
-                     * 获取Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Certificate status: 0 = under review, 1 = approved, 2 = review failed, 3 = expired, 4 = dns record added automatically, 5 = enterprise certificate, pending documentation submission, 6 = order cancellation in progress, 7 = canceled, 8 = documents submitted, pending upload of confirmation letter, 9 = certificate revocation in progress, 10 = revoked, 11 = reissue in progress, 12 = pending upload of revocation confirmation letter, 13 = free certificate pending documentation submission, 14 = certificate refunded, 15 = certificate migration in progress.
+                     * @return Status Certificate status: 0 = under review, 1 = approved, 2 = review failed, 3 = expired, 4 = dns record added automatically, 5 = enterprise certificate, pending documentation submission, 6 = order cancellation in progress, 7 = canceled, 8 = documents submitted, pending upload of confirmation letter, 9 = certificate revocation in progress, 10 = revoked, 11 = reissue in progress, 12 = pending upload of revocation confirmation letter, 13 = free certificate pending documentation submission, 14 = certificate refunded, 15 = certificate migration in progress.
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Certificate status: 0 = under review, 1 = approved, 2 = review failed, 3 = expired, 4 = dns record added automatically, 5 = enterprise certificate, pending documentation submission, 6 = order cancellation in progress, 7 = canceled, 8 = documents submitted, pending upload of confirmation letter, 9 = certificate revocation in progress, 10 = revoked, 11 = reissue in progress, 12 = pending upload of revocation confirmation letter, 13 = free certificate pending documentation submission, 14 = certificate refunded, 15 = certificate migration in progress.
+                     * @param _status Certificate status: 0 = under review, 1 = approved, 2 = review failed, 3 = expired, 4 = dns record added automatically, 5 = enterprise certificate, pending documentation submission, 6 = order cancellation in progress, 7 = canceled, 8 = documents submitted, pending upload of confirmation letter, 9 = certificate revocation in progress, 10 = revoked, 11 = reissue in progress, 12 = pending upload of revocation confirmation letter, 13 = free certificate pending documentation submission, 14 = certificate refunded, 15 = certificate migration in progress.
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -285,19 +594,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Extended information of the certificate
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CertificateExtra Extended information of the certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Certificate extended information.
+                     * @return CertificateExtra Certificate extended information.
                      * 
                      */
                     CertificateExtra GetCertificateExtra() const;
 
                     /**
-                     * 设置Extended information of the certificate
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _certificateExtra Extended information of the certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Certificate extended information.
+                     * @param _certificateExtra Certificate extended information.
                      * 
                      */
                     void SetCertificateExtra(const CertificateExtra& _certificateExtra);
@@ -310,19 +615,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CertificateExtraHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability scanning status. `INACTIVE`: not activated; `ACTIVE`: activated
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return VulnerabilityStatus Vulnerability scanning status. `INACTIVE`: not activated; `ACTIVE`: activated
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Vulnerability scanning status: INACTIVE = not enabled, ACTIVE = enabled.
+                     * @return VulnerabilityStatus Vulnerability scanning status: INACTIVE = not enabled, ACTIVE = enabled.
                      * 
                      */
                     std::string GetVulnerabilityStatus() const;
 
                     /**
-                     * 设置Vulnerability scanning status. `INACTIVE`: not activated; `ACTIVE`: activated
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _vulnerabilityStatus Vulnerability scanning status. `INACTIVE`: not activated; `ACTIVE`: activated
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Vulnerability scanning status: INACTIVE = not enabled, ACTIVE = enabled.
+                     * @param _vulnerabilityStatus Vulnerability scanning status: INACTIVE = not enabled, ACTIVE = enabled.
                      * 
                      */
                     void SetVulnerabilityStatus(const std::string& _vulnerabilityStatus);
@@ -335,19 +636,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool VulnerabilityStatusHasBeenSet() const;
 
                     /**
-                     * 获取Status information
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return StatusMsg Status information
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Status information.
+                     * @return StatusMsg Status information.
                      * 
                      */
                     std::string GetStatusMsg() const;
 
                     /**
-                     * 设置Status information
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _statusMsg Status information
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Status information.
+                     * @param _statusMsg Status information.
                      * 
                      */
                     void SetStatusMsg(const std::string& _statusMsg);
@@ -360,19 +657,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool StatusMsgHasBeenSet() const;
 
                     /**
-                     * 获取Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return VerifyType Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Validation type: DNS_AUTO = automatic dns validation, DNS = manual dns validation, FILE = file verification, DNS_PROXY = dns proxy validation, FILE_PROXY = file proxy verification.
+                     * @return VerifyType Validation type: DNS_AUTO = automatic dns validation, DNS = manual dns validation, FILE = file verification, DNS_PROXY = dns proxy validation, FILE_PROXY = file proxy verification.
                      * 
                      */
                     std::string GetVerifyType() const;
 
                     /**
-                     * 设置Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _verifyType Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Validation type: DNS_AUTO = automatic dns validation, DNS = manual dns validation, FILE = file verification, DNS_PROXY = dns proxy validation, FILE_PROXY = file proxy verification.
+                     * @param _verifyType Validation type: DNS_AUTO = automatic dns validation, DNS = manual dns validation, FILE = file verification, DNS_PROXY = dns proxy validation, FILE_PROXY = file proxy verification.
                      * 
                      */
                     void SetVerifyType(const std::string& _verifyType);
@@ -385,19 +678,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool VerifyTypeHasBeenSet() const;
 
                     /**
-                     * 获取Time when the certificate takes effect
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CertBeginTime Time when the certificate takes effect
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Certificate validation time.
+                     * @return CertBeginTime Certificate validation time.
                      * 
                      */
                     std::string GetCertBeginTime() const;
 
                     /**
-                     * 设置Time when the certificate takes effect
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _certBeginTime Time when the certificate takes effect
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Certificate validation time.
+                     * @param _certBeginTime Certificate validation time.
                      * 
                      */
                     void SetCertBeginTime(const std::string& _certBeginTime);
@@ -410,19 +699,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CertBeginTimeHasBeenSet() const;
 
                     /**
-                     * 获取Time when the certificate expires
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CertEndTime Time when the certificate expires
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Certificate expiration time.
+                     * @return CertEndTime Certificate expiration time.
                      * 
                      */
                     std::string GetCertEndTime() const;
 
                     /**
-                     * 设置Time when the certificate expires
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _certEndTime Time when the certificate expires
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Certificate expiration time.
+                     * @param _certEndTime Certificate expiration time.
                      * 
                      */
                     void SetCertEndTime(const std::string& _certEndTime);
@@ -435,19 +720,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CertEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Validity period of the certificate, in months
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ValidityPeriod Validity period of the certificate, in months
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Certificate validity period (month).
+                     * @return ValidityPeriod Certificate validity period (month).
                      * 
                      */
                     std::string GetValidityPeriod() const;
 
                     /**
-                     * 设置Validity period of the certificate, in months
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _validityPeriod Validity period of the certificate, in months
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Certificate validity period (month).
+                     * @param _validityPeriod Certificate validity period (month).
                      * 
                      */
                     void SetValidityPeriod(const std::string& _validityPeriod);
@@ -460,19 +741,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ValidityPeriodHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return InsertTime Creation time
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Creation time.
+                     * @return InsertTime Creation time.
                      * 
                      */
                     std::string GetInsertTime() const;
 
                     /**
-                     * 设置Creation time
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _insertTime Creation time
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Creation time.
+                     * @param _insertTime Creation time.
                      * 
                      */
                     void SetInsertTime(const std::string& _insertTime);
@@ -485,19 +762,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool InsertTimeHasBeenSet() const;
 
                     /**
-                     * 获取Certificate ID
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CertificateId Certificate ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Certificate id.
+                     * @return CertificateId Certificate id.
                      * 
                      */
                     std::string GetCertificateId() const;
 
                     /**
-                     * 设置Certificate ID
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _certificateId Certificate ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Certificate id.
+                     * @param _certificateId Certificate id.
                      * 
                      */
                     void SetCertificateId(const std::string& _certificateId);
@@ -510,19 +783,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CertificateIdHasBeenSet() const;
 
                     /**
-                     * 获取Domain names associated with the certificate (including the primary domain name)
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SubjectAltName Domain names associated with the certificate (including the primary domain name)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Multiple domain names contained in the certificate (including the primary domain name).
+                     * @return SubjectAltName Multiple domain names contained in the certificate (including the primary domain name).
                      * 
                      */
                     std::vector<std::string> GetSubjectAltName() const;
 
                     /**
-                     * 设置Domain names associated with the certificate (including the primary domain name)
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _subjectAltName Domain names associated with the certificate (including the primary domain name)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Multiple domain names contained in the certificate (including the primary domain name).
+                     * @param _subjectAltName Multiple domain names contained in the certificate (including the primary domain name).
                      * 
                      */
                     void SetSubjectAltName(const std::vector<std::string>& _subjectAltName);
@@ -535,19 +804,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SubjectAltNameHasBeenSet() const;
 
                     /**
-                     * 获取Certificate type name
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PackageTypeName Certificate type name
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Certificate type name.
+                     * @return PackageTypeName Certificate type name.
                      * 
                      */
                     std::string GetPackageTypeName() const;
 
                     /**
-                     * 设置Certificate type name
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _packageTypeName Certificate type name
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Certificate type name.
+                     * @param _packageTypeName Certificate type name.
                      * 
                      */
                     void SetPackageTypeName(const std::string& _packageTypeName);
@@ -560,19 +825,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PackageTypeNameHasBeenSet() const;
 
                     /**
-                     * 获取Status description
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return StatusName Status description
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Status name.
+                     * @return StatusName Status name.
                      * 
                      */
                     std::string GetStatusName() const;
 
                     /**
-                     * 设置Status description
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _statusName Status description
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Status name.
+                     * @param _statusName Status name.
                      * 
                      */
                     void SetStatusName(const std::string& _statusName);
@@ -585,19 +846,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool StatusNameHasBeenSet() const;
 
                     /**
-                     * 获取Whether the customer is a VIP customer
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return IsVip Whether the customer is a VIP customer
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies whether the customer is a vip customer. true indicates yes and false indicates no.
+                     * @return IsVip Specifies whether the customer is a vip customer. true indicates yes and false indicates no.
                      * 
                      */
                     bool GetIsVip() const;
 
                     /**
-                     * 设置Whether the customer is a VIP customer
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _isVip Whether the customer is a VIP customer
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies whether the customer is a vip customer. true indicates yes and false indicates no.
+                     * @param _isVip Specifies whether the customer is a vip customer. true indicates yes and false indicates no.
                      * 
                      */
                     void SetIsVip(const bool& _isVip);
@@ -610,19 +867,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IsVipHasBeenSet() const;
 
                     /**
-                     * 获取Whether the certificate is a DV certificate
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return IsDv Whether the certificate is a DV certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies whether it is a dv version certificate. true indicates yes and false indicates no.
+                     * @return IsDv Specifies whether it is a dv version certificate. true indicates yes and false indicates no.
                      * 
                      */
                     bool GetIsDv() const;
 
                     /**
-                     * 设置Whether the certificate is a DV certificate
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _isDv Whether the certificate is a DV certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies whether it is a dv version certificate. true indicates yes and false indicates no.
+                     * @param _isDv Specifies whether it is a dv version certificate. true indicates yes and false indicates no.
                      * 
                      */
                     void SetIsDv(const bool& _isDv);
@@ -635,19 +888,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IsDvHasBeenSet() const;
 
                     /**
-                     * 获取Whether the certificate is a wildcard certificate
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return IsWildcard Whether the certificate is a wildcard certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies whether it is a wildcard domain name certificate. true indicates yes and false indicates no.
+                     * @return IsWildcard Specifies whether it is a wildcard domain name certificate. true indicates yes and false indicates no.
                      * 
                      */
                     bool GetIsWildcard() const;
 
                     /**
-                     * 设置Whether the certificate is a wildcard certificate
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _isWildcard Whether the certificate is a wildcard certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies whether it is a wildcard domain name certificate. true indicates yes and false indicates no.
+                     * @param _isWildcard Specifies whether it is a wildcard domain name certificate. true indicates yes and false indicates no.
                      * 
                      */
                     void SetIsWildcard(const bool& _isWildcard);
@@ -660,19 +909,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IsWildcardHasBeenSet() const;
 
                     /**
-                     * 获取Whether the vulnerability scanning feature is enabled
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return IsVulnerability Whether the vulnerability scanning feature is enabled
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether the vulnerability scanning feature is enabled.
+                     * @return IsVulnerability Whether the vulnerability scanning feature is enabled.
                      * 
                      */
                     bool GetIsVulnerability() const;
 
                     /**
-                     * 设置Whether the vulnerability scanning feature is enabled
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _isVulnerability Whether the vulnerability scanning feature is enabled
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether the vulnerability scanning feature is enabled.
+                     * @param _isVulnerability Whether the vulnerability scanning feature is enabled.
                      * 
                      */
                     void SetIsVulnerability(const bool& _isVulnerability);
@@ -685,19 +930,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IsVulnerabilityHasBeenSet() const;
 
                     /**
-                     * 获取Whether it can be renewed 
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return RenewAble Whether it can be renewed 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Whether it is renewable.
+                     * @return RenewAble Whether it is renewable.
                      * 
                      */
                     bool GetRenewAble() const;
 
                     /**
-                     * 设置Whether it can be renewed 
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _renewAble Whether it can be renewed 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Whether it is renewable.
+                     * @param _renewAble Whether it is renewable.
                      * 
                      */
                     void SetRenewAble(const bool& _renewAble);
@@ -710,19 +951,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool RenewAbleHasBeenSet() const;
 
                     /**
-                     * 获取Project information
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ProjectInfo Project information
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Project information.
+                     * @return ProjectInfo Project information.
                      * 
                      */
                     ProjectInfo GetProjectInfo() const;
 
                     /**
-                     * 设置Project information
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _projectInfo Project information
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Project information.
+                     * @param _projectInfo Project information.
                      * 
                      */
                     void SetProjectInfo(const ProjectInfo& _projectInfo);
@@ -735,19 +972,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ProjectInfoHasBeenSet() const;
 
                     /**
-                     * 获取Associated Tencent Cloud services. Currently, this parameter is unavailable.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return BoundResource Associated Tencent Cloud services. Currently, this parameter is unavailable.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Associated cloud resources are temporarily unavailable.
+                     * @return BoundResource Associated cloud resources are temporarily unavailable.
                      * 
                      */
                     std::vector<std::string> GetBoundResource() const;
 
                     /**
-                     * 设置Associated Tencent Cloud services. Currently, this parameter is unavailable.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _boundResource Associated Tencent Cloud services. Currently, this parameter is unavailable.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Associated cloud resources are temporarily unavailable.
+                     * @param _boundResource Associated cloud resources are temporarily unavailable.
                      * 
                      */
                     void SetBoundResource(const std::vector<std::string>& _boundResource);
@@ -760,19 +993,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool BoundResourceHasBeenSet() const;
 
                     /**
-                     * 获取Whether the certificate can be deployed
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Deployable Whether the certificate can be deployed
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether it can be deployed.
+                     * @return Deployable Whether it can be deployed.
                      * 
                      */
                     bool GetDeployable() const;
 
                     /**
-                     * 设置Whether the certificate can be deployed
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _deployable Whether the certificate can be deployed
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether it can be deployed.
+                     * @param _deployable Whether it can be deployed.
                      * 
                      */
                     void SetDeployable(const bool& _deployable);
@@ -785,19 +1014,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DeployableHasBeenSet() const;
 
                     /**
-                     * 获取List of tags
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Tags List of tags
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Tag list.
+                     * @return Tags Tag list.
                      * 
                      */
                     std::vector<Tags> GetTags() const;
 
                     /**
-                     * 设置List of tags
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _tags List of tags
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Tag list.
+                     * @param _tags Tag list.
                      * 
                      */
                     void SetTags(const std::vector<Tags>& _tags);
@@ -810,19 +1035,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Whether the expiration notification was ignored
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsIgnore Whether the expiration notification was ignored
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether expiration notice has been ignored.
+                     * @return IsIgnore Whether expiration notice has been ignored.
                      * 
                      */
                     bool GetIsIgnore() const;
 
                     /**
-                     * 设置Whether the expiration notification was ignored
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isIgnore Whether the expiration notification was ignored
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether expiration notice has been ignored.
+                     * @param _isIgnore Whether expiration notice has been ignored.
                      * 
                      */
                     void SetIsIgnore(const bool& _isIgnore);
@@ -835,19 +1056,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsIgnoreHasBeenSet() const;
 
                     /**
-                     * 获取Whether the certificate is a Chinese SM certificate
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsSM Whether the certificate is a Chinese SM certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether it is a China SM certificate.
+                     * @return IsSM Whether it is a China SM certificate.
                      * 
                      */
                     bool GetIsSM() const;
 
                     /**
-                     * 设置Whether the certificate is a Chinese SM certificate
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isSM Whether the certificate is a Chinese SM certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether it is a China SM certificate.
+                     * @param _isSM Whether it is a China SM certificate.
                      * 
                      */
                     void SetIsSM(const bool& _isSM);
@@ -860,19 +1077,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsSMHasBeenSet() const;
 
                     /**
-                     * 获取Certificate algorithm
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EncryptAlgorithm Certificate algorithm
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Certificate algorithm.
+                     * @return EncryptAlgorithm Certificate algorithm.
                      * 
                      */
                     std::string GetEncryptAlgorithm() const;
 
                     /**
-                     * 设置Certificate algorithm
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _encryptAlgorithm Certificate algorithm
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Certificate algorithm.
+                     * @param _encryptAlgorithm Certificate algorithm.
                      * 
                      */
                     void SetEncryptAlgorithm(const std::string& _encryptAlgorithm);
@@ -885,19 +1098,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EncryptAlgorithmHasBeenSet() const;
 
                     /**
-                     * 获取Encryption algorithm of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CAEncryptAlgorithms Encryption algorithm of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Encryption algorithm for upload ca certificate.
+                     * @return CAEncryptAlgorithms Encryption algorithm for upload ca certificate.
                      * 
                      */
                     std::vector<std::string> GetCAEncryptAlgorithms() const;
 
                     /**
-                     * 设置Encryption algorithm of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cAEncryptAlgorithms Encryption algorithm of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Encryption algorithm for upload ca certificate.
+                     * @param _cAEncryptAlgorithms Encryption algorithm for upload ca certificate.
                      * 
                      */
                     void SetCAEncryptAlgorithms(const std::vector<std::string>& _cAEncryptAlgorithms);
@@ -910,19 +1119,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CAEncryptAlgorithmsHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CAEndTimes Expiration time of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Expiration time for upload ca certificate.
+                     * @return CAEndTimes Expiration time for upload ca certificate.
                      * 
                      */
                     std::vector<std::string> GetCAEndTimes() const;
 
                     /**
-                     * 设置Expiration time of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cAEndTimes Expiration time of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Expiration time for upload ca certificate.
+                     * @param _cAEndTimes Expiration time for upload ca certificate.
                      * 
                      */
                     void SetCAEndTimes(const std::vector<std::string>& _cAEndTimes);
@@ -935,19 +1140,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CAEndTimesHasBeenSet() const;
 
                     /**
-                     * 获取Generic name of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CACommonNames Generic name of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Common name of the upload ca certificate.
+                     * @return CACommonNames Common name of the upload ca certificate.
                      * 
                      */
                     std::vector<std::string> GetCACommonNames() const;
 
                     /**
-                     * 设置Generic name of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cACommonNames Generic name of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Common name of the upload ca certificate.
+                     * @param _cACommonNames Common name of the upload ca certificate.
                      * 
                      */
                     void SetCACommonNames(const std::vector<std::string>& _cACommonNames);
@@ -960,19 +1161,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CACommonNamesHasBeenSet() const;
 
                     /**
-                     * 获取Prereview information of the certificate
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PreAuditInfo Prereview information of the certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Certificate prereview information.
+                     * @return PreAuditInfo Certificate prereview information.
                      * 
                      */
                     PreAuditInfo GetPreAuditInfo() const;
 
                     /**
-                     * 设置Prereview information of the certificate
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _preAuditInfo Prereview information of the certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Certificate prereview information.
+                     * @param _preAuditInfo Certificate prereview information.
                      * 
                      */
                     void SetPreAuditInfo(const PreAuditInfo& _preAuditInfo);
@@ -985,19 +1182,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PreAuditInfoHasBeenSet() const;
 
                     /**
-                     * 获取Whether auto-renewal is enabled.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return AutoRenewFlag Whether auto-renewal is enabled.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Whether to auto-renew.
+                     * @return AutoRenewFlag Whether to auto-renew.
                      * 
                      */
                     int64_t GetAutoRenewFlag() const;
 
                     /**
-                     * 设置Whether auto-renewal is enabled.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _autoRenewFlag Whether auto-renewal is enabled.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Whether to auto-renew.
+                     * @param _autoRenewFlag Whether to auto-renew.
                      * 
                      */
                     void SetAutoRenewFlag(const int64_t& _autoRenewFlag);
@@ -1010,19 +1203,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool AutoRenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取The hosting status. Valid values: `0` (hosting), `5` (replacing resources), `10` (hosting completed), and `-1` (not hosted). 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HostingStatus The hosting status. Valid values: `0` (hosting), `5` (replacing resources), `10` (hosting completed), and `-1` (not hosted). 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Hosting status: 0, hosting; 5, resource replacement; 10, hosting completed; -1, not hosted. 
+                     * @return HostingStatus Hosting status: 0, hosting; 5, resource replacement; 10, hosting completed; -1, not hosted. 
                      * 
                      */
                     int64_t GetHostingStatus() const;
 
                     /**
-                     * 设置The hosting status. Valid values: `0` (hosting), `5` (replacing resources), `10` (hosting completed), and `-1` (not hosted). 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hostingStatus The hosting status. Valid values: `0` (hosting), `5` (replacing resources), `10` (hosting completed), and `-1` (not hosted). 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Hosting status: 0, hosting; 5, resource replacement; 10, hosting completed; -1, not hosted. 
+                     * @param _hostingStatus Hosting status: 0, hosting; 5, resource replacement; 10, hosting completed; -1, not hosted. 
                      * 
                      */
                     void SetHostingStatus(const int64_t& _hostingStatus);
@@ -1035,19 +1224,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HostingStatusHasBeenSet() const;
 
                     /**
-                     * 获取The hosting completion time.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HostingCompleteTime The hosting completion time.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Hosting completion time.
+                     * @return HostingCompleteTime Hosting completion time.
                      * 
                      */
                     std::string GetHostingCompleteTime() const;
 
                     /**
-                     * 设置The hosting completion time.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hostingCompleteTime The hosting completion time.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Hosting completion time.
+                     * @param _hostingCompleteTime Hosting completion time.
                      * 
                      */
                     void SetHostingCompleteTime(const std::string& _hostingCompleteTime);
@@ -1060,19 +1245,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HostingCompleteTimeHasBeenSet() const;
 
                     /**
-                     * 获取The hosted new certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HostingRenewCertId The hosted new certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Manage the new certificate id.
+                     * @return HostingRenewCertId Manage the new certificate id.
                      * 
                      */
                     std::string GetHostingRenewCertId() const;
 
                     /**
-                     * 设置The hosted new certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hostingRenewCertId The hosted new certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Manage the new certificate id.
+                     * @param _hostingRenewCertId Manage the new certificate id.
                      * 
                      */
                     void SetHostingRenewCertId(const std::string& _hostingRenewCertId);
@@ -1085,19 +1266,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HostingRenewCertIdHasBeenSet() const;
 
                     /**
-                     * 获取Existing renewed certificate ID
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return HasRenewOrder Existing renewed certificate ID
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Existing renewal certificate id.
+                     * @return HasRenewOrder Existing renewal certificate id.
                      * 
                      */
                     std::string GetHasRenewOrder() const;
 
                     /**
-                     * 设置Existing renewed certificate ID
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _hasRenewOrder Existing renewed certificate ID
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Existing renewal certificate id.
+                     * @param _hasRenewOrder Existing renewal certificate id.
                      * 
                      */
                     void SetHasRenewOrder(const std::string& _hasRenewOrder);
@@ -1110,19 +1287,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool HasRenewOrderHasBeenSet() const;
 
                     /**
-                     * 获取Whether the original certificate is deleted when a certificate is reissued.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return ReplaceOriCertIsDelete Whether the original certificate is deleted when a certificate is reissued.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Indicates whether the original certificate is deleted during reissue.
+                     * @return ReplaceOriCertIsDelete Indicates whether the original certificate is deleted during reissue.
                      * 
                      */
                     bool GetReplaceOriCertIsDelete() const;
 
                     /**
-                     * 设置Whether the original certificate is deleted when a certificate is reissued.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _replaceOriCertIsDelete Whether the original certificate is deleted when a certificate is reissued.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Indicates whether the original certificate is deleted during reissue.
+                     * @param _replaceOriCertIsDelete Indicates whether the original certificate is deleted during reissue.
                      * 
                      */
                     void SetReplaceOriCertIsDelete(const bool& _replaceOriCertIsDelete);
@@ -1135,19 +1308,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ReplaceOriCertIsDeleteHasBeenSet() const;
 
                     /**
-                     * 获取Whether the certificate is expiring soon. A certificate is considered to be expiring soon when there are 30 days or less left.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return IsExpiring Whether the certificate is expiring soon. A certificate is considered to be expiring soon when there are 30 days or less left.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Indicates whether it is about to expire. a certificate is about to expire if it will expire within 30 days.
+                     * @return IsExpiring Indicates whether it is about to expire. a certificate is about to expire if it will expire within 30 days.
                      * 
                      */
                     bool GetIsExpiring() const;
 
                     /**
-                     * 设置Whether the certificate is expiring soon. A certificate is considered to be expiring soon when there are 30 days or less left.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _isExpiring Whether the certificate is expiring soon. A certificate is considered to be expiring soon when there are 30 days or less left.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Indicates whether it is about to expire. a certificate is about to expire if it will expire within 30 days.
+                     * @param _isExpiring Indicates whether it is about to expire. a certificate is about to expire if it will expire within 30 days.
                      * 
                      */
                     void SetIsExpiring(const bool& _isExpiring);
@@ -1160,19 +1329,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool IsExpiringHasBeenSet() const;
 
                     /**
-                     * 获取Validation expiration time for the addition of the DV certificate
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return DVAuthDeadline Validation expiration time for the addition of the DV certificate
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Add validation expiration date for DV certificate
+                     * @return DVAuthDeadline Add validation expiration date for DV certificate
                      * 
                      */
                     std::string GetDVAuthDeadline() const;
 
                     /**
-                     * 设置Validation expiration time for the addition of the DV certificate
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _dVAuthDeadline Validation expiration time for the addition of the DV certificate
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Add validation expiration date for DV certificate
+                     * @param _dVAuthDeadline Add validation expiration date for DV certificate
                      * 
                      */
                     void SetDVAuthDeadline(const std::string& _dVAuthDeadline);
@@ -1185,19 +1350,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool DVAuthDeadlineHasBeenSet() const;
 
                     /**
-                     * 获取Domain name validation pass time
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return ValidationPassedTime Domain name validation pass time
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Domain verification passed time.
+                     * @return ValidationPassedTime Domain verification passed time.
                      * 
                      */
                     std::string GetValidationPassedTime() const;
 
                     /**
-                     * 设置Domain name validation pass time
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _validationPassedTime Domain name validation pass time
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Domain verification passed time.
+                     * @param _validationPassedTime Domain verification passed time.
                      * 
                      */
                     void SetValidationPassedTime(const std::string& _validationPassedTime);
@@ -1210,19 +1371,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ValidationPassedTimeHasBeenSet() const;
 
                     /**
-                     * 获取Multiple domain names with which the certificate is associated
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return CertSANs Multiple domain names with which the certificate is associated
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Multiple domain names associated with the certificate.
+                     * @return CertSANs Multiple domain names associated with the certificate.
                      * 
                      */
                     std::vector<std::string> GetCertSANs() const;
 
                     /**
-                     * 设置Multiple domain names with which the certificate is associated
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _certSANs Multiple domain names with which the certificate is associated
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Multiple domain names associated with the certificate.
+                     * @param _certSANs Multiple domain names associated with the certificate.
                      * 
                      */
                     void SetCertSANs(const std::vector<std::string>& _certSANs);
@@ -1235,19 +1392,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool CertSANsHasBeenSet() const;
 
                     /**
-                     * 获取Domain name validation rejection information
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return AwaitingValidationMsg Domain name validation rejection information
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Domain verification rejection information.
+                     * @return AwaitingValidationMsg Domain verification rejection information.
                      * 
                      */
                     std::string GetAwaitingValidationMsg() const;
 
                     /**
-                     * 设置Domain name validation rejection information
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _awaitingValidationMsg Domain name validation rejection information
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Domain verification rejection information.
+                     * @param _awaitingValidationMsg Domain verification rejection information.
                      * 
                      */
                     void SetAwaitingValidationMsg(const std::string& _awaitingValidationMsg);
@@ -1260,19 +1413,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool AwaitingValidationMsgHasBeenSet() const;
 
                     /**
-                     * 获取Whether downloading is allowed
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return AllowDownload Whether downloading is allowed
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Whether to allow downloading.
+                     * @return AllowDownload Whether to allow downloading.
                      * 
                      */
                     bool GetAllowDownload() const;
 
                     /**
-                     * 设置Whether downloading is allowed
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _allowDownload Whether downloading is allowed
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Whether to allow downloading.
+                     * @param _allowDownload Whether to allow downloading.
                      * 
                      */
                     void SetAllowDownload(const bool& _allowDownload);
@@ -1285,15 +1434,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool AllowDownloadHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IsDNSPODResolve 
+                     * 获取Whether all certificate domain names are managed and resolved by dnspod.
+                     * @return IsDNSPODResolve Whether all certificate domain names are managed and resolved by dnspod.
                      * 
                      */
                     bool GetIsDNSPODResolve() const;
 
                     /**
-                     * 设置
-                     * @param _isDNSPODResolve 
+                     * 设置Whether all certificate domain names are managed and resolved by dnspod.
+                     * @param _isDNSPODResolve Whether all certificate domain names are managed and resolved by dnspod.
                      * 
                      */
                     void SetIsDNSPODResolve(const bool& _isDNSPODResolve);
@@ -1306,15 +1455,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool IsDNSPODResolveHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IsPackage 
+                     * 获取Whether the certificate is purchased with benefit points.
+                     * @return IsPackage Whether the certificate is purchased with benefit points.
                      * 
                      */
                     bool GetIsPackage() const;
 
                     /**
-                     * 设置
-                     * @param _isPackage 
+                     * 设置Whether the certificate is purchased with benefit points.
+                     * @param _isPackage Whether the certificate is purchased with benefit points.
                      * 
                      */
                     void SetIsPackage(const bool& _isPackage);
@@ -1327,15 +1476,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool IsPackageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return KeyPasswordCustomFlag 
+                     * 获取Whether there is a private key password.
+                     * @return KeyPasswordCustomFlag Whether there is a private key password.
                      * 
                      */
                     bool GetKeyPasswordCustomFlag() const;
 
                     /**
-                     * 设置
-                     * @param _keyPasswordCustomFlag 
+                     * 设置Whether there is a private key password.
+                     * @param _keyPasswordCustomFlag Whether there is a private key password.
                      * 
                      */
                     void SetKeyPasswordCustomFlag(const bool& _keyPasswordCustomFlag);
@@ -1348,15 +1497,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool KeyPasswordCustomFlagHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SupportDownloadType 
+                     * 获取Types of web servers supported for download: nginx, apache, iis, tomcat, jks, root, other.
+                     * @return SupportDownloadType Types of web servers supported for download: nginx, apache, iis, tomcat, jks, root, other.
                      * 
                      */
                     SupportDownloadType GetSupportDownloadType() const;
 
                     /**
-                     * 设置
-                     * @param _supportDownloadType 
+                     * 设置Types of web servers supported for download: nginx, apache, iis, tomcat, jks, root, other.
+                     * @param _supportDownloadType Types of web servers supported for download: nginx, apache, iis, tomcat, jks, root, other.
                      * 
                      */
                     void SetSupportDownloadType(const SupportDownloadType& _supportDownloadType);
@@ -1368,376 +1517,494 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool SupportDownloadTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Certificate revocation completion time.
+                     * @return CertRevokedTime Certificate revocation completion time.
+                     * 
+                     */
+                    std::string GetCertRevokedTime() const;
+
+                    /**
+                     * 设置Certificate revocation completion time.
+                     * @param _certRevokedTime Certificate revocation completion time.
+                     * 
+                     */
+                    void SetCertRevokedTime(const std::string& _certRevokedTime);
+
+                    /**
+                     * 判断参数 CertRevokedTime 是否已赋值
+                     * @return CertRevokedTime 是否已赋值
+                     * 
+                     */
+                    bool CertRevokedTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Hosted resource type list.
+                     * @return HostingResourceTypes Hosted resource type list.
+                     * 
+                     */
+                    std::vector<std::string> GetHostingResourceTypes() const;
+
+                    /**
+                     * 设置Hosted resource type list.
+                     * @param _hostingResourceTypes Hosted resource type list.
+                     * 
+                     */
+                    void SetHostingResourceTypes(const std::vector<std::string>& _hostingResourceTypes);
+
+                    /**
+                     * 判断参数 HostingResourceTypes 是否已赋值
+                     * @return HostingResourceTypes 是否已赋值
+                     * 
+                     */
+                    bool HostingResourceTypesHasBeenSet() const;
+
+                    /**
+                     * 获取Managed configuration information.
+                     * @return HostingConfig Managed configuration information.
+                     * 
+                     */
+                    HostingConfig GetHostingConfig() const;
+
+                    /**
+                     * 设置Managed configuration information.
+                     * @param _hostingConfig Managed configuration information.
+                     * 
+                     */
+                    void SetHostingConfig(const HostingConfig& _hostingConfig);
+
+                    /**
+                     * 判断参数 HostingConfig 是否已赋值
+                     * @return HostingConfig 是否已赋值
+                     * 
+                     */
+                    bool HostingConfigHasBeenSet() const;
+
                 private:
 
                     /**
-                     * User UIN
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * User uin.
                      */
                     std::string m_ownerUin;
                     bool m_ownerUinHasBeenSet;
 
                     /**
-                     * Project ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Project id.
                      */
                     std::string m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Certificate source
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Certificate source:.
+trustasia.
+upload.
+wosign.
+sheca.
                      */
                     std::string m_from;
                     bool m_fromHasBeenSet;
 
                     /**
-                     * The certificate plan type. Valid values:
-null: Certificates uploaded by users (no plan type)
-`1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Certificate package type:.
+Null: user uploads a certificate (without package type),.
+2: trustasia tls rsa ca,. 
+3: securesite enhanced enterprise edition (ev pro),. 
+4: securesite enhanced (ev). 
+5: securesite enterprise professional edition (ov pro).
+6: securesite enterprise (ov). 
+7: securesite enterprise (ov) wildcard. 
+8: geotrust enhanced (ev). 
+9: geotrust enterprise (ov) cert. 
+10: geotrust enterprise (ov) wildcard cert. 
+11: trustasia domain name-based multiple domain names ssl certificate. 
+12: trustasia domain name-based (dv) wildcard cert. 
+13: trustasia enterprise wildcard (ov) ssl certificate (d3). 
+14: trustasia enterprise (ov) ssl certificate (d3). 
+15: trustasia enterprise multiple domain names (ov) ssl certificate (d3). 
+16: trustasia enhanced (ev) ssl certificate (d3). 
+17: trustasia enhanced multiple domain names (ev) ssl certificate (d3). 
+18: globalsign enterprise (ov) ssl certificate. 
+19: globalsign enterprise wildcard (ov) ssl certificate. 
+20: globalsign enhanced (ev) ssl certificate. 
+21: trustasia enterprise wildcard multiple domain names (ov) ssl certificate (d3). 
+22: globalsign enterprise multiple domain names (ov) ssl certificate. 
+23: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+24: globalsign enhanced multiple domain name (ev) ssl certificate.
+25: wotrus domain name cert.
+26: wotrus domain name multiple domain name cert.
+27: wotrus domain name wildcard cert.
+28: wotrus enterprise cert.
+29: wotrus enterprise multi - domain name certificate.
+30: wotrus enterprise wildcard certificate.
+31: wotrus enhanced certificate.
+32: wotrus enhanced multi - domain name certificate.
+33: wotrus - national cryptography domain - type certificate.
+34: wotrus-national cryptography domain certificate (multiple domain names).
+35: wotrus-national cryptography domain certificate (wildcard).
+37: wotrus-national cryptography enterprise certificate.
+38: wotrus-national cryptography enterprise certificate (multiple domain names).
+39: wotrus-national cryptography enterprise certificate (wildcard).
+40: wotrus - enhanced national cryptography certificate.
+41: wotrus - enhanced national cryptography certificate (multiple domain names).
+42: trustasia - domain name type certificate (wildcard multiple domain names).
+43: DNSPod - enterprise (ov) ssl certificate.
+44: DNSPod - enterprise (ov) wildcard ssl certificate.
+45: DNSPod - enterprise (ov) multiple domain names ssl certificate.
+46: DNSPod - enhanced (ev) ssl certificate.
+47: DNSPod - enhanced (ev) multiple domain names ssl certificate.
+48: DNSPod - domain name-based (dv) ssl certificate.
+49: DNSPod - domain name-based (dv) wildcard ssl certificate.
+50: DNSPod - domain name-based (dv) multiple domain names ssl certificate.
+51: DNSPod (national cryptography) - enterprise (ov) ssl certificate.
+52: DNSPod (national cryptography) - enterprise (ov) wildcard ssl certificate.
+53: DNSPod (national cryptography) - enterprise (ov) multiple domain names ssl certificate.
+54: DNSPod (national cryptography) - domain name-based (dv) ssl certificate.
+55: DNSPod (national cryptography) - domain name-based (dv) wildcard ssl certificate.
+56: DNSPod (national cryptography) - domain name-based (dv) multiple domain names ssl certificate.
+57: securesite enterprise professional edition multiple domain names (ov pro).
+58: securesite enterprise multiple domain names (ov).
+59: securesite enhanced professional edition multiple domain names (ev pro).
+60: securesite enhanced multiple domain names (ev).
+61: geotrust enhanced multiple domain names (ev).
+75: securesite enterprise (ov).
+76: securesite enterprise (ov) wildcard.
+77: securesite enhanced (ev).
+78: geotrust enterprise (ov).
+79: geotrust enterprise wildcard (ov).
+80: geotrust enhanced (ev).
+81: globalsign enterprise (ov) ssl certificate.
+82: globalsign enterprise wildcard (ov) ssl certificate.
+83: trustasia c1 dv free.
+85: globalsign enhanced (ev) ssl certificate.
+88: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+89: globalsign enterprise multiple domain names (ov) ssl certificate.
+90: globalsign enhanced multiple domain names (ev) ssl certificate.
+91: geotrust enhanced multiple domain names (ev).
+92: securesite enterprise pro multiple domain names (ov pro).
+93: securesite enterprise multiple domain names (ov).
+94: securesite enhanced pro multiple domain names (ev pro).
+95: securesite enhanced multiple domain names (ev).
+96: securesite ev pro.
+97: securesite enterprise professional edition (ov pro).
+98: cfca enterprise (ov) ssl certificate.
+99: cfca enterprise ov ssl certificate for multiple domain names.
+100: cfca ov wildcard ssl certificate.
+101: cfca enhanced (ev) ssl certificate.
                      */
                     std::string m_packageType;
                     bool m_packageTypeHasBeenSet;
 
                     /**
-                     * Certificate type. `CA`: client certificate; `SVR`: server certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Certificate type. ca = client certificate; svr = server certificate.
                      */
                     std::string m_certificateType;
                     bool m_certificateTypeHasBeenSet;
 
                     /**
-                     * Issuer
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Certificate product name.
                      */
                     std::string m_productZhName;
                     bool m_productZhNameHasBeenSet;
 
                     /**
-                     * Primary domain name
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Primary domain name.
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * Alias
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Remark name.
                      */
                     std::string m_alias;
                     bool m_aliasHasBeenSet;
 
                     /**
-                     * Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Certificate status: 0 = under review, 1 = approved, 2 = review failed, 3 = expired, 4 = dns record added automatically, 5 = enterprise certificate, pending documentation submission, 6 = order cancellation in progress, 7 = canceled, 8 = documents submitted, pending upload of confirmation letter, 9 = certificate revocation in progress, 10 = revoked, 11 = reissue in progress, 12 = pending upload of revocation confirmation letter, 13 = free certificate pending documentation submission, 14 = certificate refunded, 15 = certificate migration in progress.
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Extended information of the certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Certificate extended information.
                      */
                     CertificateExtra m_certificateExtra;
                     bool m_certificateExtraHasBeenSet;
 
                     /**
-                     * Vulnerability scanning status. `INACTIVE`: not activated; `ACTIVE`: activated
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Vulnerability scanning status: INACTIVE = not enabled, ACTIVE = enabled.
                      */
                     std::string m_vulnerabilityStatus;
                     bool m_vulnerabilityStatusHasBeenSet;
 
                     /**
-                     * Status information
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Status information.
                      */
                     std::string m_statusMsg;
                     bool m_statusMsgHasBeenSet;
 
                     /**
-                     * Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Validation type: DNS_AUTO = automatic dns validation, DNS = manual dns validation, FILE = file verification, DNS_PROXY = dns proxy validation, FILE_PROXY = file proxy verification.
                      */
                     std::string m_verifyType;
                     bool m_verifyTypeHasBeenSet;
 
                     /**
-                     * Time when the certificate takes effect
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Certificate validation time.
                      */
                     std::string m_certBeginTime;
                     bool m_certBeginTimeHasBeenSet;
 
                     /**
-                     * Time when the certificate expires
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Certificate expiration time.
                      */
                     std::string m_certEndTime;
                     bool m_certEndTimeHasBeenSet;
 
                     /**
-                     * Validity period of the certificate, in months
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Certificate validity period (month).
                      */
                     std::string m_validityPeriod;
                     bool m_validityPeriodHasBeenSet;
 
                     /**
-                     * Creation time
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Creation time.
                      */
                     std::string m_insertTime;
                     bool m_insertTimeHasBeenSet;
 
                     /**
-                     * Certificate ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Certificate id.
                      */
                     std::string m_certificateId;
                     bool m_certificateIdHasBeenSet;
 
                     /**
-                     * Domain names associated with the certificate (including the primary domain name)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Multiple domain names contained in the certificate (including the primary domain name).
                      */
                     std::vector<std::string> m_subjectAltName;
                     bool m_subjectAltNameHasBeenSet;
 
                     /**
-                     * Certificate type name
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Certificate type name.
                      */
                     std::string m_packageTypeName;
                     bool m_packageTypeNameHasBeenSet;
 
                     /**
-                     * Status description
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Status name.
                      */
                     std::string m_statusName;
                     bool m_statusNameHasBeenSet;
 
                     /**
-                     * Whether the customer is a VIP customer
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Specifies whether the customer is a vip customer. true indicates yes and false indicates no.
                      */
                     bool m_isVip;
                     bool m_isVipHasBeenSet;
 
                     /**
-                     * Whether the certificate is a DV certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Specifies whether it is a dv version certificate. true indicates yes and false indicates no.
                      */
                     bool m_isDv;
                     bool m_isDvHasBeenSet;
 
                     /**
-                     * Whether the certificate is a wildcard certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Specifies whether it is a wildcard domain name certificate. true indicates yes and false indicates no.
                      */
                     bool m_isWildcard;
                     bool m_isWildcardHasBeenSet;
 
                     /**
-                     * Whether the vulnerability scanning feature is enabled
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Whether the vulnerability scanning feature is enabled.
                      */
                     bool m_isVulnerability;
                     bool m_isVulnerabilityHasBeenSet;
 
                     /**
-                     * Whether it can be renewed 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Whether it is renewable.
                      */
                     bool m_renewAble;
                     bool m_renewAbleHasBeenSet;
 
                     /**
-                     * Project information
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Project information.
                      */
                     ProjectInfo m_projectInfo;
                     bool m_projectInfoHasBeenSet;
 
                     /**
-                     * Associated Tencent Cloud services. Currently, this parameter is unavailable.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Associated cloud resources are temporarily unavailable.
                      */
                     std::vector<std::string> m_boundResource;
                     bool m_boundResourceHasBeenSet;
 
                     /**
-                     * Whether the certificate can be deployed
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Whether it can be deployed.
                      */
                     bool m_deployable;
                     bool m_deployableHasBeenSet;
 
                     /**
-                     * List of tags
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Tag list.
                      */
                     std::vector<Tags> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Whether the expiration notification was ignored
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether expiration notice has been ignored.
                      */
                     bool m_isIgnore;
                     bool m_isIgnoreHasBeenSet;
 
                     /**
-                     * Whether the certificate is a Chinese SM certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether it is a China SM certificate.
                      */
                     bool m_isSM;
                     bool m_isSMHasBeenSet;
 
                     /**
-                     * Certificate algorithm
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Certificate algorithm.
                      */
                     std::string m_encryptAlgorithm;
                     bool m_encryptAlgorithmHasBeenSet;
 
                     /**
-                     * Encryption algorithm of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Encryption algorithm for upload ca certificate.
                      */
                     std::vector<std::string> m_cAEncryptAlgorithms;
                     bool m_cAEncryptAlgorithmsHasBeenSet;
 
                     /**
-                     * Expiration time of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Expiration time for upload ca certificate.
                      */
                     std::vector<std::string> m_cAEndTimes;
                     bool m_cAEndTimesHasBeenSet;
 
                     /**
-                     * Generic name of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Common name of the upload ca certificate.
                      */
                     std::vector<std::string> m_cACommonNames;
                     bool m_cACommonNamesHasBeenSet;
 
                     /**
-                     * Prereview information of the certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Certificate prereview information.
                      */
                     PreAuditInfo m_preAuditInfo;
                     bool m_preAuditInfoHasBeenSet;
 
                     /**
-                     * Whether auto-renewal is enabled.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Whether to auto-renew.
                      */
                     int64_t m_autoRenewFlag;
                     bool m_autoRenewFlagHasBeenSet;
 
                     /**
-                     * The hosting status. Valid values: `0` (hosting), `5` (replacing resources), `10` (hosting completed), and `-1` (not hosted). 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Hosting status: 0, hosting; 5, resource replacement; 10, hosting completed; -1, not hosted. 
                      */
                     int64_t m_hostingStatus;
                     bool m_hostingStatusHasBeenSet;
 
                     /**
-                     * The hosting completion time.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Hosting completion time.
                      */
                     std::string m_hostingCompleteTime;
                     bool m_hostingCompleteTimeHasBeenSet;
 
                     /**
-                     * The hosted new certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Manage the new certificate id.
                      */
                     std::string m_hostingRenewCertId;
                     bool m_hostingRenewCertIdHasBeenSet;
 
                     /**
-                     * Existing renewed certificate ID
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Existing renewal certificate id.
                      */
                     std::string m_hasRenewOrder;
                     bool m_hasRenewOrderHasBeenSet;
 
                     /**
-                     * Whether the original certificate is deleted when a certificate is reissued.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Indicates whether the original certificate is deleted during reissue.
                      */
                     bool m_replaceOriCertIsDelete;
                     bool m_replaceOriCertIsDeleteHasBeenSet;
 
                     /**
-                     * Whether the certificate is expiring soon. A certificate is considered to be expiring soon when there are 30 days or less left.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Indicates whether it is about to expire. a certificate is about to expire if it will expire within 30 days.
                      */
                     bool m_isExpiring;
                     bool m_isExpiringHasBeenSet;
 
                     /**
-                     * Validation expiration time for the addition of the DV certificate
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Add validation expiration date for DV certificate
                      */
                     std::string m_dVAuthDeadline;
                     bool m_dVAuthDeadlineHasBeenSet;
 
                     /**
-                     * Domain name validation pass time
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Domain verification passed time.
                      */
                     std::string m_validationPassedTime;
                     bool m_validationPassedTimeHasBeenSet;
 
                     /**
-                     * Multiple domain names with which the certificate is associated
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Multiple domain names associated with the certificate.
                      */
                     std::vector<std::string> m_certSANs;
                     bool m_certSANsHasBeenSet;
 
                     /**
-                     * Domain name validation rejection information
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Domain verification rejection information.
                      */
                     std::string m_awaitingValidationMsg;
                     bool m_awaitingValidationMsgHasBeenSet;
 
                     /**
-                     * Whether downloading is allowed
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Whether to allow downloading.
                      */
                     bool m_allowDownload;
                     bool m_allowDownloadHasBeenSet;
 
                     /**
-                     * 
+                     * Whether all certificate domain names are managed and resolved by dnspod.
                      */
                     bool m_isDNSPODResolve;
                     bool m_isDNSPODResolveHasBeenSet;
 
                     /**
-                     * 
+                     * Whether the certificate is purchased with benefit points.
                      */
                     bool m_isPackage;
                     bool m_isPackageHasBeenSet;
 
                     /**
-                     * 
+                     * Whether there is a private key password.
                      */
                     bool m_keyPasswordCustomFlag;
                     bool m_keyPasswordCustomFlagHasBeenSet;
 
                     /**
-                     * 
+                     * Types of web servers supported for download: nginx, apache, iis, tomcat, jks, root, other.
                      */
                     SupportDownloadType m_supportDownloadType;
                     bool m_supportDownloadTypeHasBeenSet;
+
+                    /**
+                     * Certificate revocation completion time.
+                     */
+                    std::string m_certRevokedTime;
+                    bool m_certRevokedTimeHasBeenSet;
+
+                    /**
+                     * Hosted resource type list.
+                     */
+                    std::vector<std::string> m_hostingResourceTypes;
+                    bool m_hostingResourceTypesHasBeenSet;
+
+                    /**
+                     * Managed configuration information.
+                     */
+                    HostingConfig m_hostingConfig;
+                    bool m_hostingConfigHasBeenSet;
 
                 };
             }

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Customer information Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Data Customer information Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Sub-Customer information.
+                     * @return Data Sub-Customer information.
                      * 
                      */
                     std::vector<DescribeCustomerInfoData> GetData() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Customer information Note: This field may return null, indicating that no valid values can be obtained.
+                     * Sub-Customer information.
                      */
                     std::vector<DescribeCustomerInfoData> m_data;
                     bool m_dataHasBeenSet;

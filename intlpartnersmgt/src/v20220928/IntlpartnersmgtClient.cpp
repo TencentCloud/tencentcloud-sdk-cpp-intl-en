@@ -1029,49 +1029,6 @@ IntlpartnersmgtClient::QueryCreditByUinListOutcomeCallable IntlpartnersmgtClient
     return task->get_future();
 }
 
-IntlpartnersmgtClient::QueryCreditQuotaOutcome IntlpartnersmgtClient::QueryCreditQuota(const QueryCreditQuotaRequest &request)
-{
-    auto outcome = MakeRequest(request, "QueryCreditQuota");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        QueryCreditQuotaResponse rsp = QueryCreditQuotaResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return QueryCreditQuotaOutcome(rsp);
-        else
-            return QueryCreditQuotaOutcome(o.GetError());
-    }
-    else
-    {
-        return QueryCreditQuotaOutcome(outcome.GetError());
-    }
-}
-
-void IntlpartnersmgtClient::QueryCreditQuotaAsync(const QueryCreditQuotaRequest& request, const QueryCreditQuotaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->QueryCreditQuota(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-IntlpartnersmgtClient::QueryCreditQuotaOutcomeCallable IntlpartnersmgtClient::QueryCreditQuotaCallable(const QueryCreditQuotaRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<QueryCreditQuotaOutcome()>>(
-        [this, request]()
-        {
-            return this->QueryCreditQuota(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 IntlpartnersmgtClient::QueryCustomerBillingQuotaOutcome IntlpartnersmgtClient::QueryCustomerBillingQuota(const QueryCustomerBillingQuotaRequest &request)
 {
     auto outcome = MakeRequest(request, "QueryCustomerBillingQuota");

@@ -69,8 +69,6 @@
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryCreditAllocationHistoryResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryCreditByUinListRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryCreditByUinListResponse.h>
-#include <tencentcloud/intlpartnersmgt/v20220928/model/QueryCreditQuotaRequest.h>
-#include <tencentcloud/intlpartnersmgt/v20220928/model/QueryCreditQuotaResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryCustomerBillingQuotaRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryCustomerBillingQuotaResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryCustomersCreditRequest.h>
@@ -174,9 +172,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::QueryCreditByUinListResponse> QueryCreditByUinListOutcome;
                 typedef std::future<QueryCreditByUinListOutcome> QueryCreditByUinListOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryCreditByUinListRequest&, QueryCreditByUinListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryCreditByUinListAsyncHandler;
-                typedef Outcome<Core::Error, Model::QueryCreditQuotaResponse> QueryCreditQuotaOutcome;
-                typedef std::future<QueryCreditQuotaOutcome> QueryCreditQuotaOutcomeCallable;
-                typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryCreditQuotaRequest&, QueryCreditQuotaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryCreditQuotaAsyncHandler;
                 typedef Outcome<Core::Error, Model::QueryCustomerBillingQuotaResponse> QueryCustomerBillingQuotaOutcome;
                 typedef std::future<QueryCustomerBillingQuotaOutcome> QueryCustomerBillingQuotaOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryCustomerBillingQuotaRequest&, QueryCustomerBillingQuotaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryCustomerBillingQuotaAsyncHandler;
@@ -212,6 +207,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to allocate credit pools to second-level resellers by distributors.
+Callable roles: Distributor
                  * @param req AllocateCreditPoolRequest
                  * @return AllocateCreditPoolOutcome
                  */
@@ -225,6 +221,8 @@ namespace TencentCloud
 2. The customer's service will be suspended when its available credit is set to 0, so caution should be exercised with this operation.
 3. To prevent the customer from making new purchases without affecting their use of previously purchased products, the partner can set their available credit to 0 after obtaining the non-stop feature privilege from the channel manager.
 4. The set credit is an increment of the current available credit and cannot exceed the remaining allocable credit. Setting the credit to a negative value indicates that it will be repossessed. The available credit can be set to 0 at the minimum.
+
+Callable roles: Distributor, Second-level reseller, Reseller
                  * @param req AllocateCustomerCreditRequest
                  * @return AllocateCustomerCreditOutcome
                  */
@@ -249,7 +247,7 @@ Callable roles: Reseller, Distributer, Second-level reseller
 2. Customers need to add personal information when logging in for the first time.
 3. This interface needs to be applied for allowlist usage. Please contact the channel manager to initiate the application process.
 
-Callable roles: distributor, second-level reseller, reseller
+Callable roles: Distributor, Second-level reseller, Reseller
                  * @param req CreateAccountRequest
                  * @return CreateAccountOutcome
                  */
@@ -264,6 +262,8 @@ Callable roles: distributor, second-level reseller, reseller
 3.You can review the customer's application in customer management  after submission.
 
 Note:This API is used to manually send the invitation link to the customer if the specified email does not receive it.
+
+Callable roles: Distributor, Second-level reseller, Reseller
                  * @param req CreateAndSendClientInvitationMailRequest
                  * @return CreateAndSendClientInvitationMailOutcome
                  */
@@ -272,7 +272,8 @@ Note:This API is used to manually send the invitation link to the customer if th
                 CreateAndSendClientInvitationMailOutcomeCallable CreateAndSendClientInvitationMailCallable(const Model::CreateAndSendClientInvitationMailRequest& request);
 
                 /**
-                 *This API is used to query bill details by customers.
+                 *Description: End-customer queries its own bill details.
+Callable role: End-customer.
                  * @param req DescribeBillDetailRequest
                  * @return DescribeBillDetailOutcome
                  */
@@ -281,7 +282,8 @@ Note:This API is used to manually send the invitation link to the customer if th
                 DescribeBillDetailOutcomeCallable DescribeBillDetailCallable(const Model::DescribeBillDetailRequest& request);
 
                 /**
-                 *This API is used to download billing files and return billing file URLs by customers.
+                 *Description: This API is used to download billing files and return billing file URLs for sub-customers.
+Callable role: Enb-customer.
                  * @param req DescribeBillDownloadUrlRequest
                  * @return DescribeBillDownloadUrlOutcome
                  */
@@ -290,7 +292,8 @@ Note:This API is used to manually send the invitation link to the customer if th
                 DescribeBillDownloadUrlOutcomeCallable DescribeBillDownloadUrlCallable(const Model::DescribeBillDownloadUrlRequest& request);
 
                 /**
-                 *External API for the L1 billing of the customer billing center
+                 *Description: External API for L1 billing of Sub-customer billing center.
+Callable role: End-customer.
                  * @param req DescribeBillSummaryRequest
                  * @return DescribeBillSummaryOutcome
                  */
@@ -300,6 +303,7 @@ Note:This API is used to manually send the invitation link to the customer if th
 
                 /**
                  *This API is used to obtain the total amount of customer bills by payment mode.
+Callable roles: Distributor, Second-level reseller, Reseller
                  * @param req DescribeBillSummaryByPayModeRequest
                  * @return DescribeBillSummaryByPayModeOutcome
                  */
@@ -308,7 +312,8 @@ Note:This API is used to manually send the invitation link to the customer if th
                 DescribeBillSummaryByPayModeOutcomeCallable DescribeBillSummaryByPayModeCallable(const Model::DescribeBillSummaryByPayModeRequest& request);
 
                 /**
-                 *This API is used to obtain the total amount of customer bills by product.
+                 *Description: Obtain the summarized value of sub - account bills by product dimension.
+Callable roles: Distributor, Second-level reseller, Reseller
                  * @param req DescribeBillSummaryByProductRequest
                  * @return DescribeBillSummaryByProductOutcome
                  */
@@ -317,7 +322,8 @@ Note:This API is used to manually send the invitation link to the customer if th
                 DescribeBillSummaryByProductOutcomeCallable DescribeBillSummaryByProductCallable(const Model::DescribeBillSummaryByProductRequest& request);
 
                 /**
-                 *This API is used to obtain the total amount of customer bills by region.
+                 *Description: Obtain the summarized value of sub - account bills by region through API.
+Callable roles: Distributor, Second-level reseller, Reseller
                  * @param req DescribeBillSummaryByRegionRequest
                  * @return DescribeBillSummaryByRegionOutcome
                  */
@@ -327,6 +333,7 @@ Note:This API is used to manually send the invitation link to the customer if th
 
                 /**
                  *This API is used to query the customer bill details by resellers.
+Callable roles: Distributor, Second-level reseller, Reseller
                  * @param req DescribeCustomerBillDetailRequest
                  * @return DescribeCustomerBillDetailOutcome
                  */
@@ -347,6 +354,7 @@ Note:This API is used to manually send the invitation link to the customer if th
 
                 /**
                  *This API is used to query the total amount of customer bills.
+Callable roles: Distributor, Second-level reseller, Reseller
                  * @param req DescribeCustomerBillSummaryRequest
                  * @return DescribeCustomerBillSummaryOutcome
                  */
@@ -356,6 +364,8 @@ Note:This API is used to manually send the invitation link to the customer if th
 
                 /**
                  *This API is used to query the customer information.
+
+Callable roles: Distributor, Reseller
                  * @param req DescribeCustomerInfoRequest
                  * @return DescribeCustomerInfoOutcome
                  */
@@ -373,8 +383,9 @@ Note:This API is used to manually send the invitation link to the customer if th
                 DescribeCustomerUinOutcomeCallable DescribeCustomerUinCallable(const Model::DescribeCustomerUinRequest& request);
 
                 /**
-                 *This API is used to set and cancel forced service suspension.
-Note:Reseller need to be allowlisted to use the API, please contact your business representative to apply for allowlist.
+                 *Forced Service Suspension settings and cancellation can be used only after the reseller is whitelisted.
+
+Callable roles: Distributor, Second-level reseller, Reseller
                  * @param req ForceQNRequest
                  * @return ForceQNOutcome
                  */
@@ -393,6 +404,8 @@ Note:Reseller need to be allowlisted to use the API, please contact your busines
 
                 /**
                  *This API is used to query industry information, including layer-1 industry and layer-2 industry.
+
+Callable roles: Distributor, Second-level reseller, Reseller,End-customer
                  * @param req GetTradeConfigListRequest
                  * @return GetTradeConfigListOutcome
                  */
@@ -402,6 +415,8 @@ Note:Reseller need to be allowlisted to use the API, please contact your busines
 
                 /**
                  *This API is used to modify customer remarks.
+
+Callable roles: Distributor, Second-level reseller, Reseller
                  * @param req ModifyClientRemarkRequest
                  * @return ModifyClientRemarkOutcome
                  */
@@ -411,6 +426,7 @@ Note:Reseller need to be allowlisted to use the API, please contact your busines
 
                 /**
                  *This API is used to query the account verification status.
+Callable roles: Distributor, Reseller
                  * @param req QueryAccountVerificationStatusRequest
                  * @return QueryAccountVerificationStatusOutcome
                  */
@@ -420,6 +436,7 @@ Note:Reseller need to be allowlisted to use the API, please contact your busines
 
                 /**
                  *This API is used to query all the credit allocation records of a single customer.
+Callable roles: Distributor, Second-level reseller, Reseller
                  * @param req QueryCreditAllocationHistoryRequest
                  * @return QueryCreditAllocationHistoryOutcome
                  */
@@ -429,21 +446,13 @@ Note:Reseller need to be allowlisted to use the API, please contact your busines
 
                 /**
                  *This API is used to query the credit of users in the list.
+Callable roles: Distributor, Second-level reseller, Reseller
                  * @param req QueryCreditByUinListRequest
                  * @return QueryCreditByUinListOutcome
                  */
                 QueryCreditByUinListOutcome QueryCreditByUinList(const Model::QueryCreditByUinListRequest &request);
                 void QueryCreditByUinListAsync(const Model::QueryCreditByUinListRequest& request, const QueryCreditByUinListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 QueryCreditByUinListOutcomeCallable QueryCreditByUinListCallable(const Model::QueryCreditByUinListRequest& request);
-
-                /**
-                 *This API is used to query customer credits.
-                 * @param req QueryCreditQuotaRequest
-                 * @return QueryCreditQuotaOutcome
-                 */
-                QueryCreditQuotaOutcome QueryCreditQuota(const Model::QueryCreditQuotaRequest &request);
-                void QueryCreditQuotaAsync(const Model::QueryCreditQuotaRequest& request, const QueryCreditQuotaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                QueryCreditQuotaOutcomeCallable QueryCreditQuotaCallable(const Model::QueryCreditQuotaRequest& request);
 
                 /**
                  *Description: This API is used for a sub-customer to real-time query its own total credit and remaining credit in USD.
@@ -458,6 +467,8 @@ Callable roles: Sub-customer
 
                 /**
                  *This API is used for a partner to the credits and basic information of cutomers.
+
+Callable roles: Distributor, Second-level reseller, Reseller
                  * @param req QueryCustomersCreditRequest
                  * @return QueryCustomersCreditOutcome
                  */
@@ -467,6 +478,7 @@ Callable roles: Sub-customer
 
                 /**
                  *This API is used to query the credits of direct customers.
+Callable roles: Distributor, Second-level reseller, Reseller
                  * @param req QueryDirectCustomersCreditRequest
                  * @return QueryDirectCustomersCreditOutcome
                  */
@@ -476,6 +488,8 @@ Callable roles: Sub-customer
 
                 /**
                  *This API is used for a partner to query its own total credit, available credit, and used credit in USD.
+
+Callable roles: Distributor, Second-level reseller, Reseller
                  * @param req QueryPartnerCreditRequest
                  * @return QueryPartnerCreditOutcome
                  */
@@ -495,7 +509,8 @@ Callable roles: Reseller, Distributer, Second-level reseller
                 QueryPendingClientsV2OutcomeCallable QueryPendingClientsV2Callable(const Model::QueryPendingClientsV2Request& request);
 
                 /**
-                 *This API is used to query the product list information within the specified policy range. To call this API, contact your account manager to add it to the allowlist.
+                 *This API is used to query the product list information within the specified policy range. To call this API, contact your business manager to apply for adding it to the allowlist.
+Callable roles: Distributor, Second-level reseller, Reseller
                  * @param req QueryPolicyProductListByCodeRequest
                  * @return QueryPolicyProductListByCodeOutcome
                  */
@@ -504,7 +519,8 @@ Callable roles: Reseller, Distributer, Second-level reseller
                 QueryPolicyProductListByCodeOutcomeCallable QueryPolicyProductListByCodeCallable(const Model::QueryPolicyProductListByCodeRequest& request);
 
                 /**
-                 *This API is used to query the voucher quota based on the customer UIN.
+                 *This API is used by primary/secondary resellers to query the voucher quota based on the customer UIN.
+Callable roles: Reseller, Distributor, Second-level reseller
                  * @param req QueryVoucherAmountByUinRequest
                  * @return QueryVoucherAmountByUinOutcome
                  */
@@ -513,7 +529,8 @@ Callable roles: Reseller, Distributer, Second-level reseller
                 QueryVoucherAmountByUinOutcomeCallable QueryVoucherAmountByUinCallable(const Model::QueryVoucherAmountByUinRequest& request);
 
                 /**
-                 *This API is used to query the voucher list based on the customer UIN.
+                 *This API is used by primary/secondary resellers to query the voucher list based on the customer UIN.
+Callable roles: Reseller, Distributor, Second-level reseller
                  * @param req QueryVoucherListByUinRequest
                  * @return QueryVoucherListByUinOutcome
                  */
@@ -522,7 +539,8 @@ Callable roles: Reseller, Distributer, Second-level reseller
                 QueryVoucherListByUinOutcomeCallable QueryVoucherListByUinCallable(const Model::QueryVoucherListByUinRequest& request);
 
                 /**
-                 *This API is used to query the voucher quota pool.
+                 *This API is used by primary/secondary resellers to query the voucher quota pool.
+Callable roles: Distributor, First-level reseller, Second-level reseller
                  * @param req QueryVoucherPoolRequest
                  * @return QueryVoucherPoolOutcome
                  */
@@ -532,6 +550,8 @@ Callable roles: Reseller, Distributer, Second-level reseller
 
                 /**
                  *This API is used to send a verification code for account registration.
+
+Callable roles: Distributor, Second-level reseller, Reseller,End-customer
                  * @param req SendVerifyCodeRequest
                  * @return SendVerifyCodeOutcome
                  */

@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/ssl/v20191205/model/Tags.h>
 
 
 namespace TencentCloud
@@ -43,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Pagination offset, starting from 0
-                     * @return Offset Pagination offset, starting from 0
+                     * 获取Pagination offset, starting from 0. default is 0.
+                     * @return Offset Pagination offset, starting from 0. default is 0.
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination offset, starting from 0
-                     * @param _offset Pagination offset, starting from 0
+                     * 设置Pagination offset, starting from 0. default is 0.
+                     * @param _offset Pagination offset, starting from 0. default is 0.
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -64,15 +65,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of entries per page. Default value: `20`. Maximum value: `1000`.
-                     * @return Limit Number of entries per page. Default value: `20`. Maximum value: `1000`.
+                     * 获取Number of items per page. default is 10. maximum value is 1000; values exceeding 1000 will be treated as 1000.
+                     * @return Limit Number of items per page. default is 10. maximum value is 1000; values exceeding 1000 will be treated as 1000.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of entries per page. Default value: `20`. Maximum value: `1000`.
-                     * @param _limit Number of entries per page. Default value: `20`. Maximum value: `1000`.
+                     * 设置Number of items per page. default is 10. maximum value is 1000; values exceeding 1000 will be treated as 1000.
+                     * @param _limit Number of items per page. default is 10. maximum value is 1000; values exceeding 1000 will be treated as 1000.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -85,15 +86,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Keyword for search, which can be a certificate ID, alias, or domain name, for example, a8xHcaIs
-                     * @return SearchKey Keyword for search, which can be a certificate ID, alias, or domain name, for example, a8xHcaIs
+                     * 获取Search keywords, supporting fuzzy match by certificate id, remark name, and certificate domain name.
+                     * @return SearchKey Search keywords, supporting fuzzy match by certificate id, remark name, and certificate domain name.
                      * 
                      */
                     std::string GetSearchKey() const;
 
                     /**
-                     * 设置Keyword for search, which can be a certificate ID, alias, or domain name, for example, a8xHcaIs
-                     * @param _searchKey Keyword for search, which can be a certificate ID, alias, or domain name, for example, a8xHcaIs
+                     * 设置Search keywords, supporting fuzzy match by certificate id, remark name, and certificate domain name.
+                     * @param _searchKey Search keywords, supporting fuzzy match by certificate id, remark name, and certificate domain name.
                      * 
                      */
                     void SetSearchKey(const std::string& _searchKey);
@@ -148,15 +149,15 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Sorting by expiration time. `DESC`: descending; `ASC`: ascending
-                     * @return ExpirationSort Sorting by expiration time. `DESC`: descending; `ASC`: ascending
+                     * 获取Default sorting is by certificate application time in descending order. Sort by expiration date if the following values are passed: DESC for descending order of certificate expiration time, ASC for ascending order.
+                     * @return ExpirationSort Default sorting is by certificate application time in descending order. Sort by expiration date if the following values are passed: DESC for descending order of certificate expiration time, ASC for ascending order.
                      * 
                      */
                     std::string GetExpirationSort() const;
 
                     /**
-                     * 设置Sorting by expiration time. `DESC`: descending; `ASC`: ascending
-                     * @param _expirationSort Sorting by expiration time. `DESC`: descending; `ASC`: ascending
+                     * 设置Default sorting is by certificate application time in descending order. Sort by expiration date if the following values are passed: DESC for descending order of certificate expiration time, ASC for ascending order.
+                     * @param _expirationSort Default sorting is by certificate application time in descending order. Sort by expiration date if the following values are passed: DESC for descending order of certificate expiration time, ASC for ascending order.
                      * 
                      */
                     void SetExpirationSort(const std::string& _expirationSort);
@@ -169,15 +170,15 @@ namespace TencentCloud
                     bool ExpirationSortHasBeenSet() const;
 
                     /**
-                     * 获取Certificate status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate.
-                     * @return CertificateStatus Certificate status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate.
+                     * 获取Certificate status: 0=under review, 1=approved, 2=review failed, 3=expired, 4=dns record added, 5=enterprise certificate, pending submission, 6=order cancellation in progress, 7=canceled, 8=documents submitted, pending upload of confirmation letter, 9=certificate revocation in progress, 10=revoked, 11=reissue in progress, 12=pending upload of revocation confirmation letter, 13=free certificate pending document submission, 14=refunded, 15=certificate migration in progress.
+                     * @return CertificateStatus Certificate status: 0=under review, 1=approved, 2=review failed, 3=expired, 4=dns record added, 5=enterprise certificate, pending submission, 6=order cancellation in progress, 7=canceled, 8=documents submitted, pending upload of confirmation letter, 9=certificate revocation in progress, 10=revoked, 11=reissue in progress, 12=pending upload of revocation confirmation letter, 13=free certificate pending document submission, 14=refunded, 15=certificate migration in progress.
                      * 
                      */
                     std::vector<uint64_t> GetCertificateStatus() const;
 
                     /**
-                     * 设置Certificate status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate.
-                     * @param _certificateStatus Certificate status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate.
+                     * 设置Certificate status: 0=under review, 1=approved, 2=review failed, 3=expired, 4=dns record added, 5=enterprise certificate, pending submission, 6=order cancellation in progress, 7=canceled, 8=documents submitted, pending upload of confirmation letter, 9=certificate revocation in progress, 10=revoked, 11=reissue in progress, 12=pending upload of revocation confirmation letter, 13=free certificate pending document submission, 14=refunded, 15=certificate migration in progress.
+                     * @param _certificateStatus Certificate status: 0=under review, 1=approved, 2=review failed, 3=expired, 4=dns record added, 5=enterprise certificate, pending submission, 6=order cancellation in progress, 7=canceled, 8=documents submitted, pending upload of confirmation letter, 9=certificate revocation in progress, 10=revoked, 11=reissue in progress, 12=pending upload of revocation confirmation letter, 13=free certificate pending document submission, 14=refunded, 15=certificate migration in progress.
                      * 
                      */
                     void SetCertificateStatus(const std::vector<uint64_t>& _certificateStatus);
@@ -336,22 +337,85 @@ namespace TencentCloud
                      */
                     bool HostableHasBeenSet() const;
 
+                    /**
+                     * 获取Filter certificates with specified tags.
+                     * @return Tags Filter certificates with specified tags.
+                     * 
+                     */
+                    std::vector<Tags> GetTags() const;
+
+                    /**
+                     * 设置Filter certificates with specified tags.
+                     * @param _tags Filter certificates with specified tags.
+                     * 
+                     */
+                    void SetTags(const std::vector<Tags>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     * 
+                     */
+                    bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to filter certificates pending issue: 1 for filtering, 0 and null for no filtering.
+                     * @return IsPendingIssue Whether to filter certificates pending issue: 1 for filtering, 0 and null for no filtering.
+                     * 
+                     */
+                    int64_t GetIsPendingIssue() const;
+
+                    /**
+                     * 设置Whether to filter certificates pending issue: 1 for filtering, 0 and null for no filtering.
+                     * @param _isPendingIssue Whether to filter certificates pending issue: 1 for filtering, 0 and null for no filtering.
+                     * 
+                     */
+                    void SetIsPendingIssue(const int64_t& _isPendingIssue);
+
+                    /**
+                     * 判断参数 IsPendingIssue 是否已赋值
+                     * @return IsPendingIssue 是否已赋值
+                     * 
+                     */
+                    bool IsPendingIssueHasBeenSet() const;
+
+                    /**
+                     * 获取Filter certificates by the specified certificate id, only supports certificate ids with permission.
+                     * @return CertIds Filter certificates by the specified certificate id, only supports certificate ids with permission.
+                     * 
+                     */
+                    std::vector<std::string> GetCertIds() const;
+
+                    /**
+                     * 设置Filter certificates by the specified certificate id, only supports certificate ids with permission.
+                     * @param _certIds Filter certificates by the specified certificate id, only supports certificate ids with permission.
+                     * 
+                     */
+                    void SetCertIds(const std::vector<std::string>& _certIds);
+
+                    /**
+                     * 判断参数 CertIds 是否已赋值
+                     * @return CertIds 是否已赋值
+                     * 
+                     */
+                    bool CertIdsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Pagination offset, starting from 0
+                     * Pagination offset, starting from 0. default is 0.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of entries per page. Default value: `20`. Maximum value: `1000`.
+                     * Number of items per page. default is 10. maximum value is 1000; values exceeding 1000 will be treated as 1000.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Keyword for search, which can be a certificate ID, alias, or domain name, for example, a8xHcaIs
+                     * Search keywords, supporting fuzzy match by certificate id, remark name, and certificate domain name.
                      */
                     std::string m_searchKey;
                     bool m_searchKeyHasBeenSet;
@@ -369,13 +433,13 @@ namespace TencentCloud
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Sorting by expiration time. `DESC`: descending; `ASC`: ascending
+                     * Default sorting is by certificate application time in descending order. Sort by expiration date if the following values are passed: DESC for descending order of certificate expiration time, ASC for ascending order.
                      */
                     std::string m_expirationSort;
                     bool m_expirationSortHasBeenSet;
 
                     /**
-                     * Certificate status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate.
+                     * Certificate status: 0=under review, 1=approved, 2=review failed, 3=expired, 4=dns record added, 5=enterprise certificate, pending submission, 6=order cancellation in progress, 7=canceled, 8=documents submitted, pending upload of confirmation letter, 9=certificate revocation in progress, 10=revoked, 11=reissue in progress, 12=pending upload of revocation confirmation letter, 13=free certificate pending document submission, 14=refunded, 15=certificate migration in progress.
                      */
                     std::vector<uint64_t> m_certificateStatus;
                     bool m_certificateStatusHasBeenSet;
@@ -421,6 +485,24 @@ namespace TencentCloud
                      */
                     uint64_t m_hostable;
                     bool m_hostableHasBeenSet;
+
+                    /**
+                     * Filter certificates with specified tags.
+                     */
+                    std::vector<Tags> m_tags;
+                    bool m_tagsHasBeenSet;
+
+                    /**
+                     * Whether to filter certificates pending issue: 1 for filtering, 0 and null for no filtering.
+                     */
+                    int64_t m_isPendingIssue;
+                    bool m_isPendingIssueHasBeenSet;
+
+                    /**
+                     * Filter certificates by the specified certificate id, only supports certificate ids with permission.
+                     */
+                    std::vector<std::string> m_certIds;
+                    bool m_certIdsHasBeenSet;
 
                 };
             }

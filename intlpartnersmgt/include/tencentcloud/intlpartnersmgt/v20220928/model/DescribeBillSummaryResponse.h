@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Detailed summary by billing dimensionNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return SummaryDetail Detailed summary by billing dimensionNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Detailed summary by billing dimension.
+                     * @return SummaryDetail Detailed summary by billing dimension.
                      * 
                      */
                     std::vector<SummaryDetails> GetSummaryDetail() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Detailed summary by billing dimensionNote: This field may return null, indicating that no valid values can be obtained.
+                     * Detailed summary by billing dimension.
                      */
                     std::vector<SummaryDetails> m_summaryDetail;
                     bool m_summaryDetailHasBeenSet;

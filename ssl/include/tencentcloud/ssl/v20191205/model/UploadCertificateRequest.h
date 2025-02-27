@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CertificateUse 
+                     * 获取Certificate Usage/Source, such as CLB, CDN, WAF, LIVE, DDOS.
+                     * @return CertificateUse Certificate Usage/Source, such as CLB, CDN, WAF, LIVE, DDOS.
                      * 
                      */
                     std::string GetCertificateUse() const;
 
                     /**
-                     * 设置
-                     * @param _certificateUse 
+                     * 设置Certificate Usage/Source, such as CLB, CDN, WAF, LIVE, DDOS.
+                     * @param _certificateUse Certificate Usage/Source, such as CLB, CDN, WAF, LIVE, DDOS.
                      * 
                      */
                     void SetCertificateUse(const std::string& _certificateUse);
@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Whether a certificate can be repeatedly uploaded.
-                     * @return Repeatable Whether a certificate can be repeatedly uploaded.
+                     * 获取Whether to allow duplicate upload of the same certificate, true: allow uploading certificates with the same fingerprint; false: do not allow uploading certificates with the same fingerprint. default value: true.
+                     * @return Repeatable Whether to allow duplicate upload of the same certificate, true: allow uploading certificates with the same fingerprint; false: do not allow uploading certificates with the same fingerprint. default value: true.
                      * 
                      */
                     bool GetRepeatable() const;
 
                     /**
-                     * 设置Whether a certificate can be repeatedly uploaded.
-                     * @param _repeatable Whether a certificate can be repeatedly uploaded.
+                     * 设置Whether to allow duplicate upload of the same certificate, true: allow uploading certificates with the same fingerprint; false: do not allow uploading certificates with the same fingerprint. default value: true.
+                     * @param _repeatable Whether to allow duplicate upload of the same certificate, true: allow uploading certificates with the same fingerprint; false: do not allow uploading certificates with the same fingerprint. default value: true.
                      * 
                      */
                     void SetRepeatable(const bool& _repeatable);
@@ -244,7 +244,7 @@ namespace TencentCloud
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * 
+                     * Certificate Usage/Source, such as CLB, CDN, WAF, LIVE, DDOS.
                      */
                     std::string m_certificateUse;
                     bool m_certificateUseHasBeenSet;
@@ -256,7 +256,7 @@ namespace TencentCloud
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Whether a certificate can be repeatedly uploaded.
+                     * Whether to allow duplicate upload of the same certificate, true: allow uploading certificates with the same fingerprint; false: do not allow uploading certificates with the same fingerprint. default value: true.
                      */
                     bool m_repeatable;
                     bool m_repeatableHasBeenSet;

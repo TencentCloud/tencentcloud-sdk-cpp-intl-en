@@ -45,10 +45,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total count
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return TotalCount Total count
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取If the total number cannot be obtained, return 0.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return TotalCount If the total number cannot be obtained, return 0.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -61,10 +61,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Certificate deployment record list
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return RecordDetailList Certificate deployment record list
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Certificate deployment record list; returns an empty array if no value is obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return RecordDetailList Certificate deployment record list; returns an empty array if no value is obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<UpdateRecordDetails> GetRecordDetailList() const;
@@ -77,10 +77,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool RecordDetailListHasBeenSet() const;
 
                     /**
-                     * 获取Total successful deployments
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return SuccessTotalCount Total successful deployments
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Total number of successes; returns 0 if unavailable.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return SuccessTotalCount Total number of successes; returns 0 if unavailable.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetSuccessTotalCount() const;
@@ -93,10 +93,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool SuccessTotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Total failed deployments
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return FailedTotalCount Total failed deployments
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Total number of failures. if it cannot be obtained, return 0.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return FailedTotalCount Total number of failures. if it cannot be obtained, return 0.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetFailedTotalCount() const;
@@ -109,10 +109,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool FailedTotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Total running deployments
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return RunningTotalCount Total running deployments
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Total number of deployments in progress; returns 0 if unavailable.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return RunningTotalCount Total number of deployments in progress; returns 0 if unavailable.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetRunningTotalCount() const;
@@ -127,36 +127,36 @@ Note: This field may return null, indicating that no valid value can be obtained
                 private:
 
                     /**
-                     * Total count
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * If the total number cannot be obtained, return 0.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Certificate deployment record list
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Certificate deployment record list; returns an empty array if no value is obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<UpdateRecordDetails> m_recordDetailList;
                     bool m_recordDetailListHasBeenSet;
 
                     /**
-                     * Total successful deployments
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Total number of successes; returns 0 if unavailable.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_successTotalCount;
                     bool m_successTotalCountHasBeenSet;
 
                     /**
-                     * Total failed deployments
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Total number of failures. if it cannot be obtained, return 0.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_failedTotalCount;
                     bool m_failedTotalCountHasBeenSet;
 
                     /**
-                     * Total running deployments
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Total number of deployments in progress; returns 0 if unavailable.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_runningTotalCount;
                     bool m_runningTotalCountHasBeenSet;

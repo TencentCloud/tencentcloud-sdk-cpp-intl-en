@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The list of queried customers
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Data The list of queried customers
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Queries the list of customers.
+                     * @return Data Queries the list of customers.
                      * 
                      */
                     std::vector<QueryCustomersCreditData> GetData() const;
@@ -77,8 +75,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The list of queried customers
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Queries the list of customers.
                      */
                     std::vector<QueryCustomersCreditData> m_data;
                     bool m_dataHasBeenSet;

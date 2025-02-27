@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Customer UIN Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CustomerUin Customer UIN Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Sub-Account uin.
+                     * @return CustomerUin Sub-Account uin.
                      * 
                      */
                     std::string GetCustomerUin() const;
 
                     /**
-                     * 设置Customer UIN Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _customerUin Customer UIN Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Sub-Account uin.
+                     * @param _customerUin Sub-Account uin.
                      * 
                      */
                     void SetCustomerUin(const std::string& _customerUin);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CustomerUinHasBeenSet() const;
 
                     /**
-                     * 获取Email Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Email Email Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Contact email.
+                     * @return Email Contact email.
                      * 
                      */
                     std::string GetEmail() const;
 
                     /**
-                     * 设置Email Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _email Email Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Contact email.
+                     * @param _email Contact email.
                      * 
                      */
                     void SetEmail(const std::string& _email);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool EmailHasBeenSet() const;
 
                     /**
-                     * 获取Mobile number Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Phone Mobile number Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Contact phone number.
+                     * @return Phone Contact phone number.
                      * 
                      */
                     std::string GetPhone() const;
 
                     /**
-                     * 设置Mobile number Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _phone Mobile number Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Contact phone number.
+                     * @param _phone Contact phone number.
                      * 
                      */
                     void SetPhone(const std::string& _phone);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool PhoneHasBeenSet() const;
 
                     /**
-                     * 获取Remarks Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Mark Remarks Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Remarks.
+                     * @return Mark Remarks.
                      * 
                      */
                     std::string GetMark() const;
 
                     /**
-                     * 设置Remarks Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _mark Remarks Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Remarks.
+                     * @param _mark Remarks.
                      * 
                      */
                     void SetMark(const std::string& _mark);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool MarkHasBeenSet() const;
 
                     /**
-                     * 获取Displayed name Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Name Displayed name Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Display name.
+                     * @return Name Display name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Displayed name Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _name Displayed name Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Display name.
+                     * @param _name Display name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Binding time Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BindTime Binding time Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Binding time.
+                     * @return BindTime Binding time.
                      * 
                      */
                     std::string GetBindTime() const;
 
                     /**
-                     * 设置Binding time Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _bindTime Binding time Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Binding time.
+                     * @param _bindTime Binding time.
                      * 
                      */
                     void SetBindTime(const std::string& _bindTime);
@@ -174,30 +174,30 @@ namespace TencentCloud
 
                     /**
                      * 获取Account status
-0: Normal
-1: Forcibly mandatory (this function is not supported yet)
-2. Mandatory arrears
-Note: The return value may be null, indicating that no valid data can be obtained.
+.
+0: normal.
+1: forcibly mandatory (this function is not supported yet).
+2: mandatory arrears. 
                      * @return AccountStatus Account status
-0: Normal
-1: Forcibly mandatory (this function is not supported yet)
-2. Mandatory arrears
-Note: The return value may be null, indicating that no valid data can be obtained.
+.
+0: normal.
+1: forcibly mandatory (this function is not supported yet).
+2: mandatory arrears. 
                      * 
                      */
                     std::string GetAccountStatus() const;
 
                     /**
                      * 设置Account status
-0: Normal
-1: Forcibly mandatory (this function is not supported yet)
-2. Mandatory arrears
-Note: The return value may be null, indicating that no valid data can be obtained.
+.
+0: normal.
+1: forcibly mandatory (this function is not supported yet).
+2: mandatory arrears. 
                      * @param _accountStatus Account status
-0: Normal
-1: Forcibly mandatory (this function is not supported yet)
-2. Mandatory arrears
-Note: The return value may be null, indicating that no valid data can be obtained.
+.
+0: normal.
+1: forcibly mandatory (this function is not supported yet).
+2: mandatory arrears. 
                      * 
                      */
                     void SetAccountStatus(const std::string& _accountStatus);
@@ -210,39 +210,35 @@ Note: The return value may be null, indicating that no valid data can be obtaine
                     bool AccountStatusHasBeenSet() const;
 
                     /**
-                     * 获取Identity verification status
--1: Files not uploaded
-0: Not submitted for review
-1: Under review
-2: Review error
-3: Approved
-Note: The return value may be null, indicating that no valid data can be obtained.
-                     * @return AuthStatus Identity verification status
--1: Files not uploaded
-0: Not submitted for review
-1: Under review
-2: Review error
-3: Approved
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * 获取Identity verification status.
+-1: files not uploaded.
+0: not submitted for review.
+1: under review.
+2: review error.
+3: approved.
+                     * @return AuthStatus Identity verification status.
+-1: files not uploaded.
+0: not submitted for review.
+1: under review.
+2: review error.
+3: approved.
                      * 
                      */
                     std::string GetAuthStatus() const;
 
                     /**
-                     * 设置Identity verification status
--1: Files not uploaded
-0: Not submitted for review
-1: Under review
-2: Review error
-3: Approved
-Note: The return value may be null, indicating that no valid data can be obtained.
-                     * @param _authStatus Identity verification status
--1: Files not uploaded
-0: Not submitted for review
-1: Under review
-2: Review error
-3: Approved
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * 设置Identity verification status.
+-1: files not uploaded.
+0: not submitted for review.
+1: under review.
+2: review error.
+3: approved.
+                     * @param _authStatus Identity verification status.
+-1: files not uploaded.
+0: not submitted for review.
+1: under review.
+2: review error.
+3: approved.
                      * 
                      */
                     void SetAuthStatus(const std::string& _authStatus);
@@ -257,59 +253,58 @@ Note: The return value may be null, indicating that no valid data can be obtaine
                 private:
 
                     /**
-                     * Customer UIN Note: This field may return null, indicating that no valid values can be obtained.
+                     * Sub-Account uin.
                      */
                     std::string m_customerUin;
                     bool m_customerUinHasBeenSet;
 
                     /**
-                     * Email Note: This field may return null, indicating that no valid values can be obtained.
+                     * Contact email.
                      */
                     std::string m_email;
                     bool m_emailHasBeenSet;
 
                     /**
-                     * Mobile number Note: This field may return null, indicating that no valid values can be obtained.
+                     * Contact phone number.
                      */
                     std::string m_phone;
                     bool m_phoneHasBeenSet;
 
                     /**
-                     * Remarks Note: This field may return null, indicating that no valid values can be obtained.
+                     * Remarks.
                      */
                     std::string m_mark;
                     bool m_markHasBeenSet;
 
                     /**
-                     * Displayed name Note: This field may return null, indicating that no valid values can be obtained.
+                     * Display name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Binding time Note: This field may return null, indicating that no valid values can be obtained.
+                     * Binding time.
                      */
                     std::string m_bindTime;
                     bool m_bindTimeHasBeenSet;
 
                     /**
                      * Account status
-0: Normal
-1: Forcibly mandatory (this function is not supported yet)
-2. Mandatory arrears
-Note: The return value may be null, indicating that no valid data can be obtained.
+.
+0: normal.
+1: forcibly mandatory (this function is not supported yet).
+2: mandatory arrears. 
                      */
                     std::string m_accountStatus;
                     bool m_accountStatusHasBeenSet;
 
                     /**
-                     * Identity verification status
--1: Files not uploaded
-0: Not submitted for review
-1: Under review
-2: Review error
-3: Approved
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * Identity verification status.
+-1: files not uploaded.
+0: not submitted for review.
+1: under review.
+2: review error.
+3: approved.
                      */
                     std::string m_authStatus;
                     bool m_authStatusHasBeenSet;

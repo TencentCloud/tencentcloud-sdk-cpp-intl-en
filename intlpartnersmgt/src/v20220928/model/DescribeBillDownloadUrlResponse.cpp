@@ -24,7 +24,8 @@ using namespace TencentCloud::Intlpartnersmgt::V20220928::Model;
 using namespace std;
 
 DescribeBillDownloadUrlResponse::DescribeBillDownloadUrlResponse() :
-    m_downloadUrlHasBeenSet(false)
+    m_downloadUrlHasBeenSet(false),
+    m_readyHasBeenSet(false)
 {
 }
 
@@ -72,6 +73,16 @@ CoreInternalOutcome DescribeBillDownloadUrlResponse::Deserialize(const string &p
         m_downloadUrlHasBeenSet = true;
     }
 
+    if (rsp.HasMember("Ready") && !rsp["Ready"].IsNull())
+    {
+        if (!rsp["Ready"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `Ready` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_ready = rsp["Ready"].GetInt64();
+        m_readyHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -88,6 +99,14 @@ string DescribeBillDownloadUrlResponse::ToJsonString() const
         string key = "DownloadUrl";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_downloadUrl.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_readyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Ready";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_ready, allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -110,6 +129,16 @@ string DescribeBillDownloadUrlResponse::GetDownloadUrl() const
 bool DescribeBillDownloadUrlResponse::DownloadUrlHasBeenSet() const
 {
     return m_downloadUrlHasBeenSet;
+}
+
+int64_t DescribeBillDownloadUrlResponse::GetReady() const
+{
+    return m_ready;
+}
+
+bool DescribeBillDownloadUrlResponse::ReadyHasBeenSet() const
+{
+    return m_readyHasBeenSet;
 }
 
 

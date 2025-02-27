@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Payment mode details in the customer bill data totaled by payment mode
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SummaryOverview Payment mode details in the customer bill data totaled by payment mode
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Get the payment mode details of the sub-customer bill summary through the api.
+                     * @return SummaryOverview Get the payment mode details of the sub-customer bill summary through the api.
                      * 
                      */
                     std::vector<PayModeSummaryOverviewItem> GetSummaryOverview() const;
@@ -63,8 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Payment mode details in the customer bill data totaled by payment mode
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Get the payment mode details of the sub-customer bill summary through the api.
                      */
                     std::vector<PayModeSummaryOverviewItem> m_summaryOverview;
                     bool m_summaryOverviewHasBeenSet;

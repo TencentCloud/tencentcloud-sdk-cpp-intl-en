@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取File download address, valid for one hour.
-                     * @return DownloadUrl File download address, valid for one hour.
+                     * 获取File download link, with a file validity period of 1 hour
+                     * @return DownloadUrl File download link, with a file validity period of 1 hour
                      * 
                      */
                     std::string GetDownloadUrl() const;
@@ -57,13 +57,33 @@ namespace TencentCloud
                      */
                     bool DownloadUrlHasBeenSet() const;
 
+                    /**
+                     * 获取File generation status. 0: generating; 1: generated.
+                     * @return Ready File generation status. 0: generating; 1: generated.
+                     * 
+                     */
+                    int64_t GetReady() const;
+
+                    /**
+                     * 判断参数 Ready 是否已赋值
+                     * @return Ready 是否已赋值
+                     * 
+                     */
+                    bool ReadyHasBeenSet() const;
+
                 private:
 
                     /**
-                     * File download address, valid for one hour.
+                     * File download link, with a file validity period of 1 hour
                      */
                     std::string m_downloadUrl;
                     bool m_downloadUrlHasBeenSet;
+
+                    /**
+                     * File generation status. 0: generating; 1: generated.
+                     */
+                    int64_t m_ready;
+                    bool m_readyHasBeenSet;
 
                 };
             }

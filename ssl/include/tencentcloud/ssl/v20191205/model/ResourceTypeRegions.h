@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cloud resource type
-                     * @return ResourceType Cloud resource type
+                     * 获取Cloud resource types, which support clb, waf, api gateway, cos, tke, tse, and tcb.
+                     * @return ResourceType Cloud resource types, which support clb, waf, api gateway, cos, tke, tse, and tcb.
                      * 
                      */
                     std::string GetResourceType() const;
 
                     /**
-                     * 设置Cloud resource type
-                     * @param _resourceType Cloud resource type
+                     * 设置Cloud resource types, which support clb, waf, api gateway, cos, tke, tse, and tcb.
+                     * @param _resourceType Cloud resource types, which support clb, waf, api gateway, cos, tke, tse, and tcb.
                      * 
                      */
                     void SetResourceType(const std::string& _resourceType);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cloud resource type
+                     * Cloud resource types, which support clb, waf, api gateway, cos, tke, tse, and tcb.
                      */
                     std::string m_resourceType;
                     bool m_resourceTypeHasBeenSet;

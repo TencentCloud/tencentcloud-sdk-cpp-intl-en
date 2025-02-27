@@ -133,19 +133,15 @@ namespace TencentCloud
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取The information of the certificate bound to the listener.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Certificate The information of the certificate bound to the listener.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Data of certificate bound to the listener.
+                     * @return Certificate Data of certificate bound to the listener.
                      * 
                      */
                     Certificate GetCertificate() const;
 
                     /**
-                     * 设置The information of the certificate bound to the listener.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _certificate The information of the certificate bound to the listener.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Data of certificate bound to the listener.
+                     * @param _certificate Data of certificate bound to the listener.
                      * 
                      */
                     void SetCertificate(const Certificate& _certificate);
@@ -158,19 +154,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CertificateHasBeenSet() const;
 
                     /**
-                     * 获取The list of the listener rules.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Rules The list of the listener rules.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List of listener rules.
+                     * @return Rules List of listener rules.
                      * 
                      */
                     std::vector<ClbListenerRule> GetRules() const;
 
                     /**
-                     * 设置The list of the listener rules.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _rules The list of the listener rules.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置List of listener rules.
+                     * @param _rules List of listener rules.
                      * 
                      */
                     void SetRules(const std::vector<ClbListenerRule>& _rules);
@@ -183,19 +175,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RulesHasBeenSet() const;
 
                     /**
-                     * 获取The list of non-matching domains.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NoMatchDomains The list of non-matching domains.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Domain list not matched.
+                     * @return NoMatchDomains Domain list not matched.
                      * 
                      */
                     std::vector<std::string> GetNoMatchDomains() const;
 
                     /**
-                     * 设置The list of non-matching domains.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _noMatchDomains The list of non-matching domains.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Domain list not matched.
+                     * @param _noMatchDomains Domain list not matched.
                      * 
                      */
                     void SetNoMatchDomains(const std::vector<std::string>& _noMatchDomains);
@@ -234,22 +222,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * The information of the certificate bound to the listener.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Data of certificate bound to the listener.
                      */
                     Certificate m_certificate;
                     bool m_certificateHasBeenSet;
 
                     /**
-                     * The list of the listener rules.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List of listener rules.
                      */
                     std::vector<ClbListenerRule> m_rules;
                     bool m_rulesHasBeenSet;
 
                     /**
-                     * The list of non-matching domains.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Domain list not matched.
                      */
                     std::vector<std::string> m_noMatchDomains;
                     bool m_noMatchDomainsHasBeenSet;

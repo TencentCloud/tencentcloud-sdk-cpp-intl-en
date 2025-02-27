@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Data details
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DetailSet Data details
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Data details.
+                     * @return DetailSet Data details.
                      * 
                      */
                     std::vector<CustomerBillDetailData> GetDetailSet() const;
@@ -61,10 +59,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DetailSetHasBeenSet() const;
 
                     /**
-                     * 获取Total number of data entries
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Total Total number of data entries
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Total number of entries.
+                     * @return Total Total number of entries.
                      * 
                      */
                     int64_t GetTotal() const;
@@ -79,15 +75,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Data details
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Data details.
                      */
                     std::vector<CustomerBillDetailData> m_detailSet;
                     bool m_detailSetHasBeenSet;
 
                     /**
-                     * Total number of data entries
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Total number of entries.
                      */
                     int64_t m_total;
                     bool m_totalHasBeenSet;

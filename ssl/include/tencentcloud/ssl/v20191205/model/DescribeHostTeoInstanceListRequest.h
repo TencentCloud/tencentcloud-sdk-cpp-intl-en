@@ -67,21 +67,21 @@ namespace TencentCloud
                     /**
                      * 获取The type of resource for certificate deployment.
                      * @return ResourceType The type of resource for certificate deployment.
-                     * 
+                     * @deprecated
                      */
                     std::string GetResourceType() const;
 
                     /**
                      * 设置The type of resource for certificate deployment.
                      * @param _resourceType The type of resource for certificate deployment.
-                     * 
+                     * @deprecated
                      */
                     void SetResourceType(const std::string& _resourceType);
 
                     /**
                      * 判断参数 ResourceType 是否已赋值
                      * @return ResourceType 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool ResourceTypeHasBeenSet() const;
 
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool OldCertificateIdHasBeenSet() const;
 
                     /**
-                     * 获取The pagination offset, starting from 0.
-                     * @return Offset The pagination offset, starting from 0.
+                     * 获取Paging offset. default value: 0.
+                     * @return Offset Paging offset. default value: 0.
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置The pagination offset, starting from 0.
-                     * @param _offset The pagination offset, starting from 0.
+                     * 设置Paging offset. default value: 0.
+                     * @param _offset Paging offset. default value: 0.
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取The number of instances on each page. Default value: 10.	
-                     * @return Limit The number of instances on each page. Default value: 10.	
+                     * 获取Number of items per page. default: 10. maximum value: 200.	
+                     * @return Limit Number of items per page. default: 10. maximum value: 200.	
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置The number of instances on each page. Default value: 10.	
-                     * @param _limit The number of instances on each page. Default value: 10.	
+                     * 设置Number of items per page. default: 10. maximum value: 200.	
+                     * @param _limit Number of items per page. default: 10. maximum value: 200.	
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Whether the query is asynchronous.
-                     * @return AsyncCache Whether the query is asynchronous.
+                     * 获取Asynchronous or not. 1 means yes, 0 means no. default: 0.
+                     * @return AsyncCache Asynchronous or not. 1 means yes, 0 means no. default: 0.
                      * 
                      */
                     int64_t GetAsyncCache() const;
 
                     /**
-                     * 设置Whether the query is asynchronous.
-                     * @param _asyncCache Whether the query is asynchronous.
+                     * 设置Asynchronous or not. 1 means yes, 0 means no. default: 0.
+                     * @param _asyncCache Asynchronous or not. 1 means yes, 0 means no. default: 0.
                      * 
                      */
                     void SetAsyncCache(const int64_t& _asyncCache);
@@ -244,19 +244,19 @@ namespace TencentCloud
                     bool m_oldCertificateIdHasBeenSet;
 
                     /**
-                     * The pagination offset, starting from 0.
+                     * Paging offset. default value: 0.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * The number of instances on each page. Default value: 10.	
+                     * Number of items per page. default: 10. maximum value: 200.	
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Whether the query is asynchronous.
+                     * Asynchronous or not. 1 means yes, 0 means no. default: 0.
                      */
                     int64_t m_asyncCache;
                     bool m_asyncCacheHasBeenSet;

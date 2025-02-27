@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Detail record ID
-                     * @return Id Detail record ID
+                     * 获取Update detail record id.
+                     * @return Id Update detail record id.
                      * 
                      */
                     uint64_t GetId() const;
 
                     /**
-                     * 设置Detail record ID
-                     * @param _id Detail record ID
+                     * 设置Update detail record id.
+                     * @param _id Update detail record id.
                      * 
                      */
                     void SetId(const uint64_t& _id);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取New certificate ID
-                     * @return CertId New certificate ID
+                     * 获取New and old certificate update - new certificate id.
+                     * @return CertId New and old certificate update - new certificate id.
                      * 
                      */
                     std::string GetCertId() const;
 
                     /**
-                     * 设置New certificate ID
-                     * @param _certId New certificate ID
+                     * 设置New and old certificate update - new certificate id.
+                     * @param _certId New and old certificate update - new certificate id.
                      * 
                      */
                     void SetCertId(const std::string& _certId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CertIdHasBeenSet() const;
 
                     /**
-                     * 获取Old certificate ID
-                     * @return OldCertId Old certificate ID
+                     * 获取Old and new certificate update - old certificate id.
+                     * @return OldCertId Old and new certificate update - old certificate id.
                      * 
                      */
                     std::string GetOldCertId() const;
 
                     /**
-                     * 设置Old certificate ID
-                     * @param _oldCertId Old certificate ID
+                     * 设置Old and new certificate update - old certificate id.
+                     * @param _oldCertId Old and new certificate update - old certificate id.
                      * 
                      */
                     void SetOldCertId(const std::string& _oldCertId);
@@ -135,15 +135,63 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool DomainsHasBeenSet() const;
 
                     /**
-                     * 获取Deployment resource type
-                     * @return ResourceType Deployment resource type
+                     * 获取Type of cloud resource for updating old and new certs.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
+                     * @return ResourceType Type of cloud resource for updating old and new certs.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
                      * 
                      */
                     std::string GetResourceType() const;
 
                     /**
-                     * 设置Deployment resource type
-                     * @param _resourceType Deployment resource type
+                     * 设置Type of cloud resource for updating old and new certs.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
+                     * @param _resourceType Type of cloud resource for updating old and new certs.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
                      * 
                      */
                     void SetResourceType(const std::string& _resourceType);
@@ -181,15 +229,43 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Deployment status
-                     * @return Status Deployment status
+                     * 获取Deployment status. valid values:.
+0: To be deployed.
+1: Deployment successful.
+2: Deployment failed.
+3: Deploying.
+4: Rollback succeeded.
+5: Rollback failure.
+6: No resource, no need for deployment.
+                     * @return Status Deployment status. valid values:.
+0: To be deployed.
+1: Deployment successful.
+2: Deployment failed.
+3: Deploying.
+4: Rollback succeeded.
+5: Rollback failure.
+6: No resource, no need for deployment.
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置Deployment status
-                     * @param _status Deployment status
+                     * 设置Deployment status. valid values:.
+0: To be deployed.
+1: Deployment successful.
+2: Deployment failed.
+3: Deploying.
+4: Rollback succeeded.
+5: Rollback failure.
+6: No resource, no need for deployment.
+                     * @param _status Deployment status. valid values:.
+0: To be deployed.
+1: Deployment successful.
+2: Deployment failed.
+3: Deploying.
+4: Rollback succeeded.
+5: Rollback failure.
+6: No resource, no need for deployment.
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -568,22 +644,47 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool TCBTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Listener url (only for CLB).
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return Url Listener url (only for CLB).
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetUrl() const;
+
+                    /**
+                     * 设置Listener url (only for CLB).
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param _url Listener url (only for CLB).
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetUrl(const std::string& _url);
+
+                    /**
+                     * 判断参数 Url 是否已赋值
+                     * @return Url 是否已赋值
+                     * 
+                     */
+                    bool UrlHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Detail record ID
+                     * Update detail record id.
                      */
                     uint64_t m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * New certificate ID
+                     * New and old certificate update - new certificate id.
                      */
                     std::string m_certId;
                     bool m_certIdHasBeenSet;
 
                     /**
-                     * Old certificate ID
+                     * Old and new certificate update - old certificate id.
                      */
                     std::string m_oldCertId;
                     bool m_oldCertIdHasBeenSet;
@@ -596,7 +697,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_domainsHasBeenSet;
 
                     /**
-                     * Deployment resource type
+                     * Type of cloud resource for updating old and new certs.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
                      */
                     std::string m_resourceType;
                     bool m_resourceTypeHasBeenSet;
@@ -609,7 +722,14 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Deployment status
+                     * Deployment status. valid values:.
+0: To be deployed.
+1: Deployment successful.
+2: Deployment failed.
+3: Deploying.
+4: Rollback succeeded.
+5: Rollback failure.
+6: No resource, no need for deployment.
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
@@ -716,6 +836,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     std::string m_tCBType;
                     bool m_tCBTypeHasBeenSet;
+
+                    /**
+                     * Listener url (only for CLB).
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_url;
+                    bool m_urlHasBeenSet;
 
                 };
             }

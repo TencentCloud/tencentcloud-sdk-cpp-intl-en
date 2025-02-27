@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Transaction type code
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ActionType Transaction type code
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Transaction type code.
+                     * @return ActionType Transaction type code.
                      * 
                      */
                     std::string GetActionType() const;
 
                     /**
-                     * 设置Transaction type code
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _actionType Transaction type code
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Transaction type code.
+                     * @param _actionType Transaction type code.
                      * 
                      */
                     void SetActionType(const std::string& _actionType);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ActionTypeHasBeenSet() const;
 
                     /**
-                     * 获取Transaction type name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ActionTypeName Transaction type name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Transaction type name.
+                     * @return ActionTypeName Transaction type name.
                      * 
                      */
                     std::string GetActionTypeName() const;
 
                     /**
-                     * 设置Transaction type name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _actionTypeName Transaction type name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Transaction type name.
+                     * @param _actionTypeName Transaction type name.
                      * 
                      */
                     void SetActionTypeName(const std::string& _actionTypeName);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ActionTypeNameHasBeenSet() const;
 
                     /**
-                     * 获取The actual total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OriginalCost The actual total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Actual total consumption, up to 8 decimal places.
+                     * @return OriginalCost Actual total consumption, up to 8 decimal places.
                      * 
                      */
                     std::string GetOriginalCost() const;
 
                     /**
-                     * 设置The actual total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _originalCost The actual total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Actual total consumption, up to 8 decimal places.
+                     * @param _originalCost Actual total consumption, up to 8 decimal places.
                      * 
                      */
                     void SetOriginalCost(const std::string& _originalCost);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OriginalCostHasBeenSet() const;
 
                     /**
-                     * 获取The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VoucherPayAmount The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Voucher payment amount, up to 8 decimal places.
+                     * @return VoucherPayAmount Voucher payment amount, up to 8 decimal places.
                      * 
                      */
                     std::string GetVoucherPayAmount() const;
 
                     /**
-                     * 设置The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _voucherPayAmount The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Voucher payment amount, up to 8 decimal places.
+                     * @param _voucherPayAmount Voucher payment amount, up to 8 decimal places.
                      * 
                      */
                     void SetVoucherPayAmount(const std::string& _voucherPayAmount);
@@ -147,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VoucherPayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TotalCost Total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Total consumption, up to 8 decimal places.
+                     * @return TotalCost Total consumption, up to 8 decimal places.
                      * 
                      */
                     std::string GetTotalCost() const;
 
                     /**
-                     * 设置Total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _totalCost Total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Total consumption, up to 8 decimal places.
+                     * @param _totalCost Total consumption, up to 8 decimal places.
                      * 
                      */
                     void SetTotalCost(const std::string& _totalCost);
@@ -174,36 +154,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Transaction type code
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Transaction type code.
                      */
                     std::string m_actionType;
                     bool m_actionTypeHasBeenSet;
 
                     /**
-                     * Transaction type name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Transaction type name.
                      */
                     std::string m_actionTypeName;
                     bool m_actionTypeNameHasBeenSet;
 
                     /**
-                     * The actual total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Actual total consumption, up to 8 decimal places.
                      */
                     std::string m_originalCost;
                     bool m_originalCostHasBeenSet;
 
                     /**
-                     * The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Voucher payment amount, up to 8 decimal places.
                      */
                     std::string m_voucherPayAmount;
                     bool m_voucherPayAmountHasBeenSet;
 
                     /**
-                     * Total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Total consumption, up to 8 decimal places.
                      */
                     std::string m_totalCost;
                     bool m_totalCostHasBeenSet;

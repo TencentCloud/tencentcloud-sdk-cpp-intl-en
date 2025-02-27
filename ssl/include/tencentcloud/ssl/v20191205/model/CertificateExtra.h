@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of domain names which can be associated with the certificate
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return DomainNumber Number of domain names which can be associated with the certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Quantity of configurable domain names for the certificate.
+                     * @return DomainNumber Quantity of configurable domain names for the certificate.
                      * 
                      */
                     std::string GetDomainNumber() const;
 
                     /**
-                     * 设置Number of domain names which can be associated with the certificate
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _domainNumber Number of domain names which can be associated with the certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Quantity of configurable domain names for the certificate.
+                     * @param _domainNumber Quantity of configurable domain names for the certificate.
                      * 
                      */
                     void SetDomainNumber(const std::string& _domainNumber);
@@ -72,18 +68,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DomainNumberHasBeenSet() const;
 
                     /**
-                     * 获取Original certificate ID
+                     * 获取Renew the original certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return OriginCertificateId Original certificate ID
+                     * @return OriginCertificateId Renew the original certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetOriginCertificateId() const;
 
                     /**
-                     * 设置Original certificate ID
+                     * 设置Renew the original certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _originCertificateId Original certificate ID
+                     * @param _originCertificateId Renew the original certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -122,18 +118,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ReplacedByHasBeenSet() const;
 
                     /**
-                     * 获取New ID of the new certificate
+                     * 获取Reissue certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ReplacedFor New ID of the new certificate
+                     * @return ReplacedFor Reissue certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetReplacedFor() const;
 
                     /**
-                     * 设置New ID of the new certificate
+                     * 设置Reissue certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _replacedFor New ID of the new certificate
+                     * @param _replacedFor Reissue certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -147,18 +143,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ReplacedForHasBeenSet() const;
 
                     /**
-                     * 获取Certificate ID of the new order
+                     * 获取Renewal certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return RenewOrder Certificate ID of the new order
+                     * @return RenewOrder Renewal certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRenewOrder() const;
 
                     /**
-                     * 设置Certificate ID of the new order
+                     * 设置Renewal certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _renewOrder Certificate ID of the new order
+                     * @param _renewOrder Renewal certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -172,19 +168,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool RenewOrderHasBeenSet() const;
 
                     /**
-                     * 获取Whether the certificate is a Chinese SM certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SMCert Whether the certificate is a Chinese SM certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether it is a China SM certificate.
+                     * @return SMCert Whether it is a China SM certificate.
                      * 
                      */
                     int64_t GetSMCert() const;
 
                     /**
-                     * 设置Whether the certificate is a Chinese SM certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _sMCert Whether the certificate is a Chinese SM certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether it is a China SM certificate.
+                     * @param _sMCert Whether it is a China SM certificate.
                      * 
                      */
                     void SetSMCert(const int64_t& _sMCert);
@@ -197,19 +189,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SMCertHasBeenSet() const;
 
                     /**
-                     * 获取Company type
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return CompanyType Company type
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Company type, valid values: 1 (individual); 2 (company).
+                     * @return CompanyType Company type, valid values: 1 (individual); 2 (company).
                      * 
                      */
                     int64_t GetCompanyType() const;
 
                     /**
-                     * 设置Company type
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _companyType Company type
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Company type, valid values: 1 (individual); 2 (company).
+                     * @param _companyType Company type, valid values: 1 (individual); 2 (company).
                      * 
                      */
                     void SetCompanyType(const int64_t& _companyType);
@@ -224,14 +212,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                 private:
 
                     /**
-                     * Number of domain names which can be associated with the certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Quantity of configurable domain names for the certificate.
                      */
                     std::string m_domainNumber;
                     bool m_domainNumberHasBeenSet;
 
                     /**
-                     * Original certificate ID
+                     * Renew the original certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_originCertificateId;
@@ -245,29 +232,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_replacedByHasBeenSet;
 
                     /**
-                     * New ID of the new certificate
+                     * Reissue certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_replacedFor;
                     bool m_replacedForHasBeenSet;
 
                     /**
-                     * Certificate ID of the new order
+                     * Renewal certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_renewOrder;
                     bool m_renewOrderHasBeenSet;
 
                     /**
-                     * Whether the certificate is a Chinese SM certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether it is a China SM certificate.
                      */
                     int64_t m_sMCert;
                     bool m_sMCertHasBeenSet;
 
                     /**
-                     * Company type
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Company type, valid values: 1 (individual); 2 (company).
                      */
                     int64_t m_companyType;
                     bool m_companyTypeHasBeenSet;

@@ -69,19 +69,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取The list of APIGATEWAY instances.	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceList The list of APIGATEWAY instances.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取API gateway instance details.	
+                     * @return InstanceList API gateway instance details.	
                      * 
                      */
                     std::vector<ApiGatewayInstanceDetail> GetInstanceList() const;
 
                     /**
-                     * 设置The list of APIGATEWAY instances.	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceList The list of APIGATEWAY instances.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置API gateway instance details.	
+                     * @param _instanceList API gateway instance details.	
                      * 
                      */
                     void SetInstanceList(const std::vector<ApiGatewayInstanceDetail>& _instanceList);
@@ -114,6 +110,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool TotalCountHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to query exceptions.
+                     * @return Error Whether to query exceptions.
+                     * 
+                     */
+                    std::string GetError() const;
+
+                    /**
+                     * 设置Whether to query exceptions.
+                     * @param _error Whether to query exceptions.
+                     * 
+                     */
+                    void SetError(const std::string& _error);
+
+                    /**
+                     * 判断参数 Error 是否已赋值
+                     * @return Error 是否已赋值
+                     * 
+                     */
+                    bool ErrorHasBeenSet() const;
+
                 private:
 
                     /**
@@ -123,8 +140,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_regionHasBeenSet;
 
                     /**
-                     * The list of APIGATEWAY instances.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * API gateway instance details.	
                      */
                     std::vector<ApiGatewayInstanceDetail> m_instanceList;
                     bool m_instanceListHasBeenSet;
@@ -134,6 +150,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
+
+                    /**
+                     * Whether to query exceptions.
+                     */
+                    std::string m_error;
+                    bool m_errorHasBeenSet;
 
                 };
             }

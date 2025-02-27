@@ -45,10 +45,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The list of EDGEONE instances.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceList The list of EDGEONE instances.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Teo instance list. if no value is obtained, an empty array is returned.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return InstanceList Teo instance list. if no value is obtained, an empty array is returned.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<TeoInstanceDetail> GetInstanceList() const;
@@ -77,8 +77,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The list of EDGEONE instances.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Teo instance list. if no value is obtained, an empty array is returned.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<TeoInstanceDetail> m_instanceList;
                     bool m_instanceListHasBeenSet;

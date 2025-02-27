@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Supported types for download.
                 */
                 class SupportDownloadType : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return NGINX 
+                     * 获取Whether the available format of nginx can be downloaded.
+                     * @return NGINX Whether the available format of nginx can be downloaded.
                      * 
                      */
                     bool GetNGINX() const;
 
                     /**
-                     * 设置
-                     * @param _nGINX 
+                     * 设置Whether the available format of nginx can be downloaded.
+                     * @param _nGINX Whether the available format of nginx can be downloaded.
                      * 
                      */
                     void SetNGINX(const bool& _nGINX);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NGINXHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return APACHE 
+                     * 获取Whether the available format of apache can be downloaded.
+                     * @return APACHE Whether the available format of apache can be downloaded.
                      * 
                      */
                     bool GetAPACHE() const;
 
                     /**
-                     * 设置
-                     * @param _aPACHE 
+                     * 设置Whether the available format of apache can be downloaded.
+                     * @param _aPACHE Whether the available format of apache can be downloaded.
                      * 
                      */
                     void SetAPACHE(const bool& _aPACHE);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool APACHEHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TOMCAT 
+                     * 获取Whether the available format of tomcat can be downloaded.
+                     * @return TOMCAT Whether the available format of tomcat can be downloaded.
                      * 
                      */
                     bool GetTOMCAT() const;
 
                     /**
-                     * 设置
-                     * @param _tOMCAT 
+                     * 设置Whether the available format of tomcat can be downloaded.
+                     * @param _tOMCAT Whether the available format of tomcat can be downloaded.
                      * 
                      */
                     void SetTOMCAT(const bool& _tOMCAT);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool TOMCATHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IIS 
+                     * 获取Whether the available format of iis can be downloaded.
+                     * @return IIS Whether the available format of iis can be downloaded.
                      * 
                      */
                     bool GetIIS() const;
 
                     /**
-                     * 设置
-                     * @param _iIS 
+                     * 设置Whether the available format of iis can be downloaded.
+                     * @param _iIS Whether the available format of iis can be downloaded.
                      * 
                      */
                     void SetIIS(const bool& _iIS);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool IISHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return JKS 
+                     * 获取Indicates whether the jks format can be downloaded.
+                     * @return JKS Indicates whether the jks format can be downloaded.
                      * 
                      */
                     bool GetJKS() const;
 
                     /**
-                     * 设置
-                     * @param _jKS 
+                     * 设置Indicates whether the jks format can be downloaded.
+                     * @param _jKS Indicates whether the jks format can be downloaded.
                      * 
                      */
                     void SetJKS(const bool& _jKS);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool JKSHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OTHER 
+                     * 获取Indicates whether other formats can be downloaded.
+                     * @return OTHER Indicates whether other formats can be downloaded.
                      * 
                      */
                     bool GetOTHER() const;
 
                     /**
-                     * 设置
-                     * @param _oTHER 
+                     * 设置Indicates whether other formats can be downloaded.
+                     * @param _oTHER Indicates whether other formats can be downloaded.
                      * 
                      */
                     void SetOTHER(const bool& _oTHER);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool OTHERHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ROOT 
+                     * 获取Indicates whether the root certificate can be downloaded.
+                     * @return ROOT Indicates whether the root certificate can be downloaded.
                      * 
                      */
                     bool GetROOT() const;
 
                     /**
-                     * 设置
-                     * @param _rOOT 
+                     * 设置Indicates whether the root certificate can be downloaded.
+                     * @param _rOOT Indicates whether the root certificate can be downloaded.
                      * 
                      */
                     void SetROOT(const bool& _rOOT);
@@ -196,43 +196,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Whether the available format of nginx can be downloaded.
                      */
                     bool m_nGINX;
                     bool m_nGINXHasBeenSet;
 
                     /**
-                     * 
+                     * Whether the available format of apache can be downloaded.
                      */
                     bool m_aPACHE;
                     bool m_aPACHEHasBeenSet;
 
                     /**
-                     * 
+                     * Whether the available format of tomcat can be downloaded.
                      */
                     bool m_tOMCAT;
                     bool m_tOMCATHasBeenSet;
 
                     /**
-                     * 
+                     * Whether the available format of iis can be downloaded.
                      */
                     bool m_iIS;
                     bool m_iISHasBeenSet;
 
                     /**
-                     * 
+                     * Indicates whether the jks format can be downloaded.
                      */
                     bool m_jKS;
                     bool m_jKSHasBeenSet;
 
                     /**
-                     * 
+                     * Indicates whether other formats can be downloaded.
                      */
                     bool m_oTHER;
                     bool m_oTHERHasBeenSet;
 
                     /**
-                     * 
+                     * Indicates whether the root certificate can be downloaded.
                      */
                     bool m_rOOT;
                     bool m_rOOTHasBeenSet;

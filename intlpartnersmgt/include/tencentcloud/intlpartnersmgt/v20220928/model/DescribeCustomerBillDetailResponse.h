@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalHasBeenSet() const;
 
                     /**
-                     * 获取Data details
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DetailSet Data details
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Data detailsNote: This field may return null, indicating that no valid values can be obtained.
+                     * @return DetailSet Data detailsNote: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<BillDetailData> GetDetailSet() const;
@@ -83,8 +81,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_totalHasBeenSet;
 
                     /**
-                     * Data details
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Data detailsNote: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<BillDetailData> m_detailSet;
                     bool m_detailSetHasBeenSet;

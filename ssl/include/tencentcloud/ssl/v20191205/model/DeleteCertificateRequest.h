@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool CertificateIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IsCheckResource 
+                     * 获取When deleting, check whether the certificate is associated with cloud resources. By default, no check is performed. if you choose to check (the authorization service role SSL_QCSLinkedRoleInReplaceLoadCertificate is required), the deletion will become asynchronous, and the API will return an asynchronous task id. you need to use the DescribeDeleteCertificatesTaskResult API to check whether the deletion is successful.
+                     * @return IsCheckResource When deleting, check whether the certificate is associated with cloud resources. By default, no check is performed. if you choose to check (the authorization service role SSL_QCSLinkedRoleInReplaceLoadCertificate is required), the deletion will become asynchronous, and the API will return an asynchronous task id. you need to use the DescribeDeleteCertificatesTaskResult API to check whether the deletion is successful.
                      * 
                      */
                     bool GetIsCheckResource() const;
 
                     /**
-                     * 设置
-                     * @param _isCheckResource 
+                     * 设置When deleting, check whether the certificate is associated with cloud resources. By default, no check is performed. if you choose to check (the authorization service role SSL_QCSLinkedRoleInReplaceLoadCertificate is required), the deletion will become asynchronous, and the API will return an asynchronous task id. you need to use the DescribeDeleteCertificatesTaskResult API to check whether the deletion is successful.
+                     * @param _isCheckResource When deleting, check whether the certificate is associated with cloud resources. By default, no check is performed. if you choose to check (the authorization service role SSL_QCSLinkedRoleInReplaceLoadCertificate is required), the deletion will become asynchronous, and the API will return an asynchronous task id. you need to use the DescribeDeleteCertificatesTaskResult API to check whether the deletion is successful.
                      * 
                      */
                     void SetIsCheckResource(const bool& _isCheckResource);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_certificateIdHasBeenSet;
 
                     /**
-                     * 
+                     * When deleting, check whether the certificate is associated with cloud resources. By default, no check is performed. if you choose to check (the authorization service role SSL_QCSLinkedRoleInReplaceLoadCertificate is required), the deletion will become asynchronous, and the API will return an asynchronous task id. you need to use the DescribeDeleteCertificatesTaskResult API to check whether the deletion is successful.
                      */
                     bool m_isCheckResource;
                     bool m_isCheckResourceHasBeenSet;

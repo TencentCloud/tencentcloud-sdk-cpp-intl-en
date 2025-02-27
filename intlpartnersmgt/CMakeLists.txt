@@ -31,12 +31,10 @@ set(intlpartnersmgt_public_header_model
   include/tencentcloud/intlpartnersmgt/v20220928/model/CountryCodeItem.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryByRegionRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryCreditByUinListResponse.h
-  include/tencentcloud/intlpartnersmgt/v20220928/model/QueryCreditQuotaResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryCreditAllocationHistoryResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/CreateAccountRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryDirectCustomersCreditRequest.h
-  include/tencentcloud/intlpartnersmgt/v20220928/model/QueryCreditQuotaRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryCustomerBillingQuotaData.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryPartnerCreditRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/GetTradeConfigListRequest.h
@@ -126,12 +124,10 @@ set(intlpartnersmgt_src
   src/v20220928/model/CountryCodeItem.cpp
   src/v20220928/model/DescribeBillSummaryByRegionRequest.cpp
   src/v20220928/model/QueryCreditByUinListResponse.cpp
-  src/v20220928/model/QueryCreditQuotaResponse.cpp
   src/v20220928/model/QueryCreditAllocationHistoryResponse.cpp
   src/v20220928/model/CreateAccountRequest.cpp
   src/v20220928/model/DescribeBillSummaryRequest.cpp
   src/v20220928/model/QueryDirectCustomersCreditRequest.cpp
-  src/v20220928/model/QueryCreditQuotaRequest.cpp
   src/v20220928/model/QueryCustomerBillingQuotaData.cpp
   src/v20220928/model/QueryPartnerCreditRequest.cpp
   src/v20220928/model/GetTradeConfigListRequest.cpp

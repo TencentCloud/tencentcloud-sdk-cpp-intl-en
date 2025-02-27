@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Certificate ID
-                     * @return CertificateId Certificate ID
+                     * 获取Paid certificate id of materials to be submitted.
+                     * @return CertificateId Paid certificate id of materials to be submitted.
                      * 
                      */
                     std::string GetCertificateId() const;
 
                     /**
-                     * 设置Certificate ID
-                     * @param _certificateId Certificate ID
+                     * 设置Paid certificate id of materials to be submitted.
+                     * @param _certificateId Paid certificate id of materials to be submitted.
                      * 
                      */
                     void SetCertificateId(const std::string& _certificateId);
@@ -64,15 +64,23 @@ namespace TencentCloud
                     bool CertificateIdHasBeenSet() const;
 
                     /**
-                     * 获取CSR generation mode. `online`: generated online; `parse`: uploaded manually
-                     * @return CsrType CSR generation mode. `online`: generated online; `parse`: uploaded manually
+                     * 获取This field is required. Generation method of CSR, valid values are:
+online: tencent cloud generates the CSR and private key based on the submitted parameter information and stores them encryptedly.
+parse: generate the CSR and private key by itself, and apply for a certificate by uploading the CSR.
+                     * @return CsrType This field is required. Generation method of CSR, valid values are:
+online: tencent cloud generates the CSR and private key based on the submitted parameter information and stores them encryptedly.
+parse: generate the CSR and private key by itself, and apply for a certificate by uploading the CSR.
                      * 
                      */
                     std::string GetCsrType() const;
 
                     /**
-                     * 设置CSR generation mode. `online`: generated online; `parse`: uploaded manually
-                     * @param _csrType CSR generation mode. `online`: generated online; `parse`: uploaded manually
+                     * 设置This field is required. Generation method of CSR, valid values are:
+online: tencent cloud generates the CSR and private key based on the submitted parameter information and stores them encryptedly.
+parse: generate the CSR and private key by itself, and apply for a certificate by uploading the CSR.
+                     * @param _csrType This field is required. Generation method of CSR, valid values are:
+online: tencent cloud generates the CSR and private key based on the submitted parameter information and stores them encryptedly.
+parse: generate the CSR and private key by itself, and apply for a certificate by uploading the CSR.
                      * 
                      */
                     void SetCsrType(const std::string& _csrType);
@@ -85,15 +93,19 @@ namespace TencentCloud
                     bool CsrTypeHasBeenSet() const;
 
                     /**
-                     * 获取Uploaded CSR content
-                     * @return CsrContent Uploaded CSR content
+                     * 获取The content of the uploaded csr.
+If CsrType is parse, this field is required.
+                     * @return CsrContent The content of the uploaded csr.
+If CsrType is parse, this field is required.
                      * 
                      */
                     std::string GetCsrContent() const;
 
                     /**
-                     * 设置Uploaded CSR content
-                     * @param _csrContent Uploaded CSR content
+                     * 设置The content of the uploaded csr.
+If CsrType is parse, this field is required.
+                     * @param _csrContent The content of the uploaded csr.
+If CsrType is parse, this field is required.
                      * 
                      */
                     void SetCsrContent(const std::string& _csrContent);
@@ -106,15 +118,15 @@ namespace TencentCloud
                     bool CsrContentHasBeenSet() const;
 
                     /**
-                     * 获取Domain name bound with the certificate
-                     * @return CertificateDomain Domain name bound with the certificate
+                     * 获取The common name bound to the certificate. if a CSR is uploaded, the domain name must be consistent with the common name resolved from the CSR.
+                     * @return CertificateDomain The common name bound to the certificate. if a CSR is uploaded, the domain name must be consistent with the common name resolved from the CSR.
                      * 
                      */
                     std::string GetCertificateDomain() const;
 
                     /**
-                     * 设置Domain name bound with the certificate
-                     * @param _certificateDomain Domain name bound with the certificate
+                     * 设置The common name bound to the certificate. if a CSR is uploaded, the domain name must be consistent with the common name resolved from the CSR.
+                     * @param _certificateDomain The common name bound to the certificate. if a CSR is uploaded, the domain name must be consistent with the common name resolved from the CSR.
                      * 
                      */
                     void SetCertificateDomain(const std::string& _certificateDomain);
@@ -127,15 +139,15 @@ namespace TencentCloud
                     bool CertificateDomainHasBeenSet() const;
 
                     /**
-                     * 获取Uploaded domain name array (can be uploaded for a multi-domain certificate)
-                     * @return DomainList Uploaded domain name array (can be uploaded for a multi-domain certificate)
+                     * 获取Other domain names bound to the certificate. not required for single domain and wildcard domain certificates. required for multiple domain names and multiple wildcard domain names.
+                     * @return DomainList Other domain names bound to the certificate. not required for single domain and wildcard domain certificates. required for multiple domain names and multiple wildcard domain names.
                      * 
                      */
                     std::vector<std::string> GetDomainList() const;
 
                     /**
-                     * 设置Uploaded domain name array (can be uploaded for a multi-domain certificate)
-                     * @param _domainList Uploaded domain name array (can be uploaded for a multi-domain certificate)
+                     * 设置Other domain names bound to the certificate. not required for single domain and wildcard domain certificates. required for multiple domain names and multiple wildcard domain names.
+                     * @param _domainList Other domain names bound to the certificate. not required for single domain and wildcard domain certificates. required for multiple domain names and multiple wildcard domain names.
                      * 
                      */
                     void SetDomainList(const std::vector<std::string>& _domainList);
@@ -148,15 +160,15 @@ namespace TencentCloud
                     bool DomainListHasBeenSet() const;
 
                     /**
-                     * 获取Password of the private key
-                     * @return KeyPassword Password of the private key
+                     * 获取Private key password, which is currently only used for the password when generating jks and pfx format certificates; other formats of private key certificates are not encrypted.	
+                     * @return KeyPassword Private key password, which is currently only used for the password when generating jks and pfx format certificates; other formats of private key certificates are not encrypted.	
                      * 
                      */
                     std::string GetKeyPassword() const;
 
                     /**
-                     * 设置Password of the private key
-                     * @param _keyPassword Password of the private key
+                     * 设置Private key password, which is currently only used for the password when generating jks and pfx format certificates; other formats of private key certificates are not encrypted.	
+                     * @param _keyPassword Private key password, which is currently only used for the password when generating jks and pfx format certificates; other formats of private key certificates are not encrypted.	
                      * 
                      */
                     void SetKeyPassword(const std::string& _keyPassword);
@@ -169,15 +181,15 @@ namespace TencentCloud
                     bool KeyPasswordHasBeenSet() const;
 
                     /**
-                     * 获取Organization name
-                     * @return OrganizationName Organization name
+                     * 获取This field is required. Company name.
+                     * @return OrganizationName This field is required. Company name.
                      * 
                      */
                     std::string GetOrganizationName() const;
 
                     /**
-                     * 设置Organization name
-                     * @param _organizationName Organization name
+                     * 设置This field is required. Company name.
+                     * @param _organizationName This field is required. Company name.
                      * 
                      */
                     void SetOrganizationName(const std::string& _organizationName);
@@ -190,15 +202,15 @@ namespace TencentCloud
                     bool OrganizationNameHasBeenSet() const;
 
                     /**
-                     * 获取Division name
-                     * @return OrganizationDivision Division name
+                     * 获取This field is required.  Department name.
+                     * @return OrganizationDivision This field is required.  Department name.
                      * 
                      */
                     std::string GetOrganizationDivision() const;
 
                     /**
-                     * 设置Division name
-                     * @param _organizationDivision Division name
+                     * 设置This field is required.  Department name.
+                     * @param _organizationDivision This field is required.  Department name.
                      * 
                      */
                     void SetOrganizationDivision(const std::string& _organizationDivision);
@@ -211,15 +223,15 @@ namespace TencentCloud
                     bool OrganizationDivisionHasBeenSet() const;
 
                     /**
-                     * 获取Detailed address of the organization
-                     * @return OrganizationAddress Detailed address of the organization
+                     * 获取This field is required. Company's detailed address.
+                     * @return OrganizationAddress This field is required. Company's detailed address.
                      * 
                      */
                     std::string GetOrganizationAddress() const;
 
                     /**
-                     * 设置Detailed address of the organization
-                     * @param _organizationAddress Detailed address of the organization
+                     * 设置This field is required. Company's detailed address.
+                     * @param _organizationAddress This field is required. Company's detailed address.
                      * 
                      */
                     void SetOrganizationAddress(const std::string& _organizationAddress);
@@ -232,15 +244,15 @@ namespace TencentCloud
                     bool OrganizationAddressHasBeenSet() const;
 
                     /**
-                     * 获取Country where the organization is located, for example, CN (China)
-                     * @return OrganizationCountry Country where the organization is located, for example, CN (China)
+                     * 获取This field is required.Country name such as CN.
+                     * @return OrganizationCountry This field is required.Country name such as CN.
                      * 
                      */
                     std::string GetOrganizationCountry() const;
 
                     /**
-                     * 设置Country where the organization is located, for example, CN (China)
-                     * @param _organizationCountry Country where the organization is located, for example, CN (China)
+                     * 设置This field is required.Country name such as CN.
+                     * @param _organizationCountry This field is required.Country name such as CN.
                      * 
                      */
                     void SetOrganizationCountry(const std::string& _organizationCountry);
@@ -253,15 +265,15 @@ namespace TencentCloud
                     bool OrganizationCountryHasBeenSet() const;
 
                     /**
-                     * 获取City where the organization is located
-                     * @return OrganizationCity City where the organization is located
+                     * 获取This field is required, which specifies the city where the company is located.
+                     * @return OrganizationCity This field is required, which specifies the city where the company is located.
                      * 
                      */
                     std::string GetOrganizationCity() const;
 
                     /**
-                     * 设置City where the organization is located
-                     * @param _organizationCity City where the organization is located
+                     * 设置This field is required, which specifies the city where the company is located.
+                     * @param _organizationCity This field is required, which specifies the city where the company is located.
                      * 
                      */
                     void SetOrganizationCity(const std::string& _organizationCity);
@@ -274,15 +286,15 @@ namespace TencentCloud
                     bool OrganizationCityHasBeenSet() const;
 
                     /**
-                     * 获取Province where the organization is located
-                     * @return OrganizationRegion Province where the organization is located
+                     * 获取This field is required, specifying the province where the company is located.
+                     * @return OrganizationRegion This field is required, specifying the province where the company is located.
                      * 
                      */
                     std::string GetOrganizationRegion() const;
 
                     /**
-                     * 设置Province where the organization is located
-                     * @param _organizationRegion Province where the organization is located
+                     * 设置This field is required, specifying the province where the company is located.
+                     * @param _organizationRegion This field is required, specifying the province where the company is located.
                      * 
                      */
                     void SetOrganizationRegion(const std::string& _organizationRegion);
@@ -316,15 +328,15 @@ namespace TencentCloud
                     bool PostalCodeHasBeenSet() const;
 
                     /**
-                     * 获取Area code of the fixed-line phone number of the organization
-                     * @return PhoneAreaCode Area code of the fixed-line phone number of the organization
+                     * 获取This field is required, the company's fixed-line phone area code.
+                     * @return PhoneAreaCode This field is required, the company's fixed-line phone area code.
                      * 
                      */
                     std::string GetPhoneAreaCode() const;
 
                     /**
-                     * 设置Area code of the fixed-line phone number of the organization
-                     * @param _phoneAreaCode Area code of the fixed-line phone number of the organization
+                     * 设置This field is required, the company's fixed-line phone area code.
+                     * @param _phoneAreaCode This field is required, the company's fixed-line phone area code.
                      * 
                      */
                     void SetPhoneAreaCode(const std::string& _phoneAreaCode);
@@ -337,15 +349,15 @@ namespace TencentCloud
                     bool PhoneAreaCodeHasBeenSet() const;
 
                     /**
-                     * 获取Fixed-line phone number of the organization
-                     * @return PhoneNumber Fixed-line phone number of the organization
+                     * 获取This field is required, the company's landline number.
+                     * @return PhoneNumber This field is required, the company's landline number.
                      * 
                      */
                     std::string GetPhoneNumber() const;
 
                     /**
-                     * 设置Fixed-line phone number of the organization
-                     * @param _phoneNumber Fixed-line phone number of the organization
+                     * 设置This field is required, the company's landline number.
+                     * @param _phoneNumber This field is required, the company's landline number.
                      * 
                      */
                     void SetPhoneNumber(const std::string& _phoneNumber);
@@ -358,15 +370,15 @@ namespace TencentCloud
                     bool PhoneNumberHasBeenSet() const;
 
                     /**
-                     * 获取Certificate validation method
-                     * @return VerifyType Certificate validation method
+                     * 获取Certificate validation method. Validation types: DNS_AUTO = Automatic DNS validation (only supported for domains resolved by Tencent Cloud DNS with a normal resolution status), DNS = Manual DNS validation, FILE = File validation.
+                     * @return VerifyType Certificate validation method. Validation types: DNS_AUTO = Automatic DNS validation (only supported for domains resolved by Tencent Cloud DNS with a normal resolution status), DNS = Manual DNS validation, FILE = File validation.
                      * 
                      */
                     std::string GetVerifyType() const;
 
                     /**
-                     * 设置Certificate validation method
-                     * @param _verifyType Certificate validation method
+                     * 设置Certificate validation method. Validation types: DNS_AUTO = Automatic DNS validation (only supported for domains resolved by Tencent Cloud DNS with a normal resolution status), DNS = Manual DNS validation, FILE = File validation.
+                     * @param _verifyType Certificate validation method. Validation types: DNS_AUTO = Automatic DNS validation (only supported for domains resolved by Tencent Cloud DNS with a normal resolution status), DNS = Manual DNS validation, FILE = File validation.
                      * 
                      */
                     void SetVerifyType(const std::string& _verifyType);
@@ -379,15 +391,15 @@ namespace TencentCloud
                     bool VerifyTypeHasBeenSet() const;
 
                     /**
-                     * 获取Last name of the administrator
-                     * @return AdminFirstName Last name of the administrator
+                     * 获取This field is required, manager name.
+                     * @return AdminFirstName This field is required, manager name.
                      * 
                      */
                     std::string GetAdminFirstName() const;
 
                     /**
-                     * 设置Last name of the administrator
-                     * @param _adminFirstName Last name of the administrator
+                     * 设置This field is required, manager name.
+                     * @param _adminFirstName This field is required, manager name.
                      * 
                      */
                     void SetAdminFirstName(const std::string& _adminFirstName);
@@ -400,15 +412,15 @@ namespace TencentCloud
                     bool AdminFirstNameHasBeenSet() const;
 
                     /**
-                     * 获取First name of the administrator
-                     * @return AdminLastName First name of the administrator
+                     * 获取This field is required, the manager's surname.
+                     * @return AdminLastName This field is required, the manager's surname.
                      * 
                      */
                     std::string GetAdminLastName() const;
 
                     /**
-                     * 设置First name of the administrator
-                     * @param _adminLastName First name of the administrator
+                     * 设置This field is required, the manager's surname.
+                     * @param _adminLastName This field is required, the manager's surname.
                      * 
                      */
                     void SetAdminLastName(const std::string& _adminLastName);
@@ -421,15 +433,15 @@ namespace TencentCloud
                     bool AdminLastNameHasBeenSet() const;
 
                     /**
-                     * 获取Mobile number of the administrator
-                     * @return AdminPhoneNum Mobile number of the administrator
+                     * 获取This field is required, the manager's mobile phone number.
+                     * @return AdminPhoneNum This field is required, the manager's mobile phone number.
                      * 
                      */
                     std::string GetAdminPhoneNum() const;
 
                     /**
-                     * 设置Mobile number of the administrator
-                     * @param _adminPhoneNum Mobile number of the administrator
+                     * 设置This field is required, the manager's mobile phone number.
+                     * @param _adminPhoneNum This field is required, the manager's mobile phone number.
                      * 
                      */
                     void SetAdminPhoneNum(const std::string& _adminPhoneNum);
@@ -442,15 +454,15 @@ namespace TencentCloud
                     bool AdminPhoneNumHasBeenSet() const;
 
                     /**
-                     * 获取Email of the administrator
-                     * @return AdminEmail Email of the administrator
+                     * 获取This field is required, the manager's email address.
+                     * @return AdminEmail This field is required, the manager's email address.
                      * 
                      */
                     std::string GetAdminEmail() const;
 
                     /**
-                     * 设置Email of the administrator
-                     * @param _adminEmail Email of the administrator
+                     * 设置This field is required, the manager's email address.
+                     * @param _adminEmail This field is required, the manager's email address.
                      * 
                      */
                     void SetAdminEmail(const std::string& _adminEmail);
@@ -463,15 +475,15 @@ namespace TencentCloud
                     bool AdminEmailHasBeenSet() const;
 
                     /**
-                     * 获取Position of the administrator
-                     * @return AdminPosition Position of the administrator
+                     * 获取This field is required, the manager position.
+                     * @return AdminPosition This field is required, the manager position.
                      * 
                      */
                     std::string GetAdminPosition() const;
 
                     /**
-                     * 设置Position of the administrator
-                     * @param _adminPosition Position of the administrator
+                     * 设置This field is required, the manager position.
+                     * @param _adminPosition This field is required, the manager position.
                      * 
                      */
                     void SetAdminPosition(const std::string& _adminPosition);
@@ -484,15 +496,15 @@ namespace TencentCloud
                     bool AdminPositionHasBeenSet() const;
 
                     /**
-                     * 获取Last name of the contact
-                     * @return ContactFirstName Last name of the contact
+                     * 获取This field is required, the contact person name.
+                     * @return ContactFirstName This field is required, the contact person name.
                      * 
                      */
                     std::string GetContactFirstName() const;
 
                     /**
-                     * 设置Last name of the contact
-                     * @param _contactFirstName Last name of the contact
+                     * 设置This field is required, the contact person name.
+                     * @param _contactFirstName This field is required, the contact person name.
                      * 
                      */
                     void SetContactFirstName(const std::string& _contactFirstName);
@@ -505,15 +517,15 @@ namespace TencentCloud
                     bool ContactFirstNameHasBeenSet() const;
 
                     /**
-                     * 获取First name of the contact
-                     * @return ContactLastName First name of the contact
+                     * 获取This field is required, the contact person's surname.
+                     * @return ContactLastName This field is required, the contact person's surname.
                      * 
                      */
                     std::string GetContactLastName() const;
 
                     /**
-                     * 设置First name of the contact
-                     * @param _contactLastName First name of the contact
+                     * 设置This field is required, the contact person's surname.
+                     * @param _contactLastName This field is required, the contact person's surname.
                      * 
                      */
                     void SetContactLastName(const std::string& _contactLastName);
@@ -526,15 +538,15 @@ namespace TencentCloud
                     bool ContactLastNameHasBeenSet() const;
 
                     /**
-                     * 获取Email of the contact
-                     * @return ContactEmail Email of the contact
+                     * 获取This field is required, the contact person's email address.
+                     * @return ContactEmail This field is required, the contact person's email address.
                      * 
                      */
                     std::string GetContactEmail() const;
 
                     /**
-                     * 设置Email of the contact
-                     * @param _contactEmail Email of the contact
+                     * 设置This field is required, the contact person's email address.
+                     * @param _contactEmail This field is required, the contact person's email address.
                      * 
                      */
                     void SetContactEmail(const std::string& _contactEmail);
@@ -547,15 +559,15 @@ namespace TencentCloud
                     bool ContactEmailHasBeenSet() const;
 
                     /**
-                     * 获取Mobile number of the contact
-                     * @return ContactNumber Mobile number of the contact
+                     * 获取This field is required, the contact person's mobile phone number.
+                     * @return ContactNumber This field is required, the contact person's mobile phone number.
                      * 
                      */
                     std::string GetContactNumber() const;
 
                     /**
-                     * 设置Mobile number of the contact
-                     * @param _contactNumber Mobile number of the contact
+                     * 设置This field is required, the contact person's mobile phone number.
+                     * @param _contactNumber This field is required, the contact person's mobile phone number.
                      * 
                      */
                     void SetContactNumber(const std::string& _contactNumber);
@@ -568,15 +580,15 @@ namespace TencentCloud
                     bool ContactNumberHasBeenSet() const;
 
                     /**
-                     * 获取Position of the contact
-                     * @return ContactPosition Position of the contact
+                     * 获取This field is required, the contact person position.
+                     * @return ContactPosition This field is required, the contact person position.
                      * 
                      */
                     std::string GetContactPosition() const;
 
                     /**
-                     * 设置Position of the contact
-                     * @param _contactPosition Position of the contact
+                     * 设置This field is required, the contact person position.
+                     * @param _contactPosition This field is required, the contact person position.
                      * 
                      */
                     void SetContactPosition(const std::string& _contactPosition);
@@ -588,76 +600,100 @@ namespace TencentCloud
                      */
                     bool ContactPositionHasBeenSet() const;
 
+                    /**
+                     * 获取Indicates whether it is a dv certificate. default value is false.
+                     * @return IsDV Indicates whether it is a dv certificate. default value is false.
+                     * 
+                     */
+                    bool GetIsDV() const;
+
+                    /**
+                     * 设置Indicates whether it is a dv certificate. default value is false.
+                     * @param _isDV Indicates whether it is a dv certificate. default value is false.
+                     * 
+                     */
+                    void SetIsDV(const bool& _isDV);
+
+                    /**
+                     * 判断参数 IsDV 是否已赋值
+                     * @return IsDV 是否已赋值
+                     * 
+                     */
+                    bool IsDVHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Certificate ID
+                     * Paid certificate id of materials to be submitted.
                      */
                     std::string m_certificateId;
                     bool m_certificateIdHasBeenSet;
 
                     /**
-                     * CSR generation mode. `online`: generated online; `parse`: uploaded manually
+                     * This field is required. Generation method of CSR, valid values are:
+online: tencent cloud generates the CSR and private key based on the submitted parameter information and stores them encryptedly.
+parse: generate the CSR and private key by itself, and apply for a certificate by uploading the CSR.
                      */
                     std::string m_csrType;
                     bool m_csrTypeHasBeenSet;
 
                     /**
-                     * Uploaded CSR content
+                     * The content of the uploaded csr.
+If CsrType is parse, this field is required.
                      */
                     std::string m_csrContent;
                     bool m_csrContentHasBeenSet;
 
                     /**
-                     * Domain name bound with the certificate
+                     * The common name bound to the certificate. if a CSR is uploaded, the domain name must be consistent with the common name resolved from the CSR.
                      */
                     std::string m_certificateDomain;
                     bool m_certificateDomainHasBeenSet;
 
                     /**
-                     * Uploaded domain name array (can be uploaded for a multi-domain certificate)
+                     * Other domain names bound to the certificate. not required for single domain and wildcard domain certificates. required for multiple domain names and multiple wildcard domain names.
                      */
                     std::vector<std::string> m_domainList;
                     bool m_domainListHasBeenSet;
 
                     /**
-                     * Password of the private key
+                     * Private key password, which is currently only used for the password when generating jks and pfx format certificates; other formats of private key certificates are not encrypted.	
                      */
                     std::string m_keyPassword;
                     bool m_keyPasswordHasBeenSet;
 
                     /**
-                     * Organization name
+                     * This field is required. Company name.
                      */
                     std::string m_organizationName;
                     bool m_organizationNameHasBeenSet;
 
                     /**
-                     * Division name
+                     * This field is required.  Department name.
                      */
                     std::string m_organizationDivision;
                     bool m_organizationDivisionHasBeenSet;
 
                     /**
-                     * Detailed address of the organization
+                     * This field is required. Company's detailed address.
                      */
                     std::string m_organizationAddress;
                     bool m_organizationAddressHasBeenSet;
 
                     /**
-                     * Country where the organization is located, for example, CN (China)
+                     * This field is required.Country name such as CN.
                      */
                     std::string m_organizationCountry;
                     bool m_organizationCountryHasBeenSet;
 
                     /**
-                     * City where the organization is located
+                     * This field is required, which specifies the city where the company is located.
                      */
                     std::string m_organizationCity;
                     bool m_organizationCityHasBeenSet;
 
                     /**
-                     * Province where the organization is located
+                     * This field is required, specifying the province where the company is located.
                      */
                     std::string m_organizationRegion;
                     bool m_organizationRegionHasBeenSet;
@@ -669,82 +705,88 @@ namespace TencentCloud
                     bool m_postalCodeHasBeenSet;
 
                     /**
-                     * Area code of the fixed-line phone number of the organization
+                     * This field is required, the company's fixed-line phone area code.
                      */
                     std::string m_phoneAreaCode;
                     bool m_phoneAreaCodeHasBeenSet;
 
                     /**
-                     * Fixed-line phone number of the organization
+                     * This field is required, the company's landline number.
                      */
                     std::string m_phoneNumber;
                     bool m_phoneNumberHasBeenSet;
 
                     /**
-                     * Certificate validation method
+                     * Certificate validation method. Validation types: DNS_AUTO = Automatic DNS validation (only supported for domains resolved by Tencent Cloud DNS with a normal resolution status), DNS = Manual DNS validation, FILE = File validation.
                      */
                     std::string m_verifyType;
                     bool m_verifyTypeHasBeenSet;
 
                     /**
-                     * Last name of the administrator
+                     * This field is required, manager name.
                      */
                     std::string m_adminFirstName;
                     bool m_adminFirstNameHasBeenSet;
 
                     /**
-                     * First name of the administrator
+                     * This field is required, the manager's surname.
                      */
                     std::string m_adminLastName;
                     bool m_adminLastNameHasBeenSet;
 
                     /**
-                     * Mobile number of the administrator
+                     * This field is required, the manager's mobile phone number.
                      */
                     std::string m_adminPhoneNum;
                     bool m_adminPhoneNumHasBeenSet;
 
                     /**
-                     * Email of the administrator
+                     * This field is required, the manager's email address.
                      */
                     std::string m_adminEmail;
                     bool m_adminEmailHasBeenSet;
 
                     /**
-                     * Position of the administrator
+                     * This field is required, the manager position.
                      */
                     std::string m_adminPosition;
                     bool m_adminPositionHasBeenSet;
 
                     /**
-                     * Last name of the contact
+                     * This field is required, the contact person name.
                      */
                     std::string m_contactFirstName;
                     bool m_contactFirstNameHasBeenSet;
 
                     /**
-                     * First name of the contact
+                     * This field is required, the contact person's surname.
                      */
                     std::string m_contactLastName;
                     bool m_contactLastNameHasBeenSet;
 
                     /**
-                     * Email of the contact
+                     * This field is required, the contact person's email address.
                      */
                     std::string m_contactEmail;
                     bool m_contactEmailHasBeenSet;
 
                     /**
-                     * Mobile number of the contact
+                     * This field is required, the contact person's mobile phone number.
                      */
                     std::string m_contactNumber;
                     bool m_contactNumberHasBeenSet;
 
                     /**
-                     * Position of the contact
+                     * This field is required, the contact person position.
                      */
                     std::string m_contactPosition;
                     bool m_contactPositionHasBeenSet;
+
+                    /**
+                     * Indicates whether it is a dv certificate. default value is false.
+                     */
+                    bool m_isDV;
+                    bool m_isDVHasBeenSet;
 
                 };
             }

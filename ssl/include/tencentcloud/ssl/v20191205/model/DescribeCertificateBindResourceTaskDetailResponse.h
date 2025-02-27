@@ -32,6 +32,7 @@
 #include <tencentcloud/ssl/v20191205/model/TCBInstanceList.h>
 #include <tencentcloud/ssl/v20191205/model/TeoInstanceList.h>
 #include <tencentcloud/ssl/v20191205/model/TSEInstanceList.h>
+#include <tencentcloud/ssl/v20191205/model/COSInstanceList.h>
 
 
 namespace TencentCloud
@@ -215,8 +216,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TEOHasBeenSet() const;
 
                     /**
-                     * 获取The status of the async task. Valid values: `0` for querying, `1` for successful, and `2` for abnormal. If the status is `1`, the result of `BindResourceResult` will be displayed; if the status is `2`, the error causes will be displayed.
-                     * @return Status The status of the async task. Valid values: `0` for querying, `1` for successful, and `2` for abnormal. If the status is `1`, the result of `BindResourceResult` will be displayed; if the status is `2`, the error causes will be displayed.
+                     * 获取The status of the async task. Valid values: `0` for querying, `1` for successful, and `2` for abnormal. If the status is `1`, check the result of `BindResourceResult` ; if the status is `2`, check the `error` .
+                     * @return Status The status of the async task. Valid values: `0` for querying, `1` for successful, and `2` for abnormal. If the status is `1`, check the result of `BindResourceResult` ; if the status is `2`, check the `error` .
                      * 
                      */
                     uint64_t GetStatus() const;
@@ -257,6 +258,22 @@ Note: This field may return null, indicating that no valid value can be obtained
                      * 
                      */
                     bool TSEHasBeenSet() const;
+
+                    /**
+                     * 获取Information of associated cos resource.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return COS Information of associated cos resource.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<COSInstanceList> GetCOS() const;
+
+                    /**
+                     * 判断参数 COS 是否已赋值
+                     * @return COS 是否已赋值
+                     * 
+                     */
+                    bool COSHasBeenSet() const;
 
                 private:
 
@@ -331,7 +348,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_tEOHasBeenSet;
 
                     /**
-                     * The status of the async task. Valid values: `0` for querying, `1` for successful, and `2` for abnormal. If the status is `1`, the result of `BindResourceResult` will be displayed; if the status is `2`, the error causes will be displayed.
+                     * The status of the async task. Valid values: `0` for querying, `1` for successful, and `2` for abnormal. If the status is `1`, check the result of `BindResourceResult` ; if the status is `2`, check the `error` .
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
@@ -348,6 +365,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     std::vector<TSEInstanceList> m_tSE;
                     bool m_tSEHasBeenSet;
+
+                    /**
+                     * Information of associated cos resource.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<COSInstanceList> m_cOS;
+                    bool m_cOSHasBeenSet;
 
                 };
             }

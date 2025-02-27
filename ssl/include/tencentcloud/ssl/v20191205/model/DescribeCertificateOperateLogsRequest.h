@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of requested logs. The default value is 20.
-                     * @return Limit Number of requested logs. The default value is 20.
+                     * 获取Number of requested logs, 20 by default, with a maximum value of 1000. if it exceeds 1000, it will be treated as 1000.
+                     * @return Limit Number of requested logs, 20 by default, with a maximum value of 1000. if it exceeds 1000, it will be treated as 1000.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of requested logs. The default value is 20.
-                     * @param _limit Number of requested logs. The default value is 20.
+                     * 设置Number of requested logs, 20 by default, with a maximum value of 1000. if it exceeds 1000, it will be treated as 1000.
+                     * @param _limit Number of requested logs, 20 by default, with a maximum value of 1000. if it exceeds 1000, it will be treated as 1000.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -135,7 +135,7 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of requested logs. The default value is 20.
+                     * Number of requested logs, 20 by default, with a maximum value of 1000. if it exceeds 1000, it will be treated as 1000.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

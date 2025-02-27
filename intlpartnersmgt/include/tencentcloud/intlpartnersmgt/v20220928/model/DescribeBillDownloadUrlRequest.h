@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Bill month in the format of "yyyy-mm"; the earliest month available for query is June, 2022. Current month's billing data may be inaccurate; please download the current month's bill after it is generated at 1:00 on the 5th of the next month.
-                     * @return Month Bill month in the format of "yyyy-mm"; the earliest month available for query is June, 2022. Current month's billing data may be inaccurate; please download the current month's bill after it is generated at 1:00 on the 5th of the next month.
+                     * 获取The month to which the bill belongs, formatted as YYYY-MM; the earliest month available for query is June, 2022. Current month's billing data may be inaccurate; please download the current month's bill after it is generated at 1:00 on the 5th of the next month.
+                     * @return Month The month to which the bill belongs, formatted as YYYY-MM; the earliest month available for query is June, 2022. Current month's billing data may be inaccurate; please download the current month's bill after it is generated at 1:00 on the 5th of the next month.
                      * 
                      */
                     std::string GetMonth() const;
 
                     /**
-                     * 设置Bill month in the format of "yyyy-mm"; the earliest month available for query is June, 2022. Current month's billing data may be inaccurate; please download the current month's bill after it is generated at 1:00 on the 5th of the next month.
-                     * @param _month Bill month in the format of "yyyy-mm"; the earliest month available for query is June, 2022. Current month's billing data may be inaccurate; please download the current month's bill after it is generated at 1:00 on the 5th of the next month.
+                     * 设置The month to which the bill belongs, formatted as YYYY-MM; the earliest month available for query is June, 2022. Current month's billing data may be inaccurate; please download the current month's bill after it is generated at 1:00 on the 5th of the next month.
+                     * @param _month The month to which the bill belongs, formatted as YYYY-MM; the earliest month available for query is June, 2022. Current month's billing data may be inaccurate; please download the current month's bill after it is generated at 1:00 on the 5th of the next month.
                      * 
                      */
                     void SetMonth(const std::string& _month);
@@ -87,7 +87,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Bill month in the format of "yyyy-mm"; the earliest month available for query is June, 2022. Current month's billing data may be inaccurate; please download the current month's bill after it is generated at 1:00 on the 5th of the next month.
+                     * The month to which the bill belongs, formatted as YYYY-MM; the earliest month available for query is June, 2022. Current month's billing data may be inaccurate; please download the current month's bill after it is generated at 1:00 on the 5th of the next month.
                      */
                     std::string m_month;
                     bool m_monthHasBeenSet;

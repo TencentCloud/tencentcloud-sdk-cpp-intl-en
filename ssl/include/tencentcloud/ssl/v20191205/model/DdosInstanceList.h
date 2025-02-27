@@ -69,19 +69,15 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取The list of DDOS instances.	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceList The list of DDOS instances.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取DDOS instance details.	
+                     * @return InstanceList DDOS instance details.	
                      * 
                      */
                     std::vector<DdosInstanceDetail> GetInstanceList() const;
 
                     /**
-                     * 设置The list of DDOS instances.	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceList The list of DDOS instances.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置DDOS instance details.	
+                     * @param _instanceList DDOS instance details.	
                      * 
                      */
                     void SetInstanceList(const std::vector<DdosInstanceDetail>& _instanceList);
@@ -93,6 +89,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool InstanceListHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to query exceptions.
+                     * @return Error Whether to query exceptions.
+                     * 
+                     */
+                    std::string GetError() const;
+
+                    /**
+                     * 设置Whether to query exceptions.
+                     * @param _error Whether to query exceptions.
+                     * 
+                     */
+                    void SetError(const std::string& _error);
+
+                    /**
+                     * 判断参数 Error 是否已赋值
+                     * @return Error 是否已赋值
+                     * 
+                     */
+                    bool ErrorHasBeenSet() const;
+
                 private:
 
                     /**
@@ -102,11 +119,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * The list of DDOS instances.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * DDOS instance details.	
                      */
                     std::vector<DdosInstanceDetail> m_instanceList;
                     bool m_instanceListHasBeenSet;
+
+                    /**
+                     * Whether to query exceptions.
+                     */
+                    std::string m_error;
+                    bool m_errorHasBeenSet;
 
                 };
             }

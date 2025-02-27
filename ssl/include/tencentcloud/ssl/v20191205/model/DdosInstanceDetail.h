@@ -110,19 +110,15 @@ namespace TencentCloud
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取The certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CertId The certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Certificate id.
+                     * @return CertId Certificate id.
                      * 
                      */
                     std::string GetCertId() const;
 
                     /**
-                     * 设置The certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _certId The certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Certificate id.
+                     * @param _certId Certificate id.
                      * 
                      */
                     void SetCertId(const std::string& _certId);
@@ -176,8 +172,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * The certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Certificate id.
                      */
                     std::string m_certId;
                     bool m_certIdHasBeenSet;

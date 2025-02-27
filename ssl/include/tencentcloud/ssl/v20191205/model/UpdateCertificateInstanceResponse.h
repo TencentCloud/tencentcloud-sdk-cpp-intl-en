@@ -45,10 +45,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cloud resource deployment task ID
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return DeployRecordId Cloud resource deployment task ID
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Task id, DeployRecordId of 0 indicates that the task is in progress. repeatedly requesting this api, when DeployRecordId returned is greater than 0, it indicates that the task is created successfully. if not created successfully, an exception will be thrown.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return DeployRecordId Task id, DeployRecordId of 0 indicates that the task is in progress. repeatedly requesting this api, when DeployRecordId returned is greater than 0, it indicates that the task is created successfully. if not created successfully, an exception will be thrown.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetDeployRecordId() const;
@@ -61,8 +61,8 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool DeployRecordIdHasBeenSet() const;
 
                     /**
-                     * 获取Deployment status. 1 indicates that the deployment succeeded, and 0 indicates that the deployment failed.
-                     * @return DeployStatus Deployment status. 1 indicates that the deployment succeeded, and 0 indicates that the deployment failed.
+                     * 获取Status of the task; 1 indicates successful creation; 0 indicates that there is a task being updated currently, and no new update task has been created; the returned value DeployRecordId is the task id being updated.
+                     * @return DeployStatus Status of the task; 1 indicates successful creation; 0 indicates that there is a task being updated currently, and no new update task has been created; the returned value DeployRecordId is the task id being updated.
                      * 
                      */
                     int64_t GetDeployStatus() const;
@@ -75,8 +75,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool DeployStatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UpdateSyncProgress 
+                     * 获取Task Progress Details.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return UpdateSyncProgress Task Progress Details.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<UpdateSyncProgress> GetUpdateSyncProgress() const;
@@ -91,20 +93,21 @@ Note: This field may return null, indicating that no valid value can be obtained
                 private:
 
                     /**
-                     * Cloud resource deployment task ID
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Task id, DeployRecordId of 0 indicates that the task is in progress. repeatedly requesting this api, when DeployRecordId returned is greater than 0, it indicates that the task is created successfully. if not created successfully, an exception will be thrown.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_deployRecordId;
                     bool m_deployRecordIdHasBeenSet;
 
                     /**
-                     * Deployment status. 1 indicates that the deployment succeeded, and 0 indicates that the deployment failed.
+                     * Status of the task; 1 indicates successful creation; 0 indicates that there is a task being updated currently, and no new update task has been created; the returned value DeployRecordId is the task id being updated.
                      */
                     int64_t m_deployStatus;
                     bool m_deployStatusHasBeenSet;
 
                     /**
-                     * 
+                     * Task Progress Details.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<UpdateSyncProgress> m_updateSyncProgress;
                     bool m_updateSyncProgressHasBeenSet;

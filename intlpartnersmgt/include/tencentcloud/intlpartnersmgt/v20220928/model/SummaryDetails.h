@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Product information list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Business Product information list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Product information list.
+                     * @return Business Product information list.
                      * 
                      */
                     std::vector<BusinessInfo> GetBusiness() const;
 
                     /**
-                     * 设置Product information list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _business Product information list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Product information list.
+                     * @param _business Product information list.
                      * 
                      */
                     void SetBusiness(const std::vector<BusinessInfo>& _business);
@@ -73,19 +69,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BusinessHasBeenSet() const;
 
                     /**
-                     * 获取Original price
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OriginalCost Original price
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Original price.
+                     * @return OriginalCost Original price.
                      * 
                      */
                     std::string GetOriginalCost() const;
 
                     /**
-                     * 设置Original price
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _originalCost Original price
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Original price.
+                     * @param _originalCost Original price.
                      * 
                      */
                     void SetOriginalCost(const std::string& _originalCost);
@@ -98,19 +90,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OriginalCostHasBeenSet() const;
 
                     /**
-                     * 获取Voucher amount
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VoucherPayAmount Voucher amount
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Voucher amount.
+                     * @return VoucherPayAmount Voucher amount.
                      * 
                      */
                     std::string GetVoucherPayAmount() const;
 
                     /**
-                     * 设置Voucher amount
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _voucherPayAmount Voucher amount
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Voucher amount.
+                     * @param _voucherPayAmount Voucher amount.
                      * 
                      */
                     void SetVoucherPayAmount(const std::string& _voucherPayAmount);
@@ -123,19 +111,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VoucherPayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Daily deduction
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RICost Daily deduction
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取RI deduction.
+                     * @return RICost RI deduction.
                      * 
                      */
                     std::string GetRICost() const;
 
                     /**
-                     * 设置Daily deduction
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _rICost Daily deduction
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置RI deduction.
+                     * @param _rICost RI deduction.
                      * 
                      */
                     void SetRICost(const std::string& _rICost);
@@ -148,19 +132,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RICostHasBeenSet() const;
 
                     /**
-                     * 获取Total amount
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TotalCost Total amount
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<TOTAL_AMOUNT>.
+                     * @return TotalCost <TOTAL_AMOUNT>.
                      * 
                      */
                     std::string GetTotalCost() const;
 
                     /**
-                     * 设置Total amount
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _totalCost Total amount
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<TOTAL_AMOUNT>.
+                     * @param _totalCost <TOTAL_AMOUNT>.
                      * 
                      */
                     void SetTotalCost(const std::string& _totalCost);
@@ -173,15 +153,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TotalCostHasBeenSet() const;
 
                     /**
-                     * 获取Summary key by classification dimension Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return GroupKey Summary key by classification dimension Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Classification dimension summary key.
+                     * @return GroupKey Classification dimension summary key.
                      * 
                      */
                     std::string GetGroupKey() const;
 
                     /**
-                     * 设置Summary key by classification dimension Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _groupKey Summary key by classification dimension Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Classification dimension summary key.
+                     * @param _groupKey Classification dimension summary key.
                      * 
                      */
                     void SetGroupKey(const std::string& _groupKey);
@@ -194,19 +174,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool GroupKeyHasBeenSet() const;
 
                     /**
-                     * 获取 Summary value by classification dimension
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return GroupValue  Summary value by classification dimension
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Summary value by classification dimension.
+                     * @return GroupValue Summary value by classification dimension.
                      * 
                      */
                     std::string GetGroupValue() const;
 
                     /**
-                     * 设置 Summary value by classification dimension
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _groupValue  Summary value by classification dimension
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Summary value by classification dimension.
+                     * @param _groupValue Summary value by classification dimension.
                      * 
                      */
                     void SetGroupValue(const std::string& _groupValue);
@@ -221,49 +197,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Product information list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Product information list.
                      */
                     std::vector<BusinessInfo> m_business;
                     bool m_businessHasBeenSet;
 
                     /**
-                     * Original price
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Original price.
                      */
                     std::string m_originalCost;
                     bool m_originalCostHasBeenSet;
 
                     /**
-                     * Voucher amount
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Voucher amount.
                      */
                     std::string m_voucherPayAmount;
                     bool m_voucherPayAmountHasBeenSet;
 
                     /**
-                     * Daily deduction
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * RI deduction.
                      */
                     std::string m_rICost;
                     bool m_rICostHasBeenSet;
 
                     /**
-                     * Total amount
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <TOTAL_AMOUNT>.
                      */
                     std::string m_totalCost;
                     bool m_totalCostHasBeenSet;
 
                     /**
-                     * Summary key by classification dimension Note: This field may return null, indicating that no valid values can be obtained.
+                     * Classification dimension summary key.
                      */
                     std::string m_groupKey;
                     bool m_groupKeyHasBeenSet;
 
                     /**
-                     *  Summary value by classification dimension
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Summary value by classification dimension.
                      */
                     std::string m_groupValue;
                     bool m_groupValueHasBeenSet;

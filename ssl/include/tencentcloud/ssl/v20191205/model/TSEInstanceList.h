@@ -114,6 +114,31 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool RegionHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return Error Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetError() const;
+
+                    /**
+                     * 设置Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param _error Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetError(const std::string& _error);
+
+                    /**
+                     * 判断参数 Error 是否已赋值
+                     * @return Error 是否已赋值
+                     * 
+                     */
+                    bool ErrorHasBeenSet() const;
+
                 private:
 
                     /**
@@ -134,6 +159,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
+
+                    /**
+                     * Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_error;
+                    bool m_errorHasBeenSet;
 
                 };
             }

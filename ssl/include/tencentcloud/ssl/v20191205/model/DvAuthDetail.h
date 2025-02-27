@@ -48,18 +48,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取DV authentication key
+                     * 获取Certificate domain name verification record key.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return DvAuthKey DV authentication key
+                     * @return DvAuthKey Certificate domain name verification record key.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDvAuthKey() const;
 
                     /**
-                     * 设置DV authentication key
+                     * 设置Certificate domain name verification record key.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _dvAuthKey DV authentication key
+                     * @param _dvAuthKey Certificate domain name verification record key.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -73,18 +73,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DvAuthKeyHasBeenSet() const;
 
                     /**
-                     * 获取DV authentication value
+                     * 获取Certificate domain name verification record value.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return DvAuthValue DV authentication value
+                     * @return DvAuthValue Certificate domain name verification record value.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDvAuthValue() const;
 
                     /**
-                     * 设置DV authentication value
+                     * 设置Certificate domain name verification record value.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _dvAuthValue DV authentication value
+                     * @param _dvAuthValue Certificate domain name verification record value.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -98,18 +98,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DvAuthValueHasBeenSet() const;
 
                     /**
-                     * 获取Domain name of the DV authentication value
+                     * 获取Certificate domain name verification domain value.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return DvAuthDomain Domain name of the DV authentication value
+                     * @return DvAuthDomain Certificate domain name verification domain value.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDvAuthDomain() const;
 
                     /**
-                     * 设置Domain name of the DV authentication value
+                     * 设置Certificate domain name verification domain value.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _dvAuthDomain Domain name of the DV authentication value
+                     * @param _dvAuthDomain Certificate domain name verification domain value.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -123,18 +123,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DvAuthDomainHasBeenSet() const;
 
                     /**
-                     * 获取Path of the DV authentication value
+                     * 获取Certificate domain name verification file path, used only for file and file_proxy.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return DvAuthPath Path of the DV authentication value
+                     * @return DvAuthPath Certificate domain name verification file path, used only for file and file_proxy.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDvAuthPath() const;
 
                     /**
-                     * 设置Path of the DV authentication value
+                     * 设置Certificate domain name verification file path, used only for file and file_proxy.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _dvAuthPath Path of the DV authentication value
+                     * @param _dvAuthPath Certificate domain name verification file path, used only for file and file_proxy.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -148,18 +148,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DvAuthPathHasBeenSet() const;
 
                     /**
-                     * 获取DV authentication sub-domain name
+                     * 获取Certificate domain name verification subdomain.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return DvAuthKeySubDomain DV authentication sub-domain name
+                     * @return DvAuthKeySubDomain Certificate domain name verification subdomain.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDvAuthKeySubDomain() const;
 
                     /**
-                     * 设置DV authentication sub-domain name
+                     * 设置Certificate domain name verification subdomain.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _dvAuthKeySubDomain DV authentication sub-domain name
+                     * @param _dvAuthKeySubDomain Certificate domain name verification subdomain.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -173,18 +173,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DvAuthKeySubDomainHasBeenSet() const;
 
                     /**
-                     * 获取DV authentication information
+                     * 获取Certificate domain verification information; multiple domain verifications use this field.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return DvAuths DV authentication information
+                     * @return DvAuths Certificate domain verification information; multiple domain verifications use this field.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<DvAuths> GetDvAuths() const;
 
                     /**
-                     * 设置DV authentication information
+                     * 设置Certificate domain verification information; multiple domain verifications use this field.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _dvAuths DV authentication information
+                     * @param _dvAuths Certificate domain verification information; multiple domain verifications use this field.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -200,42 +200,42 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * DV authentication key
+                     * Certificate domain name verification record key.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dvAuthKey;
                     bool m_dvAuthKeyHasBeenSet;
 
                     /**
-                     * DV authentication value
+                     * Certificate domain name verification record value.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dvAuthValue;
                     bool m_dvAuthValueHasBeenSet;
 
                     /**
-                     * Domain name of the DV authentication value
+                     * Certificate domain name verification domain value.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dvAuthDomain;
                     bool m_dvAuthDomainHasBeenSet;
 
                     /**
-                     * Path of the DV authentication value
+                     * Certificate domain name verification file path, used only for file and file_proxy.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dvAuthPath;
                     bool m_dvAuthPathHasBeenSet;
 
                     /**
-                     * DV authentication sub-domain name
+                     * Certificate domain name verification subdomain.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dvAuthKeySubDomain;
                     bool m_dvAuthKeySubDomainHasBeenSet;
 
                     /**
-                     * DV authentication information
+                     * Certificate domain verification information; multiple domain verifications use this field.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<DvAuths> m_dvAuths;

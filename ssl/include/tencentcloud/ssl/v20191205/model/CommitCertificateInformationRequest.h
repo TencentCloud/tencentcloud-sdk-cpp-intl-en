@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Certificate ID
-                     * @return CertificateId Certificate ID
+                     * 获取Paid certificate id of materials to be submitted.	
+                     * @return CertificateId Paid certificate id of materials to be submitted.	
                      * 
                      */
                     std::string GetCertificateId() const;
 
                     /**
-                     * 设置Certificate ID
-                     * @param _certificateId Certificate ID
+                     * 设置Paid certificate id of materials to be submitted.	
+                     * @param _certificateId Paid certificate id of materials to be submitted.	
                      * 
                      */
                     void SetCertificateId(const std::string& _certificateId);
@@ -64,15 +64,27 @@ namespace TencentCloud
                     bool CertificateIdHasBeenSet() const;
 
                     /**
-                     * 获取Domain validation method
-                     * @return VerifyType Domain validation method
+                     * 获取Certificate domain name verification method:.
+DNS_AUTO: automatically adds domain dns verification, requiring user domain name resolution to be hosted on [cloud dns](https://console.cloud.tencent.com/cns) and under the same tencent cloud account as the certificate application.
+DNS: manually add domain dns verification, which requires users to manually add verification values to the domain resolution service provider.
+FILE: manual addition of domain name file verification. requires the user to manually add a specified path file in the root directory of the domain site for file verification, and either http or https passing is acceptable; the domain site needs to be accessible by overseas ca institutions, with the specific access allowlist being: 64.78.193.238, 216.168.247.9, 216.168.249.9, 54.189.196.217.
+                     * @return VerifyType Certificate domain name verification method:.
+DNS_AUTO: automatically adds domain dns verification, requiring user domain name resolution to be hosted on [cloud dns](https://console.cloud.tencent.com/cns) and under the same tencent cloud account as the certificate application.
+DNS: manually add domain dns verification, which requires users to manually add verification values to the domain resolution service provider.
+FILE: manual addition of domain name file verification. requires the user to manually add a specified path file in the root directory of the domain site for file verification, and either http or https passing is acceptable; the domain site needs to be accessible by overseas ca institutions, with the specific access allowlist being: 64.78.193.238, 216.168.247.9, 216.168.249.9, 54.189.196.217.
                      * 
                      */
                     std::string GetVerifyType() const;
 
                     /**
-                     * 设置Domain validation method
-                     * @param _verifyType Domain validation method
+                     * 设置Certificate domain name verification method:.
+DNS_AUTO: automatically adds domain dns verification, requiring user domain name resolution to be hosted on [cloud dns](https://console.cloud.tencent.com/cns) and under the same tencent cloud account as the certificate application.
+DNS: manually add domain dns verification, which requires users to manually add verification values to the domain resolution service provider.
+FILE: manual addition of domain name file verification. requires the user to manually add a specified path file in the root directory of the domain site for file verification, and either http or https passing is acceptable; the domain site needs to be accessible by overseas ca institutions, with the specific access allowlist being: 64.78.193.238, 216.168.247.9, 216.168.249.9, 54.189.196.217.
+                     * @param _verifyType Certificate domain name verification method:.
+DNS_AUTO: automatically adds domain dns verification, requiring user domain name resolution to be hosted on [cloud dns](https://console.cloud.tencent.com/cns) and under the same tencent cloud account as the certificate application.
+DNS: manually add domain dns verification, which requires users to manually add verification values to the domain resolution service provider.
+FILE: manual addition of domain name file verification. requires the user to manually add a specified path file in the root directory of the domain site for file verification, and either http or https passing is acceptable; the domain site needs to be accessible by overseas ca institutions, with the specific access allowlist being: 64.78.193.238, 216.168.247.9, 216.168.249.9, 54.189.196.217.
                      * 
                      */
                     void SetVerifyType(const std::string& _verifyType);
@@ -87,13 +99,16 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Certificate ID
+                     * Paid certificate id of materials to be submitted.	
                      */
                     std::string m_certificateId;
                     bool m_certificateIdHasBeenSet;
 
                     /**
-                     * Domain validation method
+                     * Certificate domain name verification method:.
+DNS_AUTO: automatically adds domain dns verification, requiring user domain name resolution to be hosted on [cloud dns](https://console.cloud.tencent.com/cns) and under the same tencent cloud account as the certificate application.
+DNS: manually add domain dns verification, which requires users to manually add verification values to the domain resolution service provider.
+FILE: manual addition of domain name file verification. requires the user to manually add a specified path file in the root directory of the domain site for file verification, and either http or https passing is acceptable; the domain site needs to be accessible by overseas ca institutions, with the specific access allowlist being: 64.78.193.238, 216.168.247.9, 216.168.249.9, 54.189.196.217.
                      */
                     std::string m_verifyType;
                     bool m_verifyTypeHasBeenSet;

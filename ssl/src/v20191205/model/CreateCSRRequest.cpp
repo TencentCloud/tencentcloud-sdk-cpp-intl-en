@@ -34,7 +34,8 @@ CreateCSRRequest::CreateCSRRequest() :
     m_keyParameterHasBeenSet(false),
     m_generateHasBeenSet(false),
     m_keyPasswordHasBeenSet(false),
-    m_remarkHasBeenSet(false)
+    m_remarkHasBeenSet(false),
+    m_tagsHasBeenSet(false)
 {
 }
 
@@ -139,6 +140,21 @@ string CreateCSRRequest::ToJsonString() const
         string key = "Remark";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_remark.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
     }
 
 
@@ -339,6 +355,22 @@ void CreateCSRRequest::SetRemark(const string& _remark)
 bool CreateCSRRequest::RemarkHasBeenSet() const
 {
     return m_remarkHasBeenSet;
+}
+
+vector<Tags> CreateCSRRequest::GetTags() const
+{
+    return m_tags;
+}
+
+void CreateCSRRequest::SetTags(const vector<Tags>& _tags)
+{
+    m_tags = _tags;
+    m_tagsHasBeenSet = true;
+}
+
+bool CreateCSRRequest::TagsHasBeenSet() const
+{
+    return m_tagsHasBeenSet;
 }
 
 

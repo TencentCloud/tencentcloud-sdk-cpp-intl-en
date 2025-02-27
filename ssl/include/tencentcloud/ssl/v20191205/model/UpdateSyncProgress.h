@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Update the progress of asynchronous task.
                 */
                 class UpdateSyncProgress : public AbstractModel
                 {
@@ -48,15 +48,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ResourceType 
+                     * 获取Resource type.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return ResourceType Resource type.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetResourceType() const;
 
                     /**
-                     * 设置
-                     * @param _resourceType 
+                     * 设置Resource type.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param _resourceType Resource type.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetResourceType(const std::string& _resourceType);
@@ -69,15 +73,19 @@ namespace TencentCloud
                     bool ResourceTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UpdateSyncProgressRegions 
+                     * 获取Region result list.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return UpdateSyncProgressRegions Region result list.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<UpdateSyncProgressRegion> GetUpdateSyncProgressRegions() const;
 
                     /**
-                     * 设置
-                     * @param _updateSyncProgressRegions 
+                     * 设置Region result list.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param _updateSyncProgressRegions Region result list.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUpdateSyncProgressRegions(const std::vector<UpdateSyncProgressRegion>& _updateSyncProgressRegions);
@@ -90,15 +98,19 @@ namespace TencentCloud
                     bool UpdateSyncProgressRegionsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Asynchronous update progress status: 0, pending, 1 processed, 3 processing.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return Status Asynchronous update progress status: 0, pending, 1 processed, 3 processing.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置Asynchronous update progress status: 0, pending, 1 processed, 3 processing.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param _status Asynchronous update progress status: 0, pending, 1 processed, 3 processing.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -113,19 +125,22 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Resource type.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_resourceType;
                     bool m_resourceTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Region result list.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<UpdateSyncProgressRegion> m_updateSyncProgressRegions;
                     bool m_updateSyncProgressRegionsHasBeenSet;
 
                     /**
-                     * 
+                     * Asynchronous update progress status: 0, pending, 1 processed, 3 processing.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;

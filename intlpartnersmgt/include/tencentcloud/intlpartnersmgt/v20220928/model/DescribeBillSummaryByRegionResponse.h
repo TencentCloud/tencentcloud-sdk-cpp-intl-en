@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Region details in the customer bill data totaled by region
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SummaryOverview Region details in the customer bill data totaled by region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Get the region details of the customer bill data totaled by region through the api.
+                     * @return SummaryOverview Get the region details of the customer bill data totaled by region through the api.
                      * 
                      */
                     std::vector<RegionSummaryOverviewItem> GetSummaryOverview() const;
@@ -63,8 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Region details in the customer bill data totaled by region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Get the region details of the customer bill data totaled by region through the api.
                      */
                     std::vector<RegionSummaryOverviewItem> m_summaryOverview;
                     bool m_summaryOverviewHasBeenSet;

@@ -90,19 +90,15 @@ namespace TencentCloud
                     bool LoadBalancerNameHasBeenSet() const;
 
                     /**
-                     * 获取The list of CLB listeners.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Listeners The list of CLB listeners.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取CLB listener list.
+                     * @return Listeners CLB listener list.
                      * 
                      */
                     std::vector<ClbListener> GetListeners() const;
 
                     /**
-                     * 设置The list of CLB listeners.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _listeners The list of CLB listeners.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置CLB listener list.
+                     * @param _listeners CLB listener list.
                      * 
                      */
                     void SetListeners(const std::vector<ClbListener>& _listeners);
@@ -129,8 +125,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_loadBalancerNameHasBeenSet;
 
                     /**
-                     * The list of CLB listeners.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * CLB listener list.
                      */
                     std::vector<ClbListener> m_listeners;
                     bool m_listenersHasBeenSet;

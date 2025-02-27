@@ -106,15 +106,31 @@ namespace TencentCloud
                     bool UserIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to disable the user’s audio and video. 0: Enable; 1: Disable.
-                     * @return IsMute Whether to disable the user’s audio and video. 0: Enable; 1: Disable.
+                     * 获取Controls the activation state of audio and video.
+0: Enable audio and video,
+1: Disable audio and video,
+2: Disable audio only,
+3: Disable video only.
+                     * @return IsMute Controls the activation state of audio and video.
+0: Enable audio and video,
+1: Disable audio and video,
+2: Disable audio only,
+3: Disable video only.
                      * 
                      */
                     uint64_t GetIsMute() const;
 
                     /**
-                     * 设置Whether to disable the user’s audio and video. 0: Enable; 1: Disable.
-                     * @param _isMute Whether to disable the user’s audio and video. 0: Enable; 1: Disable.
+                     * 设置Controls the activation state of audio and video.
+0: Enable audio and video,
+1: Disable audio and video,
+2: Disable audio only,
+3: Disable video only.
+                     * @param _isMute Controls the activation state of audio and video.
+0: Enable audio and video,
+1: Disable audio and video,
+2: Disable audio only,
+3: Disable video only.
                      * 
                      */
                     void SetIsMute(const uint64_t& _isMute);
@@ -147,7 +163,11 @@ namespace TencentCloud
                     bool m_userIdHasBeenSet;
 
                     /**
-                     * Whether to disable the user’s audio and video. 0: Enable; 1: Disable.
+                     * Controls the activation state of audio and video.
+0: Enable audio and video,
+1: Disable audio and video,
+2: Disable audio only,
+3: Disable video only.
                      */
                     uint64_t m_isMute;
                     bool m_isMuteHasBeenSet;

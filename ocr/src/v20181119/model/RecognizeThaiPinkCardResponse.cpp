@@ -28,6 +28,7 @@ RecognizeThaiPinkCardResponse::RecognizeThaiPinkCardResponse() :
     m_iDNumberHasBeenSet(false),
     m_thaiNameHasBeenSet(false),
     m_enNameHasBeenSet(false),
+    m_thaiSurNameHasBeenSet(false),
     m_thaiDOBHasBeenSet(false),
     m_enDOBHasBeenSet(false),
     m_photoNumberHasBeenSet(false),
@@ -115,6 +116,16 @@ CoreInternalOutcome RecognizeThaiPinkCardResponse::Deserialize(const string &pay
         }
         m_enName = string(rsp["EnName"].GetString());
         m_enNameHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("ThaiSurName") && !rsp["ThaiSurName"].IsNull())
+    {
+        if (!rsp["ThaiSurName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ThaiSurName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_thaiSurName = string(rsp["ThaiSurName"].GetString());
+        m_thaiSurNameHasBeenSet = true;
     }
 
     if (rsp.HasMember("ThaiDOB") && !rsp["ThaiDOB"].IsNull())
@@ -279,6 +290,14 @@ string RecognizeThaiPinkCardResponse::ToJsonString() const
         value.AddMember(iKey, rapidjson::Value(m_enName.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_thaiSurNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ThaiSurName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_thaiSurName.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_thaiDOBHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -425,6 +444,16 @@ string RecognizeThaiPinkCardResponse::GetEnName() const
 bool RecognizeThaiPinkCardResponse::EnNameHasBeenSet() const
 {
     return m_enNameHasBeenSet;
+}
+
+string RecognizeThaiPinkCardResponse::GetThaiSurName() const
+{
+    return m_thaiSurName;
+}
+
+bool RecognizeThaiPinkCardResponse::ThaiSurNameHasBeenSet() const
+{
+    return m_thaiSurNameHasBeenSet;
 }
 
 string RecognizeThaiPinkCardResponse::GetThaiDOB() const

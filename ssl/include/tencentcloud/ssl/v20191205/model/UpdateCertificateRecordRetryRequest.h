@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取To-be-redeployed record ID
-                     * @return DeployRecordId To-be-redeployed record ID
+                     * 获取Record ID for pending retry deployment, which can be obtained through UpdateCertificateInstance. if this parameter is not provided, DeployRecordDetailId must be provided.
+                     * @return DeployRecordId Record ID for pending retry deployment, which can be obtained through UpdateCertificateInstance. if this parameter is not provided, DeployRecordDetailId must be provided.
                      * 
                      */
                     int64_t GetDeployRecordId() const;
 
                     /**
-                     * 设置To-be-redeployed record ID
-                     * @param _deployRecordId To-be-redeployed record ID
+                     * 设置Record ID for pending retry deployment, which can be obtained through UpdateCertificateInstance. if this parameter is not provided, DeployRecordDetailId must be provided.
+                     * @param _deployRecordId Record ID for pending retry deployment, which can be obtained through UpdateCertificateInstance. if this parameter is not provided, DeployRecordDetailId must be provided.
                      * 
                      */
                     void SetDeployRecordId(const int64_t& _deployRecordId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DeployRecordIdHasBeenSet() const;
 
                     /**
-                     * 获取To-be-redeployed record detail ID
-                     * @return DeployRecordDetailId To-be-redeployed record detail ID
+                     * 获取Detail ID for pending retry deployment record, which can be obtained through the DescribeHostUpdateRecordDetail api. if this parameter is not provided, DeployRecordId must be provided.
+                     * @return DeployRecordDetailId Detail ID for pending retry deployment record, which can be obtained through the DescribeHostUpdateRecordDetail api. if this parameter is not provided, DeployRecordId must be provided.
                      * 
                      */
                     int64_t GetDeployRecordDetailId() const;
 
                     /**
-                     * 设置To-be-redeployed record detail ID
-                     * @param _deployRecordDetailId To-be-redeployed record detail ID
+                     * 设置Detail ID for pending retry deployment record, which can be obtained through the DescribeHostUpdateRecordDetail api. if this parameter is not provided, DeployRecordId must be provided.
+                     * @param _deployRecordDetailId Detail ID for pending retry deployment record, which can be obtained through the DescribeHostUpdateRecordDetail api. if this parameter is not provided, DeployRecordId must be provided.
                      * 
                      */
                     void SetDeployRecordDetailId(const int64_t& _deployRecordDetailId);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * To-be-redeployed record ID
+                     * Record ID for pending retry deployment, which can be obtained through UpdateCertificateInstance. if this parameter is not provided, DeployRecordDetailId must be provided.
                      */
                     int64_t m_deployRecordId;
                     bool m_deployRecordIdHasBeenSet;
 
                     /**
-                     * To-be-redeployed record detail ID
+                     * Detail ID for pending retry deployment record, which can be obtained through the DescribeHostUpdateRecordDetail api. if this parameter is not provided, DeployRecordId must be provided.
                      */
                     int64_t m_deployRecordDetailId;
                     bool m_deployRecordDetailIdHasBeenSet;

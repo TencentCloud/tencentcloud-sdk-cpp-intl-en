@@ -111,19 +111,15 @@ namespace TencentCloud
                     bool IsMatchHasBeenSet() const;
 
                     /**
-                     * 获取The certificates associated with the rule.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Certificate The certificates associated with the rule.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Certificate data bound to the rule.
+                     * @return Certificate Certificate data bound to the rule.
                      * 
                      */
                     Certificate GetCertificate() const;
 
                     /**
-                     * 设置The certificates associated with the rule.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _certificate The certificates associated with the rule.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Certificate data bound to the rule.
+                     * @param _certificate Certificate data bound to the rule.
                      * 
                      */
                     void SetCertificate(const Certificate& _certificate);
@@ -136,19 +132,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CertificateHasBeenSet() const;
 
                     /**
-                     * 获取The list of non-matching domains.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NoMatchDomains The list of non-matching domains.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Domain list not matched.
+                     * @return NoMatchDomains Domain list not matched.
                      * 
                      */
                     std::vector<std::string> GetNoMatchDomains() const;
 
                     /**
-                     * 设置The list of non-matching domains.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _noMatchDomains The list of non-matching domains.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Domain list not matched.
+                     * @param _noMatchDomains Domain list not matched.
                      * 
                      */
                     void SetNoMatchDomains(const std::vector<std::string>& _noMatchDomains);
@@ -159,6 +151,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool NoMatchDomainsHasBeenSet() const;
+
+                    /**
+                     * 获取Rule binding path.
+                     * @return Url Rule binding path.
+                     * 
+                     */
+                    std::string GetUrl() const;
+
+                    /**
+                     * 设置Rule binding path.
+                     * @param _url Rule binding path.
+                     * 
+                     */
+                    void SetUrl(const std::string& _url);
+
+                    /**
+                     * 判断参数 Url 是否已赋值
+                     * @return Url 是否已赋值
+                     * 
+                     */
+                    bool UrlHasBeenSet() const;
 
                 private:
 
@@ -181,18 +194,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_isMatchHasBeenSet;
 
                     /**
-                     * The certificates associated with the rule.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Certificate data bound to the rule.
                      */
                     Certificate m_certificate;
                     bool m_certificateHasBeenSet;
 
                     /**
-                     * The list of non-matching domains.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Domain list not matched.
                      */
                     std::vector<std::string> m_noMatchDomains;
                     bool m_noMatchDomainsHasBeenSet;
+
+                    /**
+                     * Rule binding path.
+                     */
+                    std::string m_url;
+                    bool m_urlHasBeenSet;
 
                 };
             }

@@ -114,15 +114,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取The status of the domain.
-                     * @return Status The status of the domain.
+                     * 获取Domain status.
+`Deployed`: deployed;.
+`Processing`: deploying;.
+`Applying`: applying;.
+`Failed`: application failed;.
+`Issued`: binding failed.
+                     * @return Status Domain status.
+`Deployed`: deployed;.
+`Processing`: deploying;.
+`Applying`: applying;.
+`Failed`: application failed;.
+`Issued`: binding failed.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置The status of the domain.
-                     * @param _status The status of the domain.
+                     * 设置Domain status.
+`Deployed`: deployed;.
+`Processing`: deploying;.
+`Applying`: applying;.
+`Failed`: application failed;.
+`Issued`: binding failed.
+                     * @param _status Domain status.
+`Deployed`: deployed;.
+`Processing`: deploying;.
+`Applying`: applying;.
+`Failed`: application failed;.
+`Issued`: binding failed.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -156,7 +176,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * The status of the domain.
+                     * Domain status.
+`Deployed`: deployed;.
+`Processing`: deploying;.
+`Applying`: applying;.
+`Failed`: application failed;.
+`Issued`: binding failed.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return C Status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Status (deprecated).
+                     * @return C Status (deprecated).
                      * @deprecated
                      */
                     int64_t GetC() const;
@@ -60,10 +58,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CHasBeenSet() const;
 
                     /**
-                     * 获取msg
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return M msg
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Msg (deprecated).
+                     * @return M Msg (deprecated).
                      * @deprecated
                      */
                     std::string GetM() const;
@@ -78,15 +74,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Status (deprecated).
                      */
                     int64_t m_c;
                     bool m_cHasBeenSet;
 
                     /**
-                     * msg
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Msg (deprecated).
                      */
                     std::string m_m;
                     bool m_mHasBeenSet;

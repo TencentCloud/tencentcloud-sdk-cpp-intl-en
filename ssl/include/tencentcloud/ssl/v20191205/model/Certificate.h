@@ -89,19 +89,15 @@ namespace TencentCloud
                     bool DnsNamesHasBeenSet() const;
 
                     /**
-                     * 获取The root certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CertCaId The root certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Root certificate id.
+                     * @return CertCaId Root certificate id.
                      * 
                      */
                     std::string GetCertCaId() const;
 
                     /**
-                     * 设置The root certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _certCaId The root certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Root certificate id.
+                     * @param _certCaId Root certificate id.
                      * 
                      */
                     void SetCertCaId(const std::string& _certCaId);
@@ -114,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CertCaIdHasBeenSet() const;
 
                     /**
-                     * 获取The authentication type. Valid values: `UNIDIRECTIONAL` (one-way authentication) and `MUTUAL` (two-way authentication).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SSLMode The authentication type. Valid values: `UNIDIRECTIONAL` (one-way authentication) and `MUTUAL` (two-way authentication).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Certificate authentication mode: unidirectional one-way authentication, mutual mutual authentication.
+                     * @return SSLMode Certificate authentication mode: unidirectional one-way authentication, mutual mutual authentication.
                      * 
                      */
                     std::string GetSSLMode() const;
 
                     /**
-                     * 设置The authentication type. Valid values: `UNIDIRECTIONAL` (one-way authentication) and `MUTUAL` (two-way authentication).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _sSLMode The authentication type. Valid values: `UNIDIRECTIONAL` (one-way authentication) and `MUTUAL` (two-way authentication).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Certificate authentication mode: unidirectional one-way authentication, mutual mutual authentication.
+                     * @param _sSLMode Certificate authentication mode: unidirectional one-way authentication, mutual mutual authentication.
                      * 
                      */
                     void SetSSLMode(const std::string& _sSLMode);
@@ -153,15 +145,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_dnsNamesHasBeenSet;
 
                     /**
-                     * The root certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Root certificate id.
                      */
                     std::string m_certCaId;
                     bool m_certCaIdHasBeenSet;
 
                     /**
-                     * The authentication type. Valid values: `UNIDIRECTIONAL` (one-way authentication) and `MUTUAL` (two-way authentication).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Certificate authentication mode: unidirectional one-way authentication, mutual mutual authentication.
                      */
                     std::string m_sSLMode;
                     bool m_sSLModeHasBeenSet;

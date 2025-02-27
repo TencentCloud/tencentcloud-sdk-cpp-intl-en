@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Reseller account
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PayerAccountId Reseller account
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Distributor account.
+                     * @return PayerAccountId Distributor account.
                      * 
                      */
                     int64_t GetPayerAccountId() const;
 
                     /**
-                     * 设置Reseller account
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _payerAccountId Reseller account
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Distributor account.
+                     * @param _payerAccountId Distributor account.
                      * 
                      */
                     void SetPayerAccountId(const int64_t& _payerAccountId);
@@ -73,19 +69,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PayerAccountIdHasBeenSet() const;
 
                     /**
-                     * 获取Customer account
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OwnerAccountId Customer account
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Sub-Customer account.
+                     * @return OwnerAccountId Sub-Customer account.
                      * 
                      */
                     int64_t GetOwnerAccountId() const;
 
                     /**
-                     * 设置Customer account
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ownerAccountId Customer account
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Sub-Customer account.
+                     * @param _ownerAccountId Sub-Customer account.
                      * 
                      */
                     void SetOwnerAccountId(const int64_t& _ownerAccountId);
@@ -98,19 +90,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OwnerAccountIdHasBeenSet() const;
 
                     /**
-                     * 获取Operator account
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OperatorAccountId Operator account
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Operator account.
+                     * @return OperatorAccountId Operator account.
                      * 
                      */
                     int64_t GetOperatorAccountId() const;
 
                     /**
-                     * 设置Operator account
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _operatorAccountId Operator account
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Operator account.
+                     * @param _operatorAccountId Operator account.
                      * 
                      */
                     void SetOperatorAccountId(const int64_t& _operatorAccountId);
@@ -123,19 +111,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OperatorAccountIdHasBeenSet() const;
 
                     /**
-                     * 获取Product name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProductName Product name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Product name.
+                     * @return ProductName Product name.
                      * 
                      */
                     std::string GetProductName() const;
 
                     /**
-                     * 设置Product name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _productName Product name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Product name.
+                     * @param _productName Product name.
                      * 
                      */
                     void SetProductName(const std::string& _productName);
@@ -149,30 +133,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Billing mode
-`Monthly subscription` (Monthly subscription)
-`Pay-As-You-Go resources` (Pay-as-you-go)
-`Standard RI` (Reserved instance)
-Note: This field may return null, indicating that no valid values can be obtained.
+.
+Monthly subscription.
+Pay-As-You-Go resources.
+Standard ri reserved instances.
                      * @return BillingMode Billing mode
-`Monthly subscription` (Monthly subscription)
-`Pay-As-You-Go resources` (Pay-as-you-go)
-`Standard RI` (Reserved instance)
-Note: This field may return null, indicating that no valid values can be obtained.
+.
+Monthly subscription.
+Pay-As-You-Go resources.
+Standard ri reserved instances.
                      * 
                      */
                     std::string GetBillingMode() const;
 
                     /**
                      * 设置Billing mode
-`Monthly subscription` (Monthly subscription)
-`Pay-As-You-Go resources` (Pay-as-you-go)
-`Standard RI` (Reserved instance)
-Note: This field may return null, indicating that no valid values can be obtained.
+.
+Monthly subscription.
+Pay-As-You-Go resources.
+Standard ri reserved instances.
                      * @param _billingMode Billing mode
-`Monthly subscription` (Monthly subscription)
-`Pay-As-You-Go resources` (Pay-as-you-go)
-`Standard RI` (Reserved instance)
-Note: This field may return null, indicating that no valid values can be obtained.
+.
+Monthly subscription.
+Pay-As-You-Go resources.
+Standard ri reserved instances.
                      * 
                      */
                     void SetBillingMode(const std::string& _billingMode);
@@ -185,23 +169,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BillingModeHasBeenSet() const;
 
                     /**
-                     * 获取Project name
+                     * 获取Project name.
+.
 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProjectName Project name
+                     * @return ProjectName Project name.
+.
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetProjectName() const;
 
                     /**
-                     * 设置Project name
+                     * 设置Project name.
+.
 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _projectName Project name
+                     * @param _projectName Project name.
+.
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetProjectName(const std::string& _projectName);
@@ -214,19 +198,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProjectNameHasBeenSet() const;
 
                     /**
-                     * 获取Resource region
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Region Resource region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Resource region.
+                     * @return Region Resource region.
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Resource region
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _region Resource region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Resource region.
+                     * @param _region Resource region.
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -239,19 +219,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Resource AZ
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AvailabilityZone Resource AZ
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Resource availability zone.
+                     * @return AvailabilityZone Resource availability zone.
                      * 
                      */
                     std::string GetAvailabilityZone() const;
 
                     /**
-                     * 设置Resource AZ
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _availabilityZone Resource AZ
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Resource availability zone.
+                     * @param _availabilityZone Resource availability zone.
                      * 
                      */
                     void SetAvailabilityZone(const std::string& _availabilityZone);
@@ -264,19 +240,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AvailabilityZoneHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceId Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance id.
+                     * @return InstanceId Instance id.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceId Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance id.
+                     * @param _instanceId Instance id.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -289,19 +261,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceName Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance name.
+                     * @return InstanceName Instance name.
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceName Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance name.
+                     * @param _instanceName Instance name.
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -314,23 +282,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Subproduct name
+                     * 获取Sub-Product name
+.
 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SubProductName Subproduct name
+                     * @return SubProductName Sub-Product name
+.
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSubProductName() const;
 
                     /**
-                     * 设置Subproduct name
+                     * 设置Sub-Product name
+.
 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _subProductName Subproduct name
+                     * @param _subProductName Sub-Product name
+.
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSubProductName(const std::string& _subProductName);
@@ -343,19 +311,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SubProductNameHasBeenSet() const;
 
                     /**
-                     * 获取Settlement type
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TransactionType Settlement type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Settlement type.
+                     * @return TransactionType Settlement type.
                      * 
                      */
                     std::string GetTransactionType() const;
 
                     /**
-                     * 设置Settlement type
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _transactionType Settlement type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Settlement type.
+                     * @param _transactionType Settlement type.
                      * 
                      */
                     void SetTransactionType(const std::string& _transactionType);
@@ -368,19 +332,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TransactionTypeHasBeenSet() const;
 
                     /**
-                     * 获取Transaction ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TransactionId Transaction ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Transaction flow id.
+                     * @return TransactionId Transaction flow id.
                      * 
                      */
                     std::string GetTransactionId() const;
 
                     /**
-                     * 设置Transaction ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _transactionId Transaction ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Transaction flow id.
+                     * @param _transactionId Transaction flow id.
                      * 
                      */
                     void SetTransactionId(const std::string& _transactionId);
@@ -393,23 +353,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TransactionIdHasBeenSet() const;
 
                     /**
-                     * 获取Settlement time
+                     * 获取Settlement time.
 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TransactionTime Settlement time
+                     * @return TransactionTime Settlement time.
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTransactionTime() const;
 
                     /**
-                     * 设置Settlement time
+                     * 设置Settlement time.
 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _transactionTime Settlement time
+                     * @param _transactionTime Settlement time.
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTransactionTime(const std::string& _transactionTime);
@@ -422,19 +378,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TransactionTimeHasBeenSet() const;
 
                     /**
-                     * 获取Start time of resource use
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UsageStartTime Start time of resource use
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Resource start time.
+                     * @return UsageStartTime Resource start time.
                      * 
                      */
                     std::string GetUsageStartTime() const;
 
                     /**
-                     * 设置Start time of resource use
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _usageStartTime Start time of resource use
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Resource start time.
+                     * @param _usageStartTime Resource start time.
                      * 
                      */
                     void SetUsageStartTime(const std::string& _usageStartTime);
@@ -447,19 +399,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UsageStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time of resource use
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UsageEndTime End time of resource use
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Resource end time.
+                     * @return UsageEndTime Resource end time.
                      * 
                      */
                     std::string GetUsageEndTime() const;
 
                     /**
-                     * 设置End time of resource use
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _usageEndTime End time of resource use
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Resource end time.
+                     * @param _usageEndTime Resource end time.
                      * 
                      */
                     void SetUsageEndTime(const std::string& _usageEndTime);
@@ -472,19 +420,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UsageEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Component
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ComponentType Component
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Component.
+                     * @return ComponentType Component.
                      * 
                      */
                     std::string GetComponentType() const;
 
                     /**
-                     * 设置Component
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _componentType Component
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Component.
+                     * @param _componentType Component.
                      * 
                      */
                     void SetComponentType(const std::string& _componentType);
@@ -497,19 +441,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ComponentTypeHasBeenSet() const;
 
                     /**
-                     * 获取Component name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ComponentName Component name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Component name.
+                     * @return ComponentName Component name.
                      * 
                      */
                     std::string GetComponentName() const;
 
                     /**
-                     * 设置Component name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _componentName Component name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Component name.
+                     * @param _componentName Component name.
                      * 
                      */
                     void SetComponentName(const std::string& _componentName);
@@ -522,19 +462,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ComponentNameHasBeenSet() const;
 
                     /**
-                     * 获取Component list price
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ComponentListPrice Component list price
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Component list price.
+                     * @return ComponentListPrice Component list price.
                      * 
                      */
                     std::string GetComponentListPrice() const;
 
                     /**
-                     * 设置Component list price
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _componentListPrice Component list price
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Component list price.
+                     * @param _componentListPrice Component list price.
                      * 
                      */
                     void SetComponentListPrice(const std::string& _componentListPrice);
@@ -547,19 +483,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ComponentListPriceHasBeenSet() const;
 
                     /**
-                     * 获取Price unit
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ComponentPriceMeasurementUnit Price unit
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Price unit.
+                     * @return ComponentPriceMeasurementUnit Price unit.
                      * 
                      */
                     std::string GetComponentPriceMeasurementUnit() const;
 
                     /**
-                     * 设置Price unit
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _componentPriceMeasurementUnit Price unit
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Price unit.
+                     * @param _componentPriceMeasurementUnit Price unit.
                      * 
                      */
                     void SetComponentPriceMeasurementUnit(const std::string& _componentPriceMeasurementUnit);
@@ -572,19 +504,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ComponentPriceMeasurementUnitHasBeenSet() const;
 
                     /**
-                     * 获取Component usage
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ComponentUsage Component usage
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Component usage.
+                     * @return ComponentUsage Component usage.
                      * 
                      */
                     std::string GetComponentUsage() const;
 
                     /**
-                     * 设置Component usage
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _componentUsage Component usage
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Component usage.
+                     * @param _componentUsage Component usage.
                      * 
                      */
                     void SetComponentUsage(const std::string& _componentUsage);
@@ -597,19 +525,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ComponentUsageHasBeenSet() const;
 
                     /**
-                     * 获取Component usage unit
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ComponentUsageUnit Component usage unit
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Component usage unit.
+                     * @return ComponentUsageUnit Component usage unit.
                      * 
                      */
                     std::string GetComponentUsageUnit() const;
 
                     /**
-                     * 设置Component usage unit
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _componentUsageUnit Component usage unit
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Component usage unit.
+                     * @param _componentUsageUnit Component usage unit.
                      * 
                      */
                     void SetComponentUsageUnit(const std::string& _componentUsageUnit);
@@ -622,19 +546,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ComponentUsageUnitHasBeenSet() const;
 
                     /**
-                     * 获取Resource usage duration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UsageDuration Resource usage duration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Resource usage duration.
+                     * @return UsageDuration Resource usage duration.
                      * 
                      */
                     std::string GetUsageDuration() const;
 
                     /**
-                     * 设置Resource usage duration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _usageDuration Resource usage duration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Resource usage duration.
+                     * @param _usageDuration Resource usage duration.
                      * 
                      */
                     void SetUsageDuration(const std::string& _usageDuration);
@@ -647,19 +567,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UsageDurationHasBeenSet() const;
 
                     /**
-                     * 获取Duration unit
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DurationUnit Duration unit
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取duration unit.
+                     * @return DurationUnit duration unit.
                      * 
                      */
                     std::string GetDurationUnit() const;
 
                     /**
-                     * 设置Duration unit
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _durationUnit Duration unit
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置duration unit.
+                     * @param _durationUnit duration unit.
                      * 
                      */
                     void SetDurationUnit(const std::string& _durationUnit);
@@ -672,23 +588,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DurationUnitHasBeenSet() const;
 
                     /**
-                     * 获取Original cost
-Original cost = component list price * component usage * usage duration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OriginalCost Original cost
-Original cost = component list price * component usage * usage duration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Total original price.
+Original cost = component list price * component usage * usage duration.
+                     * @return OriginalCost Total original price.
+Original cost = component list price * component usage * usage duration.
                      * 
                      */
                     std::string GetOriginalCost() const;
 
                     /**
-                     * 设置Original cost
-Original cost = component list price * component usage * usage duration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _originalCost Original cost
-Original cost = component list price * component usage * usage duration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Total original price.
+Original cost = component list price * component usage * usage duration.
+                     * @param _originalCost Total original price.
+Original cost = component list price * component usage * usage duration.
                      * 
                      */
                     void SetOriginalCost(const std::string& _originalCost);
@@ -701,19 +613,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OriginalCostHasBeenSet() const;
 
                     /**
-                     * 获取Currency
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Currency Currency
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Currency.
+                     * @return Currency Currency.
                      * 
                      */
                     std::string GetCurrency() const;
 
                     /**
-                     * 设置Currency
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _currency Currency
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Currency.
+                     * @param _currency Currency.
                      * 
                      */
                     void SetCurrency(const std::string& _currency);
@@ -726,19 +634,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CurrencyHasBeenSet() const;
 
                     /**
-                     * 获取Total cost = discounted total - voucher deduction
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TotalCost Total cost = discounted total - voucher deduction
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取= Total Amount After Discount - Voucher Deduction
+                     * @return TotalCost = Total Amount After Discount - Voucher Deduction
                      * 
                      */
                     std::string GetTotalCost() const;
 
                     /**
-                     * 设置Total cost = discounted total - voucher deduction
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _totalCost Total cost = discounted total - voucher deduction
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置= Total Amount After Discount - Voucher Deduction
+                     * @param _totalCost = Total Amount After Discount - Voucher Deduction
                      * 
                      */
                     void SetTotalCost(const std::string& _totalCost);
@@ -751,19 +655,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TotalCostHasBeenSet() const;
 
                     /**
-                     * 获取ID
-Note: The return value may be null, indicating that no valid data can be obtained.
-                     * @return Id ID
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * 获取Id identifier.
+                     * @return Id Id identifier.
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置ID
-Note: The return value may be null, indicating that no valid data can be obtained.
-                     * @param _id ID
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * 设置Id identifier.
+                     * @param _id Id identifier.
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -776,15 +676,15 @@ Note: The return value may be null, indicating that no valid data can be obtaine
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Tag informationNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return Tags Tag informationNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Tag information.
+                     * @return Tags Tag information.
                      * 
                      */
                     std::vector<TagInfo> GetTags() const;
 
                     /**
-                     * 设置Tag informationNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tags Tag informationNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Tag information.
+                     * @param _tags Tag information.
                      * 
                      */
                     void SetTags(const std::vector<TagInfo>& _tags);
@@ -799,210 +699,185 @@ Note: The return value may be null, indicating that no valid data can be obtaine
                 private:
 
                     /**
-                     * Reseller account
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Distributor account.
                      */
                     int64_t m_payerAccountId;
                     bool m_payerAccountIdHasBeenSet;
 
                     /**
-                     * Customer account
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Sub-Customer account.
                      */
                     int64_t m_ownerAccountId;
                     bool m_ownerAccountIdHasBeenSet;
 
                     /**
-                     * Operator account
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Operator account.
                      */
                     int64_t m_operatorAccountId;
                     bool m_operatorAccountIdHasBeenSet;
 
                     /**
-                     * Product name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Product name.
                      */
                     std::string m_productName;
                     bool m_productNameHasBeenSet;
 
                     /**
                      * Billing mode
-`Monthly subscription` (Monthly subscription)
-`Pay-As-You-Go resources` (Pay-as-you-go)
-`Standard RI` (Reserved instance)
-Note: This field may return null, indicating that no valid values can be obtained.
+.
+Monthly subscription.
+Pay-As-You-Go resources.
+Standard ri reserved instances.
                      */
                     std::string m_billingMode;
                     bool m_billingModeHasBeenSet;
 
                     /**
-                     * Project name
+                     * Project name.
+.
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_projectName;
                     bool m_projectNameHasBeenSet;
 
                     /**
-                     * Resource region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Resource region.
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Resource AZ
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Resource availability zone.
                      */
                     std::string m_availabilityZone;
                     bool m_availabilityZoneHasBeenSet;
 
                     /**
-                     * Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance id.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance name.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Subproduct name
+                     * Sub-Product name
+.
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_subProductName;
                     bool m_subProductNameHasBeenSet;
 
                     /**
-                     * Settlement type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Settlement type.
                      */
                     std::string m_transactionType;
                     bool m_transactionTypeHasBeenSet;
 
                     /**
-                     * Transaction ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Transaction flow id.
                      */
                     std::string m_transactionId;
                     bool m_transactionIdHasBeenSet;
 
                     /**
-                     * Settlement time
+                     * Settlement time.
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_transactionTime;
                     bool m_transactionTimeHasBeenSet;
 
                     /**
-                     * Start time of resource use
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Resource start time.
                      */
                     std::string m_usageStartTime;
                     bool m_usageStartTimeHasBeenSet;
 
                     /**
-                     * End time of resource use
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Resource end time.
                      */
                     std::string m_usageEndTime;
                     bool m_usageEndTimeHasBeenSet;
 
                     /**
-                     * Component
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Component.
                      */
                     std::string m_componentType;
                     bool m_componentTypeHasBeenSet;
 
                     /**
-                     * Component name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Component name.
                      */
                     std::string m_componentName;
                     bool m_componentNameHasBeenSet;
 
                     /**
-                     * Component list price
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Component list price.
                      */
                     std::string m_componentListPrice;
                     bool m_componentListPriceHasBeenSet;
 
                     /**
-                     * Price unit
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Price unit.
                      */
                     std::string m_componentPriceMeasurementUnit;
                     bool m_componentPriceMeasurementUnitHasBeenSet;
 
                     /**
-                     * Component usage
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Component usage.
                      */
                     std::string m_componentUsage;
                     bool m_componentUsageHasBeenSet;
 
                     /**
-                     * Component usage unit
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Component usage unit.
                      */
                     std::string m_componentUsageUnit;
                     bool m_componentUsageUnitHasBeenSet;
 
                     /**
-                     * Resource usage duration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Resource usage duration.
                      */
                     std::string m_usageDuration;
                     bool m_usageDurationHasBeenSet;
 
                     /**
-                     * Duration unit
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * duration unit.
                      */
                     std::string m_durationUnit;
                     bool m_durationUnitHasBeenSet;
 
                     /**
-                     * Original cost
-Original cost = component list price * component usage * usage duration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Total original price.
+Original cost = component list price * component usage * usage duration.
                      */
                     std::string m_originalCost;
                     bool m_originalCostHasBeenSet;
 
                     /**
-                     * Currency
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Currency.
                      */
                     std::string m_currency;
                     bool m_currencyHasBeenSet;
 
                     /**
-                     * Total cost = discounted total - voucher deduction
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * = Total Amount After Discount - Voucher Deduction
                      */
                     std::string m_totalCost;
                     bool m_totalCostHasBeenSet;
 
                     /**
-                     * ID
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * Id identifier.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Tag informationNote: This field may return null, indicating that no valid values can be obtained.
+                     * Tag information.
                      */
                     std::vector<TagInfo> m_tags;
                     bool m_tagsHasBeenSet;

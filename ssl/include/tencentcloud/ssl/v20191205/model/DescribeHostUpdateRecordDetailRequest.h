@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取One-click update record ID
-                     * @return DeployRecordId One-click update record ID
+                     * 获取Deployment record id, which is the record id returned by calling the UpdateCertificateInstance api, or the record id returned by calling the UpdateCertificateRecordRollback rollback api.
+                     * @return DeployRecordId Deployment record id, which is the record id returned by calling the UpdateCertificateInstance api, or the record id returned by calling the UpdateCertificateRecordRollback rollback api.
                      * 
                      */
                     std::string GetDeployRecordId() const;
 
                     /**
-                     * 设置One-click update record ID
-                     * @param _deployRecordId One-click update record ID
+                     * 设置Deployment record id, which is the record id returned by calling the UpdateCertificateInstance api, or the record id returned by calling the UpdateCertificateRecordRollback rollback api.
+                     * @param _deployRecordId Deployment record id, which is the record id returned by calling the UpdateCertificateInstance api, or the record id returned by calling the UpdateCertificateRecordRollback rollback api.
                      * 
                      */
                     void SetDeployRecordId(const std::string& _deployRecordId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DeployRecordIdHasBeenSet() const;
 
                     /**
-                     * 获取Number per page, 10 by default.
-                     * @return Limit Number per page, 10 by default.
+                     * 获取Number of items per page. the default is 10. the maximum value is 200.
+                     * @return Limit Number of items per page. the default is 10. the maximum value is 200.
                      * 
                      */
                     std::string GetLimit() const;
 
                     /**
-                     * 设置Number per page, 10 by default.
-                     * @param _limit Number per page, 10 by default.
+                     * 设置Number of items per page. the default is 10. the maximum value is 200.
+                     * @param _limit Number of items per page. the default is 10. the maximum value is 200.
                      * 
                      */
                     void SetLimit(const std::string& _limit);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Paging offset, starting from 0
-                     * @return Offset Paging offset, starting from 0
+                     * 获取Pagination offset, starting from 0. default is 0.
+                     * @return Offset Pagination offset, starting from 0. default is 0.
                      * 
                      */
                     std::string GetOffset() const;
 
                     /**
-                     * 设置Paging offset, starting from 0
-                     * @param _offset Paging offset, starting from 0
+                     * 设置Pagination offset, starting from 0. default is 0.
+                     * @param _offset Pagination offset, starting from 0. default is 0.
                      * 
                      */
                     void SetOffset(const std::string& _offset);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * One-click update record ID
+                     * Deployment record id, which is the record id returned by calling the UpdateCertificateInstance api, or the record id returned by calling the UpdateCertificateRecordRollback rollback api.
                      */
                     std::string m_deployRecordId;
                     bool m_deployRecordIdHasBeenSet;
 
                     /**
-                     * Number per page, 10 by default.
+                     * Number of items per page. the default is 10. the maximum value is 200.
                      */
                     std::string m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Paging offset, starting from 0
+                     * Pagination offset, starting from 0. default is 0.
                      */
                     std::string m_offset;
                     bool m_offsetHasBeenSet;

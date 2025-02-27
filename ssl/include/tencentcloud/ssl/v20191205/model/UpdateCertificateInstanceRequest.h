@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取One-click update old certificate ID
-                     * @return OldCertificateId One-click update old certificate ID
+                     * 获取The old certificate id for one-click update. by querying the cloud resources bound to this certificate id, and then updating these cloud resources with the new certificate.
+                     * @return OldCertificateId The old certificate id for one-click update. by querying the cloud resources bound to this certificate id, and then updating these cloud resources with the new certificate.
                      * 
                      */
                     std::string GetOldCertificateId() const;
 
                     /**
-                     * 设置One-click update old certificate ID
-                     * @param _oldCertificateId One-click update old certificate ID
+                     * 设置The old certificate id for one-click update. by querying the cloud resources bound to this certificate id, and then updating these cloud resources with the new certificate.
+                     * @param _oldCertificateId The old certificate id for one-click update. by querying the cloud resources bound to this certificate id, and then updating these cloud resources with the new certificate.
                      * 
                      */
                     void SetOldCertificateId(const std::string& _oldCertificateId);
@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool OldCertificateIdHasBeenSet() const;
 
                     /**
-                     * 获取Type of the resource that needs to be deployed. The following parameter values are optional: clb, cdn, waf, live, ddos, teo, apigateway, vod, tke, and tcb.
-                     * @return ResourceTypes Type of the resource that needs to be deployed. The following parameter values are optional: clb, cdn, waf, live, ddos, teo, apigateway, vod, tke, and tcb.
+                     * 获取Resource types that need to be deployed, with optional parameter values (lowercase): clb, cdn, waf, live, ddos, teo, apigateway, vod, tke, tcb, tse, cos.
+                     * @return ResourceTypes Resource types that need to be deployed, with optional parameter values (lowercase): clb, cdn, waf, live, ddos, teo, apigateway, vod, tke, tcb, tse, cos.
                      * 
                      */
                     std::vector<std::string> GetResourceTypes() const;
 
                     /**
-                     * 设置Type of the resource that needs to be deployed. The following parameter values are optional: clb, cdn, waf, live, ddos, teo, apigateway, vod, tke, and tcb.
-                     * @param _resourceTypes Type of the resource that needs to be deployed. The following parameter values are optional: clb, cdn, waf, live, ddos, teo, apigateway, vod, tke, and tcb.
+                     * 设置Resource types that need to be deployed, with optional parameter values (lowercase): clb, cdn, waf, live, ddos, teo, apigateway, vod, tke, tcb, tse, cos.
+                     * @param _resourceTypes Resource types that need to be deployed, with optional parameter values (lowercase): clb, cdn, waf, live, ddos, teo, apigateway, vod, tke, tcb, tse, cos.
                      * 
                      */
                     void SetResourceTypes(const std::vector<std::string>& _resourceTypes);
@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool ResourceTypesHasBeenSet() const;
 
                     /**
-                     * 获取One-click update new certificate ID
-                     * @return CertificateId One-click update new certificate ID
+                     * 获取New certificate id for one-click update. if this parameter is not provided, the public key certificate and private key certificate must be provided.
+                     * @return CertificateId New certificate id for one-click update. if this parameter is not provided, the public key certificate and private key certificate must be provided.
                      * 
                      */
                     std::string GetCertificateId() const;
 
                     /**
-                     * 设置One-click update new certificate ID
-                     * @param _certificateId One-click update new certificate ID
+                     * 设置New certificate id for one-click update. if this parameter is not provided, the public key certificate and private key certificate must be provided.
+                     * @param _certificateId New certificate id for one-click update. if this parameter is not provided, the public key certificate and private key certificate must be provided.
                      * 
                      */
                     void SetCertificateId(const std::string& _certificateId);
@@ -129,15 +129,15 @@ namespace TencentCloud
                     bool RegionsHasBeenSet() const;
 
                     /**
-                     * 获取List of regions for which cloud resources need to be deployed
-                     * @return ResourceTypesRegions List of regions for which cloud resources need to be deployed
+                     * 获取List of regions where cloud resources need to be deployed. the cloud resource type of the supported region must be passed. valid values: clb, tke, apigateway, waf, tcb, tse, cos.
+                     * @return ResourceTypesRegions List of regions where cloud resources need to be deployed. the cloud resource type of the supported region must be passed. valid values: clb, tke, apigateway, waf, tcb, tse, cos.
                      * 
                      */
                     std::vector<ResourceTypeRegions> GetResourceTypesRegions() const;
 
                     /**
-                     * 设置List of regions for which cloud resources need to be deployed
-                     * @param _resourceTypesRegions List of regions for which cloud resources need to be deployed
+                     * 设置List of regions where cloud resources need to be deployed. the cloud resource type of the supported region must be passed. valid values: clb, tke, apigateway, waf, tcb, tse, cos.
+                     * @param _resourceTypesRegions List of regions where cloud resources need to be deployed. the cloud resource type of the supported region must be passed. valid values: clb, tke, apigateway, waf, tcb, tse, cos.
                      * 
                      */
                     void SetResourceTypesRegions(const std::vector<ResourceTypeRegions>& _resourceTypesRegions);
@@ -150,15 +150,15 @@ namespace TencentCloud
                     bool ResourceTypesRegionsHasBeenSet() const;
 
                     /**
-                     * 获取Public key of the certificate. If the public key of the certificate is uploaded, CertificateId does not need to be uploaded.
-                     * @return CertificatePublicKey Public key of the certificate. If the public key of the certificate is uploaded, CertificateId does not need to be uploaded.
+                     * 获取If a public key certificate is uploaded, the private key certificate must also be uploaded, and the CertificateId does not need to be transmitted.
+                     * @return CertificatePublicKey If a public key certificate is uploaded, the private key certificate must also be uploaded, and the CertificateId does not need to be transmitted.
                      * 
                      */
                     std::string GetCertificatePublicKey() const;
 
                     /**
-                     * 设置Public key of the certificate. If the public key of the certificate is uploaded, CertificateId does not need to be uploaded.
-                     * @param _certificatePublicKey Public key of the certificate. If the public key of the certificate is uploaded, CertificateId does not need to be uploaded.
+                     * 设置If a public key certificate is uploaded, the private key certificate must also be uploaded, and the CertificateId does not need to be transmitted.
+                     * @param _certificatePublicKey If a public key certificate is uploaded, the private key certificate must also be uploaded, and the CertificateId does not need to be transmitted.
                      * 
                      */
                     void SetCertificatePublicKey(const std::string& _certificatePublicKey);
@@ -171,15 +171,15 @@ namespace TencentCloud
                     bool CertificatePublicKeyHasBeenSet() const;
 
                     /**
-                     * 获取Private key of the certificate. If the public key of the certificate is uploaded, the private key of the certificate is required.
-                     * @return CertificatePrivateKey Private key of the certificate. If the public key of the certificate is uploaded, the private key of the certificate is required.
+                     * 获取If a private key certificate is uploaded, then a public key certificate must be uploaded; CertificateId is not required.
+                     * @return CertificatePrivateKey If a private key certificate is uploaded, then a public key certificate must be uploaded; CertificateId is not required.
                      * 
                      */
                     std::string GetCertificatePrivateKey() const;
 
                     /**
-                     * 设置Private key of the certificate. If the public key of the certificate is uploaded, the private key of the certificate is required.
-                     * @param _certificatePrivateKey Private key of the certificate. If the public key of the certificate is uploaded, the private key of the certificate is required.
+                     * 设置If a private key certificate is uploaded, then a public key certificate must be uploaded; CertificateId is not required.
+                     * @param _certificatePrivateKey If a private key certificate is uploaded, then a public key certificate must be uploaded; CertificateId is not required.
                      * 
                      */
                     void SetCertificatePrivateKey(const std::string& _certificatePrivateKey);
@@ -192,15 +192,15 @@ namespace TencentCloud
                     bool CertificatePrivateKeyHasBeenSet() const;
 
                     /**
-                     * 获取Whether an expiration reminder is ignored for the old certificate. 0: The notification is not ignored. 1: The notification is ignored.
-                     * @return ExpiringNotificationSwitch Whether an expiration reminder is ignored for the old certificate. 0: The notification is not ignored. 1: The notification is ignored.
+                     * 获取Whether to ignore expiration reminder for old certificate  0: do not ignore the notification. 1: ignore the notification, ignore the expiration reminder of OldCertificateId.
+                     * @return ExpiringNotificationSwitch Whether to ignore expiration reminder for old certificate  0: do not ignore the notification. 1: ignore the notification, ignore the expiration reminder of OldCertificateId.
                      * 
                      */
                     uint64_t GetExpiringNotificationSwitch() const;
 
                     /**
-                     * 设置Whether an expiration reminder is ignored for the old certificate. 0: The notification is not ignored. 1: The notification is ignored.
-                     * @param _expiringNotificationSwitch Whether an expiration reminder is ignored for the old certificate. 0: The notification is not ignored. 1: The notification is ignored.
+                     * 设置Whether to ignore expiration reminder for old certificate  0: do not ignore the notification. 1: ignore the notification, ignore the expiration reminder of OldCertificateId.
+                     * @param _expiringNotificationSwitch Whether to ignore expiration reminder for old certificate  0: do not ignore the notification. 1: ignore the notification, ignore the expiration reminder of OldCertificateId.
                      * 
                      */
                     void SetExpiringNotificationSwitch(const uint64_t& _expiringNotificationSwitch);
@@ -213,15 +213,15 @@ namespace TencentCloud
                     bool ExpiringNotificationSwitchHasBeenSet() const;
 
                     /**
-                     * 获取Whether repeated uploading of the same certificate is allowed. If the public key of the certificate is uploaded, this parameter can be configured.
-                     * @return Repeatable Whether repeated uploading of the same certificate is allowed. If the public key of the certificate is uploaded, this parameter can be configured.
+                     * 获取It specifies whether the same certificate is allowed to be uploaded repeatedly. If the public key and private key certificates are selected for upload, this parameter can be configured. If there are duplicate certificates, the update task will fail.
+                     * @return Repeatable It specifies whether the same certificate is allowed to be uploaded repeatedly. If the public key and private key certificates are selected for upload, this parameter can be configured. If there are duplicate certificates, the update task will fail.
                      * 
                      */
                     bool GetRepeatable() const;
 
                     /**
-                     * 设置Whether repeated uploading of the same certificate is allowed. If the public key of the certificate is uploaded, this parameter can be configured.
-                     * @param _repeatable Whether repeated uploading of the same certificate is allowed. If the public key of the certificate is uploaded, this parameter can be configured.
+                     * 设置It specifies whether the same certificate is allowed to be uploaded repeatedly. If the public key and private key certificates are selected for upload, this parameter can be configured. If there are duplicate certificates, the update task will fail.
+                     * @param _repeatable It specifies whether the same certificate is allowed to be uploaded repeatedly. If the public key and private key certificates are selected for upload, this parameter can be configured. If there are duplicate certificates, the update task will fail.
                      * 
                      */
                     void SetRepeatable(const bool& _repeatable);
@@ -234,15 +234,15 @@ namespace TencentCloud
                     bool RepeatableHasBeenSet() const;
 
                     /**
-                     * 获取Whether downloading is allowed. If the public key of the certificate is uploaded, this parameter can be configured.
-                     * @return AllowDownload Whether downloading is allowed. If the public key of the certificate is uploaded, this parameter can be configured.
+                     * 获取Whether to allow downloading. If you choose to upload a public/private key certificate, this parameter can be configured.
+                     * @return AllowDownload Whether to allow downloading. If you choose to upload a public/private key certificate, this parameter can be configured.
                      * 
                      */
                     bool GetAllowDownload() const;
 
                     /**
-                     * 设置Whether downloading is allowed. If the public key of the certificate is uploaded, this parameter can be configured.
-                     * @param _allowDownload Whether downloading is allowed. If the public key of the certificate is uploaded, this parameter can be configured.
+                     * 设置Whether to allow downloading. If you choose to upload a public/private key certificate, this parameter can be configured.
+                     * @param _allowDownload Whether to allow downloading. If you choose to upload a public/private key certificate, this parameter can be configured.
                      * 
                      */
                     void SetAllowDownload(const bool& _allowDownload);
@@ -255,15 +255,15 @@ namespace TencentCloud
                     bool AllowDownloadHasBeenSet() const;
 
                     /**
-                     * 获取Tag list. If the public key of the certificate is uploaded, this parameter can be configured.
-                     * @return Tags Tag list. If the public key of the certificate is uploaded, this parameter can be configured.
+                     * 获取Tag list. If you choose to upload a public/private key certificate, you can configure this parameter.
+                     * @return Tags Tag list. If you choose to upload a public/private key certificate, you can configure this parameter.
                      * 
                      */
                     std::vector<Tags> GetTags() const;
 
                     /**
-                     * 设置Tag list. If the public key of the certificate is uploaded, this parameter can be configured.
-                     * @param _tags Tag list. If the public key of the certificate is uploaded, this parameter can be configured.
+                     * 设置Tag list. If you choose to upload a public/private key certificate, you can configure this parameter.
+                     * @param _tags Tag list. If you choose to upload a public/private key certificate, you can configure this parameter.
                      * 
                      */
                     void SetTags(const std::vector<Tags>& _tags);
@@ -276,15 +276,15 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Project ID. If the public key of the certificate is uploaded, this parameter can be configured.
-                     * @return ProjectId Project ID. If the public key of the certificate is uploaded, this parameter can be configured.
+                     * 获取Project id. If you choose to upload a public/private key certificate, you can configure this parameter.
+                     * @return ProjectId Project id. If you choose to upload a public/private key certificate, you can configure this parameter.
                      * 
                      */
                     uint64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID. If the public key of the certificate is uploaded, this parameter can be configured.
-                     * @param _projectId Project ID. If the public key of the certificate is uploaded, this parameter can be configured.
+                     * 设置Project id. If you choose to upload a public/private key certificate, you can configure this parameter.
+                     * @param _projectId Project id. If you choose to upload a public/private key certificate, you can configure this parameter.
                      * 
                      */
                     void SetProjectId(const uint64_t& _projectId);
@@ -299,19 +299,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * One-click update old certificate ID
+                     * The old certificate id for one-click update. by querying the cloud resources bound to this certificate id, and then updating these cloud resources with the new certificate.
                      */
                     std::string m_oldCertificateId;
                     bool m_oldCertificateIdHasBeenSet;
 
                     /**
-                     * Type of the resource that needs to be deployed. The following parameter values are optional: clb, cdn, waf, live, ddos, teo, apigateway, vod, tke, and tcb.
+                     * Resource types that need to be deployed, with optional parameter values (lowercase): clb, cdn, waf, live, ddos, teo, apigateway, vod, tke, tcb, tse, cos.
                      */
                     std::vector<std::string> m_resourceTypes;
                     bool m_resourceTypesHasBeenSet;
 
                     /**
-                     * One-click update new certificate ID
+                     * New certificate id for one-click update. if this parameter is not provided, the public key certificate and private key certificate must be provided.
                      */
                     std::string m_certificateId;
                     bool m_certificateIdHasBeenSet;
@@ -323,49 +323,49 @@ namespace TencentCloud
                     bool m_regionsHasBeenSet;
 
                     /**
-                     * List of regions for which cloud resources need to be deployed
+                     * List of regions where cloud resources need to be deployed. the cloud resource type of the supported region must be passed. valid values: clb, tke, apigateway, waf, tcb, tse, cos.
                      */
                     std::vector<ResourceTypeRegions> m_resourceTypesRegions;
                     bool m_resourceTypesRegionsHasBeenSet;
 
                     /**
-                     * Public key of the certificate. If the public key of the certificate is uploaded, CertificateId does not need to be uploaded.
+                     * If a public key certificate is uploaded, the private key certificate must also be uploaded, and the CertificateId does not need to be transmitted.
                      */
                     std::string m_certificatePublicKey;
                     bool m_certificatePublicKeyHasBeenSet;
 
                     /**
-                     * Private key of the certificate. If the public key of the certificate is uploaded, the private key of the certificate is required.
+                     * If a private key certificate is uploaded, then a public key certificate must be uploaded; CertificateId is not required.
                      */
                     std::string m_certificatePrivateKey;
                     bool m_certificatePrivateKeyHasBeenSet;
 
                     /**
-                     * Whether an expiration reminder is ignored for the old certificate. 0: The notification is not ignored. 1: The notification is ignored.
+                     * Whether to ignore expiration reminder for old certificate  0: do not ignore the notification. 1: ignore the notification, ignore the expiration reminder of OldCertificateId.
                      */
                     uint64_t m_expiringNotificationSwitch;
                     bool m_expiringNotificationSwitchHasBeenSet;
 
                     /**
-                     * Whether repeated uploading of the same certificate is allowed. If the public key of the certificate is uploaded, this parameter can be configured.
+                     * It specifies whether the same certificate is allowed to be uploaded repeatedly. If the public key and private key certificates are selected for upload, this parameter can be configured. If there are duplicate certificates, the update task will fail.
                      */
                     bool m_repeatable;
                     bool m_repeatableHasBeenSet;
 
                     /**
-                     * Whether downloading is allowed. If the public key of the certificate is uploaded, this parameter can be configured.
+                     * Whether to allow downloading. If you choose to upload a public/private key certificate, this parameter can be configured.
                      */
                     bool m_allowDownload;
                     bool m_allowDownloadHasBeenSet;
 
                     /**
-                     * Tag list. If the public key of the certificate is uploaded, this parameter can be configured.
+                     * Tag list. If you choose to upload a public/private key certificate, you can configure this parameter.
                      */
                     std::vector<Tags> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Project ID. If the public key of the certificate is uploaded, this parameter can be configured.
+                     * Project id. If you choose to upload a public/private key certificate, you can configure this parameter.
                      */
                     uint64_t m_projectId;
                     bool m_projectIdHasBeenSet;

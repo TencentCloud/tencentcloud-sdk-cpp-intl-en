@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_SSL_V20191205_MODEL_CDNINSTANCELIST_H_
-#define TENCENTCLOUD_SSL_V20191205_MODEL_CDNINSTANCELIST_H_
+#ifndef TENCENTCLOUD_SSL_V20191205_MODEL_COSINSTANCELIST_H_
+#define TENCENTCLOUD_SSL_V20191205_MODEL_COSINSTANCELIST_H_
 
 #include <string>
 #include <vector>
@@ -24,7 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/ssl/v20191205/model/CdnInstanceDetail.h>
+#include <tencentcloud/ssl/v20191205/model/CosInstanceDetail.h>
 
 
 namespace TencentCloud
@@ -36,51 +36,51 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Details of CDN instances - data structure of an async task for querying associated cloud resources
+                * COS instance details - asynchronous association of cloud resource data structure.
                 */
-                class CdnInstanceList : public AbstractModel
+                class COSInstanceList : public AbstractModel
                 {
                 public:
-                    CdnInstanceList();
-                    ~CdnInstanceList() = default;
+                    COSInstanceList();
+                    ~COSInstanceList() = default;
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
-                     * 获取The total number of CDN domains in this region.	
-                     * @return TotalCount The total number of CDN domains in this region.	
+                     * 获取Region.
+                     * @return Region Region.
                      * 
                      */
-                    uint64_t GetTotalCount() const;
+                    std::string GetRegion() const;
 
                     /**
-                     * 设置The total number of CDN domains in this region.	
-                     * @param _totalCount The total number of CDN domains in this region.	
+                     * 设置Region.
+                     * @param _region Region.
                      * 
                      */
-                    void SetTotalCount(const uint64_t& _totalCount);
+                    void SetRegion(const std::string& _region);
 
                     /**
-                     * 判断参数 TotalCount 是否已赋值
-                     * @return TotalCount 是否已赋值
+                     * 判断参数 Region 是否已赋值
+                     * @return Region 是否已赋值
                      * 
                      */
-                    bool TotalCountHasBeenSet() const;
+                    bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取CDN domain name details.	
-                     * @return InstanceList CDN domain name details.	
+                     * 获取Instance details.
+                     * @return InstanceList Instance details.
                      * 
                      */
-                    std::vector<CdnInstanceDetail> GetInstanceList() const;
+                    std::vector<CosInstanceDetail> GetInstanceList() const;
 
                     /**
-                     * 设置CDN domain name details.	
-                     * @param _instanceList CDN domain name details.	
+                     * 设置Instance details.
+                     * @param _instanceList Instance details.
                      * 
                      */
-                    void SetInstanceList(const std::vector<CdnInstanceDetail>& _instanceList);
+                    void SetInstanceList(const std::vector<CosInstanceDetail>& _instanceList);
 
                     /**
                      * 判断参数 InstanceList 是否已赋值
@@ -90,15 +90,36 @@ namespace TencentCloud
                     bool InstanceListHasBeenSet() const;
 
                     /**
-                     * 获取Whether to query exceptions.
-                     * @return Error Whether to query exceptions.
+                     * 获取Total number under the region.
+                     * @return TotalCount Total number under the region.
+                     * 
+                     */
+                    int64_t GetTotalCount() const;
+
+                    /**
+                     * 设置Total number under the region.
+                     * @param _totalCount Total number under the region.
+                     * 
+                     */
+                    void SetTotalCount(const int64_t& _totalCount);
+
+                    /**
+                     * 判断参数 TotalCount 是否已赋值
+                     * @return TotalCount 是否已赋值
+                     * 
+                     */
+                    bool TotalCountHasBeenSet() const;
+
+                    /**
+                     * 获取Error message.
+                     * @return Error Error message.
                      * 
                      */
                     std::string GetError() const;
 
                     /**
-                     * 设置Whether to query exceptions.
-                     * @param _error Whether to query exceptions.
+                     * 设置Error message.
+                     * @param _error Error message.
                      * 
                      */
                     void SetError(const std::string& _error);
@@ -113,19 +134,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The total number of CDN domains in this region.	
+                     * Region.
                      */
-                    uint64_t m_totalCount;
-                    bool m_totalCountHasBeenSet;
+                    std::string m_region;
+                    bool m_regionHasBeenSet;
 
                     /**
-                     * CDN domain name details.	
+                     * Instance details.
                      */
-                    std::vector<CdnInstanceDetail> m_instanceList;
+                    std::vector<CosInstanceDetail> m_instanceList;
                     bool m_instanceListHasBeenSet;
 
                     /**
-                     * Whether to query exceptions.
+                     * Total number under the region.
+                     */
+                    int64_t m_totalCount;
+                    bool m_totalCountHasBeenSet;
+
+                    /**
+                     * Error message.
                      */
                     std::string m_error;
                     bool m_errorHasBeenSet;
@@ -136,4 +163,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_SSL_V20191205_MODEL_CDNINSTANCELIST_H_
+#endif // !TENCENTCLOUD_SSL_V20191205_MODEL_COSINSTANCELIST_H_

@@ -27,6 +27,7 @@
 #include <tencentcloud/ssl/v20191205/model/Tags.h>
 #include <tencentcloud/ssl/v20191205/model/RootCertificates.h>
 #include <tencentcloud/ssl/v20191205/model/DvAuths.h>
+#include <tencentcloud/ssl/v20191205/model/CertBasicInfo.h>
 
 
 namespace TencentCloud
@@ -50,9 +51,9 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取User UIN
+                     * 获取Certificate belonging to user main account uin.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return OwnerUin User UIN
+                     * @return OwnerUin Certificate belonging to user main account uin.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -82,9 +83,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Certificate source. `trustasia`: TrustAsia; `upload`: certificate uploaded by users
+                     * 获取Certificate source:.
+trustAsia.
+upload.
+wosign.
+sheca.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return From Certificate source. `trustasia`: TrustAsia; `upload`: certificate uploaded by users
+                     * @return From Certificate source:.
+trustAsia.
+upload.
+wosign.
+sheca.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -114,8 +123,178 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CertificateTypeHasBeenSet() const;
 
                     /**
-                     * 获取Certificate plan type. null: User-uploaded certificate (no plan type); `1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain; `25` WoTrus DV; `26`: WoTrus DV multi-domain; `27`: WoTrus DV wildcard; `28`: WoTrus OV; `29`: WoTrus OV multi-domain; `30`: WoTrus OV wildcard; `31`: WoTrus EV; `32`: WoTrus EV multi-domain; `33`: DNSPod SM2 DV; `34`: DNSPod SM2 DV multi-domain; `35`: DNSPod SM2 DV wildcard; `37`: DNSPod SM2 OV; `38`: DNSPod SM2 OV multi-domain; `39`: DNSPod SM2 OV wildcard: `40`: DNSPod SM2 EV; `41`: DNSPod SM2 EV multi-domain; `42`: TrustAsia DV wildcard multi-domain.
-                     * @return PackageType Certificate plan type. null: User-uploaded certificate (no plan type); `1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain; `25` WoTrus DV; `26`: WoTrus DV multi-domain; `27`: WoTrus DV wildcard; `28`: WoTrus OV; `29`: WoTrus OV multi-domain; `30`: WoTrus OV wildcard; `31`: WoTrus EV; `32`: WoTrus EV multi-domain; `33`: DNSPod SM2 DV; `34`: DNSPod SM2 DV multi-domain; `35`: DNSPod SM2 DV wildcard; `37`: DNSPod SM2 OV; `38`: DNSPod SM2 OV multi-domain; `39`: DNSPod SM2 OV wildcard: `40`: DNSPod SM2 EV; `41`: DNSPod SM2 EV multi-domain; `42`: TrustAsia DV wildcard multi-domain.
+                     * 获取Certificate package type:.
+null: user uploads a certificate (no package type),.
+2: trustasia tls rsa ca,. 
+3: securesite enhanced enterprise version (ev pro),. 
+4: securesite enhanced (ev),. 
+5: securesite enterprise pro (ov pro).
+6: securesite enterprise (ov). 
+7: securesite enterprise (ov) wildcard. 
+8: geotrust enhanced (ev). 
+9: geotrust enterprise (ov). 
+10: geotrust enterprise (ov) wildcard cert. 
+11: trustasia domain name-based multiple domain names ssl certificate. 
+12: trustasia domain name-based (dv) wildcard cert. 
+13: trustasia enterprise wildcard (ov) ssl certificate (d3). 
+14: trustasia enterprise (ov) ssl certificate (d3). 
+15: trustasia enterprise multiple domain names (ov) ssl certificate (d3). 
+16: trustasia enhanced (ev) ssl certificate (d3). 
+17: trustasia enhanced multiple domain names (ev) ssl certificate (d3). 
+18: globalsign enterprise (ov) ssl certificate. 
+19: globalsign enterprise wildcard (ov) ssl certificate. 
+20: globalsign enhanced (ev) ssl certificate. 
+21: trustasia enterprise wildcard multiple domain names (ov) ssl certificate (d3). 
+22: globalsign enterprise multiple domain names (ov) ssl certificate. 
+23: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+24: globalsign enhanced multiple domain names (ev) ssl certificate.
+25: wotrus domain cert.
+26: wotrus multi-domain cert.
+27: wotrus wildcard cert.
+28: wotrus enterprise cert.
+29: wotrus enterprise multi-domain cert.
+30: wotrus enterprise wildcard certificate.
+31: wotrus enhanced certificate.
+32: wotrus enhanced multi-domain name certificate.
+33: wotrus-national cryptography domain name certificate.
+34: wotrus-national cryptography domain name certificate (multiple domain names).
+35: wotrus-national cryptography wildcard certificate.
+37: wotrus-national cryptography enterprise certificate.
+38: wotrus-national cryptography enterprise certificate (multiple domain names).
+39: wotrus-national cryptography enterprise certificate (wildcard).
+40: wotrus-national cryptography enhanced certificate.
+41: wotrus - national cryptography enhanced certificate (multiple domain names).
+42: trustasia - domain name certificate (wildcard multiple domain names).
+43: DNSPod - enterprise (ov) ssl certificate.
+44: DNSPod - enterprise (ov) wildcard ssl certificate.
+45: DNSPod - enterprise (ov) multiple domain names ssl certificate.
+46: dnspod-enhanced (ev) ssl certificate.
+47: dnspod-enhanced (ev) multiple domain names ssl certificate.
+48: dnspod-domain name-based (dv) ssl certificate.
+49: dnspod-domain name-based (dv) wildcard ssl certificate.
+50: dnspod-domain name-based (dv) multiple domain names ssl certificate.
+51: DNSPod (national cryptography) - enterprise (ov) ssl certificate.
+52: DNSPod (national cryptography) - enterprise (ov) wildcard ssl certificate.
+53: DNSPod (national cryptography) - enterprise (ov) multiple domain names ssl certificate.
+54: DNSPod (national cryptography) - domain name-based (dv) ssl certificate.
+55: DNSPod (national cryptography) - domain name-based (dv) wildcard ssl certificate.
+56: DNSPod (national cryptography) - domain name-based (dv) multiple domain names ssl certificate.
+57: securesite enterprise professional version multiple domain names (ov pro).
+58: securesite enterprise multiple domain names (ov).
+59: securesite enhanced professional version multiple domain names (ev pro).
+60: securesite enhanced multiple domain names (ev).
+61: geotrust enhanced multiple domain names (ev).
+75: securesite enterprise (ov).
+76: securesite enterprise (ov) wildcard.
+77: securesite enhanced (ev).
+78: geotrust enterprise (ov).
+79: geotrust enterprise (ov) wildcard.
+80: geotrust enhanced (ev).
+81: globalsign enterprise (ov) ssl certificate.
+82: globalsign enterprise wildcard (ov) ssl certificate.
+83: trustasia c1 dv free.
+85: globalsign enhanced (ev) ssl certificate.
+88: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+89: globalsign enterprise multiple domain names (ov) ssl certificate.
+90: globalsign enhanced multiple domain names (ev) ssl certificate.
+91: geotrust enhanced multiple domain names (ev).
+92: securesite enterprise ov pro for multiple domain names.
+93: securesite enterprise for multiple domain names (ov).
+94: securesite ev pro for multiple domain names.
+95: securesite ev for multiple domain names.
+96: securesite ev pro.
+97: securesite enterprise professional edition (ov pro).
+98: cfca enterprise (ov) ssl certificate.
+99: cfca enterprise multiple domain names (ov) ssl certificate.
+100: cfca enterprise wildcard (ov) ssl certificate.
+101: cfca enhanced (ev) ssl certificate.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return PackageType Certificate package type:.
+null: user uploads a certificate (no package type),.
+2: trustasia tls rsa ca,. 
+3: securesite enhanced enterprise version (ev pro),. 
+4: securesite enhanced (ev),. 
+5: securesite enterprise pro (ov pro).
+6: securesite enterprise (ov). 
+7: securesite enterprise (ov) wildcard. 
+8: geotrust enhanced (ev). 
+9: geotrust enterprise (ov). 
+10: geotrust enterprise (ov) wildcard cert. 
+11: trustasia domain name-based multiple domain names ssl certificate. 
+12: trustasia domain name-based (dv) wildcard cert. 
+13: trustasia enterprise wildcard (ov) ssl certificate (d3). 
+14: trustasia enterprise (ov) ssl certificate (d3). 
+15: trustasia enterprise multiple domain names (ov) ssl certificate (d3). 
+16: trustasia enhanced (ev) ssl certificate (d3). 
+17: trustasia enhanced multiple domain names (ev) ssl certificate (d3). 
+18: globalsign enterprise (ov) ssl certificate. 
+19: globalsign enterprise wildcard (ov) ssl certificate. 
+20: globalsign enhanced (ev) ssl certificate. 
+21: trustasia enterprise wildcard multiple domain names (ov) ssl certificate (d3). 
+22: globalsign enterprise multiple domain names (ov) ssl certificate. 
+23: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+24: globalsign enhanced multiple domain names (ev) ssl certificate.
+25: wotrus domain cert.
+26: wotrus multi-domain cert.
+27: wotrus wildcard cert.
+28: wotrus enterprise cert.
+29: wotrus enterprise multi-domain cert.
+30: wotrus enterprise wildcard certificate.
+31: wotrus enhanced certificate.
+32: wotrus enhanced multi-domain name certificate.
+33: wotrus-national cryptography domain name certificate.
+34: wotrus-national cryptography domain name certificate (multiple domain names).
+35: wotrus-national cryptography wildcard certificate.
+37: wotrus-national cryptography enterprise certificate.
+38: wotrus-national cryptography enterprise certificate (multiple domain names).
+39: wotrus-national cryptography enterprise certificate (wildcard).
+40: wotrus-national cryptography enhanced certificate.
+41: wotrus - national cryptography enhanced certificate (multiple domain names).
+42: trustasia - domain name certificate (wildcard multiple domain names).
+43: DNSPod - enterprise (ov) ssl certificate.
+44: DNSPod - enterprise (ov) wildcard ssl certificate.
+45: DNSPod - enterprise (ov) multiple domain names ssl certificate.
+46: dnspod-enhanced (ev) ssl certificate.
+47: dnspod-enhanced (ev) multiple domain names ssl certificate.
+48: dnspod-domain name-based (dv) ssl certificate.
+49: dnspod-domain name-based (dv) wildcard ssl certificate.
+50: dnspod-domain name-based (dv) multiple domain names ssl certificate.
+51: DNSPod (national cryptography) - enterprise (ov) ssl certificate.
+52: DNSPod (national cryptography) - enterprise (ov) wildcard ssl certificate.
+53: DNSPod (national cryptography) - enterprise (ov) multiple domain names ssl certificate.
+54: DNSPod (national cryptography) - domain name-based (dv) ssl certificate.
+55: DNSPod (national cryptography) - domain name-based (dv) wildcard ssl certificate.
+56: DNSPod (national cryptography) - domain name-based (dv) multiple domain names ssl certificate.
+57: securesite enterprise professional version multiple domain names (ov pro).
+58: securesite enterprise multiple domain names (ov).
+59: securesite enhanced professional version multiple domain names (ev pro).
+60: securesite enhanced multiple domain names (ev).
+61: geotrust enhanced multiple domain names (ev).
+75: securesite enterprise (ov).
+76: securesite enterprise (ov) wildcard.
+77: securesite enhanced (ev).
+78: geotrust enterprise (ov).
+79: geotrust enterprise (ov) wildcard.
+80: geotrust enhanced (ev).
+81: globalsign enterprise (ov) ssl certificate.
+82: globalsign enterprise wildcard (ov) ssl certificate.
+83: trustasia c1 dv free.
+85: globalsign enhanced (ev) ssl certificate.
+88: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+89: globalsign enterprise multiple domain names (ov) ssl certificate.
+90: globalsign enhanced multiple domain names (ev) ssl certificate.
+91: geotrust enhanced multiple domain names (ev).
+92: securesite enterprise ov pro for multiple domain names.
+93: securesite enterprise for multiple domain names (ov).
+94: securesite ev pro for multiple domain names.
+95: securesite ev for multiple domain names.
+96: securesite ev pro.
+97: securesite enterprise professional edition (ov pro).
+98: cfca enterprise (ov) ssl certificate.
+99: cfca enterprise multiple domain names (ov) ssl certificate.
+100: cfca enterprise wildcard (ov) ssl certificate.
+101: cfca enhanced (ev) ssl certificate.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetPackageType() const;
@@ -128,9 +307,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PackageTypeHasBeenSet() const;
 
                     /**
-                     * 获取Issuer
+                     * 获取Certificate product name.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ProductZhName Issuer
+                     * @return ProductZhName Certificate product name.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -144,9 +323,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ProductZhNameHasBeenSet() const;
 
                     /**
-                     * 获取Domain name
+                     * 获取Certificate binds to a common name domain.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Domain Domain name
+                     * @return Domain Certificate binds to a common name domain.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -176,9 +355,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AliasHasBeenSet() const;
 
                     /**
-                     * 获取Certificate status. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: enterprise-grade certificate, pending submission; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload; `9`: revoking certificate; `10`: revoked; `11`: reissuing; `12`: pending revocation confirmation letter upload
+                     * 获取Certificate status: 0 = under review, 1 = approved, 2 = review failed, 3 = expired, 4 = automatically added dns records, 5 = enterprise certificate, pending document submission, 6 = order cancellation in progress, 7 = canceled, 8 = documents submitted, pending upload of confirmation letter, 9 = certificate revocation in progress, 10 = revoked, 11 = reissue in progress, 12 = pending upload of revocation confirmation letter, 13 = free certificate pending document submission, 14 = certificate has been refunded, 15 = certificate migration in progress.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Status Certificate status. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: enterprise-grade certificate, pending submission; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload; `9`: revoking certificate; `10`: revoked; `11`: reissuing; `12`: pending revocation confirmation letter upload
+                     * @return Status Certificate status: 0 = under review, 1 = approved, 2 = review failed, 3 = expired, 4 = automatically added dns records, 5 = enterprise certificate, pending document submission, 6 = order cancellation in progress, 7 = canceled, 8 = documents submitted, pending upload of confirmation letter, 9 = certificate revocation in progress, 10 = revoked, 11 = reissue in progress, 12 = pending upload of revocation confirmation letter, 13 = free certificate pending document submission, 14 = certificate has been refunded, 15 = certificate migration in progress.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -192,9 +371,33 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Status information
+                     * 获取Status information. valid values:.
+//Common status information.
+PRE-REVIEWING: in prereview.
+LEGAL-REVIEWING: in legal review.
+CA-REVIEWING: in ca review.
+PENDING-DCV: in domain verification.
+WAIT-ISSUE: waiting for issue (domain verification passed).
+Certificate review failure status information.
+1. order review failed.
+2. ca review failed, and the domain name did not pass the security review.
+3. domain name verification timed out, and the order was automatically closed. please reapply for the certificate.
+4. the certificate information did not pass the review of the certificate ca agency. the reviewer will call the contact information reserved for the certificate. please pay attention to the incoming call. subsequently, you can resubmit the information through "modify information".
+To be continuously improved.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return StatusMsg Status information
+                     * @return StatusMsg Status information. valid values:.
+//Common status information.
+PRE-REVIEWING: in prereview.
+LEGAL-REVIEWING: in legal review.
+CA-REVIEWING: in ca review.
+PENDING-DCV: in domain verification.
+WAIT-ISSUE: waiting for issue (domain verification passed).
+Certificate review failure status information.
+1. order review failed.
+2. ca review failed, and the domain name did not pass the security review.
+3. domain name verification timed out, and the order was automatically closed. please reapply for the certificate.
+4. the certificate information did not pass the review of the certificate ca agency. the reviewer will call the contact information reserved for the certificate. please pay attention to the incoming call. subsequently, you can resubmit the information through "modify information".
+To be continuously improved.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -288,9 +491,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ValidityPeriodHasBeenSet() const;
 
                     /**
-                     * 获取Application time
+                     * 获取Certificate application time.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return InsertTime Application time
+                     * @return InsertTime Certificate application time.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -304,9 +507,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool InsertTimeHasBeenSet() const;
 
                     /**
-                     * 获取Order ID
+                     * 获取CA order id.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return OrderId Order ID
+                     * @return OrderId CA order id.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -336,9 +539,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CertificateExtraHasBeenSet() const;
 
                     /**
-                     * 获取Private key of the certificate
+                     * 获取Private key certificate; for Chinese SM certificates, it refers to the private key certificate in the signature certificate.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CertificatePrivateKey Private key of the certificate
+                     * @return CertificatePrivateKey Private key certificate; for Chinese SM certificates, it refers to the private key certificate in the signature certificate.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -352,9 +555,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CertificatePrivateKeyHasBeenSet() const;
 
                     /**
-                     * 获取Public key of the certificate
+                     * 获取Public key certificate; for Chinese SM certificate, it refers to the public key certificate in the signature certificate.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CertificatePublicKey Public key of the certificate
+                     * @return CertificatePublicKey Public key certificate; for Chinese SM certificate, it refers to the public key certificate in the signature certificate.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -368,9 +571,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CertificatePublicKeyHasBeenSet() const;
 
                     /**
-                     * 获取DV authentication information
+                     * 获取Certificate domain name verification information.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return DvAuthDetail DV authentication information
+                     * @return DvAuthDetail Certificate domain name verification information.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -528,9 +731,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IsVulnerabilityHasBeenSet() const;
 
                     /**
-                     * 获取Submitted data
+                     * 获取Profile information submitted for paid certificates.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SubmittedData Submitted data
+                     * @return SubmittedData Profile information submitted for paid certificates.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -608,10 +811,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RootCertHasBeenSet() const;
 
                     /**
-                     * 获取Chinese SM encryption certificate
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EncryptCert Chinese SM encryption certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Chinese SM certificate public key, only has value for national cryptography certificates.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return EncryptCert Chinese SM certificate public key, only has value for national cryptography certificates.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetEncryptCert() const;
@@ -624,10 +827,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EncryptCertHasBeenSet() const;
 
                     /**
-                     * 获取Private key of Chinese SM encryption
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EncryptPrivateKey Private key of Chinese SM encryption
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Chinese SM certificate private key certificate, only has value for national cryptography certificates.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return EncryptPrivateKey Chinese SM certificate private key certificate, only has value for national cryptography certificates.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetEncryptPrivateKey() const;
@@ -672,10 +875,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EncryptCertFingerprintHasBeenSet() const;
 
                     /**
-                     * 获取Certificate algorithm
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EncryptAlgorithm Certificate algorithm
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Certificate encryption algorithm (or Chinese SM certificates only).
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return EncryptAlgorithm Certificate encryption algorithm (or Chinese SM certificates only).
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetEncryptAlgorithm() const;
@@ -703,10 +906,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool DvRevokeAuthDetailHasBeenSet() const;
 
+                    /**
+                     * 获取Certificate chain information.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return CertChainInfo Certificate chain information.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<CertBasicInfo> GetCertChainInfo() const;
+
+                    /**
+                     * 判断参数 CertChainInfo 是否已赋值
+                     * @return CertChainInfo 是否已赋值
+                     * 
+                     */
+                    bool CertChainInfoHasBeenSet() const;
+
                 private:
 
                     /**
-                     * User UIN
+                     * Certificate belonging to user main account uin.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_ownerUin;
@@ -720,7 +939,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Certificate source. `trustasia`: TrustAsia; `upload`: certificate uploaded by users
+                     * Certificate source:.
+trustAsia.
+upload.
+wosign.
+sheca.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_from;
@@ -734,20 +957,105 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_certificateTypeHasBeenSet;
 
                     /**
-                     * Certificate plan type. null: User-uploaded certificate (no plan type); `1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain; `25` WoTrus DV; `26`: WoTrus DV multi-domain; `27`: WoTrus DV wildcard; `28`: WoTrus OV; `29`: WoTrus OV multi-domain; `30`: WoTrus OV wildcard; `31`: WoTrus EV; `32`: WoTrus EV multi-domain; `33`: DNSPod SM2 DV; `34`: DNSPod SM2 DV multi-domain; `35`: DNSPod SM2 DV wildcard; `37`: DNSPod SM2 OV; `38`: DNSPod SM2 OV multi-domain; `39`: DNSPod SM2 OV wildcard: `40`: DNSPod SM2 EV; `41`: DNSPod SM2 EV multi-domain; `42`: TrustAsia DV wildcard multi-domain.
+                     * Certificate package type:.
+null: user uploads a certificate (no package type),.
+2: trustasia tls rsa ca,. 
+3: securesite enhanced enterprise version (ev pro),. 
+4: securesite enhanced (ev),. 
+5: securesite enterprise pro (ov pro).
+6: securesite enterprise (ov). 
+7: securesite enterprise (ov) wildcard. 
+8: geotrust enhanced (ev). 
+9: geotrust enterprise (ov). 
+10: geotrust enterprise (ov) wildcard cert. 
+11: trustasia domain name-based multiple domain names ssl certificate. 
+12: trustasia domain name-based (dv) wildcard cert. 
+13: trustasia enterprise wildcard (ov) ssl certificate (d3). 
+14: trustasia enterprise (ov) ssl certificate (d3). 
+15: trustasia enterprise multiple domain names (ov) ssl certificate (d3). 
+16: trustasia enhanced (ev) ssl certificate (d3). 
+17: trustasia enhanced multiple domain names (ev) ssl certificate (d3). 
+18: globalsign enterprise (ov) ssl certificate. 
+19: globalsign enterprise wildcard (ov) ssl certificate. 
+20: globalsign enhanced (ev) ssl certificate. 
+21: trustasia enterprise wildcard multiple domain names (ov) ssl certificate (d3). 
+22: globalsign enterprise multiple domain names (ov) ssl certificate. 
+23: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+24: globalsign enhanced multiple domain names (ev) ssl certificate.
+25: wotrus domain cert.
+26: wotrus multi-domain cert.
+27: wotrus wildcard cert.
+28: wotrus enterprise cert.
+29: wotrus enterprise multi-domain cert.
+30: wotrus enterprise wildcard certificate.
+31: wotrus enhanced certificate.
+32: wotrus enhanced multi-domain name certificate.
+33: wotrus-national cryptography domain name certificate.
+34: wotrus-national cryptography domain name certificate (multiple domain names).
+35: wotrus-national cryptography wildcard certificate.
+37: wotrus-national cryptography enterprise certificate.
+38: wotrus-national cryptography enterprise certificate (multiple domain names).
+39: wotrus-national cryptography enterprise certificate (wildcard).
+40: wotrus-national cryptography enhanced certificate.
+41: wotrus - national cryptography enhanced certificate (multiple domain names).
+42: trustasia - domain name certificate (wildcard multiple domain names).
+43: DNSPod - enterprise (ov) ssl certificate.
+44: DNSPod - enterprise (ov) wildcard ssl certificate.
+45: DNSPod - enterprise (ov) multiple domain names ssl certificate.
+46: dnspod-enhanced (ev) ssl certificate.
+47: dnspod-enhanced (ev) multiple domain names ssl certificate.
+48: dnspod-domain name-based (dv) ssl certificate.
+49: dnspod-domain name-based (dv) wildcard ssl certificate.
+50: dnspod-domain name-based (dv) multiple domain names ssl certificate.
+51: DNSPod (national cryptography) - enterprise (ov) ssl certificate.
+52: DNSPod (national cryptography) - enterprise (ov) wildcard ssl certificate.
+53: DNSPod (national cryptography) - enterprise (ov) multiple domain names ssl certificate.
+54: DNSPod (national cryptography) - domain name-based (dv) ssl certificate.
+55: DNSPod (national cryptography) - domain name-based (dv) wildcard ssl certificate.
+56: DNSPod (national cryptography) - domain name-based (dv) multiple domain names ssl certificate.
+57: securesite enterprise professional version multiple domain names (ov pro).
+58: securesite enterprise multiple domain names (ov).
+59: securesite enhanced professional version multiple domain names (ev pro).
+60: securesite enhanced multiple domain names (ev).
+61: geotrust enhanced multiple domain names (ev).
+75: securesite enterprise (ov).
+76: securesite enterprise (ov) wildcard.
+77: securesite enhanced (ev).
+78: geotrust enterprise (ov).
+79: geotrust enterprise (ov) wildcard.
+80: geotrust enhanced (ev).
+81: globalsign enterprise (ov) ssl certificate.
+82: globalsign enterprise wildcard (ov) ssl certificate.
+83: trustasia c1 dv free.
+85: globalsign enhanced (ev) ssl certificate.
+88: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+89: globalsign enterprise multiple domain names (ov) ssl certificate.
+90: globalsign enhanced multiple domain names (ev) ssl certificate.
+91: geotrust enhanced multiple domain names (ev).
+92: securesite enterprise ov pro for multiple domain names.
+93: securesite enterprise for multiple domain names (ov).
+94: securesite ev pro for multiple domain names.
+95: securesite ev for multiple domain names.
+96: securesite ev pro.
+97: securesite enterprise professional edition (ov pro).
+98: cfca enterprise (ov) ssl certificate.
+99: cfca enterprise multiple domain names (ov) ssl certificate.
+100: cfca enterprise wildcard (ov) ssl certificate.
+101: cfca enhanced (ev) ssl certificate.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_packageType;
                     bool m_packageTypeHasBeenSet;
 
                     /**
-                     * Issuer
+                     * Certificate product name.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_productZhName;
                     bool m_productZhNameHasBeenSet;
 
                     /**
-                     * Domain name
+                     * Certificate binds to a common name domain.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_domain;
@@ -761,14 +1069,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_aliasHasBeenSet;
 
                     /**
-                     * Certificate status. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: enterprise-grade certificate, pending submission; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload; `9`: revoking certificate; `10`: revoked; `11`: reissuing; `12`: pending revocation confirmation letter upload
+                     * Certificate status: 0 = under review, 1 = approved, 2 = review failed, 3 = expired, 4 = automatically added dns records, 5 = enterprise certificate, pending document submission, 6 = order cancellation in progress, 7 = canceled, 8 = documents submitted, pending upload of confirmation letter, 9 = certificate revocation in progress, 10 = revoked, 11 = reissue in progress, 12 = pending upload of revocation confirmation letter, 13 = free certificate pending document submission, 14 = certificate has been refunded, 15 = certificate migration in progress.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Status information
+                     * Status information. valid values:.
+//Common status information.
+PRE-REVIEWING: in prereview.
+LEGAL-REVIEWING: in legal review.
+CA-REVIEWING: in ca review.
+PENDING-DCV: in domain verification.
+WAIT-ISSUE: waiting for issue (domain verification passed).
+Certificate review failure status information.
+1. order review failed.
+2. ca review failed, and the domain name did not pass the security review.
+3. domain name verification timed out, and the order was automatically closed. please reapply for the certificate.
+4. the certificate information did not pass the review of the certificate ca agency. the reviewer will call the contact information reserved for the certificate. please pay attention to the incoming call. subsequently, you can resubmit the information through "modify information".
+To be continuously improved.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_statusMsg;
@@ -810,14 +1130,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_validityPeriodHasBeenSet;
 
                     /**
-                     * Application time
+                     * Certificate application time.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_insertTime;
                     bool m_insertTimeHasBeenSet;
 
                     /**
-                     * Order ID
+                     * CA order id.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_orderId;
@@ -831,21 +1151,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_certificateExtraHasBeenSet;
 
                     /**
-                     * Private key of the certificate
+                     * Private key certificate; for Chinese SM certificates, it refers to the private key certificate in the signature certificate.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_certificatePrivateKey;
                     bool m_certificatePrivateKeyHasBeenSet;
 
                     /**
-                     * Public key of the certificate
+                     * Public key certificate; for Chinese SM certificate, it refers to the public key certificate in the signature certificate.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_certificatePublicKey;
                     bool m_certificatePublicKeyHasBeenSet;
 
                     /**
-                     * DV authentication information
+                     * Certificate domain name verification information.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     DvAuthDetail m_dvAuthDetail;
@@ -915,7 +1235,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_isVulnerabilityHasBeenSet;
 
                     /**
-                     * Submitted data
+                     * Profile information submitted for paid certificates.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     SubmittedData m_submittedData;
@@ -950,15 +1270,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_rootCertHasBeenSet;
 
                     /**
-                     * Chinese SM encryption certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Chinese SM certificate public key, only has value for national cryptography certificates.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_encryptCert;
                     bool m_encryptCertHasBeenSet;
 
                     /**
-                     * Private key of Chinese SM encryption
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Chinese SM certificate private key certificate, only has value for national cryptography certificates.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_encryptPrivateKey;
                     bool m_encryptPrivateKeyHasBeenSet;
@@ -978,8 +1298,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_encryptCertFingerprintHasBeenSet;
 
                     /**
-                     * Certificate algorithm
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Certificate encryption algorithm (or Chinese SM certificates only).
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_encryptAlgorithm;
                     bool m_encryptAlgorithmHasBeenSet;
@@ -990,6 +1310,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<DvAuths> m_dvRevokeAuthDetail;
                     bool m_dvRevokeAuthDetailHasBeenSet;
+
+                    /**
+                     * Certificate chain information.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<CertBasicInfo> m_certChainInfo;
+                    bool m_certChainInfoHasBeenSet;
 
                 };
             }

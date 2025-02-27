@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ValidTypeHasBeenSet() const;
 
                     /**
-                     * 获取Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original.
-                     * @return CsrType Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original.
+                     * 获取Type. `Original`: original certificate CSR; `Upload`: uploaded manually; `Online`: generated online. The default value is original.
+                     * @return CsrType Type. `Original`: original certificate CSR; `Upload`: uploaded manually; `Online`: generated online. The default value is original.
                      * 
                      */
                     std::string GetCsrType() const;
 
                     /**
-                     * 设置Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original.
-                     * @param _csrType Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original.
+                     * 设置Type. `Original`: original certificate CSR; `Upload`: uploaded manually; `Online`: generated online. The default value is original.
+                     * @param _csrType Type. `Original`: original certificate CSR; `Upload`: uploaded manually; `Online`: generated online. The default value is original.
                      * 
                      */
                     void SetCsrType(const std::string& _csrType);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool CsrTypeHasBeenSet() const;
 
                     /**
-                     * 获取CSR content
-                     * @return CsrContent CSR content
+                     * 获取CSR content, required when uploading manually.
+                     * @return CsrContent CSR content, required when uploading manually.
                      * 
                      */
                     std::string GetCsrContent() const;
 
                     /**
-                     * 设置CSR content
-                     * @param _csrContent CSR content
+                     * 设置CSR content, required when uploading manually.
+                     * @param _csrContent CSR content, required when uploading manually.
                      * 
                      */
                     void SetCsrContent(const std::string& _csrContent);
@@ -229,13 +229,13 @@ This parameter is available for selection only when the value of `CsrType` is `O
                     bool m_validTypeHasBeenSet;
 
                     /**
-                     * Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original.
+                     * Type. `Original`: original certificate CSR; `Upload`: uploaded manually; `Online`: generated online. The default value is original.
                      */
                     std::string m_csrType;
                     bool m_csrTypeHasBeenSet;
 
                     /**
-                     * CSR content
+                     * CSR content, required when uploading manually.
                      */
                     std::string m_csrContent;
                     bool m_csrContentHasBeenSet;

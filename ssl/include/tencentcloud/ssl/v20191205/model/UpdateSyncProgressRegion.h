@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Update the progress of asynchronous task.
                 */
                 class UpdateSyncProgressRegion : public AbstractModel
                 {
@@ -47,15 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Region 
+                     * 获取Resource type.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return Region Resource type.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置
-                     * @param _region 
+                     * 设置Resource type.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param _region Resource type.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -68,15 +72,23 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TotalCount 
+                     * 获取Total number
+.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return TotalCount Total number
+.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
-                     * 设置
-                     * @param _totalCount 
+                     * 设置Total number
+.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param _totalCount Total number
+.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
@@ -89,15 +101,19 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OffsetCount 
+                     * 获取Quantity of executions completed.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return OffsetCount Quantity of executions completed.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetOffsetCount() const;
 
                     /**
-                     * 设置
-                     * @param _offsetCount 
+                     * 设置Quantity of executions completed.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param _offsetCount Quantity of executions completed.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetOffsetCount(const int64_t& _offsetCount);
@@ -110,15 +126,19 @@ namespace TencentCloud
                     bool OffsetCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Asynchronous update progress status: 0, pending, 1 processed, 3 processing.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return Status Asynchronous update progress status: 0, pending, 1 processed, 3 processing.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置Asynchronous update progress status: 0, pending, 1 processed, 3 processing.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param _status Asynchronous update progress status: 0, pending, 1 processed, 3 processing.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -133,25 +153,30 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Resource type.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * 
+                     * Total number
+.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * 
+                     * Quantity of executions completed.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_offsetCount;
                     bool m_offsetCountHasBeenSet;
 
                     /**
-                     * 
+                     * Asynchronous update progress status: 0, pending, 1 processed, 3 processing.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;

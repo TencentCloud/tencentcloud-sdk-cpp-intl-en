@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ProductNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return BusinessCodeName ProductNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Product name.
+                     * @return BusinessCodeName Product name.
                      * 
                      */
                     std::string GetBusinessCodeName() const;
 
                     /**
-                     * 设置ProductNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _businessCodeName ProductNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Product name.
+                     * @param _businessCodeName Product name.
                      * 
                      */
                     void SetBusinessCodeName(const std::string& _businessCodeName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool BusinessCodeNameHasBeenSet() const;
 
                     /**
-                     * 获取Product codeNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return BusinessCode Product codeNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Product code.
+                     * @return BusinessCode Product code.
                      * 
                      */
                     std::string GetBusinessCode() const;
 
                     /**
-                     * 设置Product codeNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _businessCode Product codeNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Product code.
+                     * @param _businessCode Product code.
                      * 
                      */
                     void SetBusinessCode(const std::string& _businessCode);
@@ -89,19 +89,15 @@ namespace TencentCloud
                     bool BusinessCodeHasBeenSet() const;
 
                     /**
-                     * 获取Original price
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OriginalCost Original price
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Original price.
+                     * @return OriginalCost Original price.
                      * 
                      */
                     std::string GetOriginalCost() const;
 
                     /**
-                     * 设置Original price
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _originalCost Original price
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Original price.
+                     * @param _originalCost Original price.
                      * 
                      */
                     void SetOriginalCost(const std::string& _originalCost);
@@ -114,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OriginalCostHasBeenSet() const;
 
                     /**
-                     * 获取Voucher amount
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VoucherPayAmount Voucher amount
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Voucher amount.
+                     * @return VoucherPayAmount Voucher amount.
                      * 
                      */
                     std::string GetVoucherPayAmount() const;
 
                     /**
-                     * 设置Voucher amount
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _voucherPayAmount Voucher amount
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Voucher amount.
+                     * @param _voucherPayAmount Voucher amount.
                      * 
                      */
                     void SetVoucherPayAmount(const std::string& _voucherPayAmount);
@@ -139,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VoucherPayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Daily deduction
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RICost Daily deduction
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取RI deduction.
+                     * @return RICost RI deduction.
                      * 
                      */
                     std::string GetRICost() const;
 
                     /**
-                     * 设置Daily deduction
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _rICost Daily deduction
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置RI deduction.
+                     * @param _rICost RI deduction.
                      * 
                      */
                     void SetRICost(const std::string& _rICost);
@@ -164,19 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RICostHasBeenSet() const;
 
                     /**
-                     * 获取Total amount
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TotalCost Total amount
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Total amount.
+                     * @return TotalCost Total amount.
                      * 
                      */
                     std::string GetTotalCost() const;
 
                     /**
-                     * 设置Total amount
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _totalCost Total amount
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Total amount.
+                     * @param _totalCost Total amount.
                      * 
                      */
                     void SetTotalCost(const std::string& _totalCost);
@@ -191,41 +175,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * ProductNote: This field may return null, indicating that no valid values can be obtained.
+                     * Product name.
                      */
                     std::string m_businessCodeName;
                     bool m_businessCodeNameHasBeenSet;
 
                     /**
-                     * Product codeNote: This field may return null, indicating that no valid values can be obtained.
+                     * Product code.
                      */
                     std::string m_businessCode;
                     bool m_businessCodeHasBeenSet;
 
                     /**
-                     * Original price
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Original price.
                      */
                     std::string m_originalCost;
                     bool m_originalCostHasBeenSet;
 
                     /**
-                     * Voucher amount
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Voucher amount.
                      */
                     std::string m_voucherPayAmount;
                     bool m_voucherPayAmountHasBeenSet;
 
                     /**
-                     * Daily deduction
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * RI deduction.
                      */
                     std::string m_rICost;
                     bool m_rICostHasBeenSet;
 
                     /**
-                     * Total amount
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Total amount.
                      */
                     std::string m_totalCost;
                     bool m_totalCostHasBeenSet;

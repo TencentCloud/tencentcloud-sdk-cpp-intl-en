@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The task ID, which is required to query the result of associated cloud resources.
-                     * @return TaskId The task ID, which is required to query the result of associated cloud resources.
+                     * 获取Task id, which can be used to query the result of binding cloud resources according to the task id obtained from createcertificatebindresourcesynctask.
+                     * @return TaskId Task id, which can be used to query the result of binding cloud resources according to the task id obtained from createcertificatebindresourcesynctask.
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置The task ID, which is required to query the result of associated cloud resources.
-                     * @param _taskId The task ID, which is required to query the result of associated cloud resources.
+                     * 设置Task id, which can be used to query the result of binding cloud resources according to the task id obtained from createcertificatebindresourcesynctask.
+                     * @param _taskId Task id, which can be used to query the result of binding cloud resources according to the task id obtained from createcertificatebindresourcesynctask.
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取The current offset.
-                     * @return Offset The current offset.
+                     * 获取Current offset, default is 0.
+                     * @return Offset Current offset, default is 0.
                      * 
                      */
                     std::string GetOffset() const;
 
                     /**
-                     * 设置The current offset.
-                     * @param _offset The current offset.
+                     * 设置Current offset, default is 0.
+                     * @param _offset Current offset, default is 0.
                      * 
                      */
                     void SetOffset(const std::string& _offset);
@@ -106,15 +106,63 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取The types of the resources to be queried. If no value is passed in, all types of resources will be queried.
-                     * @return ResourceTypes The types of the resources to be queried. If no value is passed in, all types of resources will be queried.
+                     * 获取Result detail of queried resource type. if not provided, all will be queried. valid values include:.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
+                     * @return ResourceTypes Result detail of queried resource type. if not provided, all will be queried. valid values include:.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
                      * 
                      */
                     std::vector<std::string> GetResourceTypes() const;
 
                     /**
-                     * 设置The types of the resources to be queried. If no value is passed in, all types of resources will be queried.
-                     * @param _resourceTypes The types of the resources to be queried. If no value is passed in, all types of resources will be queried.
+                     * 设置Result detail of queried resource type. if not provided, all will be queried. valid values include:.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
+                     * @param _resourceTypes Result detail of queried resource type. if not provided, all will be queried. valid values include:.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
                      * 
                      */
                     void SetResourceTypes(const std::vector<std::string>& _resourceTypes);
@@ -127,15 +175,15 @@ namespace TencentCloud
                     bool ResourceTypesHasBeenSet() const;
 
                     /**
-                     * 获取The regions of the resources to be queried. Only CLB, TKE, WAF, APIGATEWAY, and TCB resources support the query by region.
-                     * @return Regions The regions of the resources to be queried. Only CLB, TKE, WAF, APIGATEWAY, and TCB resources support the query by region.
+                     * 获取Data of querying region list. clb, tke, waf, api gateway, tcb, cos, and tse support region query, while other resource types do not support.
+                     * @return Regions Data of querying region list. clb, tke, waf, api gateway, tcb, cos, and tse support region query, while other resource types do not support.
                      * 
                      */
                     std::vector<std::string> GetRegions() const;
 
                     /**
-                     * 设置The regions of the resources to be queried. Only CLB, TKE, WAF, APIGATEWAY, and TCB resources support the query by region.
-                     * @param _regions The regions of the resources to be queried. Only CLB, TKE, WAF, APIGATEWAY, and TCB resources support the query by region.
+                     * 设置Data of querying region list. clb, tke, waf, api gateway, tcb, cos, and tse support region query, while other resource types do not support.
+                     * @param _regions Data of querying region list. clb, tke, waf, api gateway, tcb, cos, and tse support region query, while other resource types do not support.
                      * 
                      */
                     void SetRegions(const std::vector<std::string>& _regions);
@@ -150,7 +198,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The task ID, which is required to query the result of associated cloud resources.
+                     * Task id, which can be used to query the result of binding cloud resources according to the task id obtained from createcertificatebindresourcesynctask.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
@@ -162,19 +210,31 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * The current offset.
+                     * Current offset, default is 0.
                      */
                     std::string m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * The types of the resources to be queried. If no value is passed in, all types of resources will be queried.
+                     * Result detail of queried resource type. if not provided, all will be queried. valid values include:.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
                      */
                     std::vector<std::string> m_resourceTypes;
                     bool m_resourceTypesHasBeenSet;
 
                     /**
-                     * The regions of the resources to be queried. Only CLB, TKE, WAF, APIGATEWAY, and TCB resources support the query by region.
+                     * Data of querying region list. clb, tke, waf, api gateway, tcb, cos, and tse support region query, while other resource types do not support.
                      */
                     std::vector<std::string> m_regions;
                     bool m_regionsHasBeenSet;

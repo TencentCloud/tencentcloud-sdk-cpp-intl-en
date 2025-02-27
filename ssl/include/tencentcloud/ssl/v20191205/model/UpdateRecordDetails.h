@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Update record detail list
+                * Details of update records.
                 */
                 class UpdateRecordDetails : public AbstractModel
                 {
@@ -48,15 +48,63 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Deployment resource type
-                     * @return ResourceType Deployment resource type
+                     * 获取Type of cloud resource for updating old and new certs.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
+                     * @return ResourceType Type of cloud resource for updating old and new certs.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
                      * 
                      */
                     std::string GetResourceType() const;
 
                     /**
-                     * 设置Deployment resource type
-                     * @param _resourceType Deployment resource type
+                     * 设置Type of cloud resource for updating old and new certs.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
+                     * @param _resourceType Type of cloud resource for updating old and new certs.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
                      * 
                      */
                     void SetResourceType(const std::string& _resourceType);
@@ -69,15 +117,15 @@ namespace TencentCloud
                     bool ResourceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Deployment resource detail list
-                     * @return List Deployment resource detail list
+                     * 获取The update details of the cloud resource.
+                     * @return List The update details of the cloud resource.
                      * 
                      */
                     std::vector<UpdateRecordDetail> GetList() const;
 
                     /**
-                     * 设置Deployment resource detail list
-                     * @param _list Deployment resource detail list
+                     * 设置The update details of the cloud resource.
+                     * @param _list The update details of the cloud resource.
                      * 
                      */
                     void SetList(const std::vector<UpdateRecordDetail>& _list);
@@ -90,15 +138,15 @@ namespace TencentCloud
                     bool ListHasBeenSet() const;
 
                     /**
-                     * 获取Total deployment resource count
-                     * @return TotalCount Total deployment resource count
+                     * 获取The update of the total number of cloud resources.
+                     * @return TotalCount The update of the total number of cloud resources.
                      * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
-                     * 设置Total deployment resource count
-                     * @param _totalCount Total deployment resource count
+                     * 设置The update of the total number of cloud resources.
+                     * @param _totalCount The update of the total number of cloud resources.
                      * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
@@ -113,19 +161,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Deployment resource type
+                     * Type of cloud resource for updating old and new certs.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
                      */
                     std::string m_resourceType;
                     bool m_resourceTypeHasBeenSet;
 
                     /**
-                     * Deployment resource detail list
+                     * The update details of the cloud resource.
                      */
                     std::vector<UpdateRecordDetail> m_list;
                     bool m_listHasBeenSet;
 
                     /**
-                     * Total deployment resource count
+                     * The update of the total number of cloud resources.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
