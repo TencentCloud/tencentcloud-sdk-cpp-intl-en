@@ -427,6 +427,49 @@ CvmClient::CreateKeyPairOutcomeCallable CvmClient::CreateKeyPairCallable(const C
     return task->get_future();
 }
 
+CvmClient::CreateLaunchTemplateOutcome CvmClient::CreateLaunchTemplate(const CreateLaunchTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateLaunchTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateLaunchTemplateResponse rsp = CreateLaunchTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateLaunchTemplateOutcome(rsp);
+        else
+            return CreateLaunchTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateLaunchTemplateOutcome(outcome.GetError());
+    }
+}
+
+void CvmClient::CreateLaunchTemplateAsync(const CreateLaunchTemplateRequest& request, const CreateLaunchTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateLaunchTemplate(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CvmClient::CreateLaunchTemplateOutcomeCallable CvmClient::CreateLaunchTemplateCallable(const CreateLaunchTemplateRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateLaunchTemplateOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateLaunchTemplate(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CvmClient::CreateLaunchTemplateVersionOutcome CvmClient::CreateLaunchTemplateVersion(const CreateLaunchTemplateVersionRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateLaunchTemplateVersion");

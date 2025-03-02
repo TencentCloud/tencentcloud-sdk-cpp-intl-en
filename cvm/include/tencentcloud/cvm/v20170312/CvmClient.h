@@ -41,6 +41,8 @@
 #include <tencentcloud/cvm/v20170312/model/CreateImageResponse.h>
 #include <tencentcloud/cvm/v20170312/model/CreateKeyPairRequest.h>
 #include <tencentcloud/cvm/v20170312/model/CreateKeyPairResponse.h>
+#include <tencentcloud/cvm/v20170312/model/CreateLaunchTemplateRequest.h>
+#include <tencentcloud/cvm/v20170312/model/CreateLaunchTemplateResponse.h>
 #include <tencentcloud/cvm/v20170312/model/CreateLaunchTemplateVersionRequest.h>
 #include <tencentcloud/cvm/v20170312/model/CreateLaunchTemplateVersionResponse.h>
 #include <tencentcloud/cvm/v20170312/model/DeleteDisasterRecoverGroupsRequest.h>
@@ -214,6 +216,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateKeyPairResponse> CreateKeyPairOutcome;
                 typedef std::future<CreateKeyPairOutcome> CreateKeyPairOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::CreateKeyPairRequest&, CreateKeyPairOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateKeyPairAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateLaunchTemplateResponse> CreateLaunchTemplateOutcome;
+                typedef std::future<CreateLaunchTemplateOutcome> CreateLaunchTemplateOutcomeCallable;
+                typedef std::function<void(const CvmClient*, const Model::CreateLaunchTemplateRequest&, CreateLaunchTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLaunchTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateLaunchTemplateVersionResponse> CreateLaunchTemplateVersionOutcome;
                 typedef std::future<CreateLaunchTemplateVersionOutcome> CreateLaunchTemplateVersionOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::CreateLaunchTemplateVersionRequest&, CreateLaunchTemplateVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLaunchTemplateVersionAsyncHandler;
@@ -506,6 +511,19 @@ If you currently use a password to log in, you will no longer be able to do so a
                 CreateKeyPairOutcome CreateKeyPair(const Model::CreateKeyPairRequest &request);
                 void CreateKeyPairAsync(const Model::CreateKeyPairRequest& request, const CreateKeyPairAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateKeyPairOutcomeCallable CreateKeyPairCallable(const Model::CreateKeyPairRequest& request);
+
+                /**
+                 *This API is used to create an instance launch template.
+
+An instance launch template contains the configuration information required to create an instance, including instance type, data/system disk type and size, and security group, etc.
+
+When a template is created, it defaults to Version 1. You can use `CreateLaunchTemplateVersion` to create new versions of this template, with the version number increasing. When you run `RunInstances` to create instances, you can specify the instance launch template version. If it’s not specified, the default template version is used.
+                 * @param req CreateLaunchTemplateRequest
+                 * @return CreateLaunchTemplateOutcome
+                 */
+                CreateLaunchTemplateOutcome CreateLaunchTemplate(const Model::CreateLaunchTemplateRequest &request);
+                void CreateLaunchTemplateAsync(const Model::CreateLaunchTemplateRequest& request, const CreateLaunchTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateLaunchTemplateOutcomeCallable CreateLaunchTemplateCallable(const Model::CreateLaunchTemplateRequest& request);
 
                 /**
                  *This API is used to create an instance launch template based on the specified template ID and the corresponding template version number. The default version number will be used when no template version numbers are specified. Each instance launch template can have up to 30 version numbers.

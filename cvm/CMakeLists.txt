@@ -132,6 +132,7 @@ set(cvm_public_header_model
   include/tencentcloud/cvm/v20170312/model/DescribeDisasterRecoverGroupsResponse.h
   include/tencentcloud/cvm/v20170312/model/ExportImagesRequest.h
   include/tencentcloud/cvm/v20170312/model/ActionTimer.h
+  include/tencentcloud/cvm/v20170312/model/CreateLaunchTemplateRequest.h
   include/tencentcloud/cvm/v20170312/model/DescribeReservedInstancesConfigInfosRequest.h
   include/tencentcloud/cvm/v20170312/model/InquiryPriceResetInstanceRequest.h
   include/tencentcloud/cvm/v20170312/model/DescribeLaunchTemplatesRequest.h
@@ -143,6 +144,7 @@ set(cvm_public_header_model
   include/tencentcloud/cvm/v20170312/model/SpotMarketOptions.h
   include/tencentcloud/cvm/v20170312/model/ConfigureChcAssistVpcRequest.h
   include/tencentcloud/cvm/v20170312/model/DescribeImportImageOsRequest.h
+  include/tencentcloud/cvm/v20170312/model/CreateLaunchTemplateResponse.h
   include/tencentcloud/cvm/v20170312/model/CreateKeyPairRequest.h
   include/tencentcloud/cvm/v20170312/model/InstanceStatus.h
   include/tencentcloud/cvm/v20170312/model/ReservedInstancePriceItem.h
@@ -343,6 +345,7 @@ set(cvm_src
   src/v20170312/model/DescribeDisasterRecoverGroupsResponse.cpp
   src/v20170312/model/ExportImagesRequest.cpp
   src/v20170312/model/ActionTimer.cpp
+  src/v20170312/model/CreateLaunchTemplateRequest.cpp
   src/v20170312/model/DescribeReservedInstancesConfigInfosRequest.cpp
   src/v20170312/model/InquiryPriceResetInstanceRequest.cpp
   src/v20170312/model/DescribeLaunchTemplatesRequest.cpp
@@ -354,6 +357,7 @@ set(cvm_src
   src/v20170312/model/SpotMarketOptions.cpp
   src/v20170312/model/ConfigureChcAssistVpcRequest.cpp
   src/v20170312/model/DescribeImportImageOsRequest.cpp
+  src/v20170312/model/CreateLaunchTemplateResponse.cpp
   src/v20170312/model/CreateKeyPairRequest.cpp
   src/v20170312/model/InstanceStatus.cpp
   src/v20170312/model/ReservedInstancePriceItem.cpp
