@@ -619,6 +619,48 @@ false (default value): send a normal request and create instance(s) if all the r
                      */
                     bool InstanceChargePrepaidHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return DisableApiTermination 
+                     * 
+                     */
+                    bool GetDisableApiTermination() const;
+
+                    /**
+                     * 设置
+                     * @param _disableApiTermination 
+                     * 
+                     */
+                    void SetDisableApiTermination(const bool& _disableApiTermination);
+
+                    /**
+                     * 判断参数 DisableApiTermination 是否已赋值
+                     * @return DisableApiTermination 是否已赋值
+                     * 
+                     */
+                    bool DisableApiTerminationHasBeenSet() const;
+
+                    /**
+                     * 获取Instance launch template tag description list. By specifying the TemplateTag parameter, you can bind tags to the instance launch template.
+                     * @return LaunchTemplateTagSpecification Instance launch template tag description list. By specifying the TemplateTag parameter, you can bind tags to the instance launch template.
+                     * 
+                     */
+                    std::vector<TagSpecification> GetLaunchTemplateTagSpecification() const;
+
+                    /**
+                     * 设置Instance launch template tag description list. By specifying the TemplateTag parameter, you can bind tags to the instance launch template.
+                     * @param _launchTemplateTagSpecification Instance launch template tag description list. By specifying the TemplateTag parameter, you can bind tags to the instance launch template.
+                     * 
+                     */
+                    void SetLaunchTemplateTagSpecification(const std::vector<TagSpecification>& _launchTemplateTagSpecification);
+
+                    /**
+                     * 判断参数 LaunchTemplateTagSpecification 是否已赋值
+                     * @return LaunchTemplateTagSpecification 是否已赋值
+                     * 
+                     */
+                    bool LaunchTemplateTagSpecificationHasBeenSet() const;
+
                 private:
 
                     /**
@@ -781,6 +823,18 @@ false (default value): send a normal request and create instance(s) if all the r
                      */
                     InstanceChargePrepaid m_instanceChargePrepaid;
                     bool m_instanceChargePrepaidHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_disableApiTermination;
+                    bool m_disableApiTerminationHasBeenSet;
+
+                    /**
+                     * Instance launch template tag description list. By specifying the TemplateTag parameter, you can bind tags to the instance launch template.
+                     */
+                    std::vector<TagSpecification> m_launchTemplateTagSpecification;
+                    bool m_launchTemplateTagSpecificationHasBeenSet;
 
                 };
             }

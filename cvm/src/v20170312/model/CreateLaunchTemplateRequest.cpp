@@ -48,7 +48,9 @@ CreateLaunchTemplateRequest::CreateLaunchTemplateRequest() :
     m_camRoleNameHasBeenSet(false),
     m_hpcClusterIdHasBeenSet(false),
     m_instanceChargeTypeHasBeenSet(false),
-    m_instanceChargePrepaidHasBeenSet(false)
+    m_instanceChargePrepaidHasBeenSet(false),
+    m_disableApiTerminationHasBeenSet(false),
+    m_launchTemplateTagSpecificationHasBeenSet(false)
 {
 }
 
@@ -298,6 +300,29 @@ string CreateLaunchTemplateRequest::ToJsonString() const
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_instanceChargePrepaid.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_disableApiTerminationHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DisableApiTermination";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_disableApiTermination, allocator);
+    }
+
+    if (m_launchTemplateTagSpecificationHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LaunchTemplateTagSpecification";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_launchTemplateTagSpecification.begin(); itr != m_launchTemplateTagSpecification.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
     }
 
 
@@ -722,6 +747,38 @@ void CreateLaunchTemplateRequest::SetInstanceChargePrepaid(const InstanceChargeP
 bool CreateLaunchTemplateRequest::InstanceChargePrepaidHasBeenSet() const
 {
     return m_instanceChargePrepaidHasBeenSet;
+}
+
+bool CreateLaunchTemplateRequest::GetDisableApiTermination() const
+{
+    return m_disableApiTermination;
+}
+
+void CreateLaunchTemplateRequest::SetDisableApiTermination(const bool& _disableApiTermination)
+{
+    m_disableApiTermination = _disableApiTermination;
+    m_disableApiTerminationHasBeenSet = true;
+}
+
+bool CreateLaunchTemplateRequest::DisableApiTerminationHasBeenSet() const
+{
+    return m_disableApiTerminationHasBeenSet;
+}
+
+vector<TagSpecification> CreateLaunchTemplateRequest::GetLaunchTemplateTagSpecification() const
+{
+    return m_launchTemplateTagSpecification;
+}
+
+void CreateLaunchTemplateRequest::SetLaunchTemplateTagSpecification(const vector<TagSpecification>& _launchTemplateTagSpecification)
+{
+    m_launchTemplateTagSpecification = _launchTemplateTagSpecification;
+    m_launchTemplateTagSpecificationHasBeenSet = true;
+}
+
+bool CreateLaunchTemplateRequest::LaunchTemplateTagSpecificationHasBeenSet() const
+{
+    return m_launchTemplateTagSpecificationHasBeenSet;
 }
 
 
