@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Dealer policy code.
-                     * @return PolicyCode Dealer policy code.
+                     * 获取Policy code.
+                     * @return PolicyCode Policy code.
                      * 
                      */
                     std::string GetPolicyCode() const;
 
                     /**
-                     * 设置Dealer policy code.
-                     * @param _policyCode Dealer policy code.
+                     * 设置Policy code.
+                     * @param _policyCode Policy code.
                      * 
                      */
                     void SetPolicyCode(const std::string& _policyCode);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool PolicyCodeHasBeenSet() const;
 
                     /**
-                     * 获取Product level 1 code.
-                     * @return ProductCode Product level 1 code.
+                     * 获取The code of the ProductName field in the  bill data.
+                     * @return ProductCode The code of the ProductName field in the  bill data.
                      * 
                      */
                     std::string GetProductCode() const;
 
                     /**
-                     * 设置Product level 1 code.
-                     * @param _productCode Product level 1 code.
+                     * 设置The code of the ProductName field in the  bill data.
+                     * @param _productCode The code of the ProductName field in the  bill data.
                      * 
                      */
                     void SetProductCode(const std::string& _productCode);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ProductCodeHasBeenSet() const;
 
                     /**
-                     * 获取Product level 1 name.
-                     * @return ProductName Product level 1 name.
+                     * 获取The ProductName field value in the billing data.
+                     * @return ProductName The ProductName field value in the billing data.
                      * 
                      */
                     std::string GetProductName() const;
 
                     /**
-                     * 设置Product level 1 name.
-                     * @param _productName Product level 1 name.
+                     * 设置The ProductName field value in the billing data.
+                     * @param _productName The ProductName field value in the billing data.
                      * 
                      */
                     void SetProductName(const std::string& _productName);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool ProductNameHasBeenSet() const;
 
                     /**
-                     * 获取Product level 2 code.
-                     * @return SubProductCode Product level 2 code.
+                     * 获取The code of the SubProductName field in the  bill data.
+                     * @return SubProductCode The code of the SubProductName field in the  bill data.
                      * 
                      */
                     std::string GetSubProductCode() const;
 
                     /**
-                     * 设置Product level 2 code.
-                     * @param _subProductCode Product level 2 code.
+                     * 设置The code of the SubProductName field in the  bill data.
+                     * @param _subProductCode The code of the SubProductName field in the  bill data.
                      * 
                      */
                     void SetSubProductCode(const std::string& _subProductCode);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool SubProductCodeHasBeenSet() const;
 
                     /**
-                     * 获取Product level 2 name.
-                     * @return SubProductName Product level 2 name.
+                     * 获取The SubProductName field value in the billing data.
+                     * @return SubProductName The SubProductName field value in the billing data.
                      * 
                      */
                     std::string GetSubProductName() const;
 
                     /**
-                     * 设置Product level 2 name.
-                     * @param _subProductName Product level 2 name.
+                     * 设置The SubProductName field value in the billing data.
+                     * @param _subProductName The SubProductName field value in the billing data.
                      * 
                      */
                     void SetSubProductName(const std::string& _subProductName);
@@ -192,31 +192,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Dealer policy code.
+                     * Policy code.
                      */
                     std::string m_policyCode;
                     bool m_policyCodeHasBeenSet;
 
                     /**
-                     * Product level 1 code.
+                     * The code of the ProductName field in the  bill data.
                      */
                     std::string m_productCode;
                     bool m_productCodeHasBeenSet;
 
                     /**
-                     * Product level 1 name.
+                     * The ProductName field value in the billing data.
                      */
                     std::string m_productName;
                     bool m_productNameHasBeenSet;
 
                     /**
-                     * Product level 2 code.
+                     * The code of the SubProductName field in the  bill data.
                      */
                     std::string m_subProductCode;
                     bool m_subProductCodeHasBeenSet;
 
                     /**
-                     * Product level 2 name.
+                     * The SubProductName field value in the billing data.
                      */
                     std::string m_subProductName;
                     bool m_subProductNameHasBeenSet;

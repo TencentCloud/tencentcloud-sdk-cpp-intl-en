@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Dealer policy code.
-                     * @return PolicyCode Dealer policy code.
+                     * 获取 Policy code.
+                     * @return PolicyCode  Policy code.
                      * 
                      */
                     std::string GetPolicyCode() const;
 
                     /**
-                     * 设置Dealer policy code.
-                     * @param _policyCode Dealer policy code.
+                     * 设置 Policy code.
+                     * @param _policyCode  Policy code.
                      * 
                      */
                     void SetPolicyCode(const std::string& _policyCode);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool PolicyCodeHasBeenSet() const;
 
                     /**
-                     * 获取Product level 1 code. If the return value is *, any item at this level is included in the policy product range.
-                     * @return ProductCode Product level 1 code. If the return value is *, any item at this level is included in the policy product range.
+                     * 获取The code of the ProductName field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
+                     * @return ProductCode The code of the ProductName field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
                      * 
                      */
                     std::string GetProductCode() const;
 
                     /**
-                     * 设置Product level 1 code. If the return value is *, any item at this level is included in the policy product range.
-                     * @param _productCode Product level 1 code. If the return value is *, any item at this level is included in the policy product range.
+                     * 设置The code of the ProductName field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
+                     * @param _productCode The code of the ProductName field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
                      * 
                      */
                     void SetProductCode(const std::string& _productCode);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ProductCodeHasBeenSet() const;
 
                     /**
-                     * 获取Product level 1 name. If the return value is *, any item at this level is included in the policy product range.
-                     * @return ProductName Product level 1 name. If the return value is *, any item at this level is included in the policy product range.
+                     * 获取The ProductName field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
+                     * @return ProductName The ProductName field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
                      * 
                      */
                     std::string GetProductName() const;
 
                     /**
-                     * 设置Product level 1 name. If the return value is *, any item at this level is included in the policy product range.
-                     * @param _productName Product level 1 name. If the return value is *, any item at this level is included in the policy product range.
+                     * 设置The ProductName field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
+                     * @param _productName The ProductName field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
                      * 
                      */
                     void SetProductName(const std::string& _productName);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ProductNameHasBeenSet() const;
 
                     /**
-                     * 获取Product level 2 code. If the return value is *, any item at this level is included in the policy product range.
-                     * @return SubProductCode Product level 2 code. If the return value is *, any item at this level is included in the policy product range.
+                     * 获取The code of the SubProduct field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
+                     * @return SubProductCode The code of the SubProduct field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
                      * 
                      */
                     std::string GetSubProductCode() const;
 
                     /**
-                     * 设置Product level 2 code. If the return value is *, any item at this level is included in the policy product range.
-                     * @param _subProductCode Product level 2 code. If the return value is *, any item at this level is included in the policy product range.
+                     * 设置The code of the SubProduct field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
+                     * @param _subProductCode The code of the SubProduct field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
                      * 
                      */
                     void SetSubProductCode(const std::string& _subProductCode);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool SubProductCodeHasBeenSet() const;
 
                     /**
-                     * 获取Product level 2 name. If the return value is *, any item at this level is included in the policy product range.
-                     * @return SubProductName Product level 2 name. If the return value is *, any item at this level is included in the policy product range.
+                     * 获取The SubProduct field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
+                     * @return SubProductName The SubProduct field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
                      * 
                      */
                     std::string GetSubProductName() const;
 
                     /**
-                     * 设置Product level 2 name. If the return value is *, any item at this level is included in the policy product range.
-                     * @param _subProductName Product level 2 name. If the return value is *, any item at this level is included in the policy product range.
+                     * 设置The SubProduct field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
+                     * @param _subProductName The SubProduct field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
                      * 
                      */
                     void SetSubProductName(const std::string& _subProductName);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool SubProductNameHasBeenSet() const;
 
                     /**
-                     * 获取Product level 3 code. If the return value is *, any item at this level is included in the policy product range.
-                     * @return ComponentTypeCode Product level 3 code. If the return value is *, any item at this level is included in the policy product range.
+                     * 获取The code of the ComponentType field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
+                     * @return ComponentTypeCode The code of the ComponentType field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
                      * 
                      */
                     std::string GetComponentTypeCode() const;
 
                     /**
-                     * 设置Product level 3 code. If the return value is *, any item at this level is included in the policy product range.
-                     * @param _componentTypeCode Product level 3 code. If the return value is *, any item at this level is included in the policy product range.
+                     * 设置The code of the ComponentType field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
+                     * @param _componentTypeCode The code of the ComponentType field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
                      * 
                      */
                     void SetComponentTypeCode(const std::string& _componentTypeCode);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool ComponentTypeCodeHasBeenSet() const;
 
                     /**
-                     * 获取Product level 3 name. If the return value is *, any item at this level is included in the policy product range.
-                     * @return ComponentTypeName Product level 3 name. If the return value is *, any item at this level is included in the policy product range.
+                     * 获取The ComponentType field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
+                     * @return ComponentTypeName The ComponentType field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
                      * 
                      */
                     std::string GetComponentTypeName() const;
 
                     /**
-                     * 设置Product level 3 name. If the return value is *, any item at this level is included in the policy product range.
-                     * @param _componentTypeName Product level 3 name. If the return value is *, any item at this level is included in the policy product range.
+                     * 设置The ComponentType field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
+                     * @param _componentTypeName The ComponentType field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
                      * 
                      */
                     void SetComponentTypeName(const std::string& _componentTypeName);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool ComponentTypeNameHasBeenSet() const;
 
                     /**
-                     * 获取Product level 4 code. If the return value is *, any item at this level is included in the policy product range.
-                     * @return ComponentCode Product level 4 code. If the return value is *, any item at this level is included in the policy product range.
+                     * 获取The code of the Component field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
+                     * @return ComponentCode The code of the Component field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
                      * 
                      */
                     std::string GetComponentCode() const;
 
                     /**
-                     * 设置Product level 4 code. If the return value is *, any item at this level is included in the policy product range.
-                     * @param _componentCode Product level 4 code. If the return value is *, any item at this level is included in the policy product range.
+                     * 设置The code of the Component field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
+                     * @param _componentCode The code of the Component field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
                      * 
                      */
                     void SetComponentCode(const std::string& _componentCode);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool ComponentCodeHasBeenSet() const;
 
                     /**
-                     * 获取Product fourth-level name. If the return value is *, any item under this level is included in the policy product scope.
-                     * @return ComponentName Product fourth-level name. If the return value is *, any item under this level is included in the policy product scope.
+                     * 获取The Component field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
+                     * @return ComponentName The Component field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
                      * 
                      */
                     std::string GetComponentName() const;
 
                     /**
-                     * 设置Product fourth-level name. If the return value is *, any item under this level is included in the policy product scope.
-                     * @param _componentName Product fourth-level name. If the return value is *, any item under this level is included in the policy product scope.
+                     * 设置The Component field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
+                     * @param _componentName The Component field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
                      * 
                      */
                     void SetComponentName(const std::string& _componentName);
@@ -280,55 +280,55 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Dealer policy code.
+                     *  Policy code.
                      */
                     std::string m_policyCode;
                     bool m_policyCodeHasBeenSet;
 
                     /**
-                     * Product level 1 code. If the return value is *, any item at this level is included in the policy product range.
+                     * The code of the ProductName field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
                      */
                     std::string m_productCode;
                     bool m_productCodeHasBeenSet;
 
                     /**
-                     * Product level 1 name. If the return value is *, any item at this level is included in the policy product range.
+                     * The ProductName field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
                      */
                     std::string m_productName;
                     bool m_productNameHasBeenSet;
 
                     /**
-                     * Product level 2 code. If the return value is *, any item at this level is included in the policy product range.
+                     * The code of the SubProduct field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
                      */
                     std::string m_subProductCode;
                     bool m_subProductCodeHasBeenSet;
 
                     /**
-                     * Product level 2 name. If the return value is *, any item at this level is included in the policy product range.
+                     * The SubProduct field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
                      */
                     std::string m_subProductName;
                     bool m_subProductNameHasBeenSet;
 
                     /**
-                     * Product level 3 code. If the return value is *, any item at this level is included in the policy product range.
+                     * The code of the ComponentType field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
                      */
                     std::string m_componentTypeCode;
                     bool m_componentTypeCodeHasBeenSet;
 
                     /**
-                     * Product level 3 name. If the return value is *, any item at this level is included in the policy product range.
+                     * The ComponentType field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
                      */
                     std::string m_componentTypeName;
                     bool m_componentTypeNameHasBeenSet;
 
                     /**
-                     * Product level 4 code. If the return value is *, any item at this level is included in the policy product range.
+                     * The code of the Component field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
                      */
                     std::string m_componentCode;
                     bool m_componentCodeHasBeenSet;
 
                     /**
-                     * Product fourth-level name. If the return value is *, any item under this level is included in the policy product scope.
+                     * The Component field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
                      */
                     std::string m_componentName;
                     bool m_componentNameHasBeenSet;

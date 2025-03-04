@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cvm/v20170312/model/TagSpecification.h>
 
 
 namespace TencentCloud
@@ -105,6 +106,48 @@ namespace TencentCloud
                      */
                     bool ClientTokenHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return Affinity 
+                     * 
+                     */
+                    int64_t GetAffinity() const;
+
+                    /**
+                     * 设置
+                     * @param _affinity 
+                     * 
+                     */
+                    void SetAffinity(const int64_t& _affinity);
+
+                    /**
+                     * 判断参数 Affinity 是否已赋值
+                     * @return Affinity 是否已赋值
+                     * 
+                     */
+                    bool AffinityHasBeenSet() const;
+
+                    /**
+                     * 获取List of tag description. By specifying this parameter, the tag can be bound to the placement group.
+                     * @return TagSpecification List of tag description. By specifying this parameter, the tag can be bound to the placement group.
+                     * 
+                     */
+                    std::vector<TagSpecification> GetTagSpecification() const;
+
+                    /**
+                     * 设置List of tag description. By specifying this parameter, the tag can be bound to the placement group.
+                     * @param _tagSpecification List of tag description. By specifying this parameter, the tag can be bound to the placement group.
+                     * 
+                     */
+                    void SetTagSpecification(const std::vector<TagSpecification>& _tagSpecification);
+
+                    /**
+                     * 判断参数 TagSpecification 是否已赋值
+                     * @return TagSpecification 是否已赋值
+                     * 
+                     */
+                    bool TagSpecificationHasBeenSet() const;
+
                 private:
 
                     /**
@@ -124,6 +167,18 @@ namespace TencentCloud
                      */
                     std::string m_clientToken;
                     bool m_clientTokenHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_affinity;
+                    bool m_affinityHasBeenSet;
+
+                    /**
+                     * List of tag description. By specifying this parameter, the tag can be bound to the placement group.
+                     */
+                    std::vector<TagSpecification> m_tagSpecification;
+                    bool m_tagSpecificationHasBeenSet;
 
                 };
             }

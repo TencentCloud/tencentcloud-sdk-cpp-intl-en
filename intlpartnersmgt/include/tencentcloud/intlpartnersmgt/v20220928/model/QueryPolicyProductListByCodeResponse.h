@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Dealer policy product list.
-                     * @return ProductList Dealer policy product list.
+                     * 获取policy product list.
+                     * @return ProductList policy product list.
                      * 
                      */
                     std::vector<PolicyProductList> GetProductList() const;
@@ -75,7 +75,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Dealer policy product list.
+                     * policy product list.
                      */
                     std::vector<PolicyProductList> m_productList;
                     bool m_productListHasBeenSet;
