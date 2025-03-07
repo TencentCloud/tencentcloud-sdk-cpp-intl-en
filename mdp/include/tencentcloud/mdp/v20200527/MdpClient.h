@@ -23,6 +23,8 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/mdp/v20200527/model/BindLinearAssemblyCDNDomainWithChannelRequest.h>
+#include <tencentcloud/mdp/v20200527/model/BindLinearAssemblyCDNDomainWithChannelResponse.h>
 #include <tencentcloud/mdp/v20200527/model/BindNewLVBDomainWithChannelRequest.h>
 #include <tencentcloud/mdp/v20200527/model/BindNewLVBDomainWithChannelResponse.h>
 #include <tencentcloud/mdp/v20200527/model/CreateStreamPackageChannelRequest.h>
@@ -63,6 +65,10 @@
 #include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageSourceResponse.h>
 #include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageSourceLocationRequest.h>
 #include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageSourceLocationResponse.h>
+#include <tencentcloud/mdp/v20200527/model/DescribeLinearAssemblyCDNDomainWithChannelRequest.h>
+#include <tencentcloud/mdp/v20200527/model/DescribeLinearAssemblyCDNDomainWithChannelResponse.h>
+#include <tencentcloud/mdp/v20200527/model/DescribeLinearAssemblyCDNDomainWithChannelsRequest.h>
+#include <tencentcloud/mdp/v20200527/model/DescribeLinearAssemblyCDNDomainWithChannelsResponse.h>
 #include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageChannelRequest.h>
 #include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageChannelResponse.h>
 #include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageChannelsRequest.h>
@@ -121,6 +127,8 @@
 #include <tencentcloud/mdp/v20200527/model/StopStreamPackageLinearAssemblyChannelResponse.h>
 #include <tencentcloud/mdp/v20200527/model/UnbindCdnDomainWithChannelRequest.h>
 #include <tencentcloud/mdp/v20200527/model/UnbindCdnDomainWithChannelResponse.h>
+#include <tencentcloud/mdp/v20200527/model/UnbindLinearAssemblyCDNDomainWithChannelRequest.h>
+#include <tencentcloud/mdp/v20200527/model/UnbindLinearAssemblyCDNDomainWithChannelResponse.h>
 
 
 namespace TencentCloud
@@ -135,6 +143,9 @@ namespace TencentCloud
                 MdpClient(const Credential &credential, const std::string &region);
                 MdpClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::BindLinearAssemblyCDNDomainWithChannelResponse> BindLinearAssemblyCDNDomainWithChannelOutcome;
+                typedef std::future<BindLinearAssemblyCDNDomainWithChannelOutcome> BindLinearAssemblyCDNDomainWithChannelOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::BindLinearAssemblyCDNDomainWithChannelRequest&, BindLinearAssemblyCDNDomainWithChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BindLinearAssemblyCDNDomainWithChannelAsyncHandler;
                 typedef Outcome<Core::Error, Model::BindNewLVBDomainWithChannelResponse> BindNewLVBDomainWithChannelOutcome;
                 typedef std::future<BindNewLVBDomainWithChannelOutcome> BindNewLVBDomainWithChannelOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::BindNewLVBDomainWithChannelRequest&, BindNewLVBDomainWithChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BindNewLVBDomainWithChannelAsyncHandler;
@@ -195,6 +206,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteStreamPackageSourceLocationResponse> DeleteStreamPackageSourceLocationOutcome;
                 typedef std::future<DeleteStreamPackageSourceLocationOutcome> DeleteStreamPackageSourceLocationOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::DeleteStreamPackageSourceLocationRequest&, DeleteStreamPackageSourceLocationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteStreamPackageSourceLocationAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeLinearAssemblyCDNDomainWithChannelResponse> DescribeLinearAssemblyCDNDomainWithChannelOutcome;
+                typedef std::future<DescribeLinearAssemblyCDNDomainWithChannelOutcome> DescribeLinearAssemblyCDNDomainWithChannelOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::DescribeLinearAssemblyCDNDomainWithChannelRequest&, DescribeLinearAssemblyCDNDomainWithChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLinearAssemblyCDNDomainWithChannelAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeLinearAssemblyCDNDomainWithChannelsResponse> DescribeLinearAssemblyCDNDomainWithChannelsOutcome;
+                typedef std::future<DescribeLinearAssemblyCDNDomainWithChannelsOutcome> DescribeLinearAssemblyCDNDomainWithChannelsOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::DescribeLinearAssemblyCDNDomainWithChannelsRequest&, DescribeLinearAssemblyCDNDomainWithChannelsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLinearAssemblyCDNDomainWithChannelsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeStreamPackageChannelResponse> DescribeStreamPackageChannelOutcome;
                 typedef std::future<DescribeStreamPackageChannelOutcome> DescribeStreamPackageChannelOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::DescribeStreamPackageChannelRequest&, DescribeStreamPackageChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamPackageChannelAsyncHandler;
@@ -282,8 +299,20 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::UnbindCdnDomainWithChannelResponse> UnbindCdnDomainWithChannelOutcome;
                 typedef std::future<UnbindCdnDomainWithChannelOutcome> UnbindCdnDomainWithChannelOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::UnbindCdnDomainWithChannelRequest&, UnbindCdnDomainWithChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UnbindCdnDomainWithChannelAsyncHandler;
+                typedef Outcome<Core::Error, Model::UnbindLinearAssemblyCDNDomainWithChannelResponse> UnbindLinearAssemblyCDNDomainWithChannelOutcome;
+                typedef std::future<UnbindLinearAssemblyCDNDomainWithChannelOutcome> UnbindLinearAssemblyCDNDomainWithChannelOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::UnbindLinearAssemblyCDNDomainWithChannelRequest&, UnbindLinearAssemblyCDNDomainWithChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UnbindLinearAssemblyCDNDomainWithChannelAsyncHandler;
 
 
+
+                /**
+                 *Linear Assembly channel is bound to CDN playback domain name.
+                 * @param req BindLinearAssemblyCDNDomainWithChannelRequest
+                 * @return BindLinearAssemblyCDNDomainWithChannelOutcome
+                 */
+                BindLinearAssemblyCDNDomainWithChannelOutcome BindLinearAssemblyCDNDomainWithChannel(const Model::BindLinearAssemblyCDNDomainWithChannelRequest &request);
+                void BindLinearAssemblyCDNDomainWithChannelAsync(const Model::BindLinearAssemblyCDNDomainWithChannelRequest& request, const BindLinearAssemblyCDNDomainWithChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                BindLinearAssemblyCDNDomainWithChannelOutcomeCallable BindLinearAssemblyCDNDomainWithChannelCallable(const Model::BindLinearAssemblyCDNDomainWithChannelRequest& request);
 
                 /**
                  *This API is used to bind an LVB domain name to a channel.
@@ -464,6 +493,24 @@ namespace TencentCloud
                 DeleteStreamPackageSourceLocationOutcome DeleteStreamPackageSourceLocation(const Model::DeleteStreamPackageSourceLocationRequest &request);
                 void DeleteStreamPackageSourceLocationAsync(const Model::DeleteStreamPackageSourceLocationRequest& request, const DeleteStreamPackageSourceLocationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteStreamPackageSourceLocationOutcomeCallable DeleteStreamPackageSourceLocationCallable(const Model::DeleteStreamPackageSourceLocationRequest& request);
+
+                /**
+                 *Query the CDN domain name associated with the LinearAssembly channel.
+                 * @param req DescribeLinearAssemblyCDNDomainWithChannelRequest
+                 * @return DescribeLinearAssemblyCDNDomainWithChannelOutcome
+                 */
+                DescribeLinearAssemblyCDNDomainWithChannelOutcome DescribeLinearAssemblyCDNDomainWithChannel(const Model::DescribeLinearAssemblyCDNDomainWithChannelRequest &request);
+                void DescribeLinearAssemblyCDNDomainWithChannelAsync(const Model::DescribeLinearAssemblyCDNDomainWithChannelRequest& request, const DescribeLinearAssemblyCDNDomainWithChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeLinearAssemblyCDNDomainWithChannelOutcomeCallable DescribeLinearAssemblyCDNDomainWithChannelCallable(const Model::DescribeLinearAssemblyCDNDomainWithChannelRequest& request);
+
+                /**
+                 *Query the CDN domain names associated with all LinearAssembly channels.
+                 * @param req DescribeLinearAssemblyCDNDomainWithChannelsRequest
+                 * @return DescribeLinearAssemblyCDNDomainWithChannelsOutcome
+                 */
+                DescribeLinearAssemblyCDNDomainWithChannelsOutcome DescribeLinearAssemblyCDNDomainWithChannels(const Model::DescribeLinearAssemblyCDNDomainWithChannelsRequest &request);
+                void DescribeLinearAssemblyCDNDomainWithChannelsAsync(const Model::DescribeLinearAssemblyCDNDomainWithChannelsRequest& request, const DescribeLinearAssemblyCDNDomainWithChannelsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeLinearAssemblyCDNDomainWithChannelsOutcomeCallable DescribeLinearAssemblyCDNDomainWithChannelsCallable(const Model::DescribeLinearAssemblyCDNDomainWithChannelsRequest& request);
 
                 /**
                  *This API is used to query the information of a StreamPackage channel.
@@ -725,6 +772,15 @@ namespace TencentCloud
                 UnbindCdnDomainWithChannelOutcome UnbindCdnDomainWithChannel(const Model::UnbindCdnDomainWithChannelRequest &request);
                 void UnbindCdnDomainWithChannelAsync(const Model::UnbindCdnDomainWithChannelRequest& request, const UnbindCdnDomainWithChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 UnbindCdnDomainWithChannelOutcomeCallable UnbindCdnDomainWithChannelCallable(const Model::UnbindCdnDomainWithChannelRequest& request);
+
+                /**
+                 *Unbind LinearAssembly channel with CDN domain name.
+                 * @param req UnbindLinearAssemblyCDNDomainWithChannelRequest
+                 * @return UnbindLinearAssemblyCDNDomainWithChannelOutcome
+                 */
+                UnbindLinearAssemblyCDNDomainWithChannelOutcome UnbindLinearAssemblyCDNDomainWithChannel(const Model::UnbindLinearAssemblyCDNDomainWithChannelRequest &request);
+                void UnbindLinearAssemblyCDNDomainWithChannelAsync(const Model::UnbindLinearAssemblyCDNDomainWithChannelRequest& request, const UnbindLinearAssemblyCDNDomainWithChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UnbindLinearAssemblyCDNDomainWithChannelOutcomeCallable UnbindLinearAssemblyCDNDomainWithChannelCallable(const Model::UnbindLinearAssemblyCDNDomainWithChannelRequest& request);
 
             };
         }

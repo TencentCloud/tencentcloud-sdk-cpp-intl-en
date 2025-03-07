@@ -78,6 +78,7 @@ set(cvm_public_header_model
   include/tencentcloud/cvm/v20170312/model/RunInstancesResponse.h
   include/tencentcloud/cvm/v20170312/model/ReservedInstancePrice.h
   include/tencentcloud/cvm/v20170312/model/ModifyInstancesAttributeResponse.h
+  include/tencentcloud/cvm/v20170312/model/ModifyInstancesRenewFlagRequest.h
   include/tencentcloud/cvm/v20170312/model/DescribeInstancesOperationLimitResponse.h
   include/tencentcloud/cvm/v20170312/model/SyncImagesResponse.h
   include/tencentcloud/cvm/v20170312/model/DescribeZoneInstanceConfigInfosResponse.h
@@ -175,6 +176,7 @@ set(cvm_public_header_model
   include/tencentcloud/cvm/v20170312/model/InquiryPriceRunInstancesResponse.h
   include/tencentcloud/cvm/v20170312/model/DescribeHostsRequest.h
   include/tencentcloud/cvm/v20170312/model/ModifyChcAttributeRequest.h
+  include/tencentcloud/cvm/v20170312/model/ModifyInstancesRenewFlagResponse.h
   include/tencentcloud/cvm/v20170312/model/DescribeInstancesStatusRequest.h
   include/tencentcloud/cvm/v20170312/model/InquiryPriceResizeInstanceDisksResponse.h
   include/tencentcloud/cvm/v20170312/model/TerminateInstancesRequest.h
@@ -291,6 +293,7 @@ set(cvm_src
   src/v20170312/model/RunInstancesResponse.cpp
   src/v20170312/model/ReservedInstancePrice.cpp
   src/v20170312/model/ModifyInstancesAttributeResponse.cpp
+  src/v20170312/model/ModifyInstancesRenewFlagRequest.cpp
   src/v20170312/model/DescribeInstancesOperationLimitResponse.cpp
   src/v20170312/model/SyncImagesResponse.cpp
   src/v20170312/model/DescribeZoneInstanceConfigInfosResponse.cpp
@@ -388,6 +391,7 @@ set(cvm_src
   src/v20170312/model/InquiryPriceRunInstancesResponse.cpp
   src/v20170312/model/DescribeHostsRequest.cpp
   src/v20170312/model/ModifyChcAttributeRequest.cpp
+  src/v20170312/model/ModifyInstancesRenewFlagResponse.cpp
   src/v20170312/model/DescribeInstancesStatusRequest.cpp
   src/v20170312/model/InquiryPriceResizeInstanceDisksResponse.cpp
   src/v20170312/model/TerminateInstancesRequest.cpp

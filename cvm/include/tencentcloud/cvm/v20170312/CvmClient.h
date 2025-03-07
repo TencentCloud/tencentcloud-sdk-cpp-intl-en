@@ -141,6 +141,8 @@
 #include <tencentcloud/cvm/v20170312/model/ModifyInstancesAttributeResponse.h>
 #include <tencentcloud/cvm/v20170312/model/ModifyInstancesProjectRequest.h>
 #include <tencentcloud/cvm/v20170312/model/ModifyInstancesProjectResponse.h>
+#include <tencentcloud/cvm/v20170312/model/ModifyInstancesRenewFlagRequest.h>
+#include <tencentcloud/cvm/v20170312/model/ModifyInstancesRenewFlagResponse.h>
 #include <tencentcloud/cvm/v20170312/model/ModifyInstancesVpcAttributeRequest.h>
 #include <tencentcloud/cvm/v20170312/model/ModifyInstancesVpcAttributeResponse.h>
 #include <tencentcloud/cvm/v20170312/model/ModifyKeyPairAttributeRequest.h>
@@ -366,6 +368,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyInstancesProjectResponse> ModifyInstancesProjectOutcome;
                 typedef std::future<ModifyInstancesProjectOutcome> ModifyInstancesProjectOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::ModifyInstancesProjectRequest&, ModifyInstancesProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstancesProjectAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyInstancesRenewFlagResponse> ModifyInstancesRenewFlagOutcome;
+                typedef std::future<ModifyInstancesRenewFlagOutcome> ModifyInstancesRenewFlagOutcomeCallable;
+                typedef std::function<void(const CvmClient*, const Model::ModifyInstancesRenewFlagRequest&, ModifyInstancesRenewFlagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstancesRenewFlagAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyInstancesVpcAttributeResponse> ModifyInstancesVpcAttributeOutcome;
                 typedef std::future<ModifyInstancesVpcAttributeOutcome> ModifyInstancesVpcAttributeOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::ModifyInstancesVpcAttributeRequest&, ModifyInstancesVpcAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstancesVpcAttributeAsyncHandler;
@@ -1028,6 +1033,18 @@ When a template is created, it defaults to Version 1. You can use `CreateLaunchT
                 ModifyInstancesProjectOutcome ModifyInstancesProject(const Model::ModifyInstancesProjectRequest &request);
                 void ModifyInstancesProjectAsync(const Model::ModifyInstancesProjectRequest& request, const ModifyInstancesProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyInstancesProjectOutcomeCallable ModifyInstancesProjectCallable(const Model::ModifyInstancesProjectRequest& request);
+
+                /**
+                 *This API is used to modify the renewal flag of monthly subscription instances.
+
+* After an instance is marked as auto-renewal, it will be automatically renewed for one month each time it expires.
+* Batch operations are supported. The maximum number of instances for each request is 100.* You can query the result of the instance operation by calling the API [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5). If the latest operation status (LatestOperationState) of the instance is **SUCCESS**, the operation is successful.
+                 * @param req ModifyInstancesRenewFlagRequest
+                 * @return ModifyInstancesRenewFlagOutcome
+                 */
+                ModifyInstancesRenewFlagOutcome ModifyInstancesRenewFlag(const Model::ModifyInstancesRenewFlagRequest &request);
+                void ModifyInstancesRenewFlagAsync(const Model::ModifyInstancesRenewFlagRequest& request, const ModifyInstancesRenewFlagAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyInstancesRenewFlagOutcomeCallable ModifyInstancesRenewFlagCallable(const Model::ModifyInstancesRenewFlagRequest& request);
 
                 /**
                  *This API is used to modify the VPC attributes of an instance, such as the VPC IP address.

@@ -27,6 +27,8 @@
 #include <tencentcloud/organization/v20210331/model/AcceptJoinShareUnitInvitationResponse.h>
 #include <tencentcloud/organization/v20210331/model/AddExternalSAMLIdPCertificateRequest.h>
 #include <tencentcloud/organization/v20210331/model/AddExternalSAMLIdPCertificateResponse.h>
+#include <tencentcloud/organization/v20210331/model/AddOrganizationMemberEmailRequest.h>
+#include <tencentcloud/organization/v20210331/model/AddOrganizationMemberEmailResponse.h>
 #include <tencentcloud/organization/v20210331/model/AddOrganizationNodeRequest.h>
 #include <tencentcloud/organization/v20210331/model/AddOrganizationNodeResponse.h>
 #include <tencentcloud/organization/v20210331/model/AddPermissionPolicyToRoleConfigurationRequest.h>
@@ -111,6 +113,8 @@
 #include <tencentcloud/organization/v20210331/model/DescribeOrganizationMemberAuthAccountsResponse.h>
 #include <tencentcloud/organization/v20210331/model/DescribeOrganizationMemberAuthIdentitiesRequest.h>
 #include <tencentcloud/organization/v20210331/model/DescribeOrganizationMemberAuthIdentitiesResponse.h>
+#include <tencentcloud/organization/v20210331/model/DescribeOrganizationMemberEmailBindRequest.h>
+#include <tencentcloud/organization/v20210331/model/DescribeOrganizationMemberEmailBindResponse.h>
 #include <tencentcloud/organization/v20210331/model/DescribeOrganizationMemberPoliciesRequest.h>
 #include <tencentcloud/organization/v20210331/model/DescribeOrganizationMemberPoliciesResponse.h>
 #include <tencentcloud/organization/v20210331/model/DescribeOrganizationMembersRequest.h>
@@ -195,6 +199,8 @@
 #include <tencentcloud/organization/v20210331/model/RemovePermissionPolicyFromRoleConfigurationResponse.h>
 #include <tencentcloud/organization/v20210331/model/RemoveUserFromGroupRequest.h>
 #include <tencentcloud/organization/v20210331/model/RemoveUserFromGroupResponse.h>
+#include <tencentcloud/organization/v20210331/model/SendOrgMemberAccountBindEmailRequest.h>
+#include <tencentcloud/organization/v20210331/model/SendOrgMemberAccountBindEmailResponse.h>
 #include <tencentcloud/organization/v20210331/model/SetExternalSAMLIdentityProviderRequest.h>
 #include <tencentcloud/organization/v20210331/model/SetExternalSAMLIdentityProviderResponse.h>
 #include <tencentcloud/organization/v20210331/model/UpdateCustomPolicyForRoleConfigurationRequest.h>
@@ -205,6 +211,8 @@
 #include <tencentcloud/organization/v20210331/model/UpdateOrganizationIdentityResponse.h>
 #include <tencentcloud/organization/v20210331/model/UpdateOrganizationMemberRequest.h>
 #include <tencentcloud/organization/v20210331/model/UpdateOrganizationMemberResponse.h>
+#include <tencentcloud/organization/v20210331/model/UpdateOrganizationMemberEmailBindRequest.h>
+#include <tencentcloud/organization/v20210331/model/UpdateOrganizationMemberEmailBindResponse.h>
 #include <tencentcloud/organization/v20210331/model/UpdateOrganizationNodeRequest.h>
 #include <tencentcloud/organization/v20210331/model/UpdateOrganizationNodeResponse.h>
 #include <tencentcloud/organization/v20210331/model/UpdateRoleConfigurationRequest.h>
@@ -243,6 +251,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AddExternalSAMLIdPCertificateResponse> AddExternalSAMLIdPCertificateOutcome;
                 typedef std::future<AddExternalSAMLIdPCertificateOutcome> AddExternalSAMLIdPCertificateOutcomeCallable;
                 typedef std::function<void(const OrganizationClient*, const Model::AddExternalSAMLIdPCertificateRequest&, AddExternalSAMLIdPCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddExternalSAMLIdPCertificateAsyncHandler;
+                typedef Outcome<Core::Error, Model::AddOrganizationMemberEmailResponse> AddOrganizationMemberEmailOutcome;
+                typedef std::future<AddOrganizationMemberEmailOutcome> AddOrganizationMemberEmailOutcomeCallable;
+                typedef std::function<void(const OrganizationClient*, const Model::AddOrganizationMemberEmailRequest&, AddOrganizationMemberEmailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddOrganizationMemberEmailAsyncHandler;
                 typedef Outcome<Core::Error, Model::AddOrganizationNodeResponse> AddOrganizationNodeOutcome;
                 typedef std::future<AddOrganizationNodeOutcome> AddOrganizationNodeOutcomeCallable;
                 typedef std::function<void(const OrganizationClient*, const Model::AddOrganizationNodeRequest&, AddOrganizationNodeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddOrganizationNodeAsyncHandler;
@@ -369,6 +380,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeOrganizationMemberAuthIdentitiesResponse> DescribeOrganizationMemberAuthIdentitiesOutcome;
                 typedef std::future<DescribeOrganizationMemberAuthIdentitiesOutcome> DescribeOrganizationMemberAuthIdentitiesOutcomeCallable;
                 typedef std::function<void(const OrganizationClient*, const Model::DescribeOrganizationMemberAuthIdentitiesRequest&, DescribeOrganizationMemberAuthIdentitiesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOrganizationMemberAuthIdentitiesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeOrganizationMemberEmailBindResponse> DescribeOrganizationMemberEmailBindOutcome;
+                typedef std::future<DescribeOrganizationMemberEmailBindOutcome> DescribeOrganizationMemberEmailBindOutcomeCallable;
+                typedef std::function<void(const OrganizationClient*, const Model::DescribeOrganizationMemberEmailBindRequest&, DescribeOrganizationMemberEmailBindOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOrganizationMemberEmailBindAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeOrganizationMemberPoliciesResponse> DescribeOrganizationMemberPoliciesOutcome;
                 typedef std::future<DescribeOrganizationMemberPoliciesOutcome> DescribeOrganizationMemberPoliciesOutcomeCallable;
                 typedef std::function<void(const OrganizationClient*, const Model::DescribeOrganizationMemberPoliciesRequest&, DescribeOrganizationMemberPoliciesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOrganizationMemberPoliciesAsyncHandler;
@@ -495,6 +509,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RemoveUserFromGroupResponse> RemoveUserFromGroupOutcome;
                 typedef std::future<RemoveUserFromGroupOutcome> RemoveUserFromGroupOutcomeCallable;
                 typedef std::function<void(const OrganizationClient*, const Model::RemoveUserFromGroupRequest&, RemoveUserFromGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RemoveUserFromGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::SendOrgMemberAccountBindEmailResponse> SendOrgMemberAccountBindEmailOutcome;
+                typedef std::future<SendOrgMemberAccountBindEmailOutcome> SendOrgMemberAccountBindEmailOutcomeCallable;
+                typedef std::function<void(const OrganizationClient*, const Model::SendOrgMemberAccountBindEmailRequest&, SendOrgMemberAccountBindEmailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SendOrgMemberAccountBindEmailAsyncHandler;
                 typedef Outcome<Core::Error, Model::SetExternalSAMLIdentityProviderResponse> SetExternalSAMLIdentityProviderOutcome;
                 typedef std::future<SetExternalSAMLIdentityProviderOutcome> SetExternalSAMLIdentityProviderOutcomeCallable;
                 typedef std::function<void(const OrganizationClient*, const Model::SetExternalSAMLIdentityProviderRequest&, SetExternalSAMLIdentityProviderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetExternalSAMLIdentityProviderAsyncHandler;
@@ -510,6 +527,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::UpdateOrganizationMemberResponse> UpdateOrganizationMemberOutcome;
                 typedef std::future<UpdateOrganizationMemberOutcome> UpdateOrganizationMemberOutcomeCallable;
                 typedef std::function<void(const OrganizationClient*, const Model::UpdateOrganizationMemberRequest&, UpdateOrganizationMemberOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateOrganizationMemberAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateOrganizationMemberEmailBindResponse> UpdateOrganizationMemberEmailBindOutcome;
+                typedef std::future<UpdateOrganizationMemberEmailBindOutcome> UpdateOrganizationMemberEmailBindOutcomeCallable;
+                typedef std::function<void(const OrganizationClient*, const Model::UpdateOrganizationMemberEmailBindRequest&, UpdateOrganizationMemberEmailBindOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateOrganizationMemberEmailBindAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpdateOrganizationNodeResponse> UpdateOrganizationNodeOutcome;
                 typedef std::future<UpdateOrganizationNodeOutcome> UpdateOrganizationNodeOutcomeCallable;
                 typedef std::function<void(const OrganizationClient*, const Model::UpdateOrganizationNodeRequest&, UpdateOrganizationNodeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateOrganizationNodeAsyncHandler;
@@ -557,6 +577,15 @@ namespace TencentCloud
                 AddExternalSAMLIdPCertificateOutcome AddExternalSAMLIdPCertificate(const Model::AddExternalSAMLIdPCertificateRequest &request);
                 void AddExternalSAMLIdPCertificateAsync(const Model::AddExternalSAMLIdPCertificateRequest& request, const AddExternalSAMLIdPCertificateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 AddExternalSAMLIdPCertificateOutcomeCallable AddExternalSAMLIdPCertificateCallable(const Model::AddExternalSAMLIdPCertificateRequest& request);
+
+                /**
+                 *This API is used to add an organization member's mailbox.
+                 * @param req AddOrganizationMemberEmailRequest
+                 * @return AddOrganizationMemberEmailOutcome
+                 */
+                AddOrganizationMemberEmailOutcome AddOrganizationMemberEmail(const Model::AddOrganizationMemberEmailRequest &request);
+                void AddOrganizationMemberEmailAsync(const Model::AddOrganizationMemberEmailRequest& request, const AddOrganizationMemberEmailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AddOrganizationMemberEmailOutcomeCallable AddOrganizationMemberEmailCallable(const Model::AddOrganizationMemberEmailRequest& request);
 
                 /**
                  *This API is used to add an organization node.
@@ -937,6 +966,15 @@ namespace TencentCloud
                 DescribeOrganizationMemberAuthIdentitiesOutcomeCallable DescribeOrganizationMemberAuthIdentitiesCallable(const Model::DescribeOrganizationMemberAuthIdentitiesRequest& request);
 
                 /**
+                 *This API is used to query detailed information about member mailbox binding.
+                 * @param req DescribeOrganizationMemberEmailBindRequest
+                 * @return DescribeOrganizationMemberEmailBindOutcome
+                 */
+                DescribeOrganizationMemberEmailBindOutcome DescribeOrganizationMemberEmailBind(const Model::DescribeOrganizationMemberEmailBindRequest &request);
+                void DescribeOrganizationMemberEmailBindAsync(const Model::DescribeOrganizationMemberEmailBindRequest& request, const DescribeOrganizationMemberEmailBindAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeOrganizationMemberEmailBindOutcomeCallable DescribeOrganizationMemberEmailBindCallable(const Model::DescribeOrganizationMemberEmailBindRequest& request);
+
+                /**
                  *This API is used to get the list of authorization policies of an organization member.
                  * @param req DescribeOrganizationMemberPoliciesRequest
                  * @return DescribeOrganizationMemberPoliciesOutcome
@@ -1315,6 +1353,15 @@ namespace TencentCloud
                 RemoveUserFromGroupOutcomeCallable RemoveUserFromGroupCallable(const Model::RemoveUserFromGroupRequest& request);
 
                 /**
+                 *This API is used to resend an email for activating the member's bound mailbox.
+                 * @param req SendOrgMemberAccountBindEmailRequest
+                 * @return SendOrgMemberAccountBindEmailOutcome
+                 */
+                SendOrgMemberAccountBindEmailOutcome SendOrgMemberAccountBindEmail(const Model::SendOrgMemberAccountBindEmailRequest &request);
+                void SendOrgMemberAccountBindEmailAsync(const Model::SendOrgMemberAccountBindEmailRequest& request, const SendOrgMemberAccountBindEmailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SendOrgMemberAccountBindEmailOutcomeCallable SendOrgMemberAccountBindEmailCallable(const Model::SendOrgMemberAccountBindEmailRequest& request);
+
+                /**
                  *This API is used to configure the SAML identity provider information.
                  * @param req SetExternalSAMLIdentityProviderRequest
                  * @return SetExternalSAMLIdentityProviderOutcome
@@ -1358,6 +1405,15 @@ namespace TencentCloud
                 UpdateOrganizationMemberOutcome UpdateOrganizationMember(const Model::UpdateOrganizationMemberRequest &request);
                 void UpdateOrganizationMemberAsync(const Model::UpdateOrganizationMemberRequest& request, const UpdateOrganizationMemberAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 UpdateOrganizationMemberOutcomeCallable UpdateOrganizationMemberCallable(const Model::UpdateOrganizationMemberRequest& request);
+
+                /**
+                 *This API is used to modify the mailbox of a bound member.
+                 * @param req UpdateOrganizationMemberEmailBindRequest
+                 * @return UpdateOrganizationMemberEmailBindOutcome
+                 */
+                UpdateOrganizationMemberEmailBindOutcome UpdateOrganizationMemberEmailBind(const Model::UpdateOrganizationMemberEmailBindRequest &request);
+                void UpdateOrganizationMemberEmailBindAsync(const Model::UpdateOrganizationMemberEmailBindRequest& request, const UpdateOrganizationMemberEmailBindAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateOrganizationMemberEmailBindOutcomeCallable UpdateOrganizationMemberEmailBindCallable(const Model::UpdateOrganizationMemberEmailBindRequest& request);
 
                 /**
                  *This API is used to update an organization node.

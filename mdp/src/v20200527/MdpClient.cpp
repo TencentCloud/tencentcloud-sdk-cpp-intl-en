@@ -40,6 +40,49 @@ MdpClient::MdpClient(const Credential &credential, const string &region, const C
 }
 
 
+MdpClient::BindLinearAssemblyCDNDomainWithChannelOutcome MdpClient::BindLinearAssemblyCDNDomainWithChannel(const BindLinearAssemblyCDNDomainWithChannelRequest &request)
+{
+    auto outcome = MakeRequest(request, "BindLinearAssemblyCDNDomainWithChannel");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        BindLinearAssemblyCDNDomainWithChannelResponse rsp = BindLinearAssemblyCDNDomainWithChannelResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return BindLinearAssemblyCDNDomainWithChannelOutcome(rsp);
+        else
+            return BindLinearAssemblyCDNDomainWithChannelOutcome(o.GetError());
+    }
+    else
+    {
+        return BindLinearAssemblyCDNDomainWithChannelOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::BindLinearAssemblyCDNDomainWithChannelAsync(const BindLinearAssemblyCDNDomainWithChannelRequest& request, const BindLinearAssemblyCDNDomainWithChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->BindLinearAssemblyCDNDomainWithChannel(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::BindLinearAssemblyCDNDomainWithChannelOutcomeCallable MdpClient::BindLinearAssemblyCDNDomainWithChannelCallable(const BindLinearAssemblyCDNDomainWithChannelRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<BindLinearAssemblyCDNDomainWithChannelOutcome()>>(
+        [this, request]()
+        {
+            return this->BindLinearAssemblyCDNDomainWithChannel(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 MdpClient::BindNewLVBDomainWithChannelOutcome MdpClient::BindNewLVBDomainWithChannel(const BindNewLVBDomainWithChannelRequest &request)
 {
     auto outcome = MakeRequest(request, "BindNewLVBDomainWithChannel");
@@ -893,6 +936,92 @@ MdpClient::DeleteStreamPackageSourceLocationOutcomeCallable MdpClient::DeleteStr
         [this, request]()
         {
             return this->DeleteStreamPackageSourceLocation(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::DescribeLinearAssemblyCDNDomainWithChannelOutcome MdpClient::DescribeLinearAssemblyCDNDomainWithChannel(const DescribeLinearAssemblyCDNDomainWithChannelRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeLinearAssemblyCDNDomainWithChannel");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeLinearAssemblyCDNDomainWithChannelResponse rsp = DescribeLinearAssemblyCDNDomainWithChannelResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeLinearAssemblyCDNDomainWithChannelOutcome(rsp);
+        else
+            return DescribeLinearAssemblyCDNDomainWithChannelOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeLinearAssemblyCDNDomainWithChannelOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::DescribeLinearAssemblyCDNDomainWithChannelAsync(const DescribeLinearAssemblyCDNDomainWithChannelRequest& request, const DescribeLinearAssemblyCDNDomainWithChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeLinearAssemblyCDNDomainWithChannel(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::DescribeLinearAssemblyCDNDomainWithChannelOutcomeCallable MdpClient::DescribeLinearAssemblyCDNDomainWithChannelCallable(const DescribeLinearAssemblyCDNDomainWithChannelRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeLinearAssemblyCDNDomainWithChannelOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeLinearAssemblyCDNDomainWithChannel(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::DescribeLinearAssemblyCDNDomainWithChannelsOutcome MdpClient::DescribeLinearAssemblyCDNDomainWithChannels(const DescribeLinearAssemblyCDNDomainWithChannelsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeLinearAssemblyCDNDomainWithChannels");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeLinearAssemblyCDNDomainWithChannelsResponse rsp = DescribeLinearAssemblyCDNDomainWithChannelsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeLinearAssemblyCDNDomainWithChannelsOutcome(rsp);
+        else
+            return DescribeLinearAssemblyCDNDomainWithChannelsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeLinearAssemblyCDNDomainWithChannelsOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::DescribeLinearAssemblyCDNDomainWithChannelsAsync(const DescribeLinearAssemblyCDNDomainWithChannelsRequest& request, const DescribeLinearAssemblyCDNDomainWithChannelsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeLinearAssemblyCDNDomainWithChannels(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::DescribeLinearAssemblyCDNDomainWithChannelsOutcomeCallable MdpClient::DescribeLinearAssemblyCDNDomainWithChannelsCallable(const DescribeLinearAssemblyCDNDomainWithChannelsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeLinearAssemblyCDNDomainWithChannelsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeLinearAssemblyCDNDomainWithChannels(request);
         }
     );
 
@@ -2140,6 +2269,49 @@ MdpClient::UnbindCdnDomainWithChannelOutcomeCallable MdpClient::UnbindCdnDomainW
         [this, request]()
         {
             return this->UnbindCdnDomainWithChannel(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::UnbindLinearAssemblyCDNDomainWithChannelOutcome MdpClient::UnbindLinearAssemblyCDNDomainWithChannel(const UnbindLinearAssemblyCDNDomainWithChannelRequest &request)
+{
+    auto outcome = MakeRequest(request, "UnbindLinearAssemblyCDNDomainWithChannel");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UnbindLinearAssemblyCDNDomainWithChannelResponse rsp = UnbindLinearAssemblyCDNDomainWithChannelResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UnbindLinearAssemblyCDNDomainWithChannelOutcome(rsp);
+        else
+            return UnbindLinearAssemblyCDNDomainWithChannelOutcome(o.GetError());
+    }
+    else
+    {
+        return UnbindLinearAssemblyCDNDomainWithChannelOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::UnbindLinearAssemblyCDNDomainWithChannelAsync(const UnbindLinearAssemblyCDNDomainWithChannelRequest& request, const UnbindLinearAssemblyCDNDomainWithChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UnbindLinearAssemblyCDNDomainWithChannel(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::UnbindLinearAssemblyCDNDomainWithChannelOutcomeCallable MdpClient::UnbindLinearAssemblyCDNDomainWithChannelCallable(const UnbindLinearAssemblyCDNDomainWithChannelRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UnbindLinearAssemblyCDNDomainWithChannelOutcome()>>(
+        [this, request]()
+        {
+            return this->UnbindLinearAssemblyCDNDomainWithChannel(request);
         }
     );
 

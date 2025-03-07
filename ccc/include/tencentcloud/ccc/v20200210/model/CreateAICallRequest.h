@@ -325,14 +325,14 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
                     /**
                      * 获取Model API key, for authentication information, please refer to the respective model's official website
 
-- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [Hunyuan](https://intl.cloud.tencent.com/document/product/1729/111008?from_cn_redirect=1), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
+- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
 
 - Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
 
 - Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
                      * @return APIKey Model API key, for authentication information, please refer to the respective model's official website
 
-- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [Hunyuan](https://intl.cloud.tencent.com/document/product/1729/111008?from_cn_redirect=1), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
+- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
 
 - Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
 
@@ -344,14 +344,14 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
                     /**
                      * 设置Model API key, for authentication information, please refer to the respective model's official website
 
-- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [Hunyuan](https://intl.cloud.tencent.com/document/product/1729/111008?from_cn_redirect=1), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
+- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
 
 - Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
 
 - Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
                      * @param _aPIKey Model API key, for authentication information, please refer to the respective model's official website
 
-- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [Hunyuan](https://intl.cloud.tencent.com/document/product/1729/111008?from_cn_redirect=1), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
+- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
 
 - Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
 
@@ -607,15 +607,15 @@ HoaiMy
                     bool CallersHasBeenSet() const;
 
                     /**
-                     * 获取Used to set the AI Agent Greeting.
-                     * @return WelcomeMessage Used to set the AI Agent Greeting.
+                     * 获取Used to set the AI Agent Welcome Message.
+                     * @return WelcomeMessage Used to set the AI Agent Welcome Message.
                      * 
                      */
                     std::string GetWelcomeMessage() const;
 
                     /**
-                     * 设置Used to set the AI Agent Greeting.
-                     * @param _welcomeMessage Used to set the AI Agent Greeting.
+                     * 设置Used to set the AI Agent Welcome Message.
+                     * @param _welcomeMessage Used to set the AI Agent Welcome Message.
                      * 
                      */
                     void SetWelcomeMessage(const std::string& _welcomeMessage);
@@ -1354,7 +1354,7 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
                     /**
                      * Model API key, for authentication information, please refer to the respective model's official website
 
-- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [Hunyuan](https://intl.cloud.tencent.com/document/product/1729/111008?from_cn_redirect=1), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
+- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
 
 - Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
 
@@ -1426,7 +1426,7 @@ HoaiMy
                     bool m_callersHasBeenSet;
 
                     /**
-                     * Used to set the AI Agent Greeting.
+                     * Used to set the AI Agent Welcome Message.
                      */
                     std::string m_welcomeMessage;
                     bool m_welcomeMessageHasBeenSet;

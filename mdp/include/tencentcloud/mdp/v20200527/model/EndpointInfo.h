@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mdp/v20200527/model/EndpointAuthInfo.h>
 #include <tencentcloud/mdp/v20200527/model/SSAIConf.h>
+#include <tencentcloud/mdp/v20200527/model/DRMInfo.h>
 
 
 namespace TencentCloud
@@ -112,15 +113,15 @@ namespace TencentCloud
                     bool AuthInfoHasBeenSet() const;
 
                     /**
-                     * 获取Endpoint protocol.
-                     * @return Protocol Endpoint protocol.
+                     * 获取Endpoint protocol, supports `HLS`, `CMAF`, `CMAF-HLS`.
+                     * @return Protocol Endpoint protocol, supports `HLS`, `CMAF`, `CMAF-HLS`.
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置Endpoint protocol.
-                     * @param _protocol Endpoint protocol.
+                     * 设置Endpoint protocol, supports `HLS`, `CMAF`, `CMAF-HLS`.
+                     * @param _protocol Endpoint protocol, supports `HLS`, `CMAF`, `CMAF-HLS`.
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -283,6 +284,48 @@ The parameters can only contain digits, letters, underscores (_), and hyphens (-
                      */
                     bool CustomUrlParamHasBeenSet() const;
 
+                    /**
+                     * 获取DRM switch. If it is turned on, only CMAF will take effect.
+                     * @return DRMEnabled DRM switch. If it is turned on, only CMAF will take effect.
+                     * 
+                     */
+                    bool GetDRMEnabled() const;
+
+                    /**
+                     * 设置DRM switch. If it is turned on, only CMAF will take effect.
+                     * @param _dRMEnabled DRM switch. If it is turned on, only CMAF will take effect.
+                     * 
+                     */
+                    void SetDRMEnabled(const bool& _dRMEnabled);
+
+                    /**
+                     * 判断参数 DRMEnabled 是否已赋值
+                     * @return DRMEnabled 是否已赋值
+                     * 
+                     */
+                    bool DRMEnabledHasBeenSet() const;
+
+                    /**
+                     * 获取DRM configuration information.
+                     * @return DRMInfo DRM configuration information.
+                     * 
+                     */
+                    DRMInfo GetDRMInfo() const;
+
+                    /**
+                     * 设置DRM configuration information.
+                     * @param _dRMInfo DRM configuration information.
+                     * 
+                     */
+                    void SetDRMInfo(const DRMInfo& _dRMInfo);
+
+                    /**
+                     * 判断参数 DRMInfo 是否已赋值
+                     * @return DRMInfo 是否已赋值
+                     * 
+                     */
+                    bool DRMInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -304,7 +347,7 @@ The parameters can only contain digits, letters, underscores (_), and hyphens (-
                     bool m_authInfoHasBeenSet;
 
                     /**
-                     * Endpoint protocol.
+                     * Endpoint protocol, supports `HLS`, `CMAF`, `CMAF-HLS`.
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
@@ -351,6 +394,18 @@ The parameters can only contain digits, letters, underscores (_), and hyphens (-
                      */
                     std::string m_customUrlParam;
                     bool m_customUrlParamHasBeenSet;
+
+                    /**
+                     * DRM switch. If it is turned on, only CMAF will take effect.
+                     */
+                    bool m_dRMEnabled;
+                    bool m_dRMEnabledHasBeenSet;
+
+                    /**
+                     * DRM configuration information.
+                     */
+                    DRMInfo m_dRMInfo;
+                    bool m_dRMInfoHasBeenSet;
 
                 };
             }

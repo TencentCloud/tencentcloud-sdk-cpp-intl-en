@@ -2577,6 +2577,49 @@ CvmClient::ModifyInstancesProjectOutcomeCallable CvmClient::ModifyInstancesProje
     return task->get_future();
 }
 
+CvmClient::ModifyInstancesRenewFlagOutcome CvmClient::ModifyInstancesRenewFlag(const ModifyInstancesRenewFlagRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyInstancesRenewFlag");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyInstancesRenewFlagResponse rsp = ModifyInstancesRenewFlagResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyInstancesRenewFlagOutcome(rsp);
+        else
+            return ModifyInstancesRenewFlagOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyInstancesRenewFlagOutcome(outcome.GetError());
+    }
+}
+
+void CvmClient::ModifyInstancesRenewFlagAsync(const ModifyInstancesRenewFlagRequest& request, const ModifyInstancesRenewFlagAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyInstancesRenewFlag(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CvmClient::ModifyInstancesRenewFlagOutcomeCallable CvmClient::ModifyInstancesRenewFlagCallable(const ModifyInstancesRenewFlagRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyInstancesRenewFlagOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyInstancesRenewFlag(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CvmClient::ModifyInstancesVpcAttributeOutcome CvmClient::ModifyInstancesVpcAttribute(const ModifyInstancesVpcAttributeRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyInstancesVpcAttribute");

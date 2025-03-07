@@ -620,15 +620,15 @@ false (default value): send a normal request and create instance(s) if all the r
                     bool InstanceChargePrepaidHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DisableApiTermination 
+                     * 获取Instance termination protection flag, indicating whether an instance is allowed to be deleted through an API. Valid values:<br><li>true: Instance protection is enabled, and the instance is not allowed to be deleted through the API.</li><br><li>false: Instance protection is disabled, and the instance is allowed to be deleted through the API.</li><br><br>Default value: false.
+                     * @return DisableApiTermination Instance termination protection flag, indicating whether an instance is allowed to be deleted through an API. Valid values:<br><li>true: Instance protection is enabled, and the instance is not allowed to be deleted through the API.</li><br><li>false: Instance protection is disabled, and the instance is allowed to be deleted through the API.</li><br><br>Default value: false.
                      * 
                      */
                     bool GetDisableApiTermination() const;
 
                     /**
-                     * 设置
-                     * @param _disableApiTermination 
+                     * 设置Instance termination protection flag, indicating whether an instance is allowed to be deleted through an API. Valid values:<br><li>true: Instance protection is enabled, and the instance is not allowed to be deleted through the API.</li><br><li>false: Instance protection is disabled, and the instance is allowed to be deleted through the API.</li><br><br>Default value: false.
+                     * @param _disableApiTermination Instance termination protection flag, indicating whether an instance is allowed to be deleted through an API. Valid values:<br><li>true: Instance protection is enabled, and the instance is not allowed to be deleted through the API.</li><br><li>false: Instance protection is disabled, and the instance is allowed to be deleted through the API.</li><br><br>Default value: false.
                      * 
                      */
                     void SetDisableApiTermination(const bool& _disableApiTermination);
@@ -825,7 +825,7 @@ false (default value): send a normal request and create instance(s) if all the r
                     bool m_instanceChargePrepaidHasBeenSet;
 
                     /**
-                     * 
+                     * Instance termination protection flag, indicating whether an instance is allowed to be deleted through an API. Valid values:<br><li>true: Instance protection is enabled, and the instance is not allowed to be deleted through the API.</li><br><li>false: Instance protection is disabled, and the instance is allowed to be deleted through the API.</li><br><br>Default value: false.
                      */
                     bool m_disableApiTermination;
                     bool m_disableApiTerminationHasBeenSet;

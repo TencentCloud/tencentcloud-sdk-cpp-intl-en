@@ -31,7 +31,9 @@ EndpointInfo::EndpointInfo() :
     m_sSAIEnableHasBeenSet(false),
     m_sSAIInfoHasBeenSet(false),
     m_customUrlParamIndexHasBeenSet(false),
-    m_customUrlParamHasBeenSet(false)
+    m_customUrlParamHasBeenSet(false),
+    m_dRMEnabledHasBeenSet(false),
+    m_dRMInfoHasBeenSet(false)
 {
 }
 
@@ -164,6 +166,33 @@ CoreInternalOutcome EndpointInfo::Deserialize(const rapidjson::Value &value)
         m_customUrlParamHasBeenSet = true;
     }
 
+    if (value.HasMember("DRMEnabled") && !value["DRMEnabled"].IsNull())
+    {
+        if (!value["DRMEnabled"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `EndpointInfo.DRMEnabled` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_dRMEnabled = value["DRMEnabled"].GetBool();
+        m_dRMEnabledHasBeenSet = true;
+    }
+
+    if (value.HasMember("DRMInfo") && !value["DRMInfo"].IsNull())
+    {
+        if (!value["DRMInfo"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `EndpointInfo.DRMInfo` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_dRMInfo.Deserialize(value["DRMInfo"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_dRMInfoHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -259,6 +288,23 @@ void EndpointInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Al
         string key = "CustomUrlParam";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_customUrlParam.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_dRMEnabledHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DRMEnabled";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_dRMEnabled, allocator);
+    }
+
+    if (m_dRMInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DRMInfo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_dRMInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -438,5 +484,37 @@ void EndpointInfo::SetCustomUrlParam(const string& _customUrlParam)
 bool EndpointInfo::CustomUrlParamHasBeenSet() const
 {
     return m_customUrlParamHasBeenSet;
+}
+
+bool EndpointInfo::GetDRMEnabled() const
+{
+    return m_dRMEnabled;
+}
+
+void EndpointInfo::SetDRMEnabled(const bool& _dRMEnabled)
+{
+    m_dRMEnabled = _dRMEnabled;
+    m_dRMEnabledHasBeenSet = true;
+}
+
+bool EndpointInfo::DRMEnabledHasBeenSet() const
+{
+    return m_dRMEnabledHasBeenSet;
+}
+
+DRMInfo EndpointInfo::GetDRMInfo() const
+{
+    return m_dRMInfo;
+}
+
+void EndpointInfo::SetDRMInfo(const DRMInfo& _dRMInfo)
+{
+    m_dRMInfo = _dRMInfo;
+    m_dRMInfoHasBeenSet = true;
+}
+
+bool EndpointInfo::DRMInfoHasBeenSet() const
+{
+    return m_dRMInfoHasBeenSet;
 }
 
