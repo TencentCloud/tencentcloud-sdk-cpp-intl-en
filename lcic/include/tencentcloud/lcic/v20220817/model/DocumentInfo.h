@@ -462,6 +462,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool PreviewHasBeenSet() const;
 
+                    /**
+                     * 获取Document resolution.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Resolution Document resolution.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetResolution() const;
+
+                    /**
+                     * 设置Document resolution.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _resolution Document resolution.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetResolution(const std::string& _resolution);
+
+                    /**
+                     * 判断参数 Resolution 是否已赋值
+                     * @return Resolution 是否已赋值
+                     * 
+                     */
+                    bool ResolutionHasBeenSet() const;
+
+                    /**
+                     * 获取Minimum resolution of a transcoded document, consistent with the parameters provided when the document is created.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MinScaleResolution Minimum resolution of a transcoded document, consistent with the parameters provided when the document is created.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetMinScaleResolution() const;
+
+                    /**
+                     * 设置Minimum resolution of a transcoded document, consistent with the parameters provided when the document is created.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _minScaleResolution Minimum resolution of a transcoded document, consistent with the parameters provided when the document is created.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetMinScaleResolution(const std::string& _minScaleResolution);
+
+                    /**
+                     * 判断参数 MinScaleResolution 是否已赋值
+                     * @return MinScaleResolution 是否已赋值
+                     * 
+                     */
+                    bool MinScaleResolutionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -581,6 +623,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_preview;
                     bool m_previewHasBeenSet;
+
+                    /**
+                     * Document resolution.Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_resolution;
+                    bool m_resolutionHasBeenSet;
+
+                    /**
+                     * Minimum resolution of a transcoded document, consistent with the parameters provided when the document is created.Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_minScaleResolution;
+                    bool m_minScaleResolutionHasBeenSet;
 
                 };
             }

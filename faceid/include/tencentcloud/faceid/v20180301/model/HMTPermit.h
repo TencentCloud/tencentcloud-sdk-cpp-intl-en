@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan
+                * Exit/entry permit (card) for traveling to and from Hong Kong (China), Macao (China), or Taiwan (China)
                 */
                 class HMTPermit : public AbstractModel
                 {

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * ID cards of Hong Kong, Macao and Taiwan (China), and international passport.
+                * ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
                 */
                 class InternationalIDPassport : public AbstractModel
                 {

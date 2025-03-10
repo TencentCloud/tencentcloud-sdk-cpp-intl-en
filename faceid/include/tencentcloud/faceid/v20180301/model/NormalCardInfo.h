@@ -65,18 +65,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Hong Kong ID Card
+                     * 获取Hong Kong (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HKIDCard Hong Kong ID Card
+                     * @return HKIDCard Hong Kong (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     NormalHKIDCard GetHKIDCard() const;
 
                     /**
-                     * 设置Hong Kong ID Card
+                     * 设置Hong Kong (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hKIDCard Hong Kong ID Card
+                     * @param _hKIDCard Hong Kong (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -265,18 +265,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PhilippinesUMIDHasBeenSet() const;
 
                     /**
-                     * 获取ID Cards of Hong Kong, Macao and Taiwan (China), and International Passport
+                     * 获取ID Cards of Hong Kong (China), Macao (China) and Taiwan (China), and International Passport
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InternationalIDPassport ID Cards of Hong Kong, Macao and Taiwan (China), and International Passport
+                     * @return InternationalIDPassport ID Cards of Hong Kong (China), Macao (China) and Taiwan (China), and International Passport
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     InternationalIDPassport GetInternationalIDPassport() const;
 
                     /**
-                     * 设置ID Cards of Hong Kong, Macao and Taiwan (China), and International Passport
+                     * 设置ID Cards of Hong Kong (China), Macao (China) and Taiwan (China), and International Passport
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _internationalIDPassport ID Cards of Hong Kong, Macao and Taiwan (China), and International Passport
+                     * @param _internationalIDPassport ID Cards of Hong Kong (China), Macao (China) and Taiwan (China), and International Passport
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -390,18 +390,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SingaporeIDCardHasBeenSet() const;
 
                     /**
-                     * 获取Macao ID Card
+                     * 获取Macao (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MacaoIDCard Macao ID Card
+                     * @return MacaoIDCard Macao (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MacaoIDCard GetMacaoIDCard() const;
 
                     /**
-                     * 设置Macao ID Card
+                     * 设置Macao (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _macaoIDCard Macao ID Card
+                     * @param _macaoIDCard Macao (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -415,18 +415,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MacaoIDCardHasBeenSet() const;
 
                     /**
-                     * 获取Mainland ID Card
+                     * 获取Mainland (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MainlandIDCard Mainland ID Card
+                     * @return MainlandIDCard Mainland (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MainlandIDCard GetMainlandIDCard() const;
 
                     /**
-                     * 设置Mainland ID Card
+                     * 设置Mainland (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _mainlandIDCard Mainland ID Card
+                     * @param _mainlandIDCard Mainland (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -465,18 +465,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool JapanIDCardHasBeenSet() const;
 
                     /**
-                     * 获取Taiwan ID Card
+                     * 获取Taiwan (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TaiWanIDCard Taiwan ID Card
+                     * @return TaiWanIDCard Taiwan (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     TaiWanIDCard GetTaiWanIDCard() const;
 
                     /**
-                     * 设置Taiwan ID Card
+                     * 设置Taiwan (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _taiWanIDCard Taiwan ID Card
+                     * @param _taiWanIDCard Taiwan (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -490,18 +490,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TaiWanIDCardHasBeenSet() const;
 
                     /**
-                     * 获取exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan.
+                     * 获取exit/entry permit (card) for traveling to and from Hong Kong (China), Macao (China), or Taiwan (China).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HMTPermitCard exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan.
+                     * @return HMTPermitCard exit/entry permit (card) for traveling to and from Hong Kong (China), Macao (China), or Taiwan (China).
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     HMTPermit GetHMTPermitCard() const;
 
                     /**
-                     * 设置exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan.
+                     * 设置exit/entry permit (card) for traveling to and from Hong Kong (China), Macao (China), or Taiwan (China).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hMTPermitCard exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan.
+                     * @param _hMTPermitCard exit/entry permit (card) for traveling to and from Hong Kong (China), Macao (China), or Taiwan (China).
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -517,7 +517,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Hong Kong ID Card
+                     * Hong Kong (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     NormalHKIDCard m_hKIDCard;
@@ -573,7 +573,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_philippinesUMIDHasBeenSet;
 
                     /**
-                     * ID Cards of Hong Kong, Macao and Taiwan (China), and International Passport
+                     * ID Cards of Hong Kong (China), Macao (China) and Taiwan (China), and International Passport
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     InternationalIDPassport m_internationalIDPassport;
@@ -608,14 +608,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_singaporeIDCardHasBeenSet;
 
                     /**
-                     * Macao ID Card
+                     * Macao (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MacaoIDCard m_macaoIDCard;
                     bool m_macaoIDCardHasBeenSet;
 
                     /**
-                     * Mainland ID Card
+                     * Mainland (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MainlandIDCard m_mainlandIDCard;
@@ -629,14 +629,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_japanIDCardHasBeenSet;
 
                     /**
-                     * Taiwan ID Card
+                     * Taiwan (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     TaiWanIDCard m_taiWanIDCard;
                     bool m_taiWanIDCardHasBeenSet;
 
                     /**
-                     * exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan.
+                     * exit/entry permit (card) for traveling to and from Hong Kong (China), Macao (China), or Taiwan (China).
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     HMTPermit m_hMTPermitCard;

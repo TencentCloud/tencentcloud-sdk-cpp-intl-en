@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Taiwan ID card.
+                * Taiwan (China) ID card.
                 */
                 class TaiWanIDCard : public AbstractModel
                 {

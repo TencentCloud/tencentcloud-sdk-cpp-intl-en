@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Hong Kong ID card.
+                * Hong Kong (China) ID card.
                 */
                 class NormalHKIDCard : public AbstractModel
                 {

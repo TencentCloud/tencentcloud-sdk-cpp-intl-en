@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/tms/v20201229/model/DetailResults.h>
 #include <tencentcloud/tms/v20201229/model/RiskDetails.h>
+#include <tencentcloud/tms/v20201229/model/SentimentAnalysis.h>
 
 
 namespace TencentCloud
@@ -213,6 +214,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ContextTextHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return SentimentAnalysis 
+                     * 
+                     */
+                    SentimentAnalysis GetSentimentAnalysis() const;
+
+                    /**
+                     * 判断参数 SentimentAnalysis 是否已赋值
+                     * @return SentimentAnalysis 是否已赋值
+                     * 
+                     */
+                    bool SentimentAnalysisHasBeenSet() const;
+
                 private:
 
                     /**
@@ -287,6 +302,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_contextText;
                     bool m_contextTextHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    SentimentAnalysis m_sentimentAnalysis;
+                    bool m_sentimentAnalysisHasBeenSet;
 
                 };
             }

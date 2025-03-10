@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Mainland ID Card OCR
+                * Mainland (China) ID Card OCR
                 */
                 class MainlandIDCard : public AbstractModel
                 {

@@ -546,9 +546,7 @@ A maximum of 20 requests can be initiated per second for this API.
                 DescribeDocumentOutcomeCallable DescribeDocumentCallable(const Model::DescribeDocumentRequest& request);
 
                 /**
-                 *有新接口替换
-
-A new API is offered for this action now.
+                 *A new API is offered for this action now.
 
 This API is used to query courseware. It has been deprecated. Please use `BatchDescribeDocument` instead.
                  * @param req DescribeDocumentsRequest

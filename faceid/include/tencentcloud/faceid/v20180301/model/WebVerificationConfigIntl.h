@@ -147,7 +147,7 @@ Example value: 3
 6.PhilippinesTinID: Philippines TinID card
 7.PhilippinesSSSID: Philippines SSSID card
 8.PhilippinesUMID: Philippines UMID card
-9.InternationalIDPassport: ID cards of Hong Kong, Macao and Taiwan (China), and international passport.
+9.InternationalIDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
 10.IndonesiaDrivingLicense:Indonesia driving license
 11.ThailandIDCard: Thailand ID card
 12.ThailandDrivingLicense: Thailand driving license
@@ -157,8 +157,8 @@ Example value: 3
 16.JapanIDCard: Japan ID card
 17.JapanDrivingLicense: Japan driving license
 18.PhilippinesIDCard: Philippines ID card
-19.MainlandIDCard: Mainland ID card
-20.MacaoIDCard: Macao ID card
+19.MainlandIDCard: Mainland (China) ID card
+20.MacaoIDCard: Macao (China) ID card
 Example: HKIDCard
                      * @return IDCardType The type of lisence used for verification. The following types are supported.
 1.HKIDCard: Hong Kong (China) ID card
@@ -169,7 +169,7 @@ Example: HKIDCard
 6.PhilippinesTinID: Philippines TinID card
 7.PhilippinesSSSID: Philippines SSSID card
 8.PhilippinesUMID: Philippines UMID card
-9.InternationalIDPassport: ID cards of Hong Kong, Macao and Taiwan (China), and international passport.
+9.InternationalIDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
 10.IndonesiaDrivingLicense:Indonesia driving license
 11.ThailandIDCard: Thailand ID card
 12.ThailandDrivingLicense: Thailand driving license
@@ -179,8 +179,8 @@ Example: HKIDCard
 16.JapanIDCard: Japan ID card
 17.JapanDrivingLicense: Japan driving license
 18.PhilippinesIDCard: Philippines ID card
-19.MainlandIDCard: Mainland ID card
-20.MacaoIDCard: Macao ID card
+19.MainlandIDCard: Mainland (China) ID card
+20.MacaoIDCard: Macao (China) ID card
 Example: HKIDCard
                      * 
                      */
@@ -196,7 +196,7 @@ Example: HKIDCard
 6.PhilippinesTinID: Philippines TinID card
 7.PhilippinesSSSID: Philippines SSSID card
 8.PhilippinesUMID: Philippines UMID card
-9.InternationalIDPassport: ID cards of Hong Kong, Macao and Taiwan (China), and international passport.
+9.InternationalIDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
 10.IndonesiaDrivingLicense:Indonesia driving license
 11.ThailandIDCard: Thailand ID card
 12.ThailandDrivingLicense: Thailand driving license
@@ -206,8 +206,8 @@ Example: HKIDCard
 16.JapanIDCard: Japan ID card
 17.JapanDrivingLicense: Japan driving license
 18.PhilippinesIDCard: Philippines ID card
-19.MainlandIDCard: Mainland ID card
-20.MacaoIDCard: Macao ID card
+19.MainlandIDCard: Mainland (China) ID card
+20.MacaoIDCard: Macao (China) ID card
 Example: HKIDCard
                      * @param _iDCardType The type of lisence used for verification. The following types are supported.
 1.HKIDCard: Hong Kong (China) ID card
@@ -218,7 +218,7 @@ Example: HKIDCard
 6.PhilippinesTinID: Philippines TinID card
 7.PhilippinesSSSID: Philippines SSSID card
 8.PhilippinesUMID: Philippines UMID card
-9.InternationalIDPassport: ID cards of Hong Kong, Macao and Taiwan (China), and international passport.
+9.InternationalIDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
 10.IndonesiaDrivingLicense:Indonesia driving license
 11.ThailandIDCard: Thailand ID card
 12.ThailandDrivingLicense: Thailand driving license
@@ -228,8 +228,8 @@ Example: HKIDCard
 16.JapanIDCard: Japan ID card
 17.JapanDrivingLicense: Japan driving license
 18.PhilippinesIDCard: Philippines ID card
-19.MainlandIDCard: Mainland ID card
-20.MacaoIDCard: Macao ID card
+19.MainlandIDCard: Mainland (China) ID card
+20.MacaoIDCard: Macao (China) ID card
 Example: HKIDCard
                      * 
                      */
@@ -504,7 +504,7 @@ Example value: 3
 6.PhilippinesTinID: Philippines TinID card
 7.PhilippinesSSSID: Philippines SSSID card
 8.PhilippinesUMID: Philippines UMID card
-9.InternationalIDPassport: ID cards of Hong Kong, Macao and Taiwan (China), and international passport.
+9.InternationalIDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
 10.IndonesiaDrivingLicense:Indonesia driving license
 11.ThailandIDCard: Thailand ID card
 12.ThailandDrivingLicense: Thailand driving license
@@ -514,8 +514,8 @@ Example value: 3
 16.JapanIDCard: Japan ID card
 17.JapanDrivingLicense: Japan driving license
 18.PhilippinesIDCard: Philippines ID card
-19.MainlandIDCard: Mainland ID card
-20.MacaoIDCard: Macao ID card
+19.MainlandIDCard: Mainland (China) ID card
+20.MacaoIDCard: Macao (China) ID card
 Example: HKIDCard
                      */
                     std::string m_iDCardType;

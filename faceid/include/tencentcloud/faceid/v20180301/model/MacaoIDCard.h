@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Macao ID Card
+                * Macao (China) IDCard
                 */
                 class MacaoIDCard : public AbstractModel
                 {

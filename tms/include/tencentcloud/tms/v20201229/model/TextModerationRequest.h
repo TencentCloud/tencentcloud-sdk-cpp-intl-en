@@ -149,6 +149,27 @@ namespace TencentCloud
                      */
                     bool DeviceHasBeenSet() const;
 
+                    /**
+                     * 获取This field Indicates the original language of the content.The enumeration values are ("en", "zh", ""), where en means English, zh means Chinese, and an empty string means the default language is Chinese. It is recommended to enter "en" only when the language of the content is clearly "English".
+                     * @return SourceLanguage This field Indicates the original language of the content.The enumeration values are ("en", "zh", ""), where en means English, zh means Chinese, and an empty string means the default language is Chinese. It is recommended to enter "en" only when the language of the content is clearly "English".
+                     * 
+                     */
+                    std::string GetSourceLanguage() const;
+
+                    /**
+                     * 设置This field Indicates the original language of the content.The enumeration values are ("en", "zh", ""), where en means English, zh means Chinese, and an empty string means the default language is Chinese. It is recommended to enter "en" only when the language of the content is clearly "English".
+                     * @param _sourceLanguage This field Indicates the original language of the content.The enumeration values are ("en", "zh", ""), where en means English, zh means Chinese, and an empty string means the default language is Chinese. It is recommended to enter "en" only when the language of the content is clearly "English".
+                     * 
+                     */
+                    void SetSourceLanguage(const std::string& _sourceLanguage);
+
+                    /**
+                     * 判断参数 SourceLanguage 是否已赋值
+                     * @return SourceLanguage 是否已赋值
+                     * 
+                     */
+                    bool SourceLanguageHasBeenSet() const;
+
                 private:
 
                     /**
@@ -180,6 +201,12 @@ namespace TencentCloud
                      */
                     Device m_device;
                     bool m_deviceHasBeenSet;
+
+                    /**
+                     * This field Indicates the original language of the content.The enumeration values are ("en", "zh", ""), where en means English, zh means Chinese, and an empty string means the default language is Chinese. It is recommended to enter "en" only when the language of the content is clearly "English".
+                     */
+                    std::string m_sourceLanguage;
+                    bool m_sourceLanguageHasBeenSet;
 
                 };
             }

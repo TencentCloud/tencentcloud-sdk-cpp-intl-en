@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Hong Kong ID card.
+                * Hong Kong (China) ID card.
                 */
                 class HKIDCard : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return CnName 
+                     * 获取Chinese name
+Note: This field may return null, indicating that no valid values can be obtained.
+Example:  SAN, Nan
+                     * @return CnName Chinese name
+Note: This field may return null, indicating that no valid values can be obtained.
+Example:  SAN, Nan
                      * 
                      */
                     std::string GetCnName() const;
 
                     /**
-                     * 设置
-                     * @param _cnName 
+                     * 设置Chinese name
+Note: This field may return null, indicating that no valid values can be obtained.
+Example:  SAN, Nan
+                     * @param _cnName Chinese name
+Note: This field may return null, indicating that no valid values can be obtained.
+Example:  SAN, Nan
                      * 
                      */
                     void SetCnName(const std::string& _cnName);
@@ -307,7 +315,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * 
+                     * Chinese name
+Note: This field may return null, indicating that no valid values can be obtained.
+Example:  SAN, Nan
                      */
                     std::string m_cnName;
                     bool m_cnNameHasBeenSet;
