@@ -1975,6 +1975,49 @@ ApigatewayClient::DescribeIPStrategysStatusOutcomeCallable ApigatewayClient::Des
     return task->get_future();
 }
 
+ApigatewayClient::DescribeInstancesNetworkConfigOutcome ApigatewayClient::DescribeInstancesNetworkConfig(const DescribeInstancesNetworkConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeInstancesNetworkConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeInstancesNetworkConfigResponse rsp = DescribeInstancesNetworkConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeInstancesNetworkConfigOutcome(rsp);
+        else
+            return DescribeInstancesNetworkConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeInstancesNetworkConfigOutcome(outcome.GetError());
+    }
+}
+
+void ApigatewayClient::DescribeInstancesNetworkConfigAsync(const DescribeInstancesNetworkConfigRequest& request, const DescribeInstancesNetworkConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeInstancesNetworkConfig(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ApigatewayClient::DescribeInstancesNetworkConfigOutcomeCallable ApigatewayClient::DescribeInstancesNetworkConfigCallable(const DescribeInstancesNetworkConfigRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeInstancesNetworkConfigOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeInstancesNetworkConfig(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 ApigatewayClient::DescribeLogSearchOutcome ApigatewayClient::DescribeLogSearch(const DescribeLogSearchRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeLogSearch");

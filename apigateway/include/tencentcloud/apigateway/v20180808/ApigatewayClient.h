@@ -113,6 +113,8 @@
 #include <tencentcloud/apigateway/v20180808/model/DescribeIPStrategyApisStatusResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeIPStrategysStatusRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeIPStrategysStatusResponse.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribeInstancesNetworkConfigRequest.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribeInstancesNetworkConfigResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeLogSearchRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeLogSearchResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribePluginRequest.h>
@@ -356,6 +358,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeIPStrategysStatusResponse> DescribeIPStrategysStatusOutcome;
                 typedef std::future<DescribeIPStrategysStatusOutcome> DescribeIPStrategysStatusOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DescribeIPStrategysStatusRequest&, DescribeIPStrategysStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIPStrategysStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeInstancesNetworkConfigResponse> DescribeInstancesNetworkConfigOutcome;
+                typedef std::future<DescribeInstancesNetworkConfigOutcome> DescribeInstancesNetworkConfigOutcomeCallable;
+                typedef std::function<void(const ApigatewayClient*, const Model::DescribeInstancesNetworkConfigRequest&, DescribeInstancesNetworkConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstancesNetworkConfigAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeLogSearchResponse> DescribeLogSearchOutcome;
                 typedef std::future<DescribeLogSearchOutcome> DescribeLogSearchOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DescribeLogSearchRequest&, DescribeLogSearchOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLogSearchAsyncHandler;
@@ -915,6 +920,15 @@ To make authentication and throttling for a service take effect, you need to bin
                 DescribeIPStrategysStatusOutcome DescribeIPStrategysStatus(const Model::DescribeIPStrategysStatusRequest &request);
                 void DescribeIPStrategysStatusAsync(const Model::DescribeIPStrategysStatusRequest& request, const DescribeIPStrategysStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeIPStrategysStatusOutcomeCallable DescribeIPStrategysStatusCallable(const Model::DescribeIPStrategysStatusRequest& request);
+
+                /**
+                 *This API is used to obtain the network configuration list of a dedicated instance.
+                 * @param req DescribeInstancesNetworkConfigRequest
+                 * @return DescribeInstancesNetworkConfigOutcome
+                 */
+                DescribeInstancesNetworkConfigOutcome DescribeInstancesNetworkConfig(const Model::DescribeInstancesNetworkConfigRequest &request);
+                void DescribeInstancesNetworkConfigAsync(const Model::DescribeInstancesNetworkConfigRequest& request, const DescribeInstancesNetworkConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeInstancesNetworkConfigOutcomeCallable DescribeInstancesNetworkConfigCallable(const Model::DescribeInstancesNetworkConfigRequest& request);
 
                 /**
                  *This API is used to search for logs.
