@@ -402,6 +402,27 @@ Whether the Anycast EIP can be bound to CLB instances.
                     bool DedicatedClusterIdHasBeenSet() const;
 
                     /**
+                     * 获取
+                     * @return IsDedicatedAddressPool 
+                     * 
+                     */
+                    bool GetIsDedicatedAddressPool() const;
+
+                    /**
+                     * 设置
+                     * @param _isDedicatedAddressPool 
+                     * 
+                     */
+                    void SetIsDedicatedAddressPool(const bool& _isDedicatedAddressPool);
+
+                    /**
+                     * 判断参数 IsDedicatedAddressPool 是否已赋值
+                     * @return IsDedicatedAddressPool 是否已赋值
+                     * 
+                     */
+                    bool IsDedicatedAddressPoolHasBeenSet() const;
+
+                    /**
                      * 获取Network egress. It defaults to `center_egress1`.
                      * @return Egress Network egress. It defaults to `center_egress1`.
                      * 
@@ -564,6 +585,12 @@ Whether the Anycast EIP can be bound to CLB instances.
                      */
                     std::string m_dedicatedClusterId;
                     bool m_dedicatedClusterIdHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_isDedicatedAddressPool;
+                    bool m_isDedicatedAddressPoolHasBeenSet;
 
                     /**
                      * Network egress. It defaults to `center_egress1`.

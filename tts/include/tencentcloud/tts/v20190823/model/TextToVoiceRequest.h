@@ -314,6 +314,69 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
                      */
                     bool SegmentRateHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return EmotionCategory 
+                     * 
+                     */
+                    std::string GetEmotionCategory() const;
+
+                    /**
+                     * 设置
+                     * @param _emotionCategory 
+                     * 
+                     */
+                    void SetEmotionCategory(const std::string& _emotionCategory);
+
+                    /**
+                     * 判断参数 EmotionCategory 是否已赋值
+                     * @return EmotionCategory 是否已赋值
+                     * 
+                     */
+                    bool EmotionCategoryHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return EmotionIntensity 
+                     * 
+                     */
+                    int64_t GetEmotionIntensity() const;
+
+                    /**
+                     * 设置
+                     * @param _emotionIntensity 
+                     * 
+                     */
+                    void SetEmotionIntensity(const int64_t& _emotionIntensity);
+
+                    /**
+                     * 判断参数 EmotionIntensity 是否已赋值
+                     * @return EmotionIntensity 是否已赋值
+                     * 
+                     */
+                    bool EmotionIntensityHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return FastVoiceType 
+                     * 
+                     */
+                    std::string GetFastVoiceType() const;
+
+                    /**
+                     * 设置
+                     * @param _fastVoiceType 
+                     * 
+                     */
+                    void SetFastVoiceType(const std::string& _fastVoiceType);
+
+                    /**
+                     * 判断参数 FastVoiceType 是否已赋值
+                     * @return FastVoiceType 是否已赋值
+                     * 
+                     */
+                    bool FastVoiceTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -392,6 +455,24 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
                      */
                     uint64_t m_segmentRate;
                     bool m_segmentRateHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_emotionCategory;
+                    bool m_emotionCategoryHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_emotionIntensity;
+                    bool m_emotionIntensityHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_fastVoiceType;
+                    bool m_fastVoiceTypeHasBeenSet;
 
                 };
             }

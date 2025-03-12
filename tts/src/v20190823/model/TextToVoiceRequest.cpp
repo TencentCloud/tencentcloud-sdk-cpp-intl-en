@@ -34,7 +34,10 @@ TextToVoiceRequest::TextToVoiceRequest() :
     m_sampleRateHasBeenSet(false),
     m_codecHasBeenSet(false),
     m_enableSubtitleHasBeenSet(false),
-    m_segmentRateHasBeenSet(false)
+    m_segmentRateHasBeenSet(false),
+    m_emotionCategoryHasBeenSet(false),
+    m_emotionIntensityHasBeenSet(false),
+    m_fastVoiceTypeHasBeenSet(false)
 {
 }
 
@@ -139,6 +142,30 @@ string TextToVoiceRequest::ToJsonString() const
         string key = "SegmentRate";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_segmentRate, allocator);
+    }
+
+    if (m_emotionCategoryHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EmotionCategory";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_emotionCategory.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_emotionIntensityHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EmotionIntensity";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_emotionIntensity, allocator);
+    }
+
+    if (m_fastVoiceTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FastVoiceType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_fastVoiceType.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -339,6 +366,54 @@ void TextToVoiceRequest::SetSegmentRate(const uint64_t& _segmentRate)
 bool TextToVoiceRequest::SegmentRateHasBeenSet() const
 {
     return m_segmentRateHasBeenSet;
+}
+
+string TextToVoiceRequest::GetEmotionCategory() const
+{
+    return m_emotionCategory;
+}
+
+void TextToVoiceRequest::SetEmotionCategory(const string& _emotionCategory)
+{
+    m_emotionCategory = _emotionCategory;
+    m_emotionCategoryHasBeenSet = true;
+}
+
+bool TextToVoiceRequest::EmotionCategoryHasBeenSet() const
+{
+    return m_emotionCategoryHasBeenSet;
+}
+
+int64_t TextToVoiceRequest::GetEmotionIntensity() const
+{
+    return m_emotionIntensity;
+}
+
+void TextToVoiceRequest::SetEmotionIntensity(const int64_t& _emotionIntensity)
+{
+    m_emotionIntensity = _emotionIntensity;
+    m_emotionIntensityHasBeenSet = true;
+}
+
+bool TextToVoiceRequest::EmotionIntensityHasBeenSet() const
+{
+    return m_emotionIntensityHasBeenSet;
+}
+
+string TextToVoiceRequest::GetFastVoiceType() const
+{
+    return m_fastVoiceType;
+}
+
+void TextToVoiceRequest::SetFastVoiceType(const string& _fastVoiceType)
+{
+    m_fastVoiceType = _fastVoiceType;
+    m_fastVoiceTypeHasBeenSet = true;
+}
+
+bool TextToVoiceRequest::FastVoiceTypeHasBeenSet() const
+{
+    return m_fastVoiceTypeHasBeenSet;
 }
 
 
