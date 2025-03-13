@@ -93,6 +93,8 @@
 #include <tencentcloud/cvm/v20170312/model/DescribeLaunchTemplatesResponse.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeRegionsRequest.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeRegionsResponse.h>
+#include <tencentcloud/cvm/v20170312/model/DescribeReservedInstancesRequest.h>
+#include <tencentcloud/cvm/v20170312/model/DescribeReservedInstancesResponse.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeReservedInstancesConfigInfosRequest.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeReservedInstancesConfigInfosResponse.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeReservedInstancesOfferingsRequest.h>
@@ -296,6 +298,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeRegionsResponse> DescribeRegionsOutcome;
                 typedef std::future<DescribeRegionsOutcome> DescribeRegionsOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DescribeRegionsRequest&, DescribeRegionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRegionsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeReservedInstancesResponse> DescribeReservedInstancesOutcome;
+                typedef std::future<DescribeReservedInstancesOutcome> DescribeReservedInstancesOutcomeCallable;
+                typedef std::function<void(const CvmClient*, const Model::DescribeReservedInstancesRequest&, DescribeReservedInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeReservedInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeReservedInstancesConfigInfosResponse> DescribeReservedInstancesConfigInfosOutcome;
                 typedef std::future<DescribeReservedInstancesConfigInfosOutcome> DescribeReservedInstancesConfigInfosOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DescribeReservedInstancesConfigInfosRequest&, DescribeReservedInstancesConfigInfosOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeReservedInstancesConfigInfosAsyncHandler;
@@ -779,7 +784,16 @@ When a template is created, it defaults to Version 1. You can use `CreateLaunchT
                 DescribeRegionsOutcomeCallable DescribeRegionsCallable(const Model::DescribeRegionsRequest& request);
 
                 /**
-                 *This API is used to describe reserved instance (RI) offerings. Currently, RIs are only offered to beta users.
+                 *This API is used to list the reserved instances purchased by the user.
+                 * @param req DescribeReservedInstancesRequest
+                 * @return DescribeReservedInstancesOutcome
+                 */
+                DescribeReservedInstancesOutcome DescribeReservedInstances(const Model::DescribeReservedInstancesRequest &request);
+                void DescribeReservedInstancesAsync(const Model::DescribeReservedInstancesRequest& request, const DescribeReservedInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeReservedInstancesOutcomeCallable DescribeReservedInstancesCallable(const Model::DescribeReservedInstancesRequest& request);
+
+                /**
+                 *This API is used to describe reserved instance (RI) offerings.
                  * @param req DescribeReservedInstancesConfigInfosRequest
                  * @return DescribeReservedInstancesConfigInfosOutcome
                  */

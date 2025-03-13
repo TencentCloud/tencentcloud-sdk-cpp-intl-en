@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Price information of the reserved instance based on the payment method. Currently, RIs are only offered to beta users.
+                * Price information of the reserved instance based on the payment method.
                 */
                 class ReservedInstancePriceItem : public AbstractModel
                 {
@@ -202,15 +202,15 @@ Valid value: `Linux`.
                     bool ProductDescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Upfront total cost, in USD.
-                     * @return DiscountUsagePrice Upfront total cost, in USD.
+                     * 获取Discount price for subsequent total cost, in USD/hr.
+                     * @return DiscountUsagePrice Discount price for subsequent total cost, in USD/hr.
                      * 
                      */
                     double GetDiscountUsagePrice() const;
 
                     /**
-                     * 设置Upfront total cost, in USD.
-                     * @param _discountUsagePrice Upfront total cost, in USD.
+                     * 设置Discount price for subsequent total cost, in USD/hr.
+                     * @param _discountUsagePrice Discount price for subsequent total cost, in USD/hr.
                      * 
                      */
                     void SetDiscountUsagePrice(const double& _discountUsagePrice);
@@ -223,15 +223,15 @@ Valid value: `Linux`.
                     bool DiscountUsagePriceHasBeenSet() const;
 
                     /**
-                     * 获取Discount price for subsequent total cost, in USD/hr.
-                     * @return DiscountFixedPrice Discount price for subsequent total cost, in USD/hr.
+                     * 获取Discount price for upfront total cost, in USD.
+                     * @return DiscountFixedPrice Discount price for upfront total cost, in USD.
                      * 
                      */
                     double GetDiscountFixedPrice() const;
 
                     /**
-                     * 设置Discount price for subsequent total cost, in USD/hr.
-                     * @param _discountFixedPrice Discount price for subsequent total cost, in USD/hr.
+                     * 设置Discount price for upfront total cost, in USD.
+                     * @param _discountFixedPrice Discount price for upfront total cost, in USD.
                      * 
                      */
                     void SetDiscountFixedPrice(const double& _discountFixedPrice);
@@ -290,13 +290,13 @@ Valid value: `Linux`.
                     bool m_productDescriptionHasBeenSet;
 
                     /**
-                     * Upfront total cost, in USD.
+                     * Discount price for subsequent total cost, in USD/hr.
                      */
                     double m_discountUsagePrice;
                     bool m_discountUsagePriceHasBeenSet;
 
                     /**
-                     * Discount price for subsequent total cost, in USD/hr.
+                     * Discount price for upfront total cost, in USD.
                      */
                     double m_discountFixedPrice;
                     bool m_discountFixedPriceHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Static configurations of the reserved instance. Currently, RIs are only offered to beta users.
+                * Static configurations of the reserved instance.
                 */
                 class ReservedInstanceConfigInfoItem : public AbstractModel
                 {

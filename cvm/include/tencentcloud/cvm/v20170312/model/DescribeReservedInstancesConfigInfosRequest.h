@@ -44,37 +44,37 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取zone
+                     * 获取<li><strong>zone</li></strong>
 Filters by the availability zones in which the reserved instance can be purchased, such as `ap-guangzhou-1`.
 Type: String
 Required: no
 Valid values: list of regions/availability zones
 
-product-description
+<li><strong>product-description</li></strong>
 Filters by the platform description (operating system) of the reserved instance, such as `linux`.
 Type: String
 Required: no
 Valid value: linux
 
-duration
+<li><strong>duration</li></strong>
 Filters by the **validity** of the reserved instance, which is the purchased usage period. For example, `31536000`.
 Type: Integer
 Unit: second
 Required: no
 Valid value: 31536000 (1 year)
-                     * @return Filters zone
+                     * @return Filters <li><strong>zone</li></strong>
 Filters by the availability zones in which the reserved instance can be purchased, such as `ap-guangzhou-1`.
 Type: String
 Required: no
 Valid values: list of regions/availability zones
 
-product-description
+<li><strong>product-description</li></strong>
 Filters by the platform description (operating system) of the reserved instance, such as `linux`.
 Type: String
 Required: no
 Valid value: linux
 
-duration
+<li><strong>duration</li></strong>
 Filters by the **validity** of the reserved instance, which is the purchased usage period. For example, `31536000`.
 Type: Integer
 Unit: second
@@ -85,37 +85,37 @@ Valid value: 31536000 (1 year)
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置zone
+                     * 设置<li><strong>zone</li></strong>
 Filters by the availability zones in which the reserved instance can be purchased, such as `ap-guangzhou-1`.
 Type: String
 Required: no
 Valid values: list of regions/availability zones
 
-product-description
+<li><strong>product-description</li></strong>
 Filters by the platform description (operating system) of the reserved instance, such as `linux`.
 Type: String
 Required: no
 Valid value: linux
 
-duration
+<li><strong>duration</li></strong>
 Filters by the **validity** of the reserved instance, which is the purchased usage period. For example, `31536000`.
 Type: Integer
 Unit: second
 Required: no
 Valid value: 31536000 (1 year)
-                     * @param _filters zone
+                     * @param _filters <li><strong>zone</li></strong>
 Filters by the availability zones in which the reserved instance can be purchased, such as `ap-guangzhou-1`.
 Type: String
 Required: no
 Valid values: list of regions/availability zones
 
-product-description
+<li><strong>product-description</li></strong>
 Filters by the platform description (operating system) of the reserved instance, such as `linux`.
 Type: String
 Required: no
 Valid value: linux
 
-duration
+<li><strong>duration</li></strong>
 Filters by the **validity** of the reserved instance, which is the purchased usage period. For example, `31536000`.
 Type: Integer
 Unit: second
@@ -135,19 +135,19 @@ Valid value: 31536000 (1 year)
                 private:
 
                     /**
-                     * zone
+                     * <li><strong>zone</li></strong>
 Filters by the availability zones in which the reserved instance can be purchased, such as `ap-guangzhou-1`.
 Type: String
 Required: no
 Valid values: list of regions/availability zones
 
-product-description
+<li><strong>product-description</li></strong>
 Filters by the platform description (operating system) of the reserved instance, such as `linux`.
 Type: String
 Required: no
 Valid value: linux
 
-duration
+<li><strong>duration</li></strong>
 Filters by the **validity** of the reserved instance, which is the purchased usage period. For example, `31536000`.
 Type: Integer
 Unit: second

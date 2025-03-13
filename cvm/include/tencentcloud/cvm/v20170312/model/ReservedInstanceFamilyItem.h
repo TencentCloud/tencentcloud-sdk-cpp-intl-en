@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * RI-related instance family. Currently, RIs are only offered to beta users.
+                * RI-related instance family.
                 */
                 class ReservedInstanceFamilyItem : public AbstractModel
                 {

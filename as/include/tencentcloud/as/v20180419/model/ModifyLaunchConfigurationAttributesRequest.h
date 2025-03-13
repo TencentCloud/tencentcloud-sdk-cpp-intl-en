@@ -252,22 +252,26 @@ When the public outbound network bandwidth is 0 Mbps, assigning a public IP is n
 
                     /**
                      * 获取Instance billing mode. Valid values:
-<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
-<br><li>SPOTPAID: spot instance
+<li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>
+<li>SPOTPAID: spot instance</li>
+<li> CDCPAID: dedicated cluster</li>
                      * @return InstanceChargeType Instance billing mode. Valid values:
-<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
-<br><li>SPOTPAID: spot instance
+<li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>
+<li>SPOTPAID: spot instance</li>
+<li> CDCPAID: dedicated cluster</li>
                      * 
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
                      * 设置Instance billing mode. Valid values:
-<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
-<br><li>SPOTPAID: spot instance
+<li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>
+<li>SPOTPAID: spot instance</li>
+<li> CDCPAID: dedicated cluster</li>
                      * @param _instanceChargeType Instance billing mode. Valid values:
-<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
-<br><li>SPOTPAID: spot instance
+<li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>
+<li>SPOTPAID: spot instance</li>
+<li> CDCPAID: dedicated cluster</li>
                      * 
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
@@ -759,8 +763,9 @@ When the public outbound network bandwidth is 0 Mbps, assigning a public IP is n
 
                     /**
                      * Instance billing mode. Valid values:
-<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
-<br><li>SPOTPAID: spot instance
+<li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>
+<li>SPOTPAID: spot instance</li>
+<li> CDCPAID: dedicated cluster</li>
                      */
                     std::string m_instanceChargeType;
                     bool m_instanceChargeTypeHasBeenSet;
