@@ -45,15 +45,31 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Query Direction, INPUT, OUTPUT, BOTH enumerated values
-                     * @return Direction Query Direction, INPUT, OUTPUT, BOTH enumerated values
+                     * 获取Enumeration value of query direction.
+
+- INPUT
+- OUTPUT
+- BOTH
+                     * @return Direction Enumeration value of query direction.
+
+- INPUT
+- OUTPUT
+- BOTH
                      * 
                      */
                     std::string GetDirection() const;
 
                     /**
-                     * 设置Query Direction, INPUT, OUTPUT, BOTH enumerated values
-                     * @param _direction Query Direction, INPUT, OUTPUT, BOTH enumerated values
+                     * 设置Enumeration value of query direction.
+
+- INPUT
+- OUTPUT
+- BOTH
+                     * @param _direction Enumeration value of query direction.
+
+- INPUT
+- OUTPUT
+- BOTH
                      * 
                      */
                     void SetDirection(const std::string& _direction);
@@ -173,7 +189,11 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Query Direction, INPUT, OUTPUT, BOTH enumerated values
+                     * Enumeration value of query direction.
+
+- INPUT
+- OUTPUT
+- BOTH
                      */
                     std::string m_direction;
                     bool m_directionHasBeenSet;

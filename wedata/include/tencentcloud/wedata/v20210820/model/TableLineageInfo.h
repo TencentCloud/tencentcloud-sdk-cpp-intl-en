@@ -698,6 +698,56 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool DatabaseIdHasBeenSet() const;
 
+                    /**
+                     * 获取Data source.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DataFromType Data source.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetDataFromType() const;
+
+                    /**
+                     * 设置Data source.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _dataFromType Data source.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetDataFromType(const std::string& _dataFromType);
+
+                    /**
+                     * 判断参数 DataFromType 是否已赋值
+                     * @return DataFromType 是否已赋值
+                     * 
+                     */
+                    bool DataFromTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Collection id.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CollectJobId Collection id.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetCollectJobId() const;
+
+                    /**
+                     * 设置Collection id.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _collectJobId Collection id.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetCollectJobId(const std::string& _collectJobId);
+
+                    /**
+                     * 判断参数 CollectJobId 是否已赋值
+                     * @return CollectJobId 是否已赋值
+                     * 
+                     */
+                    bool CollectJobIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -881,6 +931,20 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     std::string m_databaseId;
                     bool m_databaseIdHasBeenSet;
+
+                    /**
+                     * Data source.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_dataFromType;
+                    bool m_dataFromTypeHasBeenSet;
+
+                    /**
+                     * Collection id.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_collectJobId;
+                    bool m_collectJobIdHasBeenSet;
 
                 };
             }
