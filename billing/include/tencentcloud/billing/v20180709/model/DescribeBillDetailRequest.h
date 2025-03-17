@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Quantity, maximum is 100
-                     * @return Limit Quantity, maximum is 100
+                     * 获取Quantity, maximum is 300
+                     * @return Limit Quantity, maximum is 300
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Quantity, maximum is 100
-                     * @param _limit Quantity, maximum is 100
+                     * 设置Quantity, maximum is 300
+                     * @param _limit Quantity, maximum is 300
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -478,7 +478,7 @@ Note: To query the product codes used in the current month, call <a href="https:
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Quantity, maximum is 100
+                     * Quantity, maximum is 300
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

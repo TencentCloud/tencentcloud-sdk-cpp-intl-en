@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool BusinessCodeNameHasBeenSet() const;
 
                     /**
-                     * 获取Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
-                     * @return ProductCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
+                     * 获取Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Standard S1.
+                     * @return ProductCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Standard S1.
                      * 
                      */
                     std::string GetProductCodeName() const;
 
                     /**
-                     * 设置Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
-                     * @param _productCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
+                     * 设置Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Standard S1.
+                     * @param _productCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Standard S1.
                      * 
                      */
                     void SetProductCodeName(const std::string& _productCodeName);
@@ -779,6 +779,73 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ReserveDetailHasBeenSet() const;
 
+                    /**
+                     * 获取the discount object for the current consumption item, such as official website discount, user discount, and event discount.
+                     * @return DiscountObject the discount object for the current consumption item, such as official website discount, user discount, and event discount.
+                     * 
+                     */
+                    std::string GetDiscountObject() const;
+
+                    /**
+                     * 设置the discount object for the current consumption item, such as official website discount, user discount, and event discount.
+                     * @param _discountObject the discount object for the current consumption item, such as official website discount, user discount, and event discount.
+                     * 
+                     */
+                    void SetDiscountObject(const std::string& _discountObject);
+
+                    /**
+                     * 判断参数 DiscountObject 是否已赋值
+                     * @return DiscountObject 是否已赋值
+                     * 
+                     */
+                    bool DiscountObjectHasBeenSet() const;
+
+                    /**
+                     * 获取the discount type for the current consumption item, such as discount and contract price.
+
+                     * @return DiscountType the discount type for the current consumption item, such as discount and contract price.
+
+                     * 
+                     */
+                    std::string GetDiscountType() const;
+
+                    /**
+                     * 设置the discount type for the current consumption item, such as discount and contract price.
+
+                     * @param _discountType the discount type for the current consumption item, such as discount and contract price.
+
+                     * 
+                     */
+                    void SetDiscountType(const std::string& _discountType);
+
+                    /**
+                     * 判断参数 DiscountType 是否已赋值
+                     * @return DiscountType 是否已赋值
+                     * 
+                     */
+                    bool DiscountTypeHasBeenSet() const;
+
+                    /**
+                     * 获取supplementary description of the discount type, such as 0.2.
+                     * @return DiscountContent supplementary description of the discount type, such as 0.2.
+                     * 
+                     */
+                    std::string GetDiscountContent() const;
+
+                    /**
+                     * 设置supplementary description of the discount type, such as 0.2.
+                     * @param _discountContent supplementary description of the discount type, such as 0.2.
+                     * 
+                     */
+                    void SetDiscountContent(const std::string& _discountContent);
+
+                    /**
+                     * 判断参数 DiscountContent 是否已赋值
+                     * @return DiscountContent 是否已赋值
+                     * 
+                     */
+                    bool DiscountContentHasBeenSet() const;
+
                 private:
 
                     /**
@@ -788,7 +855,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_businessCodeNameHasBeenSet;
 
                     /**
-                     * Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
+                     * Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Standard S1.
                      */
                     std::string m_productCodeName;
                     bool m_productCodeNameHasBeenSet;
@@ -988,6 +1055,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_reserveDetail;
                     bool m_reserveDetailHasBeenSet;
+
+                    /**
+                     * the discount object for the current consumption item, such as official website discount, user discount, and event discount.
+                     */
+                    std::string m_discountObject;
+                    bool m_discountObjectHasBeenSet;
+
+                    /**
+                     * the discount type for the current consumption item, such as discount and contract price.
+
+                     */
+                    std::string m_discountType;
+                    bool m_discountTypeHasBeenSet;
+
+                    /**
+                     * supplementary description of the discount type, such as 0.2.
+                     */
+                    std::string m_discountContent;
+                    bool m_discountContentHasBeenSet;
 
                 };
             }
