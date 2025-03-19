@@ -257,3 +257,7 @@ Run the following script:
 ```
 sh function_test.sh
 ```
+
+# Compliance Notice
+
+Please prioritize using the ​default domain names configured in the SDK for each product. If using other domains, note that ​overseas domains may pose ​data compliance risks.
