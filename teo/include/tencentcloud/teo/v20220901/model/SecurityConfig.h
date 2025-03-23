@@ -34,6 +34,7 @@
 #include <tencentcloud/teo/v20220901/model/DropPageConfig.h>
 #include <tencentcloud/teo/v20220901/model/TemplateConfig.h>
 #include <tencentcloud/teo/v20220901/model/SlowPostConfig.h>
+#include <tencentcloud/teo/v20220901/model/DetectLengthLimitConfig.h>
 
 
 namespace TencentCloud
@@ -45,7 +46,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Security configuration
+                * Web security configuration.
                 */
                 class SecurityConfig : public AbstractModel
                 {
@@ -290,6 +291,31 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool SlowPostConfigHasBeenSet() const;
 
+                    /**
+                     * 获取Detect the length limit configuration, output parameter only.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return DetectLengthLimitConfig Detect the length limit configuration, output parameter only.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 
+                     */
+                    DetectLengthLimitConfig GetDetectLengthLimitConfig() const;
+
+                    /**
+                     * 设置Detect the length limit configuration, output parameter only.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @param _detectLengthLimitConfig Detect the length limit configuration, output parameter only.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 
+                     */
+                    void SetDetectLengthLimitConfig(const DetectLengthLimitConfig& _detectLengthLimitConfig);
+
+                    /**
+                     * 判断参数 DetectLengthLimitConfig 是否已赋值
+                     * @return DetectLengthLimitConfig 是否已赋值
+                     * 
+                     */
+                    bool DetectLengthLimitConfigHasBeenSet() const;
+
                 private:
 
                     /**
@@ -357,6 +383,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     SlowPostConfig m_slowPostConfig;
                     bool m_slowPostConfigHasBeenSet;
+
+                    /**
+                     * Detect the length limit configuration, output parameter only.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     */
+                    DetectLengthLimitConfig m_detectLengthLimitConfig;
+                    bool m_detectLengthLimitConfigHasBeenSet;
 
                 };
             }

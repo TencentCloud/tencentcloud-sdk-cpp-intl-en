@@ -556,6 +556,49 @@ OcrClient::RecognizeBrazilDriverLicenseOCROutcomeCallable OcrClient::RecognizeBr
     return task->get_future();
 }
 
+OcrClient::RecognizeBrazilIDCardOCROutcome OcrClient::RecognizeBrazilIDCardOCR(const RecognizeBrazilIDCardOCRRequest &request)
+{
+    auto outcome = MakeRequest(request, "RecognizeBrazilIDCardOCR");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RecognizeBrazilIDCardOCRResponse rsp = RecognizeBrazilIDCardOCRResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RecognizeBrazilIDCardOCROutcome(rsp);
+        else
+            return RecognizeBrazilIDCardOCROutcome(o.GetError());
+    }
+    else
+    {
+        return RecognizeBrazilIDCardOCROutcome(outcome.GetError());
+    }
+}
+
+void OcrClient::RecognizeBrazilIDCardOCRAsync(const RecognizeBrazilIDCardOCRRequest& request, const RecognizeBrazilIDCardOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RecognizeBrazilIDCardOCR(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OcrClient::RecognizeBrazilIDCardOCROutcomeCallable OcrClient::RecognizeBrazilIDCardOCRCallable(const RecognizeBrazilIDCardOCRRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RecognizeBrazilIDCardOCROutcome()>>(
+        [this, request]()
+        {
+            return this->RecognizeBrazilIDCardOCR(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 OcrClient::RecognizeGeneralInvoiceOutcome OcrClient::RecognizeGeneralInvoice(const RecognizeGeneralInvoiceRequest &request)
 {
     auto outcome = MakeRequest(request, "RecognizeGeneralInvoice");
