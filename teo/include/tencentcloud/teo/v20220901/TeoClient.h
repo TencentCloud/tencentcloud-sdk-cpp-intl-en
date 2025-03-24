@@ -277,6 +277,8 @@
 #include <tencentcloud/teo/v20220901/model/ModifyL4ProxyStatusResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyL7AccRuleRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyL7AccRuleResponse.h>
+#include <tencentcloud/teo/v20220901/model/ModifyL7AccRulePriorityRequest.h>
+#include <tencentcloud/teo/v20220901/model/ModifyL7AccRulePriorityResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyL7AccSettingRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyL7AccSettingResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyLoadBalancerRequest.h>
@@ -700,6 +702,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyL7AccRuleResponse> ModifyL7AccRuleOutcome;
                 typedef std::future<ModifyL7AccRuleOutcome> ModifyL7AccRuleOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyL7AccRuleRequest&, ModifyL7AccRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyL7AccRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyL7AccRulePriorityResponse> ModifyL7AccRulePriorityOutcome;
+                typedef std::future<ModifyL7AccRulePriorityOutcome> ModifyL7AccRulePriorityOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ModifyL7AccRulePriorityRequest&, ModifyL7AccRulePriorityOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyL7AccRulePriorityAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyL7AccSettingResponse> ModifyL7AccSettingOutcome;
                 typedef std::future<ModifyL7AccSettingOutcome> ModifyL7AccSettingOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyL7AccSettingRequest&, ModifyL7AccSettingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyL7AccSettingAsyncHandler;
@@ -1911,6 +1916,15 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
                 ModifyL7AccRuleOutcome ModifyL7AccRule(const Model::ModifyL7AccRuleRequest &request);
                 void ModifyL7AccRuleAsync(const Model::ModifyL7AccRuleRequest& request, const ModifyL7AccRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyL7AccRuleOutcomeCallable ModifyL7AccRuleCallable(const Model::ModifyL7AccRuleRequest& request);
+
+                /**
+                 *This interface is used to modify the priority of the rule list in the [Rule Engine](https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1). This interface requires the complete rule ID list under the site ID to be passed in. The rule ID list can be obtained through the [Query Seven-Layer Acceleration Rules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1) interface. The final priority order will be adjusted to the order of the rule ID list, and will be executed from front to back.
+                 * @param req ModifyL7AccRulePriorityRequest
+                 * @return ModifyL7AccRulePriorityOutcome
+                 */
+                ModifyL7AccRulePriorityOutcome ModifyL7AccRulePriority(const Model::ModifyL7AccRulePriorityRequest &request);
+                void ModifyL7AccRulePriorityAsync(const Model::ModifyL7AccRulePriorityRequest& request, const ModifyL7AccRulePriorityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyL7AccRulePriorityOutcomeCallable ModifyL7AccRulePriorityCallable(const Model::ModifyL7AccRulePriorityRequest& request);
 
                 /**
                  *This API is used to modify the global configuration of [Site Acceleration](https://intl.cloud.tencent.com/document/product/1552/96193?from_cn_redirect=1).
