@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2018-07-24";
-    const string ENDPOINT = "monitor.tencentcloudapi.com";
+    const string ENDPOINT = "monitor.intl.tencentcloudapi.com";
 }
 
 MonitorClient::MonitorClient(const Credential &credential, const string &region) :

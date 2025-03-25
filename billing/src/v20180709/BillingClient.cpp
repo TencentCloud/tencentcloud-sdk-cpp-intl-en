@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2018-07-09";
-    const string ENDPOINT = "billing.tencentcloudapi.com";
+    const string ENDPOINT = "billing.intl.tencentcloudapi.com";
 }
 
 BillingClient::BillingClient(const Credential &credential, const string &region) :

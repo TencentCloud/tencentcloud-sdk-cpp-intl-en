@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2017-03-12";
-    const string ENDPOINT = "cbs.tencentcloudapi.com";
+    const string ENDPOINT = "cbs.intl.tencentcloudapi.com";
 }
 
 CbsClient::CbsClient(const Credential &credential, const string &region) :

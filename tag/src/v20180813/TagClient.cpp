@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2018-08-13";
-    const string ENDPOINT = "tag.tencentcloudapi.com";
+    const string ENDPOINT = "tag.intl.tencentcloudapi.com";
 }
 
 TagClient::TagClient(const Credential &credential, const string &region) :

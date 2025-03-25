@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2019-10-16";
-    const string ENDPOINT = "dbbrain.tencentcloudapi.com";
+    const string ENDPOINT = "dbbrain.intl.tencentcloudapi.com";
 }
 
 DbbrainClient::DbbrainClient(const Credential &credential, const string &region) :

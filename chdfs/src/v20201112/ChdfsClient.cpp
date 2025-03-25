@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2020-11-12";
-    const string ENDPOINT = "chdfs.tencentcloudapi.com";
+    const string ENDPOINT = "chdfs.intl.tencentcloudapi.com";
 }
 
 ChdfsClient::ChdfsClient(const Credential &credential, const string &region) :

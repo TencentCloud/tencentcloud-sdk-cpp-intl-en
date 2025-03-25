@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2017-03-20";
-    const string ENDPOINT = "cdb.tencentcloudapi.com";
+    const string ENDPOINT = "cdb.intl.tencentcloudapi.com";
 }
 
 CdbClient::CdbClient(const Credential &credential, const string &region) :

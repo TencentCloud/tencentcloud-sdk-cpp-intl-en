@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2022-08-17";
-    const string ENDPOINT = "lcic.tencentcloudapi.com";
+    const string ENDPOINT = "lcic.intl.tencentcloudapi.com";
 }
 
 LcicClient::LcicClient(const Credential &credential, const string &region) :

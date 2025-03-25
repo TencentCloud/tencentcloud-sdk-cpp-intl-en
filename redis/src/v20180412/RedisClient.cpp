@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2018-04-12";
-    const string ENDPOINT = "redis.tencentcloudapi.com";
+    const string ENDPOINT = "redis.intl.tencentcloudapi.com";
 }
 
 RedisClient::RedisClient(const Credential &credential, const string &region) :

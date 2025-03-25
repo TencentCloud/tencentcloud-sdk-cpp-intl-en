@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2019-01-03";
-    const string ENDPOINT = "emr.tencentcloudapi.com";
+    const string ENDPOINT = "emr.intl.tencentcloudapi.com";
 }
 
 EmrClient::EmrClient(const Credential &credential, const string &region) :

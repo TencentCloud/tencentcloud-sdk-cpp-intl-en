@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2020-03-24";
-    const string ENDPOINT = "lighthouse.tencentcloudapi.com";
+    const string ENDPOINT = "lighthouse.intl.tencentcloudapi.com";
 }
 
 LighthouseClient::LighthouseClient(const Credential &credential, const string &region) :

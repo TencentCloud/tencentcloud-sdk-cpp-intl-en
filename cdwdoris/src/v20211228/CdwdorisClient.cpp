@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2021-12-28";
-    const string ENDPOINT = "cdwdoris.tencentcloudapi.com";
+    const string ENDPOINT = "cdwdoris.intl.tencentcloudapi.com";
 }
 
 CdwdorisClient::CdwdorisClient(const Credential &credential, const string &region) :

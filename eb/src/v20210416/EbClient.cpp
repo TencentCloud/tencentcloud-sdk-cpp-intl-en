@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2021-04-16";
-    const string ENDPOINT = "eb.tencentcloudapi.com";
+    const string ENDPOINT = "eb.intl.tencentcloudapi.com";
 }
 
 EbClient::EbClient(const Credential &credential, const string &region) :

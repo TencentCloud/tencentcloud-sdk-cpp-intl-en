@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2020-12-14";
-    const string ENDPOINT = "cdc.tencentcloudapi.com";
+    const string ENDPOINT = "cdc.intl.tencentcloudapi.com";
 }
 
 CdcClient::CdcClient(const Credential &credential, const string &region) :

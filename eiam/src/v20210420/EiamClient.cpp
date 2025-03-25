@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2021-04-20";
-    const string ENDPOINT = "eiam.tencentcloudapi.com";
+    const string ENDPOINT = "eiam.intl.tencentcloudapi.com";
 }
 
 EiamClient::EiamClient(const Credential &credential, const string &region) :

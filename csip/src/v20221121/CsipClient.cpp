@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2022-11-21";
-    const string ENDPOINT = "csip.tencentcloudapi.com";
+    const string ENDPOINT = "csip.intl.tencentcloudapi.com";
 }
 
 CsipClient::CsipClient(const Credential &credential, const string &region) :

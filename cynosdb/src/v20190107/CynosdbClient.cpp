@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2019-01-07";
-    const string ENDPOINT = "cynosdb.tencentcloudapi.com";
+    const string ENDPOINT = "cynosdb.intl.tencentcloudapi.com";
 }
 
 CynosdbClient::CynosdbClient(const Credential &credential, const string &region) :

@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2019-07-22";
-    const string ENDPOINT = "captcha.tencentcloudapi.com";
+    const string ENDPOINT = "captcha.intl.tencentcloudapi.com";
 }
 
 CaptchaClient::CaptchaClient(const Credential &credential, const string &region) :

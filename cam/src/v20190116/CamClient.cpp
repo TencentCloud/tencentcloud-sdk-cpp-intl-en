@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2019-01-16";
-    const string ENDPOINT = "cam.tencentcloudapi.com";
+    const string ENDPOINT = "cam.intl.tencentcloudapi.com";
 }
 
 CamClient::CamClient(const Credential &credential, const string &region) :

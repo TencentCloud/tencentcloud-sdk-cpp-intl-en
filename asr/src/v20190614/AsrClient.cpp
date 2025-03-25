@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2019-06-14";
-    const string ENDPOINT = "asr.tencentcloudapi.com";
+    const string ENDPOINT = "asr.intl.tencentcloudapi.com";
 }
 
 AsrClient::AsrClient(const Credential &credential, const string &region) :

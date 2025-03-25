@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2017-03-12";
-    const string ENDPOINT = "postgres.tencentcloudapi.com";
+    const string ENDPOINT = "postgres.intl.tencentcloudapi.com";
 }
 
 PostgresClient::PostgresClient(const Credential &credential, const string &region) :

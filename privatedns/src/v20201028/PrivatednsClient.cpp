@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2020-10-28";
-    const string ENDPOINT = "privatedns.tencentcloudapi.com";
+    const string ENDPOINT = "privatedns.intl.tencentcloudapi.com";
 }
 
 PrivatednsClient::PrivatednsClient(const Credential &credential, const string &region) :

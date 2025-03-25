@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2018-05-29";
-    const string ENDPOINT = "gaap.tencentcloudapi.com";
+    const string ENDPOINT = "gaap.intl.tencentcloudapi.com";
 }
 
 GaapClient::GaapClient(const Credential &credential, const string &region) :

@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2019-09-19";
-    const string ENDPOINT = "tiw.tencentcloudapi.com";
+    const string ENDPOINT = "tiw.intl.tencentcloudapi.com";
 }
 
 TiwClient::TiwClient(const Credential &credential, const string &region) :

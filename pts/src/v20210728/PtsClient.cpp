@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2021-07-28";
-    const string ENDPOINT = "pts.tencentcloudapi.com";
+    const string ENDPOINT = "pts.intl.tencentcloudapi.com";
 }
 
 PtsClient::PtsClient(const Credential &credential, const string &region) :

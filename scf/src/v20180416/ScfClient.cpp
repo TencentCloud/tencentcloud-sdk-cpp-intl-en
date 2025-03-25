@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2018-04-16";
-    const string ENDPOINT = "scf.tencentcloudapi.com";
+    const string ENDPOINT = "scf.intl.tencentcloudapi.com";
 }
 
 ScfClient::ScfClient(const Credential &credential, const string &region) :

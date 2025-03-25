@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2018-07-09";
-    const string ENDPOINT = "dayu.tencentcloudapi.com";
+    const string ENDPOINT = "dayu.intl.tencentcloudapi.com";
 }
 
 DayuClient::DayuClient(const Credential &credential, const string &region) :

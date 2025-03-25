@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2018-07-17";
-    const string ENDPOINT = "vod.tencentcloudapi.com";
+    const string ENDPOINT = "vod.intl.tencentcloudapi.com";
 }
 
 VodClient::VodClient(const Credential &credential, const string &region) :

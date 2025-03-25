@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2023-01-10";
-    const string ENDPOINT = "controlcenter.tencentcloudapi.com";
+    const string ENDPOINT = "controlcenter.intl.tencentcloudapi.com";
 }
 
 ControlcenterClient::ControlcenterClient(const Credential &credential, const string &region) :

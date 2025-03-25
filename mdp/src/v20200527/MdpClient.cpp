@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2020-05-27";
-    const string ENDPOINT = "mdp.tencentcloudapi.com";
+    const string ENDPOINT = "mdp.intl.tencentcloudapi.com";
 }
 
 MdpClient::MdpClient(const Credential &credential, const string &region) :

@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2020-11-03";
-    const string ENDPOINT = "rce.tencentcloudapi.com";
+    const string ENDPOINT = "rce.intl.tencentcloudapi.com";
 }
 
 RceClient::RceClient(const Credential &credential, const string &region) :

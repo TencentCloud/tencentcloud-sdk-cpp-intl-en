@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2022-06-13";
-    const string ENDPOINT = "dataintegration.tencentcloudapi.com";
+    const string ENDPOINT = "dataintegration.intl.tencentcloudapi.com";
 }
 
 DataintegrationClient::DataintegrationClient(const Credential &credential, const string &region) :

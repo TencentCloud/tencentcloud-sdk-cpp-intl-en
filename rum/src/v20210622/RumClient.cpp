@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2021-06-22";
-    const string ENDPOINT = "rum.tencentcloudapi.com";
+    const string ENDPOINT = "rum.intl.tencentcloudapi.com";
 }
 
 RumClient::RumClient(const Credential &credential, const string &region) :

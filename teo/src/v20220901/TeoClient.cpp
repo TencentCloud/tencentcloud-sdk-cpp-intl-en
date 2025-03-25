@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2022-09-01";
-    const string ENDPOINT = "teo.tencentcloudapi.com";
+    const string ENDPOINT = "teo.intl.tencentcloudapi.com";
 }
 
 TeoClient::TeoClient(const Credential &credential, const string &region) :

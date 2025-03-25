@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2018-08-01";
-    const string ENDPOINT = "live.tencentcloudapi.com";
+    const string ENDPOINT = "live.intl.tencentcloudapi.com";
 }
 
 LiveClient::LiveClient(const Credential &credential, const string &region) :

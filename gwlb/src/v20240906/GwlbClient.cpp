@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2024-09-06";
-    const string ENDPOINT = "gwlb.tencentcloudapi.com";
+    const string ENDPOINT = "gwlb.intl.tencentcloudapi.com";
 }
 
 GwlbClient::GwlbClient(const Credential &credential, const string &region) :

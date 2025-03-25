@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2019-12-05";
-    const string ENDPOINT = "ssl.tencentcloudapi.com";
+    const string ENDPOINT = "ssl.intl.tencentcloudapi.com";
 }
 
 SslClient::SslClient(const Credential &credential, const string &region) :

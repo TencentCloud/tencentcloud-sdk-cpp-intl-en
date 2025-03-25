@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2018-03-30";
-    const string ENDPOINT = "dts.tencentcloudapi.com";
+    const string ENDPOINT = "dts.intl.tencentcloudapi.com";
 }
 
 DtsClient::DtsClient(const Credential &credential, const string &region) :

@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2024-05-23";
-    const string ENDPOINT = "vclm.tencentcloudapi.com";
+    const string ENDPOINT = "vclm.intl.tencentcloudapi.com";
 }
 
 VclmClient::VclmClient(const Credential &credential, const string &region) :

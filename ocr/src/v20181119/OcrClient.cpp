@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2018-11-19";
-    const string ENDPOINT = "ocr.tencentcloudapi.com";
+    const string ENDPOINT = "ocr.intl.tencentcloudapi.com";
 }
 
 OcrClient::OcrClient(const Credential &credential, const string &region) :

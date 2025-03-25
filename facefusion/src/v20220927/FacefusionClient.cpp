@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2022-09-27";
-    const string ENDPOINT = "facefusion.tencentcloudapi.com";
+    const string ENDPOINT = "facefusion.intl.tencentcloudapi.com";
 }
 
 FacefusionClient::FacefusionClient(const Credential &credential, const string &region) :

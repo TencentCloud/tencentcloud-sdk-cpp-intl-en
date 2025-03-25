@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2019-03-19";
-    const string ENDPOINT = "cloudaudit.tencentcloudapi.com";
+    const string ENDPOINT = "cloudaudit.intl.tencentcloudapi.com";
 }
 
 CloudauditClient::CloudauditClient(const Credential &credential, const string &region) :

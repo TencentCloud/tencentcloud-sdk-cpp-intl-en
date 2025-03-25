@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2021-03-23";
-    const string ENDPOINT = "dnspod.tencentcloudapi.com";
+    const string ENDPOINT = "dnspod.intl.tencentcloudapi.com";
 }
 
 DnspodClient::DnspodClient(const Credential &credential, const string &region) :

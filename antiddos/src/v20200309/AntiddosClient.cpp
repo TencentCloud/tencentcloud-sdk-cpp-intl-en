@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2020-03-09";
-    const string ENDPOINT = "antiddos.tencentcloudapi.com";
+    const string ENDPOINT = "antiddos.intl.tencentcloudapi.com";
 }
 
 AntiddosClient::AntiddosClient(const Credential &credential, const string &region) :

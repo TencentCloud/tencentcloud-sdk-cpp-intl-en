@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2022-01-10";
-    const string ENDPOINT = "car.tencentcloudapi.com";
+    const string ENDPOINT = "car.intl.tencentcloudapi.com";
 }
 
 CarClient::CarClient(const Credential &credential, const string &region) :

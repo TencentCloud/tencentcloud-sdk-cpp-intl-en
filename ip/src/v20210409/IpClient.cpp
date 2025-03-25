@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2021-04-09";
-    const string ENDPOINT = "ip.tencentcloudapi.com";
+    const string ENDPOINT = "ip.intl.tencentcloudapi.com";
 }
 
 IpClient::IpClient(const Credential &credential, const string &region) :

@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2021-04-08";
-    const string ENDPOINT = "iotcloud.tencentcloudapi.com";
+    const string ENDPOINT = "iotcloud.intl.tencentcloudapi.com";
 }
 
 IotcloudClient::IotcloudClient(const Credential &credential, const string &region) :

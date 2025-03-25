@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2024-08-01";
-    const string ENDPOINT = "tcmpp.tencentcloudapi.com";
+    const string ENDPOINT = "tcmpp.intl.tencentcloudapi.com";
 }
 
 TcmppClient::TcmppClient(const Credential &credential, const string &region) :

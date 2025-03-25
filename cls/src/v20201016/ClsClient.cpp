@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2020-10-16";
-    const string ENDPOINT = "cls.tencentcloudapi.com";
+    const string ENDPOINT = "cls.intl.tencentcloudapi.com";
 }
 
 ClsClient::ClsClient(const Credential &credential, const string &region) :

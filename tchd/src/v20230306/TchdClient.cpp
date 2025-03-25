@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2023-03-06";
-    const string ENDPOINT = "tchd.tencentcloudapi.com";
+    const string ENDPOINT = "tchd.intl.tencentcloudapi.com";
 }
 
 TchdClient::TchdClient(const Credential &credential, const string &region) :

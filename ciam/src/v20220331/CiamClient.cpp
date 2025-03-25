@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2022-03-31";
-    const string ENDPOINT = "ciam.tencentcloudapi.com";
+    const string ENDPOINT = "ciam.intl.tencentcloudapi.com";
 }
 
 CiamClient::CiamClient(const Credential &credential, const string &region) :

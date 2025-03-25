@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2020-12-29";
-    const string ENDPOINT = "tms.tencentcloudapi.com";
+    const string ENDPOINT = "tms.intl.tencentcloudapi.com";
 }
 
 TmsClient::TmsClient(const Credential &credential, const string &region) :

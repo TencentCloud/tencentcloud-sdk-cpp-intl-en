@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2021-05-19";
-    const string ENDPOINT = "tdid.tencentcloudapi.com";
+    const string ENDPOINT = "tdid.intl.tencentcloudapi.com";
 }
 
 TdidClient::TdidClient(const Credential &credential, const string &region) :

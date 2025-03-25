@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2021-08-20";
-    const string ENDPOINT = "wedata.tencentcloudapi.com";
+    const string ENDPOINT = "wedata.intl.tencentcloudapi.com";
 }
 
 WedataClient::WedataClient(const Credential &credential, const string &region) :
