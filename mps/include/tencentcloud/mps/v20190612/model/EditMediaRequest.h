@@ -194,15 +194,15 @@ Note: If this parameter is not empty, the task is a video compositing task. Othe
                     bool TaskNotifyConfigHasBeenSet() const;
 
                     /**
-                     * 获取Task priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used.
-                     * @return TasksPriority Task priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used.
+                     * 获取Task priority. The higher the value, the higher the priority. Value range: -10 - 10. If this parameter is left empty, 0 will be used.
+                     * @return TasksPriority Task priority. The higher the value, the higher the priority. Value range: -10 - 10. If this parameter is left empty, 0 will be used.
                      * 
                      */
                     int64_t GetTasksPriority() const;
 
                     /**
-                     * 设置Task priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used.
-                     * @param _tasksPriority Task priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used.
+                     * 设置Task priority. The higher the value, the higher the priority. Value range: -10 - 10. If this parameter is left empty, 0 will be used.
+                     * @param _tasksPriority Task priority. The higher the value, the higher the priority. Value range: -10 - 10. If this parameter is left empty, 0 will be used.
                      * 
                      */
                     void SetTasksPriority(const int64_t& _tasksPriority);
@@ -300,7 +300,7 @@ Note: If this parameter is not empty, the task is a video compositing task. Othe
                     bool m_taskNotifyConfigHasBeenSet;
 
                     /**
-                     * Task priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used.
+                     * Task priority. The higher the value, the higher the priority. Value range: -10 - 10. If this parameter is left empty, 0 will be used.
                      */
                     int64_t m_tasksPriority;
                     bool m_tasksPriorityHasBeenSet;

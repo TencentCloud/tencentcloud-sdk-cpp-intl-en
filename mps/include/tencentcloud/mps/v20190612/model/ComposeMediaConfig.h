@@ -43,7 +43,7 @@ namespace TencentCloud
 
 The figure below outlines the relationships among tracks, elements, and the timeline.
 
-![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/EditMedia-Compose-Track-Item.png)
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/EditMedia-Compose-Track-Item-en.png)
                 */
                 class ComposeMediaConfig : public AbstractModel
                 {
