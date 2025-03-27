@@ -6,7 +6,7 @@
 
 ### Preparation
 1. Activate a desired product in the Tencent Cloud Console.
-2. Get the SecretID, SecretKey, and endpoint for calling the API of the product. An endpoint is typically in the format of \*.tencentcloudapi.com. For example, the endpoint for calling the API of CVM is cvm.tencentcloudapi.com. For more information, please see the documentation of the specified product.
+2. Get the SecretID, SecretKey, and endpoint for calling the API of the product. An endpoint is typically in the format of \*.intl.tencentcloudapi.com. For example, the endpoint for calling the API of CVM is cvm.intl.tencentcloudapi.com. For more information, please see the documentation of the specified product.
 
 ### Compiler
 * Supports C++ 11 or later versions: GCC 4.8 or later.
