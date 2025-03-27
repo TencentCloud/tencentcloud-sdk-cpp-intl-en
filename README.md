@@ -6,7 +6,7 @@
 
 ### Preparation
 1. Activate a desired product in the Tencent Cloud Console.
-2. Get the SecretID, SecretKey, and endpoint for calling the API of the product. An endpoint is typically in the format of \*.tencentcloudapi.com. For example, the endpoint for calling the API of CVM is cvm.tencentcloudapi.com. For more information, please see the documentation of the specified product.
+2. Get the SecretID, SecretKey, and endpoint for calling the API of the product. An endpoint is typically in the format of \*.intl.tencentcloudapi.com. For example, the endpoint for calling the API of CVM is cvm.intl.tencentcloudapi.com. For more information, please see the documentation of the specified product.
 
 ### Compiler
 * Supports C++ 11 or later versions: GCC 4.8 or later.
@@ -172,7 +172,7 @@ int main()
     // (Optional) Instantiate an HTTP option.
     HttpProfile httpProfile = HttpProfile();
     httpProfile.SetKeepAlive(true);  // Specify whether to enable the keepalive feature. The default value is false.
-    httpProfile.SetEndpoint("cvm.ap-guangzhou.tencentcloudapi.com");  // Specify the endpoint. If you do not specify the endpoint, nearby access is enabled by default.
+    httpProfile.SetEndpoint("cvm.intl.tencentcloudapi.com"); 
     httpProfile.SetReqTimeout(30);  // Specify the request timeout value, in seconds. The default value is 60s.
     httpProfile.SetConnectTimeout(30); // Specify the response timeout value, in seconds. The default value is 60s.
 
@@ -257,3 +257,7 @@ Run the following script:
 ```
 sh function_test.sh
 ```
+
+## Compliance Notice
+
+Please prioritize using the ​default domain names configured in the SDK for each product. If using other domains, note that ​overseas domains may pose ​data compliance risks.
