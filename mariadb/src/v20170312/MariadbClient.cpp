@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2017-03-12";
-    const string ENDPOINT = "mariadb.tencentcloudapi.com";
+    const string ENDPOINT = "mariadb.intl.tencentcloudapi.com";
 }
 
 MariadbClient::MariadbClient(const Credential &credential, const string &region) :

@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2018-12-25";
-    const string ENDPOINT = "organization.tencentcloudapi.com";
+    const string ENDPOINT = "organization.intl.tencentcloudapi.com";
 }
 
 OrganizationClient::OrganizationClient(const Credential &credential, const string &region) :

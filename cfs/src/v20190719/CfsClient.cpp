@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2019-07-19";
-    const string ENDPOINT = "cfs.tencentcloudapi.com";
+    const string ENDPOINT = "cfs.intl.tencentcloudapi.com";
 }
 
 CfsClient::CfsClient(const Credential &credential, const string &region) :

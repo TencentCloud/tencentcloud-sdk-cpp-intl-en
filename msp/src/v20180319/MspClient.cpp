@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2018-03-19";
-    const string ENDPOINT = "msp.tencentcloudapi.com";
+    const string ENDPOINT = "msp.intl.tencentcloudapi.com";
 }
 
 MspClient::MspClient(const Credential &credential, const string &region) :

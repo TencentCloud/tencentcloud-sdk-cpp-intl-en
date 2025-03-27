@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2019-07-19";
-    const string ENDPOINT = "ecm.tencentcloudapi.com";
+    const string ENDPOINT = "ecm.intl.tencentcloudapi.com";
 }
 
 EcmClient::EcmClient(const Credential &credential, const string &region) :

@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2018-02-28";
-    const string ENDPOINT = "yunjing.tencentcloudapi.com";
+    const string ENDPOINT = "yunjing.intl.tencentcloudapi.com";
 }
 
 YunjingClient::YunjingClient(const Credential &credential, const string &region) :

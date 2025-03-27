@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2021-06-22";
-    const string ENDPOINT = "apm.tencentcloudapi.com";
+    const string ENDPOINT = "apm.intl.tencentcloudapi.com";
 }
 
 ApmClient::ApmClient(const Credential &credential, const string &region) :

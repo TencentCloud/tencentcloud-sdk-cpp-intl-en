@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2022-08-02";
-    const string ENDPOINT = "config.tencentcloudapi.com";
+    const string ENDPOINT = "config.intl.tencentcloudapi.com";
 }
 
 ConfigClient::ConfigClient(const Credential &credential, const string &region) :

@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2020-03-26";
-    const string ENDPOINT = "mdl.tencentcloudapi.com";
+    const string ENDPOINT = "mdl.intl.tencentcloudapi.com";
 }
 
 MdlClient::MdlClient(const Credential &credential, const string &region) :

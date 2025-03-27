@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2018-02-28";
-    const string ENDPOINT = "cwp.tencentcloudapi.com";
+    const string ENDPOINT = "cwp.intl.tencentcloudapi.com";
 }
 
 CwpClient::CwpClient(const Credential &credential, const string &region) :

@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2020-12-29";
-    const string ENDPOINT = "ams.tencentcloudapi.com";
+    const string ENDPOINT = "ams.intl.tencentcloudapi.com";
 }
 
 AmsClient::AmsClient(const Credential &credential, const string &region) :

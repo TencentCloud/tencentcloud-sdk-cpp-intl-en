@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2019-09-23";
-    const string ENDPOINT = "ssm.tencentcloudapi.com";
+    const string ENDPOINT = "ssm.intl.tencentcloudapi.com";
 }
 
 SsmClient::SsmClient(const Credential &credential, const string &region) :

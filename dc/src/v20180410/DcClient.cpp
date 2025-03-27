@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2018-04-10";
-    const string ENDPOINT = "dc.tencentcloudapi.com";
+    const string ENDPOINT = "dc.intl.tencentcloudapi.com";
 }
 
 DcClient::DcClient(const Credential &credential, const string &region) :

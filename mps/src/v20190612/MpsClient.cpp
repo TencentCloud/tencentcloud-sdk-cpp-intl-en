@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2019-06-12";
-    const string ENDPOINT = "mps.tencentcloudapi.com";
+    const string ENDPOINT = "mps.intl.tencentcloudapi.com";
 }
 
 MpsClient::MpsClient(const Credential &credential, const string &region) :

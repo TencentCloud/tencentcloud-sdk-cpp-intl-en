@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2020-02-17";
-    const string ENDPOINT = "tdmq.tencentcloudapi.com";
+    const string ENDPOINT = "tdmq.intl.tencentcloudapi.com";
 }
 
 TdmqClient::TdmqClient(const Credential &credential, const string &region) :

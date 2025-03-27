@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2020-12-29";
-    const string ENDPOINT = "ims.tencentcloudapi.com";
+    const string ENDPOINT = "ims.intl.tencentcloudapi.com";
 }
 
 ImsClient::ImsClient(const Credential &credential, const string &region) :

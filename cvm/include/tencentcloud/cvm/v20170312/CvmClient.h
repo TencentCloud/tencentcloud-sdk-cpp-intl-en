@@ -79,6 +79,8 @@
 #include <tencentcloud/cvm/v20170312/model/DescribeInstanceFamilyConfigsResponse.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeInstancesRequest.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeInstancesResponse.h>
+#include <tencentcloud/cvm/v20170312/model/DescribeInstancesAttributesRequest.h>
+#include <tencentcloud/cvm/v20170312/model/DescribeInstancesAttributesResponse.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeInstancesOperationLimitRequest.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeInstancesOperationLimitResponse.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeInstancesStatusRequest.h>
@@ -277,6 +279,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeInstancesResponse> DescribeInstancesOutcome;
                 typedef std::future<DescribeInstancesOutcome> DescribeInstancesOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DescribeInstancesRequest&, DescribeInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeInstancesAttributesResponse> DescribeInstancesAttributesOutcome;
+                typedef std::future<DescribeInstancesAttributesOutcome> DescribeInstancesAttributesOutcomeCallable;
+                typedef std::function<void(const CvmClient*, const Model::DescribeInstancesAttributesRequest&, DescribeInstancesAttributesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstancesAttributesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeInstancesOperationLimitResponse> DescribeInstancesOperationLimitOutcome;
                 typedef std::future<DescribeInstancesOperationLimitOutcome> DescribeInstancesOperationLimitOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DescribeInstancesOperationLimitRequest&, DescribeInstancesOperationLimitOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstancesOperationLimitAsyncHandler;
@@ -712,6 +717,15 @@ When a template is created, it defaults to Version 1. You can use `CreateLaunchT
                 DescribeInstancesOutcome DescribeInstances(const Model::DescribeInstancesRequest &request);
                 void DescribeInstancesAsync(const Model::DescribeInstancesRequest& request, const DescribeInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeInstancesOutcomeCallable DescribeInstancesCallable(const Model::DescribeInstancesRequest& request);
+
+                /**
+                 *This API is used to obtain the attributes of specified instances. Currently, it supports querying the custom data UserData of instances.
+                 * @param req DescribeInstancesAttributesRequest
+                 * @return DescribeInstancesAttributesOutcome
+                 */
+                DescribeInstancesAttributesOutcome DescribeInstancesAttributes(const Model::DescribeInstancesAttributesRequest &request);
+                void DescribeInstancesAttributesAsync(const Model::DescribeInstancesAttributesRequest& request, const DescribeInstancesAttributesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeInstancesAttributesOutcomeCallable DescribeInstancesAttributesCallable(const Model::DescribeInstancesAttributesRequest& request);
 
                 /**
                  *This API is used to query limitations on operations on an instance.

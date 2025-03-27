@@ -21,6 +21,7 @@ set(ocr_public_header
 set(ocr_public_header_model
   include/tencentcloud/ocr/v20181119/model/InvoiceItem.h
   include/tencentcloud/ocr/v20181119/model/HKIDCardOCRRequest.h
+  include/tencentcloud/ocr/v20181119/model/RecognizeBrazilIDCardOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/RecognizePhilippinesDrivingLicenseOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/WordItem.h
   include/tencentcloud/ocr/v20181119/model/MLIDPassportOCRRequest.h
@@ -84,6 +85,7 @@ set(ocr_public_header_model
   include/tencentcloud/ocr/v20181119/model/TaxiTicket.h
   include/tencentcloud/ocr/v20181119/model/LicensePlateOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/GeneralBasicOCRRequest.h
+  include/tencentcloud/ocr/v20181119/model/RecognizeBrazilIDCardOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/VatElectronicInfo.h
   include/tencentcloud/ocr/v20181119/model/IDCardOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/GeneralAccurateOCRRequest.h
@@ -135,6 +137,7 @@ set(ocr_src
   src/v20181119/OcrClient.cpp
   src/v20181119/model/InvoiceItem.cpp
   src/v20181119/model/HKIDCardOCRRequest.cpp
+  src/v20181119/model/RecognizeBrazilIDCardOCRRequest.cpp
   src/v20181119/model/RecognizePhilippinesDrivingLicenseOCRRequest.cpp
   src/v20181119/model/WordItem.cpp
   src/v20181119/model/MLIDPassportOCRRequest.cpp
@@ -198,6 +201,7 @@ set(ocr_src
   src/v20181119/model/TaxiTicket.cpp
   src/v20181119/model/LicensePlateOCRRequest.cpp
   src/v20181119/model/GeneralBasicOCRRequest.cpp
+  src/v20181119/model/RecognizeBrazilIDCardOCRResponse.cpp
   src/v20181119/model/VatElectronicInfo.cpp
   src/v20181119/model/IDCardOCRRequest.cpp
   src/v20181119/model/GeneralAccurateOCRRequest.cpp

@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2019-11-12";
-    const string ENDPOINT = "gse.tencentcloudapi.com";
+    const string ENDPOINT = "gse.intl.tencentcloudapi.com";
 }
 
 GseClient::GseClient(const Credential &credential, const string &region) :

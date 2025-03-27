@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2020-10-28";
-    const string ENDPOINT = "tat.tencentcloudapi.com";
+    const string ENDPOINT = "tat.intl.tencentcloudapi.com";
 }
 
 TatClient::TatClient(const Credential &credential, const string &region) :

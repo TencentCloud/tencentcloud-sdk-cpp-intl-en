@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2019-07-11";
-    const string ENDPOINT = "sms.tencentcloudapi.com";
+    const string ENDPOINT = "sms.intl.tencentcloudapi.com";
 }
 
 SmsClient::SmsClient(const Credential &credential, const string &region) :

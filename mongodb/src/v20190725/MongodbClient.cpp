@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2019-07-25";
-    const string ENDPOINT = "mongodb.tencentcloudapi.com";
+    const string ENDPOINT = "mongodb.intl.tencentcloudapi.com";
 }
 
 MongodbClient::MongodbClient(const Credential &credential, const string &region) :

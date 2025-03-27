@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2020-10-02";
-    const string ENDPOINT = "ses.tencentcloudapi.com";
+    const string ENDPOINT = "ses.intl.tencentcloudapi.com";
 }
 
 SesClient::SesClient(const Credential &credential, const string &region) :

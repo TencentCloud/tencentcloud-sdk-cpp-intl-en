@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2018-08-13";
-    const string ENDPOINT = "sts.tencentcloudapi.com";
+    const string ENDPOINT = "sts.intl.tencentcloudapi.com";
 }
 
 StsClient::StsClient(const Credential &credential, const string &region) :

@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2019-03-04";
-    const string ENDPOINT = "cmq.tencentcloudapi.com";
+    const string ENDPOINT = "cmq.intl.tencentcloudapi.com";
 }
 
 CmqClient::CmqClient(const Credential &credential, const string &region) :

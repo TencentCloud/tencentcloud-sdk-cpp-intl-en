@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2019-07-22";
-    const string ENDPOINT = "trtc.tencentcloudapi.com";
+    const string ENDPOINT = "trtc.intl.tencentcloudapi.com";
 }
 
 TrtcClient::TrtcClient(const Credential &credential, const string &region) :

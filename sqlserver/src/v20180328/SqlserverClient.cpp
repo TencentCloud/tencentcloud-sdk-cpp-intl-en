@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2018-03-28";
-    const string ENDPOINT = "sqlserver.tencentcloudapi.com";
+    const string ENDPOINT = "sqlserver.intl.tencentcloudapi.com";
 }
 
 SqlserverClient::SqlserverClient(const Credential &credential, const string &region) :

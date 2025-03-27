@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2022-03-25";
-    const string ENDPOINT = "trro.tencentcloudapi.com";
+    const string ENDPOINT = "trro.intl.tencentcloudapi.com";
 }
 
 TrroClient::TrroClient(const Credential &credential, const string &region) :

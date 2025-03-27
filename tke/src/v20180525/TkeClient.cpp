@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2018-05-25";
-    const string ENDPOINT = "tke.tencentcloudapi.com";
+    const string ENDPOINT = "tke.intl.tencentcloudapi.com";
 }
 
 TkeClient::TkeClient(const Credential &credential, const string &region) :

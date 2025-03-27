@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2018-03-01";
-    const string ENDPOINT = "faceid.tencentcloudapi.com";
+    const string ENDPOINT = "faceid.intl.tencentcloudapi.com";
 }
 
 FaceidClient::FaceidClient(const Credential &credential, const string &region) :

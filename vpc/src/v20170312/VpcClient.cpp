@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2017-03-12";
-    const string ENDPOINT = "vpc.tencentcloudapi.com";
+    const string ENDPOINT = "vpc.intl.tencentcloudapi.com";
 }
 
 VpcClient::VpcClient(const Credential &credential, const string &region) :

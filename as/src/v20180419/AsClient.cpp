@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2018-04-19";
-    const string ENDPOINT = "as.tencentcloudapi.com";
+    const string ENDPOINT = "as.intl.tencentcloudapi.com";
 }
 
 AsClient::AsClient(const Credential &credential, const string &region) :

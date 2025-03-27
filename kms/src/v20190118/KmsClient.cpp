@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2019-01-18";
-    const string ENDPOINT = "kms.tencentcloudapi.com";
+    const string ENDPOINT = "kms.intl.tencentcloudapi.com";
 }
 
 KmsClient::KmsClient(const Credential &credential, const string &region) :

@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2022-12-29";
-    const string ENDPOINT = "aiart.tencentcloudapi.com";
+    const string ENDPOINT = "aiart.intl.tencentcloudapi.com";
 }
 
 AiartClient::AiartClient(const Credential &credential, const string &region) :

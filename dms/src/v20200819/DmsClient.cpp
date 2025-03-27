@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2020-08-19";
-    const string ENDPOINT = "dms.tencentcloudapi.com";
+    const string ENDPOINT = "dms.intl.tencentcloudapi.com";
 }
 
 DmsClient::DmsClient(const Credential &credential, const string &region) :

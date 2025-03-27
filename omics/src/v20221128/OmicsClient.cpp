@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2022-11-28";
-    const string ENDPOINT = "omics.tencentcloudapi.com";
+    const string ENDPOINT = "omics.intl.tencentcloudapi.com";
 }
 
 OmicsClient::OmicsClient(const Credential &credential, const string &region) :

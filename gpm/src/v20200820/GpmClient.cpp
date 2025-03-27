@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2020-08-20";
-    const string ENDPOINT = "gpm.tencentcloudapi.com";
+    const string ENDPOINT = "gpm.intl.tencentcloudapi.com";
 }
 
 GpmClient::GpmClient(const Credential &credential, const string &region) :

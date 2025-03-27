@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2019-09-04";
-    const string ENDPOINT = "cfw.tencentcloudapi.com";
+    const string ENDPOINT = "cfw.intl.tencentcloudapi.com";
 }
 
 CfwClient::CfwClient(const Credential &credential, const string &region) :

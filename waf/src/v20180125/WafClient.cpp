@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2018-01-25";
-    const string ENDPOINT = "waf.tencentcloudapi.com";
+    const string ENDPOINT = "waf.intl.tencentcloudapi.com";
 }
 
 WafClient::WafClient(const Credential &credential, const string &region) :

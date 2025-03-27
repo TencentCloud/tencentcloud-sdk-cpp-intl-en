@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
-                     * @return ImageBase64 Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
+                     * 获取Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
+                     * @return ImageBase64 Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
                      * 
                      */
                     std::string GetImageBase64() const;
 
                     /**
-                     * 设置Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
-                     * @param _imageBase64 Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
+                     * 设置Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
+                     * @param _imageBase64 Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
                      * 
                      */
                     void SetImageBase64(const std::string& _imageBase64);
@@ -90,12 +90,12 @@ Default value: false.
 
                     /**
                      * 获取URL address of image. (This field is not supported outside Chinese mainland)
-Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image formats: PNG, JPG, JPEG, BMP, PDF.
 Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
 We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
                      * @return ImageUrl URL address of image. (This field is not supported outside Chinese mainland)
-Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image formats: PNG, JPG, JPEG, BMP, PDF.
 Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
 We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
@@ -105,12 +105,12 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
 
                     /**
                      * 设置URL address of image. (This field is not supported outside Chinese mainland)
-Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image formats: PNG, JPG, JPEG, BMP, PDF.
 Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
 We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
                      * @param _imageUrl URL address of image. (This field is not supported outside Chinese mainland)
-Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image formats: PNG, JPG, JPEG, BMP, PDF.
 Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
 We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
@@ -128,7 +128,7 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
                 private:
 
                     /**
-                     * Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
+                     * Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
                      */
                     std::string m_imageBase64;
                     bool m_imageBase64HasBeenSet;
@@ -142,7 +142,7 @@ Default value: false.
 
                     /**
                      * URL address of image. (This field is not supported outside Chinese mainland)
-Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image formats: PNG, JPG, JPEG, BMP, PDF.
 Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
 We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.

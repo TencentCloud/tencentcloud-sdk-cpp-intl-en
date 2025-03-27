@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2019-08-19";
-    const string ENDPOINT = "ckafka.tencentcloudapi.com";
+    const string ENDPOINT = "ckafka.intl.tencentcloudapi.com";
 }
 
 CkafkaClient::CkafkaClient(const Credential &credential, const string &region) :

@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2020-03-03";
-    const string ENDPOINT = "iai.tencentcloudapi.com";
+    const string ENDPOINT = "iai.intl.tencentcloudapi.com";
 }
 
 IaiClient::IaiClient(const Credential &credential, const string &region) :

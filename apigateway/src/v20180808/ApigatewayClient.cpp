@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2018-08-08";
-    const string ENDPOINT = "apigateway.tencentcloudapi.com";
+    const string ENDPOINT = "apigateway.intl.tencentcloudapi.com";
 }
 
 ApigatewayClient::ApigatewayClient(const Credential &credential, const string &region) :

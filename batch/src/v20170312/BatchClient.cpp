@@ -26,7 +26,7 @@ using namespace std;
 namespace
 {
     const string VERSION = "2017-03-12";
-    const string ENDPOINT = "batch.tencentcloudapi.com";
+    const string ENDPOINT = "batch.intl.tencentcloudapi.com";
 }
 
 BatchClient::BatchClient(const Credential &credential, const string &region) :
