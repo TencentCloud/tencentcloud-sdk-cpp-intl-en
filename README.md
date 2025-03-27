@@ -172,7 +172,7 @@ int main()
     // (Optional) Instantiate an HTTP option.
     HttpProfile httpProfile = HttpProfile();
     httpProfile.SetKeepAlive(true);  // Specify whether to enable the keepalive feature. The default value is false.
-    httpProfile.SetEndpoint("cvm.ap-guangzhou.tencentcloudapi.com");  // Specify the endpoint. If you do not specify the endpoint, nearby access is enabled by default.
+    httpProfile.SetEndpoint("cvm.intl.tencentcloudapi.com"); 
     httpProfile.SetReqTimeout(30);  // Specify the request timeout value, in seconds. The default value is 60s.
     httpProfile.SetConnectTimeout(30); // Specify the response timeout value, in seconds. The default value is 60s.
 
