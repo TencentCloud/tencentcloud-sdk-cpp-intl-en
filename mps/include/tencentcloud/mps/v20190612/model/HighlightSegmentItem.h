@@ -134,6 +134,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool SegmentTagsHasBeenSet() const;
 
+                    /**
+                     * 获取The live streaming segment corresponds to the live start time point, in the ISO date format.	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return BeginTime The live streaming segment corresponds to the live start time point, in the ISO date format.	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetBeginTime() const;
+
+                    /**
+                     * 设置The live streaming segment corresponds to the live start time point, in the ISO date format.	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _beginTime The live streaming segment corresponds to the live start time point, in the ISO date format.	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetBeginTime(const std::string& _beginTime);
+
+                    /**
+                     * 判断参数 BeginTime 是否已赋值
+                     * @return BeginTime 是否已赋值
+                     * 
+                     */
+                    bool BeginTimeHasBeenSet() const;
+
+                    /**
+                     * 获取The live streaming segment corresponds to the live streaming end time, in the ISO date format.	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return EndTime The live streaming segment corresponds to the live streaming end time, in the ISO date format.	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetEndTime() const;
+
+                    /**
+                     * 设置The live streaming segment corresponds to the live streaming end time, in the ISO date format.	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _endTime The live streaming segment corresponds to the live streaming end time, in the ISO date format.	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetEndTime(const std::string& _endTime);
+
+                    /**
+                     * 判断参数 EndTime 是否已赋值
+                     * @return EndTime 是否已赋值
+                     * 
+                     */
+                    bool EndTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -160,6 +210,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<std::string> m_segmentTags;
                     bool m_segmentTagsHasBeenSet;
+
+                    /**
+                     * The live streaming segment corresponds to the live start time point, in the ISO date format.	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_beginTime;
+                    bool m_beginTimeHasBeenSet;
+
+                    /**
+                     * The live streaming segment corresponds to the live streaming end time, in the ISO date format.	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_endTime;
+                    bool m_endTimeHasBeenSet;
 
                 };
             }

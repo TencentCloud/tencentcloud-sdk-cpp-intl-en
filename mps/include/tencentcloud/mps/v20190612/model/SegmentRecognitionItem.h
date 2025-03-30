@@ -276,6 +276,27 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool EndTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the character ID.
+                     * @return PersonId Specifies the character ID.
+                     * 
+                     */
+                    std::string GetPersonId() const;
+
+                    /**
+                     * 设置Specifies the character ID.
+                     * @param _personId Specifies the character ID.
+                     * 
+                     */
+                    void SetPersonId(const std::string& _personId);
+
+                    /**
+                     * 判断参数 PersonId 是否已赋值
+                     * @return PersonId 是否已赋值
+                     * 
+                     */
+                    bool PersonIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -342,6 +363,12 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
+
+                    /**
+                     * Specifies the character ID.
+                     */
+                    std::string m_personId;
+                    bool m_personIdHasBeenSet;
 
                 };
             }

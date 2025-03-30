@@ -49,58 +49,62 @@ namespace TencentCloud
 
                     /**
                      * 获取Atomic task type.
-<li>Transcode: transcoding.</li>
-<li>SampleSnapshot: sampled screenshot taking.</li>
-<li>AnimatedGraphics: animated image generating.</li>
-<li>SnapshotByTimeOffset: time point screenshot taking.</li>
-<li>ImageSprites: sprite image generating.</li>
-<li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
-<li>AiContentReview: content moderation.</li>
-<li>AIRecognition: intelligent identification.</li>
-<li>AIAnalysis: intelligent analysis.</li>
-
+<Li>Transcode: transcoding</li>
+<Li>SampleSnapshot: sampled screenshot</li>
+<Li>AnimatedGraphics: conversion to GIF</li>
+<Li>SnapshotByTimeOffset: time point screenshot</li>
+<Li>ImageSprites: image sprite</li>
+<Li>AdaptiveDynamicStreaming: adaptive bitrate stream</li>
+<Li>AiContentReview: content review</li>
+<Li>AIRecognition: intelligent recognition</li>
+<Li>AIAnalysis: intelligent analysis</li>
 <li>AiQualityControl: media quality inspection.</li>
+
+<Li>SmartSubtitles: smart subtitle</li>
                      * @return ActivityType Atomic task type.
-<li>Transcode: transcoding.</li>
-<li>SampleSnapshot: sampled screenshot taking.</li>
-<li>AnimatedGraphics: animated image generating.</li>
-<li>SnapshotByTimeOffset: time point screenshot taking.</li>
-<li>ImageSprites: sprite image generating.</li>
-<li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
-<li>AiContentReview: content moderation.</li>
-<li>AIRecognition: intelligent identification.</li>
-<li>AIAnalysis: intelligent analysis.</li>
-
+<Li>Transcode: transcoding</li>
+<Li>SampleSnapshot: sampled screenshot</li>
+<Li>AnimatedGraphics: conversion to GIF</li>
+<Li>SnapshotByTimeOffset: time point screenshot</li>
+<Li>ImageSprites: image sprite</li>
+<Li>AdaptiveDynamicStreaming: adaptive bitrate stream</li>
+<Li>AiContentReview: content review</li>
+<Li>AIRecognition: intelligent recognition</li>
+<Li>AIAnalysis: intelligent analysis</li>
 <li>AiQualityControl: media quality inspection.</li>
+
+<Li>SmartSubtitles: smart subtitle</li>
                      * 
                      */
                     std::string GetActivityType() const;
 
                     /**
                      * 设置Atomic task type.
-<li>Transcode: transcoding.</li>
-<li>SampleSnapshot: sampled screenshot taking.</li>
-<li>AnimatedGraphics: animated image generating.</li>
-<li>SnapshotByTimeOffset: time point screenshot taking.</li>
-<li>ImageSprites: sprite image generating.</li>
-<li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
-<li>AiContentReview: content moderation.</li>
-<li>AIRecognition: intelligent identification.</li>
-<li>AIAnalysis: intelligent analysis.</li>
-
+<Li>Transcode: transcoding</li>
+<Li>SampleSnapshot: sampled screenshot</li>
+<Li>AnimatedGraphics: conversion to GIF</li>
+<Li>SnapshotByTimeOffset: time point screenshot</li>
+<Li>ImageSprites: image sprite</li>
+<Li>AdaptiveDynamicStreaming: adaptive bitrate stream</li>
+<Li>AiContentReview: content review</li>
+<Li>AIRecognition: intelligent recognition</li>
+<Li>AIAnalysis: intelligent analysis</li>
 <li>AiQualityControl: media quality inspection.</li>
+
+<Li>SmartSubtitles: smart subtitle</li>
                      * @param _activityType Atomic task type.
-<li>Transcode: transcoding.</li>
-<li>SampleSnapshot: sampled screenshot taking.</li>
-<li>AnimatedGraphics: animated image generating.</li>
-<li>SnapshotByTimeOffset: time point screenshot taking.</li>
-<li>ImageSprites: sprite image generating.</li>
-<li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
-<li>AiContentReview: content moderation.</li>
-<li>AIRecognition: intelligent identification.</li>
-<li>AIAnalysis: intelligent analysis.</li>
-
+<Li>Transcode: transcoding</li>
+<Li>SampleSnapshot: sampled screenshot</li>
+<Li>AnimatedGraphics: conversion to GIF</li>
+<Li>SnapshotByTimeOffset: time point screenshot</li>
+<Li>ImageSprites: image sprite</li>
+<Li>AdaptiveDynamicStreaming: adaptive bitrate stream</li>
+<Li>AiContentReview: content review</li>
+<Li>AIRecognition: intelligent recognition</li>
+<Li>AIAnalysis: intelligent analysis</li>
 <li>AiQualityControl: media quality inspection.</li>
+
+<Li>SmartSubtitles: smart subtitle</li>
                      * 
                      */
                     void SetActivityType(const std::string& _activityType);
@@ -137,17 +141,18 @@ namespace TencentCloud
 
                     /**
                      * Atomic task type.
-<li>Transcode: transcoding.</li>
-<li>SampleSnapshot: sampled screenshot taking.</li>
-<li>AnimatedGraphics: animated image generating.</li>
-<li>SnapshotByTimeOffset: time point screenshot taking.</li>
-<li>ImageSprites: sprite image generating.</li>
-<li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
-<li>AiContentReview: content moderation.</li>
-<li>AIRecognition: intelligent identification.</li>
-<li>AIAnalysis: intelligent analysis.</li>
-
+<Li>Transcode: transcoding</li>
+<Li>SampleSnapshot: sampled screenshot</li>
+<Li>AnimatedGraphics: conversion to GIF</li>
+<Li>SnapshotByTimeOffset: time point screenshot</li>
+<Li>ImageSprites: image sprite</li>
+<Li>AdaptiveDynamicStreaming: adaptive bitrate stream</li>
+<Li>AiContentReview: content review</li>
+<Li>AIRecognition: intelligent recognition</li>
+<Li>AIAnalysis: intelligent analysis</li>
 <li>AiQualityControl: media quality inspection.</li>
+
+<Li>SmartSubtitles: smart subtitle</li>
                      */
                     std::string m_activityType;
                     bool m_activityTypeHasBeenSet;

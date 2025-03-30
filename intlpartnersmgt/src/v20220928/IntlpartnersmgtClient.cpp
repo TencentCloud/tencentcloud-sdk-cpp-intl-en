@@ -1158,6 +1158,49 @@ IntlpartnersmgtClient::QueryDirectCustomersCreditOutcomeCallable Intlpartnersmgt
     return task->get_future();
 }
 
+IntlpartnersmgtClient::QueryInvitationInfoOutcome IntlpartnersmgtClient::QueryInvitationInfo(const QueryInvitationInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "QueryInvitationInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        QueryInvitationInfoResponse rsp = QueryInvitationInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return QueryInvitationInfoOutcome(rsp);
+        else
+            return QueryInvitationInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return QueryInvitationInfoOutcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::QueryInvitationInfoAsync(const QueryInvitationInfoRequest& request, const QueryInvitationInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->QueryInvitationInfo(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IntlpartnersmgtClient::QueryInvitationInfoOutcomeCallable IntlpartnersmgtClient::QueryInvitationInfoCallable(const QueryInvitationInfoRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<QueryInvitationInfoOutcome()>>(
+        [this, request]()
+        {
+            return this->QueryInvitationInfo(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 IntlpartnersmgtClient::QueryPartnerCreditOutcome IntlpartnersmgtClient::QueryPartnerCredit(const QueryPartnerCreditRequest &request)
 {
     auto outcome = MakeRequest(request, "QueryPartnerCredit");

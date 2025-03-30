@@ -31,6 +31,7 @@
 #include <tencentcloud/mps/v20190612/model/AiAnalysisResult.h>
 #include <tencentcloud/mps/v20190612/model/AiRecognitionResult.h>
 #include <tencentcloud/mps/v20190612/model/ScheduleQualityControlTaskResult.h>
+#include <tencentcloud/mps/v20190612/model/SmartSubtitlesResult.h>
 
 
 namespace TencentCloud
@@ -304,6 +305,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool AiQualityControlTaskResultHasBeenSet() const;
 
+                    /**
+                     * 获取Execution result of the smart subtitle task.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return SmartSubtitlesTaskResult Execution result of the smart subtitle task.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::vector<SmartSubtitlesResult> GetSmartSubtitlesTaskResult() const;
+
+                    /**
+                     * 设置Execution result of the smart subtitle task.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _smartSubtitlesTaskResult Execution result of the smart subtitle task.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetSmartSubtitlesTaskResult(const std::vector<SmartSubtitlesResult>& _smartSubtitlesTaskResult);
+
+                    /**
+                     * 判断参数 SmartSubtitlesTaskResult 是否已赋值
+                     * @return SmartSubtitlesTaskResult 是否已赋值
+                     * 
+                     */
+                    bool SmartSubtitlesTaskResultHasBeenSet() const;
+
                 private:
 
                     /**
@@ -376,6 +402,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     ScheduleQualityControlTaskResult m_aiQualityControlTaskResult;
                     bool m_aiQualityControlTaskResultHasBeenSet;
+
+                    /**
+                     * Execution result of the smart subtitle task.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::vector<SmartSubtitlesResult> m_smartSubtitlesTaskResult;
+                    bool m_smartSubtitlesTaskResultHasBeenSet;
 
                 };
             }

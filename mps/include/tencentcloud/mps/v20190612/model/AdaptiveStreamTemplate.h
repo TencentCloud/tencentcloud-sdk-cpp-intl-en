@@ -148,6 +148,35 @@ namespace TencentCloud
                      */
                     bool RemoveVideoHasBeenSet() const;
 
+                    /**
+                     * 获取List of audio parameter information.
+The parameter array has a maximum length of 64.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return AudioList List of audio parameter information.
+The parameter array has a maximum length of 64.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::vector<AudioTemplateInfo> GetAudioList() const;
+
+                    /**
+                     * 设置List of audio parameter information.
+The parameter array has a maximum length of 64.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _audioList List of audio parameter information.
+The parameter array has a maximum length of 64.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetAudioList(const std::vector<AudioTemplateInfo>& _audioList);
+
+                    /**
+                     * 判断参数 AudioList 是否已赋值
+                     * @return AudioList 是否已赋值
+                     * 
+                     */
+                    bool AudioListHasBeenSet() const;
+
                 private:
 
                     /**
@@ -177,6 +206,14 @@ namespace TencentCloud
                      */
                     uint64_t m_removeVideo;
                     bool m_removeVideoHasBeenSet;
+
+                    /**
+                     * List of audio parameter information.
+The parameter array has a maximum length of 64.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::vector<AudioTemplateInfo> m_audioList;
+                    bool m_audioListHasBeenSet;
 
                 };
             }

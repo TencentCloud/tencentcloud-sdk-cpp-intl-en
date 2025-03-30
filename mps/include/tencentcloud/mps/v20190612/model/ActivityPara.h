@@ -34,6 +34,7 @@
 #include <tencentcloud/mps/v20190612/model/AiAnalysisTaskInput.h>
 #include <tencentcloud/mps/v20190612/model/AiRecognitionTaskInput.h>
 #include <tencentcloud/mps/v20190612/model/AiQualityControlTaskInput.h>
+#include <tencentcloud/mps/v20190612/model/SmartSubtitlesTaskInput.h>
 
 
 namespace TencentCloud
@@ -270,6 +271,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool QualityControlTaskHasBeenSet() const;
 
+                    /**
+                     * 获取Smart subtitle task.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return SmartSubtitlesTask Smart subtitle task.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    SmartSubtitlesTaskInput GetSmartSubtitlesTask() const;
+
+                    /**
+                     * 设置Smart subtitle task.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _smartSubtitlesTask Smart subtitle task.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetSmartSubtitlesTask(const SmartSubtitlesTaskInput& _smartSubtitlesTask);
+
+                    /**
+                     * 判断参数 SmartSubtitlesTask 是否已赋值
+                     * @return SmartSubtitlesTask 是否已赋值
+                     * 
+                     */
+                    bool SmartSubtitlesTaskHasBeenSet() const;
+
                 private:
 
                     /**
@@ -332,6 +358,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     AiQualityControlTaskInput m_qualityControlTask;
                     bool m_qualityControlTaskHasBeenSet;
+
+                    /**
+                     * Smart subtitle task.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    SmartSubtitlesTaskInput m_smartSubtitlesTask;
+                    bool m_smartSubtitlesTaskHasBeenSet;
 
                 };
             }

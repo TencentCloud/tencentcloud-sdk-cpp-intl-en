@@ -75,6 +75,8 @@
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryCustomersCreditResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryDirectCustomersCreditRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryDirectCustomersCreditResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/QueryInvitationInfoRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/QueryInvitationInfoResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryPartnerCreditRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryPartnerCreditResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryPendingClientsV2Request.h>
@@ -181,6 +183,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::QueryDirectCustomersCreditResponse> QueryDirectCustomersCreditOutcome;
                 typedef std::future<QueryDirectCustomersCreditOutcome> QueryDirectCustomersCreditOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryDirectCustomersCreditRequest&, QueryDirectCustomersCreditOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryDirectCustomersCreditAsyncHandler;
+                typedef Outcome<Core::Error, Model::QueryInvitationInfoResponse> QueryInvitationInfoOutcome;
+                typedef std::future<QueryInvitationInfoOutcome> QueryInvitationInfoOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryInvitationInfoRequest&, QueryInvitationInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryInvitationInfoAsyncHandler;
                 typedef Outcome<Core::Error, Model::QueryPartnerCreditResponse> QueryPartnerCreditOutcome;
                 typedef std::future<QueryPartnerCreditOutcome> QueryPartnerCreditOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryPartnerCreditRequest&, QueryPartnerCreditOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryPartnerCreditAsyncHandler;
@@ -485,6 +490,16 @@ Callable roles: Distributor, Second-level reseller, Reseller
                 QueryDirectCustomersCreditOutcome QueryDirectCustomersCredit(const Model::QueryDirectCustomersCreditRequest &request);
                 void QueryDirectCustomersCreditAsync(const Model::QueryDirectCustomersCreditRequest& request, const QueryDirectCustomersCreditAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 QueryDirectCustomersCreditOutcomeCallable QueryDirectCustomersCreditCallable(const Model::QueryDirectCustomersCreditRequest& request);
+
+                /**
+                 *Query usage information of invitation link. Once created, the data will only be retained for 60 days, and the system will automatically delete the invitation link after 60 days.
+Invokable role types: Distributor, Second-level reseller, Reseller.
+                 * @param req QueryInvitationInfoRequest
+                 * @return QueryInvitationInfoOutcome
+                 */
+                QueryInvitationInfoOutcome QueryInvitationInfo(const Model::QueryInvitationInfoRequest &request);
+                void QueryInvitationInfoAsync(const Model::QueryInvitationInfoRequest& request, const QueryInvitationInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                QueryInvitationInfoOutcomeCallable QueryInvitationInfoCallable(const Model::QueryInvitationInfoRequest& request);
 
                 /**
                  *This API is used for a partner to query its own total credit, available credit, and used credit in USD.

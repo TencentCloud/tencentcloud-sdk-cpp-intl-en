@@ -29,6 +29,7 @@
 #include <tencentcloud/mps/v20190612/model/AiRecognitionTaskInput.h>
 #include <tencentcloud/mps/v20190612/model/AiQualityControlTaskInput.h>
 #include <tencentcloud/mps/v20190612/model/TaskNotifyConfig.h>
+#include <tencentcloud/mps/v20190612/model/SmartSubtitlesTaskInput.h>
 
 
 namespace TencentCloud
@@ -392,6 +393,81 @@ Note 3: The trigger configured for an orchestration is for automatically startin
                      */
                     bool TaskTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+                     * @return ResourceId Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+                     * 
+                     */
+                    std::string GetResourceId() const;
+
+                    /**
+                     * 设置Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+                     * @param _resourceId Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+                     * 
+                     */
+                    void SetResourceId(const std::string& _resourceId);
+
+                    /**
+                     * 判断参数 ResourceId 是否已赋值
+                     * @return ResourceId 是否已赋值
+                     * 
+                     */
+                    bool ResourceIdHasBeenSet() const;
+
+                    /**
+                     * 获取Smart subtitle task.
+                     * @return SmartSubtitlesTask Smart subtitle task.
+                     * 
+                     */
+                    SmartSubtitlesTaskInput GetSmartSubtitlesTask() const;
+
+                    /**
+                     * 设置Smart subtitle task.
+                     * @param _smartSubtitlesTask Smart subtitle task.
+                     * 
+                     */
+                    void SetSmartSubtitlesTask(const SmartSubtitlesTaskInput& _smartSubtitlesTask);
+
+                    /**
+                     * 判断参数 SmartSubtitlesTask 是否已赋值
+                     * @return SmartSubtitlesTask 是否已赋值
+                     * 
+                     */
+                    bool SmartSubtitlesTaskHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to skip metadata acquisition. Valid values:
+0: do not skip
+1: skip
+Default value: 0		
+                     * @return SkipMateData Whether to skip metadata acquisition. Valid values:
+0: do not skip
+1: skip
+Default value: 0		
+                     * 
+                     */
+                    int64_t GetSkipMateData() const;
+
+                    /**
+                     * 设置Whether to skip metadata acquisition. Valid values:
+0: do not skip
+1: skip
+Default value: 0		
+                     * @param _skipMateData Whether to skip metadata acquisition. Valid values:
+0: do not skip
+1: skip
+Default value: 0		
+                     * 
+                     */
+                    void SetSkipMateData(const int64_t& _skipMateData);
+
+                    /**
+                     * 判断参数 SkipMateData 是否已赋值
+                     * @return SkipMateData 是否已赋值
+                     * 
+                     */
+                    bool SkipMateDataHasBeenSet() const;
+
                 private:
 
                     /**
@@ -489,6 +565,27 @@ Note 3: The trigger configured for an orchestration is for automatically startin
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
+
+                    /**
+                     * Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+                     */
+                    std::string m_resourceId;
+                    bool m_resourceIdHasBeenSet;
+
+                    /**
+                     * Smart subtitle task.
+                     */
+                    SmartSubtitlesTaskInput m_smartSubtitlesTask;
+                    bool m_smartSubtitlesTaskHasBeenSet;
+
+                    /**
+                     * Whether to skip metadata acquisition. Valid values:
+0: do not skip
+1: skip
+Default value: 0		
+                     */
+                    int64_t m_skipMateData;
+                    bool m_skipMateDataHasBeenSet;
 
                 };
             }

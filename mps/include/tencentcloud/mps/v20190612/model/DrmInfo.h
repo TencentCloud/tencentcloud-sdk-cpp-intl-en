@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/SimpleAesDrm.h>
+#include <tencentcloud/mps/v20190612/model/SpekeDrm.h>
 
 
 namespace TencentCloud
@@ -48,23 +49,35 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The encryption type.
-<li>`simpleaes`: AES-128 encryption.</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Type The encryption type.
-<li>`simpleaes`: AES-128 encryption.</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Encryption type.
+<li>simpleaes: AES-128 encryption</li>
+<li> widevine</li>
+<li>fairplay: not supported for DASH streams</li>
+<li> playready</li>
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return Type Encryption type.
+<li>simpleaes: AES-128 encryption</li>
+<li> widevine</li>
+<li>fairplay: not supported for DASH streams</li>
+<li> playready</li>
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The encryption type.
-<li>`simpleaes`: AES-128 encryption.</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _type The encryption type.
-<li>`simpleaes`: AES-128 encryption.</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Encryption type.
+<li>simpleaes: AES-128 encryption</li>
+<li> widevine</li>
+<li>fairplay: not supported for DASH streams</li>
+<li> playready</li>
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _type Encryption type.
+<li>simpleaes: AES-128 encryption</li>
+<li> widevine</li>
+<li>fairplay: not supported for DASH streams</li>
+<li> playready</li>
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -101,12 +114,36 @@ Note: This field may return·null, indicating that no valid values can be obtain
                      */
                     bool SimpleAesDrmHasBeenSet() const;
 
+                    /**
+                     * 获取Information about FairPlay, WideVine, and PlayReady encryption.
+                     * @return SpekeDrm Information about FairPlay, WideVine, and PlayReady encryption.
+                     * 
+                     */
+                    SpekeDrm GetSpekeDrm() const;
+
+                    /**
+                     * 设置Information about FairPlay, WideVine, and PlayReady encryption.
+                     * @param _spekeDrm Information about FairPlay, WideVine, and PlayReady encryption.
+                     * 
+                     */
+                    void SetSpekeDrm(const SpekeDrm& _spekeDrm);
+
+                    /**
+                     * 判断参数 SpekeDrm 是否已赋值
+                     * @return SpekeDrm 是否已赋值
+                     * 
+                     */
+                    bool SpekeDrmHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The encryption type.
-<li>`simpleaes`: AES-128 encryption.</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Encryption type.
+<li>simpleaes: AES-128 encryption</li>
+<li> widevine</li>
+<li>fairplay: not supported for DASH streams</li>
+<li> playready</li>
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -117,6 +154,12 @@ Note: This field may return·null, indicating that no valid values can be obtain
                      */
                     SimpleAesDrm m_simpleAesDrm;
                     bool m_simpleAesDrmHasBeenSet;
+
+                    /**
+                     * Information about FairPlay, WideVine, and PlayReady encryption.
+                     */
+                    SpekeDrm m_spekeDrm;
+                    bool m_spekeDrmHasBeenSet;
 
                 };
             }

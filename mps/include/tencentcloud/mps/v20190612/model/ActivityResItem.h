@@ -34,6 +34,7 @@
 #include <tencentcloud/mps/v20190612/model/ScheduleReviewTaskResult.h>
 #include <tencentcloud/mps/v20190612/model/ScheduleAnalysisTaskResult.h>
 #include <tencentcloud/mps/v20190612/model/ScheduleQualityControlTaskResult.h>
+#include <tencentcloud/mps/v20190612/model/ScheduleSmartSubtitleTaskResult.h>
 
 
 namespace TencentCloud
@@ -306,6 +307,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool QualityControlTaskHasBeenSet() const;
 
+                    /**
+                     * 获取Smart subtitle task output.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return SmartSubtitlesTask Smart subtitle task output.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    ScheduleSmartSubtitleTaskResult GetSmartSubtitlesTask() const;
+
+                    /**
+                     * 设置Smart subtitle task output.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _smartSubtitlesTask Smart subtitle task output.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetSmartSubtitlesTask(const ScheduleSmartSubtitleTaskResult& _smartSubtitlesTask);
+
+                    /**
+                     * 判断参数 SmartSubtitlesTask 是否已赋值
+                     * @return SmartSubtitlesTask 是否已赋值
+                     * 
+                     */
+                    bool SmartSubtitlesTaskHasBeenSet() const;
+
                 private:
 
                     /**
@@ -377,6 +403,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     ScheduleQualityControlTaskResult m_qualityControlTask;
                     bool m_qualityControlTaskHasBeenSet;
+
+                    /**
+                     * Smart subtitle task output.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    ScheduleSmartSubtitleTaskResult m_smartSubtitlesTask;
+                    bool m_smartSubtitlesTaskHasBeenSet;
 
                 };
             }

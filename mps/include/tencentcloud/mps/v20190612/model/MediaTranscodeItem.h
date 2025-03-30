@@ -309,6 +309,75 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool VideoStreamSetHasBeenSet() const;
 
+                    /**
+                     * 获取Enhancement items used for video transcoding. Descriptions of enhancement items:
+<li>hdr: HDR configuration</li>
+<li>wd_fps: configuration of frame interpolation for higher frame rate</li>
+<li>video_super_resolution: 	super-resolution configuration</li>
+<li>repair: comprehensive enhancement configuration</li>
+<li>denoise: video denoising configuration</li>
+<Li>color_enhance: color enhancement configuration</li>
+<Li>scratch: scratch removal configuration</li>
+<li>artifact: artifact (glitch) removal configuration</li>
+<li>sharp: detail enhancement configuration</li>
+<Li>low_light: low-light enhancement configuration</li>
+<Li>face_enhance: face enhancement configuration</li>
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return CallBackExtInfo Enhancement items used for video transcoding. Descriptions of enhancement items:
+<li>hdr: HDR configuration</li>
+<li>wd_fps: configuration of frame interpolation for higher frame rate</li>
+<li>video_super_resolution: 	super-resolution configuration</li>
+<li>repair: comprehensive enhancement configuration</li>
+<li>denoise: video denoising configuration</li>
+<Li>color_enhance: color enhancement configuration</li>
+<Li>scratch: scratch removal configuration</li>
+<li>artifact: artifact (glitch) removal configuration</li>
+<li>sharp: detail enhancement configuration</li>
+<Li>low_light: low-light enhancement configuration</li>
+<Li>face_enhance: face enhancement configuration</li>
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetCallBackExtInfo() const;
+
+                    /**
+                     * 设置Enhancement items used for video transcoding. Descriptions of enhancement items:
+<li>hdr: HDR configuration</li>
+<li>wd_fps: configuration of frame interpolation for higher frame rate</li>
+<li>video_super_resolution: 	super-resolution configuration</li>
+<li>repair: comprehensive enhancement configuration</li>
+<li>denoise: video denoising configuration</li>
+<Li>color_enhance: color enhancement configuration</li>
+<Li>scratch: scratch removal configuration</li>
+<li>artifact: artifact (glitch) removal configuration</li>
+<li>sharp: detail enhancement configuration</li>
+<Li>low_light: low-light enhancement configuration</li>
+<Li>face_enhance: face enhancement configuration</li>
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _callBackExtInfo Enhancement items used for video transcoding. Descriptions of enhancement items:
+<li>hdr: HDR configuration</li>
+<li>wd_fps: configuration of frame interpolation for higher frame rate</li>
+<li>video_super_resolution: 	super-resolution configuration</li>
+<li>repair: comprehensive enhancement configuration</li>
+<li>denoise: video denoising configuration</li>
+<Li>color_enhance: color enhancement configuration</li>
+<Li>scratch: scratch removal configuration</li>
+<li>artifact: artifact (glitch) removal configuration</li>
+<li>sharp: detail enhancement configuration</li>
+<Li>low_light: low-light enhancement configuration</li>
+<Li>face_enhance: face enhancement configuration</li>
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetCallBackExtInfo(const std::string& _callBackExtInfo);
+
+                    /**
+                     * 判断参数 CallBackExtInfo 是否已赋值
+                     * @return CallBackExtInfo 是否已赋值
+                     * 
+                     */
+                    bool CallBackExtInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -384,6 +453,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<MediaVideoStreamItem> m_videoStreamSet;
                     bool m_videoStreamSetHasBeenSet;
+
+                    /**
+                     * Enhancement items used for video transcoding. Descriptions of enhancement items:
+<li>hdr: HDR configuration</li>
+<li>wd_fps: configuration of frame interpolation for higher frame rate</li>
+<li>video_super_resolution: 	super-resolution configuration</li>
+<li>repair: comprehensive enhancement configuration</li>
+<li>denoise: video denoising configuration</li>
+<Li>color_enhance: color enhancement configuration</li>
+<Li>scratch: scratch removal configuration</li>
+<li>artifact: artifact (glitch) removal configuration</li>
+<li>sharp: detail enhancement configuration</li>
+<Li>low_light: low-light enhancement configuration</li>
+<Li>face_enhance: face enhancement configuration</li>
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_callBackExtInfo;
+                    bool m_callBackExtInfoHasBeenSet;
 
                 };
             }

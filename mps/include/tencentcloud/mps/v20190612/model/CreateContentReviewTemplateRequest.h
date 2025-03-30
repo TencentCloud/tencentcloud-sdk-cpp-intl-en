@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter for porn information
-                     * @return PornConfigure Control parameter for porn information
+                     * 获取Control parameter for a pornography detection task.
+                     * @return PornConfigure Control parameter for a pornography detection task.
                      * 
                      */
                     PornConfigureInfo GetPornConfigure() const;
 
                     /**
-                     * 设置Control parameter for porn information
-                     * @param _pornConfigure Control parameter for porn information
+                     * 设置Control parameter for a pornography detection task.
+                     * @param _pornConfigure Control parameter for a pornography detection task.
                      * 
                      */
                     void SetPornConfigure(const PornConfigureInfo& _pornConfigure);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool PornConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter for terrorism information
-                     * @return TerrorismConfigure Control parameter for terrorism information
+                     * 获取Control parameter for a violence detection task.
+                     * @return TerrorismConfigure Control parameter for a violence detection task.
                      * 
                      */
                     TerrorismConfigureInfo GetTerrorismConfigure() const;
 
                     /**
-                     * 设置Control parameter for terrorism information
-                     * @param _terrorismConfigure Control parameter for terrorism information
+                     * 设置Control parameter for a violence detection task.
+                     * @param _terrorismConfigure Control parameter for a violence detection task.
                      * 
                      */
                     void SetTerrorismConfigure(const TerrorismConfigureInfo& _terrorismConfigure);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool TerrorismConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter for politically sensitive information
-                     * @return PoliticalConfigure Control parameter for politically sensitive information
+                     * 获取Control parameter for a sensitive content detection task.
+                     * @return PoliticalConfigure Control parameter for a sensitive content detection task.
                      * 
                      */
                     PoliticalConfigureInfo GetPoliticalConfigure() const;
 
                     /**
-                     * 设置Control parameter for politically sensitive information
-                     * @param _politicalConfigure Control parameter for politically sensitive information
+                     * 设置Control parameter for a sensitive content detection task.
+                     * @param _politicalConfigure Control parameter for a sensitive content detection task.
                      * 
                      */
                     void SetPoliticalConfigure(const PoliticalConfigureInfo& _politicalConfigure);
@@ -221,19 +221,19 @@ Note: this parameter is not supported yet.
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Control parameter for porn information
+                     * Control parameter for a pornography detection task.
                      */
                     PornConfigureInfo m_pornConfigure;
                     bool m_pornConfigureHasBeenSet;
 
                     /**
-                     * Control parameter for terrorism information
+                     * Control parameter for a violence detection task.
                      */
                     TerrorismConfigureInfo m_terrorismConfigure;
                     bool m_terrorismConfigureHasBeenSet;
 
                     /**
-                     * Control parameter for politically sensitive information
+                     * Control parameter for a sensitive content detection task.
                      */
                     PoliticalConfigureInfo m_politicalConfigure;
                     bool m_politicalConfigureHasBeenSet;

@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/mps/v20190612/model/AudioTrackChannelInfo.h>
 
 
 namespace TencentCloud
@@ -234,6 +235,35 @@ Default value: 2.
                      */
                     bool AudioChannelHasBeenSet() const;
 
+                    /**
+                     * 获取Merge audio track information.
+This field only takes effec in adaptive bitrate transcoding.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return TrackChannelInfo Merge audio track information.
+This field only takes effec in adaptive bitrate transcoding.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    AudioTrackChannelInfo GetTrackChannelInfo() const;
+
+                    /**
+                     * 设置Merge audio track information.
+This field only takes effec in adaptive bitrate transcoding.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _trackChannelInfo Merge audio track information.
+This field only takes effec in adaptive bitrate transcoding.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetTrackChannelInfo(const AudioTrackChannelInfo& _trackChannelInfo);
+
+                    /**
+                     * 判断参数 TrackChannelInfo 是否已赋值
+                     * @return TrackChannelInfo 是否已赋值
+                     * 
+                     */
+                    bool TrackChannelInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -285,6 +315,14 @@ Default value: 2.
                      */
                     int64_t m_audioChannel;
                     bool m_audioChannelHasBeenSet;
+
+                    /**
+                     * Merge audio track information.
+This field only takes effec in adaptive bitrate transcoding.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    AudioTrackChannelInfo m_trackChannelInfo;
+                    bool m_trackChannelInfoHasBeenSet;
 
                 };
             }

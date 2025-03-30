@@ -68,23 +68,39 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取An extended parameter, whose value is a stringfied JSON.
-Note: This parameter is for customers with special requirements. It needs to be customized offline.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExtendedParameter An extended parameter, whose value is a stringfied JSON.
-Note: This parameter is for customers with special requirements. It needs to be customized offline.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Additional parameter. Its value is a serialized JSON string.
+Note: This parameter is used to meet customization requirements. References:
+Smart erase: https://intl.cloud.tencent.com/document/product/862/101530?from_cn_redirect=1
+Video splitting: https://intl.cloud.tencent.com/document/product/862/112098?from_cn_redirect=1
+Intelligent highlights: https://intl.cloud.tencent.com/document/product/862/107280?from_cn_redirect=1
+Horizontal-to-vertical video transformation: https://intl.cloud.tencent.com/document/product/862/112112?from_cn_redirect=1
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return ExtendedParameter Additional parameter. Its value is a serialized JSON string.
+Note: This parameter is used to meet customization requirements. References:
+Smart erase: https://intl.cloud.tencent.com/document/product/862/101530?from_cn_redirect=1
+Video splitting: https://intl.cloud.tencent.com/document/product/862/112098?from_cn_redirect=1
+Intelligent highlights: https://intl.cloud.tencent.com/document/product/862/107280?from_cn_redirect=1
+Horizontal-to-vertical video transformation: https://intl.cloud.tencent.com/document/product/862/112112?from_cn_redirect=1
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetExtendedParameter() const;
 
                     /**
-                     * 设置An extended parameter, whose value is a stringfied JSON.
-Note: This parameter is for customers with special requirements. It needs to be customized offline.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _extendedParameter An extended parameter, whose value is a stringfied JSON.
-Note: This parameter is for customers with special requirements. It needs to be customized offline.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Additional parameter. Its value is a serialized JSON string.
+Note: This parameter is used to meet customization requirements. References:
+Smart erase: https://intl.cloud.tencent.com/document/product/862/101530?from_cn_redirect=1
+Video splitting: https://intl.cloud.tencent.com/document/product/862/112098?from_cn_redirect=1
+Intelligent highlights: https://intl.cloud.tencent.com/document/product/862/107280?from_cn_redirect=1
+Horizontal-to-vertical video transformation: https://intl.cloud.tencent.com/document/product/862/112112?from_cn_redirect=1
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _extendedParameter Additional parameter. Its value is a serialized JSON string.
+Note: This parameter is used to meet customization requirements. References:
+Smart erase: https://intl.cloud.tencent.com/document/product/862/101530?from_cn_redirect=1
+Video splitting: https://intl.cloud.tencent.com/document/product/862/112098?from_cn_redirect=1
+Intelligent highlights: https://intl.cloud.tencent.com/document/product/862/107280?from_cn_redirect=1
+Horizontal-to-vertical video transformation: https://intl.cloud.tencent.com/document/product/862/112112?from_cn_redirect=1
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetExtendedParameter(const std::string& _extendedParameter);
@@ -105,9 +121,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * An extended parameter, whose value is a stringfied JSON.
-Note: This parameter is for customers with special requirements. It needs to be customized offline.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Additional parameter. Its value is a serialized JSON string.
+Note: This parameter is used to meet customization requirements. References:
+Smart erase: https://intl.cloud.tencent.com/document/product/862/101530?from_cn_redirect=1
+Video splitting: https://intl.cloud.tencent.com/document/product/862/112098?from_cn_redirect=1
+Intelligent highlights: https://intl.cloud.tencent.com/document/product/862/107280?from_cn_redirect=1
+Horizontal-to-vertical video transformation: https://intl.cloud.tencent.com/document/product/862/112112?from_cn_redirect=1
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_extendedParameter;
                     bool m_extendedParameterHasBeenSet;
