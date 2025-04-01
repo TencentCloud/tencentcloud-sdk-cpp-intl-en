@@ -21,7 +21,7 @@ set(antiddos_public_header
 set(antiddos_public_header_model
   include/tencentcloud/antiddos/v20200309/model/CreateDefaultAlarmThresholdRequest.h
   include/tencentcloud/antiddos/v20200309/model/DescribeListBGPIPInstancesResponse.h
-  include/tencentcloud/antiddos/v20200309/model/DescribeBlackWhiteIpListResponse.h
+  include/tencentcloud/antiddos/v20200309/model/ModifyNewDomainRulesRequest.h
   include/tencentcloud/antiddos/v20200309/model/DeleteCCLevelPolicyRequest.h
   include/tencentcloud/antiddos/v20200309/model/ProxyTypeInfo.h
   include/tencentcloud/antiddos/v20200309/model/CreateBoundIPRequest.h
@@ -35,7 +35,6 @@ set(antiddos_public_header_model
   include/tencentcloud/antiddos/v20200309/model/DescribeL7RulesBySSLCertIdResponse.h
   include/tencentcloud/antiddos/v20200309/model/DescribeListDDoSSpeedLimitConfigRequest.h
   include/tencentcloud/antiddos/v20200309/model/InstanceRelation.h
-  include/tencentcloud/antiddos/v20200309/model/ModifyNewDomainRulesRequest.h
   include/tencentcloud/antiddos/v20200309/model/RegionInfo.h
   include/tencentcloud/antiddos/v20200309/model/DescribeListProtocolBlockConfigResponse.h
   include/tencentcloud/antiddos/v20200309/model/DescribeListBGPInstancesRequest.h
@@ -54,7 +53,6 @@ set(antiddos_public_header_model
   include/tencentcloud/antiddos/v20200309/model/DescribeDefaultAlarmThresholdResponse.h
   include/tencentcloud/antiddos/v20200309/model/CreateNewL7RulesResponse.h
   include/tencentcloud/antiddos/v20200309/model/CreateDDoSAIRequest.h
-  include/tencentcloud/antiddos/v20200309/model/DescribeListProtectThresholdConfigRequest.h
   include/tencentcloud/antiddos/v20200309/model/ModifyNewDomainRulesResponse.h
   include/tencentcloud/antiddos/v20200309/model/CcBlackWhiteIpPolicy.h
   include/tencentcloud/antiddos/v20200309/model/L7RuleHealth.h
@@ -103,7 +101,6 @@ set(antiddos_public_header_model
   include/tencentcloud/antiddos/v20200309/model/DDoSSpeedLimitConfigRelation.h
   include/tencentcloud/antiddos/v20200309/model/DeleteCCLevelPolicyResponse.h
   include/tencentcloud/antiddos/v20200309/model/ModifyPacketFilterConfigRequest.h
-  include/tencentcloud/antiddos/v20200309/model/DescribeBlackWhiteIpListRequest.h
   include/tencentcloud/antiddos/v20200309/model/CreateCcGeoIPBlockConfigRequest.h
   include/tencentcloud/antiddos/v20200309/model/DescribeBizHttpStatusResponse.h
   include/tencentcloud/antiddos/v20200309/model/CreateDDoSSpeedLimitConfigResponse.h
@@ -131,7 +128,6 @@ set(antiddos_public_header_model
   include/tencentcloud/antiddos/v20200309/model/CreateDDoSGeoIPBlockConfigResponse.h
   include/tencentcloud/antiddos/v20200309/model/CCPrecisionPolicy.h
   include/tencentcloud/antiddos/v20200309/model/DescribeOverviewDDoSEventListRequest.h
-  include/tencentcloud/antiddos/v20200309/model/ListenerCcThreholdConfig.h
   include/tencentcloud/antiddos/v20200309/model/EipAddressRelation.h
   include/tencentcloud/antiddos/v20200309/model/DescribeBasicDeviceStatusRequest.h
   include/tencentcloud/antiddos/v20200309/model/PackInfo.h
@@ -145,8 +141,6 @@ set(antiddos_public_header_model
   include/tencentcloud/antiddos/v20200309/model/CreateCCPrecisionPolicyRequest.h
   include/tencentcloud/antiddos/v20200309/model/DDoSSpeedLimitConfig.h
   include/tencentcloud/antiddos/v20200309/model/AnycastOutPackRelation.h
-  include/tencentcloud/antiddos/v20200309/model/ProtectThresholdRelation.h
-  include/tencentcloud/antiddos/v20200309/model/DescribeListProtectThresholdConfigResponse.h
   include/tencentcloud/antiddos/v20200309/model/CertIdInsL7Rules.h
   include/tencentcloud/antiddos/v20200309/model/CreateDefaultAlarmThresholdResponse.h
   include/tencentcloud/antiddos/v20200309/model/DescribeListSchedulingDomainResponse.h
@@ -234,7 +228,7 @@ set(antiddos_src
   src/v20200309/AntiddosClient.cpp
   src/v20200309/model/CreateDefaultAlarmThresholdRequest.cpp
   src/v20200309/model/DescribeListBGPIPInstancesResponse.cpp
-  src/v20200309/model/DescribeBlackWhiteIpListResponse.cpp
+  src/v20200309/model/ModifyNewDomainRulesRequest.cpp
   src/v20200309/model/DeleteCCLevelPolicyRequest.cpp
   src/v20200309/model/ProxyTypeInfo.cpp
   src/v20200309/model/CreateBoundIPRequest.cpp
@@ -248,7 +242,6 @@ set(antiddos_src
   src/v20200309/model/DescribeL7RulesBySSLCertIdResponse.cpp
   src/v20200309/model/DescribeListDDoSSpeedLimitConfigRequest.cpp
   src/v20200309/model/InstanceRelation.cpp
-  src/v20200309/model/ModifyNewDomainRulesRequest.cpp
   src/v20200309/model/RegionInfo.cpp
   src/v20200309/model/DescribeListProtocolBlockConfigResponse.cpp
   src/v20200309/model/DescribeListBGPInstancesRequest.cpp
@@ -267,7 +260,6 @@ set(antiddos_src
   src/v20200309/model/DescribeDefaultAlarmThresholdResponse.cpp
   src/v20200309/model/CreateNewL7RulesResponse.cpp
   src/v20200309/model/CreateDDoSAIRequest.cpp
-  src/v20200309/model/DescribeListProtectThresholdConfigRequest.cpp
   src/v20200309/model/ModifyNewDomainRulesResponse.cpp
   src/v20200309/model/CcBlackWhiteIpPolicy.cpp
   src/v20200309/model/L7RuleHealth.cpp
@@ -316,7 +308,6 @@ set(antiddos_src
   src/v20200309/model/DDoSSpeedLimitConfigRelation.cpp
   src/v20200309/model/DeleteCCLevelPolicyResponse.cpp
   src/v20200309/model/ModifyPacketFilterConfigRequest.cpp
-  src/v20200309/model/DescribeBlackWhiteIpListRequest.cpp
   src/v20200309/model/CreateCcGeoIPBlockConfigRequest.cpp
   src/v20200309/model/DescribeBizHttpStatusResponse.cpp
   src/v20200309/model/CreateDDoSSpeedLimitConfigResponse.cpp
@@ -344,7 +335,6 @@ set(antiddos_src
   src/v20200309/model/CreateDDoSGeoIPBlockConfigResponse.cpp
   src/v20200309/model/CCPrecisionPolicy.cpp
   src/v20200309/model/DescribeOverviewDDoSEventListRequest.cpp
-  src/v20200309/model/ListenerCcThreholdConfig.cpp
   src/v20200309/model/EipAddressRelation.cpp
   src/v20200309/model/DescribeBasicDeviceStatusRequest.cpp
   src/v20200309/model/PackInfo.cpp
@@ -358,8 +348,6 @@ set(antiddos_src
   src/v20200309/model/CreateCCPrecisionPolicyRequest.cpp
   src/v20200309/model/DDoSSpeedLimitConfig.cpp
   src/v20200309/model/AnycastOutPackRelation.cpp
-  src/v20200309/model/ProtectThresholdRelation.cpp
-  src/v20200309/model/DescribeListProtectThresholdConfigResponse.cpp
   src/v20200309/model/CertIdInsL7Rules.cpp
   src/v20200309/model/CreateDefaultAlarmThresholdResponse.cpp
   src/v20200309/model/DescribeListSchedulingDomainResponse.cpp

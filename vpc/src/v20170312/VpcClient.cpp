@@ -7522,6 +7522,49 @@ VpcClient::DisableGatewayFlowMonitorOutcomeCallable VpcClient::DisableGatewayFlo
     return task->get_future();
 }
 
+VpcClient::DisableRoutesOutcome VpcClient::DisableRoutes(const DisableRoutesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DisableRoutes");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DisableRoutesResponse rsp = DisableRoutesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DisableRoutesOutcome(rsp);
+        else
+            return DisableRoutesOutcome(o.GetError());
+    }
+    else
+    {
+        return DisableRoutesOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::DisableRoutesAsync(const DisableRoutesRequest& request, const DisableRoutesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DisableRoutes(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::DisableRoutesOutcomeCallable VpcClient::DisableRoutesCallable(const DisableRoutesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DisableRoutesOutcome()>>(
+        [this, request]()
+        {
+            return this->DisableRoutes(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VpcClient::DisableSnapshotPoliciesOutcome VpcClient::DisableSnapshotPolicies(const DisableSnapshotPoliciesRequest &request)
 {
     auto outcome = MakeRequest(request, "DisableSnapshotPolicies");
@@ -8031,6 +8074,49 @@ VpcClient::EnableGatewayFlowMonitorOutcomeCallable VpcClient::EnableGatewayFlowM
         [this, request]()
         {
             return this->EnableGatewayFlowMonitor(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::EnableRoutesOutcome VpcClient::EnableRoutes(const EnableRoutesRequest &request)
+{
+    auto outcome = MakeRequest(request, "EnableRoutes");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        EnableRoutesResponse rsp = EnableRoutesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return EnableRoutesOutcome(rsp);
+        else
+            return EnableRoutesOutcome(o.GetError());
+    }
+    else
+    {
+        return EnableRoutesOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::EnableRoutesAsync(const EnableRoutesRequest& request, const EnableRoutesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->EnableRoutes(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::EnableRoutesOutcomeCallable VpcClient::EnableRoutesCallable(const EnableRoutesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<EnableRoutesOutcome()>>(
+        [this, request]()
+        {
+            return this->EnableRoutes(request);
         }
     );
 

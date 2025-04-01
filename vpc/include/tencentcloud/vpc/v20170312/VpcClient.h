@@ -371,6 +371,8 @@
 #include <tencentcloud/vpc/v20170312/model/DisableFlowLogsResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DisableGatewayFlowMonitorRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DisableGatewayFlowMonitorResponse.h>
+#include <tencentcloud/vpc/v20170312/model/DisableRoutesRequest.h>
+#include <tencentcloud/vpc/v20170312/model/DisableRoutesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DisableSnapshotPoliciesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DisableSnapshotPoliciesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DisassociateAddressRequest.h>
@@ -395,6 +397,8 @@
 #include <tencentcloud/vpc/v20170312/model/EnableFlowLogsResponse.h>
 #include <tencentcloud/vpc/v20170312/model/EnableGatewayFlowMonitorRequest.h>
 #include <tencentcloud/vpc/v20170312/model/EnableGatewayFlowMonitorResponse.h>
+#include <tencentcloud/vpc/v20170312/model/EnableRoutesRequest.h>
+#include <tencentcloud/vpc/v20170312/model/EnableRoutesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/EnableSnapshotPoliciesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/EnableSnapshotPoliciesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/EnableVpcEndPointConnectRequest.h>
@@ -1109,6 +1113,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DisableGatewayFlowMonitorResponse> DisableGatewayFlowMonitorOutcome;
                 typedef std::future<DisableGatewayFlowMonitorOutcome> DisableGatewayFlowMonitorOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DisableGatewayFlowMonitorRequest&, DisableGatewayFlowMonitorOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableGatewayFlowMonitorAsyncHandler;
+                typedef Outcome<Core::Error, Model::DisableRoutesResponse> DisableRoutesOutcome;
+                typedef std::future<DisableRoutesOutcome> DisableRoutesOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::DisableRoutesRequest&, DisableRoutesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableRoutesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DisableSnapshotPoliciesResponse> DisableSnapshotPoliciesOutcome;
                 typedef std::future<DisableSnapshotPoliciesOutcome> DisableSnapshotPoliciesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DisableSnapshotPoliciesRequest&, DisableSnapshotPoliciesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableSnapshotPoliciesAsyncHandler;
@@ -1145,6 +1152,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::EnableGatewayFlowMonitorResponse> EnableGatewayFlowMonitorOutcome;
                 typedef std::future<EnableGatewayFlowMonitorOutcome> EnableGatewayFlowMonitorOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::EnableGatewayFlowMonitorRequest&, EnableGatewayFlowMonitorOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableGatewayFlowMonitorAsyncHandler;
+                typedef Outcome<Core::Error, Model::EnableRoutesResponse> EnableRoutesOutcome;
+                typedef std::future<EnableRoutesOutcome> EnableRoutesOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::EnableRoutesRequest&, EnableRoutesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableRoutesAsyncHandler;
                 typedef Outcome<Core::Error, Model::EnableSnapshotPoliciesResponse> EnableSnapshotPoliciesOutcome;
                 typedef std::future<EnableSnapshotPoliciesOutcome> EnableSnapshotPoliciesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::EnableSnapshotPoliciesRequest&, EnableSnapshotPoliciesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableSnapshotPoliciesAsyncHandler;
@@ -3147,6 +3157,15 @@ This API is completed asynchronously. If you need to query the execution result 
                 DisableGatewayFlowMonitorOutcomeCallable DisableGatewayFlowMonitorCallable(const Model::DisableGatewayFlowMonitorRequest& request);
 
                 /**
+                 *This API is used to disable enabled subnet routes.
+                 * @param req DisableRoutesRequest
+                 * @return DisableRoutesOutcome
+                 */
+                DisableRoutesOutcome DisableRoutes(const Model::DisableRoutesRequest &request);
+                void DisableRoutesAsync(const Model::DisableRoutesRequest& request, const DisableRoutesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DisableRoutesOutcomeCallable DisableRoutesCallable(const Model::DisableRoutesRequest& request);
+
+                /**
                  *This API is used to disable specified snapshot policies.
                  * @param req DisableSnapshotPoliciesRequest
                  * @return DisableSnapshotPoliciesOutcome
@@ -3261,6 +3280,16 @@ This API is used to verify whether there will be conflict with an existing route
                 EnableGatewayFlowMonitorOutcome EnableGatewayFlowMonitor(const Model::EnableGatewayFlowMonitorRequest &request);
                 void EnableGatewayFlowMonitorAsync(const Model::EnableGatewayFlowMonitorRequest& request, const EnableGatewayFlowMonitorAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 EnableGatewayFlowMonitorOutcomeCallable EnableGatewayFlowMonitorCallable(const Model::EnableGatewayFlowMonitorRequest& request);
+
+                /**
+                 *This API is used to enable disabled subnet routes.<br />
+The API is used to verify whether the enabled route conflicts with existing routes. If they conflict, the new route cannot be enabled and will result in a failure. When a route conflict occurs, you need to first disable the conflicting route before you can enable the new one.
+                 * @param req EnableRoutesRequest
+                 * @return EnableRoutesOutcome
+                 */
+                EnableRoutesOutcome EnableRoutes(const Model::EnableRoutesRequest &request);
+                void EnableRoutesAsync(const Model::EnableRoutesRequest& request, const EnableRoutesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                EnableRoutesOutcomeCallable EnableRoutesCallable(const Model::EnableRoutesRequest& request);
 
                 /**
                  *This API is used to enable specified snapshot policies. 

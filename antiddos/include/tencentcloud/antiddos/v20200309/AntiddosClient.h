@@ -91,8 +91,6 @@
 #include <tencentcloud/antiddos/v20200309/model/DescribeBizHttpStatusResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeBizTrendRequest.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeBizTrendResponse.h>
-#include <tencentcloud/antiddos/v20200309/model/DescribeBlackWhiteIpListRequest.h>
-#include <tencentcloud/antiddos/v20200309/model/DescribeBlackWhiteIpListResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeCCLevelListRequest.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeCCLevelListResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeCCLevelPolicyRequest.h>
@@ -133,8 +131,6 @@
 #include <tencentcloud/antiddos/v20200309/model/DescribeListListenerResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeListPacketFilterConfigRequest.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeListPacketFilterConfigResponse.h>
-#include <tencentcloud/antiddos/v20200309/model/DescribeListProtectThresholdConfigRequest.h>
-#include <tencentcloud/antiddos/v20200309/model/DescribeListProtectThresholdConfigResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeListProtocolBlockConfigRequest.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeListProtocolBlockConfigResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeListSchedulingDomainRequest.h>
@@ -283,9 +279,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeBizTrendResponse> DescribeBizTrendOutcome;
                 typedef std::future<DescribeBizTrendOutcome> DescribeBizTrendOutcomeCallable;
                 typedef std::function<void(const AntiddosClient*, const Model::DescribeBizTrendRequest&, DescribeBizTrendOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBizTrendAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeBlackWhiteIpListResponse> DescribeBlackWhiteIpListOutcome;
-                typedef std::future<DescribeBlackWhiteIpListOutcome> DescribeBlackWhiteIpListOutcomeCallable;
-                typedef std::function<void(const AntiddosClient*, const Model::DescribeBlackWhiteIpListRequest&, DescribeBlackWhiteIpListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBlackWhiteIpListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCCLevelListResponse> DescribeCCLevelListOutcome;
                 typedef std::future<DescribeCCLevelListOutcome> DescribeCCLevelListOutcomeCallable;
                 typedef std::function<void(const AntiddosClient*, const Model::DescribeCCLevelListRequest&, DescribeCCLevelListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCCLevelListAsyncHandler;
@@ -346,9 +339,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeListPacketFilterConfigResponse> DescribeListPacketFilterConfigOutcome;
                 typedef std::future<DescribeListPacketFilterConfigOutcome> DescribeListPacketFilterConfigOutcomeCallable;
                 typedef std::function<void(const AntiddosClient*, const Model::DescribeListPacketFilterConfigRequest&, DescribeListPacketFilterConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeListPacketFilterConfigAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeListProtectThresholdConfigResponse> DescribeListProtectThresholdConfigOutcome;
-                typedef std::future<DescribeListProtectThresholdConfigOutcome> DescribeListProtectThresholdConfigOutcomeCallable;
-                typedef std::function<void(const AntiddosClient*, const Model::DescribeListProtectThresholdConfigRequest&, DescribeListProtectThresholdConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeListProtectThresholdConfigAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeListProtocolBlockConfigResponse> DescribeListProtocolBlockConfigOutcome;
                 typedef std::future<DescribeListProtocolBlockConfigOutcome> DescribeListProtocolBlockConfigOutcomeCallable;
                 typedef std::function<void(const AntiddosClient*, const Model::DescribeListProtocolBlockConfigRequest&, DescribeListProtocolBlockConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeListProtocolBlockConfigAsyncHandler;
@@ -707,17 +697,6 @@ namespace TencentCloud
                 DescribeBizTrendOutcomeCallable DescribeBizTrendCallable(const Model::DescribeBizTrendRequest& request);
 
                 /**
-                 *接口变更
-
-This API is used to get an Anti-DDoS IP blocklist/allowlist.
-                 * @param req DescribeBlackWhiteIpListRequest
-                 * @return DescribeBlackWhiteIpListOutcome
-                 */
-                DescribeBlackWhiteIpListOutcome DescribeBlackWhiteIpList(const Model::DescribeBlackWhiteIpListRequest &request);
-                void DescribeBlackWhiteIpListAsync(const Model::DescribeBlackWhiteIpListRequest& request, const DescribeBlackWhiteIpListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeBlackWhiteIpListOutcomeCallable DescribeBlackWhiteIpListCallable(const Model::DescribeBlackWhiteIpListRequest& request);
-
-                /**
                  *Gets the list of CC protection levels
                  * @param req DescribeCCLevelListRequest
                  * @return DescribeCCLevelListOutcome
@@ -897,17 +876,6 @@ This API is used to get an Anti-DDoS IP blocklist/allowlist.
                 DescribeListPacketFilterConfigOutcome DescribeListPacketFilterConfig(const Model::DescribeListPacketFilterConfigRequest &request);
                 void DescribeListPacketFilterConfigAsync(const Model::DescribeListPacketFilterConfigRequest& request, const DescribeListPacketFilterConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeListPacketFilterConfigOutcomeCallable DescribeListPacketFilterConfigCallable(const Model::DescribeListPacketFilterConfigRequest& request);
-
-                /**
-                 *接口变更
-
-This API is used to get a list of protection threshold configurations for AI protection switch, protection level, and CC threshold switch.
-                 * @param req DescribeListProtectThresholdConfigRequest
-                 * @return DescribeListProtectThresholdConfigOutcome
-                 */
-                DescribeListProtectThresholdConfigOutcome DescribeListProtectThresholdConfig(const Model::DescribeListProtectThresholdConfigRequest &request);
-                void DescribeListProtectThresholdConfigAsync(const Model::DescribeListProtectThresholdConfigRequest& request, const DescribeListProtectThresholdConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeListProtectThresholdConfigOutcomeCallable DescribeListProtectThresholdConfigCallable(const Model::DescribeListProtectThresholdConfigRequest& request);
 
                 /**
                  *This API is used to get a list of Anti-DDoS protocol blocking configurations.
