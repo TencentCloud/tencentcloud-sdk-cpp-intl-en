@@ -25,7 +25,8 @@ QueryCreditAllocationHistoryData::QueryCreditAllocationHistoryData() :
     m_operatorHasBeenSet(false),
     m_creditHasBeenSet(false),
     m_allocatedCreditHasBeenSet(false),
-    m_clientCreditAfterHasBeenSet(false)
+    m_clientCreditAfterHasBeenSet(false),
+    m_remarkHasBeenSet(false)
 {
 }
 
@@ -84,6 +85,16 @@ CoreInternalOutcome QueryCreditAllocationHistoryData::Deserialize(const rapidjso
         m_clientCreditAfterHasBeenSet = true;
     }
 
+    if (value.HasMember("Remark") && !value["Remark"].IsNull())
+    {
+        if (!value["Remark"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `QueryCreditAllocationHistoryData.Remark` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_remark = string(value["Remark"].GetString());
+        m_remarkHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -129,6 +140,14 @@ void QueryCreditAllocationHistoryData::ToJsonObject(rapidjson::Value &value, rap
         string key = "ClientCreditAfter";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_clientCreditAfter, allocator);
+    }
+
+    if (m_remarkHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Remark";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_remark.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -212,5 +231,21 @@ void QueryCreditAllocationHistoryData::SetClientCreditAfter(const double& _clien
 bool QueryCreditAllocationHistoryData::ClientCreditAfterHasBeenSet() const
 {
     return m_clientCreditAfterHasBeenSet;
+}
+
+string QueryCreditAllocationHistoryData::GetRemark() const
+{
+    return m_remark;
+}
+
+void QueryCreditAllocationHistoryData::SetRemark(const string& _remark)
+{
+    m_remark = _remark;
+    m_remarkHasBeenSet = true;
+}
+
+bool QueryCreditAllocationHistoryData::RemarkHasBeenSet() const
+{
+    return m_remarkHasBeenSet;
 }
 

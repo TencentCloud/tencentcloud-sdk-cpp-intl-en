@@ -23,6 +23,7 @@ set(intlpartnersmgt_public_header_model
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryDirectCustomersCreditData.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillSummaryResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/TradeTwoNode.h
+  include/tencentcloud/intlpartnersmgt/v20220928/model/QueryT1IndirectCustomersDetailRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/CreateAndSendClientInvitationMailResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/CustomerBillDetailData.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/RegionSummaryOverviewItem.h
@@ -55,8 +56,9 @@ set(intlpartnersmgt_public_header_model
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryByPayModeRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryInvitationInfoData.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/GetCountryCodesResponse.h
-  include/tencentcloud/intlpartnersmgt/v20220928/model/AllocateCreditPoolRequest.h
+  include/tencentcloud/intlpartnersmgt/v20220928/model/QueryT1IndirectCustomersDetailResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/AllocateCustomerCreditResponse.h
+  include/tencentcloud/intlpartnersmgt/v20220928/model/AllocateCreditPoolRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryVoucherAmountByUinRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/GetCountryCodesRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/ForceQNResponse.h
@@ -69,6 +71,7 @@ set(intlpartnersmgt_public_header_model
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryInvitationInfoRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryCustomersCreditRequest.h
+  include/tencentcloud/intlpartnersmgt/v20220928/model/QueryT1IndirectCustomersDetailResponseData.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerInfoResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryVoucherPoolResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryAccountVerificationStatusRequest.h
@@ -119,6 +122,7 @@ set(intlpartnersmgt_src
   src/v20220928/model/QueryDirectCustomersCreditData.cpp
   src/v20220928/model/DescribeCustomerBillSummaryResponse.cpp
   src/v20220928/model/TradeTwoNode.cpp
+  src/v20220928/model/QueryT1IndirectCustomersDetailRequest.cpp
   src/v20220928/model/CreateAndSendClientInvitationMailResponse.cpp
   src/v20220928/model/CustomerBillDetailData.cpp
   src/v20220928/model/RegionSummaryOverviewItem.cpp
@@ -151,8 +155,9 @@ set(intlpartnersmgt_src
   src/v20220928/model/DescribeBillSummaryByPayModeRequest.cpp
   src/v20220928/model/QueryInvitationInfoData.cpp
   src/v20220928/model/GetCountryCodesResponse.cpp
-  src/v20220928/model/AllocateCreditPoolRequest.cpp
+  src/v20220928/model/QueryT1IndirectCustomersDetailResponse.cpp
   src/v20220928/model/AllocateCustomerCreditResponse.cpp
+  src/v20220928/model/AllocateCreditPoolRequest.cpp
   src/v20220928/model/QueryVoucherAmountByUinRequest.cpp
   src/v20220928/model/GetCountryCodesRequest.cpp
   src/v20220928/model/ForceQNResponse.cpp
@@ -165,6 +170,7 @@ set(intlpartnersmgt_src
   src/v20220928/model/DescribeBillSummaryResponse.cpp
   src/v20220928/model/QueryInvitationInfoRequest.cpp
   src/v20220928/model/QueryCustomersCreditRequest.cpp
+  src/v20220928/model/QueryT1IndirectCustomersDetailResponseData.cpp
   src/v20220928/model/DescribeCustomerInfoResponse.cpp
   src/v20220928/model/QueryVoucherPoolResponse.cpp
   src/v20220928/model/QueryAccountVerificationStatusRequest.cpp

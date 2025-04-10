@@ -1330,6 +1330,49 @@ IntlpartnersmgtClient::QueryPolicyProductListByCodeOutcomeCallable Intlpartnersm
     return task->get_future();
 }
 
+IntlpartnersmgtClient::QueryT1IndirectCustomersDetailOutcome IntlpartnersmgtClient::QueryT1IndirectCustomersDetail(const QueryT1IndirectCustomersDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "QueryT1IndirectCustomersDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        QueryT1IndirectCustomersDetailResponse rsp = QueryT1IndirectCustomersDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return QueryT1IndirectCustomersDetailOutcome(rsp);
+        else
+            return QueryT1IndirectCustomersDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return QueryT1IndirectCustomersDetailOutcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::QueryT1IndirectCustomersDetailAsync(const QueryT1IndirectCustomersDetailRequest& request, const QueryT1IndirectCustomersDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->QueryT1IndirectCustomersDetail(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IntlpartnersmgtClient::QueryT1IndirectCustomersDetailOutcomeCallable IntlpartnersmgtClient::QueryT1IndirectCustomersDetailCallable(const QueryT1IndirectCustomersDetailRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<QueryT1IndirectCustomersDetailOutcome()>>(
+        [this, request]()
+        {
+            return this->QueryT1IndirectCustomersDetail(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 IntlpartnersmgtClient::QueryVoucherAmountByUinOutcome IntlpartnersmgtClient::QueryVoucherAmountByUin(const QueryVoucherAmountByUinRequest &request)
 {
     auto outcome = MakeRequest(request, "QueryVoucherAmountByUin");

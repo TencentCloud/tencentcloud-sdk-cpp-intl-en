@@ -84,6 +84,27 @@ namespace TencentCloud
                      */
                     bool ClientUinHasBeenSet() const;
 
+                    /**
+                     * 获取Remark
+                     * @return Remark Remark
+                     * 
+                     */
+                    std::string GetRemark() const;
+
+                    /**
+                     * 设置Remark
+                     * @param _remark Remark
+                     * 
+                     */
+                    void SetRemark(const std::string& _remark);
+
+                    /**
+                     * 判断参数 Remark 是否已赋值
+                     * @return Remark 是否已赋值
+                     * 
+                     */
+                    bool RemarkHasBeenSet() const;
+
                 private:
 
                     /**
@@ -97,6 +118,12 @@ namespace TencentCloud
                      */
                     uint64_t m_clientUin;
                     bool m_clientUinHasBeenSet;
+
+                    /**
+                     * Remark
+                     */
+                    std::string m_remark;
+                    bool m_remarkHasBeenSet;
 
                 };
             }

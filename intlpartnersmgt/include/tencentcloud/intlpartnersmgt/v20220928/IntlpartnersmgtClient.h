@@ -83,6 +83,8 @@
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryPendingClientsV2Response.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryPolicyProductListByCodeRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryPolicyProductListByCodeResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/QueryT1IndirectCustomersDetailRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/QueryT1IndirectCustomersDetailResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryVoucherAmountByUinRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryVoucherAmountByUinResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryVoucherListByUinRequest.h>
@@ -195,6 +197,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::QueryPolicyProductListByCodeResponse> QueryPolicyProductListByCodeOutcome;
                 typedef std::future<QueryPolicyProductListByCodeOutcome> QueryPolicyProductListByCodeOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryPolicyProductListByCodeRequest&, QueryPolicyProductListByCodeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryPolicyProductListByCodeAsyncHandler;
+                typedef Outcome<Core::Error, Model::QueryT1IndirectCustomersDetailResponse> QueryT1IndirectCustomersDetailOutcome;
+                typedef std::future<QueryT1IndirectCustomersDetailOutcome> QueryT1IndirectCustomersDetailOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryT1IndirectCustomersDetailRequest&, QueryT1IndirectCustomersDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryT1IndirectCustomersDetailAsyncHandler;
                 typedef Outcome<Core::Error, Model::QueryVoucherAmountByUinResponse> QueryVoucherAmountByUinOutcome;
                 typedef std::future<QueryVoucherAmountByUinOutcome> QueryVoucherAmountByUinOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryVoucherAmountByUinRequest&, QueryVoucherAmountByUinOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryVoucherAmountByUinAsyncHandler;
@@ -532,6 +537,16 @@ Callable roles: Distributor, Second-level reseller, Reseller
                 QueryPolicyProductListByCodeOutcome QueryPolicyProductListByCode(const Model::QueryPolicyProductListByCodeRequest &request);
                 void QueryPolicyProductListByCodeAsync(const Model::QueryPolicyProductListByCodeRequest& request, const QueryPolicyProductListByCodeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 QueryPolicyProductListByCodeOutcomeCallable QueryPolicyProductListByCodeCallable(const Model::QueryPolicyProductListByCodeRequest& request);
+
+                /**
+                 *This API is used to query the indirect sub-customers of a first-level distributor.
+Invokable role type: first-level reseller.
+                 * @param req QueryT1IndirectCustomersDetailRequest
+                 * @return QueryT1IndirectCustomersDetailOutcome
+                 */
+                QueryT1IndirectCustomersDetailOutcome QueryT1IndirectCustomersDetail(const Model::QueryT1IndirectCustomersDetailRequest &request);
+                void QueryT1IndirectCustomersDetailAsync(const Model::QueryT1IndirectCustomersDetailRequest& request, const QueryT1IndirectCustomersDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                QueryT1IndirectCustomersDetailOutcomeCallable QueryT1IndirectCustomersDetailCallable(const Model::QueryT1IndirectCustomersDetailRequest& request);
 
                 /**
                  *This API is used by primary/secondary resellers to query the voucher quota based on the customer UIN.

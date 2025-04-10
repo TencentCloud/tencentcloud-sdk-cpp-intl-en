@@ -24,7 +24,8 @@ using namespace std;
 
 AllocateCustomerCreditRequest::AllocateCustomerCreditRequest() :
     m_addedCreditHasBeenSet(false),
-    m_clientUinHasBeenSet(false)
+    m_clientUinHasBeenSet(false),
+    m_remarkHasBeenSet(false)
 {
 }
 
@@ -49,6 +50,14 @@ string AllocateCustomerCreditRequest::ToJsonString() const
         string key = "ClientUin";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_clientUin, allocator);
+    }
+
+    if (m_remarkHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Remark";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_remark.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -89,6 +98,22 @@ void AllocateCustomerCreditRequest::SetClientUin(const uint64_t& _clientUin)
 bool AllocateCustomerCreditRequest::ClientUinHasBeenSet() const
 {
     return m_clientUinHasBeenSet;
+}
+
+string AllocateCustomerCreditRequest::GetRemark() const
+{
+    return m_remark;
+}
+
+void AllocateCustomerCreditRequest::SetRemark(const string& _remark)
+{
+    m_remark = _remark;
+    m_remarkHasBeenSet = true;
+}
+
+bool AllocateCustomerCreditRequest::RemarkHasBeenSet() const
+{
+    return m_remarkHasBeenSet;
 }
 
 

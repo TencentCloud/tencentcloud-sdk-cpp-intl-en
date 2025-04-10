@@ -151,6 +151,27 @@ namespace TencentCloud
                      */
                     bool ClientCreditAfterHasBeenSet() const;
 
+                    /**
+                     * 获取Remark
+                     * @return Remark Remark
+                     * 
+                     */
+                    std::string GetRemark() const;
+
+                    /**
+                     * 设置Remark
+                     * @param _remark Remark
+                     * 
+                     */
+                    void SetRemark(const std::string& _remark);
+
+                    /**
+                     * 判断参数 Remark 是否已赋值
+                     * @return Remark 是否已赋值
+                     * 
+                     */
+                    bool RemarkHasBeenSet() const;
+
                 private:
 
                     /**
@@ -182,6 +203,12 @@ namespace TencentCloud
                      */
                     double m_clientCreditAfter;
                     bool m_clientCreditAfterHasBeenSet;
+
+                    /**
+                     * Remark
+                     */
+                    std::string m_remark;
+                    bool m_remarkHasBeenSet;
 
                 };
             }
