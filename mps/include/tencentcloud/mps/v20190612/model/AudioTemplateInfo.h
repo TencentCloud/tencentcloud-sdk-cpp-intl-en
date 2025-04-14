@@ -48,79 +48,83 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Audio stream encoding format.
-When audio transcoding is not needed, the value is:
+                     * 获取Specifies the encoding format of the audio stream.
+When audio transcoding is not needed, the optional values are:.
 <li>copy.</li>
-When the outer parameter Container is mp3, the value is:
+When the outer parameter Container is mp3, the valid values are:.
 <li>mp3.</li>
-When the outer parameter Container is ogg or flac, the value is:
+When the outer parameter Container is ogg or flac, the valid values are:.
 <li>flac.</li>
-When the outer parameter Container is m4a, valid values are:
+When the outer parameter Container is m4a, valid values are:.
 <li>aac;</li>
 <li>ac3.</li>
-When the outer parameter Container is mp4 or flv, valid values are:
-<li>aac: more suitable for mp4;</li>
-<li>mp3: more suitable for flv;</li>
+When the outer parameter Container is mp4 or flv, valid values are:.
+<li>aac: more suitable for mp4;</li>.
+<li>mp3: more suitable for flv;</li>.
 <li>mp2.</li>
-When the outer parameter Container is hls, valid values are:
+When the outer parameter Container is hls, valid values are:.
 <li>aac;</li>
-<li>mp3.</li>
-                     * @return Codec Audio stream encoding format.
-When audio transcoding is not needed, the value is:
+<li>mp3;</li>
+<li>eac3: used when merging adaptive transcoding audio tracks.</li>.
+                     * @return Codec Specifies the encoding format of the audio stream.
+When audio transcoding is not needed, the optional values are:.
 <li>copy.</li>
-When the outer parameter Container is mp3, the value is:
+When the outer parameter Container is mp3, the valid values are:.
 <li>mp3.</li>
-When the outer parameter Container is ogg or flac, the value is:
+When the outer parameter Container is ogg or flac, the valid values are:.
 <li>flac.</li>
-When the outer parameter Container is m4a, valid values are:
+When the outer parameter Container is m4a, valid values are:.
 <li>aac;</li>
 <li>ac3.</li>
-When the outer parameter Container is mp4 or flv, valid values are:
-<li>aac: more suitable for mp4;</li>
-<li>mp3: more suitable for flv;</li>
+When the outer parameter Container is mp4 or flv, valid values are:.
+<li>aac: more suitable for mp4;</li>.
+<li>mp3: more suitable for flv;</li>.
 <li>mp2.</li>
-When the outer parameter Container is hls, valid values are:
+When the outer parameter Container is hls, valid values are:.
 <li>aac;</li>
-<li>mp3.</li>
+<li>mp3;</li>
+<li>eac3: used when merging adaptive transcoding audio tracks.</li>.
                      * 
                      */
                     std::string GetCodec() const;
 
                     /**
-                     * 设置Audio stream encoding format.
-When audio transcoding is not needed, the value is:
+                     * 设置Specifies the encoding format of the audio stream.
+When audio transcoding is not needed, the optional values are:.
 <li>copy.</li>
-When the outer parameter Container is mp3, the value is:
+When the outer parameter Container is mp3, the valid values are:.
 <li>mp3.</li>
-When the outer parameter Container is ogg or flac, the value is:
+When the outer parameter Container is ogg or flac, the valid values are:.
 <li>flac.</li>
-When the outer parameter Container is m4a, valid values are:
+When the outer parameter Container is m4a, valid values are:.
 <li>aac;</li>
 <li>ac3.</li>
-When the outer parameter Container is mp4 or flv, valid values are:
-<li>aac: more suitable for mp4;</li>
-<li>mp3: more suitable for flv;</li>
+When the outer parameter Container is mp4 or flv, valid values are:.
+<li>aac: more suitable for mp4;</li>.
+<li>mp3: more suitable for flv;</li>.
 <li>mp2.</li>
-When the outer parameter Container is hls, valid values are:
+When the outer parameter Container is hls, valid values are:.
 <li>aac;</li>
-<li>mp3.</li>
-                     * @param _codec Audio stream encoding format.
-When audio transcoding is not needed, the value is:
+<li>mp3;</li>
+<li>eac3: used when merging adaptive transcoding audio tracks.</li>.
+                     * @param _codec Specifies the encoding format of the audio stream.
+When audio transcoding is not needed, the optional values are:.
 <li>copy.</li>
-When the outer parameter Container is mp3, the value is:
+When the outer parameter Container is mp3, the valid values are:.
 <li>mp3.</li>
-When the outer parameter Container is ogg or flac, the value is:
+When the outer parameter Container is ogg or flac, the valid values are:.
 <li>flac.</li>
-When the outer parameter Container is m4a, valid values are:
+When the outer parameter Container is m4a, valid values are:.
 <li>aac;</li>
 <li>ac3.</li>
-When the outer parameter Container is mp4 or flv, valid values are:
-<li>aac: more suitable for mp4;</li>
-<li>mp3: more suitable for flv;</li>
+When the outer parameter Container is mp4 or flv, valid values are:.
+<li>aac: more suitable for mp4;</li>.
+<li>mp3: more suitable for flv;</li>.
 <li>mp2.</li>
-When the outer parameter Container is hls, valid values are:
+When the outer parameter Container is hls, valid values are:.
 <li>aac;</li>
-<li>mp3.</li>
+<li>mp3;</li>
+<li>eac3: used when merging adaptive transcoding audio tracks.</li>.
                      * 
                      */
                     void SetCodec(const std::string& _codec);
@@ -133,19 +137,47 @@ When the outer parameter Container is hls, valid values are:
                     bool CodecHasBeenSet() const;
 
                     /**
-                     * 获取Audio stream bitrate in Kbps. Value range: 0 and [26, 256].
-If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
-                     * @return Bitrate Audio stream bitrate in Kbps. Value range: 0 and [26, 256].
-If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
+                     * 获取The bitrate of the audio stream. value ranges from 0 to 26 and in the range of [26, 256]. measurement unit: kbps.
+If the value is 0, the audio bitrate will be the same as that of the original audio.
+Specifies that when using the TrackChannelInfo parameter for adaptive transcoding audio track merging, the valid values are:.
+Cannot be set to 0.
+2). when Codec is aac, valid values: [26, 256].
+3). when Codec is ac3, valid values: [26, 640].
+4) when Codec is eac3, value range: [26, 6144]. remark: when SampleRate is 44100HZ, maximum value: 5644. when SampleRate is 48000HZ, maximum value: 6144.
+
+
+                     * @return Bitrate The bitrate of the audio stream. value ranges from 0 to 26 and in the range of [26, 256]. measurement unit: kbps.
+If the value is 0, the audio bitrate will be the same as that of the original audio.
+Specifies that when using the TrackChannelInfo parameter for adaptive transcoding audio track merging, the valid values are:.
+Cannot be set to 0.
+2). when Codec is aac, valid values: [26, 256].
+3). when Codec is ac3, valid values: [26, 640].
+4) when Codec is eac3, value range: [26, 6144]. remark: when SampleRate is 44100HZ, maximum value: 5644. when SampleRate is 48000HZ, maximum value: 6144.
+
+
                      * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
-                     * 设置Audio stream bitrate in Kbps. Value range: 0 and [26, 256].
-If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
-                     * @param _bitrate Audio stream bitrate in Kbps. Value range: 0 and [26, 256].
-If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
+                     * 设置The bitrate of the audio stream. value ranges from 0 to 26 and in the range of [26, 256]. measurement unit: kbps.
+If the value is 0, the audio bitrate will be the same as that of the original audio.
+Specifies that when using the TrackChannelInfo parameter for adaptive transcoding audio track merging, the valid values are:.
+Cannot be set to 0.
+2). when Codec is aac, valid values: [26, 256].
+3). when Codec is ac3, valid values: [26, 640].
+4) when Codec is eac3, value range: [26, 6144]. remark: when SampleRate is 44100HZ, maximum value: 5644. when SampleRate is 48000HZ, maximum value: 6144.
+
+
+                     * @param _bitrate The bitrate of the audio stream. value ranges from 0 to 26 and in the range of [26, 256]. measurement unit: kbps.
+If the value is 0, the audio bitrate will be the same as that of the original audio.
+Specifies that when using the TrackChannelInfo parameter for adaptive transcoding audio track merging, the valid values are:.
+Cannot be set to 0.
+2). when Codec is aac, valid values: [26, 256].
+3). when Codec is ac3, valid values: [26, 640].
+4) when Codec is eac3, value range: [26, 6144]. remark: when SampleRate is 44100HZ, maximum value: 5644. when SampleRate is 48000HZ, maximum value: 6144.
+
+
                      * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
@@ -158,31 +190,23 @@ If the value is 0, the bitrate of the audio stream will be the same as that of t
                     bool BitrateHasBeenSet() const;
 
                     /**
-                     * 获取Audio stream sample rate. Valid values:
-<li>32,000</li>
-<li>44,100</li>
-<li>48,000</li>
-In Hz.
-                     * @return SampleRate Audio stream sample rate. Valid values:
-<li>32,000</li>
-<li>44,100</li>
-<li>48,000</li>
-In Hz.
+                     * 获取The sampling rate of the audio stream. the supported sampling rate options vary for different encoding standards. for details, see audio sampling rate support scope document https://intl.cloud.tencent.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53.
+Unit: Hz.
+Please ensure that the sampling rate of the source audio stream is within the value range of the above options. otherwise, transcoding failure may occur.
+                     * @return SampleRate The sampling rate of the audio stream. the supported sampling rate options vary for different encoding standards. for details, see audio sampling rate support scope document https://intl.cloud.tencent.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53.
+Unit: Hz.
+Please ensure that the sampling rate of the source audio stream is within the value range of the above options. otherwise, transcoding failure may occur.
                      * 
                      */
                     uint64_t GetSampleRate() const;
 
                     /**
-                     * 设置Audio stream sample rate. Valid values:
-<li>32,000</li>
-<li>44,100</li>
-<li>48,000</li>
-In Hz.
-                     * @param _sampleRate Audio stream sample rate. Valid values:
-<li>32,000</li>
-<li>44,100</li>
-<li>48,000</li>
-In Hz.
+                     * 设置The sampling rate of the audio stream. the supported sampling rate options vary for different encoding standards. for details, see audio sampling rate support scope document https://intl.cloud.tencent.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53.
+Unit: Hz.
+Please ensure that the sampling rate of the source audio stream is within the value range of the above options. otherwise, transcoding failure may occur.
+                     * @param _sampleRate The sampling rate of the audio stream. the supported sampling rate options vary for different encoding standards. for details, see audio sampling rate support scope document https://intl.cloud.tencent.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53.
+Unit: Hz.
+Please ensure that the sampling rate of the source audio stream is within the value range of the above options. otherwise, transcoding failure may occur.
                      * 
                      */
                     void SetSampleRate(const uint64_t& _sampleRate);
@@ -267,40 +291,46 @@ Note: This field may return null, indicating that no valid value can be obtained
                 private:
 
                     /**
-                     * Audio stream encoding format.
-When audio transcoding is not needed, the value is:
+                     * Specifies the encoding format of the audio stream.
+When audio transcoding is not needed, the optional values are:.
 <li>copy.</li>
-When the outer parameter Container is mp3, the value is:
+When the outer parameter Container is mp3, the valid values are:.
 <li>mp3.</li>
-When the outer parameter Container is ogg or flac, the value is:
+When the outer parameter Container is ogg or flac, the valid values are:.
 <li>flac.</li>
-When the outer parameter Container is m4a, valid values are:
+When the outer parameter Container is m4a, valid values are:.
 <li>aac;</li>
 <li>ac3.</li>
-When the outer parameter Container is mp4 or flv, valid values are:
-<li>aac: more suitable for mp4;</li>
-<li>mp3: more suitable for flv;</li>
+When the outer parameter Container is mp4 or flv, valid values are:.
+<li>aac: more suitable for mp4;</li>.
+<li>mp3: more suitable for flv;</li>.
 <li>mp2.</li>
-When the outer parameter Container is hls, valid values are:
+When the outer parameter Container is hls, valid values are:.
 <li>aac;</li>
-<li>mp3.</li>
+<li>mp3;</li>
+<li>eac3: used when merging adaptive transcoding audio tracks.</li>.
                      */
                     std::string m_codec;
                     bool m_codecHasBeenSet;
 
                     /**
-                     * Audio stream bitrate in Kbps. Value range: 0 and [26, 256].
-If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
+                     * The bitrate of the audio stream. value ranges from 0 to 26 and in the range of [26, 256]. measurement unit: kbps.
+If the value is 0, the audio bitrate will be the same as that of the original audio.
+Specifies that when using the TrackChannelInfo parameter for adaptive transcoding audio track merging, the valid values are:.
+Cannot be set to 0.
+2). when Codec is aac, valid values: [26, 256].
+3). when Codec is ac3, valid values: [26, 640].
+4) when Codec is eac3, value range: [26, 6144]. remark: when SampleRate is 44100HZ, maximum value: 5644. when SampleRate is 48000HZ, maximum value: 6144.
+
+
                      */
                     int64_t m_bitrate;
                     bool m_bitrateHasBeenSet;
 
                     /**
-                     * Audio stream sample rate. Valid values:
-<li>32,000</li>
-<li>44,100</li>
-<li>48,000</li>
-In Hz.
+                     * The sampling rate of the audio stream. the supported sampling rate options vary for different encoding standards. for details, see audio sampling rate support scope document https://intl.cloud.tencent.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53.
+Unit: Hz.
+Please ensure that the sampling rate of the source audio stream is within the value range of the above options. otherwise, transcoding failure may occur.
                      */
                     uint64_t m_sampleRate;
                     bool m_sampleRateHasBeenSet;

@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Resource ID.
+                     * 获取Resource tagging. the field content is user-customized.
 It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
-                     * @return ResourceId Resource ID.
+                     * @return ResourceId Resource tagging. the field content is user-customized.
 It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
                      * 
                      */
                     std::string GetResourceId() const;
 
                     /**
-                     * 设置Resource ID.
+                     * 设置Resource tagging. the field content is user-customized.
 It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
-                     * @param _resourceId Resource ID.
+                     * @param _resourceId Resource tagging. the field content is user-customized.
 It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
                      * 
                      */
@@ -72,23 +72,23 @@ It supports 1 to 128 characters consisting of digits, letters, underscores (_), 
                     bool ResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取Access address of the DRM vendor.
+                     * 获取DRM manufacturer access address. the field content is obtained from the drm manufacturer.
 
-Note: Different DRM vendors have different limits on the number of substreams. For example, PallyCon limits the number of substreams to no more than 5, and DRMtoday supports encryption of up to 9 substreams.
-                     * @return KeyServerUrl Access address of the DRM vendor.
+Note: different DRM manufacturers have different limitations on the number of substreams. for example, PallyCon limits the number of substreams to no more than 5, and DRMtoday only supports encryption of up to 9 substreams.
+                     * @return KeyServerUrl DRM manufacturer access address. the field content is obtained from the drm manufacturer.
 
-Note: Different DRM vendors have different limits on the number of substreams. For example, PallyCon limits the number of substreams to no more than 5, and DRMtoday supports encryption of up to 9 substreams.
+Note: different DRM manufacturers have different limitations on the number of substreams. for example, PallyCon limits the number of substreams to no more than 5, and DRMtoday only supports encryption of up to 9 substreams.
                      * 
                      */
                     std::string GetKeyServerUrl() const;
 
                     /**
-                     * 设置Access address of the DRM vendor.
+                     * 设置DRM manufacturer access address. the field content is obtained from the drm manufacturer.
 
-Note: Different DRM vendors have different limits on the number of substreams. For example, PallyCon limits the number of substreams to no more than 5, and DRMtoday supports encryption of up to 9 substreams.
-                     * @param _keyServerUrl Access address of the DRM vendor.
+Note: different DRM manufacturers have different limitations on the number of substreams. for example, PallyCon limits the number of substreams to no more than 5, and DRMtoday only supports encryption of up to 9 substreams.
+                     * @param _keyServerUrl DRM manufacturer access address. the field content is obtained from the drm manufacturer.
 
-Note: Different DRM vendors have different limits on the number of substreams. For example, PallyCon limits the number of substreams to no more than 5, and DRMtoday supports encryption of up to 9 substreams.
+Note: different DRM manufacturers have different limitations on the number of substreams. for example, PallyCon limits the number of substreams to no more than 5, and DRMtoday only supports encryption of up to 9 substreams.
                      * 
                      */
                     void SetKeyServerUrl(const std::string& _keyServerUrl);
@@ -101,15 +101,15 @@ Note: Different DRM vendors have different limits on the number of substreams. F
                     bool KeyServerUrlHasBeenSet() const;
 
                     /**
-                     * 获取Initialization vector (32-byte string) for encryption.
-                     * @return Vector Initialization vector (32-byte string) for encryption.
+                     * 获取Encryption initialization vector (32-byte string). the field content is user-customized.
+                     * @return Vector Encryption initialization vector (32-byte string). the field content is user-customized.
                      * 
                      */
                     std::string GetVector() const;
 
                     /**
-                     * 设置Initialization vector (32-byte string) for encryption.
-                     * @param _vector Initialization vector (32-byte string) for encryption.
+                     * 设置Encryption initialization vector (32-byte string). the field content is user-customized.
+                     * @param _vector Encryption initialization vector (32-byte string). the field content is user-customized.
                      * 
                      */
                     void SetVector(const std::string& _vector);
@@ -190,22 +190,22 @@ preset1: use different keys for each substream
                 private:
 
                     /**
-                     * Resource ID.
+                     * Resource tagging. the field content is user-customized.
 It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
                      */
                     std::string m_resourceId;
                     bool m_resourceIdHasBeenSet;
 
                     /**
-                     * Access address of the DRM vendor.
+                     * DRM manufacturer access address. the field content is obtained from the drm manufacturer.
 
-Note: Different DRM vendors have different limits on the number of substreams. For example, PallyCon limits the number of substreams to no more than 5, and DRMtoday supports encryption of up to 9 substreams.
+Note: different DRM manufacturers have different limitations on the number of substreams. for example, PallyCon limits the number of substreams to no more than 5, and DRMtoday only supports encryption of up to 9 substreams.
                      */
                     std::string m_keyServerUrl;
                     bool m_keyServerUrlHasBeenSet;
 
                     /**
-                     * Initialization vector (32-byte string) for encryption.
+                     * Encryption initialization vector (32-byte string). the field content is user-customized.
                      */
                     std::string m_vector;
                     bool m_vectorHasBeenSet;

@@ -157,31 +157,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BitrateHasBeenSet() const;
 
                     /**
-                     * 获取Audio stream sample rate. Valid values:
-<li>32,000</li>
-<li>44,100</li>
-<li>48,000</li>
-In Hz.
-                     * @return SampleRate Audio stream sample rate. Valid values:
-<li>32,000</li>
-<li>44,100</li>
-<li>48,000</li>
-In Hz.
+                     * 获取The sampling rate of the audio stream. the supported sampling rate options vary for different encoding standards. for details, see audio sampling rate support scope document https://intl.cloud.tencent.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53.
+Please ensure that the sampling rate of the source audio stream is within the value range of the above options. otherwise, transcoding failure may occur.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return SampleRate The sampling rate of the audio stream. the supported sampling rate options vary for different encoding standards. for details, see audio sampling rate support scope document https://intl.cloud.tencent.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53.
+Please ensure that the sampling rate of the source audio stream is within the value range of the above options. otherwise, transcoding failure may occur.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     uint64_t GetSampleRate() const;
 
                     /**
-                     * 设置Audio stream sample rate. Valid values:
-<li>32,000</li>
-<li>44,100</li>
-<li>48,000</li>
-In Hz.
-                     * @param _sampleRate Audio stream sample rate. Valid values:
-<li>32,000</li>
-<li>44,100</li>
-<li>48,000</li>
-In Hz.
+                     * 设置The sampling rate of the audio stream. the supported sampling rate options vary for different encoding standards. for details, see audio sampling rate support scope document https://intl.cloud.tencent.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53.
+Please ensure that the sampling rate of the source audio stream is within the value range of the above options. otherwise, transcoding failure may occur.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _sampleRate The sampling rate of the audio stream. the supported sampling rate options vary for different encoding standards. for details, see audio sampling rate support scope document https://intl.cloud.tencent.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53.
+Please ensure that the sampling rate of the source audio stream is within the value range of the above options. otherwise, transcoding failure may occur.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetSampleRate(const uint64_t& _sampleRate);
@@ -287,11 +279,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_bitrateHasBeenSet;
 
                     /**
-                     * Audio stream sample rate. Valid values:
-<li>32,000</li>
-<li>44,100</li>
-<li>48,000</li>
-In Hz.
+                     * The sampling rate of the audio stream. the supported sampling rate options vary for different encoding standards. for details, see audio sampling rate support scope document https://intl.cloud.tencent.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53.
+Please ensure that the sampling rate of the source audio stream is within the value range of the above options. otherwise, transcoding failure may occur.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     uint64_t m_sampleRate;
                     bool m_sampleRateHasBeenSet;

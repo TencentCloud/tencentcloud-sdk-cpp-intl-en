@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable audio mix. valid values:.
-0: indicates not enabling audio mix.
-1: Indicates enabling audio mix.
+                     * 获取Whether to enable the feature of multi-audio track mixing. valid values:
+0: indicates not enabling multi-audio track mix.
+1: Indicates enabling multi-audio track mixing.
 Default value: 0
 
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return ChannelsRemix Whether to enable audio mix. valid values:.
-0: indicates not enabling audio mix.
-1: Indicates enabling audio mix.
+                     * @return ChannelsRemix Whether to enable the feature of multi-audio track mixing. valid values:
+0: indicates not enabling multi-audio track mix.
+1: Indicates enabling multi-audio track mixing.
 Default value: 0
 
 Note: This field may return null, indicating that no valid value can be obtained.
@@ -65,15 +65,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     int64_t GetChannelsRemix() const;
 
                     /**
-                     * 设置Whether to enable audio mix. valid values:.
-0: indicates not enabling audio mix.
-1: Indicates enabling audio mix.
+                     * 设置Whether to enable the feature of multi-audio track mixing. valid values:
+0: indicates not enabling multi-audio track mix.
+1: Indicates enabling multi-audio track mixing.
 Default value: 0
 
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _channelsRemix Whether to enable audio mix. valid values:.
-0: indicates not enabling audio mix.
-1: Indicates enabling audio mix.
+                     * @param _channelsRemix Whether to enable the feature of multi-audio track mixing. valid values:
+0: indicates not enabling multi-audio track mix.
+1: Indicates enabling multi-audio track mixing.
 Default value: 0
 
 Note: This field may return null, indicating that no valid value can be obtained.
@@ -89,34 +89,34 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ChannelsRemixHasBeenSet() const;
 
                     /**
-                     * 获取Audio track input type. valid values:.
-trask: indicates usage of the audio track id.
-trask_channel: indicates usage of the audio track id and sound channel id.
-Default: trask.
-If the original aduio track is multichannel, recommend using trask_channel.
+                     * 获取Set the selector type for the input audio track. valid values:
+Track: indicates the usage of audio track id;.
+Track_channel: indicates the usage of the audio track id and sound channel id.
+Default: track.
+If the original video has multiple channels, it is recommended to use track_channel.
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return SelectType Audio track input type. valid values:.
-trask: indicates usage of the audio track id.
-trask_channel: indicates usage of the audio track id and sound channel id.
-Default: trask.
-If the original aduio track is multichannel, recommend using trask_channel.
+                     * @return SelectType Set the selector type for the input audio track. valid values:
+Track: indicates the usage of audio track id;.
+Track_channel: indicates the usage of the audio track id and sound channel id.
+Default: track.
+If the original video has multiple channels, it is recommended to use track_channel.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetSelectType() const;
 
                     /**
-                     * 设置Audio track input type. valid values:.
-trask: indicates usage of the audio track id.
-trask_channel: indicates usage of the audio track id and sound channel id.
-Default: trask.
-If the original aduio track is multichannel, recommend using trask_channel.
+                     * 设置Set the selector type for the input audio track. valid values:
+Track: indicates the usage of audio track id;.
+Track_channel: indicates the usage of the audio track id and sound channel id.
+Default: track.
+If the original video has multiple channels, it is recommended to use track_channel.
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _selectType Audio track input type. valid values:.
-trask: indicates usage of the audio track id.
-trask_channel: indicates usage of the audio track id and sound channel id.
-Default: trask.
-If the original aduio track is multichannel, recommend using trask_channel.
+                     * @param _selectType Set the selector type for the input audio track. valid values:
+Track: indicates the usage of audio track id;.
+Track_channel: indicates the usage of the audio track id and sound channel id.
+Default: track.
+If the original video has multiple channels, it is recommended to use track_channel.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
@@ -157,9 +157,9 @@ Note: This field may return null, indicating that no valid value can be obtained
                 private:
 
                     /**
-                     * Whether to enable audio mix. valid values:.
-0: indicates not enabling audio mix.
-1: Indicates enabling audio mix.
+                     * Whether to enable the feature of multi-audio track mixing. valid values:
+0: indicates not enabling multi-audio track mix.
+1: Indicates enabling multi-audio track mixing.
 Default value: 0
 
 Note: This field may return null, indicating that no valid value can be obtained.
@@ -168,11 +168,11 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_channelsRemixHasBeenSet;
 
                     /**
-                     * Audio track input type. valid values:.
-trask: indicates usage of the audio track id.
-trask_channel: indicates usage of the audio track id and sound channel id.
-Default: trask.
-If the original aduio track is multichannel, recommend using trask_channel.
+                     * Set the selector type for the input audio track. valid values:
+Track: indicates the usage of audio track id;.
+Track_channel: indicates the usage of the audio track id and sound channel id.
+Default: track.
+If the original video has multiple channels, it is recommended to use track_channel.
 Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_selectType;

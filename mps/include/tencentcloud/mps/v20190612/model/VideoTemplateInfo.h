@@ -573,31 +573,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FpsDenominatorHasBeenSet() const;
 
                     /**
-                     * 获取3D video splicing mode, which is only valid for MV-HEVC 3D videos. Valid values:
-<li>side_by_side: side-by-side view.</li>
-<li>top_bottom: top-bottom view.</li>
+                     * 获取3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:.
+<Li>Side_by_side: the original video content is arranged in a left-right layout.</li>.
+<li>top_bottom: vertical layout arrangement of original video content.</li>.
+Submit the amount and cost based on the segmented resolution size.
 Default value: side_by_side.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Stereo3dType 3D video splicing mode, which is only valid for MV-HEVC 3D videos. Valid values:
-<li>side_by_side: side-by-side view.</li>
-<li>top_bottom: top-bottom view.</li>
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return Stereo3dType 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:.
+<Li>Side_by_side: the original video content is arranged in a left-right layout.</li>.
+<li>top_bottom: vertical layout arrangement of original video content.</li>.
+Submit the amount and cost based on the segmented resolution size.
 Default value: side_by_side.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetStereo3dType() const;
 
                     /**
-                     * 设置3D video splicing mode, which is only valid for MV-HEVC 3D videos. Valid values:
-<li>side_by_side: side-by-side view.</li>
-<li>top_bottom: top-bottom view.</li>
+                     * 设置3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:.
+<Li>Side_by_side: the original video content is arranged in a left-right layout.</li>.
+<li>top_bottom: vertical layout arrangement of original video content.</li>.
+Submit the amount and cost based on the segmented resolution size.
 Default value: side_by_side.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _stereo3dType 3D video splicing mode, which is only valid for MV-HEVC 3D videos. Valid values:
-<li>side_by_side: side-by-side view.</li>
-<li>top_bottom: top-bottom view.</li>
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _stereo3dType 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:.
+<Li>Side_by_side: the original video content is arranged in a left-right layout.</li>.
+<li>top_bottom: vertical layout arrangement of original video content.</li>.
+Submit the amount and cost based on the segmented resolution size.
 Default value: side_by_side.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetStereo3dType(const std::string& _stereo3dType);
@@ -1254,11 +1258,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_fpsDenominatorHasBeenSet;
 
                     /**
-                     * 3D video splicing mode, which is only valid for MV-HEVC 3D videos. Valid values:
-<li>side_by_side: side-by-side view.</li>
-<li>top_bottom: top-bottom view.</li>
+                     * 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:.
+<Li>Side_by_side: the original video content is arranged in a left-right layout.</li>.
+<li>top_bottom: vertical layout arrangement of original video content.</li>.
+Submit the amount and cost based on the segmented resolution size.
 Default value: side_by_side.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_stereo3dType;
                     bool m_stereo3dTypeHasBeenSet;

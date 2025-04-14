@@ -149,22 +149,22 @@ namespace TencentCloud
                     bool RemoveVideoHasBeenSet() const;
 
                     /**
-                     * 获取List of audio parameter information.
-The parameter array has a maximum length of 64.
+                     * 获取Audio parameter information list.
+The parameter is only used when merging multiple audio tracks with self-adaptive transcoding. the maximum length of the parameter array is 64.
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return AudioList List of audio parameter information.
-The parameter array has a maximum length of 64.
+                     * @return AudioList Audio parameter information list.
+The parameter is only used when merging multiple audio tracks with self-adaptive transcoding. the maximum length of the parameter array is 64.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::vector<AudioTemplateInfo> GetAudioList() const;
 
                     /**
-                     * 设置List of audio parameter information.
-The parameter array has a maximum length of 64.
+                     * 设置Audio parameter information list.
+The parameter is only used when merging multiple audio tracks with self-adaptive transcoding. the maximum length of the parameter array is 64.
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _audioList List of audio parameter information.
-The parameter array has a maximum length of 64.
+                     * @param _audioList Audio parameter information list.
+The parameter is only used when merging multiple audio tracks with self-adaptive transcoding. the maximum length of the parameter array is 64.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
@@ -208,8 +208,8 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_removeVideoHasBeenSet;
 
                     /**
-                     * List of audio parameter information.
-The parameter array has a maximum length of 64.
+                     * Audio parameter information list.
+The parameter is only used when merging multiple audio tracks with self-adaptive transcoding. the maximum length of the parameter array is 64.
 Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::vector<AudioTemplateInfo> m_audioList;
