@@ -483,6 +483,48 @@ namespace TencentCloud
                      */
                     bool EnvHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return GroupByType 
+                     * 
+                     */
+                    int64_t GetGroupByType() const;
+
+                    /**
+                     * 设置
+                     * @param _groupByType 
+                     * 
+                     */
+                    void SetGroupByType(const int64_t& _groupByType);
+
+                    /**
+                     * 判断参数 GroupByType 是否已赋值
+                     * @return GroupByType 是否已赋值
+                     * 
+                     */
+                    bool GroupByTypeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return IsNewData 
+                     * 
+                     */
+                    int64_t GetIsNewData() const;
+
+                    /**
+                     * 设置
+                     * @param _isNewData 
+                     * 
+                     */
+                    void SetIsNewData(const int64_t& _isNewData);
+
+                    /**
+                     * 判断参数 IsNewData 是否已赋值
+                     * @return IsNewData 是否已赋值
+                     * 
+                     */
+                    bool IsNewDataHasBeenSet() const;
+
                 private:
 
                     /**
@@ -610,6 +652,18 @@ namespace TencentCloud
                      */
                     std::string m_env;
                     bool m_envHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_groupByType;
+                    bool m_groupByTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_isNewData;
+                    bool m_isNewDataHasBeenSet;
 
                 };
             }

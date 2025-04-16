@@ -33,7 +33,8 @@ HlsRemuxSettingsInfo::HlsRemuxSettingsInfo() :
     m_partialSegmentPlaySiteHasBeenSet(false),
     m_streamOrderHasBeenSet(false),
     m_videoResolutionHasBeenSet(false),
-    m_endListTagHasBeenSet(false)
+    m_endListTagHasBeenSet(false),
+    m_adMarkupTypeHasBeenSet(false)
 {
 }
 
@@ -172,6 +173,16 @@ CoreInternalOutcome HlsRemuxSettingsInfo::Deserialize(const rapidjson::Value &va
         m_endListTagHasBeenSet = true;
     }
 
+    if (value.HasMember("AdMarkupType") && !value["AdMarkupType"].IsNull())
+    {
+        if (!value["AdMarkupType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `HlsRemuxSettingsInfo.AdMarkupType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_adMarkupType = string(value["AdMarkupType"].GetString());
+        m_adMarkupTypeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -281,6 +292,14 @@ void HlsRemuxSettingsInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Docu
         string key = "EndListTag";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_endListTag, allocator);
+    }
+
+    if (m_adMarkupTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AdMarkupType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_adMarkupType.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -492,5 +511,21 @@ void HlsRemuxSettingsInfo::SetEndListTag(const int64_t& _endListTag)
 bool HlsRemuxSettingsInfo::EndListTagHasBeenSet() const
 {
     return m_endListTagHasBeenSet;
+}
+
+string HlsRemuxSettingsInfo::GetAdMarkupType() const
+{
+    return m_adMarkupType;
+}
+
+void HlsRemuxSettingsInfo::SetAdMarkupType(const string& _adMarkupType)
+{
+    m_adMarkupType = _adMarkupType;
+    m_adMarkupTypeHasBeenSet = true;
+}
+
+bool HlsRemuxSettingsInfo::AdMarkupTypeHasBeenSet() const
+{
+    return m_adMarkupTypeHasBeenSet;
 }
 

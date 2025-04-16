@@ -323,6 +323,27 @@ Currently, fMP4 segments do not support DRM or time shifting.
                      */
                     bool EndListTagHasBeenSet() const;
 
+                    /**
+                     * 获取Optional: `ENHANCED_SCTE35`, `DATERANGE`; default value: `ENHANCED_SCTE35`.
+                     * @return AdMarkupType Optional: `ENHANCED_SCTE35`, `DATERANGE`; default value: `ENHANCED_SCTE35`.
+                     * 
+                     */
+                    std::string GetAdMarkupType() const;
+
+                    /**
+                     * 设置Optional: `ENHANCED_SCTE35`, `DATERANGE`; default value: `ENHANCED_SCTE35`.
+                     * @param _adMarkupType Optional: `ENHANCED_SCTE35`, `DATERANGE`; default value: `ENHANCED_SCTE35`.
+                     * 
+                     */
+                    void SetAdMarkupType(const std::string& _adMarkupType);
+
+                    /**
+                     * 判断参数 AdMarkupType 是否已赋值
+                     * @return AdMarkupType 是否已赋值
+                     * 
+                     */
+                    bool AdMarkupTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -403,6 +424,12 @@ Currently, fMP4 segments do not support DRM or time shifting.
                      */
                     int64_t m_endListTag;
                     bool m_endListTagHasBeenSet;
+
+                    /**
+                     * Optional: `ENHANCED_SCTE35`, `DATERANGE`; default value: `ENHANCED_SCTE35`.
+                     */
+                    std::string m_adMarkupType;
+                    bool m_adMarkupTypeHasBeenSet;
 
                 };
             }

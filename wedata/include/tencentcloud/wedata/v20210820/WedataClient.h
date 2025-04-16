@@ -373,16 +373,22 @@
 #include <tencentcloud/wedata/v20210820/model/GenHiveTableDDLSqlResponse.h>
 #include <tencentcloud/wedata/v20210820/model/GetFileInfoRequest.h>
 #include <tencentcloud/wedata/v20210820/model/GetFileInfoResponse.h>
+#include <tencentcloud/wedata/v20210820/model/GetInstanceLogRequest.h>
+#include <tencentcloud/wedata/v20210820/model/GetInstanceLogResponse.h>
 #include <tencentcloud/wedata/v20210820/model/GetIntegrationNodeColumnSchemaRequest.h>
 #include <tencentcloud/wedata/v20210820/model/GetIntegrationNodeColumnSchemaResponse.h>
 #include <tencentcloud/wedata/v20210820/model/GetOfflineDIInstanceListRequest.h>
 #include <tencentcloud/wedata/v20210820/model/GetOfflineDIInstanceListResponse.h>
 #include <tencentcloud/wedata/v20210820/model/GetOfflineInstanceListRequest.h>
 #include <tencentcloud/wedata/v20210820/model/GetOfflineInstanceListResponse.h>
+#include <tencentcloud/wedata/v20210820/model/GetTaskInstanceRequest.h>
+#include <tencentcloud/wedata/v20210820/model/GetTaskInstanceResponse.h>
 #include <tencentcloud/wedata/v20210820/model/KillOpsMakePlanInstancesRequest.h>
 #include <tencentcloud/wedata/v20210820/model/KillOpsMakePlanInstancesResponse.h>
 #include <tencentcloud/wedata/v20210820/model/KillScheduleInstancesRequest.h>
 #include <tencentcloud/wedata/v20210820/model/KillScheduleInstancesResponse.h>
+#include <tencentcloud/wedata/v20210820/model/ListInstancesRequest.h>
+#include <tencentcloud/wedata/v20210820/model/ListInstancesResponse.h>
 #include <tencentcloud/wedata/v20210820/model/LockIntegrationTaskRequest.h>
 #include <tencentcloud/wedata/v20210820/model/LockIntegrationTaskResponse.h>
 #include <tencentcloud/wedata/v20210820/model/ModifyApproveStatusRequest.h>
@@ -1010,6 +1016,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::GetFileInfoResponse> GetFileInfoOutcome;
                 typedef std::future<GetFileInfoOutcome> GetFileInfoOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::GetFileInfoRequest&, GetFileInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetFileInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetInstanceLogResponse> GetInstanceLogOutcome;
+                typedef std::future<GetInstanceLogOutcome> GetInstanceLogOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::GetInstanceLogRequest&, GetInstanceLogOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetInstanceLogAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetIntegrationNodeColumnSchemaResponse> GetIntegrationNodeColumnSchemaOutcome;
                 typedef std::future<GetIntegrationNodeColumnSchemaOutcome> GetIntegrationNodeColumnSchemaOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::GetIntegrationNodeColumnSchemaRequest&, GetIntegrationNodeColumnSchemaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetIntegrationNodeColumnSchemaAsyncHandler;
@@ -1019,12 +1028,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::GetOfflineInstanceListResponse> GetOfflineInstanceListOutcome;
                 typedef std::future<GetOfflineInstanceListOutcome> GetOfflineInstanceListOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::GetOfflineInstanceListRequest&, GetOfflineInstanceListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetOfflineInstanceListAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetTaskInstanceResponse> GetTaskInstanceOutcome;
+                typedef std::future<GetTaskInstanceOutcome> GetTaskInstanceOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::GetTaskInstanceRequest&, GetTaskInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetTaskInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::KillOpsMakePlanInstancesResponse> KillOpsMakePlanInstancesOutcome;
                 typedef std::future<KillOpsMakePlanInstancesOutcome> KillOpsMakePlanInstancesOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::KillOpsMakePlanInstancesRequest&, KillOpsMakePlanInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> KillOpsMakePlanInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::KillScheduleInstancesResponse> KillScheduleInstancesOutcome;
                 typedef std::future<KillScheduleInstancesOutcome> KillScheduleInstancesOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::KillScheduleInstancesRequest&, KillScheduleInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> KillScheduleInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListInstancesResponse> ListInstancesOutcome;
+                typedef std::future<ListInstancesOutcome> ListInstancesOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::ListInstancesRequest&, ListInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::LockIntegrationTaskResponse> LockIntegrationTaskOutcome;
                 typedef std::future<LockIntegrationTaskOutcome> LockIntegrationTaskOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::LockIntegrationTaskRequest&, LockIntegrationTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> LockIntegrationTaskAsyncHandler;
@@ -2739,6 +2754,15 @@ namespace TencentCloud
                 GetFileInfoOutcomeCallable GetFileInfoCallable(const Model::GetFileInfoRequest& request);
 
                 /**
+                 *This API is used to obtain instance lists.
+                 * @param req GetInstanceLogRequest
+                 * @return GetInstanceLogOutcome
+                 */
+                GetInstanceLogOutcome GetInstanceLog(const Model::GetInstanceLogRequest &request);
+                void GetInstanceLogAsync(const Model::GetInstanceLogRequest& request, const GetInstanceLogAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetInstanceLogOutcomeCallable GetInstanceLogCallable(const Model::GetInstanceLogRequest& request);
+
+                /**
                  *Extracting DataInLong Node Field Schema
                  * @param req GetIntegrationNodeColumnSchemaRequest
                  * @return GetIntegrationNodeColumnSchemaOutcome
@@ -2766,6 +2790,15 @@ namespace TencentCloud
                 GetOfflineInstanceListOutcomeCallable GetOfflineInstanceListCallable(const Model::GetOfflineInstanceListRequest& request);
 
                 /**
+                 *This API is used to obtain instance lists.
+                 * @param req GetTaskInstanceRequest
+                 * @return GetTaskInstanceOutcome
+                 */
+                GetTaskInstanceOutcome GetTaskInstance(const Model::GetTaskInstanceRequest &request);
+                void GetTaskInstanceAsync(const Model::GetTaskInstanceRequest& request, const GetTaskInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetTaskInstanceOutcomeCallable GetTaskInstanceCallable(const Model::GetTaskInstanceRequest& request);
+
+                /**
                  *Batch Termination of Instances by Supplement Plan.
                  * @param req KillOpsMakePlanInstancesRequest
                  * @return KillOpsMakePlanInstancesOutcome
@@ -2782,6 +2815,15 @@ namespace TencentCloud
                 KillScheduleInstancesOutcome KillScheduleInstances(const Model::KillScheduleInstancesRequest &request);
                 void KillScheduleInstancesAsync(const Model::KillScheduleInstancesRequest& request, const KillScheduleInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 KillScheduleInstancesOutcomeCallable KillScheduleInstancesCallable(const Model::KillScheduleInstancesRequest& request);
+
+                /**
+                 *This API is used to obtain instance lists.
+                 * @param req ListInstancesRequest
+                 * @return ListInstancesOutcome
+                 */
+                ListInstancesOutcome ListInstances(const Model::ListInstancesRequest &request);
+                void ListInstancesAsync(const Model::ListInstancesRequest& request, const ListInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListInstancesOutcomeCallable ListInstancesCallable(const Model::ListInstancesRequest& request);
 
                 /**
                  *Lock Integration Task

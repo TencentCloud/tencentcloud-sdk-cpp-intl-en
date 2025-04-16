@@ -31,7 +31,9 @@ SSAIConf::SSAIConf() :
     m_adTriggersHasBeenSet(false),
     m_deliveryRestrictionsHasBeenSet(false),
     m_sourceCDNPrefixHasBeenSet(false),
-    m_adCDNPrefixHasBeenSet(false)
+    m_adCDNPrefixHasBeenSet(false),
+    m_preRollAdsUrlHasBeenSet(false),
+    m_preRollMaxAllowedDurationHasBeenSet(false)
 {
 }
 
@@ -163,6 +165,26 @@ CoreInternalOutcome SSAIConf::Deserialize(const rapidjson::Value &value)
         m_adCDNPrefixHasBeenSet = true;
     }
 
+    if (value.HasMember("PreRollAdsUrl") && !value["PreRollAdsUrl"].IsNull())
+    {
+        if (!value["PreRollAdsUrl"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SSAIConf.PreRollAdsUrl` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_preRollAdsUrl = string(value["PreRollAdsUrl"].GetString());
+        m_preRollAdsUrlHasBeenSet = true;
+    }
+
+    if (value.HasMember("PreRollMaxAllowedDuration") && !value["PreRollMaxAllowedDuration"].IsNull())
+    {
+        if (!value["PreRollMaxAllowedDuration"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `SSAIConf.PreRollMaxAllowedDuration` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_preRollMaxAllowedDuration = value["PreRollMaxAllowedDuration"].GetInt64();
+        m_preRollMaxAllowedDurationHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -268,6 +290,22 @@ void SSAIConf::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Alloca
         string key = "AdCDNPrefix";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_adCDNPrefix.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_preRollAdsUrlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PreRollAdsUrl";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_preRollAdsUrl.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_preRollMaxAllowedDurationHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PreRollMaxAllowedDuration";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_preRollMaxAllowedDuration, allocator);
     }
 
 }
@@ -447,5 +485,37 @@ void SSAIConf::SetAdCDNPrefix(const string& _adCDNPrefix)
 bool SSAIConf::AdCDNPrefixHasBeenSet() const
 {
     return m_adCDNPrefixHasBeenSet;
+}
+
+string SSAIConf::GetPreRollAdsUrl() const
+{
+    return m_preRollAdsUrl;
+}
+
+void SSAIConf::SetPreRollAdsUrl(const string& _preRollAdsUrl)
+{
+    m_preRollAdsUrl = _preRollAdsUrl;
+    m_preRollAdsUrlHasBeenSet = true;
+}
+
+bool SSAIConf::PreRollAdsUrlHasBeenSet() const
+{
+    return m_preRollAdsUrlHasBeenSet;
+}
+
+int64_t SSAIConf::GetPreRollMaxAllowedDuration() const
+{
+    return m_preRollMaxAllowedDuration;
+}
+
+void SSAIConf::SetPreRollMaxAllowedDuration(const int64_t& _preRollMaxAllowedDuration)
+{
+    m_preRollMaxAllowedDuration = _preRollMaxAllowedDuration;
+    m_preRollMaxAllowedDurationHasBeenSet = true;
+}
+
+bool SSAIConf::PreRollMaxAllowedDurationHasBeenSet() const
+{
+    return m_preRollMaxAllowedDurationHasBeenSet;
 }
 

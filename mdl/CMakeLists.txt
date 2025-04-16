@@ -107,8 +107,6 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveTranscodeDetailResponse.h
   include/tencentcloud/mdl/v20200326/model/CreateStreamLiveWatermarkResponse.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveInputsResponse.h
-  include/tencentcloud/mdl/v20200326/model/HighlightResInfoResp.h
-  include/tencentcloud/mdl/v20200326/model/ModifyStreamLiveChannelRequest.h
   include/tencentcloud/mdl/v20200326/model/ModifyStreamLiveInputResponse.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelAlertsResponse.h
   include/tencentcloud/mdl/v20200326/model/PlanResp.h
@@ -128,7 +126,6 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/VideoCodecDetail.h
   include/tencentcloud/mdl/v20200326/model/CreateStreamLiveChannelResponse.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelInputStatisticsResponse.h
-  include/tencentcloud/mdl/v20200326/model/DescribeMediaLiveHighlightResultResponse.h
   include/tencentcloud/mdl/v20200326/model/StopStreamLiveChannelResponse.h
   include/tencentcloud/mdl/v20200326/model/PushEventSetting.h
   include/tencentcloud/mdl/v20200326/model/InputTrack.h
@@ -161,7 +158,7 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveInputsRequest.h
   include/tencentcloud/mdl/v20200326/model/Scte35SettingsInfo.h
   include/tencentcloud/mdl/v20200326/model/ModifyStreamLiveWatermarkResponse.h
-  include/tencentcloud/mdl/v20200326/model/DescribeMediaLiveHighlightResultRequest.h
+  include/tencentcloud/mdl/v20200326/model/ModifyStreamLiveChannelRequest.h
   include/tencentcloud/mdl/v20200326/model/DescribeTextSettings.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveInputSecurityGroupsRequest.h
   include/tencentcloud/mdl/v20200326/model/DeleteStreamLiveWatermarkResponse.h
@@ -264,8 +261,6 @@ set(mdl_src
   src/v20200326/model/DescribeStreamLiveTranscodeDetailResponse.cpp
   src/v20200326/model/CreateStreamLiveWatermarkResponse.cpp
   src/v20200326/model/DescribeStreamLiveInputsResponse.cpp
-  src/v20200326/model/HighlightResInfoResp.cpp
-  src/v20200326/model/ModifyStreamLiveChannelRequest.cpp
   src/v20200326/model/ModifyStreamLiveInputResponse.cpp
   src/v20200326/model/DescribeStreamLiveChannelAlertsResponse.cpp
   src/v20200326/model/PlanResp.cpp
@@ -285,7 +280,6 @@ set(mdl_src
   src/v20200326/model/VideoCodecDetail.cpp
   src/v20200326/model/CreateStreamLiveChannelResponse.cpp
   src/v20200326/model/DescribeStreamLiveChannelInputStatisticsResponse.cpp
-  src/v20200326/model/DescribeMediaLiveHighlightResultResponse.cpp
   src/v20200326/model/StopStreamLiveChannelResponse.cpp
   src/v20200326/model/PushEventSetting.cpp
   src/v20200326/model/InputTrack.cpp
@@ -318,7 +312,7 @@ set(mdl_src
   src/v20200326/model/DescribeStreamLiveInputsRequest.cpp
   src/v20200326/model/Scte35SettingsInfo.cpp
   src/v20200326/model/ModifyStreamLiveWatermarkResponse.cpp
-  src/v20200326/model/DescribeMediaLiveHighlightResultRequest.cpp
+  src/v20200326/model/ModifyStreamLiveChannelRequest.cpp
   src/v20200326/model/DescribeTextSettings.cpp
   src/v20200326/model/DescribeStreamLiveInputSecurityGroupsRequest.cpp
   src/v20200326/model/DeleteStreamLiveWatermarkResponse.cpp

@@ -47,15 +47,51 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance StatusNote: This field may return null, indicating that no valid value can be obtained.
-                     * @return State Instance StatusNote: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Indicates the status of an instance.
+-Indicates waiting for event.
+-[12] indicates waiting for upstream.
+-[6, 7, 9, 10, 18] indicates awaiting execution.
+-1, 19, 22 indicate running.
+-21: skip running.
+-[3] indicates retry on failure.
+-[8, 4, 5, 13] indicates a failure.
+-[2] indicates a success.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return State Indicates the status of an instance.
+-Indicates waiting for event.
+-[12] indicates waiting for upstream.
+-[6, 7, 9, 10, 18] indicates awaiting execution.
+-1, 19, 22 indicate running.
+-21: skip running.
+-[3] indicates retry on failure.
+-[8, 4, 5, 13] indicates a failure.
+-[2] indicates a success.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetState() const;
 
                     /**
-                     * 设置Instance StatusNote: This field may return null, indicating that no valid value can be obtained.
-                     * @param _state Instance StatusNote: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Indicates the status of an instance.
+-Indicates waiting for event.
+-[12] indicates waiting for upstream.
+-[6, 7, 9, 10, 18] indicates awaiting execution.
+-1, 19, 22 indicate running.
+-21: skip running.
+-[3] indicates retry on failure.
+-[8, 4, 5, 13] indicates a failure.
+-[2] indicates a success.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _state Indicates the status of an instance.
+-Indicates waiting for event.
+-[12] indicates waiting for upstream.
+-[6, 7, 9, 10, 18] indicates awaiting execution.
+-1, 19, 22 indicate running.
+-21: skip running.
+-[3] indicates retry on failure.
+-[8, 4, 5, 13] indicates a failure.
+-[2] indicates a success.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetState(const std::string& _state);
@@ -93,19 +129,55 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Instance Lifecycle Phase Status
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return DetailState Instance Lifecycle Phase Status
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Instance lifecycle phase status.
+
+-WAIT_UPSTREAM indicates waiting for event/upstream status.
+-WAIT_RUN indicates a waiting for running status.
+-RUNNING indicates a running state.
+-COMPLETE indicates the final state - completed.
+-FAILED indicates the final state - retry on failure.
+-EXPIRED indicates the final state - failure.
+-SKIP_RUNNING indicates the final state - a branch skipped by the upstream branch node.
+-HISTORY indicates compatibility with historical instances.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DetailState Instance lifecycle phase status.
+
+-WAIT_UPSTREAM indicates waiting for event/upstream status.
+-WAIT_RUN indicates a waiting for running status.
+-RUNNING indicates a running state.
+-COMPLETE indicates the final state - completed.
+-FAILED indicates the final state - retry on failure.
+-EXPIRED indicates the final state - failure.
+-SKIP_RUNNING indicates the final state - a branch skipped by the upstream branch node.
+-HISTORY indicates compatibility with historical instances.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDetailState() const;
 
                     /**
-                     * 设置Instance Lifecycle Phase Status
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _detailState Instance Lifecycle Phase Status
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Instance lifecycle phase status.
+
+-WAIT_UPSTREAM indicates waiting for event/upstream status.
+-WAIT_RUN indicates a waiting for running status.
+-RUNNING indicates a running state.
+-COMPLETE indicates the final state - completed.
+-FAILED indicates the final state - retry on failure.
+-EXPIRED indicates the final state - failure.
+-SKIP_RUNNING indicates the final state - a branch skipped by the upstream branch node.
+-HISTORY indicates compatibility with historical instances.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _detailState Instance lifecycle phase status.
+
+-WAIT_UPSTREAM indicates waiting for event/upstream status.
+-WAIT_RUN indicates a waiting for running status.
+-RUNNING indicates a running state.
+-COMPLETE indicates the final state - completed.
+-FAILED indicates the final state - retry on failure.
+-EXPIRED indicates the final state - failure.
+-SKIP_RUNNING indicates the final state - a branch skipped by the upstream branch node.
+-HISTORY indicates compatibility with historical instances.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDetailState(const std::string& _detailState);
@@ -145,7 +217,16 @@ Note: This field may return null, indicating that no valid value can be obtained
                 private:
 
                     /**
-                     * Instance StatusNote: This field may return null, indicating that no valid value can be obtained.
+                     * Indicates the status of an instance.
+-Indicates waiting for event.
+-[12] indicates waiting for upstream.
+-[6, 7, 9, 10, 18] indicates awaiting execution.
+-1, 19, 22 indicate running.
+-21: skip running.
+-[3] indicates retry on failure.
+-[8, 4, 5, 13] indicates a failure.
+-[2] indicates a success.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_state;
                     bool m_stateHasBeenSet;
@@ -158,8 +239,17 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Instance Lifecycle Phase Status
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Instance lifecycle phase status.
+
+-WAIT_UPSTREAM indicates waiting for event/upstream status.
+-WAIT_RUN indicates a waiting for running status.
+-RUNNING indicates a running state.
+-COMPLETE indicates the final state - completed.
+-FAILED indicates the final state - retry on failure.
+-EXPIRED indicates the final state - failure.
+-SKIP_RUNNING indicates the final state - a branch skipped by the upstream branch node.
+-HISTORY indicates compatibility with historical instances.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_detailState;
                     bool m_detailStateHasBeenSet;

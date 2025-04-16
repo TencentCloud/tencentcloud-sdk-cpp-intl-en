@@ -334,6 +334,48 @@ namespace TencentCloud
                      */
                     bool AdCDNPrefixHasBeenSet() const;
 
+                    /**
+                     * 获取Pre-roll ad decision service address.
+                     * @return PreRollAdsUrl Pre-roll ad decision service address.
+                     * 
+                     */
+                    std::string GetPreRollAdsUrl() const;
+
+                    /**
+                     * 设置Pre-roll ad decision service address.
+                     * @param _preRollAdsUrl Pre-roll ad decision service address.
+                     * 
+                     */
+                    void SetPreRollAdsUrl(const std::string& _preRollAdsUrl);
+
+                    /**
+                     * 判断参数 PreRollAdsUrl 是否已赋值
+                     * @return PreRollAdsUrl 是否已赋值
+                     * 
+                     */
+                    bool PreRollAdsUrlHasBeenSet() const;
+
+                    /**
+                     * 获取The maximum allowed duration of pre-roll ads, (0, 3600].
+                     * @return PreRollMaxAllowedDuration The maximum allowed duration of pre-roll ads, (0, 3600].
+                     * 
+                     */
+                    int64_t GetPreRollMaxAllowedDuration() const;
+
+                    /**
+                     * 设置The maximum allowed duration of pre-roll ads, (0, 3600].
+                     * @param _preRollMaxAllowedDuration The maximum allowed duration of pre-roll ads, (0, 3600].
+                     * 
+                     */
+                    void SetPreRollMaxAllowedDuration(const int64_t& _preRollMaxAllowedDuration);
+
+                    /**
+                     * 判断参数 PreRollMaxAllowedDuration 是否已赋值
+                     * @return PreRollMaxAllowedDuration 是否已赋值
+                     * 
+                     */
+                    bool PreRollMaxAllowedDurationHasBeenSet() const;
+
                 private:
 
                     /**
@@ -415,6 +457,18 @@ namespace TencentCloud
                      */
                     std::string m_adCDNPrefix;
                     bool m_adCDNPrefixHasBeenSet;
+
+                    /**
+                     * Pre-roll ad decision service address.
+                     */
+                    std::string m_preRollAdsUrl;
+                    bool m_preRollAdsUrlHasBeenSet;
+
+                    /**
+                     * The maximum allowed duration of pre-roll ads, (0, 3600].
+                     */
+                    int64_t m_preRollMaxAllowedDuration;
+                    bool m_preRollMaxAllowedDurationHasBeenSet;
 
                 };
             }
