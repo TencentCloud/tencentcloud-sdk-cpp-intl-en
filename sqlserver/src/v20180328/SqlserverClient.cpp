@@ -1717,6 +1717,49 @@ SqlserverClient::DescribeInstanceParamsOutcomeCallable SqlserverClient::Describe
     return task->get_future();
 }
 
+SqlserverClient::DescribeMaintenanceSpanOutcome SqlserverClient::DescribeMaintenanceSpan(const DescribeMaintenanceSpanRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMaintenanceSpan");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMaintenanceSpanResponse rsp = DescribeMaintenanceSpanResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMaintenanceSpanOutcome(rsp);
+        else
+            return DescribeMaintenanceSpanOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMaintenanceSpanOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DescribeMaintenanceSpanAsync(const DescribeMaintenanceSpanRequest& request, const DescribeMaintenanceSpanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeMaintenanceSpan(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DescribeMaintenanceSpanOutcomeCallable SqlserverClient::DescribeMaintenanceSpanCallable(const DescribeMaintenanceSpanRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeMaintenanceSpanOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeMaintenanceSpan(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 SqlserverClient::DescribeMigrationDetailOutcome SqlserverClient::DescribeMigrationDetail(const DescribeMigrationDetailRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeMigrationDetail");

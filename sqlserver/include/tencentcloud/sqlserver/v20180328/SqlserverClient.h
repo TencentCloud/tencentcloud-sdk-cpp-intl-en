@@ -101,6 +101,8 @@
 #include <tencentcloud/sqlserver/v20180328/model/DescribeInstanceParamRecordsResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeInstanceParamsRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeInstanceParamsResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeMaintenanceSpanRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeMaintenanceSpanResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeMigrationDetailRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeMigrationDetailResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeMigrationsRequest.h>
@@ -318,6 +320,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeInstanceParamsResponse> DescribeInstanceParamsOutcome;
                 typedef std::future<DescribeInstanceParamsOutcome> DescribeInstanceParamsOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DescribeInstanceParamsRequest&, DescribeInstanceParamsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceParamsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMaintenanceSpanResponse> DescribeMaintenanceSpanOutcome;
+                typedef std::future<DescribeMaintenanceSpanOutcome> DescribeMaintenanceSpanOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::DescribeMaintenanceSpanRequest&, DescribeMaintenanceSpanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMaintenanceSpanAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMigrationDetailResponse> DescribeMigrationDetailOutcome;
                 typedef std::future<DescribeMigrationDetailOutcome> DescribeMigrationDetailOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DescribeMigrationDetailRequest&, DescribeMigrationDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMigrationDetailAsyncHandler;
@@ -800,6 +805,15 @@ namespace TencentCloud
                 DescribeInstanceParamsOutcome DescribeInstanceParams(const Model::DescribeInstanceParamsRequest &request);
                 void DescribeInstanceParamsAsync(const Model::DescribeInstanceParamsRequest& request, const DescribeInstanceParamsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeInstanceParamsOutcomeCallable DescribeInstanceParamsCallable(const Model::DescribeInstanceParamsRequest& request);
+
+                /**
+                 *This API is used to query the maintenance time window of an instance based on its instance ID.
+                 * @param req DescribeMaintenanceSpanRequest
+                 * @return DescribeMaintenanceSpanOutcome
+                 */
+                DescribeMaintenanceSpanOutcome DescribeMaintenanceSpan(const Model::DescribeMaintenanceSpanRequest &request);
+                void DescribeMaintenanceSpanAsync(const Model::DescribeMaintenanceSpanRequest& request, const DescribeMaintenanceSpanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMaintenanceSpanOutcomeCallable DescribeMaintenanceSpanCallable(const Model::DescribeMaintenanceSpanRequest& request);
 
                 /**
                  *This API is used to query migration task details.

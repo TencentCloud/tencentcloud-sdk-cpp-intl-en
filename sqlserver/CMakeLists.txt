@@ -27,6 +27,7 @@ set(sqlserver_public_header_model
   include/tencentcloud/sqlserver/v20180328/model/RestoreInstanceRequest.h
   include/tencentcloud/sqlserver/v20180328/model/CreateBasicDBInstancesResponse.h
   include/tencentcloud/sqlserver/v20180328/model/DescribeAccountsRequest.h
+  include/tencentcloud/sqlserver/v20180328/model/DescribeMaintenanceSpanResponse.h
   include/tencentcloud/sqlserver/v20180328/model/CreateBusinessIntelligenceFileRequest.h
   include/tencentcloud/sqlserver/v20180328/model/CreateMigrationResponse.h
   include/tencentcloud/sqlserver/v20180328/model/ModifyDReadableRequest.h
@@ -121,6 +122,7 @@ set(sqlserver_public_header_model
   include/tencentcloud/sqlserver/v20180328/model/ModifyDatabaseMdfRequest.h
   include/tencentcloud/sqlserver/v20180328/model/DeleteIncrementalMigrationResponse.h
   include/tencentcloud/sqlserver/v20180328/model/DescribeRegionsRequest.h
+  include/tencentcloud/sqlserver/v20180328/model/DescribeMaintenanceSpanRequest.h
   include/tencentcloud/sqlserver/v20180328/model/AccountPrivilege.h
   include/tencentcloud/sqlserver/v20180328/model/CreateReadOnlyDBInstancesResponse.h
   include/tencentcloud/sqlserver/v20180328/model/DeleteMigrationRequest.h
@@ -249,6 +251,7 @@ set(sqlserver_src
   src/v20180328/model/RestoreInstanceRequest.cpp
   src/v20180328/model/CreateBasicDBInstancesResponse.cpp
   src/v20180328/model/DescribeAccountsRequest.cpp
+  src/v20180328/model/DescribeMaintenanceSpanResponse.cpp
   src/v20180328/model/CreateBusinessIntelligenceFileRequest.cpp
   src/v20180328/model/CreateMigrationResponse.cpp
   src/v20180328/model/ModifyDReadableRequest.cpp
@@ -343,6 +346,7 @@ set(sqlserver_src
   src/v20180328/model/ModifyDatabaseMdfRequest.cpp
   src/v20180328/model/DeleteIncrementalMigrationResponse.cpp
   src/v20180328/model/DescribeRegionsRequest.cpp
+  src/v20180328/model/DescribeMaintenanceSpanRequest.cpp
   src/v20180328/model/AccountPrivilege.cpp
   src/v20180328/model/CreateReadOnlyDBInstancesResponse.cpp
   src/v20180328/model/DeleteMigrationRequest.cpp

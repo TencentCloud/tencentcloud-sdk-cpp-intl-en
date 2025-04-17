@@ -88,14 +88,12 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool CaptchaMsgHasBeenSet() const;
 
                     /**
-                     * 获取This parameter returns the result of imperceptible verification. This parameter is not available for Tencent Cloud International yet.
+                     * 获取This parameter returns the result of imperceptible verification. 
 `0`: The request is trusted.
 `100`: The request is malicious.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return EvilLevel This parameter returns the result of imperceptible verification. This parameter is not available for Tencent Cloud International yet.
+                     * @return EvilLevel This parameter returns the result of imperceptible verification. 
 `0`: The request is trusted.
 `100`: The request is malicious.
-Note: This field may return `null`, indicating that no valid value was found.
                      * 
                      */
                     int64_t GetEvilLevel() const;
@@ -154,8 +152,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SubmitCaptchaTimeHasBeenSet() const;
 
                     /**
-                     * 获取Device Risk Category
-                     * @return DeviceRiskCategory Device Risk Category
+                     * 获取Device Risk Category.
+                     * @return DeviceRiskCategory Device Risk Category.
                      * 
                      */
                     std::string GetDeviceRiskCategory() const;
@@ -190,10 +188,9 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_captchaMsgHasBeenSet;
 
                     /**
-                     * This parameter returns the result of imperceptible verification. This parameter is not available for Tencent Cloud International yet.
+                     * This parameter returns the result of imperceptible verification. 
 `0`: The request is trusted.
 `100`: The request is malicious.
-Note: This field may return `null`, indicating that no valid value was found.
                      */
                     int64_t m_evilLevel;
                     bool m_evilLevelHasBeenSet;
@@ -219,7 +216,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_submitCaptchaTimeHasBeenSet;
 
                     /**
-                     * Device Risk Category
+                     * Device Risk Category.
                      */
                     std::string m_deviceRiskCategory;
                     bool m_deviceRiskCategoryHasBeenSet;
