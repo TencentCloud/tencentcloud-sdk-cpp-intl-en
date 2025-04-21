@@ -86,6 +86,7 @@ set(ocr_public_header_model
   include/tencentcloud/ocr/v20181119/model/LicensePlateOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/GeneralBasicOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/RecognizeBrazilIDCardOCRResponse.h
+  include/tencentcloud/ocr/v20181119/model/RecognizeBrazilRNEOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/VatElectronicInfo.h
   include/tencentcloud/ocr/v20181119/model/IDCardOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/GeneralAccurateOCRRequest.h
@@ -97,6 +98,7 @@ set(ocr_public_header_model
   include/tencentcloud/ocr/v20181119/model/RecognizeTableAccurateOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/Coord.h
   include/tencentcloud/ocr/v20181119/model/SealOCRResponse.h
+  include/tencentcloud/ocr/v20181119/model/RecognizeBrazilRNEOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/RecognizeIndonesiaIDCardOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/TableInfo.h
   include/tencentcloud/ocr/v20181119/model/VinOCRResponse.h
@@ -202,6 +204,7 @@ set(ocr_src
   src/v20181119/model/LicensePlateOCRRequest.cpp
   src/v20181119/model/GeneralBasicOCRRequest.cpp
   src/v20181119/model/RecognizeBrazilIDCardOCRResponse.cpp
+  src/v20181119/model/RecognizeBrazilRNEOCRRequest.cpp
   src/v20181119/model/VatElectronicInfo.cpp
   src/v20181119/model/IDCardOCRRequest.cpp
   src/v20181119/model/GeneralAccurateOCRRequest.cpp
@@ -213,6 +216,7 @@ set(ocr_src
   src/v20181119/model/RecognizeTableAccurateOCRRequest.cpp
   src/v20181119/model/Coord.cpp
   src/v20181119/model/SealOCRResponse.cpp
+  src/v20181119/model/RecognizeBrazilRNEOCRResponse.cpp
   src/v20181119/model/RecognizeIndonesiaIDCardOCRResponse.cpp
   src/v20181119/model/TableInfo.cpp
   src/v20181119/model/VinOCRResponse.cpp
