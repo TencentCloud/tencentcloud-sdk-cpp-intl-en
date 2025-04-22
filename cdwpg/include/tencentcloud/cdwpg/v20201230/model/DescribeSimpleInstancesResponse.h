@@ -45,9 +45,9 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total Count
+                     * 获取Total count of instance lists.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TotalCount Total Count
+                     * @return TotalCount Total count of instance lists.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -61,9 +61,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Instances List
+                     * 获取Instance list details.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstancesList Instances List
+                     * @return InstancesList Instance list details.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -77,9 +77,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstancesListHasBeenSet() const;
 
                     /**
-                     * 获取 Error Message
+                     * 获取Error message.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ErrorMsg  Error Message
+                     * @return ErrorMsg Error message.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -95,21 +97,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Total Count
+                     * Total count of instance lists.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Instances List
+                     * Instance list details.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<InstanceSimpleInfoNew> m_instancesList;
                     bool m_instancesListHasBeenSet;
 
                     /**
-                     *  Error Message
+                     * Error message.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_errorMsg;

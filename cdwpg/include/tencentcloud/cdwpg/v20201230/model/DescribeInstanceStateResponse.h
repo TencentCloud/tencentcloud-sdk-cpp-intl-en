@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool FlowProgressHasBeenSet() const;
 
                     /**
-                     * 获取Cluster status description. Example: running.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceStateDesc Cluster status description. Example: running.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance status description. Example: running.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return InstanceStateDesc Instance status description. Example: running.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetInstanceStateDesc() const;
@@ -184,7 +184,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_flowProgressHasBeenSet;
 
                     /**
-                     * Cluster status description. Example: running.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance status description. Example: running.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_instanceStateDesc;
                     bool m_instanceStateDescHasBeenSet;

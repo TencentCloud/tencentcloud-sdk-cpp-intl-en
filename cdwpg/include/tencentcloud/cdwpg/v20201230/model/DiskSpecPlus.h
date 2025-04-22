@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Disk Count
+                     * 获取Number of disks.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DiskCount Disk Count
+                     * @return DiskCount Number of disks.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetDiskCount() const;
 
                     /**
-                     * 设置Disk Count
+                     * 设置Number of disks.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _diskCount Disk Count
+                     * @param _diskCount Number of disks.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -72,18 +72,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DiskCountHasBeenSet() const;
 
                     /**
-                     * 获取Max Disk Size
+                     * 获取Maximum disk capacity.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MaxDiskSize Max Disk Size
+                     * @return MaxDiskSize Maximum disk capacity.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetMaxDiskSize() const;
 
                     /**
-                     * 设置Max Disk Size
+                     * 设置Maximum disk capacity.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _maxDiskSize Max Disk Size
+                     * @param _maxDiskSize Maximum disk capacity.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -97,18 +97,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MaxDiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Min Disk Size
+                     * 获取Minimum disk capacity.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MinDiskSize Min Disk Size
+                     * @return MinDiskSize Minimum disk capacity.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetMinDiskSize() const;
 
                     /**
-                     * 设置Min Disk Size
+                     * 设置Minimum disk capacity.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _minDiskSize Min Disk Size
+                     * @param _minDiskSize Minimum disk capacity.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -122,18 +122,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MinDiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Disk Type
+                     * 获取Disk type.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DiskType Disk Type
+                     * @return DiskType Disk type.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置Disk Type
+                     * 设置Disk type.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _diskType Disk Type
+                     * @param _diskType Disk type.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -147,18 +147,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Disk Description
+                     * 获取Disk type details.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DiskDesc Disk Description
+                     * @return DiskDesc Disk type details.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDiskDesc() const;
 
                     /**
-                     * 设置Disk Description
+                     * 设置Disk type details.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _diskDesc Disk Description
+                     * @param _diskDesc Disk type details.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -172,18 +172,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DiskDescHasBeenSet() const;
 
                     /**
-                     * 获取Cvm Class
+                     * 获取Model type.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CvmClass Cvm Class
+                     * @return CvmClass Model type.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCvmClass() const;
 
                     /**
-                     * 设置Cvm Class
+                     * 设置Model type.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cvmClass Cvm Class
+                     * @param _cvmClass Model type.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -199,42 +199,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Disk Count
+                     * Number of disks.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_diskCount;
                     bool m_diskCountHasBeenSet;
 
                     /**
-                     * Max Disk Size
+                     * Maximum disk capacity.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_maxDiskSize;
                     bool m_maxDiskSizeHasBeenSet;
 
                     /**
-                     * Min Disk Size
+                     * Minimum disk capacity.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_minDiskSize;
                     bool m_minDiskSizeHasBeenSet;
 
                     /**
-                     * Disk Type
+                     * Disk type.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;
 
                     /**
-                     * Disk Description
+                     * Disk type details.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_diskDesc;
                     bool m_diskDescHasBeenSet;
 
                     /**
-                     * Cvm Class
+                     * Model type.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_cvmClass;

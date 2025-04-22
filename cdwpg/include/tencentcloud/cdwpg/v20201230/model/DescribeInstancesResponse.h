@@ -45,9 +45,9 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of instances.
+                     * 获取Total count of instances.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TotalCount Total number of instances.
+                     * @return TotalCount Total count of instances.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -77,8 +77,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstancesListHasBeenSet() const;
 
                     /**
-                     * 获取 -Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ErrorMsg  -Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Error message.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ErrorMsg Error message.
+
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetErrorMsg() const;
@@ -93,7 +97,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Total number of instances.
+                     * Total count of instances.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_totalCount;
@@ -107,7 +111,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_instancesListHasBeenSet;
 
                     /**
-                     *  -Note: This field may return null, indicating that no valid values can be obtained.
+                     * Error message.
+
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_errorMsg;
                     bool m_errorMsgHasBeenSet;

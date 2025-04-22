@@ -75,18 +75,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IDHasBeenSet() const;
 
                     /**
-                     * 获取Instance Id
+                     * 获取Cluster ID.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceId Instance Id
+                     * @return InstanceId Cluster ID.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance Id
+                     * 设置Cluster ID.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceId Instance Id
+                     * @param _instanceId Cluster ID.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -100,18 +104,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance Name
+                     * 获取Cluster name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceName Instance Name
+                     * @return InstanceName Cluster name.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance Name
+                     * 设置Cluster name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceName Instance Name
+                     * @param _instanceName Cluster name.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -125,18 +129,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Version
+                     * 获取Kernel version.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Version Version
+                     * @return Version Kernel version.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVersion() const;
 
                     /**
-                     * 设置Version
+                     * 设置Kernel version.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _version Version
+                     * @param _version Kernel version.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -150,18 +158,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VersionHasBeenSet() const;
 
                     /**
-                     * 获取Region
+                     * 获取Region.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Region Region
+                     * @return Region Region.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Region
+                     * 设置Region.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _region Region
+                     * @param _region Region.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -175,18 +187,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Zone
+                     * 获取Region.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Zone Zone
+                     * @return Zone Region.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Zone
+                     * 设置Region.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _zone Zone
+                     * @param _zone Region.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -200,18 +212,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取User VPC ID
+                     * 获取Virtual Private Cloud (VPC).
+
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UserVPCID User VPC ID
+                     * @return UserVPCID Virtual Private Cloud (VPC).
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUserVPCID() const;
 
                     /**
-                     * 设置User VPC ID
+                     * 设置Virtual Private Cloud (VPC).
+
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _userVPCID User VPC ID
+                     * @param _userVPCID Virtual Private Cloud (VPC).
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -225,18 +241,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UserVPCIDHasBeenSet() const;
 
                     /**
-                     * 获取User Subnet ID
+                     * 获取Subnet.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UserSubnetID User Subnet ID
+                     * @return UserSubnetID Subnet.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUserSubnetID() const;
 
                     /**
-                     * 设置User Subnet ID
+                     * 设置Subnet.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _userSubnetID User Subnet ID
+                     * @param _userSubnetID Subnet.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -250,18 +266,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UserSubnetIDHasBeenSet() const;
 
                     /**
-                     * 获取CreateTime
+                     * 获取Start time.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CreateTime CreateTime
+                     * @return CreateTime Start time.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置CreateTime
+                     * 设置Start time.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _createTime CreateTime
+                     * @param _createTime Start time.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -275,18 +295,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取ExpireTime
+                     * 获取Expiration time.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExpireTime ExpireTime
+                     * @return ExpireTime Expiration time.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置ExpireTime
+                     * 设置Expiration time.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _expireTime ExpireTime
+                     * @param _expireTime Expiration time.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -300,18 +324,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Access Infomation
+                     * 获取Access address.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AccessInfo Access Infomation
+                     * @return AccessInfo Access address.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetAccessInfo() const;
 
                     /**
-                     * 设置Access Infomation
+                     * 设置Access address.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _accessInfo Access Infomation
+                     * @param _accessInfo Access address.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -325,18 +349,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AccessInfoHasBeenSet() const;
 
                     /**
-                     * 获取Renew Flag
+                     * 获取Automatic renewal switch. 0 indicates automatic renewal is not enabled, and 1 indicates automatic renewal is enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RenewFlag Renew Flag
+                     * @return RenewFlag Automatic renewal switch. 0 indicates automatic renewal is not enabled, and 1 indicates automatic renewal is enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetRenewFlag() const;
 
                     /**
-                     * 设置Renew Flag
+                     * 设置Automatic renewal switch. 0 indicates automatic renewal is not enabled, and 1 indicates automatic renewal is enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _renewFlag Renew Flag
+                     * @param _renewFlag Automatic renewal switch. 0 indicates automatic renewal is not enabled, and 1 indicates automatic renewal is enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -350,18 +374,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取Charge Properties
+                     * 获取Billing mode.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ChargeProperties Charge Properties
+                     * @return ChargeProperties Billing mode.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ChargeProperties GetChargeProperties() const;
 
                     /**
-                     * 设置Charge Properties
+                     * 设置Billing mode.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _chargeProperties Charge Properties
+                     * @param _chargeProperties Billing mode.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -375,18 +403,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ChargePropertiesHasBeenSet() const;
 
                     /**
-                     * 获取Resources
+                     * 获取Resource collection.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Resources Resources
+                     * @return Resources Resource collection.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<ResourceInfo> GetResources() const;
 
                     /**
-                     * 设置Resources
+                     * 设置Resource collection.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _resources Resources
+                     * @param _resources Resource collection.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -400,18 +428,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ResourcesHasBeenSet() const;
 
                     /**
-                     * 获取Tags
+                     * 获取Tag list.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Tags Tags
+                     * @return Tags Tag list.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置Tags
+                     * 设置Tag list.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tags Tags
+                     * @param _tags Tag list.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -425,18 +457,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Status
+                     * 获取Cluster status.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Status
+                     * @return Status Cluster status.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Status
+                     * 设置Cluster status.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status Status
+                     * @param _status Cluster status.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -459,105 +491,113 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_iDHasBeenSet;
 
                     /**
-                     * Instance Id
+                     * Cluster ID.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance Name
+                     * Cluster name.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Version
+                     * Kernel version.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_version;
                     bool m_versionHasBeenSet;
 
                     /**
-                     * Region
+                     * Region.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Zone
+                     * Region.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * User VPC ID
+                     * Virtual Private Cloud (VPC).
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_userVPCID;
                     bool m_userVPCIDHasBeenSet;
 
                     /**
-                     * User Subnet ID
+                     * Subnet.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_userSubnetID;
                     bool m_userSubnetIDHasBeenSet;
 
                     /**
-                     * CreateTime
+                     * Start time.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * ExpireTime
+                     * Expiration time.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * Access Infomation
+                     * Access address.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_accessInfo;
                     bool m_accessInfoHasBeenSet;
 
                     /**
-                     * Renew Flag
+                     * Automatic renewal switch. 0 indicates automatic renewal is not enabled, and 1 indicates automatic renewal is enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_renewFlag;
                     bool m_renewFlagHasBeenSet;
 
                     /**
-                     * Charge Properties
+                     * Billing mode.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ChargeProperties m_chargeProperties;
                     bool m_chargePropertiesHasBeenSet;
 
                     /**
-                     * Resources
+                     * Resource collection.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<ResourceInfo> m_resources;
                     bool m_resourcesHasBeenSet;
 
                     /**
-                     * Tags
+                     * Tag list.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Status
+                     * Cluster status.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_status;

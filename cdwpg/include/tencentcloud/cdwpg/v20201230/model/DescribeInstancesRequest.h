@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The name of the Instance ID for the search.
-                     * @return SearchInstanceId The name of the Instance ID for the search.
+                     * 获取Searches by instance ID.
+                     * @return SearchInstanceId Searches by instance ID.
                      * 
                      */
                     std::string GetSearchInstanceId() const;
 
                     /**
-                     * 设置The name of the Instance ID for the search.
-                     * @param _searchInstanceId The name of the Instance ID for the search.
+                     * 设置Searches by instance ID.
+                     * @param _searchInstanceId Searches by instance ID.
                      * 
                      */
                     void SetSearchInstanceId(const std::string& _searchInstanceId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool SearchInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取The instance name for the search.
-                     * @return SearchInstanceName The instance name for the search.
+                     * 获取Searches by instance name.
+                     * @return SearchInstanceName Searches by instance name.
                      * 
                      */
                     std::string GetSearchInstanceName() const;
 
                     /**
-                     * 设置The instance name for the search.
-                     * @param _searchInstanceName The instance name for the search.
+                     * 设置Searches by instance name.
+                     * @param _searchInstanceName Searches by instance name.
                      * 
                      */
                     void SetSearchInstanceName(const std::string& _searchInstanceName);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool SearchInstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Pagination parameter. The first page is 0, and the second page is 10.
-                     * @return Offset Pagination parameter. The first page is 0, and the second page is 10.
+                     * 获取Offset.
+                     * @return Offset Offset.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination parameter. The first page is 0, and the second page is 10.
-                     * @param _offset Pagination parameter. The first page is 0, and the second page is 10.
+                     * 设置Offset.
+                     * @param _offset Offset.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Pagination parameter. Pagination step length. It is 10 by default.
-                     * @return Limit Pagination parameter. Pagination step length. It is 10 by default.
+                     * 获取Limit.
+                     * @return Limit Limit.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Pagination parameter. Pagination step length. It is 10 by default.
-                     * @param _limit Pagination parameter. Pagination step length. It is 10 by default.
+                     * 设置Limit.
+                     * @param _limit Limit.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -151,25 +151,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The name of the Instance ID for the search.
+                     * Searches by instance ID.
                      */
                     std::string m_searchInstanceId;
                     bool m_searchInstanceIdHasBeenSet;
 
                     /**
-                     * The instance name for the search.
+                     * Searches by instance name.
                      */
                     std::string m_searchInstanceName;
                     bool m_searchInstanceNameHasBeenSet;
 
                     /**
-                     * Pagination parameter. The first page is 0, and the second page is 10.
+                     * Offset.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Pagination parameter. Pagination step length. It is 10 by default.
+                     * Limit.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

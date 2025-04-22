@@ -193,15 +193,15 @@ namespace TencentCloud
                     bool ResourcesHasBeenSet() const;
 
                     /**
-                     * 获取Tag list.
-                     * @return Tags Tag list.
+                     * 获取Tag list.Deprecated, use TagItems.
+                     * @return Tags Tag list.Deprecated, use TagItems.
                      * 
                      */
                     Tag GetTags() const;
 
                     /**
-                     * 设置Tag list.
-                     * @param _tags Tag list.
+                     * 设置Tag list.Deprecated, use TagItems.
+                     * @param _tags Tag list.Deprecated, use TagItems.
                      * 
                      */
                     void SetTags(const Tag& _tags);
@@ -233,6 +233,27 @@ namespace TencentCloud
                      * 
                      */
                     bool ProductVersionHasBeenSet() const;
+
+                    /**
+                     * 获取 TagItems list.
+                     * @return TagItems  TagItems list.
+                     * 
+                     */
+                    std::vector<Tag> GetTagItems() const;
+
+                    /**
+                     * 设置 TagItems list.
+                     * @param _tagItems  TagItems list.
+                     * 
+                     */
+                    void SetTagItems(const std::vector<Tag>& _tagItems);
+
+                    /**
+                     * 判断参数 TagItems 是否已赋值
+                     * @return TagItems 是否已赋值
+                     * 
+                     */
+                    bool TagItemsHasBeenSet() const;
 
                 private:
 
@@ -279,7 +300,7 @@ namespace TencentCloud
                     bool m_resourcesHasBeenSet;
 
                     /**
-                     * Tag list.
+                     * Tag list.Deprecated, use TagItems.
                      */
                     Tag m_tags;
                     bool m_tagsHasBeenSet;
@@ -289,6 +310,12 @@ namespace TencentCloud
                      */
                     std::string m_productVersion;
                     bool m_productVersionHasBeenSet;
+
+                    /**
+                     *  TagItems list.
+                     */
+                    std::vector<Tag> m_tagItems;
+                    bool m_tagItemsHasBeenSet;
 
                 };
             }

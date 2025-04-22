@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Search Instance Id
-                     * @return SearchInstanceId Search Instance Id
+                     * 获取Searches by instance ID.
+                     * @return SearchInstanceId Searches by instance ID.
                      * 
                      */
                     std::string GetSearchInstanceId() const;
 
                     /**
-                     * 设置Search Instance Id
-                     * @param _searchInstanceId Search Instance Id
+                     * 设置Searches by instance ID.
+                     * @param _searchInstanceId Searches by instance ID.
                      * 
                      */
                     void SetSearchInstanceId(const std::string& _searchInstanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SearchInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Search Instance Name
-                     * @return SearchInstanceName Search Instance Name
+                     * 获取Searches by instance name.
+                     * @return SearchInstanceName Searches by instance name.
                      * 
                      */
                     std::string GetSearchInstanceName() const;
 
                     /**
-                     * 设置Search Instance Name
-                     * @param _searchInstanceName Search Instance Name
+                     * 设置Searches by instance name.
+                     * @param _searchInstanceName Searches by instance name.
                      * 
                      */
                     void SetSearchInstanceName(const std::string& _searchInstanceName);
@@ -85,19 +85,15 @@ namespace TencentCloud
                     bool SearchInstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取	
-Offset
-                     * @return Offset 	
-Offset
+                     * 获取Offset.
+                     * @return Offset Offset.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置	
-Offset
-                     * @param _offset 	
-Offset
+                     * 设置Offset.
+                     * @param _offset Offset.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -110,15 +106,15 @@ Offset
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Limit
-                     * @return Limit Limit
+                     * 获取Limit.
+                     * @return Limit Limit.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Limit
-                     * @param _limit Limit
+                     * 设置Limit.
+                     * @param _limit Limit.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -131,15 +127,15 @@ Offset
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Search Tags
-                     * @return SearchTags Search Tags
+                     * 获取Searches by tag list.
+                     * @return SearchTags Searches by tag list.
                      * 
                      */
                     std::vector<std::string> GetSearchTags() const;
 
                     /**
-                     * 设置Search Tags
-                     * @param _searchTags Search Tags
+                     * 设置Searches by tag list.
+                     * @param _searchTags Searches by tag list.
                      * 
                      */
                     void SetSearchTags(const std::vector<std::string>& _searchTags);
@@ -154,32 +150,31 @@ Offset
                 private:
 
                     /**
-                     * Search Instance Id
+                     * Searches by instance ID.
                      */
                     std::string m_searchInstanceId;
                     bool m_searchInstanceIdHasBeenSet;
 
                     /**
-                     * Search Instance Name
+                     * Searches by instance name.
                      */
                     std::string m_searchInstanceName;
                     bool m_searchInstanceNameHasBeenSet;
 
                     /**
-                     * 	
-Offset
+                     * Offset.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Limit
+                     * Limit.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Search Tags
+                     * Searches by tag list.
                      */
                     std::vector<std::string> m_searchTags;
                     bool m_searchTagsHasBeenSet;

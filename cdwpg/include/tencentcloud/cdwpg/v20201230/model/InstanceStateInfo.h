@@ -247,18 +247,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BackupStatusHasBeenSet() const;
 
                     /**
-                     * 获取Request Id
+                     * 获取Request ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RequestId Request Id
+                     * @return RequestId Request ID.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRequestId() const;
 
                     /**
-                     * 设置Request Id
+                     * 设置Request ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _requestId Request Id
+                     * @param _requestId Request ID.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -272,18 +272,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RequestIdHasBeenSet() const;
 
                     /**
-                     * 获取Backup Open Status
+                     * 获取Indicates whether there is a backup task in the cluster. 1 indicates yes and 0 indicates no.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BackupOpenStatus Backup Open Status
+                     * @return BackupOpenStatus Indicates whether there is a backup task in the cluster. 1 indicates yes and 0 indicates no.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetBackupOpenStatus() const;
 
                     /**
-                     * 设置Backup Open Status
+                     * 设置Indicates whether there is a backup task in the cluster. 1 indicates yes and 0 indicates no.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _backupOpenStatus Backup Open Status
+                     * @param _backupOpenStatus Indicates whether there is a backup task in the cluster. 1 indicates yes and 0 indicates no.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -355,14 +355,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_backupStatusHasBeenSet;
 
                     /**
-                     * Request Id
+                     * Request ID.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_requestId;
                     bool m_requestIdHasBeenSet;
 
                     /**
-                     * Backup Open Status
+                     * Indicates whether there is a backup task in the cluster. 1 indicates yes and 0 indicates no.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_backupOpenStatus;

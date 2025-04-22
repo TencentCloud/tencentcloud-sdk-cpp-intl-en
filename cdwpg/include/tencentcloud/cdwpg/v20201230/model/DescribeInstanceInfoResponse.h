@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance simple information
-                     * @return SimpleInstanceInfo Instance simple information
+                     * 获取Instance description information.
+                     * @return SimpleInstanceInfo Instance description information.
                      * 
                      */
                     SimpleInstanceInfo GetSimpleInstanceInfo() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool SimpleInstanceInfoHasBeenSet() const;
 
                     /**
-                     * 获取Error Message
-                     * @return ErrorMsg Error Message
+                     * 获取Error message.
+                     * @return ErrorMsg Error message.
                      * 
                      */
                     std::string GetErrorMsg() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance simple information
+                     * Instance description information.
                      */
                     SimpleInstanceInfo m_simpleInstanceInfo;
                     bool m_simpleInstanceInfoHasBeenSet;
 
                     /**
-                     * Error Message
+                     * Error message.
                      */
                     std::string m_errorMsg;
                     bool m_errorMsgHasBeenSet;

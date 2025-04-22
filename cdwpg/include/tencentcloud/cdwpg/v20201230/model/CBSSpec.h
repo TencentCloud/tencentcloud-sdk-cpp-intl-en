@@ -48,14 +48,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Disk type.
+
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DiskType Disk type.
+
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDiskType() const;
 
                     /**
                      * 设置Disk type.
+
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _diskType Disk type.
+
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDiskType(const std::string& _diskType);
@@ -69,14 +77,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Size.
+
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DiskSize Size.
+
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetDiskSize() const;
 
                     /**
                      * 设置Size.
+
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _diskSize Size.
+
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDiskSize(const int64_t& _diskSize);
@@ -90,14 +106,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Number.
+
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DiskCount Number.
+
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetDiskCount() const;
 
                     /**
                      * 设置Number.
+
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _diskCount Number.
+
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDiskCount(const int64_t& _diskCount);
@@ -113,18 +137,24 @@ namespace TencentCloud
 
                     /**
                      * Disk type.
+
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;
 
                     /**
                      * Size.
+
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;
 
                     /**
                      * Number.
+
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_diskCount;
                     bool m_diskCountHasBeenSet;

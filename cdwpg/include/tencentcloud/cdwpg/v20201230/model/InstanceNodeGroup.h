@@ -48,18 +48,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Spec Name
+                     * 获取Model.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SpecName Spec Name
+                     * @return SpecName Model.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSpecName() const;
 
                     /**
-                     * 设置Spec Name
+                     * 设置Model.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _specName Spec Name
+                     * @param _specName Model.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -73,18 +77,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SpecNameHasBeenSet() const;
 
                     /**
-                     * 获取Data Disk
+                     * 获取Disk information.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DataDisk Data Disk
+                     * @return DataDisk Disk information.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     DiskSpecPlus GetDataDisk() const;
 
                     /**
-                     * 设置Data Disk
+                     * 设置Disk information.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dataDisk Data Disk
+                     * @param _dataDisk Disk information.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -98,18 +106,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DataDiskHasBeenSet() const;
 
                     /**
-                     * 获取Cvm Count
+                     * 获取Number of machines.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CvmCount Cvm Count
+                     * @return CvmCount Number of machines.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetCvmCount() const;
 
                     /**
-                     * 设置Cvm Count
+                     * 设置Number of machines.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cvmCount Cvm Count
+                     * @param _cvmCount Number of machines.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -125,21 +133,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Spec Name
+                     * Model.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_specName;
                     bool m_specNameHasBeenSet;
 
                     /**
-                     * Data Disk
+                     * Disk information.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     DiskSpecPlus m_dataDisk;
                     bool m_dataDiskHasBeenSet;
 
                     /**
-                     * Cvm Count
+                     * Number of machines.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_cvmCount;

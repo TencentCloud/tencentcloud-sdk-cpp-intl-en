@@ -123,18 +123,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DiskSpecHasBeenSet() const;
 
                     /**
-                     * 获取Resource type.
+                     * 获取Node type. Valid values: cn and dn.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Type Resource type.
+                     * @return Type Node type. Valid values: cn and dn.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Resource type.
+                     * 设置Node type. Valid values: cn and dn.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _type Resource type.
+                     * @param _type Node type. Valid values: cn and dn.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -171,7 +171,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_diskSpecHasBeenSet;
 
                     /**
-                     * Resource type.
+                     * Node type. Valid values: cn and dn.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_type;
