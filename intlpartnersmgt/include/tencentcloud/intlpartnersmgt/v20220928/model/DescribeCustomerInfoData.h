@@ -173,13 +173,11 @@ namespace TencentCloud
                     bool BindTimeHasBeenSet() const;
 
                     /**
-                     * 获取Account status
-.
+                     * 获取Account status.
 0: normal.
 1: forcibly mandatory (this function is not supported yet).
 2: mandatory arrears. 
-                     * @return AccountStatus Account status
-.
+                     * @return AccountStatus Account status.
 0: normal.
 1: forcibly mandatory (this function is not supported yet).
 2: mandatory arrears. 
@@ -188,13 +186,11 @@ namespace TencentCloud
                     std::string GetAccountStatus() const;
 
                     /**
-                     * 设置Account status
-.
+                     * 设置Account status.
 0: normal.
 1: forcibly mandatory (this function is not supported yet).
 2: mandatory arrears. 
-                     * @param _accountStatus Account status
-.
+                     * @param _accountStatus Account status.
 0: normal.
 1: forcibly mandatory (this function is not supported yet).
 2: mandatory arrears. 
@@ -210,35 +206,39 @@ namespace TencentCloud
                     bool AccountStatusHasBeenSet() const;
 
                     /**
-                     * 获取Identity verification status.
--1: files not uploaded.
-0: not submitted for review.
-1: under review.
-2: review error.
-3: approved.
-                     * @return AuthStatus Identity verification status.
--1: files not uploaded.
-0: not submitted for review.
-1: under review.
-2: review error.
-3: approved.
+                     * 获取Specifies the identity verification status.
+-999: account information not found.
+-1: file not uploaded.
+0: pending review.
+Under review.
+Error in review: 2.
+3: pass review.
+                     * @return AuthStatus Specifies the identity verification status.
+-999: account information not found.
+-1: file not uploaded.
+0: pending review.
+Under review.
+Error in review: 2.
+3: pass review.
                      * 
                      */
                     std::string GetAuthStatus() const;
 
                     /**
-                     * 设置Identity verification status.
--1: files not uploaded.
-0: not submitted for review.
-1: under review.
-2: review error.
-3: approved.
-                     * @param _authStatus Identity verification status.
--1: files not uploaded.
-0: not submitted for review.
-1: under review.
-2: review error.
-3: approved.
+                     * 设置Specifies the identity verification status.
+-999: account information not found.
+-1: file not uploaded.
+0: pending review.
+Under review.
+Error in review: 2.
+3: pass review.
+                     * @param _authStatus Specifies the identity verification status.
+-999: account information not found.
+-1: file not uploaded.
+0: pending review.
+Under review.
+Error in review: 2.
+3: pass review.
                      * 
                      */
                     void SetAuthStatus(const std::string& _authStatus);
@@ -249,6 +249,127 @@ namespace TencentCloud
                      * 
                      */
                     bool AuthStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Real-Name type.
+-1: default value. no such information. 
+0: personal type. 
+1: enterprise type.
+                     * @return AuthType Real-Name type.
+-1: default value. no such information. 
+0: personal type. 
+1: enterprise type.
+                     * 
+                     */
+                    int64_t GetAuthType() const;
+
+                    /**
+                     * 设置Real-Name type.
+-1: default value. no such information. 
+0: personal type. 
+1: enterprise type.
+                     * @param _authType Real-Name type.
+-1: default value. no such information. 
+0: personal type. 
+1: enterprise type.
+                     * 
+                     */
+                    void SetAuthType(const int64_t& _authType);
+
+                    /**
+                     * 判断参数 AuthType 是否已赋值
+                     * @return AuthType 是否已赋值
+                     * 
+                     */
+                    bool AuthTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the registration time of the cid.
+                     * @return CidRegisterTime Specifies the registration time of the cid.
+                     * 
+                     */
+                    std::string GetCidRegisterTime() const;
+
+                    /**
+                     * 设置Specifies the registration time of the cid.
+                     * @param _cidRegisterTime Specifies the registration time of the cid.
+                     * 
+                     */
+                    void SetCidRegisterTime(const std::string& _cidRegisterTime);
+
+                    /**
+                     * 判断参数 CidRegisterTime 是否已赋值
+                     * @return CidRegisterTime 是否已赋值
+                     * 
+                     */
+                    bool CidRegisterTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the registration time of the uin.
+                     * @return UinRegisterTime Specifies the registration time of the uin.
+                     * 
+                     */
+                    std::string GetUinRegisterTime() const;
+
+                    /**
+                     * 设置Specifies the registration time of the uin.
+                     * @param _uinRegisterTime Specifies the registration time of the uin.
+                     * 
+                     */
+                    void SetUinRegisterTime(const std::string& _uinRegisterTime);
+
+                    /**
+                     * 判断参数 UinRegisterTime 是否已赋值
+                     * @return UinRegisterTime 是否已赋值
+                     * 
+                     */
+                    bool UinRegisterTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Time when real-name authentication passed.
+                     * @return AuthPassTime Time when real-name authentication passed.
+                     * 
+                     */
+                    std::string GetAuthPassTime() const;
+
+                    /**
+                     * 设置Time when real-name authentication passed.
+                     * @param _authPassTime Time when real-name authentication passed.
+                     * 
+                     */
+                    void SetAuthPassTime(const std::string& _authPassTime);
+
+                    /**
+                     * 判断参数 AuthPassTime 是否已赋值
+                     * @return AuthPassTime 是否已赋值
+                     * 
+                     */
+                    bool AuthPassTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Whether there is consumption.
+0: no consumption; 1: consumption.
+                     * @return HasExpense Whether there is consumption.
+0: no consumption; 1: consumption.
+                     * 
+                     */
+                    int64_t GetHasExpense() const;
+
+                    /**
+                     * 设置Whether there is consumption.
+0: no consumption; 1: consumption.
+                     * @param _hasExpense Whether there is consumption.
+0: no consumption; 1: consumption.
+                     * 
+                     */
+                    void SetHasExpense(const int64_t& _hasExpense);
+
+                    /**
+                     * 判断参数 HasExpense 是否已赋值
+                     * @return HasExpense 是否已赋值
+                     * 
+                     */
+                    bool HasExpenseHasBeenSet() const;
 
                 private:
 
@@ -289,8 +410,7 @@ namespace TencentCloud
                     bool m_bindTimeHasBeenSet;
 
                     /**
-                     * Account status
-.
+                     * Account status.
 0: normal.
 1: forcibly mandatory (this function is not supported yet).
 2: mandatory arrears. 
@@ -299,15 +419,50 @@ namespace TencentCloud
                     bool m_accountStatusHasBeenSet;
 
                     /**
-                     * Identity verification status.
--1: files not uploaded.
-0: not submitted for review.
-1: under review.
-2: review error.
-3: approved.
+                     * Specifies the identity verification status.
+-999: account information not found.
+-1: file not uploaded.
+0: pending review.
+Under review.
+Error in review: 2.
+3: pass review.
                      */
                     std::string m_authStatus;
                     bool m_authStatusHasBeenSet;
+
+                    /**
+                     * Real-Name type.
+-1: default value. no such information. 
+0: personal type. 
+1: enterprise type.
+                     */
+                    int64_t m_authType;
+                    bool m_authTypeHasBeenSet;
+
+                    /**
+                     * Specifies the registration time of the cid.
+                     */
+                    std::string m_cidRegisterTime;
+                    bool m_cidRegisterTimeHasBeenSet;
+
+                    /**
+                     * Specifies the registration time of the uin.
+                     */
+                    std::string m_uinRegisterTime;
+                    bool m_uinRegisterTimeHasBeenSet;
+
+                    /**
+                     * Time when real-name authentication passed.
+                     */
+                    std::string m_authPassTime;
+                    bool m_authPassTimeHasBeenSet;
+
+                    /**
+                     * Whether there is consumption.
+0: no consumption; 1: consumption.
+                     */
+                    int64_t m_hasExpense;
+                    bool m_hasExpenseHasBeenSet;
 
                 };
             }

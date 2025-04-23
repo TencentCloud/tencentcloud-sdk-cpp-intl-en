@@ -28,7 +28,12 @@ DescribeCustomerInfoData::DescribeCustomerInfoData() :
     m_nameHasBeenSet(false),
     m_bindTimeHasBeenSet(false),
     m_accountStatusHasBeenSet(false),
-    m_authStatusHasBeenSet(false)
+    m_authStatusHasBeenSet(false),
+    m_authTypeHasBeenSet(false),
+    m_cidRegisterTimeHasBeenSet(false),
+    m_uinRegisterTimeHasBeenSet(false),
+    m_authPassTimeHasBeenSet(false),
+    m_hasExpenseHasBeenSet(false)
 {
 }
 
@@ -117,6 +122,56 @@ CoreInternalOutcome DescribeCustomerInfoData::Deserialize(const rapidjson::Value
         m_authStatusHasBeenSet = true;
     }
 
+    if (value.HasMember("AuthType") && !value["AuthType"].IsNull())
+    {
+        if (!value["AuthType"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeCustomerInfoData.AuthType` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_authType = value["AuthType"].GetInt64();
+        m_authTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("CidRegisterTime") && !value["CidRegisterTime"].IsNull())
+    {
+        if (!value["CidRegisterTime"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeCustomerInfoData.CidRegisterTime` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_cidRegisterTime = string(value["CidRegisterTime"].GetString());
+        m_cidRegisterTimeHasBeenSet = true;
+    }
+
+    if (value.HasMember("UinRegisterTime") && !value["UinRegisterTime"].IsNull())
+    {
+        if (!value["UinRegisterTime"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeCustomerInfoData.UinRegisterTime` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_uinRegisterTime = string(value["UinRegisterTime"].GetString());
+        m_uinRegisterTimeHasBeenSet = true;
+    }
+
+    if (value.HasMember("AuthPassTime") && !value["AuthPassTime"].IsNull())
+    {
+        if (!value["AuthPassTime"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeCustomerInfoData.AuthPassTime` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_authPassTime = string(value["AuthPassTime"].GetString());
+        m_authPassTimeHasBeenSet = true;
+    }
+
+    if (value.HasMember("HasExpense") && !value["HasExpense"].IsNull())
+    {
+        if (!value["HasExpense"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeCustomerInfoData.HasExpense` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_hasExpense = value["HasExpense"].GetInt64();
+        m_hasExpenseHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -186,6 +241,46 @@ void DescribeCustomerInfoData::ToJsonObject(rapidjson::Value &value, rapidjson::
         string key = "AuthStatus";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_authStatus.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_authTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AuthType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_authType, allocator);
+    }
+
+    if (m_cidRegisterTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CidRegisterTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cidRegisterTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_uinRegisterTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UinRegisterTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_uinRegisterTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_authPassTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AuthPassTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_authPassTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_hasExpenseHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HasExpense";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_hasExpense, allocator);
     }
 
 }
@@ -317,5 +412,85 @@ void DescribeCustomerInfoData::SetAuthStatus(const string& _authStatus)
 bool DescribeCustomerInfoData::AuthStatusHasBeenSet() const
 {
     return m_authStatusHasBeenSet;
+}
+
+int64_t DescribeCustomerInfoData::GetAuthType() const
+{
+    return m_authType;
+}
+
+void DescribeCustomerInfoData::SetAuthType(const int64_t& _authType)
+{
+    m_authType = _authType;
+    m_authTypeHasBeenSet = true;
+}
+
+bool DescribeCustomerInfoData::AuthTypeHasBeenSet() const
+{
+    return m_authTypeHasBeenSet;
+}
+
+string DescribeCustomerInfoData::GetCidRegisterTime() const
+{
+    return m_cidRegisterTime;
+}
+
+void DescribeCustomerInfoData::SetCidRegisterTime(const string& _cidRegisterTime)
+{
+    m_cidRegisterTime = _cidRegisterTime;
+    m_cidRegisterTimeHasBeenSet = true;
+}
+
+bool DescribeCustomerInfoData::CidRegisterTimeHasBeenSet() const
+{
+    return m_cidRegisterTimeHasBeenSet;
+}
+
+string DescribeCustomerInfoData::GetUinRegisterTime() const
+{
+    return m_uinRegisterTime;
+}
+
+void DescribeCustomerInfoData::SetUinRegisterTime(const string& _uinRegisterTime)
+{
+    m_uinRegisterTime = _uinRegisterTime;
+    m_uinRegisterTimeHasBeenSet = true;
+}
+
+bool DescribeCustomerInfoData::UinRegisterTimeHasBeenSet() const
+{
+    return m_uinRegisterTimeHasBeenSet;
+}
+
+string DescribeCustomerInfoData::GetAuthPassTime() const
+{
+    return m_authPassTime;
+}
+
+void DescribeCustomerInfoData::SetAuthPassTime(const string& _authPassTime)
+{
+    m_authPassTime = _authPassTime;
+    m_authPassTimeHasBeenSet = true;
+}
+
+bool DescribeCustomerInfoData::AuthPassTimeHasBeenSet() const
+{
+    return m_authPassTimeHasBeenSet;
+}
+
+int64_t DescribeCustomerInfoData::GetHasExpense() const
+{
+    return m_hasExpense;
+}
+
+void DescribeCustomerInfoData::SetHasExpense(const int64_t& _hasExpense)
+{
+    m_hasExpense = _hasExpense;
+    m_hasExpenseHasBeenSet = true;
+}
+
+bool DescribeCustomerInfoData::HasExpenseHasBeenSet() const
+{
+    return m_hasExpenseHasBeenSet;
 }
 
