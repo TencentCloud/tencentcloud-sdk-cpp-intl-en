@@ -130,21 +130,21 @@ namespace TencentCloud
                     /**
                      * 获取Prompt variable.
                      * @return PromptVariables Prompt variable.
-                     * 
+                     * @deprecated
                      */
                     std::vector<Variable> GetPromptVariables() const;
 
                     /**
                      * 设置Prompt variable.
                      * @param _promptVariables Prompt variable.
-                     * 
+                     * @deprecated
                      */
                     void SetPromptVariables(const std::vector<Variable>& _promptVariables);
 
                     /**
                      * 判断参数 PromptVariables 是否已赋值
                      * @return PromptVariables 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool PromptVariablesHasBeenSet() const;
 

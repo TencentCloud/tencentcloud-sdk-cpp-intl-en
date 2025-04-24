@@ -88,6 +88,149 @@ namespace TencentCloud
                     bool CalleeHasBeenSet() const;
 
                     /**
+                     * 获取Model interface protocol types, currently compatible with three protocol types:
+
+- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
+- Azure protocol:"azure"
+- Minimax protocol:"minimax"
+                     * @return LLMType Model interface protocol types, currently compatible with three protocol types:
+
+- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
+- Azure protocol:"azure"
+- Minimax protocol:"minimax"
+                     * 
+                     */
+                    std::string GetLLMType() const;
+
+                    /**
+                     * 设置Model interface protocol types, currently compatible with three protocol types:
+
+- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
+- Azure protocol:"azure"
+- Minimax protocol:"minimax"
+                     * @param _lLMType Model interface protocol types, currently compatible with three protocol types:
+
+- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
+- Azure protocol:"azure"
+- Minimax protocol:"minimax"
+                     * 
+                     */
+                    void SetLLMType(const std::string& _lLMType);
+
+                    /**
+                     * 判断参数 LLMType 是否已赋值
+                     * @return LLMType 是否已赋值
+                     * 
+                     */
+                    bool LLMTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Model API key, for authentication information, please refer to the respective model's official website
+
+- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
+
+- Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
+
+- Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
+                     * @return APIKey Model API key, for authentication information, please refer to the respective model's official website
+
+- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
+
+- Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
+
+- Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
+                     * 
+                     */
+                    std::string GetAPIKey() const;
+
+                    /**
+                     * 设置Model API key, for authentication information, please refer to the respective model's official website
+
+- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
+
+- Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
+
+- Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
+                     * @param _aPIKey Model API key, for authentication information, please refer to the respective model's official website
+
+- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
+
+- Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
+
+- Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
+                     * 
+                     */
+                    void SetAPIKey(const std::string& _aPIKey);
+
+                    /**
+                     * 判断参数 APIKey 是否已赋值
+                     * @return APIKey 是否已赋值
+                     * 
+                     */
+                    bool APIKeyHasBeenSet() const;
+
+                    /**
+                     * 获取Model interface address
+
+- OpenAI protocol
+GPT:"https://api.openai.com/v1/"
+Deepseek:"https://api.deepseek.com/v1"
+
+- Azure protocol
+ "https://{your-resource-name}.openai.azure.com?api-version={api-version}"
+
+- Minimax protocol
+"https://api.minimax.chat/v1"
+                     * @return APIUrl Model interface address
+
+- OpenAI protocol
+GPT:"https://api.openai.com/v1/"
+Deepseek:"https://api.deepseek.com/v1"
+
+- Azure protocol
+ "https://{your-resource-name}.openai.azure.com?api-version={api-version}"
+
+- Minimax protocol
+"https://api.minimax.chat/v1"
+                     * 
+                     */
+                    std::string GetAPIUrl() const;
+
+                    /**
+                     * 设置Model interface address
+
+- OpenAI protocol
+GPT:"https://api.openai.com/v1/"
+Deepseek:"https://api.deepseek.com/v1"
+
+- Azure protocol
+ "https://{your-resource-name}.openai.azure.com?api-version={api-version}"
+
+- Minimax protocol
+"https://api.minimax.chat/v1"
+                     * @param _aPIUrl Model interface address
+
+- OpenAI protocol
+GPT:"https://api.openai.com/v1/"
+Deepseek:"https://api.deepseek.com/v1"
+
+- Azure protocol
+ "https://{your-resource-name}.openai.azure.com?api-version={api-version}"
+
+- Minimax protocol
+"https://api.minimax.chat/v1"
+                     * 
+                     */
+                    void SetAPIUrl(const std::string& _aPIUrl);
+
+                    /**
+                     * 判断参数 APIUrl 是否已赋值
+                     * @return APIUrl 是否已赋值
+                     * 
+                     */
+                    bool APIUrlHasBeenSet() const;
+
+                    /**
                      * 获取## Identity
 You are Kate from the appointment department at Retell Health calling Cindy over the phone to prepare for the annual checkup coming up. You are a pleasant and friendly receptionist caring deeply for the user. You don't provide medical advice but would use the medical knowledge to understand user responses.
 
@@ -229,43 +372,6 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
                     bool SystemPromptHasBeenSet() const;
 
                     /**
-                     * 获取Model interface protocol types, currently compatible with three protocol types:
-
-- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
-- Azure protocol:"azure"
-- Minimax protocol:"minimax"
-                     * @return LLMType Model interface protocol types, currently compatible with three protocol types:
-
-- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
-- Azure protocol:"azure"
-- Minimax protocol:"minimax"
-                     * 
-                     */
-                    std::string GetLLMType() const;
-
-                    /**
-                     * 设置Model interface protocol types, currently compatible with three protocol types:
-
-- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
-- Azure protocol:"azure"
-- Minimax protocol:"minimax"
-                     * @param _lLMType Model interface protocol types, currently compatible with three protocol types:
-
-- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
-- Azure protocol:"azure"
-- Minimax protocol:"minimax"
-                     * 
-                     */
-                    void SetLLMType(const std::string& _lLMType);
-
-                    /**
-                     * 判断参数 LLMType 是否已赋值
-                     * @return LLMType 是否已赋值
-                     * 
-                     */
-                    bool LLMTypeHasBeenSet() const;
-
-                    /**
                      * 获取Model name, such as
 
 - OpenAI protocol
@@ -321,112 +427,6 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
                      * 
                      */
                     bool ModelHasBeenSet() const;
-
-                    /**
-                     * 获取Model API key, for authentication information, please refer to the respective model's official website
-
-- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
-
-- Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
-
-- Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
-                     * @return APIKey Model API key, for authentication information, please refer to the respective model's official website
-
-- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
-
-- Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
-
-- Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
-                     * 
-                     */
-                    std::string GetAPIKey() const;
-
-                    /**
-                     * 设置Model API key, for authentication information, please refer to the respective model's official website
-
-- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
-
-- Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
-
-- Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
-                     * @param _aPIKey Model API key, for authentication information, please refer to the respective model's official website
-
-- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
-
-- Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
-
-- Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
-                     * 
-                     */
-                    void SetAPIKey(const std::string& _aPIKey);
-
-                    /**
-                     * 判断参数 APIKey 是否已赋值
-                     * @return APIKey 是否已赋值
-                     * 
-                     */
-                    bool APIKeyHasBeenSet() const;
-
-                    /**
-                     * 获取Model interface address
-
-- OpenAI protocol
-GPT:"https://api.openai.com/v1/"
-Deepseek:"https://api.deepseek.com/v1"
-
-- Azure protocol
- "https://{your-resource-name}.openai.azure.com?api-version={api-version}"
-
-- Minimax protocol
-"https://api.minimax.chat/v1"
-                     * @return APIUrl Model interface address
-
-- OpenAI protocol
-GPT:"https://api.openai.com/v1/"
-Deepseek:"https://api.deepseek.com/v1"
-
-- Azure protocol
- "https://{your-resource-name}.openai.azure.com?api-version={api-version}"
-
-- Minimax protocol
-"https://api.minimax.chat/v1"
-                     * 
-                     */
-                    std::string GetAPIUrl() const;
-
-                    /**
-                     * 设置Model interface address
-
-- OpenAI protocol
-GPT:"https://api.openai.com/v1/"
-Deepseek:"https://api.deepseek.com/v1"
-
-- Azure protocol
- "https://{your-resource-name}.openai.azure.com?api-version={api-version}"
-
-- Minimax protocol
-"https://api.minimax.chat/v1"
-                     * @param _aPIUrl Model interface address
-
-- OpenAI protocol
-GPT:"https://api.openai.com/v1/"
-Deepseek:"https://api.deepseek.com/v1"
-
-- Azure protocol
- "https://{your-resource-name}.openai.azure.com?api-version={api-version}"
-
-- Minimax protocol
-"https://api.minimax.chat/v1"
-                     * 
-                     */
-                    void SetAPIUrl(const std::string& _aPIUrl);
-
-                    /**
-                     * 判断参数 APIUrl 是否已赋值
-                     * @return APIUrl 是否已赋值
-                     * 
-                     */
-                    bool APIUrlHasBeenSet() const;
 
                     /**
                      * 获取The following voice parameter values are available by default. If you wish to customize the voice type, please leave VoiceType blank and configure it in the CustomTTSConfig parameter.
@@ -1216,21 +1216,21 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
                     /**
                      * 获取Prompt word variable.
                      * @return PromptVariables Prompt word variable.
-                     * 
+                     * @deprecated
                      */
                     std::vector<Variable> GetPromptVariables() const;
 
                     /**
                      * 设置Prompt word variable.
                      * @param _promptVariables Prompt word variable.
-                     * 
+                     * @deprecated
                      */
                     void SetPromptVariables(const std::vector<Variable>& _promptVariables);
 
                     /**
                      * 判断参数 PromptVariables 是否已赋值
                      * @return PromptVariables 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool PromptVariablesHasBeenSet() const;
 
@@ -1291,6 +1291,44 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
                     bool m_calleeHasBeenSet;
 
                     /**
+                     * Model interface protocol types, currently compatible with three protocol types:
+
+- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
+- Azure protocol:"azure"
+- Minimax protocol:"minimax"
+                     */
+                    std::string m_lLMType;
+                    bool m_lLMTypeHasBeenSet;
+
+                    /**
+                     * Model API key, for authentication information, please refer to the respective model's official website
+
+- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
+
+- Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
+
+- Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
+                     */
+                    std::string m_aPIKey;
+                    bool m_aPIKeyHasBeenSet;
+
+                    /**
+                     * Model interface address
+
+- OpenAI protocol
+GPT:"https://api.openai.com/v1/"
+Deepseek:"https://api.deepseek.com/v1"
+
+- Azure protocol
+ "https://{your-resource-name}.openai.azure.com?api-version={api-version}"
+
+- Minimax protocol
+"https://api.minimax.chat/v1"
+                     */
+                    std::string m_aPIUrl;
+                    bool m_aPIUrlHasBeenSet;
+
+                    /**
                      * ## Identity
 You are Kate from the appointment department at Retell Health calling Cindy over the phone to prepare for the annual checkup coming up. You are a pleasant and friendly receptionist caring deeply for the user. You don't provide medical advice but would use the medical knowledge to understand user responses.
 
@@ -1327,16 +1365,6 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
                     bool m_systemPromptHasBeenSet;
 
                     /**
-                     * Model interface protocol types, currently compatible with three protocol types:
-
-- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
-- Azure protocol:"azure"
-- Minimax protocol:"minimax"
-                     */
-                    std::string m_lLMType;
-                    bool m_lLMTypeHasBeenSet;
-
-                    /**
                      * Model name, such as
 
 - OpenAI protocol
@@ -1350,34 +1378,6 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
                      */
                     std::string m_model;
                     bool m_modelHasBeenSet;
-
-                    /**
-                     * Model API key, for authentication information, please refer to the respective model's official website
-
-- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
-
-- Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
-
-- Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
-                     */
-                    std::string m_aPIKey;
-                    bool m_aPIKeyHasBeenSet;
-
-                    /**
-                     * Model interface address
-
-- OpenAI protocol
-GPT:"https://api.openai.com/v1/"
-Deepseek:"https://api.deepseek.com/v1"
-
-- Azure protocol
- "https://{your-resource-name}.openai.azure.com?api-version={api-version}"
-
-- Minimax protocol
-"https://api.minimax.chat/v1"
-                     */
-                    std::string m_aPIUrl;
-                    bool m_aPIUrlHasBeenSet;
 
                     /**
                      * The following voice parameter values are available by default. If you wish to customize the voice type, please leave VoiceType blank and configure it in the CustomTTSConfig parameter.

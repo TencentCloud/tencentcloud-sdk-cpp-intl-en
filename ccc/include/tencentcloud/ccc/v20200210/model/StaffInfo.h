@@ -155,21 +155,21 @@ namespace TencentCloud
                     /**
                      * 获取User role id.
                      * @return RoleId User role id.
-                     * 
+                     * @deprecated
                      */
                     uint64_t GetRoleId() const;
 
                     /**
                      * 设置User role id.
                      * @param _roleId User role id.
-                     * 
+                     * @deprecated
                      */
                     void SetRoleId(const uint64_t& _roleId);
 
                     /**
                      * 判断参数 RoleId 是否已赋值
                      * @return RoleId 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool RoleIdHasBeenSet() const;
 

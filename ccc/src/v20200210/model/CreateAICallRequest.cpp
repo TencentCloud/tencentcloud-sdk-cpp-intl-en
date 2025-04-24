@@ -25,11 +25,11 @@ using namespace std;
 CreateAICallRequest::CreateAICallRequest() :
     m_sdkAppIdHasBeenSet(false),
     m_calleeHasBeenSet(false),
-    m_systemPromptHasBeenSet(false),
     m_lLMTypeHasBeenSet(false),
-    m_modelHasBeenSet(false),
     m_aPIKeyHasBeenSet(false),
     m_aPIUrlHasBeenSet(false),
+    m_systemPromptHasBeenSet(false),
+    m_modelHasBeenSet(false),
     m_voiceTypeHasBeenSet(false),
     m_callersHasBeenSet(false),
     m_welcomeMessageHasBeenSet(false),
@@ -76,28 +76,12 @@ string CreateAICallRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_callee.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_systemPromptHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "SystemPrompt";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_systemPrompt.c_str(), allocator).Move(), allocator);
-    }
-
     if (m_lLMTypeHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LLMType";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_lLMType.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_modelHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Model";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_model.c_str(), allocator).Move(), allocator);
     }
 
     if (m_aPIKeyHasBeenSet)
@@ -114,6 +98,22 @@ string CreateAICallRequest::ToJsonString() const
         string key = "APIUrl";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_aPIUrl.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_systemPromptHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SystemPrompt";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_systemPrompt.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_modelHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Model";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_model.c_str(), allocator).Move(), allocator);
     }
 
     if (m_voiceTypeHasBeenSet)
@@ -347,22 +347,6 @@ bool CreateAICallRequest::CalleeHasBeenSet() const
     return m_calleeHasBeenSet;
 }
 
-string CreateAICallRequest::GetSystemPrompt() const
-{
-    return m_systemPrompt;
-}
-
-void CreateAICallRequest::SetSystemPrompt(const string& _systemPrompt)
-{
-    m_systemPrompt = _systemPrompt;
-    m_systemPromptHasBeenSet = true;
-}
-
-bool CreateAICallRequest::SystemPromptHasBeenSet() const
-{
-    return m_systemPromptHasBeenSet;
-}
-
 string CreateAICallRequest::GetLLMType() const
 {
     return m_lLMType;
@@ -377,22 +361,6 @@ void CreateAICallRequest::SetLLMType(const string& _lLMType)
 bool CreateAICallRequest::LLMTypeHasBeenSet() const
 {
     return m_lLMTypeHasBeenSet;
-}
-
-string CreateAICallRequest::GetModel() const
-{
-    return m_model;
-}
-
-void CreateAICallRequest::SetModel(const string& _model)
-{
-    m_model = _model;
-    m_modelHasBeenSet = true;
-}
-
-bool CreateAICallRequest::ModelHasBeenSet() const
-{
-    return m_modelHasBeenSet;
 }
 
 string CreateAICallRequest::GetAPIKey() const
@@ -425,6 +393,38 @@ void CreateAICallRequest::SetAPIUrl(const string& _aPIUrl)
 bool CreateAICallRequest::APIUrlHasBeenSet() const
 {
     return m_aPIUrlHasBeenSet;
+}
+
+string CreateAICallRequest::GetSystemPrompt() const
+{
+    return m_systemPrompt;
+}
+
+void CreateAICallRequest::SetSystemPrompt(const string& _systemPrompt)
+{
+    m_systemPrompt = _systemPrompt;
+    m_systemPromptHasBeenSet = true;
+}
+
+bool CreateAICallRequest::SystemPromptHasBeenSet() const
+{
+    return m_systemPromptHasBeenSet;
+}
+
+string CreateAICallRequest::GetModel() const
+{
+    return m_model;
+}
+
+void CreateAICallRequest::SetModel(const string& _model)
+{
+    m_model = _model;
+    m_modelHasBeenSet = true;
+}
+
+bool CreateAICallRequest::ModelHasBeenSet() const
+{
+    return m_modelHasBeenSet;
 }
 
 string CreateAICallRequest::GetVoiceType() const

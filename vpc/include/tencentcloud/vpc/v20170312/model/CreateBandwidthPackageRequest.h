@@ -45,10 +45,10 @@ namespace TencentCloud
 
                     /**
                      * 获取The network type of the bandwidth package. Default value: `BGP`. Valid values:
-`BGP` 
+`BGP`
 `HIGH_QUALITY_BGP`
                      * @return NetworkType The network type of the bandwidth package. Default value: `BGP`. Valid values:
-`BGP` 
+`BGP`
 `HIGH_QUALITY_BGP`
                      * 
                      */
@@ -56,10 +56,10 @@ namespace TencentCloud
 
                     /**
                      * 设置The network type of the bandwidth package. Default value: `BGP`. Valid values:
-`BGP` 
+`BGP`
 `HIGH_QUALITY_BGP`
                      * @param _networkType The network type of the bandwidth package. Default value: `BGP`. Valid values:
-`BGP` 
+`BGP`
 `HIGH_QUALITY_BGP`
                      * 
                      */
@@ -73,27 +73,43 @@ namespace TencentCloud
                     bool NetworkTypeHasBeenSet() const;
 
                     /**
-                     * 获取The billing mode of the bandwidth package. Default value: `TOP5_POSTPAID_BY_MONTH`. Valid values:
-<li>`TOP5_POSTPAID_BY_MONTH`: monthly top 5 </li>
-<li>`PERCENT95_POSTPAID_BY_MONTH`: monthly 95th percentile</li>
-<li>`FIXED_PREPAID_BY_MONTH`: monthly subscription</li>
-                     * @return ChargeType The billing mode of the bandwidth package. Default value: `TOP5_POSTPAID_BY_MONTH`. Valid values:
-<li>`TOP5_POSTPAID_BY_MONTH`: monthly top 5 </li>
-<li>`PERCENT95_POSTPAID_BY_MONTH`: monthly 95th percentile</li>
-<li>`FIXED_PREPAID_BY_MONTH`: monthly subscription</li>
+                     * 获取The billing mode of the bandwidth package. Default value: `ENHANCED95_POSTPAID_BY_MONTH`. Valid values:
+<li>`ENHANCED95_POSTPAID_BY_MONTH`: Pay-as-you-go - Enhanced 95th percentile</li>
+<li>`PRIMARY_TRAFFIC_POSTPAID_BY_HOUR`: Postpaid - Main Traffic Billing</li>
+<li>`BANDWIDTH_POSTPAID_BY_DAY`: General BGP, Pay-as-you-go - Bandwidth-based</li>
+<li>`PEAK_BANDWIDTH_POSTPAID_BY_DAY`: Static single-line, Pay-as-you-go - Daily billed</li>
+<li>`TOP5_POSTPAID_BY_MONTH`: Pay-as-you-go - Monthly top 5th, If you need to use this Bglling mode, please submit a ticket.</li>
+
+
+                     * @return ChargeType The billing mode of the bandwidth package. Default value: `ENHANCED95_POSTPAID_BY_MONTH`. Valid values:
+<li>`ENHANCED95_POSTPAID_BY_MONTH`: Pay-as-you-go - Enhanced 95th percentile</li>
+<li>`PRIMARY_TRAFFIC_POSTPAID_BY_HOUR`: Postpaid - Main Traffic Billing</li>
+<li>`BANDWIDTH_POSTPAID_BY_DAY`: General BGP, Pay-as-you-go - Bandwidth-based</li>
+<li>`PEAK_BANDWIDTH_POSTPAID_BY_DAY`: Static single-line, Pay-as-you-go - Daily billed</li>
+<li>`TOP5_POSTPAID_BY_MONTH`: Pay-as-you-go - Monthly top 5th, If you need to use this Bglling mode, please submit a ticket.</li>
+
+
                      * 
                      */
                     std::string GetChargeType() const;
 
                     /**
-                     * 设置The billing mode of the bandwidth package. Default value: `TOP5_POSTPAID_BY_MONTH`. Valid values:
-<li>`TOP5_POSTPAID_BY_MONTH`: monthly top 5 </li>
-<li>`PERCENT95_POSTPAID_BY_MONTH`: monthly 95th percentile</li>
-<li>`FIXED_PREPAID_BY_MONTH`: monthly subscription</li>
-                     * @param _chargeType The billing mode of the bandwidth package. Default value: `TOP5_POSTPAID_BY_MONTH`. Valid values:
-<li>`TOP5_POSTPAID_BY_MONTH`: monthly top 5 </li>
-<li>`PERCENT95_POSTPAID_BY_MONTH`: monthly 95th percentile</li>
-<li>`FIXED_PREPAID_BY_MONTH`: monthly subscription</li>
+                     * 设置The billing mode of the bandwidth package. Default value: `ENHANCED95_POSTPAID_BY_MONTH`. Valid values:
+<li>`ENHANCED95_POSTPAID_BY_MONTH`: Pay-as-you-go - Enhanced 95th percentile</li>
+<li>`PRIMARY_TRAFFIC_POSTPAID_BY_HOUR`: Postpaid - Main Traffic Billing</li>
+<li>`BANDWIDTH_POSTPAID_BY_DAY`: General BGP, Pay-as-you-go - Bandwidth-based</li>
+<li>`PEAK_BANDWIDTH_POSTPAID_BY_DAY`: Static single-line, Pay-as-you-go - Daily billed</li>
+<li>`TOP5_POSTPAID_BY_MONTH`: Pay-as-you-go - Monthly top 5th, If you need to use this Bglling mode, please submit a ticket.</li>
+
+
+                     * @param _chargeType The billing mode of the bandwidth package. Default value: `ENHANCED95_POSTPAID_BY_MONTH`. Valid values:
+<li>`ENHANCED95_POSTPAID_BY_MONTH`: Pay-as-you-go - Enhanced 95th percentile</li>
+<li>`PRIMARY_TRAFFIC_POSTPAID_BY_HOUR`: Postpaid - Main Traffic Billing</li>
+<li>`BANDWIDTH_POSTPAID_BY_DAY`: General BGP, Pay-as-you-go - Bandwidth-based</li>
+<li>`PEAK_BANDWIDTH_POSTPAID_BY_DAY`: Static single-line, Pay-as-you-go - Daily billed</li>
+<li>`TOP5_POSTPAID_BY_MONTH`: Pay-as-you-go - Monthly top 5th, If you need to use this Bglling mode, please submit a ticket.</li>
+
+
                      * 
                      */
                     void SetChargeType(const std::string& _chargeType);
@@ -127,15 +143,15 @@ namespace TencentCloud
                     bool BandwidthPackageNameHasBeenSet() const;
 
                     /**
-                     * 获取The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts.
-                     * @return BandwidthPackageCount The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts.
+                     * 获取The number of bandwidth packages to create. Valid range: 1-20. It can only be "1" for bill-by-CVM accounts.
+                     * @return BandwidthPackageCount The number of bandwidth packages to create. Valid range: 1-20. It can only be "1" for bill-by-CVM accounts.
                      * 
                      */
                     uint64_t GetBandwidthPackageCount() const;
 
                     /**
-                     * 设置The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts.
-                     * @param _bandwidthPackageCount The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts.
+                     * 设置The number of bandwidth packages to create. Valid range: 1-20. It can only be "1" for bill-by-CVM accounts.
+                     * @param _bandwidthPackageCount The number of bandwidth packages to create. Valid range: 1-20. It can only be "1" for bill-by-CVM accounts.
                      * 
                      */
                     void SetBandwidthPackageCount(const uint64_t& _bandwidthPackageCount);
@@ -231,21 +247,54 @@ namespace TencentCloud
                      */
                     bool TimeSpanHasBeenSet() const;
 
+                    /**
+                     * 获取    Network egress. It defaults to `center_egress1`. Valid values:
+center_egress1,center_egress2,center_egress3
+
+                     * @return Egress     Network egress. It defaults to `center_egress1`. Valid values:
+center_egress1,center_egress2,center_egress3
+
+                     * 
+                     */
+                    std::string GetEgress() const;
+
+                    /**
+                     * 设置    Network egress. It defaults to `center_egress1`. Valid values:
+center_egress1,center_egress2,center_egress3
+
+                     * @param _egress     Network egress. It defaults to `center_egress1`. Valid values:
+center_egress1,center_egress2,center_egress3
+
+                     * 
+                     */
+                    void SetEgress(const std::string& _egress);
+
+                    /**
+                     * 判断参数 Egress 是否已赋值
+                     * @return Egress 是否已赋值
+                     * 
+                     */
+                    bool EgressHasBeenSet() const;
+
                 private:
 
                     /**
                      * The network type of the bandwidth package. Default value: `BGP`. Valid values:
-`BGP` 
+`BGP`
 `HIGH_QUALITY_BGP`
                      */
                     std::string m_networkType;
                     bool m_networkTypeHasBeenSet;
 
                     /**
-                     * The billing mode of the bandwidth package. Default value: `TOP5_POSTPAID_BY_MONTH`. Valid values:
-<li>`TOP5_POSTPAID_BY_MONTH`: monthly top 5 </li>
-<li>`PERCENT95_POSTPAID_BY_MONTH`: monthly 95th percentile</li>
-<li>`FIXED_PREPAID_BY_MONTH`: monthly subscription</li>
+                     * The billing mode of the bandwidth package. Default value: `ENHANCED95_POSTPAID_BY_MONTH`. Valid values:
+<li>`ENHANCED95_POSTPAID_BY_MONTH`: Pay-as-you-go - Enhanced 95th percentile</li>
+<li>`PRIMARY_TRAFFIC_POSTPAID_BY_HOUR`: Postpaid - Main Traffic Billing</li>
+<li>`BANDWIDTH_POSTPAID_BY_DAY`: General BGP, Pay-as-you-go - Bandwidth-based</li>
+<li>`PEAK_BANDWIDTH_POSTPAID_BY_DAY`: Static single-line, Pay-as-you-go - Daily billed</li>
+<li>`TOP5_POSTPAID_BY_MONTH`: Pay-as-you-go - Monthly top 5th, If you need to use this Bglling mode, please submit a ticket.</li>
+
+
                      */
                     std::string m_chargeType;
                     bool m_chargeTypeHasBeenSet;
@@ -257,7 +306,7 @@ namespace TencentCloud
                     bool m_bandwidthPackageNameHasBeenSet;
 
                     /**
-                     * The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts.
+                     * The number of bandwidth packages to create. Valid range: 1-20. It can only be "1" for bill-by-CVM accounts.
                      */
                     uint64_t m_bandwidthPackageCount;
                     bool m_bandwidthPackageCountHasBeenSet;
@@ -285,6 +334,14 @@ namespace TencentCloud
                      */
                     uint64_t m_timeSpan;
                     bool m_timeSpanHasBeenSet;
+
+                    /**
+                     *     Network egress. It defaults to `center_egress1`. Valid values:
+center_egress1,center_egress2,center_egress3
+
+                     */
+                    std::string m_egress;
+                    bool m_egressHasBeenSet;
 
                 };
             }
