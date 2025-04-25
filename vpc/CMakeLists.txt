@@ -103,6 +103,7 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/AttachSnapshotInstancesResponse.h
   include/tencentcloud/vpc/v20170312/model/DescribeNatGatewaySourceIpTranslationNatRulesRequest.h
   include/tencentcloud/vpc/v20170312/model/DescribeNatGatewaysRequest.h
+  include/tencentcloud/vpc/v20170312/model/InstanceJumbo.h
   include/tencentcloud/vpc/v20170312/model/ModifyFlowLogAttributeResponse.h
   include/tencentcloud/vpc/v20170312/model/DescribeBandwidthPackagesResponse.h
   include/tencentcloud/vpc/v20170312/model/ReplaceSecurityGroupPoliciesResponse.h
@@ -111,6 +112,7 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/DescribeIPv6AddressesResponse.h
   include/tencentcloud/vpc/v20170312/model/AttachSnapshotInstancesRequest.h
   include/tencentcloud/vpc/v20170312/model/CreateVpcEndPointServiceWhiteListResponse.h
+  include/tencentcloud/vpc/v20170312/model/DescribeInstanceJumboResponse.h
   include/tencentcloud/vpc/v20170312/model/DescribeIpGeolocationDatabaseUrlResponse.h
   include/tencentcloud/vpc/v20170312/model/DescribeNatGatewaySourceIpTranslationNatRulesResponse.h
   include/tencentcloud/vpc/v20170312/model/DescribeVpcsRequest.h
@@ -285,6 +287,7 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/ModifyRouteTableAttributeRequest.h
   include/tencentcloud/vpc/v20170312/model/ModifyDirectConnectGatewayAttributeResponse.h
   include/tencentcloud/vpc/v20170312/model/DescribeVpnGatewaysRequest.h
+  include/tencentcloud/vpc/v20170312/model/DescribeInstanceJumboRequest.h
   include/tencentcloud/vpc/v20170312/model/NetDetectIpState.h
   include/tencentcloud/vpc/v20170312/model/InternetPrice.h
   include/tencentcloud/vpc/v20170312/model/ModifyIp6AddressesBandwidthResponse.h
@@ -770,6 +773,7 @@ set(vpc_src
   src/v20170312/model/AttachSnapshotInstancesResponse.cpp
   src/v20170312/model/DescribeNatGatewaySourceIpTranslationNatRulesRequest.cpp
   src/v20170312/model/DescribeNatGatewaysRequest.cpp
+  src/v20170312/model/InstanceJumbo.cpp
   src/v20170312/model/ModifyFlowLogAttributeResponse.cpp
   src/v20170312/model/DescribeBandwidthPackagesResponse.cpp
   src/v20170312/model/ReplaceSecurityGroupPoliciesResponse.cpp
@@ -778,6 +782,7 @@ set(vpc_src
   src/v20170312/model/DescribeIPv6AddressesResponse.cpp
   src/v20170312/model/AttachSnapshotInstancesRequest.cpp
   src/v20170312/model/CreateVpcEndPointServiceWhiteListResponse.cpp
+  src/v20170312/model/DescribeInstanceJumboResponse.cpp
   src/v20170312/model/DescribeIpGeolocationDatabaseUrlResponse.cpp
   src/v20170312/model/DescribeNatGatewaySourceIpTranslationNatRulesResponse.cpp
   src/v20170312/model/DescribeVpcsRequest.cpp
@@ -952,6 +957,7 @@ set(vpc_src
   src/v20170312/model/ModifyRouteTableAttributeRequest.cpp
   src/v20170312/model/ModifyDirectConnectGatewayAttributeResponse.cpp
   src/v20170312/model/DescribeVpnGatewaysRequest.cpp
+  src/v20170312/model/DescribeInstanceJumboRequest.cpp
   src/v20170312/model/NetDetectIpState.cpp
   src/v20170312/model/InternetPrice.cpp
   src/v20170312/model/ModifyIp6AddressesBandwidthResponse.cpp

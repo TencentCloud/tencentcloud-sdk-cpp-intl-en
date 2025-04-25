@@ -269,6 +269,8 @@
 #include <tencentcloud/vpc/v20170312/model/DescribeHaVipsResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeIPv6AddressesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeIPv6AddressesResponse.h>
+#include <tencentcloud/vpc/v20170312/model/DescribeInstanceJumboRequest.h>
+#include <tencentcloud/vpc/v20170312/model/DescribeInstanceJumboResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeIp6AddressesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeIp6AddressesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeIpGeolocationDatabaseUrlRequest.h>
@@ -960,6 +962,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeIPv6AddressesResponse> DescribeIPv6AddressesOutcome;
                 typedef std::future<DescribeIPv6AddressesOutcome> DescribeIPv6AddressesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DescribeIPv6AddressesRequest&, DescribeIPv6AddressesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIPv6AddressesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeInstanceJumboResponse> DescribeInstanceJumboOutcome;
+                typedef std::future<DescribeInstanceJumboOutcome> DescribeInstanceJumboOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::DescribeInstanceJumboRequest&, DescribeInstanceJumboOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceJumboAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeIp6AddressesResponse> DescribeIp6AddressesOutcome;
                 typedef std::future<DescribeIp6AddressesOutcome> DescribeIp6AddressesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DescribeIp6AddressesRequest&, DescribeIp6AddressesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIp6AddressesAsyncHandler;
@@ -2687,6 +2692,18 @@ A service provider can query all review requests created by any `APPID` under it
                 DescribeIPv6AddressesOutcome DescribeIPv6Addresses(const Model::DescribeIPv6AddressesRequest &request);
                 void DescribeIPv6AddressesAsync(const Model::DescribeIPv6AddressesRequest& request, const DescribeIPv6AddressesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeIPv6AddressesOutcomeCallable DescribeIPv6AddressesCallable(const Model::DescribeIPv6AddressesRequest& request);
+
+                /**
+                 *This API is used to check whether Cloud Virtual Machines support jumbo frames.
+Usage limits.
+This API is used to perform operations that require CAM policy authorization and read access to the corresponding instance. The API accesses CVM instances, so it verifies whether there are CAM permissions for the instance. For example: CAM action allows vpc:DescribeInstanceJumbo; resource allows qcs::cvm:ap-guangzhou:uin/2126195383:instance/*.
+This API is used to check the jumbo frame status before and after instance migration. The status returned by this API may be inconsistent before and after migration. You need to check whether the host machines of the instance before and after migration both support jumbo frames. One possible reason is that the instance has been migrated to a host machine that does not support jumbo frames.
+                 * @param req DescribeInstanceJumboRequest
+                 * @return DescribeInstanceJumboOutcome
+                 */
+                DescribeInstanceJumboOutcome DescribeInstanceJumbo(const Model::DescribeInstanceJumboRequest &request);
+                void DescribeInstanceJumboAsync(const Model::DescribeInstanceJumboRequest& request, const DescribeInstanceJumboAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeInstanceJumboOutcomeCallable DescribeInstanceJumboCallable(const Model::DescribeInstanceJumboRequest& request);
 
                 /**
                  *This API is used to query the detailed information on one or multiple classic elastic public IPv6 instances.
