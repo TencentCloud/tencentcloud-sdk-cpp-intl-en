@@ -728,6 +728,49 @@ IntlpartnersmgtClient::DescribeCustomerUinOutcomeCallable IntlpartnersmgtClient:
     return task->get_future();
 }
 
+IntlpartnersmgtClient::DescribeRebateDownloadUrlOutcome IntlpartnersmgtClient::DescribeRebateDownloadUrl(const DescribeRebateDownloadUrlRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRebateDownloadUrl");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRebateDownloadUrlResponse rsp = DescribeRebateDownloadUrlResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRebateDownloadUrlOutcome(rsp);
+        else
+            return DescribeRebateDownloadUrlOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRebateDownloadUrlOutcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::DescribeRebateDownloadUrlAsync(const DescribeRebateDownloadUrlRequest& request, const DescribeRebateDownloadUrlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeRebateDownloadUrl(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IntlpartnersmgtClient::DescribeRebateDownloadUrlOutcomeCallable IntlpartnersmgtClient::DescribeRebateDownloadUrlCallable(const DescribeRebateDownloadUrlRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeRebateDownloadUrlOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeRebateDownloadUrl(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 IntlpartnersmgtClient::ForceQNOutcome IntlpartnersmgtClient::ForceQN(const ForceQNRequest &request)
 {
     auto outcome = MakeRequest(request, "ForceQN");

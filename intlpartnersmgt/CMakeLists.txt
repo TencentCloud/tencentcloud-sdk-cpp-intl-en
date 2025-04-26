@@ -68,6 +68,7 @@ set(intlpartnersmgt_public_header_model
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillDownloadUrlResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerUinRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/TradeOneNode.h
+  include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeRebateDownloadUrlResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryInvitationInfoRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryCustomersCreditRequest.h
@@ -113,6 +114,7 @@ set(intlpartnersmgt_public_header_model
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryCustomerBillingQuotaRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerInfoData.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/CreateAndSendClientInvitationMailRequest.h
+  include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeRebateDownloadUrlRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/SendVerifyCodeResponse.h
   )
 
@@ -167,6 +169,7 @@ set(intlpartnersmgt_src
   src/v20220928/model/DescribeBillDownloadUrlResponse.cpp
   src/v20220928/model/DescribeCustomerUinRequest.cpp
   src/v20220928/model/TradeOneNode.cpp
+  src/v20220928/model/DescribeRebateDownloadUrlResponse.cpp
   src/v20220928/model/DescribeBillSummaryResponse.cpp
   src/v20220928/model/QueryInvitationInfoRequest.cpp
   src/v20220928/model/QueryCustomersCreditRequest.cpp
@@ -212,6 +215,7 @@ set(intlpartnersmgt_src
   src/v20220928/model/QueryCustomerBillingQuotaRequest.cpp
   src/v20220928/model/DescribeCustomerInfoData.cpp
   src/v20220928/model/CreateAndSendClientInvitationMailRequest.cpp
+  src/v20220928/model/DescribeRebateDownloadUrlRequest.cpp
   src/v20220928/model/SendVerifyCodeResponse.cpp
   )
 

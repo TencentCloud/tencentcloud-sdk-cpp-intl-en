@@ -55,6 +55,8 @@
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerInfoResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerUinRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerUinResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeRebateDownloadUrlRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeRebateDownloadUrlResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/ForceQNRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/ForceQNResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/GetCountryCodesRequest.h>
@@ -155,6 +157,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeCustomerUinResponse> DescribeCustomerUinOutcome;
                 typedef std::future<DescribeCustomerUinOutcome> DescribeCustomerUinOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeCustomerUinRequest&, DescribeCustomerUinOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomerUinAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRebateDownloadUrlResponse> DescribeRebateDownloadUrlOutcome;
+                typedef std::future<DescribeRebateDownloadUrlOutcome> DescribeRebateDownloadUrlOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeRebateDownloadUrlRequest&, DescribeRebateDownloadUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRebateDownloadUrlAsyncHandler;
                 typedef Outcome<Core::Error, Model::ForceQNResponse> ForceQNOutcome;
                 typedef std::future<ForceQNOutcome> ForceQNOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::ForceQNRequest&, ForceQNOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ForceQNAsyncHandler;
@@ -390,6 +395,16 @@ Invocation roles: reseller, first-level distributor.
                 DescribeCustomerUinOutcome DescribeCustomerUin(const Model::DescribeCustomerUinRequest &request);
                 void DescribeCustomerUinAsync(const Model::DescribeCustomerUinRequest& request, const DescribeCustomerUinAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeCustomerUinOutcomeCallable DescribeCustomerUinCallable(const Model::DescribeCustomerUinRequest& request);
+
+                /**
+                 *This API is used to download the commission bill file by resellers/agents. The file URL is returned.
+Resellers/Agents can call this API.
+                 * @param req DescribeRebateDownloadUrlRequest
+                 * @return DescribeRebateDownloadUrlOutcome
+                 */
+                DescribeRebateDownloadUrlOutcome DescribeRebateDownloadUrl(const Model::DescribeRebateDownloadUrlRequest &request);
+                void DescribeRebateDownloadUrlAsync(const Model::DescribeRebateDownloadUrlRequest& request, const DescribeRebateDownloadUrlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRebateDownloadUrlOutcomeCallable DescribeRebateDownloadUrlCallable(const Model::DescribeRebateDownloadUrlRequest& request);
 
                 /**
                  *Forced Service Suspension settings and cancellation can be used only after the reseller is whitelisted.
