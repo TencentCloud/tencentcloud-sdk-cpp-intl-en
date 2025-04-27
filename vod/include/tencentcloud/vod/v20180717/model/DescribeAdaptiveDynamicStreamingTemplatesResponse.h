@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of eligible entries.
-                     * @return TotalCount Number of eligible entries.
+                     * 获取The total number of records matching the filter criteria.
+                     * @return TotalCount The total number of records matching the filter criteria.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -75,7 +75,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of eligible entries.
+                     * The total number of records matching the filter criteria.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

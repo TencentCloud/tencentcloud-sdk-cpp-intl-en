@@ -23,6 +23,8 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/wedata/v20210820/model/AddProjectUserRoleRequest.h>
+#include <tencentcloud/wedata/v20210820/model/AddProjectUserRoleResponse.h>
 #include <tencentcloud/wedata/v20210820/model/BatchCreateIntegrationTaskAlarmsRequest.h>
 #include <tencentcloud/wedata/v20210820/model/BatchCreateIntegrationTaskAlarmsResponse.h>
 #include <tencentcloud/wedata/v20210820/model/BatchDeleteIntegrationTasksRequest.h>
@@ -261,6 +263,8 @@
 #include <tencentcloud/wedata/v20210820/model/DescribeReportTaskListResponse.h>
 #include <tencentcloud/wedata/v20210820/model/DescribeResourceManagePathTreesRequest.h>
 #include <tencentcloud/wedata/v20210820/model/DescribeResourceManagePathTreesResponse.h>
+#include <tencentcloud/wedata/v20210820/model/DescribeRoleListRequest.h>
+#include <tencentcloud/wedata/v20210820/model/DescribeRoleListResponse.h>
 #include <tencentcloud/wedata/v20210820/model/DescribeRuleRequest.h>
 #include <tencentcloud/wedata/v20210820/model/DescribeRuleResponse.h>
 #include <tencentcloud/wedata/v20210820/model/DescribeRuleDimStatRequest.h>
@@ -473,6 +477,8 @@
 #include <tencentcloud/wedata/v20210820/model/TriggerEventResponse.h>
 #include <tencentcloud/wedata/v20210820/model/UnlockIntegrationTaskRequest.h>
 #include <tencentcloud/wedata/v20210820/model/UnlockIntegrationTaskResponse.h>
+#include <tencentcloud/wedata/v20210820/model/UpdateProjectUserRoleRequest.h>
+#include <tencentcloud/wedata/v20210820/model/UpdateProjectUserRoleResponse.h>
 #include <tencentcloud/wedata/v20210820/model/UpdateWorkflowOwnerRequest.h>
 #include <tencentcloud/wedata/v20210820/model/UpdateWorkflowOwnerResponse.h>
 #include <tencentcloud/wedata/v20210820/model/UploadContentRequest.h>
@@ -491,6 +497,9 @@ namespace TencentCloud
                 WedataClient(const Credential &credential, const std::string &region);
                 WedataClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::AddProjectUserRoleResponse> AddProjectUserRoleOutcome;
+                typedef std::future<AddProjectUserRoleOutcome> AddProjectUserRoleOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::AddProjectUserRoleRequest&, AddProjectUserRoleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddProjectUserRoleAsyncHandler;
                 typedef Outcome<Core::Error, Model::BatchCreateIntegrationTaskAlarmsResponse> BatchCreateIntegrationTaskAlarmsOutcome;
                 typedef std::future<BatchCreateIntegrationTaskAlarmsOutcome> BatchCreateIntegrationTaskAlarmsOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::BatchCreateIntegrationTaskAlarmsRequest&, BatchCreateIntegrationTaskAlarmsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BatchCreateIntegrationTaskAlarmsAsyncHandler;
@@ -848,6 +857,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeResourceManagePathTreesResponse> DescribeResourceManagePathTreesOutcome;
                 typedef std::future<DescribeResourceManagePathTreesOutcome> DescribeResourceManagePathTreesOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::DescribeResourceManagePathTreesRequest&, DescribeResourceManagePathTreesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeResourceManagePathTreesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRoleListResponse> DescribeRoleListOutcome;
+                typedef std::future<DescribeRoleListOutcome> DescribeRoleListOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::DescribeRoleListRequest&, DescribeRoleListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRoleListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRuleResponse> DescribeRuleOutcome;
                 typedef std::future<DescribeRuleOutcome> DescribeRuleOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::DescribeRuleRequest&, DescribeRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRuleAsyncHandler;
@@ -1166,6 +1178,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::UnlockIntegrationTaskResponse> UnlockIntegrationTaskOutcome;
                 typedef std::future<UnlockIntegrationTaskOutcome> UnlockIntegrationTaskOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::UnlockIntegrationTaskRequest&, UnlockIntegrationTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UnlockIntegrationTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateProjectUserRoleResponse> UpdateProjectUserRoleOutcome;
+                typedef std::future<UpdateProjectUserRoleOutcome> UpdateProjectUserRoleOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::UpdateProjectUserRoleRequest&, UpdateProjectUserRoleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateProjectUserRoleAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpdateWorkflowOwnerResponse> UpdateWorkflowOwnerOutcome;
                 typedef std::future<UpdateWorkflowOwnerOutcome> UpdateWorkflowOwnerOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::UpdateWorkflowOwnerRequest&, UpdateWorkflowOwnerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateWorkflowOwnerAsyncHandler;
@@ -1174,6 +1189,15 @@ namespace TencentCloud
                 typedef std::function<void(const WedataClient*, const Model::UploadContentRequest&, UploadContentOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UploadContentAsyncHandler;
 
 
+
+                /**
+                 *This API is used to add a user role to a project.
+                 * @param req AddProjectUserRoleRequest
+                 * @return AddProjectUserRoleOutcome
+                 */
+                AddProjectUserRoleOutcome AddProjectUserRole(const Model::AddProjectUserRoleRequest &request);
+                void AddProjectUserRoleAsync(const Model::AddProjectUserRoleRequest& request, const AddProjectUserRoleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AddProjectUserRoleOutcomeCallable AddProjectUserRoleCallable(const Model::AddProjectUserRoleRequest& request);
 
                 /**
                  *Bulk Create Task Alert Rules
@@ -2247,6 +2271,15 @@ namespace TencentCloud
                 DescribeResourceManagePathTreesOutcomeCallable DescribeResourceManagePathTreesCallable(const Model::DescribeResourceManagePathTreesRequest& request);
 
                 /**
+                 *This API is used to retrieve role list information.
+                 * @param req DescribeRoleListRequest
+                 * @return DescribeRoleListOutcome
+                 */
+                DescribeRoleListOutcome DescribeRoleList(const Model::DescribeRoleListRequest &request);
+                void DescribeRoleListAsync(const Model::DescribeRoleListRequest& request, const DescribeRoleListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRoleListOutcomeCallable DescribeRoleListCallable(const Model::DescribeRoleListRequest& request);
+
+                /**
                  *Queries rule details
                  * @param req DescribeRuleRequest
                  * @return DescribeRuleOutcome
@@ -3210,6 +3243,15 @@ Trigger events
                 UnlockIntegrationTaskOutcome UnlockIntegrationTask(const Model::UnlockIntegrationTaskRequest &request);
                 void UnlockIntegrationTaskAsync(const Model::UnlockIntegrationTaskRequest& request, const UnlockIntegrationTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 UnlockIntegrationTaskOutcomeCallable UnlockIntegrationTaskCallable(const Model::UnlockIntegrationTaskRequest& request);
+
+                /**
+                 *This API is used to modify user roles in a project.
+                 * @param req UpdateProjectUserRoleRequest
+                 * @return UpdateProjectUserRoleOutcome
+                 */
+                UpdateProjectUserRoleOutcome UpdateProjectUserRole(const Model::UpdateProjectUserRoleRequest &request);
+                void UpdateProjectUserRoleAsync(const Model::UpdateProjectUserRoleRequest& request, const UpdateProjectUserRoleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateProjectUserRoleOutcomeCallable UpdateProjectUserRoleCallable(const Model::UpdateProjectUserRoleRequest& request);
 
                 /**
                  *Modifying Workflow Person in Charge
