@@ -1373,6 +1373,49 @@ IntlpartnersmgtClient::QueryPolicyProductListByCodeOutcomeCallable Intlpartnersm
     return task->get_future();
 }
 
+IntlpartnersmgtClient::QuerySubAgentsDetailV2Outcome IntlpartnersmgtClient::QuerySubAgentsDetailV2(const QuerySubAgentsDetailV2Request &request)
+{
+    auto outcome = MakeRequest(request, "QuerySubAgentsDetailV2");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        QuerySubAgentsDetailV2Response rsp = QuerySubAgentsDetailV2Response();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return QuerySubAgentsDetailV2Outcome(rsp);
+        else
+            return QuerySubAgentsDetailV2Outcome(o.GetError());
+    }
+    else
+    {
+        return QuerySubAgentsDetailV2Outcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::QuerySubAgentsDetailV2Async(const QuerySubAgentsDetailV2Request& request, const QuerySubAgentsDetailV2AsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->QuerySubAgentsDetailV2(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IntlpartnersmgtClient::QuerySubAgentsDetailV2OutcomeCallable IntlpartnersmgtClient::QuerySubAgentsDetailV2Callable(const QuerySubAgentsDetailV2Request &request)
+{
+    auto task = std::make_shared<std::packaged_task<QuerySubAgentsDetailV2Outcome()>>(
+        [this, request]()
+        {
+            return this->QuerySubAgentsDetailV2(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 IntlpartnersmgtClient::QueryT1IndirectCustomersDetailOutcome IntlpartnersmgtClient::QueryT1IndirectCustomersDetail(const QueryT1IndirectCustomersDetailRequest &request)
 {
     auto outcome = MakeRequest(request, "QueryT1IndirectCustomersDetail");

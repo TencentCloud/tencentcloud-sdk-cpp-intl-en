@@ -85,15 +85,23 @@ namespace TencentCloud
                     bool InstanceKeyHasBeenSet() const;
 
                     /**
-                     * 获取Lifecycle no.
-                     * @return LifeRoundNum Lifecycle no.
+                     * 获取Instance lifetime number, which identifies one-time execution of the instance.
+
+For example: the number of the first run of a periodic instance is 0. when the user reruns the instance later, the number of the second execution is 1.
+                     * @return LifeRoundNum Instance lifetime number, which identifies one-time execution of the instance.
+
+For example: the number of the first run of a periodic instance is 0. when the user reruns the instance later, the number of the second execution is 1.
                      * 
                      */
                     uint64_t GetLifeRoundNum() const;
 
                     /**
-                     * 设置Lifecycle no.
-                     * @param _lifeRoundNum Lifecycle no.
+                     * 设置Instance lifetime number, which identifies one-time execution of the instance.
+
+For example: the number of the first run of a periodic instance is 0. when the user reruns the instance later, the number of the second execution is 1.
+                     * @param _lifeRoundNum Instance lifetime number, which identifies one-time execution of the instance.
+
+For example: the number of the first run of a periodic instance is 0. when the user reruns the instance later, the number of the second execution is 1.
                      * 
                      */
                     void SetLifeRoundNum(const uint64_t& _lifeRoundNum);
@@ -308,6 +316,39 @@ The default value is 10000.
                      */
                     bool EndLineCountHasBeenSet() const;
 
+                    /**
+                     * 获取Used when performing a paging query for logs. it has no specific business meaning.
+
+Specifies that the value is null for the first query. 
+Use the ExtInfo field value in the returned information from the previous query for the second and subsequent queries.
+                     * @return ExtInfo Used when performing a paging query for logs. it has no specific business meaning.
+
+Specifies that the value is null for the first query. 
+Use the ExtInfo field value in the returned information from the previous query for the second and subsequent queries.
+                     * 
+                     */
+                    std::string GetExtInfo() const;
+
+                    /**
+                     * 设置Used when performing a paging query for logs. it has no specific business meaning.
+
+Specifies that the value is null for the first query. 
+Use the ExtInfo field value in the returned information from the previous query for the second and subsequent queries.
+                     * @param _extInfo Used when performing a paging query for logs. it has no specific business meaning.
+
+Specifies that the value is null for the first query. 
+Use the ExtInfo field value in the returned information from the previous query for the second and subsequent queries.
+                     * 
+                     */
+                    void SetExtInfo(const std::string& _extInfo);
+
+                    /**
+                     * 判断参数 ExtInfo 是否已赋值
+                     * @return ExtInfo 是否已赋值
+                     * 
+                     */
+                    bool ExtInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -323,7 +364,9 @@ The default value is 10000.
                     bool m_instanceKeyHasBeenSet;
 
                     /**
-                     * Lifecycle no.
+                     * Instance lifetime number, which identifies one-time execution of the instance.
+
+For example: the number of the first run of a periodic instance is 0. when the user reruns the instance later, the number of the second execution is 1.
                      */
                     uint64_t m_lifeRoundNum;
                     bool m_lifeRoundNumHasBeenSet;
@@ -383,6 +426,15 @@ The default value is 10000.
                      */
                     uint64_t m_endLineCount;
                     bool m_endLineCountHasBeenSet;
+
+                    /**
+                     * Used when performing a paging query for logs. it has no specific business meaning.
+
+Specifies that the value is null for the first query. 
+Use the ExtInfo field value in the returned information from the previous query for the second and subsequent queries.
+                     */
+                    std::string m_extInfo;
+                    bool m_extInfoHasBeenSet;
 
                 };
             }

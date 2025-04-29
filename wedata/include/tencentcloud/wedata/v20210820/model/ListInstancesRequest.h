@@ -64,19 +64,19 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance plan scheduling time.
-Filter start time. the time format is yyyy-MM-dd HH:MM:ss.
-                     * @return ScheduleTimeFrom Instance plan scheduling time.
-Filter start time. the time format is yyyy-MM-dd HH:MM:ss.
+                     * 获取Filter criteria for instance planned scheduling time.
+Specifies the start time for filtering. the time format is yyyy-MM-dd HH:MM:ss.
+                     * @return ScheduleTimeFrom Filter criteria for instance planned scheduling time.
+Specifies the start time for filtering. the time format is yyyy-MM-dd HH:MM:ss.
                      * 
                      */
                     std::string GetScheduleTimeFrom() const;
 
                     /**
-                     * 设置Instance plan scheduling time.
-Filter start time. the time format is yyyy-MM-dd HH:MM:ss.
-                     * @param _scheduleTimeFrom Instance plan scheduling time.
-Filter start time. the time format is yyyy-MM-dd HH:MM:ss.
+                     * 设置Filter criteria for instance planned scheduling time.
+Specifies the start time for filtering. the time format is yyyy-MM-dd HH:MM:ss.
+                     * @param _scheduleTimeFrom Filter criteria for instance planned scheduling time.
+Specifies the start time for filtering. the time format is yyyy-MM-dd HH:MM:ss.
                      * 
                      */
                     void SetScheduleTimeFrom(const std::string& _scheduleTimeFrom);
@@ -89,19 +89,19 @@ Filter start time. the time format is yyyy-MM-dd HH:MM:ss.
                     bool ScheduleTimeFromHasBeenSet() const;
 
                     /**
-                     * 获取Instance plan scheduling time.
-Filter expiration time. time format: yyyy-MM-dd HH:MM:ss.
-                     * @return ScheduleTimeTo Instance plan scheduling time.
-Filter expiration time. time format: yyyy-MM-dd HH:MM:ss.
+                     * 获取Filter criteria for instance planned scheduling time.
+Filter expiration time. the time format is yyyy-MM-dd HH:MM:ss.
+                     * @return ScheduleTimeTo Filter criteria for instance planned scheduling time.
+Filter expiration time. the time format is yyyy-MM-dd HH:MM:ss.
                      * 
                      */
                     std::string GetScheduleTimeTo() const;
 
                     /**
-                     * 设置Instance plan scheduling time.
-Filter expiration time. time format: yyyy-MM-dd HH:MM:ss.
-                     * @param _scheduleTimeTo Instance plan scheduling time.
-Filter expiration time. time format: yyyy-MM-dd HH:MM:ss.
+                     * 设置Filter criteria for instance planned scheduling time.
+Filter expiration time. the time format is yyyy-MM-dd HH:MM:ss.
+                     * @param _scheduleTimeTo Filter criteria for instance planned scheduling time.
+Filter expiration time. the time format is yyyy-MM-dd HH:MM:ss.
                      * 
                      */
                     void SetScheduleTimeTo(const std::string& _scheduleTimeTo);
@@ -164,35 +164,35 @@ Use in conjunction with pageNumber and should not exceed 200. default value: 10.
                     bool PageSizeHasBeenSet() const;
 
                     /**
-                     * 获取Field used to sort query results.
+                     * 获取Sorting field for query results.
 
--SCHEDULE_DATE indicates the planned scheduling time.
--START_TIME indicates the start execution time of an instance.
--END_TIME indicates the execution end time of the instance.
--COST_TIME indicates the execution duration of an instance.
-                     * @return SortColumn Field used to sort query results.
+-SCHEDULE_DATE indicates sorting based on the planned scheduling time.
+-START_TIME indicates sorting by the instance's start execution time.
+-END_TIME indicates sorting based on the instance execution end time.
+-COST_TIME indicates sorting based on instance execution duration.
+                     * @return SortColumn Sorting field for query results.
 
--SCHEDULE_DATE indicates the planned scheduling time.
--START_TIME indicates the start execution time of an instance.
--END_TIME indicates the execution end time of the instance.
--COST_TIME indicates the execution duration of an instance.
+-SCHEDULE_DATE indicates sorting based on the planned scheduling time.
+-START_TIME indicates sorting by the instance's start execution time.
+-END_TIME indicates sorting based on the instance execution end time.
+-COST_TIME indicates sorting based on instance execution duration.
                      * 
                      */
                     std::string GetSortColumn() const;
 
                     /**
-                     * 设置Field used to sort query results.
+                     * 设置Sorting field for query results.
 
--SCHEDULE_DATE indicates the planned scheduling time.
--START_TIME indicates the start execution time of an instance.
--END_TIME indicates the execution end time of the instance.
--COST_TIME indicates the execution duration of an instance.
-                     * @param _sortColumn Field used to sort query results.
+-SCHEDULE_DATE indicates sorting based on the planned scheduling time.
+-START_TIME indicates sorting by the instance's start execution time.
+-END_TIME indicates sorting based on the instance execution end time.
+-COST_TIME indicates sorting based on instance execution duration.
+                     * @param _sortColumn Sorting field for query results.
 
--SCHEDULE_DATE indicates the planned scheduling time.
--START_TIME indicates the start execution time of an instance.
--END_TIME indicates the execution end time of the instance.
--COST_TIME indicates the execution duration of an instance.
+-SCHEDULE_DATE indicates sorting based on the planned scheduling time.
+-START_TIME indicates sorting by the instance's start execution time.
+-END_TIME indicates sorting based on the instance execution end time.
+-COST_TIME indicates sorting based on instance execution duration.
                      * 
                      */
                     void SetSortColumn(const std::string& _sortColumn);
@@ -240,14 +240,14 @@ Use in conjunction with pageNumber and should not exceed 200. default value: 10.
                     /**
                      * 获取Instance type.
 
--0 indicates the supplementary entry type.
--1 indicates a periodic instance.
--2 indicates a non-periodic instance.
+-0 indicates Replenished Instance.
+-1 indicates Periodic Instance.
+-2 indicates Non-Periodic instance.
                      * @return InstanceType Instance type.
 
--0 indicates the supplementary entry type.
--1 indicates a periodic instance.
--2 indicates a non-periodic instance.
+-0 indicates Replenished Instance.
+-1 indicates Periodic Instance.
+-2 indicates Non-Periodic instance.
                      * 
                      */
                     uint64_t GetInstanceType() const;
@@ -255,14 +255,14 @@ Use in conjunction with pageNumber and should not exceed 200. default value: 10.
                     /**
                      * 设置Instance type.
 
--0 indicates the supplementary entry type.
--1 indicates a periodic instance.
--2 indicates a non-periodic instance.
+-0 indicates Replenished Instance.
+-1 indicates Periodic Instance.
+-2 indicates Non-Periodic instance.
                      * @param _instanceType Instance type.
 
--0 indicates the supplementary entry type.
--1 indicates a periodic instance.
--2 indicates a non-periodic instance.
+-0 indicates Replenished Instance.
+-1 indicates Periodic Instance.
+-2 indicates Non-Periodic instance.
                      * 
                      */
                     void SetInstanceType(const uint64_t& _instanceType);
@@ -278,10 +278,10 @@ Use in conjunction with pageNumber and should not exceed 200. default value: 10.
                      * 获取Instance execution status.
 Support filtering multiple items with an "or" relationship between conditions.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
+-[1, 19, 22] indicate running.
 -[21] indicates skipping running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
@@ -289,10 +289,10 @@ Support filtering multiple items with an "or" relationship between conditions.
                      * @return InstanceStateList Instance execution status.
 Support filtering multiple items with an "or" relationship between conditions.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
+-[1, 19, 22] indicate running.
 -[21] indicates skipping running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
@@ -305,10 +305,10 @@ Support filtering multiple items with an "or" relationship between conditions.
                      * 设置Instance execution status.
 Support filtering multiple items with an "or" relationship between conditions.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
+-[1, 19, 22] indicate running.
 -[21] indicates skipping running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
@@ -316,10 +316,10 @@ Support filtering multiple items with an "or" relationship between conditions.
                      * @param _instanceStateList Instance execution status.
 Support filtering multiple items with an "or" relationship between conditions.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
+-[1, 19, 22] indicate running.
 -[21] indicates skipping running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
@@ -567,19 +567,19 @@ The DescribeNormalIntegrationExecutorGroups API can be used to obtain the list o
                     bool ExecutorGroupIdListHasBeenSet() const;
 
                     /**
-                     * 获取**Start time**.
-Filter start time. the time format is yyyy-MM-dd HH:MM:ss.
-                     * @return StartTimeFrom **Start time**.
-Filter start time. the time format is yyyy-MM-dd HH:MM:ss.
+                     * 获取Instance execution start time filter criteria.
+Specifies the start time for filtering. the time format is yyyy-MM-dd HH:MM:ss.
+                     * @return StartTimeFrom Instance execution start time filter criteria.
+Specifies the start time for filtering. the time format is yyyy-MM-dd HH:MM:ss.
                      * 
                      */
                     std::string GetStartTimeFrom() const;
 
                     /**
-                     * 设置**Start time**.
-Filter start time. the time format is yyyy-MM-dd HH:MM:ss.
-                     * @param _startTimeFrom **Start time**.
-Filter start time. the time format is yyyy-MM-dd HH:MM:ss.
+                     * 设置Instance execution start time filter criteria.
+Specifies the start time for filtering. the time format is yyyy-MM-dd HH:MM:ss.
+                     * @param _startTimeFrom Instance execution start time filter criteria.
+Specifies the start time for filtering. the time format is yyyy-MM-dd HH:MM:ss.
                      * 
                      */
                     void SetStartTimeFrom(const std::string& _startTimeFrom);
@@ -592,19 +592,19 @@ Filter start time. the time format is yyyy-MM-dd HH:MM:ss.
                     bool StartTimeFromHasBeenSet() const;
 
                     /**
-                     * 获取**Start time**.
-Filter expiration time. time format: yyyy-MM-dd HH:MM:ss.
-                     * @return StartTimeTo **Start time**.
-Filter expiration time. time format: yyyy-MM-dd HH:MM:ss.
+                     * 获取Instance execution start time filter criteria.
+Filter expiration time. the time format is yyyy-MM-dd HH:MM:ss.
+                     * @return StartTimeTo Instance execution start time filter criteria.
+Filter expiration time. the time format is yyyy-MM-dd HH:MM:ss.
                      * 
                      */
                     std::string GetStartTimeTo() const;
 
                     /**
-                     * 设置**Start time**.
-Filter expiration time. time format: yyyy-MM-dd HH:MM:ss.
-                     * @param _startTimeTo **Start time**.
-Filter expiration time. time format: yyyy-MM-dd HH:MM:ss.
+                     * 设置Instance execution start time filter criteria.
+Filter expiration time. the time format is yyyy-MM-dd HH:MM:ss.
+                     * @param _startTimeTo Instance execution start time filter criteria.
+Filter expiration time. the time format is yyyy-MM-dd HH:MM:ss.
                      * 
                      */
                     void SetStartTimeTo(const std::string& _startTimeTo);
@@ -650,15 +650,15 @@ Time zone. specifies the time zone. the default value is UTC+8.
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Instance plan scheduling time.
-Filter start time. the time format is yyyy-MM-dd HH:MM:ss.
+                     * Filter criteria for instance planned scheduling time.
+Specifies the start time for filtering. the time format is yyyy-MM-dd HH:MM:ss.
                      */
                     std::string m_scheduleTimeFrom;
                     bool m_scheduleTimeFromHasBeenSet;
 
                     /**
-                     * Instance plan scheduling time.
-Filter expiration time. time format: yyyy-MM-dd HH:MM:ss.
+                     * Filter criteria for instance planned scheduling time.
+Filter expiration time. the time format is yyyy-MM-dd HH:MM:ss.
                      */
                     std::string m_scheduleTimeTo;
                     bool m_scheduleTimeToHasBeenSet;
@@ -678,12 +678,12 @@ Use in conjunction with pageNumber and should not exceed 200. default value: 10.
                     bool m_pageSizeHasBeenSet;
 
                     /**
-                     * Field used to sort query results.
+                     * Sorting field for query results.
 
--SCHEDULE_DATE indicates the planned scheduling time.
--START_TIME indicates the start execution time of an instance.
--END_TIME indicates the execution end time of the instance.
--COST_TIME indicates the execution duration of an instance.
+-SCHEDULE_DATE indicates sorting based on the planned scheduling time.
+-START_TIME indicates sorting by the instance's start execution time.
+-END_TIME indicates sorting based on the instance execution end time.
+-COST_TIME indicates sorting based on instance execution duration.
                      */
                     std::string m_sortColumn;
                     bool m_sortColumnHasBeenSet;
@@ -700,9 +700,9 @@ Use in conjunction with pageNumber and should not exceed 200. default value: 10.
                     /**
                      * Instance type.
 
--0 indicates the supplementary entry type.
--1 indicates a periodic instance.
--2 indicates a non-periodic instance.
+-0 indicates Replenished Instance.
+-1 indicates Periodic Instance.
+-2 indicates Non-Periodic instance.
                      */
                     uint64_t m_instanceType;
                     bool m_instanceTypeHasBeenSet;
@@ -711,10 +711,10 @@ Use in conjunction with pageNumber and should not exceed 200. default value: 10.
                      * Instance execution status.
 Support filtering multiple items with an "or" relationship between conditions.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
+-[1, 19, 22] indicate running.
 -[21] indicates skipping running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
@@ -787,15 +787,15 @@ The DescribeNormalIntegrationExecutorGroups API can be used to obtain the list o
                     bool m_executorGroupIdListHasBeenSet;
 
                     /**
-                     * **Start time**.
-Filter start time. the time format is yyyy-MM-dd HH:MM:ss.
+                     * Instance execution start time filter criteria.
+Specifies the start time for filtering. the time format is yyyy-MM-dd HH:MM:ss.
                      */
                     std::string m_startTimeFrom;
                     bool m_startTimeFromHasBeenSet;
 
                     /**
-                     * **Start time**.
-Filter expiration time. time format: yyyy-MM-dd HH:MM:ss.
+                     * Instance execution start time filter criteria.
+Filter expiration time. the time format is yyyy-MM-dd HH:MM:ss.
                      */
                     std::string m_startTimeTo;
                     bool m_startTimeToHasBeenSet;

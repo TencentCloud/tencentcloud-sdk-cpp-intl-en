@@ -27,6 +27,7 @@ set(intlpartnersmgt_public_header_model
   include/tencentcloud/intlpartnersmgt/v20220928/model/CreateAndSendClientInvitationMailResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/CustomerBillDetailData.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/RegionSummaryOverviewItem.h
+  include/tencentcloud/intlpartnersmgt/v20220928/model/QuerySubAgentsDetailV2Response.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillDownloadUrlRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerUinData.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/CountryCodeItem.h
@@ -55,6 +56,7 @@ set(intlpartnersmgt_public_header_model
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillDownloadUrlRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryByPayModeRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryInvitationInfoData.h
+  include/tencentcloud/intlpartnersmgt/v20220928/model/QuerySubAgentsDetailV2Request.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/GetCountryCodesResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryT1IndirectCustomersDetailResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/AllocateCustomerCreditResponse.h
@@ -69,6 +71,7 @@ set(intlpartnersmgt_public_header_model
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerUinRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/TradeOneNode.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeRebateDownloadUrlResponse.h
+  include/tencentcloud/intlpartnersmgt/v20220928/model/QuerySubAgentsDetailV2ResponseData.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryInvitationInfoRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryCustomersCreditRequest.h
@@ -128,6 +131,7 @@ set(intlpartnersmgt_src
   src/v20220928/model/CreateAndSendClientInvitationMailResponse.cpp
   src/v20220928/model/CustomerBillDetailData.cpp
   src/v20220928/model/RegionSummaryOverviewItem.cpp
+  src/v20220928/model/QuerySubAgentsDetailV2Response.cpp
   src/v20220928/model/DescribeCustomerBillDownloadUrlRequest.cpp
   src/v20220928/model/DescribeCustomerUinData.cpp
   src/v20220928/model/CountryCodeItem.cpp
@@ -156,6 +160,7 @@ set(intlpartnersmgt_src
   src/v20220928/model/DescribeBillDownloadUrlRequest.cpp
   src/v20220928/model/DescribeBillSummaryByPayModeRequest.cpp
   src/v20220928/model/QueryInvitationInfoData.cpp
+  src/v20220928/model/QuerySubAgentsDetailV2Request.cpp
   src/v20220928/model/GetCountryCodesResponse.cpp
   src/v20220928/model/QueryT1IndirectCustomersDetailResponse.cpp
   src/v20220928/model/AllocateCustomerCreditResponse.cpp
@@ -170,6 +175,7 @@ set(intlpartnersmgt_src
   src/v20220928/model/DescribeCustomerUinRequest.cpp
   src/v20220928/model/TradeOneNode.cpp
   src/v20220928/model/DescribeRebateDownloadUrlResponse.cpp
+  src/v20220928/model/QuerySubAgentsDetailV2ResponseData.cpp
   src/v20220928/model/DescribeBillSummaryResponse.cpp
   src/v20220928/model/QueryInvitationInfoRequest.cpp
   src/v20220928/model/QueryCustomersCreditRequest.cpp

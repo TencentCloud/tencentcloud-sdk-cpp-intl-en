@@ -103,22 +103,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 获取**Instance status**.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
--21: skip running.
+-[1, 19, 22] indicate running.
+-[21] skip running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
 -[2] indicates a success.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceState **Instance status**.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
--21: skip running.
+-[1, 19, 22] indicate running.
+-[21] skip running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
 -[2] indicates a success.
@@ -130,22 +130,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 设置**Instance status**.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
--21: skip running.
+-[1, 19, 22] indicate running.
+-[21] skip running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
 -[2] indicates a success.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _instanceState **Instance status**.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
--21: skip running.
+-[1, 19, 22] indicate running.
+-[21] skip running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
 -[2] indicates a success.
@@ -164,12 +164,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 获取Instance running trigger type.
 
--RERUN indicates rerunning.
+-RERUN indicates data replenishment.
 -ADDITION indicates supplementary recording.
 -PERIODIC indicates a period.
 -APERIODIC indicates non-periodic.
 -RERUN_SKIP_RUN means empty run for re-run.
--ADDITION_SKIP_RUN indicates a supplementary run - empty run.
+-ADDITION_SKIP_RUN indicates data replenishment - empty run.
 -PERIODIC_SKIP_RUN indicates an empty run in a periodic cycle.
 -APERIODIC_SKIP_RUN indicates a non-periodic empty run.
 -MANUAL_TRIGGER indicates manual triggering.
@@ -177,12 +177,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RunType Instance running trigger type.
 
--RERUN indicates rerunning.
+-RERUN indicates data replenishment.
 -ADDITION indicates supplementary recording.
 -PERIODIC indicates a period.
 -APERIODIC indicates non-periodic.
 -RERUN_SKIP_RUN means empty run for re-run.
--ADDITION_SKIP_RUN indicates a supplementary run - empty run.
+-ADDITION_SKIP_RUN indicates data replenishment - empty run.
 -PERIODIC_SKIP_RUN indicates an empty run in a periodic cycle.
 -APERIODIC_SKIP_RUN indicates a non-periodic empty run.
 -MANUAL_TRIGGER indicates manual triggering.
@@ -195,12 +195,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 设置Instance running trigger type.
 
--RERUN indicates rerunning.
+-RERUN indicates data replenishment.
 -ADDITION indicates supplementary recording.
 -PERIODIC indicates a period.
 -APERIODIC indicates non-periodic.
 -RERUN_SKIP_RUN means empty run for re-run.
--ADDITION_SKIP_RUN indicates a supplementary run - empty run.
+-ADDITION_SKIP_RUN indicates data replenishment - empty run.
 -PERIODIC_SKIP_RUN indicates an empty run in a periodic cycle.
 -APERIODIC_SKIP_RUN indicates a non-periodic empty run.
 -MANUAL_TRIGGER indicates manual triggering.
@@ -208,12 +208,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _runType Instance running trigger type.
 
--RERUN indicates rerunning.
+-RERUN indicates data replenishment.
 -ADDITION indicates supplementary recording.
 -PERIODIC indicates a period.
 -APERIODIC indicates non-periodic.
 -RERUN_SKIP_RUN means empty run for re-run.
--ADDITION_SKIP_RUN indicates a supplementary run - empty run.
+-ADDITION_SKIP_RUN indicates data replenishment - empty run.
 -PERIODIC_SKIP_RUN indicates an empty run in a periodic cycle.
 -APERIODIC_SKIP_RUN indicates a non-periodic empty run.
 -MANUAL_TRIGGER indicates manual triggering.
@@ -439,18 +439,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LineCountHasBeenSet() const;
 
                     /**
-                     * 获取Execute platform log pagination query parameters, transparently input for each request. the value is an empty string when querying the first page.
+                     * 获取Used when performing a paging query for logs. it has no specific business meaning.
+
+Specifies that the value is null for the first query. 
+Specifies that you can use the field value of ExtInfo in the returned information from the previous query for the second and subsequent queries.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExtInfo Execute platform log pagination query parameters, transparently input for each request. the value is an empty string when querying the first page.
+                     * @return ExtInfo Used when performing a paging query for logs. it has no specific business meaning.
+
+Specifies that the value is null for the first query. 
+Specifies that you can use the field value of ExtInfo in the returned information from the previous query for the second and subsequent queries.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetExtInfo() const;
 
                     /**
-                     * 设置Execute platform log pagination query parameters, transparently input for each request. the value is an empty string when querying the first page.
+                     * 设置Used when performing a paging query for logs. it has no specific business meaning.
+
+Specifies that the value is null for the first query. 
+Specifies that you can use the field value of ExtInfo in the returned information from the previous query for the second and subsequent queries.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _extInfo Execute platform log pagination query parameters, transparently input for each request. the value is an empty string when querying the first page.
+                     * @param _extInfo Used when performing a paging query for logs. it has no specific business meaning.
+
+Specifies that the value is null for the first query. 
+Specifies that you can use the field value of ExtInfo in the returned information from the previous query for the second and subsequent queries.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -508,11 +520,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * **Instance status**.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
--21: skip running.
+-[1, 19, 22] indicate running.
+-[21] skip running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
 -[2] indicates a success.
@@ -524,12 +536,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * Instance running trigger type.
 
--RERUN indicates rerunning.
+-RERUN indicates data replenishment.
 -ADDITION indicates supplementary recording.
 -PERIODIC indicates a period.
 -APERIODIC indicates non-periodic.
 -RERUN_SKIP_RUN means empty run for re-run.
--ADDITION_SKIP_RUN indicates a supplementary run - empty run.
+-ADDITION_SKIP_RUN indicates data replenishment - empty run.
 -PERIODIC_SKIP_RUN indicates an empty run in a periodic cycle.
 -APERIODIC_SKIP_RUN indicates a non-periodic empty run.
 -MANUAL_TRIGGER indicates manual triggering.
@@ -598,7 +610,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_lineCountHasBeenSet;
 
                     /**
-                     * Execute platform log pagination query parameters, transparently input for each request. the value is an empty string when querying the first page.
+                     * Used when performing a paging query for logs. it has no specific business meaning.
+
+Specifies that the value is null for the first query. 
+Specifies that you can use the field value of ExtInfo in the returned information from the previous query for the second and subsequent queries.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_extInfo;

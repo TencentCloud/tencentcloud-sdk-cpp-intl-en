@@ -439,18 +439,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ExecutorGroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Standard data time.
+                     * 获取Instance data time.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CurRunDate Standard data time.
+                     * @return CurRunDate Instance data time.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCurRunDate() const;
 
                     /**
-                     * 设置Standard data time.
+                     * 设置Instance data time.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _curRunDate Standard data time.
+                     * @param _curRunDate Instance data time.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -464,18 +464,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CurRunDateHasBeenSet() const;
 
                     /**
-                     * 获取Next standard data time.
+                     * 获取Next instance data time.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NextCurDate Next standard data time.
+                     * @return NextCurDate Next instance data time.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetNextCurDate() const;
 
                     /**
-                     * 设置Next standard data time.
+                     * 设置Next instance data time.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _nextCurDate Next standard data time.
+                     * @param _nextCurDate Next instance data time.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -564,18 +564,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TotalRunNumHasBeenSet() const;
 
                     /**
-                     * 获取Lifecycle no.
+                     * 获取Instance lifetime number, which identifies one-time execution of the instance.
+
+For example: the number of the first run of a periodic instance is 0. after the user reruns the instance later, the number of the second execution is 1.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LifeRoundNum Lifecycle no.
+                     * @return LifeRoundNum Instance lifetime number, which identifies one-time execution of the instance.
+
+For example: the number of the first run of a periodic instance is 0. after the user reruns the instance later, the number of the second execution is 1.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetLifeRoundNum() const;
 
                     /**
-                     * 设置Lifecycle no.
+                     * 设置Instance lifetime number, which identifies one-time execution of the instance.
+
+For example: the number of the first run of a periodic instance is 0. after the user reruns the instance later, the number of the second execution is 1.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _lifeRoundNum Lifecycle no.
+                     * @param _lifeRoundNum Instance lifetime number, which identifies one-time execution of the instance.
+
+For example: the number of the first run of a periodic instance is 0. after the user reruns the instance later, the number of the second execution is 1.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -591,15 +599,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 获取Instance type.
 
--0 indicates the supplementary entry type.
--1 indicates a periodic instance.
--2 indicates a non-periodic instance.
+-0 indicates Replenished Instance.
+-1 indicates Periodic Instance.
+-2 indicates Non-Periodic Instance.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceType Instance type.
 
--0 indicates the supplementary entry type.
--1 indicates a periodic instance.
--2 indicates a non-periodic instance.
+-0 indicates Replenished Instance.
+-1 indicates Periodic Instance.
+-2 indicates Non-Periodic Instance.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -608,15 +616,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 设置Instance type.
 
--0 indicates the supplementary entry type.
--1 indicates a periodic instance.
--2 indicates a non-periodic instance.
+-0 indicates Replenished Instance.
+-1 indicates Periodic Instance.
+-2 indicates Non-Periodic Instance.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _instanceType Instance type.
 
--0 indicates the supplementary entry type.
--1 indicates a periodic instance.
--2 indicates a non-periodic instance.
+-0 indicates Replenished Instance.
+-1 indicates Periodic Instance.
+-2 indicates Non-Periodic Instance.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -632,22 +640,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 获取Indicates the status of an instance.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
--21: skip running.
+-[1, 19, 22] indicate running.
+-[21]: skip running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
 -[2] indicates a success.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceState Indicates the status of an instance.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
--21: skip running.
+-[1, 19, 22] indicate running.
+-[21]: skip running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
 -[2] indicates a success.
@@ -659,22 +667,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 设置Indicates the status of an instance.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
--21: skip running.
+-[1, 19, 22] indicate running.
+-[21]: skip running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
 -[2] indicates a success.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _instanceState Indicates the status of an instance.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
--21: skip running.
+-[1, 19, 22] indicate running.
+-[21]: skip running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
 -[2] indicates a success.
@@ -794,11 +802,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 获取Instance running trigger type.
 
 -RERUN indicates rerunning.
--ADDITION indicates supplementary recording.
+-ADDITION indicates data replenishment.
 -PERIODIC indicates a period.
 -APERIODIC indicates non-periodic.
 -RERUN_SKIP_RUN indicates re-run - empty run.
--ADDITION_SKIP_RUN indicates a supplementary run - empty run.
+-ADDITION_SKIP_RUN indicates a data replenishment run - empty run.
 -PERIODIC_SKIP_RUN indicates an empty run in a periodic cycle.
 -APERIODIC_SKIP_RUN indicates a non-periodic empty run.
 -MANUAL_TRIGGER indicates manual triggering.
@@ -807,11 +815,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return InstanceRunType Instance running trigger type.
 
 -RERUN indicates rerunning.
--ADDITION indicates supplementary recording.
+-ADDITION indicates data replenishment.
 -PERIODIC indicates a period.
 -APERIODIC indicates non-periodic.
 -RERUN_SKIP_RUN indicates re-run - empty run.
--ADDITION_SKIP_RUN indicates a supplementary run - empty run.
+-ADDITION_SKIP_RUN indicates a data replenishment run - empty run.
 -PERIODIC_SKIP_RUN indicates an empty run in a periodic cycle.
 -APERIODIC_SKIP_RUN indicates a non-periodic empty run.
 -MANUAL_TRIGGER indicates manual triggering.
@@ -825,11 +833,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置Instance running trigger type.
 
 -RERUN indicates rerunning.
--ADDITION indicates supplementary recording.
+-ADDITION indicates data replenishment.
 -PERIODIC indicates a period.
 -APERIODIC indicates non-periodic.
 -RERUN_SKIP_RUN indicates re-run - empty run.
--ADDITION_SKIP_RUN indicates a supplementary run - empty run.
+-ADDITION_SKIP_RUN indicates a data replenishment run - empty run.
 -PERIODIC_SKIP_RUN indicates an empty run in a periodic cycle.
 -APERIODIC_SKIP_RUN indicates a non-periodic empty run.
 -MANUAL_TRIGGER indicates manual triggering.
@@ -838,11 +846,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @param _instanceRunType Instance running trigger type.
 
 -RERUN indicates rerunning.
--ADDITION indicates supplementary recording.
+-ADDITION indicates data replenishment.
 -PERIODIC indicates a period.
 -APERIODIC indicates non-periodic.
 -RERUN_SKIP_RUN indicates re-run - empty run.
--ADDITION_SKIP_RUN indicates a supplementary run - empty run.
+-ADDITION_SKIP_RUN indicates a data replenishment run - empty run.
 -PERIODIC_SKIP_RUN indicates an empty run in a periodic cycle.
 -APERIODIC_SKIP_RUN indicates a non-periodic empty run.
 -MANUAL_TRIGGER indicates manual triggering.
@@ -1044,14 +1052,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_executorGroupNameHasBeenSet;
 
                     /**
-                     * Standard data time.
+                     * Instance data time.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_curRunDate;
                     bool m_curRunDateHasBeenSet;
 
                     /**
-                     * Next standard data time.
+                     * Next instance data time.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_nextCurDate;
@@ -1079,7 +1087,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_totalRunNumHasBeenSet;
 
                     /**
-                     * Lifecycle no.
+                     * Instance lifetime number, which identifies one-time execution of the instance.
+
+For example: the number of the first run of a periodic instance is 0. after the user reruns the instance later, the number of the second execution is 1.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_lifeRoundNum;
@@ -1088,9 +1098,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * Instance type.
 
--0 indicates the supplementary entry type.
--1 indicates a periodic instance.
--2 indicates a non-periodic instance.
+-0 indicates Replenished Instance.
+-1 indicates Periodic Instance.
+-2 indicates Non-Periodic Instance.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_instanceType;
@@ -1099,11 +1109,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * Indicates the status of an instance.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
--21: skip running.
+-[1, 19, 22] indicate running.
+-[21]: skip running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
 -[2] indicates a success.
@@ -1144,11 +1154,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * Instance running trigger type.
 
 -RERUN indicates rerunning.
--ADDITION indicates supplementary recording.
+-ADDITION indicates data replenishment.
 -PERIODIC indicates a period.
 -APERIODIC indicates non-periodic.
 -RERUN_SKIP_RUN indicates re-run - empty run.
--ADDITION_SKIP_RUN indicates a supplementary run - empty run.
+-ADDITION_SKIP_RUN indicates a data replenishment run - empty run.
 -PERIODIC_SKIP_RUN indicates an empty run in a periodic cycle.
 -APERIODIC_SKIP_RUN indicates a non-periodic empty run.
 -MANUAL_TRIGGER indicates manual triggering.
