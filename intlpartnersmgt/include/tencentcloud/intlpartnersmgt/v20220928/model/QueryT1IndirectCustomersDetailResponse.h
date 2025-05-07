@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The number of indirect sub-customers of a first-level distributor.
-                     * @return Total The number of indirect sub-customers of a first-level distributor.
+                     * 获取The number of indirect sub-customers of a distributor.
+                     * @return Total The number of indirect sub-customers of a distributor.
                      * 
                      */
                     int64_t GetTotal() const;
@@ -103,7 +103,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The number of indirect sub-customers of a first-level distributor.
+                     * The number of indirect sub-customers of a distributor.
                      */
                     int64_t m_total;
                     bool m_totalHasBeenSet;

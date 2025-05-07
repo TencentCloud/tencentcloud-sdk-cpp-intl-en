@@ -568,8 +568,8 @@ Invocation Role:Distributor.
                 QuerySubAgentsDetailV2OutcomeCallable QuerySubAgentsDetailV2Callable(const Model::QuerySubAgentsDetailV2Request& request);
 
                 /**
-                 *This API is used to query the indirect sub-customers of a first-level distributor.
-Invokable role type: first-level reseller.
+                 *This API is used to query the indirect sub-customers of a distributor.
+Invokable role type: Distributor
                  * @param req QueryT1IndirectCustomersDetailRequest
                  * @return QueryT1IndirectCustomersDetailOutcome
                  */
