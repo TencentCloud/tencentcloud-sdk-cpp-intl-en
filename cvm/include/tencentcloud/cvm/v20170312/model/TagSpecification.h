@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Resource type. Valid values: `instance` (CVM), `host` (CDH), `image` (for image), and `keypair` (for key).
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return ResourceType Resource type. Valid values: `instance` (CVM), `host` (CDH), `image` (for image), and `keypair` (for key).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Tag-Bound resource type. "instance" for cloud virtual machine, "host" for cdh, "image" for mirror, and "keypair" for key.
+                     * @return ResourceType Tag-Bound resource type. "instance" for cloud virtual machine, "host" for cdh, "image" for mirror, and "keypair" for key.
                      * 
                      */
                     std::string GetResourceType() const;
 
                     /**
-                     * 设置Resource type. Valid values: `instance` (CVM), `host` (CDH), `image` (for image), and `keypair` (for key).
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _resourceType Resource type. Valid values: `instance` (CVM), `host` (CDH), `image` (for image), and `keypair` (for key).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Tag-Bound resource type. "instance" for cloud virtual machine, "host" for cdh, "image" for mirror, and "keypair" for key.
+                     * @param _resourceType Tag-Bound resource type. "instance" for cloud virtual machine, "host" for cdh, "image" for mirror, and "keypair" for key.
                      * 
                      */
                     void SetResourceType(const std::string& _resourceType);
@@ -73,19 +69,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool ResourceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Tag pairs
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return Tags Tag pairs
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Tag pair list
+                     * @return Tags Tag pair list
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置Tag pairs
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _tags Tag pairs
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Tag pair list
+                     * @param _tags Tag pair list
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -100,15 +92,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Resource type. Valid values: `instance` (CVM), `host` (CDH), `image` (for image), and `keypair` (for key).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Tag-Bound resource type. "instance" for cloud virtual machine, "host" for cdh, "image" for mirror, and "keypair" for key.
                      */
                     std::string m_resourceType;
                     bool m_resourceTypeHasBeenSet;
 
                     /**
-                     * Tag pairs
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Tag pair list
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;

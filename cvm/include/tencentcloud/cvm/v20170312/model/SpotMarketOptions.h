@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Bidding price
-                     * @return MaxPrice Bidding price
+                     * 获取Bid price.
+                     * @return MaxPrice Bid price.
                      * 
                      */
                     std::string GetMaxPrice() const;
 
                     /**
-                     * 设置Bidding price
-                     * @param _maxPrice Bidding price
+                     * 设置Bid price.
+                     * @param _maxPrice Bid price.
                      * 
                      */
                     void SetMaxPrice(const std::string& _maxPrice);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool MaxPriceHasBeenSet() const;
 
                     /**
-                     * 获取Bidding request type. Currently only "one-time" is supported.
-                     * @return SpotInstanceType Bidding request type. Currently only "one-time" is supported.
+                     * 获取Bid request type. valid values: one-time. currently, only the one-time type is supported.
+                     * @return SpotInstanceType Bid request type. valid values: one-time. currently, only the one-time type is supported.
                      * 
                      */
                     std::string GetSpotInstanceType() const;
 
                     /**
-                     * 设置Bidding request type. Currently only "one-time" is supported.
-                     * @param _spotInstanceType Bidding request type. Currently only "one-time" is supported.
+                     * 设置Bid request type. valid values: one-time. currently, only the one-time type is supported.
+                     * @param _spotInstanceType Bid request type. valid values: one-time. currently, only the one-time type is supported.
                      * 
                      */
                     void SetSpotInstanceType(const std::string& _spotInstanceType);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Bidding price
+                     * Bid price.
                      */
                     std::string m_maxPrice;
                     bool m_maxPriceHasBeenSet;
 
                     /**
-                     * Bidding request type. Currently only "one-time" is supported.
+                     * Bid request type. valid values: one-time. currently, only the one-time type is supported.
                      */
                     std::string m_spotInstanceType;
                     bool m_spotInstanceTypeHasBeenSet;

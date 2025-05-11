@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Subscription period (in month). Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`, `48’, `60`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return Period Subscription period (in month). Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`, `48’, `60`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Subscription period in months. value range: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60.
+                     * @return Period Subscription period in months. value range: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60.
                      * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
-                     * 设置Subscription period (in month). Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`, `48’, `60`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _period Subscription period (in month). Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`, `48’, `60`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Subscription period in months. value range: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60.
+                     * @param _period Subscription period in months. value range: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60.
                      * 
                      */
                     void SetPeriod(const int64_t& _period);
@@ -72,19 +68,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取Auto-renewal flag. Valid values:<br><li>NOTIFY_AND_AUTO_RENEW: Notify of expiration and automatically renew.</li><br><li>NOTIFY_AND_MANUAL_RENEW: Notify of expiration and manually renew.</li><br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not notify of expiration and do not automatically renew.</li><br><br>Default value: NOTIFY_AND_MANUAL_RENEW. If this parameter is set to NOTIFY_AND_AUTO_RENEW, an instance will be automatically renewed monthly after expiration, provided that the account balance is sufficient.
-Note: This field may return null, indicating that no valid value is found.
-                     * @return RenewFlag Auto-renewal flag. Valid values:<br><li>NOTIFY_AND_AUTO_RENEW: Notify of expiration and automatically renew.</li><br><li>NOTIFY_AND_MANUAL_RENEW: Notify of expiration and manually renew.</li><br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not notify of expiration and do not automatically renew.</li><br><br>Default value: NOTIFY_AND_MANUAL_RENEW. If this parameter is set to NOTIFY_AND_AUTO_RENEW, an instance will be automatically renewed monthly after expiration, provided that the account balance is sufficient.
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取AUTO-Renewal flag. value ranges:<br><li>NOTIFY_AND_AUTO_RENEW: NOTIFY of expiration AND automatically RENEW.</li><br><li>NOTIFY_AND_MANUAL_RENEW: NOTIFY of expiration but do not automatically RENEW.</li><br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: do not NOTIFY of expiration AND do not automatically RENEW.</li><br><br>default value: NOTIFY_AND_MANUAL_RENEW. if this parameter is set to NOTIFY_AND_AUTO_RENEW, the instance will be automatically renewed monthly after expiration, provided that the account balance is sufficient.
+                     * @return RenewFlag AUTO-Renewal flag. value ranges:<br><li>NOTIFY_AND_AUTO_RENEW: NOTIFY of expiration AND automatically RENEW.</li><br><li>NOTIFY_AND_MANUAL_RENEW: NOTIFY of expiration but do not automatically RENEW.</li><br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: do not NOTIFY of expiration AND do not automatically RENEW.</li><br><br>default value: NOTIFY_AND_MANUAL_RENEW. if this parameter is set to NOTIFY_AND_AUTO_RENEW, the instance will be automatically renewed monthly after expiration, provided that the account balance is sufficient.
                      * 
                      */
                     std::string GetRenewFlag() const;
 
                     /**
-                     * 设置Auto-renewal flag. Valid values:<br><li>NOTIFY_AND_AUTO_RENEW: Notify of expiration and automatically renew.</li><br><li>NOTIFY_AND_MANUAL_RENEW: Notify of expiration and manually renew.</li><br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not notify of expiration and do not automatically renew.</li><br><br>Default value: NOTIFY_AND_MANUAL_RENEW. If this parameter is set to NOTIFY_AND_AUTO_RENEW, an instance will be automatically renewed monthly after expiration, provided that the account balance is sufficient.
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _renewFlag Auto-renewal flag. Valid values:<br><li>NOTIFY_AND_AUTO_RENEW: Notify of expiration and automatically renew.</li><br><li>NOTIFY_AND_MANUAL_RENEW: Notify of expiration and manually renew.</li><br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not notify of expiration and do not automatically renew.</li><br><br>Default value: NOTIFY_AND_MANUAL_RENEW. If this parameter is set to NOTIFY_AND_AUTO_RENEW, an instance will be automatically renewed monthly after expiration, provided that the account balance is sufficient.
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置AUTO-Renewal flag. value ranges:<br><li>NOTIFY_AND_AUTO_RENEW: NOTIFY of expiration AND automatically RENEW.</li><br><li>NOTIFY_AND_MANUAL_RENEW: NOTIFY of expiration but do not automatically RENEW.</li><br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: do not NOTIFY of expiration AND do not automatically RENEW.</li><br><br>default value: NOTIFY_AND_MANUAL_RENEW. if this parameter is set to NOTIFY_AND_AUTO_RENEW, the instance will be automatically renewed monthly after expiration, provided that the account balance is sufficient.
+                     * @param _renewFlag AUTO-Renewal flag. value ranges:<br><li>NOTIFY_AND_AUTO_RENEW: NOTIFY of expiration AND automatically RENEW.</li><br><li>NOTIFY_AND_MANUAL_RENEW: NOTIFY of expiration but do not automatically RENEW.</li><br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: do not NOTIFY of expiration AND do not automatically RENEW.</li><br><br>default value: NOTIFY_AND_MANUAL_RENEW. if this parameter is set to NOTIFY_AND_AUTO_RENEW, the instance will be automatically renewed monthly after expiration, provided that the account balance is sufficient.
                      * 
                      */
                     void SetRenewFlag(const std::string& _renewFlag);
@@ -99,15 +91,13 @@ Note: This field may return null, indicating that no valid value is found.
                 private:
 
                     /**
-                     * Subscription period (in month). Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`, `48’, `60`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Subscription period in months. value range: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60.
                      */
                     int64_t m_period;
                     bool m_periodHasBeenSet;
 
                     /**
-                     * Auto-renewal flag. Valid values:<br><li>NOTIFY_AND_AUTO_RENEW: Notify of expiration and automatically renew.</li><br><li>NOTIFY_AND_MANUAL_RENEW: Notify of expiration and manually renew.</li><br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not notify of expiration and do not automatically renew.</li><br><br>Default value: NOTIFY_AND_MANUAL_RENEW. If this parameter is set to NOTIFY_AND_AUTO_RENEW, an instance will be automatically renewed monthly after expiration, provided that the account balance is sufficient.
-Note: This field may return null, indicating that no valid value is found.
+                     * AUTO-Renewal flag. value ranges:<br><li>NOTIFY_AND_AUTO_RENEW: NOTIFY of expiration AND automatically RENEW.</li><br><li>NOTIFY_AND_MANUAL_RENEW: NOTIFY of expiration but do not automatically RENEW.</li><br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: do not NOTIFY of expiration AND do not automatically RENEW.</li><br><br>default value: NOTIFY_AND_MANUAL_RENEW. if this parameter is set to NOTIFY_AND_AUTO_RENEW, the instance will be automatically renewed monthly after expiration, provided that the account balance is sufficient.
                      */
                     std::string m_renewFlag;
                     bool m_renewFlagHasBeenSet;

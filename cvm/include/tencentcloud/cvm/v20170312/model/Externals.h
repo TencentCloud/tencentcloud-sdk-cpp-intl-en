@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Release address
-Note: This field may return null, indicating that no valid value is found.
-                     * @return ReleaseAddress Release address
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Release Address
+                     * @return ReleaseAddress Release Address
                      * 
                      */
                     bool GetReleaseAddress() const;
 
                     /**
-                     * 设置Release address
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _releaseAddress Release address
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Release Address
+                     * @param _releaseAddress Release Address
                      * 
                      */
                     void SetReleaseAddress(const bool& _releaseAddress);
@@ -73,19 +69,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool ReleaseAddressHasBeenSet() const;
 
                     /**
-                     * 获取Not supported network. Value: <br><li>BASIC: classic network<br><li>VPC1.0: VPC1.0
-Note: This field may return null, indicating that no valid value was found.
-                     * @return UnsupportNetworks Not supported network. Value: <br><li>BASIC: classic network<br><li>VPC1.0: VPC1.0
-Note: This field may return null, indicating that no valid value was found.
+                     * 获取Unsupported network type. valid values: <br><li>BASIC: BASIC network</li><li>VPC1.0: private network VPC1.0</li>.
+                     * @return UnsupportNetworks Unsupported network type. valid values: <br><li>BASIC: BASIC network</li><li>VPC1.0: private network VPC1.0</li>.
                      * 
                      */
                     std::vector<std::string> GetUnsupportNetworks() const;
 
                     /**
-                     * 设置Not supported network. Value: <br><li>BASIC: classic network<br><li>VPC1.0: VPC1.0
-Note: This field may return null, indicating that no valid value was found.
-                     * @param _unsupportNetworks Not supported network. Value: <br><li>BASIC: classic network<br><li>VPC1.0: VPC1.0
-Note: This field may return null, indicating that no valid value was found.
+                     * 设置Unsupported network type. valid values: <br><li>BASIC: BASIC network</li><li>VPC1.0: private network VPC1.0</li>.
+                     * @param _unsupportNetworks Unsupported network type. valid values: <br><li>BASIC: BASIC network</li><li>VPC1.0: private network VPC1.0</li>.
                      * 
                      */
                     void SetUnsupportNetworks(const std::vector<std::string>& _unsupportNetworks);
@@ -98,19 +90,15 @@ Note: This field may return null, indicating that no valid value was found.
                     bool UnsupportNetworksHasBeenSet() const;
 
                     /**
-                     * 获取Attributes of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
-                     * @return StorageBlockAttr Attributes of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Specifies the HDD local storage attributes.
+                     * @return StorageBlockAttr Specifies the HDD local storage attributes.
                      * 
                      */
                     StorageBlock GetStorageBlockAttr() const;
 
                     /**
-                     * 设置Attributes of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _storageBlockAttr Attributes of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Specifies the HDD local storage attributes.
+                     * @param _storageBlockAttr Specifies the HDD local storage attributes.
                      * 
                      */
                     void SetStorageBlockAttr(const StorageBlock& _storageBlockAttr);
@@ -125,22 +113,19 @@ Note: This field may return null, indicating that no valid value is found.
                 private:
 
                     /**
-                     * Release address
-Note: This field may return null, indicating that no valid value is found.
+                     * Release Address
                      */
                     bool m_releaseAddress;
                     bool m_releaseAddressHasBeenSet;
 
                     /**
-                     * Not supported network. Value: <br><li>BASIC: classic network<br><li>VPC1.0: VPC1.0
-Note: This field may return null, indicating that no valid value was found.
+                     * Unsupported network type. valid values: <br><li>BASIC: BASIC network</li><li>VPC1.0: private network VPC1.0</li>.
                      */
                     std::vector<std::string> m_unsupportNetworks;
                     bool m_unsupportNetworksHasBeenSet;
 
                     /**
-                     * Attributes of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
+                     * Specifies the HDD local storage attributes.
                      */
                     StorageBlock m_storageBlockAttr;
                     bool m_storageBlockAttrHasBeenSet;

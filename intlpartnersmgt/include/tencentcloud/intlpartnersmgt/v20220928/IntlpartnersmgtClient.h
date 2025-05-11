@@ -29,6 +29,8 @@
 #include <tencentcloud/intlpartnersmgt/v20220928/model/AllocateCustomerCreditResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/ApproveClientApplyRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/ApproveClientApplyResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/ApproveSubAgentApplyRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/ApproveSubAgentApplyResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/CreateAccountRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/CreateAccountResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/CreateAndSendClientInvitationMailRequest.h>
@@ -83,6 +85,8 @@
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryPartnerCreditResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryPendingClientsV2Request.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryPendingClientsV2Response.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/QueryPendingSubAgentsV2Request.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/QueryPendingSubAgentsV2Response.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryPolicyProductListByCodeRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryPolicyProductListByCodeResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QuerySubAgentsDetailV2Request.h>
@@ -120,6 +124,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ApproveClientApplyResponse> ApproveClientApplyOutcome;
                 typedef std::future<ApproveClientApplyOutcome> ApproveClientApplyOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::ApproveClientApplyRequest&, ApproveClientApplyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ApproveClientApplyAsyncHandler;
+                typedef Outcome<Core::Error, Model::ApproveSubAgentApplyResponse> ApproveSubAgentApplyOutcome;
+                typedef std::future<ApproveSubAgentApplyOutcome> ApproveSubAgentApplyOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::ApproveSubAgentApplyRequest&, ApproveSubAgentApplyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ApproveSubAgentApplyAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateAccountResponse> CreateAccountOutcome;
                 typedef std::future<CreateAccountOutcome> CreateAccountOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::CreateAccountRequest&, CreateAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAccountAsyncHandler;
@@ -201,6 +208,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::QueryPendingClientsV2Response> QueryPendingClientsV2Outcome;
                 typedef std::future<QueryPendingClientsV2Outcome> QueryPendingClientsV2OutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryPendingClientsV2Request&, QueryPendingClientsV2Outcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryPendingClientsV2AsyncHandler;
+                typedef Outcome<Core::Error, Model::QueryPendingSubAgentsV2Response> QueryPendingSubAgentsV2Outcome;
+                typedef std::future<QueryPendingSubAgentsV2Outcome> QueryPendingSubAgentsV2OutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryPendingSubAgentsV2Request&, QueryPendingSubAgentsV2Outcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryPendingSubAgentsV2AsyncHandler;
                 typedef Outcome<Core::Error, Model::QueryPolicyProductListByCodeResponse> QueryPolicyProductListByCodeOutcome;
                 typedef std::future<QueryPolicyProductListByCodeOutcome> QueryPolicyProductListByCodeOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryPolicyProductListByCodeRequest&, QueryPolicyProductListByCodeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryPolicyProductListByCodeAsyncHandler;
@@ -262,6 +272,16 @@ Callable roles: Reseller, Distributer, Second-level reseller
                 ApproveClientApplyOutcomeCallable ApproveClientApplyCallable(const Model::ApproveClientApplyRequest& request);
 
                 /**
+                 *This API is used to approve applications for second-level resellers.
+Invocation Role: Distributor.
+                 * @param req ApproveSubAgentApplyRequest
+                 * @return ApproveSubAgentApplyOutcome
+                 */
+                ApproveSubAgentApplyOutcome ApproveSubAgentApply(const Model::ApproveSubAgentApplyRequest &request);
+                void ApproveSubAgentApplyAsync(const Model::ApproveSubAgentApplyRequest& request, const ApproveSubAgentApplyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ApproveSubAgentApplyOutcomeCallable ApproveSubAgentApplyCallable(const Model::ApproveSubAgentApplyRequest& request);
+
+                /**
                  *This API is used to create Tencent Cloud customer accounts for distributor/second-level resellers.After the account is created, it will be automatically bound to the partner account.Note:
 1. Create a Tencent Cloud account. The entered email address and mobile phone number need to be verified by the partner for validity.
 2. Customers need to add personal information when logging in for the first time.
@@ -276,14 +296,13 @@ Callable roles: Distributor, Second-level reseller, Reseller
                 CreateAccountOutcomeCallable CreateAccountCallable(const Model::CreateAccountRequest& request);
 
                 /**
-                 *This API is used to apply for the allowlist. If needed, please contact your business representative.Directions:
-1.This API is used to create an invitation link, which you can send to a specified email address.
-2.Customer need to click the invitation link in the email, fill in and submit the required information.
-3.You can review the customer's application in customer management  after submission.
+                 *This API is used to perform operations. Application for allowlist is required before usage. If needed, contact your business representative to request allowlisting. The specific usage process is as follows;.
+This API is used to create an invitation link. You can send the invitation link to your designated email address.
+2. Customers need to click the invitation link in the mailbox, fill in and submit relevant information.
+3. After customer submission, you can view the application of this sub-customer on the customer management page and review it.
 
-Note:This API is used to manually send the invitation link to the customer if the specified email does not receive it.
-
-Callable roles: Distributor, Second-level reseller, Reseller
+This API is used to handle cases where if the designated mailbox does not receive the invitation link, you can send the invitation link returned by the API to the customer manually.
+Invocation roles: resellers, distributors, second-level reseller.
                  * @param req CreateAndSendClientInvitationMailRequest
                  * @return CreateAndSendClientInvitationMailOutcome
                  */
@@ -546,6 +565,16 @@ Callable roles: Reseller, Distributer, Second-level reseller
                 QueryPendingClientsV2Outcome QueryPendingClientsV2(const Model::QueryPendingClientsV2Request &request);
                 void QueryPendingClientsV2Async(const Model::QueryPendingClientsV2Request& request, const QueryPendingClientsV2AsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 QueryPendingClientsV2OutcomeCallable QueryPendingClientsV2Callable(const Model::QueryPendingClientsV2Request& request);
+
+                /**
+                 *This API is used to query information of second-level resellers in application.
+Invocation Role: Distributor.
+                 * @param req QueryPendingSubAgentsV2Request
+                 * @return QueryPendingSubAgentsV2Outcome
+                 */
+                QueryPendingSubAgentsV2Outcome QueryPendingSubAgentsV2(const Model::QueryPendingSubAgentsV2Request &request);
+                void QueryPendingSubAgentsV2Async(const Model::QueryPendingSubAgentsV2Request& request, const QueryPendingSubAgentsV2AsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                QueryPendingSubAgentsV2OutcomeCallable QueryPendingSubAgentsV2Callable(const Model::QueryPendingSubAgentsV2Request& request);
 
                 /**
                  *This API is used to query the product list information within the specified policy range. To call this API, contact your business manager to apply for adding it to the allowlist.

@@ -93,19 +93,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool KeyIdsHasBeenSet() const;
 
                     /**
-                     * 获取Maintains the original settings of the image. This parameter cannot be specified simultaneously with Password or KeyIds.N. It can be set to true only when an instance is created with a custom image, shared image, or externally imported image. Valid values: <li>true: indicates that the login settings of the image are maintained</li><li>false: indicates that the login settings of the image are not maintained</li>Default value: false.
-Note: This field may return null, indicating that no valid value is found.
-                     * @return KeepImageLogin Maintains the original settings of the image. This parameter cannot be specified simultaneously with Password or KeyIds.N. It can be set to true only when an instance is created with a custom image, shared image, or externally imported image. Valid values: <li>true: indicates that the login settings of the image are maintained</li><li>false: indicates that the login settings of the image are not maintained</li>Default value: false.
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Retain the original settings of the image. this parameter cannot be specified simultaneously with Password or KeyIds.N. it can be set to true only when an instance is created with a custom image, shared image, or externally imported image. value ranges from true to false: <li>true: indicates that the login settings of the image are retained</li><li>false: indicates that the login settings of the image are not retained</li>. default value: false.
+                     * @return KeepImageLogin Retain the original settings of the image. this parameter cannot be specified simultaneously with Password or KeyIds.N. it can be set to true only when an instance is created with a custom image, shared image, or externally imported image. value ranges from true to false: <li>true: indicates that the login settings of the image are retained</li><li>false: indicates that the login settings of the image are not retained</li>. default value: false.
                      * 
                      */
                     std::string GetKeepImageLogin() const;
 
                     /**
-                     * 设置Maintains the original settings of the image. This parameter cannot be specified simultaneously with Password or KeyIds.N. It can be set to true only when an instance is created with a custom image, shared image, or externally imported image. Valid values: <li>true: indicates that the login settings of the image are maintained</li><li>false: indicates that the login settings of the image are not maintained</li>Default value: false.
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _keepImageLogin Maintains the original settings of the image. This parameter cannot be specified simultaneously with Password or KeyIds.N. It can be set to true only when an instance is created with a custom image, shared image, or externally imported image. Valid values: <li>true: indicates that the login settings of the image are maintained</li><li>false: indicates that the login settings of the image are not maintained</li>Default value: false.
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Retain the original settings of the image. this parameter cannot be specified simultaneously with Password or KeyIds.N. it can be set to true only when an instance is created with a custom image, shared image, or externally imported image. value ranges from true to false: <li>true: indicates that the login settings of the image are retained</li><li>false: indicates that the login settings of the image are not retained</li>. default value: false.
+                     * @param _keepImageLogin Retain the original settings of the image. this parameter cannot be specified simultaneously with Password or KeyIds.N. it can be set to true only when an instance is created with a custom image, shared image, or externally imported image. value ranges from true to false: <li>true: indicates that the login settings of the image are retained</li><li>false: indicates that the login settings of the image are not retained</li>. default value: false.
                      * 
                      */
                     void SetKeepImageLogin(const std::string& _keepImageLogin);
@@ -133,8 +129,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_keyIdsHasBeenSet;
 
                     /**
-                     * Maintains the original settings of the image. This parameter cannot be specified simultaneously with Password or KeyIds.N. It can be set to true only when an instance is created with a custom image, shared image, or externally imported image. Valid values: <li>true: indicates that the login settings of the image are maintained</li><li>false: indicates that the login settings of the image are not maintained</li>Default value: false.
-Note: This field may return null, indicating that no valid value is found.
+                     * Retain the original settings of the image. this parameter cannot be specified simultaneously with Password or KeyIds.N. it can be set to true only when an instance is created with a custom image, shared image, or externally imported image. value ranges from true to false: <li>true: indicates that the login settings of the image are retained</li><li>false: indicates that the login settings of the image are not retained</li>. default value: false.
                      */
                     std::string m_keepImageLogin;
                     bool m_keepImageLoginHasBeenSet;

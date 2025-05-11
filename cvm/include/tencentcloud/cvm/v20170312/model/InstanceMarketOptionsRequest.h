@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Spot-related options
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return SpotOptions Spot-related options
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Relevant options for spot instances.
+                     * @return SpotOptions Relevant options for spot instances.
                      * 
                      */
                     SpotMarketOptions GetSpotOptions() const;
 
                     /**
-                     * 设置Spot-related options
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _spotOptions Spot-related options
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Relevant options for spot instances.
+                     * @param _spotOptions Relevant options for spot instances.
                      * 
                      */
                     void SetSpotOptions(const SpotMarketOptions& _spotOptions);
@@ -73,19 +69,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool SpotOptionsHasBeenSet() const;
 
                     /**
-                     * 获取Market type. Valid value: `spot`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return MarketType Market type. Valid value: `spot`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Market option type. The value can only be spot currently.
+                     * @return MarketType Market option type. The value can only be spot currently.
                      * 
                      */
                     std::string GetMarketType() const;
 
                     /**
-                     * 设置Market type. Valid value: `spot`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _marketType Market type. Valid value: `spot`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Market option type. The value can only be spot currently.
+                     * @param _marketType Market option type. The value can only be spot currently.
                      * 
                      */
                     void SetMarketType(const std::string& _marketType);
@@ -100,15 +92,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Spot-related options
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Relevant options for spot instances.
                      */
                     SpotMarketOptions m_spotOptions;
                     bool m_spotOptionsHasBeenSet;
 
                     /**
-                     * Market type. Valid value: `spot`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Market option type. The value can only be spot currently.
                      */
                     std::string m_marketType;
                     bool m_marketTypeHasBeenSet;

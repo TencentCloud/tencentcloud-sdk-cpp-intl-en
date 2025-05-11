@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Timer action. Valid value: `TerminateInstances`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return TimerAction Timer action. Valid value: `TerminateInstances`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Timer action currently only supports terminating one value: TerminateInstances.
+                     * @return TimerAction Timer action currently only supports terminating one value: TerminateInstances.
                      * 
                      */
                     std::string GetTimerAction() const;
 
                     /**
-                     * 设置Timer action. Valid value: `TerminateInstances`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _timerAction Timer action. Valid value: `TerminateInstances`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Timer action currently only supports terminating one value: TerminateInstances.
+                     * @param _timerAction Timer action currently only supports terminating one value: TerminateInstances.
                      * 
                      */
                     void SetTimerAction(const std::string& _timerAction);
@@ -73,19 +69,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool TimerActionHasBeenSet() const;
 
                     /**
-                     * 获取Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return ActionTime Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Execution time, in standard ISO8601 representation and using UTC time. format: YYYY-MM-DDThh:MM:ssZ. for example, 2018-05-29T11:26:40Z. the execution time must be later than the current time by 5 minutes.
+                     * @return ActionTime Execution time, in standard ISO8601 representation and using UTC time. format: YYYY-MM-DDThh:MM:ssZ. for example, 2018-05-29T11:26:40Z. the execution time must be later than the current time by 5 minutes.
                      * 
                      */
                     std::string GetActionTime() const;
 
                     /**
-                     * 设置Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _actionTime Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Execution time, in standard ISO8601 representation and using UTC time. format: YYYY-MM-DDThh:MM:ssZ. for example, 2018-05-29T11:26:40Z. the execution time must be later than the current time by 5 minutes.
+                     * @param _actionTime Execution time, in standard ISO8601 representation and using UTC time. format: YYYY-MM-DDThh:MM:ssZ. for example, 2018-05-29T11:26:40Z. the execution time must be later than the current time by 5 minutes.
                      * 
                      */
                     void SetActionTime(const std::string& _actionTime);
@@ -98,19 +90,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool ActionTimeHasBeenSet() const;
 
                     /**
-                     * 获取Extended data
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return Externals Extended data
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Extension data. only used as output usage.
+                     * @return Externals Extension data. only used as output usage.
                      * 
                      */
                     Externals GetExternals() const;
 
                     /**
-                     * 设置Extended data
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _externals Extended data
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Extension data. only used as output usage.
+                     * @param _externals Extension data. only used as output usage.
                      * 
                      */
                     void SetExternals(const Externals& _externals);
@@ -123,15 +111,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool ExternalsHasBeenSet() const;
 
                     /**
-                     * 获取Timer ID.
-                     * @return ActionTimerId Timer ID.
+                     * 获取Timer ID. only used as output usage.
+                     * @return ActionTimerId Timer ID. only used as output usage.
                      * 
                      */
                     std::string GetActionTimerId() const;
 
                     /**
-                     * 设置Timer ID.
-                     * @param _actionTimerId Timer ID.
+                     * 设置Timer ID. only used as output usage.
+                     * @param _actionTimerId Timer ID. only used as output usage.
                      * 
                      */
                     void SetActionTimerId(const std::string& _actionTimerId);
@@ -144,35 +132,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool ActionTimerIdHasBeenSet() const;
 
                     /**
-                     * 获取Timer status. Valid values:
-
-UNDO: Not triggered.
-DOING: Triggering.
-DONE: Triggered already.
-
-                     * @return Status Timer status. Valid values:
-
-UNDO: Not triggered.
-DOING: Triggering.
-DONE: Triggered already.
-
+                     * 获取Timer status, for output usage only. value ranges from: <li>UNDO: unexecuted</li> <li>DOING: executing</li> <li>DONE: execution completed.</li>.
+                     * @return Status Timer status, for output usage only. value ranges from: <li>UNDO: unexecuted</li> <li>DOING: executing</li> <li>DONE: execution completed.</li>.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Timer status. Valid values:
-
-UNDO: Not triggered.
-DOING: Triggering.
-DONE: Triggered already.
-
-                     * @param _status Timer status. Valid values:
-
-UNDO: Not triggered.
-DOING: Triggering.
-DONE: Triggered already.
-
+                     * 设置Timer status, for output usage only. value ranges from: <li>UNDO: unexecuted</li> <li>DOING: executing</li> <li>DONE: execution completed.</li>.
+                     * @param _status Timer status, for output usage only. value ranges from: <li>UNDO: unexecuted</li> <li>DOING: executing</li> <li>DONE: execution completed.</li>.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -185,15 +153,15 @@ DONE: Triggered already.
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID corresponding to a timer.
-                     * @return InstanceId Instance ID corresponding to a timer.
+                     * 获取Instance ID corresponding to a timer. used only for output.
+                     * @return InstanceId Instance ID corresponding to a timer. used only for output.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID corresponding to a timer.
-                     * @param _instanceId Instance ID corresponding to a timer.
+                     * 设置Instance ID corresponding to a timer. used only for output.
+                     * @param _instanceId Instance ID corresponding to a timer. used only for output.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -208,45 +176,37 @@ DONE: Triggered already.
                 private:
 
                     /**
-                     * Timer action. Valid value: `TerminateInstances`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Timer action currently only supports terminating one value: TerminateInstances.
                      */
                     std::string m_timerAction;
                     bool m_timerActionHasBeenSet;
 
                     /**
-                     * Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Execution time, in standard ISO8601 representation and using UTC time. format: YYYY-MM-DDThh:MM:ssZ. for example, 2018-05-29T11:26:40Z. the execution time must be later than the current time by 5 minutes.
                      */
                     std::string m_actionTime;
                     bool m_actionTimeHasBeenSet;
 
                     /**
-                     * Extended data
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Extension data. only used as output usage.
                      */
                     Externals m_externals;
                     bool m_externalsHasBeenSet;
 
                     /**
-                     * Timer ID.
+                     * Timer ID. only used as output usage.
                      */
                     std::string m_actionTimerId;
                     bool m_actionTimerIdHasBeenSet;
 
                     /**
-                     * Timer status. Valid values:
-
-UNDO: Not triggered.
-DOING: Triggering.
-DONE: Triggered already.
-
+                     * Timer status, for output usage only. value ranges from: <li>UNDO: unexecuted</li> <li>DOING: executing</li> <li>DONE: execution completed.</li>.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Instance ID corresponding to a timer.
+                     * Instance ID corresponding to a timer. used only for output.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

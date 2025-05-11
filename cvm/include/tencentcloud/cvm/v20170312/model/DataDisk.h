@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
-                     * @return DiskSize Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
+                     * 获取Data disk size, unit: GiB. the minimum adjustment step size is 10 GiB. the value ranges of different data disk types vary. for specific limitations, see the storage overview (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). the default value is 0, which means no data disk purchase. for more restrictions, see the product document.
+                     * @return DiskSize Data disk size, unit: GiB. the minimum adjustment step size is 10 GiB. the value ranges of different data disk types vary. for specific limitations, see the storage overview (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). the default value is 0, which means no data disk purchase. for more restrictions, see the product document.
                      * 
                      */
                     int64_t GetDiskSize() const;
 
                     /**
-                     * 设置Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
-                     * @param _diskSize Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
+                     * 设置Data disk size, unit: GiB. the minimum adjustment step size is 10 GiB. the value ranges of different data disk types vary. for specific limitations, see the storage overview (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). the default value is 0, which means no data disk purchase. for more restrictions, see the product document.
+                     * @param _diskSize Data disk size, unit: GiB. the minimum adjustment step size is 10 GiB. the value ranges of different data disk types vary. for specific limitations, see the storage overview (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). the default value is 0, which means no data disk purchase. for more restrictions, see the product document.
                      * 
                      */
                     void SetDiskSize(const int64_t& _diskSize);
@@ -89,19 +89,19 @@ namespace TencentCloud
                     bool DiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Data disk ID. Note that it's not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
-It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
-                     * @return DiskId Data disk ID. Note that it's not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
-It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
+                     * 获取Specifies the data disk ID.
+This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`.
+                     * @return DiskId Specifies the data disk ID.
+This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`.
                      * 
                      */
                     std::string GetDiskId() const;
 
                     /**
-                     * 设置Data disk ID. Note that it's not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
-It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
-                     * @param _diskId Data disk ID. Note that it's not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
-It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
+                     * 设置Specifies the data disk ID.
+This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`.
+                     * @param _diskId Specifies the data disk ID.
+This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`.
                      * 
                      */
                     void SetDiskId(const std::string& _diskId);
@@ -114,47 +114,15 @@ It is only used as a response parameter for APIs such as `DescribeInstances`, an
                     bool DiskIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether the data disk is terminated with the Cloud Virtual Machine (CVM). Valid values:
-
-<li>true: Terminate the data disk when the CVM is terminated. Only the pay-as-you-go cloud disk billed by hour is supported.</li>
-<li>
-  false: Retain the data disk when the CVM is terminated.<br />
-  Default value: true.<br />
-  This parameter is currently only used for the `RunInstances` API.
-</li>
-Note: This field may return null, indicating that no valid value is found.
-                     * @return DeleteWithInstance Whether the data disk is terminated with the Cloud Virtual Machine (CVM). Valid values:
-
-<li>true: Terminate the data disk when the CVM is terminated. Only the pay-as-you-go cloud disk billed by hour is supported.</li>
-<li>
-  false: Retain the data disk when the CVM is terminated.<br />
-  Default value: true.<br />
-  This parameter is currently only used for the `RunInstances` API.
-</li>
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Whether the data disk is terminated with the instance. value range: <li>true: when the instance is terminated, the data disk is also terminated. only hourly postpaid cloud disks are supported. <li>false: when the instance is terminated, the data disk is retained. <br>default value: true <br>currently, this parameter is only used for the API `RunInstances`.
+                     * @return DeleteWithInstance Whether the data disk is terminated with the instance. value range: <li>true: when the instance is terminated, the data disk is also terminated. only hourly postpaid cloud disks are supported. <li>false: when the instance is terminated, the data disk is retained. <br>default value: true <br>currently, this parameter is only used for the API `RunInstances`.
                      * 
                      */
                     bool GetDeleteWithInstance() const;
 
                     /**
-                     * 设置Whether the data disk is terminated with the Cloud Virtual Machine (CVM). Valid values:
-
-<li>true: Terminate the data disk when the CVM is terminated. Only the pay-as-you-go cloud disk billed by hour is supported.</li>
-<li>
-  false: Retain the data disk when the CVM is terminated.<br />
-  Default value: true.<br />
-  This parameter is currently only used for the `RunInstances` API.
-</li>
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _deleteWithInstance Whether the data disk is terminated with the Cloud Virtual Machine (CVM). Valid values:
-
-<li>true: Terminate the data disk when the CVM is terminated. Only the pay-as-you-go cloud disk billed by hour is supported.</li>
-<li>
-  false: Retain the data disk when the CVM is terminated.<br />
-  Default value: true.<br />
-  This parameter is currently only used for the `RunInstances` API.
-</li>
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Whether the data disk is terminated with the instance. value range: <li>true: when the instance is terminated, the data disk is also terminated. only hourly postpaid cloud disks are supported. <li>false: when the instance is terminated, the data disk is retained. <br>default value: true <br>currently, this parameter is only used for the API `RunInstances`.
+                     * @param _deleteWithInstance Whether the data disk is terminated with the instance. value range: <li>true: when the instance is terminated, the data disk is also terminated. only hourly postpaid cloud disks are supported. <li>false: when the instance is terminated, the data disk is retained. <br>default value: true <br>currently, this parameter is only used for the API `RunInstances`.
                      * 
                      */
                     void SetDeleteWithInstance(const bool& _deleteWithInstance);
@@ -167,19 +135,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool DeleteWithInstanceHasBeenSet() const;
 
                     /**
-                     * 获取Data disk snapshot ID. The size of the selected data disk snapshot must be smaller than that of the data disk.
-Note: This field may return null, indicating that no valid value is found.
-                     * @return SnapshotId Data disk snapshot ID. The size of the selected data disk snapshot must be smaller than that of the data disk.
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Data disk snapshot ID. the size of the selected data disk snapshot must be less than the data disk size.
+                     * @return SnapshotId Data disk snapshot ID. the size of the selected data disk snapshot must be less than the data disk size.
                      * 
                      */
                     std::string GetSnapshotId() const;
 
                     /**
-                     * 设置Data disk snapshot ID. The size of the selected data disk snapshot must be smaller than that of the data disk.
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _snapshotId Data disk snapshot ID. The size of the selected data disk snapshot must be smaller than that of the data disk.
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Data disk snapshot ID. the size of the selected data disk snapshot must be less than the data disk size.
+                     * @param _snapshotId Data disk snapshot ID. the size of the selected data disk snapshot must be less than the data disk size.
                      * 
                      */
                     void SetSnapshotId(const std::string& _snapshotId);
@@ -192,43 +156,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool SnapshotIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether a data disk is encrypted. Valid values:
-<li>true: encrypted.</li>
-<li>
-  false: not encrypted.<br/>
-  Default value: false.<br/>
-  This parameter is currently used only in the `RunInstances` API.
-</li>
-Note: This field may return null, indicating that no valid value is found.
-                     * @return Encrypt Whether a data disk is encrypted. Valid values:
-<li>true: encrypted.</li>
-<li>
-  false: not encrypted.<br/>
-  Default value: false.<br/>
-  This parameter is currently used only in the `RunInstances` API.
-</li>
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Specifies whether the data disk is encrypted. value range: <li>true: encrypted</li> <li>false: unencrypted</li><br/> default value: false<br/> this parameter is currently only used for the `RunInstances` api.
+                     * @return Encrypt Specifies whether the data disk is encrypted. value range: <li>true: encrypted</li> <li>false: unencrypted</li><br/> default value: false<br/> this parameter is currently only used for the `RunInstances` api.
                      * 
                      */
                     bool GetEncrypt() const;
 
                     /**
-                     * 设置Whether a data disk is encrypted. Valid values:
-<li>true: encrypted.</li>
-<li>
-  false: not encrypted.<br/>
-  Default value: false.<br/>
-  This parameter is currently used only in the `RunInstances` API.
-</li>
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _encrypt Whether a data disk is encrypted. Valid values:
-<li>true: encrypted.</li>
-<li>
-  false: not encrypted.<br/>
-  Default value: false.<br/>
-  This parameter is currently used only in the `RunInstances` API.
-</li>
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Specifies whether the data disk is encrypted. value range: <li>true: encrypted</li> <li>false: unencrypted</li><br/> default value: false<br/> this parameter is currently only used for the `RunInstances` api.
+                     * @param _encrypt Specifies whether the data disk is encrypted. value range: <li>true: encrypted</li> <li>false: unencrypted</li><br/> default value: false<br/> this parameter is currently only used for the `RunInstances` api.
                      * 
                      */
                     void SetEncrypt(const bool& _encrypt);
@@ -241,27 +177,23 @@ Note: This field may return null, indicating that no valid value is found.
                     bool EncryptHasBeenSet() const;
 
                     /**
-                     * 获取ID of the custom CMK in the format of UUID or "kms-abcd1234". This parameter is used to encrypt cloud disks.
+                     * 获取Custom CMK's corresponding ID, with a value of UUID or something similar to kms - abcd1234. used for encrypting cloud disks.
 
-Currently, this parameter is only used in the `RunInstances` API.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return KmsKeyId ID of the custom CMK in the format of UUID or "kms-abcd1234". This parameter is used to encrypt cloud disks.
+This parameter is currently only used for the `RunInstances` api.
+                     * @return KmsKeyId Custom CMK's corresponding ID, with a value of UUID or something similar to kms - abcd1234. used for encrypting cloud disks.
 
-Currently, this parameter is only used in the `RunInstances` API.
-Note: this field may return null, indicating that no valid values can be obtained.
+This parameter is currently only used for the `RunInstances` api.
                      * 
                      */
                     std::string GetKmsKeyId() const;
 
                     /**
-                     * 设置ID of the custom CMK in the format of UUID or "kms-abcd1234". This parameter is used to encrypt cloud disks.
+                     * 设置Custom CMK's corresponding ID, with a value of UUID or something similar to kms - abcd1234. used for encrypting cloud disks.
 
-Currently, this parameter is only used in the `RunInstances` API.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _kmsKeyId ID of the custom CMK in the format of UUID or "kms-abcd1234". This parameter is used to encrypt cloud disks.
+This parameter is currently only used for the `RunInstances` api.
+                     * @param _kmsKeyId Custom CMK's corresponding ID, with a value of UUID or something similar to kms - abcd1234. used for encrypting cloud disks.
 
-Currently, this parameter is only used in the `RunInstances` API.
-Note: this field may return null, indicating that no valid values can be obtained.
+This parameter is currently only used for the `RunInstances` api.
                      * 
                      */
                     void SetKmsKeyId(const std::string& _kmsKeyId);
@@ -274,19 +206,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool KmsKeyIdHasBeenSet() const;
 
                     /**
-                     * 获取Cloud disk performance, in MB/s
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ThroughputPerformance Cloud disk performance, in MB/s
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Specifies the cloud disk performance (unit: MiB/s). using this parameter allows you to purchase additional performance for the cloud disk.
+Currently only supports ultra-fast CLOUD disk (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD).
+                     * @return ThroughputPerformance Specifies the cloud disk performance (unit: MiB/s). using this parameter allows you to purchase additional performance for the cloud disk.
+Currently only supports ultra-fast CLOUD disk (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD).
                      * 
                      */
                     int64_t GetThroughputPerformance() const;
 
                     /**
-                     * 设置Cloud disk performance, in MB/s
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _throughputPerformance Cloud disk performance, in MB/s
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Specifies the cloud disk performance (unit: MiB/s). using this parameter allows you to purchase additional performance for the cloud disk.
+Currently only supports ultra-fast CLOUD disk (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD).
+                     * @param _throughputPerformance Specifies the cloud disk performance (unit: MiB/s). using this parameter allows you to purchase additional performance for the cloud disk.
+Currently only supports ultra-fast CLOUD disk (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD).
                      * 
                      */
                     void SetThroughputPerformance(const int64_t& _throughputPerformance);
@@ -299,19 +231,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ThroughputPerformanceHasBeenSet() const;
 
                     /**
-                     * 获取ID of the dedicated cluster to which the instance belongs.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return CdcId ID of the dedicated cluster to which the instance belongs.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Specifies the exclusive cluster ID it belongs to.
+                     * @return CdcId Specifies the exclusive cluster ID it belongs to.
                      * 
                      */
                     std::string GetCdcId() const;
 
                     /**
-                     * 设置ID of the dedicated cluster to which the instance belongs.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _cdcId ID of the dedicated cluster to which the instance belongs.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Specifies the exclusive cluster ID it belongs to.
+                     * @param _cdcId Specifies the exclusive cluster ID it belongs to.
                      * 
                      */
                     void SetCdcId(const std::string& _cdcId);
@@ -326,12 +254,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     /**
                      * 获取Burst performance.
 
- <b>Note: This field is in beta test.</b>
-Note: This field may return null, indicating that no valid value is found.
+<B>Note: this feature is in beta test.</b>.
                      * @return BurstPerformance Burst performance.
 
- <b>Note: This field is in beta test.</b>
-Note: This field may return null, indicating that no valid value is found.
+<B>Note: this feature is in beta test.</b>.
                      * 
                      */
                     bool GetBurstPerformance() const;
@@ -339,12 +265,10 @@ Note: This field may return null, indicating that no valid value is found.
                     /**
                      * 设置Burst performance.
 
- <b>Note: This field is in beta test.</b>
-Note: This field may return null, indicating that no valid value is found.
+<B>Note: this feature is in beta test.</b>.
                      * @param _burstPerformance Burst performance.
 
- <b>Note: This field is in beta test.</b>
-Note: This field may return null, indicating that no valid value is found.
+<B>Note: this feature is in beta test.</b>.
                      * 
                      */
                     void SetBurstPerformance(const bool& _burstPerformance);
@@ -357,23 +281,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool BurstPerformanceHasBeenSet() const;
 
                     /**
-                     * 获取Disk name, with a length of not more than 128 characters.
-
-This parameter is in invite-only testing and is not yet open for use.
-                     * @return DiskName Disk name, with a length of not more than 128 characters.
-
-This parameter is in invite-only testing and is not yet open for use.
+                     * 获取Disk name, with a length not exceeding 128 characters.
+                     * @return DiskName Disk name, with a length not exceeding 128 characters.
                      * 
                      */
                     std::string GetDiskName() const;
 
                     /**
-                     * 设置Disk name, with a length of not more than 128 characters.
-
-This parameter is in invite-only testing and is not yet open for use.
-                     * @param _diskName Disk name, with a length of not more than 128 characters.
-
-This parameter is in invite-only testing and is not yet open for use.
+                     * 设置Disk name, with a length not exceeding 128 characters.
+                     * @param _diskName Disk name, with a length not exceeding 128 characters.
                      * 
                      */
                     void SetDiskName(const std::string& _diskName);
@@ -388,7 +304,7 @@ This parameter is in invite-only testing and is not yet open for use.
                 private:
 
                     /**
-                     * Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
+                     * Data disk size, unit: GiB. the minimum adjustment step size is 10 GiB. the value ranges of different data disk types vary. for specific limitations, see the storage overview (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). the default value is 0, which means no data disk purchase. for more restrictions, see the product document.
                      */
                     int64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;
@@ -400,65 +316,47 @@ This parameter is in invite-only testing and is not yet open for use.
                     bool m_diskTypeHasBeenSet;
 
                     /**
-                     * Data disk ID. Note that it's not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
-It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
+                     * Specifies the data disk ID.
+This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`.
                      */
                     std::string m_diskId;
                     bool m_diskIdHasBeenSet;
 
                     /**
-                     * Whether the data disk is terminated with the Cloud Virtual Machine (CVM). Valid values:
-
-<li>true: Terminate the data disk when the CVM is terminated. Only the pay-as-you-go cloud disk billed by hour is supported.</li>
-<li>
-  false: Retain the data disk when the CVM is terminated.<br />
-  Default value: true.<br />
-  This parameter is currently only used for the `RunInstances` API.
-</li>
-Note: This field may return null, indicating that no valid value is found.
+                     * Whether the data disk is terminated with the instance. value range: <li>true: when the instance is terminated, the data disk is also terminated. only hourly postpaid cloud disks are supported. <li>false: when the instance is terminated, the data disk is retained. <br>default value: true <br>currently, this parameter is only used for the API `RunInstances`.
                      */
                     bool m_deleteWithInstance;
                     bool m_deleteWithInstanceHasBeenSet;
 
                     /**
-                     * Data disk snapshot ID. The size of the selected data disk snapshot must be smaller than that of the data disk.
-Note: This field may return null, indicating that no valid value is found.
+                     * Data disk snapshot ID. the size of the selected data disk snapshot must be less than the data disk size.
                      */
                     std::string m_snapshotId;
                     bool m_snapshotIdHasBeenSet;
 
                     /**
-                     * Whether a data disk is encrypted. Valid values:
-<li>true: encrypted.</li>
-<li>
-  false: not encrypted.<br/>
-  Default value: false.<br/>
-  This parameter is currently used only in the `RunInstances` API.
-</li>
-Note: This field may return null, indicating that no valid value is found.
+                     * Specifies whether the data disk is encrypted. value range: <li>true: encrypted</li> <li>false: unencrypted</li><br/> default value: false<br/> this parameter is currently only used for the `RunInstances` api.
                      */
                     bool m_encrypt;
                     bool m_encryptHasBeenSet;
 
                     /**
-                     * ID of the custom CMK in the format of UUID or "kms-abcd1234". This parameter is used to encrypt cloud disks.
+                     * Custom CMK's corresponding ID, with a value of UUID or something similar to kms - abcd1234. used for encrypting cloud disks.
 
-Currently, this parameter is only used in the `RunInstances` API.
-Note: this field may return null, indicating that no valid values can be obtained.
+This parameter is currently only used for the `RunInstances` api.
                      */
                     std::string m_kmsKeyId;
                     bool m_kmsKeyIdHasBeenSet;
 
                     /**
-                     * Cloud disk performance, in MB/s
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Specifies the cloud disk performance (unit: MiB/s). using this parameter allows you to purchase additional performance for the cloud disk.
+Currently only supports ultra-fast CLOUD disk (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD).
                      */
                     int64_t m_throughputPerformance;
                     bool m_throughputPerformanceHasBeenSet;
 
                     /**
-                     * ID of the dedicated cluster to which the instance belongs.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Specifies the exclusive cluster ID it belongs to.
                      */
                     std::string m_cdcId;
                     bool m_cdcIdHasBeenSet;
@@ -466,16 +364,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     /**
                      * Burst performance.
 
- <b>Note: This field is in beta test.</b>
-Note: This field may return null, indicating that no valid value is found.
+<B>Note: this feature is in beta test.</b>.
                      */
                     bool m_burstPerformance;
                     bool m_burstPerformanceHasBeenSet;
 
                     /**
-                     * Disk name, with a length of not more than 128 characters.
-
-This parameter is in invite-only testing and is not yet open for use.
+                     * Disk name, with a length not exceeding 128 characters.
                      */
                     std::string m_diskName;
                     bool m_diskNameHasBeenSet;

@@ -63,6 +63,64 @@ namespace TencentCloud
                      */
                     bool EmailHasBeenSet() const;
 
+                    /**
+                     * 获取Invite a role.
+Note: if no value is passed, it defaults to the sub - customer.
+Client: customer.
+SubAgent: second-level reseller.
+                     * @return InvitationRole Invite a role.
+Note: if no value is passed, it defaults to the sub - customer.
+Client: customer.
+SubAgent: second-level reseller.
+                     * 
+                     */
+                    std::string GetInvitationRole() const;
+
+                    /**
+                     * 设置Invite a role.
+Note: if no value is passed, it defaults to the sub - customer.
+Client: customer.
+SubAgent: second-level reseller.
+                     * @param _invitationRole Invite a role.
+Note: if no value is passed, it defaults to the sub - customer.
+Client: customer.
+SubAgent: second-level reseller.
+                     * 
+                     */
+                    void SetInvitationRole(const std::string& _invitationRole);
+
+                    /**
+                     * 判断参数 InvitationRole 是否已赋值
+                     * @return InvitationRole 是否已赋值
+                     * 
+                     */
+                    bool InvitationRoleHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the application material.
+Note: this field takes effect only in the scenario of inviting a second-level reseller.
+                     * @return MaterialUrl Specifies the application material.
+Note: this field takes effect only in the scenario of inviting a second-level reseller.
+                     * 
+                     */
+                    std::string GetMaterialUrl() const;
+
+                    /**
+                     * 设置Specifies the application material.
+Note: this field takes effect only in the scenario of inviting a second-level reseller.
+                     * @param _materialUrl Specifies the application material.
+Note: this field takes effect only in the scenario of inviting a second-level reseller.
+                     * 
+                     */
+                    void SetMaterialUrl(const std::string& _materialUrl);
+
+                    /**
+                     * 判断参数 MaterialUrl 是否已赋值
+                     * @return MaterialUrl 是否已赋值
+                     * 
+                     */
+                    bool MaterialUrlHasBeenSet() const;
+
                 private:
 
                     /**
@@ -70,6 +128,22 @@ namespace TencentCloud
                      */
                     std::string m_email;
                     bool m_emailHasBeenSet;
+
+                    /**
+                     * Invite a role.
+Note: if no value is passed, it defaults to the sub - customer.
+Client: customer.
+SubAgent: second-level reseller.
+                     */
+                    std::string m_invitationRole;
+                    bool m_invitationRoleHasBeenSet;
+
+                    /**
+                     * Specifies the application material.
+Note: this field takes effect only in the scenario of inviting a second-level reseller.
+                     */
+                    std::string m_materialUrl;
+                    bool m_materialUrlHasBeenSet;
 
                 };
             }

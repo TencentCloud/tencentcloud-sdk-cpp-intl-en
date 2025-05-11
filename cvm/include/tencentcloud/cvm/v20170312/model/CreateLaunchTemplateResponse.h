@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ID of successfully created instance launch template. This parameter will be returned when the instance launch template is created through the `CreateLaunchTemplate` API.
-                     * @return LaunchTemplateId The ID of successfully created instance launch template. This parameter will be returned when the instance launch template is created through the `CreateLaunchTemplate` API.
+                     * 获取Specifies the ID of the successfully created instance launch template when this parameter is returned by creating an instance launch template through this interface.
+                     * @return LaunchTemplateId Specifies the ID of the successfully created instance launch template when this parameter is returned by creating an instance launch template through this interface.
                      * 
                      */
                     std::string GetLaunchTemplateId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The ID of successfully created instance launch template. This parameter will be returned when the instance launch template is created through the `CreateLaunchTemplate` API.
+                     * Specifies the ID of the successfully created instance launch template when this parameter is returned by creating an instance launch template through this interface.
                      */
                     std::string m_launchTemplateId;
                     bool m_launchTemplateIdHasBeenSet;

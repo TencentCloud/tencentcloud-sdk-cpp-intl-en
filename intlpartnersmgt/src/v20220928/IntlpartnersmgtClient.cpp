@@ -169,6 +169,49 @@ IntlpartnersmgtClient::ApproveClientApplyOutcomeCallable IntlpartnersmgtClient::
     return task->get_future();
 }
 
+IntlpartnersmgtClient::ApproveSubAgentApplyOutcome IntlpartnersmgtClient::ApproveSubAgentApply(const ApproveSubAgentApplyRequest &request)
+{
+    auto outcome = MakeRequest(request, "ApproveSubAgentApply");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ApproveSubAgentApplyResponse rsp = ApproveSubAgentApplyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ApproveSubAgentApplyOutcome(rsp);
+        else
+            return ApproveSubAgentApplyOutcome(o.GetError());
+    }
+    else
+    {
+        return ApproveSubAgentApplyOutcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::ApproveSubAgentApplyAsync(const ApproveSubAgentApplyRequest& request, const ApproveSubAgentApplyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ApproveSubAgentApply(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IntlpartnersmgtClient::ApproveSubAgentApplyOutcomeCallable IntlpartnersmgtClient::ApproveSubAgentApplyCallable(const ApproveSubAgentApplyRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ApproveSubAgentApplyOutcome()>>(
+        [this, request]()
+        {
+            return this->ApproveSubAgentApply(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 IntlpartnersmgtClient::CreateAccountOutcome IntlpartnersmgtClient::CreateAccount(const CreateAccountRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateAccount");
@@ -1323,6 +1366,49 @@ IntlpartnersmgtClient::QueryPendingClientsV2OutcomeCallable IntlpartnersmgtClien
         [this, request]()
         {
             return this->QueryPendingClientsV2(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+IntlpartnersmgtClient::QueryPendingSubAgentsV2Outcome IntlpartnersmgtClient::QueryPendingSubAgentsV2(const QueryPendingSubAgentsV2Request &request)
+{
+    auto outcome = MakeRequest(request, "QueryPendingSubAgentsV2");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        QueryPendingSubAgentsV2Response rsp = QueryPendingSubAgentsV2Response();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return QueryPendingSubAgentsV2Outcome(rsp);
+        else
+            return QueryPendingSubAgentsV2Outcome(o.GetError());
+    }
+    else
+    {
+        return QueryPendingSubAgentsV2Outcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::QueryPendingSubAgentsV2Async(const QueryPendingSubAgentsV2Request& request, const QueryPendingSubAgentsV2AsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->QueryPendingSubAgentsV2(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IntlpartnersmgtClient::QueryPendingSubAgentsV2OutcomeCallable IntlpartnersmgtClient::QueryPendingSubAgentsV2Callable(const QueryPendingSubAgentsV2Request &request)
+{
+    auto task = std::make_shared<std::packaged_task<QueryPendingSubAgentsV2Outcome()>>(
+        [this, request]()
+        {
+            return this->QueryPendingSubAgentsV2(request);
         }
     );
 

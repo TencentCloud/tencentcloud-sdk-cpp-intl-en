@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Local HDD storage type. Value: LOCAL_PRO.
-Note: This field may return null, indicating that no valid value is found.
-                     * @return Type Local HDD storage type. Value: LOCAL_PRO.
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取HDD LOCAL storage type specifies the value: LOCAL_PRO.
+                     * @return Type HDD LOCAL storage type specifies the value: LOCAL_PRO.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Local HDD storage type. Value: LOCAL_PRO.
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _type Local HDD storage type. Value: LOCAL_PRO.
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置HDD LOCAL storage type specifies the value: LOCAL_PRO.
+                     * @param _type HDD LOCAL storage type specifies the value: LOCAL_PRO.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Minimum capacity of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
-                     * @return MinSize Minimum capacity of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Specifies the minimum HDD local storage capacity. measurement unit: GiB.
+                     * @return MinSize Specifies the minimum HDD local storage capacity. measurement unit: GiB.
                      * 
                      */
                     int64_t GetMinSize() const;
 
                     /**
-                     * 设置Minimum capacity of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _minSize Minimum capacity of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Specifies the minimum HDD local storage capacity. measurement unit: GiB.
+                     * @param _minSize Specifies the minimum HDD local storage capacity. measurement unit: GiB.
                      * 
                      */
                     void SetMinSize(const int64_t& _minSize);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool MinSizeHasBeenSet() const;
 
                     /**
-                     * 获取Maximum capacity of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
-                     * @return MaxSize Maximum capacity of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
+                     * 获取Specifies the maximum capacity of HDD local storage. measurement unit: GiB.
+                     * @return MaxSize Specifies the maximum capacity of HDD local storage. measurement unit: GiB.
                      * 
                      */
                     int64_t GetMaxSize() const;
 
                     /**
-                     * 设置Maximum capacity of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
-                     * @param _maxSize Maximum capacity of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
+                     * 设置Specifies the maximum capacity of HDD local storage. measurement unit: GiB.
+                     * @param _maxSize Specifies the maximum capacity of HDD local storage. measurement unit: GiB.
                      * 
                      */
                     void SetMaxSize(const int64_t& _maxSize);
@@ -124,22 +112,19 @@ Note: This field may return null, indicating that no valid value is found.
                 private:
 
                     /**
-                     * Local HDD storage type. Value: LOCAL_PRO.
-Note: This field may return null, indicating that no valid value is found.
+                     * HDD LOCAL storage type specifies the value: LOCAL_PRO.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Minimum capacity of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
+                     * Specifies the minimum HDD local storage capacity. measurement unit: GiB.
                      */
                     int64_t m_minSize;
                     bool m_minSizeHasBeenSet;
 
                     /**
-                     * Maximum capacity of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
+                     * Specifies the maximum capacity of HDD local storage. measurement unit: GiB.
                      */
                     int64_t m_maxSize;
                     bool m_maxSizeHasBeenSet;

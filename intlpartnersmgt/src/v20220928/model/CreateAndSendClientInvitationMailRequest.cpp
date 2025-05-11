@@ -23,7 +23,9 @@ using namespace TencentCloud::Intlpartnersmgt::V20220928::Model;
 using namespace std;
 
 CreateAndSendClientInvitationMailRequest::CreateAndSendClientInvitationMailRequest() :
-    m_emailHasBeenSet(false)
+    m_emailHasBeenSet(false),
+    m_invitationRoleHasBeenSet(false),
+    m_materialUrlHasBeenSet(false)
 {
 }
 
@@ -40,6 +42,22 @@ string CreateAndSendClientInvitationMailRequest::ToJsonString() const
         string key = "Email";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_email.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_invitationRoleHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InvitationRole";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_invitationRole.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_materialUrlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MaterialUrl";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_materialUrl.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -64,6 +82,38 @@ void CreateAndSendClientInvitationMailRequest::SetEmail(const string& _email)
 bool CreateAndSendClientInvitationMailRequest::EmailHasBeenSet() const
 {
     return m_emailHasBeenSet;
+}
+
+string CreateAndSendClientInvitationMailRequest::GetInvitationRole() const
+{
+    return m_invitationRole;
+}
+
+void CreateAndSendClientInvitationMailRequest::SetInvitationRole(const string& _invitationRole)
+{
+    m_invitationRole = _invitationRole;
+    m_invitationRoleHasBeenSet = true;
+}
+
+bool CreateAndSendClientInvitationMailRequest::InvitationRoleHasBeenSet() const
+{
+    return m_invitationRoleHasBeenSet;
+}
+
+string CreateAndSendClientInvitationMailRequest::GetMaterialUrl() const
+{
+    return m_materialUrl;
+}
+
+void CreateAndSendClientInvitationMailRequest::SetMaterialUrl(const string& _materialUrl)
+{
+    m_materialUrl = _materialUrl;
+    m_materialUrlHasBeenSet = true;
+}
+
+bool CreateAndSendClientInvitationMailRequest::MaterialUrlHasBeenSet() const
+{
+    return m_materialUrlHasBeenSet;
 }
 
 

@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable [Cloud Monitor](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1). Valid values: <br><li>TRUE: enable Cloud Monitor <br><li>FALSE: do not enable Cloud Monitor <br><br>Default value: TRUE.
-                     * @return Enabled Whether to enable [Cloud Monitor](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1). Valid values: <br><li>TRUE: enable Cloud Monitor <br><li>FALSE: do not enable Cloud Monitor <br><br>Default value: TRUE.
+                     * 获取Whether to enable the cloud monitor service. value ranges from: <li>true: indicates enabling the cloud monitor service</li> <li>false: indicates disabling the cloud monitor service</li> default value: true.
+                     * @return Enabled Whether to enable the cloud monitor service. value ranges from: <li>true: indicates enabling the cloud monitor service</li> <li>false: indicates disabling the cloud monitor service</li> default value: true.
                      * 
                      */
                     bool GetEnabled() const;
 
                     /**
-                     * 设置Whether to enable [Cloud Monitor](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1). Valid values: <br><li>TRUE: enable Cloud Monitor <br><li>FALSE: do not enable Cloud Monitor <br><br>Default value: TRUE.
-                     * @param _enabled Whether to enable [Cloud Monitor](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1). Valid values: <br><li>TRUE: enable Cloud Monitor <br><li>FALSE: do not enable Cloud Monitor <br><br>Default value: TRUE.
+                     * 设置Whether to enable the cloud monitor service. value ranges from: <li>true: indicates enabling the cloud monitor service</li> <li>false: indicates disabling the cloud monitor service</li> default value: true.
+                     * @param _enabled Whether to enable the cloud monitor service. value ranges from: <li>true: indicates enabling the cloud monitor service</li> <li>false: indicates disabling the cloud monitor service</li> default value: true.
                      * 
                      */
                     void SetEnabled(const bool& _enabled);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable [Cloud Monitor](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1). Valid values: <br><li>TRUE: enable Cloud Monitor <br><li>FALSE: do not enable Cloud Monitor <br><br>Default value: TRUE.
+                     * Whether to enable the cloud monitor service. value ranges from: <li>true: indicates enabling the cloud monitor service</li> <li>false: indicates disabling the cloud monitor service</li> default value: true.
                      */
                     bool m_enabled;
                     bool m_enabledHasBeenSet;
