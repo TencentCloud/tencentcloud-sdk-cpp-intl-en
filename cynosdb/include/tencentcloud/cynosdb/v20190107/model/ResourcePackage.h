@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PackageId The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The unique ID of the resource package.
+                     * @return PackageId The unique ID of the resource package.
                      * 
                      */
                     std::string GetPackageId() const;
 
                     /**
-                     * 设置The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _packageId The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The unique ID of the resource package.
+                     * @param _packageId The unique ID of the resource package.
                      * 
                      */
                     void SetPackageId(const std::string& _packageId);
@@ -68,15 +68,19 @@ namespace TencentCloud
                     bool PackageIdHasBeenSet() const;
 
                     /**
-                     * 获取Resource pack type. Valid values:  `CCU` (compute resource pack),  `DISK`  (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PackageType Resource pack type. Valid values:  `CCU` (compute resource pack),  `DISK`  (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Resource package type: CCU: compute resource package.
+DISK: storage resource package.
+                     * @return PackageType Resource package type: CCU: compute resource package.
+DISK: storage resource package.
                      * 
                      */
                     std::string GetPackageType() const;
 
                     /**
-                     * 设置Resource pack type. Valid values:  `CCU` (compute resource pack),  `DISK`  (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _packageType Resource pack type. Valid values:  `CCU` (compute resource pack),  `DISK`  (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Resource package type: CCU: compute resource package.
+DISK: storage resource package.
+                     * @param _packageType Resource package type: CCU: compute resource package.
+DISK: storage resource package.
                      * 
                      */
                     void SetPackageType(const std::string& _packageType);
@@ -88,19 +92,47 @@ namespace TencentCloud
                      */
                     bool PackageTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Deduction priority of the current resource package bound to the current instance.
+                     * @return DeductionPriority Deduction priority of the current resource package bound to the current instance.
+                     * 
+                     */
+                    int64_t GetDeductionPriority() const;
+
+                    /**
+                     * 设置Deduction priority of the current resource package bound to the current instance.
+                     * @param _deductionPriority Deduction priority of the current resource package bound to the current instance.
+                     * 
+                     */
+                    void SetDeductionPriority(const int64_t& _deductionPriority);
+
+                    /**
+                     * 判断参数 DeductionPriority 是否已赋值
+                     * @return DeductionPriority 是否已赋值
+                     * 
+                     */
+                    bool DeductionPriorityHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
+                     * The unique ID of the resource package.
                      */
                     std::string m_packageId;
                     bool m_packageIdHasBeenSet;
 
                     /**
-                     * Resource pack type. Valid values:  `CCU` (compute resource pack),  `DISK`  (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
+                     * Resource package type: CCU: compute resource package.
+DISK: storage resource package.
                      */
                     std::string m_packageType;
                     bool m_packageTypeHasBeenSet;
+
+                    /**
+                     * Deduction priority of the current resource package bound to the current instance.
+                     */
+                    int64_t m_deductionPriority;
+                    bool m_deductionPriorityHasBeenSet;
 
                 };
             }

@@ -236,19 +236,15 @@ namespace TencentCloud
                     bool SnapshotTimeHasBeenSet() const;
 
                     /**
-                     * 获取Backup ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BackupId Backup ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Backup ID.
+                     * @return BackupId Backup ID.
                      * 
                      */
                     int64_t GetBackupId() const;
 
                     /**
-                     * 设置Backup ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _backupId Backup ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Backup ID.
+                     * @param _backupId Backup ID.
                      * 
                      */
                     void SetBackupId(const int64_t& _backupId);
@@ -261,15 +257,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BackupIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SnapShotType 
+                     * 获取Specifies the snapshot type. valid values: full (full snapshot); increment (incremental snapshot).
+                     * @return SnapShotType Specifies the snapshot type. valid values: full (full snapshot); increment (incremental snapshot).
                      * 
                      */
                     std::string GetSnapShotType() const;
 
                     /**
-                     * 设置
-                     * @param _snapShotType 
+                     * 设置Specifies the snapshot type. valid values: full (full snapshot); increment (incremental snapshot).
+                     * @param _snapShotType Specifies the snapshot type. valid values: full (full snapshot); increment (incremental snapshot).
                      * 
                      */
                     void SetSnapShotType(const std::string& _snapShotType);
@@ -282,19 +278,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SnapShotTypeHasBeenSet() const;
 
                     /**
-                     * 获取Backup file alias
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BackupName Backup file alias
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the remark of the backup file.
+                     * @return BackupName Specifies the remark of the backup file.
                      * 
                      */
                     std::string GetBackupName() const;
 
                     /**
-                     * 设置Backup file alias
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _backupName Backup file alias
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the remark of the backup file.
+                     * @param _backupName Specifies the remark of the backup file.
                      * 
                      */
                     void SetBackupName(const std::string& _backupName);
@@ -363,21 +355,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_snapshotTimeHasBeenSet;
 
                     /**
-                     * Backup ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Backup ID.
                      */
                     int64_t m_backupId;
                     bool m_backupIdHasBeenSet;
 
                     /**
-                     * 
+                     * Specifies the snapshot type. valid values: full (full snapshot); increment (incremental snapshot).
                      */
                     std::string m_snapShotType;
                     bool m_snapShotTypeHasBeenSet;
 
                     /**
-                     * Backup file alias
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the remark of the backup file.
                      */
                     std::string m_backupName;
                     bool m_backupNameHasBeenSet;

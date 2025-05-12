@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Binlog list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Binlogs Binlog list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Binlog list.
+                     * @return Binlogs Binlog list.
                      * 
                      */
                     std::vector<BinlogItem> GetBinlogs() const;
@@ -83,8 +81,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Binlog list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Binlog list.
                      */
                     std::vector<BinlogItem> m_binlogs;
                     bool m_binlogsHasBeenSet;

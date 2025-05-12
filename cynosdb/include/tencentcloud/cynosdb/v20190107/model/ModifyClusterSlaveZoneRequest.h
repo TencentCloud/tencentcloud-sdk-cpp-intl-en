@@ -105,6 +105,27 @@ namespace TencentCloud
                      */
                     bool NewSlaveZoneHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the binlog synchronization mode. the default value is async. valid values are sync, semisync, and async.
+                     * @return BinlogSyncWay Specifies the binlog synchronization mode. the default value is async. valid values are sync, semisync, and async.
+                     * 
+                     */
+                    std::string GetBinlogSyncWay() const;
+
+                    /**
+                     * 设置Specifies the binlog synchronization mode. the default value is async. valid values are sync, semisync, and async.
+                     * @param _binlogSyncWay Specifies the binlog synchronization mode. the default value is async. valid values are sync, semisync, and async.
+                     * 
+                     */
+                    void SetBinlogSyncWay(const std::string& _binlogSyncWay);
+
+                    /**
+                     * 判断参数 BinlogSyncWay 是否已赋值
+                     * @return BinlogSyncWay 是否已赋值
+                     * 
+                     */
+                    bool BinlogSyncWayHasBeenSet() const;
+
                 private:
 
                     /**
@@ -124,6 +145,12 @@ namespace TencentCloud
                      */
                     std::string m_newSlaveZone;
                     bool m_newSlaveZoneHasBeenSet;
+
+                    /**
+                     * Specifies the binlog synchronization mode. the default value is async. valid values are sync, semisync, and async.
+                     */
+                    std::string m_binlogSyncWay;
+                    bool m_binlogSyncWayHasBeenSet;
 
                 };
             }

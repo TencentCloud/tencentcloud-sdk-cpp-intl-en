@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance type
-                     * @return InstanceType Instance type
+                     * 获取Instance type. currently fixed to cynosdb-serverless.
+                     * @return InstanceType Instance type. currently fixed to cynosdb-serverless.
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Instance type
-                     * @param _instanceType Instance type
+                     * 设置Instance type. currently fixed to cynosdb-serverless.
+                     * @param _instanceType Instance type. currently fixed to cynosdb-serverless.
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
-                     * @return PackageRegion Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
+                     * 获取Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
+                     * @return PackageRegion Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
                      * 
                      */
                     std::string GetPackageRegion() const;
 
                     /**
-                     * 设置Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
-                     * @param _packageRegion Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
+                     * 设置Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
+                     * @param _packageRegion Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
                      * 
                      */
                     void SetPackageRegion(const std::string& _packageRegion);
@@ -213,13 +213,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance type
+                     * Instance type. currently fixed to cynosdb-serverless.
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
+                     * Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
                      */
                     std::string m_packageRegion;
                     bool m_packageRegionHasBeenSet;

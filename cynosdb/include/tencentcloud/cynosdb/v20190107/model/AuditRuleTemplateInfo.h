@@ -111,19 +111,15 @@ namespace TencentCloud
                     bool RuleFiltersHasBeenSet() const;
 
                     /**
-                     * 获取Description of a rule template
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Description Description of a rule template
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Rule template description.
+                     * @return Description Rule template description.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Description of a rule template
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _description Description of a rule template
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Rule template description.
+                     * @param _description Rule template description.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -156,6 +152,111 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool CreateAtHasBeenSet() const;
 
+                    /**
+                     * 获取Rule template modification time.
+                     * @return UpdateAt Rule template modification time.
+                     * 
+                     */
+                    std::string GetUpdateAt() const;
+
+                    /**
+                     * 设置Rule template modification time.
+                     * @param _updateAt Rule template modification time.
+                     * 
+                     */
+                    void SetUpdateAt(const std::string& _updateAt);
+
+                    /**
+                     * 判断参数 UpdateAt 是否已赋值
+                     * @return UpdateAt 是否已赋值
+                     * 
+                     */
+                    bool UpdateAtHasBeenSet() const;
+
+                    /**
+                     * 获取Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
+                     * @return AlarmLevel Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
+                     * 
+                     */
+                    uint64_t GetAlarmLevel() const;
+
+                    /**
+                     * 设置Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
+                     * @param _alarmLevel Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
+                     * 
+                     */
+                    void SetAlarmLevel(const uint64_t& _alarmLevel);
+
+                    /**
+                     * 判断参数 AlarmLevel 是否已赋值
+                     * @return AlarmLevel 是否已赋值
+                     * 
+                     */
+                    bool AlarmLevelHasBeenSet() const;
+
+                    /**
+                     * 获取Alarm policy. 0 - no alert, 1 - alert.
+                     * @return AlarmPolicy Alarm policy. 0 - no alert, 1 - alert.
+                     * 
+                     */
+                    uint64_t GetAlarmPolicy() const;
+
+                    /**
+                     * 设置Alarm policy. 0 - no alert, 1 - alert.
+                     * @param _alarmPolicy Alarm policy. 0 - no alert, 1 - alert.
+                     * 
+                     */
+                    void SetAlarmPolicy(const uint64_t& _alarmPolicy);
+
+                    /**
+                     * 判断参数 AlarmPolicy 是否已赋值
+                     * @return AlarmPolicy 是否已赋值
+                     * 
+                     */
+                    bool AlarmPolicyHasBeenSet() const;
+
+                    /**
+                     * 获取Template status. 0 - no task, 1 - modifying.
+                     * @return Status Template status. 0 - no task, 1 - modifying.
+                     * 
+                     */
+                    uint64_t GetStatus() const;
+
+                    /**
+                     * 设置Template status. 0 - no task, 1 - modifying.
+                     * @param _status Template status. 0 - no task, 1 - modifying.
+                     * 
+                     */
+                    void SetStatus(const uint64_t& _status);
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     * 
+                     */
+                    bool StatusHasBeenSet() const;
+
+                    /**
+                     * 获取Template application is used in which instances.
+                     * @return AffectedInstances Template application is used in which instances.
+                     * 
+                     */
+                    std::vector<std::string> GetAffectedInstances() const;
+
+                    /**
+                     * 设置Template application is used in which instances.
+                     * @param _affectedInstances Template application is used in which instances.
+                     * 
+                     */
+                    void SetAffectedInstances(const std::vector<std::string>& _affectedInstances);
+
+                    /**
+                     * 判断参数 AffectedInstances 是否已赋值
+                     * @return AffectedInstances 是否已赋值
+                     * 
+                     */
+                    bool AffectedInstancesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -177,8 +278,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_ruleFiltersHasBeenSet;
 
                     /**
-                     * Description of a rule template
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Rule template description.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
@@ -188,6 +288,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_createAt;
                     bool m_createAtHasBeenSet;
+
+                    /**
+                     * Rule template modification time.
+                     */
+                    std::string m_updateAt;
+                    bool m_updateAtHasBeenSet;
+
+                    /**
+                     * Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
+                     */
+                    uint64_t m_alarmLevel;
+                    bool m_alarmLevelHasBeenSet;
+
+                    /**
+                     * Alarm policy. 0 - no alert, 1 - alert.
+                     */
+                    uint64_t m_alarmPolicy;
+                    bool m_alarmPolicyHasBeenSet;
+
+                    /**
+                     * Template status. 0 - no task, 1 - modifying.
+                     */
+                    uint64_t m_status;
+                    bool m_statusHasBeenSet;
+
+                    /**
+                     * Template application is used in which instances.
+                     */
+                    std::vector<std::string> m_affectedInstances;
+                    bool m_affectedInstancesHasBeenSet;
 
                 };
             }

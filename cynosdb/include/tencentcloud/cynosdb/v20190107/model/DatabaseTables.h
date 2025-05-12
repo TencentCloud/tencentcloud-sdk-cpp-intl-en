@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Database name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Database Database name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDatabase() const;
 
                     /**
                      * 设置Database name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _database Database name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDatabase(const std::string& _database);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DatabaseHasBeenSet() const;
 
                     /**
-                     * 获取Table name list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Tables Table name list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Table name list.
+                     * @return Tables Table name list.
                      * 
                      */
                     std::vector<std::string> GetTables() const;
 
                     /**
-                     * 设置Table name list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tables Table name list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Table name list.
+                     * @param _tables Table name list.
                      * 
                      */
                     void SetTables(const std::vector<std::string>& _tables);
@@ -100,14 +92,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Database name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_database;
                     bool m_databaseHasBeenSet;
 
                     /**
-                     * Table name list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Table name list.
                      */
                     std::vector<std::string> m_tables;
                     bool m_tablesHasBeenSet;

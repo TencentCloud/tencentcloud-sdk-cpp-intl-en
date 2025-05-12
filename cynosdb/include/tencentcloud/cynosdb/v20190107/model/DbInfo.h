@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool CollateRuleHasBeenSet() const;
 
                     /**
-                     * 获取Database remarks Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Description Database remarks Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the remark of the database.
+                     * @return Description Specifies the remark of the database.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Database remarks Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _description Database remarks Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the remark of the database.
+                     * @param _description Specifies the remark of the database.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取User permissions Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UserHostPrivileges User permissions Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取User permission
+                     * @return UserHostPrivileges User permission
                      * 
                      */
                     std::vector<UserHostPrivilege> GetUserHostPrivileges() const;
 
                     /**
-                     * 设置User permissions Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _userHostPrivileges User permissions Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置User permission
+                     * @param _userHostPrivileges User permission
                      * 
                      */
                     void SetUserHostPrivileges(const std::vector<UserHostPrivilege>& _userHostPrivileges);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool UserHostPrivilegesHasBeenSet() const;
 
                     /**
-                     * 获取Database ID Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DbId Database ID Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Database ID
+                     * @return DbId Database ID
                      * 
                      */
                     int64_t GetDbId() const;
 
                     /**
-                     * 设置Database ID Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dbId Database ID Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Database ID
+                     * @param _dbId Database ID
                      * 
                      */
                     void SetDbId(const int64_t& _dbId);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool DbIdHasBeenSet() const;
 
                     /**
-                     * 获取Creation time Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CreateTime Creation time Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Creation time
+                     * @return CreateTime Creation time
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _createTime Creation time Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Creation time
+                     * @param _createTime Creation time
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Update time Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UpdateTime Update time Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Update time.
+                     * @return UpdateTime Update time.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Update time Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _updateTime Update time Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Update time.
+                     * @param _updateTime Update time.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取User appid Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AppId User appid Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取User appid.
+                     * @return AppId User appid.
                      * 
                      */
                     int64_t GetAppId() const;
 
                     /**
-                     * 设置User appid Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _appId User appid Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置User appid.
+                     * @param _appId User appid.
                      * 
                      */
                     void SetAppId(const int64_t& _appId);
@@ -258,15 +258,15 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取User Uin Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Uin User Uin Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取User UIN
+                     * @return Uin User UIN
                      * 
                      */
                     std::string GetUin() const;
 
                     /**
-                     * 设置User Uin Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _uin User Uin Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置User UIN
+                     * @param _uin User UIN
                      * 
                      */
                     void SetUin(const std::string& _uin);
@@ -279,15 +279,15 @@ namespace TencentCloud
                     bool UinHasBeenSet() const;
 
                     /**
-                     * 获取Cluster ID Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ClusterId Cluster ID Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Cluster ID
+                     * @return ClusterId Cluster ID
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _clusterId Cluster ID Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Cluster ID
+                     * @param _clusterId Cluster ID
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -326,49 +326,49 @@ namespace TencentCloud
                     bool m_collateRuleHasBeenSet;
 
                     /**
-                     * Database remarks Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the remark of the database.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * User permissions Note: This field may return null, indicating that no valid values can be obtained.
+                     * User permission
                      */
                     std::vector<UserHostPrivilege> m_userHostPrivileges;
                     bool m_userHostPrivilegesHasBeenSet;
 
                     /**
-                     * Database ID Note: This field may return null, indicating that no valid values can be obtained.
+                     * Database ID
                      */
                     int64_t m_dbId;
                     bool m_dbIdHasBeenSet;
 
                     /**
-                     * Creation time Note: This field may return null, indicating that no valid values can be obtained.
+                     * Creation time
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Update time Note: This field may return null, indicating that no valid values can be obtained.
+                     * Update time.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * User appid Note: This field may return null, indicating that no valid values can be obtained.
+                     * User appid.
                      */
                     int64_t m_appId;
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * User Uin Note: This field may return null, indicating that no valid values can be obtained.
+                     * User UIN
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;
 
                     /**
-                     * Cluster ID Note: This field may return null, indicating that no valid values can be obtained.
+                     * Cluster ID
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;

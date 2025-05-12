@@ -72,7 +72,13 @@ CynosdbInstance::CynosdbInstance() :
     m_masterZoneHasBeenSet(false),
     m_slaveZonesHasBeenSet(false),
     m_instanceNetInfoHasBeenSet(false),
-    m_resourcePackagesHasBeenSet(false)
+    m_resourcePackagesHasBeenSet(false),
+    m_instanceIndexModeHasBeenSet(false),
+    m_instanceAbilityHasBeenSet(false),
+    m_deviceTypeHasBeenSet(false),
+    m_instanceStorageTypeHasBeenSet(false),
+    m_cynosVersionTagHasBeenSet(false),
+    m_nodeListHasBeenSet(false)
 {
 }
 
@@ -644,6 +650,76 @@ CoreInternalOutcome CynosdbInstance::Deserialize(const rapidjson::Value &value)
         m_resourcePackagesHasBeenSet = true;
     }
 
+    if (value.HasMember("InstanceIndexMode") && !value["InstanceIndexMode"].IsNull())
+    {
+        if (!value["InstanceIndexMode"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `CynosdbInstance.InstanceIndexMode` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_instanceIndexMode = string(value["InstanceIndexMode"].GetString());
+        m_instanceIndexModeHasBeenSet = true;
+    }
+
+    if (value.HasMember("InstanceAbility") && !value["InstanceAbility"].IsNull())
+    {
+        if (!value["InstanceAbility"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `CynosdbInstance.InstanceAbility` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_instanceAbility.Deserialize(value["InstanceAbility"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_instanceAbilityHasBeenSet = true;
+    }
+
+    if (value.HasMember("DeviceType") && !value["DeviceType"].IsNull())
+    {
+        if (!value["DeviceType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `CynosdbInstance.DeviceType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_deviceType = string(value["DeviceType"].GetString());
+        m_deviceTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("InstanceStorageType") && !value["InstanceStorageType"].IsNull())
+    {
+        if (!value["InstanceStorageType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `CynosdbInstance.InstanceStorageType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_instanceStorageType = string(value["InstanceStorageType"].GetString());
+        m_instanceStorageTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("CynosVersionTag") && !value["CynosVersionTag"].IsNull())
+    {
+        if (!value["CynosVersionTag"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `CynosdbInstance.CynosVersionTag` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_cynosVersionTag = string(value["CynosVersionTag"].GetString());
+        m_cynosVersionTagHasBeenSet = true;
+    }
+
+    if (value.HasMember("NodeList") && !value["NodeList"].IsNull())
+    {
+        if (!value["NodeList"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `CynosdbInstance.NodeList` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["NodeList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_nodeList.push_back((*itr).GetString());
+        }
+        m_nodeListHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -1097,6 +1173,60 @@ void CynosdbInstance::ToJsonObject(rapidjson::Value &value, rapidjson::Document:
         {
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_instanceIndexModeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceIndexMode";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceIndexMode.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_instanceAbilityHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceAbility";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_instanceAbility.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_deviceTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DeviceType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_deviceType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_instanceStorageTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceStorageType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceStorageType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_cynosVersionTagHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CynosVersionTag";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cynosVersionTag.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_nodeListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NodeList";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_nodeList.begin(); itr != m_nodeList.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
@@ -1933,5 +2063,101 @@ void CynosdbInstance::SetResourcePackages(const vector<ResourcePackage>& _resour
 bool CynosdbInstance::ResourcePackagesHasBeenSet() const
 {
     return m_resourcePackagesHasBeenSet;
+}
+
+string CynosdbInstance::GetInstanceIndexMode() const
+{
+    return m_instanceIndexMode;
+}
+
+void CynosdbInstance::SetInstanceIndexMode(const string& _instanceIndexMode)
+{
+    m_instanceIndexMode = _instanceIndexMode;
+    m_instanceIndexModeHasBeenSet = true;
+}
+
+bool CynosdbInstance::InstanceIndexModeHasBeenSet() const
+{
+    return m_instanceIndexModeHasBeenSet;
+}
+
+InstanceAbility CynosdbInstance::GetInstanceAbility() const
+{
+    return m_instanceAbility;
+}
+
+void CynosdbInstance::SetInstanceAbility(const InstanceAbility& _instanceAbility)
+{
+    m_instanceAbility = _instanceAbility;
+    m_instanceAbilityHasBeenSet = true;
+}
+
+bool CynosdbInstance::InstanceAbilityHasBeenSet() const
+{
+    return m_instanceAbilityHasBeenSet;
+}
+
+string CynosdbInstance::GetDeviceType() const
+{
+    return m_deviceType;
+}
+
+void CynosdbInstance::SetDeviceType(const string& _deviceType)
+{
+    m_deviceType = _deviceType;
+    m_deviceTypeHasBeenSet = true;
+}
+
+bool CynosdbInstance::DeviceTypeHasBeenSet() const
+{
+    return m_deviceTypeHasBeenSet;
+}
+
+string CynosdbInstance::GetInstanceStorageType() const
+{
+    return m_instanceStorageType;
+}
+
+void CynosdbInstance::SetInstanceStorageType(const string& _instanceStorageType)
+{
+    m_instanceStorageType = _instanceStorageType;
+    m_instanceStorageTypeHasBeenSet = true;
+}
+
+bool CynosdbInstance::InstanceStorageTypeHasBeenSet() const
+{
+    return m_instanceStorageTypeHasBeenSet;
+}
+
+string CynosdbInstance::GetCynosVersionTag() const
+{
+    return m_cynosVersionTag;
+}
+
+void CynosdbInstance::SetCynosVersionTag(const string& _cynosVersionTag)
+{
+    m_cynosVersionTag = _cynosVersionTag;
+    m_cynosVersionTagHasBeenSet = true;
+}
+
+bool CynosdbInstance::CynosVersionTagHasBeenSet() const
+{
+    return m_cynosVersionTagHasBeenSet;
+}
+
+vector<string> CynosdbInstance::GetNodeList() const
+{
+    return m_nodeList;
+}
+
+void CynosdbInstance::SetNodeList(const vector<string>& _nodeList)
+{
+    m_nodeList = _nodeList;
+    m_nodeListHasBeenSet = true;
+}
+
+bool CynosdbInstance::NodeListHasBeenSet() const
+{
+    return m_nodeListHasBeenSet;
 }
 

@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Database account list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AccountSet Database account list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Database account list.
+                     * @return AccountSet Database account list.
                      * 
                      */
                     std::vector<Account> GetAccountSet() const;
@@ -77,8 +75,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Database account list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Database account list.
                      */
                     std::vector<Account> m_accountSet;
                     bool m_accountSetHasBeenSet;

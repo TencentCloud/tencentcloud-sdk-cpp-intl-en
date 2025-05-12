@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cynosdb/v20190107/model/AuditRuleFilters.h>
+#include <tencentcloud/cynosdb/v20190107/model/RuleTemplateInfo.h>
 
 
 namespace TencentCloud
@@ -69,19 +70,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether the audit is rule audit. Valid values: `true` (rule audit), `false` (full audit).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AuditRule Whether the audit is rule audit. Valid values: `true` (rule audit), `false` (full audit).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies whether it is a rule-based audit. true - rule-based audit; false - comprehensive audit.
+                     * @return AuditRule Specifies whether it is a rule-based audit. true - rule-based audit; false - comprehensive audit.
                      * 
                      */
                     bool GetAuditRule() const;
 
                     /**
-                     * 设置Whether the audit is rule audit. Valid values: `true` (rule audit), `false` (full audit).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _auditRule Whether the audit is rule audit. Valid values: `true` (rule audit), `false` (full audit).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies whether it is a rule-based audit. true - rule-based audit; false - comprehensive audit.
+                     * @param _auditRule Specifies whether it is a rule-based audit. true - rule-based audit; false - comprehensive audit.
                      * 
                      */
                     void SetAuditRule(const bool& _auditRule);
@@ -94,19 +91,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AuditRuleHasBeenSet() const;
 
                     /**
-                     * 获取Audit rule details, which is valid only when `AuditRule` is `true`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AuditRuleFilters Audit rule details, which is valid only when `AuditRule` is `true`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the audit rule details. valid when AuditRule=true.
+                     * @return AuditRuleFilters Specifies the audit rule details. valid when AuditRule=true.
                      * 
                      */
                     std::vector<AuditRuleFilters> GetAuditRuleFilters() const;
 
                     /**
-                     * 设置Audit rule details, which is valid only when `AuditRule` is `true`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _auditRuleFilters Audit rule details, which is valid only when `AuditRule` is `true`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the audit rule details. valid when AuditRule=true.
+                     * @param _auditRuleFilters Specifies the audit rule details. valid when AuditRule=true.
                      * 
                      */
                     void SetAuditRuleFilters(const std::vector<AuditRuleFilters>& _auditRuleFilters);
@@ -118,6 +111,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool AuditRuleFiltersHasBeenSet() const;
 
+                    /**
+                     * 获取Whether it is an audit policy.
+                     * @return OldRule Whether it is an audit policy.
+                     * 
+                     */
+                    bool GetOldRule() const;
+
+                    /**
+                     * 设置Whether it is an audit policy.
+                     * @param _oldRule Whether it is an audit policy.
+                     * 
+                     */
+                    void SetOldRule(const bool& _oldRule);
+
+                    /**
+                     * 判断参数 OldRule 是否已赋值
+                     * @return OldRule 是否已赋值
+                     * 
+                     */
+                    bool OldRuleHasBeenSet() const;
+
+                    /**
+                     * 获取The rule template details of the instance application.
+                     * @return RuleTemplates The rule template details of the instance application.
+                     * 
+                     */
+                    std::vector<RuleTemplateInfo> GetRuleTemplates() const;
+
+                    /**
+                     * 设置The rule template details of the instance application.
+                     * @param _ruleTemplates The rule template details of the instance application.
+                     * 
+                     */
+                    void SetRuleTemplates(const std::vector<RuleTemplateInfo>& _ruleTemplates);
+
+                    /**
+                     * 判断参数 RuleTemplates 是否已赋值
+                     * @return RuleTemplates 是否已赋值
+                     * 
+                     */
+                    bool RuleTemplatesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -127,18 +162,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Whether the audit is rule audit. Valid values: `true` (rule audit), `false` (full audit).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies whether it is a rule-based audit. true - rule-based audit; false - comprehensive audit.
                      */
                     bool m_auditRule;
                     bool m_auditRuleHasBeenSet;
 
                     /**
-                     * Audit rule details, which is valid only when `AuditRule` is `true`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the audit rule details. valid when AuditRule=true.
                      */
                     std::vector<AuditRuleFilters> m_auditRuleFilters;
                     bool m_auditRuleFiltersHasBeenSet;
+
+                    /**
+                     * Whether it is an audit policy.
+                     */
+                    bool m_oldRule;
+                    bool m_oldRuleHasBeenSet;
+
+                    /**
+                     * The rule template details of the instance application.
+                     */
+                    std::vector<RuleTemplateInfo> m_ruleTemplates;
+                    bool m_ruleTemplatesHasBeenSet;
 
                 };
             }

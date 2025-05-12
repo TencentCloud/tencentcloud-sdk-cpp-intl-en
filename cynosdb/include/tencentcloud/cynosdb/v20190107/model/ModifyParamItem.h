@@ -89,19 +89,15 @@ namespace TencentCloud
                     bool CurrentValueHasBeenSet() const;
 
                     /**
-                     * 获取Old parameter value, which is used only in output parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OldValue Old parameter value, which is used only in output parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Old parameter value (useful only in output parameters).
+                     * @return OldValue Old parameter value (useful only in output parameters).
                      * 
                      */
                     std::string GetOldValue() const;
 
                     /**
-                     * 设置Old parameter value, which is used only in output parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _oldValue Old parameter value, which is used only in output parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Old parameter value (useful only in output parameters).
+                     * @param _oldValue Old parameter value (useful only in output parameters).
                      * 
                      */
                     void SetOldValue(const std::string& _oldValue);
@@ -112,6 +108,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool OldValueHasBeenSet() const;
+
+                    /**
+                     * 获取libra component type.
+                     * @return Component libra component type.
+                     * 
+                     */
+                    std::string GetComponent() const;
+
+                    /**
+                     * 设置libra component type.
+                     * @param _component libra component type.
+                     * 
+                     */
+                    void SetComponent(const std::string& _component);
+
+                    /**
+                     * 判断参数 Component 是否已赋值
+                     * @return Component 是否已赋值
+                     * 
+                     */
+                    bool ComponentHasBeenSet() const;
 
                 private:
 
@@ -128,11 +145,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_currentValueHasBeenSet;
 
                     /**
-                     * Old parameter value, which is used only in output parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Old parameter value (useful only in output parameters).
                      */
                     std::string m_oldValue;
                     bool m_oldValueHasBeenSet;
+
+                    /**
+                     * libra component type.
+                     */
+                    std::string m_component;
+                    bool m_componentHasBeenSet;
 
                 };
             }

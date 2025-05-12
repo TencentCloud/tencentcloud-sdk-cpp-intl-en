@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The generated rule template ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RuleTemplateId The generated rule template ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The generated rule template ID.
+                     * @return RuleTemplateId The generated rule template ID.
                      * 
                      */
                     std::string GetRuleTemplateId() const;
@@ -62,8 +60,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The generated rule template ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The generated rule template ID.
                      */
                     std::string m_ruleTemplateId;
                     bool m_ruleTemplateIdHasBeenSet;

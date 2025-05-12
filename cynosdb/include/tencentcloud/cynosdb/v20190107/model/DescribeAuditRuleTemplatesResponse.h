@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of rule template details
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Items List of rule template details
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Rule template detail list.
+                     * @return Items Rule template detail list.
                      * 
                      */
                     std::vector<AuditRuleTemplateInfo> GetItems() const;
@@ -83,8 +81,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of rule template details
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Rule template detail list.
                      */
                     std::vector<AuditRuleTemplateInfo> m_items;
                     bool m_itemsHasBeenSet;

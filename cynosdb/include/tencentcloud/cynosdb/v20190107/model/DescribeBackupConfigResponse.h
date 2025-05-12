@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cynosdb/v20190107/model/LogicBackupConfigInfo.h>
 
 
 namespace TencentCloud
@@ -86,10 +87,8 @@ namespace TencentCloud
                     bool ReserveDurationHasBeenSet() const;
 
                     /**
-                     * 获取Backup frequency. It is an array of 7 elements corresponding to Monday through Sunday. full: full backup; increment: incremental backup
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return BackupFreq Backup frequency. It is an array of 7 elements corresponding to Monday through Sunday. full: full backup; increment: incremental backup
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Backup frequency. an array with a length of 7, indicating the backup methods corresponding to monday to sunday respectively. full represents full backup, and increment represents incremental backup.
+                     * @return BackupFreq Backup frequency. an array with a length of 7, indicating the backup methods corresponding to monday to sunday respectively. full represents full backup, and increment represents incremental backup.
                      * 
                      */
                     std::vector<std::string> GetBackupFreq() const;
@@ -102,10 +101,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool BackupFreqHasBeenSet() const;
 
                     /**
-                     * 获取Backup mode. logic: logic backup; snapshot: snapshot backup
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return BackupType Backup mode. logic: logic backup; snapshot: snapshot backup
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Backup method. specifies the method of backup. valid values: logic (indicates logical backup), snapshot (indicates snapshot backup).
+                     * @return BackupType Backup method. specifies the method of backup. valid values: logic (indicates logical backup), snapshot (indicates snapshot backup).
                      * 
                      */
                     std::string GetBackupType() const;
@@ -116,6 +113,34 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool BackupTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Cross-Regional logical backup configuration modification time.
+                     * @return LogicCrossRegionsConfigUpdateTime Cross-Regional logical backup configuration modification time.
+                     * 
+                     */
+                    std::string GetLogicCrossRegionsConfigUpdateTime() const;
+
+                    /**
+                     * 判断参数 LogicCrossRegionsConfigUpdateTime 是否已赋值
+                     * @return LogicCrossRegionsConfigUpdateTime 是否已赋值
+                     * 
+                     */
+                    bool LogicCrossRegionsConfigUpdateTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Automatic logical backup configuration.
+                     * @return LogicBackupConfig Automatic logical backup configuration.
+                     * 
+                     */
+                    LogicBackupConfigInfo GetLogicBackupConfig() const;
+
+                    /**
+                     * 判断参数 LogicBackupConfig 是否已赋值
+                     * @return LogicBackupConfig 是否已赋值
+                     * 
+                     */
+                    bool LogicBackupConfigHasBeenSet() const;
 
                 private:
 
@@ -138,18 +163,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_reserveDurationHasBeenSet;
 
                     /**
-                     * Backup frequency. It is an array of 7 elements corresponding to Monday through Sunday. full: full backup; increment: incremental backup
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Backup frequency. an array with a length of 7, indicating the backup methods corresponding to monday to sunday respectively. full represents full backup, and increment represents incremental backup.
                      */
                     std::vector<std::string> m_backupFreq;
                     bool m_backupFreqHasBeenSet;
 
                     /**
-                     * Backup mode. logic: logic backup; snapshot: snapshot backup
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Backup method. specifies the method of backup. valid values: logic (indicates logical backup), snapshot (indicates snapshot backup).
                      */
                     std::string m_backupType;
                     bool m_backupTypeHasBeenSet;
+
+                    /**
+                     * Cross-Regional logical backup configuration modification time.
+                     */
+                    std::string m_logicCrossRegionsConfigUpdateTime;
+                    bool m_logicCrossRegionsConfigUpdateTimeHasBeenSet;
+
+                    /**
+                     * Automatic logical backup configuration.
+                     */
+                    LogicBackupConfigInfo m_logicBackupConfig;
+                    bool m_logicBackupConfigHasBeenSet;
 
                 };
             }

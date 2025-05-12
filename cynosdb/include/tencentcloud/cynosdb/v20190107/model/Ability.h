@@ -68,19 +68,15 @@ namespace TencentCloud
                     bool IsSupportSlaveZoneHasBeenSet() const;
 
                     /**
-                     * 获取The reason why secondary AZ is not supported
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NonsupportSlaveZoneReason The reason why secondary AZ is not supported
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The causes for no support from an availability zone.
+                     * @return NonsupportSlaveZoneReason The causes for no support from an availability zone.
                      * 
                      */
                     std::string GetNonsupportSlaveZoneReason() const;
 
                     /**
-                     * 设置The reason why secondary AZ is not supported
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _nonsupportSlaveZoneReason The reason why secondary AZ is not supported
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The causes for no support from an availability zone.
+                     * @param _nonsupportSlaveZoneReason The causes for no support from an availability zone.
                      * 
                      */
                     void SetNonsupportSlaveZoneReason(const std::string& _nonsupportSlaveZoneReason);
@@ -114,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsSupportRoHasBeenSet() const;
 
                     /**
-                     * 获取The reason why read-only instance is not supported
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NonsupportRoReason The reason why read-only instance is not supported
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Reasons why RO instances are not supported.
+                     * @return NonsupportRoReason Reasons why RO instances are not supported.
                      * 
                      */
                     std::string GetNonsupportRoReason() const;
 
                     /**
-                     * 设置The reason why read-only instance is not supported
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _nonsupportRoReason The reason why read-only instance is not supported
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Reasons why RO instances are not supported.
+                     * @param _nonsupportRoReason Reasons why RO instances are not supported.
                      * 
                      */
                     void SetNonsupportRoReason(const std::string& _nonsupportRoReason);
@@ -138,6 +130,90 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool NonsupportRoReasonHasBeenSet() const;
 
+                    /**
+                     * 获取Whether manual snapshot backup initiation is supported.
+                     * @return IsSupportManualSnapshot Whether manual snapshot backup initiation is supported.
+                     * 
+                     */
+                    std::string GetIsSupportManualSnapshot() const;
+
+                    /**
+                     * 设置Whether manual snapshot backup initiation is supported.
+                     * @param _isSupportManualSnapshot Whether manual snapshot backup initiation is supported.
+                     * 
+                     */
+                    void SetIsSupportManualSnapshot(const std::string& _isSupportManualSnapshot);
+
+                    /**
+                     * 判断参数 IsSupportManualSnapshot 是否已赋值
+                     * @return IsSupportManualSnapshot 是否已赋值
+                     * 
+                     */
+                    bool IsSupportManualSnapshotHasBeenSet() const;
+
+                    /**
+                     * 获取Whether transparent data encryption is supported.
+                     * @return IsSupportTransparentDataEncryption Whether transparent data encryption is supported.
+                     * 
+                     */
+                    std::string GetIsSupportTransparentDataEncryption() const;
+
+                    /**
+                     * 设置Whether transparent data encryption is supported.
+                     * @param _isSupportTransparentDataEncryption Whether transparent data encryption is supported.
+                     * 
+                     */
+                    void SetIsSupportTransparentDataEncryption(const std::string& _isSupportTransparentDataEncryption);
+
+                    /**
+                     * 判断参数 IsSupportTransparentDataEncryption 是否已赋值
+                     * @return IsSupportTransparentDataEncryption 是否已赋值
+                     * 
+                     */
+                    bool IsSupportTransparentDataEncryptionHasBeenSet() const;
+
+                    /**
+                     * 获取Reasons for no support of transparent data encryption.
+                     * @return NoSupportTransparentDataEncryptionReason Reasons for no support of transparent data encryption.
+                     * 
+                     */
+                    std::string GetNoSupportTransparentDataEncryptionReason() const;
+
+                    /**
+                     * 设置Reasons for no support of transparent data encryption.
+                     * @param _noSupportTransparentDataEncryptionReason Reasons for no support of transparent data encryption.
+                     * 
+                     */
+                    void SetNoSupportTransparentDataEncryptionReason(const std::string& _noSupportTransparentDataEncryptionReason);
+
+                    /**
+                     * 判断参数 NoSupportTransparentDataEncryptionReason 是否已赋值
+                     * @return NoSupportTransparentDataEncryptionReason 是否已赋值
+                     * 
+                     */
+                    bool NoSupportTransparentDataEncryptionReasonHasBeenSet() const;
+
+                    /**
+                     * 获取Whether manual initiation of logical backup is supported.
+                     * @return IsSupportManualLogic Whether manual initiation of logical backup is supported.
+                     * 
+                     */
+                    std::string GetIsSupportManualLogic() const;
+
+                    /**
+                     * 设置Whether manual initiation of logical backup is supported.
+                     * @param _isSupportManualLogic Whether manual initiation of logical backup is supported.
+                     * 
+                     */
+                    void SetIsSupportManualLogic(const std::string& _isSupportManualLogic);
+
+                    /**
+                     * 判断参数 IsSupportManualLogic 是否已赋值
+                     * @return IsSupportManualLogic 是否已赋值
+                     * 
+                     */
+                    bool IsSupportManualLogicHasBeenSet() const;
+
                 private:
 
                     /**
@@ -147,8 +223,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_isSupportSlaveZoneHasBeenSet;
 
                     /**
-                     * The reason why secondary AZ is not supported
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The causes for no support from an availability zone.
                      */
                     std::string m_nonsupportSlaveZoneReason;
                     bool m_nonsupportSlaveZoneReasonHasBeenSet;
@@ -160,11 +235,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_isSupportRoHasBeenSet;
 
                     /**
-                     * The reason why read-only instance is not supported
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Reasons why RO instances are not supported.
                      */
                     std::string m_nonsupportRoReason;
                     bool m_nonsupportRoReasonHasBeenSet;
+
+                    /**
+                     * Whether manual snapshot backup initiation is supported.
+                     */
+                    std::string m_isSupportManualSnapshot;
+                    bool m_isSupportManualSnapshotHasBeenSet;
+
+                    /**
+                     * Whether transparent data encryption is supported.
+                     */
+                    std::string m_isSupportTransparentDataEncryption;
+                    bool m_isSupportTransparentDataEncryptionHasBeenSet;
+
+                    /**
+                     * Reasons for no support of transparent data encryption.
+                     */
+                    std::string m_noSupportTransparentDataEncryptionReason;
+                    bool m_noSupportTransparentDataEncryptionReasonHasBeenSet;
+
+                    /**
+                     * Whether manual initiation of logical backup is supported.
+                     */
+                    std::string m_isSupportManualLogic;
+                    bool m_isSupportManualLogicHasBeenSet;
 
                 };
             }

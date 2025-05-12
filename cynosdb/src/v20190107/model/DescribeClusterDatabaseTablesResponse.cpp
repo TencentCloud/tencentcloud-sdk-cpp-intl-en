@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/cynosdb/v20190107/model/DescribeRollbackTimeValidityResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeClusterDatabaseTablesResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,15 +23,15 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cynosdb::V20190107::Model;
 using namespace std;
 
-DescribeRollbackTimeValidityResponse::DescribeRollbackTimeValidityResponse() :
-    m_poolIdHasBeenSet(false),
-    m_queryIdHasBeenSet(false),
-    m_statusHasBeenSet(false),
-    m_suggestTimeHasBeenSet(false)
+DescribeClusterDatabaseTablesResponse::DescribeClusterDatabaseTablesResponse() :
+    m_totalCountHasBeenSet(false),
+    m_offsetHasBeenSet(false),
+    m_limitHasBeenSet(false),
+    m_tablesHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DescribeRollbackTimeValidityResponse::Deserialize(const string &payload)
+CoreInternalOutcome DescribeClusterDatabaseTablesResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -65,86 +65,94 @@ CoreInternalOutcome DescribeRollbackTimeValidityResponse::Deserialize(const stri
     }
 
 
-    if (rsp.HasMember("PoolId") && !rsp["PoolId"].IsNull())
+    if (rsp.HasMember("TotalCount") && !rsp["TotalCount"].IsNull())
     {
-        if (!rsp["PoolId"].IsUint64())
+        if (!rsp["TotalCount"].IsInt64())
         {
-            return CoreInternalOutcome(Core::Error("response `PoolId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
-        m_poolId = rsp["PoolId"].GetUint64();
-        m_poolIdHasBeenSet = true;
+        m_totalCount = rsp["TotalCount"].GetInt64();
+        m_totalCountHasBeenSet = true;
     }
 
-    if (rsp.HasMember("QueryId") && !rsp["QueryId"].IsNull())
+    if (rsp.HasMember("Offset") && !rsp["Offset"].IsNull())
     {
-        if (!rsp["QueryId"].IsUint64())
+        if (!rsp["Offset"].IsInt64())
         {
-            return CoreInternalOutcome(Core::Error("response `QueryId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Offset` IsInt64=false incorrectly").SetRequestId(requestId));
         }
-        m_queryId = rsp["QueryId"].GetUint64();
-        m_queryIdHasBeenSet = true;
+        m_offset = rsp["Offset"].GetInt64();
+        m_offsetHasBeenSet = true;
     }
 
-    if (rsp.HasMember("Status") && !rsp["Status"].IsNull())
+    if (rsp.HasMember("Limit") && !rsp["Limit"].IsNull())
     {
-        if (!rsp["Status"].IsString())
+        if (!rsp["Limit"].IsInt64())
         {
-            return CoreInternalOutcome(Core::Error("response `Status` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Limit` IsInt64=false incorrectly").SetRequestId(requestId));
         }
-        m_status = string(rsp["Status"].GetString());
-        m_statusHasBeenSet = true;
+        m_limit = rsp["Limit"].GetInt64();
+        m_limitHasBeenSet = true;
     }
 
-    if (rsp.HasMember("SuggestTime") && !rsp["SuggestTime"].IsNull())
+    if (rsp.HasMember("Tables") && !rsp["Tables"].IsNull())
     {
-        if (!rsp["SuggestTime"].IsString())
+        if (!rsp["Tables"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `Tables` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["Tables"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            return CoreInternalOutcome(Core::Error("response `SuggestTime` IsString=false incorrectly").SetRequestId(requestId));
+            m_tables.push_back((*itr).GetString());
         }
-        m_suggestTime = string(rsp["SuggestTime"].GetString());
-        m_suggestTimeHasBeenSet = true;
+        m_tablesHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string DescribeRollbackTimeValidityResponse::ToJsonString() const
+string DescribeClusterDatabaseTablesResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_poolIdHasBeenSet)
+    if (m_totalCountHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "PoolId";
+        string key = "TotalCount";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_poolId, allocator);
+        value.AddMember(iKey, m_totalCount, allocator);
     }
 
-    if (m_queryIdHasBeenSet)
+    if (m_offsetHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "QueryId";
+        string key = "Offset";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_queryId, allocator);
+        value.AddMember(iKey, m_offset, allocator);
     }
 
-    if (m_statusHasBeenSet)
+    if (m_limitHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Status";
+        string key = "Limit";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, m_limit, allocator);
     }
 
-    if (m_suggestTimeHasBeenSet)
+    if (m_tablesHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "SuggestTime";
+        string key = "Tables";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_suggestTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_tables.begin(); itr != m_tables.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -159,44 +167,44 @@ string DescribeRollbackTimeValidityResponse::ToJsonString() const
 }
 
 
-uint64_t DescribeRollbackTimeValidityResponse::GetPoolId() const
+int64_t DescribeClusterDatabaseTablesResponse::GetTotalCount() const
 {
-    return m_poolId;
+    return m_totalCount;
 }
 
-bool DescribeRollbackTimeValidityResponse::PoolIdHasBeenSet() const
+bool DescribeClusterDatabaseTablesResponse::TotalCountHasBeenSet() const
 {
-    return m_poolIdHasBeenSet;
+    return m_totalCountHasBeenSet;
 }
 
-uint64_t DescribeRollbackTimeValidityResponse::GetQueryId() const
+int64_t DescribeClusterDatabaseTablesResponse::GetOffset() const
 {
-    return m_queryId;
+    return m_offset;
 }
 
-bool DescribeRollbackTimeValidityResponse::QueryIdHasBeenSet() const
+bool DescribeClusterDatabaseTablesResponse::OffsetHasBeenSet() const
 {
-    return m_queryIdHasBeenSet;
+    return m_offsetHasBeenSet;
 }
 
-string DescribeRollbackTimeValidityResponse::GetStatus() const
+int64_t DescribeClusterDatabaseTablesResponse::GetLimit() const
 {
-    return m_status;
+    return m_limit;
 }
 
-bool DescribeRollbackTimeValidityResponse::StatusHasBeenSet() const
+bool DescribeClusterDatabaseTablesResponse::LimitHasBeenSet() const
 {
-    return m_statusHasBeenSet;
+    return m_limitHasBeenSet;
 }
 
-string DescribeRollbackTimeValidityResponse::GetSuggestTime() const
+vector<string> DescribeClusterDatabaseTablesResponse::GetTables() const
 {
-    return m_suggestTime;
+    return m_tables;
 }
 
-bool DescribeRollbackTimeValidityResponse::SuggestTimeHasBeenSet() const
+bool DescribeClusterDatabaseTablesResponse::TablesHasBeenSet() const
 {
-    return m_suggestTimeHasBeenSet;
+    return m_tablesHasBeenSet;
 }
 
 

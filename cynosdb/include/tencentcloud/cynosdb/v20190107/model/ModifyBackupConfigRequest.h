@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cynosdb/v20190107/model/LogicBackupConfigInfo.h>
 
 
 namespace TencentCloud
@@ -148,15 +149,15 @@ namespace TencentCloud
                     bool BackupFreqHasBeenSet() const;
 
                     /**
-                     * 获取Backup mode. logic: logic backup; snapshot: snapshot backup. This parameter cannot be modified currently and doesn't need to be entered.
-                     * @return BackupType Backup mode. logic: logic backup; snapshot: snapshot backup. This parameter cannot be modified currently and doesn't need to be entered.
+                     * 获取Currently, this parameter does not support modification and is not required.
+                     * @return BackupType Currently, this parameter does not support modification and is not required.
                      * 
                      */
                     std::string GetBackupType() const;
 
                     /**
-                     * 设置Backup mode. logic: logic backup; snapshot: snapshot backup. This parameter cannot be modified currently and doesn't need to be entered.
-                     * @param _backupType Backup mode. logic: logic backup; snapshot: snapshot backup. This parameter cannot be modified currently and doesn't need to be entered.
+                     * 设置Currently, this parameter does not support modification and is not required.
+                     * @param _backupType Currently, this parameter does not support modification and is not required.
                      * 
                      */
                     void SetBackupType(const std::string& _backupType);
@@ -167,6 +168,48 @@ namespace TencentCloud
                      * 
                      */
                     bool BackupTypeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return LogicBackupConfig 
+                     * 
+                     */
+                    LogicBackupConfigInfo GetLogicBackupConfig() const;
+
+                    /**
+                     * 设置
+                     * @param _logicBackupConfig 
+                     * 
+                     */
+                    void SetLogicBackupConfig(const LogicBackupConfigInfo& _logicBackupConfig);
+
+                    /**
+                     * 判断参数 LogicBackupConfig 是否已赋值
+                     * @return LogicBackupConfig 是否已赋值
+                     * 
+                     */
+                    bool LogicBackupConfigHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return DeleteAutoLogicBackup 
+                     * 
+                     */
+                    bool GetDeleteAutoLogicBackup() const;
+
+                    /**
+                     * 设置
+                     * @param _deleteAutoLogicBackup 
+                     * 
+                     */
+                    void SetDeleteAutoLogicBackup(const bool& _deleteAutoLogicBackup);
+
+                    /**
+                     * 判断参数 DeleteAutoLogicBackup 是否已赋值
+                     * @return DeleteAutoLogicBackup 是否已赋值
+                     * 
+                     */
+                    bool DeleteAutoLogicBackupHasBeenSet() const;
 
                 private:
 
@@ -201,10 +244,22 @@ namespace TencentCloud
                     bool m_backupFreqHasBeenSet;
 
                     /**
-                     * Backup mode. logic: logic backup; snapshot: snapshot backup. This parameter cannot be modified currently and doesn't need to be entered.
+                     * Currently, this parameter does not support modification and is not required.
                      */
                     std::string m_backupType;
                     bool m_backupTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    LogicBackupConfigInfo m_logicBackupConfig;
+                    bool m_logicBackupConfigHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_deleteAutoLogicBackup;
+                    bool m_deleteAutoLogicBackupHasBeenSet;
 
                 };
             }

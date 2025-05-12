@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DbUserNameHasBeenSet() const;
 
                     /**
-                     * 获取Client IP Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DbHost Client IP Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Client IP
+                     * @return DbHost Client IP
                      * 
                      */
                     std::string GetDbHost() const;
 
                     /**
-                     * 设置Client IP Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dbHost Client IP Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Client IP
+                     * @param _dbHost Client IP
                      * 
                      */
                     void SetDbHost(const std::string& _dbHost);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool DbHostHasBeenSet() const;
 
                     /**
-                     * 获取User permissions Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DbPrivilege User permissions Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取User permission
+                     * @return DbPrivilege User permission
                      * 
                      */
                     std::string GetDbPrivilege() const;
 
                     /**
-                     * 设置User permissions Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dbPrivilege User permissions Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置User permission
+                     * @param _dbPrivilege User permission
                      * 
                      */
                     void SetDbPrivilege(const std::string& _dbPrivilege);
@@ -118,13 +118,13 @@ namespace TencentCloud
                     bool m_dbUserNameHasBeenSet;
 
                     /**
-                     * Client IP Note: This field may return null, indicating that no valid values can be obtained.
+                     * Client IP
                      */
                     std::string m_dbHost;
                     bool m_dbHostHasBeenSet;
 
                     /**
-                     * User permissions Note: This field may return null, indicating that no valid values can be obtained.
+                     * User permission
                      */
                     std::string m_dbPrivilege;
                     bool m_dbPrivilegeHasBeenSet;

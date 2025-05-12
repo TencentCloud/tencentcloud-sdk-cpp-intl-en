@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Auto-Incrementing task ID
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TaskId Auto-Incrementing task ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Task auto-increment ID.
+                     * @return TaskId Task auto-increment ID.
                      * 
                      */
                     int64_t GetTaskId() const;
 
                     /**
-                     * 设置Auto-Incrementing task ID
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _taskId Auto-Incrementing task ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Task auto-increment ID.
+                     * @param _taskId Task auto-increment ID.
                      * 
                      */
                     void SetTaskId(const int64_t& _taskId);
@@ -73,18 +69,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Task type
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TaskType Task type
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTaskType() const;
 
                     /**
                      * 设置Task type
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _taskType Task type
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTaskType(const std::string& _taskType);
@@ -97,19 +89,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TaskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Task status
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TaskStatus Task status
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Status of tasks.
+                     * @return TaskStatus Status of tasks.
                      * 
                      */
                     std::string GetTaskStatus() const;
 
                     /**
-                     * 设置Task status
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _taskStatus Task status
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Status of tasks.
+                     * @param _taskStatus Status of tasks.
                      * 
                      */
                     void SetTaskStatus(const std::string& _taskStatus);
@@ -122,19 +110,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TaskStatusHasBeenSet() const;
 
                     /**
-                     * 获取Task ID (cluster ID | instance group ID | instance ID)
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ObjectId Task ID (cluster ID | instance group ID | instance ID)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Task ID (cluster ID | instance group ID | instance ID).
+                     * @return ObjectId Task ID (cluster ID | instance group ID | instance ID).
                      * 
                      */
                     std::string GetObjectId() const;
 
                     /**
-                     * 设置Task ID (cluster ID | instance group ID | instance ID)
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _objectId Task ID (cluster ID | instance group ID | instance ID)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Task ID (cluster ID | instance group ID | instance ID).
+                     * @param _objectId Task ID (cluster ID | instance group ID | instance ID).
                      * 
                      */
                     void SetObjectId(const std::string& _objectId);
@@ -148,18 +132,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Task type
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ObjectType Task type
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetObjectType() const;
 
                     /**
                      * 设置Task type
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _objectType Task type
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetObjectType(const std::string& _objectType);
@@ -174,36 +154,31 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Auto-Incrementing task ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Task auto-increment ID.
                      */
                     int64_t m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
                      * Task type
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
 
                     /**
-                     * Task status
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Status of tasks.
                      */
                     std::string m_taskStatus;
                     bool m_taskStatusHasBeenSet;
 
                     /**
-                     * Task ID (cluster ID | instance group ID | instance ID)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Task ID (cluster ID | instance group ID | instance ID).
                      */
                     std::string m_objectId;
                     bool m_objectIdHasBeenSet;
 
                     /**
                      * Task type
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_objectType;
                     bool m_objectTypeHasBeenSet;

@@ -130,21 +130,21 @@ namespace TencentCloud
                     /**
                      * 获取Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
                      * @return InstanceGrpId Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
-                     * 
+                     * @deprecated
                      */
                     std::string GetInstanceGrpId() const;
 
                     /**
                      * 设置Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
                      * @param _instanceGrpId Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
-                     * 
+                     * @deprecated
                      */
                     void SetInstanceGrpId(const std::string& _instanceGrpId);
 
                     /**
                      * 判断参数 InstanceGrpId 是否已赋值
                      * @return InstanceGrpId 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool InstanceGrpIdHasBeenSet() const;
 

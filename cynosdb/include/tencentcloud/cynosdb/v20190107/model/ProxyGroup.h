@@ -174,18 +174,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Cluster ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ClusterId Cluster ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _clusterId Cluster ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -198,19 +194,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取User `AppId`
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AppId User `AppId`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取User AppId
+                     * @return AppId User AppId
                      * 
                      */
                     int64_t GetAppId() const;
 
                     /**
-                     * 设置User `AppId`
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _appId User `AppId`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置User AppId
+                     * @param _appId User AppId
                      * 
                      */
                     void SetAppId(const int64_t& _appId);
@@ -223,19 +215,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取Enabling read/write separation for database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OpenRw Enabling read/write separation for database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies that a read-write node activates the database proxy.
+                     * @return OpenRw Specifies that a read-write node activates the database proxy.
                      * 
                      */
                     std::string GetOpenRw() const;
 
                     /**
-                     * 设置Enabling read/write separation for database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _openRw Enabling read/write separation for database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies that a read-write node activates the database proxy.
+                     * @param _openRw Specifies that a read-write node activates the database proxy.
                      * 
                      */
                     void SetOpenRw(const std::string& _openRw);
@@ -287,21 +275,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Cluster ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * User `AppId`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * User AppId
                      */
                     int64_t m_appId;
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * Enabling read/write separation for database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies that a read-write node activates the database proxy.
                      */
                     std::string m_openRw;
                     bool m_openRwHasBeenSet;

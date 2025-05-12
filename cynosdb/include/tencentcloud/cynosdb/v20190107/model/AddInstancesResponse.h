@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Freezing transaction. One freezing transaction ID is generated each time an instance is added.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TranId Freezing transaction. One freezing transaction ID is generated each time an instance is added.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Freeze transaction. one frozen transaction is activated at a time.
+                     * @return TranId Freeze transaction. one frozen transaction is activated at a time.
                      * 
                      */
                     std::string GetTranId() const;
@@ -60,10 +58,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TranIdHasBeenSet() const;
 
                     /**
-                     * 获取Pay-as-You-Go order ID.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return DealNames Pay-as-You-Go order ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the post-paid order number.
+                     * @return DealNames Specifies the post-paid order number.
                      * 
                      */
                     std::vector<std::string> GetDealNames() const;
@@ -76,10 +72,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DealNamesHasBeenSet() const;
 
                     /**
-                     * 获取List of IDs of delivered resources
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ResourceIds List of IDs of delivered resources
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Delivery resource id list.
+                     * @return ResourceIds Delivery resource id list.
                      * 
                      */
                     std::vector<std::string> GetResourceIds() const;
@@ -92,10 +86,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ResourceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Big order ID.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return BigDealIds Big order ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Large order number.
+                     * @return BigDealIds Large order number.
                      * 
                      */
                     std::vector<std::string> GetBigDealIds() const;
@@ -110,29 +102,25 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Freezing transaction. One freezing transaction ID is generated each time an instance is added.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Freeze transaction. one frozen transaction is activated at a time.
                      */
                     std::string m_tranId;
                     bool m_tranIdHasBeenSet;
 
                     /**
-                     * Pay-as-You-Go order ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Specifies the post-paid order number.
                      */
                     std::vector<std::string> m_dealNames;
                     bool m_dealNamesHasBeenSet;
 
                     /**
-                     * List of IDs of delivered resources
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Delivery resource id list.
                      */
                     std::vector<std::string> m_resourceIds;
                     bool m_resourceIdsHasBeenSet;
 
                     /**
-                     * Big order ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Large order number.
                      */
                     std::vector<std::string> m_bigDealIds;
                     bool m_bigDealIdsHasBeenSet;

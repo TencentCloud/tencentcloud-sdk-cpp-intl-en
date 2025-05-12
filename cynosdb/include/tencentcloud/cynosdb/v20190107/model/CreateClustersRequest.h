@@ -230,6 +230,27 @@ Memory of a non-serverless instance in GB
                     bool MemoryHasBeenSet() const;
 
                     /**
+                     * 获取Instance count. valid values: a quantity range from 0 to 16. the default value is 2 (that is, one rw instance + one ro instance). the transmitted n represents 1 rw instance + (n - 1) ro instances (with identical specifications). if a more precise cluster composition collocation is required, please use InstanceInitInfos.
+                     * @return InstanceCount Instance count. valid values: a quantity range from 0 to 16. the default value is 2 (that is, one rw instance + one ro instance). the transmitted n represents 1 rw instance + (n - 1) ro instances (with identical specifications). if a more precise cluster composition collocation is required, please use InstanceInitInfos.
+                     * 
+                     */
+                    int64_t GetInstanceCount() const;
+
+                    /**
+                     * 设置Instance count. valid values: a quantity range from 0 to 16. the default value is 2 (that is, one rw instance + one ro instance). the transmitted n represents 1 rw instance + (n - 1) ro instances (with identical specifications). if a more precise cluster composition collocation is required, please use InstanceInitInfos.
+                     * @param _instanceCount Instance count. valid values: a quantity range from 0 to 16. the default value is 2 (that is, one rw instance + one ro instance). the transmitted n represents 1 rw instance + (n - 1) ro instances (with identical specifications). if a more precise cluster composition collocation is required, please use InstanceInitInfos.
+                     * 
+                     */
+                    void SetInstanceCount(const int64_t& _instanceCount);
+
+                    /**
+                     * 判断参数 InstanceCount 是否已赋值
+                     * @return InstanceCount 是否已赋值
+                     * 
+                     */
+                    bool InstanceCountHasBeenSet() const;
+
+                    /**
                      * 获取This parameter has been deprecated.
 Storage capacity in GB
                      * @return Storage This parameter has been deprecated.
@@ -506,27 +527,6 @@ If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the
                     bool StorageLimitHasBeenSet() const;
 
                     /**
-                     * 获取Number of Instances. Valid range: (0,16]
-                     * @return InstanceCount Number of Instances. Valid range: (0,16]
-                     * 
-                     */
-                    int64_t GetInstanceCount() const;
-
-                    /**
-                     * 设置Number of Instances. Valid range: (0,16]
-                     * @param _instanceCount Number of Instances. Valid range: (0,16]
-                     * 
-                     */
-                    void SetInstanceCount(const int64_t& _instanceCount);
-
-                    /**
-                     * 判断参数 InstanceCount 是否已赋值
-                     * @return InstanceCount 是否已赋值
-                     * 
-                     */
-                    bool InstanceCountHasBeenSet() const;
-
-                    /**
                      * 获取Purchase duration of monthly subscription plan
                      * @return TimeSpan Purchase duration of monthly subscription plan
                      * 
@@ -569,15 +569,19 @@ If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the
                     bool TimeUnitHasBeenSet() const;
 
                     /**
-                     * 获取Whether auto-renewal is enabled for monthly subscription plan. Default value: `0`
-                     * @return AutoRenewFlag Whether auto-renewal is enabled for monthly subscription plan. Default value: `0`
+                     * 获取Specifies whether the annual/monthly subscription is auto-renewed. the default value is 0.
+0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
+                     * @return AutoRenewFlag Specifies whether the annual/monthly subscription is auto-renewed. the default value is 0.
+0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
                      * 
                      */
                     int64_t GetAutoRenewFlag() const;
 
                     /**
-                     * 设置Whether auto-renewal is enabled for monthly subscription plan. Default value: `0`
-                     * @param _autoRenewFlag Whether auto-renewal is enabled for monthly subscription plan. Default value: `0`
+                     * 设置Specifies whether the annual/monthly subscription is auto-renewed. the default value is 0.
+0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
+                     * @param _autoRenewFlag Specifies whether the annual/monthly subscription is auto-renewed. the default value is 0.
+0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
                      * 
                      */
                     void SetAutoRenewFlag(const int64_t& _autoRenewFlag);
@@ -1045,6 +1049,12 @@ Memory of a non-serverless instance in GB
                     bool m_memoryHasBeenSet;
 
                     /**
+                     * Instance count. valid values: a quantity range from 0 to 16. the default value is 2 (that is, one rw instance + one ro instance). the transmitted n represents 1 rw instance + (n - 1) ro instances (with identical specifications). if a more precise cluster composition collocation is required, please use InstanceInitInfos.
+                     */
+                    int64_t m_instanceCount;
+                    bool m_instanceCountHasBeenSet;
+
+                    /**
                      * This parameter has been deprecated.
 Storage capacity in GB
                      */
@@ -1123,12 +1133,6 @@ If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the
                     bool m_storageLimitHasBeenSet;
 
                     /**
-                     * Number of Instances. Valid range: (0,16]
-                     */
-                    int64_t m_instanceCount;
-                    bool m_instanceCountHasBeenSet;
-
-                    /**
                      * Purchase duration of monthly subscription plan
                      */
                     int64_t m_timeSpan;
@@ -1141,7 +1145,8 @@ If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the
                     bool m_timeUnitHasBeenSet;
 
                     /**
-                     * Whether auto-renewal is enabled for monthly subscription plan. Default value: `0`
+                     * Specifies whether the annual/monthly subscription is auto-renewed. the default value is 0.
+0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
                      */
                     int64_t m_autoRenewFlag;
                     bool m_autoRenewFlagHasBeenSet;

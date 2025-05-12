@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance group ID
-                     * @return InstanceId Instance group ID
+                     * 获取Network group id (starting with the cynosdbmysql-grp- prefix) or cluster id.
+                     * @return InstanceId Network group id (starting with the cynosdbmysql-grp- prefix) or cluster id.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance group ID
-                     * @param _instanceId Instance group ID
+                     * 设置Network group id (starting with the cynosdbmysql-grp- prefix) or cluster id.
+                     * @param _instanceId Network group id (starting with the cynosdbmysql-grp- prefix) or cluster id.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -108,7 +108,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance group ID
+                     * Network group id (starting with the cynosdbmysql-grp- prefix) or cluster id.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

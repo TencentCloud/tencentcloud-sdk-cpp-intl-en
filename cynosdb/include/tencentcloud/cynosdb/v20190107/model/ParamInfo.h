@@ -90,19 +90,15 @@ namespace TencentCloud
                     bool DefaultHasBeenSet() const;
 
                     /**
-                     * 获取List of valid values when parameter type is `enum`, `string` or `bool`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EnumValue List of valid values when parameter type is `enum`, `string` or `bool`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取If the parameter is of type enum/string/bool, the available options list.
+                     * @return EnumValue If the parameter is of type enum/string/bool, the available options list.
                      * 
                      */
                     std::vector<std::string> GetEnumValue() const;
 
                     /**
-                     * 设置List of valid values when parameter type is `enum`, `string` or `bool`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _enumValue List of valid values when parameter type is `enum`, `string` or `bool`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置If the parameter is of type enum/string/bool, the available options list.
+                     * @param _enumValue If the parameter is of type enum/string/bool, the available options list.
                      * 
                      */
                     void SetEnumValue(const std::vector<std::string>& _enumValue);
@@ -283,19 +279,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is global parameter
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsGlobal Whether it is global parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether it is a global parameter.
+                     * @return IsGlobal Whether it is a global parameter.
                      * 
                      */
                     int64_t GetIsGlobal() const;
 
                     /**
-                     * 设置Whether it is global parameter
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isGlobal Whether it is global parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether it is a global parameter.
+                     * @param _isGlobal Whether it is a global parameter.
                      * 
                      */
                     void SetIsGlobal(const int64_t& _isGlobal);
@@ -308,19 +300,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsGlobalHasBeenSet() const;
 
                     /**
-                     * 获取Whether the parameter can be modified
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ModifiableInfo Whether the parameter can be modified
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether the parameter is modifiable.
+                     * @return ModifiableInfo Whether the parameter is modifiable.
                      * 
                      */
                     ModifiableInfo GetModifiableInfo() const;
 
                     /**
-                     * 设置Whether the parameter can be modified
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _modifiableInfo Whether the parameter can be modified
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether the parameter is modifiable.
+                     * @param _modifiableInfo Whether the parameter is modifiable.
                      * 
                      */
                     void SetModifiableInfo(const ModifiableInfo& _modifiableInfo);
@@ -333,19 +321,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ModifiableInfoHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is a function
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsFunc Whether it is a function
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether it is a function.
+                     * @return IsFunc Whether it is a function.
                      * 
                      */
                     bool GetIsFunc() const;
 
                     /**
-                     * 设置Whether it is a function
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isFunc Whether it is a function
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether it is a function.
+                     * @param _isFunc Whether it is a function.
                      * 
                      */
                     void SetIsFunc(const bool& _isFunc);
@@ -358,19 +342,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsFuncHasBeenSet() const;
 
                     /**
-                     * 获取Function
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Func Function
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Function.
+                     * @return Func Function.
                      * 
                      */
                     std::string GetFunc() const;
 
                     /**
-                     * 设置Function
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _func Function
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Function.
+                     * @param _func Function.
                      * 
                      */
                     void SetFunc(const std::string& _func);
@@ -381,6 +361,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool FuncHasBeenSet() const;
+
+                    /**
+                     * 获取The default formula style of parameters that support formulas.
+                     * @return FuncPattern The default formula style of parameters that support formulas.
+                     * 
+                     */
+                    std::string GetFuncPattern() const;
+
+                    /**
+                     * 设置The default formula style of parameters that support formulas.
+                     * @param _funcPattern The default formula style of parameters that support formulas.
+                     * 
+                     */
+                    void SetFuncPattern(const std::string& _funcPattern);
+
+                    /**
+                     * 判断参数 FuncPattern 是否已赋值
+                     * @return FuncPattern 是否已赋值
+                     * 
+                     */
+                    bool FuncPatternHasBeenSet() const;
 
                 private:
 
@@ -397,8 +398,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_defaultHasBeenSet;
 
                     /**
-                     * List of valid values when parameter type is `enum`, `string` or `bool`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * If the parameter is of type enum/string/bool, the available options list.
                      */
                     std::vector<std::string> m_enumValue;
                     bool m_enumValueHasBeenSet;
@@ -452,32 +452,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Whether it is global parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether it is a global parameter.
                      */
                     int64_t m_isGlobal;
                     bool m_isGlobalHasBeenSet;
 
                     /**
-                     * Whether the parameter can be modified
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether the parameter is modifiable.
                      */
                     ModifiableInfo m_modifiableInfo;
                     bool m_modifiableInfoHasBeenSet;
 
                     /**
-                     * Whether it is a function
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether it is a function.
                      */
                     bool m_isFunc;
                     bool m_isFuncHasBeenSet;
 
                     /**
-                     * Function
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Function.
                      */
                     std::string m_func;
                     bool m_funcHasBeenSet;
+
+                    /**
+                     * The default formula style of parameters that support formulas.
+                     */
+                    std::string m_funcPattern;
+                    bool m_funcPatternHasBeenSet;
 
                 };
             }

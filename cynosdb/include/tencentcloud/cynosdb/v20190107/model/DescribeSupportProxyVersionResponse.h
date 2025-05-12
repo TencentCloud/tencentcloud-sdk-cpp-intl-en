@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cynosdb/v20190107/model/ProxyVersionInfo.h>
 
 
 namespace TencentCloud
@@ -44,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Collection of supported database proxy versions
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SupportProxyVersions Collection of supported database proxy versions
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Supported database proxy version collections.
+                     * @return SupportProxyVersions Supported database proxy version collections.
                      * 
                      */
                     std::vector<std::string> GetSupportProxyVersions() const;
@@ -60,10 +59,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SupportProxyVersionsHasBeenSet() const;
 
                     /**
-                     * 获取The current proxy version
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CurrentProxyVersion The current proxy version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The current proxy version number.
+                     * @return CurrentProxyVersion The current proxy version number.
                      * 
                      */
                     std::string GetCurrentProxyVersion() const;
@@ -75,21 +72,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool CurrentProxyVersionHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the proxy version details.
+                     * @return SupportProxyVersionDetail Specifies the proxy version details.
+                     * 
+                     */
+                    std::vector<ProxyVersionInfo> GetSupportProxyVersionDetail() const;
+
+                    /**
+                     * 判断参数 SupportProxyVersionDetail 是否已赋值
+                     * @return SupportProxyVersionDetail 是否已赋值
+                     * 
+                     */
+                    bool SupportProxyVersionDetailHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Collection of supported database proxy versions
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Supported database proxy version collections.
                      */
                     std::vector<std::string> m_supportProxyVersions;
                     bool m_supportProxyVersionsHasBeenSet;
 
                     /**
-                     * The current proxy version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The current proxy version number.
                      */
                     std::string m_currentProxyVersion;
                     bool m_currentProxyVersionHasBeenSet;
+
+                    /**
+                     * Specifies the proxy version details.
+                     */
+                    std::vector<ProxyVersionInfo> m_supportProxyVersionDetail;
+                    bool m_supportProxyVersionDetailHasBeenSet;
 
                 };
             }

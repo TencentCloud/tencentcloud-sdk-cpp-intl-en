@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Time Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Timestamp Time Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Time
+                     * @return Timestamp Time
                      * 
                      */
                     std::string GetTimestamp() const;
 
                     /**
-                     * 设置Time Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _timestamp Time Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Time
+                     * @param _timestamp Time
                      * 
                      */
                     void SetTimestamp(const std::string& _timestamp);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TimestampHasBeenSet() const;
 
                     /**
-                     * 获取Log level. Valid values: `error`, `warning`, `note`. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Level Log level. Valid values: `error`, `warning`, `note`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the log level. valid values are note, warning, and error.
+                     * @return Level Specifies the log level. valid values are note, warning, and error.
                      * 
                      */
                     std::string GetLevel() const;
 
                     /**
-                     * 设置Log level. Valid values: `error`, `warning`, `note`. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _level Log level. Valid values: `error`, `warning`, `note`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the log level. valid values are note, warning, and error.
+                     * @param _level Specifies the log level. valid values are note, warning, and error.
                      * 
                      */
                     void SetLevel(const std::string& _level);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool LevelHasBeenSet() const;
 
                     /**
-                     * 获取Log content Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Content Log content Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Log content.
+                     * @return Content Log content.
                      * 
                      */
                     std::string GetContent() const;
 
                     /**
-                     * 设置Log content Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _content Log content Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Log content.
+                     * @param _content Log content.
                      * 
                      */
                     void SetContent(const std::string& _content);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Time Note: This field may return null, indicating that no valid values can be obtained.
+                     * Time
                      */
                     std::string m_timestamp;
                     bool m_timestampHasBeenSet;
 
                     /**
-                     * Log level. Valid values: `error`, `warning`, `note`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the log level. valid values are note, warning, and error.
                      */
                     std::string m_level;
                     bool m_levelHasBeenSet;
 
                     /**
-                     * Log content Note: This field may return null, indicating that no valid values can be obtained.
+                     * Log content.
                      */
                     std::string m_content;
                     bool m_contentHasBeenSet;

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of logs Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TotalCount Number of logs Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of logs.
+                     * @return TotalCount Number of logs.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Error log list Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ErrorLogs Error log list Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Error log list.
+                     * @return ErrorLogs Error log list.
                      * 
                      */
                     std::vector<CynosdbErrorLogItem> GetErrorLogs() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of logs Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of logs.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Error log list Note: This field may return null, indicating that no valid values can be obtained.
+                     * Error log list.
                      */
                     std::vector<CynosdbErrorLogItem> m_errorLogs;
                     bool m_errorLogsHasBeenSet;

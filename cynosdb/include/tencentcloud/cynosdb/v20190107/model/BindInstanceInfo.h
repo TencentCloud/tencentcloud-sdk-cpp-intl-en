@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the bound cluster
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceId ID of the bound cluster
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取ID of the bound cluster.
+                     * @return InstanceId ID of the bound cluster.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置ID of the bound cluster
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceId ID of the bound cluster
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置ID of the bound cluster.
+                     * @param _instanceId ID of the bound cluster.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -72,15 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Region of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceRegion Region of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The region where the bound instance is located.
+                     * @return InstanceRegion The region where the bound instance is located.
                      * 
                      */
                     std::string GetInstanceRegion() const;
 
                     /**
-                     * 设置Region of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceRegion Region of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The region where the bound instance is located.
+                     * @param _instanceRegion The region where the bound instance is located.
                      * 
                      */
                     void SetInstanceRegion(const std::string& _instanceRegion);
@@ -93,15 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceRegionHasBeenSet() const;
 
                     /**
-                     * 获取Type of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceType Type of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Type of the bound instance.
+                     * @return InstanceType Type of the bound instance.
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Type of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceType Type of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Type of the bound instance.
+                     * @param _instanceType Type of the bound instance.
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -114,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取ID of the instance in the bound cluster
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExtendIds ID of the instance in the bound cluster
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The instance ID under the bound cluster.
+                     * @return ExtendIds The instance ID under the bound cluster.
                      * 
                      */
                     std::vector<std::string> GetExtendIds() const;
 
                     /**
-                     * 设置ID of the instance in the bound cluster
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _extendIds ID of the instance in the bound cluster
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The instance ID under the bound cluster.
+                     * @param _extendIds The instance ID under the bound cluster.
                      * 
                      */
                     void SetExtendIds(const std::vector<std::string>& _extendIds);
@@ -141,27 +133,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * ID of the bound cluster
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * ID of the bound cluster.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Region of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+                     * The region where the bound instance is located.
                      */
                     std::string m_instanceRegion;
                     bool m_instanceRegionHasBeenSet;
 
                     /**
-                     * Type of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+                     * Type of the bound instance.
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * ID of the instance in the bound cluster
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The instance ID under the bound cluster.
                      */
                     std::vector<std::string> m_extendIds;
                     bool m_extendIdsHasBeenSet;

@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取AppID Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AppId AppID Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取AppID
+                     * @return AppId AppID
                      * 
                      */
                     int64_t GetAppId() const;
 
                     /**
-                     * 设置AppID Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _appId AppID Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置AppID
+                     * @param _appId AppID
                      * 
                      */
                     void SetAppId(const int64_t& _appId);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PackageId The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The unique ID of the resource package.
+                     * @return PackageId The unique ID of the resource package.
                      * 
                      */
                     std::string GetPackageId() const;
 
                     /**
-                     * 设置The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _packageId The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The unique ID of the resource package.
+                     * @param _packageId The unique ID of the resource package.
                      * 
                      */
                     void SetPackageId(const std::string& _packageId);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool PackageIdHasBeenSet() const;
 
                     /**
-                     * 获取Resource pack name Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PackageName Resource pack name Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Resource package name.
+                     * @return PackageName Resource package name.
                      * 
                      */
                     std::string GetPackageName() const;
 
                     /**
-                     * 设置Resource pack name Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _packageName Resource pack name Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Resource package name.
+                     * @param _packageName Resource package name.
                      * 
                      */
                     void SetPackageName(const std::string& _packageName);
@@ -111,15 +111,19 @@ namespace TencentCloud
                     bool PackageNameHasBeenSet() const;
 
                     /**
-                     * 获取Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PackageType Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the resource package type.
+CCU: compute resource package. DISK: storage resource package.
+                     * @return PackageType Specifies the resource package type.
+CCU: compute resource package. DISK: storage resource package.
                      * 
                      */
                     std::string GetPackageType() const;
 
                     /**
-                     * 设置Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _packageType Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the resource package type.
+CCU: compute resource package. DISK: storage resource package.
+                     * @param _packageType Specifies the resource package type.
+CCU: compute resource package. DISK: storage resource package.
                      * 
                      */
                     void SetPackageType(const std::string& _packageType);
@@ -132,15 +136,19 @@ namespace TencentCloud
                     bool PackageTypeHasBeenSet() const;
 
                     /**
-                     * 获取Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland). Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PackageRegion Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland). Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Resource package region of use.
+China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
+                     * @return PackageRegion Resource package region of use.
+China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
                      * 
                      */
                     std::string GetPackageRegion() const;
 
                     /**
-                     * 设置Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland). Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _packageRegion Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland). Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Resource package region of use.
+China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
+                     * @param _packageRegion Resource package region of use.
+China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
                      * 
                      */
                     void SetPackageRegion(const std::string& _packageRegion);
@@ -153,19 +161,39 @@ namespace TencentCloud
                     bool PackageRegionHasBeenSet() const;
 
                     /**
-                     * 获取Resource pack status. Valid values: `creating`, `using`, `expired`, `normal_finish` (used up), `apply_refund` (requesting a refund), `refund` (refunded). 
-Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Resource pack status. Valid values: `creating`, `using`, `expired`, `normal_finish` (used up), `apply_refund` (requesting a refund), `refund` (refunded). 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the status of the resource package.
+creating - indicates that it is in the process of being created.
+{using} specifies that it is in use.
+expired-expired;.
+normal_finish - specifies that it is used up.
+`Apply_refund`: apply for a refund.
+Specifies that the fee has been refunded.
+                     * @return Status Specifies the status of the resource package.
+creating - indicates that it is in the process of being created.
+{using} specifies that it is in use.
+expired-expired;.
+normal_finish - specifies that it is used up.
+`Apply_refund`: apply for a refund.
+Specifies that the fee has been refunded.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Resource pack status. Valid values: `creating`, `using`, `expired`, `normal_finish` (used up), `apply_refund` (requesting a refund), `refund` (refunded). 
-Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @param _status Resource pack status. Valid values: `creating`, `using`, `expired`, `normal_finish` (used up), `apply_refund` (requesting a refund), `refund` (refunded). 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the status of the resource package.
+creating - indicates that it is in the process of being created.
+{using} specifies that it is in use.
+expired-expired;.
+normal_finish - specifies that it is used up.
+`Apply_refund`: apply for a refund.
+Specifies that the fee has been refunded.
+                     * @param _status Specifies the status of the resource package.
+creating - indicates that it is in the process of being created.
+{using} specifies that it is in use.
+expired-expired;.
+normal_finish - specifies that it is used up.
+`Apply_refund`: apply for a refund.
+Specifies that the fee has been refunded.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -178,15 +206,15 @@ Note:  This field may return null, indicating that no valid values can be obtain
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Total number of resource packs Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PackageTotalSpec Total number of resource packs Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Total resource package quantity.
+                     * @return PackageTotalSpec Total resource package quantity.
                      * 
                      */
                     double GetPackageTotalSpec() const;
 
                     /**
-                     * 设置Total number of resource packs Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _packageTotalSpec Total number of resource packs Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Total resource package quantity.
+                     * @param _packageTotalSpec Total resource package quantity.
                      * 
                      */
                     void SetPackageTotalSpec(const double& _packageTotalSpec);
@@ -199,15 +227,15 @@ Note:  This field may return null, indicating that no valid values can be obtain
                     bool PackageTotalSpecHasBeenSet() const;
 
                     /**
-                     * 获取Consumed usage of resource packs Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PackageUsedSpec Consumed usage of resource packs Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Used amount of resource package.
+                     * @return PackageUsedSpec Used amount of resource package.
                      * 
                      */
                     double GetPackageUsedSpec() const;
 
                     /**
-                     * 设置Consumed usage of resource packs Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _packageUsedSpec Consumed usage of resource packs Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Used amount of resource package.
+                     * @param _packageUsedSpec Used amount of resource package.
                      * 
                      */
                     void SetPackageUsedSpec(const double& _packageUsedSpec);
@@ -220,15 +248,15 @@ Note:  This field may return null, indicating that no valid values can be obtain
                     bool PackageUsedSpecHasBeenSet() const;
 
                     /**
-                     * 获取Remaining usage of resource packs Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HasQuota Remaining usage of resource packs Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether there is inventory surplus.
+                     * @return HasQuota Whether there is inventory surplus.
                      * 
                      */
                     bool GetHasQuota() const;
 
                     /**
-                     * 设置Remaining usage of resource packs Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hasQuota Remaining usage of resource packs Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether there is inventory surplus.
+                     * @param _hasQuota Whether there is inventory surplus.
                      * 
                      */
                     void SetHasQuota(const bool& _hasQuota);
@@ -241,15 +269,15 @@ Note:  This field may return null, indicating that no valid values can be obtain
                     bool HasQuotaHasBeenSet() const;
 
                     /**
-                     * 获取Information of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BindInstanceInfos Information of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the bound instance information.
+                     * @return BindInstanceInfos Specifies the bound instance information.
                      * 
                      */
                     std::vector<BindInstanceInfo> GetBindInstanceInfos() const;
 
                     /**
-                     * 设置Information of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _bindInstanceInfos Information of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the bound instance information.
+                     * @param _bindInstanceInfos Specifies the bound instance information.
                      * 
                      */
                     void SetBindInstanceInfos(const std::vector<BindInstanceInfo>& _bindInstanceInfos);
@@ -262,15 +290,15 @@ Note:  This field may return null, indicating that no valid values can be obtain
                     bool BindInstanceInfosHasBeenSet() const;
 
                     /**
-                     * 获取Validity time:  2022-07-01 00:00:00 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StartTime Validity time:  2022-07-01 00:00:00 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the effective time: 2022-07-01 00:00:00.
+                     * @return StartTime Specifies the effective time: 2022-07-01 00:00:00.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Validity time:  2022-07-01 00:00:00 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _startTime Validity time:  2022-07-01 00:00:00 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the effective time: 2022-07-01 00:00:00.
+                     * @param _startTime Specifies the effective time: 2022-07-01 00:00:00.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -283,15 +311,15 @@ Note:  This field may return null, indicating that no valid values can be obtain
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Validity time:  2022-08-01 00:00:00 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExpireTime Validity time:  2022-08-01 00:00:00 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the expiration time: 2022-08-01 00:00:00.
+                     * @return ExpireTime Specifies the expiration time: 2022-08-01 00:00:00.
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置Validity time:  2022-08-01 00:00:00 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _expireTime Validity time:  2022-08-01 00:00:00 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the expiration time: 2022-08-01 00:00:00.
+                     * @param _expireTime Specifies the expiration time: 2022-08-01 00:00:00.
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -303,80 +331,114 @@ Note:  This field may return null, indicating that no valid values can be obtain
                      */
                     bool ExpireTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Information of the instance historically bound (now unbound) to the resource pack.
+                     * @return HistoryBindResourceInfos Information of the instance historically bound (now unbound) to the resource pack.
+                     * 
+                     */
+                    std::vector<BindInstanceInfo> GetHistoryBindResourceInfos() const;
+
+                    /**
+                     * 设置Information of the instance historically bound (now unbound) to the resource pack.
+                     * @param _historyBindResourceInfos Information of the instance historically bound (now unbound) to the resource pack.
+                     * 
+                     */
+                    void SetHistoryBindResourceInfos(const std::vector<BindInstanceInfo>& _historyBindResourceInfos);
+
+                    /**
+                     * 判断参数 HistoryBindResourceInfos 是否已赋值
+                     * @return HistoryBindResourceInfos 是否已赋值
+                     * 
+                     */
+                    bool HistoryBindResourceInfosHasBeenSet() const;
+
                 private:
 
                     /**
-                     * AppID Note: This field may return null, indicating that no valid values can be obtained.
+                     * AppID
                      */
                     int64_t m_appId;
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
+                     * The unique ID of the resource package.
                      */
                     std::string m_packageId;
                     bool m_packageIdHasBeenSet;
 
                     /**
-                     * Resource pack name Note: This field may return null, indicating that no valid values can be obtained.
+                     * Resource package name.
                      */
                     std::string m_packageName;
                     bool m_packageNameHasBeenSet;
 
                     /**
-                     * Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the resource package type.
+CCU: compute resource package. DISK: storage resource package.
                      */
                     std::string m_packageType;
                     bool m_packageTypeHasBeenSet;
 
                     /**
-                     * Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland). Note: This field may return null, indicating that no valid values can be obtained.
+                     * Resource package region of use.
+China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
                      */
                     std::string m_packageRegion;
                     bool m_packageRegionHasBeenSet;
 
                     /**
-                     * Resource pack status. Valid values: `creating`, `using`, `expired`, `normal_finish` (used up), `apply_refund` (requesting a refund), `refund` (refunded). 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the status of the resource package.
+creating - indicates that it is in the process of being created.
+{using} specifies that it is in use.
+expired-expired;.
+normal_finish - specifies that it is used up.
+`Apply_refund`: apply for a refund.
+Specifies that the fee has been refunded.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Total number of resource packs Note: This field may return null, indicating that no valid values can be obtained.
+                     * Total resource package quantity.
                      */
                     double m_packageTotalSpec;
                     bool m_packageTotalSpecHasBeenSet;
 
                     /**
-                     * Consumed usage of resource packs Note: This field may return null, indicating that no valid values can be obtained.
+                     * Used amount of resource package.
                      */
                     double m_packageUsedSpec;
                     bool m_packageUsedSpecHasBeenSet;
 
                     /**
-                     * Remaining usage of resource packs Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether there is inventory surplus.
                      */
                     bool m_hasQuota;
                     bool m_hasQuotaHasBeenSet;
 
                     /**
-                     * Information of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the bound instance information.
                      */
                     std::vector<BindInstanceInfo> m_bindInstanceInfos;
                     bool m_bindInstanceInfosHasBeenSet;
 
                     /**
-                     * Validity time:  2022-07-01 00:00:00 Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the effective time: 2022-07-01 00:00:00.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Validity time:  2022-08-01 00:00:00 Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the expiration time: 2022-08-01 00:00:00.
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;
+
+                    /**
+                     * Information of the instance historically bound (now unbound) to the resource pack.
+                     */
+                    std::vector<BindInstanceInfo> m_historyBindResourceInfos;
+                    bool m_historyBindResourceInfosHasBeenSet;
 
                 };
             }

@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Freezing transaction ID
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TranId Freezing transaction ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Frozen transaction ID.
+                     * @return TranId Frozen transaction ID.
                      * 
                      */
                     std::string GetTranId() const;
@@ -60,10 +58,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TranIdHasBeenSet() const;
 
                     /**
-                     * 获取Big order ID.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return BigDealIds Big order ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Large order number.
+                     * @return BigDealIds Large order number.
                      * 
                      */
                     std::vector<std::string> GetBigDealIds() const;
@@ -92,15 +88,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Freezing transaction ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Frozen transaction ID.
                      */
                     std::string m_tranId;
                     bool m_tranIdHasBeenSet;
 
                     /**
-                     * Big order ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Large order number.
                      */
                     std::vector<std::string> m_bigDealIds;
                     bool m_bigDealIdsHasBeenSet;

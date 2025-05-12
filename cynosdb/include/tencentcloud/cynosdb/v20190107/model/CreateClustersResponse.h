@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Freezing transaction ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TranId Freezing transaction ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Frozen transaction ID.
+                     * @return TranId Frozen transaction ID.
                      * 
                      */
                     std::string GetTranId() const;
@@ -61,9 +59,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Order ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DealNames Order ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetDealNames() const;
@@ -76,10 +72,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DealNamesHasBeenSet() const;
 
                     /**
-                     * 获取List of resource IDs (This field has been deprecated. You need to use `dealNames` in the `DescribeResourcesByDealName` API to get resource IDs.)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ResourceIds List of resource IDs (This field has been deprecated. You need to use `dealNames` in the `DescribeResourcesByDealName` API to get resource IDs.)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Resource ID list (this field is no longer maintained. please use the dealNames field and the DescribeResourcesByDealName query API to obtain resource ids.).
+                     * @return ResourceIds Resource ID list (this field is no longer maintained. please use the dealNames field and the DescribeResourcesByDealName query API to obtain resource ids.).
                      * 
                      */
                     std::vector<std::string> GetResourceIds() const;
@@ -92,10 +86,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ResourceIdsHasBeenSet() const;
 
                     /**
-                     * 获取List of cluster IDs (This field has been deprecated. You need to use `dealNames` in the `DescribeResourcesByDealName` API to get cluster IDs.)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ClusterIds List of cluster IDs (This field has been deprecated. You need to use `dealNames` in the `DescribeResourcesByDealName` API to get cluster IDs.)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Cluster ID list. this field is no longer maintained. please use the dealNames field and the DescribeResourcesByDealName query API to get the cluster ID.
+                     * @return ClusterIds Cluster ID list. this field is no longer maintained. please use the dealNames field and the DescribeResourcesByDealName query API to get the cluster ID.
                      * 
                      */
                     std::vector<std::string> GetClusterIds() const;
@@ -126,29 +118,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Freezing transaction ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Frozen transaction ID.
                      */
                     std::string m_tranId;
                     bool m_tranIdHasBeenSet;
 
                     /**
                      * Order ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_dealNames;
                     bool m_dealNamesHasBeenSet;
 
                     /**
-                     * List of resource IDs (This field has been deprecated. You need to use `dealNames` in the `DescribeResourcesByDealName` API to get resource IDs.)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Resource ID list (this field is no longer maintained. please use the dealNames field and the DescribeResourcesByDealName query API to obtain resource ids.).
                      */
                     std::vector<std::string> m_resourceIds;
                     bool m_resourceIdsHasBeenSet;
 
                     /**
-                     * List of cluster IDs (This field has been deprecated. You need to use `dealNames` in the `DescribeResourcesByDealName` API to get cluster IDs.)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Cluster ID list. this field is no longer maintained. please use the dealNames field and the DescribeResourcesByDealName query API to get the cluster ID.
                      */
                     std::vector<std::string> m_clusterIds;
                     bool m_clusterIdsHasBeenSet;

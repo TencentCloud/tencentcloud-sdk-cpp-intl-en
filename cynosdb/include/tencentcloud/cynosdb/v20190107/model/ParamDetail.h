@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool MinHasBeenSet() const;
 
                     /**
-                     * 获取Enumerated values of the parameter.  It is null if the parameter is non-enumerated. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EnumValue Enumerated values of the parameter.  It is null if the parameter is non-enumerated. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Optional enumerated values of the parameter. if it is a non-enumerated value, it is empty.
+                     * @return EnumValue Optional enumerated values of the parameter. if it is a non-enumerated value, it is empty.
                      * 
                      */
                     std::vector<std::string> GetEnumValue() const;
 
                     /**
-                     * 设置Enumerated values of the parameter.  It is null if the parameter is non-enumerated. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _enumValue Enumerated values of the parameter.  It is null if the parameter is non-enumerated. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Optional enumerated values of the parameter. if it is a non-enumerated value, it is empty.
+                     * @param _enumValue Optional enumerated values of the parameter. if it is a non-enumerated value, it is empty.
                      * 
                      */
                     void SetEnumValue(const std::vector<std::string>& _enumValue);
@@ -321,15 +321,15 @@ namespace TencentCloud
                     bool MatchValueHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is a `func` type. Valid values: `true` (yes), `false` (no). Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsFunc Whether it is a `func` type. Valid values: `true` (yes), `false` (no). Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取true - indicates a formula. false - indicates it is not a formula.
+                     * @return IsFunc true - indicates a formula. false - indicates it is not a formula.
                      * 
                      */
                     bool GetIsFunc() const;
 
                     /**
-                     * 设置Whether it is a `func` type. Valid values: `true` (yes), `false` (no). Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isFunc Whether it is a `func` type. Valid values: `true` (yes), `false` (no). Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置true - indicates a formula. false - indicates it is not a formula.
+                     * @param _isFunc true - indicates a formula. false - indicates it is not a formula.
                      * 
                      */
                     void SetIsFunc(const bool& _isFunc);
@@ -342,15 +342,15 @@ namespace TencentCloud
                     bool IsFuncHasBeenSet() const;
 
                     /**
-                     * 获取Formula content returned when `ParamType` is `func`. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Func Formula content returned when `ParamType` is `func`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies that when the parameter is set as a formula, Func returns the set formula content.
+                     * @return Func Specifies that when the parameter is set as a formula, Func returns the set formula content.
                      * 
                      */
                     std::string GetFunc() const;
 
                     /**
-                     * 设置Formula content returned when `ParamType` is `func`. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _func Formula content returned when `ParamType` is `func`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies that when the parameter is set as a formula, Func returns the set formula content.
+                     * @param _func Specifies that when the parameter is set as a formula, Func returns the set formula content.
                      * 
                      */
                     void SetFunc(const std::string& _func);
@@ -363,15 +363,15 @@ namespace TencentCloud
                     bool FuncHasBeenSet() const;
 
                     /**
-                     * 获取Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ModifiableInfo Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether the parameter is modifiable.
+                     * @return ModifiableInfo Whether the parameter is modifiable.
                      * 
                      */
                     ModifiableInfo GetModifiableInfo() const;
 
                     /**
-                     * 设置Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _modifiableInfo Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether the parameter is modifiable.
+                     * @param _modifiableInfo Whether the parameter is modifiable.
                      * 
                      */
                     void SetModifiableInfo(const ModifiableInfo& _modifiableInfo);
@@ -382,6 +382,27 @@ namespace TencentCloud
                      * 
                      */
                     bool ModifiableInfoHasBeenSet() const;
+
+                    /**
+                     * 获取The default formula style of parameters that support formulas.
+                     * @return FuncPattern The default formula style of parameters that support formulas.
+                     * 
+                     */
+                    std::string GetFuncPattern() const;
+
+                    /**
+                     * 设置The default formula style of parameters that support formulas.
+                     * @param _funcPattern The default formula style of parameters that support formulas.
+                     * 
+                     */
+                    void SetFuncPattern(const std::string& _funcPattern);
+
+                    /**
+                     * 判断参数 FuncPattern 是否已赋值
+                     * @return FuncPattern 是否已赋值
+                     * 
+                     */
+                    bool FuncPatternHasBeenSet() const;
 
                 private:
 
@@ -440,7 +461,7 @@ namespace TencentCloud
                     bool m_minHasBeenSet;
 
                     /**
-                     * Enumerated values of the parameter.  It is null if the parameter is non-enumerated. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Optional enumerated values of the parameter. if it is a non-enumerated value, it is empty.
                      */
                     std::vector<std::string> m_enumValue;
                     bool m_enumValueHasBeenSet;
@@ -464,22 +485,28 @@ namespace TencentCloud
                     bool m_matchValueHasBeenSet;
 
                     /**
-                     * Whether it is a `func` type. Valid values: `true` (yes), `false` (no). Note: This field may return null, indicating that no valid values can be obtained.
+                     * true - indicates a formula. false - indicates it is not a formula.
                      */
                     bool m_isFunc;
                     bool m_isFuncHasBeenSet;
 
                     /**
-                     * Formula content returned when `ParamType` is `func`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies that when the parameter is set as a formula, Func returns the set formula content.
                      */
                     std::string m_func;
                     bool m_funcHasBeenSet;
 
                     /**
-                     * Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether the parameter is modifiable.
                      */
                     ModifiableInfo m_modifiableInfo;
                     bool m_modifiableInfoHasBeenSet;
+
+                    /**
+                     * The default formula style of parameters that support formulas.
+                     */
+                    std::string m_funcPattern;
+                    bool m_funcPatternHasBeenSet;
 
                 };
             }

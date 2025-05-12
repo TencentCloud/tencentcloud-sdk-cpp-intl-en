@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Log timestamp Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Timestamp Log timestamp Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Log timestamp.
+                     * @return Timestamp Log timestamp.
                      * 
                      */
                     int64_t GetTimestamp() const;
 
                     /**
-                     * 设置Log timestamp Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _timestamp Log timestamp Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Log timestamp.
+                     * @param _timestamp Log timestamp.
                      * 
                      */
                     void SetTimestamp(const int64_t& _timestamp);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TimestampHasBeenSet() const;
 
                     /**
-                     * 获取Log level Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Level Log level Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Log level.
+                     * @return Level Log level.
                      * 
                      */
                     std::string GetLevel() const;
 
                     /**
-                     * 设置Log level Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _level Log level Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Log level.
+                     * @param _level Log level.
                      * 
                      */
                     void SetLevel(const std::string& _level);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool LevelHasBeenSet() const;
 
                     /**
-                     * 获取Log content Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Content Log content Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Log content.
+                     * @return Content Log content.
                      * 
                      */
                     std::string GetContent() const;
 
                     /**
-                     * 设置Log content Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _content Log content Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Log content.
+                     * @param _content Log content.
                      * 
                      */
                     void SetContent(const std::string& _content);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Log timestamp Note: This field may return null, indicating that no valid values can be obtained.
+                     * Log timestamp.
                      */
                     int64_t m_timestamp;
                     bool m_timestampHasBeenSet;
 
                     /**
-                     * Log level Note: This field may return null, indicating that no valid values can be obtained.
+                     * Log level.
                      */
                     std::string m_level;
                     bool m_levelHasBeenSet;
 
                     /**
-                     * Log content Note: This field may return null, indicating that no valid values can be obtained.
+                     * Log content.
                      */
                     std::string m_content;
                     bool m_contentHasBeenSet;

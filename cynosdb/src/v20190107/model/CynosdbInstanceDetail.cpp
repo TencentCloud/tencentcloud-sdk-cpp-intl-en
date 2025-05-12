@@ -32,6 +32,7 @@ CynosdbInstanceDetail::CynosdbInstanceDetail() :
     m_zoneHasBeenSet(false),
     m_statusHasBeenSet(false),
     m_statusDescHasBeenSet(false),
+    m_serverlessStatusHasBeenSet(false),
     m_dbTypeHasBeenSet(false),
     m_dbVersionHasBeenSet(false),
     m_cpuHasBeenSet(false),
@@ -54,7 +55,7 @@ CynosdbInstanceDetail::CynosdbInstanceDetail() :
     m_renewFlagHasBeenSet(false),
     m_minCpuHasBeenSet(false),
     m_maxCpuHasBeenSet(false),
-    m_serverlessStatusHasBeenSet(false)
+    m_dbModeHasBeenSet(false)
 {
 }
 
@@ -171,6 +172,16 @@ CoreInternalOutcome CynosdbInstanceDetail::Deserialize(const rapidjson::Value &v
         }
         m_statusDesc = string(value["StatusDesc"].GetString());
         m_statusDescHasBeenSet = true;
+    }
+
+    if (value.HasMember("ServerlessStatus") && !value["ServerlessStatus"].IsNull())
+    {
+        if (!value["ServerlessStatus"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `CynosdbInstanceDetail.ServerlessStatus` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_serverlessStatus = string(value["ServerlessStatus"].GetString());
+        m_serverlessStatusHasBeenSet = true;
     }
 
     if (value.HasMember("DbType") && !value["DbType"].IsNull())
@@ -393,14 +404,14 @@ CoreInternalOutcome CynosdbInstanceDetail::Deserialize(const rapidjson::Value &v
         m_maxCpuHasBeenSet = true;
     }
 
-    if (value.HasMember("ServerlessStatus") && !value["ServerlessStatus"].IsNull())
+    if (value.HasMember("DbMode") && !value["DbMode"].IsNull())
     {
-        if (!value["ServerlessStatus"].IsString())
+        if (!value["DbMode"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `CynosdbInstanceDetail.ServerlessStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CynosdbInstanceDetail.DbMode` IsString=false incorrectly").SetRequestId(requestId));
         }
-        m_serverlessStatus = string(value["ServerlessStatus"].GetString());
-        m_serverlessStatusHasBeenSet = true;
+        m_dbMode = string(value["DbMode"].GetString());
+        m_dbModeHasBeenSet = true;
     }
 
 
@@ -496,6 +507,14 @@ void CynosdbInstanceDetail::ToJsonObject(rapidjson::Value &value, rapidjson::Doc
         string key = "StatusDesc";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_statusDesc.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_serverlessStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ServerlessStatus";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_serverlessStatus.c_str(), allocator).Move(), allocator);
     }
 
     if (m_dbTypeHasBeenSet)
@@ -674,12 +693,12 @@ void CynosdbInstanceDetail::ToJsonObject(rapidjson::Value &value, rapidjson::Doc
         value.AddMember(iKey, m_maxCpu, allocator);
     }
 
-    if (m_serverlessStatusHasBeenSet)
+    if (m_dbModeHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "ServerlessStatus";
+        string key = "DbMode";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_serverlessStatus.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_dbMode.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -859,6 +878,22 @@ void CynosdbInstanceDetail::SetStatusDesc(const string& _statusDesc)
 bool CynosdbInstanceDetail::StatusDescHasBeenSet() const
 {
     return m_statusDescHasBeenSet;
+}
+
+string CynosdbInstanceDetail::GetServerlessStatus() const
+{
+    return m_serverlessStatus;
+}
+
+void CynosdbInstanceDetail::SetServerlessStatus(const string& _serverlessStatus)
+{
+    m_serverlessStatus = _serverlessStatus;
+    m_serverlessStatusHasBeenSet = true;
+}
+
+bool CynosdbInstanceDetail::ServerlessStatusHasBeenSet() const
+{
+    return m_serverlessStatusHasBeenSet;
 }
 
 string CynosdbInstanceDetail::GetDbType() const
@@ -1213,19 +1248,19 @@ bool CynosdbInstanceDetail::MaxCpuHasBeenSet() const
     return m_maxCpuHasBeenSet;
 }
 
-string CynosdbInstanceDetail::GetServerlessStatus() const
+string CynosdbInstanceDetail::GetDbMode() const
 {
-    return m_serverlessStatus;
+    return m_dbMode;
 }
 
-void CynosdbInstanceDetail::SetServerlessStatus(const string& _serverlessStatus)
+void CynosdbInstanceDetail::SetDbMode(const string& _dbMode)
 {
-    m_serverlessStatus = _serverlessStatus;
-    m_serverlessStatusHasBeenSet = true;
+    m_dbMode = _dbMode;
+    m_dbModeHasBeenSet = true;
 }
 
-bool CynosdbInstanceDetail::ServerlessStatusHasBeenSet() const
+bool CynosdbInstanceDetail::DbModeHasBeenSet() const
 {
-    return m_serverlessStatusHasBeenSet;
+    return m_dbModeHasBeenSet;
 }
 

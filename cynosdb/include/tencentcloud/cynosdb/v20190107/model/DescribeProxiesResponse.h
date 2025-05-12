@@ -60,10 +60,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of database proxy groups
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProxyGroupInfos List of database proxy groups
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List of database proxy groups.
+                     * @return ProxyGroupInfos List of database proxy groups.
                      * 
                      */
                     std::vector<ProxyGroupInfo> GetProxyGroupInfos() const;
@@ -100,8 +98,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of database proxy groups
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List of database proxy groups.
                      */
                     std::vector<ProxyGroupInfo> m_proxyGroupInfos;
                     bool m_proxyGroupInfosHasBeenSet;

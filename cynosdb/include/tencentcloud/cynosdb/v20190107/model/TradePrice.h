@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The non-discounted total price of monthly subscribed resources (unit: 0.000001 cent)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TotalPrice The non-discounted total price of monthly subscribed resources (unit: 0.000001 cent)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Resource total price under prepaid mode, excluding discounts. unit: cent.
+                     * @return TotalPrice Resource total price under prepaid mode, excluding discounts. unit: cent.
                      * 
                      */
                     int64_t GetTotalPrice() const;
 
                     /**
-                     * 设置The non-discounted total price of monthly subscribed resources (unit: 0.000001 cent)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _totalPrice The non-discounted total price of monthly subscribed resources (unit: 0.000001 cent)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Resource total price under prepaid mode, excluding discounts. unit: cent.
+                     * @param _totalPrice Resource total price under prepaid mode, excluding discounts. unit: cent.
                      * 
                      */
                     void SetTotalPrice(const int64_t& _totalPrice);
@@ -93,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DiscountHasBeenSet() const;
 
                     /**
-                     * 获取The discounted total price of monthly subscribed resources (unit: 0.000001 cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TotalPriceDiscount The discounted total price of monthly subscribed resources (unit: 0.000001 cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Discounted total price under prepaid mode, unit: fen. for example, the user enjoys a Discount = TotalPrice × Discount.
+                     * @return TotalPriceDiscount Discounted total price under prepaid mode, unit: fen. for example, the user enjoys a Discount = TotalPrice × Discount.
                      * 
                      */
                     int64_t GetTotalPriceDiscount() const;
 
                     /**
-                     * 设置The discounted total price of monthly subscribed resources (unit: 0.000001 cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _totalPriceDiscount The discounted total price of monthly subscribed resources (unit: 0.000001 cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Discounted total price under prepaid mode, unit: fen. for example, the user enjoys a Discount = TotalPrice × Discount.
+                     * @param _totalPriceDiscount Discounted total price under prepaid mode, unit: fen. for example, the user enjoys a Discount = TotalPrice × Discount.
                      * 
                      */
                     void SetTotalPriceDiscount(const int64_t& _totalPriceDiscount);
@@ -118,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TotalPriceDiscountHasBeenSet() const;
 
                     /**
-                     * 获取The non-discounted unit price of pay-as-you-go resources (unit: 0.000001 cent)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UnitPrice The non-discounted unit price of pay-as-you-go resources (unit: 0.000001 cent)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Unit resource price in postpaid mode, excluding discounts. unit: cent.
+                     * @return UnitPrice Unit resource price in postpaid mode, excluding discounts. unit: cent.
                      * 
                      */
                     int64_t GetUnitPrice() const;
 
                     /**
-                     * 设置The non-discounted unit price of pay-as-you-go resources (unit: 0.000001 cent)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _unitPrice The non-discounted unit price of pay-as-you-go resources (unit: 0.000001 cent)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Unit resource price in postpaid mode, excluding discounts. unit: cent.
+                     * @param _unitPrice Unit resource price in postpaid mode, excluding discounts. unit: cent.
                      * 
                      */
                     void SetUnitPrice(const int64_t& _unitPrice);
@@ -143,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UnitPriceHasBeenSet() const;
 
                     /**
-                     * 获取The discounted unit price of pay-as-you-go resources (unit: 0.000001 cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UnitPriceDiscount The discounted unit price of pay-as-you-go resources (unit: 0.000001 cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Unit resource price in postpaid mode after Discount, unit: fen. for example, the user enjoys a Discount = unitprice × Discount.
+                     * @return UnitPriceDiscount Unit resource price in postpaid mode after Discount, unit: fen. for example, the user enjoys a Discount = unitprice × Discount.
                      * 
                      */
                     int64_t GetUnitPriceDiscount() const;
 
                     /**
-                     * 设置The discounted unit price of pay-as-you-go resources (unit: 0.000001 cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _unitPriceDiscount The discounted unit price of pay-as-you-go resources (unit: 0.000001 cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Unit resource price in postpaid mode after Discount, unit: fen. for example, the user enjoys a Discount = unitprice × Discount.
+                     * @param _unitPriceDiscount Unit resource price in postpaid mode after Discount, unit: fen. for example, the user enjoys a Discount = unitprice × Discount.
                      * 
                      */
                     void SetUnitPriceDiscount(const int64_t& _unitPriceDiscount);
@@ -191,8 +175,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The non-discounted total price of monthly subscribed resources (unit: 0.000001 cent)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Resource total price under prepaid mode, excluding discounts. unit: cent.
                      */
                     int64_t m_totalPrice;
                     bool m_totalPriceHasBeenSet;
@@ -204,22 +187,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_discountHasBeenSet;
 
                     /**
-                     * The discounted total price of monthly subscribed resources (unit: 0.000001 cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Discounted total price under prepaid mode, unit: fen. for example, the user enjoys a Discount = TotalPrice × Discount.
                      */
                     int64_t m_totalPriceDiscount;
                     bool m_totalPriceDiscountHasBeenSet;
 
                     /**
-                     * The non-discounted unit price of pay-as-you-go resources (unit: 0.000001 cent)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Unit resource price in postpaid mode, excluding discounts. unit: cent.
                      */
                     int64_t m_unitPrice;
                     bool m_unitPriceHasBeenSet;
 
                     /**
-                     * The discounted unit price of pay-as-you-go resources (unit: 0.000001 cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Unit resource price in postpaid mode after Discount, unit: fen. for example, the user enjoys a Discount = unitprice × Discount.
                      */
                     int64_t m_unitPriceDiscount;
                     bool m_unitPriceDiscountHasBeenSet;

@@ -28,6 +28,7 @@
 #include <tencentcloud/cynosdb/v20190107/model/Tag.h>
 #include <tencentcloud/cynosdb/v20190107/model/InstanceNetInfo.h>
 #include <tencentcloud/cynosdb/v20190107/model/ResourcePackage.h>
+#include <tencentcloud/cynosdb/v20190107/model/InstanceAbility.h>
 
 
 namespace TencentCloud
@@ -920,19 +921,15 @@ pause
                     bool ServerlessStatusHasBeenSet() const;
 
                     /**
-                     * 获取Prepaid storage ID
-Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @return StorageId Prepaid storage ID
-Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Prepayment storage Id.
+                     * @return StorageId Prepayment storage Id.
                      * 
                      */
                     std::string GetStorageId() const;
 
                     /**
-                     * 设置Prepaid storage ID
-Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param _storageId Prepaid storage ID
-Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Prepayment storage Id.
+                     * @param _storageId Prepayment storage Id.
                      * 
                      */
                     void SetStorageId(const std::string& _storageId);
@@ -987,19 +984,15 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                     bool PhysicalZoneHasBeenSet() const;
 
                     /**
-                     * 获取Business type
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return BusinessType Business type
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Business type.
+                     * @return BusinessType Business type.
                      * 
                      */
                     std::string GetBusinessType() const;
 
                     /**
-                     * 设置Business type
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _businessType Business type
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Business type.
+                     * @param _businessType Business type.
                      * 
                      */
                     void SetBusinessType(const std::string& _businessType);
@@ -1013,18 +1006,14 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * 获取Task
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tasks Task
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<ObjectTask> GetTasks() const;
 
                     /**
                      * 设置Task
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _tasks Task
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTasks(const std::vector<ObjectTask>& _tasks);
@@ -1037,19 +1026,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TasksHasBeenSet() const;
 
                     /**
-                     * 获取Whether to freeze
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsFreeze Whether to freeze
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether to freeze.
+                     * @return IsFreeze Whether to freeze.
                      * 
                      */
                     std::string GetIsFreeze() const;
 
                     /**
-                     * 设置Whether to freeze
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isFreeze Whether to freeze
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether to freeze.
+                     * @param _isFreeze Whether to freeze.
                      * 
                      */
                     void SetIsFreeze(const std::string& _isFreeze);
@@ -1087,19 +1072,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ResourceTagsHasBeenSet() const;
 
                     /**
-                     * 获取Source AZ
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return MasterZone Source AZ
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Primary AZ.
+                     * @return MasterZone Primary AZ.
                      * 
                      */
                     std::string GetMasterZone() const;
 
                     /**
-                     * 设置Source AZ
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _masterZone Source AZ
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Primary AZ.
+                     * @param _masterZone Primary AZ.
                      * 
                      */
                     void SetMasterZone(const std::string& _masterZone);
@@ -1137,19 +1118,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool SlaveZonesHasBeenSet() const;
 
                     /**
-                     * 获取Instance network information
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return InstanceNetInfo Instance network information
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Network information of the instance.
+                     * @return InstanceNetInfo Network information of the instance.
                      * 
                      */
                     std::vector<InstanceNetInfo> GetInstanceNetInfo() const;
 
                     /**
-                     * 设置Instance network information
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _instanceNetInfo Instance network information
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Network information of the instance.
+                     * @param _instanceNetInfo Network information of the instance.
                      * 
                      */
                     void SetInstanceNetInfo(const std::vector<InstanceNetInfo>& _instanceNetInfo);
@@ -1181,6 +1158,132 @@ Note: This field may return null, indicating that no valid value can be obtained
                      * 
                      */
                     bool ResourcePackagesHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the instance index form. valid values include mixedRowColumn (row and column hybrid storage) and onlyRowIndex (row-only storage).
+                     * @return InstanceIndexMode Specifies the instance index form. valid values include mixedRowColumn (row and column hybrid storage) and onlyRowIndex (row-only storage).
+                     * 
+                     */
+                    std::string GetInstanceIndexMode() const;
+
+                    /**
+                     * 设置Specifies the instance index form. valid values include mixedRowColumn (row and column hybrid storage) and onlyRowIndex (row-only storage).
+                     * @param _instanceIndexMode Specifies the instance index form. valid values include mixedRowColumn (row and column hybrid storage) and onlyRowIndex (row-only storage).
+                     * 
+                     */
+                    void SetInstanceIndexMode(const std::string& _instanceIndexMode);
+
+                    /**
+                     * 判断参数 InstanceIndexMode 是否已赋值
+                     * @return InstanceIndexMode 是否已赋值
+                     * 
+                     */
+                    bool InstanceIndexModeHasBeenSet() const;
+
+                    /**
+                     * 获取Supported capabilities of the existing instance.
+                     * @return InstanceAbility Supported capabilities of the existing instance.
+                     * 
+                     */
+                    InstanceAbility GetInstanceAbility() const;
+
+                    /**
+                     * 设置Supported capabilities of the existing instance.
+                     * @param _instanceAbility Supported capabilities of the existing instance.
+                     * 
+                     */
+                    void SetInstanceAbility(const InstanceAbility& _instanceAbility);
+
+                    /**
+                     * 判断参数 InstanceAbility 是否已赋值
+                     * @return InstanceAbility 是否已赋值
+                     * 
+                     */
+                    bool InstanceAbilityHasBeenSet() const;
+
+                    /**
+                     * 获取Instance machine type.
+                     * @return DeviceType Instance machine type.
+                     * 
+                     */
+                    std::string GetDeviceType() const;
+
+                    /**
+                     * 设置Instance machine type.
+                     * @param _deviceType Instance machine type.
+                     * 
+                     */
+                    void SetDeviceType(const std::string& _deviceType);
+
+                    /**
+                     * 判断参数 DeviceType 是否已赋值
+                     * @return DeviceType 是否已赋值
+                     * 
+                     */
+                    bool DeviceTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the instance storage type.
+                     * @return InstanceStorageType Specifies the instance storage type.
+                     * 
+                     */
+                    std::string GetInstanceStorageType() const;
+
+                    /**
+                     * 设置Specifies the instance storage type.
+                     * @param _instanceStorageType Specifies the instance storage type.
+                     * 
+                     */
+                    void SetInstanceStorageType(const std::string& _instanceStorageType);
+
+                    /**
+                     * 判断参数 InstanceStorageType 是否已赋值
+                     * @return InstanceStorageType 是否已赋值
+                     * 
+                     */
+                    bool InstanceStorageTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Unknown field.
+                     * @return CynosVersionTag Unknown field.
+                     * 
+                     */
+                    std::string GetCynosVersionTag() const;
+
+                    /**
+                     * 设置Unknown field.
+                     * @param _cynosVersionTag Unknown field.
+                     * 
+                     */
+                    void SetCynosVersionTag(const std::string& _cynosVersionTag);
+
+                    /**
+                     * 判断参数 CynosVersionTag 是否已赋值
+                     * @return CynosVersionTag 是否已赋值
+                     * 
+                     */
+                    bool CynosVersionTagHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the node information of libradb.
+                     * @return NodeList Specifies the node information of libradb.
+                     * 
+                     */
+                    std::vector<std::string> GetNodeList() const;
+
+                    /**
+                     * 设置Specifies the node information of libradb.
+                     * @param _nodeList Specifies the node information of libradb.
+                     * 
+                     */
+                    void SetNodeList(const std::vector<std::string>& _nodeList);
+
+                    /**
+                     * 判断参数 NodeList 是否已赋值
+                     * @return NodeList 是否已赋值
+                     * 
+                     */
+                    bool NodeListHasBeenSet() const;
 
                 private:
 
@@ -1433,8 +1536,7 @@ pause
                     bool m_serverlessStatusHasBeenSet;
 
                     /**
-                     * Prepaid storage ID
-Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * Prepayment storage Id.
                      */
                     std::string m_storageId;
                     bool m_storageIdHasBeenSet;
@@ -1452,22 +1554,19 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                     bool m_physicalZoneHasBeenSet;
 
                     /**
-                     * Business type
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Business type.
                      */
                     std::string m_businessType;
                     bool m_businessTypeHasBeenSet;
 
                     /**
                      * Task
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<ObjectTask> m_tasks;
                     bool m_tasksHasBeenSet;
 
                     /**
-                     * Whether to freeze
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether to freeze.
                      */
                     std::string m_isFreeze;
                     bool m_isFreezeHasBeenSet;
@@ -1480,8 +1579,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_resourceTagsHasBeenSet;
 
                     /**
-                     * Source AZ
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Primary AZ.
                      */
                     std::string m_masterZone;
                     bool m_masterZoneHasBeenSet;
@@ -1494,8 +1592,7 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_slaveZonesHasBeenSet;
 
                     /**
-                     * Instance network information
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Network information of the instance.
                      */
                     std::vector<InstanceNetInfo> m_instanceNetInfo;
                     bool m_instanceNetInfoHasBeenSet;
@@ -1505,6 +1602,42 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     std::vector<ResourcePackage> m_resourcePackages;
                     bool m_resourcePackagesHasBeenSet;
+
+                    /**
+                     * Specifies the instance index form. valid values include mixedRowColumn (row and column hybrid storage) and onlyRowIndex (row-only storage).
+                     */
+                    std::string m_instanceIndexMode;
+                    bool m_instanceIndexModeHasBeenSet;
+
+                    /**
+                     * Supported capabilities of the existing instance.
+                     */
+                    InstanceAbility m_instanceAbility;
+                    bool m_instanceAbilityHasBeenSet;
+
+                    /**
+                     * Instance machine type.
+                     */
+                    std::string m_deviceType;
+                    bool m_deviceTypeHasBeenSet;
+
+                    /**
+                     * Specifies the instance storage type.
+                     */
+                    std::string m_instanceStorageType;
+                    bool m_instanceStorageTypeHasBeenSet;
+
+                    /**
+                     * Unknown field.
+                     */
+                    std::string m_cynosVersionTag;
+                    bool m_cynosVersionTagHasBeenSet;
+
+                    /**
+                     * Specifies the node information of libradb.
+                     */
+                    std::vector<std::string> m_nodeList;
+                    bool m_nodeListHasBeenSet;
 
                 };
             }

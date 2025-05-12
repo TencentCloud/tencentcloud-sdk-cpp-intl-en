@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Account ID of `AppId` Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AppId Account ID of `AppId` Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取AppId account ID.
+                     * @return AppId AppId account ID.
                      * 
                      */
                     int64_t GetAppId() const;
 
                     /**
-                     * 设置Account ID of `AppId` Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _appId Account ID of `AppId` Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置AppId account ID.
+                     * @param _appId AppId account ID.
                      * 
                      */
                     void SetAppId(const int64_t& _appId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PackageId The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The unique ID of the resource package.
+                     * @return PackageId The unique ID of the resource package.
                      * 
                      */
                     std::string GetPackageId() const;
 
                     /**
-                     * 设置The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _packageId The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The unique ID of the resource package.
+                     * @param _packageId The unique ID of the resource package.
                      * 
                      */
                     void SetPackageId(const std::string& _packageId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool PackageIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceId Instance ID Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance ID
+                     * @return InstanceId Instance ID
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceId Instance ID Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance ID
+                     * @param _instanceId Instance ID
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取The successfully deducted capacity Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SuccessDeductSpec The successfully deducted capacity Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Successfully deduct capacity.
+                     * @return SuccessDeductSpec Successfully deduct capacity.
                      * 
                      */
                     double GetSuccessDeductSpec() const;
 
                     /**
-                     * 设置The successfully deducted capacity Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _successDeductSpec The successfully deducted capacity Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Successfully deduct capacity.
+                     * @param _successDeductSpec Successfully deduct capacity.
                      * 
                      */
                     void SetSuccessDeductSpec(const double& _successDeductSpec);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool SuccessDeductSpecHasBeenSet() const;
 
                     /**
-                     * 获取Used capacity of a resource pack as of now Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PackageTotalUsedSpec Used capacity of a resource pack as of now Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The used capacity of the resource package up to the present.
+                     * @return PackageTotalUsedSpec The used capacity of the resource package up to the present.
                      * 
                      */
                     double GetPackageTotalUsedSpec() const;
 
                     /**
-                     * 设置Used capacity of a resource pack as of now Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _packageTotalUsedSpec Used capacity of a resource pack as of now Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The used capacity of the resource package up to the present.
+                     * @param _packageTotalUsedSpec The used capacity of the resource package up to the present.
                      * 
                      */
                     void SetPackageTotalUsedSpec(const double& _packageTotalUsedSpec);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool PackageTotalUsedSpecHasBeenSet() const;
 
                     /**
-                     * 获取Deduction start time Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StartTime Deduction start time Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Deduction start time.
+                     * @return StartTime Deduction start time.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Deduction start time Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _startTime Deduction start time Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Deduction start time.
+                     * @param _startTime Deduction start time.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Deduction end time Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EndTime Deduction end time Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Deduction end time.
+                     * @return EndTime Deduction end time.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Deduction end time Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _endTime Deduction end time Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Deduction end time.
+                     * @param _endTime Deduction end time.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Extended information Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExtendInfo Extended information Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Extension Information
+                     * @return ExtendInfo Extension Information
                      * 
                      */
                     std::string GetExtendInfo() const;
 
                     /**
-                     * 设置Extended information Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _extendInfo Extended information Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Extension Information
+                     * @param _extendInfo Extension Information
                      * 
                      */
                     void SetExtendInfo(const std::string& _extendInfo);
@@ -217,49 +217,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Account ID of `AppId` Note: This field may return null, indicating that no valid values can be obtained.
+                     * AppId account ID.
                      */
                     int64_t m_appId;
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
+                     * The unique ID of the resource package.
                      */
                     std::string m_packageId;
                     bool m_packageIdHasBeenSet;
 
                     /**
-                     * Instance ID Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance ID
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * The successfully deducted capacity Note: This field may return null, indicating that no valid values can be obtained.
+                     * Successfully deduct capacity.
                      */
                     double m_successDeductSpec;
                     bool m_successDeductSpecHasBeenSet;
 
                     /**
-                     * Used capacity of a resource pack as of now Note: This field may return null, indicating that no valid values can be obtained.
+                     * The used capacity of the resource package up to the present.
                      */
                     double m_packageTotalUsedSpec;
                     bool m_packageTotalUsedSpecHasBeenSet;
 
                     /**
-                     * Deduction start time Note: This field may return null, indicating that no valid values can be obtained.
+                     * Deduction start time.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Deduction end time Note: This field may return null, indicating that no valid values can be obtained.
+                     * Deduction end time.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Extended information Note: This field may return null, indicating that no valid values can be obtained.
+                     * Extension Information
                      */
                     std::string m_extendInfo;
                     bool m_extendInfoHasBeenSet;

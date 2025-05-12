@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start time of valid rollback time range (disused)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TimeRangeStart Start time of valid rollback time range (disused)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Valid regression time range start time point (abandoned).
+                     * @return TimeRangeStart Valid regression time range start time point (abandoned).
                      * 
                      */
                     std::string GetTimeRangeStart() const;
@@ -61,10 +59,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TimeRangeStartHasBeenSet() const;
 
                     /**
-                     * 获取End time of valid rollback time range (disused)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TimeRangeEnd End time of valid rollback time range (disused)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Valid regression time range end time point (abandoned).
+                     * @return TimeRangeEnd Valid regression time range end time point (abandoned).
                      * 
                      */
                     std::string GetTimeRangeEnd() const;
@@ -93,15 +89,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Start time of valid rollback time range (disused)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Valid regression time range start time point (abandoned).
                      */
                     std::string m_timeRangeStart;
                     bool m_timeRangeStartHasBeenSet;
 
                     /**
-                     * End time of valid rollback time range (disused)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Valid regression time range end time point (abandoned).
                      */
                     std::string m_timeRangeEnd;
                     bool m_timeRangeEndHasBeenSet;

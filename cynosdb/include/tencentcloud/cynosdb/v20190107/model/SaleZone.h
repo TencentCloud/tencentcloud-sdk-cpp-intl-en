@@ -189,19 +189,15 @@ namespace TencentCloud
                     bool PhysicalZoneHasBeenSet() const;
 
                     /**
-                     * 获取Whether the user has AZ permission
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HasPermission Whether the user has AZ permission
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether the user has AZ permission.
+                     * @return HasPermission Whether the user has AZ permission.
                      * 
                      */
                     bool GetHasPermission() const;
 
                     /**
-                     * 设置Whether the user has AZ permission
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hasPermission Whether the user has AZ permission
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether the user has AZ permission.
+                     * @param _hasPermission Whether the user has AZ permission.
                      * 
                      */
                     void SetHasPermission(const bool& _hasPermission);
@@ -233,6 +229,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool IsWholeRdmaZoneHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies whether a newly purchased cluster is allowed in the current availability zone. valid values: 1 (allowed), 0 (not allowed).
+                     * @return IsSupportCreateCluster Specifies whether a newly purchased cluster is allowed in the current availability zone. valid values: 1 (allowed), 0 (not allowed).
+                     * 
+                     */
+                    int64_t GetIsSupportCreateCluster() const;
+
+                    /**
+                     * 设置Specifies whether a newly purchased cluster is allowed in the current availability zone. valid values: 1 (allowed), 0 (not allowed).
+                     * @param _isSupportCreateCluster Specifies whether a newly purchased cluster is allowed in the current availability zone. valid values: 1 (allowed), 0 (not allowed).
+                     * 
+                     */
+                    void SetIsSupportCreateCluster(const int64_t& _isSupportCreateCluster);
+
+                    /**
+                     * 判断参数 IsSupportCreateCluster 是否已赋值
+                     * @return IsSupportCreateCluster 是否已赋值
+                     * 
+                     */
+                    bool IsSupportCreateClusterHasBeenSet() const;
 
                 private:
 
@@ -277,8 +294,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_physicalZoneHasBeenSet;
 
                     /**
-                     * Whether the user has AZ permission
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether the user has AZ permission.
                      */
                     bool m_hasPermission;
                     bool m_hasPermissionHasBeenSet;
@@ -288,6 +304,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_isWholeRdmaZone;
                     bool m_isWholeRdmaZoneHasBeenSet;
+
+                    /**
+                     * Specifies whether a newly purchased cluster is allowed in the current availability zone. valid values: 1 (allowed), 0 (not allowed).
+                     */
+                    int64_t m_isSupportCreateCluster;
+                    bool m_isSupportCreateClusterHasBeenSet;
 
                 };
             }

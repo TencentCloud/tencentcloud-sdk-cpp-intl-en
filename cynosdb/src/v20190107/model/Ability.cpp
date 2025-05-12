@@ -24,7 +24,11 @@ Ability::Ability() :
     m_isSupportSlaveZoneHasBeenSet(false),
     m_nonsupportSlaveZoneReasonHasBeenSet(false),
     m_isSupportRoHasBeenSet(false),
-    m_nonsupportRoReasonHasBeenSet(false)
+    m_nonsupportRoReasonHasBeenSet(false),
+    m_isSupportManualSnapshotHasBeenSet(false),
+    m_isSupportTransparentDataEncryptionHasBeenSet(false),
+    m_noSupportTransparentDataEncryptionReasonHasBeenSet(false),
+    m_isSupportManualLogicHasBeenSet(false)
 {
 }
 
@@ -73,6 +77,46 @@ CoreInternalOutcome Ability::Deserialize(const rapidjson::Value &value)
         m_nonsupportRoReasonHasBeenSet = true;
     }
 
+    if (value.HasMember("IsSupportManualSnapshot") && !value["IsSupportManualSnapshot"].IsNull())
+    {
+        if (!value["IsSupportManualSnapshot"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Ability.IsSupportManualSnapshot` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_isSupportManualSnapshot = string(value["IsSupportManualSnapshot"].GetString());
+        m_isSupportManualSnapshotHasBeenSet = true;
+    }
+
+    if (value.HasMember("IsSupportTransparentDataEncryption") && !value["IsSupportTransparentDataEncryption"].IsNull())
+    {
+        if (!value["IsSupportTransparentDataEncryption"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Ability.IsSupportTransparentDataEncryption` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_isSupportTransparentDataEncryption = string(value["IsSupportTransparentDataEncryption"].GetString());
+        m_isSupportTransparentDataEncryptionHasBeenSet = true;
+    }
+
+    if (value.HasMember("NoSupportTransparentDataEncryptionReason") && !value["NoSupportTransparentDataEncryptionReason"].IsNull())
+    {
+        if (!value["NoSupportTransparentDataEncryptionReason"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Ability.NoSupportTransparentDataEncryptionReason` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_noSupportTransparentDataEncryptionReason = string(value["NoSupportTransparentDataEncryptionReason"].GetString());
+        m_noSupportTransparentDataEncryptionReasonHasBeenSet = true;
+    }
+
+    if (value.HasMember("IsSupportManualLogic") && !value["IsSupportManualLogic"].IsNull())
+    {
+        if (!value["IsSupportManualLogic"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Ability.IsSupportManualLogic` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_isSupportManualLogic = string(value["IsSupportManualLogic"].GetString());
+        m_isSupportManualLogicHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -110,6 +154,38 @@ void Ability::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Allocat
         string key = "NonsupportRoReason";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_nonsupportRoReason.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_isSupportManualSnapshotHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsSupportManualSnapshot";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_isSupportManualSnapshot.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_isSupportTransparentDataEncryptionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsSupportTransparentDataEncryption";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_isSupportTransparentDataEncryption.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_noSupportTransparentDataEncryptionReasonHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NoSupportTransparentDataEncryptionReason";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_noSupportTransparentDataEncryptionReason.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_isSupportManualLogicHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsSupportManualLogic";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_isSupportManualLogic.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -177,5 +253,69 @@ void Ability::SetNonsupportRoReason(const string& _nonsupportRoReason)
 bool Ability::NonsupportRoReasonHasBeenSet() const
 {
     return m_nonsupportRoReasonHasBeenSet;
+}
+
+string Ability::GetIsSupportManualSnapshot() const
+{
+    return m_isSupportManualSnapshot;
+}
+
+void Ability::SetIsSupportManualSnapshot(const string& _isSupportManualSnapshot)
+{
+    m_isSupportManualSnapshot = _isSupportManualSnapshot;
+    m_isSupportManualSnapshotHasBeenSet = true;
+}
+
+bool Ability::IsSupportManualSnapshotHasBeenSet() const
+{
+    return m_isSupportManualSnapshotHasBeenSet;
+}
+
+string Ability::GetIsSupportTransparentDataEncryption() const
+{
+    return m_isSupportTransparentDataEncryption;
+}
+
+void Ability::SetIsSupportTransparentDataEncryption(const string& _isSupportTransparentDataEncryption)
+{
+    m_isSupportTransparentDataEncryption = _isSupportTransparentDataEncryption;
+    m_isSupportTransparentDataEncryptionHasBeenSet = true;
+}
+
+bool Ability::IsSupportTransparentDataEncryptionHasBeenSet() const
+{
+    return m_isSupportTransparentDataEncryptionHasBeenSet;
+}
+
+string Ability::GetNoSupportTransparentDataEncryptionReason() const
+{
+    return m_noSupportTransparentDataEncryptionReason;
+}
+
+void Ability::SetNoSupportTransparentDataEncryptionReason(const string& _noSupportTransparentDataEncryptionReason)
+{
+    m_noSupportTransparentDataEncryptionReason = _noSupportTransparentDataEncryptionReason;
+    m_noSupportTransparentDataEncryptionReasonHasBeenSet = true;
+}
+
+bool Ability::NoSupportTransparentDataEncryptionReasonHasBeenSet() const
+{
+    return m_noSupportTransparentDataEncryptionReasonHasBeenSet;
+}
+
+string Ability::GetIsSupportManualLogic() const
+{
+    return m_isSupportManualLogic;
+}
+
+void Ability::SetIsSupportManualLogic(const string& _isSupportManualLogic)
+{
+    m_isSupportManualLogic = _isSupportManualLogic;
+    m_isSupportManualLogicHasBeenSet = true;
+}
+
+bool Ability::IsSupportManualLogicHasBeenSet() const
+{
+    return m_isSupportManualLogicHasBeenSet;
 }
 

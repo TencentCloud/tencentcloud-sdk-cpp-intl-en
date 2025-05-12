@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Connection persistence timeout in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ConnectionPoolTimeOut Connection persistence timeout in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the persistence threshold of the connection pool. the unit is seconds.
+                     * @return ConnectionPoolTimeOut Specifies the persistence threshold of the connection pool. the unit is seconds.
                      * 
                      */
                     int64_t GetConnectionPoolTimeOut() const;
 
                     /**
-                     * 设置Connection persistence timeout in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _connectionPoolTimeOut Connection persistence timeout in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the persistence threshold of the connection pool. the unit is seconds.
+                     * @param _connectionPoolTimeOut Specifies the persistence threshold of the connection pool. the unit is seconds.
                      * 
                      */
                     void SetConnectionPoolTimeOut(const int64_t& _connectionPoolTimeOut);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ConnectionPoolTimeOutHasBeenSet() const;
 
                     /**
-                     * 获取Whether the connection pool is enabled
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OpenConnectionPool Whether the connection pool is enabled
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether the connection pool is enabled.
+                     * @return OpenConnectionPool Whether the connection pool is enabled.
                      * 
                      */
                     std::string GetOpenConnectionPool() const;
 
                     /**
-                     * 设置Whether the connection pool is enabled
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _openConnectionPool Whether the connection pool is enabled
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether the connection pool is enabled.
+                     * @param _openConnectionPool Whether the connection pool is enabled.
                      * 
                      */
                     void SetOpenConnectionPool(const std::string& _openConnectionPool);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OpenConnectionPoolHasBeenSet() const;
 
                     /**
-                     * 获取Connection pool type. Valid value: `SessionConnectionPool` (session-level).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ConnectionPoolType Connection pool type. Valid value: `SessionConnectionPool` (session-level).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the connection pool type. valid values: SessionConnectionPool (session-level connection pool).
+                     * @return ConnectionPoolType Specifies the connection pool type. valid values: SessionConnectionPool (session-level connection pool).
                      * 
                      */
                     std::string GetConnectionPoolType() const;
 
                     /**
-                     * 设置Connection pool type. Valid value: `SessionConnectionPool` (session-level).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _connectionPoolType Connection pool type. Valid value: `SessionConnectionPool` (session-level).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the connection pool type. valid values: SessionConnectionPool (session-level connection pool).
+                     * @param _connectionPoolType Specifies the connection pool type. valid values: SessionConnectionPool (session-level connection pool).
                      * 
                      */
                     void SetConnectionPoolType(const std::string& _connectionPoolType);
@@ -124,22 +112,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Connection persistence timeout in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the persistence threshold of the connection pool. the unit is seconds.
                      */
                     int64_t m_connectionPoolTimeOut;
                     bool m_connectionPoolTimeOutHasBeenSet;
 
                     /**
-                     * Whether the connection pool is enabled
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether the connection pool is enabled.
                      */
                     std::string m_openConnectionPool;
                     bool m_openConnectionPoolHasBeenSet;
 
                     /**
-                     * Connection pool type. Valid value: `SessionConnectionPool` (session-level).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the connection pool type. valid values: SessionConnectionPool (session-level connection pool).
                      */
                     std::string m_connectionPoolType;
                     bool m_connectionPoolTypeHasBeenSet;

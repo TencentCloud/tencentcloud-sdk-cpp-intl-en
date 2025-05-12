@@ -43,33 +43,60 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance group ID
-                     * @return InstanceId Instance group ID
-                     * 
+                     * 获取Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId.
+                     * @return InstanceId Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId.
+                     * @deprecated
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance group ID
-                     * @param _instanceId Instance group ID
-                     * 
+                     * 设置Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId.
+                     * @param _instanceId Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId.
+                     * @deprecated
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool InstanceIdHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies that the instance group ID must be provided by selecting either InstanceId or InstanceGroupId.
+                     * @return InstanceGroupId Specifies that the instance group ID must be provided by selecting either InstanceId or InstanceGroupId.
+                     * 
+                     */
+                    std::string GetInstanceGroupId() const;
+
+                    /**
+                     * 设置Specifies that the instance group ID must be provided by selecting either InstanceId or InstanceGroupId.
+                     * @param _instanceGroupId Specifies that the instance group ID must be provided by selecting either InstanceId or InstanceGroupId.
+                     * 
+                     */
+                    void SetInstanceGroupId(const std::string& _instanceGroupId);
+
+                    /**
+                     * 判断参数 InstanceGroupId 是否已赋值
+                     * @return InstanceGroupId 是否已赋值
+                     * 
+                     */
+                    bool InstanceGroupIdHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Instance group ID
+                     * Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * Specifies that the instance group ID must be provided by selecting either InstanceId or InstanceGroupId.
+                     */
+                    std::string m_instanceGroupId;
+                    bool m_instanceGroupIdHasBeenSet;
 
                 };
             }

@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Region of the resource pack Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PackageRegion Region of the resource pack Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Resource package region of use.
+                     * @return PackageRegion Resource package region of use.
                      * 
                      */
                     std::string GetPackageRegion() const;
 
                     /**
-                     * 设置Region of the resource pack Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _packageRegion Region of the resource pack Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Resource package region of use.
+                     * @param _packageRegion Resource package region of use.
                      * 
                      */
                     void SetPackageRegion(const std::string& _packageRegion);
@@ -68,15 +68,23 @@ namespace TencentCloud
                     bool PackageRegionHasBeenSet() const;
 
                     /**
-                     * 获取Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PackageType Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the resource package type.
+CCU - compute resource package.
+Storage resource package.
+                     * @return PackageType Specifies the resource package type.
+CCU - compute resource package.
+Storage resource package.
                      * 
                      */
                     std::string GetPackageType() const;
 
                     /**
-                     * 设置Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _packageType Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the resource package type.
+CCU - compute resource package.
+Storage resource package.
+                     * @param _packageType Specifies the resource package type.
+CCU - compute resource package.
+Storage resource package.
                      * 
                      */
                     void SetPackageType(const std::string& _packageType);
@@ -89,15 +97,19 @@ namespace TencentCloud
                     bool PackageTypeHasBeenSet() const;
 
                     /**
-                     * 获取Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition). Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PackageVersion Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition). Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Resource pack version.
+base - basic version; common - general version; enterprise - enterprise edition.
+                     * @return PackageVersion Resource pack version.
+base - basic version; common - general version; enterprise - enterprise edition.
                      * 
                      */
                     std::string GetPackageVersion() const;
 
                     /**
-                     * 设置Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition). Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _packageVersion Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition). Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Resource pack version.
+base - basic version; common - general version; enterprise - enterprise edition.
+                     * @param _packageVersion Resource pack version.
+base - basic version; common - general version; enterprise - enterprise edition.
                      * 
                      */
                     void SetPackageVersion(const std::string& _packageVersion);
@@ -110,15 +122,15 @@ namespace TencentCloud
                     bool PackageVersionHasBeenSet() const;
 
                     /**
-                     * 获取Minimum number of resources for the current edition of the resource pack.  Unit of the compute resources: pcs.  Unit of the storage resources: GB. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MinPackageSpec Minimum number of resources for the current edition of the resource pack.  Unit of the compute resources: pcs.  Unit of the storage resources: GB. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Minimum number of resources in the current version of the resource package. compute resource unit: pieces; storage resource: GB.
+                     * @return MinPackageSpec Minimum number of resources in the current version of the resource package. compute resource unit: pieces; storage resource: GB.
                      * 
                      */
                     double GetMinPackageSpec() const;
 
                     /**
-                     * 设置Minimum number of resources for the current edition of the resource pack.  Unit of the compute resources: pcs.  Unit of the storage resources: GB. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _minPackageSpec Minimum number of resources for the current edition of the resource pack.  Unit of the compute resources: pcs.  Unit of the storage resources: GB. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Minimum number of resources in the current version of the resource package. compute resource unit: pieces; storage resource: GB.
+                     * @param _minPackageSpec Minimum number of resources in the current version of the resource package. compute resource unit: pieces; storage resource: GB.
                      * 
                      */
                     void SetMinPackageSpec(const double& _minPackageSpec);
@@ -131,15 +143,15 @@ namespace TencentCloud
                     bool MinPackageSpecHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of resources for the current edition of the resource pack.  Unit of the compute resources: pcs.  Unit of the storage resources: GB. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MaxPackageSpec Maximum number of resources for the current edition of the resource pack.  Unit of the compute resources: pcs.  Unit of the storage resources: GB. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the maximum number of resources in the current version of the resource package. valid values: compute resource unit: pieces; storage resource: GB.
+                     * @return MaxPackageSpec Specifies the maximum number of resources in the current version of the resource package. valid values: compute resource unit: pieces; storage resource: GB.
                      * 
                      */
                     double GetMaxPackageSpec() const;
 
                     /**
-                     * 设置Maximum number of resources for the current edition of the resource pack.  Unit of the compute resources: pcs.  Unit of the storage resources: GB. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _maxPackageSpec Maximum number of resources for the current edition of the resource pack.  Unit of the compute resources: pcs.  Unit of the storage resources: GB. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the maximum number of resources in the current version of the resource package. valid values: compute resource unit: pieces; storage resource: GB.
+                     * @param _maxPackageSpec Specifies the maximum number of resources in the current version of the resource package. valid values: compute resource unit: pieces; storage resource: GB.
                      * 
                      */
                     void SetMaxPackageSpec(const double& _maxPackageSpec);
@@ -152,15 +164,15 @@ namespace TencentCloud
                     bool MaxPackageSpecHasBeenSet() const;
 
                     /**
-                     * 获取Validity period of a resource pack in days Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExpireDay Validity period of a resource pack in days Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the resource pack validity period. the measurement unit is day.
+                     * @return ExpireDay Specifies the resource pack validity period. the measurement unit is day.
                      * 
                      */
                     int64_t GetExpireDay() const;
 
                     /**
-                     * 设置Validity period of a resource pack in days Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _expireDay Validity period of a resource pack in days Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the resource pack validity period. the measurement unit is day.
+                     * @param _expireDay Specifies the resource pack validity period. the measurement unit is day.
                      * 
                      */
                     void SetExpireDay(const int64_t& _expireDay);
@@ -175,37 +187,40 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Region of the resource pack Note: This field may return null, indicating that no valid values can be obtained.
+                     * Resource package region of use.
                      */
                     std::string m_packageRegion;
                     bool m_packageRegionHasBeenSet;
 
                     /**
-                     * Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the resource package type.
+CCU - compute resource package.
+Storage resource package.
                      */
                     std::string m_packageType;
                     bool m_packageTypeHasBeenSet;
 
                     /**
-                     * Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition). Note: This field may return null, indicating that no valid values can be obtained.
+                     * Resource pack version.
+base - basic version; common - general version; enterprise - enterprise edition.
                      */
                     std::string m_packageVersion;
                     bool m_packageVersionHasBeenSet;
 
                     /**
-                     * Minimum number of resources for the current edition of the resource pack.  Unit of the compute resources: pcs.  Unit of the storage resources: GB. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Minimum number of resources in the current version of the resource package. compute resource unit: pieces; storage resource: GB.
                      */
                     double m_minPackageSpec;
                     bool m_minPackageSpecHasBeenSet;
 
                     /**
-                     * Maximum number of resources for the current edition of the resource pack.  Unit of the compute resources: pcs.  Unit of the storage resources: GB. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the maximum number of resources in the current version of the resource package. valid values: compute resource unit: pieces; storage resource: GB.
                      */
                     double m_maxPackageSpec;
                     bool m_maxPackageSpecHasBeenSet;
 
                     /**
-                     * Validity period of a resource pack in days Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the resource pack validity period. the measurement unit is day.
                      */
                     int64_t m_expireDay;
                     bool m_expireDayHasBeenSet;

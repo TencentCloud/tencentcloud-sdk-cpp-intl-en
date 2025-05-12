@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Audit rule
-                     * @return RuleFilters Audit rule
+                     * 获取A single audit rule.
+                     * @return RuleFilters A single audit rule.
                      * 
                      */
                     std::vector<RuleFilters> GetRuleFilters() const;
 
                     /**
-                     * 设置Audit rule
-                     * @param _ruleFilters Audit rule
+                     * 设置A single audit rule.
+                     * @param _ruleFilters A single audit rule.
                      * 
                      */
                     void SetRuleFilters(const std::vector<RuleFilters>& _ruleFilters);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Audit rule
+                     * A single audit rule.
                      */
                     std::vector<RuleFilters> m_ruleFilters;
                     bool m_ruleFiltersHasBeenSet;

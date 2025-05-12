@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalHasBeenSet() const;
 
                     /**
-                     * 获取Resource pack details Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Detail Resource pack details Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Resource pack details.
+                     * @return Detail Resource pack details.
                      * 
                      */
                     std::vector<Package> GetDetail() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalHasBeenSet;
 
                     /**
-                     * Resource pack details Note: This field may return null, indicating that no valid values can be obtained.
+                     * Resource pack details.
                      */
                     std::vector<Package> m_detail;
                     bool m_detailHasBeenSet;

@@ -278,6 +278,35 @@ namespace TencentCloud
                     bool StatusDescHasBeenSet() const;
 
                     /**
+                     * 获取Serverless instance status. Valid values:
+resume
+pause
+                     * @return ServerlessStatus Serverless instance status. Valid values:
+resume
+pause
+                     * 
+                     */
+                    std::string GetServerlessStatus() const;
+
+                    /**
+                     * 设置Serverless instance status. Valid values:
+resume
+pause
+                     * @param _serverlessStatus Serverless instance status. Valid values:
+resume
+pause
+                     * 
+                     */
+                    void SetServerlessStatus(const std::string& _serverlessStatus);
+
+                    /**
+                     * 判断参数 ServerlessStatus 是否已赋值
+                     * @return ServerlessStatus 是否已赋值
+                     * 
+                     */
+                    bool ServerlessStatusHasBeenSet() const;
+
+                    /**
                      * 获取Database type
                      * @return DbType Database type
                      * 
@@ -740,33 +769,25 @@ namespace TencentCloud
                     bool MaxCpuHasBeenSet() const;
 
                     /**
-                     * 获取Serverless instance status. Valid values:
-resume
-pause
-                     * @return ServerlessStatus Serverless instance status. Valid values:
-resume
-pause
+                     * 获取Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
+                     * @return DbMode Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
                      * 
                      */
-                    std::string GetServerlessStatus() const;
+                    std::string GetDbMode() const;
 
                     /**
-                     * 设置Serverless instance status. Valid values:
-resume
-pause
-                     * @param _serverlessStatus Serverless instance status. Valid values:
-resume
-pause
+                     * 设置Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
+                     * @param _dbMode Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
                      * 
                      */
-                    void SetServerlessStatus(const std::string& _serverlessStatus);
+                    void SetDbMode(const std::string& _dbMode);
 
                     /**
-                     * 判断参数 ServerlessStatus 是否已赋值
-                     * @return ServerlessStatus 是否已赋值
+                     * 判断参数 DbMode 是否已赋值
+                     * @return DbMode 是否已赋值
                      * 
                      */
-                    bool ServerlessStatusHasBeenSet() const;
+                    bool DbModeHasBeenSet() const;
 
                 private:
 
@@ -835,6 +856,14 @@ pause
                      */
                     std::string m_statusDesc;
                     bool m_statusDescHasBeenSet;
+
+                    /**
+                     * Serverless instance status. Valid values:
+resume
+pause
+                     */
+                    std::string m_serverlessStatus;
+                    bool m_serverlessStatusHasBeenSet;
 
                     /**
                      * Database type
@@ -969,12 +998,10 @@ pause
                     bool m_maxCpuHasBeenSet;
 
                     /**
-                     * Serverless instance status. Valid values:
-resume
-pause
+                     * Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
                      */
-                    std::string m_serverlessStatus;
-                    bool m_serverlessStatusHasBeenSet;
+                    std::string m_dbMode;
+                    bool m_dbModeHasBeenSet;
 
                 };
             }

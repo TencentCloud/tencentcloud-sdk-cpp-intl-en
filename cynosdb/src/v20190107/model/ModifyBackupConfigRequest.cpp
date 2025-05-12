@@ -28,7 +28,9 @@ ModifyBackupConfigRequest::ModifyBackupConfigRequest() :
     m_backupTimeEndHasBeenSet(false),
     m_reserveDurationHasBeenSet(false),
     m_backupFreqHasBeenSet(false),
-    m_backupTypeHasBeenSet(false)
+    m_backupTypeHasBeenSet(false),
+    m_logicBackupConfigHasBeenSet(false),
+    m_deleteAutoLogicBackupHasBeenSet(false)
 {
 }
 
@@ -90,6 +92,23 @@ string ModifyBackupConfigRequest::ToJsonString() const
         string key = "BackupType";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_backupType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_logicBackupConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LogicBackupConfig";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_logicBackupConfig.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_deleteAutoLogicBackupHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DeleteAutoLogicBackup";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_deleteAutoLogicBackup, allocator);
     }
 
 
@@ -194,6 +213,38 @@ void ModifyBackupConfigRequest::SetBackupType(const string& _backupType)
 bool ModifyBackupConfigRequest::BackupTypeHasBeenSet() const
 {
     return m_backupTypeHasBeenSet;
+}
+
+LogicBackupConfigInfo ModifyBackupConfigRequest::GetLogicBackupConfig() const
+{
+    return m_logicBackupConfig;
+}
+
+void ModifyBackupConfigRequest::SetLogicBackupConfig(const LogicBackupConfigInfo& _logicBackupConfig)
+{
+    m_logicBackupConfig = _logicBackupConfig;
+    m_logicBackupConfigHasBeenSet = true;
+}
+
+bool ModifyBackupConfigRequest::LogicBackupConfigHasBeenSet() const
+{
+    return m_logicBackupConfigHasBeenSet;
+}
+
+bool ModifyBackupConfigRequest::GetDeleteAutoLogicBackup() const
+{
+    return m_deleteAutoLogicBackup;
+}
+
+void ModifyBackupConfigRequest::SetDeleteAutoLogicBackup(const bool& _deleteAutoLogicBackup)
+{
+    m_deleteAutoLogicBackup = _deleteAutoLogicBackup;
+    m_deleteAutoLogicBackupHasBeenSet = true;
+}
+
+bool ModifyBackupConfigRequest::DeleteAutoLogicBackupHasBeenSet() const
+{
+    return m_deleteAutoLogicBackupHasBeenSet;
 }
 
 

@@ -174,19 +174,15 @@ namespace TencentCloud
                     bool InstanceWeightsHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable read-write node. Valid values: `yes`, `no`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OpenRw Whether to enable read-write node. Valid values: `yes`, `no`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether to enable read-write nodes. valid values: yes, no.
+                     * @return OpenRw Whether to enable read-write nodes. valid values: yes, no.
                      * 
                      */
                     std::string GetOpenRw() const;
 
                     /**
-                     * 设置Whether to enable read-write node. Valid values: `yes`, `no`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _openRw Whether to enable read-write node. Valid values: `yes`, `no`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether to enable read-write nodes. valid values: yes, no.
+                     * @param _openRw Whether to enable read-write nodes. valid values: yes, no.
                      * 
                      */
                     void SetOpenRw(const std::string& _openRw);
@@ -300,8 +296,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_instanceWeightsHasBeenSet;
 
                     /**
-                     * Whether to enable read-write node. Valid values: `yes`, `no`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether to enable read-write nodes. valid values: yes, no.
                      */
                     std::string m_openRw;
                     bool m_openRwHasBeenSet;

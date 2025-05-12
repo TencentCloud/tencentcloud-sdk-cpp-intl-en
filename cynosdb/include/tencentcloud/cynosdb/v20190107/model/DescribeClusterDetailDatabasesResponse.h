@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Database information Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DbInfos Database information Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Database information
+                     * @return DbInfos Database information
                      * 
                      */
                     std::vector<DbInfo> GetDbInfos() const;
@@ -75,7 +75,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Database information Note: This field may return null, indicating that no valid values can be obtained.
+                     * Database information
                      */
                     std::vector<DbInfo> m_dbInfos;
                     bool m_dbInfosHasBeenSet;

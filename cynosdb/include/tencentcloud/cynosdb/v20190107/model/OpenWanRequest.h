@@ -45,21 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Instance group ID
                      * @return InstanceGrpId Instance group ID
-                     * 
+                     * @deprecated
                      */
                     std::string GetInstanceGrpId() const;
 
                     /**
                      * 设置Instance group ID
                      * @param _instanceGrpId Instance group ID
-                     * 
+                     * @deprecated
                      */
                     void SetInstanceGrpId(const std::string& _instanceGrpId);
 
                     /**
                      * 判断参数 InstanceGrpId 是否已赋值
                      * @return InstanceGrpId 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool InstanceGrpIdHasBeenSet() const;
 

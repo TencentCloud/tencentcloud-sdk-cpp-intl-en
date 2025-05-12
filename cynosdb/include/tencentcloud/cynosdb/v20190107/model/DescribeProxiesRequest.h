@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取Cluster ID (this parameter is required. for example, cynosdbmysql-2u2mh111).
+                     * @return ClusterId Cluster ID (this parameter is required. for example, cynosdbmysql-2u2mh111).
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置Cluster ID (this parameter is required. for example, cynosdbmysql-2u2mh111).
+                     * @param _clusterId Cluster ID (this parameter is required. for example, cynosdbmysql-2u2mh111).
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -188,7 +188,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID
+                     * Cluster ID (this parameter is required. for example, cynosdbmysql-2u2mh111).
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;

@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Whether `ParamType` is a `func` Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsFunc Whether `ParamType` is a `func` Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether the type is a formula.
+                     * @return IsFunc Whether the type is a formula.
                      * 
                      */
                     bool GetIsFunc() const;
 
                     /**
-                     * 设置Whether `ParamType` is a `func` Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isFunc Whether `ParamType` is a `func` Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether the type is a formula.
+                     * @param _isFunc Whether the type is a formula.
                      * 
                      */
                     void SetIsFunc(const bool& _isFunc);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool IsFuncHasBeenSet() const;
 
                     /**
-                     * 获取Parameter configuration formula Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Func Parameter configuration formula Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Parameter configuration formula.
+                     * @return Func Parameter configuration formula.
                      * 
                      */
                     std::string GetFunc() const;
 
                     /**
-                     * 设置Parameter configuration formula Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _func Parameter configuration formula Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Parameter configuration formula.
+                     * @param _func Parameter configuration formula.
                      * 
                      */
                     void SetFunc(const std::string& _func);
@@ -297,6 +297,27 @@ namespace TencentCloud
                      * 
                      */
                     bool FuncHasBeenSet() const;
+
+                    /**
+                     * 获取The default formula style of parameters that support formulas.
+                     * @return FuncPattern The default formula style of parameters that support formulas.
+                     * 
+                     */
+                    std::string GetFuncPattern() const;
+
+                    /**
+                     * 设置The default formula style of parameters that support formulas.
+                     * @param _funcPattern The default formula style of parameters that support formulas.
+                     * 
+                     */
+                    void SetFuncPattern(const std::string& _funcPattern);
+
+                    /**
+                     * 判断参数 FuncPattern 是否已赋值
+                     * @return FuncPattern 是否已赋值
+                     * 
+                     */
+                    bool FuncPatternHasBeenSet() const;
 
                 private:
 
@@ -361,16 +382,22 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Whether `ParamType` is a `func` Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether the type is a formula.
                      */
                     bool m_isFunc;
                     bool m_isFuncHasBeenSet;
 
                     /**
-                     * Parameter configuration formula Note: This field may return null, indicating that no valid values can be obtained.
+                     * Parameter configuration formula.
                      */
                     std::string m_func;
                     bool m_funcHasBeenSet;
+
+                    /**
+                     * The default formula style of parameters that support formulas.
+                     */
+                    std::string m_funcPattern;
+                    bool m_funcPatternHasBeenSet;
 
                 };
             }

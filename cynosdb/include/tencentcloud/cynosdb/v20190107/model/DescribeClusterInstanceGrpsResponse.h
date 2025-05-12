@@ -61,14 +61,14 @@ namespace TencentCloud
                     /**
                      * 获取Instance group list
                      * @return InstanceGrpInfoList Instance group list
-                     * 
+                     * @deprecated
                      */
                     std::vector<CynosdbInstanceGrp> GetInstanceGrpInfoList() const;
 
                     /**
                      * 判断参数 InstanceGrpInfoList 是否已赋值
                      * @return InstanceGrpInfoList 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool InstanceGrpInfoListHasBeenSet() const;
 

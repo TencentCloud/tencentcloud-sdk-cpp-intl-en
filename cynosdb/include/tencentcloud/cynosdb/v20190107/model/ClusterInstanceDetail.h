@@ -237,19 +237,15 @@ namespace TencentCloud
                     bool InstanceRoleHasBeenSet() const;
 
                     /**
-                     * 获取Execution start time in seconds from 0:00	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MaintainStartTime Execution start time in seconds from 0:00	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Execution start time (seconds from 0 o'clock).	
+                     * @return MaintainStartTime Execution start time (seconds from 0 o'clock).	
                      * 
                      */
                     int64_t GetMaintainStartTime() const;
 
                     /**
-                     * 设置Execution start time in seconds from 0:00	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _maintainStartTime Execution start time in seconds from 0:00	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Execution start time (seconds from 0 o'clock).	
+                     * @param _maintainStartTime Execution start time (seconds from 0 o'clock).	
                      * 
                      */
                     void SetMaintainStartTime(const int64_t& _maintainStartTime);
@@ -262,19 +258,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MaintainStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Duration in seconds	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MaintainDuration Duration in seconds	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the continuous time. the unit is second.	
+                     * @return MaintainDuration Specifies the continuous time. the unit is second.	
                      * 
                      */
                     int64_t GetMaintainDuration() const;
 
                     /**
-                     * 设置Duration in seconds	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _maintainDuration Duration in seconds	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the continuous time. the unit is second.	
+                     * @param _maintainDuration Specifies the continuous time. the unit is second.	
                      * 
                      */
                     void SetMaintainDuration(const int64_t& _maintainDuration);
@@ -287,19 +279,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MaintainDurationHasBeenSet() const;
 
                     /**
-                     * 获取Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MaintainWeekDays Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
+                     * @return MaintainWeekDays Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
                      * 
                      */
                     std::vector<std::string> GetMaintainWeekDays() const;
 
                     /**
-                     * 设置Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _maintainWeekDays Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
+                     * @param _maintainWeekDays Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
                      * 
                      */
                     void SetMaintainWeekDays(const std::vector<std::string>& _maintainWeekDays);
@@ -312,19 +300,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MaintainWeekDaysHasBeenSet() const;
 
                     /**
-                     * 获取Serverless instance enablement status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ServerlessStatus Serverless instance enablement status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取serverless instance substatus.
+                     * @return ServerlessStatus serverless instance substatus.
                      * 
                      */
                     std::string GetServerlessStatus() const;
 
                     /**
-                     * 设置Serverless instance enablement status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _serverlessStatus Serverless instance enablement status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置serverless instance substatus.
+                     * @param _serverlessStatus serverless instance substatus.
                      * 
                      */
                     void SetServerlessStatus(const std::string& _serverlessStatus);
@@ -337,15 +321,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ServerlessStatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceTasks 
+                     * 获取Instance task information.
+                     * @return InstanceTasks Instance task information.
                      * 
                      */
                     std::vector<ObjectTask> GetInstanceTasks() const;
 
                     /**
-                     * 设置
-                     * @param _instanceTasks 
+                     * 设置Instance task information.
+                     * @param _instanceTasks Instance task information.
                      * 
                      */
                     void SetInstanceTasks(const std::vector<ObjectTask>& _instanceTasks);
@@ -358,15 +342,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceTasksHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceDeviceType 
+                     * 获取Instance machine type.
+                     * @return InstanceDeviceType Instance machine type.
                      * 
                      */
                     std::string GetInstanceDeviceType() const;
 
                     /**
-                     * 设置
-                     * @param _instanceDeviceType 
+                     * 设置Instance machine type.
+                     * @param _instanceDeviceType Instance machine type.
                      * 
                      */
                     void SetInstanceDeviceType(const std::string& _instanceDeviceType);
@@ -377,6 +361,69 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool InstanceDeviceTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Instance storage type.
+                     * @return InstanceStorageType Instance storage type.
+                     * 
+                     */
+                    std::string GetInstanceStorageType() const;
+
+                    /**
+                     * 设置Instance storage type.
+                     * @param _instanceStorageType Instance storage type.
+                     * 
+                     */
+                    void SetInstanceStorageType(const std::string& _instanceStorageType);
+
+                    /**
+                     * 判断参数 InstanceStorageType 是否已赋值
+                     * @return InstanceStorageType 是否已赋值
+                     * 
+                     */
+                    bool InstanceStorageTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Database type.
+                     * @return DbMode Database type.
+                     * 
+                     */
+                    std::string GetDbMode() const;
+
+                    /**
+                     * 设置Database type.
+                     * @param _dbMode Database type.
+                     * 
+                     */
+                    void SetDbMode(const std::string& _dbMode);
+
+                    /**
+                     * 判断参数 DbMode 是否已赋值
+                     * @return DbMode 是否已赋值
+                     * 
+                     */
+                    bool DbModeHasBeenSet() const;
+
+                    /**
+                     * 获取Node list
+                     * @return NodeList Node list
+                     * 
+                     */
+                    std::vector<std::string> GetNodeList() const;
+
+                    /**
+                     * 设置Node list
+                     * @param _nodeList Node list
+                     * 
+                     */
+                    void SetNodeList(const std::vector<std::string>& _nodeList);
+
+                    /**
+                     * 判断参数 NodeList 是否已赋值
+                     * @return NodeList 是否已赋值
+                     * 
+                     */
+                    bool NodeListHasBeenSet() const;
 
                 private:
 
@@ -435,44 +482,58 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_instanceRoleHasBeenSet;
 
                     /**
-                     * Execution start time in seconds from 0:00	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Execution start time (seconds from 0 o'clock).	
                      */
                     int64_t m_maintainStartTime;
                     bool m_maintainStartTimeHasBeenSet;
 
                     /**
-                     * Duration in seconds	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the continuous time. the unit is second.	
                      */
                     int64_t m_maintainDuration;
                     bool m_maintainDurationHasBeenSet;
 
                     /**
-                     * Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
                      */
                     std::vector<std::string> m_maintainWeekDays;
                     bool m_maintainWeekDaysHasBeenSet;
 
                     /**
-                     * Serverless instance enablement status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * serverless instance substatus.
                      */
                     std::string m_serverlessStatus;
                     bool m_serverlessStatusHasBeenSet;
 
                     /**
-                     * 
+                     * Instance task information.
                      */
                     std::vector<ObjectTask> m_instanceTasks;
                     bool m_instanceTasksHasBeenSet;
 
                     /**
-                     * 
+                     * Instance machine type.
                      */
                     std::string m_instanceDeviceType;
                     bool m_instanceDeviceTypeHasBeenSet;
+
+                    /**
+                     * Instance storage type.
+                     */
+                    std::string m_instanceStorageType;
+                    bool m_instanceStorageTypeHasBeenSet;
+
+                    /**
+                     * Database type.
+                     */
+                    std::string m_dbMode;
+                    bool m_dbModeHasBeenSet;
+
+                    /**
+                     * Node list
+                     */
+                    std::vector<std::string> m_nodeList;
+                    bool m_nodeListHasBeenSet;
 
                 };
             }

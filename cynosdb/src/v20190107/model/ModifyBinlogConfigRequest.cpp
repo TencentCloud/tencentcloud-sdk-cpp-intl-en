@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/cynosdb/v20190107/model/DescribeRollbackTimeValidityRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/ModifyBinlogConfigRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -22,14 +22,13 @@
 using namespace TencentCloud::Cynosdb::V20190107::Model;
 using namespace std;
 
-DescribeRollbackTimeValidityRequest::DescribeRollbackTimeValidityRequest() :
+ModifyBinlogConfigRequest::ModifyBinlogConfigRequest() :
     m_clusterIdHasBeenSet(false),
-    m_expectTimeHasBeenSet(false),
-    m_expectTimeThreshHasBeenSet(false)
+    m_binlogConfigHasBeenSet(false)
 {
 }
 
-string DescribeRollbackTimeValidityRequest::ToJsonString() const
+string ModifyBinlogConfigRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
@@ -44,20 +43,13 @@ string DescribeRollbackTimeValidityRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_clusterId.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_expectTimeHasBeenSet)
+    if (m_binlogConfigHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "ExpectTime";
+        string key = "BinlogConfig";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_expectTime.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_expectTimeThreshHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "ExpectTimeThresh";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_expectTimeThresh, allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_binlogConfig.ToJsonObject(d[key.c_str()], allocator);
     }
 
 
@@ -68,52 +60,36 @@ string DescribeRollbackTimeValidityRequest::ToJsonString() const
 }
 
 
-string DescribeRollbackTimeValidityRequest::GetClusterId() const
+string ModifyBinlogConfigRequest::GetClusterId() const
 {
     return m_clusterId;
 }
 
-void DescribeRollbackTimeValidityRequest::SetClusterId(const string& _clusterId)
+void ModifyBinlogConfigRequest::SetClusterId(const string& _clusterId)
 {
     m_clusterId = _clusterId;
     m_clusterIdHasBeenSet = true;
 }
 
-bool DescribeRollbackTimeValidityRequest::ClusterIdHasBeenSet() const
+bool ModifyBinlogConfigRequest::ClusterIdHasBeenSet() const
 {
     return m_clusterIdHasBeenSet;
 }
 
-string DescribeRollbackTimeValidityRequest::GetExpectTime() const
+BinlogConfigInfo ModifyBinlogConfigRequest::GetBinlogConfig() const
 {
-    return m_expectTime;
+    return m_binlogConfig;
 }
 
-void DescribeRollbackTimeValidityRequest::SetExpectTime(const string& _expectTime)
+void ModifyBinlogConfigRequest::SetBinlogConfig(const BinlogConfigInfo& _binlogConfig)
 {
-    m_expectTime = _expectTime;
-    m_expectTimeHasBeenSet = true;
+    m_binlogConfig = _binlogConfig;
+    m_binlogConfigHasBeenSet = true;
 }
 
-bool DescribeRollbackTimeValidityRequest::ExpectTimeHasBeenSet() const
+bool ModifyBinlogConfigRequest::BinlogConfigHasBeenSet() const
 {
-    return m_expectTimeHasBeenSet;
-}
-
-uint64_t DescribeRollbackTimeValidityRequest::GetExpectTimeThresh() const
-{
-    return m_expectTimeThresh;
-}
-
-void DescribeRollbackTimeValidityRequest::SetExpectTimeThresh(const uint64_t& _expectTimeThresh)
-{
-    m_expectTimeThresh = _expectTimeThresh;
-    m_expectTimeThreshHasBeenSet = true;
-}
-
-bool DescribeRollbackTimeValidityRequest::ExpectTimeThreshHasBeenSet() const
-{
-    return m_expectTimeThreshHasBeenSet;
+    return m_binlogConfigHasBeenSet;
 }
 
 

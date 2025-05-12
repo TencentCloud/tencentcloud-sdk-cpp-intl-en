@@ -216,19 +216,15 @@ namespace TencentCloud
                     bool MaxIoBandWidthHasBeenSet() const;
 
                     /**
-                     * 获取Inventory information in a region
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ZoneStockInfos Inventory information in a region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Regional inventory information.
+                     * @return ZoneStockInfos Regional inventory information.
                      * 
                      */
                     std::vector<ZoneStockInfo> GetZoneStockInfos() const;
 
                     /**
-                     * 设置Inventory information in a region
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _zoneStockInfos Inventory information in a region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Regional inventory information.
+                     * @param _zoneStockInfos Regional inventory information.
                      * 
                      */
                     void SetZoneStockInfos(const std::vector<ZoneStockInfo>& _zoneStockInfos);
@@ -241,19 +237,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ZoneStockInfosHasBeenSet() const;
 
                     /**
-                     * 获取Quantity in stock
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StockCount Quantity in stock
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Inventory quantity.
+                     * @return StockCount Inventory quantity.
                      * 
                      */
                     int64_t GetStockCount() const;
 
                     /**
-                     * 设置Quantity in stock
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _stockCount Quantity in stock
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Inventory quantity.
+                     * @param _stockCount Inventory quantity.
                      * 
                      */
                     void SetStockCount(const int64_t& _stockCount);
@@ -316,15 +308,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_maxIoBandWidthHasBeenSet;
 
                     /**
-                     * Inventory information in a region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Regional inventory information.
                      */
                     std::vector<ZoneStockInfo> m_zoneStockInfos;
                     bool m_zoneStockInfosHasBeenSet;
 
                     /**
-                     * Quantity in stock
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Inventory quantity.
                      */
                     int64_t m_stockCount;
                     bool m_stockCountHasBeenSet;

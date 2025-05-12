@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cynosdb/v20190107/model/SlaveZoneStockInfo.h>
 
 
 namespace TencentCloud
@@ -109,6 +110,27 @@ namespace TencentCloud
                      */
                     bool StockCountHasBeenSet() const;
 
+                    /**
+                     * 获取Available zone inventory information.
+                     * @return SlaveZoneStockInfos Available zone inventory information.
+                     * 
+                     */
+                    std::vector<SlaveZoneStockInfo> GetSlaveZoneStockInfos() const;
+
+                    /**
+                     * 设置Available zone inventory information.
+                     * @param _slaveZoneStockInfos Available zone inventory information.
+                     * 
+                     */
+                    void SetSlaveZoneStockInfos(const std::vector<SlaveZoneStockInfo>& _slaveZoneStockInfos);
+
+                    /**
+                     * 判断参数 SlaveZoneStockInfos 是否已赋值
+                     * @return SlaveZoneStockInfos 是否已赋值
+                     * 
+                     */
+                    bool SlaveZoneStockInfosHasBeenSet() const;
+
                 private:
 
                     /**
@@ -128,6 +150,12 @@ namespace TencentCloud
                      */
                     int64_t m_stockCount;
                     bool m_stockCountHasBeenSet;
+
+                    /**
+                     * Available zone inventory information.
+                     */
+                    std::vector<SlaveZoneStockInfo> m_slaveZoneStockInfos;
+                    bool m_slaveZoneStockInfosHasBeenSet;
 
                 };
             }

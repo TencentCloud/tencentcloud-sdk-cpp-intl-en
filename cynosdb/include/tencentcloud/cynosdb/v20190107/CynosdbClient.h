@@ -37,6 +37,10 @@
 #include <tencentcloud/cynosdb/v20190107/model/CloseClusterPasswordComplexityResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/CloseProxyRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/CloseProxyResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/CloseProxyEndPointRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/CloseProxyEndPointResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/CloseSSLRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/CloseSSLResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/CloseWanRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/CloseWanResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/CopyClusterPasswordComplexityRequest.h>
@@ -83,12 +87,16 @@
 #include <tencentcloud/cynosdb/v20190107/model/DescribeBackupDownloadUrlResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeBackupListRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeBackupListResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeBinlogConfigRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeBinlogConfigResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeBinlogDownloadUrlRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeBinlogDownloadUrlResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeBinlogSaveDaysRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeBinlogSaveDaysResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeBinlogsRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeBinlogsResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeClusterDatabaseTablesRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeClusterDatabaseTablesResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeClusterDetailRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeClusterDetailResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeClusterDetailDatabasesRequest.h>
@@ -99,6 +107,8 @@
 #include <tencentcloud/cynosdb/v20190107/model/DescribeClusterParamsResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeClusterPasswordComplexityRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeClusterPasswordComplexityResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeClusterTransparentEncryptInfoRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeClusterTransparentEncryptInfoResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeClustersRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeClustersResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeDBSecurityGroupsRequest.h>
@@ -117,6 +127,10 @@
 #include <tencentcloud/cynosdb/v20190107/model/DescribeInstanceSpecsResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeInstancesRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeInstancesResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeInstancesWithinSameClusterRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeInstancesWithinSameClusterResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeIsolatedInstancesRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeIsolatedInstancesResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeMaintainPeriodRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeMaintainPeriodResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeParamTemplateDetailRequest.h>
@@ -141,8 +155,12 @@
 #include <tencentcloud/cynosdb/v20190107/model/DescribeResourcesByDealNameResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeRollbackTimeRangeRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeRollbackTimeRangeResponse.h>
-#include <tencentcloud/cynosdb/v20190107/model/DescribeRollbackTimeValidityRequest.h>
-#include <tencentcloud/cynosdb/v20190107/model/DescribeRollbackTimeValidityResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeServerlessInstanceSpecsRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeServerlessInstanceSpecsResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeServerlessStrategyRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeServerlessStrategyResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeSlaveZonesRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeSlaveZonesResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeSupportProxyVersionRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeSupportProxyVersionResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeZonesRequest.h>
@@ -151,8 +169,12 @@
 #include <tencentcloud/cynosdb/v20190107/model/ExportInstanceErrorLogsResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/ExportInstanceSlowQueriesRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/ExportInstanceSlowQueriesResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/ExportResourcePackageDeductDetailsRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/ExportResourcePackageDeductDetailsResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/InquirePriceCreateRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/InquirePriceCreateResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/InquirePriceModifyRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/InquirePriceModifyResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/InquirePriceRenewRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/InquirePriceRenewResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/IsolateClusterRequest.h>
@@ -173,6 +195,8 @@
 #include <tencentcloud/cynosdb/v20190107/model/ModifyBackupConfigResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/ModifyBackupNameRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/ModifyBackupNameResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/ModifyBinlogConfigRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/ModifyBinlogConfigResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/ModifyBinlogSaveDaysRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/ModifyBinlogSaveDaysResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/ModifyClusterDatabaseRequest.h>
@@ -203,6 +227,10 @@
 #include <tencentcloud/cynosdb/v20190107/model/ModifyResourcePackageClustersResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/ModifyResourcePackageNameRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/ModifyResourcePackageNameResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/ModifyResourcePackagesDeductionPriorityRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/ModifyResourcePackagesDeductionPriorityResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/ModifyServerlessStrategyRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/ModifyServerlessStrategyResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/ModifyVipVportRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/ModifyVipVportResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/OfflineClusterRequest.h>
@@ -215,6 +243,8 @@
 #include <tencentcloud/cynosdb/v20190107/model/OpenClusterPasswordComplexityResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/OpenClusterReadOnlyInstanceGroupAccessRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/OpenClusterReadOnlyInstanceGroupAccessResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/OpenClusterTransparentEncryptRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/OpenClusterTransparentEncryptResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/OpenReadOnlyInstanceExclusiveAccessRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/OpenReadOnlyInstanceExclusiveAccessResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/OpenWanRequest.h>
@@ -290,6 +320,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CloseProxyResponse> CloseProxyOutcome;
                 typedef std::future<CloseProxyOutcome> CloseProxyOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::CloseProxyRequest&, CloseProxyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloseProxyAsyncHandler;
+                typedef Outcome<Core::Error, Model::CloseProxyEndPointResponse> CloseProxyEndPointOutcome;
+                typedef std::future<CloseProxyEndPointOutcome> CloseProxyEndPointOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::CloseProxyEndPointRequest&, CloseProxyEndPointOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloseProxyEndPointAsyncHandler;
+                typedef Outcome<Core::Error, Model::CloseSSLResponse> CloseSSLOutcome;
+                typedef std::future<CloseSSLOutcome> CloseSSLOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::CloseSSLRequest&, CloseSSLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloseSSLAsyncHandler;
                 typedef Outcome<Core::Error, Model::CloseWanResponse> CloseWanOutcome;
                 typedef std::future<CloseWanOutcome> CloseWanOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::CloseWanRequest&, CloseWanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloseWanAsyncHandler;
@@ -359,6 +395,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeBackupListResponse> DescribeBackupListOutcome;
                 typedef std::future<DescribeBackupListOutcome> DescribeBackupListOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::DescribeBackupListRequest&, DescribeBackupListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBackupListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBinlogConfigResponse> DescribeBinlogConfigOutcome;
+                typedef std::future<DescribeBinlogConfigOutcome> DescribeBinlogConfigOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::DescribeBinlogConfigRequest&, DescribeBinlogConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBinlogConfigAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeBinlogDownloadUrlResponse> DescribeBinlogDownloadUrlOutcome;
                 typedef std::future<DescribeBinlogDownloadUrlOutcome> DescribeBinlogDownloadUrlOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::DescribeBinlogDownloadUrlRequest&, DescribeBinlogDownloadUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBinlogDownloadUrlAsyncHandler;
@@ -368,6 +407,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeBinlogsResponse> DescribeBinlogsOutcome;
                 typedef std::future<DescribeBinlogsOutcome> DescribeBinlogsOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::DescribeBinlogsRequest&, DescribeBinlogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBinlogsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeClusterDatabaseTablesResponse> DescribeClusterDatabaseTablesOutcome;
+                typedef std::future<DescribeClusterDatabaseTablesOutcome> DescribeClusterDatabaseTablesOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::DescribeClusterDatabaseTablesRequest&, DescribeClusterDatabaseTablesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClusterDatabaseTablesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeClusterDetailResponse> DescribeClusterDetailOutcome;
                 typedef std::future<DescribeClusterDetailOutcome> DescribeClusterDetailOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::DescribeClusterDetailRequest&, DescribeClusterDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClusterDetailAsyncHandler;
@@ -383,6 +425,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeClusterPasswordComplexityResponse> DescribeClusterPasswordComplexityOutcome;
                 typedef std::future<DescribeClusterPasswordComplexityOutcome> DescribeClusterPasswordComplexityOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::DescribeClusterPasswordComplexityRequest&, DescribeClusterPasswordComplexityOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClusterPasswordComplexityAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeClusterTransparentEncryptInfoResponse> DescribeClusterTransparentEncryptInfoOutcome;
+                typedef std::future<DescribeClusterTransparentEncryptInfoOutcome> DescribeClusterTransparentEncryptInfoOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::DescribeClusterTransparentEncryptInfoRequest&, DescribeClusterTransparentEncryptInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClusterTransparentEncryptInfoAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeClustersResponse> DescribeClustersOutcome;
                 typedef std::future<DescribeClustersOutcome> DescribeClustersOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::DescribeClustersRequest&, DescribeClustersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClustersAsyncHandler;
@@ -410,6 +455,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeInstancesResponse> DescribeInstancesOutcome;
                 typedef std::future<DescribeInstancesOutcome> DescribeInstancesOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::DescribeInstancesRequest&, DescribeInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeInstancesWithinSameClusterResponse> DescribeInstancesWithinSameClusterOutcome;
+                typedef std::future<DescribeInstancesWithinSameClusterOutcome> DescribeInstancesWithinSameClusterOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::DescribeInstancesWithinSameClusterRequest&, DescribeInstancesWithinSameClusterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstancesWithinSameClusterAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeIsolatedInstancesResponse> DescribeIsolatedInstancesOutcome;
+                typedef std::future<DescribeIsolatedInstancesOutcome> DescribeIsolatedInstancesOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::DescribeIsolatedInstancesRequest&, DescribeIsolatedInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIsolatedInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMaintainPeriodResponse> DescribeMaintainPeriodOutcome;
                 typedef std::future<DescribeMaintainPeriodOutcome> DescribeMaintainPeriodOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::DescribeMaintainPeriodRequest&, DescribeMaintainPeriodOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMaintainPeriodAsyncHandler;
@@ -446,9 +497,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeRollbackTimeRangeResponse> DescribeRollbackTimeRangeOutcome;
                 typedef std::future<DescribeRollbackTimeRangeOutcome> DescribeRollbackTimeRangeOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::DescribeRollbackTimeRangeRequest&, DescribeRollbackTimeRangeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRollbackTimeRangeAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeRollbackTimeValidityResponse> DescribeRollbackTimeValidityOutcome;
-                typedef std::future<DescribeRollbackTimeValidityOutcome> DescribeRollbackTimeValidityOutcomeCallable;
-                typedef std::function<void(const CynosdbClient*, const Model::DescribeRollbackTimeValidityRequest&, DescribeRollbackTimeValidityOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRollbackTimeValidityAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeServerlessInstanceSpecsResponse> DescribeServerlessInstanceSpecsOutcome;
+                typedef std::future<DescribeServerlessInstanceSpecsOutcome> DescribeServerlessInstanceSpecsOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::DescribeServerlessInstanceSpecsRequest&, DescribeServerlessInstanceSpecsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeServerlessInstanceSpecsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeServerlessStrategyResponse> DescribeServerlessStrategyOutcome;
+                typedef std::future<DescribeServerlessStrategyOutcome> DescribeServerlessStrategyOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::DescribeServerlessStrategyRequest&, DescribeServerlessStrategyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeServerlessStrategyAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSlaveZonesResponse> DescribeSlaveZonesOutcome;
+                typedef std::future<DescribeSlaveZonesOutcome> DescribeSlaveZonesOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::DescribeSlaveZonesRequest&, DescribeSlaveZonesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSlaveZonesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeSupportProxyVersionResponse> DescribeSupportProxyVersionOutcome;
                 typedef std::future<DescribeSupportProxyVersionOutcome> DescribeSupportProxyVersionOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::DescribeSupportProxyVersionRequest&, DescribeSupportProxyVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSupportProxyVersionAsyncHandler;
@@ -461,9 +518,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ExportInstanceSlowQueriesResponse> ExportInstanceSlowQueriesOutcome;
                 typedef std::future<ExportInstanceSlowQueriesOutcome> ExportInstanceSlowQueriesOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::ExportInstanceSlowQueriesRequest&, ExportInstanceSlowQueriesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExportInstanceSlowQueriesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ExportResourcePackageDeductDetailsResponse> ExportResourcePackageDeductDetailsOutcome;
+                typedef std::future<ExportResourcePackageDeductDetailsOutcome> ExportResourcePackageDeductDetailsOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::ExportResourcePackageDeductDetailsRequest&, ExportResourcePackageDeductDetailsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExportResourcePackageDeductDetailsAsyncHandler;
                 typedef Outcome<Core::Error, Model::InquirePriceCreateResponse> InquirePriceCreateOutcome;
                 typedef std::future<InquirePriceCreateOutcome> InquirePriceCreateOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::InquirePriceCreateRequest&, InquirePriceCreateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquirePriceCreateAsyncHandler;
+                typedef Outcome<Core::Error, Model::InquirePriceModifyResponse> InquirePriceModifyOutcome;
+                typedef std::future<InquirePriceModifyOutcome> InquirePriceModifyOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::InquirePriceModifyRequest&, InquirePriceModifyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquirePriceModifyAsyncHandler;
                 typedef Outcome<Core::Error, Model::InquirePriceRenewResponse> InquirePriceRenewOutcome;
                 typedef std::future<InquirePriceRenewOutcome> InquirePriceRenewOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::InquirePriceRenewRequest&, InquirePriceRenewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquirePriceRenewAsyncHandler;
@@ -494,6 +557,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyBackupNameResponse> ModifyBackupNameOutcome;
                 typedef std::future<ModifyBackupNameOutcome> ModifyBackupNameOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::ModifyBackupNameRequest&, ModifyBackupNameOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBackupNameAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyBinlogConfigResponse> ModifyBinlogConfigOutcome;
+                typedef std::future<ModifyBinlogConfigOutcome> ModifyBinlogConfigOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::ModifyBinlogConfigRequest&, ModifyBinlogConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBinlogConfigAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyBinlogSaveDaysResponse> ModifyBinlogSaveDaysOutcome;
                 typedef std::future<ModifyBinlogSaveDaysOutcome> ModifyBinlogSaveDaysOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::ModifyBinlogSaveDaysRequest&, ModifyBinlogSaveDaysOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBinlogSaveDaysAsyncHandler;
@@ -539,6 +605,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyResourcePackageNameResponse> ModifyResourcePackageNameOutcome;
                 typedef std::future<ModifyResourcePackageNameOutcome> ModifyResourcePackageNameOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::ModifyResourcePackageNameRequest&, ModifyResourcePackageNameOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyResourcePackageNameAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyResourcePackagesDeductionPriorityResponse> ModifyResourcePackagesDeductionPriorityOutcome;
+                typedef std::future<ModifyResourcePackagesDeductionPriorityOutcome> ModifyResourcePackagesDeductionPriorityOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::ModifyResourcePackagesDeductionPriorityRequest&, ModifyResourcePackagesDeductionPriorityOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyResourcePackagesDeductionPriorityAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyServerlessStrategyResponse> ModifyServerlessStrategyOutcome;
+                typedef std::future<ModifyServerlessStrategyOutcome> ModifyServerlessStrategyOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::ModifyServerlessStrategyRequest&, ModifyServerlessStrategyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyServerlessStrategyAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyVipVportResponse> ModifyVipVportOutcome;
                 typedef std::future<ModifyVipVportOutcome> ModifyVipVportOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::ModifyVipVportRequest&, ModifyVipVportOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyVipVportAsyncHandler;
@@ -557,6 +629,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::OpenClusterReadOnlyInstanceGroupAccessResponse> OpenClusterReadOnlyInstanceGroupAccessOutcome;
                 typedef std::future<OpenClusterReadOnlyInstanceGroupAccessOutcome> OpenClusterReadOnlyInstanceGroupAccessOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::OpenClusterReadOnlyInstanceGroupAccessRequest&, OpenClusterReadOnlyInstanceGroupAccessOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OpenClusterReadOnlyInstanceGroupAccessAsyncHandler;
+                typedef Outcome<Core::Error, Model::OpenClusterTransparentEncryptResponse> OpenClusterTransparentEncryptOutcome;
+                typedef std::future<OpenClusterTransparentEncryptOutcome> OpenClusterTransparentEncryptOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::OpenClusterTransparentEncryptRequest&, OpenClusterTransparentEncryptOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OpenClusterTransparentEncryptAsyncHandler;
                 typedef Outcome<Core::Error, Model::OpenReadOnlyInstanceExclusiveAccessResponse> OpenReadOnlyInstanceExclusiveAccessOutcome;
                 typedef std::future<OpenReadOnlyInstanceExclusiveAccessOutcome> OpenReadOnlyInstanceExclusiveAccessOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::OpenReadOnlyInstanceExclusiveAccessRequest&, OpenReadOnlyInstanceExclusiveAccessOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OpenReadOnlyInstanceExclusiveAccessAsyncHandler;
@@ -621,7 +696,7 @@ namespace TencentCloud
 
 
                 /**
-                 *This API is used to remove the isolation of an instance to make it accessible again.
+                 *This interface (ActivateInstance) restores access to isolated instances.
                  * @param req ActivateInstanceRequest
                  * @return ActivateInstanceOutcome
                  */
@@ -630,7 +705,7 @@ namespace TencentCloud
                 ActivateInstanceOutcomeCallable ActivateInstanceCallable(const Model::ActivateInstanceRequest& request);
 
                 /**
-                 *This API is used to add the replica AZ.
+                 *This interface (AddClusterSlaveZone) is used to enable multi-az deployment for a cluster.
                  * @param req AddClusterSlaveZoneRequest
                  * @return AddClusterSlaveZoneOutcome
                  */
@@ -639,7 +714,7 @@ namespace TencentCloud
                 AddClusterSlaveZoneOutcomeCallable AddClusterSlaveZoneCallable(const Model::AddClusterSlaveZoneRequest& request);
 
                 /**
-                 *This API is used to add an instance in a cluster.
+                 *This API is used to add instances to a cluster.
                  * @param req AddInstancesRequest
                  * @return AddInstancesOutcome
                  */
@@ -648,7 +723,7 @@ namespace TencentCloud
                 AddInstancesOutcomeCallable AddInstancesCallable(const Model::AddInstancesRequest& request);
 
                 /**
-                 *This API is used to bind a resource pack to a cluster.
+                 *This API is used to bind resource packages to a cluster.
                  * @param req BindClusterResourcePackagesRequest
                  * @return BindClusterResourcePackagesOutcome
                  */
@@ -657,7 +732,7 @@ namespace TencentCloud
                 BindClusterResourcePackagesOutcomeCallable BindClusterResourcePackagesCallable(const Model::BindClusterResourcePackagesRequest& request);
 
                 /**
-                 *This API is used to disable the audit service for a TDSQL-C for MySQL instance.
+                 *This API is used to close the database audit service for TDSQL-C MySQL instances.
                  * @param req CloseAuditServiceRequest
                  * @return CloseAuditServiceOutcome
                  */
@@ -666,7 +741,7 @@ namespace TencentCloud
                 CloseAuditServiceOutcomeCallable CloseAuditServiceCallable(const Model::CloseAuditServiceRequest& request);
 
                 /**
-                 *This API is used to disable the password complexity for a cluster.
+                 *This API is used to close cluster password complexity.
                  * @param req CloseClusterPasswordComplexityRequest
                  * @return CloseClusterPasswordComplexityOutcome
                  */
@@ -675,7 +750,7 @@ namespace TencentCloud
                 CloseClusterPasswordComplexityOutcomeCallable CloseClusterPasswordComplexityCallable(const Model::CloseClusterPasswordComplexityRequest& request);
 
                 /**
-                 *This API is used to disable the database proxy.
+                 *This API is used to close the database proxy service of a cluster.
                  * @param req CloseProxyRequest
                  * @return CloseProxyOutcome
                  */
@@ -684,7 +759,25 @@ namespace TencentCloud
                 CloseProxyOutcomeCallable CloseProxyCallable(const Model::CloseProxyRequest& request);
 
                 /**
-                 *This API is used to disable the public network.
+                 *This API is used to close the database proxy connection address.
+                 * @param req CloseProxyEndPointRequest
+                 * @return CloseProxyEndPointOutcome
+                 */
+                CloseProxyEndPointOutcome CloseProxyEndPoint(const Model::CloseProxyEndPointRequest &request);
+                void CloseProxyEndPointAsync(const Model::CloseProxyEndPointRequest& request, const CloseProxyEndPointAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CloseProxyEndPointOutcomeCallable CloseProxyEndPointCallable(const Model::CloseProxyEndPointRequest& request);
+
+                /**
+                 *This API is used to disable SSL encryption.
+                 * @param req CloseSSLRequest
+                 * @return CloseSSLOutcome
+                 */
+                CloseSSLOutcome CloseSSL(const Model::CloseSSLRequest &request);
+                void CloseSSLAsync(const Model::CloseSSLRequest& request, const CloseSSLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CloseSSLOutcomeCallable CloseSSLCallable(const Model::CloseSSLRequest& request);
+
+                /**
+                 *This interface (CloseWan) is used to disable public network.
                  * @param req CloseWanRequest
                  * @return CloseWanOutcome
                  */
@@ -693,7 +786,7 @@ namespace TencentCloud
                 CloseWanOutcomeCallable CloseWanCallable(const Model::CloseWanRequest& request);
 
                 /**
-                 *This API is used to replicate the password complexity for a cluster.
+                 *This API is used to copy the password complexity of a replication cluster.
                  * @param req CopyClusterPasswordComplexityRequest
                  * @return CopyClusterPasswordComplexityOutcome
                  */
@@ -702,7 +795,7 @@ namespace TencentCloud
                 CopyClusterPasswordComplexityOutcomeCallable CopyClusterPasswordComplexityCallable(const Model::CopyClusterPasswordComplexityRequest& request);
 
                 /**
-                 *This API is used to create an account.
+                 *This API is used to create user accounts.
                  * @param req CreateAccountsRequest
                  * @return CreateAccountsOutcome
                  */
@@ -711,7 +804,7 @@ namespace TencentCloud
                 CreateAccountsOutcomeCallable CreateAccountsCallable(const Model::CreateAccountsRequest& request);
 
                 /**
-                 *This API is used to create an audit rule template.
+                 *This API is used to create audit rule templates.
                  * @param req CreateAuditRuleTemplateRequest
                  * @return CreateAuditRuleTemplateOutcome
                  */
@@ -720,7 +813,7 @@ namespace TencentCloud
                 CreateAuditRuleTemplateOutcomeCallable CreateAuditRuleTemplateCallable(const Model::CreateAuditRuleTemplateRequest& request);
 
                 /**
-                 *This API is used to create manual backup.
+                 *This API is used to create a manual backup for a cluster.
                  * @param req CreateBackupRequest
                  * @return CreateBackupOutcome
                  */
@@ -738,7 +831,7 @@ namespace TencentCloud
                 CreateClusterDatabaseOutcomeCallable CreateClusterDatabaseCallable(const Model::CreateClusterDatabaseRequest& request);
 
                 /**
-                 *This API is used to create a cluster.
+                 *This API is used to purchase new clusters.
                  * @param req CreateClustersRequest
                  * @return CreateClustersOutcome
                  */
@@ -747,7 +840,7 @@ namespace TencentCloud
                 CreateClustersOutcomeCallable CreateClustersCallable(const Model::CreateClustersRequest& request);
 
                 /**
-                 *This API is used to create a parameter template.
+                 *This API is used to create parameter templates.
                  * @param req CreateParamTemplateRequest
                  * @return CreateParamTemplateOutcome
                  */
@@ -756,7 +849,7 @@ namespace TencentCloud
                 CreateParamTemplateOutcomeCallable CreateParamTemplateCallable(const Model::CreateParamTemplateRequest& request);
 
                 /**
-                 *This API is used to create a database proxy.
+                 *This API is used to enable the database proxy of a cluster.
                  * @param req CreateProxyRequest
                  * @return CreateProxyOutcome
                  */
@@ -765,7 +858,7 @@ namespace TencentCloud
                 CreateProxyOutcomeCallable CreateProxyCallable(const Model::CreateProxyRequest& request);
 
                 /**
-                 *This API is used to create a database proxy connection.
+                 *This API is used to create a database proxy connection point.
                  * @param req CreateProxyEndPointRequest
                  * @return CreateProxyEndPointOutcome
                  */
@@ -774,7 +867,7 @@ namespace TencentCloud
                 CreateProxyEndPointOutcomeCallable CreateProxyEndPointCallable(const Model::CreateProxyEndPointRequest& request);
 
                 /**
-                 *This API is used to purchase a resource pack.
+                 *This API is used to purchase new resource packets.
                  * @param req CreateResourcePackageRequest
                  * @return CreateResourcePackageOutcome
                  */
@@ -783,7 +876,7 @@ namespace TencentCloud
                 CreateResourcePackageOutcomeCallable CreateResourcePackageCallable(const Model::CreateResourcePackageRequest& request);
 
                 /**
-                 *This API is used to delete an account.
+                 *This API is used to delete user accounts.
                  * @param req DeleteAccountsRequest
                  * @return DeleteAccountsOutcome
                  */
@@ -792,7 +885,7 @@ namespace TencentCloud
                 DeleteAccountsOutcomeCallable DeleteAccountsCallable(const Model::DeleteAccountsRequest& request);
 
                 /**
-                 *This API is used to delete an audit rule template.
+                 *This API is used to delete audit rule templates.
                  * @param req DeleteAuditRuleTemplatesRequest
                  * @return DeleteAuditRuleTemplatesOutcome
                  */
@@ -801,7 +894,7 @@ namespace TencentCloud
                 DeleteAuditRuleTemplatesOutcomeCallable DeleteAuditRuleTemplatesCallable(const Model::DeleteAuditRuleTemplatesRequest& request);
 
                 /**
-                 *This API is used to delete the manual backup for a cluster. It cannot be used to delete the automatic backup.
+                 *This API is used to delete manual backups for a cluster. Automatic backups cannot be deleted.
                  * @param req DeleteBackupRequest
                  * @return DeleteBackupOutcome
                  */
@@ -810,7 +903,7 @@ namespace TencentCloud
                 DeleteBackupOutcomeCallable DeleteBackupCallable(const Model::DeleteBackupRequest& request);
 
                 /**
-                 *This API is used to delete a database.
+                 *This interface is used to delete a database.
                  * @param req DeleteClusterDatabaseRequest
                  * @return DeleteClusterDatabaseOutcome
                  */
@@ -828,7 +921,7 @@ namespace TencentCloud
                 DeleteParamTemplateOutcomeCallable DeleteParamTemplateCallable(const Model::DeleteParamTemplateRequest& request);
 
                 /**
-                 *This API is used to query the existing permissions of an account.
+                 *This API is used to query account privileges.
                  * @param req DescribeAccountPrivilegesRequest
                  * @return DescribeAccountPrivilegesOutcome
                  */
@@ -837,7 +930,7 @@ namespace TencentCloud
                 DescribeAccountPrivilegesOutcomeCallable DescribeAccountPrivilegesCallable(const Model::DescribeAccountPrivilegesRequest& request);
 
                 /**
-                 *This API is used to query database management accounts.
+                 *This API is used to query the database account list.
                  * @param req DescribeAccountsRequest
                  * @return DescribeAccountsOutcome
                  */
@@ -846,7 +939,7 @@ namespace TencentCloud
                 DescribeAccountsOutcomeCallable DescribeAccountsCallable(const Model::DescribeAccountsRequest& request);
 
                 /**
-                 *This API is used to query audit rule templates.
+                 *This API is used to query audit rule template information.
                  * @param req DescribeAuditRuleTemplatesRequest
                  * @return DescribeAuditRuleTemplatesOutcome
                  */
@@ -855,7 +948,7 @@ namespace TencentCloud
                 DescribeAuditRuleTemplatesOutcomeCallable DescribeAuditRuleTemplatesCallable(const Model::DescribeAuditRuleTemplatesRequest& request);
 
                 /**
-                 *This API is used to get the audit rule templates of an instance.
+                 *This API is used to obtain the audit rules of the instance.
                  * @param req DescribeAuditRuleWithInstanceIdsRequest
                  * @return DescribeAuditRuleWithInstanceIdsOutcome
                  */
@@ -864,7 +957,7 @@ namespace TencentCloud
                 DescribeAuditRuleWithInstanceIdsOutcomeCallable DescribeAuditRuleWithInstanceIdsCallable(const Model::DescribeAuditRuleWithInstanceIdsRequest& request);
 
                 /**
-                 *This API is used to get the backup configuration information of the specified cluster, including the full backup time range and backup file retention period.
+                 *This API is used to obtain the backup configuration information of a specified cluster, including the full backup time period and the backup file retention time.
                  * @param req DescribeBackupConfigRequest
                  * @return DescribeBackupConfigOutcome
                  */
@@ -873,7 +966,7 @@ namespace TencentCloud
                 DescribeBackupConfigOutcomeCallable DescribeBackupConfigCallable(const Model::DescribeBackupConfigRequest& request);
 
                 /**
-                 *This API is used to query the download address of a cluster backup file.
+                 *This API is used to query the download link of cluster backup files.
                  * @param req DescribeBackupDownloadUrlRequest
                  * @return DescribeBackupDownloadUrlOutcome
                  */
@@ -882,7 +975,7 @@ namespace TencentCloud
                 DescribeBackupDownloadUrlOutcomeCallable DescribeBackupDownloadUrlCallable(const Model::DescribeBackupDownloadUrlRequest& request);
 
                 /**
-                 *This API is used to query the list of backup files.
+                 *This API is used to query the backup file list of a cluster.
                  * @param req DescribeBackupListRequest
                  * @return DescribeBackupListOutcome
                  */
@@ -891,7 +984,16 @@ namespace TencentCloud
                 DescribeBackupListOutcomeCallable DescribeBackupListCallable(const Model::DescribeBackupListRequest& request);
 
                 /**
-                 *This API is used to query the download address of a binlog.
+                 *This API is used to query binlog configurations.
+                 * @param req DescribeBinlogConfigRequest
+                 * @return DescribeBinlogConfigOutcome
+                 */
+                DescribeBinlogConfigOutcome DescribeBinlogConfig(const Model::DescribeBinlogConfigRequest &request);
+                void DescribeBinlogConfigAsync(const Model::DescribeBinlogConfigRequest& request, const DescribeBinlogConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBinlogConfigOutcomeCallable DescribeBinlogConfigCallable(const Model::DescribeBinlogConfigRequest& request);
+
+                /**
+                 *This API is used to query the download address of Binlog.
                  * @param req DescribeBinlogDownloadUrlRequest
                  * @return DescribeBinlogDownloadUrlOutcome
                  */
@@ -909,7 +1011,7 @@ namespace TencentCloud
                 DescribeBinlogSaveDaysOutcomeCallable DescribeBinlogSaveDaysCallable(const Model::DescribeBinlogSaveDaysRequest& request);
 
                 /**
-                 *This API is used to query the list of binlogs in a cluster.
+                 *This interface (DescribeBinlogs) queries the cluster binlog list.
                  * @param req DescribeBinlogsRequest
                  * @return DescribeBinlogsOutcome
                  */
@@ -918,7 +1020,16 @@ namespace TencentCloud
                 DescribeBinlogsOutcomeCallable DescribeBinlogsCallable(const Model::DescribeBinlogsRequest& request);
 
                 /**
-                 *This API is used to show the details of an instance.
+                 *This API is used to access the table list.
+                 * @param req DescribeClusterDatabaseTablesRequest
+                 * @return DescribeClusterDatabaseTablesOutcome
+                 */
+                DescribeClusterDatabaseTablesOutcome DescribeClusterDatabaseTables(const Model::DescribeClusterDatabaseTablesRequest &request);
+                void DescribeClusterDatabaseTablesAsync(const Model::DescribeClusterDatabaseTablesRequest& request, const DescribeClusterDatabaseTablesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeClusterDatabaseTablesOutcomeCallable DescribeClusterDatabaseTablesCallable(const Model::DescribeClusterDatabaseTablesRequest& request);
+
+                /**
+                 *This API is used to display cluster details.
                  * @param req DescribeClusterDetailRequest
                  * @return DescribeClusterDetailOutcome
                  */
@@ -927,7 +1038,7 @@ namespace TencentCloud
                 DescribeClusterDetailOutcomeCallable DescribeClusterDetailCallable(const Model::DescribeClusterDetailRequest& request);
 
                 /**
-                 *This API is used to query the database list.
+                 *This API is used to query database list.
                  * @param req DescribeClusterDetailDatabasesRequest
                  * @return DescribeClusterDetailDatabasesOutcome
                  */
@@ -945,7 +1056,7 @@ namespace TencentCloud
                 DescribeClusterInstanceGrpsOutcomeCallable DescribeClusterInstanceGrpsCallable(const Model::DescribeClusterInstanceGrpsRequest& request);
 
                 /**
-                 *This API is used to query the parameters of a cluster.
+                 *This API is used to query cluster parameters.
                  * @param req DescribeClusterParamsRequest
                  * @return DescribeClusterParamsOutcome
                  */
@@ -954,7 +1065,7 @@ namespace TencentCloud
                 DescribeClusterParamsOutcomeCallable DescribeClusterParamsCallable(const Model::DescribeClusterParamsRequest& request);
 
                 /**
-                 *This API is used to query the details of password complexity for a cluster.
+                 *This API is used to view the cluster password complexity details.
                  * @param req DescribeClusterPasswordComplexityRequest
                  * @return DescribeClusterPasswordComplexityOutcome
                  */
@@ -963,7 +1074,16 @@ namespace TencentCloud
                 DescribeClusterPasswordComplexityOutcomeCallable DescribeClusterPasswordComplexityCallable(const Model::DescribeClusterPasswordComplexityRequest& request);
 
                 /**
-                 *This API is used to the list of clusters.
+                 *This API is used to query cluster transparent encryption information.
+                 * @param req DescribeClusterTransparentEncryptInfoRequest
+                 * @return DescribeClusterTransparentEncryptInfoOutcome
+                 */
+                DescribeClusterTransparentEncryptInfoOutcome DescribeClusterTransparentEncryptInfo(const Model::DescribeClusterTransparentEncryptInfoRequest &request);
+                void DescribeClusterTransparentEncryptInfoAsync(const Model::DescribeClusterTransparentEncryptInfoRequest& request, const DescribeClusterTransparentEncryptInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeClusterTransparentEncryptInfoOutcomeCallable DescribeClusterTransparentEncryptInfoCallable(const Model::DescribeClusterTransparentEncryptInfoRequest& request);
+
+                /**
+                 *This API is used to describe clusters.
                  * @param req DescribeClustersRequest
                  * @return DescribeClustersOutcome
                  */
@@ -972,7 +1092,7 @@ namespace TencentCloud
                 DescribeClustersOutcomeCallable DescribeClustersCallable(const Model::DescribeClustersRequest& request);
 
                 /**
-                 *This API is used to query the security group information of an instance.
+                 *This API is used to query instance security group information.
                  * @param req DescribeDBSecurityGroupsRequest
                  * @return DescribeDBSecurityGroupsOutcome
                  */
@@ -999,7 +1119,7 @@ namespace TencentCloud
                 DescribeInstanceDetailOutcomeCallable DescribeInstanceDetailCallable(const Model::DescribeInstanceDetailRequest& request);
 
                 /**
-                 *This API is used to query the list of error logs for an instance.
+                 *This API is used to query the list of instance error logs.
                  * @param req DescribeInstanceErrorLogsRequest
                  * @return DescribeInstanceErrorLogsOutcome
                  */
@@ -1008,7 +1128,7 @@ namespace TencentCloud
                 DescribeInstanceErrorLogsOutcomeCallable DescribeInstanceErrorLogsCallable(const Model::DescribeInstanceErrorLogsRequest& request);
 
                 /**
-                 *This API is used to query the parameter list of an instance.
+                 *This API is used to query the instance parameter list.
                  * @param req DescribeInstanceParamsRequest
                  * @return DescribeInstanceParamsOutcome
                  */
@@ -1026,7 +1146,7 @@ namespace TencentCloud
                 DescribeInstanceSlowQueriesOutcomeCallable DescribeInstanceSlowQueriesCallable(const Model::DescribeInstanceSlowQueriesRequest& request);
 
                 /**
-                 *This API is used to query instance specifications.
+                 *This interface (DescribeInstanceSpecs) is used to query the instance specifications available for purchase on the query purchase page.
                  * @param req DescribeInstanceSpecsRequest
                  * @return DescribeInstanceSpecsOutcome
                  */
@@ -1044,7 +1164,25 @@ namespace TencentCloud
                 DescribeInstancesOutcomeCallable DescribeInstancesCallable(const Model::DescribeInstancesRequest& request);
 
                 /**
-                 *This API is used to query the instance maintenance window.
+                 *This API is used to query the instance list under the same cluster.
+                 * @param req DescribeInstancesWithinSameClusterRequest
+                 * @return DescribeInstancesWithinSameClusterOutcome
+                 */
+                DescribeInstancesWithinSameClusterOutcome DescribeInstancesWithinSameCluster(const Model::DescribeInstancesWithinSameClusterRequest &request);
+                void DescribeInstancesWithinSameClusterAsync(const Model::DescribeInstancesWithinSameClusterRequest& request, const DescribeInstancesWithinSameClusterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeInstancesWithinSameClusterOutcomeCallable DescribeInstancesWithinSameClusterCallable(const Model::DescribeInstancesWithinSameClusterRequest& request);
+
+                /**
+                 *This interface is used for querying the recycle bin instance list.
+                 * @param req DescribeIsolatedInstancesRequest
+                 * @return DescribeIsolatedInstancesOutcome
+                 */
+                DescribeIsolatedInstancesOutcome DescribeIsolatedInstances(const Model::DescribeIsolatedInstancesRequest &request);
+                void DescribeIsolatedInstancesAsync(const Model::DescribeIsolatedInstancesRequest& request, const DescribeIsolatedInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeIsolatedInstancesOutcomeCallable DescribeIsolatedInstancesCallable(const Model::DescribeIsolatedInstancesRequest& request);
+
+                /**
+                 *This interface (DescribeMaintainPeriod) is used to query the instance maintenance window.
                  * @param req DescribeMaintainPeriodRequest
                  * @return DescribeMaintainPeriodOutcome
                  */
@@ -1053,7 +1191,7 @@ namespace TencentCloud
                 DescribeMaintainPeriodOutcomeCallable DescribeMaintainPeriodCallable(const Model::DescribeMaintainPeriodRequest& request);
 
                 /**
-                 *This API is used to query the details of a parameter template.
+                 *This API is used to query user parameter template details.
                  * @param req DescribeParamTemplateDetailRequest
                  * @return DescribeParamTemplateDetailOutcome
                  */
@@ -1062,7 +1200,7 @@ namespace TencentCloud
                 DescribeParamTemplateDetailOutcomeCallable DescribeParamTemplateDetailCallable(const Model::DescribeParamTemplateDetailRequest& request);
 
                 /**
-                 *This API is used to query all parameter templates information of a user-specified product.
+                 *This API is used to query all parameter template information under the user-specified product.
                  * @param req DescribeParamTemplatesRequest
                  * @return DescribeParamTemplatesOutcome
                  */
@@ -1071,7 +1209,7 @@ namespace TencentCloud
                 DescribeParamTemplatesOutcomeCallable DescribeParamTemplatesCallable(const Model::DescribeParamTemplatesRequest& request);
 
                 /**
-                 *This API is used to query the security group information of a project.
+                 *This API is used to query project security group information.
                  * @param req DescribeProjectSecurityGroupsRequest
                  * @return DescribeProjectSecurityGroupsOutcome
                  */
@@ -1080,7 +1218,7 @@ namespace TencentCloud
                 DescribeProjectSecurityGroupsOutcomeCallable DescribeProjectSecurityGroupsCallable(const Model::DescribeProjectSecurityGroupsRequest& request);
 
                 /**
-                 *This API is used to query the list of database proxies.
+                 *This API is used to query agent list.
                  * @param req DescribeProxiesRequest
                  * @return DescribeProxiesOutcome
                  */
@@ -1098,7 +1236,7 @@ namespace TencentCloud
                 DescribeProxyNodesOutcomeCallable DescribeProxyNodesCallable(const Model::DescribeProxyNodesRequest& request);
 
                 /**
-                 *This API is used to query the specifications of a database proxy.
+                 *This API is used to query database proxy specifications.
                  * @param req DescribeProxySpecsRequest
                  * @return DescribeProxySpecsOutcome
                  */
@@ -1107,7 +1245,7 @@ namespace TencentCloud
                 DescribeProxySpecsOutcomeCallable DescribeProxySpecsCallable(const Model::DescribeProxySpecsRequest& request);
 
                 /**
-                 *This API is used to query the usage details of a resource pack.
+                 *This API is used to query resource package usage details.
                  * @param req DescribeResourcePackageDetailRequest
                  * @return DescribeResourcePackageDetailOutcome
                  */
@@ -1116,7 +1254,7 @@ namespace TencentCloud
                 DescribeResourcePackageDetailOutcomeCallable DescribeResourcePackageDetailCallable(const Model::DescribeResourcePackageDetailRequest& request);
 
                 /**
-                 *This API is used to query the list of the resource packs.
+                 *This API is used to query resource package list.
                  * @param req DescribeResourcePackageListRequest
                  * @return DescribeResourcePackageListOutcome
                  */
@@ -1125,7 +1263,7 @@ namespace TencentCloud
                 DescribeResourcePackageListOutcomeCallable DescribeResourcePackageListCallable(const Model::DescribeResourcePackageListRequest& request);
 
                 /**
-                 *This API is used to query the specifications of a resource pack.
+                 *This API is used to query resource package specifications.
                  * @param req DescribeResourcePackageSaleSpecRequest
                  * @return DescribeResourcePackageSaleSpecOutcome
                  */
@@ -1134,7 +1272,7 @@ namespace TencentCloud
                 DescribeResourcePackageSaleSpecOutcomeCallable DescribeResourcePackageSaleSpecCallable(const Model::DescribeResourcePackageSaleSpecRequest& request);
 
                 /**
-                 *This API is used to query the list of resources by billing order ID.
+                 *This interface (DescribeResourcesByDealName) is used to query order-associated instances.
                  * @param req DescribeResourcesByDealNameRequest
                  * @return DescribeResourcesByDealNameOutcome
                  */
@@ -1143,7 +1281,7 @@ namespace TencentCloud
                 DescribeResourcesByDealNameOutcomeCallable DescribeResourcesByDealNameCallable(const Model::DescribeResourcesByDealNameRequest& request);
 
                 /**
-                 *This API is used to query the valid rollback time range for the specified cluster.
+                 *This API is used to query the rollback time range.
                  * @param req DescribeRollbackTimeRangeRequest
                  * @return DescribeRollbackTimeRangeOutcome
                  */
@@ -1152,16 +1290,34 @@ namespace TencentCloud
                 DescribeRollbackTimeRangeOutcomeCallable DescribeRollbackTimeRangeCallable(const Model::DescribeRollbackTimeRangeRequest& request);
 
                 /**
-                 *This API is used to query whether rollback is possible based on the specified time and cluster.
-                 * @param req DescribeRollbackTimeValidityRequest
-                 * @return DescribeRollbackTimeValidityOutcome
+                 *This API is used to query available specifications of Serverless instances.
+                 * @param req DescribeServerlessInstanceSpecsRequest
+                 * @return DescribeServerlessInstanceSpecsOutcome
                  */
-                DescribeRollbackTimeValidityOutcome DescribeRollbackTimeValidity(const Model::DescribeRollbackTimeValidityRequest &request);
-                void DescribeRollbackTimeValidityAsync(const Model::DescribeRollbackTimeValidityRequest& request, const DescribeRollbackTimeValidityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeRollbackTimeValidityOutcomeCallable DescribeRollbackTimeValidityCallable(const Model::DescribeRollbackTimeValidityRequest& request);
+                DescribeServerlessInstanceSpecsOutcome DescribeServerlessInstanceSpecs(const Model::DescribeServerlessInstanceSpecsRequest &request);
+                void DescribeServerlessInstanceSpecsAsync(const Model::DescribeServerlessInstanceSpecsRequest& request, const DescribeServerlessInstanceSpecsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeServerlessInstanceSpecsOutcomeCallable DescribeServerlessInstanceSpecsCallable(const Model::DescribeServerlessInstanceSpecsRequest& request);
 
                 /**
-                 *This API is used to query the supported database proxy versions.
+                 *This API is used to query serverless policies.
+                 * @param req DescribeServerlessStrategyRequest
+                 * @return DescribeServerlessStrategyOutcome
+                 */
+                DescribeServerlessStrategyOutcome DescribeServerlessStrategy(const Model::DescribeServerlessStrategyRequest &request);
+                void DescribeServerlessStrategyAsync(const Model::DescribeServerlessStrategyRequest& request, const DescribeServerlessStrategyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeServerlessStrategyOutcomeCallable DescribeServerlessStrategyCallable(const Model::DescribeServerlessStrategyRequest& request);
+
+                /**
+                 *This API is used to query from availability zones.
+                 * @param req DescribeSlaveZonesRequest
+                 * @return DescribeSlaveZonesOutcome
+                 */
+                DescribeSlaveZonesOutcome DescribeSlaveZones(const Model::DescribeSlaveZonesRequest &request);
+                void DescribeSlaveZonesAsync(const Model::DescribeSlaveZonesRequest& request, const DescribeSlaveZonesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSlaveZonesOutcomeCallable DescribeSlaveZonesCallable(const Model::DescribeSlaveZonesRequest& request);
+
+                /**
+                 *This API is used to query supported database proxy versions.
                  * @param req DescribeSupportProxyVersionRequest
                  * @return DescribeSupportProxyVersionOutcome
                  */
@@ -1170,7 +1326,7 @@ namespace TencentCloud
                 DescribeSupportProxyVersionOutcomeCallable DescribeSupportProxyVersionCallable(const Model::DescribeSupportProxyVersionRequest& request);
 
                 /**
-                 *This API is used to query the AZ information in a purchasable region.
+                 *This API is used to query marketable regional availability zone information.
                  * @param req DescribeZonesRequest
                  * @return DescribeZonesOutcome
                  */
@@ -1188,7 +1344,7 @@ namespace TencentCloud
                 ExportInstanceErrorLogsOutcomeCallable ExportInstanceErrorLogsCallable(const Model::ExportInstanceErrorLogsRequest& request);
 
                 /**
-                 *This API is used to export the slow logs of an instance.
+                 *This API is used to export instance slow logs.
                  * @param req ExportInstanceSlowQueriesRequest
                  * @return ExportInstanceSlowQueriesOutcome
                  */
@@ -1197,13 +1353,31 @@ namespace TencentCloud
                 ExportInstanceSlowQueriesOutcomeCallable ExportInstanceSlowQueriesCallable(const Model::ExportInstanceSlowQueriesRequest& request);
 
                 /**
-                 *This API is used to query the purchasable price of a cluster.
+                 *This API is used to export the usage details of a resource package.
+                 * @param req ExportResourcePackageDeductDetailsRequest
+                 * @return ExportResourcePackageDeductDetailsOutcome
+                 */
+                ExportResourcePackageDeductDetailsOutcome ExportResourcePackageDeductDetails(const Model::ExportResourcePackageDeductDetailsRequest &request);
+                void ExportResourcePackageDeductDetailsAsync(const Model::ExportResourcePackageDeductDetailsRequest& request, const ExportResourcePackageDeductDetailsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ExportResourcePackageDeductDetailsOutcomeCallable ExportResourcePackageDeductDetailsCallable(const Model::ExportResourcePackageDeductDetailsRequest& request);
+
+                /**
+                 *This interface (InquirePriceCreate) is used for price inquiry of newly purchased clusters.
                  * @param req InquirePriceCreateRequest
                  * @return InquirePriceCreateOutcome
                  */
                 InquirePriceCreateOutcome InquirePriceCreate(const Model::InquirePriceCreateRequest &request);
                 void InquirePriceCreateAsync(const Model::InquirePriceCreateRequest& request, const InquirePriceCreateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 InquirePriceCreateOutcomeCallable InquirePriceCreateCallable(const Model::InquirePriceCreateRequest& request);
+
+                /**
+                 *This API is used to query the price for modifying the specifications of a prepaid cluster.
+                 * @param req InquirePriceModifyRequest
+                 * @return InquirePriceModifyOutcome
+                 */
+                InquirePriceModifyOutcome InquirePriceModify(const Model::InquirePriceModifyRequest &request);
+                void InquirePriceModifyAsync(const Model::InquirePriceModifyRequest& request, const InquirePriceModifyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                InquirePriceModifyOutcomeCallable InquirePriceModifyCallable(const Model::InquirePriceModifyRequest& request);
 
                 /**
                  *This API is used to query the renewal price of a cluster.
@@ -1215,7 +1389,7 @@ namespace TencentCloud
                 InquirePriceRenewOutcomeCallable InquirePriceRenewCallable(const Model::InquirePriceRenewRequest& request);
 
                 /**
-                 *This API is used to isolate a cluster.
+                 *This interface (IsolateCluster) is used to isolate a cluster.
                  * @param req IsolateClusterRequest
                  * @return IsolateClusterOutcome
                  */
@@ -1242,7 +1416,7 @@ namespace TencentCloud
                 ModifyAccountDescriptionOutcomeCallable ModifyAccountDescriptionCallable(const Model::ModifyAccountDescriptionRequest& request);
 
                 /**
-                 *This API is used to modify the account host.
+                 *This API is used to modify account hosts.
                  * @param req ModifyAccountHostRequest
                  * @return ModifyAccountHostOutcome
                  */
@@ -1251,7 +1425,7 @@ namespace TencentCloud
                 ModifyAccountHostOutcomeCallable ModifyAccountHostCallable(const Model::ModifyAccountHostRequest& request);
 
                 /**
-                 *This API is used to modify the account permissions.
+                 *This API is used to modify account database and table permissions.
                  * @param req ModifyAccountPrivilegesRequest
                  * @return ModifyAccountPrivilegesOutcome
                  */
@@ -1260,7 +1434,7 @@ namespace TencentCloud
                 ModifyAccountPrivilegesOutcomeCallable ModifyAccountPrivilegesCallable(const Model::ModifyAccountPrivilegesRequest& request);
 
                 /**
-                 *This API is used to modify an audit rule template.
+                 *This API is used to modify audit rule templates.
                  * @param req ModifyAuditRuleTemplatesRequest
                  * @return ModifyAuditRuleTemplatesOutcome
                  */
@@ -1278,7 +1452,7 @@ namespace TencentCloud
                 ModifyAuditServiceOutcomeCallable ModifyAuditServiceCallable(const Model::ModifyAuditServiceRequest& request);
 
                 /**
-                 *This API is used to modify the backup configuration of the specified cluster.
+                 *This API is used to modify the backup configuration of a specified cluster.
                  * @param req ModifyBackupConfigRequest
                  * @return ModifyBackupConfigOutcome
                  */
@@ -1296,6 +1470,15 @@ namespace TencentCloud
                 ModifyBackupNameOutcomeCallable ModifyBackupNameCallable(const Model::ModifyBackupNameRequest& request);
 
                 /**
+                 *This API is used to modify Binlog configuration.
+                 * @param req ModifyBinlogConfigRequest
+                 * @return ModifyBinlogConfigOutcome
+                 */
+                ModifyBinlogConfigOutcome ModifyBinlogConfig(const Model::ModifyBinlogConfigRequest &request);
+                void ModifyBinlogConfigAsync(const Model::ModifyBinlogConfigRequest& request, const ModifyBinlogConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyBinlogConfigOutcomeCallable ModifyBinlogConfigCallable(const Model::ModifyBinlogConfigRequest& request);
+
+                /**
                  *This API is used to modify the binlog retention period in days.
                  * @param req ModifyBinlogSaveDaysRequest
                  * @return ModifyBinlogSaveDaysOutcome
@@ -1305,7 +1488,7 @@ namespace TencentCloud
                 ModifyBinlogSaveDaysOutcomeCallable ModifyBinlogSaveDaysCallable(const Model::ModifyBinlogSaveDaysRequest& request);
 
                 /**
-                 *This API is used to modify the database.
+                 *This API is used to modify account authorization of a database.
                  * @param req ModifyClusterDatabaseRequest
                  * @return ModifyClusterDatabaseOutcome
                  */
@@ -1314,7 +1497,7 @@ namespace TencentCloud
                 ModifyClusterDatabaseOutcomeCallable ModifyClusterDatabaseCallable(const Model::ModifyClusterDatabaseRequest& request);
 
                 /**
-                 *This API is used to modify cluster name.
+                 *This API is used to modify cluster names.
                  * @param req ModifyClusterNameRequest
                  * @return ModifyClusterNameOutcome
                  */
@@ -1323,7 +1506,7 @@ namespace TencentCloud
                 ModifyClusterNameOutcomeCallable ModifyClusterNameCallable(const Model::ModifyClusterNameRequest& request);
 
                 /**
-                 *This API is used to modify the parameters of a cluster.
+                 *This API is used to modify cluster parameters.
                  * @param req ModifyClusterParamRequest
                  * @return ModifyClusterParamOutcome
                  */
@@ -1332,7 +1515,7 @@ namespace TencentCloud
                 ModifyClusterParamOutcomeCallable ModifyClusterParamCallable(const Model::ModifyClusterParamRequest& request);
 
                 /**
-                 *This API is used to modify or enable the password complexity for a cluster.
+                 *This API is used to modify or enable cluster password complexity.
                  * @param req ModifyClusterPasswordComplexityRequest
                  * @return ModifyClusterPasswordComplexityOutcome
                  */
@@ -1341,7 +1524,7 @@ namespace TencentCloud
                 ModifyClusterPasswordComplexityOutcomeCallable ModifyClusterPasswordComplexityCallable(const Model::ModifyClusterPasswordComplexityRequest& request);
 
                 /**
-                 *This API is used to modify the replica AZ.
+                 *This API is used to modify the slave availability zone of a cluster.
                  * @param req ModifyClusterSlaveZoneRequest
                  * @return ModifyClusterSlaveZoneOutcome
                  */
@@ -1350,7 +1533,7 @@ namespace TencentCloud
                 ModifyClusterSlaveZoneOutcomeCallable ModifyClusterSlaveZoneCallable(const Model::ModifyClusterSlaveZoneRequest& request);
 
                 /**
-                 *This API is used to modify the security groups bound to an instance.
+                 *This API is used to modify the security group bound to the instance.
                  * @param req ModifyDBInstanceSecurityGroupsRequest
                  * @return ModifyDBInstanceSecurityGroupsOutcome
                  */
@@ -1377,7 +1560,7 @@ namespace TencentCloud
                 ModifyInstanceParamOutcomeCallable ModifyInstanceParamCallable(const Model::ModifyInstanceParamRequest& request);
 
                 /**
-                 *This API is used to modify the maintenance time configuration.
+                 *This API is used to modify maintenance time configuration.
                  * @param req ModifyMaintainPeriodConfigRequest
                  * @return ModifyMaintainPeriodConfigOutcome
                  */
@@ -1404,7 +1587,7 @@ namespace TencentCloud
                 ModifyProxyDescOutcomeCallable ModifyProxyDescCallable(const Model::ModifyProxyDescRequest& request);
 
                 /**
-                 *This API is used to configure the read/write separation of a database proxy.
+                 *This API is used to configure read-write separation for database proxy.
                  * @param req ModifyProxyRwSplitRequest
                  * @return ModifyProxyRwSplitOutcome
                  */
@@ -1413,7 +1596,7 @@ namespace TencentCloud
                 ModifyProxyRwSplitOutcomeCallable ModifyProxyRwSplitCallable(const Model::ModifyProxyRwSplitRequest& request);
 
                 /**
-                 *This API is used to bind a resource pack to a cluster.
+                 *This API is used to modify the binding relationship between resource packages and clusters.
                  * @param req ModifyResourcePackageClustersRequest
                  * @return ModifyResourcePackageClustersOutcome
                  */
@@ -1422,7 +1605,7 @@ namespace TencentCloud
                 ModifyResourcePackageClustersOutcomeCallable ModifyResourcePackageClustersCallable(const Model::ModifyResourcePackageClustersRequest& request);
 
                 /**
-                 *This API is used to modify the name of a resource pack.
+                 *This API is used to modify resource package name.
                  * @param req ModifyResourcePackageNameRequest
                  * @return ModifyResourcePackageNameOutcome
                  */
@@ -1431,7 +1614,25 @@ namespace TencentCloud
                 ModifyResourcePackageNameOutcomeCallable ModifyResourcePackageNameCallable(const Model::ModifyResourcePackageNameRequest& request);
 
                 /**
-                 *This API is used to modify the IP and port of an instance group.
+                 *This API is used to modify the deduction priority of the bound resource package.
+                 * @param req ModifyResourcePackagesDeductionPriorityRequest
+                 * @return ModifyResourcePackagesDeductionPriorityOutcome
+                 */
+                ModifyResourcePackagesDeductionPriorityOutcome ModifyResourcePackagesDeductionPriority(const Model::ModifyResourcePackagesDeductionPriorityRequest &request);
+                void ModifyResourcePackagesDeductionPriorityAsync(const Model::ModifyResourcePackagesDeductionPriorityRequest& request, const ModifyResourcePackagesDeductionPriorityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyResourcePackagesDeductionPriorityOutcomeCallable ModifyResourcePackagesDeductionPriorityCallable(const Model::ModifyResourcePackagesDeductionPriorityRequest& request);
+
+                /**
+                 *This API is used to modify the serverless policy.
+                 * @param req ModifyServerlessStrategyRequest
+                 * @return ModifyServerlessStrategyOutcome
+                 */
+                ModifyServerlessStrategyOutcome ModifyServerlessStrategy(const Model::ModifyServerlessStrategyRequest &request);
+                void ModifyServerlessStrategyAsync(const Model::ModifyServerlessStrategyRequest& request, const ModifyServerlessStrategyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyServerlessStrategyOutcomeCallable ModifyServerlessStrategyCallable(const Model::ModifyServerlessStrategyRequest& request);
+
+                /**
+                 *This API is used to modify the ip and port of an instance group.
                  * @param req ModifyVipVportRequest
                  * @return ModifyVipVportOutcome
                  */
@@ -1440,7 +1641,7 @@ namespace TencentCloud
                 ModifyVipVportOutcomeCallable ModifyVipVportCallable(const Model::ModifyVipVportRequest& request);
 
                 /**
-                 *This API is used to deactivate a cluster.
+                 *This interface (OfflineCluster) is used to terminate clusters.
                  * @param req OfflineClusterRequest
                  * @return OfflineClusterOutcome
                  */
@@ -1449,7 +1650,7 @@ namespace TencentCloud
                 OfflineClusterOutcomeCallable OfflineClusterCallable(const Model::OfflineClusterRequest& request);
 
                 /**
-                 *This API is used to deactivate an instance.
+                 *This interface (OfflineInstance) is used to terminate an instance.
                  * @param req OfflineInstanceRequest
                  * @return OfflineInstanceOutcome
                  */
@@ -1458,7 +1659,7 @@ namespace TencentCloud
                 OfflineInstanceOutcomeCallable OfflineInstanceCallable(const Model::OfflineInstanceRequest& request);
 
                 /**
-                 *This API is used to enable the audit service for a TDSQL-C for MySQL instance.
+                 *This API is used to enable database audit service for an instance.
                  * @param req OpenAuditServiceRequest
                  * @return OpenAuditServiceOutcome
                  */
@@ -1467,7 +1668,7 @@ namespace TencentCloud
                 OpenAuditServiceOutcomeCallable OpenAuditServiceCallable(const Model::OpenAuditServiceRequest& request);
 
                 /**
-                 *This API is used to enable the password complexity for a cluster.
+                 *This API is used to enable the custom password complexity feature.
                  * @param req OpenClusterPasswordComplexityRequest
                  * @return OpenClusterPasswordComplexityOutcome
                  */
@@ -1476,7 +1677,7 @@ namespace TencentCloud
                 OpenClusterPasswordComplexityOutcomeCallable OpenClusterPasswordComplexityCallable(const Model::OpenClusterPasswordComplexityRequest& request);
 
                 /**
-                 *This API is used to enable the access to read-only instance group.
+                 *This API is used to enable read-only instance group access.
                  * @param req OpenClusterReadOnlyInstanceGroupAccessRequest
                  * @return OpenClusterReadOnlyInstanceGroupAccessOutcome
                  */
@@ -1485,7 +1686,16 @@ namespace TencentCloud
                 OpenClusterReadOnlyInstanceGroupAccessOutcomeCallable OpenClusterReadOnlyInstanceGroupAccessCallable(const Model::OpenClusterReadOnlyInstanceGroupAccessRequest& request);
 
                 /**
-                 *This API is used to enable the dedicated access group for a read-only instance.
+                 *Enable transparent data encryption for the cluster.
+                 * @param req OpenClusterTransparentEncryptRequest
+                 * @return OpenClusterTransparentEncryptOutcome
+                 */
+                OpenClusterTransparentEncryptOutcome OpenClusterTransparentEncrypt(const Model::OpenClusterTransparentEncryptRequest &request);
+                void OpenClusterTransparentEncryptAsync(const Model::OpenClusterTransparentEncryptRequest& request, const OpenClusterTransparentEncryptAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                OpenClusterTransparentEncryptOutcomeCallable OpenClusterTransparentEncryptCallable(const Model::OpenClusterTransparentEncryptRequest& request);
+
+                /**
+                 *This interface (OpenReadOnlyInstanceExclusiveAccess) is used to enable the dedicated access access group for a read-only instance.
                  * @param req OpenReadOnlyInstanceExclusiveAccessRequest
                  * @return OpenReadOnlyInstanceExclusiveAccessOutcome
                  */
@@ -1494,7 +1704,7 @@ namespace TencentCloud
                 OpenReadOnlyInstanceExclusiveAccessOutcomeCallable OpenReadOnlyInstanceExclusiveAccessCallable(const Model::OpenReadOnlyInstanceExclusiveAccessRequest& request);
 
                 /**
-                 *This API is used to enable the public network.
+                 *This interface (OpenWan) is used to enable external network.
                  * @param req OpenWanRequest
                  * @return OpenWanOutcome
                  */
@@ -1503,7 +1713,7 @@ namespace TencentCloud
                 OpenWanOutcomeCallable OpenWanCallable(const Model::OpenWanRequest& request);
 
                 /**
-                 *This API is used to pause a serverless cluster.
+                 *This API is used to suspend a serverless cluster.
                  * @param req PauseServerlessRequest
                  * @return PauseServerlessOutcome
                  */
@@ -1512,7 +1722,7 @@ namespace TencentCloud
                 PauseServerlessOutcomeCallable PauseServerlessCallable(const Model::PauseServerlessRequest& request);
 
                 /**
-                 *This API is used to refund a resource pack.
+                 *This API is used to refund a resource package.
                  * @param req RefundResourcePackageRequest
                  * @return RefundResourcePackageOutcome
                  */
@@ -1521,7 +1731,7 @@ namespace TencentCloud
                 RefundResourcePackageOutcomeCallable RefundResourcePackageCallable(const Model::RefundResourcePackageRequest& request);
 
                 /**
-                 *This API is used to rebalance the load on the database proxy.
+                 *This API is used to reload the database proxy of Cloud Load Balancer.
                  * @param req ReloadBalanceProxyNodeRequest
                  * @return ReloadBalanceProxyNodeOutcome
                  */
@@ -1530,7 +1740,7 @@ namespace TencentCloud
                 ReloadBalanceProxyNodeOutcomeCallable ReloadBalanceProxyNodeCallable(const Model::ReloadBalanceProxyNodeRequest& request);
 
                 /**
-                 *This API is used to delete the replica AZ.
+                 *This API is used to disable multi-AZ deployment for a cluster.
                  * @param req RemoveClusterSlaveZoneRequest
                  * @return RemoveClusterSlaveZoneOutcome
                  */
@@ -1539,7 +1749,7 @@ namespace TencentCloud
                 RemoveClusterSlaveZoneOutcomeCallable RemoveClusterSlaveZoneCallable(const Model::RemoveClusterSlaveZoneRequest& request);
 
                 /**
-                 *This API is used to reset the password of a TencentDB instance account.
+                 *This API is used to modify the database account password.
                  * @param req ResetAccountPasswordRequest
                  * @return ResetAccountPasswordOutcome
                  */
@@ -1548,7 +1758,7 @@ namespace TencentCloud
                 ResetAccountPasswordOutcomeCallable ResetAccountPasswordCallable(const Model::ResetAccountPasswordRequest& request);
 
                 /**
-                 *This API is used to restart an instance.
+                 *This API is used to reboot an instance.
                  * @param req RestartInstanceRequest
                  * @return RestartInstanceOutcome
                  */
@@ -1557,7 +1767,7 @@ namespace TencentCloud
                 RestartInstanceOutcomeCallable RestartInstanceCallable(const Model::RestartInstanceRequest& request);
 
                 /**
-                 *This API is used to resume a serverless cluster.
+                 *This API is used to restore a serverless cluster.
                  * @param req ResumeServerlessRequest
                  * @return ResumeServerlessOutcome
                  */
@@ -1566,7 +1776,7 @@ namespace TencentCloud
                 ResumeServerlessOutcomeCallable ResumeServerlessCallable(const Model::ResumeServerlessRequest& request);
 
                 /**
-                 *This API is used to search the list of cluster databases.
+                 *This API is used to search cluster database lists.
                  * @param req SearchClusterDatabasesRequest
                  * @return SearchClusterDatabasesOutcome
                  */
@@ -1575,7 +1785,7 @@ namespace TencentCloud
                 SearchClusterDatabasesOutcomeCallable SearchClusterDatabasesCallable(const Model::SearchClusterDatabasesRequest& request);
 
                 /**
-                 *This API is used to search the list of cluster data tables.
+                 *This API is used to search cluster data table lists.
                  * @param req SearchClusterTablesRequest
                  * @return SearchClusterTablesOutcome
                  */
@@ -1584,7 +1794,7 @@ namespace TencentCloud
                 SearchClusterTablesOutcomeCallable SearchClusterTablesCallable(const Model::SearchClusterTablesRequest& request);
 
                 /**
-                 *This API is used to set auto-renewal for an instance.
+                 *This API is used to set the auto-renewal feature of an instance.
                  * @param req SetRenewFlagRequest
                  * @return SetRenewFlagOutcome
                  */
@@ -1593,7 +1803,7 @@ namespace TencentCloud
                 SetRenewFlagOutcomeCallable SetRenewFlagCallable(const Model::SetRenewFlagRequest& request);
 
                 /**
-                 *This API is used to modify the cluster VPC.
+                 *This API is used to replace the cluster vpc.
                  * @param req SwitchClusterVpcRequest
                  * @return SwitchClusterVpcOutcome
                  */
@@ -1602,7 +1812,7 @@ namespace TencentCloud
                 SwitchClusterVpcOutcomeCallable SwitchClusterVpcCallable(const Model::SwitchClusterVpcRequest& request);
 
                 /**
-                 *This API is used to switch to the replica AZ.
+                 *This API is used to switch the primary and secondary AZs of a cluster.
                  * @param req SwitchClusterZoneRequest
                  * @return SwitchClusterZoneOutcome
                  */
@@ -1611,7 +1821,7 @@ namespace TencentCloud
                 SwitchClusterZoneOutcomeCallable SwitchClusterZoneCallable(const Model::SwitchClusterZoneRequest& request);
 
                 /**
-                 *This API is used to modify the database proxy VPC.
+                 *This API is used to replace the vpc of the database proxy.
                  * @param req SwitchProxyVpcRequest
                  * @return SwitchProxyVpcOutcome
                  */
@@ -1620,7 +1830,7 @@ namespace TencentCloud
                 SwitchProxyVpcOutcomeCallable SwitchProxyVpcCallable(const Model::SwitchProxyVpcRequest& request);
 
                 /**
-                 *This API is used to unbind a TDSQL-C for MySQL resource pack.
+                 *This API is used to unbind resource packages from clusters.
                  * @param req UnbindClusterResourcePackagesRequest
                  * @return UnbindClusterResourcePackagesOutcome
                  */
@@ -1629,7 +1839,7 @@ namespace TencentCloud
                 UnbindClusterResourcePackagesOutcomeCallable UnbindClusterResourcePackagesCallable(const Model::UnbindClusterResourcePackagesRequest& request);
 
                 /**
-                 *This API is used to upgrade the kernel version of a TDSQL-C for MySQL cluster.
+                 *This interface (UpgradeClusterVersion) is used to update the kernel minor version.
                  * @param req UpgradeClusterVersionRequest
                  * @return UpgradeClusterVersionOutcome
                  */
@@ -1638,7 +1848,7 @@ namespace TencentCloud
                 UpgradeClusterVersionOutcomeCallable UpgradeClusterVersionCallable(const Model::UpgradeClusterVersionRequest& request);
 
                 /**
-                 *This API is used to upgrade an instance.
+                 *This interface (UpgradeInstance) is used to upgrade instances.
                  * @param req UpgradeInstanceRequest
                  * @return UpgradeInstanceOutcome
                  */
@@ -1647,7 +1857,7 @@ namespace TencentCloud
                 UpgradeInstanceOutcomeCallable UpgradeInstanceCallable(const Model::UpgradeInstanceRequest& request);
 
                 /**
-                 *This API is used to upgrade the configuration of a database proxy.
+                 *This API is used to upgrade database proxy configuration.
                  * @param req UpgradeProxyRequest
                  * @return UpgradeProxyOutcome
                  */
@@ -1656,7 +1866,7 @@ namespace TencentCloud
                 UpgradeProxyOutcomeCallable UpgradeProxyCallable(const Model::UpgradeProxyRequest& request);
 
                 /**
-                 *This API is used to upgrade the version of a database proxy.
+                 *This API is used to upgrade the database proxy version.
                  * @param req UpgradeProxyVersionRequest
                  * @return UpgradeProxyVersionOutcome
                  */

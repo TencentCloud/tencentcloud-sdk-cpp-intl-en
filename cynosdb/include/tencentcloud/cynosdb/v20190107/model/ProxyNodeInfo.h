@@ -256,6 +256,27 @@ namespace TencentCloud
                      */
                     bool ZoneHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return OssProxyNodeName 
+                     * 
+                     */
+                    std::string GetOssProxyNodeName() const;
+
+                    /**
+                     * 设置
+                     * @param _ossProxyNodeName 
+                     * 
+                     */
+                    void SetOssProxyNodeName(const std::string& _ossProxyNodeName);
+
+                    /**
+                     * 判断参数 OssProxyNodeName 是否已赋值
+                     * @return OssProxyNodeName 是否已赋值
+                     * 
+                     */
+                    bool OssProxyNodeNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -317,6 +338,12 @@ namespace TencentCloud
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_ossProxyNodeName;
+                    bool m_ossProxyNodeNameHasBeenSet;
 
                 };
             }

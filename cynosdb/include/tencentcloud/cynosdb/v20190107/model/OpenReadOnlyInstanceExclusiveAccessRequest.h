@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取Please use the cluster information description (https://intl.cloud.tencent.com/document/api/1003/48086?from_cn_redirect=1) to obtain the clusterId.
+                     * @return ClusterId Please use the cluster information description (https://intl.cloud.tencent.com/document/api/1003/48086?from_cn_redirect=1) to obtain the clusterId.
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置Please use the cluster information description (https://intl.cloud.tencent.com/document/api/1003/48086?from_cn_redirect=1) to obtain the clusterId.
+                     * @param _clusterId Please use the cluster information description (https://intl.cloud.tencent.com/document/api/1003/48086?from_cn_redirect=1) to obtain the clusterId.
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the read-only instance with dedicated access to be enabled
-                     * @return InstanceId ID of the read-only instance with dedicated access to be enabled
+                     * 获取Please use the cluster information description (https://intl.cloud.tencent.com/document/api/1003/48086?from_cn_redirect=1) to obtain the instanceId.
+                     * @return InstanceId Please use the cluster information description (https://intl.cloud.tencent.com/document/api/1003/48086?from_cn_redirect=1) to obtain the instanceId.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置ID of the read-only instance with dedicated access to be enabled
-                     * @param _instanceId ID of the read-only instance with dedicated access to be enabled
+                     * 设置Please use the cluster information description (https://intl.cloud.tencent.com/document/api/1003/48086?from_cn_redirect=1) to obtain the instanceId.
+                     * @param _instanceId Please use the cluster information description (https://intl.cloud.tencent.com/document/api/1003/48086?from_cn_redirect=1) to obtain the instanceId.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Specified VPC ID
-                     * @return VpcId Specified VPC ID
+                     * 获取Specifies the designated vpc ID. please use the "query vpc list" to obtain the vpc ID.
+                     * @return VpcId Specifies the designated vpc ID. please use the "query vpc list" to obtain the vpc ID.
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置Specified VPC ID
-                     * @param _vpcId Specified VPC ID
+                     * 设置Specifies the designated vpc ID. please use the "query vpc list" to obtain the vpc ID.
+                     * @param _vpcId Specifies the designated vpc ID. please use the "query vpc list" to obtain the vpc ID.
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Specified subnet ID
-                     * @return SubnetId Specified subnet ID
+                     * 获取Specified subnet ID. if vpc ID is set, SubnetId is required. please use query subnet list (https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
+                     * @return SubnetId Specified subnet ID. if vpc ID is set, SubnetId is required. please use query subnet list (https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置Specified subnet ID
-                     * @param _subnetId Specified subnet ID
+                     * 设置Specified subnet ID. if vpc ID is set, SubnetId is required. please use query subnet list (https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
+                     * @param _subnetId Specified subnet ID. if vpc ID is set, SubnetId is required. please use query subnet list (https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Port
-                     * @return Port Port
+                     * 获取User-Defined port.
+                     * @return Port User-Defined port.
                      * 
                      */
                     int64_t GetPort() const;
 
                     /**
-                     * 设置Port
-                     * @param _port Port
+                     * 设置User-Defined port.
+                     * @param _port User-Defined port.
                      * 
                      */
                     void SetPort(const int64_t& _port);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取Security group
-                     * @return SecurityGroupIds Security group
+                     * 获取Security group ID. use [view security group](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) to obtain the SecurityGroupId.
+                     * @return SecurityGroupIds Security group ID. use [view security group](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) to obtain the SecurityGroupId.
                      * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
-                     * 设置Security group
-                     * @param _securityGroupIds Security group
+                     * 设置Security group ID. use [view security group](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) to obtain the SecurityGroupId.
+                     * @param _securityGroupIds Security group ID. use [view security group](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) to obtain the SecurityGroupId.
                      * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
@@ -171,37 +171,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID
+                     * Please use the cluster information description (https://intl.cloud.tencent.com/document/api/1003/48086?from_cn_redirect=1) to obtain the clusterId.
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * ID of the read-only instance with dedicated access to be enabled
+                     * Please use the cluster information description (https://intl.cloud.tencent.com/document/api/1003/48086?from_cn_redirect=1) to obtain the instanceId.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Specified VPC ID
+                     * Specifies the designated vpc ID. please use the "query vpc list" to obtain the vpc ID.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Specified subnet ID
+                     * Specified subnet ID. if vpc ID is set, SubnetId is required. please use query subnet list (https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Port
+                     * User-Defined port.
                      */
                     int64_t m_port;
                     bool m_portHasBeenSet;
 
                     /**
-                     * Security group
+                     * Security group ID. use [view security group](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) to obtain the SecurityGroupId.
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;

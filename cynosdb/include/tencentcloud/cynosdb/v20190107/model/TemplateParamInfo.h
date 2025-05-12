@@ -89,19 +89,15 @@ namespace TencentCloud
                     bool DefaultHasBeenSet() const;
 
                     /**
-                     * 获取The collection of valid value types when parameter type is `enum`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EnumValue The collection of valid value types when parameter type is `enum`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The collection of optional value types when the parameter type is `enum`.
+                     * @return EnumValue The collection of optional value types when the parameter type is `enum`.
                      * 
                      */
                     std::vector<std::string> GetEnumValue() const;
 
                     /**
-                     * 设置The collection of valid value types when parameter type is `enum`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _enumValue The collection of valid value types when parameter type is `enum`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The collection of optional value types when the parameter type is `enum`.
+                     * @param _enumValue The collection of optional value types when the parameter type is `enum`.
                      * 
                      */
                     void SetEnumValue(const std::vector<std::string>& _enumValue);
@@ -114,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EnumValueHasBeenSet() const;
 
                     /**
-                     * 获取Maximum value when parameter type is `float` or `integer`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Max Maximum value when parameter type is `float` or `integer`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The maximum value when the parameter type is float/integer.
+                     * @return Max The maximum value when the parameter type is float/integer.
                      * 
                      */
                     std::string GetMax() const;
 
                     /**
-                     * 设置Maximum value when parameter type is `float` or `integer`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _max Maximum value when parameter type is `float` or `integer`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The maximum value when the parameter type is float/integer.
+                     * @param _max The maximum value when the parameter type is float/integer.
                      * 
                      */
                     void SetMax(const std::string& _max);
@@ -139,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MaxHasBeenSet() const;
 
                     /**
-                     * 获取Minimum value when parameter type is `float` or `integer`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Min Minimum value when parameter type is `float` or `integer`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Minimum value when the parameter type is float/integer.
+                     * @return Min Minimum value when the parameter type is float/integer.
                      * 
                      */
                     std::string GetMin() const;
 
                     /**
-                     * 设置Minimum value when parameter type is `float` or `integer`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _min Minimum value when parameter type is `float` or `integer`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Minimum value when the parameter type is float/integer.
+                     * @param _min Minimum value when the parameter type is float/integer.
                      * 
                      */
                     void SetMin(const std::string& _min);
@@ -262,22 +250,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_defaultHasBeenSet;
 
                     /**
-                     * The collection of valid value types when parameter type is `enum`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The collection of optional value types when the parameter type is `enum`.
                      */
                     std::vector<std::string> m_enumValue;
                     bool m_enumValueHasBeenSet;
 
                     /**
-                     * Maximum value when parameter type is `float` or `integer`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The maximum value when the parameter type is float/integer.
                      */
                     std::string m_max;
                     bool m_maxHasBeenSet;
 
                     /**
-                     * Minimum value when parameter type is `float` or `integer`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Minimum value when the parameter type is float/integer.
                      */
                     std::string m_min;
                     bool m_minHasBeenSet;

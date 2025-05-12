@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Instance parameter list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Items Instance parameter list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance parameter list.
+                     * @return Items Instance parameter list.
                      * 
                      */
                     std::vector<ParamInfo> GetItems() const;
@@ -83,8 +81,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Instance parameter list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance parameter list.
                      */
                     std::vector<ParamInfo> m_items;
                     bool m_itemsHasBeenSet;

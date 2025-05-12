@@ -277,6 +277,181 @@ namespace TencentCloud
                      */
                     bool SqlMd5HasBeenSet() const;
 
+                    /**
+                     * 获取Remote reading count.
+Specifies that the database kernel version is larger than 3.1.12.
+                     * @return SyncReadCountRemote Remote reading count.
+Specifies that the database kernel version is larger than 3.1.12.
+                     * 
+                     */
+                    int64_t GetSyncReadCountRemote() const;
+
+                    /**
+                     * 设置Remote reading count.
+Specifies that the database kernel version is larger than 3.1.12.
+                     * @param _syncReadCountRemote Remote reading count.
+Specifies that the database kernel version is larger than 3.1.12.
+                     * 
+                     */
+                    void SetSyncReadCountRemote(const int64_t& _syncReadCountRemote);
+
+                    /**
+                     * 判断参数 SyncReadCountRemote 是否已赋值
+                     * @return SyncReadCountRemote 是否已赋值
+                     * 
+                     */
+                    bool SyncReadCountRemoteHasBeenSet() const;
+
+                    /**
+                     * 获取Number of remote read bytes.
+Specifies that the database kernel version is larger than 3.1.12.
+                     * @return SyncReadBytesRemote Number of remote read bytes.
+Specifies that the database kernel version is larger than 3.1.12.
+                     * 
+                     */
+                    int64_t GetSyncReadBytesRemote() const;
+
+                    /**
+                     * 设置Number of remote read bytes.
+Specifies that the database kernel version is larger than 3.1.12.
+                     * @param _syncReadBytesRemote Number of remote read bytes.
+Specifies that the database kernel version is larger than 3.1.12.
+                     * 
+                     */
+                    void SetSyncReadBytesRemote(const int64_t& _syncReadBytesRemote);
+
+                    /**
+                     * 判断参数 SyncReadBytesRemote 是否已赋值
+                     * @return SyncReadBytesRemote 是否已赋值
+                     * 
+                     */
+                    bool SyncReadBytesRemoteHasBeenSet() const;
+
+                    /**
+                     * 获取Time spent on remote reads (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+                     * @return SyncReadTimeRemote Time spent on remote reads (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+                     * 
+                     */
+                    int64_t GetSyncReadTimeRemote() const;
+
+                    /**
+                     * 设置Time spent on remote reads (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+                     * @param _syncReadTimeRemote Time spent on remote reads (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+                     * 
+                     */
+                    void SetSyncReadTimeRemote(const int64_t& _syncReadTimeRemote);
+
+                    /**
+                     * 判断参数 SyncReadTimeRemote 是否已赋值
+                     * @return SyncReadTimeRemote 是否已赋值
+                     * 
+                     */
+                    bool SyncReadTimeRemoteHasBeenSet() const;
+
+                    /**
+                     * 获取Remote write count.
+Specifies that the database kernel version is larger than 3.1.12.
+                     * @return SyncWriteCountRemote Remote write count.
+Specifies that the database kernel version is larger than 3.1.12.
+                     * 
+                     */
+                    int64_t GetSyncWriteCountRemote() const;
+
+                    /**
+                     * 设置Remote write count.
+Specifies that the database kernel version is larger than 3.1.12.
+                     * @param _syncWriteCountRemote Remote write count.
+Specifies that the database kernel version is larger than 3.1.12.
+                     * 
+                     */
+                    void SetSyncWriteCountRemote(const int64_t& _syncWriteCountRemote);
+
+                    /**
+                     * 判断参数 SyncWriteCountRemote 是否已赋值
+                     * @return SyncWriteCountRemote 是否已赋值
+                     * 
+                     */
+                    bool SyncWriteCountRemoteHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the number of remote written bytes.
+Specifies that the database kernel version is larger than 3.1.12.
+                     * @return SyncWriteBytesRemote Specifies the number of remote written bytes.
+Specifies that the database kernel version is larger than 3.1.12.
+                     * 
+                     */
+                    int64_t GetSyncWriteBytesRemote() const;
+
+                    /**
+                     * 设置Specifies the number of remote written bytes.
+Specifies that the database kernel version is larger than 3.1.12.
+                     * @param _syncWriteBytesRemote Specifies the number of remote written bytes.
+Specifies that the database kernel version is larger than 3.1.12.
+                     * 
+                     */
+                    void SetSyncWriteBytesRemote(const int64_t& _syncWriteBytesRemote);
+
+                    /**
+                     * 判断参数 SyncWriteBytesRemote 是否已赋值
+                     * @return SyncWriteBytesRemote 是否已赋值
+                     * 
+                     */
+                    bool SyncWriteBytesRemoteHasBeenSet() const;
+
+                    /**
+                     * 获取Time spent on remote writing (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+                     * @return SyncWriteTimeRemote Time spent on remote writing (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+                     * 
+                     */
+                    int64_t GetSyncWriteTimeRemote() const;
+
+                    /**
+                     * 设置Time spent on remote writing (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+                     * @param _syncWriteTimeRemote Time spent on remote writing (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+                     * 
+                     */
+                    void SetSyncWriteTimeRemote(const int64_t& _syncWriteTimeRemote);
+
+                    /**
+                     * 判断参数 SyncWriteTimeRemote 是否已赋值
+                     * @return SyncWriteTimeRemote 是否已赋值
+                     * 
+                     */
+                    bool SyncWriteTimeRemoteHasBeenSet() const;
+
+                    /**
+                     * 获取Transaction submission delay (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+                     * @return TrxCommitDelay Transaction submission delay (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+                     * 
+                     */
+                    int64_t GetTrxCommitDelay() const;
+
+                    /**
+                     * 设置Transaction submission delay (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+                     * @param _trxCommitDelay Transaction submission delay (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+                     * 
+                     */
+                    void SetTrxCommitDelay(const int64_t& _trxCommitDelay);
+
+                    /**
+                     * 判断参数 TrxCommitDelay 是否已赋值
+                     * @return TrxCommitDelay 是否已赋值
+                     * 
+                     */
+                    bool TrxCommitDelayHasBeenSet() const;
+
                 private:
 
                     /**
@@ -344,6 +519,55 @@ namespace TencentCloud
                      */
                     std::string m_sqlMd5;
                     bool m_sqlMd5HasBeenSet;
+
+                    /**
+                     * Remote reading count.
+Specifies that the database kernel version is larger than 3.1.12.
+                     */
+                    int64_t m_syncReadCountRemote;
+                    bool m_syncReadCountRemoteHasBeenSet;
+
+                    /**
+                     * Number of remote read bytes.
+Specifies that the database kernel version is larger than 3.1.12.
+                     */
+                    int64_t m_syncReadBytesRemote;
+                    bool m_syncReadBytesRemoteHasBeenSet;
+
+                    /**
+                     * Time spent on remote reads (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+                     */
+                    int64_t m_syncReadTimeRemote;
+                    bool m_syncReadTimeRemoteHasBeenSet;
+
+                    /**
+                     * Remote write count.
+Specifies that the database kernel version is larger than 3.1.12.
+                     */
+                    int64_t m_syncWriteCountRemote;
+                    bool m_syncWriteCountRemoteHasBeenSet;
+
+                    /**
+                     * Specifies the number of remote written bytes.
+Specifies that the database kernel version is larger than 3.1.12.
+                     */
+                    int64_t m_syncWriteBytesRemote;
+                    bool m_syncWriteBytesRemoteHasBeenSet;
+
+                    /**
+                     * Time spent on remote writing (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+                     */
+                    int64_t m_syncWriteTimeRemote;
+                    bool m_syncWriteTimeRemoteHasBeenSet;
+
+                    /**
+                     * Transaction submission delay (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+                     */
+                    int64_t m_trxCommitDelay;
+                    bool m_trxCommitDelayHasBeenSet;
 
                 };
             }
