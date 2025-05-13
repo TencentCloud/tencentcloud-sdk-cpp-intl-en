@@ -121,6 +121,31 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool TotalCountHasBeenSet() const;
 
+                    /**
+                     * 获取Unique id of the asynchronous operation record.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AsyncActionId Unique id of the asynchronous operation record.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetAsyncActionId() const;
+
+                    /**
+                     * 设置Unique id of the asynchronous operation record.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _asyncActionId Unique id of the asynchronous operation record.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetAsyncActionId(const std::string& _asyncActionId);
+
+                    /**
+                     * 判断参数 AsyncActionId 是否已赋值
+                     * @return AsyncActionId 是否已赋值
+                     * 
+                     */
+                    bool AsyncActionIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -143,6 +168,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
+
+                    /**
+                     * Unique id of the asynchronous operation record.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_asyncActionId;
+                    bool m_asyncActionIdHasBeenSet;
 
                 };
             }

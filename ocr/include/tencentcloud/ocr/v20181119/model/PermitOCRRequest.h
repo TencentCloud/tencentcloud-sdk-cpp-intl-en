@@ -112,6 +112,27 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
                      */
                     bool ImageUrlHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to return the profile photo, default is false.
+                     * @return CropPortrait Whether to return the profile photo, default is false.
+                     * 
+                     */
+                    bool GetCropPortrait() const;
+
+                    /**
+                     * 设置Whether to return the profile photo, default is false.
+                     * @param _cropPortrait Whether to return the profile photo, default is false.
+                     * 
+                     */
+                    void SetCropPortrait(const bool& _cropPortrait);
+
+                    /**
+                     * 判断参数 CropPortrait 是否已赋值
+                     * @return CropPortrait 是否已赋值
+                     * 
+                     */
+                    bool CropPortraitHasBeenSet() const;
+
                 private:
 
                     /**
@@ -132,6 +153,12 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
                      */
                     std::string m_imageUrl;
                     bool m_imageUrlHasBeenSet;
+
+                    /**
+                     * Whether to return the profile photo, default is false.
+                     */
+                    bool m_cropPortrait;
+                    bool m_cropPortraitHasBeenSet;
 
                 };
             }

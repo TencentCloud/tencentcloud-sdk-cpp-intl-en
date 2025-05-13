@@ -31,7 +31,9 @@ PermitOCRResponse::PermitOCRResponse() :
     m_validDateHasBeenSet(false),
     m_issueAuthorityHasBeenSet(false),
     m_issueAddressHasBeenSet(false),
-    m_birthdayHasBeenSet(false)
+    m_birthdayHasBeenSet(false),
+    m_portraitImageHasBeenSet(false),
+    m_typeHasBeenSet(false)
 {
 }
 
@@ -149,6 +151,26 @@ CoreInternalOutcome PermitOCRResponse::Deserialize(const string &payload)
         m_birthdayHasBeenSet = true;
     }
 
+    if (rsp.HasMember("PortraitImage") && !rsp["PortraitImage"].IsNull())
+    {
+        if (!rsp["PortraitImage"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `PortraitImage` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_portraitImage = string(rsp["PortraitImage"].GetString());
+        m_portraitImageHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("Type") && !rsp["Type"].IsNull())
+    {
+        if (!rsp["Type"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Type` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_type = string(rsp["Type"].GetString());
+        m_typeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -221,6 +243,22 @@ string PermitOCRResponse::ToJsonString() const
         string key = "Birthday";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_birthday.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_portraitImageHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PortraitImage";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_portraitImage.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_typeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Type";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -313,6 +351,26 @@ string PermitOCRResponse::GetBirthday() const
 bool PermitOCRResponse::BirthdayHasBeenSet() const
 {
     return m_birthdayHasBeenSet;
+}
+
+string PermitOCRResponse::GetPortraitImage() const
+{
+    return m_portraitImage;
+}
+
+bool PermitOCRResponse::PortraitImageHasBeenSet() const
+{
+    return m_portraitImageHasBeenSet;
+}
+
+string PermitOCRResponse::GetType() const
+{
+    return m_type;
+}
+
+bool PermitOCRResponse::TypeHasBeenSet() const
+{
+    return m_typeHasBeenSet;
 }
 
 

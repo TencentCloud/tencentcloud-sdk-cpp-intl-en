@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool OwnerHasBeenSet() const;
 
                     /**
-                     * 获取Event Type, default value: TIME_SERIES
-                     * @return EventType Event Type, default value: TIME_SERIES
+                     * 获取Required. event type. default value: TIME_SERIES.
+                     * @return EventType Required. event type. default value: TIME_SERIES.
                      * 
                      */
                     std::string GetEventType() const;
 
                     /**
-                     * 设置Event Type, default value: TIME_SERIES
-                     * @param _eventType Event Type, default value: TIME_SERIES
+                     * 设置Required. event type. default value: TIME_SERIES.
+                     * @param _eventType Required. event type. default value: TIME_SERIES.
                      * 
                      */
                     void SetEventType(const std::string& _eventType);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool EventTypeHasBeenSet() const;
 
                     /**
-                     * 获取Corresponding DAY: yyyyMMdd, Corresponding HOUR: yyyyMMddHH, Corresponding MIN: yyyyMMddHHmm, Corresponding SECOND: yyyyMMddHHmmss
-                     * @return DimensionFormat Corresponding DAY: yyyyMMdd, Corresponding HOUR: yyyyMMddHH, Corresponding MIN: yyyyMMddHHmm, Corresponding SECOND: yyyyMMddHHmmss
+                     * 获取Required. corresponds to day: yyyyMMdd, corresponds to HOUR: yyyyMMddHH, corresponds to MIN: yyyyMMddHHmm, corresponds to SECOND: yyyyMMddHHmmss. default value: yyyyMMdd.
+                     * @return DimensionFormat Required. corresponds to day: yyyyMMdd, corresponds to HOUR: yyyyMMddHH, corresponds to MIN: yyyyMMddHHmm, corresponds to SECOND: yyyyMMddHHmmss. default value: yyyyMMdd.
                      * 
                      */
                     std::string GetDimensionFormat() const;
 
                     /**
-                     * 设置Corresponding DAY: yyyyMMdd, Corresponding HOUR: yyyyMMddHH, Corresponding MIN: yyyyMMddHHmm, Corresponding SECOND: yyyyMMddHHmmss
-                     * @param _dimensionFormat Corresponding DAY: yyyyMMdd, Corresponding HOUR: yyyyMMddHH, Corresponding MIN: yyyyMMddHHmm, Corresponding SECOND: yyyyMMddHHmmss
+                     * 设置Required. corresponds to day: yyyyMMdd, corresponds to HOUR: yyyyMMddHH, corresponds to MIN: yyyyMMddHHmm, corresponds to SECOND: yyyyMMddHHmmss. default value: yyyyMMdd.
+                     * @param _dimensionFormat Required. corresponds to day: yyyyMMdd, corresponds to HOUR: yyyyMMddHH, corresponds to MIN: yyyyMMddHHmm, corresponds to SECOND: yyyyMMddHHmmss. default value: yyyyMMdd.
                      * 
                      */
                     void SetDimensionFormat(const std::string& _dimensionFormat);
@@ -291,13 +291,13 @@ namespace TencentCloud
                     bool m_ownerHasBeenSet;
 
                     /**
-                     * Event Type, default value: TIME_SERIES
+                     * Required. event type. default value: TIME_SERIES.
                      */
                     std::string m_eventType;
                     bool m_eventTypeHasBeenSet;
 
                     /**
-                     * Corresponding DAY: yyyyMMdd, Corresponding HOUR: yyyyMMddHH, Corresponding MIN: yyyyMMddHHmm, Corresponding SECOND: yyyyMMddHHmmss
+                     * Required. corresponds to day: yyyyMMdd, corresponds to HOUR: yyyyMMddHH, corresponds to MIN: yyyyMMddHHmm, corresponds to SECOND: yyyyMMddHHmmss. default value: yyyyMMdd.
                      */
                     std::string m_dimensionFormat;
                     bool m_dimensionFormatHasBeenSet;
