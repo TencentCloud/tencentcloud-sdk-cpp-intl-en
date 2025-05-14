@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool NextRotateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Scheduled deletion time
-                     * @return DeletionDate Scheduled deletion time
+                     * 获取The time when scheduled deletion occurs.
+                     * @return DeletionDate The time when scheduled deletion occurs.
                      * 
                      */
                     uint64_t GetDeletionDate() const;
 
                     /**
-                     * 设置Scheduled deletion time
-                     * @param _deletionDate Scheduled deletion time
+                     * 设置The time when scheduled deletion occurs.
+                     * @param _deletionDate The time when scheduled deletion occurs.
                      * 
                      */
                     void SetDeletionDate(const uint64_t& _deletionDate);
@@ -299,19 +299,15 @@ namespace TencentCloud
                     bool DeletionDateHasBeenSet() const;
 
                     /**
-                     * 获取CMK key material type. TENCENT_KMS: created by KMS; EXTERNAL: imported by user.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Origin CMK key material type. TENCENT_KMS: created by KMS; EXTERNAL: imported by user.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL.
+                     * @return Origin CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL.
                      * 
                      */
                     std::string GetOrigin() const;
 
                     /**
-                     * 设置CMK key material type. TENCENT_KMS: created by KMS; EXTERNAL: imported by user.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _origin CMK key material type. TENCENT_KMS: created by KMS; EXTERNAL: imported by user.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL.
+                     * @param _origin CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL.
                      * 
                      */
                     void SetOrigin(const std::string& _origin);
@@ -324,19 +320,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OriginHasBeenSet() const;
 
                     /**
-                     * 获取It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ValidTo It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration.
+                     * @return ValidTo Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration.
                      * 
                      */
                     uint64_t GetValidTo() const;
 
                     /**
-                     * 设置It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _validTo It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration.
+                     * @param _validTo Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration.
                      * 
                      */
                     void SetValidTo(const uint64_t& _validTo);
@@ -370,19 +362,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return HsmClusterId ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取HSM cluster ID (valid only for exclusive or managed version KMS service instances).
+                     * @return HsmClusterId HSM cluster ID (valid only for exclusive or managed version KMS service instances).
                      * 
                      */
                     std::string GetHsmClusterId() const;
 
                     /**
-                     * 设置ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _hsmClusterId ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置HSM cluster ID (valid only for exclusive or managed version KMS service instances).
+                     * @param _hsmClusterId HSM cluster ID (valid only for exclusive or managed version KMS service instances).
                      * 
                      */
                     void SetHsmClusterId(const std::string& _hsmClusterId);
@@ -393,6 +381,48 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * 
                      */
                     bool HsmClusterIdHasBeenSet() const;
+
+                    /**
+                     * 获取Key rotation period (days).
+                     * @return RotateDays Key rotation period (days).
+                     * 
+                     */
+                    uint64_t GetRotateDays() const;
+
+                    /**
+                     * 设置Key rotation period (days).
+                     * @param _rotateDays Key rotation period (days).
+                     * 
+                     */
+                    void SetRotateDays(const uint64_t& _rotateDays);
+
+                    /**
+                     * 判断参数 RotateDays 是否已赋值
+                     * @return RotateDays 是否已赋值
+                     * 
+                     */
+                    bool RotateDaysHasBeenSet() const;
+
+                    /**
+                     * 获取Last disorderly rotation time (Unix timestamp).
+                     * @return LastRotateTime Last disorderly rotation time (Unix timestamp).
+                     * 
+                     */
+                    uint64_t GetLastRotateTime() const;
+
+                    /**
+                     * 设置Last disorderly rotation time (Unix timestamp).
+                     * @param _lastRotateTime Last disorderly rotation time (Unix timestamp).
+                     * 
+                     */
+                    void SetLastRotateTime(const uint64_t& _lastRotateTime);
+
+                    /**
+                     * 判断参数 LastRotateTime 是否已赋值
+                     * @return LastRotateTime 是否已赋值
+                     * 
+                     */
+                    bool LastRotateTimeHasBeenSet() const;
 
                 private:
 
@@ -463,21 +493,19 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_nextRotateTimeHasBeenSet;
 
                     /**
-                     * Scheduled deletion time
+                     * The time when scheduled deletion occurs.
                      */
                     uint64_t m_deletionDate;
                     bool m_deletionDateHasBeenSet;
 
                     /**
-                     * CMK key material type. TENCENT_KMS: created by KMS; EXTERNAL: imported by user.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL.
                      */
                     std::string m_origin;
                     bool m_originHasBeenSet;
 
                     /**
-                     * It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration.
                      */
                     uint64_t m_validTo;
                     bool m_validToHasBeenSet;
@@ -489,11 +517,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_resourceIdHasBeenSet;
 
                     /**
-                     * ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * HSM cluster ID (valid only for exclusive or managed version KMS service instances).
                      */
                     std::string m_hsmClusterId;
                     bool m_hsmClusterIdHasBeenSet;
+
+                    /**
+                     * Key rotation period (days).
+                     */
+                    uint64_t m_rotateDays;
+                    bool m_rotateDaysHasBeenSet;
+
+                    /**
+                     * Last disorderly rotation time (Unix timestamp).
+                     */
+                    uint64_t m_lastRotateTime;
+                    bool m_lastRotateTimeHasBeenSet;
 
                 };
             }

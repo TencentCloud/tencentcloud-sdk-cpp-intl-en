@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ProductIdHasBeenSet() const;
 
                     /**
-                     * 获取Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service’s features.
-                     * @return ResourceId Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service’s features.
+                     * 获取Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service's features.
+                     * @return ResourceId Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service's features.
                      * 
                      */
                     std::string GetResourceId() const;
 
                     /**
-                     * 设置Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service’s features.
-                     * @param _resourceId Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service’s features.
+                     * 设置Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service's features.
+                     * @param _resourceId Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service's features.
                      * 
                      */
                     void SetResourceId(const std::string& _resourceId);
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_productIdHasBeenSet;
 
                     /**
-                     * Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service’s features.
+                     * Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service's features.
                      */
                     std::string m_resourceId;
                     bool m_resourceIdHasBeenSet;

@@ -47,31 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether [TCOP (formerly Cloud Monitor)](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) is enabled. Valid values:
-<li>TRUE: enabled</li>
-<li>FALSE: disabled</li>
+                     * 获取Whether to enable [Tencent Cloud Observability Platform (formerly Cloud Monitor)](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) (TCOP). Valid values:
+<li>TRUE: enable TCOP.</li>
+<li>FALSE: disable TCOP.</li>
 Default value: TRUE.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Enabled Whether [TCOP (formerly Cloud Monitor)](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) is enabled. Valid values:
-<li>TRUE: enabled</li>
-<li>FALSE: disabled</li>
+                     * @return Enabled Whether to enable [Tencent Cloud Observability Platform (formerly Cloud Monitor)](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) (TCOP). Valid values:
+<li>TRUE: enable TCOP.</li>
+<li>FALSE: disable TCOP.</li>
 Default value: TRUE.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     bool GetEnabled() const;
 
                     /**
-                     * 设置Whether [TCOP (formerly Cloud Monitor)](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) is enabled. Valid values:
-<li>TRUE: enabled</li>
-<li>FALSE: disabled</li>
+                     * 设置Whether to enable [Tencent Cloud Observability Platform (formerly Cloud Monitor)](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) (TCOP). Valid values:
+<li>TRUE: enable TCOP.</li>
+<li>FALSE: disable TCOP.</li>
 Default value: TRUE.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _enabled Whether [TCOP (formerly Cloud Monitor)](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) is enabled. Valid values:
-<li>TRUE: enabled</li>
-<li>FALSE: disabled</li>
+                     * @param _enabled Whether to enable [Tencent Cloud Observability Platform (formerly Cloud Monitor)](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) (TCOP). Valid values:
+<li>TRUE: enable TCOP.</li>
+<li>FALSE: disable TCOP.</li>
 Default value: TRUE.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetEnabled(const bool& _enabled);
@@ -86,11 +82,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Whether [TCOP (formerly Cloud Monitor)](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) is enabled. Valid values:
-<li>TRUE: enabled</li>
-<li>FALSE: disabled</li>
+                     * Whether to enable [Tencent Cloud Observability Platform (formerly Cloud Monitor)](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) (TCOP). Valid values:
+<li>TRUE: enable TCOP.</li>
+<li>FALSE: disable TCOP.</li>
 Default value: TRUE.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_enabled;
                     bool m_enabledHasBeenSet;

@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Key attribute information
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return KeyMetadata Key attribute information
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the attribute information of the key.
+                     * @return KeyMetadata Specifies the attribute information of the key.
                      * 
                      */
                     KeyMetadata GetKeyMetadata() const;
@@ -63,8 +61,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Key attribute information
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Specifies the attribute information of the key.
                      */
                     KeyMetadata m_keyMetadata;
                     bool m_keyMetadataHasBeenSet;

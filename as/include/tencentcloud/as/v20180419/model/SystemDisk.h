@@ -47,19 +47,39 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取System disk type. For more information on limits of system disk types, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: local disk <br><li>`LOCAL_SSD`: local SSD disk <br><li>`CLOUD_BASIC`: HDD cloud disk <br><li>`CLOUD_PREMIUM`: premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk <br><br>Default value: `CLOUD_PREMIUM`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @return DiskType System disk type. For more information on limits of system disk types, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: local disk <br><li>`LOCAL_SSD`: local SSD disk <br><li>`CLOUD_BASIC`: HDD cloud disk <br><li>`CLOUD_PREMIUM`: premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk <br><br>Default value: `CLOUD_PREMIUM`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 获取System disk type. For restrictions on the system disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_BASIC: Basic Cloud Disk.</li>
+<li>CLOUD_PREMIUM: Premium Disk.</li>
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>Default value: CLOUD_PREMIUM.</li>
+                     * @return DiskType System disk type. For restrictions on the system disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_BASIC: Basic Cloud Disk.</li>
+<li>CLOUD_PREMIUM: Premium Disk.</li>
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>Default value: CLOUD_PREMIUM.</li>
                      * 
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置System disk type. For more information on limits of system disk types, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: local disk <br><li>`LOCAL_SSD`: local SSD disk <br><li>`CLOUD_BASIC`: HDD cloud disk <br><li>`CLOUD_PREMIUM`: premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk <br><br>Default value: `CLOUD_PREMIUM`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param _diskType System disk type. For more information on limits of system disk types, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: local disk <br><li>`LOCAL_SSD`: local SSD disk <br><li>`CLOUD_BASIC`: HDD cloud disk <br><li>`CLOUD_PREMIUM`: premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk <br><br>Default value: `CLOUD_PREMIUM`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 设置System disk type. For restrictions on the system disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_BASIC: Basic Cloud Disk.</li>
+<li>CLOUD_PREMIUM: Premium Disk.</li>
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>Default value: CLOUD_PREMIUM.</li>
+                     * @param _diskType System disk type. For restrictions on the system disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_BASIC: Basic Cloud Disk.</li>
+<li>CLOUD_PREMIUM: Premium Disk.</li>
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>Default value: CLOUD_PREMIUM.</li>
                      * 
                      */
                     void SetDiskType(const std::string& _diskType);
@@ -72,19 +92,15 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                     bool DiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取System disk size in GB. Default value: 50
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DiskSize System disk size in GB. Default value: 50
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取System disk size, in GB. Default value: 50.
+                     * @return DiskSize System disk size, in GB. Default value: 50.
                      * 
                      */
                     uint64_t GetDiskSize() const;
 
                     /**
-                     * 设置System disk size in GB. Default value: 50
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _diskSize System disk size in GB. Default value: 50
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置System disk size, in GB. Default value: 50.
+                     * @param _diskSize System disk size, in GB. Default value: 50.
                      * 
                      */
                     void SetDiskSize(const uint64_t& _diskSize);
@@ -99,15 +115,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * System disk type. For more information on limits of system disk types, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: local disk <br><li>`LOCAL_SSD`: local SSD disk <br><li>`CLOUD_BASIC`: HDD cloud disk <br><li>`CLOUD_PREMIUM`: premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk <br><br>Default value: `CLOUD_PREMIUM`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * System disk type. For restrictions on the system disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_BASIC: Basic Cloud Disk.</li>
+<li>CLOUD_PREMIUM: Premium Disk.</li>
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>Default value: CLOUD_PREMIUM.</li>
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;
 
                     /**
-                     * System disk size in GB. Default value: 50
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * System disk size, in GB. Default value: 50.
                      */
                     uint64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;

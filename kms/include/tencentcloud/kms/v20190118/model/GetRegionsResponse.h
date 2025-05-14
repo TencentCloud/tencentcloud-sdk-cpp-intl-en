@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The list of supported regions
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Regions The list of supported regions
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Available region list.
+                     * @return Regions Available region list.
                      * 
                      */
                     std::vector<std::string> GetRegions() const;
@@ -62,8 +60,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The list of supported regions
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Available region list.
                      */
                     std::vector<std::string> m_regions;
                     bool m_regionsHasBeenSet;

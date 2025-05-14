@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool KeyIdHasBeenSet() const;
 
                     /**
-                     * 获取Base64-encoded ciphertext encrypted with `PublicKey`, whose length cannot exceed 256 bytes.
-                     * @return Ciphertext Base64-encoded ciphertext encrypted with `PublicKey`, whose length cannot exceed 256 bytes.
+                     * 获取Specifies that the ciphertext encrypted with PublicKey is Base64 encoded. the original ciphertext format needs to be C1C3C2_ASN1. the length of the original ciphertext cannot exceed 256 bytes.
+                     * @return Ciphertext Specifies that the ciphertext encrypted with PublicKey is Base64 encoded. the original ciphertext format needs to be C1C3C2_ASN1. the length of the original ciphertext cannot exceed 256 bytes.
                      * 
                      */
                     std::string GetCiphertext() const;
 
                     /**
-                     * 设置Base64-encoded ciphertext encrypted with `PublicKey`, whose length cannot exceed 256 bytes.
-                     * @param _ciphertext Base64-encoded ciphertext encrypted with `PublicKey`, whose length cannot exceed 256 bytes.
+                     * 设置Specifies that the ciphertext encrypted with PublicKey is Base64 encoded. the original ciphertext format needs to be C1C3C2_ASN1. the length of the original ciphertext cannot exceed 256 bytes.
+                     * @param _ciphertext Specifies that the ciphertext encrypted with PublicKey is Base64 encoded. the original ciphertext format needs to be C1C3C2_ASN1. the length of the original ciphertext cannot exceed 256 bytes.
                      * 
                      */
                     void SetCiphertext(const std::string& _ciphertext);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_keyIdHasBeenSet;
 
                     /**
-                     * Base64-encoded ciphertext encrypted with `PublicKey`, whose length cannot exceed 256 bytes.
+                     * Specifies that the ciphertext encrypted with PublicKey is Base64 encoded. the original ciphertext format needs to be C1C3C2_ASN1. the length of the original ciphertext cannot exceed 256 bytes.
                      */
                     std::string m_ciphertext;
                     bool m_ciphertextHasBeenSet;

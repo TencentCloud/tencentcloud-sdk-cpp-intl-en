@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取CMK description
-                     * @return Description CMK description
+                     * 获取Specifies the description of the CMK.
+                     * @return Description Specifies the description of the CMK.
                      * 
                      */
                     std::string GetDescription() const;
@@ -128,8 +128,8 @@ namespace TencentCloud
                     bool KeyUsageHasBeenSet() const;
 
                     /**
-                     * 获取Tag operation return code. 0: success; 1: internal error; 2: business processing error
-                     * @return TagCode Tag operation return code. 0: success; 1: internal error; 2: business processing error
+                     * 获取Return code of Tag operation. `0`: success; `1`: cls internal error; `2`: business processing error.
+                     * @return TagCode Return code of Tag operation. `0`: success; `1`: cls internal error; `2`: business processing error.
                      * 
                      */
                     uint64_t GetTagCode() const;
@@ -142,8 +142,8 @@ namespace TencentCloud
                     bool TagCodeHasBeenSet() const;
 
                     /**
-                     * 获取Tag operation return information
-                     * @return TagMsg Tag operation return information
+                     * 获取Response information of Tag operation.
+                     * @return TagMsg Response information of Tag operation.
                      * 
                      */
                     std::string GetTagMsg() const;
@@ -156,10 +156,8 @@ namespace TencentCloud
                     bool TagMsgHasBeenSet() const;
 
                     /**
-                     * 获取ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return HsmClusterId ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取HSM cluster ID (valid only for exclusive or managed version KMS service instances).
+                     * @return HsmClusterId HSM cluster ID (valid only for exclusive or managed version KMS service instances).
                      * 
                      */
                     std::string GetHsmClusterId() const;
@@ -192,7 +190,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * CMK description
+                     * Specifies the description of the CMK.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
@@ -210,20 +208,19 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_keyUsageHasBeenSet;
 
                     /**
-                     * Tag operation return code. 0: success; 1: internal error; 2: business processing error
+                     * Return code of Tag operation. `0`: success; `1`: cls internal error; `2`: business processing error.
                      */
                     uint64_t m_tagCode;
                     bool m_tagCodeHasBeenSet;
 
                     /**
-                     * Tag operation return information
+                     * Response information of Tag operation.
                      */
                     std::string m_tagMsg;
                     bool m_tagMsgHasBeenSet;
 
                     /**
-                     * ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * HSM cluster ID (valid only for exclusive or managed version KMS service instances).
                      */
                     std::string m_hsmClusterId;
                     bool m_hsmClusterIdHasBeenSet;

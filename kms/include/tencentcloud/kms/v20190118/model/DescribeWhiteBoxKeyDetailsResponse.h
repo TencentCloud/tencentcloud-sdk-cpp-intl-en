@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool KeyInfosHasBeenSet() const;
 
                     /**
-                     * 获取Total white-box keys.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TotalCount Total white-box keys.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Total number of white-box keys.
+                     * @return TotalCount Total number of white-box keys.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -83,8 +81,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_keyInfosHasBeenSet;
 
                     /**
-                     * Total white-box keys.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Total number of white-box keys.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

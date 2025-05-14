@@ -32,7 +32,10 @@ GetServiceStatusResponse::GetServiceStatusResponse() :
     m_proResourceIdHasBeenSet(false),
     m_exclusiveVSMEnabledHasBeenSet(false),
     m_exclusiveHSMEnabledHasBeenSet(false),
-    m_subscriptionInfoHasBeenSet(false)
+    m_subscriptionInfoHasBeenSet(false),
+    m_cmkUserCountHasBeenSet(false),
+    m_cmkLimitHasBeenSet(false),
+    m_exclusiveHSMListHasBeenSet(false)
 {
 }
 
@@ -160,6 +163,46 @@ CoreInternalOutcome GetServiceStatusResponse::Deserialize(const string &payload)
         m_subscriptionInfoHasBeenSet = true;
     }
 
+    if (rsp.HasMember("CmkUserCount") && !rsp["CmkUserCount"].IsNull())
+    {
+        if (!rsp["CmkUserCount"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `CmkUserCount` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_cmkUserCount = rsp["CmkUserCount"].GetUint64();
+        m_cmkUserCountHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("CmkLimit") && !rsp["CmkLimit"].IsNull())
+    {
+        if (!rsp["CmkLimit"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `CmkLimit` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_cmkLimit = rsp["CmkLimit"].GetUint64();
+        m_cmkLimitHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("ExclusiveHSMList") && !rsp["ExclusiveHSMList"].IsNull())
+    {
+        if (!rsp["ExclusiveHSMList"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `ExclusiveHSMList` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["ExclusiveHSMList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            ExclusiveHSM item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_exclusiveHSMList.push_back(item);
+        }
+        m_exclusiveHSMListHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -240,6 +283,37 @@ string GetServiceStatusResponse::ToJsonString() const
         string key = "SubscriptionInfo";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_subscriptionInfo.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_cmkUserCountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CmkUserCount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_cmkUserCount, allocator);
+    }
+
+    if (m_cmkLimitHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CmkLimit";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_cmkLimit, allocator);
+    }
+
+    if (m_exclusiveHSMListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExclusiveHSMList";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_exclusiveHSMList.begin(); itr != m_exclusiveHSMList.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -342,6 +416,36 @@ string GetServiceStatusResponse::GetSubscriptionInfo() const
 bool GetServiceStatusResponse::SubscriptionInfoHasBeenSet() const
 {
     return m_subscriptionInfoHasBeenSet;
+}
+
+uint64_t GetServiceStatusResponse::GetCmkUserCount() const
+{
+    return m_cmkUserCount;
+}
+
+bool GetServiceStatusResponse::CmkUserCountHasBeenSet() const
+{
+    return m_cmkUserCountHasBeenSet;
+}
+
+uint64_t GetServiceStatusResponse::GetCmkLimit() const
+{
+    return m_cmkLimit;
+}
+
+bool GetServiceStatusResponse::CmkLimitHasBeenSet() const
+{
+    return m_cmkLimitHasBeenSet;
+}
+
+vector<ExclusiveHSM> GetServiceStatusResponse::GetExclusiveHSMList() const
+{
+    return m_exclusiveHSMList;
+}
+
+bool GetServiceStatusResponse::ExclusiveHSMListHasBeenSet() const
+{
+    return m_exclusiveHSMListHasBeenSet;
 }
 
 

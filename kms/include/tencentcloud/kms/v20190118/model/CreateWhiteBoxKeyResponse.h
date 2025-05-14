@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool KeyIdHasBeenSet() const;
 
                     /**
-                     * 获取Tag operation return code. 0: success; 1: internal error; 2: business processing error
-                     * @return TagCode Tag operation return code. 0: success; 1: internal error; 2: business processing error
+                     * 获取Return code of Tag operation. `0`: success; `1`: internal error; `2`: business processing error.
+                     * @return TagCode Return code of Tag operation. `0`: success; `1`: internal error; `2`: business processing error.
                      * 
                      */
                     uint64_t GetTagCode() const;
@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool TagCodeHasBeenSet() const;
 
                     /**
-                     * 获取Tag operation return message
-                     * @return TagMsg Tag operation return message
+                     * 获取Response information of Tag operation.
+                     * @return TagMsg Response information of Tag operation.
                      * 
                      */
                     std::string GetTagMsg() const;
@@ -134,13 +134,13 @@ namespace TencentCloud
                     bool m_keyIdHasBeenSet;
 
                     /**
-                     * Tag operation return code. 0: success; 1: internal error; 2: business processing error
+                     * Return code of Tag operation. `0`: success; `1`: internal error; `2`: business processing error.
                      */
                     uint64_t m_tagCode;
                     bool m_tagCodeHasBeenSet;
 
                     /**
-                     * Tag operation return message
+                     * Response information of Tag operation.
                      */
                     std::string m_tagMsg;
                     bool m_tagMsgHasBeenSet;

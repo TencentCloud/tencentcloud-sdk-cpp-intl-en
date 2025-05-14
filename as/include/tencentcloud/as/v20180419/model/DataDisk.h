@@ -47,51 +47,47 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Data disk type. For restrictions on data disk type, see [Cloud Block Storage Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
-<li>LOCAL_BASIC: Local hard disk.</li>
+                     * 获取Data disk type. For restrictions on the data disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local Disk.</li>
 <li>LOCAL_SSD: Local SSD.</li>
-<li>CLOUD_BASIC: General cloud disk.</li>
-<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_BASIC: Basic Cloud Disk.</li>
+<li>CLOUD_PREMIUM: Premium Disk.</li>
 <li>CLOUD_SSD: Cloud SSD.</li>
 <li>CLOUD_HSSD: Enhanced SSD.</li>
-<li>CLOUD_TSSD: Ultra SSD.</li>
+<li>CLOUD_TSSD: Tremendous SSD.</li>
 The default value is consistent with the system disk type (SystemDisk.DiskType).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DiskType Data disk type. For restrictions on data disk type, see [Cloud Block Storage Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
-<li>LOCAL_BASIC: Local hard disk.</li>
+                     * @return DiskType Data disk type. For restrictions on the data disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local Disk.</li>
 <li>LOCAL_SSD: Local SSD.</li>
-<li>CLOUD_BASIC: General cloud disk.</li>
-<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_BASIC: Basic Cloud Disk.</li>
+<li>CLOUD_PREMIUM: Premium Disk.</li>
 <li>CLOUD_SSD: Cloud SSD.</li>
 <li>CLOUD_HSSD: Enhanced SSD.</li>
-<li>CLOUD_TSSD: Ultra SSD.</li>
+<li>CLOUD_TSSD: Tremendous SSD.</li>
 The default value is consistent with the system disk type (SystemDisk.DiskType).
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置Data disk type. For restrictions on data disk type, see [Cloud Block Storage Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
-<li>LOCAL_BASIC: Local hard disk.</li>
+                     * 设置Data disk type. For restrictions on the data disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local Disk.</li>
 <li>LOCAL_SSD: Local SSD.</li>
-<li>CLOUD_BASIC: General cloud disk.</li>
-<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_BASIC: Basic Cloud Disk.</li>
+<li>CLOUD_PREMIUM: Premium Disk.</li>
 <li>CLOUD_SSD: Cloud SSD.</li>
 <li>CLOUD_HSSD: Enhanced SSD.</li>
-<li>CLOUD_TSSD: Ultra SSD.</li>
+<li>CLOUD_TSSD: Tremendous SSD.</li>
 The default value is consistent with the system disk type (SystemDisk.DiskType).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _diskType Data disk type. For restrictions on data disk type, see [Cloud Block Storage Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
-<li>LOCAL_BASIC: Local hard disk.</li>
+                     * @param _diskType Data disk type. For restrictions on the data disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local Disk.</li>
 <li>LOCAL_SSD: Local SSD.</li>
-<li>CLOUD_BASIC: General cloud disk.</li>
-<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_BASIC: Basic Cloud Disk.</li>
+<li>CLOUD_PREMIUM: Premium Disk.</li>
 <li>CLOUD_SSD: Cloud SSD.</li>
 <li>CLOUD_HSSD: Enhanced SSD.</li>
-<li>CLOUD_TSSD: Ultra SSD.</li>
+<li>CLOUD_TSSD: Tremendous SSD.</li>
 The default value is consistent with the system disk type (SystemDisk.DiskType).
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDiskType(const std::string& _diskType);
@@ -104,19 +100,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [CVM Instance Configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DiskSize Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [CVM Instance Configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Data disk size, in GB. The minimum adjustment step size is 10 GB. The value range varies according to the data disk type. For specific restrictions, see [CVM instance configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). Default value: 0, which means that no data disk is purchased. For more restrictions, see the product documentation.
+                     * @return DiskSize Data disk size, in GB. The minimum adjustment step size is 10 GB. The value range varies according to the data disk type. For specific restrictions, see [CVM instance configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). Default value: 0, which means that no data disk is purchased. For more restrictions, see the product documentation.
                      * 
                      */
                     uint64_t GetDiskSize() const;
 
                     /**
-                     * 设置Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [CVM Instance Configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _diskSize Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [CVM Instance Configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Data disk size, in GB. The minimum adjustment step size is 10 GB. The value range varies according to the data disk type. For specific restrictions, see [CVM instance configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). Default value: 0, which means that no data disk is purchased. For more restrictions, see the product documentation.
+                     * @param _diskSize Data disk size, in GB. The minimum adjustment step size is 10 GB. The value range varies according to the data disk type. For specific restrictions, see [CVM instance configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). Default value: 0, which means that no data disk is purchased. For more restrictions, see the product documentation.
                      * 
                      */
                     void SetDiskSize(const uint64_t& _diskSize);
@@ -284,23 +276,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Data disk type. For restrictions on data disk type, see [Cloud Block Storage Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
-<li>LOCAL_BASIC: Local hard disk.</li>
+                     * Data disk type. For restrictions on the data disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local Disk.</li>
 <li>LOCAL_SSD: Local SSD.</li>
-<li>CLOUD_BASIC: General cloud disk.</li>
-<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_BASIC: Basic Cloud Disk.</li>
+<li>CLOUD_PREMIUM: Premium Disk.</li>
 <li>CLOUD_SSD: Cloud SSD.</li>
 <li>CLOUD_HSSD: Enhanced SSD.</li>
-<li>CLOUD_TSSD: Ultra SSD.</li>
+<li>CLOUD_TSSD: Tremendous SSD.</li>
 The default value is consistent with the system disk type (SystemDisk.DiskType).
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;
 
                     /**
-                     * Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [CVM Instance Configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Data disk size, in GB. The minimum adjustment step size is 10 GB. The value range varies according to the data disk type. For specific restrictions, see [CVM instance configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). Default value: 0, which means that no data disk is purchased. For more restrictions, see the product documentation.
                      */
                     uint64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;

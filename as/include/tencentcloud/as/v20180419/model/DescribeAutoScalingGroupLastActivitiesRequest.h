@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID list of an auto scaling group.
-                     * @return AutoScalingGroupIds ID list of an auto scaling group.
+                     * 获取ID list of auto scaling groups.
+                     * @return AutoScalingGroupIds ID list of auto scaling groups.
                      * 
                      */
                     std::vector<std::string> GetAutoScalingGroupIds() const;
 
                     /**
-                     * 设置ID list of an auto scaling group.
-                     * @param _autoScalingGroupIds ID list of an auto scaling group.
+                     * 设置ID list of auto scaling groups.
+                     * @param _autoScalingGroupIds ID list of auto scaling groups.
                      * 
                      */
                     void SetAutoScalingGroupIds(const std::vector<std::string>& _autoScalingGroupIds);
@@ -63,13 +63,40 @@ namespace TencentCloud
                      */
                     bool AutoScalingGroupIdsHasBeenSet() const;
 
+                    /**
+                     * 获取Excludes cancelled type activities when querying. Default value is false, which means cancelled type activities are not excluded.
+                     * @return ExcludeCancelledActivity Excludes cancelled type activities when querying. Default value is false, which means cancelled type activities are not excluded.
+                     * 
+                     */
+                    bool GetExcludeCancelledActivity() const;
+
+                    /**
+                     * 设置Excludes cancelled type activities when querying. Default value is false, which means cancelled type activities are not excluded.
+                     * @param _excludeCancelledActivity Excludes cancelled type activities when querying. Default value is false, which means cancelled type activities are not excluded.
+                     * 
+                     */
+                    void SetExcludeCancelledActivity(const bool& _excludeCancelledActivity);
+
+                    /**
+                     * 判断参数 ExcludeCancelledActivity 是否已赋值
+                     * @return ExcludeCancelledActivity 是否已赋值
+                     * 
+                     */
+                    bool ExcludeCancelledActivityHasBeenSet() const;
+
                 private:
 
                     /**
-                     * ID list of an auto scaling group.
+                     * ID list of auto scaling groups.
                      */
                     std::vector<std::string> m_autoScalingGroupIds;
                     bool m_autoScalingGroupIdsHasBeenSet;
+
+                    /**
+                     * Excludes cancelled type activities when querying. Default value is false, which means cancelled type activities are not excluded.
+                     */
+                    bool m_excludeCancelledActivity;
+                    bool m_excludeCancelledActivityHasBeenSet;
 
                 };
             }

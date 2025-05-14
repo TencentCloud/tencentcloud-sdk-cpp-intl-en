@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/kms/v20190118/model/ExclusiveHSM.h>
 
 
 namespace TencentCloud
@@ -58,8 +59,8 @@ namespace TencentCloud
                     bool ServiceEnabledHasBeenSet() const;
 
                     /**
-                     * 获取Service unavailability type. 0: not purchased; 1: normal; 2: suspended due to arrears; 3: resource released
-                     * @return InvalidType Service unavailability type. 0: not purchased; 1: normal; 2: suspended due to arrears; 3: resource released
+                     * 获取Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release.
+                     * @return InvalidType Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release.
                      * 
                      */
                     int64_t GetInvalidType() const;
@@ -86,10 +87,8 @@ namespace TencentCloud
                     bool UserLevelHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time of the KMS Ultimate edition. It’s represented in a Unix Epoch timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProExpireTime Expiration time of the KMS Ultimate edition. It’s represented in a Unix Epoch timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the expiry time (Epoch Unix Timestamp) of the flagship edition.
+                     * @return ProExpireTime Specifies the expiry time (Epoch Unix Timestamp) of the flagship edition.
                      * 
                      */
                     uint64_t GetProExpireTime() const;
@@ -102,10 +101,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to automatically renew Ultimate Edition. 0: no, 1: yes
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ProRenewFlag Whether to automatically renew Ultimate Edition. 0: no, 1: yes
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies whether the flagship edition is automatically renewed: 0 - no automatic renewal, 1 - automatic renewal.
+                     * @return ProRenewFlag Specifies whether the flagship edition is automatically renewed: 0 - no automatic renewal, 1 - automatic renewal.
                      * 
                      */
                     uint64_t GetProRenewFlag() const;
@@ -118,10 +115,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ProRenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取Unique ID of the Ultimate Edition purchase record. If the Ultimate Edition is not activated, the returned value will be null.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ProResourceId Unique ID of the Ultimate Edition purchase record. If the Ultimate Edition is not activated, the returned value will be null.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Unique identifier for the purchase record of the flagship edition. if the flagship edition is enabled, the return value is null.
+                     * @return ProResourceId Unique identifier for the purchase record of the flagship edition. if the flagship edition is enabled, the return value is null.
                      * 
                      */
                     std::string GetProResourceId() const;
@@ -134,10 +129,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ProResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to activate Managed KMS
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return ExclusiveVSMEnabled Whether to activate Managed KMS
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Whether to enable the KMS-managed version.
+                     * @return ExclusiveVSMEnabled Whether to enable the KMS-managed version.
                      * 
                      */
                     bool GetExclusiveVSMEnabled() const;
@@ -150,10 +143,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool ExclusiveVSMEnabledHasBeenSet() const;
 
                     /**
-                     * 获取Whether to activate Exclusive KMS
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return ExclusiveHSMEnabled Whether to activate Exclusive KMS
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Whether to enable the exclusive edition of KMS.
+                     * @return ExclusiveHSMEnabled Whether to enable the exclusive edition of KMS.
                      * 
                      */
                     bool GetExclusiveHSMEnabled() const;
@@ -166,10 +157,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool ExclusiveHSMEnabledHasBeenSet() const;
 
                     /**
-                     * 获取KMS subscription information.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SubscriptionInfo KMS subscription information.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the KMS subscription information.
+                     * @return SubscriptionInfo Specifies the KMS subscription information.
                      * 
                      */
                     std::string GetSubscriptionInfo() const;
@@ -181,6 +170,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool SubscriptionInfoHasBeenSet() const;
 
+                    /**
+                     * 获取Returns the amount of KMS user secret keys used.
+                     * @return CmkUserCount Returns the amount of KMS user secret keys used.
+                     * 
+                     */
+                    uint64_t GetCmkUserCount() const;
+
+                    /**
+                     * 判断参数 CmkUserCount 是否已赋值
+                     * @return CmkUserCount 是否已赋值
+                     * 
+                     */
+                    bool CmkUserCountHasBeenSet() const;
+
+                    /**
+                     * 获取Returns the specification quantity of KMS user secret keys.
+                     * @return CmkLimit Returns the specification quantity of KMS user secret keys.
+                     * 
+                     */
+                    uint64_t GetCmkLimit() const;
+
+                    /**
+                     * 判断参数 CmkLimit 是否已赋值
+                     * @return CmkLimit 是否已赋值
+                     * 
+                     */
+                    bool CmkLimitHasBeenSet() const;
+
+                    /**
+                     * 获取Return dedicated cluster group.
+                     * @return ExclusiveHSMList Return dedicated cluster group.
+                     * 
+                     */
+                    std::vector<ExclusiveHSM> GetExclusiveHSMList() const;
+
+                    /**
+                     * 判断参数 ExclusiveHSMList 是否已赋值
+                     * @return ExclusiveHSMList 是否已赋值
+                     * 
+                     */
+                    bool ExclusiveHSMListHasBeenSet() const;
+
                 private:
 
                     /**
@@ -190,7 +221,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_serviceEnabledHasBeenSet;
 
                     /**
-                     * Service unavailability type. 0: not purchased; 1: normal; 2: suspended due to arrears; 3: resource released
+                     * Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release.
                      */
                     int64_t m_invalidType;
                     bool m_invalidTypeHasBeenSet;
@@ -202,46 +233,58 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_userLevelHasBeenSet;
 
                     /**
-                     * Expiration time of the KMS Ultimate edition. It’s represented in a Unix Epoch timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the expiry time (Epoch Unix Timestamp) of the flagship edition.
                      */
                     uint64_t m_proExpireTime;
                     bool m_proExpireTimeHasBeenSet;
 
                     /**
-                     * Whether to automatically renew Ultimate Edition. 0: no, 1: yes
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Specifies whether the flagship edition is automatically renewed: 0 - no automatic renewal, 1 - automatic renewal.
                      */
                     uint64_t m_proRenewFlag;
                     bool m_proRenewFlagHasBeenSet;
 
                     /**
-                     * Unique ID of the Ultimate Edition purchase record. If the Ultimate Edition is not activated, the returned value will be null.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Unique identifier for the purchase record of the flagship edition. if the flagship edition is enabled, the return value is null.
                      */
                     std::string m_proResourceId;
                     bool m_proResourceIdHasBeenSet;
 
                     /**
-                     * Whether to activate Managed KMS
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Whether to enable the KMS-managed version.
                      */
                     bool m_exclusiveVSMEnabled;
                     bool m_exclusiveVSMEnabledHasBeenSet;
 
                     /**
-                     * Whether to activate Exclusive KMS
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Whether to enable the exclusive edition of KMS.
                      */
                     bool m_exclusiveHSMEnabled;
                     bool m_exclusiveHSMEnabledHasBeenSet;
 
                     /**
-                     * KMS subscription information.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the KMS subscription information.
                      */
                     std::string m_subscriptionInfo;
                     bool m_subscriptionInfoHasBeenSet;
+
+                    /**
+                     * Returns the amount of KMS user secret keys used.
+                     */
+                    uint64_t m_cmkUserCount;
+                    bool m_cmkUserCountHasBeenSet;
+
+                    /**
+                     * Returns the specification quantity of KMS user secret keys.
+                     */
+                    uint64_t m_cmkLimit;
+                    bool m_cmkLimitHasBeenSet;
+
+                    /**
+                     * Return dedicated cluster group.
+                     */
+                    std::vector<ExclusiveHSM> m_exclusiveHSMList;
+                    bool m_exclusiveHSMListHasBeenSet;
 
                 };
             }

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CMK list array
-                     * @return Keys CMK list array
+                     * 获取CMK list array.
+                     * @return Keys CMK list array.
                      * 
                      */
                     std::vector<Key> GetKeys() const;
@@ -75,7 +75,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * CMK list array
+                     * CMK list array.
                      */
                     std::vector<Key> m_keys;
                     bool m_keysHasBeenSet;

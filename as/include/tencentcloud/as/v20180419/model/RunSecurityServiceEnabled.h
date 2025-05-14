@@ -47,31 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable the [Cloud Workload Protection Platform](https://www.tencentcloud.com/document/product/296?lang=en&pg=) service. Valid values:
-<li>TRUE: enable.</li>
-<li>FALSE: disable.</li>
+                     * 获取Whether to enable [Cloud Workload Protection Platform (CWPP)](https://intl.cloud.tencent.com/document/product/296?from_cn_redirect=1). Valid values:
+<li>TRUE: enable CWPP.</li>
+<li>FALSE: disable CWPP.</li>
 Default value: TRUE.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Enabled Whether to enable the [Cloud Workload Protection Platform](https://www.tencentcloud.com/document/product/296?lang=en&pg=) service. Valid values:
-<li>TRUE: enable.</li>
-<li>FALSE: disable.</li>
+                     * @return Enabled Whether to enable [Cloud Workload Protection Platform (CWPP)](https://intl.cloud.tencent.com/document/product/296?from_cn_redirect=1). Valid values:
+<li>TRUE: enable CWPP.</li>
+<li>FALSE: disable CWPP.</li>
 Default value: TRUE.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     bool GetEnabled() const;
 
                     /**
-                     * 设置Whether to enable the [Cloud Workload Protection Platform](https://www.tencentcloud.com/document/product/296?lang=en&pg=) service. Valid values:
-<li>TRUE: enable.</li>
-<li>FALSE: disable.</li>
+                     * 设置Whether to enable [Cloud Workload Protection Platform (CWPP)](https://intl.cloud.tencent.com/document/product/296?from_cn_redirect=1). Valid values:
+<li>TRUE: enable CWPP.</li>
+<li>FALSE: disable CWPP.</li>
 Default value: TRUE.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _enabled Whether to enable the [Cloud Workload Protection Platform](https://www.tencentcloud.com/document/product/296?lang=en&pg=) service. Valid values:
-<li>TRUE: enable.</li>
-<li>FALSE: disable.</li>
+                     * @param _enabled Whether to enable [Cloud Workload Protection Platform (CWPP)](https://intl.cloud.tencent.com/document/product/296?from_cn_redirect=1). Valid values:
+<li>TRUE: enable CWPP.</li>
+<li>FALSE: disable CWPP.</li>
 Default value: TRUE.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetEnabled(const bool& _enabled);
@@ -86,11 +82,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Whether to enable the [Cloud Workload Protection Platform](https://www.tencentcloud.com/document/product/296?lang=en&pg=) service. Valid values:
-<li>TRUE: enable.</li>
-<li>FALSE: disable.</li>
+                     * Whether to enable [Cloud Workload Protection Platform (CWPP)](https://intl.cloud.tencent.com/document/product/296?from_cn_redirect=1). Valid values:
+<li>TRUE: enable CWPP.</li>
+<li>FALSE: disable CWPP.</li>
 Default value: TRUE.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_enabled;
                     bool m_enabledHasBeenSet;

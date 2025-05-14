@@ -278,19 +278,15 @@ namespace TencentCloud
                     bool ResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether there is a device fingerprint bound to the current key
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return DeviceFingerprintBind Whether there is a device fingerprint bound to the current key
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies whether there is a device fingerprint bound to the current key.
+                     * @return DeviceFingerprintBind Specifies whether there is a device fingerprint bound to the current key.
                      * 
                      */
                     bool GetDeviceFingerprintBind() const;
 
                     /**
-                     * 设置Whether there is a device fingerprint bound to the current key
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _deviceFingerprintBind Whether there is a device fingerprint bound to the current key
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies whether there is a device fingerprint bound to the current key.
+                     * @param _deviceFingerprintBind Specifies whether there is a device fingerprint bound to the current key.
                      * 
                      */
                     void SetDeviceFingerprintBind(const bool& _deviceFingerprintBind);
@@ -371,8 +367,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_resourceIdHasBeenSet;
 
                     /**
-                     * Whether there is a device fingerprint bound to the current key
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Specifies whether there is a device fingerprint bound to the current key.
                      */
                     bool m_deviceFingerprintBind;
                     bool m_deviceFingerprintBindHasBeenSet;

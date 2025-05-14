@@ -69,19 +69,15 @@ namespace TencentCloud
                     bool SpotOptionsHasBeenSet() const;
 
                     /**
-                     * 获取Market option type. Currently, this only supports the value "spot"
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MarketType Market option type. Currently, this only supports the value "spot"
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Market option type. The value can only be spot currently.
+                     * @return MarketType Market option type. The value can only be spot currently.
                      * 
                      */
                     std::string GetMarketType() const;
 
                     /**
-                     * 设置Market option type. Currently, this only supports the value "spot"
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _marketType Market option type. Currently, this only supports the value "spot"
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Market option type. The value can only be spot currently.
+                     * @param _marketType Market option type. The value can only be spot currently.
                      * 
                      */
                     void SetMarketType(const std::string& _marketType);
@@ -102,8 +98,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_spotOptionsHasBeenSet;
 
                     /**
-                     * Market option type. Currently, this only supports the value "spot"
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Market option type. The value can only be spot currently.
                      */
                     std::string m_marketType;
                     bool m_marketTypeHasBeenSet;

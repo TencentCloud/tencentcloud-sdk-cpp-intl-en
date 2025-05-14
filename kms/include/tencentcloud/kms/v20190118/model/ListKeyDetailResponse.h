@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of returned attribute information.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return KeyMetadatas List of returned attribute information.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the returned attribute information list.
+                     * @return KeyMetadatas Specifies the returned attribute information list.
                      * 
                      */
                     std::vector<KeyMetadata> GetKeyMetadatas() const;
@@ -83,8 +81,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of returned attribute information.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Specifies the returned attribute information list.
                      */
                     std::vector<KeyMetadata> m_keyMetadatas;
                     bool m_keyMetadatasHasBeenSet;

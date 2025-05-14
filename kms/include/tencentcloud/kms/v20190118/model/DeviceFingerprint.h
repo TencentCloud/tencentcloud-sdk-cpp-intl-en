@@ -68,19 +68,15 @@ namespace TencentCloud
                     bool IdentityHasBeenSet() const;
 
                     /**
-                     * 获取Description, such as IP and device name. Length limit: 1,024 bytes
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Description Description, such as IP and device name. Length limit: 1,024 bytes
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Description information, such as IP and device name, with a maximum of 1024 bytes.
+                     * @return Description Description information, such as IP and device name, with a maximum of 1024 bytes.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Description, such as IP and device name. Length limit: 1,024 bytes
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _description Description, such as IP and device name. Length limit: 1,024 bytes
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Description information, such as IP and device name, with a maximum of 1024 bytes.
+                     * @param _description Description information, such as IP and device name, with a maximum of 1024 bytes.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -101,8 +97,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_identityHasBeenSet;
 
                     /**
-                     * Description, such as IP and device name. Length limit: 1,024 bytes
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Description information, such as IP and device name, with a maximum of 1024 bytes.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;

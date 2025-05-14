@@ -68,19 +68,15 @@ namespace TencentCloud
                     bool MaxPriceHasBeenSet() const;
 
                     /**
-                     * 获取Bid request type. Currently, only "one-time" type is supported. Default value: one-time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SpotInstanceType Bid request type. Currently, only "one-time" type is supported. Default value: one-time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Spot instance type. The value can only be one-time currently. Default value: one-time.
+                     * @return SpotInstanceType Spot instance type. The value can only be one-time currently. Default value: one-time.
                      * 
                      */
                     std::string GetSpotInstanceType() const;
 
                     /**
-                     * 设置Bid request type. Currently, only "one-time" type is supported. Default value: one-time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _spotInstanceType Bid request type. Currently, only "one-time" type is supported. Default value: one-time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Spot instance type. The value can only be one-time currently. Default value: one-time.
+                     * @param _spotInstanceType Spot instance type. The value can only be one-time currently. Default value: one-time.
                      * 
                      */
                     void SetSpotInstanceType(const std::string& _spotInstanceType);
@@ -101,8 +97,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_maxPriceHasBeenSet;
 
                     /**
-                     * Bid request type. Currently, only "one-time" type is supported. Default value: one-time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Spot instance type. The value can only be one-time currently. Default value: one-time.
                      */
                     std::string m_spotInstanceType;
                     bool m_spotInstanceTypeHasBeenSet;
