@@ -4512,6 +4512,49 @@ TkeClient::GetClusterLevelPriceOutcomeCallable TkeClient::GetClusterLevelPriceCa
     return task->get_future();
 }
 
+TkeClient::GetTkeAppChartListOutcome TkeClient::GetTkeAppChartList(const GetTkeAppChartListRequest &request)
+{
+    auto outcome = MakeRequest(request, "GetTkeAppChartList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        GetTkeAppChartListResponse rsp = GetTkeAppChartListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return GetTkeAppChartListOutcome(rsp);
+        else
+            return GetTkeAppChartListOutcome(o.GetError());
+    }
+    else
+    {
+        return GetTkeAppChartListOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::GetTkeAppChartListAsync(const GetTkeAppChartListRequest& request, const GetTkeAppChartListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->GetTkeAppChartList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::GetTkeAppChartListOutcomeCallable TkeClient::GetTkeAppChartListCallable(const GetTkeAppChartListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<GetTkeAppChartListOutcome()>>(
+        [this, request]()
+        {
+            return this->GetTkeAppChartList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TkeClient::GetUpgradeInstanceProgressOutcome TkeClient::GetUpgradeInstanceProgress(const GetUpgradeInstanceProgressRequest &request)
 {
     auto outcome = MakeRequest(request, "GetUpgradeInstanceProgress");

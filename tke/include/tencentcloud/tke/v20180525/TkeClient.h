@@ -231,6 +231,8 @@
 #include <tencentcloud/tke/v20180525/model/ForwardTKEEdgeApplicationRequestV3Response.h>
 #include <tencentcloud/tke/v20180525/model/GetClusterLevelPriceRequest.h>
 #include <tencentcloud/tke/v20180525/model/GetClusterLevelPriceResponse.h>
+#include <tencentcloud/tke/v20180525/model/GetTkeAppChartListRequest.h>
+#include <tencentcloud/tke/v20180525/model/GetTkeAppChartListResponse.h>
 #include <tencentcloud/tke/v20180525/model/GetUpgradeInstanceProgressRequest.h>
 #include <tencentcloud/tke/v20180525/model/GetUpgradeInstanceProgressResponse.h>
 #include <tencentcloud/tke/v20180525/model/InstallAddonRequest.h>
@@ -603,6 +605,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::GetClusterLevelPriceResponse> GetClusterLevelPriceOutcome;
                 typedef std::future<GetClusterLevelPriceOutcome> GetClusterLevelPriceOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::GetClusterLevelPriceRequest&, GetClusterLevelPriceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetClusterLevelPriceAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetTkeAppChartListResponse> GetTkeAppChartListOutcome;
+                typedef std::future<GetTkeAppChartListOutcome> GetTkeAppChartListOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::GetTkeAppChartListRequest&, GetTkeAppChartListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetTkeAppChartListAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetUpgradeInstanceProgressResponse> GetUpgradeInstanceProgressOutcome;
                 typedef std::future<GetUpgradeInstanceProgressOutcome> GetUpgradeInstanceProgressOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::GetUpgradeInstanceProgressRequest&, GetUpgradeInstanceProgressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetUpgradeInstanceProgressAsyncHandler;
@@ -1610,6 +1615,15 @@ namespace TencentCloud
                 GetClusterLevelPriceOutcome GetClusterLevelPrice(const Model::GetClusterLevelPriceRequest &request);
                 void GetClusterLevelPriceAsync(const Model::GetClusterLevelPriceRequest& request, const GetClusterLevelPriceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 GetClusterLevelPriceOutcomeCallable GetClusterLevelPriceCallable(const Model::GetClusterLevelPriceRequest& request);
+
+                /**
+                 *This API is used to retrieve the App List supported by TKE.
+                 * @param req GetTkeAppChartListRequest
+                 * @return GetTkeAppChartListOutcome
+                 */
+                GetTkeAppChartListOutcome GetTkeAppChartList(const Model::GetTkeAppChartListRequest &request);
+                void GetTkeAppChartListAsync(const Model::GetTkeAppChartListRequest& request, const GetTkeAppChartListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetTkeAppChartListOutcomeCallable GetTkeAppChartListCallable(const Model::GetTkeAppChartListRequest& request);
 
                 /**
                  *This API is used to obtain the current progress of node upgrade. If the cluster is not in node upgrade status, the API will report an error: Task not found.

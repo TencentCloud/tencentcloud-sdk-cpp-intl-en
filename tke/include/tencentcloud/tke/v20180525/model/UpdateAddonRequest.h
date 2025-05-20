@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool AddonNameHasBeenSet() const;
 
                     /**
-                     * 获取Add-on version. The add-on version is not updated if this parameter is not specified.
-                     * @return AddonVersion Add-on version. The add-on version is not updated if this parameter is not specified.
+                     * 获取addon version (default does not update if not passed. if AddonVersion is not passed, RawValues must be passed.).
+                     * @return AddonVersion addon version (default does not update if not passed. if AddonVersion is not passed, RawValues must be passed.).
                      * 
                      */
                     std::string GetAddonVersion() const;
 
                     /**
-                     * 设置Add-on version. The add-on version is not updated if this parameter is not specified.
-                     * @param _addonVersion Add-on version. The add-on version is not updated if this parameter is not specified.
+                     * 设置addon version (default does not update if not passed. if AddonVersion is not passed, RawValues must be passed.).
+                     * @param _addonVersion addon version (default does not update if not passed. if AddonVersion is not passed, RawValues must be passed.).
                      * 
                      */
                     void SetAddonVersion(const std::string& _addonVersion);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool AddonVersionHasBeenSet() const;
 
                     /**
-                     * 获取Add-on parameters in a base64-encoded JSON string. You can query add-on parameters via `DescribeAddonValues`.
-                     * @return RawValues Add-on parameters in a base64-encoded JSON string. You can query add-on parameters via `DescribeAddonValues`.
+                     * 获取Parameters of the addon, which is a base64-transcoded string in json format. (the addon parameters are obtained through DescribeAddonValues. when RawValues is not passed, AddonVersion must be provided.).
+                     * @return RawValues Parameters of the addon, which is a base64-transcoded string in json format. (the addon parameters are obtained through DescribeAddonValues. when RawValues is not passed, AddonVersion must be provided.).
                      * 
                      */
                     std::string GetRawValues() const;
 
                     /**
-                     * 设置Add-on parameters in a base64-encoded JSON string. You can query add-on parameters via `DescribeAddonValues`.
-                     * @param _rawValues Add-on parameters in a base64-encoded JSON string. You can query add-on parameters via `DescribeAddonValues`.
+                     * 设置Parameters of the addon, which is a base64-transcoded string in json format. (the addon parameters are obtained through DescribeAddonValues. when RawValues is not passed, AddonVersion must be provided.).
+                     * @param _rawValues Parameters of the addon, which is a base64-transcoded string in json format. (the addon parameters are obtained through DescribeAddonValues. when RawValues is not passed, AddonVersion must be provided.).
                      * 
                      */
                     void SetRawValues(const std::string& _rawValues);
@@ -125,6 +125,48 @@ namespace TencentCloud
                      * 
                      */
                     bool RawValuesHasBeenSet() const;
+
+                    /**
+                     * 获取The update policy for the addon parameter supports two strategies: replace and merge. the default value is merge, which is compatible with old version apis. replace: use new RawValues to fully replace the original RawValues of the addon. merge: add or update the corresponding parameters in the original RawValues of the addon based on new RawValues.
+                     * @return UpdateStrategy The update policy for the addon parameter supports two strategies: replace and merge. the default value is merge, which is compatible with old version apis. replace: use new RawValues to fully replace the original RawValues of the addon. merge: add or update the corresponding parameters in the original RawValues of the addon based on new RawValues.
+                     * 
+                     */
+                    std::string GetUpdateStrategy() const;
+
+                    /**
+                     * 设置The update policy for the addon parameter supports two strategies: replace and merge. the default value is merge, which is compatible with old version apis. replace: use new RawValues to fully replace the original RawValues of the addon. merge: add or update the corresponding parameters in the original RawValues of the addon based on new RawValues.
+                     * @param _updateStrategy The update policy for the addon parameter supports two strategies: replace and merge. the default value is merge, which is compatible with old version apis. replace: use new RawValues to fully replace the original RawValues of the addon. merge: add or update the corresponding parameters in the original RawValues of the addon based on new RawValues.
+                     * 
+                     */
+                    void SetUpdateStrategy(const std::string& _updateStrategy);
+
+                    /**
+                     * 判断参数 UpdateStrategy 是否已赋值
+                     * @return UpdateStrategy 是否已赋值
+                     * 
+                     */
+                    bool UpdateStrategyHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies whether to only perform an update check. when set to true, only the check is performed without updating the component.
+                     * @return DryRun Specifies whether to only perform an update check. when set to true, only the check is performed without updating the component.
+                     * 
+                     */
+                    bool GetDryRun() const;
+
+                    /**
+                     * 设置Specifies whether to only perform an update check. when set to true, only the check is performed without updating the component.
+                     * @param _dryRun Specifies whether to only perform an update check. when set to true, only the check is performed without updating the component.
+                     * 
+                     */
+                    void SetDryRun(const bool& _dryRun);
+
+                    /**
+                     * 判断参数 DryRun 是否已赋值
+                     * @return DryRun 是否已赋值
+                     * 
+                     */
+                    bool DryRunHasBeenSet() const;
 
                 private:
 
@@ -141,16 +183,28 @@ namespace TencentCloud
                     bool m_addonNameHasBeenSet;
 
                     /**
-                     * Add-on version. The add-on version is not updated if this parameter is not specified.
+                     * addon version (default does not update if not passed. if AddonVersion is not passed, RawValues must be passed.).
                      */
                     std::string m_addonVersion;
                     bool m_addonVersionHasBeenSet;
 
                     /**
-                     * Add-on parameters in a base64-encoded JSON string. You can query add-on parameters via `DescribeAddonValues`.
+                     * Parameters of the addon, which is a base64-transcoded string in json format. (the addon parameters are obtained through DescribeAddonValues. when RawValues is not passed, AddonVersion must be provided.).
                      */
                     std::string m_rawValues;
                     bool m_rawValuesHasBeenSet;
+
+                    /**
+                     * The update policy for the addon parameter supports two strategies: replace and merge. the default value is merge, which is compatible with old version apis. replace: use new RawValues to fully replace the original RawValues of the addon. merge: add or update the corresponding parameters in the original RawValues of the addon based on new RawValues.
+                     */
+                    std::string m_updateStrategy;
+                    bool m_updateStrategyHasBeenSet;
+
+                    /**
+                     * Specifies whether to only perform an update check. when set to true, only the check is performed without updating the component.
+                     */
+                    bool m_dryRun;
+                    bool m_dryRunHasBeenSet;
 
                 };
             }

@@ -147,6 +147,7 @@ set(tke_public_header_model
   include/tencentcloud/tke/v20180525/model/AcquireClusterAdminRoleResponse.h
   include/tencentcloud/tke/v20180525/model/DescribeEdgeClusterInstancesResponse.h
   include/tencentcloud/tke/v20180525/model/UpdateEdgeClusterVersionRequest.h
+  include/tencentcloud/tke/v20180525/model/GetTkeAppChartListResponse.h
   include/tencentcloud/tke/v20180525/model/DescribeExternalNodeSupportConfigRequest.h
   include/tencentcloud/tke/v20180525/model/DeleteTKEEdgeClusterResponse.h
   include/tencentcloud/tke/v20180525/model/UpgradeAbleInstancesItem.h
@@ -309,6 +310,7 @@ set(tke_public_header_model
   include/tencentcloud/tke/v20180525/model/PrometheusGrafanaInfo.h
   include/tencentcloud/tke/v20180525/model/Switch.h
   include/tencentcloud/tke/v20180525/model/ImageInstance.h
+  include/tencentcloud/tke/v20180525/model/GetTkeAppChartListRequest.h
   include/tencentcloud/tke/v20180525/model/ResourceUsageDetail.h
   include/tencentcloud/tke/v20180525/model/DescribeClusterVirtualNodePoolsResponse.h
   include/tencentcloud/tke/v20180525/model/CheckEdgeClusterCIDRResponse.h
@@ -409,6 +411,7 @@ set(tke_public_header_model
   include/tencentcloud/tke/v20180525/model/ClusterProperty.h
   include/tencentcloud/tke/v20180525/model/EdgeClusterExtraArgs.h
   include/tencentcloud/tke/v20180525/model/DescribeEnableVpcCniProgressResponse.h
+  include/tencentcloud/tke/v20180525/model/AppChart.h
   include/tencentcloud/tke/v20180525/model/DeleteEdgeCVMInstancesRequest.h
   include/tencentcloud/tke/v20180525/model/ModifyClusterNodePoolRequest.h
   include/tencentcloud/tke/v20180525/model/GetClusterLevelPriceRequest.h
@@ -569,6 +572,7 @@ set(tke_src
   src/v20180525/model/AcquireClusterAdminRoleResponse.cpp
   src/v20180525/model/DescribeEdgeClusterInstancesResponse.cpp
   src/v20180525/model/UpdateEdgeClusterVersionRequest.cpp
+  src/v20180525/model/GetTkeAppChartListResponse.cpp
   src/v20180525/model/DescribeExternalNodeSupportConfigRequest.cpp
   src/v20180525/model/DeleteTKEEdgeClusterResponse.cpp
   src/v20180525/model/UpgradeAbleInstancesItem.cpp
@@ -731,6 +735,7 @@ set(tke_src
   src/v20180525/model/PrometheusGrafanaInfo.cpp
   src/v20180525/model/Switch.cpp
   src/v20180525/model/ImageInstance.cpp
+  src/v20180525/model/GetTkeAppChartListRequest.cpp
   src/v20180525/model/ResourceUsageDetail.cpp
   src/v20180525/model/DescribeClusterVirtualNodePoolsResponse.cpp
   src/v20180525/model/CheckEdgeClusterCIDRResponse.cpp
@@ -831,6 +836,7 @@ set(tke_src
   src/v20180525/model/ClusterProperty.cpp
   src/v20180525/model/EdgeClusterExtraArgs.cpp
   src/v20180525/model/DescribeEnableVpcCniProgressResponse.cpp
+  src/v20180525/model/AppChart.cpp
   src/v20180525/model/DeleteEdgeCVMInstancesRequest.cpp
   src/v20180525/model/ModifyClusterNodePoolRequest.cpp
   src/v20180525/model/GetClusterLevelPriceRequest.cpp

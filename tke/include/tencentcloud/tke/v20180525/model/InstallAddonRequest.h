@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取Cluster ID (only supported for standard tke clusters).
+                     * @return ClusterId Cluster ID (only supported for standard tke clusters).
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置Cluster ID (only supported for standard tke clusters).
+                     * @param _clusterId Cluster ID (only supported for standard tke clusters).
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -126,10 +126,31 @@ namespace TencentCloud
                      */
                     bool RawValuesHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies whether to perform only an installation check. when set to true, only checks are performed without installing components.
+                     * @return DryRun Specifies whether to perform only an installation check. when set to true, only checks are performed without installing components.
+                     * 
+                     */
+                    bool GetDryRun() const;
+
+                    /**
+                     * 设置Specifies whether to perform only an installation check. when set to true, only checks are performed without installing components.
+                     * @param _dryRun Specifies whether to perform only an installation check. when set to true, only checks are performed without installing components.
+                     * 
+                     */
+                    void SetDryRun(const bool& _dryRun);
+
+                    /**
+                     * 判断参数 DryRun 是否已赋值
+                     * @return DryRun 是否已赋值
+                     * 
+                     */
+                    bool DryRunHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Cluster ID
+                     * Cluster ID (only supported for standard tke clusters).
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
@@ -151,6 +172,12 @@ namespace TencentCloud
                      */
                     std::string m_rawValues;
                     bool m_rawValuesHasBeenSet;
+
+                    /**
+                     * Specifies whether to perform only an installation check. when set to true, only checks are performed without installing components.
+                     */
+                    bool m_dryRun;
+                    bool m_dryRunHasBeenSet;
 
                 };
             }
