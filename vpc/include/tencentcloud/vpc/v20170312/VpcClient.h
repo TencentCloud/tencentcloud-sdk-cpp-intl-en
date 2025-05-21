@@ -27,6 +27,8 @@
 #include <tencentcloud/vpc/v20170312/model/AcceptAttachCcnInstancesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/AddBandwidthPackageResourcesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/AddBandwidthPackageResourcesResponse.h>
+#include <tencentcloud/vpc/v20170312/model/AddTemplateMemberRequest.h>
+#include <tencentcloud/vpc/v20170312/model/AddTemplateMemberResponse.h>
 #include <tencentcloud/vpc/v20170312/model/AdjustPublicAddressRequest.h>
 #include <tencentcloud/vpc/v20170312/model/AdjustPublicAddressResponse.h>
 #include <tencentcloud/vpc/v20170312/model/AllocateAddressesRequest.h>
@@ -201,6 +203,8 @@
 #include <tencentcloud/vpc/v20170312/model/DeleteSnapshotPoliciesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DeleteSubnetRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DeleteSubnetResponse.h>
+#include <tencentcloud/vpc/v20170312/model/DeleteTemplateMemberRequest.h>
+#include <tencentcloud/vpc/v20170312/model/DeleteTemplateMemberResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DeleteTrafficPackagesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DeleteTrafficPackagesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DeleteVpcRequest.h>
@@ -507,6 +511,8 @@
 #include <tencentcloud/vpc/v20170312/model/ModifySnapshotPoliciesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifySubnetAttributeRequest.h>
 #include <tencentcloud/vpc/v20170312/model/ModifySubnetAttributeResponse.h>
+#include <tencentcloud/vpc/v20170312/model/ModifyTemplateMemberRequest.h>
+#include <tencentcloud/vpc/v20170312/model/ModifyTemplateMemberResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyVpcAttributeRequest.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyVpcAttributeResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyVpcEndPointAttributeRequest.h>
@@ -599,6 +605,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AddBandwidthPackageResourcesResponse> AddBandwidthPackageResourcesOutcome;
                 typedef std::future<AddBandwidthPackageResourcesOutcome> AddBandwidthPackageResourcesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::AddBandwidthPackageResourcesRequest&, AddBandwidthPackageResourcesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddBandwidthPackageResourcesAsyncHandler;
+                typedef Outcome<Core::Error, Model::AddTemplateMemberResponse> AddTemplateMemberOutcome;
+                typedef std::future<AddTemplateMemberOutcome> AddTemplateMemberOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::AddTemplateMemberRequest&, AddTemplateMemberOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddTemplateMemberAsyncHandler;
                 typedef Outcome<Core::Error, Model::AdjustPublicAddressResponse> AdjustPublicAddressOutcome;
                 typedef std::future<AdjustPublicAddressOutcome> AdjustPublicAddressOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::AdjustPublicAddressRequest&, AdjustPublicAddressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AdjustPublicAddressAsyncHandler;
@@ -860,6 +869,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteSubnetResponse> DeleteSubnetOutcome;
                 typedef std::future<DeleteSubnetOutcome> DeleteSubnetOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DeleteSubnetRequest&, DeleteSubnetOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteSubnetAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteTemplateMemberResponse> DeleteTemplateMemberOutcome;
+                typedef std::future<DeleteTemplateMemberOutcome> DeleteTemplateMemberOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::DeleteTemplateMemberRequest&, DeleteTemplateMemberOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteTemplateMemberAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteTrafficPackagesResponse> DeleteTrafficPackagesOutcome;
                 typedef std::future<DeleteTrafficPackagesOutcome> DeleteTrafficPackagesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DeleteTrafficPackagesRequest&, DeleteTrafficPackagesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteTrafficPackagesAsyncHandler;
@@ -1319,6 +1331,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifySubnetAttributeResponse> ModifySubnetAttributeOutcome;
                 typedef std::future<ModifySubnetAttributeOutcome> ModifySubnetAttributeOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::ModifySubnetAttributeRequest&, ModifySubnetAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySubnetAttributeAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyTemplateMemberResponse> ModifyTemplateMemberOutcome;
+                typedef std::future<ModifyTemplateMemberOutcome> ModifyTemplateMemberOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::ModifyTemplateMemberRequest&, ModifyTemplateMemberOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyTemplateMemberAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyVpcAttributeResponse> ModifyVpcAttributeOutcome;
                 typedef std::future<ModifyVpcAttributeOutcome> ModifyVpcAttributeOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::ModifyVpcAttributeRequest&, ModifyVpcAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyVpcAttributeAsyncHandler;
@@ -1447,6 +1462,15 @@ namespace TencentCloud
                 AddBandwidthPackageResourcesOutcome AddBandwidthPackageResources(const Model::AddBandwidthPackageResourcesRequest &request);
                 void AddBandwidthPackageResourcesAsync(const Model::AddBandwidthPackageResourcesRequest& request, const AddBandwidthPackageResourcesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 AddBandwidthPackageResourcesOutcomeCallable AddBandwidthPackageResourcesCallable(const Model::AddBandwidthPackageResourcesRequest& request);
+
+                /**
+                 *This API is used to add a parameter template of the IP address, protocol port, IP address group, or protocol port group type.
+                 * @param req AddTemplateMemberRequest
+                 * @return AddTemplateMemberOutcome
+                 */
+                AddTemplateMemberOutcome AddTemplateMember(const Model::AddTemplateMemberRequest &request);
+                void AddTemplateMemberAsync(const Model::AddTemplateMemberRequest& request, const AddTemplateMemberAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AddTemplateMemberOutcomeCallable AddTemplateMemberCallable(const Model::AddTemplateMemberRequest& request);
 
                 /**
                  *This API is used to change the public IP of a CVM or the EIP of the associated bandwidth package.
@@ -2374,6 +2398,15 @@ This API is completed asynchronously. If you need to query the execution result 
                 DeleteSubnetOutcome DeleteSubnet(const Model::DeleteSubnetRequest &request);
                 void DeleteSubnetAsync(const Model::DeleteSubnetRequest& request, const DeleteSubnetAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteSubnetOutcomeCallable DeleteSubnetCallable(const Model::DeleteSubnetRequest& request);
+
+                /**
+                 *This API is used to delete a parameter template of the IP address, protocol port, IP address group, or protocol port group type.
+                 * @param req DeleteTemplateMemberRequest
+                 * @return DeleteTemplateMemberOutcome
+                 */
+                DeleteTemplateMemberOutcome DeleteTemplateMember(const Model::DeleteTemplateMemberRequest &request);
+                void DeleteTemplateMemberAsync(const Model::DeleteTemplateMemberRequest& request, const DeleteTemplateMemberAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteTemplateMemberOutcomeCallable DeleteTemplateMemberCallable(const Model::DeleteTemplateMemberRequest& request);
 
                 /**
                  *This API is used to delete traffic packages. Note that only non-valid traffic packages can be deleted. 
@@ -3816,6 +3849,15 @@ This API is completed asynchronously. If you need to query the execution result 
                 ModifySubnetAttributeOutcome ModifySubnetAttribute(const Model::ModifySubnetAttributeRequest &request);
                 void ModifySubnetAttributeAsync(const Model::ModifySubnetAttributeRequest& request, const ModifySubnetAttributeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifySubnetAttributeOutcomeCallable ModifySubnetAttributeCallable(const Model::ModifySubnetAttributeRequest& request);
+
+                /**
+                 *This API is used to modify a parameter template of the IP address, protocol port, IP address group, or protocol port group type.
+                 * @param req ModifyTemplateMemberRequest
+                 * @return ModifyTemplateMemberOutcome
+                 */
+                ModifyTemplateMemberOutcome ModifyTemplateMember(const Model::ModifyTemplateMemberRequest &request);
+                void ModifyTemplateMemberAsync(const Model::ModifyTemplateMemberRequest& request, const ModifyTemplateMemberAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyTemplateMemberOutcomeCallable ModifyTemplateMemberCallable(const Model::ModifyTemplateMemberRequest& request);
 
                 /**
                  *This API (ModifyVpcAttribute) is used to modify VPC attributes.
