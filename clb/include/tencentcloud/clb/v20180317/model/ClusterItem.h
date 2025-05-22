@@ -68,19 +68,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Cluster name
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ClusterName Cluster name
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Cluster name.
+                     * @return ClusterName Cluster name.
                      * 
                      */
                     std::string GetClusterName() const;
 
                     /**
-                     * 设置Cluster name
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _clusterName Cluster name
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Cluster name.
+                     * @param _clusterName Cluster name.
                      * 
                      */
                     void SetClusterName(const std::string& _clusterName);
@@ -126,8 +122,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Cluster name
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Cluster name.
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;

@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Renewal type. AUTO_RENEW: automatic renewal; MANUAL_RENEW: manual renewal
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RenewFlag Renewal type. AUTO_RENEW: automatic renewal; MANUAL_RENEW: manual renewal
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Reserved field.
+                     * @return RenewFlag Reserved field.
                      * 
                      */
                     std::string GetRenewFlag() const;
 
                     /**
-                     * 设置Renewal type. AUTO_RENEW: automatic renewal; MANUAL_RENEW: manual renewal
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _renewFlag Renewal type. AUTO_RENEW: automatic renewal; MANUAL_RENEW: manual renewal
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Reserved field.
+                     * @param _renewFlag Reserved field.
                      * 
                      */
                     void SetRenewFlag(const std::string& _renewFlag);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取Cycle, indicating the number of months (reserved field)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Period Cycle, indicating the number of months (reserved field)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Reserved field.
+                     * @return Period Reserved field.
                      * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
-                     * 设置Cycle, indicating the number of months (reserved field)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _period Cycle, indicating the number of months (reserved field)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Reserved field.
+                     * @param _period Reserved field.
                      * 
                      */
                     void SetPeriod(const int64_t& _period);
@@ -99,15 +91,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Renewal type. AUTO_RENEW: automatic renewal; MANUAL_RENEW: manual renewal
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Reserved field.
                      */
                     std::string m_renewFlag;
                     bool m_renewFlagHasBeenSet;
 
                     /**
-                     * Cycle, indicating the number of months (reserved field)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Reserved field.
                      */
                     int64_t m_period;
                     bool m_periodHasBeenSet;
