@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/ImageEncodeConfig.h>
 #include <tencentcloud/mps/v20190612/model/ImageEnhanceConfig.h>
+#include <tencentcloud/mps/v20190612/model/ImageEraseConfig.h>
 
 
 namespace TencentCloud
@@ -98,6 +99,31 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool EnhanceConfigHasBeenSet() const;
 
+                    /**
+                     * 获取Image erasing configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return EraseConfig Image erasing configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    ImageEraseConfig GetEraseConfig() const;
+
+                    /**
+                     * 设置Image erasing configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _eraseConfig Image erasing configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetEraseConfig(const ImageEraseConfig& _eraseConfig);
+
+                    /**
+                     * 判断参数 EraseConfig 是否已赋值
+                     * @return EraseConfig 是否已赋值
+                     * 
+                     */
+                    bool EraseConfigHasBeenSet() const;
+
                 private:
 
                     /**
@@ -113,6 +139,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     ImageEnhanceConfig m_enhanceConfig;
                     bool m_enhanceConfigHasBeenSet;
+
+                    /**
+                     * Image erasing configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    ImageEraseConfig m_eraseConfig;
+                    bool m_eraseConfigHasBeenSet;
 
                 };
             }

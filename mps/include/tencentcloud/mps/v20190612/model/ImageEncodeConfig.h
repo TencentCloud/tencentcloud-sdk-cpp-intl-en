@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Image format. Valid values: JPG, BMP, GIF, PNG, and WebP. The default is the original image format.
+                     * 获取Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Format Image format. Valid values: JPG, BMP, GIF, PNG, and WebP. The default is the original image format.
+                     * @return Format Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetFormat() const;
 
                     /**
-                     * 设置Image format. Valid values: JPG, BMP, GIF, PNG, and WebP. The default is the original image format.
+                     * 设置Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _format Image format. Valid values: JPG, BMP, GIF, PNG, and WebP. The default is the original image format.
+                     * @param _format Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
@@ -99,7 +99,7 @@ Note: This field may return null, indicating that no valid value can be obtained
                 private:
 
                     /**
-                     * Image format. Valid values: JPG, BMP, GIF, PNG, and WebP. The default is the original image format.
+                     * Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
 Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_format;

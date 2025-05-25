@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Condition for filtering smart subtitle templates by unique identifier. The array can contain up to 10 unique identifiers.
-                     * @return Definitions Condition for filtering smart subtitle templates by unique identifier. The array can contain up to 10 unique identifiers.
+                     * 获取Unique identifiers of smart subtitle templates for filtering. The array can contain up to 100 unique identifiers.
+                     * @return Definitions Unique identifiers of smart subtitle templates for filtering. The array can contain up to 100 unique identifiers.
                      * 
                      */
                     std::vector<int64_t> GetDefinitions() const;
 
                     /**
-                     * 设置Condition for filtering smart subtitle templates by unique identifier. The array can contain up to 10 unique identifiers.
-                     * @param _definitions Condition for filtering smart subtitle templates by unique identifier. The array can contain up to 10 unique identifiers.
+                     * 设置Unique identifiers of smart subtitle templates for filtering. The array can contain up to 100 unique identifiers.
+                     * @param _definitions Unique identifiers of smart subtitle templates for filtering. The array can contain up to 100 unique identifiers.
                      * 
                      */
                     void SetDefinitions(const std::vector<int64_t>& _definitions);
@@ -158,7 +158,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Condition for filtering smart subtitle templates by unique identifier. The array can contain up to 10 unique identifiers.
+                     * Unique identifiers of smart subtitle templates for filtering. The array can contain up to 100 unique identifiers.
                      */
                     std::vector<int64_t> m_definitions;
                     bool m_definitionsHasBeenSet;

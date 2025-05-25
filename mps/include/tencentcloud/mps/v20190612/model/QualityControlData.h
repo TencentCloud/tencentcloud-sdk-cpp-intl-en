@@ -99,19 +99,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NoVideoHasBeenSet() const;
 
                     /**
-                     * 获取The no-reference video quality score. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return QualityEvaluationScore The no-reference video quality score. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取No-reference quality score of the video (100 points in total).
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return QualityEvaluationScore No-reference quality score of the video (100 points in total).
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     int64_t GetQualityEvaluationScore() const;
 
                     /**
-                     * 设置The no-reference video quality score. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _qualityEvaluationScore The no-reference video quality score. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置No-reference quality score of the video (100 points in total).
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _qualityEvaluationScore No-reference quality score of the video (100 points in total).
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetQualityEvaluationScore(const int64_t& _qualityEvaluationScore);
@@ -122,6 +122,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool QualityEvaluationScoreHasBeenSet() const;
+
+                    /**
+                     * 获取No-reference quality score of the video (MOS).
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return QualityEvaluationMeanOpinionScore No-reference quality score of the video (MOS).
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    double GetQualityEvaluationMeanOpinionScore() const;
+
+                    /**
+                     * 设置No-reference quality score of the video (MOS).
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _qualityEvaluationMeanOpinionScore No-reference quality score of the video (MOS).
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetQualityEvaluationMeanOpinionScore(const double& _qualityEvaluationMeanOpinionScore);
+
+                    /**
+                     * 判断参数 QualityEvaluationMeanOpinionScore 是否已赋值
+                     * @return QualityEvaluationMeanOpinionScore 是否已赋值
+                     * 
+                     */
+                    bool QualityEvaluationMeanOpinionScoreHasBeenSet() const;
 
                     /**
                      * 获取Exception items detected in content quality inspection.
@@ -190,11 +215,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_noVideoHasBeenSet;
 
                     /**
-                     * The no-reference video quality score. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * No-reference quality score of the video (100 points in total).
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     int64_t m_qualityEvaluationScore;
                     bool m_qualityEvaluationScoreHasBeenSet;
+
+                    /**
+                     * No-reference quality score of the video (MOS).
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    double m_qualityEvaluationMeanOpinionScore;
+                    bool m_qualityEvaluationMeanOpinionScoreHasBeenSet;
 
                     /**
                      * Exception items detected in content quality inspection.

@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/HLSConfigureInfo.h>
+#include <tencentcloud/mps/v20190612/model/MP4ConfigureInfo.h>
 
 
 namespace TencentCloud
@@ -44,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取HLS configuration parameters.
-                     * @return HLSConfigure HLS configuration parameters.
+                     * 获取HLS configuration parameter. Either this parameter or MP4Configure should be specified.
+                     * @return HLSConfigure HLS configuration parameter. Either this parameter or MP4Configure should be specified.
                      * 
                      */
                     HLSConfigureInfo GetHLSConfigure() const;
 
                     /**
-                     * 设置HLS configuration parameters.
-                     * @param _hLSConfigure HLS configuration parameters.
+                     * 设置HLS configuration parameter. Either this parameter or MP4Configure should be specified.
+                     * @param _hLSConfigure HLS configuration parameter. Either this parameter or MP4Configure should be specified.
                      * 
                      */
                     void SetHLSConfigure(const HLSConfigureInfo& _hLSConfigure);
@@ -63,6 +64,27 @@ namespace TencentCloud
                      * 
                      */
                     bool HLSConfigureHasBeenSet() const;
+
+                    /**
+                     * 获取MP4 configuration parameter. Either this parameter or HLSConfigure should be specified.
+                     * @return MP4Configure MP4 configuration parameter. Either this parameter or HLSConfigure should be specified.
+                     * 
+                     */
+                    MP4ConfigureInfo GetMP4Configure() const;
+
+                    /**
+                     * 设置MP4 configuration parameter. Either this parameter or HLSConfigure should be specified.
+                     * @param _mP4Configure MP4 configuration parameter. Either this parameter or HLSConfigure should be specified.
+                     * 
+                     */
+                    void SetMP4Configure(const MP4ConfigureInfo& _mP4Configure);
+
+                    /**
+                     * 判断参数 MP4Configure 是否已赋值
+                     * @return MP4Configure 是否已赋值
+                     * 
+                     */
+                    bool MP4ConfigureHasBeenSet() const;
 
                     /**
                      * 获取Recording template name. Length limit: 64 characters.
@@ -109,10 +131,16 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * HLS configuration parameters.
+                     * HLS configuration parameter. Either this parameter or MP4Configure should be specified.
                      */
                     HLSConfigureInfo m_hLSConfigure;
                     bool m_hLSConfigureHasBeenSet;
+
+                    /**
+                     * MP4 configuration parameter. Either this parameter or HLSConfigure should be specified.
+                     */
+                    MP4ConfigureInfo m_mP4Configure;
+                    bool m_mP4ConfigureHasBeenSet;
 
                     /**
                      * Recording template name. Length limit: 64 characters.

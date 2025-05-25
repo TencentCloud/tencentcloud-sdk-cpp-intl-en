@@ -109,6 +109,27 @@ namespace TencentCloud
                      */
                     bool EndHasBeenSet() const;
 
+                    /**
+                     * 获取Text after translation.
+                     * @return Trans Text after translation.
+                     * 
+                     */
+                    std::string GetTrans() const;
+
+                    /**
+                     * 设置Text after translation.
+                     * @param _trans Text after translation.
+                     * 
+                     */
+                    void SetTrans(const std::string& _trans);
+
+                    /**
+                     * 判断参数 Trans 是否已赋值
+                     * @return Trans 是否已赋值
+                     * 
+                     */
+                    bool TransHasBeenSet() const;
+
                 private:
 
                     /**
@@ -128,6 +149,12 @@ namespace TencentCloud
                      */
                     double m_end;
                     bool m_endHasBeenSet;
+
+                    /**
+                     * Text after translation.
+                     */
+                    std::string m_trans;
+                    bool m_transHasBeenSet;
 
                 };
             }

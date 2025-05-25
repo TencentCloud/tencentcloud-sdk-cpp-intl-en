@@ -259,6 +259,27 @@ Default value: 0.
                      */
                     bool EnhanceConfigHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return StdExtInfo 
+                     * 
+                     */
+                    std::string GetStdExtInfo() const;
+
+                    /**
+                     * 设置
+                     * @param _stdExtInfo 
+                     * 
+                     */
+                    void SetStdExtInfo(const std::string& _stdExtInfo);
+
+                    /**
+                     * 判断参数 StdExtInfo 是否已赋值
+                     * @return StdExtInfo 是否已赋值
+                     * 
+                     */
+                    bool StdExtInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -320,6 +341,12 @@ Default value: 0.
                      */
                     EnhanceConfig m_enhanceConfig;
                     bool m_enhanceConfigHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_stdExtInfo;
+                    bool m_stdExtInfoHasBeenSet;
 
                 };
             }

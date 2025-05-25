@@ -43,15 +43,31 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Hotword lexicon ID.
-                     * @return HotwordsId Hotword lexicon ID.
+                     * 获取Hotword lexicon ID. 
+ 
+Either Name or Content should be specified if the hotword lexicon is a text-based hotword lexicon.
+One of Name, FileContent, and FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+
+                     * @return HotwordsId Hotword lexicon ID. 
+ 
+Either Name or Content should be specified if the hotword lexicon is a text-based hotword lexicon.
+One of Name, FileContent, and FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+
                      * 
                      */
                     std::string GetHotwordsId() const;
 
                     /**
-                     * 设置Hotword lexicon ID.
-                     * @param _hotwordsId Hotword lexicon ID.
+                     * 设置Hotword lexicon ID. 
+ 
+Either Name or Content should be specified if the hotword lexicon is a text-based hotword lexicon.
+One of Name, FileContent, and FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+
+                     * @param _hotwordsId Hotword lexicon ID. 
+ 
+Either Name or Content should be specified if the hotword lexicon is a text-based hotword lexicon.
+One of Name, FileContent, and FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+
                      * 
                      */
                     void SetHotwordsId(const std::string& _hotwordsId);
@@ -162,7 +178,11 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Hotword lexicon ID.
+                     * Hotword lexicon ID. 
+ 
+Either Name or Content should be specified if the hotword lexicon is a text-based hotword lexicon.
+One of Name, FileContent, and FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+
                      */
                     std::string m_hotwordsId;
                     bool m_hotwordsIdHasBeenSet;

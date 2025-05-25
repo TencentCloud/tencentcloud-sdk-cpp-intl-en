@@ -190,23 +190,23 @@ Cannot be set to 0.
                     bool BitrateHasBeenSet() const;
 
                     /**
-                     * 获取The sampling rate of the audio stream. the supported sampling rate options vary for different encoding standards. for details, see audio sampling rate support scope document https://intl.cloud.tencent.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53.
+                     * 获取Audio stream sampling rate. Different sampling rate options are provided for different encoding standards. For details, see [Audio/Video Transcoding Template](https://intl.cloud.tencent.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53).
 Unit: Hz.
-Please ensure that the sampling rate of the source audio stream is within the value range of the above options. otherwise, transcoding failure may occur.
-                     * @return SampleRate The sampling rate of the audio stream. the supported sampling rate options vary for different encoding standards. for details, see audio sampling rate support scope document https://intl.cloud.tencent.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53.
+Note: Make sure that the sampling rate of the source audio stream is among the above options. Otherwise, transcoding may fail.
+                     * @return SampleRate Audio stream sampling rate. Different sampling rate options are provided for different encoding standards. For details, see [Audio/Video Transcoding Template](https://intl.cloud.tencent.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53).
 Unit: Hz.
-Please ensure that the sampling rate of the source audio stream is within the value range of the above options. otherwise, transcoding failure may occur.
+Note: Make sure that the sampling rate of the source audio stream is among the above options. Otherwise, transcoding may fail.
                      * 
                      */
                     uint64_t GetSampleRate() const;
 
                     /**
-                     * 设置The sampling rate of the audio stream. the supported sampling rate options vary for different encoding standards. for details, see audio sampling rate support scope document https://intl.cloud.tencent.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53.
+                     * 设置Audio stream sampling rate. Different sampling rate options are provided for different encoding standards. For details, see [Audio/Video Transcoding Template](https://intl.cloud.tencent.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53).
 Unit: Hz.
-Please ensure that the sampling rate of the source audio stream is within the value range of the above options. otherwise, transcoding failure may occur.
-                     * @param _sampleRate The sampling rate of the audio stream. the supported sampling rate options vary for different encoding standards. for details, see audio sampling rate support scope document https://intl.cloud.tencent.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53.
+Note: Make sure that the sampling rate of the source audio stream is among the above options. Otherwise, transcoding may fail.
+                     * @param _sampleRate Audio stream sampling rate. Different sampling rate options are provided for different encoding standards. For details, see [Audio/Video Transcoding Template](https://intl.cloud.tencent.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53).
 Unit: Hz.
-Please ensure that the sampling rate of the source audio stream is within the value range of the above options. otherwise, transcoding failure may occur.
+Note: Make sure that the sampling rate of the source audio stream is among the above options. Otherwise, transcoding may fail.
                      * 
                      */
                     void SetSampleRate(const uint64_t& _sampleRate);
@@ -332,9 +332,9 @@ Cannot be set to 0.
                     bool m_bitrateHasBeenSet;
 
                     /**
-                     * The sampling rate of the audio stream. the supported sampling rate options vary for different encoding standards. for details, see audio sampling rate support scope document https://intl.cloud.tencent.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53.
+                     * Audio stream sampling rate. Different sampling rate options are provided for different encoding standards. For details, see [Audio/Video Transcoding Template](https://intl.cloud.tencent.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53).
 Unit: Hz.
-Please ensure that the sampling rate of the source audio stream is within the value range of the above options. otherwise, transcoding failure may occur.
+Note: Make sure that the sampling rate of the source audio stream is among the above options. Otherwise, transcoding may fail.
                      */
                     uint64_t m_sampleRate;
                     bool m_sampleRateHasBeenSet;
