@@ -169,6 +169,49 @@ BillingClient::DescribeAccountBalanceOutcomeCallable BillingClient::DescribeAcco
     return task->get_future();
 }
 
+BillingClient::DescribeAllocationUnitDetailOutcome BillingClient::DescribeAllocationUnitDetail(const DescribeAllocationUnitDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAllocationUnitDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAllocationUnitDetailResponse rsp = DescribeAllocationUnitDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAllocationUnitDetailOutcome(rsp);
+        else
+            return DescribeAllocationUnitDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAllocationUnitDetailOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DescribeAllocationUnitDetailAsync(const DescribeAllocationUnitDetailRequest& request, const DescribeAllocationUnitDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeAllocationUnitDetail(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+BillingClient::DescribeAllocationUnitDetailOutcomeCallable BillingClient::DescribeAllocationUnitDetailCallable(const DescribeAllocationUnitDetailRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeAllocationUnitDetailOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeAllocationUnitDetail(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 BillingClient::DescribeBillAdjustInfoOutcome BillingClient::DescribeBillAdjustInfo(const DescribeBillAdjustInfoRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeBillAdjustInfo");

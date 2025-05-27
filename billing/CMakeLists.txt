@@ -36,13 +36,14 @@ set(billing_public_header_model
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryByRegionRequest.h
   include/tencentcloud/billing/v20180709/model/AdjustInfoDetail.h
   include/tencentcloud/billing/v20180709/model/ConsumptionRegionSummaryDataItem.h
+  include/tencentcloud/billing/v20180709/model/BusinessSummaryInfo.h
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryRequest.h
   include/tencentcloud/billing/v20180709/model/DescribeBillResourceSummaryResponse.h
   include/tencentcloud/billing/v20180709/model/DistributionBillDetail.h
   include/tencentcloud/billing/v20180709/model/DescribeDosageCosDetailByDateRequest.h
   include/tencentcloud/billing/v20180709/model/DescribeBillAdjustInfoResponse.h
   include/tencentcloud/billing/v20180709/model/BillDistributionResourceSummary.h
-  include/tencentcloud/billing/v20180709/model/BusinessSummaryInfo.h
+  include/tencentcloud/billing/v20180709/model/DescribeAllocationUnitDetailResponse.h
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryByProductRequest.h
   include/tencentcloud/billing/v20180709/model/DescribeVoucherUsageDetailsResponse.h
   include/tencentcloud/billing/v20180709/model/ConsumptionSummaryTotal.h
@@ -83,6 +84,7 @@ set(billing_public_header_model
   include/tencentcloud/billing/v20180709/model/RegionSummaryOverviewItem.h
   include/tencentcloud/billing/v20180709/model/ConsumptionProjectSummaryDataItem.h
   include/tencentcloud/billing/v20180709/model/AnalyseRegionDetail.h
+  include/tencentcloud/billing/v20180709/model/DescribeAllocationUnitDetailRequest.h
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryForOrganizationRequest.h
   include/tencentcloud/billing/v20180709/model/ActionSummaryOverviewItem.h
   include/tencentcloud/billing/v20180709/model/DescribeBillDetailForOrganizationRequest.h
@@ -150,13 +152,14 @@ set(billing_src
   src/v20180709/model/DescribeBillSummaryByRegionRequest.cpp
   src/v20180709/model/AdjustInfoDetail.cpp
   src/v20180709/model/ConsumptionRegionSummaryDataItem.cpp
+  src/v20180709/model/BusinessSummaryInfo.cpp
   src/v20180709/model/DescribeBillSummaryRequest.cpp
   src/v20180709/model/DescribeBillResourceSummaryResponse.cpp
   src/v20180709/model/DistributionBillDetail.cpp
   src/v20180709/model/DescribeDosageCosDetailByDateRequest.cpp
   src/v20180709/model/DescribeBillAdjustInfoResponse.cpp
   src/v20180709/model/BillDistributionResourceSummary.cpp
-  src/v20180709/model/BusinessSummaryInfo.cpp
+  src/v20180709/model/DescribeAllocationUnitDetailResponse.cpp
   src/v20180709/model/DescribeBillSummaryByProductRequest.cpp
   src/v20180709/model/DescribeVoucherUsageDetailsResponse.cpp
   src/v20180709/model/ConsumptionSummaryTotal.cpp
@@ -197,6 +200,7 @@ set(billing_src
   src/v20180709/model/RegionSummaryOverviewItem.cpp
   src/v20180709/model/ConsumptionProjectSummaryDataItem.cpp
   src/v20180709/model/AnalyseRegionDetail.cpp
+  src/v20180709/model/DescribeAllocationUnitDetailRequest.cpp
   src/v20180709/model/DescribeBillSummaryForOrganizationRequest.cpp
   src/v20180709/model/ActionSummaryOverviewItem.cpp
   src/v20180709/model/DescribeBillDetailForOrganizationRequest.cpp
