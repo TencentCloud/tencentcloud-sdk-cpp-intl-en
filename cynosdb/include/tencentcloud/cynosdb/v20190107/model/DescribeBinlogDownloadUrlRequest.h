@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cynosdb/v20190107/model/BackupLimitRestriction.h>
 
 
 namespace TencentCloud
@@ -84,6 +85,27 @@ namespace TencentCloud
                      */
                     bool BinlogIdHasBeenSet() const;
 
+                    /**
+                     * 获取Backup download source restriction condition.
+                     * @return DownloadRestriction Backup download source restriction condition.
+                     * 
+                     */
+                    BackupLimitRestriction GetDownloadRestriction() const;
+
+                    /**
+                     * 设置Backup download source restriction condition.
+                     * @param _downloadRestriction Backup download source restriction condition.
+                     * 
+                     */
+                    void SetDownloadRestriction(const BackupLimitRestriction& _downloadRestriction);
+
+                    /**
+                     * 判断参数 DownloadRestriction 是否已赋值
+                     * @return DownloadRestriction 是否已赋值
+                     * 
+                     */
+                    bool DownloadRestrictionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -97,6 +119,12 @@ namespace TencentCloud
                      */
                     int64_t m_binlogId;
                     bool m_binlogIdHasBeenSet;
+
+                    /**
+                     * Backup download source restriction condition.
+                     */
+                    BackupLimitRestriction m_downloadRestriction;
+                    bool m_downloadRestrictionHasBeenSet;
 
                 };
             }

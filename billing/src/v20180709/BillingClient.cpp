@@ -83,6 +83,49 @@ BillingClient::CreateAllocationTagOutcomeCallable BillingClient::CreateAllocatio
     return task->get_future();
 }
 
+BillingClient::CreateAllocationUnitOutcome BillingClient::CreateAllocationUnit(const CreateAllocationUnitRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateAllocationUnit");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateAllocationUnitResponse rsp = CreateAllocationUnitResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateAllocationUnitOutcome(rsp);
+        else
+            return CreateAllocationUnitOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateAllocationUnitOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::CreateAllocationUnitAsync(const CreateAllocationUnitRequest& request, const CreateAllocationUnitAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateAllocationUnit(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+BillingClient::CreateAllocationUnitOutcomeCallable BillingClient::CreateAllocationUnitCallable(const CreateAllocationUnitRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateAllocationUnitOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateAllocationUnit(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 BillingClient::DeleteAllocationTagOutcome BillingClient::DeleteAllocationTag(const DeleteAllocationTagRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteAllocationTag");
@@ -119,6 +162,49 @@ BillingClient::DeleteAllocationTagOutcomeCallable BillingClient::DeleteAllocatio
         [this, request]()
         {
             return this->DeleteAllocationTag(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+BillingClient::DeleteAllocationUnitOutcome BillingClient::DeleteAllocationUnit(const DeleteAllocationUnitRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteAllocationUnit");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteAllocationUnitResponse rsp = DeleteAllocationUnitResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteAllocationUnitOutcome(rsp);
+        else
+            return DeleteAllocationUnitOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteAllocationUnitOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DeleteAllocationUnitAsync(const DeleteAllocationUnitRequest& request, const DeleteAllocationUnitAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteAllocationUnit(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+BillingClient::DeleteAllocationUnitOutcomeCallable BillingClient::DeleteAllocationUnitCallable(const DeleteAllocationUnitRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteAllocationUnitOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteAllocationUnit(request);
         }
     );
 
@@ -1237,6 +1323,49 @@ BillingClient::DescribeVoucherUsageDetailsOutcomeCallable BillingClient::Describ
         [this, request]()
         {
             return this->DescribeVoucherUsageDetails(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+BillingClient::ModifyAllocationUnitOutcome BillingClient::ModifyAllocationUnit(const ModifyAllocationUnitRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyAllocationUnit");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyAllocationUnitResponse rsp = ModifyAllocationUnitResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyAllocationUnitOutcome(rsp);
+        else
+            return ModifyAllocationUnitOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyAllocationUnitOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::ModifyAllocationUnitAsync(const ModifyAllocationUnitRequest& request, const ModifyAllocationUnitAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyAllocationUnit(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+BillingClient::ModifyAllocationUnitOutcomeCallable BillingClient::ModifyAllocationUnitCallable(const ModifyAllocationUnitRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyAllocationUnitOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyAllocationUnit(request);
         }
     );
 

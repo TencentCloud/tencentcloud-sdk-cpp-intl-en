@@ -1,0 +1,302 @@
+/*
+ * Copyright (c) 2017-2019 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_LKE_V20231130_MODEL_AGENTTHOUGHT_H_
+#define TENCENTCLOUD_LKE_V20231130_MODEL_AGENTTHOUGHT_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/utils/rapidjson/document.h>
+#include <tencentcloud/core/utils/rapidjson/writer.h>
+#include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
+#include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/lke/v20231130/model/AgentProcedure.h>
+#include <tencentcloud/lke/v20231130/model/FileInfo.h>
+
+
+namespace TencentCloud
+{
+    namespace Lke
+    {
+        namespace V20231130
+        {
+            namespace Model
+            {
+                /**
+                * The thinking process of Agent.
+                */
+                class AgentThought : public AbstractModel
+                {
+                public:
+                    AgentThought();
+                    ~AgentThought() = default;
+                    void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
+                    CoreInternalOutcome Deserialize(const rapidjson::Value &value);
+
+
+                    /**
+                     * 获取Session ID.
+                     * @return SessionId Session ID.
+                     * 
+                     */
+                    std::string GetSessionId() const;
+
+                    /**
+                     * 设置Session ID.
+                     * @param _sessionId Session ID.
+                     * 
+                     */
+                    void SetSessionId(const std::string& _sessionId);
+
+                    /**
+                     * 判断参数 SessionId 是否已赋值
+                     * @return SessionId 是否已赋值
+                     * 
+                     */
+                    bool SessionIdHasBeenSet() const;
+
+                    /**
+                     * 获取Request ID
+                     * @return RequestId Request ID
+                     * 
+                     */
+                    std::string GetRequestId() const;
+
+                    /**
+                     * 设置Request ID
+                     * @param _requestId Request ID
+                     * 
+                     */
+                    void SetRequestId(const std::string& _requestId);
+
+                    /**
+                     * 判断参数 RequestId 是否已赋值
+                     * @return RequestId 是否已赋值
+                     * 
+                     */
+                    bool RequestIdHasBeenSet() const;
+
+                    /**
+                     * 获取It corresponds to a session, session ID, used for message storage in answering. It can be generated in advance and used when saving messages.
+                     * @return RecordId It corresponds to a session, session ID, used for message storage in answering. It can be generated in advance and used when saving messages.
+                     * 
+                     */
+                    std::string GetRecordId() const;
+
+                    /**
+                     * 设置It corresponds to a session, session ID, used for message storage in answering. It can be generated in advance and used when saving messages.
+                     * @param _recordId It corresponds to a session, session ID, used for message storage in answering. It can be generated in advance and used when saving messages.
+                     * 
+                     */
+                    void SetRecordId(const std::string& _recordId);
+
+                    /**
+                     * 判断参数 RecordId 是否已赋值
+                     * @return RecordId 是否已赋值
+                     * 
+                     */
+                    bool RecordIdHasBeenSet() const;
+
+                    /**
+                     * 获取Current request execution time, in milliseconds.
+                     * @return Elapsed Current request execution time, in milliseconds.
+                     * 
+                     */
+                    uint64_t GetElapsed() const;
+
+                    /**
+                     * 设置Current request execution time, in milliseconds.
+                     * @param _elapsed Current request execution time, in milliseconds.
+                     * 
+                     */
+                    void SetElapsed(const uint64_t& _elapsed);
+
+                    /**
+                     * 判断参数 Elapsed 是否已赋值
+                     * @return Elapsed 是否已赋值
+                     * 
+                     */
+                    bool ElapsedHasBeenSet() const;
+
+                    /**
+                     * 获取Whether it is a workflow currently.
+                     * @return IsWorkflow Whether it is a workflow currently.
+                     * 
+                     */
+                    bool GetIsWorkflow() const;
+
+                    /**
+                     * 设置Whether it is a workflow currently.
+                     * @param _isWorkflow Whether it is a workflow currently.
+                     * 
+                     */
+                    void SetIsWorkflow(const bool& _isWorkflow);
+
+                    /**
+                     * 判断参数 IsWorkflow 是否已赋值
+                     * @return IsWorkflow 是否已赋值
+                     * 
+                     */
+                    bool IsWorkflowHasBeenSet() const;
+
+                    /**
+                     * 获取If it is a workflow, workflow name.
+                     * @return WorkflowName If it is a workflow, workflow name.
+                     * 
+                     */
+                    std::string GetWorkflowName() const;
+
+                    /**
+                     * 设置If it is a workflow, workflow name.
+                     * @param _workflowName If it is a workflow, workflow name.
+                     * 
+                     */
+                    void SetWorkflowName(const std::string& _workflowName);
+
+                    /**
+                     * 判断参数 WorkflowName 是否已赋值
+                     * @return WorkflowName 是否已赋值
+                     * 
+                     */
+                    bool WorkflowNameHasBeenSet() const;
+
+                    /**
+                     * 获取Detailed thinking process.
+                     * @return Procedures Detailed thinking process.
+                     * 
+                     */
+                    std::vector<AgentProcedure> GetProcedures() const;
+
+                    /**
+                     * 设置Detailed thinking process.
+                     * @param _procedures Detailed thinking process.
+                     * 
+                     */
+                    void SetProcedures(const std::vector<AgentProcedure>& _procedures);
+
+                    /**
+                     * 判断参数 Procedures 是否已赋值
+                     * @return Procedures 是否已赋值
+                     * 
+                     */
+                    bool ProceduresHasBeenSet() const;
+
+                    /**
+                     * 获取TraceId.
+                     * @return TraceId TraceId.
+                     * 
+                     */
+                    std::string GetTraceId() const;
+
+                    /**
+                     * 设置TraceId.
+                     * @param _traceId TraceId.
+                     * 
+                     */
+                    void SetTraceId(const std::string& _traceId);
+
+                    /**
+                     * 判断参数 TraceId 是否已赋值
+                     * @return TraceId 是否已赋值
+                     * 
+                     */
+                    bool TraceIdHasBeenSet() const;
+
+                    /**
+                     * 获取File information
+                     * @return Files File information
+                     * 
+                     */
+                    std::vector<FileInfo> GetFiles() const;
+
+                    /**
+                     * 设置File information
+                     * @param _files File information
+                     * 
+                     */
+                    void SetFiles(const std::vector<FileInfo>& _files);
+
+                    /**
+                     * 判断参数 Files 是否已赋值
+                     * @return Files 是否已赋值
+                     * 
+                     */
+                    bool FilesHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * Session ID.
+                     */
+                    std::string m_sessionId;
+                    bool m_sessionIdHasBeenSet;
+
+                    /**
+                     * Request ID
+                     */
+                    std::string m_requestId;
+                    bool m_requestIdHasBeenSet;
+
+                    /**
+                     * It corresponds to a session, session ID, used for message storage in answering. It can be generated in advance and used when saving messages.
+                     */
+                    std::string m_recordId;
+                    bool m_recordIdHasBeenSet;
+
+                    /**
+                     * Current request execution time, in milliseconds.
+                     */
+                    uint64_t m_elapsed;
+                    bool m_elapsedHasBeenSet;
+
+                    /**
+                     * Whether it is a workflow currently.
+                     */
+                    bool m_isWorkflow;
+                    bool m_isWorkflowHasBeenSet;
+
+                    /**
+                     * If it is a workflow, workflow name.
+                     */
+                    std::string m_workflowName;
+                    bool m_workflowNameHasBeenSet;
+
+                    /**
+                     * Detailed thinking process.
+                     */
+                    std::vector<AgentProcedure> m_procedures;
+                    bool m_proceduresHasBeenSet;
+
+                    /**
+                     * TraceId.
+                     */
+                    std::string m_traceId;
+                    bool m_traceIdHasBeenSet;
+
+                    /**
+                     * File information
+                     */
+                    std::vector<FileInfo> m_files;
+                    bool m_filesHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_LKE_V20231130_MODEL_AGENTTHOUGHT_H_
