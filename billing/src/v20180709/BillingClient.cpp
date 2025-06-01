@@ -40,6 +40,49 @@ BillingClient::BillingClient(const Credential &credential, const string &region,
 }
 
 
+BillingClient::CreateAllocationRuleOutcome BillingClient::CreateAllocationRule(const CreateAllocationRuleRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateAllocationRule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateAllocationRuleResponse rsp = CreateAllocationRuleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateAllocationRuleOutcome(rsp);
+        else
+            return CreateAllocationRuleOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateAllocationRuleOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::CreateAllocationRuleAsync(const CreateAllocationRuleRequest& request, const CreateAllocationRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateAllocationRule(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+BillingClient::CreateAllocationRuleOutcomeCallable BillingClient::CreateAllocationRuleCallable(const CreateAllocationRuleRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateAllocationRuleOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateAllocationRule(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 BillingClient::CreateAllocationTagOutcome BillingClient::CreateAllocationTag(const CreateAllocationTagRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateAllocationTag");
@@ -119,6 +162,92 @@ BillingClient::CreateAllocationUnitOutcomeCallable BillingClient::CreateAllocati
         [this, request]()
         {
             return this->CreateAllocationUnit(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+BillingClient::CreateGatherRuleOutcome BillingClient::CreateGatherRule(const CreateGatherRuleRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateGatherRule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateGatherRuleResponse rsp = CreateGatherRuleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateGatherRuleOutcome(rsp);
+        else
+            return CreateGatherRuleOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateGatherRuleOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::CreateGatherRuleAsync(const CreateGatherRuleRequest& request, const CreateGatherRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateGatherRule(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+BillingClient::CreateGatherRuleOutcomeCallable BillingClient::CreateGatherRuleCallable(const CreateGatherRuleRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateGatherRuleOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateGatherRule(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+BillingClient::DeleteAllocationRuleOutcome BillingClient::DeleteAllocationRule(const DeleteAllocationRuleRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteAllocationRule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteAllocationRuleResponse rsp = DeleteAllocationRuleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteAllocationRuleOutcome(rsp);
+        else
+            return DeleteAllocationRuleOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteAllocationRuleOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DeleteAllocationRuleAsync(const DeleteAllocationRuleRequest& request, const DeleteAllocationRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteAllocationRule(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+BillingClient::DeleteAllocationRuleOutcomeCallable BillingClient::DeleteAllocationRuleCallable(const DeleteAllocationRuleRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteAllocationRuleOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteAllocationRule(request);
         }
     );
 
@@ -212,6 +341,49 @@ BillingClient::DeleteAllocationUnitOutcomeCallable BillingClient::DeleteAllocati
     return task->get_future();
 }
 
+BillingClient::DeleteGatherRuleOutcome BillingClient::DeleteGatherRule(const DeleteGatherRuleRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteGatherRule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteGatherRuleResponse rsp = DeleteGatherRuleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteGatherRuleOutcome(rsp);
+        else
+            return DeleteGatherRuleOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteGatherRuleOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DeleteGatherRuleAsync(const DeleteGatherRuleRequest& request, const DeleteGatherRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteGatherRule(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+BillingClient::DeleteGatherRuleOutcomeCallable BillingClient::DeleteGatherRuleCallable(const DeleteGatherRuleRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteGatherRuleOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteGatherRule(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 BillingClient::DescribeAccountBalanceOutcome BillingClient::DescribeAccountBalance(const DescribeAccountBalanceRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeAccountBalance");
@@ -248,6 +420,135 @@ BillingClient::DescribeAccountBalanceOutcomeCallable BillingClient::DescribeAcco
         [this, request]()
         {
             return this->DescribeAccountBalance(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+BillingClient::DescribeAllocationRuleDetailOutcome BillingClient::DescribeAllocationRuleDetail(const DescribeAllocationRuleDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAllocationRuleDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAllocationRuleDetailResponse rsp = DescribeAllocationRuleDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAllocationRuleDetailOutcome(rsp);
+        else
+            return DescribeAllocationRuleDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAllocationRuleDetailOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DescribeAllocationRuleDetailAsync(const DescribeAllocationRuleDetailRequest& request, const DescribeAllocationRuleDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeAllocationRuleDetail(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+BillingClient::DescribeAllocationRuleDetailOutcomeCallable BillingClient::DescribeAllocationRuleDetailCallable(const DescribeAllocationRuleDetailRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeAllocationRuleDetailOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeAllocationRuleDetail(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+BillingClient::DescribeAllocationRuleSummaryOutcome BillingClient::DescribeAllocationRuleSummary(const DescribeAllocationRuleSummaryRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAllocationRuleSummary");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAllocationRuleSummaryResponse rsp = DescribeAllocationRuleSummaryResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAllocationRuleSummaryOutcome(rsp);
+        else
+            return DescribeAllocationRuleSummaryOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAllocationRuleSummaryOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DescribeAllocationRuleSummaryAsync(const DescribeAllocationRuleSummaryRequest& request, const DescribeAllocationRuleSummaryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeAllocationRuleSummary(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+BillingClient::DescribeAllocationRuleSummaryOutcomeCallable BillingClient::DescribeAllocationRuleSummaryCallable(const DescribeAllocationRuleSummaryRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeAllocationRuleSummaryOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeAllocationRuleSummary(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+BillingClient::DescribeAllocationTreeOutcome BillingClient::DescribeAllocationTree(const DescribeAllocationTreeRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAllocationTree");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAllocationTreeResponse rsp = DescribeAllocationTreeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAllocationTreeOutcome(rsp);
+        else
+            return DescribeAllocationTreeOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAllocationTreeOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DescribeAllocationTreeAsync(const DescribeAllocationTreeRequest& request, const DescribeAllocationTreeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeAllocationTree(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+BillingClient::DescribeAllocationTreeOutcomeCallable BillingClient::DescribeAllocationTreeCallable(const DescribeAllocationTreeRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeAllocationTreeOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeAllocationTree(request);
         }
     );
 
@@ -1201,6 +1502,49 @@ BillingClient::DescribeDosageCosDetailByDateOutcomeCallable BillingClient::Descr
     return task->get_future();
 }
 
+BillingClient::DescribeGatherRuleDetailOutcome BillingClient::DescribeGatherRuleDetail(const DescribeGatherRuleDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeGatherRuleDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeGatherRuleDetailResponse rsp = DescribeGatherRuleDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeGatherRuleDetailOutcome(rsp);
+        else
+            return DescribeGatherRuleDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeGatherRuleDetailOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DescribeGatherRuleDetailAsync(const DescribeGatherRuleDetailRequest& request, const DescribeGatherRuleDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeGatherRuleDetail(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+BillingClient::DescribeGatherRuleDetailOutcomeCallable BillingClient::DescribeGatherRuleDetailCallable(const DescribeGatherRuleDetailRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeGatherRuleDetailOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeGatherRuleDetail(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 BillingClient::DescribeTagListOutcome BillingClient::DescribeTagList(const DescribeTagListRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeTagList");
@@ -1330,6 +1674,49 @@ BillingClient::DescribeVoucherUsageDetailsOutcomeCallable BillingClient::Describ
     return task->get_future();
 }
 
+BillingClient::ModifyAllocationRuleOutcome BillingClient::ModifyAllocationRule(const ModifyAllocationRuleRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyAllocationRule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyAllocationRuleResponse rsp = ModifyAllocationRuleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyAllocationRuleOutcome(rsp);
+        else
+            return ModifyAllocationRuleOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyAllocationRuleOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::ModifyAllocationRuleAsync(const ModifyAllocationRuleRequest& request, const ModifyAllocationRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyAllocationRule(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+BillingClient::ModifyAllocationRuleOutcomeCallable BillingClient::ModifyAllocationRuleCallable(const ModifyAllocationRuleRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyAllocationRuleOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyAllocationRule(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 BillingClient::ModifyAllocationUnitOutcome BillingClient::ModifyAllocationUnit(const ModifyAllocationUnitRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyAllocationUnit");
@@ -1366,6 +1753,49 @@ BillingClient::ModifyAllocationUnitOutcomeCallable BillingClient::ModifyAllocati
         [this, request]()
         {
             return this->ModifyAllocationUnit(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+BillingClient::ModifyGatherRuleOutcome BillingClient::ModifyGatherRule(const ModifyGatherRuleRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyGatherRule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyGatherRuleResponse rsp = ModifyGatherRuleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyGatherRuleOutcome(rsp);
+        else
+            return ModifyGatherRuleOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyGatherRuleOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::ModifyGatherRuleAsync(const ModifyGatherRuleRequest& request, const ModifyGatherRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyGatherRule(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+BillingClient::ModifyGatherRuleOutcomeCallable BillingClient::ModifyGatherRuleCallable(const ModifyGatherRuleRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyGatherRuleOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyGatherRule(request);
         }
     );
 
