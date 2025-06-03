@@ -73,6 +73,8 @@
 #include <tencentcloud/mdl/v20200326/model/DescribeStreamLiveWatermarkResponse.h>
 #include <tencentcloud/mdl/v20200326/model/DescribeStreamLiveWatermarksRequest.h>
 #include <tencentcloud/mdl/v20200326/model/DescribeStreamLiveWatermarksResponse.h>
+#include <tencentcloud/mdl/v20200326/model/GetAbWatermarkPlayUrlRequest.h>
+#include <tencentcloud/mdl/v20200326/model/GetAbWatermarkPlayUrlResponse.h>
 #include <tencentcloud/mdl/v20200326/model/ModifyStreamLiveChannelRequest.h>
 #include <tencentcloud/mdl/v20200326/model/ModifyStreamLiveChannelResponse.h>
 #include <tencentcloud/mdl/v20200326/model/ModifyStreamLiveInputRequest.h>
@@ -176,6 +178,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeStreamLiveWatermarksResponse> DescribeStreamLiveWatermarksOutcome;
                 typedef std::future<DescribeStreamLiveWatermarksOutcome> DescribeStreamLiveWatermarksOutcomeCallable;
                 typedef std::function<void(const MdlClient*, const Model::DescribeStreamLiveWatermarksRequest&, DescribeStreamLiveWatermarksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamLiveWatermarksAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetAbWatermarkPlayUrlResponse> GetAbWatermarkPlayUrlOutcome;
+                typedef std::future<GetAbWatermarkPlayUrlOutcome> GetAbWatermarkPlayUrlOutcomeCallable;
+                typedef std::function<void(const MdlClient*, const Model::GetAbWatermarkPlayUrlRequest&, GetAbWatermarkPlayUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetAbWatermarkPlayUrlAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyStreamLiveChannelResponse> ModifyStreamLiveChannelOutcome;
                 typedef std::future<ModifyStreamLiveChannelOutcome> ModifyStreamLiveChannelOutcomeCallable;
                 typedef std::function<void(const MdlClient*, const Model::ModifyStreamLiveChannelRequest&, ModifyStreamLiveChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyStreamLiveChannelAsyncHandler;
@@ -424,6 +429,15 @@ namespace TencentCloud
                 DescribeStreamLiveWatermarksOutcome DescribeStreamLiveWatermarks(const Model::DescribeStreamLiveWatermarksRequest &request);
                 void DescribeStreamLiveWatermarksAsync(const Model::DescribeStreamLiveWatermarksRequest& request, const DescribeStreamLiveWatermarksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeStreamLiveWatermarksOutcomeCallable DescribeStreamLiveWatermarksCallable(const Model::DescribeStreamLiveWatermarksRequest& request);
+
+                /**
+                 *Get AB watermark play url.
+                 * @param req GetAbWatermarkPlayUrlRequest
+                 * @return GetAbWatermarkPlayUrlOutcome
+                 */
+                GetAbWatermarkPlayUrlOutcome GetAbWatermarkPlayUrl(const Model::GetAbWatermarkPlayUrlRequest &request);
+                void GetAbWatermarkPlayUrlAsync(const Model::GetAbWatermarkPlayUrlRequest& request, const GetAbWatermarkPlayUrlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetAbWatermarkPlayUrlOutcomeCallable GetAbWatermarkPlayUrlCallable(const Model::GetAbWatermarkPlayUrlRequest& request);
 
                 /**
                  *This API is used to modify a StreamLive channel.

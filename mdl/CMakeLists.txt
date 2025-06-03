@@ -39,6 +39,7 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/FrameCaptureTemplate.h
   include/tencentcloud/mdl/v20200326/model/PipelineInputSettingsInfo.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelOutputStatisticsRequest.h
+  include/tencentcloud/mdl/v20200326/model/GetAbWatermarkPlayUrlResponse.h
   include/tencentcloud/mdl/v20200326/model/ChannelPipelineAlerts.h
   include/tencentcloud/mdl/v20200326/model/InputInfo.h
   include/tencentcloud/mdl/v20200326/model/InputAnalysisInfo.h
@@ -115,6 +116,7 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelLogsRequest.h
   include/tencentcloud/mdl/v20200326/model/CreateStreamLiveInputSecurityGroupRequest.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelOutputStatisticsResponse.h
+  include/tencentcloud/mdl/v20200326/model/GetAbWatermarkPlayUrlRequest.h
   include/tencentcloud/mdl/v20200326/model/DescribeWatermarkInfo.h
   include/tencentcloud/mdl/v20200326/model/EventSettingsDestinationReq.h
   include/tencentcloud/mdl/v20200326/model/VideoPipelineInputStatistics.h
@@ -193,6 +195,7 @@ set(mdl_src
   src/v20200326/model/FrameCaptureTemplate.cpp
   src/v20200326/model/PipelineInputSettingsInfo.cpp
   src/v20200326/model/DescribeStreamLiveChannelOutputStatisticsRequest.cpp
+  src/v20200326/model/GetAbWatermarkPlayUrlResponse.cpp
   src/v20200326/model/ChannelPipelineAlerts.cpp
   src/v20200326/model/InputInfo.cpp
   src/v20200326/model/InputAnalysisInfo.cpp
@@ -269,6 +272,7 @@ set(mdl_src
   src/v20200326/model/DescribeStreamLiveChannelLogsRequest.cpp
   src/v20200326/model/CreateStreamLiveInputSecurityGroupRequest.cpp
   src/v20200326/model/DescribeStreamLiveChannelOutputStatisticsResponse.cpp
+  src/v20200326/model/GetAbWatermarkPlayUrlRequest.cpp
   src/v20200326/model/DescribeWatermarkInfo.cpp
   src/v20200326/model/EventSettingsDestinationReq.cpp
   src/v20200326/model/VideoPipelineInputStatistics.cpp

@@ -1115,6 +1115,49 @@ MdlClient::DescribeStreamLiveWatermarksOutcomeCallable MdlClient::DescribeStream
     return task->get_future();
 }
 
+MdlClient::GetAbWatermarkPlayUrlOutcome MdlClient::GetAbWatermarkPlayUrl(const GetAbWatermarkPlayUrlRequest &request)
+{
+    auto outcome = MakeRequest(request, "GetAbWatermarkPlayUrl");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        GetAbWatermarkPlayUrlResponse rsp = GetAbWatermarkPlayUrlResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return GetAbWatermarkPlayUrlOutcome(rsp);
+        else
+            return GetAbWatermarkPlayUrlOutcome(o.GetError());
+    }
+    else
+    {
+        return GetAbWatermarkPlayUrlOutcome(outcome.GetError());
+    }
+}
+
+void MdlClient::GetAbWatermarkPlayUrlAsync(const GetAbWatermarkPlayUrlRequest& request, const GetAbWatermarkPlayUrlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->GetAbWatermarkPlayUrl(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdlClient::GetAbWatermarkPlayUrlOutcomeCallable MdlClient::GetAbWatermarkPlayUrlCallable(const GetAbWatermarkPlayUrlRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<GetAbWatermarkPlayUrlOutcome()>>(
+        [this, request]()
+        {
+            return this->GetAbWatermarkPlayUrl(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 MdlClient::ModifyStreamLiveChannelOutcome MdlClient::ModifyStreamLiveChannel(const ModifyStreamLiveChannelRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyStreamLiveChannel");
