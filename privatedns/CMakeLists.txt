@@ -64,18 +64,21 @@ set(privatedns_public_header_model
   include/tencentcloud/privatedns/v20201028/model/ModifyPrivateZoneVpcResponse.h
   include/tencentcloud/privatedns/v20201028/model/ForwardRule.h
   include/tencentcloud/privatedns/v20201028/model/DescribePrivateZoneListRequest.h
-  include/tencentcloud/privatedns/v20201028/model/ModifyForwardRuleRequest.h
+  include/tencentcloud/privatedns/v20201028/model/DescribeRecordRequest.h
+  include/tencentcloud/privatedns/v20201028/model/DescribeRecordResponse.h
   include/tencentcloud/privatedns/v20201028/model/SubscribePrivateZoneServiceRequest.h
   include/tencentcloud/privatedns/v20201028/model/ModifyPrivateZoneRequest.h
   include/tencentcloud/privatedns/v20201028/model/CreatePrivateZoneResponse.h
   include/tencentcloud/privatedns/v20201028/model/EndPointInfo.h
   include/tencentcloud/privatedns/v20201028/model/DescribeDashboardResponse.h
   include/tencentcloud/privatedns/v20201028/model/CreatePrivateZoneRecordResponse.h
+  include/tencentcloud/privatedns/v20201028/model/RecordInfo.h
   include/tencentcloud/privatedns/v20201028/model/DescribePrivateZoneServiceResponse.h
   include/tencentcloud/privatedns/v20201028/model/DescribeForwardRuleListResponse.h
   include/tencentcloud/privatedns/v20201028/model/DescribeExtendEndpointListResponse.h
   include/tencentcloud/privatedns/v20201028/model/CreatePrivateDNSAccountResponse.h
   include/tencentcloud/privatedns/v20201028/model/DescribeAuditLogRequest.h
+  include/tencentcloud/privatedns/v20201028/model/ModifyForwardRuleRequest.h
   include/tencentcloud/privatedns/v20201028/model/DescribeDashboardRequest.h
   include/tencentcloud/privatedns/v20201028/model/ModifyForwardRuleResponse.h
   include/tencentcloud/privatedns/v20201028/model/CreateEndPointResponse.h
@@ -149,18 +152,21 @@ set(privatedns_src
   src/v20201028/model/ModifyPrivateZoneVpcResponse.cpp
   src/v20201028/model/ForwardRule.cpp
   src/v20201028/model/DescribePrivateZoneListRequest.cpp
-  src/v20201028/model/ModifyForwardRuleRequest.cpp
+  src/v20201028/model/DescribeRecordRequest.cpp
+  src/v20201028/model/DescribeRecordResponse.cpp
   src/v20201028/model/SubscribePrivateZoneServiceRequest.cpp
   src/v20201028/model/ModifyPrivateZoneRequest.cpp
   src/v20201028/model/CreatePrivateZoneResponse.cpp
   src/v20201028/model/EndPointInfo.cpp
   src/v20201028/model/DescribeDashboardResponse.cpp
   src/v20201028/model/CreatePrivateZoneRecordResponse.cpp
+  src/v20201028/model/RecordInfo.cpp
   src/v20201028/model/DescribePrivateZoneServiceResponse.cpp
   src/v20201028/model/DescribeForwardRuleListResponse.cpp
   src/v20201028/model/DescribeExtendEndpointListResponse.cpp
   src/v20201028/model/CreatePrivateDNSAccountResponse.cpp
   src/v20201028/model/DescribeAuditLogRequest.cpp
+  src/v20201028/model/ModifyForwardRuleRequest.cpp
   src/v20201028/model/DescribeDashboardRequest.cpp
   src/v20201028/model/ModifyForwardRuleResponse.cpp
   src/v20201028/model/CreateEndPointResponse.cpp

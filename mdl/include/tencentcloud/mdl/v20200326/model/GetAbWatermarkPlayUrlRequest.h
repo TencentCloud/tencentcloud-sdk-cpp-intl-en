@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Client UUID, 32-bit unsigned integer.
-                     * @return Uuid Client UUID, 32-bit unsigned integer.
+                     * 获取Client UUID, 32-bit unsigned integer, [0, 4294967295].
+                     * @return Uuid Client UUID, 32-bit unsigned integer, [0, 4294967295].
                      * 
                      */
                     uint64_t GetUuid() const;
 
                     /**
-                     * 设置Client UUID, 32-bit unsigned integer.
-                     * @param _uuid Client UUID, 32-bit unsigned integer.
+                     * 设置Client UUID, 32-bit unsigned integer, [0, 4294967295].
+                     * @param _uuid Client UUID, 32-bit unsigned integer, [0, 4294967295].
                      * 
                      */
                     void SetUuid(const uint64_t& _uuid);
@@ -108,7 +108,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Client UUID, 32-bit unsigned integer.
+                     * Client UUID, 32-bit unsigned integer, [0, 4294967295].
                      */
                     uint64_t m_uuid;
                     bool m_uuidHasBeenSet;
