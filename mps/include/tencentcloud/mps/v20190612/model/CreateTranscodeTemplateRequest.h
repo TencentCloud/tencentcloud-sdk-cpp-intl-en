@@ -260,15 +260,15 @@ Default value: 0.
                     bool EnhanceConfigHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StdExtInfo 
+                     * 获取Additional parameter, which is a serialized JSON string.
+                     * @return StdExtInfo Additional parameter, which is a serialized JSON string.
                      * 
                      */
                     std::string GetStdExtInfo() const;
 
                     /**
-                     * 设置
-                     * @param _stdExtInfo 
+                     * 设置Additional parameter, which is a serialized JSON string.
+                     * @param _stdExtInfo Additional parameter, which is a serialized JSON string.
                      * 
                      */
                     void SetStdExtInfo(const std::string& _stdExtInfo);
@@ -343,7 +343,7 @@ Default value: 0.
                     bool m_enhanceConfigHasBeenSet;
 
                     /**
-                     * 
+                     * Additional parameter, which is a serialized JSON string.
                      */
                     std::string m_stdExtInfo;
                     bool m_stdExtInfoHasBeenSet;

@@ -73,12 +73,12 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * 获取Current hotword lexicon status. The value indicates the number of smart subtitle templates bound to this hotword lexicon.
-If the Status value is 0, it indicates that the hotword lexicon is not referenced by any smart subtitle template and that it can be deleted.
-If the Status value is not 0, it indicates that the hotword lexicon cannot be deleted.
+If the value of Status is 0, it indicates that the hotword lexicon is not referenced by any smart subtitle template and that it can be deleted.
+If the value of Status is not 0, it indicates that the hotword lexicon cannot be deleted.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @return Status Current hotword lexicon status. The value indicates the number of smart subtitle templates bound to this hotword lexicon.
-If the Status value is 0, it indicates that the hotword lexicon is not referenced by any smart subtitle template and that it can be deleted.
-If the Status value is not 0, it indicates that the hotword lexicon cannot be deleted.
+If the value of Status is 0, it indicates that the hotword lexicon is not referenced by any smart subtitle template and that it can be deleted.
+If the value of Status is not 0, it indicates that the hotword lexicon cannot be deleted.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
@@ -86,12 +86,12 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * 设置Current hotword lexicon status. The value indicates the number of smart subtitle templates bound to this hotword lexicon.
-If the Status value is 0, it indicates that the hotword lexicon is not referenced by any smart subtitle template and that it can be deleted.
-If the Status value is not 0, it indicates that the hotword lexicon cannot be deleted.
+If the value of Status is 0, it indicates that the hotword lexicon is not referenced by any smart subtitle template and that it can be deleted.
+If the value of Status is not 0, it indicates that the hotword lexicon cannot be deleted.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _status Current hotword lexicon status. The value indicates the number of smart subtitle templates bound to this hotword lexicon.
-If the Status value is 0, it indicates that the hotword lexicon is not referenced by any smart subtitle template and that it can be deleted.
-If the Status value is not 0, it indicates that the hotword lexicon cannot be deleted.
+If the value of Status is 0, it indicates that the hotword lexicon is not referenced by any smart subtitle template and that it can be deleted.
+If the value of Status is not 0, it indicates that the hotword lexicon cannot be deleted.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
@@ -269,8 +269,8 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * Current hotword lexicon status. The value indicates the number of smart subtitle templates bound to this hotword lexicon.
-If the Status value is 0, it indicates that the hotword lexicon is not referenced by any smart subtitle template and that it can be deleted.
-If the Status value is not 0, it indicates that the hotword lexicon cannot be deleted.
+If the value of Status is 0, it indicates that the hotword lexicon is not referenced by any smart subtitle template and that it can be deleted.
+If the value of Status is not 0, it indicates that the hotword lexicon cannot be deleted.
 Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     uint64_t m_status;

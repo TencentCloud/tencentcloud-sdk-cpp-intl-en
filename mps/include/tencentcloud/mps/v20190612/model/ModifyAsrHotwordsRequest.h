@@ -45,13 +45,13 @@ namespace TencentCloud
                     /**
                      * 获取Hotword lexicon ID. 
  
-Either Name or Content should be specified if the hotword lexicon is a text-based hotword lexicon.
-One of Name, FileContent, and FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon.
+Either Name, FileContent, or FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
 
                      * @return HotwordsId Hotword lexicon ID. 
  
-Either Name or Content should be specified if the hotword lexicon is a text-based hotword lexicon.
-One of Name, FileContent, and FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon.
+Either Name, FileContent, or FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
 
                      * 
                      */
@@ -60,13 +60,13 @@ One of Name, FileContent, and FileName should be specified if the hotword lexico
                     /**
                      * 设置Hotword lexicon ID. 
  
-Either Name or Content should be specified if the hotword lexicon is a text-based hotword lexicon.
-One of Name, FileContent, and FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon.
+Either Name, FileContent, or FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
 
                      * @param _hotwordsId Hotword lexicon ID. 
  
-Either Name or Content should be specified if the hotword lexicon is a text-based hotword lexicon.
-One of Name, FileContent, and FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon.
+Either Name, FileContent, or FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
 
                      * 
                      */
@@ -180,8 +180,8 @@ One of Name, FileContent, and FileName should be specified if the hotword lexico
                     /**
                      * Hotword lexicon ID. 
  
-Either Name or Content should be specified if the hotword lexicon is a text-based hotword lexicon.
-One of Name, FileContent, and FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon.
+Either Name, FileContent, or FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
 
                      */
                     std::string m_hotwordsId;

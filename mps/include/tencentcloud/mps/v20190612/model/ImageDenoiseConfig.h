@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_MPS_V20190612_MODEL_IMAGEERASELOGOCONFIG_H_
-#define TENCENTCLOUD_MPS_V20190612_MODEL_IMAGEERASELOGOCONFIG_H_
+#ifndef TENCENTCLOUD_MPS_V20190612_MODEL_IMAGEDENOISECONFIG_H_
+#define TENCENTCLOUD_MPS_V20190612_MODEL_IMAGEDENOISECONFIG_H_
 
 #include <string>
 #include <vector>
@@ -24,7 +24,6 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/mps/v20190612/model/ImageAreaBoxInfo.h>
 
 
 namespace TencentCloud
@@ -36,43 +35,39 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Icon erasing configuration.
+                * Image denoising configuration.
                 */
-                class ImageEraseLogoConfig : public AbstractModel
+                class ImageDenoiseConfig : public AbstractModel
                 {
                 public:
-                    ImageEraseLogoConfig();
-                    ~ImageEraseLogoConfig() = default;
+                    ImageDenoiseConfig();
+                    ~ImageDenoiseConfig() = default;
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
                      * 获取Capability configuration enabling status. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled.</li>
+<li>OFF: disabled.</li>
 Default value: ON.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @return Switch Capability configuration enabling status. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled.</li>
+<li>OFF: disabled.</li>
 Default value: ON.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Capability configuration enabling status. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled.</li>
+<li>OFF: disabled.</li>
 Default value: ON.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _switch Capability configuration enabling status. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled.</li>
+<li>OFF: disabled.</li>
 Default value: ON.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -85,58 +80,62 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Multiple box selection areas that need to be erased, with a maximum of 16 areas available.
+                     * 获取Type, with valid values including:
+<li>weak</li>
+<li>strong</li>
+Default value: weak.
 Note: This field may return null, indicating that no valid value can be obtained.
-
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return ImageAreaBoxes Multiple box selection areas that need to be erased, with a maximum of 16 areas available.
-Note: This field may return null, indicating that no valid value can be obtained.
-
+                     * @return Type Type, with valid values including:
+<li>weak</li>
+<li>strong</li>
+Default value: weak.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
-                    std::vector<ImageAreaBoxInfo> GetImageAreaBoxes() const;
+                    std::string GetType() const;
 
                     /**
-                     * 设置Multiple box selection areas that need to be erased, with a maximum of 16 areas available.
+                     * 设置Type, with valid values including:
+<li>weak</li>
+<li>strong</li>
+Default value: weak.
 Note: This field may return null, indicating that no valid value can be obtained.
-
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _imageAreaBoxes Multiple box selection areas that need to be erased, with a maximum of 16 areas available.
-Note: This field may return null, indicating that no valid value can be obtained.
-
+                     * @param _type Type, with valid values including:
+<li>weak</li>
+<li>strong</li>
+Default value: weak.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
-                    void SetImageAreaBoxes(const std::vector<ImageAreaBoxInfo>& _imageAreaBoxes);
+                    void SetType(const std::string& _type);
 
                     /**
-                     * 判断参数 ImageAreaBoxes 是否已赋值
-                     * @return ImageAreaBoxes 是否已赋值
+                     * 判断参数 Type 是否已赋值
+                     * @return Type 是否已赋值
                      * 
                      */
-                    bool ImageAreaBoxesHasBeenSet() const;
+                    bool TypeHasBeenSet() const;
 
                 private:
 
                     /**
                      * Capability configuration enabling status. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled.</li>
+<li>OFF: disabled.</li>
 Default value: ON.
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Multiple box selection areas that need to be erased, with a maximum of 16 areas available.
-Note: This field may return null, indicating that no valid value can be obtained.
-
+                     * Type, with valid values including:
+<li>weak</li>
+<li>strong</li>
+Default value: weak.
 Note: This field may return null, indicating that no valid value can be obtained.
                      */
-                    std::vector<ImageAreaBoxInfo> m_imageAreaBoxes;
-                    bool m_imageAreaBoxesHasBeenSet;
+                    std::string m_type;
+                    bool m_typeHasBeenSet;
 
                 };
             }
@@ -144,4 +143,4 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 }
 
-#endif // !TENCENTCLOUD_MPS_V20190612_MODEL_IMAGEERASELOGOCONFIG_H_
+#endif // !TENCENTCLOUD_MPS_V20190612_MODEL_IMAGEDENOISECONFIG_H_

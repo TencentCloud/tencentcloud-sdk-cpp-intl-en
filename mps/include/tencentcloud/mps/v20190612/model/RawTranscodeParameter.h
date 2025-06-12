@@ -27,6 +27,7 @@
 #include <tencentcloud/mps/v20190612/model/VideoTemplateInfo.h>
 #include <tencentcloud/mps/v20190612/model/AudioTemplateInfo.h>
 #include <tencentcloud/mps/v20190612/model/TEHDConfig.h>
+#include <tencentcloud/mps/v20190612/model/EnhanceConfig.h>
 
 
 namespace TencentCloud
@@ -199,6 +200,56 @@ Default value: 0.
                      */
                     bool TEHDConfigHasBeenSet() const;
 
+                    /**
+                     * 获取Additional parameter, which is a serialized JSON string.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return StdExtInfo Additional parameter, which is a serialized JSON string.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetStdExtInfo() const;
+
+                    /**
+                     * 设置Additional parameter, which is a serialized JSON string.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _stdExtInfo Additional parameter, which is a serialized JSON string.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetStdExtInfo(const std::string& _stdExtInfo);
+
+                    /**
+                     * 判断参数 StdExtInfo 是否已赋值
+                     * @return StdExtInfo 是否已赋值
+                     * 
+                     */
+                    bool StdExtInfoHasBeenSet() const;
+
+                    /**
+                     * 获取Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return EnhanceConfig Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    EnhanceConfig GetEnhanceConfig() const;
+
+                    /**
+                     * 设置Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _enhanceConfig Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetEnhanceConfig(const EnhanceConfig& _enhanceConfig);
+
+                    /**
+                     * 判断参数 EnhanceConfig 是否已赋值
+                     * @return EnhanceConfig 是否已赋值
+                     * 
+                     */
+                    bool EnhanceConfigHasBeenSet() const;
+
                 private:
 
                     /**
@@ -242,6 +293,20 @@ Default value: 0.
                      */
                     TEHDConfig m_tEHDConfig;
                     bool m_tEHDConfigHasBeenSet;
+
+                    /**
+                     * Additional parameter, which is a serialized JSON string.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_stdExtInfo;
+                    bool m_stdExtInfoHasBeenSet;
+
+                    /**
+                     * Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    EnhanceConfig m_enhanceConfig;
+                    bool m_enhanceConfigHasBeenSet;
 
                 };
             }

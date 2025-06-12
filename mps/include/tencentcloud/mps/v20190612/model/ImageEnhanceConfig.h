@@ -25,9 +25,12 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/SuperResolutionConfig.h>
+#include <tencentcloud/mps/v20190612/model/ImageDenoiseConfig.h>
+#include <tencentcloud/mps/v20190612/model/ImageQualityEnhanceConfig.h>
 #include <tencentcloud/mps/v20190612/model/ColorEnhanceConfig.h>
 #include <tencentcloud/mps/v20190612/model/SharpEnhanceConfig.h>
 #include <tencentcloud/mps/v20190612/model/FaceEnhanceConfig.h>
+#include <tencentcloud/mps/v20190612/model/LowLightEnhanceConfig.h>
 
 
 namespace TencentCloud
@@ -74,6 +77,56 @@ namespace TencentCloud
                      * 
                      */
                     bool SuperResolutionHasBeenSet() const;
+
+                    /**
+                     * 获取Denoising configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return Denoise Denoising configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    ImageDenoiseConfig GetDenoise() const;
+
+                    /**
+                     * 设置Denoising configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _denoise Denoising configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetDenoise(const ImageDenoiseConfig& _denoise);
+
+                    /**
+                     * 判断参数 Denoise 是否已赋值
+                     * @return Denoise 是否已赋值
+                     * 
+                     */
+                    bool DenoiseHasBeenSet() const;
+
+                    /**
+                     * 获取Comprehensive enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return ImageQualityEnhance Comprehensive enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    ImageQualityEnhanceConfig GetImageQualityEnhance() const;
+
+                    /**
+                     * 设置Comprehensive enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _imageQualityEnhance Comprehensive enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetImageQualityEnhance(const ImageQualityEnhanceConfig& _imageQualityEnhance);
+
+                    /**
+                     * 判断参数 ImageQualityEnhance 是否已赋值
+                     * @return ImageQualityEnhance 是否已赋值
+                     * 
+                     */
+                    bool ImageQualityEnhanceHasBeenSet() const;
 
                     /**
                      * 获取Color enhancement configuration.
@@ -150,6 +203,31 @@ namespace TencentCloud
                      */
                     bool FaceEnhanceHasBeenSet() const;
 
+                    /**
+                     * 获取Low-light enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return LowLightEnhance Low-light enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    LowLightEnhanceConfig GetLowLightEnhance() const;
+
+                    /**
+                     * 设置Low-light enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _lowLightEnhance Low-light enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetLowLightEnhance(const LowLightEnhanceConfig& _lowLightEnhance);
+
+                    /**
+                     * 判断参数 LowLightEnhance 是否已赋值
+                     * @return LowLightEnhance 是否已赋值
+                     * 
+                     */
+                    bool LowLightEnhanceHasBeenSet() const;
+
                 private:
 
                     /**
@@ -158,6 +236,20 @@ namespace TencentCloud
                      */
                     SuperResolutionConfig m_superResolution;
                     bool m_superResolutionHasBeenSet;
+
+                    /**
+                     * Denoising configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    ImageDenoiseConfig m_denoise;
+                    bool m_denoiseHasBeenSet;
+
+                    /**
+                     * Comprehensive enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    ImageQualityEnhanceConfig m_imageQualityEnhance;
+                    bool m_imageQualityEnhanceHasBeenSet;
 
                     /**
                      * Color enhancement configuration.
@@ -179,6 +271,13 @@ namespace TencentCloud
                      */
                     FaceEnhanceConfig m_faceEnhance;
                     bool m_faceEnhanceHasBeenSet;
+
+                    /**
+                     * Low-light enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    LowLightEnhanceConfig m_lowLightEnhance;
+                    bool m_lowLightEnhanceHasBeenSet;
 
                 };
             }

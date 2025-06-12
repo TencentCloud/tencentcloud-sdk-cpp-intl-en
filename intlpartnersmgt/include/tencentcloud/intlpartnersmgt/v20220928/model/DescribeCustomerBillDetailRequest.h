@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool CustomerUinHasBeenSet() const;
 
                     /**
-                     * 获取Inquiry month, in the format of YYYY-MM, such as 2023-01
-                     * @return Month Inquiry month, in the format of YYYY-MM, such as 2023-01
+                     * 获取Inquiry month, in the format of YYYY-MM, such as 2023-01.
+                     * @return Month Inquiry month, in the format of YYYY-MM, such as 2023-01.
                      * 
                      */
                     std::string GetMonth() const;
 
                     /**
-                     * 设置Inquiry month, in the format of YYYY-MM, such as 2023-01
-                     * @param _month Inquiry month, in the format of YYYY-MM, such as 2023-01
+                     * 设置Inquiry month, in the format of YYYY-MM, such as 2023-01.
+                     * @param _month Inquiry month, in the format of YYYY-MM, such as 2023-01.
                      * 
                      */
                     void SetMonth(const std::string& _month);
@@ -318,7 +318,7 @@ pre_downgrade (Upgrade/Downgrade)
                     bool m_customerUinHasBeenSet;
 
                     /**
-                     * Inquiry month, in the format of YYYY-MM, such as 2023-01
+                     * Inquiry month, in the format of YYYY-MM, such as 2023-01.
                      */
                     std::string m_month;
                     bool m_monthHasBeenSet;

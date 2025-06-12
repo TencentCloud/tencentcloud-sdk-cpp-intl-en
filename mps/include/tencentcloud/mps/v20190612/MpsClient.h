@@ -23,6 +23,8 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/mps/v20190612/model/BatchProcessMediaRequest.h>
+#include <tencentcloud/mps/v20190612/model/BatchProcessMediaResponse.h>
 #include <tencentcloud/mps/v20190612/model/CreateAIAnalysisTemplateRequest.h>
 #include <tencentcloud/mps/v20190612/model/CreateAIAnalysisTemplateResponse.h>
 #include <tencentcloud/mps/v20190612/model/CreateAIRecognitionTemplateRequest.h>
@@ -107,10 +109,14 @@
 #include <tencentcloud/mps/v20190612/model/DescribeAsrHotwordsResponse.h>
 #include <tencentcloud/mps/v20190612/model/DescribeAsrHotwordsListRequest.h>
 #include <tencentcloud/mps/v20190612/model/DescribeAsrHotwordsListResponse.h>
+#include <tencentcloud/mps/v20190612/model/DescribeBatchTaskDetailRequest.h>
+#include <tencentcloud/mps/v20190612/model/DescribeBatchTaskDetailResponse.h>
 #include <tencentcloud/mps/v20190612/model/DescribeContentReviewTemplatesRequest.h>
 #include <tencentcloud/mps/v20190612/model/DescribeContentReviewTemplatesResponse.h>
 #include <tencentcloud/mps/v20190612/model/DescribeImageSpriteTemplatesRequest.h>
 #include <tencentcloud/mps/v20190612/model/DescribeImageSpriteTemplatesResponse.h>
+#include <tencentcloud/mps/v20190612/model/DescribeImageTaskDetailRequest.h>
+#include <tencentcloud/mps/v20190612/model/DescribeImageTaskDetailResponse.h>
 #include <tencentcloud/mps/v20190612/model/DescribeLiveRecordTemplatesRequest.h>
 #include <tencentcloud/mps/v20190612/model/DescribeLiveRecordTemplatesResponse.h>
 #include <tencentcloud/mps/v20190612/model/DescribeMediaMetaDataRequest.h>
@@ -215,6 +221,9 @@ namespace TencentCloud
                 MpsClient(const Credential &credential, const std::string &region);
                 MpsClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::BatchProcessMediaResponse> BatchProcessMediaOutcome;
+                typedef std::future<BatchProcessMediaOutcome> BatchProcessMediaOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::BatchProcessMediaRequest&, BatchProcessMediaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BatchProcessMediaAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateAIAnalysisTemplateResponse> CreateAIAnalysisTemplateOutcome;
                 typedef std::future<CreateAIAnalysisTemplateOutcome> CreateAIAnalysisTemplateOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::CreateAIAnalysisTemplateRequest&, CreateAIAnalysisTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAIAnalysisTemplateAsyncHandler;
@@ -341,12 +350,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAsrHotwordsListResponse> DescribeAsrHotwordsListOutcome;
                 typedef std::future<DescribeAsrHotwordsListOutcome> DescribeAsrHotwordsListOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::DescribeAsrHotwordsListRequest&, DescribeAsrHotwordsListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAsrHotwordsListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBatchTaskDetailResponse> DescribeBatchTaskDetailOutcome;
+                typedef std::future<DescribeBatchTaskDetailOutcome> DescribeBatchTaskDetailOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::DescribeBatchTaskDetailRequest&, DescribeBatchTaskDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBatchTaskDetailAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeContentReviewTemplatesResponse> DescribeContentReviewTemplatesOutcome;
                 typedef std::future<DescribeContentReviewTemplatesOutcome> DescribeContentReviewTemplatesOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::DescribeContentReviewTemplatesRequest&, DescribeContentReviewTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeContentReviewTemplatesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeImageSpriteTemplatesResponse> DescribeImageSpriteTemplatesOutcome;
                 typedef std::future<DescribeImageSpriteTemplatesOutcome> DescribeImageSpriteTemplatesOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::DescribeImageSpriteTemplatesRequest&, DescribeImageSpriteTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeImageSpriteTemplatesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeImageTaskDetailResponse> DescribeImageTaskDetailOutcome;
+                typedef std::future<DescribeImageTaskDetailOutcome> DescribeImageTaskDetailOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::DescribeImageTaskDetailRequest&, DescribeImageTaskDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeImageTaskDetailAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeLiveRecordTemplatesResponse> DescribeLiveRecordTemplatesOutcome;
                 typedef std::future<DescribeLiveRecordTemplatesOutcome> DescribeLiveRecordTemplatesOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::DescribeLiveRecordTemplatesRequest&, DescribeLiveRecordTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveRecordTemplatesAsyncHandler;
@@ -484,6 +499,16 @@ namespace TencentCloud
                 typedef std::function<void(const MpsClient*, const Model::ResetWorkflowRequest&, ResetWorkflowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetWorkflowAsyncHandler;
 
 
+
+                /**
+                 *This API is used to initiate batch processing tasks for URL video links, with features including:
+Smart subtitle (full speech, speech hotword, and speech translation)
+                 * @param req BatchProcessMediaRequest
+                 * @return BatchProcessMediaOutcome
+                 */
+                BatchProcessMediaOutcome BatchProcessMedia(const Model::BatchProcessMediaRequest &request);
+                void BatchProcessMediaAsync(const Model::BatchProcessMediaRequest& request, const BatchProcessMediaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                BatchProcessMediaOutcomeCallable BatchProcessMediaCallable(const Model::BatchProcessMediaRequest& request);
 
                 /**
                  *This API is used to create a custom content analysis template. Up to 50 templates can be created.
@@ -888,6 +913,15 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DescribeAsrHotwordsListOutcomeCallable DescribeAsrHotwordsListCallable(const Model::DescribeAsrHotwordsListRequest& request);
 
                 /**
+                 *This API is used to query the details of the task execution status and results by task ID (tasks submitted within the last 7 days can be queried).
+                 * @param req DescribeBatchTaskDetailRequest
+                 * @return DescribeBatchTaskDetailOutcome
+                 */
+                DescribeBatchTaskDetailOutcome DescribeBatchTaskDetail(const Model::DescribeBatchTaskDetailRequest &request);
+                void DescribeBatchTaskDetailAsync(const Model::DescribeBatchTaskDetailRequest& request, const DescribeBatchTaskDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBatchTaskDetailOutcomeCallable DescribeBatchTaskDetailCallable(const Model::DescribeBatchTaskDetailRequest& request);
+
+                /**
                  *This API is used to query content moderation templates by template ID. Both custom and preset templates that match the template IDs passed in will be returned.
                  * @param req DescribeContentReviewTemplatesRequest
                  * @return DescribeContentReviewTemplatesOutcome
@@ -904,6 +938,15 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DescribeImageSpriteTemplatesOutcome DescribeImageSpriteTemplates(const Model::DescribeImageSpriteTemplatesRequest &request);
                 void DescribeImageSpriteTemplatesAsync(const Model::DescribeImageSpriteTemplatesRequest& request, const DescribeImageSpriteTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeImageSpriteTemplatesOutcomeCallable DescribeImageSpriteTemplatesCallable(const Model::DescribeImageSpriteTemplatesRequest& request);
+
+                /**
+                 *This API is used to query the details of the task execution status and results by task ID (tasks submitted within the last 7 days can be queried).
+                 * @param req DescribeImageTaskDetailRequest
+                 * @return DescribeImageTaskDetailOutcome
+                 */
+                DescribeImageTaskDetailOutcome DescribeImageTaskDetail(const Model::DescribeImageTaskDetailRequest &request);
+                void DescribeImageTaskDetailAsync(const Model::DescribeImageTaskDetailRequest& request, const DescribeImageTaskDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeImageTaskDetailOutcomeCallable DescribeImageTaskDetailCallable(const Model::DescribeImageTaskDetailRequest& request);
 
                 /**
                  *This API is used to get a live recording template.
@@ -1293,9 +1336,10 @@ Instead of initiating a video processing task, this API is used to help generate
                 ParseNotificationOutcomeCallable ParseNotificationCallable(const Model::ParseNotificationRequest& request);
 
                 /**
-                 *This API is used to initiate image processing. Its features include:
-1. Format conversion;
-2. Image enhancement;
+                 *This API is used to initiate image processing, with features including:
+1. Format conversion.
+2. Image enhancement.
+3. Image erasure.
                  * @param req ProcessImageRequest
                  * @return ProcessImageOutcome
                  */

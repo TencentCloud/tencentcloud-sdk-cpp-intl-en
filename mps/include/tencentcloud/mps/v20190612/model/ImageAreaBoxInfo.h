@@ -48,13 +48,13 @@ namespace TencentCloud
 
                     /**
                      * 获取Type of the box selection area in the image. Valid values:
-<li>logo: icon</li>
-<li>text: text</li>
+<li>logo: icon.</li>
+<li>Text: text.</li>
 Default value: logo.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @return Type Type of the box selection area in the image. Valid values:
-<li>logo: icon</li>
-<li>text: text</li>
+<li>logo: icon.</li>
+<li>Text: text.</li>
 Default value: logo.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * 
@@ -63,13 +63,13 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * 设置Type of the box selection area in the image. Valid values:
-<li>logo: icon</li>
-<li>text: text</li>
+<li>logo: icon.</li>
+<li>Text: text.</li>
 Default value: logo.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _type Type of the box selection area in the image. Valid values:
-<li>logo: icon</li>
-<li>text: text</li>
+<li>logo: icon.</li>
+<li>Text: text.</li>
 Default value: logo.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * 
@@ -113,15 +113,27 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool AreaCoordSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BoundingBox 
+                     * 获取Coordinates of the box selection area in the image. Format: [x1, y1, x2, y2], which indicates the coordinates of the top left corner and the bottom right corner. This parameter takes effect when AreaCoordSet is not specified.
+ - [0.1, 0.1, 0.3, 0.3]: Indicates the ratio (values are less than 1).
+ -[50, 50, 350, 280]: Indicates the pixel (values are greater than or equal to 1).
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return BoundingBox Coordinates of the box selection area in the image. Format: [x1, y1, x2, y2], which indicates the coordinates of the top left corner and the bottom right corner. This parameter takes effect when AreaCoordSet is not specified.
+ - [0.1, 0.1, 0.3, 0.3]: Indicates the ratio (values are less than 1).
+ -[50, 50, 350, 280]: Indicates the pixel (values are greater than or equal to 1).
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::vector<double> GetBoundingBox() const;
 
                     /**
-                     * 设置
-                     * @param _boundingBox 
+                     * 设置Coordinates of the box selection area in the image. Format: [x1, y1, x2, y2], which indicates the coordinates of the top left corner and the bottom right corner. This parameter takes effect when AreaCoordSet is not specified.
+ - [0.1, 0.1, 0.3, 0.3]: Indicates the ratio (values are less than 1).
+ -[50, 50, 350, 280]: Indicates the pixel (values are greater than or equal to 1).
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _boundingBox Coordinates of the box selection area in the image. Format: [x1, y1, x2, y2], which indicates the coordinates of the top left corner and the bottom right corner. This parameter takes effect when AreaCoordSet is not specified.
+ - [0.1, 0.1, 0.3, 0.3]: Indicates the ratio (values are less than 1).
+ -[50, 50, 350, 280]: Indicates the pixel (values are greater than or equal to 1).
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetBoundingBox(const std::vector<double>& _boundingBox);
@@ -137,8 +149,8 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * Type of the box selection area in the image. Valid values:
-<li>logo: icon</li>
-<li>text: text</li>
+<li>logo: icon.</li>
+<li>Text: text.</li>
 Default value: logo.
 Note: This field may return null, indicating that no valid value can be obtained.
                      */
@@ -154,7 +166,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_areaCoordSetHasBeenSet;
 
                     /**
-                     * 
+                     * Coordinates of the box selection area in the image. Format: [x1, y1, x2, y2], which indicates the coordinates of the top left corner and the bottom right corner. This parameter takes effect when AreaCoordSet is not specified.
+ - [0.1, 0.1, 0.3, 0.3]: Indicates the ratio (values are less than 1).
+ -[50, 50, 350, 280]: Indicates the pixel (values are greater than or equal to 1).
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::vector<double> m_boundingBox;
                     bool m_boundingBoxHasBeenSet;

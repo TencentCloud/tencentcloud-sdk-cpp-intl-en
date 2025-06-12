@@ -49,26 +49,30 @@ namespace TencentCloud
 
                     /**
                      * 获取Smart subtitle language type.
-0: source language1: target language
+0: source language
+1: target language
 2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
+The value can only be 0 when TranslateSwitch is set to OFF. The value can only be 1 or 2 when TranslateSwitch is set to ON.
                      * @return SubtitleType Smart subtitle language type.
-0: source language1: target language
+0: source language
+1: target language
 2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
+The value can only be 0 when TranslateSwitch is set to OFF. The value can only be 1 or 2 when TranslateSwitch is set to ON.
                      * 
                      */
                     int64_t GetSubtitleType() const;
 
                     /**
                      * 设置Smart subtitle language type.
-0: source language1: target language
+0: source language
+1: target language
 2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
+The value can only be 0 when TranslateSwitch is set to OFF. The value can only be 1 or 2 when TranslateSwitch is set to ON.
                      * @param _subtitleType Smart subtitle language type.
-0: source language1: target language
+0: source language
+1: target language
 2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
+The value can only be 0 when TranslateSwitch is set to OFF. The value can only be 1 or 2 when TranslateSwitch is set to ON.
                      * 
                      */
                     void SetSubtitleType(const int64_t& _subtitleType);
@@ -93,7 +97,7 @@ yue: Cantonese
 vi: Vietnamese
 ms: Malay
 id: Indonesian
-fli: Filipino
+fil: Filipino
 th: Thai
 pt: Portuguese
 tr: Turkish
@@ -115,7 +119,7 @@ yue: Cantonese
 vi: Vietnamese
 ms: Malay
 id: Indonesian
-fli: Filipino
+fil: Filipino
 th: Thai
 pt: Portuguese
 tr: Turkish
@@ -142,7 +146,7 @@ yue: Cantonese
 vi: Vietnamese
 ms: Malay
 id: Indonesian
-fli: Filipino
+fil: Filipino
 th: Thai
 pt: Portuguese
 tr: Turkish
@@ -164,7 +168,7 @@ yue: Cantonese
 vi: Vietnamese
 ms: Malay
 id: Indonesian
-fli: Filipino
+fil: Filipino
 th: Thai
 pt: Portuguese
 tr: Turkish
@@ -402,9 +406,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * Smart subtitle language type.
-0: source language1: target language
+0: source language
+1: target language
 2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
+The value can only be 0 when TranslateSwitch is set to OFF. The value can only be 1 or 2 when TranslateSwitch is set to ON.
                      */
                     int64_t m_subtitleType;
                     bool m_subtitleTypeHasBeenSet;
@@ -422,7 +427,7 @@ yue: Cantonese
 vi: Vietnamese
 ms: Malay
 id: Indonesian
-fli: Filipino
+fil: Filipino
 th: Thai
 pt: Portuguese
 tr: Turkish
