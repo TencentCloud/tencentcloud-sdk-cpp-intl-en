@@ -23,22 +23,44 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/lke/v20231130/model/CheckAttributeLabelExistRequest.h>
+#include <tencentcloud/lke/v20231130/model/CheckAttributeLabelExistResponse.h>
+#include <tencentcloud/lke/v20231130/model/CheckAttributeLabelReferRequest.h>
+#include <tencentcloud/lke/v20231130/model/CheckAttributeLabelReferResponse.h>
+#include <tencentcloud/lke/v20231130/model/CreateAppRequest.h>
+#include <tencentcloud/lke/v20231130/model/CreateAppResponse.h>
+#include <tencentcloud/lke/v20231130/model/CreateAttributeLabelRequest.h>
+#include <tencentcloud/lke/v20231130/model/CreateAttributeLabelResponse.h>
 #include <tencentcloud/lke/v20231130/model/CreateCorpRequest.h>
 #include <tencentcloud/lke/v20231130/model/CreateCorpResponse.h>
+#include <tencentcloud/lke/v20231130/model/CreateDocCateRequest.h>
+#include <tencentcloud/lke/v20231130/model/CreateDocCateResponse.h>
+#include <tencentcloud/lke/v20231130/model/CreateQARequest.h>
+#include <tencentcloud/lke/v20231130/model/CreateQAResponse.h>
+#include <tencentcloud/lke/v20231130/model/CreateQACateRequest.h>
+#include <tencentcloud/lke/v20231130/model/CreateQACateResponse.h>
 #include <tencentcloud/lke/v20231130/model/CreateReconstructDocumentFlowRequest.h>
 #include <tencentcloud/lke/v20231130/model/CreateReconstructDocumentFlowResponse.h>
+#include <tencentcloud/lke/v20231130/model/CreateRejectedQuestionRequest.h>
+#include <tencentcloud/lke/v20231130/model/CreateRejectedQuestionResponse.h>
 #include <tencentcloud/lke/v20231130/model/CreateReleaseRequest.h>
 #include <tencentcloud/lke/v20231130/model/CreateReleaseResponse.h>
 #include <tencentcloud/lke/v20231130/model/DeleteAppRequest.h>
 #include <tencentcloud/lke/v20231130/model/DeleteAppResponse.h>
+#include <tencentcloud/lke/v20231130/model/DeleteAttributeLabelRequest.h>
+#include <tencentcloud/lke/v20231130/model/DeleteAttributeLabelResponse.h>
 #include <tencentcloud/lke/v20231130/model/DeleteDocRequest.h>
 #include <tencentcloud/lke/v20231130/model/DeleteDocResponse.h>
+#include <tencentcloud/lke/v20231130/model/DeleteDocCateRequest.h>
+#include <tencentcloud/lke/v20231130/model/DeleteDocCateResponse.h>
 #include <tencentcloud/lke/v20231130/model/DeleteQARequest.h>
 #include <tencentcloud/lke/v20231130/model/DeleteQAResponse.h>
 #include <tencentcloud/lke/v20231130/model/DeleteQACateRequest.h>
 #include <tencentcloud/lke/v20231130/model/DeleteQACateResponse.h>
 #include <tencentcloud/lke/v20231130/model/DeleteRejectedQuestionRequest.h>
 #include <tencentcloud/lke/v20231130/model/DeleteRejectedQuestionResponse.h>
+#include <tencentcloud/lke/v20231130/model/DescribeAppRequest.h>
+#include <tencentcloud/lke/v20231130/model/DescribeAppResponse.h>
 #include <tencentcloud/lke/v20231130/model/DescribeAttributeLabelRequest.h>
 #include <tencentcloud/lke/v20231130/model/DescribeAttributeLabelResponse.h>
 #include <tencentcloud/lke/v20231130/model/DescribeCallStatsGraphRequest.h>
@@ -47,48 +69,98 @@
 #include <tencentcloud/lke/v20231130/model/DescribeConcurrencyUsageResponse.h>
 #include <tencentcloud/lke/v20231130/model/DescribeConcurrencyUsageGraphRequest.h>
 #include <tencentcloud/lke/v20231130/model/DescribeConcurrencyUsageGraphResponse.h>
+#include <tencentcloud/lke/v20231130/model/DescribeCorpRequest.h>
+#include <tencentcloud/lke/v20231130/model/DescribeCorpResponse.h>
 #include <tencentcloud/lke/v20231130/model/DescribeDocRequest.h>
 #include <tencentcloud/lke/v20231130/model/DescribeDocResponse.h>
 #include <tencentcloud/lke/v20231130/model/DescribeKnowledgeUsageRequest.h>
 #include <tencentcloud/lke/v20231130/model/DescribeKnowledgeUsageResponse.h>
 #include <tencentcloud/lke/v20231130/model/DescribeKnowledgeUsagePieGraphRequest.h>
 #include <tencentcloud/lke/v20231130/model/DescribeKnowledgeUsagePieGraphResponse.h>
+#include <tencentcloud/lke/v20231130/model/DescribeQARequest.h>
+#include <tencentcloud/lke/v20231130/model/DescribeQAResponse.h>
+#include <tencentcloud/lke/v20231130/model/DescribeReferRequest.h>
+#include <tencentcloud/lke/v20231130/model/DescribeReferResponse.h>
 #include <tencentcloud/lke/v20231130/model/DescribeReleaseRequest.h>
 #include <tencentcloud/lke/v20231130/model/DescribeReleaseResponse.h>
+#include <tencentcloud/lke/v20231130/model/DescribeReleaseInfoRequest.h>
+#include <tencentcloud/lke/v20231130/model/DescribeReleaseInfoResponse.h>
 #include <tencentcloud/lke/v20231130/model/DescribeRobotBizIDByAppKeyRequest.h>
 #include <tencentcloud/lke/v20231130/model/DescribeRobotBizIDByAppKeyResponse.h>
 #include <tencentcloud/lke/v20231130/model/DescribeSearchStatsGraphRequest.h>
 #include <tencentcloud/lke/v20231130/model/DescribeSearchStatsGraphResponse.h>
+#include <tencentcloud/lke/v20231130/model/DescribeSegmentsRequest.h>
+#include <tencentcloud/lke/v20231130/model/DescribeSegmentsResponse.h>
+#include <tencentcloud/lke/v20231130/model/DescribeStorageCredentialRequest.h>
+#include <tencentcloud/lke/v20231130/model/DescribeStorageCredentialResponse.h>
 #include <tencentcloud/lke/v20231130/model/DescribeTokenUsageRequest.h>
 #include <tencentcloud/lke/v20231130/model/DescribeTokenUsageResponse.h>
 #include <tencentcloud/lke/v20231130/model/DescribeTokenUsageGraphRequest.h>
 #include <tencentcloud/lke/v20231130/model/DescribeTokenUsageGraphResponse.h>
 #include <tencentcloud/lke/v20231130/model/DescribeUnsatisfiedReplyContextRequest.h>
 #include <tencentcloud/lke/v20231130/model/DescribeUnsatisfiedReplyContextResponse.h>
+#include <tencentcloud/lke/v20231130/model/ExportAttributeLabelRequest.h>
+#include <tencentcloud/lke/v20231130/model/ExportAttributeLabelResponse.h>
 #include <tencentcloud/lke/v20231130/model/ExportQAListRequest.h>
 #include <tencentcloud/lke/v20231130/model/ExportQAListResponse.h>
 #include <tencentcloud/lke/v20231130/model/ExportUnsatisfiedReplyRequest.h>
 #include <tencentcloud/lke/v20231130/model/ExportUnsatisfiedReplyResponse.h>
 #include <tencentcloud/lke/v20231130/model/GenerateQARequest.h>
 #include <tencentcloud/lke/v20231130/model/GenerateQAResponse.h>
+#include <tencentcloud/lke/v20231130/model/GetAnswerTypeDataCountRequest.h>
+#include <tencentcloud/lke/v20231130/model/GetAnswerTypeDataCountResponse.h>
+#include <tencentcloud/lke/v20231130/model/GetAppKnowledgeCountRequest.h>
+#include <tencentcloud/lke/v20231130/model/GetAppKnowledgeCountResponse.h>
+#include <tencentcloud/lke/v20231130/model/GetAppSecretRequest.h>
+#include <tencentcloud/lke/v20231130/model/GetAppSecretResponse.h>
+#include <tencentcloud/lke/v20231130/model/GetDocPreviewRequest.h>
+#include <tencentcloud/lke/v20231130/model/GetDocPreviewResponse.h>
+#include <tencentcloud/lke/v20231130/model/GetLikeDataCountRequest.h>
+#include <tencentcloud/lke/v20231130/model/GetLikeDataCountResponse.h>
 #include <tencentcloud/lke/v20231130/model/GetMsgRecordRequest.h>
 #include <tencentcloud/lke/v20231130/model/GetMsgRecordResponse.h>
+#include <tencentcloud/lke/v20231130/model/GetReconstructDocumentResultRequest.h>
+#include <tencentcloud/lke/v20231130/model/GetReconstructDocumentResultResponse.h>
 #include <tencentcloud/lke/v20231130/model/GetTaskStatusRequest.h>
 #include <tencentcloud/lke/v20231130/model/GetTaskStatusResponse.h>
 #include <tencentcloud/lke/v20231130/model/GetWsTokenRequest.h>
 #include <tencentcloud/lke/v20231130/model/GetWsTokenResponse.h>
+#include <tencentcloud/lke/v20231130/model/GroupDocRequest.h>
+#include <tencentcloud/lke/v20231130/model/GroupDocResponse.h>
+#include <tencentcloud/lke/v20231130/model/GroupQARequest.h>
+#include <tencentcloud/lke/v20231130/model/GroupQAResponse.h>
 #include <tencentcloud/lke/v20231130/model/IgnoreUnsatisfiedReplyRequest.h>
 #include <tencentcloud/lke/v20231130/model/IgnoreUnsatisfiedReplyResponse.h>
 #include <tencentcloud/lke/v20231130/model/ListAppRequest.h>
 #include <tencentcloud/lke/v20231130/model/ListAppResponse.h>
+#include <tencentcloud/lke/v20231130/model/ListAppCategoryRequest.h>
+#include <tencentcloud/lke/v20231130/model/ListAppCategoryResponse.h>
+#include <tencentcloud/lke/v20231130/model/ListAppKnowledgeDetailRequest.h>
+#include <tencentcloud/lke/v20231130/model/ListAppKnowledgeDetailResponse.h>
 #include <tencentcloud/lke/v20231130/model/ListAttributeLabelRequest.h>
 #include <tencentcloud/lke/v20231130/model/ListAttributeLabelResponse.h>
+#include <tencentcloud/lke/v20231130/model/ListDocRequest.h>
+#include <tencentcloud/lke/v20231130/model/ListDocResponse.h>
+#include <tencentcloud/lke/v20231130/model/ListDocCateRequest.h>
+#include <tencentcloud/lke/v20231130/model/ListDocCateResponse.h>
+#include <tencentcloud/lke/v20231130/model/ListModelRequest.h>
+#include <tencentcloud/lke/v20231130/model/ListModelResponse.h>
+#include <tencentcloud/lke/v20231130/model/ListQARequest.h>
+#include <tencentcloud/lke/v20231130/model/ListQAResponse.h>
 #include <tencentcloud/lke/v20231130/model/ListQACateRequest.h>
 #include <tencentcloud/lke/v20231130/model/ListQACateResponse.h>
 #include <tencentcloud/lke/v20231130/model/ListRejectedQuestionRequest.h>
 #include <tencentcloud/lke/v20231130/model/ListRejectedQuestionResponse.h>
+#include <tencentcloud/lke/v20231130/model/ListRejectedQuestionPreviewRequest.h>
+#include <tencentcloud/lke/v20231130/model/ListRejectedQuestionPreviewResponse.h>
+#include <tencentcloud/lke/v20231130/model/ListReleaseRequest.h>
+#include <tencentcloud/lke/v20231130/model/ListReleaseResponse.h>
 #include <tencentcloud/lke/v20231130/model/ListReleaseConfigPreviewRequest.h>
 #include <tencentcloud/lke/v20231130/model/ListReleaseConfigPreviewResponse.h>
+#include <tencentcloud/lke/v20231130/model/ListReleaseDocPreviewRequest.h>
+#include <tencentcloud/lke/v20231130/model/ListReleaseDocPreviewResponse.h>
+#include <tencentcloud/lke/v20231130/model/ListReleaseQAPreviewRequest.h>
+#include <tencentcloud/lke/v20231130/model/ListReleaseQAPreviewResponse.h>
 #include <tencentcloud/lke/v20231130/model/ListSelectDocRequest.h>
 #include <tencentcloud/lke/v20231130/model/ListSelectDocResponse.h>
 #include <tencentcloud/lke/v20231130/model/ListUnsatisfiedReplyRequest.h>
@@ -115,6 +187,8 @@
 #include <tencentcloud/lke/v20231130/model/ModifyRejectedQuestionResponse.h>
 #include <tencentcloud/lke/v20231130/model/RateMsgRecordRequest.h>
 #include <tencentcloud/lke/v20231130/model/RateMsgRecordResponse.h>
+#include <tencentcloud/lke/v20231130/model/RenameDocRequest.h>
+#include <tencentcloud/lke/v20231130/model/RenameDocResponse.h>
 #include <tencentcloud/lke/v20231130/model/RetryDocAuditRequest.h>
 #include <tencentcloud/lke/v20231130/model/RetryDocAuditResponse.h>
 #include <tencentcloud/lke/v20231130/model/RetryDocParseRequest.h>
@@ -143,21 +217,51 @@ namespace TencentCloud
                 LkeClient(const Credential &credential, const std::string &region);
                 LkeClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::CheckAttributeLabelExistResponse> CheckAttributeLabelExistOutcome;
+                typedef std::future<CheckAttributeLabelExistOutcome> CheckAttributeLabelExistOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::CheckAttributeLabelExistRequest&, CheckAttributeLabelExistOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CheckAttributeLabelExistAsyncHandler;
+                typedef Outcome<Core::Error, Model::CheckAttributeLabelReferResponse> CheckAttributeLabelReferOutcome;
+                typedef std::future<CheckAttributeLabelReferOutcome> CheckAttributeLabelReferOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::CheckAttributeLabelReferRequest&, CheckAttributeLabelReferOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CheckAttributeLabelReferAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateAppResponse> CreateAppOutcome;
+                typedef std::future<CreateAppOutcome> CreateAppOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::CreateAppRequest&, CreateAppOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAppAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateAttributeLabelResponse> CreateAttributeLabelOutcome;
+                typedef std::future<CreateAttributeLabelOutcome> CreateAttributeLabelOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::CreateAttributeLabelRequest&, CreateAttributeLabelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAttributeLabelAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateCorpResponse> CreateCorpOutcome;
                 typedef std::future<CreateCorpOutcome> CreateCorpOutcomeCallable;
                 typedef std::function<void(const LkeClient*, const Model::CreateCorpRequest&, CreateCorpOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCorpAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateDocCateResponse> CreateDocCateOutcome;
+                typedef std::future<CreateDocCateOutcome> CreateDocCateOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::CreateDocCateRequest&, CreateDocCateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDocCateAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateQAResponse> CreateQAOutcome;
+                typedef std::future<CreateQAOutcome> CreateQAOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::CreateQARequest&, CreateQAOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateQAAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateQACateResponse> CreateQACateOutcome;
+                typedef std::future<CreateQACateOutcome> CreateQACateOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::CreateQACateRequest&, CreateQACateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateQACateAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateReconstructDocumentFlowResponse> CreateReconstructDocumentFlowOutcome;
                 typedef std::future<CreateReconstructDocumentFlowOutcome> CreateReconstructDocumentFlowOutcomeCallable;
                 typedef std::function<void(const LkeClient*, const Model::CreateReconstructDocumentFlowRequest&, CreateReconstructDocumentFlowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateReconstructDocumentFlowAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateRejectedQuestionResponse> CreateRejectedQuestionOutcome;
+                typedef std::future<CreateRejectedQuestionOutcome> CreateRejectedQuestionOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::CreateRejectedQuestionRequest&, CreateRejectedQuestionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRejectedQuestionAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateReleaseResponse> CreateReleaseOutcome;
                 typedef std::future<CreateReleaseOutcome> CreateReleaseOutcomeCallable;
                 typedef std::function<void(const LkeClient*, const Model::CreateReleaseRequest&, CreateReleaseOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateReleaseAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteAppResponse> DeleteAppOutcome;
                 typedef std::future<DeleteAppOutcome> DeleteAppOutcomeCallable;
                 typedef std::function<void(const LkeClient*, const Model::DeleteAppRequest&, DeleteAppOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAppAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteAttributeLabelResponse> DeleteAttributeLabelOutcome;
+                typedef std::future<DeleteAttributeLabelOutcome> DeleteAttributeLabelOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::DeleteAttributeLabelRequest&, DeleteAttributeLabelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAttributeLabelAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteDocResponse> DeleteDocOutcome;
                 typedef std::future<DeleteDocOutcome> DeleteDocOutcomeCallable;
                 typedef std::function<void(const LkeClient*, const Model::DeleteDocRequest&, DeleteDocOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteDocAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteDocCateResponse> DeleteDocCateOutcome;
+                typedef std::future<DeleteDocCateOutcome> DeleteDocCateOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::DeleteDocCateRequest&, DeleteDocCateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteDocCateAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteQAResponse> DeleteQAOutcome;
                 typedef std::future<DeleteQAOutcome> DeleteQAOutcomeCallable;
                 typedef std::function<void(const LkeClient*, const Model::DeleteQARequest&, DeleteQAOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteQAAsyncHandler;
@@ -167,6 +271,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteRejectedQuestionResponse> DeleteRejectedQuestionOutcome;
                 typedef std::future<DeleteRejectedQuestionOutcome> DeleteRejectedQuestionOutcomeCallable;
                 typedef std::function<void(const LkeClient*, const Model::DeleteRejectedQuestionRequest&, DeleteRejectedQuestionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRejectedQuestionAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAppResponse> DescribeAppOutcome;
+                typedef std::future<DescribeAppOutcome> DescribeAppOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::DescribeAppRequest&, DescribeAppOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAppAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAttributeLabelResponse> DescribeAttributeLabelOutcome;
                 typedef std::future<DescribeAttributeLabelOutcome> DescribeAttributeLabelOutcomeCallable;
                 typedef std::function<void(const LkeClient*, const Model::DescribeAttributeLabelRequest&, DescribeAttributeLabelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAttributeLabelAsyncHandler;
@@ -179,6 +286,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeConcurrencyUsageGraphResponse> DescribeConcurrencyUsageGraphOutcome;
                 typedef std::future<DescribeConcurrencyUsageGraphOutcome> DescribeConcurrencyUsageGraphOutcomeCallable;
                 typedef std::function<void(const LkeClient*, const Model::DescribeConcurrencyUsageGraphRequest&, DescribeConcurrencyUsageGraphOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeConcurrencyUsageGraphAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCorpResponse> DescribeCorpOutcome;
+                typedef std::future<DescribeCorpOutcome> DescribeCorpOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::DescribeCorpRequest&, DescribeCorpOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCorpAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDocResponse> DescribeDocOutcome;
                 typedef std::future<DescribeDocOutcome> DescribeDocOutcomeCallable;
                 typedef std::function<void(const LkeClient*, const Model::DescribeDocRequest&, DescribeDocOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDocAsyncHandler;
@@ -188,15 +298,30 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeKnowledgeUsagePieGraphResponse> DescribeKnowledgeUsagePieGraphOutcome;
                 typedef std::future<DescribeKnowledgeUsagePieGraphOutcome> DescribeKnowledgeUsagePieGraphOutcomeCallable;
                 typedef std::function<void(const LkeClient*, const Model::DescribeKnowledgeUsagePieGraphRequest&, DescribeKnowledgeUsagePieGraphOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeKnowledgeUsagePieGraphAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeQAResponse> DescribeQAOutcome;
+                typedef std::future<DescribeQAOutcome> DescribeQAOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::DescribeQARequest&, DescribeQAOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeQAAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeReferResponse> DescribeReferOutcome;
+                typedef std::future<DescribeReferOutcome> DescribeReferOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::DescribeReferRequest&, DescribeReferOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeReferAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeReleaseResponse> DescribeReleaseOutcome;
                 typedef std::future<DescribeReleaseOutcome> DescribeReleaseOutcomeCallable;
                 typedef std::function<void(const LkeClient*, const Model::DescribeReleaseRequest&, DescribeReleaseOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeReleaseAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeReleaseInfoResponse> DescribeReleaseInfoOutcome;
+                typedef std::future<DescribeReleaseInfoOutcome> DescribeReleaseInfoOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::DescribeReleaseInfoRequest&, DescribeReleaseInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeReleaseInfoAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRobotBizIDByAppKeyResponse> DescribeRobotBizIDByAppKeyOutcome;
                 typedef std::future<DescribeRobotBizIDByAppKeyOutcome> DescribeRobotBizIDByAppKeyOutcomeCallable;
                 typedef std::function<void(const LkeClient*, const Model::DescribeRobotBizIDByAppKeyRequest&, DescribeRobotBizIDByAppKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRobotBizIDByAppKeyAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeSearchStatsGraphResponse> DescribeSearchStatsGraphOutcome;
                 typedef std::future<DescribeSearchStatsGraphOutcome> DescribeSearchStatsGraphOutcomeCallable;
                 typedef std::function<void(const LkeClient*, const Model::DescribeSearchStatsGraphRequest&, DescribeSearchStatsGraphOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSearchStatsGraphAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSegmentsResponse> DescribeSegmentsOutcome;
+                typedef std::future<DescribeSegmentsOutcome> DescribeSegmentsOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::DescribeSegmentsRequest&, DescribeSegmentsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSegmentsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeStorageCredentialResponse> DescribeStorageCredentialOutcome;
+                typedef std::future<DescribeStorageCredentialOutcome> DescribeStorageCredentialOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::DescribeStorageCredentialRequest&, DescribeStorageCredentialOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStorageCredentialAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeTokenUsageResponse> DescribeTokenUsageOutcome;
                 typedef std::future<DescribeTokenUsageOutcome> DescribeTokenUsageOutcomeCallable;
                 typedef std::function<void(const LkeClient*, const Model::DescribeTokenUsageRequest&, DescribeTokenUsageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTokenUsageAsyncHandler;
@@ -206,6 +331,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeUnsatisfiedReplyContextResponse> DescribeUnsatisfiedReplyContextOutcome;
                 typedef std::future<DescribeUnsatisfiedReplyContextOutcome> DescribeUnsatisfiedReplyContextOutcomeCallable;
                 typedef std::function<void(const LkeClient*, const Model::DescribeUnsatisfiedReplyContextRequest&, DescribeUnsatisfiedReplyContextOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUnsatisfiedReplyContextAsyncHandler;
+                typedef Outcome<Core::Error, Model::ExportAttributeLabelResponse> ExportAttributeLabelOutcome;
+                typedef std::future<ExportAttributeLabelOutcome> ExportAttributeLabelOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::ExportAttributeLabelRequest&, ExportAttributeLabelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExportAttributeLabelAsyncHandler;
                 typedef Outcome<Core::Error, Model::ExportQAListResponse> ExportQAListOutcome;
                 typedef std::future<ExportQAListOutcome> ExportQAListOutcomeCallable;
                 typedef std::function<void(const LkeClient*, const Model::ExportQAListRequest&, ExportQAListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExportQAListAsyncHandler;
@@ -215,33 +343,87 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::GenerateQAResponse> GenerateQAOutcome;
                 typedef std::future<GenerateQAOutcome> GenerateQAOutcomeCallable;
                 typedef std::function<void(const LkeClient*, const Model::GenerateQARequest&, GenerateQAOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GenerateQAAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetAnswerTypeDataCountResponse> GetAnswerTypeDataCountOutcome;
+                typedef std::future<GetAnswerTypeDataCountOutcome> GetAnswerTypeDataCountOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::GetAnswerTypeDataCountRequest&, GetAnswerTypeDataCountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetAnswerTypeDataCountAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetAppKnowledgeCountResponse> GetAppKnowledgeCountOutcome;
+                typedef std::future<GetAppKnowledgeCountOutcome> GetAppKnowledgeCountOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::GetAppKnowledgeCountRequest&, GetAppKnowledgeCountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetAppKnowledgeCountAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetAppSecretResponse> GetAppSecretOutcome;
+                typedef std::future<GetAppSecretOutcome> GetAppSecretOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::GetAppSecretRequest&, GetAppSecretOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetAppSecretAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetDocPreviewResponse> GetDocPreviewOutcome;
+                typedef std::future<GetDocPreviewOutcome> GetDocPreviewOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::GetDocPreviewRequest&, GetDocPreviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetDocPreviewAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetLikeDataCountResponse> GetLikeDataCountOutcome;
+                typedef std::future<GetLikeDataCountOutcome> GetLikeDataCountOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::GetLikeDataCountRequest&, GetLikeDataCountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetLikeDataCountAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetMsgRecordResponse> GetMsgRecordOutcome;
                 typedef std::future<GetMsgRecordOutcome> GetMsgRecordOutcomeCallable;
                 typedef std::function<void(const LkeClient*, const Model::GetMsgRecordRequest&, GetMsgRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetMsgRecordAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetReconstructDocumentResultResponse> GetReconstructDocumentResultOutcome;
+                typedef std::future<GetReconstructDocumentResultOutcome> GetReconstructDocumentResultOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::GetReconstructDocumentResultRequest&, GetReconstructDocumentResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetReconstructDocumentResultAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetTaskStatusResponse> GetTaskStatusOutcome;
                 typedef std::future<GetTaskStatusOutcome> GetTaskStatusOutcomeCallable;
                 typedef std::function<void(const LkeClient*, const Model::GetTaskStatusRequest&, GetTaskStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetTaskStatusAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetWsTokenResponse> GetWsTokenOutcome;
                 typedef std::future<GetWsTokenOutcome> GetWsTokenOutcomeCallable;
                 typedef std::function<void(const LkeClient*, const Model::GetWsTokenRequest&, GetWsTokenOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetWsTokenAsyncHandler;
+                typedef Outcome<Core::Error, Model::GroupDocResponse> GroupDocOutcome;
+                typedef std::future<GroupDocOutcome> GroupDocOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::GroupDocRequest&, GroupDocOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GroupDocAsyncHandler;
+                typedef Outcome<Core::Error, Model::GroupQAResponse> GroupQAOutcome;
+                typedef std::future<GroupQAOutcome> GroupQAOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::GroupQARequest&, GroupQAOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GroupQAAsyncHandler;
                 typedef Outcome<Core::Error, Model::IgnoreUnsatisfiedReplyResponse> IgnoreUnsatisfiedReplyOutcome;
                 typedef std::future<IgnoreUnsatisfiedReplyOutcome> IgnoreUnsatisfiedReplyOutcomeCallable;
                 typedef std::function<void(const LkeClient*, const Model::IgnoreUnsatisfiedReplyRequest&, IgnoreUnsatisfiedReplyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> IgnoreUnsatisfiedReplyAsyncHandler;
                 typedef Outcome<Core::Error, Model::ListAppResponse> ListAppOutcome;
                 typedef std::future<ListAppOutcome> ListAppOutcomeCallable;
                 typedef std::function<void(const LkeClient*, const Model::ListAppRequest&, ListAppOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListAppAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListAppCategoryResponse> ListAppCategoryOutcome;
+                typedef std::future<ListAppCategoryOutcome> ListAppCategoryOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::ListAppCategoryRequest&, ListAppCategoryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListAppCategoryAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListAppKnowledgeDetailResponse> ListAppKnowledgeDetailOutcome;
+                typedef std::future<ListAppKnowledgeDetailOutcome> ListAppKnowledgeDetailOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::ListAppKnowledgeDetailRequest&, ListAppKnowledgeDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListAppKnowledgeDetailAsyncHandler;
                 typedef Outcome<Core::Error, Model::ListAttributeLabelResponse> ListAttributeLabelOutcome;
                 typedef std::future<ListAttributeLabelOutcome> ListAttributeLabelOutcomeCallable;
                 typedef std::function<void(const LkeClient*, const Model::ListAttributeLabelRequest&, ListAttributeLabelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListAttributeLabelAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListDocResponse> ListDocOutcome;
+                typedef std::future<ListDocOutcome> ListDocOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::ListDocRequest&, ListDocOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListDocAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListDocCateResponse> ListDocCateOutcome;
+                typedef std::future<ListDocCateOutcome> ListDocCateOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::ListDocCateRequest&, ListDocCateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListDocCateAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListModelResponse> ListModelOutcome;
+                typedef std::future<ListModelOutcome> ListModelOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::ListModelRequest&, ListModelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListModelAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListQAResponse> ListQAOutcome;
+                typedef std::future<ListQAOutcome> ListQAOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::ListQARequest&, ListQAOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListQAAsyncHandler;
                 typedef Outcome<Core::Error, Model::ListQACateResponse> ListQACateOutcome;
                 typedef std::future<ListQACateOutcome> ListQACateOutcomeCallable;
                 typedef std::function<void(const LkeClient*, const Model::ListQACateRequest&, ListQACateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListQACateAsyncHandler;
                 typedef Outcome<Core::Error, Model::ListRejectedQuestionResponse> ListRejectedQuestionOutcome;
                 typedef std::future<ListRejectedQuestionOutcome> ListRejectedQuestionOutcomeCallable;
                 typedef std::function<void(const LkeClient*, const Model::ListRejectedQuestionRequest&, ListRejectedQuestionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListRejectedQuestionAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListRejectedQuestionPreviewResponse> ListRejectedQuestionPreviewOutcome;
+                typedef std::future<ListRejectedQuestionPreviewOutcome> ListRejectedQuestionPreviewOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::ListRejectedQuestionPreviewRequest&, ListRejectedQuestionPreviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListRejectedQuestionPreviewAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListReleaseResponse> ListReleaseOutcome;
+                typedef std::future<ListReleaseOutcome> ListReleaseOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::ListReleaseRequest&, ListReleaseOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListReleaseAsyncHandler;
                 typedef Outcome<Core::Error, Model::ListReleaseConfigPreviewResponse> ListReleaseConfigPreviewOutcome;
                 typedef std::future<ListReleaseConfigPreviewOutcome> ListReleaseConfigPreviewOutcomeCallable;
                 typedef std::function<void(const LkeClient*, const Model::ListReleaseConfigPreviewRequest&, ListReleaseConfigPreviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListReleaseConfigPreviewAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListReleaseDocPreviewResponse> ListReleaseDocPreviewOutcome;
+                typedef std::future<ListReleaseDocPreviewOutcome> ListReleaseDocPreviewOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::ListReleaseDocPreviewRequest&, ListReleaseDocPreviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListReleaseDocPreviewAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListReleaseQAPreviewResponse> ListReleaseQAPreviewOutcome;
+                typedef std::future<ListReleaseQAPreviewOutcome> ListReleaseQAPreviewOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::ListReleaseQAPreviewRequest&, ListReleaseQAPreviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListReleaseQAPreviewAsyncHandler;
                 typedef Outcome<Core::Error, Model::ListSelectDocResponse> ListSelectDocOutcome;
                 typedef std::future<ListSelectDocOutcome> ListSelectDocOutcomeCallable;
                 typedef std::function<void(const LkeClient*, const Model::ListSelectDocRequest&, ListSelectDocOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListSelectDocAsyncHandler;
@@ -281,6 +463,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RateMsgRecordResponse> RateMsgRecordOutcome;
                 typedef std::future<RateMsgRecordOutcome> RateMsgRecordOutcomeCallable;
                 typedef std::function<void(const LkeClient*, const Model::RateMsgRecordRequest&, RateMsgRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RateMsgRecordAsyncHandler;
+                typedef Outcome<Core::Error, Model::RenameDocResponse> RenameDocOutcome;
+                typedef std::future<RenameDocOutcome> RenameDocOutcomeCallable;
+                typedef std::function<void(const LkeClient*, const Model::RenameDocRequest&, RenameDocOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RenameDocAsyncHandler;
                 typedef Outcome<Core::Error, Model::RetryDocAuditResponse> RetryDocAuditOutcome;
                 typedef std::future<RetryDocAuditOutcome> RetryDocAuditOutcomeCallable;
                 typedef std::function<void(const LkeClient*, const Model::RetryDocAuditRequest&, RetryDocAuditOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RetryDocAuditAsyncHandler;
@@ -306,6 +491,42 @@ namespace TencentCloud
 
 
                 /**
+                 *This API is used to check if the label name under an attribute exist.
+                 * @param req CheckAttributeLabelExistRequest
+                 * @return CheckAttributeLabelExistOutcome
+                 */
+                CheckAttributeLabelExistOutcome CheckAttributeLabelExist(const Model::CheckAttributeLabelExistRequest &request);
+                void CheckAttributeLabelExistAsync(const Model::CheckAttributeLabelExistRequest& request, const CheckAttributeLabelExistAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CheckAttributeLabelExistOutcomeCallable CheckAttributeLabelExistCallable(const Model::CheckAttributeLabelExistRequest& request);
+
+                /**
+                 *This API is used to check attribute label references.
+                 * @param req CheckAttributeLabelReferRequest
+                 * @return CheckAttributeLabelReferOutcome
+                 */
+                CheckAttributeLabelReferOutcome CheckAttributeLabelRefer(const Model::CheckAttributeLabelReferRequest &request);
+                void CheckAttributeLabelReferAsync(const Model::CheckAttributeLabelReferRequest& request, const CheckAttributeLabelReferAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CheckAttributeLabelReferOutcomeCallable CheckAttributeLabelReferCallable(const Model::CheckAttributeLabelReferRequest& request);
+
+                /**
+                 *This API is used to create knowledge engine applications.
+                 * @param req CreateAppRequest
+                 * @return CreateAppOutcome
+                 */
+                CreateAppOutcome CreateApp(const Model::CreateAppRequest &request);
+                void CreateAppAsync(const Model::CreateAppRequest& request, const CreateAppAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateAppOutcomeCallable CreateAppCallable(const Model::CreateAppRequest& request);
+
+                /**
+                 *This API is used to create attributes.
+                 * @param req CreateAttributeLabelRequest
+                 * @return CreateAttributeLabelOutcome
+                 */
+                CreateAttributeLabelOutcome CreateAttributeLabel(const Model::CreateAttributeLabelRequest &request);
+                void CreateAttributeLabelAsync(const Model::CreateAttributeLabelRequest& request, const CreateAttributeLabelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateAttributeLabelOutcomeCallable CreateAttributeLabelCallable(const Model::CreateAttributeLabelRequest& request);
+
+                /**
                  *This API is used to create enterprises.
                  * @param req CreateCorpRequest
                  * @return CreateCorpOutcome
@@ -313,6 +534,33 @@ namespace TencentCloud
                 CreateCorpOutcome CreateCorp(const Model::CreateCorpRequest &request);
                 void CreateCorpAsync(const Model::CreateCorpRequest& request, const CreateCorpAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateCorpOutcomeCallable CreateCorpCallable(const Model::CreateCorpRequest& request);
+
+                /**
+                 *This API is used to create doc categories.
+                 * @param req CreateDocCateRequest
+                 * @return CreateDocCateOutcome
+                 */
+                CreateDocCateOutcome CreateDocCate(const Model::CreateDocCateRequest &request);
+                void CreateDocCateAsync(const Model::CreateDocCateRequest& request, const CreateDocCateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateDocCateOutcomeCallable CreateDocCateCallable(const Model::CreateDocCateRequest& request);
+
+                /**
+                 *This API is used to enter Q&As.
+                 * @param req CreateQARequest
+                 * @return CreateQAOutcome
+                 */
+                CreateQAOutcome CreateQA(const Model::CreateQARequest &request);
+                void CreateQAAsync(const Model::CreateQARequest& request, const CreateQAAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateQAOutcomeCallable CreateQACallable(const Model::CreateQARequest& request);
+
+                /**
+                 *This API is used to create Q&A categories.
+                 * @param req CreateQACateRequest
+                 * @return CreateQACateOutcome
+                 */
+                CreateQACateOutcome CreateQACate(const Model::CreateQACateRequest &request);
+                void CreateQACateAsync(const Model::CreateQACateRequest& request, const CreateQACateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateQACateOutcomeCallable CreateQACateCallable(const Model::CreateQACateRequest& request);
 
                 /**
                  *This API is used to initiate requests for this asynchronous API, for initiating document parsing tasks.
@@ -324,6 +572,15 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
                 CreateReconstructDocumentFlowOutcome CreateReconstructDocumentFlow(const Model::CreateReconstructDocumentFlowRequest &request);
                 void CreateReconstructDocumentFlowAsync(const Model::CreateReconstructDocumentFlowRequest& request, const CreateReconstructDocumentFlowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateReconstructDocumentFlowOutcomeCallable CreateReconstructDocumentFlowCallable(const Model::CreateReconstructDocumentFlowRequest& request);
+
+                /**
+                 *This API is used to create rejected questions.
+                 * @param req CreateRejectedQuestionRequest
+                 * @return CreateRejectedQuestionOutcome
+                 */
+                CreateRejectedQuestionOutcome CreateRejectedQuestion(const Model::CreateRejectedQuestionRequest &request);
+                void CreateRejectedQuestionAsync(const Model::CreateRejectedQuestionRequest& request, const CreateRejectedQuestionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateRejectedQuestionOutcomeCallable CreateRejectedQuestionCallable(const Model::CreateRejectedQuestionRequest& request);
 
                 /**
                  *This API is used to create a release.
@@ -344,6 +601,15 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
                 DeleteAppOutcomeCallable DeleteAppCallable(const Model::DeleteAppRequest& request);
 
                 /**
+                 *This API is used to delete attribute labels.
+                 * @param req DeleteAttributeLabelRequest
+                 * @return DeleteAttributeLabelOutcome
+                 */
+                DeleteAttributeLabelOutcome DeleteAttributeLabel(const Model::DeleteAttributeLabelRequest &request);
+                void DeleteAttributeLabelAsync(const Model::DeleteAttributeLabelRequest& request, const DeleteAttributeLabelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteAttributeLabelOutcomeCallable DeleteAttributeLabelCallable(const Model::DeleteAttributeLabelRequest& request);
+
+                /**
                  *This API is used to delete documents.
                  * @param req DeleteDocRequest
                  * @return DeleteDocOutcome
@@ -351,6 +617,15 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
                 DeleteDocOutcome DeleteDoc(const Model::DeleteDocRequest &request);
                 void DeleteDocAsync(const Model::DeleteDocRequest& request, const DeleteDocAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteDocOutcomeCallable DeleteDocCallable(const Model::DeleteDocRequest& request);
+
+                /**
+                 *This API is used to delete Doc categories.
+                 * @param req DeleteDocCateRequest
+                 * @return DeleteDocCateOutcome
+                 */
+                DeleteDocCateOutcome DeleteDocCate(const Model::DeleteDocCateRequest &request);
+                void DeleteDocCateAsync(const Model::DeleteDocCateRequest& request, const DeleteDocCateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteDocCateOutcomeCallable DeleteDocCateCallable(const Model::DeleteDocCateRequest& request);
 
                 /**
                  *This API is used to delete Q&As.
@@ -378,6 +653,15 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
                 DeleteRejectedQuestionOutcome DeleteRejectedQuestion(const Model::DeleteRejectedQuestionRequest &request);
                 void DeleteRejectedQuestionAsync(const Model::DeleteRejectedQuestionRequest& request, const DeleteRejectedQuestionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteRejectedQuestionOutcomeCallable DeleteRejectedQuestionCallable(const Model::DeleteRejectedQuestionRequest& request);
+
+                /**
+                 *This API is used to obtain application details under the corporate.
+                 * @param req DescribeAppRequest
+                 * @return DescribeAppOutcome
+                 */
+                DescribeAppOutcome DescribeApp(const Model::DescribeAppRequest &request);
+                void DescribeAppAsync(const Model::DescribeAppRequest& request, const DescribeAppAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAppOutcomeCallable DescribeAppCallable(const Model::DescribeAppRequest& request);
 
                 /**
                  *This API is used to query attribute label details.
@@ -416,6 +700,15 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
                 DescribeConcurrencyUsageGraphOutcomeCallable DescribeConcurrencyUsageGraphCallable(const Model::DescribeConcurrencyUsageGraphRequest& request);
 
                 /**
+                 *This API is used to query corporate details.
+                 * @param req DescribeCorpRequest
+                 * @return DescribeCorpOutcome
+                 */
+                DescribeCorpOutcome DescribeCorp(const Model::DescribeCorpRequest &request);
+                void DescribeCorpAsync(const Model::DescribeCorpRequest& request, const DescribeCorpAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCorpOutcomeCallable DescribeCorpCallable(const Model::DescribeCorpRequest& request);
+
+                /**
                  *This API is used to query document details.
                  * @param req DescribeDocRequest
                  * @return DescribeDocOutcome
@@ -443,6 +736,24 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
                 DescribeKnowledgeUsagePieGraphOutcomeCallable DescribeKnowledgeUsagePieGraphCallable(const Model::DescribeKnowledgeUsagePieGraphRequest& request);
 
                 /**
+                 *This API is used to query Q&A details.
+                 * @param req DescribeQARequest
+                 * @return DescribeQAOutcome
+                 */
+                DescribeQAOutcome DescribeQA(const Model::DescribeQARequest &request);
+                void DescribeQAAsync(const Model::DescribeQARequest& request, const DescribeQAAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeQAOutcomeCallable DescribeQACallable(const Model::DescribeQARequest& request);
+
+                /**
+                 *This API is used to get the reference source details list.
+                 * @param req DescribeReferRequest
+                 * @return DescribeReferOutcome
+                 */
+                DescribeReferOutcome DescribeRefer(const Model::DescribeReferRequest &request);
+                void DescribeReferAsync(const Model::DescribeReferRequest& request, const DescribeReferAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeReferOutcomeCallable DescribeReferCallable(const Model::DescribeReferRequest& request);
+
+                /**
                  *This API is used to query release details.
                  * @param req DescribeReleaseRequest
                  * @return DescribeReleaseOutcome
@@ -450,6 +761,15 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
                 DescribeReleaseOutcome DescribeRelease(const Model::DescribeReleaseRequest &request);
                 void DescribeReleaseAsync(const Model::DescribeReleaseRequest& request, const DescribeReleaseAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeReleaseOutcomeCallable DescribeReleaseCallable(const Model::DescribeReleaseRequest& request);
+
+                /**
+                 *This API is used to pull the release button status and last release time.
+                 * @param req DescribeReleaseInfoRequest
+                 * @return DescribeReleaseInfoOutcome
+                 */
+                DescribeReleaseInfoOutcome DescribeReleaseInfo(const Model::DescribeReleaseInfoRequest &request);
+                void DescribeReleaseInfoAsync(const Model::DescribeReleaseInfoRequest& request, const DescribeReleaseInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeReleaseInfoOutcomeCallable DescribeReleaseInfoCallable(const Model::DescribeReleaseInfoRequest& request);
 
                 /**
                  *This API is used to get application business ID through appKey.
@@ -468,6 +788,24 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
                 DescribeSearchStatsGraphOutcome DescribeSearchStatsGraph(const Model::DescribeSearchStatsGraphRequest &request);
                 void DescribeSearchStatsGraphAsync(const Model::DescribeSearchStatsGraphRequest& request, const DescribeSearchStatsGraphAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeSearchStatsGraphOutcomeCallable DescribeSearchStatsGraphCallable(const Model::DescribeSearchStatsGraphRequest& request);
+
+                /**
+                 *This API is used to get fragment details.
+                 * @param req DescribeSegmentsRequest
+                 * @return DescribeSegmentsOutcome
+                 */
+                DescribeSegmentsOutcome DescribeSegments(const Model::DescribeSegmentsRequest &request);
+                void DescribeSegmentsAsync(const Model::DescribeSegmentsRequest& request, const DescribeSegmentsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSegmentsOutcomeCallable DescribeSegmentsCallable(const Model::DescribeSegmentsRequest& request);
+
+                /**
+                 *This API is used to get the temporary key for file upload.
+                 * @param req DescribeStorageCredentialRequest
+                 * @return DescribeStorageCredentialOutcome
+                 */
+                DescribeStorageCredentialOutcome DescribeStorageCredential(const Model::DescribeStorageCredentialRequest &request);
+                void DescribeStorageCredentialAsync(const Model::DescribeStorageCredentialRequest& request, const DescribeStorageCredentialAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeStorageCredentialOutcomeCallable DescribeStorageCredentialCallable(const Model::DescribeStorageCredentialRequest& request);
 
                 /**
                  *This API is used to query API call token details.
@@ -497,6 +835,15 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
                 DescribeUnsatisfiedReplyContextOutcomeCallable DescribeUnsatisfiedReplyContextCallable(const Model::DescribeUnsatisfiedReplyContextRequest& request);
 
                 /**
+                 *This API is used to export attribute labels.
+                 * @param req ExportAttributeLabelRequest
+                 * @return ExportAttributeLabelOutcome
+                 */
+                ExportAttributeLabelOutcome ExportAttributeLabel(const Model::ExportAttributeLabelRequest &request);
+                void ExportAttributeLabelAsync(const Model::ExportAttributeLabelRequest& request, const ExportAttributeLabelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ExportAttributeLabelOutcomeCallable ExportAttributeLabelCallable(const Model::ExportAttributeLabelRequest& request);
+
+                /**
                  *This API is used to export Q&A list.
                  * @param req ExportQAListRequest
                  * @return ExportQAListOutcome
@@ -524,6 +871,51 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
                 GenerateQAOutcomeCallable GenerateQACallable(const Model::GenerateQARequest& request);
 
                 /**
+                 *This API is used to get response type data statistics.
+                 * @param req GetAnswerTypeDataCountRequest
+                 * @return GetAnswerTypeDataCountOutcome
+                 */
+                GetAnswerTypeDataCountOutcome GetAnswerTypeDataCount(const Model::GetAnswerTypeDataCountRequest &request);
+                void GetAnswerTypeDataCountAsync(const Model::GetAnswerTypeDataCountRequest& request, const GetAnswerTypeDataCountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetAnswerTypeDataCountOutcomeCallable GetAnswerTypeDataCountCallable(const Model::GetAnswerTypeDataCountRequest& request);
+
+                /**
+                 *This API is used to get a model list.
+                 * @param req GetAppKnowledgeCountRequest
+                 * @return GetAppKnowledgeCountOutcome
+                 */
+                GetAppKnowledgeCountOutcome GetAppKnowledgeCount(const Model::GetAppKnowledgeCountRequest &request);
+                void GetAppKnowledgeCountAsync(const Model::GetAppKnowledgeCountRequest& request, const GetAppKnowledgeCountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetAppKnowledgeCountOutcomeCallable GetAppKnowledgeCountCallable(const Model::GetAppKnowledgeCountRequest& request);
+
+                /**
+                 *This API is used to get application secret keys.
+                 * @param req GetAppSecretRequest
+                 * @return GetAppSecretOutcome
+                 */
+                GetAppSecretOutcome GetAppSecret(const Model::GetAppSecretRequest &request);
+                void GetAppSecretAsync(const Model::GetAppSecretRequest& request, const GetAppSecretAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetAppSecretOutcomeCallable GetAppSecretCallable(const Model::GetAppSecretRequest& request);
+
+                /**
+                 *This API is used to get document preview information.
+                 * @param req GetDocPreviewRequest
+                 * @return GetDocPreviewOutcome
+                 */
+                GetDocPreviewOutcome GetDocPreview(const Model::GetDocPreviewRequest &request);
+                void GetDocPreviewAsync(const Model::GetDocPreviewRequest& request, const GetDocPreviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetDocPreviewOutcomeCallable GetDocPreviewCallable(const Model::GetDocPreviewRequest& request);
+
+                /**
+                 *This API is used to get likes and dislikes data statistics.
+                 * @param req GetLikeDataCountRequest
+                 * @return GetLikeDataCountOutcome
+                 */
+                GetLikeDataCountOutcome GetLikeDataCount(const Model::GetLikeDataCountRequest &request);
+                void GetLikeDataCountAsync(const Model::GetLikeDataCountRequest& request, const GetLikeDataCountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetLikeDataCountOutcomeCallable GetLikeDataCountCallable(const Model::GetLikeDataCountRequest& request);
+
+                /**
                  *This API is used to obtain chat history based on the session ID (only historical session data within the past 180 days will be retained).
                  * @param req GetMsgRecordRequest
                  * @return GetMsgRecordOutcome
@@ -531,6 +923,15 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
                 GetMsgRecordOutcome GetMsgRecord(const Model::GetMsgRecordRequest &request);
                 void GetMsgRecordAsync(const Model::GetMsgRecordRequest& request, const GetMsgRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 GetMsgRecordOutcomeCallable GetMsgRecordCallable(const Model::GetMsgRecordRequest& request);
+
+                /**
+                 *This is an asynchronous APIs, used to get document parsing task results.
+                 * @param req GetReconstructDocumentResultRequest
+                 * @return GetReconstructDocumentResultOutcome
+                 */
+                GetReconstructDocumentResultOutcome GetReconstructDocumentResult(const Model::GetReconstructDocumentResultRequest &request);
+                void GetReconstructDocumentResultAsync(const Model::GetReconstructDocumentResultRequest& request, const GetReconstructDocumentResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetReconstructDocumentResultOutcomeCallable GetReconstructDocumentResultCallable(const Model::GetReconstructDocumentResultRequest& request);
 
                 /**
                  *This API is used to get the task status.
@@ -551,6 +952,24 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
                 GetWsTokenOutcomeCallable GetWsTokenCallable(const Model::GetWsTokenRequest& request);
 
                 /**
+                 *DocGroup.
+                 * @param req GroupDocRequest
+                 * @return GroupDocOutcome
+                 */
+                GroupDocOutcome GroupDoc(const Model::GroupDocRequest &request);
+                void GroupDocAsync(const Model::GroupDocRequest& request, const GroupDocAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GroupDocOutcomeCallable GroupDocCallable(const Model::GroupDocRequest& request);
+
+                /**
+                 *Q&A Group.
+                 * @param req GroupQARequest
+                 * @return GroupQAOutcome
+                 */
+                GroupQAOutcome GroupQA(const Model::GroupQARequest &request);
+                void GroupQAAsync(const Model::GroupQARequest& request, const GroupQAAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GroupQAOutcomeCallable GroupQACallable(const Model::GroupQARequest& request);
+
+                /**
                  *This API is used to ignore dissatisfied responses.
                  * @param req IgnoreUnsatisfiedReplyRequest
                  * @return IgnoreUnsatisfiedReplyOutcome
@@ -569,6 +988,24 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
                 ListAppOutcomeCallable ListAppCallable(const Model::ListAppRequest& request);
 
                 /**
+                 *This API is used to get list of application types.
+                 * @param req ListAppCategoryRequest
+                 * @return ListAppCategoryOutcome
+                 */
+                ListAppCategoryOutcome ListAppCategory(const Model::ListAppCategoryRequest &request);
+                void ListAppCategoryAsync(const Model::ListAppCategoryRequest& request, const ListAppCategoryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListAppCategoryOutcomeCallable ListAppCategoryCallable(const Model::ListAppCategoryRequest& request);
+
+                /**
+                 *This API is used to query the knowledge base capacity details in a list.
+                 * @param req ListAppKnowledgeDetailRequest
+                 * @return ListAppKnowledgeDetailOutcome
+                 */
+                ListAppKnowledgeDetailOutcome ListAppKnowledgeDetail(const Model::ListAppKnowledgeDetailRequest &request);
+                void ListAppKnowledgeDetailAsync(const Model::ListAppKnowledgeDetailRequest& request, const ListAppKnowledgeDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListAppKnowledgeDetailOutcomeCallable ListAppKnowledgeDetailCallable(const Model::ListAppKnowledgeDetailRequest& request);
+
+                /**
                  *This API is used to query attribute label lists.
                  * @param req ListAttributeLabelRequest
                  * @return ListAttributeLabelOutcome
@@ -576,6 +1013,42 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
                 ListAttributeLabelOutcome ListAttributeLabel(const Model::ListAttributeLabelRequest &request);
                 void ListAttributeLabelAsync(const Model::ListAttributeLabelRequest& request, const ListAttributeLabelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ListAttributeLabelOutcomeCallable ListAttributeLabelCallable(const Model::ListAttributeLabelRequest& request);
+
+                /**
+                 *This API is used to get document list.
+                 * @param req ListDocRequest
+                 * @return ListDocOutcome
+                 */
+                ListDocOutcome ListDoc(const Model::ListDocRequest &request);
+                void ListDocAsync(const Model::ListDocRequest& request, const ListDocAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListDocOutcomeCallable ListDocCallable(const Model::ListDocRequest& request);
+
+                /**
+                 *This API is used to get document category.
+                 * @param req ListDocCateRequest
+                 * @return ListDocCateOutcome
+                 */
+                ListDocCateOutcome ListDocCate(const Model::ListDocCateRequest &request);
+                void ListDocCateAsync(const Model::ListDocCateRequest& request, const ListDocCateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListDocCateOutcomeCallable ListDocCateCallable(const Model::ListDocCateRequest& request);
+
+                /**
+                 *This API is used to get the model list.
+                 * @param req ListModelRequest
+                 * @return ListModelOutcome
+                 */
+                ListModelOutcome ListModel(const Model::ListModelRequest &request);
+                void ListModelAsync(const Model::ListModelRequest& request, const ListModelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListModelOutcomeCallable ListModelCallable(const Model::ListModelRequest& request);
+
+                /**
+                 *This API is used to query Q&A lists.
+                 * @param req ListQARequest
+                 * @return ListQAOutcome
+                 */
+                ListQAOutcome ListQA(const Model::ListQARequest &request);
+                void ListQAAsync(const Model::ListQARequest& request, const ListQAAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListQAOutcomeCallable ListQACallable(const Model::ListQARequest& request);
 
                 /**
                  *This API is used to get Q&A categories.
@@ -596,6 +1069,24 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
                 ListRejectedQuestionOutcomeCallable ListRejectedQuestionCallable(const Model::ListRejectedQuestionRequest& request);
 
                 /**
+                 *This API is used to release a preview of rejected questions.
+                 * @param req ListRejectedQuestionPreviewRequest
+                 * @return ListRejectedQuestionPreviewOutcome
+                 */
+                ListRejectedQuestionPreviewOutcome ListRejectedQuestionPreview(const Model::ListRejectedQuestionPreviewRequest &request);
+                void ListRejectedQuestionPreviewAsync(const Model::ListRejectedQuestionPreviewRequest& request, const ListRejectedQuestionPreviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListRejectedQuestionPreviewOutcomeCallable ListRejectedQuestionPreviewCallable(const Model::ListRejectedQuestionPreviewRequest& request);
+
+                /**
+                 *This API is used to get the release list.
+                 * @param req ListReleaseRequest
+                 * @return ListReleaseOutcome
+                 */
+                ListReleaseOutcome ListRelease(const Model::ListReleaseRequest &request);
+                void ListReleaseAsync(const Model::ListReleaseRequest& request, const ListReleaseAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListReleaseOutcomeCallable ListReleaseCallable(const Model::ListReleaseRequest& request);
+
+                /**
                  *This API is used to preview the release configuration items.
                  * @param req ListReleaseConfigPreviewRequest
                  * @return ListReleaseConfigPreviewOutcome
@@ -603,6 +1094,24 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
                 ListReleaseConfigPreviewOutcome ListReleaseConfigPreview(const Model::ListReleaseConfigPreviewRequest &request);
                 void ListReleaseConfigPreviewAsync(const Model::ListReleaseConfigPreviewRequest& request, const ListReleaseConfigPreviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ListReleaseConfigPreviewOutcomeCallable ListReleaseConfigPreviewCallable(const Model::ListReleaseConfigPreviewRequest& request);
+
+                /**
+                 *This API is used to preview released documents.
+                 * @param req ListReleaseDocPreviewRequest
+                 * @return ListReleaseDocPreviewOutcome
+                 */
+                ListReleaseDocPreviewOutcome ListReleaseDocPreview(const Model::ListReleaseDocPreviewRequest &request);
+                void ListReleaseDocPreviewAsync(const Model::ListReleaseDocPreviewRequest& request, const ListReleaseDocPreviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListReleaseDocPreviewOutcomeCallable ListReleaseDocPreviewCallable(const Model::ListReleaseDocPreviewRequest& request);
+
+                /**
+                 *List of documents.
+                 * @param req ListReleaseQAPreviewRequest
+                 * @return ListReleaseQAPreviewOutcome
+                 */
+                ListReleaseQAPreviewOutcome ListReleaseQAPreview(const Model::ListReleaseQAPreviewRequest &request);
+                void ListReleaseQAPreviewAsync(const Model::ListReleaseQAPreviewRequest& request, const ListReleaseQAPreviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListReleaseQAPreviewOutcomeCallable ListReleaseQAPreviewCallable(const Model::ListReleaseQAPreviewRequest& request);
 
                 /**
                  *This API is used to get account information.
@@ -720,6 +1229,15 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
                 RateMsgRecordOutcome RateMsgRecord(const Model::RateMsgRecordRequest &request);
                 void RateMsgRecordAsync(const Model::RateMsgRecordRequest& request, const RateMsgRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 RateMsgRecordOutcomeCallable RateMsgRecordCallable(const Model::RateMsgRecordRequest& request);
+
+                /**
+                 *This API is used to rename a document.
+                 * @param req RenameDocRequest
+                 * @return RenameDocOutcome
+                 */
+                RenameDocOutcome RenameDoc(const Model::RenameDocRequest &request);
+                void RenameDocAsync(const Model::RenameDocRequest& request, const RenameDocAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RenameDocOutcomeCallable RenameDocCallable(const Model::RenameDocRequest& request);
 
                 /**
                  *This API is used to retry document parsing.
