@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取It must be `9` here.
-                     * @return CaptchaType It must be `9` here.
+                     * 获取Fill with fixed value: 9.
+                     * @return CaptchaType Fill with fixed value: 9.
                      * 
                      */
                     uint64_t GetCaptchaType() const;
 
                     /**
-                     * 设置It must be `9` here.
-                     * @param _captchaType It must be `9` here.
+                     * 设置Fill with fixed value: 9.
+                     * @param _captchaType Fill with fixed value: 9.
                      * 
                      */
                     void SetCaptchaType(const uint64_t& _captchaType);
@@ -276,7 +276,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * It must be `9` here.
+                     * Fill with fixed value: 9.
                      */
                     uint64_t m_captchaType;
                     bool m_captchaTypeHasBeenSet;
