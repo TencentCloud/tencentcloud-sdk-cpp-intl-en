@@ -221,6 +221,43 @@ If it is not specified, the default value is off.
                     bool PrivateParametersHasBeenSet() const;
 
                     /**
+                     * 获取Custom origin HOST header, this parameter only takes effect when OriginType=IP_DOMAIN. 
+
+- If OriginType=COS or AWS_S3, the origin HOST header will be consistent with the origin domain name. 
+- If OriginType=ORIGIN_GROUP, the origin HOST header follows the configuration within the origin group;if not configured, it defaults to the acceleration domain name. 
+- If OriginType=VOD or SPACE, there is no need to configure this header, and it will take effect according to the corresponding origin domain name.
+                     * @return HostHeader Custom origin HOST header, this parameter only takes effect when OriginType=IP_DOMAIN. 
+
+- If OriginType=COS or AWS_S3, the origin HOST header will be consistent with the origin domain name. 
+- If OriginType=ORIGIN_GROUP, the origin HOST header follows the configuration within the origin group;if not configured, it defaults to the acceleration domain name. 
+- If OriginType=VOD or SPACE, there is no need to configure this header, and it will take effect according to the corresponding origin domain name.
+                     * 
+                     */
+                    std::string GetHostHeader() const;
+
+                    /**
+                     * 设置Custom origin HOST header, this parameter only takes effect when OriginType=IP_DOMAIN. 
+
+- If OriginType=COS or AWS_S3, the origin HOST header will be consistent with the origin domain name. 
+- If OriginType=ORIGIN_GROUP, the origin HOST header follows the configuration within the origin group;if not configured, it defaults to the acceleration domain name. 
+- If OriginType=VOD or SPACE, there is no need to configure this header, and it will take effect according to the corresponding origin domain name.
+                     * @param _hostHeader Custom origin HOST header, this parameter only takes effect when OriginType=IP_DOMAIN. 
+
+- If OriginType=COS or AWS_S3, the origin HOST header will be consistent with the origin domain name. 
+- If OriginType=ORIGIN_GROUP, the origin HOST header follows the configuration within the origin group;if not configured, it defaults to the acceleration domain name. 
+- If OriginType=VOD or SPACE, there is no need to configure this header, and it will take effect according to the corresponding origin domain name.
+                     * 
+                     */
+                    void SetHostHeader(const std::string& _hostHeader);
+
+                    /**
+                     * 判断参数 HostHeader 是否已赋值
+                     * @return HostHeader 是否已赋值
+                     * 
+                     */
+                    bool HostHeaderHasBeenSet() const;
+
+                    /**
                      * 获取VODEO sub-application ID. This parameter is required when OriginType is VODEO.
                      * @return VodeoSubAppId VODEO sub-application ID. This parameter is required when OriginType is VODEO.
                      * @deprecated
@@ -291,6 +328,52 @@ If it is not specified, the default value is off.
                      */
                     bool VodeoBucketIdHasBeenSet() const;
 
+                    /**
+                     * 获取VOD origin-pull scope. this parameter is valid only when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the parameter VodBucketId.</li>.
+</li>
+                     * @return VodOriginScope VOD origin-pull scope. this parameter is valid only when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the parameter VodBucketId.</li>.
+</li>
+                     * 
+                     */
+                    std::string GetVodOriginScope() const;
+
+                    /**
+                     * 设置VOD origin-pull scope. this parameter is valid only when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the parameter VodBucketId.</li>.
+</li>
+                     * @param _vodOriginScope VOD origin-pull scope. this parameter is valid only when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the parameter VodBucketId.</li>.
+</li>
+                     * 
+                     */
+                    void SetVodOriginScope(const std::string& _vodOriginScope);
+
+                    /**
+                     * 判断参数 VodOriginScope 是否已赋值
+                     * @return VodOriginScope 是否已赋值
+                     * 
+                     */
+                    bool VodOriginScopeHasBeenSet() const;
+
+                    /**
+                     * 获取VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional edition application.
+                     * @return VodBucketId VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional edition application.
+                     * 
+                     */
+                    std::string GetVodBucketId() const;
+
+                    /**
+                     * 设置VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional edition application.
+                     * @param _vodBucketId VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional edition application.
+                     * 
+                     */
+                    void SetVodBucketId(const std::string& _vodBucketId);
+
+                    /**
+                     * 判断参数 VodBucketId 是否已赋值
+                     * @return VodBucketId 是否已赋值
+                     * 
+                     */
+                    bool VodBucketIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -341,6 +424,16 @@ If it is not specified, the default value is off.
                     bool m_privateParametersHasBeenSet;
 
                     /**
+                     * Custom origin HOST header, this parameter only takes effect when OriginType=IP_DOMAIN. 
+
+- If OriginType=COS or AWS_S3, the origin HOST header will be consistent with the origin domain name. 
+- If OriginType=ORIGIN_GROUP, the origin HOST header follows the configuration within the origin group;if not configured, it defaults to the acceleration domain name. 
+- If OriginType=VOD or SPACE, there is no need to configure this header, and it will take effect according to the corresponding origin domain name.
+                     */
+                    std::string m_hostHeader;
+                    bool m_hostHeaderHasBeenSet;
+
+                    /**
                      * VODEO sub-application ID. This parameter is required when OriginType is VODEO.
                      */
                     int64_t m_vodeoSubAppId;
@@ -359,6 +452,19 @@ If it is not specified, the default value is off.
                      */
                     std::string m_vodeoBucketId;
                     bool m_vodeoBucketIdHasBeenSet;
+
+                    /**
+                     * VOD origin-pull scope. this parameter is valid only when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the parameter VodBucketId.</li>.
+</li>
+                     */
+                    std::string m_vodOriginScope;
+                    bool m_vodOriginScopeHasBeenSet;
+
+                    /**
+                     * VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional edition application.
+                     */
+                    std::string m_vodBucketId;
+                    bool m_vodBucketIdHasBeenSet;
 
                 };
             }

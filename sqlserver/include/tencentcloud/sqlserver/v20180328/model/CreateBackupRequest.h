@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool BackupNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StorageStrategy 
+                     * 获取Backup storage policy. 0: Follow the custom backup retention policy; 1: Follow the instance lifecycle until the instance is eliminated. Default value: 0.
+                     * @return StorageStrategy Backup storage policy. 0: Follow the custom backup retention policy; 1: Follow the instance lifecycle until the instance is eliminated. Default value: 0.
                      * 
                      */
                     int64_t GetStorageStrategy() const;
 
                     /**
-                     * 设置
-                     * @param _storageStrategy 
+                     * 设置Backup storage policy. 0: Follow the custom backup retention policy; 1: Follow the instance lifecycle until the instance is eliminated. Default value: 0.
+                     * @param _storageStrategy Backup storage policy. 0: Follow the custom backup retention policy; 1: Follow the instance lifecycle until the instance is eliminated. Default value: 0.
                      * 
                      */
                     void SetStorageStrategy(const int64_t& _storageStrategy);
@@ -174,7 +174,7 @@ namespace TencentCloud
                     bool m_backupNameHasBeenSet;
 
                     /**
-                     * 
+                     * Backup storage policy. 0: Follow the custom backup retention policy; 1: Follow the instance lifecycle until the instance is eliminated. Default value: 0.
                      */
                     int64_t m_storageStrategy;
                     bool m_storageStrategyHasBeenSet;

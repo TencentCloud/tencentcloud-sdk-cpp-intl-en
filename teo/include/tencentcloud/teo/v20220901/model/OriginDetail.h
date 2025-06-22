@@ -259,6 +259,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PrivateParametersHasBeenSet() const;
 
                     /**
+                     * 获取current configured origin HOST header.
+                     * @return HostHeader current configured origin HOST header.
+                     * 
+                     */
+                    std::string GetHostHeader() const;
+
+                    /**
+                     * 设置current configured origin HOST header.
+                     * @param _hostHeader current configured origin HOST header.
+                     * 
+                     */
+                    void SetHostHeader(const std::string& _hostHeader);
+
+                    /**
+                     * 判断参数 HostHeader 是否已赋值
+                     * @return HostHeader 是否已赋值
+                     * 
+                     */
+                    bool HostHeaderHasBeenSet() const;
+
+                    /**
                      * 获取MO sub-application ID
                      * @return VodeoSubAppId MO sub-application ID
                      * @deprecated
@@ -321,6 +342,52 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool VodeoBucketIdHasBeenSet() const;
 
+                    /**
+                     * 获取VOD origin-pull range. this parameter returns a value when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the VodBucketId parameter.</li>.
+</li>
+                     * @return VodOriginScope VOD origin-pull range. this parameter returns a value when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the VodBucketId parameter.</li>.
+</li>
+                     * 
+                     */
+                    std::string GetVodOriginScope() const;
+
+                    /**
+                     * 设置VOD origin-pull range. this parameter returns a value when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the VodBucketId parameter.</li>.
+</li>
+                     * @param _vodOriginScope VOD origin-pull range. this parameter returns a value when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the VodBucketId parameter.</li>.
+</li>
+                     * 
+                     */
+                    void SetVodOriginScope(const std::string& _vodOriginScope);
+
+                    /**
+                     * 判断参数 VodOriginScope 是否已赋值
+                     * @return VodOriginScope 是否已赋值
+                     * 
+                     */
+                    bool VodOriginScopeHasBeenSet() const;
+
+                    /**
+                     * 获取VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional application.
+                     * @return VodBucketId VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional application.
+                     * 
+                     */
+                    std::string GetVodBucketId() const;
+
+                    /**
+                     * 设置VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional application.
+                     * @param _vodBucketId VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional application.
+                     * 
+                     */
+                    void SetVodBucketId(const std::string& _vodBucketId);
+
+                    /**
+                     * 判断参数 VodBucketId 是否已赋值
+                     * @return VodBucketId 是否已赋值
+                     * 
+                     */
+                    bool VodBucketIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -382,6 +449,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_privateParametersHasBeenSet;
 
                     /**
+                     * current configured origin HOST header.
+                     */
+                    std::string m_hostHeader;
+                    bool m_hostHeaderHasBeenSet;
+
+                    /**
                      * MO sub-application ID
                      */
                     int64_t m_vodeoSubAppId;
@@ -398,6 +471,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_vodeoBucketId;
                     bool m_vodeoBucketIdHasBeenSet;
+
+                    /**
+                     * VOD origin-pull range. this parameter returns a value when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the VodBucketId parameter.</li>.
+</li>
+                     */
+                    std::string m_vodOriginScope;
+                    bool m_vodOriginScopeHasBeenSet;
+
+                    /**
+                     * VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional application.
+                     */
+                    std::string m_vodBucketId;
+                    bool m_vodBucketIdHasBeenSet;
 
                 };
             }
