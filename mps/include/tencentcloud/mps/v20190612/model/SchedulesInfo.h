@@ -100,11 +100,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 获取The scheme type. Valid values:
  <li>`Preset`</li>
 <li>`Custom` </li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Type The scheme type. Valid values:
  <li>`Preset`</li>
 <li>`Custom` </li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetType() const;
@@ -113,11 +113,11 @@ Note: This field may return·null, indicating that no valid values can be obtain
                      * 设置The scheme type. Valid values:
  <li>`Preset`</li>
 <li>`Custom` </li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _type The scheme type. Valid values:
  <li>`Preset`</li>
 <li>`Custom` </li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -381,7 +381,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * The scheme type. Valid values:
  <li>`Preset`</li>
 <li>`Custom` </li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

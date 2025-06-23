@@ -48,18 +48,18 @@ namespace TencentCloud
 
                     /**
                      * 获取The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Container The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetContainer() const;
 
                     /**
                      * 设置The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _container The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetContainer(const std::string& _container);
@@ -112,7 +112,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_container;
                     bool m_containerHasBeenSet;

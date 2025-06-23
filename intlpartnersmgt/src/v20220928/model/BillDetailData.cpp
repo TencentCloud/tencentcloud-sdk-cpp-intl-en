@@ -51,7 +51,8 @@ BillDetailData::BillDetailData() :
     m_totalAmountAfterDiscountHasBeenSet(false),
     m_voucherDeductionHasBeenSet(false),
     m_totalCostHasBeenSet(false),
-    m_idHasBeenSet(false)
+    m_idHasBeenSet(false),
+    m_customerDiscountRateHasBeenSet(false)
 {
 }
 
@@ -370,6 +371,16 @@ CoreInternalOutcome BillDetailData::Deserialize(const rapidjson::Value &value)
         m_idHasBeenSet = true;
     }
 
+    if (value.HasMember("CustomerDiscountRate") && !value["CustomerDiscountRate"].IsNull())
+    {
+        if (!value["CustomerDiscountRate"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `BillDetailData.CustomerDiscountRate` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_customerDiscountRate = string(value["CustomerDiscountRate"].GetString());
+        m_customerDiscountRateHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -623,6 +634,14 @@ void BillDetailData::ToJsonObject(rapidjson::Value &value, rapidjson::Document::
         string key = "Id";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_id.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_customerDiscountRateHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CustomerDiscountRate";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_customerDiscountRate.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -1122,5 +1141,21 @@ void BillDetailData::SetId(const string& _id)
 bool BillDetailData::IdHasBeenSet() const
 {
     return m_idHasBeenSet;
+}
+
+string BillDetailData::GetCustomerDiscountRate() const
+{
+    return m_customerDiscountRate;
+}
+
+void BillDetailData::SetCustomerDiscountRate(const string& _customerDiscountRate)
+{
+    m_customerDiscountRate = _customerDiscountRate;
+    m_customerDiscountRateHasBeenSet = true;
+}
+
+bool BillDetailData::CustomerDiscountRateHasBeenSet() const
+{
+    return m_customerDiscountRateHasBeenSet;
 }
 

@@ -51,10 +51,10 @@ namespace TencentCloud
                     /**
                      * 获取The storage type for a media processing output file. Valid values:
 <li>`COS`: Tencent Cloud COS</li>
-<li>`>AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
+<li>`AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
                      * @return Type The storage type for a media processing output file. Valid values:
 <li>`COS`: Tencent Cloud COS</li>
-<li>`>AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
+<li>`AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
                      * 
                      */
                     std::string GetType() const;
@@ -62,10 +62,10 @@ namespace TencentCloud
                     /**
                      * 设置The storage type for a media processing output file. Valid values:
 <li>`COS`: Tencent Cloud COS</li>
-<li>`>AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
+<li>`AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
                      * @param _type The storage type for a media processing output file. Valid values:
 <li>`COS`: Tencent Cloud COS</li>
-<li>`>AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
+<li>`AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -132,7 +132,7 @@ Note: This field may return null, indicating that no valid value can be obtained
                     /**
                      * The storage type for a media processing output file. Valid values:
 <li>`COS`: Tencent Cloud COS</li>
-<li>`>AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
+<li>`AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

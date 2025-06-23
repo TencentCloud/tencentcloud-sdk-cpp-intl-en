@@ -74,15 +74,15 @@ namespace TencentCloud
                     bool TranscodeTaskSetHasBeenSet() const;
 
                     /**
-                     * 获取List of animated image generating tasks.
-                     * @return AnimatedGraphicTaskSet List of animated image generating tasks.
+                     * 获取List of animated image screenshot tasks.
+                     * @return AnimatedGraphicTaskSet List of animated image screenshot tasks.
                      * 
                      */
                     std::vector<AnimatedGraphicTaskInput> GetAnimatedGraphicTaskSet() const;
 
                     /**
-                     * 设置List of animated image generating tasks.
-                     * @param _animatedGraphicTaskSet List of animated image generating tasks.
+                     * 设置List of animated image screenshot tasks.
+                     * @param _animatedGraphicTaskSet List of animated image screenshot tasks.
                      * 
                      */
                     void SetAnimatedGraphicTaskSet(const std::vector<AnimatedGraphicTaskInput>& _animatedGraphicTaskSet);
@@ -95,15 +95,15 @@ namespace TencentCloud
                     bool AnimatedGraphicTaskSetHasBeenSet() const;
 
                     /**
-                     * 获取List of time point screencapturing tasks.
-                     * @return SnapshotByTimeOffsetTaskSet List of time point screencapturing tasks.
+                     * 获取List of time point screenshot tasks.
+                     * @return SnapshotByTimeOffsetTaskSet List of time point screenshot tasks.
                      * 
                      */
                     std::vector<SnapshotByTimeOffsetTaskInput> GetSnapshotByTimeOffsetTaskSet() const;
 
                     /**
-                     * 设置List of time point screencapturing tasks.
-                     * @param _snapshotByTimeOffsetTaskSet List of time point screencapturing tasks.
+                     * 设置List of time point screenshot tasks.
+                     * @param _snapshotByTimeOffsetTaskSet List of time point screenshot tasks.
                      * 
                      */
                     void SetSnapshotByTimeOffsetTaskSet(const std::vector<SnapshotByTimeOffsetTaskInput>& _snapshotByTimeOffsetTaskSet);
@@ -116,15 +116,15 @@ namespace TencentCloud
                     bool SnapshotByTimeOffsetTaskSetHasBeenSet() const;
 
                     /**
-                     * 获取List of sampled screencapturing tasks.
-                     * @return SampleSnapshotTaskSet List of sampled screencapturing tasks.
+                     * 获取List of sampled screenshot tasks.
+                     * @return SampleSnapshotTaskSet List of sampled screenshot tasks.
                      * 
                      */
                     std::vector<SampleSnapshotTaskInput> GetSampleSnapshotTaskSet() const;
 
                     /**
-                     * 设置List of sampled screencapturing tasks.
-                     * @param _sampleSnapshotTaskSet List of sampled screencapturing tasks.
+                     * 设置List of sampled screenshot tasks.
+                     * @param _sampleSnapshotTaskSet List of sampled screenshot tasks.
                      * 
                      */
                     void SetSampleSnapshotTaskSet(const std::vector<SampleSnapshotTaskInput>& _sampleSnapshotTaskSet);
@@ -137,15 +137,15 @@ namespace TencentCloud
                     bool SampleSnapshotTaskSetHasBeenSet() const;
 
                     /**
-                     * 获取List of image sprite generating tasks.
-                     * @return ImageSpriteTaskSet List of image sprite generating tasks.
+                     * 获取List of image sprite screenshot tasks.
+                     * @return ImageSpriteTaskSet List of image sprite screenshot tasks.
                      * 
                      */
                     std::vector<ImageSpriteTaskInput> GetImageSpriteTaskSet() const;
 
                     /**
-                     * 设置List of image sprite generating tasks.
-                     * @param _imageSpriteTaskSet List of image sprite generating tasks.
+                     * 设置List of image sprite screenshot tasks.
+                     * @param _imageSpriteTaskSet List of image sprite screenshot tasks.
                      * 
                      */
                     void SetImageSpriteTaskSet(const std::vector<ImageSpriteTaskInput>& _imageSpriteTaskSet);
@@ -187,25 +187,25 @@ namespace TencentCloud
                     bool m_transcodeTaskSetHasBeenSet;
 
                     /**
-                     * List of animated image generating tasks.
+                     * List of animated image screenshot tasks.
                      */
                     std::vector<AnimatedGraphicTaskInput> m_animatedGraphicTaskSet;
                     bool m_animatedGraphicTaskSetHasBeenSet;
 
                     /**
-                     * List of time point screencapturing tasks.
+                     * List of time point screenshot tasks.
                      */
                     std::vector<SnapshotByTimeOffsetTaskInput> m_snapshotByTimeOffsetTaskSet;
                     bool m_snapshotByTimeOffsetTaskSetHasBeenSet;
 
                     /**
-                     * List of sampled screencapturing tasks.
+                     * List of sampled screenshot tasks.
                      */
                     std::vector<SampleSnapshotTaskInput> m_sampleSnapshotTaskSet;
                     bool m_sampleSnapshotTaskSetHasBeenSet;
 
                     /**
-                     * List of image sprite generating tasks.
+                     * List of image sprite screenshot tasks.
                      */
                     std::vector<ImageSpriteTaskInput> m_imageSpriteTaskSet;
                     bool m_imageSpriteTaskSetHasBeenSet;

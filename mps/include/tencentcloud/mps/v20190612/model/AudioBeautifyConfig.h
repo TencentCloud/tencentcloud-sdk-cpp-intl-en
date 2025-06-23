@@ -84,12 +84,12 @@ Default value: `ON`.
 <li>`declick`: Noise removal.</li>
 <li>`deesser`: De-essing.</li>
 Default: `declick`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Types The audio improvement options. You can specify multiple options. Valid values:
 <li>`declick`: Noise removal.</li>
 <li>`deesser`: De-essing.</li>
 Default: `declick`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetTypes() const;
@@ -99,12 +99,12 @@ Note: This field may return·null, indicating that no valid values can be obtain
 <li>`declick`: Noise removal.</li>
 <li>`deesser`: De-essing.</li>
 Default: `declick`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _types The audio improvement options. You can specify multiple options. Valid values:
 <li>`declick`: Noise removal.</li>
 <li>`deesser`: De-essing.</li>
 Default: `declick`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTypes(const std::vector<std::string>& _types);
@@ -132,7 +132,7 @@ Default value: `ON`.
 <li>`declick`: Noise removal.</li>
 <li>`deesser`: De-essing.</li>
 Default: `declick`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_types;
                     bool m_typesHasBeenSet;

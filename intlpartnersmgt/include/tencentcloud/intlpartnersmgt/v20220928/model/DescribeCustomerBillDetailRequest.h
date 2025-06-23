@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Sub-account UIN
-                     * @return CustomerUin Sub-account UIN
+                     * 获取Sub-account UIN.
+                     * @return CustomerUin Sub-account UIN.
                      * 
                      */
                     uint64_t GetCustomerUin() const;
 
                     /**
-                     * 设置Sub-account UIN
-                     * @param _customerUin Sub-account UIN
+                     * 设置Sub-account UIN.
+                     * @param _customerUin Sub-account UIN.
                      * 
                      */
                     void SetCustomerUin(const uint64_t& _customerUin);
@@ -312,7 +312,7 @@ pre_downgrade (Upgrade/Downgrade)
                 private:
 
                     /**
-                     * Sub-account UIN
+                     * Sub-account UIN.
                      */
                     uint64_t m_customerUin;
                     bool m_customerUinHasBeenSet;

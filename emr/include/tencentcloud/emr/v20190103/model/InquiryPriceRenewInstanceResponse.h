@@ -21,6 +21,8 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/emr/v20190103/model/PriceDetail.h>
+#include <tencentcloud/emr/v20190103/model/NodeRenewPriceDetail.h>
 
 
 namespace TencentCloud
@@ -107,6 +109,34 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool TimeSpanHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return PriceDetail 
+                     * 
+                     */
+                    std::vector<PriceDetail> GetPriceDetail() const;
+
+                    /**
+                     * 判断参数 PriceDetail 是否已赋值
+                     * @return PriceDetail 是否已赋值
+                     * 
+                     */
+                    bool PriceDetailHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return NodeRenewPriceDetails 
+                     * 
+                     */
+                    std::vector<NodeRenewPriceDetail> GetNodeRenewPriceDetails() const;
+
+                    /**
+                     * 判断参数 NodeRenewPriceDetails 是否已赋值
+                     * @return NodeRenewPriceDetails 是否已赋值
+                     * 
+                     */
+                    bool NodeRenewPriceDetailsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -136,6 +166,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_timeSpan;
                     bool m_timeSpanHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<PriceDetail> m_priceDetail;
+                    bool m_priceDetailHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<NodeRenewPriceDetail> m_nodeRenewPriceDetails;
+                    bool m_nodeRenewPriceDetailsHasBeenSet;
 
                 };
             }

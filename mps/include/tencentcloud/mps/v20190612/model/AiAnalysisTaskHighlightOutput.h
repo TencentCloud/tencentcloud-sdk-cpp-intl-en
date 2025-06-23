@@ -71,18 +71,18 @@ namespace TencentCloud
 
                     /**
                      * 获取The storage location of the highlight segments.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OutputStorage The storage location of the highlight segments.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
                      * 设置The storage location of the highlight segments.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _outputStorage The storage location of the highlight segments.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -104,7 +104,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * The storage location of the highlight segments.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;

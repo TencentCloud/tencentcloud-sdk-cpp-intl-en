@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Result type of a time point screencapturing task
+                * Result type of a time point screenshot task
                 */
                 class MediaProcessTaskSnapshotByTimeOffsetResult : public AbstractModel
                 {
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Input for a time point screencapturing task.
-                     * @return Input Input for a time point screencapturing task.
+                     * 获取Input for a time point screenshot task.
+                     * @return Input Input for a time point screenshot task.
                      * 
                      */
                     SnapshotByTimeOffsetTaskInput GetInput() const;
 
                     /**
-                     * 设置Input for a time point screencapturing task.
-                     * @param _input Input for a time point screencapturing task.
+                     * 设置Input for a time point screenshot task.
+                     * @param _input Input for a time point screenshot task.
                      * 
                      */
                     void SetInput(const SnapshotByTimeOffsetTaskInput& _input);
@@ -154,18 +154,18 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output of a time point screencapturing task.
+                     * 获取Output of a time point screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Output Output of a time point screencapturing task.
+                     * @return Output Output of a time point screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MediaSnapshotByTimeOffsetItem GetOutput() const;
 
                     /**
-                     * 设置Output of a time point screencapturing task.
+                     * 设置Output of a time point screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _output Output of a time point screencapturing task.
+                     * @param _output Output of a time point screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -177,6 +177,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool OutputHasBeenSet() const;
+
+                    /**
+                     * 获取The time when the task started executing, in ISO date format.
+                     * @return BeginProcessTime The time when the task started executing, in ISO date format.
+                     * 
+                     */
+                    std::string GetBeginProcessTime() const;
+
+                    /**
+                     * 设置The time when the task started executing, in ISO date format.
+                     * @param _beginProcessTime The time when the task started executing, in ISO date format.
+                     * 
+                     */
+                    void SetBeginProcessTime(const std::string& _beginProcessTime);
+
+                    /**
+                     * 判断参数 BeginProcessTime 是否已赋值
+                     * @return BeginProcessTime 是否已赋值
+                     * 
+                     */
+                    bool BeginProcessTimeHasBeenSet() const;
+
+                    /**
+                     * 获取The time when the task finished, in ISO date format.
+                     * @return FinishTime The time when the task finished, in ISO date format.
+                     * 
+                     */
+                    std::string GetFinishTime() const;
+
+                    /**
+                     * 设置The time when the task finished, in ISO date format.
+                     * @param _finishTime The time when the task finished, in ISO date format.
+                     * 
+                     */
+                    void SetFinishTime(const std::string& _finishTime);
+
+                    /**
+                     * 判断参数 FinishTime 是否已赋值
+                     * @return FinishTime 是否已赋值
+                     * 
+                     */
+                    bool FinishTimeHasBeenSet() const;
 
                 private:
 
@@ -205,17 +247,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Input for a time point screencapturing task.
+                     * Input for a time point screenshot task.
                      */
                     SnapshotByTimeOffsetTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output of a time point screencapturing task.
+                     * Output of a time point screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MediaSnapshotByTimeOffsetItem m_output;
                     bool m_outputHasBeenSet;
+
+                    /**
+                     * The time when the task started executing, in ISO date format.
+                     */
+                    std::string m_beginProcessTime;
+                    bool m_beginProcessTimeHasBeenSet;
+
+                    /**
+                     * The time when the task finished, in ISO date format.
+                     */
+                    std::string m_finishTime;
+                    bool m_finishTimeHasBeenSet;
 
                 };
             }

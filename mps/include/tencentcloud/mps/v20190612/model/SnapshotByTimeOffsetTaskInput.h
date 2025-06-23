@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input parameter type of a time point screencapturing task
+                * Input parameter type of a time point screenshot task
                 */
                 class SnapshotByTimeOffsetTaskInput : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of a time point screencapturing template.
-                     * @return Definition ID of a time point screencapturing template.
+                     * 获取ID of a time point screenshot template.
+                     * @return Definition ID of a time point screenshot template.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置ID of a time point screencapturing template.
-                     * @param _definition ID of a time point screencapturing template.
+                     * 设置ID of a time point screenshot template.
+                     * @param _definition ID of a time point screenshot template.
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -247,7 +247,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * ID of a time point screencapturing template.
+                     * ID of a time point screenshot template.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

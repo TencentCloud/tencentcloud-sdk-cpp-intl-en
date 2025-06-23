@@ -64,6 +64,7 @@ set(emr_public_header_model
   include/tencentcloud/emr/v20190103/model/PodParameter.h
   include/tencentcloud/emr/v20190103/model/AllNodeResourceSpec.h
   include/tencentcloud/emr/v20190103/model/DescribeUsersForUserManagerRequest.h
+  include/tencentcloud/emr/v20190103/model/TerminateClusterNodesResponse.h
   include/tencentcloud/emr/v20190103/model/StrategyConfig.h
   include/tencentcloud/emr/v20190103/model/StartStopServiceOrMonitorResponse.h
   include/tencentcloud/emr/v20190103/model/MultiDisk.h
@@ -81,7 +82,8 @@ set(emr_public_header_model
   include/tencentcloud/emr/v20190103/model/ModifyResourcesTagsRequest.h
   include/tencentcloud/emr/v20190103/model/DescribeResourceScheduleResponse.h
   include/tencentcloud/emr/v20190103/model/DescribeHiveQueriesResponse.h
-  include/tencentcloud/emr/v20190103/model/TerminateClusterNodesResponse.h
+  include/tencentcloud/emr/v20190103/model/NodeRenewPriceDetail.h
+  include/tencentcloud/emr/v20190103/model/RenewPriceDetail.h
   include/tencentcloud/emr/v20190103/model/ModifyResourceSchedulerRequest.h
   include/tencentcloud/emr/v20190103/model/LoginSettings.h
   include/tencentcloud/emr/v20190103/model/PriceResource.h
@@ -186,6 +188,7 @@ set(emr_src
   src/v20190103/model/PodParameter.cpp
   src/v20190103/model/AllNodeResourceSpec.cpp
   src/v20190103/model/DescribeUsersForUserManagerRequest.cpp
+  src/v20190103/model/TerminateClusterNodesResponse.cpp
   src/v20190103/model/StrategyConfig.cpp
   src/v20190103/model/StartStopServiceOrMonitorResponse.cpp
   src/v20190103/model/MultiDisk.cpp
@@ -203,7 +206,8 @@ set(emr_src
   src/v20190103/model/ModifyResourcesTagsRequest.cpp
   src/v20190103/model/DescribeResourceScheduleResponse.cpp
   src/v20190103/model/DescribeHiveQueriesResponse.cpp
-  src/v20190103/model/TerminateClusterNodesResponse.cpp
+  src/v20190103/model/NodeRenewPriceDetail.cpp
+  src/v20190103/model/RenewPriceDetail.cpp
   src/v20190103/model/ModifyResourceSchedulerRequest.cpp
   src/v20190103/model/LoginSettings.cpp
   src/v20190103/model/PriceResource.cpp

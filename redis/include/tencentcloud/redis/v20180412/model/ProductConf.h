@@ -361,7 +361,7 @@ namespace TencentCloud
                      * @return EnableRepicaReadOnly Due to spelling inconsistency in this parameter name, it is recommended to use the **EnableReplicaReadOnly** parameter instead. Its meaning refers to whether the Read-Only Replica is supported.
 - true: Supported.
 - false: Not supported.
-                     * 
+                     * @deprecated
                      */
                     bool GetEnableRepicaReadOnly() const;
 
@@ -372,14 +372,14 @@ namespace TencentCloud
                      * @param _enableRepicaReadOnly Due to spelling inconsistency in this parameter name, it is recommended to use the **EnableReplicaReadOnly** parameter instead. Its meaning refers to whether the Read-Only Replica is supported.
 - true: Supported.
 - false: Not supported.
-                     * 
+                     * @deprecated
                      */
                     void SetEnableRepicaReadOnly(const bool& _enableRepicaReadOnly);
 
                     /**
                      * 判断参数 EnableRepicaReadOnly 是否已赋值
                      * @return EnableRepicaReadOnly 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool EnableRepicaReadOnlyHasBeenSet() const;
 

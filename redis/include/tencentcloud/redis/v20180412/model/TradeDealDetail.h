@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Actual total price of the order in 0.01 CNY
-                     * @return Price Actual total price of the order in 0.01 CNY
+                     * 获取Order actual total price (in cents)
+                     * @return Price Order actual total price (in cents)
                      * 
                      */
                     int64_t GetPrice() const;
 
                     /**
-                     * 设置Actual total price of the order in 0.01 CNY
-                     * @param _price Actual total price of the order in 0.01 CNY
+                     * 设置Order actual total price (in cents)
+                     * @param _price Order actual total price (in cents)
                      * 
                      */
                     void SetPrice(const int64_t& _price);
@@ -361,7 +361,7 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Actual total price of the order in 0.01 CNY
+                     * Order actual total price (in cents)
                      */
                     int64_t m_price;
                     bool m_priceHasBeenSet;

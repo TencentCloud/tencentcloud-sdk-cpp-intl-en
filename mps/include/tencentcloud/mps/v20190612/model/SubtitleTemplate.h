@@ -48,18 +48,18 @@ namespace TencentCloud
 
                     /**
                      * 获取The URL of the subtitles to add to the video.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Path The URL of the subtitles to add to the video.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetPath() const;
 
                     /**
                      * 设置The URL of the subtitles to add to the video.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _path The URL of the subtitles to add to the video.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPath(const std::string& _path);
@@ -73,18 +73,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取The subtitle track to add to the video. If both `Path` and `StreamIndex` are specified, `Path` will be used. You need to specify at least one of the two parameters.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StreamIndex The subtitle track to add to the video. If both `Path` and `StreamIndex` are specified, `Path` will be used. You need to specify at least one of the two parameters.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetStreamIndex() const;
 
                     /**
                      * 设置The subtitle track to add to the video. If both `Path` and `StreamIndex` are specified, `Path` will be used. You need to specify at least one of the two parameters.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _streamIndex The subtitle track to add to the video. If both `Path` and `StreamIndex` are specified, `Path` will be used. You need to specify at least one of the two parameters.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStreamIndex(const int64_t& _streamIndex);
@@ -103,14 +103,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
 <li>`simkai.ttf`: Kaiti.</li>
 <li>`arial.ttf`: Arial.</li>
 The default is `hei.ttf`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FontType The font. Valid values:
 <li>`hei.ttf`: Heiti.</li>
 <li>`song.ttf`: Songti.</li>
 <li>`simkai.ttf`: Kaiti.</li>
 <li>`arial.ttf`: Arial.</li>
 The default is `hei.ttf`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetFontType() const;
@@ -122,14 +122,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
 <li>`simkai.ttf`: Kaiti.</li>
 <li>`arial.ttf`: Arial.</li>
 The default is `hei.ttf`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _fontType The font. Valid values:
 <li>`hei.ttf`: Heiti.</li>
 <li>`song.ttf`: Songti.</li>
 <li>`simkai.ttf`: Kaiti.</li>
 <li>`arial.ttf`: Arial.</li>
 The default is `hei.ttf`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFontType(const std::string& _fontType);
@@ -143,18 +143,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取The font size (pixels). If this is not specified, the font size in the subtitle file will be used.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FontSize The font size (pixels). If this is not specified, the font size in the subtitle file will be used.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetFontSize() const;
 
                     /**
                      * 设置The font size (pixels). If this is not specified, the font size in the subtitle file will be used.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _fontSize The font size (pixels). If this is not specified, the font size in the subtitle file will be used.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFontSize(const std::string& _fontSize);
@@ -168,18 +168,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取The font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FontColor The font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetFontColor() const;
 
                     /**
                      * 设置The font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _fontColor The font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFontColor(const std::string& _fontColor);
@@ -196,12 +196,12 @@ Note: This field may return·null, indicating that no valid values can be obtain
 <li>`0`: Fully transparent.</li>
 <li>`1`: Fully opaque.</li>
 Default value: 1.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FontAlpha The text transparency. Value range: 0-1.
 <li>`0`: Fully transparent.</li>
 <li>`1`: Fully opaque.</li>
 Default value: 1.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     double GetFontAlpha() const;
@@ -211,12 +211,12 @@ Note: This field may return·null, indicating that no valid values can be obtain
 <li>`0`: Fully transparent.</li>
 <li>`1`: Fully opaque.</li>
 Default value: 1.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _fontAlpha The text transparency. Value range: 0-1.
 <li>`0`: Fully transparent.</li>
 <li>`1`: Fully opaque.</li>
 Default value: 1.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFontAlpha(const double& _fontAlpha);
@@ -232,14 +232,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * The URL of the subtitles to add to the video.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_path;
                     bool m_pathHasBeenSet;
 
                     /**
                      * The subtitle track to add to the video. If both `Path` and `StreamIndex` are specified, `Path` will be used. You need to specify at least one of the two parameters.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_streamIndex;
                     bool m_streamIndexHasBeenSet;
@@ -251,21 +251,21 @@ Note: This field may return·null, indicating that no valid values can be obtain
 <li>`simkai.ttf`: Kaiti.</li>
 <li>`arial.ttf`: Arial.</li>
 The default is `hei.ttf`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_fontType;
                     bool m_fontTypeHasBeenSet;
 
                     /**
                      * The font size (pixels). If this is not specified, the font size in the subtitle file will be used.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_fontSize;
                     bool m_fontSizeHasBeenSet;
 
                     /**
                      * The font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_fontColor;
                     bool m_fontColorHasBeenSet;
@@ -275,7 +275,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 <li>`0`: Fully transparent.</li>
 <li>`1`: Fully opaque.</li>
 Default value: 1.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     double m_fontAlpha;
                     bool m_fontAlphaHasBeenSet;

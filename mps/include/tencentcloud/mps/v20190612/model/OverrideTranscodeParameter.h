@@ -250,18 +250,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取An extended field for transcoding.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StdExtInfo An extended field for transcoding.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetStdExtInfo() const;
 
                     /**
                      * 设置An extended field for transcoding.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _stdExtInfo An extended field for transcoding.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStdExtInfo(const std::string& _stdExtInfo);
@@ -275,18 +275,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取The subtitle file to add.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AddOnSubtitles The subtitle file to add.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AddOnSubtitle> GetAddOnSubtitles() const;
 
                     /**
                      * 设置The subtitle file to add.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _addOnSubtitles The subtitle file to add.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAddOnSubtitles(const std::vector<AddOnSubtitle>& _addOnSubtitles);
@@ -357,14 +357,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * An extended field for transcoding.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_stdExtInfo;
                     bool m_stdExtInfoHasBeenSet;
 
                     /**
                      * The subtitle file to add.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AddOnSubtitle> m_addOnSubtitles;
                     bool m_addOnSubtitlesHasBeenSet;

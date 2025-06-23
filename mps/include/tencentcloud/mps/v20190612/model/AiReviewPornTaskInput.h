@@ -48,18 +48,18 @@ namespace TencentCloud
 
                     /**
                      * 获取The ID of a porn detection template.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Definition The ID of a porn detection template.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
                      * 设置The ID of a porn detection template.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _definition The ID of a porn detection template.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -75,7 +75,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * The ID of a porn detection template.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

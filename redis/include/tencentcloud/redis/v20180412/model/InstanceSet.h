@@ -329,21 +329,21 @@ namespace TencentCloud
                     /**
                      * 获取This parameter has been deprecated. Obtain the memory capacity used by the instance through the TCOP API [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1).
                      * @return SizeUsed This parameter has been deprecated. Obtain the memory capacity used by the instance through the TCOP API [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1).
-                     * 
+                     * @deprecated
                      */
                     double GetSizeUsed() const;
 
                     /**
                      * 设置This parameter has been deprecated. Obtain the memory capacity used by the instance through the TCOP API [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1).
                      * @param _sizeUsed This parameter has been deprecated. Obtain the memory capacity used by the instance through the TCOP API [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1).
-                     * 
+                     * @deprecated
                      */
                     void SetSizeUsed(const double& _sizeUsed);
 
                     /**
                      * 判断参数 SizeUsed 是否已赋值
                      * @return SizeUsed 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool SizeUsedHasBeenSet() const;
 

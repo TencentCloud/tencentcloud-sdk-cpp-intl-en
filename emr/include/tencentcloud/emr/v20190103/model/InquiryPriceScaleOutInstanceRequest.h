@@ -264,6 +264,69 @@ namespace TencentCloud
                      */
                     bool MasterCountHasBeenSet() const;
 
+                    /**
+                     * 获取The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+                     * @return ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+                     * 
+                     */
+                    std::string GetResourceBaseType() const;
+
+                    /**
+                     * 设置The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+                     * @param _resourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+                     * 
+                     */
+                    void SetResourceBaseType(const std::string& _resourceBaseType);
+
+                    /**
+                     * 判断参数 ResourceBaseType 是否已赋值
+                     * @return ResourceBaseType 是否已赋值
+                     * 
+                     */
+                    bool ResourceBaseTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Computing resource ID.
+                     * @return ComputeResourceId Computing resource ID.
+                     * 
+                     */
+                    std::string GetComputeResourceId() const;
+
+                    /**
+                     * 设置Computing resource ID.
+                     * @param _computeResourceId Computing resource ID.
+                     * 
+                     */
+                    void SetComputeResourceId(const std::string& _computeResourceId);
+
+                    /**
+                     * 判断参数 ComputeResourceId 是否已赋值
+                     * @return ComputeResourceId 是否已赋值
+                     * 
+                     */
+                    bool ComputeResourceIdHasBeenSet() const;
+
+                    /**
+                     * 获取Scale-out resource type.
+                     * @return HardwareResourceType Scale-out resource type.
+                     * 
+                     */
+                    std::string GetHardwareResourceType() const;
+
+                    /**
+                     * 设置Scale-out resource type.
+                     * @param _hardwareResourceType Scale-out resource type.
+                     * 
+                     */
+                    void SetHardwareResourceType(const std::string& _hardwareResourceType);
+
+                    /**
+                     * 判断参数 HardwareResourceType 是否已赋值
+                     * @return HardwareResourceType 是否已赋值
+                     * 
+                     */
+                    bool HardwareResourceTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -328,6 +391,24 @@ namespace TencentCloud
                      */
                     uint64_t m_masterCount;
                     bool m_masterCountHasBeenSet;
+
+                    /**
+                     * The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+                     */
+                    std::string m_resourceBaseType;
+                    bool m_resourceBaseTypeHasBeenSet;
+
+                    /**
+                     * Computing resource ID.
+                     */
+                    std::string m_computeResourceId;
+                    bool m_computeResourceIdHasBeenSet;
+
+                    /**
+                     * Scale-out resource type.
+                     */
+                    std::string m_hardwareResourceType;
+                    bool m_hardwareResourceTypeHasBeenSet;
 
                 };
             }

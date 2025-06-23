@@ -65,48 +65,6 @@ namespace TencentCloud
                     bool TimeSpanHasBeenSet() const;
 
                     /**
-                     * 获取List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
-                     * @return ResourceIds List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
-                     * 
-                     */
-                    std::vector<std::string> GetResourceIds() const;
-
-                    /**
-                     * 设置List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
-                     * @param _resourceIds List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
-                     * 
-                     */
-                    void SetResourceIds(const std::vector<std::string>& _resourceIds);
-
-                    /**
-                     * 判断参数 ResourceIds 是否已赋值
-                     * @return ResourceIds 是否已赋值
-                     * 
-                     */
-                    bool ResourceIdsHasBeenSet() const;
-
-                    /**
-                     * 获取Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
-                     * @return Placement Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
-                     * 
-                     */
-                    Placement GetPlacement() const;
-
-                    /**
-                     * 设置Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
-                     * @param _placement Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
-                     * 
-                     */
-                    void SetPlacement(const Placement& _placement);
-
-                    /**
-                     * 判断参数 Placement 是否已赋值
-                     * @return Placement 是否已赋值
-                     * 
-                     */
-                    bool PlacementHasBeenSet() const;
-
-                    /**
                      * 获取Instance billing mode.
                      * @return PayMode Instance billing mode.
                      * 
@@ -126,6 +84,27 @@ namespace TencentCloud
                      * 
                      */
                     bool PayModeHasBeenSet() const;
+
+                    /**
+                     * 获取List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
+                     * @return ResourceIds List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
+                     * 
+                     */
+                    std::vector<std::string> GetResourceIds() const;
+
+                    /**
+                     * 设置List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
+                     * @param _resourceIds List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
+                     * 
+                     */
+                    void SetResourceIds(const std::vector<std::string>& _resourceIds);
+
+                    /**
+                     * 判断参数 ResourceIds 是否已赋值
+                     * @return ResourceIds 是否已赋值
+                     * 
+                     */
+                    bool ResourceIdsHasBeenSet() const;
 
                     /**
                      * 获取Unit of time for instance renewal.
@@ -170,6 +149,27 @@ namespace TencentCloud
                     bool CurrencyHasBeenSet() const;
 
                     /**
+                     * 获取Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     * @return Placement Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     * 
+                     */
+                    Placement GetPlacement() const;
+
+                    /**
+                     * 设置Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     * @param _placement Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     * 
+                     */
+                    void SetPlacement(const Placement& _placement);
+
+                    /**
+                     * 判断参数 Placement 是否已赋值
+                     * @return Placement 是否已赋值
+                     * 
+                     */
+                    bool PlacementHasBeenSet() const;
+
+                    /**
                      * 获取Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
                      * @return ModifyPayMode Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
                      * 
@@ -190,6 +190,48 @@ namespace TencentCloud
                      */
                     bool ModifyPayModeHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return NeedDetail 
+                     * 
+                     */
+                    bool GetNeedDetail() const;
+
+                    /**
+                     * 设置
+                     * @param _needDetail 
+                     * 
+                     */
+                    void SetNeedDetail(const bool& _needDetail);
+
+                    /**
+                     * 判断参数 NeedDetail 是否已赋值
+                     * @return NeedDetail 是否已赋值
+                     * 
+                     */
+                    bool NeedDetailHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return InstanceId 
+                     * 
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置
+                     * @param _instanceId 
+                     * 
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     * 
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -199,22 +241,16 @@ namespace TencentCloud
                     bool m_timeSpanHasBeenSet;
 
                     /**
-                     * List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
-                     */
-                    std::vector<std::string> m_resourceIds;
-                    bool m_resourceIdsHasBeenSet;
-
-                    /**
-                     * Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
-                     */
-                    Placement m_placement;
-                    bool m_placementHasBeenSet;
-
-                    /**
                      * Instance billing mode.
                      */
                     int64_t m_payMode;
                     bool m_payModeHasBeenSet;
+
+                    /**
+                     * List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
+                     */
+                    std::vector<std::string> m_resourceIds;
+                    bool m_resourceIdsHasBeenSet;
 
                     /**
                      * Unit of time for instance renewal.
@@ -229,10 +265,28 @@ namespace TencentCloud
                     bool m_currencyHasBeenSet;
 
                     /**
+                     * Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     */
+                    Placement m_placement;
+                    bool m_placementHasBeenSet;
+
+                    /**
                      * Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
                      */
                     int64_t m_modifyPayMode;
                     bool m_modifyPayModeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_needDetail;
+                    bool m_needDetailHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
 
                 };
             }

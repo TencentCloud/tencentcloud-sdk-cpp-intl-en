@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Details of a sampled screencapturing template
+                * Details of a sampled screenshot template
                 */
                 class SampleSnapshotTemplate : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique ID of a sampled screencapturing template.
-                     * @return Definition Unique ID of a sampled screencapturing template.
+                     * 获取Unique ID of a sampled screenshot template.
+                     * @return Definition Unique ID of a sampled screenshot template.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Unique ID of a sampled screencapturing template.
-                     * @param _definition Unique ID of a sampled screencapturing template.
+                     * 设置Unique ID of a sampled screenshot template.
+                     * @param _definition Unique ID of a sampled screenshot template.
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -97,15 +97,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Name of a sampled screencapturing template.
-                     * @return Name Name of a sampled screencapturing template.
+                     * 获取Name of a sampled screenshot template.
+                     * @return Name Name of a sampled screenshot template.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Name of a sampled screencapturing template.
-                     * @param _name Name of a sampled screencapturing template.
+                     * 设置Name of a sampled screenshot template.
+                     * @param _name Name of a sampled screenshot template.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -275,15 +275,15 @@ Default value: open.
                     bool FormatHasBeenSet() const;
 
                     /**
-                     * 获取Sampled screencapturing type.
-                     * @return SampleType Sampled screencapturing type.
+                     * 获取Sampled screenshot type.
+                     * @return SampleType Sampled screenshot type.
                      * 
                      */
                     std::string GetSampleType() const;
 
                     /**
-                     * 设置Sampled screencapturing type.
-                     * @param _sampleType Sampled screencapturing type.
+                     * 设置Sampled screenshot type.
+                     * @param _sampleType Sampled screenshot type.
                      * 
                      */
                     void SetSampleType(const std::string& _sampleType);
@@ -402,7 +402,7 @@ Default value: black.
                 private:
 
                     /**
-                     * Unique ID of a sampled screencapturing template.
+                     * Unique ID of a sampled screenshot template.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
@@ -416,7 +416,7 @@ Default value: black.
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Name of a sampled screencapturing template.
+                     * Name of a sampled screenshot template.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -465,7 +465,7 @@ Default value: open.
                     bool m_formatHasBeenSet;
 
                     /**
-                     * Sampled screencapturing type.
+                     * Sampled screenshot type.
                      */
                     std::string m_sampleType;
                     bool m_sampleTypeHasBeenSet;

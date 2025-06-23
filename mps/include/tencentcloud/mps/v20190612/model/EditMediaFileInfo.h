@@ -114,11 +114,11 @@ namespace TencentCloud
                      * 获取The ID of the material associated with an element. This parameter is required for video compositing tasks.
 
 Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Id The ID of the material associated with an element. This parameter is required for video compositing tasks.
 
 Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetId() const;
@@ -127,11 +127,11 @@ Note: This field may return·null, indicating that no valid values can be obtain
                      * 设置The ID of the material associated with an element. This parameter is required for video compositing tasks.
 
 Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _id The ID of the material associated with an element. This parameter is required for video compositing tasks.
 
 Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -167,7 +167,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
                      * The ID of the material associated with an element. This parameter is required for video compositing tasks.
 
 Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;

@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Result type of a sampled screencapturing task
+                * Result type of a sampled screenshot task
                 */
                 class MediaProcessTaskSampleSnapshotResult : public AbstractModel
                 {
@@ -137,15 +137,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Input for a sampled screencapturing task.
-                     * @return Input Input for a sampled screencapturing task.
+                     * 获取Input for a sampled screenshot task.
+                     * @return Input Input for a sampled screenshot task.
                      * 
                      */
                     SampleSnapshotTaskInput GetInput() const;
 
                     /**
-                     * 设置Input for a sampled screencapturing task.
-                     * @param _input Input for a sampled screencapturing task.
+                     * 设置Input for a sampled screenshot task.
+                     * @param _input Input for a sampled screenshot task.
                      * 
                      */
                     void SetInput(const SampleSnapshotTaskInput& _input);
@@ -158,18 +158,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output of a sampled screencapturing task.
+                     * 获取Output of a sampled screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Output Output of a sampled screencapturing task.
+                     * @return Output Output of a sampled screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MediaSampleSnapshotItem GetOutput() const;
 
                     /**
-                     * 设置Output of a sampled screencapturing task.
+                     * 设置Output of a sampled screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _output Output of a sampled screencapturing task.
+                     * @param _output Output of a sampled screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -181,6 +181,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool OutputHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return BeginProcessTime 
+                     * 
+                     */
+                    std::string GetBeginProcessTime() const;
+
+                    /**
+                     * 设置
+                     * @param _beginProcessTime 
+                     * 
+                     */
+                    void SetBeginProcessTime(const std::string& _beginProcessTime);
+
+                    /**
+                     * 判断参数 BeginProcessTime 是否已赋值
+                     * @return BeginProcessTime 是否已赋值
+                     * 
+                     */
+                    bool BeginProcessTimeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return FinishTime 
+                     * 
+                     */
+                    std::string GetFinishTime() const;
+
+                    /**
+                     * 设置
+                     * @param _finishTime 
+                     * 
+                     */
+                    void SetFinishTime(const std::string& _finishTime);
+
+                    /**
+                     * 判断参数 FinishTime 是否已赋值
+                     * @return FinishTime 是否已赋值
+                     * 
+                     */
+                    bool FinishTimeHasBeenSet() const;
 
                 private:
 
@@ -210,17 +252,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Input for a sampled screencapturing task.
+                     * Input for a sampled screenshot task.
                      */
                     SampleSnapshotTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output of a sampled screencapturing task.
+                     * Output of a sampled screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MediaSampleSnapshotItem m_output;
                     bool m_outputHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_beginProcessTime;
+                    bool m_beginProcessTimeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_finishTime;
+                    bool m_finishTimeHasBeenSet;
 
                 };
             }

@@ -169,10 +169,8 @@ Standard ri reserved instance.
 
                     /**
                      * 获取Project name.
-.
 
                      * @return ProjectName Project name.
-.
 
                      * 
                      */
@@ -180,10 +178,8 @@ Standard ri reserved instance.
 
                     /**
                      * 设置Project name.
-.
 
                      * @param _projectName Project name.
-.
 
                      * 
                      */
@@ -612,15 +608,15 @@ Original cost = component list price * component usage * usage duration.
                     bool OriginalCostHasBeenSet() const;
 
                     /**
-                     * 获取Discount (default is 1).
-                     * @return DiscountRate Discount (default is 1).
+                     * 获取Discount (default is 1) - abandoned.
+                     * @return DiscountRate Discount (default is 1) - abandoned.
                      * 
                      */
                     std::string GetDiscountRate() const;
 
                     /**
-                     * 设置Discount (default is 1).
-                     * @param _discountRate Discount (default is 1).
+                     * 设置Discount (default is 1) - abandoned.
+                     * @param _discountRate Discount (default is 1) - abandoned.
                      * 
                      */
                     void SetDiscountRate(const std::string& _discountRate);
@@ -737,6 +733,27 @@ Original cost = component list price * component usage * usage duration.
                      */
                     bool IdHasBeenSet() const;
 
+                    /**
+                     * 获取customer discount rate. The discount rate applied to the reseller's customer, which set by reseller, default value equal to 1.
+                     * @return CustomerDiscountRate customer discount rate. The discount rate applied to the reseller's customer, which set by reseller, default value equal to 1.
+                     * 
+                     */
+                    std::string GetCustomerDiscountRate() const;
+
+                    /**
+                     * 设置customer discount rate. The discount rate applied to the reseller's customer, which set by reseller, default value equal to 1.
+                     * @param _customerDiscountRate customer discount rate. The discount rate applied to the reseller's customer, which set by reseller, default value equal to 1.
+                     * 
+                     */
+                    void SetCustomerDiscountRate(const std::string& _customerDiscountRate);
+
+                    /**
+                     * 判断参数 CustomerDiscountRate 是否已赋值
+                     * @return CustomerDiscountRate 是否已赋值
+                     * 
+                     */
+                    bool CustomerDiscountRateHasBeenSet() const;
+
                 private:
 
                     /**
@@ -775,7 +792,6 @@ Standard ri reserved instance.
 
                     /**
                      * Project name.
-.
 
                      */
                     std::string m_projectName;
@@ -900,7 +916,7 @@ Original cost = component list price * component usage * usage duration.
                     bool m_originalCostHasBeenSet;
 
                     /**
-                     * Discount (default is 1).
+                     * Discount (default is 1) - abandoned.
                      */
                     std::string m_discountRate;
                     bool m_discountRateHasBeenSet;
@@ -934,6 +950,12 @@ Original cost = component list price * component usage * usage duration.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
+
+                    /**
+                     * customer discount rate. The discount rate applied to the reseller's customer, which set by reseller, default value equal to 1.
+                     */
+                    std::string m_customerDiscountRate;
+                    bool m_customerDiscountRateHasBeenSet;
 
                 };
             }

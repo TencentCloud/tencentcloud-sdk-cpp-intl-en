@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Details of a time point screencapturing template.
+                * Details of a time point screenshot template.
                 */
                 class SnapshotByTimeOffsetTemplate : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique ID of a time point screencapturing template.
-                     * @return Definition Unique ID of a time point screencapturing template.
+                     * 获取Unique ID of a time point screenshot template.
+                     * @return Definition Unique ID of a time point screenshot template.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Unique ID of a time point screencapturing template.
-                     * @param _definition Unique ID of a time point screencapturing template.
+                     * 设置Unique ID of a time point screenshot template.
+                     * @param _definition Unique ID of a time point screenshot template.
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -97,15 +97,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Name of a time point screencapturing template.
-                     * @return Name Name of a time point screencapturing template.
+                     * 获取Name of a time point screenshot template.
+                     * @return Name Name of a time point screenshot template.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Name of a time point screencapturing template.
-                     * @param _name Name of a time point screencapturing template.
+                     * 设置Name of a time point screenshot template.
+                     * @param _name Name of a time point screenshot template.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -360,7 +360,7 @@ Default value: black.
                 private:
 
                     /**
-                     * Unique ID of a time point screencapturing template.
+                     * Unique ID of a time point screenshot template.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
@@ -374,7 +374,7 @@ Default value: black.
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Name of a time point screencapturing template.
+                     * Name of a time point screenshot template.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

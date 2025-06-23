@@ -32,7 +32,10 @@ InquiryPriceScaleOutInstanceRequest::InquiryPriceScaleOutInstanceRequest() :
     m_taskCountHasBeenSet(false),
     m_currencyHasBeenSet(false),
     m_routerCountHasBeenSet(false),
-    m_masterCountHasBeenSet(false)
+    m_masterCountHasBeenSet(false),
+    m_resourceBaseTypeHasBeenSet(false),
+    m_computeResourceIdHasBeenSet(false),
+    m_hardwareResourceTypeHasBeenSet(false)
 {
 }
 
@@ -121,6 +124,30 @@ string InquiryPriceScaleOutInstanceRequest::ToJsonString() const
         string key = "MasterCount";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_masterCount, allocator);
+    }
+
+    if (m_resourceBaseTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ResourceBaseType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_resourceBaseType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_computeResourceIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ComputeResourceId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_computeResourceId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_hardwareResourceTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HardwareResourceType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_hardwareResourceType.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -289,6 +316,54 @@ void InquiryPriceScaleOutInstanceRequest::SetMasterCount(const uint64_t& _master
 bool InquiryPriceScaleOutInstanceRequest::MasterCountHasBeenSet() const
 {
     return m_masterCountHasBeenSet;
+}
+
+string InquiryPriceScaleOutInstanceRequest::GetResourceBaseType() const
+{
+    return m_resourceBaseType;
+}
+
+void InquiryPriceScaleOutInstanceRequest::SetResourceBaseType(const string& _resourceBaseType)
+{
+    m_resourceBaseType = _resourceBaseType;
+    m_resourceBaseTypeHasBeenSet = true;
+}
+
+bool InquiryPriceScaleOutInstanceRequest::ResourceBaseTypeHasBeenSet() const
+{
+    return m_resourceBaseTypeHasBeenSet;
+}
+
+string InquiryPriceScaleOutInstanceRequest::GetComputeResourceId() const
+{
+    return m_computeResourceId;
+}
+
+void InquiryPriceScaleOutInstanceRequest::SetComputeResourceId(const string& _computeResourceId)
+{
+    m_computeResourceId = _computeResourceId;
+    m_computeResourceIdHasBeenSet = true;
+}
+
+bool InquiryPriceScaleOutInstanceRequest::ComputeResourceIdHasBeenSet() const
+{
+    return m_computeResourceIdHasBeenSet;
+}
+
+string InquiryPriceScaleOutInstanceRequest::GetHardwareResourceType() const
+{
+    return m_hardwareResourceType;
+}
+
+void InquiryPriceScaleOutInstanceRequest::SetHardwareResourceType(const string& _hardwareResourceType)
+{
+    m_hardwareResourceType = _hardwareResourceType;
+    m_hardwareResourceTypeHasBeenSet = true;
+}
+
+bool InquiryPriceScaleOutInstanceRequest::HardwareResourceTypeHasBeenSet() const
+{
+    return m_hardwareResourceTypeHasBeenSet;
 }
 
 

@@ -61,14 +61,14 @@ namespace TencentCloud
                     /**
                      * 获取Slow query log details. This parameter has been deprecated and will be replaced by InstanceSlowLogDetail because it is not properly named.
                      * @return InstanceSlowlogDetail Slow query log details. This parameter has been deprecated and will be replaced by InstanceSlowLogDetail because it is not properly named.
-                     * 
+                     * @deprecated
                      */
                     std::vector<InstanceSlowlogDetail> GetInstanceSlowlogDetail() const;
 
                     /**
                      * 判断参数 InstanceSlowlogDetail 是否已赋值
                      * @return InstanceSlowlogDetail 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool InstanceSlowlogDetailHasBeenSet() const;
 

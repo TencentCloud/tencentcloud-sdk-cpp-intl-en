@@ -84,12 +84,12 @@ Default value: `ON`.
 <li>`normal`: Separate voice and background audio.</li>
 <li>`music`: Separate vocals and instrumentals.</li>
 Default value: `normal`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Type The scenario. Valid values:
 <li>`normal`: Separate voice and background audio.</li>
 <li>`music`: Separate vocals and instrumentals.</li>
 Default value: `normal`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetType() const;
@@ -99,12 +99,12 @@ Note: This field may return·null, indicating that no valid values can be obtain
 <li>`normal`: Separate voice and background audio.</li>
 <li>`music`: Separate vocals and instrumentals.</li>
 Default value: `normal`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _type The scenario. Valid values:
 <li>`normal`: Separate voice and background audio.</li>
 <li>`music`: Separate vocals and instrumentals.</li>
 Default value: `normal`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -121,12 +121,12 @@ Note: This field may return·null, indicating that no valid values can be obtain
 <li>`vocal`: Voice.</li>
 <li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
 Default value: `vocal`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Track The output audio track. Valid values:
 <li>`vocal`: Voice.</li>
 <li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
 Default value: `vocal`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTrack() const;
@@ -136,12 +136,12 @@ Note: This field may return·null, indicating that no valid values can be obtain
 <li>`vocal`: Voice.</li>
 <li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
 Default value: `vocal`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _track The output audio track. Valid values:
 <li>`vocal`: Voice.</li>
 <li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
 Default value: `vocal`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTrack(const std::string& _track);
@@ -169,7 +169,7 @@ Default value: `ON`.
 <li>`normal`: Separate voice and background audio.</li>
 <li>`music`: Separate vocals and instrumentals.</li>
 Default value: `normal`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -179,7 +179,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 <li>`vocal`: Voice.</li>
 <li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
 Default value: `vocal`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_track;
                     bool m_trackHasBeenSet;

@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specification of a time point screenshot. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-                     * @return Definition Specification of a time point screenshot. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * 获取Specification of a time point screenshot template. 
+                     * @return Definition Specification of a time point screenshot template. 
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Specification of a time point screenshot. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-                     * @param _definition Specification of a time point screenshot. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * 设置Specification of a time point screenshot template. 
+                     * @param _definition Specification of a time point screenshot template. 
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -114,7 +114,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specification of a time point screenshot. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * Specification of a time point screenshot template. 
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

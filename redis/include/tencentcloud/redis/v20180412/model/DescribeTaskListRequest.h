@@ -487,21 +487,21 @@ namespace TencentCloud
                     /**
                      * 获取The field `OperatorUin` has been disused and replaced by `OperateUin`.
                      * @return OperatorUin The field `OperatorUin` has been disused and replaced by `OperateUin`.
-                     * 
+                     * @deprecated
                      */
                     std::vector<int64_t> GetOperatorUin() const;
 
                     /**
                      * 设置The field `OperatorUin` has been disused and replaced by `OperateUin`.
                      * @param _operatorUin The field `OperatorUin` has been disused and replaced by `OperateUin`.
-                     * 
+                     * @deprecated
                      */
                     void SetOperatorUin(const std::vector<int64_t>& _operatorUin);
 
                     /**
                      * 判断参数 OperatorUin 是否已赋值
                      * @return OperatorUin 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool OperatorUinHasBeenSet() const;
 

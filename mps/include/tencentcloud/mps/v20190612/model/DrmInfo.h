@@ -91,18 +91,18 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * 获取The AES-128 encryption details.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SimpleAesDrm The AES-128 encryption details.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     SimpleAesDrm GetSimpleAesDrm() const;
 
                     /**
                      * 设置The AES-128 encryption details.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _simpleAesDrm The AES-128 encryption details.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSimpleAesDrm(const SimpleAesDrm& _simpleAesDrm);
@@ -150,7 +150,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * The AES-128 encryption details.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     SimpleAesDrm m_simpleAesDrm;
                     bool m_simpleAesDrmHasBeenSet;

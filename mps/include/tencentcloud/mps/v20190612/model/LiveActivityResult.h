@@ -82,18 +82,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取The task output.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LiveActivityResItem The task output.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     LiveActivityResItem GetLiveActivityResItem() const;
 
                     /**
                      * 设置The task output.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _liveActivityResItem The task output.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLiveActivityResItem(const LiveActivityResItem& _liveActivityResItem);
@@ -118,7 +118,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * The task output.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     LiveActivityResItem m_liveActivityResItem;
                     bool m_liveActivityResItemHasBeenSet;

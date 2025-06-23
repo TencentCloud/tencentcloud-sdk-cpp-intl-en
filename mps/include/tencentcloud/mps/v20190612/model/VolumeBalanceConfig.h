@@ -84,12 +84,12 @@ Default value: `ON`.
 <li>`loudNorm`: Loudness normalization.</li>
 <li>`gainControl`: Volume leveling.</li>
 Default value: `loudNorm`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Type The type. Valid values:
 <li>`loudNorm`: Loudness normalization.</li>
 <li>`gainControl`: Volume leveling.</li>
 Default value: `loudNorm`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetType() const;
@@ -99,12 +99,12 @@ Note: This field may return·null, indicating that no valid values can be obtain
 <li>`loudNorm`: Loudness normalization.</li>
 <li>`gainControl`: Volume leveling.</li>
 Default value: `loudNorm`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _type The type. Valid values:
 <li>`loudNorm`: Loudness normalization.</li>
 <li>`gainControl`: Volume leveling.</li>
 Default value: `loudNorm`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -132,7 +132,7 @@ Default value: `ON`.
 <li>`loudNorm`: Loudness normalization.</li>
 <li>`gainControl`: Volume leveling.</li>
 Default value: `loudNorm`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

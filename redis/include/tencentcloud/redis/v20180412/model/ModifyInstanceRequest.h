@@ -178,63 +178,63 @@ namespace TencentCloud
                     /**
                      * 获取This parameter is currently being deprecated and can still be used by existing users. It is recommended that new users use InstanceIds.
                      * @return InstanceId This parameter is currently being deprecated and can still be used by existing users. It is recommended that new users use InstanceIds.
-                     * 
+                     * @deprecated
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置This parameter is currently being deprecated and can still be used by existing users. It is recommended that new users use InstanceIds.
                      * @param _instanceId This parameter is currently being deprecated and can still be used by existing users. It is recommended that new users use InstanceIds.
-                     * 
+                     * @deprecated
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Disused
                      * @return InstanceName Disused
-                     * 
+                     * @deprecated
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Disused
                      * @param _instanceName Disused
-                     * 
+                     * @deprecated
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool InstanceNameHasBeenSet() const;
 
                     /**
                      * 获取This parameter has been deprecated.
                      * @return AutoRenew This parameter has been deprecated.
-                     * 
+                     * @deprecated
                      */
                     int64_t GetAutoRenew() const;
 
                     /**
                      * 设置This parameter has been deprecated.
                      * @param _autoRenew This parameter has been deprecated.
-                     * 
+                     * @deprecated
                      */
                     void SetAutoRenew(const int64_t& _autoRenew);
 
                     /**
                      * 判断参数 AutoRenew 是否已赋值
                      * @return AutoRenew 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool AutoRenewHasBeenSet() const;
 

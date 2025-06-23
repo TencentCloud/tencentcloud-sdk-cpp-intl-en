@@ -249,18 +249,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取The key used to generate the callback signature.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NotifyKey The key used to generate the callback signature.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetNotifyKey() const;
 
                     /**
                      * 设置The key used to generate the callback signature.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _notifyKey The key used to generate the callback signature.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetNotifyKey(const std::string& _notifyKey);
@@ -332,7 +332,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * The key used to generate the callback signature.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_notifyKey;
                     bool m_notifyKeyHasBeenSet;

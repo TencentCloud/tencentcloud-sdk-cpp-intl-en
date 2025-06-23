@@ -75,18 +75,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取The audio enhancement configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AudioEnhance The audio enhancement configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     AudioEnhanceConfig GetAudioEnhance() const;
 
                     /**
                      * 设置The audio enhancement configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _audioEnhance The audio enhancement configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAudioEnhance(const AudioEnhanceConfig& _audioEnhance);
@@ -109,7 +109,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * The audio enhancement configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     AudioEnhanceConfig m_audioEnhance;
                     bool m_audioEnhanceHasBeenSet;

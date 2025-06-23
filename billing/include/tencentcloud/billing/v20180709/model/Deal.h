@@ -385,22 +385,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Product code
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ProductCode Product code
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetProductCode() const;
 
                     /**
                      * 设置Product code
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _productCode Product code
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetProductCode(const std::string& _productCode);
@@ -455,19 +447,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BigDealIdHasBeenSet() const;
 
                     /**
-                     * 获取Refund formula
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Formula Refund formula
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Refund formula.
+                     * @return Formula Refund formula.
                      * 
                      */
                     std::string GetFormula() const;
 
                     /**
-                     * 设置Refund formula
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _formula Refund formula
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Refund formula.
+                     * @param _formula Refund formula.
                      * 
                      */
                     void SetFormula(const std::string& _formula);
@@ -480,19 +468,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FormulaHasBeenSet() const;
 
                     /**
-                     * 获取Refund involves order information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RefReturnDeals Refund involves order information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Refund involves order information.
+                     * @return RefReturnDeals Refund involves order information.
                      * 
                      */
                     std::string GetRefReturnDeals() const;
 
                     /**
-                     * 设置Refund involves order information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _refReturnDeals Refund involves order information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Refund involves order information.
+                     * @param _refReturnDeals Refund involves order information.
                      * 
                      */
                     void SetRefReturnDeals(const std::string& _refReturnDeals);
@@ -528,34 +512,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 获取Transaction type
 
-`modifyNetworkMode`: Adjusting bandwidth mode
-`modifyNetworkSize`: Adjusting bandwidth size
-`refund`: Refund
-`downgrade`: Downgrade
-upgrade (upgrade)
-renew
-purchase
-preMoveOut annual and monthly subscription resources
-preMoveIn annual and monthly subscription resources
-preToPost prepaid to postpaid
-postMoveOut move out pay-as-you-go resources
-postMoveIn move in pay-as-you-go resources
-Note: This field may return null, indicating that no valid values can be obtained.
+Modify network mode adjust bandwidth mode.
+Adjust bandwidth size.
+`Refund`: refund.
+downgrade.
+upgrade configuration.
+renew.
+purchase.
+preMoveOut monthly subscription resource migration out.
+preMoveIn specifies the monthly subscription resources to migrate.
+preToPost specifies the prepaid to postpaid conversion.
+postMoveOut specifies the pay-as-you-go resources to be migrated out.
+postMoveIn specifies the pay-as-you-go resources for inbound migration.
                      * @return Action Transaction type
 
-`modifyNetworkMode`: Adjusting bandwidth mode
-`modifyNetworkSize`: Adjusting bandwidth size
-`refund`: Refund
-`downgrade`: Downgrade
-upgrade (upgrade)
-renew
-purchase
-preMoveOut annual and monthly subscription resources
-preMoveIn annual and monthly subscription resources
-preToPost prepaid to postpaid
-postMoveOut move out pay-as-you-go resources
-postMoveIn move in pay-as-you-go resources
-Note: This field may return null, indicating that no valid values can be obtained.
+Modify network mode adjust bandwidth mode.
+Adjust bandwidth size.
+`Refund`: refund.
+downgrade.
+upgrade configuration.
+renew.
+purchase.
+preMoveOut monthly subscription resource migration out.
+preMoveIn specifies the monthly subscription resources to migrate.
+preToPost specifies the prepaid to postpaid conversion.
+postMoveOut specifies the pay-as-you-go resources to be migrated out.
+postMoveIn specifies the pay-as-you-go resources for inbound migration.
                      * 
                      */
                     std::string GetAction() const;
@@ -563,34 +545,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 设置Transaction type
 
-`modifyNetworkMode`: Adjusting bandwidth mode
-`modifyNetworkSize`: Adjusting bandwidth size
-`refund`: Refund
-`downgrade`: Downgrade
-upgrade (upgrade)
-renew
-purchase
-preMoveOut annual and monthly subscription resources
-preMoveIn annual and monthly subscription resources
-preToPost prepaid to postpaid
-postMoveOut move out pay-as-you-go resources
-postMoveIn move in pay-as-you-go resources
-Note: This field may return null, indicating that no valid values can be obtained.
+Modify network mode adjust bandwidth mode.
+Adjust bandwidth size.
+`Refund`: refund.
+downgrade.
+upgrade configuration.
+renew.
+purchase.
+preMoveOut monthly subscription resource migration out.
+preMoveIn specifies the monthly subscription resources to migrate.
+preToPost specifies the prepaid to postpaid conversion.
+postMoveOut specifies the pay-as-you-go resources to be migrated out.
+postMoveIn specifies the pay-as-you-go resources for inbound migration.
                      * @param _action Transaction type
 
-`modifyNetworkMode`: Adjusting bandwidth mode
-`modifyNetworkSize`: Adjusting bandwidth size
-`refund`: Refund
-`downgrade`: Downgrade
-upgrade (upgrade)
-renew
-purchase
-preMoveOut annual and monthly subscription resources
-preMoveIn annual and monthly subscription resources
-preToPost prepaid to postpaid
-postMoveOut move out pay-as-you-go resources
-postMoveIn move in pay-as-you-go resources
-Note: This field may return null, indicating that no valid values can be obtained.
+Modify network mode adjust bandwidth mode.
+Adjust bandwidth size.
+`Refund`: refund.
+downgrade.
+upgrade configuration.
+renew.
+purchase.
+preMoveOut monthly subscription resource migration out.
+preMoveIn specifies the monthly subscription resources to migrate.
+preToPost specifies the prepaid to postpaid conversion.
+postMoveOut specifies the pay-as-you-go resources to be migrated out.
+postMoveIn specifies the pay-as-you-go resources for inbound migration.
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -603,19 +583,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取Product code Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProductName Product code Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Product code chinese name.
+                     * @return ProductName Product code chinese name.
                      * 
                      */
                     std::string GetProductName() const;
 
                     /**
-                     * 设置Product code Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _productName Product code Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Product code chinese name.
+                     * @param _productName Product code chinese name.
                      * 
                      */
                     void SetProductName(const std::string& _productName);
@@ -628,19 +604,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProductNameHasBeenSet() const;
 
                     /**
-                     * 获取Subproduct code Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SubProductName Subproduct code Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Sub-Product code chinese name.
+                     * @return SubProductName Sub-Product code chinese name.
                      * 
                      */
                     std::string GetSubProductName() const;
 
                     /**
-                     * 设置Subproduct code Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _subProductName Subproduct code Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Sub-Product code chinese name.
+                     * @param _subProductName Sub-Product code chinese name.
                      * 
                      */
                     void SetSubProductName(const std::string& _subProductName);
@@ -777,8 +749,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Product code
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_productCode;
                     bool m_productCodeHasBeenSet;
@@ -796,15 +766,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_bigDealIdHasBeenSet;
 
                     /**
-                     * Refund formula
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Refund formula.
                      */
                     std::string m_formula;
                     bool m_formulaHasBeenSet;
 
                     /**
-                     * Refund involves order information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Refund involves order information.
                      */
                     std::string m_refReturnDeals;
                     bool m_refReturnDealsHasBeenSet;
@@ -818,33 +786,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * Transaction type
 
-`modifyNetworkMode`: Adjusting bandwidth mode
-`modifyNetworkSize`: Adjusting bandwidth size
-`refund`: Refund
-`downgrade`: Downgrade
-upgrade (upgrade)
-renew
-purchase
-preMoveOut annual and monthly subscription resources
-preMoveIn annual and monthly subscription resources
-preToPost prepaid to postpaid
-postMoveOut move out pay-as-you-go resources
-postMoveIn move in pay-as-you-go resources
-Note: This field may return null, indicating that no valid values can be obtained.
+Modify network mode adjust bandwidth mode.
+Adjust bandwidth size.
+`Refund`: refund.
+downgrade.
+upgrade configuration.
+renew.
+purchase.
+preMoveOut monthly subscription resource migration out.
+preMoveIn specifies the monthly subscription resources to migrate.
+preToPost specifies the prepaid to postpaid conversion.
+postMoveOut specifies the pay-as-you-go resources to be migrated out.
+postMoveIn specifies the pay-as-you-go resources for inbound migration.
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * Product code Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Product code chinese name.
                      */
                     std::string m_productName;
                     bool m_productNameHasBeenSet;
 
                     /**
-                     * Subproduct code Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Sub-Product code chinese name.
                      */
                     std::string m_subProductName;
                     bool m_subProductNameHasBeenSet;

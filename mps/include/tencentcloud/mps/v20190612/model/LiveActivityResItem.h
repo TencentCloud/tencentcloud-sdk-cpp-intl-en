@@ -50,18 +50,18 @@ namespace TencentCloud
 
                     /**
                      * 获取The output of a live recording task.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LiveRecordTask The output of a live recording task.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     LiveScheduleLiveRecordTaskResult GetLiveRecordTask() const;
 
                     /**
                      * 设置The output of a live recording task.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _liveRecordTask The output of a live recording task.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLiveRecordTask(const LiveScheduleLiveRecordTaskResult& _liveRecordTask);
@@ -102,7 +102,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * The output of a live recording task.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     LiveScheduleLiveRecordTaskResult m_liveRecordTask;
                     bool m_liveRecordTaskHasBeenSet;

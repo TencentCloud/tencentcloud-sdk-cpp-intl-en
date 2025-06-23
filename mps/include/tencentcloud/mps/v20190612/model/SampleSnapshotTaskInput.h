@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input parameter type of a sampled screencapturing task.
+                * Input parameter type of a sampled screenshot task.
                 */
                 class SampleSnapshotTaskInput : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Sampled screencapturing template ID.
-                     * @return Definition Sampled screencapturing template ID.
+                     * 获取Sampled screenshot template ID.
+                     * @return Definition Sampled screenshot template ID.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Sampled screencapturing template ID.
-                     * @param _definition Sampled screencapturing template ID.
+                     * 设置Sampled screenshot template ID.
+                     * @param _definition Sampled screenshot template ID.
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -193,7 +193,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Sampled screencapturing template ID.
+                     * Sampled screenshot template ID.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

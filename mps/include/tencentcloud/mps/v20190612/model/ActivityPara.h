@@ -100,15 +100,15 @@ namespace TencentCloud
                     bool AnimatedGraphicTaskHasBeenSet() const;
 
                     /**
-                     * 获取A time point screencapturing task.
-                     * @return SnapshotByTimeOffsetTask A time point screencapturing task.
+                     * 获取A time point screenshot task.
+                     * @return SnapshotByTimeOffsetTask A time point screenshot task.
                      * 
                      */
                     SnapshotByTimeOffsetTaskInput GetSnapshotByTimeOffsetTask() const;
 
                     /**
-                     * 设置A time point screencapturing task.
-                     * @param _snapshotByTimeOffsetTask A time point screencapturing task.
+                     * 设置A time point screenshot task.
+                     * @param _snapshotByTimeOffsetTask A time point screenshot task.
                      * 
                      */
                     void SetSnapshotByTimeOffsetTask(const SnapshotByTimeOffsetTaskInput& _snapshotByTimeOffsetTask);
@@ -121,15 +121,15 @@ namespace TencentCloud
                     bool SnapshotByTimeOffsetTaskHasBeenSet() const;
 
                     /**
-                     * 获取A sampled screencapturing task.
-                     * @return SampleSnapshotTask A sampled screencapturing task.
+                     * 获取A sampled screenshot task.
+                     * @return SampleSnapshotTask A sampled screenshot task.
                      * 
                      */
                     SampleSnapshotTaskInput GetSampleSnapshotTask() const;
 
                     /**
-                     * 设置A sampled screencapturing task.
-                     * @param _sampleSnapshotTask A sampled screencapturing task.
+                     * 设置A sampled screenshot task.
+                     * @param _sampleSnapshotTask A sampled screenshot task.
                      * 
                      */
                     void SetSampleSnapshotTask(const SampleSnapshotTaskInput& _sampleSnapshotTask);
@@ -142,15 +142,15 @@ namespace TencentCloud
                     bool SampleSnapshotTaskHasBeenSet() const;
 
                     /**
-                     * 获取An image sprite generation task.
-                     * @return ImageSpriteTask An image sprite generation task.
+                     * 获取An image sprite screenshot task.
+                     * @return ImageSpriteTask An image sprite screenshot task.
                      * 
                      */
                     ImageSpriteTaskInput GetImageSpriteTask() const;
 
                     /**
-                     * 设置An image sprite generation task.
-                     * @param _imageSpriteTask An image sprite generation task.
+                     * 设置An image sprite screenshot task.
+                     * @param _imageSpriteTask An image sprite screenshot task.
                      * 
                      */
                     void SetImageSpriteTask(const ImageSpriteTaskInput& _imageSpriteTask);
@@ -311,19 +311,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_animatedGraphicTaskHasBeenSet;
 
                     /**
-                     * A time point screencapturing task.
+                     * A time point screenshot task.
                      */
                     SnapshotByTimeOffsetTaskInput m_snapshotByTimeOffsetTask;
                     bool m_snapshotByTimeOffsetTaskHasBeenSet;
 
                     /**
-                     * A sampled screencapturing task.
+                     * A sampled screenshot task.
                      */
                     SampleSnapshotTaskInput m_sampleSnapshotTask;
                     bool m_sampleSnapshotTaskHasBeenSet;
 
                     /**
-                     * An image sprite generation task.
+                     * An image sprite screenshot task.
                      */
                     ImageSpriteTaskInput m_imageSpriteTask;
                     bool m_imageSpriteTaskHasBeenSet;
