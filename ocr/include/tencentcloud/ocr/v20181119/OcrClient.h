@@ -65,6 +65,8 @@
 #include <tencentcloud/ocr/v20181119/model/RecognizeMacaoIDCardOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizeMainlandIDCardOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizeMainlandIDCardOCRResponse.h>
+#include <tencentcloud/ocr/v20181119/model/RecognizeMexicoVTIDRequest.h>
+#include <tencentcloud/ocr/v20181119/model/RecognizeMexicoVTIDResponse.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizePhilippinesDrivingLicenseOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizePhilippinesDrivingLicenseOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizePhilippinesSssIDOCRRequest.h>
@@ -170,6 +172,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RecognizeMainlandIDCardOCRResponse> RecognizeMainlandIDCardOCROutcome;
                 typedef std::future<RecognizeMainlandIDCardOCROutcome> RecognizeMainlandIDCardOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::RecognizeMainlandIDCardOCRRequest&, RecognizeMainlandIDCardOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizeMainlandIDCardOCRAsyncHandler;
+                typedef Outcome<Core::Error, Model::RecognizeMexicoVTIDResponse> RecognizeMexicoVTIDOutcome;
+                typedef std::future<RecognizeMexicoVTIDOutcome> RecognizeMexicoVTIDOutcomeCallable;
+                typedef std::function<void(const OcrClient*, const Model::RecognizeMexicoVTIDRequest&, RecognizeMexicoVTIDOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizeMexicoVTIDAsyncHandler;
                 typedef Outcome<Core::Error, Model::RecognizePhilippinesDrivingLicenseOCRResponse> RecognizePhilippinesDrivingLicenseOCROutcome;
                 typedef std::future<RecognizePhilippinesDrivingLicenseOCROutcome> RecognizePhilippinesDrivingLicenseOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::RecognizePhilippinesDrivingLicenseOCRRequest&, RecognizePhilippinesDrivingLicenseOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizePhilippinesDrivingLicenseOCRAsyncHandler;
@@ -608,6 +613,15 @@ As shown in the table below. <table style="width:650px"> <thead> <tr> <th width=
                 RecognizeMainlandIDCardOCROutcome RecognizeMainlandIDCardOCR(const Model::RecognizeMainlandIDCardOCRRequest &request);
                 void RecognizeMainlandIDCardOCRAsync(const Model::RecognizeMainlandIDCardOCRRequest& request, const RecognizeMainlandIDCardOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 RecognizeMainlandIDCardOCROutcomeCallable RecognizeMainlandIDCardOCRCallable(const Model::RecognizeMainlandIDCardOCRRequest& request);
+
+                /**
+                 *This interface supports identification of the front and back of Mexican Voter ID Card. The default interface request frequency limit is 5 times per second.
+                 * @param req RecognizeMexicoVTIDRequest
+                 * @return RecognizeMexicoVTIDOutcome
+                 */
+                RecognizeMexicoVTIDOutcome RecognizeMexicoVTID(const Model::RecognizeMexicoVTIDRequest &request);
+                void RecognizeMexicoVTIDAsync(const Model::RecognizeMexicoVTIDRequest& request, const RecognizeMexicoVTIDAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RecognizeMexicoVTIDOutcomeCallable RecognizeMexicoVTIDCallable(const Model::RecognizeMexicoVTIDRequest& request);
 
                 /**
                  *This API is used to recognize a Philippine driver's license.

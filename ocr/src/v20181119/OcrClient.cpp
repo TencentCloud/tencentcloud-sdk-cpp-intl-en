@@ -943,6 +943,49 @@ OcrClient::RecognizeMainlandIDCardOCROutcomeCallable OcrClient::RecognizeMainlan
     return task->get_future();
 }
 
+OcrClient::RecognizeMexicoVTIDOutcome OcrClient::RecognizeMexicoVTID(const RecognizeMexicoVTIDRequest &request)
+{
+    auto outcome = MakeRequest(request, "RecognizeMexicoVTID");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RecognizeMexicoVTIDResponse rsp = RecognizeMexicoVTIDResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RecognizeMexicoVTIDOutcome(rsp);
+        else
+            return RecognizeMexicoVTIDOutcome(o.GetError());
+    }
+    else
+    {
+        return RecognizeMexicoVTIDOutcome(outcome.GetError());
+    }
+}
+
+void OcrClient::RecognizeMexicoVTIDAsync(const RecognizeMexicoVTIDRequest& request, const RecognizeMexicoVTIDAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RecognizeMexicoVTID(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OcrClient::RecognizeMexicoVTIDOutcomeCallable OcrClient::RecognizeMexicoVTIDCallable(const RecognizeMexicoVTIDRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RecognizeMexicoVTIDOutcome()>>(
+        [this, request]()
+        {
+            return this->RecognizeMexicoVTID(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 OcrClient::RecognizePhilippinesDrivingLicenseOCROutcome OcrClient::RecognizePhilippinesDrivingLicenseOCR(const RecognizePhilippinesDrivingLicenseOCRRequest &request)
 {
     auto outcome = MakeRequest(request, "RecognizePhilippinesDrivingLicenseOCR");
