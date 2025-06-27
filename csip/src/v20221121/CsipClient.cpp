@@ -556,6 +556,92 @@ CsipClient::DescribeListenerListOutcomeCallable CsipClient::DescribeListenerList
     return task->get_future();
 }
 
+CsipClient::DescribeOrganizationInfoOutcome CsipClient::DescribeOrganizationInfo(const DescribeOrganizationInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeOrganizationInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeOrganizationInfoResponse rsp = DescribeOrganizationInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeOrganizationInfoOutcome(rsp);
+        else
+            return DescribeOrganizationInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeOrganizationInfoOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeOrganizationInfoAsync(const DescribeOrganizationInfoRequest& request, const DescribeOrganizationInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeOrganizationInfo(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CsipClient::DescribeOrganizationInfoOutcomeCallable CsipClient::DescribeOrganizationInfoCallable(const DescribeOrganizationInfoRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeOrganizationInfoOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeOrganizationInfo(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CsipClient::DescribeOrganizationUserInfoOutcome CsipClient::DescribeOrganizationUserInfo(const DescribeOrganizationUserInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeOrganizationUserInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeOrganizationUserInfoResponse rsp = DescribeOrganizationUserInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeOrganizationUserInfoOutcome(rsp);
+        else
+            return DescribeOrganizationUserInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeOrganizationUserInfoOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeOrganizationUserInfoAsync(const DescribeOrganizationUserInfoRequest& request, const DescribeOrganizationUserInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeOrganizationUserInfo(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CsipClient::DescribeOrganizationUserInfoOutcomeCallable CsipClient::DescribeOrganizationUserInfoCallable(const DescribeOrganizationUserInfoRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeOrganizationUserInfoOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeOrganizationUserInfo(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CsipClient::DescribePublicIpAssetsOutcome CsipClient::DescribePublicIpAssets(const DescribePublicIpAssetsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribePublicIpAssets");
@@ -1065,6 +1151,49 @@ CsipClient::DescribeSearchBugInfoOutcomeCallable CsipClient::DescribeSearchBugIn
         [this, request]()
         {
             return this->DescribeSearchBugInfo(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CsipClient::DescribeSubUserInfoOutcome CsipClient::DescribeSubUserInfo(const DescribeSubUserInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeSubUserInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeSubUserInfoResponse rsp = DescribeSubUserInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeSubUserInfoOutcome(rsp);
+        else
+            return DescribeSubUserInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeSubUserInfoOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeSubUserInfoAsync(const DescribeSubUserInfoRequest& request, const DescribeSubUserInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeSubUserInfo(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CsipClient::DescribeSubUserInfoOutcomeCallable CsipClient::DescribeSubUserInfoCallable(const DescribeSubUserInfoRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeSubUserInfoOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeSubUserInfo(request);
         }
     );
 

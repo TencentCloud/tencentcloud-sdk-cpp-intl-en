@@ -555,7 +555,7 @@ namespace TencentCloud
                 CreateDBOutcomeCallable CreateDBCallable(const Model::CreateDBRequest& request);
 
                 /**
-                 *This API is used to create high-availability instances (local disk)
+                 *This API is used to create high-availability instances (local disk).
                  * @param req CreateDBInstancesRequest
                  * @return CreateDBInstancesOutcome
                  */

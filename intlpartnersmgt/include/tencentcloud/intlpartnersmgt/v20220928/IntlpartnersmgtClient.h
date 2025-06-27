@@ -49,6 +49,8 @@
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryByRegionResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillDetailRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillDetailResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillDetailByDayRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillDetailByDayResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillDownloadUrlRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillDownloadUrlResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillSummaryRequest.h>
@@ -154,6 +156,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeCustomerBillDetailResponse> DescribeCustomerBillDetailOutcome;
                 typedef std::future<DescribeCustomerBillDetailOutcome> DescribeCustomerBillDetailOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeCustomerBillDetailRequest&, DescribeCustomerBillDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomerBillDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCustomerBillDetailByDayResponse> DescribeCustomerBillDetailByDayOutcome;
+                typedef std::future<DescribeCustomerBillDetailByDayOutcome> DescribeCustomerBillDetailByDayOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeCustomerBillDetailByDayRequest&, DescribeCustomerBillDetailByDayOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomerBillDetailByDayAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCustomerBillDownloadUrlResponse> DescribeCustomerBillDownloadUrlOutcome;
                 typedef std::future<DescribeCustomerBillDownloadUrlOutcome> DescribeCustomerBillDownloadUrlOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeCustomerBillDownloadUrlRequest&, DescribeCustomerBillDownloadUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomerBillDownloadUrlAsyncHandler;
@@ -379,6 +384,16 @@ Callable roles: Distributor, Second-level reseller, Reseller.
                 DescribeCustomerBillDetailOutcome DescribeCustomerBillDetail(const Model::DescribeCustomerBillDetailRequest &request);
                 void DescribeCustomerBillDetailAsync(const Model::DescribeCustomerBillDetailRequest& request, const DescribeCustomerBillDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeCustomerBillDetailOutcomeCallable DescribeCustomerBillDetailCallable(const Model::DescribeCustomerBillDetailRequest& request);
+
+                /**
+                 *This API is used to query the daily bill expenditure of cu by resellers.
+Invocation Role: first-level reseller, second-level reseller, reseller.
+                 * @param req DescribeCustomerBillDetailByDayRequest
+                 * @return DescribeCustomerBillDetailByDayOutcome
+                 */
+                DescribeCustomerBillDetailByDayOutcome DescribeCustomerBillDetailByDay(const Model::DescribeCustomerBillDetailByDayRequest &request);
+                void DescribeCustomerBillDetailByDayAsync(const Model::DescribeCustomerBillDetailByDayRequest& request, const DescribeCustomerBillDetailByDayAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCustomerBillDetailByDayOutcomeCallable DescribeCustomerBillDetailByDayCallable(const Model::DescribeCustomerBillDetailByDayRequest& request);
 
                 /**
                  *This API is used to get the URL for downloading the customer bill file by reseller. The download conditions are as follows:

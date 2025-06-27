@@ -47,6 +47,10 @@
 #include <tencentcloud/csip/v20221121/model/DescribeDomainAssetsResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeListenerListRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeListenerListResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeOrganizationInfoRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeOrganizationInfoResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeOrganizationUserInfoRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeOrganizationUserInfoResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribePublicIpAssetsRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribePublicIpAssetsResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeRiskCenterAssetViewCFGRiskListRequest.h>
@@ -71,6 +75,8 @@
 #include <tencentcloud/csip/v20221121/model/DescribeScanTaskListResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeSearchBugInfoRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeSearchBugInfoResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeSubUserInfoRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeSubUserInfoResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeSubnetAssetsRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeSubnetAssetsResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeTaskLogListRequest.h>
@@ -135,6 +141,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeListenerListResponse> DescribeListenerListOutcome;
                 typedef std::future<DescribeListenerListOutcome> DescribeListenerListOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeListenerListRequest&, DescribeListenerListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeListenerListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeOrganizationInfoResponse> DescribeOrganizationInfoOutcome;
+                typedef std::future<DescribeOrganizationInfoOutcome> DescribeOrganizationInfoOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeOrganizationInfoRequest&, DescribeOrganizationInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOrganizationInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeOrganizationUserInfoResponse> DescribeOrganizationUserInfoOutcome;
+                typedef std::future<DescribeOrganizationUserInfoOutcome> DescribeOrganizationUserInfoOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeOrganizationUserInfoRequest&, DescribeOrganizationUserInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOrganizationUserInfoAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribePublicIpAssetsResponse> DescribePublicIpAssetsOutcome;
                 typedef std::future<DescribePublicIpAssetsOutcome> DescribePublicIpAssetsOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribePublicIpAssetsRequest&, DescribePublicIpAssetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePublicIpAssetsAsyncHandler;
@@ -171,6 +183,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeSearchBugInfoResponse> DescribeSearchBugInfoOutcome;
                 typedef std::future<DescribeSearchBugInfoOutcome> DescribeSearchBugInfoOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeSearchBugInfoRequest&, DescribeSearchBugInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSearchBugInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSubUserInfoResponse> DescribeSubUserInfoOutcome;
+                typedef std::future<DescribeSubUserInfoOutcome> DescribeSubUserInfoOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeSubUserInfoRequest&, DescribeSubUserInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSubUserInfoAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeSubnetAssetsResponse> DescribeSubnetAssetsOutcome;
                 typedef std::future<DescribeSubnetAssetsOutcome> DescribeSubnetAssetsOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeSubnetAssetsRequest&, DescribeSubnetAssetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSubnetAssetsAsyncHandler;
@@ -304,6 +319,24 @@ namespace TencentCloud
                 DescribeListenerListOutcomeCallable DescribeListenerListCallable(const Model::DescribeListenerListRequest& request);
 
                 /**
+                 *Check group account details
+                 * @param req DescribeOrganizationInfoRequest
+                 * @return DescribeOrganizationInfoOutcome
+                 */
+                DescribeOrganizationInfoOutcome DescribeOrganizationInfo(const Model::DescribeOrganizationInfoRequest &request);
+                void DescribeOrganizationInfoAsync(const Model::DescribeOrganizationInfoRequest& request, const DescribeOrganizationInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeOrganizationInfoOutcomeCallable DescribeOrganizationInfoCallable(const Model::DescribeOrganizationInfoRequest& request);
+
+                /**
+                 *Query group account user list
+                 * @param req DescribeOrganizationUserInfoRequest
+                 * @return DescribeOrganizationUserInfoOutcome
+                 */
+                DescribeOrganizationUserInfoOutcome DescribeOrganizationUserInfo(const Model::DescribeOrganizationUserInfoRequest &request);
+                void DescribeOrganizationUserInfoAsync(const Model::DescribeOrganizationUserInfoRequest& request, const DescribeOrganizationUserInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeOrganizationUserInfoOutcomeCallable DescribeOrganizationUserInfoCallable(const Model::DescribeOrganizationUserInfoRequest& request);
+
+                /**
                  *This API is used to query the list of public IP assets.
                  * @param req DescribePublicIpAssetsRequest
                  * @return DescribePublicIpAssetsOutcome
@@ -410,6 +443,15 @@ namespace TencentCloud
                 DescribeSearchBugInfoOutcome DescribeSearchBugInfo(const Model::DescribeSearchBugInfoRequest &request);
                 void DescribeSearchBugInfoAsync(const Model::DescribeSearchBugInfoRequest& request, const DescribeSearchBugInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeSearchBugInfoOutcomeCallable DescribeSearchBugInfoCallable(const Model::DescribeSearchBugInfoRequest& request);
+
+                /**
+                 *Query the group's sub-account list
+                 * @param req DescribeSubUserInfoRequest
+                 * @return DescribeSubUserInfoOutcome
+                 */
+                DescribeSubUserInfoOutcome DescribeSubUserInfo(const Model::DescribeSubUserInfoRequest &request);
+                void DescribeSubUserInfoAsync(const Model::DescribeSubUserInfoRequest& request, const DescribeSubUserInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSubUserInfoOutcomeCallable DescribeSubUserInfoCallable(const Model::DescribeSubUserInfoRequest& request);
 
                 /**
                  *This API is used to get the list of subnets.

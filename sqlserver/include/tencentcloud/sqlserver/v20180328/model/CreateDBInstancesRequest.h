@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API
-                     * @return Zone Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API
+                     * 获取Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API.
+                     * @return Zone Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API.
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API
-                     * @param _zone Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API
+                     * 设置Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API.
+                     * @param _zone Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API.
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Instance memory size in GB
-                     * @return Memory Instance memory size in GB
+                     * 获取Instance memory size in GB.
+                     * @return Memory Instance memory size in GB.
                      * 
                      */
                     int64_t GetMemory() const;
 
                     /**
-                     * 设置Instance memory size in GB
-                     * @param _memory Instance memory size in GB
+                     * 设置Instance memory size in GB.
+                     * @param _memory Instance memory size in GB.
                      * 
                      */
                     void SetMemory(const int64_t& _memory);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Instance storage capacity in GB
-                     * @return Storage Instance storage capacity in GB
+                     * 获取Instance storage capacity in GB.
+                     * @return Storage Instance storage capacity in GB.
                      * 
                      */
                     int64_t GetStorage() const;
 
                     /**
-                     * 设置Instance storage capacity in GB
-                     * @param _storage Instance storage capacity in GB
+                     * 设置Instance storage capacity in GB.
+                     * @param _storage Instance storage capacity in GB.
                      * 
                      */
                     void SetStorage(const int64_t& _storage);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool InstanceChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Project ID
-                     * @return ProjectId Project ID
+                     * 获取Project ID.
+                     * @return ProjectId Project ID.
                      * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID
-                     * @param _projectId Project ID
+                     * 设置Project ID.
+                     * @param _projectId Project ID.
                      * 
                      */
                     void SetProjectId(const int64_t& _projectId);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Number of instances purchased this time. Default value: 1. Maximum value: 10
-                     * @return GoodsNum Number of instances purchased this time. Default value: 1. Maximum value: 10
+                     * 获取Number of instances purchased this time. Default value: 1. Maximum value: 10.
+                     * @return GoodsNum Number of instances purchased this time. Default value: 1. Maximum value: 10.
                      * 
                      */
                     int64_t GetGoodsNum() const;
 
                     /**
-                     * 设置Number of instances purchased this time. Default value: 1. Maximum value: 10
-                     * @param _goodsNum Number of instances purchased this time. Default value: 1. Maximum value: 10
+                     * 设置Number of instances purchased this time. Default value: 1. Maximum value: 10.
+                     * @param _goodsNum Number of instances purchased this time. Default value: 1. Maximum value: 10.
                      * 
                      */
                     void SetGoodsNum(const int64_t& _goodsNum);
@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool GoodsNumHasBeenSet() const;
 
                     /**
-                     * 获取VPC subnet ID in the format of subnet-bdoe83fa. `SubnetId` and `VpcId` should be set or ignored simultaneously
-                     * @return SubnetId VPC subnet ID in the format of subnet-bdoe83fa. `SubnetId` and `VpcId` should be set or ignored simultaneously
+                     * 获取VPC subnet ID in the format of subnet-bdoe83fa. `SubnetId` and `VpcId` should be set or ignored simultaneously.
+                     * @return SubnetId VPC subnet ID in the format of subnet-bdoe83fa. `SubnetId` and `VpcId` should be set or ignored simultaneously.
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置VPC subnet ID in the format of subnet-bdoe83fa. `SubnetId` and `VpcId` should be set or ignored simultaneously
-                     * @param _subnetId VPC subnet ID in the format of subnet-bdoe83fa. `SubnetId` and `VpcId` should be set or ignored simultaneously
+                     * 设置VPC subnet ID in the format of subnet-bdoe83fa. `SubnetId` and `VpcId` should be set or ignored simultaneously.
+                     * @param _subnetId VPC subnet ID in the format of subnet-bdoe83fa. `SubnetId` and `VpcId` should be set or ignored simultaneously.
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID in the format of vpc-dsp338hz. `SubnetId` and `VpcId` should be set or ignored simultaneously
-                     * @return VpcId VPC ID in the format of vpc-dsp338hz. `SubnetId` and `VpcId` should be set or ignored simultaneously
+                     * 获取VPC ID in the format of vpc-dsp338hz. `SubnetId` and `VpcId` should be set or ignored simultaneously.
+                     * @return VpcId VPC ID in the format of vpc-dsp338hz. `SubnetId` and `VpcId` should be set or ignored simultaneously.
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC ID in the format of vpc-dsp338hz. `SubnetId` and `VpcId` should be set or ignored simultaneously
-                     * @param _vpcId VPC ID in the format of vpc-dsp338hz. `SubnetId` and `VpcId` should be set or ignored simultaneously
+                     * 设置VPC ID in the format of vpc-dsp338hz. `SubnetId` and `VpcId` should be set or ignored simultaneously.
+                     * @param _vpcId VPC ID in the format of vpc-dsp338hz. `SubnetId` and `VpcId` should be set or ignored simultaneously.
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -212,15 +212,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48
-                     * @return Period Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48
+                     * 获取Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48.
+                     * @return Period Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48.
                      * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
-                     * 设置Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48
-                     * @param _period Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48
+                     * 设置Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48.
+                     * @param _period Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48.
                      * 
                      */
                     void SetPeriod(const int64_t& _period);
@@ -233,15 +233,15 @@ namespace TencentCloud
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取Whether to automatically use voucher. 0: no, 1: yes. Default value: no
-                     * @return AutoVoucher Whether to automatically use voucher. 0: no, 1: yes. Default value: no
+                     * 获取Whether to automatically use voucher. 0: no, 1: yes. Default value: no.
+                     * @return AutoVoucher Whether to automatically use voucher. 0: no, 1: yes. Default value: no.
                      * 
                      */
                     int64_t GetAutoVoucher() const;
 
                     /**
-                     * 设置Whether to automatically use voucher. 0: no, 1: yes. Default value: no
-                     * @param _autoVoucher Whether to automatically use voucher. 0: no, 1: yes. Default value: no
+                     * 设置Whether to automatically use voucher. 0: no, 1: yes. Default value: no.
+                     * @param _autoVoucher Whether to automatically use voucher. 0: no, 1: yes. Default value: no.
                      * 
                      */
                     void SetAutoVoucher(const int64_t& _autoVoucher);
@@ -254,15 +254,15 @@ namespace TencentCloud
                     bool AutoVoucherHasBeenSet() const;
 
                     /**
-                     * 获取Array of voucher IDs (currently, only one voucher can be used per order)
-                     * @return VoucherIds Array of voucher IDs (currently, only one voucher can be used per order)
+                     * 获取Array of voucher IDs (currently, only one voucher can be used per order).
+                     * @return VoucherIds Array of voucher IDs (currently, only one voucher can be used per order).
                      * 
                      */
                     std::vector<std::string> GetVoucherIds() const;
 
                     /**
-                     * 设置Array of voucher IDs (currently, only one voucher can be used per order)
-                     * @param _voucherIds Array of voucher IDs (currently, only one voucher can be used per order)
+                     * 设置Array of voucher IDs (currently, only one voucher can be used per order).
+                     * @param _voucherIds Array of voucher IDs (currently, only one voucher can be used per order).
                      * 
                      */
                     void SetVoucherIds(const std::vector<std::string>& _voucherIds);
@@ -443,15 +443,15 @@ namespace TencentCloud
                     bool MultiZonesHasBeenSet() const;
 
                     /**
-                     * 获取Tags associated with the instances to be created
-                     * @return ResourceTags Tags associated with the instances to be created
+                     * 获取Tags associated with the instances to be created.
+                     * @return ResourceTags Tags associated with the instances to be created.
                      * 
                      */
                     std::vector<ResourceTag> GetResourceTags() const;
 
                     /**
-                     * 设置Tags associated with the instances to be created
-                     * @param _resourceTags Tags associated with the instances to be created
+                     * 设置Tags associated with the instances to be created.
+                     * @param _resourceTags Tags associated with the instances to be created.
                      * 
                      */
                     void SetResourceTags(const std::vector<ResourceTag>& _resourceTags);
@@ -505,22 +505,64 @@ namespace TencentCloud
                      */
                     bool TimeZoneHasBeenSet() const;
 
+                    /**
+                     * 获取Whether it is a multi-node architecture instance. Default value: `false`.If MultiNodes = true, the value of the MultiZones parameter must be true.
+                     * @return MultiNodes Whether it is a multi-node architecture instance. Default value: `false`.If MultiNodes = true, the value of the MultiZones parameter must be true.
+                     * 
+                     */
+                    bool GetMultiNodes() const;
+
+                    /**
+                     * 设置Whether it is a multi-node architecture instance. Default value: `false`.If MultiNodes = true, the value of the MultiZones parameter must be true.
+                     * @param _multiNodes Whether it is a multi-node architecture instance. Default value: `false`.If MultiNodes = true, the value of the MultiZones parameter must be true.
+                     * 
+                     */
+                    void SetMultiNodes(const bool& _multiNodes);
+
+                    /**
+                     * 判断参数 MultiNodes 是否已赋值
+                     * @return MultiNodes 是否已赋值
+                     * 
+                     */
+                    bool MultiNodesHasBeenSet() const;
+
+                    /**
+                     * 获取The zone in which the standby node is available. Default is empty. When MultiNodes = true, the availability zones of the primary and standby nodes cannot all be the same. The minimum number of availability zones for the standby nodes is 2, and the maximum is 5.
+                     * @return DrZones The zone in which the standby node is available. Default is empty. When MultiNodes = true, the availability zones of the primary and standby nodes cannot all be the same. The minimum number of availability zones for the standby nodes is 2, and the maximum is 5.
+                     * 
+                     */
+                    std::vector<std::string> GetDrZones() const;
+
+                    /**
+                     * 设置The zone in which the standby node is available. Default is empty. When MultiNodes = true, the availability zones of the primary and standby nodes cannot all be the same. The minimum number of availability zones for the standby nodes is 2, and the maximum is 5.
+                     * @param _drZones The zone in which the standby node is available. Default is empty. When MultiNodes = true, the availability zones of the primary and standby nodes cannot all be the same. The minimum number of availability zones for the standby nodes is 2, and the maximum is 5.
+                     * 
+                     */
+                    void SetDrZones(const std::vector<std::string>& _drZones);
+
+                    /**
+                     * 判断参数 DrZones 是否已赋值
+                     * @return DrZones 是否已赋值
+                     * 
+                     */
+                    bool DrZonesHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API
+                     * Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API.
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Instance memory size in GB
+                     * Instance memory size in GB.
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Instance storage capacity in GB
+                     * Instance storage capacity in GB.
                      */
                     int64_t m_storage;
                     bool m_storageHasBeenSet;
@@ -532,43 +574,43 @@ namespace TencentCloud
                     bool m_instanceChargeTypeHasBeenSet;
 
                     /**
-                     * Project ID
+                     * Project ID.
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Number of instances purchased this time. Default value: 1. Maximum value: 10
+                     * Number of instances purchased this time. Default value: 1. Maximum value: 10.
                      */
                     int64_t m_goodsNum;
                     bool m_goodsNumHasBeenSet;
 
                     /**
-                     * VPC subnet ID in the format of subnet-bdoe83fa. `SubnetId` and `VpcId` should be set or ignored simultaneously
+                     * VPC subnet ID in the format of subnet-bdoe83fa. `SubnetId` and `VpcId` should be set or ignored simultaneously.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * VPC ID in the format of vpc-dsp338hz. `SubnetId` and `VpcId` should be set or ignored simultaneously
+                     * VPC ID in the format of vpc-dsp338hz. `SubnetId` and `VpcId` should be set or ignored simultaneously.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48
+                     * Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48.
                      */
                     int64_t m_period;
                     bool m_periodHasBeenSet;
 
                     /**
-                     * Whether to automatically use voucher. 0: no, 1: yes. Default value: no
+                     * Whether to automatically use voucher. 0: no, 1: yes. Default value: no.
                      */
                     int64_t m_autoVoucher;
                     bool m_autoVoucherHasBeenSet;
 
                     /**
-                     * Array of voucher IDs (currently, only one voucher can be used per order)
+                     * Array of voucher IDs (currently, only one voucher can be used per order).
                      */
                     std::vector<std::string> m_voucherIds;
                     bool m_voucherIdsHasBeenSet;
@@ -622,7 +664,7 @@ namespace TencentCloud
                     bool m_multiZonesHasBeenSet;
 
                     /**
-                     * Tags associated with the instances to be created
+                     * Tags associated with the instances to be created.
                      */
                     std::vector<ResourceTag> m_resourceTags;
                     bool m_resourceTagsHasBeenSet;
@@ -638,6 +680,18 @@ namespace TencentCloud
                      */
                     std::string m_timeZone;
                     bool m_timeZoneHasBeenSet;
+
+                    /**
+                     * Whether it is a multi-node architecture instance. Default value: `false`.If MultiNodes = true, the value of the MultiZones parameter must be true.
+                     */
+                    bool m_multiNodes;
+                    bool m_multiNodesHasBeenSet;
+
+                    /**
+                     * The zone in which the standby node is available. Default is empty. When MultiNodes = true, the availability zones of the primary and standby nodes cannot all be the same. The minimum number of availability zones for the standby nodes is 2, and the maximum is 5.
+                     */
+                    std::vector<std::string> m_drZones;
+                    bool m_drZonesHasBeenSet;
 
                 };
             }

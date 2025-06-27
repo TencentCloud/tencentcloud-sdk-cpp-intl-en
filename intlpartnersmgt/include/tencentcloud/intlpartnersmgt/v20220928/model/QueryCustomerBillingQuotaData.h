@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total credit limit (unit: cny), accurate down to two decimal places.
-                     * @return TotalCredit Total credit limit (unit: cny), accurate down to two decimal places.
+                     * 获取Total credit limit (unit: usd), accurate down to two decimal places.
+                     * @return TotalCredit Total credit limit (unit: usd), accurate down to two decimal places.
                      * 
                      */
                     double GetTotalCredit() const;
 
                     /**
-                     * 设置Total credit limit (unit: cny), accurate down to two decimal places.
-                     * @param _totalCredit Total credit limit (unit: cny), accurate down to two decimal places.
+                     * 设置Total credit limit (unit: usd), accurate down to two decimal places.
+                     * @param _totalCredit Total credit limit (unit: usd), accurate down to two decimal places.
                      * 
                      */
                     void SetTotalCredit(const double& _totalCredit);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TotalCreditHasBeenSet() const;
 
                     /**
-                     * 获取Remaining credit limit (unit: cny), accurate down to two decimal places.
-                     * @return RemainingCredit Remaining credit limit (unit: cny), accurate down to two decimal places.
+                     * 获取Remaining credit limit (unit: usd), accurate down to two decimal places.
+                     * @return RemainingCredit Remaining credit limit (unit: usd), accurate down to two decimal places.
                      * 
                      */
                     double GetRemainingCredit() const;
 
                     /**
-                     * 设置Remaining credit limit (unit: cny), accurate down to two decimal places.
-                     * @param _remainingCredit Remaining credit limit (unit: cny), accurate down to two decimal places.
+                     * 设置Remaining credit limit (unit: usd), accurate down to two decimal places.
+                     * @param _remainingCredit Remaining credit limit (unit: usd), accurate down to two decimal places.
                      * 
                      */
                     void SetRemainingCredit(const double& _remainingCredit);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool RemainingCreditHasBeenSet() const;
 
                     /**
-                     * 获取Remaining total voucher amount (unit: cny), accurate down to two decimal places.
-                     * @return RemainingVoucher Remaining total voucher amount (unit: cny), accurate down to two decimal places.
+                     * 获取Remaining total voucher amount (unit: usd), accurate down to two decimal places.
+                     * @return RemainingVoucher Remaining total voucher amount (unit: usd), accurate down to two decimal places.
                      * 
                      */
                     double GetRemainingVoucher() const;
 
                     /**
-                     * 设置Remaining total voucher amount (unit: cny), accurate down to two decimal places.
-                     * @param _remainingVoucher Remaining total voucher amount (unit: cny), accurate down to two decimal places.
+                     * 设置Remaining total voucher amount (unit: usd), accurate down to two decimal places.
+                     * @param _remainingVoucher Remaining total voucher amount (unit: usd), accurate down to two decimal places.
                      * 
                      */
                     void SetRemainingVoucher(const double& _remainingVoucher);
@@ -110,22 +110,18 @@ namespace TencentCloud
                     bool RemainingVoucherHasBeenSet() const;
 
                     /**
-                     * 获取Forced status
-.
+                     * 获取Forced status.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Force Forced status
-.
+                     * @return Force Forced status.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetForce() const;
 
                     /**
-                     * 设置Forced status
-.
+                     * 设置Forced status.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _force Forced status
-.
+                     * @param _force Forced status.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -183,26 +179,25 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Total credit limit (unit: cny), accurate down to two decimal places.
+                     * Total credit limit (unit: usd), accurate down to two decimal places.
                      */
                     double m_totalCredit;
                     bool m_totalCreditHasBeenSet;
 
                     /**
-                     * Remaining credit limit (unit: cny), accurate down to two decimal places.
+                     * Remaining credit limit (unit: usd), accurate down to two decimal places.
                      */
                     double m_remainingCredit;
                     bool m_remainingCreditHasBeenSet;
 
                     /**
-                     * Remaining total voucher amount (unit: cny), accurate down to two decimal places.
+                     * Remaining total voucher amount (unit: usd), accurate down to two decimal places.
                      */
                     double m_remainingVoucher;
                     bool m_remainingVoucherHasBeenSet;
 
                     /**
-                     * Forced status
-.
+                     * Forced status.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_force;

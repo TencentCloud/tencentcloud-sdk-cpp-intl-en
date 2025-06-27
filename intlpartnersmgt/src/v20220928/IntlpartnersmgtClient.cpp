@@ -599,6 +599,49 @@ IntlpartnersmgtClient::DescribeCustomerBillDetailOutcomeCallable Intlpartnersmgt
     return task->get_future();
 }
 
+IntlpartnersmgtClient::DescribeCustomerBillDetailByDayOutcome IntlpartnersmgtClient::DescribeCustomerBillDetailByDay(const DescribeCustomerBillDetailByDayRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCustomerBillDetailByDay");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCustomerBillDetailByDayResponse rsp = DescribeCustomerBillDetailByDayResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCustomerBillDetailByDayOutcome(rsp);
+        else
+            return DescribeCustomerBillDetailByDayOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCustomerBillDetailByDayOutcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::DescribeCustomerBillDetailByDayAsync(const DescribeCustomerBillDetailByDayRequest& request, const DescribeCustomerBillDetailByDayAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCustomerBillDetailByDay(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IntlpartnersmgtClient::DescribeCustomerBillDetailByDayOutcomeCallable IntlpartnersmgtClient::DescribeCustomerBillDetailByDayCallable(const DescribeCustomerBillDetailByDayRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCustomerBillDetailByDayOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCustomerBillDetailByDay(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 IntlpartnersmgtClient::DescribeCustomerBillDownloadUrlOutcome IntlpartnersmgtClient::DescribeCustomerBillDownloadUrl(const DescribeCustomerBillDownloadUrlRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeCustomerBillDownloadUrl");

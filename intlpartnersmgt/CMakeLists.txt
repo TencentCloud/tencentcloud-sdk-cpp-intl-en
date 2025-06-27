@@ -88,6 +88,7 @@ set(intlpartnersmgt_public_header_model
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillDetailResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryCreditAllocationHistoryRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerUinResponse.h
+  include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillDetailByDayResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/ApproveClientApplyRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/ApproveSubAgentApplyRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillDetailRequest.h
@@ -118,6 +119,7 @@ set(intlpartnersmgt_public_header_model
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryVoucherListByUinVoucherItem.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/ModifyClientRemarkRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryPendingSubAgentsV2Response.h
+  include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillDetailByDayRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/BillDetailData.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryCustomerBillingQuotaRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerInfoData.h
@@ -197,6 +199,7 @@ set(intlpartnersmgt_src
   src/v20220928/model/DescribeBillDetailResponse.cpp
   src/v20220928/model/QueryCreditAllocationHistoryRequest.cpp
   src/v20220928/model/DescribeCustomerUinResponse.cpp
+  src/v20220928/model/DescribeCustomerBillDetailByDayResponse.cpp
   src/v20220928/model/ApproveClientApplyRequest.cpp
   src/v20220928/model/ApproveSubAgentApplyRequest.cpp
   src/v20220928/model/DescribeCustomerBillDetailRequest.cpp
@@ -227,6 +230,7 @@ set(intlpartnersmgt_src
   src/v20220928/model/QueryVoucherListByUinVoucherItem.cpp
   src/v20220928/model/ModifyClientRemarkRequest.cpp
   src/v20220928/model/QueryPendingSubAgentsV2Response.cpp
+  src/v20220928/model/DescribeCustomerBillDetailByDayRequest.cpp
   src/v20220928/model/BillDetailData.cpp
   src/v20220928/model/QueryCustomerBillingQuotaRequest.cpp
   src/v20220928/model/DescribeCustomerInfoData.cpp
