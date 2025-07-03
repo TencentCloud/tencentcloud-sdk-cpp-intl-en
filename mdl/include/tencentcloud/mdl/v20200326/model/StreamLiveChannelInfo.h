@@ -37,6 +37,7 @@
 #include <tencentcloud/mdl/v20200326/model/InputAnalysisInfo.h>
 #include <tencentcloud/mdl/v20200326/model/Tag.h>
 #include <tencentcloud/mdl/v20200326/model/FrameCaptureTemplate.h>
+#include <tencentcloud/mdl/v20200326/model/GeneralSetting.h>
 
 
 namespace TencentCloud
@@ -240,15 +241,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool AVTemplatesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CaptionTemplates 
+                     * 获取Caption templates.
+                     * @return CaptionTemplates Caption templates.
                      * 
                      */
                     std::vector<SubtitleConf> GetCaptionTemplates() const;
 
                     /**
-                     * 设置
-                     * @param _captionTemplates 
+                     * 设置Caption templates.
+                     * @param _captionTemplates Caption templates.
                      * 
                      */
                     void SetCaptionTemplates(const std::vector<SubtitleConf>& _captionTemplates);
@@ -415,6 +416,27 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool FrameCaptureTemplatesHasBeenSet() const;
 
+                    /**
+                     * 获取General settings.
+                     * @return GeneralSettings General settings.
+                     * 
+                     */
+                    GeneralSetting GetGeneralSettings() const;
+
+                    /**
+                     * 设置General settings.
+                     * @param _generalSettings General settings.
+                     * 
+                     */
+                    void SetGeneralSettings(const GeneralSetting& _generalSettings);
+
+                    /**
+                     * 判断参数 GeneralSettings 是否已赋值
+                     * @return GeneralSettings 是否已赋值
+                     * 
+                     */
+                    bool GeneralSettingsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -469,7 +491,7 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool m_aVTemplatesHasBeenSet;
 
                     /**
-                     * 
+                     * Caption templates.
                      */
                     std::vector<SubtitleConf> m_captionTemplates;
                     bool m_captionTemplatesHasBeenSet;
@@ -517,6 +539,12 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::vector<FrameCaptureTemplate> m_frameCaptureTemplates;
                     bool m_frameCaptureTemplatesHasBeenSet;
+
+                    /**
+                     * General settings.
+                     */
+                    GeneralSetting m_generalSettings;
+                    bool m_generalSettingsHasBeenSet;
 
                 };
             }

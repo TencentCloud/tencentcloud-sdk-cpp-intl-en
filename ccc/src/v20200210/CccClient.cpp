@@ -771,6 +771,49 @@ CccClient::CreateStaffOutcomeCallable CccClient::CreateStaffCallable(const Creat
     return task->get_future();
 }
 
+CccClient::DeleteCCCSkillGroupOutcome CccClient::DeleteCCCSkillGroup(const DeleteCCCSkillGroupRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteCCCSkillGroup");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteCCCSkillGroupResponse rsp = DeleteCCCSkillGroupResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteCCCSkillGroupOutcome(rsp);
+        else
+            return DeleteCCCSkillGroupOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteCCCSkillGroupOutcome(outcome.GetError());
+    }
+}
+
+void CccClient::DeleteCCCSkillGroupAsync(const DeleteCCCSkillGroupRequest& request, const DeleteCCCSkillGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteCCCSkillGroup(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CccClient::DeleteCCCSkillGroupOutcomeCallable CccClient::DeleteCCCSkillGroupCallable(const DeleteCCCSkillGroupRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteCCCSkillGroupOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteCCCSkillGroup(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CccClient::DeleteExtensionOutcome CccClient::DeleteExtension(const DeleteExtensionRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteExtension");
@@ -936,6 +979,49 @@ CccClient::DescribeAICallExtractResultOutcomeCallable CccClient::DescribeAICallE
         [this, request]()
         {
             return this->DescribeAICallExtractResult(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CccClient::DescribeAILatencyOutcome CccClient::DescribeAILatency(const DescribeAILatencyRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAILatency");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAILatencyResponse rsp = DescribeAILatencyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAILatencyOutcome(rsp);
+        else
+            return DescribeAILatencyOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAILatencyOutcome(outcome.GetError());
+    }
+}
+
+void CccClient::DescribeAILatencyAsync(const DescribeAILatencyRequest& request, const DescribeAILatencyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeAILatency(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CccClient::DescribeAILatencyOutcomeCallable CccClient::DescribeAILatencyCallable(const DescribeAILatencyRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeAILatencyOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeAILatency(request);
         }
     );
 
@@ -1889,6 +1975,49 @@ CccClient::DisableCCCPhoneNumberOutcomeCallable CccClient::DisableCCCPhoneNumber
     return task->get_future();
 }
 
+CccClient::ForceMemberOfflineOutcome CccClient::ForceMemberOffline(const ForceMemberOfflineRequest &request)
+{
+    auto outcome = MakeRequest(request, "ForceMemberOffline");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ForceMemberOfflineResponse rsp = ForceMemberOfflineResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ForceMemberOfflineOutcome(rsp);
+        else
+            return ForceMemberOfflineOutcome(o.GetError());
+    }
+    else
+    {
+        return ForceMemberOfflineOutcome(outcome.GetError());
+    }
+}
+
+void CccClient::ForceMemberOfflineAsync(const ForceMemberOfflineRequest& request, const ForceMemberOfflineAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ForceMemberOffline(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CccClient::ForceMemberOfflineOutcomeCallable CccClient::ForceMemberOfflineCallable(const ForceMemberOfflineRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ForceMemberOfflineOutcome()>>(
+        [this, request]()
+        {
+            return this->ForceMemberOffline(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CccClient::HangUpCallOutcome CccClient::HangUpCall(const HangUpCallRequest &request)
 {
     auto outcome = MakeRequest(request, "HangUpCall");
@@ -2190,6 +2319,49 @@ CccClient::ResetExtensionPasswordOutcomeCallable CccClient::ResetExtensionPasswo
     return task->get_future();
 }
 
+CccClient::RestoreMemberOnlineOutcome CccClient::RestoreMemberOnline(const RestoreMemberOnlineRequest &request)
+{
+    auto outcome = MakeRequest(request, "RestoreMemberOnline");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RestoreMemberOnlineResponse rsp = RestoreMemberOnlineResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RestoreMemberOnlineOutcome(rsp);
+        else
+            return RestoreMemberOnlineOutcome(o.GetError());
+    }
+    else
+    {
+        return RestoreMemberOnlineOutcome(outcome.GetError());
+    }
+}
+
+void CccClient::RestoreMemberOnlineAsync(const RestoreMemberOnlineRequest& request, const RestoreMemberOnlineAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RestoreMemberOnline(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CccClient::RestoreMemberOnlineOutcomeCallable CccClient::RestoreMemberOnlineCallable(const RestoreMemberOnlineRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RestoreMemberOnlineOutcome()>>(
+        [this, request]()
+        {
+            return this->RestoreMemberOnline(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CccClient::ResumePredictiveDialingCampaignOutcome CccClient::ResumePredictiveDialingCampaign(const ResumePredictiveDialingCampaignRequest &request)
 {
     auto outcome = MakeRequest(request, "ResumePredictiveDialingCampaign");
@@ -2269,6 +2441,49 @@ CccClient::StopAutoCalloutTaskOutcomeCallable CccClient::StopAutoCalloutTaskCall
         [this, request]()
         {
             return this->StopAutoCalloutTask(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CccClient::TransferToManualOutcome CccClient::TransferToManual(const TransferToManualRequest &request)
+{
+    auto outcome = MakeRequest(request, "TransferToManual");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        TransferToManualResponse rsp = TransferToManualResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return TransferToManualOutcome(rsp);
+        else
+            return TransferToManualOutcome(o.GetError());
+    }
+    else
+    {
+        return TransferToManualOutcome(outcome.GetError());
+    }
+}
+
+void CccClient::TransferToManualAsync(const TransferToManualRequest& request, const TransferToManualAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->TransferToManual(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CccClient::TransferToManualOutcomeCallable CccClient::TransferToManualCallable(const TransferToManualRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<TransferToManualOutcome()>>(
+        [this, request]()
+        {
+            return this->TransferToManual(request);
         }
     );
 

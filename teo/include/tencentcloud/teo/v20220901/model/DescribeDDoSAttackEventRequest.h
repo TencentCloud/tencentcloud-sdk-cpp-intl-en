@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start time. Time range: 30 days.
-                     * @return StartTime Start time. Time range: 30 days.
+                     * 获取The start time.
+                     * @return StartTime The start time.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start time. Time range: 30 days.
-                     * @param _startTime Start time. Time range: 30 days.
+                     * 设置The start time.
+                     * @param _startTime The start time.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time. Time range: 30 days.
-                     * @return EndTime End time. Time range: 30 days.
+                     * 获取The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+                     * @return EndTime The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time. Time range: 30 days.
-                     * @param _endTime End time. Time range: 30 days.
+                     * 设置The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+                     * @param _endTime The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool PolicyIdsHasBeenSet() const;
 
                     /**
-                     * 获取ZoneId set. This parameter is required.
-                     * @return ZoneIds ZoneId set. This parameter is required.
+                     * 获取Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
+                     * @return ZoneIds Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
                      * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
-                     * 设置ZoneId set. This parameter is required.
-                     * @param _zoneIds ZoneId set. This parameter is required.
+                     * 设置Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
+                     * @param _zoneIds Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
                      * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
@@ -283,13 +283,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Start time. Time range: 30 days.
+                     * The start time.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time. Time range: 30 days.
+                     * The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
@@ -301,7 +301,7 @@ namespace TencentCloud
                     bool m_policyIdsHasBeenSet;
 
                     /**
-                     * ZoneId set. This parameter is required.
+                     * Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
                      */
                     std::vector<std::string> m_zoneIds;
                     bool m_zoneIdsHasBeenSet;

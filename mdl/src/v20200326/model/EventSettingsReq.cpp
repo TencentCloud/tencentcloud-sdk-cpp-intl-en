@@ -29,7 +29,9 @@ EventSettingsReq::EventSettingsReq() :
     m_sCTE35SegmentationDescriptorHasBeenSet(false),
     m_spliceEventIDHasBeenSet(false),
     m_spliceDurationHasBeenSet(false),
-    m_timedMetadataSettingHasBeenSet(false)
+    m_timedMetadataSettingHasBeenSet(false),
+    m_staticImageActivateSettingHasBeenSet(false),
+    m_staticImageDeactivateSettingHasBeenSet(false)
 {
 }
 
@@ -155,6 +157,40 @@ CoreInternalOutcome EventSettingsReq::Deserialize(const rapidjson::Value &value)
         m_timedMetadataSettingHasBeenSet = true;
     }
 
+    if (value.HasMember("StaticImageActivateSetting") && !value["StaticImageActivateSetting"].IsNull())
+    {
+        if (!value["StaticImageActivateSetting"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `EventSettingsReq.StaticImageActivateSetting` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_staticImageActivateSetting.Deserialize(value["StaticImageActivateSetting"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_staticImageActivateSettingHasBeenSet = true;
+    }
+
+    if (value.HasMember("StaticImageDeactivateSetting") && !value["StaticImageDeactivateSetting"].IsNull())
+    {
+        if (!value["StaticImageDeactivateSetting"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `EventSettingsReq.StaticImageDeactivateSetting` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_staticImageDeactivateSetting.Deserialize(value["StaticImageDeactivateSetting"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_staticImageDeactivateSettingHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -247,6 +283,24 @@ void EventSettingsReq::ToJsonObject(rapidjson::Value &value, rapidjson::Document
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_timedMetadataSetting.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_staticImageActivateSettingHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StaticImageActivateSetting";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_staticImageActivateSetting.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_staticImageDeactivateSettingHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StaticImageDeactivateSetting";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_staticImageDeactivateSetting.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -394,5 +448,37 @@ void EventSettingsReq::SetTimedMetadataSetting(const TimedMetadataInfo& _timedMe
 bool EventSettingsReq::TimedMetadataSettingHasBeenSet() const
 {
     return m_timedMetadataSettingHasBeenSet;
+}
+
+StaticImageActivateSetting EventSettingsReq::GetStaticImageActivateSetting() const
+{
+    return m_staticImageActivateSetting;
+}
+
+void EventSettingsReq::SetStaticImageActivateSetting(const StaticImageActivateSetting& _staticImageActivateSetting)
+{
+    m_staticImageActivateSetting = _staticImageActivateSetting;
+    m_staticImageActivateSettingHasBeenSet = true;
+}
+
+bool EventSettingsReq::StaticImageActivateSettingHasBeenSet() const
+{
+    return m_staticImageActivateSettingHasBeenSet;
+}
+
+StaticImageDeactivateSetting EventSettingsReq::GetStaticImageDeactivateSetting() const
+{
+    return m_staticImageDeactivateSetting;
+}
+
+void EventSettingsReq::SetStaticImageDeactivateSetting(const StaticImageDeactivateSetting& _staticImageDeactivateSetting)
+{
+    m_staticImageDeactivateSetting = _staticImageDeactivateSetting;
+    m_staticImageDeactivateSettingHasBeenSet = true;
+}
+
+bool EventSettingsReq::StaticImageDeactivateSettingHasBeenSet() const
+{
+    return m_staticImageDeactivateSettingHasBeenSet;
 }
 

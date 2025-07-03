@@ -27,6 +27,8 @@
 #include <tencentcloud/mdl/v20200326/model/EventSettingsDestinationResp.h>
 #include <tencentcloud/mdl/v20200326/model/SegmentationDescriptorRespInfo.h>
 #include <tencentcloud/mdl/v20200326/model/TimedMetadataInfo.h>
+#include <tencentcloud/mdl/v20200326/model/StaticImageActivateSetting.h>
+#include <tencentcloud/mdl/v20200326/model/StaticImageDeactivateSetting.h>
 
 
 namespace TencentCloud
@@ -238,6 +240,48 @@ namespace TencentCloud
                      */
                     bool TimedMetadataSettingHasBeenSet() const;
 
+                    /**
+                     * 获取Static image activate setting.
+                     * @return StaticImageActivateSetting Static image activate setting.
+                     * 
+                     */
+                    StaticImageActivateSetting GetStaticImageActivateSetting() const;
+
+                    /**
+                     * 设置Static image activate setting.
+                     * @param _staticImageActivateSetting Static image activate setting.
+                     * 
+                     */
+                    void SetStaticImageActivateSetting(const StaticImageActivateSetting& _staticImageActivateSetting);
+
+                    /**
+                     * 判断参数 StaticImageActivateSetting 是否已赋值
+                     * @return StaticImageActivateSetting 是否已赋值
+                     * 
+                     */
+                    bool StaticImageActivateSettingHasBeenSet() const;
+
+                    /**
+                     * 获取Static image deactivate setting.
+                     * @return StaticImageDeactivateSetting Static image deactivate setting.
+                     * 
+                     */
+                    StaticImageDeactivateSetting GetStaticImageDeactivateSetting() const;
+
+                    /**
+                     * 设置Static image deactivate setting.
+                     * @param _staticImageDeactivateSetting Static image deactivate setting.
+                     * 
+                     */
+                    void SetStaticImageDeactivateSetting(const StaticImageDeactivateSetting& _staticImageDeactivateSetting);
+
+                    /**
+                     * 判断参数 StaticImageDeactivateSetting 是否已赋值
+                     * @return StaticImageDeactivateSetting 是否已赋值
+                     * 
+                     */
+                    bool StaticImageDeactivateSettingHasBeenSet() const;
+
                 private:
 
                     /**
@@ -293,6 +337,18 @@ namespace TencentCloud
                      */
                     TimedMetadataInfo m_timedMetadataSetting;
                     bool m_timedMetadataSettingHasBeenSet;
+
+                    /**
+                     * Static image activate setting.
+                     */
+                    StaticImageActivateSetting m_staticImageActivateSetting;
+                    bool m_staticImageActivateSettingHasBeenSet;
+
+                    /**
+                     * Static image deactivate setting.
+                     */
+                    StaticImageDeactivateSetting m_staticImageDeactivateSetting;
+                    bool m_staticImageDeactivateSettingHasBeenSet;
 
                 };
             }

@@ -88,31 +88,35 @@ namespace TencentCloud
                     bool CalleeHasBeenSet() const;
 
                     /**
-                     * 获取Model interface protocol types, currently compatible with three protocol types:
+                     * 获取Model API protocol type. currently compatible with four protocol types:.
 
-- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
-- Azure protocol:"azure"
-- Minimax protocol:"minimax"
-                     * @return LLMType Model interface protocol types, currently compatible with three protocol types:
+-OpenAI protocol (including GPT, hunyuan, DeepSeek, etc.): "OpenAI".
+-Azure protocol: "azure".
+-Specifies the "Minimax" protocol.
+-Dify protocol: "dify".
+                     * @return LLMType Model API protocol type. currently compatible with four protocol types:.
 
-- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
-- Azure protocol:"azure"
-- Minimax protocol:"minimax"
+-OpenAI protocol (including GPT, hunyuan, DeepSeek, etc.): "OpenAI".
+-Azure protocol: "azure".
+-Specifies the "Minimax" protocol.
+-Dify protocol: "dify".
                      * 
                      */
                     std::string GetLLMType() const;
 
                     /**
-                     * 设置Model interface protocol types, currently compatible with three protocol types:
+                     * 设置Model API protocol type. currently compatible with four protocol types:.
 
-- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
-- Azure protocol:"azure"
-- Minimax protocol:"minimax"
-                     * @param _lLMType Model interface protocol types, currently compatible with three protocol types:
+-OpenAI protocol (including GPT, hunyuan, DeepSeek, etc.): "OpenAI".
+-Azure protocol: "azure".
+-Specifies the "Minimax" protocol.
+-Dify protocol: "dify".
+                     * @param _lLMType Model API protocol type. currently compatible with four protocol types:.
 
-- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
-- Azure protocol:"azure"
-- Minimax protocol:"minimax"
+-OpenAI protocol (including GPT, hunyuan, DeepSeek, etc.): "OpenAI".
+-Azure protocol: "azure".
+-Specifies the "Minimax" protocol.
+-Dify protocol: "dify".
                      * 
                      */
                     void SetLLMType(const std::string& _lLMType);
@@ -1276,6 +1280,64 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
                      */
                     bool ExtractConfigHasBeenSet() const;
 
+                    /**
+                     * 获取Model temperature control.
+                     * @return Temperature Model temperature control.
+                     * 
+                     */
+                    double GetTemperature() const;
+
+                    /**
+                     * 设置Model temperature control.
+                     * @param _temperature Model temperature control.
+                     * 
+                     */
+                    void SetTemperature(const double& _temperature);
+
+                    /**
+                     * 判断参数 Temperature 是否已赋值
+                     * @return Temperature 是否已赋值
+                     * 
+                     */
+                    bool TemperatureHasBeenSet() const;
+
+                    /**
+                     * 获取Common variable: <p>prompt content variable</p> <p>welcome message variable</p> <p>welcome message delay playback (in seconds): welcome-message-delay</p> <p>dify variable</p>.  
+
+dify-inputs-xxx specifies the inputs variable for dify.
+2. the dify-inputs-user specifies the user value for dify.
+3. dify-inputs-conversation_id is the conversation_id value of dify.
+                     * @return Variables Common variable: <p>prompt content variable</p> <p>welcome message variable</p> <p>welcome message delay playback (in seconds): welcome-message-delay</p> <p>dify variable</p>.  
+
+dify-inputs-xxx specifies the inputs variable for dify.
+2. the dify-inputs-user specifies the user value for dify.
+3. dify-inputs-conversation_id is the conversation_id value of dify.
+                     * 
+                     */
+                    std::vector<Variable> GetVariables() const;
+
+                    /**
+                     * 设置Common variable: <p>prompt content variable</p> <p>welcome message variable</p> <p>welcome message delay playback (in seconds): welcome-message-delay</p> <p>dify variable</p>.  
+
+dify-inputs-xxx specifies the inputs variable for dify.
+2. the dify-inputs-user specifies the user value for dify.
+3. dify-inputs-conversation_id is the conversation_id value of dify.
+                     * @param _variables Common variable: <p>prompt content variable</p> <p>welcome message variable</p> <p>welcome message delay playback (in seconds): welcome-message-delay</p> <p>dify variable</p>.  
+
+dify-inputs-xxx specifies the inputs variable for dify.
+2. the dify-inputs-user specifies the user value for dify.
+3. dify-inputs-conversation_id is the conversation_id value of dify.
+                     * 
+                     */
+                    void SetVariables(const std::vector<Variable>& _variables);
+
+                    /**
+                     * 判断参数 Variables 是否已赋值
+                     * @return Variables 是否已赋值
+                     * 
+                     */
+                    bool VariablesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1291,11 +1353,12 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
                     bool m_calleeHasBeenSet;
 
                     /**
-                     * Model interface protocol types, currently compatible with three protocol types:
+                     * Model API protocol type. currently compatible with four protocol types:.
 
-- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
-- Azure protocol:"azure"
-- Minimax protocol:"minimax"
+-OpenAI protocol (including GPT, hunyuan, DeepSeek, etc.): "OpenAI".
+-Azure protocol: "azure".
+-Specifies the "Minimax" protocol.
+-Dify protocol: "dify".
                      */
                     std::string m_lLMType;
                     bool m_lLMTypeHasBeenSet;
@@ -1605,6 +1668,22 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
                      */
                     std::vector<AICallExtractConfigElement> m_extractConfig;
                     bool m_extractConfigHasBeenSet;
+
+                    /**
+                     * Model temperature control.
+                     */
+                    double m_temperature;
+                    bool m_temperatureHasBeenSet;
+
+                    /**
+                     * Common variable: <p>prompt content variable</p> <p>welcome message variable</p> <p>welcome message delay playback (in seconds): welcome-message-delay</p> <p>dify variable</p>.  
+
+dify-inputs-xxx specifies the inputs variable for dify.
+2. the dify-inputs-user specifies the user value for dify.
+3. dify-inputs-conversation_id is the conversation_id value of dify.
+                     */
+                    std::vector<Variable> m_variables;
+                    bool m_variablesHasBeenSet;
 
                 };
             }

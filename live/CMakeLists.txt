@@ -136,6 +136,7 @@ set(live_public_header_model
   include/tencentcloud/live/v20180801/model/DropLiveStreamResponse.h
   include/tencentcloud/live/v20180801/model/DescribeLiveStreamStateResponse.h
   include/tencentcloud/live/v20180801/model/StopLiveRecordRequest.h
+  include/tencentcloud/live/v20180801/model/TranscodeDetailInfo.h
   include/tencentcloud/live/v20180801/model/DeleteLiveWatermarkRuleRequest.h
   include/tencentcloud/live/v20180801/model/StreamEventInfo.h
   include/tencentcloud/live/v20180801/model/DeleteRecordTaskResponse.h
@@ -170,6 +171,7 @@ set(live_public_header_model
   include/tencentcloud/live/v20180801/model/DescribeHttpStatusInfoListRequest.h
   include/tencentcloud/live/v20180801/model/ModifyLiveCallbackTemplateRequest.h
   include/tencentcloud/live/v20180801/model/DescribeProvinceIspPlayInfoListRequest.h
+  include/tencentcloud/live/v20180801/model/TimeShiftStreamInfo.h
   include/tencentcloud/live/v20180801/model/DescribeLivePlayAuthKeyRequest.h
   include/tencentcloud/live/v20180801/model/DeleteLivePullStreamTaskResponse.h
   include/tencentcloud/live/v20180801/model/AuthenticateDomainOwnerRequest.h
@@ -208,7 +210,7 @@ set(live_public_header_model
   include/tencentcloud/live/v20180801/model/CancelCommonMixStreamRequest.h
   include/tencentcloud/live/v20180801/model/UpdateLiveWatermarkRequest.h
   include/tencentcloud/live/v20180801/model/CertInfo.h
-  include/tencentcloud/live/v20180801/model/TranscodeDetailInfo.h
+  include/tencentcloud/live/v20180801/model/StartLivePadStreamRequest.h
   include/tencentcloud/live/v20180801/model/DescribeRecordTaskResponse.h
   include/tencentcloud/live/v20180801/model/DescribeLiveDelayInfoListResponse.h
   include/tencentcloud/live/v20180801/model/DeleteLiveTranscodeTemplateRequest.h
@@ -226,7 +228,7 @@ set(live_public_header_model
   include/tencentcloud/live/v20180801/model/ForbidLiveDomainRequest.h
   include/tencentcloud/live/v20180801/model/DescribeLiveRecordRulesRequest.h
   include/tencentcloud/live/v20180801/model/DescribePlayErrorCodeDetailInfoListResponse.h
-  include/tencentcloud/live/v20180801/model/TimeShiftStreamInfo.h
+  include/tencentcloud/live/v20180801/model/StartLivePadStreamResponse.h
   include/tencentcloud/live/v20180801/model/CreateLiveRecordTemplateResponse.h
   include/tencentcloud/live/v20180801/model/GroupProIspDataInfo.h
   include/tencentcloud/live/v20180801/model/RecordParam.h
@@ -433,6 +435,7 @@ set(live_src
   src/v20180801/model/DropLiveStreamResponse.cpp
   src/v20180801/model/DescribeLiveStreamStateResponse.cpp
   src/v20180801/model/StopLiveRecordRequest.cpp
+  src/v20180801/model/TranscodeDetailInfo.cpp
   src/v20180801/model/DeleteLiveWatermarkRuleRequest.cpp
   src/v20180801/model/StreamEventInfo.cpp
   src/v20180801/model/DeleteRecordTaskResponse.cpp
@@ -467,6 +470,7 @@ set(live_src
   src/v20180801/model/DescribeHttpStatusInfoListRequest.cpp
   src/v20180801/model/ModifyLiveCallbackTemplateRequest.cpp
   src/v20180801/model/DescribeProvinceIspPlayInfoListRequest.cpp
+  src/v20180801/model/TimeShiftStreamInfo.cpp
   src/v20180801/model/DescribeLivePlayAuthKeyRequest.cpp
   src/v20180801/model/DeleteLivePullStreamTaskResponse.cpp
   src/v20180801/model/AuthenticateDomainOwnerRequest.cpp
@@ -505,7 +509,7 @@ set(live_src
   src/v20180801/model/CancelCommonMixStreamRequest.cpp
   src/v20180801/model/UpdateLiveWatermarkRequest.cpp
   src/v20180801/model/CertInfo.cpp
-  src/v20180801/model/TranscodeDetailInfo.cpp
+  src/v20180801/model/StartLivePadStreamRequest.cpp
   src/v20180801/model/DescribeRecordTaskResponse.cpp
   src/v20180801/model/DescribeLiveDelayInfoListResponse.cpp
   src/v20180801/model/DeleteLiveTranscodeTemplateRequest.cpp
@@ -523,7 +527,7 @@ set(live_src
   src/v20180801/model/ForbidLiveDomainRequest.cpp
   src/v20180801/model/DescribeLiveRecordRulesRequest.cpp
   src/v20180801/model/DescribePlayErrorCodeDetailInfoListResponse.cpp
-  src/v20180801/model/TimeShiftStreamInfo.cpp
+  src/v20180801/model/StartLivePadStreamResponse.cpp
   src/v20180801/model/CreateLiveRecordTemplateResponse.cpp
   src/v20180801/model/GroupProIspDataInfo.cpp
   src/v20180801/model/RecordParam.cpp

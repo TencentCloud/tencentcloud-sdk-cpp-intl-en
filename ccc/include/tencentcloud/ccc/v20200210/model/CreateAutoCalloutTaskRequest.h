@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/ccc/v20200210/model/Variable.h>
 #include <tencentcloud/ccc/v20200210/model/CalleeAttribute.h>
+#include <tencentcloud/ccc/v20200210/model/TimeRange.h>
 
 
 namespace TencentCloud
@@ -129,15 +130,15 @@ namespace TencentCloud
                     bool CallersHasBeenSet() const;
 
                     /**
-                     * 获取IVR used for calling.
-                     * @return IvrId IVR used for calling.
+                     * 获取IVR Id used for calling. if not filled, AIAgentId needs to be filled.
+                     * @return IvrId IVR Id used for calling. if not filled, AIAgentId needs to be filled.
                      * 
                      */
                     uint64_t GetIvrId() const;
 
                     /**
-                     * 设置IVR used for calling.
-                     * @param _ivrId IVR used for calling.
+                     * 设置IVR Id used for calling. if not filled, AIAgentId needs to be filled.
+                     * @param _ivrId IVR Id used for calling. if not filled, AIAgentId needs to be filled.
                      * 
                      */
                     void SetIvrId(const uint64_t& _ivrId);
@@ -296,6 +297,69 @@ namespace TencentCloud
                      */
                     bool CalleeAttributesHasBeenSet() const;
 
+                    /**
+                     * 获取IANA time zone name. see https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones.
+                     * @return TimeZone IANA time zone name. see https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones.
+                     * 
+                     */
+                    std::string GetTimeZone() const;
+
+                    /**
+                     * 设置IANA time zone name. see https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones.
+                     * @param _timeZone IANA time zone name. see https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones.
+                     * 
+                     */
+                    void SetTimeZone(const std::string& _timeZone);
+
+                    /**
+                     * 判断参数 TimeZone 是否已赋值
+                     * @return TimeZone 是否已赋值
+                     * 
+                     */
+                    bool TimeZoneHasBeenSet() const;
+
+                    /**
+                     * 获取Available time period.
+                     * @return AvailableTime Available time period.
+                     * 
+                     */
+                    std::vector<TimeRange> GetAvailableTime() const;
+
+                    /**
+                     * 设置Available time period.
+                     * @param _availableTime Available time period.
+                     * 
+                     */
+                    void SetAvailableTime(const std::vector<TimeRange>& _availableTime);
+
+                    /**
+                     * 判断参数 AvailableTime 是否已赋值
+                     * @return AvailableTime 是否已赋值
+                     * 
+                     */
+                    bool AvailableTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Intelligent agent ID. if not filled, IvrId needs to be filled.
+                     * @return AIAgentId Intelligent agent ID. if not filled, IvrId needs to be filled.
+                     * 
+                     */
+                    int64_t GetAIAgentId() const;
+
+                    /**
+                     * 设置Intelligent agent ID. if not filled, IvrId needs to be filled.
+                     * @param _aIAgentId Intelligent agent ID. if not filled, IvrId needs to be filled.
+                     * 
+                     */
+                    void SetAIAgentId(const int64_t& _aIAgentId);
+
+                    /**
+                     * 判断参数 AIAgentId 是否已赋值
+                     * @return AIAgentId 是否已赋值
+                     * 
+                     */
+                    bool AIAgentIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -323,7 +387,7 @@ namespace TencentCloud
                     bool m_callersHasBeenSet;
 
                     /**
-                     * IVR used for calling.
+                     * IVR Id used for calling. if not filled, AIAgentId needs to be filled.
                      */
                     uint64_t m_ivrId;
                     bool m_ivrIdHasBeenSet;
@@ -369,6 +433,24 @@ namespace TencentCloud
                      */
                     std::vector<CalleeAttribute> m_calleeAttributes;
                     bool m_calleeAttributesHasBeenSet;
+
+                    /**
+                     * IANA time zone name. see https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones.
+                     */
+                    std::string m_timeZone;
+                    bool m_timeZoneHasBeenSet;
+
+                    /**
+                     * Available time period.
+                     */
+                    std::vector<TimeRange> m_availableTime;
+                    bool m_availableTimeHasBeenSet;
+
+                    /**
+                     * Intelligent agent ID. if not filled, IvrId needs to be filled.
+                     */
+                    int64_t m_aIAgentId;
+                    bool m_aIAgentIdHasBeenSet;
 
                 };
             }

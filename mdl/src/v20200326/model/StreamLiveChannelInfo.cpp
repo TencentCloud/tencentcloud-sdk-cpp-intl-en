@@ -36,7 +36,8 @@ StreamLiveChannelInfo::StreamLiveChannelInfo() :
     m_pipelineInputSettingsHasBeenSet(false),
     m_inputAnalysisSettingsHasBeenSet(false),
     m_tagsHasBeenSet(false),
-    m_frameCaptureTemplatesHasBeenSet(false)
+    m_frameCaptureTemplatesHasBeenSet(false),
+    m_generalSettingsHasBeenSet(false)
 {
 }
 
@@ -320,6 +321,23 @@ CoreInternalOutcome StreamLiveChannelInfo::Deserialize(const rapidjson::Value &v
         m_frameCaptureTemplatesHasBeenSet = true;
     }
 
+    if (value.HasMember("GeneralSettings") && !value["GeneralSettings"].IsNull())
+    {
+        if (!value["GeneralSettings"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `StreamLiveChannelInfo.GeneralSettings` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_generalSettings.Deserialize(value["GeneralSettings"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_generalSettingsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -514,6 +532,15 @@ void StreamLiveChannelInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Doc
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_generalSettingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "GeneralSettings";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_generalSettings.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -773,5 +800,21 @@ void StreamLiveChannelInfo::SetFrameCaptureTemplates(const vector<FrameCaptureTe
 bool StreamLiveChannelInfo::FrameCaptureTemplatesHasBeenSet() const
 {
     return m_frameCaptureTemplatesHasBeenSet;
+}
+
+GeneralSetting StreamLiveChannelInfo::GetGeneralSettings() const
+{
+    return m_generalSettings;
+}
+
+void StreamLiveChannelInfo::SetGeneralSettings(const GeneralSetting& _generalSettings)
+{
+    m_generalSettings = _generalSettings;
+    m_generalSettingsHasBeenSet = true;
+}
+
+bool StreamLiveChannelInfo::GeneralSettingsHasBeenSet() const
+{
+    return m_generalSettingsHasBeenSet;
 }
 

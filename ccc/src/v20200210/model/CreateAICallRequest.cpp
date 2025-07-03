@@ -49,7 +49,9 @@ CreateAICallRequest::CreateAICallRequest() :
     m_customTTSConfigHasBeenSet(false),
     m_promptVariablesHasBeenSet(false),
     m_vadSilenceTimeHasBeenSet(false),
-    m_extractConfigHasBeenSet(false)
+    m_extractConfigHasBeenSet(false),
+    m_temperatureHasBeenSet(false),
+    m_variablesHasBeenSet(false)
 {
 }
 
@@ -301,6 +303,29 @@ string CreateAICallRequest::ToJsonString() const
 
         int i=0;
         for (auto itr = m_extractConfig.begin(); itr != m_extractConfig.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_temperatureHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Temperature";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_temperature, allocator);
+    }
+
+    if (m_variablesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Variables";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_variables.begin(); itr != m_variables.end(); ++itr, ++i)
         {
             d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(d[key.c_str()][i], allocator);
@@ -745,6 +770,38 @@ void CreateAICallRequest::SetExtractConfig(const vector<AICallExtractConfigEleme
 bool CreateAICallRequest::ExtractConfigHasBeenSet() const
 {
     return m_extractConfigHasBeenSet;
+}
+
+double CreateAICallRequest::GetTemperature() const
+{
+    return m_temperature;
+}
+
+void CreateAICallRequest::SetTemperature(const double& _temperature)
+{
+    m_temperature = _temperature;
+    m_temperatureHasBeenSet = true;
+}
+
+bool CreateAICallRequest::TemperatureHasBeenSet() const
+{
+    return m_temperatureHasBeenSet;
+}
+
+vector<Variable> CreateAICallRequest::GetVariables() const
+{
+    return m_variables;
+}
+
+void CreateAICallRequest::SetVariables(const vector<Variable>& _variables)
+{
+    m_variables = _variables;
+    m_variablesHasBeenSet = true;
+}
+
+bool CreateAICallRequest::VariablesHasBeenSet() const
+{
+    return m_variablesHasBeenSet;
 }
 
 

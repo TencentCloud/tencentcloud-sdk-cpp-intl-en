@@ -261,21 +261,21 @@ namespace TencentCloud
                     /**
                      * 获取Device ID at the NB-IoT ISP
                      * @return NbiotDeviceID Device ID at the NB-IoT ISP
-                     * 
+                     * @deprecated
                      */
                     std::string GetNbiotDeviceID() const;
 
                     /**
                      * 设置Device ID at the NB-IoT ISP
                      * @param _nbiotDeviceID Device ID at the NB-IoT ISP
-                     * 
+                     * @deprecated
                      */
                     void SetNbiotDeviceID(const std::string& _nbiotDeviceID);
 
                     /**
                      * 判断参数 NbiotDeviceID 是否已赋值
                      * @return NbiotDeviceID 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool NbiotDeviceIDHasBeenSet() const;
 

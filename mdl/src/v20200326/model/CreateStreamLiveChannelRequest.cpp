@@ -36,7 +36,8 @@ CreateStreamLiveChannelRequest::CreateStreamLiveChannelRequest() :
     m_pipelineInputSettingsHasBeenSet(false),
     m_inputAnalysisSettingsHasBeenSet(false),
     m_tagsHasBeenSet(false),
-    m_frameCaptureTemplatesHasBeenSet(false)
+    m_frameCaptureTemplatesHasBeenSet(false),
+    m_generalSettingsHasBeenSet(false)
 {
 }
 
@@ -218,6 +219,15 @@ string CreateStreamLiveChannelRequest::ToJsonString() const
             d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(d[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_generalSettingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "GeneralSettings";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_generalSettings.ToJsonObject(d[key.c_str()], allocator);
     }
 
 
@@ -450,6 +460,22 @@ void CreateStreamLiveChannelRequest::SetFrameCaptureTemplates(const vector<Frame
 bool CreateStreamLiveChannelRequest::FrameCaptureTemplatesHasBeenSet() const
 {
     return m_frameCaptureTemplatesHasBeenSet;
+}
+
+GeneralSetting CreateStreamLiveChannelRequest::GetGeneralSettings() const
+{
+    return m_generalSettings;
+}
+
+void CreateStreamLiveChannelRequest::SetGeneralSettings(const GeneralSetting& _generalSettings)
+{
+    m_generalSettings = _generalSettings;
+    m_generalSettingsHasBeenSet = true;
+}
+
+bool CreateStreamLiveChannelRequest::GeneralSettingsHasBeenSet() const
+{
+    return m_generalSettingsHasBeenSet;
 }
 
 

@@ -4856,6 +4856,49 @@ LiveClient::ResumeLiveStreamOutcomeCallable LiveClient::ResumeLiveStreamCallable
     return task->get_future();
 }
 
+LiveClient::StartLivePadStreamOutcome LiveClient::StartLivePadStream(const StartLivePadStreamRequest &request)
+{
+    auto outcome = MakeRequest(request, "StartLivePadStream");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        StartLivePadStreamResponse rsp = StartLivePadStreamResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return StartLivePadStreamOutcome(rsp);
+        else
+            return StartLivePadStreamOutcome(o.GetError());
+    }
+    else
+    {
+        return StartLivePadStreamOutcome(outcome.GetError());
+    }
+}
+
+void LiveClient::StartLivePadStreamAsync(const StartLivePadStreamRequest& request, const StartLivePadStreamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->StartLivePadStream(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+LiveClient::StartLivePadStreamOutcomeCallable LiveClient::StartLivePadStreamCallable(const StartLivePadStreamRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<StartLivePadStreamOutcome()>>(
+        [this, request]()
+        {
+            return this->StartLivePadStream(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 LiveClient::StopLiveRecordOutcome LiveClient::StopLiveRecord(const StopLiveRecordRequest &request)
 {
     auto outcome = MakeRequest(request, "StopLiveRecord");

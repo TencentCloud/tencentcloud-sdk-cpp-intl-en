@@ -34,6 +34,7 @@
 #include <tencentcloud/mdl/v20200326/model/InputAnalysisInfo.h>
 #include <tencentcloud/mdl/v20200326/model/Tag.h>
 #include <tencentcloud/mdl/v20200326/model/FrameCaptureTemplate.h>
+#include <tencentcloud/mdl/v20200326/model/GeneralSetting.h>
 
 
 namespace TencentCloud
@@ -349,6 +350,27 @@ namespace TencentCloud
                      */
                     bool FrameCaptureTemplatesHasBeenSet() const;
 
+                    /**
+                     * 获取General settings.
+                     * @return GeneralSettings General settings.
+                     * 
+                     */
+                    GeneralSetting GetGeneralSettings() const;
+
+                    /**
+                     * 设置General settings.
+                     * @param _generalSettings General settings.
+                     * 
+                     */
+                    void SetGeneralSettings(const GeneralSetting& _generalSettings);
+
+                    /**
+                     * 判断参数 GeneralSettings 是否已赋值
+                     * @return GeneralSettings 是否已赋值
+                     * 
+                     */
+                    bool GeneralSettingsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -434,6 +456,12 @@ namespace TencentCloud
                      */
                     std::vector<FrameCaptureTemplate> m_frameCaptureTemplates;
                     bool m_frameCaptureTemplatesHasBeenSet;
+
+                    /**
+                     * General settings.
+                     */
+                    GeneralSetting m_generalSettings;
+                    bool m_generalSettingsHasBeenSet;
 
                 };
             }

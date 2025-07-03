@@ -154,14 +154,18 @@ namespace TencentCloud
 
                     /**
                      * 获取User role id.
+When a user is bound to multiple roles, RoleIdList shall prevail.
                      * @return RoleId User role id.
+When a user is bound to multiple roles, RoleIdList shall prevail.
                      * @deprecated
                      */
                     uint64_t GetRoleId() const;
 
                     /**
                      * 设置User role id.
+When a user is bound to multiple roles, RoleIdList shall prevail.
                      * @param _roleId User role id.
+When a user is bound to multiple roles, RoleIdList shall prevail.
                      * @deprecated
                      */
                     void SetRoleId(const uint64_t& _roleId);
@@ -172,6 +176,48 @@ namespace TencentCloud
                      * @deprecated
                      */
                     bool RoleIdHasBeenSet() const;
+
+                    /**
+                     * 获取User role id list.
+                     * @return RoleIdList User role id list.
+                     * @deprecated
+                     */
+                    uint64_t GetRoleIdList() const;
+
+                    /**
+                     * 设置User role id list.
+                     * @param _roleIdList User role id list.
+                     * @deprecated
+                     */
+                    void SetRoleIdList(const uint64_t& _roleIdList);
+
+                    /**
+                     * 判断参数 RoleIdList 是否已赋值
+                     * @return RoleIdList 是否已赋值
+                     * @deprecated
+                     */
+                    bool RoleIdListHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return RoleList 
+                     * 
+                     */
+                    std::vector<uint64_t> GetRoleList() const;
+
+                    /**
+                     * 设置
+                     * @param _roleList 
+                     * 
+                     */
+                    void SetRoleList(const std::vector<uint64_t>& _roleList);
+
+                    /**
+                     * 判断参数 RoleList 是否已赋值
+                     * @return RoleList 是否已赋值
+                     * 
+                     */
+                    bool RoleListHasBeenSet() const;
 
                     /**
                      * 获取Affiliated skill group list.
@@ -270,9 +316,22 @@ namespace TencentCloud
 
                     /**
                      * User role id.
+When a user is bound to multiple roles, RoleIdList shall prevail.
                      */
                     uint64_t m_roleId;
                     bool m_roleIdHasBeenSet;
+
+                    /**
+                     * User role id list.
+                     */
+                    uint64_t m_roleIdList;
+                    bool m_roleIdListHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<uint64_t> m_roleList;
+                    bool m_roleListHasBeenSet;
 
                     /**
                      * Affiliated skill group list.

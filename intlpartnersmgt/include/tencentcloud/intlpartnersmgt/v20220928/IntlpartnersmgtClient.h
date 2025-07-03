@@ -386,7 +386,7 @@ Callable roles: Distributor, Second-level reseller, Reseller.
                 DescribeCustomerBillDetailOutcomeCallable DescribeCustomerBillDetailCallable(const Model::DescribeCustomerBillDetailRequest& request);
 
                 /**
-                 *This API is used to query the daily bill expenditure of cu by resellers.
+                 *This API is used to query the daily bill expenditure of customer by resellers.
 Invocation Role: first-level reseller, second-level reseller, reseller.
                  * @param req DescribeCustomerBillDetailByDayRequest
                  * @return DescribeCustomerBillDetailByDayOutcome
