@@ -31,6 +31,8 @@
 #include <tencentcloud/teo/v20220901/model/BindZoneToPlanResponse.h>
 #include <tencentcloud/teo/v20220901/model/CheckCnameStatusRequest.h>
 #include <tencentcloud/teo/v20220901/model/CheckCnameStatusResponse.h>
+#include <tencentcloud/teo/v20220901/model/ConfirmOriginACLUpdateRequest.h>
+#include <tencentcloud/teo/v20220901/model/ConfirmOriginACLUpdateResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateAccelerationDomainRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateAccelerationDomainResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateAliasDomainRequest.h>
@@ -177,6 +179,8 @@
 #include <tencentcloud/teo/v20220901/model/DescribeL7AccSettingResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeLoadBalancerListRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeLoadBalancerListResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeOriginACLRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeOriginACLResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeOriginGroupRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeOriginGroupResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeOriginGroupHealthStatusRequest.h>
@@ -221,10 +225,14 @@
 #include <tencentcloud/teo/v20220901/model/DescribeZonesResponse.h>
 #include <tencentcloud/teo/v20220901/model/DestroyPlanRequest.h>
 #include <tencentcloud/teo/v20220901/model/DestroyPlanResponse.h>
+#include <tencentcloud/teo/v20220901/model/DisableOriginACLRequest.h>
+#include <tencentcloud/teo/v20220901/model/DisableOriginACLResponse.h>
 #include <tencentcloud/teo/v20220901/model/DownloadL4LogsRequest.h>
 #include <tencentcloud/teo/v20220901/model/DownloadL4LogsResponse.h>
 #include <tencentcloud/teo/v20220901/model/DownloadL7LogsRequest.h>
 #include <tencentcloud/teo/v20220901/model/DownloadL7LogsResponse.h>
+#include <tencentcloud/teo/v20220901/model/EnableOriginACLRequest.h>
+#include <tencentcloud/teo/v20220901/model/EnableOriginACLResponse.h>
 #include <tencentcloud/teo/v20220901/model/ExportZoneConfigRequest.h>
 #include <tencentcloud/teo/v20220901/model/ExportZoneConfigResponse.h>
 #include <tencentcloud/teo/v20220901/model/HandleFunctionRuntimeEnvironmentRequest.h>
@@ -283,6 +291,8 @@
 #include <tencentcloud/teo/v20220901/model/ModifyL7AccSettingResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyLoadBalancerRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyLoadBalancerResponse.h>
+#include <tencentcloud/teo/v20220901/model/ModifyOriginACLRequest.h>
+#include <tencentcloud/teo/v20220901/model/ModifyOriginACLResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyOriginGroupRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyOriginGroupResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyPlanRequest.h>
@@ -333,6 +343,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CheckCnameStatusResponse> CheckCnameStatusOutcome;
                 typedef std::future<CheckCnameStatusOutcome> CheckCnameStatusOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CheckCnameStatusRequest&, CheckCnameStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CheckCnameStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::ConfirmOriginACLUpdateResponse> ConfirmOriginACLUpdateOutcome;
+                typedef std::future<ConfirmOriginACLUpdateOutcome> ConfirmOriginACLUpdateOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ConfirmOriginACLUpdateRequest&, ConfirmOriginACLUpdateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ConfirmOriginACLUpdateAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateAccelerationDomainResponse> CreateAccelerationDomainOutcome;
                 typedef std::future<CreateAccelerationDomainOutcome> CreateAccelerationDomainOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateAccelerationDomainRequest&, CreateAccelerationDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAccelerationDomainAsyncHandler;
@@ -552,6 +565,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeLoadBalancerListResponse> DescribeLoadBalancerListOutcome;
                 typedef std::future<DescribeLoadBalancerListOutcome> DescribeLoadBalancerListOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeLoadBalancerListRequest&, DescribeLoadBalancerListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLoadBalancerListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeOriginACLResponse> DescribeOriginACLOutcome;
+                typedef std::future<DescribeOriginACLOutcome> DescribeOriginACLOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeOriginACLRequest&, DescribeOriginACLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOriginACLAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeOriginGroupResponse> DescribeOriginGroupOutcome;
                 typedef std::future<DescribeOriginGroupOutcome> DescribeOriginGroupOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeOriginGroupRequest&, DescribeOriginGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOriginGroupAsyncHandler;
@@ -618,12 +634,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DestroyPlanResponse> DestroyPlanOutcome;
                 typedef std::future<DestroyPlanOutcome> DestroyPlanOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DestroyPlanRequest&, DestroyPlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DestroyPlanAsyncHandler;
+                typedef Outcome<Core::Error, Model::DisableOriginACLResponse> DisableOriginACLOutcome;
+                typedef std::future<DisableOriginACLOutcome> DisableOriginACLOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DisableOriginACLRequest&, DisableOriginACLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableOriginACLAsyncHandler;
                 typedef Outcome<Core::Error, Model::DownloadL4LogsResponse> DownloadL4LogsOutcome;
                 typedef std::future<DownloadL4LogsOutcome> DownloadL4LogsOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DownloadL4LogsRequest&, DownloadL4LogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DownloadL4LogsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DownloadL7LogsResponse> DownloadL7LogsOutcome;
                 typedef std::future<DownloadL7LogsOutcome> DownloadL7LogsOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DownloadL7LogsRequest&, DownloadL7LogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DownloadL7LogsAsyncHandler;
+                typedef Outcome<Core::Error, Model::EnableOriginACLResponse> EnableOriginACLOutcome;
+                typedef std::future<EnableOriginACLOutcome> EnableOriginACLOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::EnableOriginACLRequest&, EnableOriginACLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableOriginACLAsyncHandler;
                 typedef Outcome<Core::Error, Model::ExportZoneConfigResponse> ExportZoneConfigOutcome;
                 typedef std::future<ExportZoneConfigOutcome> ExportZoneConfigOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ExportZoneConfigRequest&, ExportZoneConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExportZoneConfigAsyncHandler;
@@ -711,6 +733,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyLoadBalancerResponse> ModifyLoadBalancerOutcome;
                 typedef std::future<ModifyLoadBalancerOutcome> ModifyLoadBalancerOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyLoadBalancerRequest&, ModifyLoadBalancerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLoadBalancerAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyOriginACLResponse> ModifyOriginACLOutcome;
+                typedef std::future<ModifyOriginACLOutcome> ModifyOriginACLOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ModifyOriginACLRequest&, ModifyOriginACLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyOriginACLAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyOriginGroupResponse> ModifyOriginGroupOutcome;
                 typedef std::future<ModifyOriginGroupOutcome> ModifyOriginGroupOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyOriginGroupRequest&, ModifyOriginGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyOriginGroupAsyncHandler;
@@ -785,6 +810,15 @@ namespace TencentCloud
                 CheckCnameStatusOutcome CheckCnameStatus(const Model::CheckCnameStatusRequest &request);
                 void CheckCnameStatusAsync(const Model::CheckCnameStatusRequest& request, const CheckCnameStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CheckCnameStatusOutcomeCallable CheckCnameStatusCallable(const Model::CheckCnameStatusRequest& request);
+
+                /**
+                 *This API is used to confirm that the latest origin ACLs have been updated to the origin server firewall when the origin ACLs change. After confirming the update to the latest version, related change notifications will stop pushing.
+                 * @param req ConfirmOriginACLUpdateRequest
+                 * @return ConfirmOriginACLUpdateOutcome
+                 */
+                ConfirmOriginACLUpdateOutcome ConfirmOriginACLUpdate(const Model::ConfirmOriginACLUpdateRequest &request);
+                void ConfirmOriginACLUpdateAsync(const Model::ConfirmOriginACLUpdateRequest& request, const ConfirmOriginACLUpdateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ConfirmOriginACLUpdateOutcomeCallable ConfirmOriginACLUpdateCallable(const Model::ConfirmOriginACLUpdateRequest& request);
 
                 /**
                  *This API is used to create an acceleration domain name. 
@@ -1452,6 +1486,15 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DescribeLoadBalancerListOutcomeCallable DescribeLoadBalancerListCallable(const Model::DescribeLoadBalancerListRequest& request);
 
                 /**
+                 *This API is used to query the binding relationship between L7 acceleration domains/L4 proxy instances and origin ACLs under a site, as well as IP range details. If you want to periodically obtain the latest version of origin IP ranges through an automation script, you can poll this API at a low-frequency (recommended every three days). If the NextOriginACL field has a return value, synchronize the latest origin IP ranges to the origin server firewall configuration.
+                 * @param req DescribeOriginACLRequest
+                 * @return DescribeOriginACLOutcome
+                 */
+                DescribeOriginACLOutcome DescribeOriginACL(const Model::DescribeOriginACLRequest &request);
+                void DescribeOriginACLAsync(const Model::DescribeOriginACLRequest& request, const DescribeOriginACLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeOriginACLOutcomeCallable DescribeOriginACLCallable(const Model::DescribeOriginACLRequest& request);
+
+                /**
                  *This API is used to obtain a list of origin groups.
                  * @param req DescribeOriginGroupRequest
                  * @return DescribeOriginGroupOutcome
@@ -1660,6 +1703,15 @@ A site can be deleted by using the [Delete Site](https://intl.cloud.tencent.com/
                 DestroyPlanOutcomeCallable DestroyPlanCallable(const Model::DestroyPlanRequest& request);
 
                 /**
+                 *This API is used to disable 'Origin Protection' of a site. Once disabled, resources related to it will no longer use only the origin ACLs provided by "origin protection" to request your origin, and stops sending update notifications on the origin ACLs.
+                 * @param req DisableOriginACLRequest
+                 * @return DisableOriginACLOutcome
+                 */
+                DisableOriginACLOutcome DisableOriginACL(const Model::DisableOriginACLRequest &request);
+                void DisableOriginACLAsync(const Model::DisableOriginACLRequest& request, const DisableOriginACLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DisableOriginACLOutcomeCallable DisableOriginACLCallable(const Model::DisableOriginACLRequest& request);
+
+                /**
                  *This API is used to download L4 logs.
                  * @param req DownloadL4LogsRequest
                  * @return DownloadL4LogsOutcome
@@ -1676,6 +1728,21 @@ A site can be deleted by using the [Delete Site](https://intl.cloud.tencent.com/
                 DownloadL7LogsOutcome DownloadL7Logs(const Model::DownloadL7LogsRequest &request);
                 void DownloadL7LogsAsync(const Model::DownloadL7LogsRequest& request, const DownloadL7LogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DownloadL7LogsOutcomeCallable DownloadL7LogsCallable(const Model::DownloadL7LogsRequest& request);
+
+                /**
+                 *This API is used to enable 'Origin Protection' for Layer 4 or Layer 7 instances. The number of enabled instances has an upper limit: 200 for Layer 7 domains and 100 for Layer 4 proxy instances. The total number of instances cannot exceed 200, otherwise an error reminder will be triggered. You can first enable the maximum allowed number and use the ModifyOriginACL API to set the excess quantity.
+
+This API is used to enable 'Origin Protection' for the site for the first time. Once enabled, EdgeOne will use specific origin IP ranges for L7 acceleration domains and L4 proxy instances. The maximum number of L7 acceleration domain that can be submitted in a single request is 200, and the maximum number of L4 proxy instance is 100. Mixed submissions of L7 acceleration domains and L4 proxy instances are supported, with a total maximum of 200 instances. If you need to enable more than 200 instances, you can first enable the maximum number by specifying the instances, and then enable the remaining instances through the API ModifyOriginACL. Any subsequent addition of  L7 acceleration domains or L4 proxy instances should be configured through the API ModifyOriginACL.
+
+Note:
+- Calling this API is considered as agreeing to [Origin Protection Enablement Conditions of Use](https://www.tencentcloud.com/document/product/1145/70561?!longPreview).
+- The origin IP ranges may change periodically. EdgeOne will notify you of changes to the origin IP ranges 14 days, 7 days, 3 days, and 1 day in advance through one or more methods such as internal messages, SMS, and email. To ensure you receive notifications about changes to the origin IP ranges, please make sure that you have selected the relevant product service notifications for the Edge Security Acceleration Platform (EO) in [Tencent Cloud Message Center](https://console.tencentcloud.com/message/subscription) and have configured the correct message recipients. For configuration details, please refer to Message [Subscription Management](https://www.tencentcloud.com/document/product/1233/60778).
+                 * @param req EnableOriginACLRequest
+                 * @return EnableOriginACLOutcome
+                 */
+                EnableOriginACLOutcome EnableOriginACL(const Model::EnableOriginACLRequest &request);
+                void EnableOriginACLAsync(const Model::EnableOriginACLRequest& request, const EnableOriginACLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                EnableOriginACLOutcomeCallable EnableOriginACLCallable(const Model::EnableOriginACLRequest& request);
 
                 /**
                  *This API is used to export site configuration . The exported configuration is used for import via the API (ImportZoneConfig). This feature only supports the sites in the plans of the Standard Edition and the Enterprise Edition.
@@ -1943,6 +2010,15 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
                 ModifyLoadBalancerOutcome ModifyLoadBalancer(const Model::ModifyLoadBalancerRequest &request);
                 void ModifyLoadBalancerAsync(const Model::ModifyLoadBalancerRequest& request, const ModifyLoadBalancerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyLoadBalancerOutcomeCallable ModifyLoadBalancerCallable(const Model::ModifyLoadBalancerRequest& request);
+
+                /**
+                 *This API is used to enable or disable specific origin ACLs for L7 acceleration domain names or L4 proxy instances. A single submission supports up to 200 L7 acceleration domain names or 100 L4 proxy instances. Hybrid submissions of L7 acceleration domain names and L4 proxy instances are supported, with a maximum total number of instances of 200. If changes are needed for exceeding 200 instances, submit them in batches via this API.
+                 * @param req ModifyOriginACLRequest
+                 * @return ModifyOriginACLOutcome
+                 */
+                ModifyOriginACLOutcome ModifyOriginACL(const Model::ModifyOriginACLRequest &request);
+                void ModifyOriginACLAsync(const Model::ModifyOriginACLRequest& request, const ModifyOriginACLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyOriginACLOutcomeCallable ModifyOriginACLCallable(const Model::ModifyOriginACLRequest& request);
 
                 /**
                  *This API is used to modify the configuration of an origin group. The original configuration will be overwritten. 
