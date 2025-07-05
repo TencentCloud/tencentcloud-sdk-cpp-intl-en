@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2019 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -132,14 +132,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Number of IPv6 addresses randomly generated for the ENI.
+If IPv6AddressType is specified under InternetAccessible, this parameter must not be set to 0.
                      * @return Ipv6AddressCount Number of IPv6 addresses randomly generated for the ENI.
+If IPv6AddressType is specified under InternetAccessible, this parameter must not be set to 0.
                      * 
                      */
                     uint64_t GetIpv6AddressCount() const;
 
                     /**
                      * 设置Number of IPv6 addresses randomly generated for the ENI.
+If IPv6AddressType is specified under InternetAccessible, this parameter must not be set to 0.
                      * @param _ipv6AddressCount Number of IPv6 addresses randomly generated for the ENI.
+If IPv6AddressType is specified under InternetAccessible, this parameter must not be set to 0.
                      * 
                      */
                     void SetIpv6AddressCount(const uint64_t& _ipv6AddressCount);
@@ -179,6 +183,7 @@ namespace TencentCloud
 
                     /**
                      * Number of IPv6 addresses randomly generated for the ENI.
+If IPv6AddressType is specified under InternetAccessible, this parameter must not be set to 0.
                      */
                     uint64_t m_ipv6AddressCount;
                     bool m_ipv6AddressCountHasBeenSet;

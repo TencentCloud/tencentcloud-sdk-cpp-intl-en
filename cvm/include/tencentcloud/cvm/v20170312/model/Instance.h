@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2019 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -959,6 +959,31 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool LatestOperationErrorMsgHasBeenSet() const;
 
+                    /**
+                     * 获取Public IPv6 address of the instance.
+Note: this field may return null, indicating that no valid value was found.
+                     * @return PublicIPv6Addresses Public IPv6 address of the instance.
+Note: this field may return null, indicating that no valid value was found.
+                     * 
+                     */
+                    std::vector<std::string> GetPublicIPv6Addresses() const;
+
+                    /**
+                     * 设置Public IPv6 address of the instance.
+Note: this field may return null, indicating that no valid value was found.
+                     * @param _publicIPv6Addresses Public IPv6 address of the instance.
+Note: this field may return null, indicating that no valid value was found.
+                     * 
+                     */
+                    void SetPublicIPv6Addresses(const std::vector<std::string>& _publicIPv6Addresses);
+
+                    /**
+                     * 判断参数 PublicIPv6Addresses 是否已赋值
+                     * @return PublicIPv6Addresses 是否已赋值
+                     * 
+                     */
+                    bool PublicIPv6AddressesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1217,6 +1242,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_latestOperationErrorMsg;
                     bool m_latestOperationErrorMsgHasBeenSet;
+
+                    /**
+                     * Public IPv6 address of the instance.
+Note: this field may return null, indicating that no valid value was found.
+                     */
+                    std::vector<std::string> m_publicIPv6Addresses;
+                    bool m_publicIPv6AddressesHasBeenSet;
 
                 };
             }

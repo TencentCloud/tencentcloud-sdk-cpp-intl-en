@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2019 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -47,50 +47,50 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>.
-<Li>LOCAL_BASIC: specifies a local hard disk.</li>.
-<Li>LOCAL_SSD: specifies a local ssd.</li>.
-<Li>CLOUD_BASIC: ordinary cloud disk.</li>.
-<Li>CLOUD_SSD: ssd cloud disk</li>.
-<Li>CLOUD_PREMIUM: high-performance cloud block storage.</li>.
-<Li>CLOUD_BSSD: universal type ssd cloud disk</li>.
-<Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
-<li>CLOUD_TSSD: ultra-fast SSD cbs</li.
+                     * 获取Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>
+<li>LOCAL_BASIC: Local SATA disk</li>
+<li>LOCAL_SSD: Local NVMe SSD</li>
+<li>CLOUD_BASIC: Cloud SATA disk</li>
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium SSD</li>
+<li>CLOUD_BSSD: Balanced SSD</li>
+<li>CLOUD_HSSD: Enhanced SSD</li>
+<li>CLOUD_TSSD: Tremendous SSD</li>
 Default value: Current disk types with inventory available.
-                     * @return DiskType Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>.
-<Li>LOCAL_BASIC: specifies a local hard disk.</li>.
-<Li>LOCAL_SSD: specifies a local ssd.</li>.
-<Li>CLOUD_BASIC: ordinary cloud disk.</li>.
-<Li>CLOUD_SSD: ssd cloud disk</li>.
-<Li>CLOUD_PREMIUM: high-performance cloud block storage.</li>.
-<Li>CLOUD_BSSD: universal type ssd cloud disk</li>.
-<Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
-<li>CLOUD_TSSD: ultra-fast SSD cbs</li.
+                     * @return DiskType Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>
+<li>LOCAL_BASIC: Local SATA disk</li>
+<li>LOCAL_SSD: Local NVMe SSD</li>
+<li>CLOUD_BASIC: Cloud SATA disk</li>
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium SSD</li>
+<li>CLOUD_BSSD: Balanced SSD</li>
+<li>CLOUD_HSSD: Enhanced SSD</li>
+<li>CLOUD_TSSD: Tremendous SSD</li>
 Default value: Current disk types with inventory available.
                      * 
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>.
-<Li>LOCAL_BASIC: specifies a local hard disk.</li>.
-<Li>LOCAL_SSD: specifies a local ssd.</li>.
-<Li>CLOUD_BASIC: ordinary cloud disk.</li>.
-<Li>CLOUD_SSD: ssd cloud disk</li>.
-<Li>CLOUD_PREMIUM: high-performance cloud block storage.</li>.
-<Li>CLOUD_BSSD: universal type ssd cloud disk</li>.
-<Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
-<li>CLOUD_TSSD: ultra-fast SSD cbs</li.
+                     * 设置Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>
+<li>LOCAL_BASIC: Local SATA disk</li>
+<li>LOCAL_SSD: Local NVMe SSD</li>
+<li>CLOUD_BASIC: Cloud SATA disk</li>
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium SSD</li>
+<li>CLOUD_BSSD: Balanced SSD</li>
+<li>CLOUD_HSSD: Enhanced SSD</li>
+<li>CLOUD_TSSD: Tremendous SSD</li>
 Default value: Current disk types with inventory available.
-                     * @param _diskType Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>.
-<Li>LOCAL_BASIC: specifies a local hard disk.</li>.
-<Li>LOCAL_SSD: specifies a local ssd.</li>.
-<Li>CLOUD_BASIC: ordinary cloud disk.</li>.
-<Li>CLOUD_SSD: ssd cloud disk</li>.
-<Li>CLOUD_PREMIUM: high-performance cloud block storage.</li>.
-<Li>CLOUD_BSSD: universal type ssd cloud disk</li>.
-<Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
-<li>CLOUD_TSSD: ultra-fast SSD cbs</li.
+                     * @param _diskType Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>
+<li>LOCAL_BASIC: Local SATA disk</li>
+<li>LOCAL_SSD: Local NVMe SSD</li>
+<li>CLOUD_BASIC: Cloud SATA disk</li>
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium SSD</li>
+<li>CLOUD_BSSD: Balanced SSD</li>
+<li>CLOUD_HSSD: Enhanced SSD</li>
+<li>CLOUD_TSSD: Tremendous SSD</li>
 Default value: Current disk types with inventory available.
                      * 
                      */
@@ -194,15 +194,15 @@ This parameter currently only serves as a response parameter for query apis such
                 private:
 
                     /**
-                     * Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>.
-<Li>LOCAL_BASIC: specifies a local hard disk.</li>.
-<Li>LOCAL_SSD: specifies a local ssd.</li>.
-<Li>CLOUD_BASIC: ordinary cloud disk.</li>.
-<Li>CLOUD_SSD: ssd cloud disk</li>.
-<Li>CLOUD_PREMIUM: high-performance cloud block storage.</li>.
-<Li>CLOUD_BSSD: universal type ssd cloud disk</li>.
-<Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
-<li>CLOUD_TSSD: ultra-fast SSD cbs</li.
+                     * Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>
+<li>LOCAL_BASIC: Local SATA disk</li>
+<li>LOCAL_SSD: Local NVMe SSD</li>
+<li>CLOUD_BASIC: Cloud SATA disk</li>
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium SSD</li>
+<li>CLOUD_BSSD: Balanced SSD</li>
+<li>CLOUD_HSSD: Enhanced SSD</li>
+<li>CLOUD_TSSD: Tremendous SSD</li>
 Default value: Current disk types with inventory available.
                      */
                     std::string m_diskType;

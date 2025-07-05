@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2019 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -64,6 +64,39 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
+                     * 获取Release an Elastic IP. Under EIP 2.0, only the first EIP on the primary network interface can be released, and currently supported release types are limited to HighQualityEIP, AntiDDoSEIP, EIPv6, and HighQualityEIPv6.
+Default value:  `false`.
+
+This feature is currently in gradually released phase. To access it, please contact us.
+                     * @return ReleaseAddress Release an Elastic IP. Under EIP 2.0, only the first EIP on the primary network interface can be released, and currently supported release types are limited to HighQualityEIP, AntiDDoSEIP, EIPv6, and HighQualityEIPv6.
+Default value:  `false`.
+
+This feature is currently in gradually released phase. To access it, please contact us.
+                     * 
+                     */
+                    bool GetReleaseAddress() const;
+
+                    /**
+                     * 设置Release an Elastic IP. Under EIP 2.0, only the first EIP on the primary network interface can be released, and currently supported release types are limited to HighQualityEIP, AntiDDoSEIP, EIPv6, and HighQualityEIPv6.
+Default value:  `false`.
+
+This feature is currently in gradually released phase. To access it, please contact us.
+                     * @param _releaseAddress Release an Elastic IP. Under EIP 2.0, only the first EIP on the primary network interface can be released, and currently supported release types are limited to HighQualityEIP, AntiDDoSEIP, EIPv6, and HighQualityEIPv6.
+Default value:  `false`.
+
+This feature is currently in gradually released phase. To access it, please contact us.
+                     * 
+                     */
+                    void SetReleaseAddress(const bool& _releaseAddress);
+
+                    /**
+                     * 判断参数 ReleaseAddress 是否已赋值
+                     * @return ReleaseAddress 是否已赋值
+                     * 
+                     */
+                    bool ReleaseAddressHasBeenSet() const;
+
+                    /**
                      * 获取Whether to release a monthly subscription data disk mounted on an instance. true: Release the data disk along with termination of the instance. false: Only terminate the instance.
 Default value: `false`.
                      * @return ReleasePrepaidDataDisks Whether to release a monthly subscription data disk mounted on an instance. true: Release the data disk along with termination of the instance. false: Only terminate the instance.
@@ -95,6 +128,15 @@ Default value: `false`.
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
+
+                    /**
+                     * Release an Elastic IP. Under EIP 2.0, only the first EIP on the primary network interface can be released, and currently supported release types are limited to HighQualityEIP, AntiDDoSEIP, EIPv6, and HighQualityEIPv6.
+Default value:  `false`.
+
+This feature is currently in gradually released phase. To access it, please contact us.
+                     */
+                    bool m_releaseAddress;
+                    bool m_releaseAddressHasBeenSet;
 
                     /**
                      * Whether to release a monthly subscription data disk mounted on an instance. true: Release the data disk along with termination of the instance. false: Only terminate the instance.

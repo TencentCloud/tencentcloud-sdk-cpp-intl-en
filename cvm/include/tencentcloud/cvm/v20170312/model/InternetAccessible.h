@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2019 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -130,6 +130,198 @@ namespace TencentCloud
                      */
                     bool BandwidthPackageIdHasBeenSet() const;
 
+                    /**
+                     * 获取The EIP line type. 
+ <li>BGP Default: BGP</li>
+
+For a user who has activated the static single-line IP allowlist, possible values are:
+
+ <li>CMCC: China Mobile</li>
+ <li>CTCC: China Telecom</li>
+ <li>CUCC: China Unicom</li>
+
+Note: Only certain regions support static single-line IP addresses.
+                     * @return InternetServiceProvider The EIP line type. 
+ <li>BGP Default: BGP</li>
+
+For a user who has activated the static single-line IP allowlist, possible values are:
+
+ <li>CMCC: China Mobile</li>
+ <li>CTCC: China Telecom</li>
+ <li>CUCC: China Unicom</li>
+
+Note: Only certain regions support static single-line IP addresses.
+                     * 
+                     */
+                    std::string GetInternetServiceProvider() const;
+
+                    /**
+                     * 设置The EIP line type. 
+ <li>BGP Default: BGP</li>
+
+For a user who has activated the static single-line IP allowlist, possible values are:
+
+ <li>CMCC: China Mobile</li>
+ <li>CTCC: China Telecom</li>
+ <li>CUCC: China Unicom</li>
+
+Note: Only certain regions support static single-line IP addresses.
+                     * @param _internetServiceProvider The EIP line type. 
+ <li>BGP Default: BGP</li>
+
+For a user who has activated the static single-line IP allowlist, possible values are:
+
+ <li>CMCC: China Mobile</li>
+ <li>CTCC: China Telecom</li>
+ <li>CUCC: China Unicom</li>
+
+Note: Only certain regions support static single-line IP addresses.
+                     * 
+                     */
+                    void SetInternetServiceProvider(const std::string& _internetServiceProvider);
+
+                    /**
+                     * 判断参数 InternetServiceProvider 是否已赋值
+                     * @return InternetServiceProvider 是否已赋值
+                     * 
+                     */
+                    bool InternetServiceProviderHasBeenSet() const;
+
+                    /**
+                     * 获取AddressType. Default value: `WanIP`.
+
+For beta users of dedicated IP, the value can be:
+<li>HighQualityEIP: Dedicated IP</li>
+Note that dedicated IPs are only available in partial regions.
+
+For beta users of Anti-DDoS IP, the value can be:
+<li>AntiDDoSEIP: Anti-DDoS EIP</li>
+Note that Anti-DDoS IPs are only available in partial regions.
+
+This feature is currently in gradually released phase. To access it, please contact us.
+                     * @return IPv4AddressType AddressType. Default value: `WanIP`.
+
+For beta users of dedicated IP, the value can be:
+<li>HighQualityEIP: Dedicated IP</li>
+Note that dedicated IPs are only available in partial regions.
+
+For beta users of Anti-DDoS IP, the value can be:
+<li>AntiDDoSEIP: Anti-DDoS EIP</li>
+Note that Anti-DDoS IPs are only available in partial regions.
+
+This feature is currently in gradually released phase. To access it, please contact us.
+                     * 
+                     */
+                    std::string GetIPv4AddressType() const;
+
+                    /**
+                     * 设置AddressType. Default value: `WanIP`.
+
+For beta users of dedicated IP, the value can be:
+<li>HighQualityEIP: Dedicated IP</li>
+Note that dedicated IPs are only available in partial regions.
+
+For beta users of Anti-DDoS IP, the value can be:
+<li>AntiDDoSEIP: Anti-DDoS EIP</li>
+Note that Anti-DDoS IPs are only available in partial regions.
+
+This feature is currently in gradually released phase. To access it, please contact us.
+                     * @param _iPv4AddressType AddressType. Default value: `WanIP`.
+
+For beta users of dedicated IP, the value can be:
+<li>HighQualityEIP: Dedicated IP</li>
+Note that dedicated IPs are only available in partial regions.
+
+For beta users of Anti-DDoS IP, the value can be:
+<li>AntiDDoSEIP: Anti-DDoS EIP</li>
+Note that Anti-DDoS IPs are only available in partial regions.
+
+This feature is currently in gradually released phase. To access it, please contact us.
+                     * 
+                     */
+                    void SetIPv4AddressType(const std::string& _iPv4AddressType);
+
+                    /**
+                     * 判断参数 IPv4AddressType 是否已赋值
+                     * @return IPv4AddressType 是否已赋值
+                     * 
+                     */
+                    bool IPv4AddressTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Indicates the type of EIPv6. Valid values:
+
+<li>EIPv6: common IPv6</li>
+<li>HighQualityEIPv6: dedicated IPv6</li>
+Note: Contact the product team to enable the dedicated IPv6 allowlist. The dedicated IPv6 is only supported in some regions. 
+
+Default: `EIPv6`
+
+This feature is currently in gradually released phase. To access it, please contact us.
+                     * @return IPv6AddressType Indicates the type of EIPv6. Valid values:
+
+<li>EIPv6: common IPv6</li>
+<li>HighQualityEIPv6: dedicated IPv6</li>
+Note: Contact the product team to enable the dedicated IPv6 allowlist. The dedicated IPv6 is only supported in some regions. 
+
+Default: `EIPv6`
+
+This feature is currently in gradually released phase. To access it, please contact us.
+                     * 
+                     */
+                    std::string GetIPv6AddressType() const;
+
+                    /**
+                     * 设置Indicates the type of EIPv6. Valid values:
+
+<li>EIPv6: common IPv6</li>
+<li>HighQualityEIPv6: dedicated IPv6</li>
+Note: Contact the product team to enable the dedicated IPv6 allowlist. The dedicated IPv6 is only supported in some regions. 
+
+Default: `EIPv6`
+
+This feature is currently in gradually released phase. To access it, please contact us.
+                     * @param _iPv6AddressType Indicates the type of EIPv6. Valid values:
+
+<li>EIPv6: common IPv6</li>
+<li>HighQualityEIPv6: dedicated IPv6</li>
+Note: Contact the product team to enable the dedicated IPv6 allowlist. The dedicated IPv6 is only supported in some regions. 
+
+Default: `EIPv6`
+
+This feature is currently in gradually released phase. To access it, please contact us.
+                     * 
+                     */
+                    void SetIPv6AddressType(const std::string& _iPv6AddressType);
+
+                    /**
+                     * 判断参数 IPv6AddressType 是否已赋值
+                     * @return IPv6AddressType 是否已赋值
+                     * 
+                     */
+                    bool IPv6AddressTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
+                     * @return AntiDDoSPackageId Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
+                     * 
+                     */
+                    std::string GetAntiDDoSPackageId() const;
+
+                    /**
+                     * 设置Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
+                     * @param _antiDDoSPackageId Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
+                     * 
+                     */
+                    void SetAntiDDoSPackageId(const std::string& _antiDDoSPackageId);
+
+                    /**
+                     * 判断参数 AntiDDoSPackageId 是否已赋值
+                     * @return AntiDDoSPackageId 是否已赋值
+                     * 
+                     */
+                    bool AntiDDoSPackageIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -155,6 +347,57 @@ namespace TencentCloud
                      */
                     std::string m_bandwidthPackageId;
                     bool m_bandwidthPackageIdHasBeenSet;
+
+                    /**
+                     * The EIP line type. 
+ <li>BGP Default: BGP</li>
+
+For a user who has activated the static single-line IP allowlist, possible values are:
+
+ <li>CMCC: China Mobile</li>
+ <li>CTCC: China Telecom</li>
+ <li>CUCC: China Unicom</li>
+
+Note: Only certain regions support static single-line IP addresses.
+                     */
+                    std::string m_internetServiceProvider;
+                    bool m_internetServiceProviderHasBeenSet;
+
+                    /**
+                     * AddressType. Default value: `WanIP`.
+
+For beta users of dedicated IP, the value can be:
+<li>HighQualityEIP: Dedicated IP</li>
+Note that dedicated IPs are only available in partial regions.
+
+For beta users of Anti-DDoS IP, the value can be:
+<li>AntiDDoSEIP: Anti-DDoS EIP</li>
+Note that Anti-DDoS IPs are only available in partial regions.
+
+This feature is currently in gradually released phase. To access it, please contact us.
+                     */
+                    std::string m_iPv4AddressType;
+                    bool m_iPv4AddressTypeHasBeenSet;
+
+                    /**
+                     * Indicates the type of EIPv6. Valid values:
+
+<li>EIPv6: common IPv6</li>
+<li>HighQualityEIPv6: dedicated IPv6</li>
+Note: Contact the product team to enable the dedicated IPv6 allowlist. The dedicated IPv6 is only supported in some regions. 
+
+Default: `EIPv6`
+
+This feature is currently in gradually released phase. To access it, please contact us.
+                     */
+                    std::string m_iPv6AddressType;
+                    bool m_iPv6AddressTypeHasBeenSet;
+
+                    /**
+                     * Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
+                     */
+                    std::string m_antiDDoSPackageId;
+                    bool m_antiDDoSPackageIdHasBeenSet;
 
                 };
             }
