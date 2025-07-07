@@ -161,6 +161,7 @@ set(live_public_header_model
   include/tencentcloud/live/v20180801/model/DescribeLiveTranscodeRulesResponse.h
   include/tencentcloud/live/v20180801/model/CreateLiveTimeShiftTemplateRequest.h
   include/tencentcloud/live/v20180801/model/DescribeLiveDomainRefererResponse.h
+  include/tencentcloud/live/v20180801/model/StopLivePadStreamRequest.h
   include/tencentcloud/live/v20180801/model/AddLiveDomainRequest.h
   include/tencentcloud/live/v20180801/model/StreamName.h
   include/tencentcloud/live/v20180801/model/DescribeLiveCertsRequest.h
@@ -231,6 +232,7 @@ set(live_public_header_model
   include/tencentcloud/live/v20180801/model/StartLivePadStreamResponse.h
   include/tencentcloud/live/v20180801/model/CreateLiveRecordTemplateResponse.h
   include/tencentcloud/live/v20180801/model/GroupProIspDataInfo.h
+  include/tencentcloud/live/v20180801/model/StopLivePadStreamResponse.h
   include/tencentcloud/live/v20180801/model/RecordParam.h
   include/tencentcloud/live/v20180801/model/ForbidLiveStreamResponse.h
   include/tencentcloud/live/v20180801/model/HttpStatusInfo.h
@@ -460,6 +462,7 @@ set(live_src
   src/v20180801/model/DescribeLiveTranscodeRulesResponse.cpp
   src/v20180801/model/CreateLiveTimeShiftTemplateRequest.cpp
   src/v20180801/model/DescribeLiveDomainRefererResponse.cpp
+  src/v20180801/model/StopLivePadStreamRequest.cpp
   src/v20180801/model/AddLiveDomainRequest.cpp
   src/v20180801/model/StreamName.cpp
   src/v20180801/model/DescribeLiveCertsRequest.cpp
@@ -530,6 +533,7 @@ set(live_src
   src/v20180801/model/StartLivePadStreamResponse.cpp
   src/v20180801/model/CreateLiveRecordTemplateResponse.cpp
   src/v20180801/model/GroupProIspDataInfo.cpp
+  src/v20180801/model/StopLivePadStreamResponse.cpp
   src/v20180801/model/RecordParam.cpp
   src/v20180801/model/ForbidLiveStreamResponse.cpp
   src/v20180801/model/HttpStatusInfo.cpp

@@ -249,6 +249,8 @@
 #include <tencentcloud/live/v20180801/model/ResumeLiveStreamResponse.h>
 #include <tencentcloud/live/v20180801/model/StartLivePadStreamRequest.h>
 #include <tencentcloud/live/v20180801/model/StartLivePadStreamResponse.h>
+#include <tencentcloud/live/v20180801/model/StopLivePadStreamRequest.h>
+#include <tencentcloud/live/v20180801/model/StopLivePadStreamResponse.h>
 #include <tencentcloud/live/v20180801/model/StopLiveRecordRequest.h>
 #include <tencentcloud/live/v20180801/model/StopLiveRecordResponse.h>
 #include <tencentcloud/live/v20180801/model/StopRecordTaskRequest.h>
@@ -610,6 +612,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::StartLivePadStreamResponse> StartLivePadStreamOutcome;
                 typedef std::future<StartLivePadStreamOutcome> StartLivePadStreamOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::StartLivePadStreamRequest&, StartLivePadStreamOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartLivePadStreamAsyncHandler;
+                typedef Outcome<Core::Error, Model::StopLivePadStreamResponse> StopLivePadStreamOutcome;
+                typedef std::future<StopLivePadStreamOutcome> StopLivePadStreamOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::StopLivePadStreamRequest&, StopLivePadStreamOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopLivePadStreamAsyncHandler;
                 typedef Outcome<Core::Error, Model::StopLiveRecordResponse> StopLiveRecordOutcome;
                 typedef std::future<StopLiveRecordOutcome> StopLiveRecordOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::StopLiveRecordRequest&, StopLiveRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopLiveRecordAsyncHandler;
@@ -1738,6 +1743,15 @@ Referer information is included in HTTP requests. After you enable referer confi
                 StartLivePadStreamOutcome StartLivePadStream(const Model::StartLivePadStreamRequest &request);
                 void StartLivePadStreamAsync(const Model::StartLivePadStreamRequest& request, const StartLivePadStreamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 StartLivePadStreamOutcomeCallable StartLivePadStreamCallable(const Model::StartLivePadStreamRequest& request);
+
+                /**
+                 *Call this API to end the transition to standby footage.
+                 * @param req StopLivePadStreamRequest
+                 * @return StopLivePadStreamOutcome
+                 */
+                StopLivePadStreamOutcome StopLivePadStream(const Model::StopLivePadStreamRequest &request);
+                void StopLivePadStreamAsync(const Model::StopLivePadStreamRequest& request, const StopLivePadStreamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                StopLivePadStreamOutcomeCallable StopLivePadStreamCallable(const Model::StopLivePadStreamRequest& request);
 
                 /**
                  *Note: Recording files are stored on the VOD platform. To use the recording feature, you need to activate a VOD account and ensure that it is available. After the recording files are stored, applicable fees (including storage fees and downstream playback traffic fees) will be charged according to the VOD billing method. For more information, please see the corresponding document.
