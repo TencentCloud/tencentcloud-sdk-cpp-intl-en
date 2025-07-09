@@ -169,6 +169,49 @@ EmrClient::CreateInstanceOutcomeCallable EmrClient::CreateInstanceCallable(const
     return task->get_future();
 }
 
+EmrClient::CreateSLInstanceOutcome EmrClient::CreateSLInstance(const CreateSLInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateSLInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateSLInstanceResponse rsp = CreateSLInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateSLInstanceOutcome(rsp);
+        else
+            return CreateSLInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateSLInstanceOutcome(outcome.GetError());
+    }
+}
+
+void EmrClient::CreateSLInstanceAsync(const CreateSLInstanceRequest& request, const CreateSLInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateSLInstance(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+EmrClient::CreateSLInstanceOutcomeCallable EmrClient::CreateSLInstanceCallable(const CreateSLInstanceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateSLInstanceOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateSLInstance(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 EmrClient::DescribeAutoScaleRecordsOutcome EmrClient::DescribeAutoScaleRecords(const DescribeAutoScaleRecordsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeAutoScaleRecords");
@@ -463,6 +506,92 @@ EmrClient::DescribeResourceScheduleOutcomeCallable EmrClient::DescribeResourceSc
         [this, request]()
         {
             return this->DescribeResourceSchedule(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+EmrClient::DescribeSLInstanceOutcome EmrClient::DescribeSLInstance(const DescribeSLInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeSLInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeSLInstanceResponse rsp = DescribeSLInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeSLInstanceOutcome(rsp);
+        else
+            return DescribeSLInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeSLInstanceOutcome(outcome.GetError());
+    }
+}
+
+void EmrClient::DescribeSLInstanceAsync(const DescribeSLInstanceRequest& request, const DescribeSLInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeSLInstance(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+EmrClient::DescribeSLInstanceOutcomeCallable EmrClient::DescribeSLInstanceCallable(const DescribeSLInstanceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeSLInstanceOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeSLInstance(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+EmrClient::DescribeSLInstanceListOutcome EmrClient::DescribeSLInstanceList(const DescribeSLInstanceListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeSLInstanceList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeSLInstanceListResponse rsp = DescribeSLInstanceListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeSLInstanceListOutcome(rsp);
+        else
+            return DescribeSLInstanceListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeSLInstanceListOutcome(outcome.GetError());
+    }
+}
+
+void EmrClient::DescribeSLInstanceListAsync(const DescribeSLInstanceListRequest& request, const DescribeSLInstanceListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeSLInstanceList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+EmrClient::DescribeSLInstanceListOutcomeCallable EmrClient::DescribeSLInstanceListCallable(const DescribeSLInstanceListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeSLInstanceListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeSLInstanceList(request);
         }
     );
 
@@ -814,6 +943,92 @@ EmrClient::ModifyResourcesTagsOutcomeCallable EmrClient::ModifyResourcesTagsCall
     return task->get_future();
 }
 
+EmrClient::ModifySLInstanceOutcome EmrClient::ModifySLInstance(const ModifySLInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifySLInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifySLInstanceResponse rsp = ModifySLInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifySLInstanceOutcome(rsp);
+        else
+            return ModifySLInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifySLInstanceOutcome(outcome.GetError());
+    }
+}
+
+void EmrClient::ModifySLInstanceAsync(const ModifySLInstanceRequest& request, const ModifySLInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifySLInstance(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+EmrClient::ModifySLInstanceOutcomeCallable EmrClient::ModifySLInstanceCallable(const ModifySLInstanceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifySLInstanceOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifySLInstance(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+EmrClient::ModifySLInstanceBasicOutcome EmrClient::ModifySLInstanceBasic(const ModifySLInstanceBasicRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifySLInstanceBasic");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifySLInstanceBasicResponse rsp = ModifySLInstanceBasicResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifySLInstanceBasicOutcome(rsp);
+        else
+            return ModifySLInstanceBasicOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifySLInstanceBasicOutcome(outcome.GetError());
+    }
+}
+
+void EmrClient::ModifySLInstanceBasicAsync(const ModifySLInstanceBasicRequest& request, const ModifySLInstanceBasicAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifySLInstanceBasic(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+EmrClient::ModifySLInstanceBasicOutcomeCallable EmrClient::ModifySLInstanceBasicCallable(const ModifySLInstanceBasicRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifySLInstanceBasicOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifySLInstanceBasic(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 EmrClient::ModifyUserManagerPwdOutcome EmrClient::ModifyUserManagerPwd(const ModifyUserManagerPwdRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyUserManagerPwd");
@@ -1065,6 +1280,49 @@ EmrClient::TerminateInstanceOutcomeCallable EmrClient::TerminateInstanceCallable
         [this, request]()
         {
             return this->TerminateInstance(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+EmrClient::TerminateSLInstanceOutcome EmrClient::TerminateSLInstance(const TerminateSLInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "TerminateSLInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        TerminateSLInstanceResponse rsp = TerminateSLInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return TerminateSLInstanceOutcome(rsp);
+        else
+            return TerminateSLInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return TerminateSLInstanceOutcome(outcome.GetError());
+    }
+}
+
+void EmrClient::TerminateSLInstanceAsync(const TerminateSLInstanceRequest& request, const TerminateSLInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->TerminateSLInstance(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+EmrClient::TerminateSLInstanceOutcomeCallable EmrClient::TerminateSLInstanceCallable(const TerminateSLInstanceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<TerminateSLInstanceOutcome()>>(
+        [this, request]()
+        {
+            return this->TerminateSLInstance(request);
         }
     );
 

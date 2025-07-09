@@ -29,6 +29,8 @@
 #include <tencentcloud/emr/v20190103/model/CreateClusterResponse.h>
 #include <tencentcloud/emr/v20190103/model/CreateInstanceRequest.h>
 #include <tencentcloud/emr/v20190103/model/CreateInstanceResponse.h>
+#include <tencentcloud/emr/v20190103/model/CreateSLInstanceRequest.h>
+#include <tencentcloud/emr/v20190103/model/CreateSLInstanceResponse.h>
 #include <tencentcloud/emr/v20190103/model/DescribeAutoScaleRecordsRequest.h>
 #include <tencentcloud/emr/v20190103/model/DescribeAutoScaleRecordsResponse.h>
 #include <tencentcloud/emr/v20190103/model/DescribeClusterNodesRequest.h>
@@ -43,6 +45,10 @@
 #include <tencentcloud/emr/v20190103/model/DescribeInstancesListResponse.h>
 #include <tencentcloud/emr/v20190103/model/DescribeResourceScheduleRequest.h>
 #include <tencentcloud/emr/v20190103/model/DescribeResourceScheduleResponse.h>
+#include <tencentcloud/emr/v20190103/model/DescribeSLInstanceRequest.h>
+#include <tencentcloud/emr/v20190103/model/DescribeSLInstanceResponse.h>
+#include <tencentcloud/emr/v20190103/model/DescribeSLInstanceListRequest.h>
+#include <tencentcloud/emr/v20190103/model/DescribeSLInstanceListResponse.h>
 #include <tencentcloud/emr/v20190103/model/DescribeUsersForUserManagerRequest.h>
 #include <tencentcloud/emr/v20190103/model/DescribeUsersForUserManagerResponse.h>
 #include <tencentcloud/emr/v20190103/model/InquiryPriceCreateInstanceRequest.h>
@@ -59,6 +65,10 @@
 #include <tencentcloud/emr/v20190103/model/ModifyResourceSchedulerResponse.h>
 #include <tencentcloud/emr/v20190103/model/ModifyResourcesTagsRequest.h>
 #include <tencentcloud/emr/v20190103/model/ModifyResourcesTagsResponse.h>
+#include <tencentcloud/emr/v20190103/model/ModifySLInstanceRequest.h>
+#include <tencentcloud/emr/v20190103/model/ModifySLInstanceResponse.h>
+#include <tencentcloud/emr/v20190103/model/ModifySLInstanceBasicRequest.h>
+#include <tencentcloud/emr/v20190103/model/ModifySLInstanceBasicResponse.h>
 #include <tencentcloud/emr/v20190103/model/ModifyUserManagerPwdRequest.h>
 #include <tencentcloud/emr/v20190103/model/ModifyUserManagerPwdResponse.h>
 #include <tencentcloud/emr/v20190103/model/ScaleOutClusterRequest.h>
@@ -71,6 +81,8 @@
 #include <tencentcloud/emr/v20190103/model/TerminateClusterNodesResponse.h>
 #include <tencentcloud/emr/v20190103/model/TerminateInstanceRequest.h>
 #include <tencentcloud/emr/v20190103/model/TerminateInstanceResponse.h>
+#include <tencentcloud/emr/v20190103/model/TerminateSLInstanceRequest.h>
+#include <tencentcloud/emr/v20190103/model/TerminateSLInstanceResponse.h>
 #include <tencentcloud/emr/v20190103/model/TerminateTasksRequest.h>
 #include <tencentcloud/emr/v20190103/model/TerminateTasksResponse.h>
 
@@ -96,6 +108,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateInstanceResponse> CreateInstanceOutcome;
                 typedef std::future<CreateInstanceOutcome> CreateInstanceOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::CreateInstanceRequest&, CreateInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateSLInstanceResponse> CreateSLInstanceOutcome;
+                typedef std::future<CreateSLInstanceOutcome> CreateSLInstanceOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::CreateSLInstanceRequest&, CreateSLInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSLInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAutoScaleRecordsResponse> DescribeAutoScaleRecordsOutcome;
                 typedef std::future<DescribeAutoScaleRecordsOutcome> DescribeAutoScaleRecordsOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::DescribeAutoScaleRecordsRequest&, DescribeAutoScaleRecordsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAutoScaleRecordsAsyncHandler;
@@ -117,6 +132,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeResourceScheduleResponse> DescribeResourceScheduleOutcome;
                 typedef std::future<DescribeResourceScheduleOutcome> DescribeResourceScheduleOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::DescribeResourceScheduleRequest&, DescribeResourceScheduleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeResourceScheduleAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSLInstanceResponse> DescribeSLInstanceOutcome;
+                typedef std::future<DescribeSLInstanceOutcome> DescribeSLInstanceOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::DescribeSLInstanceRequest&, DescribeSLInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSLInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSLInstanceListResponse> DescribeSLInstanceListOutcome;
+                typedef std::future<DescribeSLInstanceListOutcome> DescribeSLInstanceListOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::DescribeSLInstanceListRequest&, DescribeSLInstanceListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSLInstanceListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeUsersForUserManagerResponse> DescribeUsersForUserManagerOutcome;
                 typedef std::future<DescribeUsersForUserManagerOutcome> DescribeUsersForUserManagerOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::DescribeUsersForUserManagerRequest&, DescribeUsersForUserManagerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUsersForUserManagerAsyncHandler;
@@ -141,6 +162,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyResourcesTagsResponse> ModifyResourcesTagsOutcome;
                 typedef std::future<ModifyResourcesTagsOutcome> ModifyResourcesTagsOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::ModifyResourcesTagsRequest&, ModifyResourcesTagsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyResourcesTagsAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifySLInstanceResponse> ModifySLInstanceOutcome;
+                typedef std::future<ModifySLInstanceOutcome> ModifySLInstanceOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::ModifySLInstanceRequest&, ModifySLInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySLInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifySLInstanceBasicResponse> ModifySLInstanceBasicOutcome;
+                typedef std::future<ModifySLInstanceBasicOutcome> ModifySLInstanceBasicOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::ModifySLInstanceBasicRequest&, ModifySLInstanceBasicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySLInstanceBasicAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyUserManagerPwdResponse> ModifyUserManagerPwdOutcome;
                 typedef std::future<ModifyUserManagerPwdOutcome> ModifyUserManagerPwdOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::ModifyUserManagerPwdRequest&, ModifyUserManagerPwdOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyUserManagerPwdAsyncHandler;
@@ -159,6 +186,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::TerminateInstanceResponse> TerminateInstanceOutcome;
                 typedef std::future<TerminateInstanceOutcome> TerminateInstanceOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::TerminateInstanceRequest&, TerminateInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TerminateInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::TerminateSLInstanceResponse> TerminateSLInstanceOutcome;
+                typedef std::future<TerminateSLInstanceOutcome> TerminateSLInstanceOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::TerminateSLInstanceRequest&, TerminateSLInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TerminateSLInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::TerminateTasksResponse> TerminateTasksOutcome;
                 typedef std::future<TerminateTasksOutcome> TerminateTasksOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::TerminateTasksRequest&, TerminateTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TerminateTasksAsyncHandler;
@@ -192,6 +222,15 @@ This API is used to add user lists (user management).
                 CreateInstanceOutcome CreateInstance(const Model::CreateInstanceRequest &request);
                 void CreateInstanceAsync(const Model::CreateInstanceRequest& request, const CreateInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateInstanceOutcomeCallable CreateInstanceCallable(const Model::CreateInstanceRequest& request);
+
+                /**
+                 *This API is used to create a Serverless HBase instance.- If the API call is successful, a Serverless HBase instance will be created. If the instance creation request is successful, the InstanceId of the created instance and the RequestID of the request will be returned.- This is an asynchronous API. The operation is not completed immediately when the API call returns. The instance operation result can be viewed by calling DescribeInstancesList to view the StatusDesc status of the current instance.
+                 * @param req CreateSLInstanceRequest
+                 * @return CreateSLInstanceOutcome
+                 */
+                CreateSLInstanceOutcome CreateSLInstance(const Model::CreateSLInstanceRequest &request);
+                void CreateSLInstanceAsync(const Model::CreateSLInstanceRequest& request, const CreateSLInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateSLInstanceOutcomeCallable CreateSLInstanceCallable(const Model::CreateSLInstanceRequest& request);
 
                 /**
                  *This API is used to inquiry detailed records of cluster autoscaling.
@@ -255,6 +294,24 @@ This API is used to add user lists (user management).
                 DescribeResourceScheduleOutcome DescribeResourceSchedule(const Model::DescribeResourceScheduleRequest &request);
                 void DescribeResourceScheduleAsync(const Model::DescribeResourceScheduleRequest& request, const DescribeResourceScheduleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeResourceScheduleOutcomeCallable DescribeResourceScheduleCallable(const Model::DescribeResourceScheduleRequest& request);
+
+                /**
+                 *This API is used to query the basic information of Serverless HBase instances.
+                 * @param req DescribeSLInstanceRequest
+                 * @return DescribeSLInstanceOutcome
+                 */
+                DescribeSLInstanceOutcome DescribeSLInstance(const Model::DescribeSLInstanceRequest &request);
+                void DescribeSLInstanceAsync(const Model::DescribeSLInstanceRequest& request, const DescribeSLInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSLInstanceOutcomeCallable DescribeSLInstanceCallable(const Model::DescribeSLInstanceRequest& request);
+
+                /**
+                 *This API is used to query the detailed information of the Serverless HBase instance list.
+                 * @param req DescribeSLInstanceListRequest
+                 * @return DescribeSLInstanceListOutcome
+                 */
+                DescribeSLInstanceListOutcome DescribeSLInstanceList(const Model::DescribeSLInstanceListRequest &request);
+                void DescribeSLInstanceListAsync(const Model::DescribeSLInstanceListRequest& request, const DescribeSLInstanceListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSLInstanceListOutcomeCallable DescribeSLInstanceListCallable(const Model::DescribeSLInstanceListRequest& request);
 
                 /**
                  *This API is available for clusters with OpenLDAP components configured.
@@ -330,6 +387,24 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
                 ModifyResourcesTagsOutcomeCallable ModifyResourcesTagsCallable(const Model::ModifyResourcesTagsRequest& request);
 
                 /**
+                 *This API is used to resize a Serverless HBase instance.- If the API call is successful, a Serverless HBase instance will be created. If the instance creation request is successful, the RequestID of the request will be returned.- This is an asynchronous API. The operation is not completed immediately when the API call returns. The instance operation result can be viewed by calling DescribeInstancesList to view the StatusDesc status of the current instance.
+                 * @param req ModifySLInstanceRequest
+                 * @return ModifySLInstanceOutcome
+                 */
+                ModifySLInstanceOutcome ModifySLInstance(const Model::ModifySLInstanceRequest &request);
+                void ModifySLInstanceAsync(const Model::ModifySLInstanceRequest& request, const ModifySLInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifySLInstanceOutcomeCallable ModifySLInstanceCallable(const Model::ModifySLInstanceRequest& request);
+
+                /**
+                 *This API is used to modify the Serverless HBase instance name.
+                 * @param req ModifySLInstanceBasicRequest
+                 * @return ModifySLInstanceBasicOutcome
+                 */
+                ModifySLInstanceBasicOutcome ModifySLInstanceBasic(const Model::ModifySLInstanceBasicRequest &request);
+                void ModifySLInstanceBasicAsync(const Model::ModifySLInstanceBasicRequest& request, const ModifySLInstanceBasicAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifySLInstanceBasicOutcomeCallable ModifySLInstanceBasicCallable(const Model::ModifySLInstanceBasicRequest& request);
+
+                /**
                  *This API is used to change user password (user management).
                  * @param req ModifyUserManagerPwdRequest
                  * @return ModifyUserManagerPwdOutcome
@@ -382,6 +457,15 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
                 TerminateInstanceOutcome TerminateInstance(const Model::TerminateInstanceRequest &request);
                 void TerminateInstanceAsync(const Model::TerminateInstanceRequest& request, const TerminateInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 TerminateInstanceOutcomeCallable TerminateInstanceCallable(const Model::TerminateInstanceRequest& request);
+
+                /**
+                 *This API is used to terminate a Serverless HBase instance.
+                 * @param req TerminateSLInstanceRequest
+                 * @return TerminateSLInstanceOutcome
+                 */
+                TerminateSLInstanceOutcome TerminateSLInstance(const Model::TerminateSLInstanceRequest &request);
+                void TerminateSLInstanceAsync(const Model::TerminateSLInstanceRequest& request, const TerminateSLInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                TerminateSLInstanceOutcomeCallable TerminateSLInstanceCallable(const Model::TerminateSLInstanceRequest& request);
 
                 /**
                  *This API is used to terminate a task node.

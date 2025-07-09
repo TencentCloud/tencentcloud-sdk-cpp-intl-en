@@ -244,21 +244,21 @@ ccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --M
                     /**
                      * 获取Queries information on a specified product
                      * @return ProductCode Queries information on a specified product
-                     * 
+                     * @deprecated
                      */
                     std::string GetProductCode() const;
 
                     /**
                      * 设置Queries information on a specified product
                      * @param _productCode Queries information on a specified product
-                     * 
+                     * @deprecated
                      */
                     void SetProductCode(const std::string& _productCode);
 
                     /**
                      * 判断参数 ProductCode 是否已赋值
                      * @return ProductCode 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool ProductCodeHasBeenSet() const;
 
