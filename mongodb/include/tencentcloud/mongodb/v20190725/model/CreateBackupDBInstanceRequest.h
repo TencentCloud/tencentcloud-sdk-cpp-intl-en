@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+                     * @return InstanceId Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+                     * @param _instanceId Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,23 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Valid values: 0 (logical backup), 1 (physical backup)
-                     * @return BackupMethod Valid values: 0 (logical backup), 1 (physical backup)
+                     * 获取Sets the backup method.
+ - 0: logical backup.
+ - 1: physical backup.
+                     * @return BackupMethod Sets the backup method.
+ - 0: logical backup.
+ - 1: physical backup.
                      * 
                      */
                     int64_t GetBackupMethod() const;
 
                     /**
-                     * 设置Valid values: 0 (logical backup), 1 (physical backup)
-                     * @param _backupMethod Valid values: 0 (logical backup), 1 (physical backup)
+                     * 设置Sets the backup method.
+ - 0: logical backup.
+ - 1: physical backup.
+                     * @param _backupMethod Sets the backup method.
+ - 0: logical backup.
+ - 1: physical backup.
                      * 
                      */
                     void SetBackupMethod(const int64_t& _backupMethod);
@@ -85,15 +93,15 @@ namespace TencentCloud
                     bool BackupMethodHasBeenSet() const;
 
                     /**
-                     * 获取Backup remarks
-                     * @return BackupRemark Backup remarks
+                     * 获取Backup remarks information.
+                     * @return BackupRemark Backup remarks information.
                      * 
                      */
                     std::string GetBackupRemark() const;
 
                     /**
-                     * 设置Backup remarks
-                     * @param _backupRemark Backup remarks
+                     * 设置Backup remarks information.
+                     * @param _backupRemark Backup remarks information.
                      * 
                      */
                     void SetBackupRemark(const std::string& _backupRemark);
@@ -108,19 +116,21 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Valid values: 0 (logical backup), 1 (physical backup)
+                     * Sets the backup method.
+ - 0: logical backup.
+ - 1: physical backup.
                      */
                     int64_t m_backupMethod;
                     bool m_backupMethodHasBeenSet;
 
                     /**
-                     * Backup remarks
+                     * Backup remarks information.
                      */
                     std::string m_backupRemark;
                     bool m_backupRemarkHasBeenSet;

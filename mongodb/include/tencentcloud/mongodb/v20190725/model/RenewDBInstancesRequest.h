@@ -44,15 +44,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取IDs of one or more instances to be operated. The value can be obtained from the `InstanceId` parameter returned by the `DescribeInstances` API. Up to 100 instances can be requested at a time.
-                     * @return InstanceIds IDs of one or more instances to be operated. The value can be obtained from the `InstanceId` parameter returned by the `DescribeInstances` API. Up to 100 instances can be requested at a time.
+                     * 获取Specifies the ID or IDs of one or multiple instances to be renewed.
+ - You can obtain the IDs from **InstanceIds** in the return values of the [DescribeDBInstances](https://intl.cloud.tencent.com/document/product/240/38568?from_cn_redirect=1) API.
+ - The maximum number of instances for each renewal request is 100.
+                     * @return InstanceIds Specifies the ID or IDs of one or multiple instances to be renewed.
+ - You can obtain the IDs from **InstanceIds** in the return values of the [DescribeDBInstances](https://intl.cloud.tencent.com/document/product/240/38568?from_cn_redirect=1) API.
+ - The maximum number of instances for each renewal request is 100.
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置IDs of one or more instances to be operated. The value can be obtained from the `InstanceId` parameter returned by the `DescribeInstances` API. Up to 100 instances can be requested at a time.
-                     * @param _instanceIds IDs of one or more instances to be operated. The value can be obtained from the `InstanceId` parameter returned by the `DescribeInstances` API. Up to 100 instances can be requested at a time.
+                     * 设置Specifies the ID or IDs of one or multiple instances to be renewed.
+ - You can obtain the IDs from **InstanceIds** in the return values of the [DescribeDBInstances](https://intl.cloud.tencent.com/document/product/240/38568?from_cn_redirect=1) API.
+ - The maximum number of instances for each renewal request is 100.
+                     * @param _instanceIds Specifies the ID or IDs of one or multiple instances to be renewed.
+ - You can obtain the IDs from **InstanceIds** in the return values of the [DescribeDBInstances](https://intl.cloud.tencent.com/document/product/240/38568?from_cn_redirect=1) API.
+ - The maximum number of instances for each renewal request is 100.
                      * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
@@ -88,7 +96,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * IDs of one or more instances to be operated. The value can be obtained from the `InstanceId` parameter returned by the `DescribeInstances` API. Up to 100 instances can be requested at a time.
+                     * Specifies the ID or IDs of one or multiple instances to be renewed.
+ - You can obtain the IDs from **InstanceIds** in the return values of the [DescribeDBInstances](https://intl.cloud.tencent.com/document/product/240/38568?from_cn_redirect=1) API.
+ - The maximum number of instances for each renewal request is 100.
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The collection of modifiable integer parameters of an instance.
+                * Collection of modifiable instance parameters of the Integer type.
                 */
                 class InstanceIntegerParam : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Current value
-                     * @return CurrentValue Current value
+                     * 获取Current parameter value.
+                     * @return CurrentValue Current parameter value.
                      * 
                      */
                     std::string GetCurrentValue() const;
 
                     /**
-                     * 设置Current value
-                     * @param _currentValue Current value
+                     * 设置Current parameter value.
+                     * @param _currentValue Current parameter value.
                      * 
                      */
                     void SetCurrentValue(const std::string& _currentValue);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CurrentValueHasBeenSet() const;
 
                     /**
-                     * 获取Default value
-                     * @return DefaultValue Default value
+                     * 获取Default parameter value.
+                     * @return DefaultValue Default parameter value.
                      * 
                      */
                     std::string GetDefaultValue() const;
 
                     /**
-                     * 设置Default value
-                     * @param _defaultValue Default value
+                     * 设置Default parameter value.
+                     * @param _defaultValue Default parameter value.
                      * 
                      */
                     void SetDefaultValue(const std::string& _defaultValue);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool DefaultValueHasBeenSet() const;
 
                     /**
-                     * 获取Maximum value
-                     * @return Max Maximum value
+                     * 获取Maximum parameter value.
+                     * @return Max Maximum parameter value.
                      * 
                      */
                     std::string GetMax() const;
 
                     /**
-                     * 设置Maximum value
-                     * @param _max Maximum value
+                     * 设置Maximum parameter value.
+                     * @param _max Maximum parameter value.
                      * 
                      */
                     void SetMax(const std::string& _max);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool MaxHasBeenSet() const;
 
                     /**
-                     * 获取Minimum value
-                     * @return Min Minimum value
+                     * 获取Minimum value.
+                     * @return Min Minimum value.
                      * 
                      */
                     std::string GetMin() const;
 
                     /**
-                     * 设置Minimum value
-                     * @param _min Minimum value
+                     * 设置Minimum value.
+                     * @param _min Minimum value.
                      * 
                      */
                     void SetMin(const std::string& _min);
@@ -131,15 +131,23 @@ namespace TencentCloud
                     bool MinHasBeenSet() const;
 
                     /**
-                     * 获取Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
-                     * @return NeedRestart Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
+                     * 获取Whether a restart is required for the parameters to take effect after modification.
+ - 1: Restart is required for the parameters to take effect.
+ - 0: Restart is not required. Once set, the parameters take effect immediately.
+                     * @return NeedRestart Whether a restart is required for the parameters to take effect after modification.
+ - 1: Restart is required for the parameters to take effect.
+ - 0: Restart is not required. Once set, the parameters take effect immediately.
                      * 
                      */
                     std::string GetNeedRestart() const;
 
                     /**
-                     * 设置Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
-                     * @param _needRestart Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
+                     * 设置Whether a restart is required for the parameters to take effect after modification.
+ - 1: Restart is required for the parameters to take effect.
+ - 0: Restart is not required. Once set, the parameters take effect immediately.
+                     * @param _needRestart Whether a restart is required for the parameters to take effect after modification.
+ - 1: Restart is required for the parameters to take effect.
+ - 0: Restart is not required. Once set, the parameters take effect immediately.
                      * 
                      */
                     void SetNeedRestart(const std::string& _needRestart);
@@ -152,15 +160,15 @@ namespace TencentCloud
                     bool NeedRestartHasBeenSet() const;
 
                     /**
-                     * 获取Parameter name
-                     * @return ParamName Parameter name
+                     * 获取Parameter name.
+                     * @return ParamName Parameter name.
                      * 
                      */
                     std::string GetParamName() const;
 
                     /**
-                     * 设置Parameter name
-                     * @param _paramName Parameter name
+                     * 设置Parameter name.
+                     * @param _paramName Parameter name.
                      * 
                      */
                     void SetParamName(const std::string& _paramName);
@@ -173,15 +181,15 @@ namespace TencentCloud
                     bool ParamNameHasBeenSet() const;
 
                     /**
-                     * 获取Parameter description
-                     * @return Tips Parameter description
+                     * 获取Parameter description.
+                     * @return Tips Parameter description.
                      * 
                      */
                     std::vector<std::string> GetTips() const;
 
                     /**
-                     * 设置Parameter description
-                     * @param _tips Parameter description
+                     * 设置Parameter description.
+                     * @param _tips Parameter description.
                      * 
                      */
                     void SetTips(const std::vector<std::string>& _tips);
@@ -194,15 +202,15 @@ namespace TencentCloud
                     bool TipsHasBeenSet() const;
 
                     /**
-                     * 获取Data type of the parameter
-                     * @return ValueType Data type of the parameter
+                     * 获取Parameter type.
+                     * @return ValueType Parameter type.
                      * 
                      */
                     std::string GetValueType() const;
 
                     /**
-                     * 设置Data type of the parameter
-                     * @param _valueType Data type of the parameter
+                     * 设置Parameter type.
+                     * @param _valueType Parameter type.
                      * 
                      */
                     void SetValueType(const std::string& _valueType);
@@ -215,15 +223,23 @@ namespace TencentCloud
                     bool ValueTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
-                     * @return Status Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+                     * 获取Whether the parameter values are used during running.
+ - 1. parameter values used during running.
+ - 0: parameter values not used during running.
+                     * @return Status Whether the parameter values are used during running.
+ - 1. parameter values used during running.
+ - 0: parameter values not used during running.
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
-                     * @param _status Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+                     * 设置Whether the parameter values are used during running.
+ - 1. parameter values used during running.
+ - 0: parameter values not used during running.
+                     * @param _status Whether the parameter values are used during running.
+ - 1. parameter values used during running.
+ - 0: parameter values not used during running.
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -236,15 +252,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Redundant field which can be ignored
-                     * @return Unit Redundant field which can be ignored
+                     * 获取Redundant field. It can be ignored.
+                     * @return Unit Redundant field. It can be ignored.
                      * 
                      */
                     std::string GetUnit() const;
 
                     /**
-                     * 设置Redundant field which can be ignored
-                     * @param _unit Redundant field which can be ignored
+                     * 设置Redundant field. It can be ignored.
+                     * @param _unit Redundant field. It can be ignored.
                      * 
                      */
                     void SetUnit(const std::string& _unit);
@@ -259,61 +275,65 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Current value
+                     * Current parameter value.
                      */
                     std::string m_currentValue;
                     bool m_currentValueHasBeenSet;
 
                     /**
-                     * Default value
+                     * Default parameter value.
                      */
                     std::string m_defaultValue;
                     bool m_defaultValueHasBeenSet;
 
                     /**
-                     * Maximum value
+                     * Maximum parameter value.
                      */
                     std::string m_max;
                     bool m_maxHasBeenSet;
 
                     /**
-                     * Minimum value
+                     * Minimum value.
                      */
                     std::string m_min;
                     bool m_minHasBeenSet;
 
                     /**
-                     * Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
+                     * Whether a restart is required for the parameters to take effect after modification.
+ - 1: Restart is required for the parameters to take effect.
+ - 0: Restart is not required. Once set, the parameters take effect immediately.
                      */
                     std::string m_needRestart;
                     bool m_needRestartHasBeenSet;
 
                     /**
-                     * Parameter name
+                     * Parameter name.
                      */
                     std::string m_paramName;
                     bool m_paramNameHasBeenSet;
 
                     /**
-                     * Parameter description
+                     * Parameter description.
                      */
                     std::vector<std::string> m_tips;
                     bool m_tipsHasBeenSet;
 
                     /**
-                     * Data type of the parameter
+                     * Parameter type.
                      */
                     std::string m_valueType;
                     bool m_valueTypeHasBeenSet;
 
                     /**
-                     * Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+                     * Whether the parameter values are used during running.
+ - 1. parameter values used during running.
+ - 0: parameter values not used during running.
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Redundant field which can be ignored
+                     * Redundant field. It can be ignored.
                      */
                     std::string m_unit;
                     bool m_unitHasBeenSet;

@@ -43,15 +43,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
-                     * @return InstanceId Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+                     * 获取Specifies the ID of the instance to be queried. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+
+                     * @return InstanceId Specifies the ID of the instance to be queried. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
-                     * @param _instanceId Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+                     * 设置Specifies the ID of the instance to be queried. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+
+                     * @param _instanceId Specifies the ID of the instance to be queried. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +68,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Number of results to be returned for a single request. Value range: 1-1,000. Default value: 1,000
-                     * @return Limit Number of results to be returned for a single request. Value range: 1-1,000. Default value: 1,000
+                     * 获取Number of entries returned per request. Minimum value: 1. Maximum value: 1000. Default value: 1000.
+                     * @return Limit Number of entries returned per request. Minimum value: 1. Maximum value: 1000. Default value: 1000.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results to be returned for a single request. Value range: 1-1,000. Default value: 1,000
-                     * @param _limit Number of results to be returned for a single request. Value range: 1-1,000. Default value: 1,000
+                     * 设置Number of entries returned per request. Minimum value: 1. Maximum value: 1000. Default value: 1000.
+                     * @param _limit Number of entries returned per request. Minimum value: 1. Maximum value: 1000. Default value: 1000.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -85,15 +89,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset. Default value: 0.
-                     * @return Offset Offset. Default value: 0.
+                     * 获取Offset. Default value: 0. Offset = Limit x (page number - 1).
+                     * @return Offset Offset. Default value: 0. Offset = Limit x (page number - 1).
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. Default value: 0.
-                     * @param _offset Offset. Default value: 0.
+                     * 设置Offset. Default value: 0. Offset = Limit x (page number - 1).
+                     * @param _offset Offset. Default value: 0. Offset = Limit x (page number - 1).
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -108,19 +112,20 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+                     * Specifies the ID of the instance to be queried. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Number of results to be returned for a single request. Value range: 1-1,000. Default value: 1,000
+                     * Number of entries returned per request. Minimum value: 1. Maximum value: 1000. Default value: 1000.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset. Default value: 0.
+                     * Offset. Default value: 0. Offset = Limit x (page number - 1).
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;

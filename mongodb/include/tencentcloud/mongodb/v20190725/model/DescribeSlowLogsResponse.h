@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool CountHasBeenSet() const;
 
                     /**
-                     * 获取Slow log details
-                     * @return SlowLogs Slow log details
+                     * 获取Slow log details.
+                     * @return SlowLogs Slow log details.
                      * 
                      */
                     std::vector<std::string> GetSlowLogs() const;
@@ -80,7 +80,7 @@ namespace TencentCloud
                     bool m_countHasBeenSet;
 
                     /**
-                     * Slow log details
+                     * Slow log details.
                      */
                     std::vector<std::string> m_slowLogs;
                     bool m_slowLogsHasBeenSet;

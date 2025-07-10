@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID in the format of "cmgo-p8vnipr5"
-                     * @return InstanceId Instance ID in the format of "cmgo-p8vnipr5"
+                     * 获取Instance ID. For example, cmgo-p8vn****.
+                     * @return InstanceId Instance ID. For example, cmgo-p8vn****.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID in the format of "cmgo-p8vnipr5"
-                     * @param _instanceId Instance ID in the format of "cmgo-p8vnipr5"
+                     * 设置Instance ID. For example, cmgo-p8vn****.
+                     * @param _instanceId Instance ID. For example, cmgo-p8vn****.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID in the format of "cmgo-p8vnipr5"
+                     * Instance ID. For example, cmgo-p8vn****.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

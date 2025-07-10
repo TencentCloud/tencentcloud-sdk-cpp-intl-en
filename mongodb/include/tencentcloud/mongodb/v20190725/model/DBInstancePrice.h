@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Unit price.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UnitPrice Unit price.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     double GetUnitPrice() const;
 
                     /**
                      * 设置Unit price.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _unitPrice Unit price.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUnitPrice(const double& _unitPrice);
@@ -93,15 +89,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool OriginalPriceHasBeenSet() const;
 
                     /**
-                     * 获取Discounted price.
-                     * @return DiscountPrice Discounted price.
+                     * 获取Discount price.
+                     * @return DiscountPrice Discount price.
                      * 
                      */
                     double GetDiscountPrice() const;
 
                     /**
-                     * 设置Discounted price.
-                     * @param _discountPrice Discounted price.
+                     * 设置Discount price.
+                     * @param _discountPrice Discount price.
                      * 
                      */
                     void SetDiscountPrice(const double& _discountPrice);
@@ -117,7 +113,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Unit price.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     double m_unitPrice;
                     bool m_unitPriceHasBeenSet;
@@ -129,7 +124,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_originalPriceHasBeenSet;
 
                     /**
-                     * Discounted price.
+                     * Discount price.
                      */
                     double m_discountPrice;
                     bool m_discountPriceHasBeenSet;

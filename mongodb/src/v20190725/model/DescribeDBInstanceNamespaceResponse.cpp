@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/mongodb/v20190725/model/ModifyDBInstanceNetworkAddressResponse.h>
+#include <tencentcloud/mongodb/v20190725/model/DescribeDBInstanceNamespaceResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,12 +23,13 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mongodb::V20190725::Model;
 using namespace std;
 
-ModifyDBInstanceNetworkAddressResponse::ModifyDBInstanceNetworkAddressResponse() :
-    m_flowIdHasBeenSet(false)
+DescribeDBInstanceNamespaceResponse::DescribeDBInstanceNamespaceResponse() :
+    m_databasesHasBeenSet(false),
+    m_collectionsHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ModifyDBInstanceNetworkAddressResponse::Deserialize(const string &payload)
+CoreInternalOutcome DescribeDBInstanceNamespaceResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -62,32 +63,66 @@ CoreInternalOutcome ModifyDBInstanceNetworkAddressResponse::Deserialize(const st
     }
 
 
-    if (rsp.HasMember("FlowId") && !rsp["FlowId"].IsNull())
+    if (rsp.HasMember("Databases") && !rsp["Databases"].IsNull())
     {
-        if (!rsp["FlowId"].IsUint64())
+        if (!rsp["Databases"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `Databases` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["Databases"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            return CoreInternalOutcome(Core::Error("response `FlowId` IsUint64=false incorrectly").SetRequestId(requestId));
+            m_databases.push_back((*itr).GetString());
         }
-        m_flowId = rsp["FlowId"].GetUint64();
-        m_flowIdHasBeenSet = true;
+        m_databasesHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("Collections") && !rsp["Collections"].IsNull())
+    {
+        if (!rsp["Collections"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `Collections` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["Collections"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_collections.push_back((*itr).GetString());
+        }
+        m_collectionsHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string ModifyDBInstanceNetworkAddressResponse::ToJsonString() const
+string DescribeDBInstanceNamespaceResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_flowIdHasBeenSet)
+    if (m_databasesHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "FlowId";
+        string key = "Databases";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_flowId, allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_databases.begin(); itr != m_databases.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_collectionsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Collections";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_collections.begin(); itr != m_collections.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -102,14 +137,24 @@ string ModifyDBInstanceNetworkAddressResponse::ToJsonString() const
 }
 
 
-uint64_t ModifyDBInstanceNetworkAddressResponse::GetFlowId() const
+vector<string> DescribeDBInstanceNamespaceResponse::GetDatabases() const
 {
-    return m_flowId;
+    return m_databases;
 }
 
-bool ModifyDBInstanceNetworkAddressResponse::FlowIdHasBeenSet() const
+bool DescribeDBInstanceNamespaceResponse::DatabasesHasBeenSet() const
 {
-    return m_flowIdHasBeenSet;
+    return m_databasesHasBeenSet;
+}
+
+vector<string> DescribeDBInstanceNamespaceResponse::GetCollections() const
+{
+    return m_collections;
+}
+
+bool DescribeDBInstanceNamespaceResponse::CollectionsHasBeenSet() const
+{
+    return m_collectionsHasBeenSet;
 }
 
 

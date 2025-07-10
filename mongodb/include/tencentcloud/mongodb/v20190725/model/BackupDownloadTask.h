@@ -236,19 +236,15 @@ namespace TencentCloud
                     bool BackupMethodHasBeenSet() const;
 
                     /**
-                     * 获取Backup description you set when starting a backup task
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return BackupDesc Backup description you set when starting a backup task
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Specifies the remarks for backup.
+                     * @return BackupDesc Specifies the remarks for backup.
                      * 
                      */
                     std::string GetBackupDesc() const;
 
                     /**
-                     * 设置Backup description you set when starting a backup task
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _backupDesc Backup description you set when starting a backup task
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Specifies the remarks for backup.
+                     * @param _backupDesc Specifies the remarks for backup.
                      * 
                      */
                     void SetBackupDesc(const std::string& _backupDesc);
@@ -259,6 +255,48 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      * 
                      */
                     bool BackupDescHasBeenSet() const;
+
+                    /**
+                     * 获取Region information.
+                     * @return Region Region information.
+                     * 
+                     */
+                    std::string GetRegion() const;
+
+                    /**
+                     * 设置Region information.
+                     * @param _region Region information.
+                     * 
+                     */
+                    void SetRegion(const std::string& _region);
+
+                    /**
+                     * 判断参数 Region 是否已赋值
+                     * @return Region 是否已赋值
+                     * 
+                     */
+                    bool RegionHasBeenSet() const;
+
+                    /**
+                     * 获取Bucket information.
+                     * @return Bucket Bucket information.
+                     * 
+                     */
+                    std::string GetBucket() const;
+
+                    /**
+                     * 设置Bucket information.
+                     * @param _bucket Bucket information.
+                     * 
+                     */
+                    void SetBucket(const std::string& _bucket);
+
+                    /**
+                     * 判断参数 Bucket 是否已赋值
+                     * @return Bucket 是否已赋值
+                     * 
+                     */
+                    bool BucketHasBeenSet() const;
 
                 private:
 
@@ -317,11 +355,22 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_backupMethodHasBeenSet;
 
                     /**
-                     * Backup description you set when starting a backup task
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Specifies the remarks for backup.
                      */
                     std::string m_backupDesc;
                     bool m_backupDescHasBeenSet;
+
+                    /**
+                     * Region information.
+                     */
+                    std::string m_region;
+                    bool m_regionHasBeenSet;
+
+                    /**
+                     * Bucket information.
+                     */
+                    std::string m_bucket;
+                    bool m_bucketHasBeenSet;
 
                 };
             }

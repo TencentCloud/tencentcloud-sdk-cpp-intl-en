@@ -29,7 +29,10 @@ ModifyDBInstanceSpecRequest::ModifyDBInstanceSpecRequest() :
     m_oplogSizeHasBeenSet(false),
     m_nodeNumHasBeenSet(false),
     m_replicateSetNumHasBeenSet(false),
-    m_inMaintenanceHasBeenSet(false)
+    m_inMaintenanceHasBeenSet(false),
+    m_mongosMemoryHasBeenSet(false),
+    m_addNodeListHasBeenSet(false),
+    m_removeNodeListHasBeenSet(false)
 {
 }
 
@@ -94,6 +97,44 @@ string ModifyDBInstanceSpecRequest::ToJsonString() const
         string key = "InMaintenance";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_inMaintenance, allocator);
+    }
+
+    if (m_mongosMemoryHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MongosMemory";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_mongosMemory.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_addNodeListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AddNodeList";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_addNodeList.begin(); itr != m_addNodeList.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_removeNodeListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RemoveNodeList";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_removeNodeList.begin(); itr != m_removeNodeList.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
     }
 
 
@@ -214,6 +255,54 @@ void ModifyDBInstanceSpecRequest::SetInMaintenance(const uint64_t& _inMaintenanc
 bool ModifyDBInstanceSpecRequest::InMaintenanceHasBeenSet() const
 {
     return m_inMaintenanceHasBeenSet;
+}
+
+string ModifyDBInstanceSpecRequest::GetMongosMemory() const
+{
+    return m_mongosMemory;
+}
+
+void ModifyDBInstanceSpecRequest::SetMongosMemory(const string& _mongosMemory)
+{
+    m_mongosMemory = _mongosMemory;
+    m_mongosMemoryHasBeenSet = true;
+}
+
+bool ModifyDBInstanceSpecRequest::MongosMemoryHasBeenSet() const
+{
+    return m_mongosMemoryHasBeenSet;
+}
+
+vector<AddNodeList> ModifyDBInstanceSpecRequest::GetAddNodeList() const
+{
+    return m_addNodeList;
+}
+
+void ModifyDBInstanceSpecRequest::SetAddNodeList(const vector<AddNodeList>& _addNodeList)
+{
+    m_addNodeList = _addNodeList;
+    m_addNodeListHasBeenSet = true;
+}
+
+bool ModifyDBInstanceSpecRequest::AddNodeListHasBeenSet() const
+{
+    return m_addNodeListHasBeenSet;
+}
+
+vector<RemoveNodeList> ModifyDBInstanceSpecRequest::GetRemoveNodeList() const
+{
+    return m_removeNodeList;
+}
+
+void ModifyDBInstanceSpecRequest::SetRemoveNodeList(const vector<RemoveNodeList>& _removeNodeList)
+{
+    m_removeNodeList = _removeNodeList;
+    m_removeNodeListHasBeenSet = true;
+}
+
+bool ModifyDBInstanceSpecRequest::RemoveNodeListHasBeenSet() const
+{
+    return m_removeNodeListHasBeenSet;
 }
 
 

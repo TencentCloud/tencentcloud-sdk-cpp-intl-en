@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Current value
-                     * @return CurrentValue Current value
+                     * 获取Current parameter value.
+                     * @return CurrentValue Current parameter value.
                      * 
                      */
                     std::string GetCurrentValue() const;
 
                     /**
-                     * 设置Current value
-                     * @param _currentValue Current value
+                     * 设置Current parameter value.
+                     * @param _currentValue Current parameter value.
                      * 
                      */
                     void SetCurrentValue(const std::string& _currentValue);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CurrentValueHasBeenSet() const;
 
                     /**
-                     * 获取Default value
-                     * @return DefaultValue Default value
+                     * 获取Default parameter value.
+                     * @return DefaultValue Default parameter value.
                      * 
                      */
                     std::string GetDefaultValue() const;
 
                     /**
-                     * 设置Default value
-                     * @param _defaultValue Default value
+                     * 设置Default parameter value.
+                     * @param _defaultValue Default parameter value.
                      * 
                      */
                     void SetDefaultValue(const std::string& _defaultValue);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool DefaultValueHasBeenSet() const;
 
                     /**
-                     * 获取Acceptable values
-                     * @return EnumValue Acceptable values
+                     * 获取Enumerated values, which indicate all supported values.
+                     * @return EnumValue Enumerated values, which indicate all supported values.
                      * 
                      */
                     std::vector<std::string> GetEnumValue() const;
 
                     /**
-                     * 设置Acceptable values
-                     * @param _enumValue Acceptable values
+                     * 设置Enumerated values, which indicate all supported values.
+                     * @param _enumValue Enumerated values, which indicate all supported values.
                      * 
                      */
                     void SetEnumValue(const std::vector<std::string>& _enumValue);
@@ -110,15 +110,23 @@ namespace TencentCloud
                     bool EnumValueHasBeenSet() const;
 
                     /**
-                     * 获取Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
-                     * @return NeedRestart Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
+                     * 获取Whether a restart is required for the parameters to take effect after modification.
+ - 1: Restart is required for the parameters to take effect.
+ - 0: Restart is not required. Once set, the parameters take effect immediately.
+                     * @return NeedRestart Whether a restart is required for the parameters to take effect after modification.
+ - 1: Restart is required for the parameters to take effect.
+ - 0: Restart is not required. Once set, the parameters take effect immediately.
                      * 
                      */
                     std::string GetNeedRestart() const;
 
                     /**
-                     * 设置Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
-                     * @param _needRestart Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
+                     * 设置Whether a restart is required for the parameters to take effect after modification.
+ - 1: Restart is required for the parameters to take effect.
+ - 0: Restart is not required. Once set, the parameters take effect immediately.
+                     * @param _needRestart Whether a restart is required for the parameters to take effect after modification.
+ - 1: Restart is required for the parameters to take effect.
+ - 0: Restart is not required. Once set, the parameters take effect immediately.
                      * 
                      */
                     void SetNeedRestart(const std::string& _needRestart);
@@ -131,15 +139,15 @@ namespace TencentCloud
                     bool NeedRestartHasBeenSet() const;
 
                     /**
-                     * 获取Parameter name
-                     * @return ParamName Parameter name
+                     * 获取Parameter name.
+                     * @return ParamName Parameter name.
                      * 
                      */
                     std::string GetParamName() const;
 
                     /**
-                     * 设置Parameter name
-                     * @param _paramName Parameter name
+                     * 设置Parameter name.
+                     * @param _paramName Parameter name.
                      * 
                      */
                     void SetParamName(const std::string& _paramName);
@@ -152,15 +160,15 @@ namespace TencentCloud
                     bool ParamNameHasBeenSet() const;
 
                     /**
-                     * 获取Parameter description
-                     * @return Tips Parameter description
+                     * 获取Parameter description.
+                     * @return Tips Parameter description.
                      * 
                      */
                     std::vector<std::string> GetTips() const;
 
                     /**
-                     * 设置Parameter description
-                     * @param _tips Parameter description
+                     * 设置Parameter description.
+                     * @param _tips Parameter description.
                      * 
                      */
                     void SetTips(const std::vector<std::string>& _tips);
@@ -173,15 +181,15 @@ namespace TencentCloud
                     bool TipsHasBeenSet() const;
 
                     /**
-                     * 获取Data type of the parameter
-                     * @return ValueType Data type of the parameter
+                     * 获取Parameter type description.
+                     * @return ValueType Parameter type description.
                      * 
                      */
                     std::string GetValueType() const;
 
                     /**
-                     * 设置Data type of the parameter
-                     * @param _valueType Data type of the parameter
+                     * 设置Parameter type description.
+                     * @param _valueType Parameter type description.
                      * 
                      */
                     void SetValueType(const std::string& _valueType);
@@ -194,15 +202,23 @@ namespace TencentCloud
                     bool ValueTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
-                     * @return Status Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+                     * 获取Whether the parameter values are used during running.
+ - 1. parameter values used during running.
+ - 0: parameter values not used during running.
+                     * @return Status Whether the parameter values are used during running.
+ - 1. parameter values used during running.
+ - 0: parameter values not used during running.
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
-                     * @param _status Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+                     * 设置Whether the parameter values are used during running.
+ - 1. parameter values used during running.
+ - 0: parameter values not used during running.
+                     * @param _status Whether the parameter values are used during running.
+ - 1. parameter values used during running.
+ - 0: parameter values not used during running.
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -217,49 +233,53 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Current value
+                     * Current parameter value.
                      */
                     std::string m_currentValue;
                     bool m_currentValueHasBeenSet;
 
                     /**
-                     * Default value
+                     * Default parameter value.
                      */
                     std::string m_defaultValue;
                     bool m_defaultValueHasBeenSet;
 
                     /**
-                     * Acceptable values
+                     * Enumerated values, which indicate all supported values.
                      */
                     std::vector<std::string> m_enumValue;
                     bool m_enumValueHasBeenSet;
 
                     /**
-                     * Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
+                     * Whether a restart is required for the parameters to take effect after modification.
+ - 1: Restart is required for the parameters to take effect.
+ - 0: Restart is not required. Once set, the parameters take effect immediately.
                      */
                     std::string m_needRestart;
                     bool m_needRestartHasBeenSet;
 
                     /**
-                     * Parameter name
+                     * Parameter name.
                      */
                     std::string m_paramName;
                     bool m_paramNameHasBeenSet;
 
                     /**
-                     * Parameter description
+                     * Parameter description.
                      */
                     std::vector<std::string> m_tips;
                     bool m_tipsHasBeenSet;
 
                     /**
-                     * Data type of the parameter
+                     * Parameter type description.
                      */
                     std::string m_valueType;
                     bool m_valueTypeHasBeenSet;
 
                     /**
-                     * Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+                     * Whether the parameter values are used during running.
+ - 1. parameter values used during running.
+ - 0: parameter values not used during running.
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;

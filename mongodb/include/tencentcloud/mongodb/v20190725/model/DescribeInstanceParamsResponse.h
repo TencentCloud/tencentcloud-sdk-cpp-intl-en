@@ -48,8 +48,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The collection of enum parameters
-                     * @return InstanceEnumParam The collection of enum parameters
+                     * 获取Collection of parameters whose values are of the Enum type.
+                     * @return InstanceEnumParam Collection of parameters whose values are of the Enum type.
                      * 
                      */
                     std::vector<InstanceEnumParam> GetInstanceEnumParam() const;
@@ -62,8 +62,8 @@ namespace TencentCloud
                     bool InstanceEnumParamHasBeenSet() const;
 
                     /**
-                     * 获取The collection of integer parameters
-                     * @return InstanceIntegerParam The collection of integer parameters
+                     * 获取Collection of parameters whose values are of the Integer type.
+                     * @return InstanceIntegerParam Collection of parameters whose values are of the Integer type.
                      * 
                      */
                     std::vector<InstanceIntegerParam> GetInstanceIntegerParam() const;
@@ -76,8 +76,8 @@ namespace TencentCloud
                     bool InstanceIntegerParamHasBeenSet() const;
 
                     /**
-                     * 获取The collection of text parameters
-                     * @return InstanceTextParam The collection of text parameters
+                     * 获取Collection of parameters whose values are of the Text type.
+                     * @return InstanceTextParam Collection of parameters whose values are of the Text type.
                      * 
                      */
                     std::vector<InstanceTextParam> GetInstanceTextParam() const;
@@ -90,8 +90,8 @@ namespace TencentCloud
                     bool InstanceTextParamHasBeenSet() const;
 
                     /**
-                     * 获取The collection of string parameters used to represent time ranges
-                     * @return InstanceMultiParam The collection of string parameters used to represent time ranges
+                     * 获取Collection of parameters whose values are of different types.
+                     * @return InstanceMultiParam Collection of parameters whose values are of different types.
                      * 
                      */
                     std::vector<InstanceMultiParam> GetInstanceMultiParam() const;
@@ -104,8 +104,8 @@ namespace TencentCloud
                     bool InstanceMultiParamHasBeenSet() const;
 
                     /**
-                     * 获取The total number of modifiable parameters of the instance, such as 0
-                     * @return TotalCount The total number of modifiable parameters of the instance, such as 0
+                     * 获取Number of modifiable parameters supported by the current instance.
+                     * @return TotalCount Number of modifiable parameters supported by the current instance.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -120,31 +120,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The collection of enum parameters
+                     * Collection of parameters whose values are of the Enum type.
                      */
                     std::vector<InstanceEnumParam> m_instanceEnumParam;
                     bool m_instanceEnumParamHasBeenSet;
 
                     /**
-                     * The collection of integer parameters
+                     * Collection of parameters whose values are of the Integer type.
                      */
                     std::vector<InstanceIntegerParam> m_instanceIntegerParam;
                     bool m_instanceIntegerParamHasBeenSet;
 
                     /**
-                     * The collection of text parameters
+                     * Collection of parameters whose values are of the Text type.
                      */
                     std::vector<InstanceTextParam> m_instanceTextParam;
                     bool m_instanceTextParamHasBeenSet;
 
                     /**
-                     * The collection of string parameters used to represent time ranges
+                     * Collection of parameters whose values are of different types.
                      */
                     std::vector<InstanceMultiParam> m_instanceMultiParam;
                     bool m_instanceMultiParamHasBeenSet;
 
                     /**
-                     * The total number of modifiable parameters of the instance, such as 0
+                     * Number of modifiable parameters supported by the current instance.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

@@ -44,15 +44,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Specifies the ID of the instance for modifying the network. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+
+                     * @return InstanceId Specifies the ID of the instance for modifying the network. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Specifies the ID of the instance for modifying the network. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+
+                     * @param _instanceId Specifies the ID of the instance for modifying the network. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -65,15 +69,27 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Old IP retention period in minutes. The old IP will be released after the specified time, and both the old and new IPs can be accessed before the release. The value `0` indicates that the old IP will be reclaimed immediately.
-                     * @return OldIpExpiredTime Old IP retention period in minutes. The old IP will be released after the specified time, and both the old and new IPs can be accessed before the release. The value `0` indicates that the old IP will be reclaimed immediately.
+                     * 获取Retention period of the original IP address.
+ - Unit: minutes. 0 means that the IP address is immediately repossessed.
+ - The original IP address will be released after a scheduled period. Both the original and new IP addresses are accessible before release.
+
+                     * @return OldIpExpiredTime Retention period of the original IP address.
+ - Unit: minutes. 0 means that the IP address is immediately repossessed.
+ - The original IP address will be released after a scheduled period. Both the original and new IP addresses are accessible before release.
+
                      * 
                      */
                     uint64_t GetOldIpExpiredTime() const;
 
                     /**
-                     * 设置Old IP retention period in minutes. The old IP will be released after the specified time, and both the old and new IPs can be accessed before the release. The value `0` indicates that the old IP will be reclaimed immediately.
-                     * @param _oldIpExpiredTime Old IP retention period in minutes. The old IP will be released after the specified time, and both the old and new IPs can be accessed before the release. The value `0` indicates that the old IP will be reclaimed immediately.
+                     * 设置Retention period of the original IP address.
+ - Unit: minutes. 0 means that the IP address is immediately repossessed.
+ - The original IP address will be released after a scheduled period. Both the original and new IP addresses are accessible before release.
+
+                     * @param _oldIpExpiredTime Retention period of the original IP address.
+ - Unit: minutes. 0 means that the IP address is immediately repossessed.
+ - The original IP address will be released after a scheduled period. Both the original and new IP addresses are accessible before release.
+
                      * 
                      */
                     void SetOldIpExpiredTime(const uint64_t& _oldIpExpiredTime);
@@ -86,15 +102,15 @@ namespace TencentCloud
                     bool OldIpExpiredTimeHasBeenSet() const;
 
                     /**
-                     * 获取ID of the VPC to which the new IP belongs after the switch. When it is classic network, this field will be empty.
-                     * @return NewUniqVpcId ID of the VPC to which the new IP belongs after the switch. When it is classic network, this field will be empty.
+                     * 获取VPC ID after the switch. If the instance is using a basic network, this field is not required.
+                     * @return NewUniqVpcId VPC ID after the switch. If the instance is using a basic network, this field is not required.
                      * 
                      */
                     std::string GetNewUniqVpcId() const;
 
                     /**
-                     * 设置ID of the VPC to which the new IP belongs after the switch. When it is classic network, this field will be empty.
-                     * @param _newUniqVpcId ID of the VPC to which the new IP belongs after the switch. When it is classic network, this field will be empty.
+                     * 设置VPC ID after the switch. If the instance is using a basic network, this field is not required.
+                     * @param _newUniqVpcId VPC ID after the switch. If the instance is using a basic network, this field is not required.
                      * 
                      */
                     void SetNewUniqVpcId(const std::string& _newUniqVpcId);
@@ -107,15 +123,15 @@ namespace TencentCloud
                     bool NewUniqVpcIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the subnet to which the new IP belongs after the switch. When it is classic network, this field will be empty.
-                     * @return NewUniqSubnetId ID of the subnet to which the new IP belongs after the switch. When it is classic network, this field will be empty.
+                     * 获取VPC subnet ID after the switch. If the instance is using a basic network, this field is not required.
+                     * @return NewUniqSubnetId VPC subnet ID after the switch. If the instance is using a basic network, this field is not required.
                      * 
                      */
                     std::string GetNewUniqSubnetId() const;
 
                     /**
-                     * 设置ID of the subnet to which the new IP belongs after the switch. When it is classic network, this field will be empty.
-                     * @param _newUniqSubnetId ID of the subnet to which the new IP belongs after the switch. When it is classic network, this field will be empty.
+                     * 设置VPC subnet ID after the switch. If the instance is using a basic network, this field is not required.
+                     * @param _newUniqSubnetId VPC subnet ID after the switch. If the instance is using a basic network, this field is not required.
                      * 
                      */
                     void SetNewUniqSubnetId(const std::string& _newUniqSubnetId);
@@ -128,15 +144,15 @@ namespace TencentCloud
                     bool NewUniqSubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取IP information to be modified
-                     * @return NetworkAddresses IP information to be modified
+                     * 获取IP address information, including the new IP address and the original IP address.
+                     * @return NetworkAddresses IP address information, including the new IP address and the original IP address.
                      * 
                      */
                     std::vector<ModifyNetworkAddress> GetNetworkAddresses() const;
 
                     /**
-                     * 设置IP information to be modified
-                     * @param _networkAddresses IP information to be modified
+                     * 设置IP address information, including the new IP address and the original IP address.
+                     * @param _networkAddresses IP address information, including the new IP address and the original IP address.
                      * 
                      */
                     void SetNetworkAddresses(const std::vector<ModifyNetworkAddress>& _networkAddresses);
@@ -151,31 +167,35 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Specifies the ID of the instance for modifying the network. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Old IP retention period in minutes. The old IP will be released after the specified time, and both the old and new IPs can be accessed before the release. The value `0` indicates that the old IP will be reclaimed immediately.
+                     * Retention period of the original IP address.
+ - Unit: minutes. 0 means that the IP address is immediately repossessed.
+ - The original IP address will be released after a scheduled period. Both the original and new IP addresses are accessible before release.
+
                      */
                     uint64_t m_oldIpExpiredTime;
                     bool m_oldIpExpiredTimeHasBeenSet;
 
                     /**
-                     * ID of the VPC to which the new IP belongs after the switch. When it is classic network, this field will be empty.
+                     * VPC ID after the switch. If the instance is using a basic network, this field is not required.
                      */
                     std::string m_newUniqVpcId;
                     bool m_newUniqVpcIdHasBeenSet;
 
                     /**
-                     * ID of the subnet to which the new IP belongs after the switch. When it is classic network, this field will be empty.
+                     * VPC subnet ID after the switch. If the instance is using a basic network, this field is not required.
                      */
                     std::string m_newUniqSubnetId;
                     bool m_newUniqSubnetIdHasBeenSet;
 
                     /**
-                     * IP information to be modified
+                     * IP address information, including the new IP address and the original IP address.
                      */
                     std::vector<ModifyNetworkAddress> m_networkAddresses;
                     bool m_networkAddressesHasBeenSet;

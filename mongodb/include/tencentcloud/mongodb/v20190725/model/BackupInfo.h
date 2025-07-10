@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID.
+                     * @return InstanceId Instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID.
+                     * @param _instanceId Instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -110,19 +110,15 @@ namespace TencentCloud
                     bool BackupNameHasBeenSet() const;
 
                     /**
-                     * 获取Backup remarks
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BackupDesc Backup remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Backup remarks.
+                     * @return BackupDesc Backup remarks.
                      * 
                      */
                     std::string GetBackupDesc() const;
 
                     /**
-                     * 设置Backup remarks
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _backupDesc Backup remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Backup remarks.
+                     * @param _backupDesc Backup remarks.
                      * 
                      */
                     void SetBackupDesc(const std::string& _backupDesc);
@@ -135,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BackupDescHasBeenSet() const;
 
                     /**
-                     * 获取Backup file size in KB
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BackupSize Backup file size in KB
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Backup file size. Unit: KB.
+                     * @return BackupSize Backup file size. Unit: KB.
                      * 
                      */
                     uint64_t GetBackupSize() const;
 
                     /**
-                     * 设置Backup file size in KB
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _backupSize Backup file size in KB
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Backup file size. Unit: KB.
+                     * @param _backupSize Backup file size. Unit: KB.
                      * 
                      */
                     void SetBackupSize(const uint64_t& _backupSize);
@@ -160,19 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BackupSizeHasBeenSet() const;
 
                     /**
-                     * 获取Backup start time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StartTime Backup start time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Backup start time.
+                     * @return StartTime Backup start time.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Backup start time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _startTime Backup start time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Backup start time.
+                     * @param _startTime Backup start time.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -185,19 +173,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Backup end time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EndTime Backup end time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Backup end time.
+                     * @return EndTime Backup end time.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Backup end time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _endTime Backup end time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Backup end time.
+                     * @param _endTime Backup end time.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -251,10 +235,73 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool BackupMethodHasBeenSet() const;
 
+                    /**
+                     * 获取Backup record ID.
+                     * @return BackId Backup record ID.
+                     * 
+                     */
+                    int64_t GetBackId() const;
+
+                    /**
+                     * 设置Backup record ID.
+                     * @param _backId Backup record ID.
+                     * 
+                     */
+                    void SetBackId(const int64_t& _backId);
+
+                    /**
+                     * 判断参数 BackId 是否已赋值
+                     * @return BackId 是否已赋值
+                     * 
+                     */
+                    bool BackIdHasBeenSet() const;
+
+                    /**
+                     * 获取Backup deletion time.
+                     * @return DeleteTime Backup deletion time.
+                     * 
+                     */
+                    std::string GetDeleteTime() const;
+
+                    /**
+                     * 设置Backup deletion time.
+                     * @param _deleteTime Backup deletion time.
+                     * 
+                     */
+                    void SetDeleteTime(const std::string& _deleteTime);
+
+                    /**
+                     * 判断参数 DeleteTime 是否已赋值
+                     * @return DeleteTime 是否已赋值
+                     * 
+                     */
+                    bool DeleteTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Region for cross-region backup.
+                     * @return BackupRegion Region for cross-region backup.
+                     * 
+                     */
+                    std::string GetBackupRegion() const;
+
+                    /**
+                     * 设置Region for cross-region backup.
+                     * @param _backupRegion Region for cross-region backup.
+                     * 
+                     */
+                    void SetBackupRegion(const std::string& _backupRegion);
+
+                    /**
+                     * 判断参数 BackupRegion 是否已赋值
+                     * @return BackupRegion 是否已赋值
+                     * 
+                     */
+                    bool BackupRegionHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -272,29 +319,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_backupNameHasBeenSet;
 
                     /**
-                     * Backup remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Backup remarks.
                      */
                     std::string m_backupDesc;
                     bool m_backupDescHasBeenSet;
 
                     /**
-                     * Backup file size in KB
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Backup file size. Unit: KB.
                      */
                     uint64_t m_backupSize;
                     bool m_backupSizeHasBeenSet;
 
                     /**
-                     * Backup start time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Backup start time.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Backup end time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Backup end time.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
@@ -310,6 +353,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_backupMethod;
                     bool m_backupMethodHasBeenSet;
+
+                    /**
+                     * Backup record ID.
+                     */
+                    int64_t m_backId;
+                    bool m_backIdHasBeenSet;
+
+                    /**
+                     * Backup deletion time.
+                     */
+                    std::string m_deleteTime;
+                    bool m_deleteTimeHasBeenSet;
+
+                    /**
+                     * Region for cross-region backup.
+                     */
+                    std::string m_backupRegion;
+                    bool m_backupRegionHasBeenSet;
 
                 };
             }

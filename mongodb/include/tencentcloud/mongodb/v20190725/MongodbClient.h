@@ -43,6 +43,8 @@
 #include <tencentcloud/mongodb/v20190725/model/DescribeDBBackupsResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeDBInstanceDealRequest.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeDBInstanceDealResponse.h>
+#include <tencentcloud/mongodb/v20190725/model/DescribeDBInstanceNamespaceRequest.h>
+#include <tencentcloud/mongodb/v20190725/model/DescribeDBInstanceNamespaceResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeDBInstancesRequest.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeDBInstancesResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeInstanceParamsRequest.h>
@@ -123,6 +125,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDBInstanceDealResponse> DescribeDBInstanceDealOutcome;
                 typedef std::future<DescribeDBInstanceDealOutcome> DescribeDBInstanceDealOutcomeCallable;
                 typedef std::function<void(const MongodbClient*, const Model::DescribeDBInstanceDealRequest&, DescribeDBInstanceDealOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBInstanceDealAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDBInstanceNamespaceResponse> DescribeDBInstanceNamespaceOutcome;
+                typedef std::future<DescribeDBInstanceNamespaceOutcome> DescribeDBInstanceNamespaceOutcomeCallable;
+                typedef std::function<void(const MongodbClient*, const Model::DescribeDBInstanceNamespaceRequest&, DescribeDBInstanceNamespaceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBInstanceNamespaceAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDBInstancesResponse> DescribeDBInstancesOutcome;
                 typedef std::future<DescribeDBInstancesOutcome> DescribeDBInstancesOutcomeCallable;
                 typedef std::function<void(const MongodbClient*, const Model::DescribeDBInstancesRequest&, DescribeDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBInstancesAsyncHandler;
@@ -181,8 +186,7 @@ namespace TencentCloud
 
 
                 /**
-                 *This API is used to specify the project to which a TencentDB instance belongs.
-
+                 *This API is used to specify the project of a TencentDB for MongoDB instance.
                  * @param req AssignProjectRequest
                  * @return AssignProjectOutcome
                  */
@@ -191,7 +195,7 @@ namespace TencentCloud
                 AssignProjectOutcomeCallable AssignProjectCallable(const Model::AssignProjectRequest& request);
 
                 /**
-                 *This API is used to create instance backups.
+                 *This API is used to back up an instance.
                  * @param req CreateBackupDBInstanceRequest
                  * @return CreateBackupDBInstanceOutcome
                  */
@@ -227,7 +231,7 @@ namespace TencentCloud
                 CreateDBInstanceHourOutcomeCallable CreateDBInstanceHourCallable(const Model::CreateDBInstanceHourRequest& request);
 
                 /**
-                 *This API is used to query async task status.
+                 *This API is used to query the asynchronous task status.
                  * @param req DescribeAsyncRequestInfoRequest
                  * @return DescribeAsyncRequestInfoOutcome
                  */
@@ -245,7 +249,7 @@ namespace TencentCloud
                 DescribeBackupDownloadTaskOutcomeCallable DescribeBackupDownloadTaskCallable(const Model::DescribeBackupDownloadTaskRequest& request);
 
                 /**
-                 *This API is used to query the client connection information of an instance, including the IP and number of connections. Currently, only instances of MongoDB 3.2 are supported.
+                 *This API is used to query the client connection information on an instance, including the IP address for connection and the number of connections.
                  * @param req DescribeClientConnectionsRequest
                  * @return DescribeClientConnectionsOutcome
                  */
@@ -263,7 +267,7 @@ namespace TencentCloud
                 DescribeDBBackupsOutcomeCallable DescribeDBBackupsCallable(const Model::DescribeDBBackupsRequest& request);
 
                 /**
-                 *This API is used to get details of purchase, renewal, and specification adjustment orders of a MongoDB instance.
+                 *This API is used to get order details of purchase, renewal, and specification adjustment of a MongoDB instance.
                  * @param req DescribeDBInstanceDealRequest
                  * @return DescribeDBInstanceDealOutcome
                  */
@@ -272,7 +276,16 @@ namespace TencentCloud
                 DescribeDBInstanceDealOutcomeCallable DescribeDBInstanceDealCallable(const Model::DescribeDBInstanceDealRequest& request);
 
                 /**
-                 *This API is used to query the list of TencentDB instances (which can be primary, disaster recovery, or read-only instances). It supports filtering instances by project ID, instance ID, and instance status.
+                 *This API is used to query the table information on a database.
+                 * @param req DescribeDBInstanceNamespaceRequest
+                 * @return DescribeDBInstanceNamespaceOutcome
+                 */
+                DescribeDBInstanceNamespaceOutcome DescribeDBInstanceNamespace(const Model::DescribeDBInstanceNamespaceRequest &request);
+                void DescribeDBInstanceNamespaceAsync(const Model::DescribeDBInstanceNamespaceRequest& request, const DescribeDBInstanceNamespaceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDBInstanceNamespaceOutcomeCallable DescribeDBInstanceNamespaceCallable(const Model::DescribeDBInstanceNamespaceRequest& request);
+
+                /**
+                 *This API is used to query the list of TencentDB for MongoDB instances. It supports filtering primary instances, disaster recovery instances, and read-only instances by project ID, instance ID, instance status, and other conditions.
                  * @param req DescribeDBInstancesRequest
                  * @return DescribeDBInstancesOutcome
                  */
@@ -281,7 +294,7 @@ namespace TencentCloud
                 DescribeDBInstancesOutcomeCallable DescribeDBInstancesCallable(const Model::DescribeDBInstancesRequest& request);
 
                 /**
-                 *This API is used to query the modifiable parameter list of an instance.
+                 *This API is used to query the list of parameters that can be modified for the current instance.
                  * @param req DescribeInstanceParamsRequest
                  * @return DescribeInstanceParamsOutcome
                  */
@@ -290,7 +303,7 @@ namespace TencentCloud
                 DescribeInstanceParamsOutcomeCallable DescribeInstanceParamsCallable(const Model::DescribeInstanceParamsRequest& request);
 
                 /**
-                 *This API is used to query the security groups associated with an instance.
+                 *This API is used to query security groups bound to an instance.
                  * @param req DescribeSecurityGroupRequest
                  * @return DescribeSecurityGroupOutcome
                  */
@@ -371,7 +384,7 @@ namespace TencentCloud
                 IsolateDBInstanceOutcomeCallable IsolateDBInstanceCallable(const Model::IsolateDBInstanceRequest& request);
 
                 /**
-                 *This API is used to modify the network settings of a TencentDB instance, such as switching its network type from classic network to VPC or between VPCs.
+                 *This API is used to modify the network information on a TencentDB for MongoDB instance. It supports switching from a basic network to a VPC network or from one VPC network to another VPC network.
                  * @param req ModifyDBInstanceNetworkAddressRequest
                  * @return ModifyDBInstanceNetworkAddressOutcome
                  */
@@ -380,7 +393,7 @@ namespace TencentCloud
                 ModifyDBInstanceNetworkAddressOutcomeCallable ModifyDBInstanceNetworkAddressCallable(const Model::ModifyDBInstanceNetworkAddressRequest& request);
 
                 /**
-                 *This API is used to modify the security groups associated with an instance.
+                 *This API is used to modify security groups bound to an instance.
                  * @param req ModifyDBInstanceSecurityGroupRequest
                  * @return ModifyDBInstanceSecurityGroupOutcome
                  */
@@ -389,7 +402,7 @@ namespace TencentCloud
                 ModifyDBInstanceSecurityGroupOutcomeCallable ModifyDBInstanceSecurityGroupCallable(const Model::ModifyDBInstanceSecurityGroupRequest& request);
 
                 /**
-                 *This API is used to adjust the specification configuration of a TencentDB for MongoDB. The purchasable specifications supported by the API can be obtained through the DescribeSpecInfo API.
+                 *This API is used to adjust the configuration of a TencentDB for MongoDB instance. Saleable specifications supported for this API can be obtained from the DescribeSpecInfo API for querying saleable TencentDB for MongoDB specifications.
                  * @param req ModifyDBInstanceSpecRequest
                  * @return ModifyDBInstanceSpecOutcome
                  */

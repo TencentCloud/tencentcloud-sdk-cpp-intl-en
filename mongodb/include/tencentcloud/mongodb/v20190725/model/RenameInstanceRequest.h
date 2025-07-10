@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
-                     * @return InstanceId Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+                     * 获取Instance ID. Format: cmgo-p8vnipr5. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB#/) and copy the instance ID from the instance list.
+                     * @return InstanceId Instance ID. Format: cmgo-p8vnipr5. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB#/) and copy the instance ID from the instance list.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
-                     * @param _instanceId Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+                     * 设置Instance ID. Format: cmgo-p8vnipr5. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB#/) and copy the instance ID from the instance list.
+                     * @param _instanceId Instance ID. Format: cmgo-p8vnipr5. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB#/) and copy the instance ID from the instance list.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Custom name of the instance, which can contain up to 60 letters, digits, or symbols (_-)
-                     * @return NewName Custom name of the instance, which can contain up to 60 letters, digits, or symbols (_-)
+                     * 获取Custom instance name. It can contain any character, with a length from 1 to 128 characters.
+                     * @return NewName Custom instance name. It can contain any character, with a length from 1 to 128 characters.
                      * 
                      */
                     std::string GetNewName() const;
 
                     /**
-                     * 设置Custom name of the instance, which can contain up to 60 letters, digits, or symbols (_-)
-                     * @param _newName Custom name of the instance, which can contain up to 60 letters, digits, or symbols (_-)
+                     * 设置Custom instance name. It can contain any character, with a length from 1 to 128 characters.
+                     * @param _newName Custom instance name. It can contain any character, with a length from 1 to 128 characters.
                      * 
                      */
                     void SetNewName(const std::string& _newName);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+                     * Instance ID. Format: cmgo-p8vnipr5. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB#/) and copy the instance ID from the instance list.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Custom name of the instance, which can contain up to 60 letters, digits, or symbols (_-)
+                     * Custom instance name. It can contain any character, with a length from 1 to 128 characters.
                      */
                     std::string m_newName;
                     bool m_newNameHasBeenSet;

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Security groups associated with the instance
-                     * @return Groups Security groups associated with the instance
+                     * 获取Information on security groups bound to the instance.
+                     * @return Groups Information on security groups bound to the instance.
                      * 
                      */
                     std::vector<SecurityGroup> GetGroups() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Security groups associated with the instance
+                     * Information on security groups bound to the instance.
                      */
                     std::vector<SecurityGroup> m_groups;
                     bool m_groupsHasBeenSet;

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Client connection information, including client IP and number of connections
-                     * @return Clients Client connection information, including client IP and number of connections
+                     * 获取Client connection information, including the numbers of connections of the client IP address and the database access IP address.
+                     * @return Clients Client connection information, including the numbers of connections of the client IP address and the database access IP address.
                      * 
                      */
                     std::vector<ClientConnection> GetClients() const;
@@ -75,7 +75,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Client connection information, including client IP and number of connections
+                     * Client connection information, including the numbers of connections of the client IP address and the database access IP address.
                      */
                     std::vector<ClientConnection> m_clients;
                     bool m_clientsHasBeenSet;

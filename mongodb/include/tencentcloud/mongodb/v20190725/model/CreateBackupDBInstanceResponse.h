@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The status of the queried backup process.
-                     * @return AsyncRequestId The status of the queried backup process.
+                     * 获取Request ID.
+                     * @return AsyncRequestId Request ID.
                      * 
                      */
                     std::string GetAsyncRequestId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The status of the queried backup process.
+                     * Request ID.
                      */
                     std::string m_asyncRequestId;
                     bool m_asyncRequestIdHasBeenSet;

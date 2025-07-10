@@ -43,7 +43,27 @@ namespace TencentCloud
                     std::string ToJsonString() const;
 
 
+                    /**
+                     * 获取ID of the asynchronous process task for modifying the network information.
+                     * @return FlowId ID of the asynchronous process task for modifying the network information.
+                     * 
+                     */
+                    uint64_t GetFlowId() const;
+
+                    /**
+                     * 判断参数 FlowId 是否已赋值
+                     * @return FlowId 是否已赋值
+                     * 
+                     */
+                    bool FlowIdHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * ID of the asynchronous process task for modifying the network information.
+                     */
+                    uint64_t m_flowId;
+                    bool m_flowIdHasBeenSet;
 
                 };
             }

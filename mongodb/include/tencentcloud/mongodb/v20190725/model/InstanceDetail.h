@@ -260,15 +260,15 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired).
-                     * @return Status Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired).
+                     * 获取Instance status. Valid values: 0: creating; 1: processing; 2: running; -2: expired.
+                     * @return Status Instance status. Valid values: 0: creating; 1: processing; 2: running; -2: expired.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired).
-                     * @param _status Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired).
+                     * 设置Instance status. Valid values: 0: creating; 1: processing; 2: running; -2: expired.
+                     * @param _status Instance status. Valid values: 0: creating; 1: processing; 2: running; -2: expired.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -848,19 +848,15 @@ namespace TencentCloud
                     bool RealInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Number of mongos nodes
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MongosNodeNum Number of mongos nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of Mongos nodes.
+                     * @return MongosNodeNum Number of Mongos nodes.
                      * 
                      */
                     uint64_t GetMongosNodeNum() const;
 
                     /**
-                     * 设置Number of mongos nodes
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _mongosNodeNum Number of mongos nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of Mongos nodes.
+                     * @param _mongosNodeNum Number of Mongos nodes.
                      * 
                      */
                     void SetMongosNodeNum(const uint64_t& _mongosNodeNum);
@@ -873,19 +869,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MongosNodeNumHasBeenSet() const;
 
                     /**
-                     * 获取mongos node memory
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MongosMemory mongos node memory
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Mongos node memory.
+                     * @return MongosMemory Mongos node memory.
                      * 
                      */
                     uint64_t GetMongosMemory() const;
 
                     /**
-                     * 设置mongos node memory
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _mongosMemory mongos node memory
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Mongos node memory.
+                     * @param _mongosMemory Mongos node memory.
                      * 
                      */
                     void SetMongosMemory(const uint64_t& _mongosMemory);
@@ -898,19 +890,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MongosMemoryHasBeenSet() const;
 
                     /**
-                     * 获取Number of mongos nodes
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MongosCpuNum Number of mongos nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of Mongos node CPU cores.
+                     * @return MongosCpuNum Number of Mongos node CPU cores.
                      * 
                      */
                     uint64_t GetMongosCpuNum() const;
 
                     /**
-                     * 设置Number of mongos nodes
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _mongosCpuNum Number of mongos nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of Mongos node CPU cores.
+                     * @param _mongosCpuNum Number of Mongos node CPU cores.
                      * 
                      */
                     void SetMongosCpuNum(const uint64_t& _mongosCpuNum);
@@ -923,19 +911,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MongosCpuNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of ConfigServer nodes
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ConfigServerNodeNum Number of ConfigServer nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of ConfigServer nodes.
+                     * @return ConfigServerNodeNum Number of ConfigServer nodes.
                      * 
                      */
                     uint64_t GetConfigServerNodeNum() const;
 
                     /**
-                     * 设置Number of ConfigServer nodes
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _configServerNodeNum Number of ConfigServer nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of ConfigServer nodes.
+                     * @param _configServerNodeNum Number of ConfigServer nodes.
                      * 
                      */
                     void SetConfigServerNodeNum(const uint64_t& _configServerNodeNum);
@@ -948,19 +932,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ConfigServerNodeNumHasBeenSet() const;
 
                     /**
-                     * 获取Memory of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ConfigServerMemory Memory of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取ConfigServer node memory.
+                     * @return ConfigServerMemory ConfigServer node memory.
                      * 
                      */
                     uint64_t GetConfigServerMemory() const;
 
                     /**
-                     * 设置Memory of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _configServerMemory Memory of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置ConfigServer node memory.
+                     * @param _configServerMemory ConfigServer node memory.
                      * 
                      */
                     void SetConfigServerMemory(const uint64_t& _configServerMemory);
@@ -973,19 +953,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ConfigServerMemoryHasBeenSet() const;
 
                     /**
-                     * 获取Disk size of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ConfigServerVolume Disk size of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取ConfigServer node disk size.
+                     * @return ConfigServerVolume ConfigServer node disk size.
                      * 
                      */
                     uint64_t GetConfigServerVolume() const;
 
                     /**
-                     * 设置Disk size of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _configServerVolume Disk size of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置ConfigServer node disk size.
+                     * @param _configServerVolume ConfigServer node disk size.
                      * 
                      */
                     void SetConfigServerVolume(const uint64_t& _configServerVolume);
@@ -998,19 +974,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ConfigServerVolumeHasBeenSet() const;
 
                     /**
-                     * 获取CPU number of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ConfigServerCpuNum CPU number of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of ConfigServer node CPU cores.
+                     * @return ConfigServerCpuNum Number of ConfigServer node CPU cores.
                      * 
                      */
                     uint64_t GetConfigServerCpuNum() const;
 
                     /**
-                     * 设置CPU number of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _configServerCpuNum CPU number of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of ConfigServer node CPU cores.
+                     * @param _configServerCpuNum Number of ConfigServer node CPU cores.
                      * 
                      */
                     void SetConfigServerCpuNum(const uint64_t& _configServerCpuNum);
@@ -1023,19 +995,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ConfigServerCpuNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of read-only nodes
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ReadonlyNodeNum Number of read-only nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of read-only nodes.
+                     * @return ReadonlyNodeNum Number of read-only nodes.
                      * 
                      */
                     uint64_t GetReadonlyNodeNum() const;
 
                     /**
-                     * 设置Number of read-only nodes
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _readonlyNodeNum Number of read-only nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of read-only nodes.
+                     * @param _readonlyNodeNum Number of read-only nodes.
                      * 
                      */
                     void SetReadonlyNodeNum(const uint64_t& _readonlyNodeNum);
@@ -1110,7 +1078,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired).
+                     * Instance status. Valid values: 0: creating; 1: processing; 2: running; -2: expired.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
@@ -1278,57 +1246,49 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_realInstanceIdHasBeenSet;
 
                     /**
-                     * Number of mongos nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of Mongos nodes.
                      */
                     uint64_t m_mongosNodeNum;
                     bool m_mongosNodeNumHasBeenSet;
 
                     /**
-                     * mongos node memory
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Mongos node memory.
                      */
                     uint64_t m_mongosMemory;
                     bool m_mongosMemoryHasBeenSet;
 
                     /**
-                     * Number of mongos nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of Mongos node CPU cores.
                      */
                     uint64_t m_mongosCpuNum;
                     bool m_mongosCpuNumHasBeenSet;
 
                     /**
-                     * Number of ConfigServer nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of ConfigServer nodes.
                      */
                     uint64_t m_configServerNodeNum;
                     bool m_configServerNodeNumHasBeenSet;
 
                     /**
-                     * Memory of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * ConfigServer node memory.
                      */
                     uint64_t m_configServerMemory;
                     bool m_configServerMemoryHasBeenSet;
 
                     /**
-                     * Disk size of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * ConfigServer node disk size.
                      */
                     uint64_t m_configServerVolume;
                     bool m_configServerVolumeHasBeenSet;
 
                     /**
-                     * CPU number of ConfigServer node
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of ConfigServer node CPU cores.
                      */
                     uint64_t m_configServerCpuNum;
                     bool m_configServerCpuNumHasBeenSet;
 
                     /**
-                     * Number of read-only nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of read-only nodes.
                      */
                     uint64_t m_readonlyNodeNum;
                     bool m_readonlyNodeNumHasBeenSet;

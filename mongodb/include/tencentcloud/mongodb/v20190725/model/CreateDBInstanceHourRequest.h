@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance memory size in GB
-                     * @return Memory Instance memory size in GB
+                     * 获取Instance memory size. Unit: GB. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain specific saleable memory specifications.
+                     * @return Memory Instance memory size. Unit: GB. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain specific saleable memory specifications.
                      * 
                      */
                     uint64_t GetMemory() const;
 
                     /**
-                     * 设置Instance memory size in GB
-                     * @param _memory Instance memory size in GB
+                     * 设置Instance memory size. Unit: GB. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain specific saleable memory specifications.
+                     * @param _memory Instance memory size. Unit: GB. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain specific saleable memory specifications.
                      * 
                      */
                     void SetMemory(const uint64_t& _memory);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Instance disk size in GB
-                     * @return Volume Instance disk size in GB
+                     * 获取Instance disk size. Unit: GB. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
+                     * @return Volume Instance disk size. Unit: GB. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
                      * 
                      */
                     uint64_t GetVolume() const;
 
                     /**
-                     * 设置Instance disk size in GB
-                     * @param _volume Instance disk size in GB
+                     * 设置Instance disk size. Unit: GB. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
+                     * @param _volume Instance disk size. Unit: GB. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
                      * 
                      */
                     void SetVolume(const uint64_t& _volume);
@@ -86,23 +86,19 @@ namespace TencentCloud
                     bool VolumeHasBeenSet() const;
 
                     /**
-                     * 获取Number of replica sets
-- Number of the replica set instances to be created. Valid value: `1`.
-- Number of sharded cluster instances to be created. You can get the specific purchasable specifications through the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API.
-                     * @return ReplicateSetNum Number of replica sets
-- Number of the replica set instances to be created. Valid value: `1`.
-- Number of sharded cluster instances to be created. You can get the specific purchasable specifications through the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API.
+                     * 获取 - Specifies the number of replica sets during replica set instance creation. This parameter can only be set to 1.
+ - Specifies the number of shards during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to query the range of shard quantity. The parameters MinReplicateSetNum and MaxReplicateSetNum in the returned data structure SpecItems correspond to the minimum value and maximum value, respectively.
+                     * @return ReplicateSetNum  - Specifies the number of replica sets during replica set instance creation. This parameter can only be set to 1.
+ - Specifies the number of shards during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to query the range of shard quantity. The parameters MinReplicateSetNum and MaxReplicateSetNum in the returned data structure SpecItems correspond to the minimum value and maximum value, respectively.
                      * 
                      */
                     uint64_t GetReplicateSetNum() const;
 
                     /**
-                     * 设置Number of replica sets
-- Number of the replica set instances to be created. Valid value: `1`.
-- Number of sharded cluster instances to be created. You can get the specific purchasable specifications through the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API.
-                     * @param _replicateSetNum Number of replica sets
-- Number of the replica set instances to be created. Valid value: `1`.
-- Number of sharded cluster instances to be created. You can get the specific purchasable specifications through the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API.
+                     * 设置 - Specifies the number of replica sets during replica set instance creation. This parameter can only be set to 1.
+ - Specifies the number of shards during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to query the range of shard quantity. The parameters MinReplicateSetNum and MaxReplicateSetNum in the returned data structure SpecItems correspond to the minimum value and maximum value, respectively.
+                     * @param _replicateSetNum  - Specifies the number of replica sets during replica set instance creation. This parameter can only be set to 1.
+ - Specifies the number of shards during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to query the range of shard quantity. The parameters MinReplicateSetNum and MaxReplicateSetNum in the returned data structure SpecItems correspond to the minimum value and maximum value, respectively.
                      * 
                      */
                     void SetReplicateSetNum(const uint64_t& _replicateSetNum);
@@ -115,15 +111,19 @@ namespace TencentCloud
                     bool ReplicateSetNumHasBeenSet() const;
 
                     /**
-                     * 获取The number of nodes in each replica set. You can get the specific purchasable specifications through the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API.
-                     * @return NodeNum The number of nodes in each replica set. You can get the specific purchasable specifications through the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API.
+                     * 获取 - Specifies the number of primary and secondary nodes for each replica set during replica set instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each replica set.
+ - Specifies the number of primary and secondary nodes for each shard during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each shard.
+                     * @return NodeNum  - Specifies the number of primary and secondary nodes for each replica set during replica set instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each replica set.
+ - Specifies the number of primary and secondary nodes for each shard during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each shard.
                      * 
                      */
                     uint64_t GetNodeNum() const;
 
                     /**
-                     * 设置The number of nodes in each replica set. You can get the specific purchasable specifications through the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API.
-                     * @param _nodeNum The number of nodes in each replica set. You can get the specific purchasable specifications through the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API.
+                     * 设置 - Specifies the number of primary and secondary nodes for each replica set during replica set instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each replica set.
+ - Specifies the number of primary and secondary nodes for each shard during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each shard.
+                     * @param _nodeNum  - Specifies the number of primary and secondary nodes for each replica set during replica set instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each replica set.
+ - Specifies the number of primary and secondary nodes for each shard during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each shard.
                      * 
                      */
                     void SetNodeNum(const uint64_t& _nodeNum);
@@ -136,31 +136,39 @@ namespace TencentCloud
                     bool NodeNumHasBeenSet() const;
 
                     /**
-                     * 获取Version information. You can get the specific purchasable specifications through the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API.
-- MONGO_36_WT：MongoDB 3.6 WiredTiger storage engine
-- MONGO_40_WT：MongoDB 4.0 WiredTiger storage engine
-- MONGO_42_WT：MongoDB 4.2 WiredTiger storage engine
-- MONGO_44_WT：MongoDB 4.4 WiredTiger storage engine
-                     * @return MongoVersion Version information. You can get the specific purchasable specifications through the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API.
-- MONGO_36_WT：MongoDB 3.6 WiredTiger storage engine
-- MONGO_40_WT：MongoDB 4.0 WiredTiger storage engine
-- MONGO_42_WT：MongoDB 4.2 WiredTiger storage engine
-- MONGO_44_WT：MongoDB 4.4 WiredTiger storage engine
+                     * 获取Information on the specific supported versions. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain such versions.
+ - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+ - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+ - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+ - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+ - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+ - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+                     * @return MongoVersion Information on the specific supported versions. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain such versions.
+ - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+ - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+ - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+ - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+ - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+ - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
                      * 
                      */
                     std::string GetMongoVersion() const;
 
                     /**
-                     * 设置Version information. You can get the specific purchasable specifications through the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API.
-- MONGO_36_WT：MongoDB 3.6 WiredTiger storage engine
-- MONGO_40_WT：MongoDB 4.0 WiredTiger storage engine
-- MONGO_42_WT：MongoDB 4.2 WiredTiger storage engine
-- MONGO_44_WT：MongoDB 4.4 WiredTiger storage engine
-                     * @param _mongoVersion Version information. You can get the specific purchasable specifications through the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API.
-- MONGO_36_WT：MongoDB 3.6 WiredTiger storage engine
-- MONGO_40_WT：MongoDB 4.0 WiredTiger storage engine
-- MONGO_42_WT：MongoDB 4.2 WiredTiger storage engine
-- MONGO_44_WT：MongoDB 4.4 WiredTiger storage engine
+                     * 设置Information on the specific supported versions. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain such versions.
+ - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+ - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+ - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+ - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+ - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+ - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+                     * @param _mongoVersion Information on the specific supported versions. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain such versions.
+ - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+ - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+ - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+ - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+ - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+ - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
                      * 
                      */
                     void SetMongoVersion(const std::string& _mongoVersion);
@@ -173,23 +181,23 @@ namespace TencentCloud
                     bool MongoVersionHasBeenSet() const;
 
                     /**
-                     * 获取Machine type
-- HIO: High IO
-- HIO10G: 10-Gigabit high IO
-                     * @return MachineCode Machine type
-- HIO: High IO
-- HIO10G: 10-Gigabit high IO
+                     * 获取Product specification type.
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk type.
+                     * @return MachineCode Product specification type.
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk type.
                      * 
                      */
                     std::string GetMachineCode() const;
 
                     /**
-                     * 设置Machine type
-- HIO: High IO
-- HIO10G: 10-Gigabit high IO
-                     * @param _machineCode Machine type
-- HIO: High IO
-- HIO10G: 10-Gigabit high IO
+                     * 设置Product specification type.
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk type.
+                     * @param _machineCode Product specification type.
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk type.
                      * 
                      */
                     void SetMachineCode(const std::string& _machineCode);
@@ -281,15 +289,15 @@ namespace TencentCloud
                     bool ClusterTypeHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID
-                     * @return VpcId VPC ID
+                     * 获取VPC ID. Log in to the [VPC console](https://console.cloud.tencent.com/vpc) to query the correct ID. Example value: vpc-pxyzim13.
+                     * @return VpcId VPC ID. Log in to the [VPC console](https://console.cloud.tencent.com/vpc) to query the correct ID. Example value: vpc-pxyzim13.
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC ID
-                     * @param _vpcId VPC ID
+                     * 设置VPC ID. Log in to the [VPC console](https://console.cloud.tencent.com/vpc) to query the correct ID. Example value: vpc-pxyzim13.
+                     * @param _vpcId VPC ID. Log in to the [VPC console](https://console.cloud.tencent.com/vpc) to query the correct ID. Example value: vpc-pxyzim13.
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -302,15 +310,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC subnet ID. If `VpcId` is set, then `SubnetId` will be required.
-                     * @return SubnetId VPC subnet ID. If `VpcId` is set, then `SubnetId` will be required.
+                     * 获取VPC subnet. Log in to the [VPC console](https://console.cloud.tencent.com/VPC) to query the subnet list and confirm the correct ID. Example value: subnet-7jbabche.
+                     * @return SubnetId VPC subnet. Log in to the [VPC console](https://console.cloud.tencent.com/VPC) to query the subnet list and confirm the correct ID. Example value: subnet-7jbabche.
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置VPC subnet ID. If `VpcId` is set, then `SubnetId` will be required.
-                     * @param _subnetId VPC subnet ID. If `VpcId` is set, then `SubnetId` will be required.
+                     * 设置VPC subnet. Log in to the [VPC console](https://console.cloud.tencent.com/VPC) to query the subnet list and confirm the correct ID. Example value: subnet-7jbabche.
+                     * @param _subnetId VPC subnet. Log in to the [VPC console](https://console.cloud.tencent.com/VPC) to query the subnet list and confirm the correct ID. Example value: subnet-7jbabche.
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -323,23 +331,31 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance password
-- If it is left empty, the password is in the default format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001". 
-- The custom password must contain 8-32 characters in at least two of the following types: letters, digits, and symbols (!@#%^*()_).
-                     * @return Password Instance password
-- If it is left empty, the password is in the default format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001". 
-- The custom password must contain 8-32 characters in at least two of the following types: letters, digits, and symbols (!@#%^*()_).
+                     * 获取Instance password. The requirements are as follows:
+ - The number of characters should be in the range of [8, 32].
+ - Characters within the ranges [A,Z], [a,z], and [0,9] are allowed.
+ - Special characters that can be entered include exclamation marks (!), at signs (@), number signs (#), percent signs (%), carets (^), asterisks (\*), brackets (()), and underscores (_).
+ - It cannot contain only the same letters or digits.
+                     * @return Password Instance password. The requirements are as follows:
+ - The number of characters should be in the range of [8, 32].
+ - Characters within the ranges [A,Z], [a,z], and [0,9] are allowed.
+ - Special characters that can be entered include exclamation marks (!), at signs (@), number signs (#), percent signs (%), carets (^), asterisks (\*), brackets (()), and underscores (_).
+ - It cannot contain only the same letters or digits.
                      * 
                      */
                     std::string GetPassword() const;
 
                     /**
-                     * 设置Instance password
-- If it is left empty, the password is in the default format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001". 
-- The custom password must contain 8-32 characters in at least two of the following types: letters, digits, and symbols (!@#%^*()_).
-                     * @param _password Instance password
-- If it is left empty, the password is in the default format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001". 
-- The custom password must contain 8-32 characters in at least two of the following types: letters, digits, and symbols (!@#%^*()_).
+                     * 设置Instance password. The requirements are as follows:
+ - The number of characters should be in the range of [8, 32].
+ - Characters within the ranges [A,Z], [a,z], and [0,9] are allowed.
+ - Special characters that can be entered include exclamation marks (!), at signs (@), number signs (#), percent signs (%), carets (^), asterisks (\*), brackets (()), and underscores (_).
+ - It cannot contain only the same letters or digits.
+                     * @param _password Instance password. The requirements are as follows:
+ - The number of characters should be in the range of [8, 32].
+ - Characters within the ranges [A,Z], [a,z], and [0,9] are allowed.
+ - Special characters that can be entered include exclamation marks (!), at signs (@), number signs (#), percent signs (%), carets (^), asterisks (\*), brackets (()), and underscores (_).
+ - It cannot contain only the same letters or digits.
                      * 
                      */
                     void SetPassword(const std::string& _password);
@@ -352,15 +368,19 @@ namespace TencentCloud
                     bool PasswordHasBeenSet() const;
 
                     /**
-                     * 获取Project ID. If it is left empty, `Default project` will be used.
-                     * @return ProjectId Project ID. If it is left empty, `Default project` will be used.
+                     * 获取Project ID. - The default project is used if this parameter is not specified.
+ - The project ID can be obtained on the [project management page in the TencentDB for MongoDB console](https://console.cloud.tencent.com/project).
+                     * @return ProjectId Project ID. - The default project is used if this parameter is not specified.
+ - The project ID can be obtained on the [project management page in the TencentDB for MongoDB console](https://console.cloud.tencent.com/project).
                      * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID. If it is left empty, `Default project` will be used.
-                     * @param _projectId Project ID. If it is left empty, `Default project` will be used.
+                     * 设置Project ID. - The default project is used if this parameter is not specified.
+ - The project ID can be obtained on the [project management page in the TencentDB for MongoDB console](https://console.cloud.tencent.com/project).
+                     * @param _projectId Project ID. - The default project is used if this parameter is not specified.
+ - The project ID can be obtained on the [project management page in the TencentDB for MongoDB console](https://console.cloud.tencent.com/project).
                      * 
                      */
                     void SetProjectId(const int64_t& _projectId);
@@ -394,27 +414,15 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Instance type. Valid values:
-- `1`: Primary instance
-- `3`: Read-only instance
-- `4`: Disaster recovery instance
-                     * @return Clone Instance type. Valid values:
-- `1`: Primary instance
-- `3`: Read-only instance
-- `4`: Disaster recovery instance
+                     * 获取Instance type. 1: formal instance; 3: read-only instance; 4: disaster recovery instance; 5: cloned instance. Note: For a cloned instance, RestoreTime is required.
+                     * @return Clone Instance type. 1: formal instance; 3: read-only instance; 4: disaster recovery instance; 5: cloned instance. Note: For a cloned instance, RestoreTime is required.
                      * 
                      */
                     int64_t GetClone() const;
 
                     /**
-                     * 设置Instance type. Valid values:
-- `1`: Primary instance
-- `3`: Read-only instance
-- `4`: Disaster recovery instance
-                     * @param _clone Instance type. Valid values:
-- `1`: Primary instance
-- `3`: Read-only instance
-- `4`: Disaster recovery instance
+                     * 设置Instance type. 1: formal instance; 3: read-only instance; 4: disaster recovery instance; 5: cloned instance. Note: For a cloned instance, RestoreTime is required.
+                     * @param _clone Instance type. 1: formal instance; 3: read-only instance; 4: disaster recovery instance; 5: cloned instance. Note: For a cloned instance, RestoreTime is required.
                      * 
                      */
                     void SetClone(const int64_t& _clone);
@@ -448,15 +456,15 @@ namespace TencentCloud
                     bool FatherHasBeenSet() const;
 
                     /**
-                     * 获取Security group
-                     * @return SecurityGroup Security group
+                     * 获取Security group ID.
+                     * @return SecurityGroup Security group ID.
                      * 
                      */
                     std::vector<std::string> GetSecurityGroup() const;
 
                     /**
-                     * 设置Security group
-                     * @param _securityGroup Security group
+                     * 设置Security group ID.
+                     * @param _securityGroup Security group ID.
                      * 
                      */
                     void SetSecurityGroup(const std::vector<std::string>& _securityGroup);
@@ -519,31 +527,31 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取List of multi-AZ deployed nodes. For more information, query through the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API.
-- Nodes of a multi-AZ instance must be deployed across three AZs. Most nodes of the cluster can’t be deployed in the same AZ. For example, a three-node sharded cluster instance does not support deploying two or more nodes in the same AZ.
-- MongoDB 4.2 and later versions do not support multi-AZ deployment.
-- Read-only and disaster recovery instances do not support multi-AZ deployment.
--Instances in the classic network do not support multi-AZ deployment.
-                     * @return AvailabilityZoneList List of multi-AZ deployed nodes. For more information, query through the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API.
-- Nodes of a multi-AZ instance must be deployed across three AZs. Most nodes of the cluster can’t be deployed in the same AZ. For example, a three-node sharded cluster instance does not support deploying two or more nodes in the same AZ.
-- MongoDB 4.2 and later versions do not support multi-AZ deployment.
-- Read-only and disaster recovery instances do not support multi-AZ deployment.
--Instances in the classic network do not support multi-AZ deployment.
+                     * 获取Specifies the list of AZs during multi-AZ deployment of TencentDB for MongoDB instances.
+ - For instances in multi-AZ deployment mode, the **Zone** parameter specifies the primary AZ, and **AvailabilityZoneList** specifies all AZs, including the primary AZ. Format: [ap-guangzhou-2,ap-guangzhou-3,ap-guangzhou-4].
+ - The [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain AZs planned for TencentDB for MongoDB instances in different regions, helping you specify valid AZs.
+ - Nodes in multi-AZ deployment mode can only be deployed in 3 different AZs. Deploying most nodes of a cluster in the same AZ is not supported. For example, a 3-node cluster does not support deploying 2 nodes in the same AZ.
+
+                     * @return AvailabilityZoneList Specifies the list of AZs during multi-AZ deployment of TencentDB for MongoDB instances.
+ - For instances in multi-AZ deployment mode, the **Zone** parameter specifies the primary AZ, and **AvailabilityZoneList** specifies all AZs, including the primary AZ. Format: [ap-guangzhou-2,ap-guangzhou-3,ap-guangzhou-4].
+ - The [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain AZs planned for TencentDB for MongoDB instances in different regions, helping you specify valid AZs.
+ - Nodes in multi-AZ deployment mode can only be deployed in 3 different AZs. Deploying most nodes of a cluster in the same AZ is not supported. For example, a 3-node cluster does not support deploying 2 nodes in the same AZ.
+
                      * 
                      */
                     std::vector<std::string> GetAvailabilityZoneList() const;
 
                     /**
-                     * 设置List of multi-AZ deployed nodes. For more information, query through the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API.
-- Nodes of a multi-AZ instance must be deployed across three AZs. Most nodes of the cluster can’t be deployed in the same AZ. For example, a three-node sharded cluster instance does not support deploying two or more nodes in the same AZ.
-- MongoDB 4.2 and later versions do not support multi-AZ deployment.
-- Read-only and disaster recovery instances do not support multi-AZ deployment.
--Instances in the classic network do not support multi-AZ deployment.
-                     * @param _availabilityZoneList List of multi-AZ deployed nodes. For more information, query through the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API.
-- Nodes of a multi-AZ instance must be deployed across three AZs. Most nodes of the cluster can’t be deployed in the same AZ. For example, a three-node sharded cluster instance does not support deploying two or more nodes in the same AZ.
-- MongoDB 4.2 and later versions do not support multi-AZ deployment.
-- Read-only and disaster recovery instances do not support multi-AZ deployment.
--Instances in the classic network do not support multi-AZ deployment.
+                     * 设置Specifies the list of AZs during multi-AZ deployment of TencentDB for MongoDB instances.
+ - For instances in multi-AZ deployment mode, the **Zone** parameter specifies the primary AZ, and **AvailabilityZoneList** specifies all AZs, including the primary AZ. Format: [ap-guangzhou-2,ap-guangzhou-3,ap-guangzhou-4].
+ - The [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain AZs planned for TencentDB for MongoDB instances in different regions, helping you specify valid AZs.
+ - Nodes in multi-AZ deployment mode can only be deployed in 3 different AZs. Deploying most nodes of a cluster in the same AZ is not supported. For example, a 3-node cluster does not support deploying 2 nodes in the same AZ.
+
+                     * @param _availabilityZoneList Specifies the list of AZs during multi-AZ deployment of TencentDB for MongoDB instances.
+ - For instances in multi-AZ deployment mode, the **Zone** parameter specifies the primary AZ, and **AvailabilityZoneList** specifies all AZs, including the primary AZ. Format: [ap-guangzhou-2,ap-guangzhou-3,ap-guangzhou-4].
+ - The [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain AZs planned for TencentDB for MongoDB instances in different regions, helping you specify valid AZs.
+ - Nodes in multi-AZ deployment mode can only be deployed in 3 different AZs. Deploying most nodes of a cluster in the same AZ is not supported. For example, a 3-node cluster does not support deploying 2 nodes in the same AZ.
+
                      * 
                      */
                     void SetAvailabilityZoneList(const std::vector<std::string>& _availabilityZoneList);
@@ -556,23 +564,19 @@ namespace TencentCloud
                     bool AvailabilityZoneListHasBeenSet() const;
 
                     /**
-                     * 获取Number of Mongos CPU cores
-- This parameter is not required for a sharded cluster instance of MongoDB 3.6 WiredTiger or later.
-- If this parameter is not configured, the mongos specification will be configured based on the mongod specification, and the default specification is free of charge.
-                     * @return MongosCpu Number of Mongos CPU cores
-- This parameter is not required for a sharded cluster instance of MongoDB 3.6 WiredTiger or later.
-- If this parameter is not configured, the mongos specification will be configured based on the mongod specification, and the default specification is free of charge.
+                     * 获取Number of Mongos node CPU cores. Valid values: 1, 2, 4, 8, and 16. This parameter is required during sharded cluster instance purchase.
+
+                     * @return MongosCpu Number of Mongos node CPU cores. Valid values: 1, 2, 4, 8, and 16. This parameter is required during sharded cluster instance purchase.
+
                      * 
                      */
                     uint64_t GetMongosCpu() const;
 
                     /**
-                     * 设置Number of Mongos CPU cores
-- This parameter is not required for a sharded cluster instance of MongoDB 3.6 WiredTiger or later.
-- If this parameter is not configured, the mongos specification will be configured based on the mongod specification, and the default specification is free of charge.
-                     * @param _mongosCpu Number of Mongos CPU cores
-- This parameter is not required for a sharded cluster instance of MongoDB 3.6 WiredTiger or later.
-- If this parameter is not configured, the mongos specification will be configured based on the mongod specification, and the default specification is free of charge.
+                     * 设置Number of Mongos node CPU cores. Valid values: 1, 2, 4, 8, and 16. This parameter is required during sharded cluster instance purchase.
+
+                     * @param _mongosCpu Number of Mongos node CPU cores. Valid values: 1, 2, 4, 8, and 16. This parameter is required during sharded cluster instance purchase.
+
                      * 
                      */
                     void SetMongosCpu(const uint64_t& _mongosCpu);
@@ -585,23 +589,31 @@ namespace TencentCloud
                     bool MongosCpuHasBeenSet() const;
 
                     /**
-                     * 获取Mongos memory size
-- This parameter is not required for a sharded cluster instance of MongoDB 3.6 WiredTiger or later.
-- If this parameter is not configured, the mongos specification will be configured based on the mongod specification, and the default specification is free of charge.
-                     * @return MongosMemory Mongos memory size
-- This parameter is not required for a sharded cluster instance of MongoDB 3.6 WiredTiger or later.
-- If this parameter is not configured, the mongos specification will be configured based on the mongod specification, and the default specification is free of charge.
+                     * 获取Mongos node memory size.
+ - This parameter is required during sharded cluster instance purchase.
+ - Unit: GB. 1-core 2GB, 2-core 4GB, 4-core 8GB, 8-core 16GB, and 16-core 32GB are supported.
+
+
+                     * @return MongosMemory Mongos node memory size.
+ - This parameter is required during sharded cluster instance purchase.
+ - Unit: GB. 1-core 2GB, 2-core 4GB, 4-core 8GB, 8-core 16GB, and 16-core 32GB are supported.
+
+
                      * 
                      */
                     uint64_t GetMongosMemory() const;
 
                     /**
-                     * 设置Mongos memory size
-- This parameter is not required for a sharded cluster instance of MongoDB 3.6 WiredTiger or later.
-- If this parameter is not configured, the mongos specification will be configured based on the mongod specification, and the default specification is free of charge.
-                     * @param _mongosMemory Mongos memory size
-- This parameter is not required for a sharded cluster instance of MongoDB 3.6 WiredTiger or later.
-- If this parameter is not configured, the mongos specification will be configured based on the mongod specification, and the default specification is free of charge.
+                     * 设置Mongos node memory size.
+ - This parameter is required during sharded cluster instance purchase.
+ - Unit: GB. 1-core 2GB, 2-core 4GB, 4-core 8GB, 8-core 16GB, and 16-core 32GB are supported.
+
+
+                     * @param _mongosMemory Mongos node memory size.
+ - This parameter is required during sharded cluster instance purchase.
+ - Unit: GB. 1-core 2GB, 2-core 4GB, 4-core 8GB, 8-core 16GB, and 16-core 32GB are supported.
+
+
                      * 
                      */
                     void SetMongosMemory(const uint64_t& _mongosMemory);
@@ -614,23 +626,23 @@ namespace TencentCloud
                     bool MongosMemoryHasBeenSet() const;
 
                     /**
-                     * 获取Number of Monogs
-- This parameter is not required for a sharded cluster instance of MongoDB 3.6 WiredTiger or later.
-- If this parameter is not configured, the mongos specification will be configured based on the mongod specification, and the default specification is free of charge.
-                     * @return MongosNodeNum Number of Monogs
-- This parameter is not required for a sharded cluster instance of MongoDB 3.6 WiredTiger or later.
-- If this parameter is not configured, the mongos specification will be configured based on the mongod specification, and the default specification is free of charge.
+                     * 获取Number of Mongos nodes. This parameter is required during sharded cluster instance purchase.
+ - For instances in single-AZ deployment mode, the value range is [3,32].
+ - For instances in multi-AZ deployment mode, the value range is [6,32].
+                     * @return MongosNodeNum Number of Mongos nodes. This parameter is required during sharded cluster instance purchase.
+ - For instances in single-AZ deployment mode, the value range is [3,32].
+ - For instances in multi-AZ deployment mode, the value range is [6,32].
                      * 
                      */
                     uint64_t GetMongosNodeNum() const;
 
                     /**
-                     * 设置Number of Monogs
-- This parameter is not required for a sharded cluster instance of MongoDB 3.6 WiredTiger or later.
-- If this parameter is not configured, the mongos specification will be configured based on the mongod specification, and the default specification is free of charge.
-                     * @param _mongosNodeNum Number of Monogs
-- This parameter is not required for a sharded cluster instance of MongoDB 3.6 WiredTiger or later.
-- If this parameter is not configured, the mongos specification will be configured based on the mongod specification, and the default specification is free of charge.
+                     * 设置Number of Mongos nodes. This parameter is required during sharded cluster instance purchase.
+ - For instances in single-AZ deployment mode, the value range is [3,32].
+ - For instances in multi-AZ deployment mode, the value range is [6,32].
+                     * @param _mongosNodeNum Number of Mongos nodes. This parameter is required during sharded cluster instance purchase.
+ - For instances in single-AZ deployment mode, the value range is [3,32].
+ - For instances in multi-AZ deployment mode, the value range is [6,32].
                      * 
                      */
                     void SetMongosNodeNum(const uint64_t& _mongosNodeNum);
@@ -643,15 +655,15 @@ namespace TencentCloud
                     bool MongosNodeNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of read-only nodes. Value range: 0-5.
-                     * @return ReadonlyNodeNum Number of read-only nodes. Value range: 0-5.
+                     * 获取Number of read-only nodes. Value ranges: [0,5].
+                     * @return ReadonlyNodeNum Number of read-only nodes. Value ranges: [0,5].
                      * 
                      */
                     uint64_t GetReadonlyNodeNum() const;
 
                     /**
-                     * 设置Number of read-only nodes. Value range: 0-5.
-                     * @param _readonlyNodeNum Number of read-only nodes. Value range: 0-5.
+                     * 设置Number of read-only nodes. Value ranges: [0,5].
+                     * @param _readonlyNodeNum Number of read-only nodes. Value ranges: [0,5].
                      * 
                      */
                     void SetReadonlyNodeNum(const uint64_t& _readonlyNodeNum);
@@ -664,15 +676,15 @@ namespace TencentCloud
                     bool ReadonlyNodeNumHasBeenSet() const;
 
                     /**
-                     * 获取AZ of read-only nodes, which is required when `ReadonlyNodeNum` is not `0` in cross-AZ instance deployment.
-                     * @return ReadonlyNodeAvailabilityZoneList AZ of read-only nodes, which is required when `ReadonlyNodeNum` is not `0` in cross-AZ instance deployment.
+                     * 获取Array of AZs of read-only nodes. This parameter is required for instances in multi-AZ deployment mode when **ReadonlyNodeNum** is not set to **0**.
+                     * @return ReadonlyNodeAvailabilityZoneList Array of AZs of read-only nodes. This parameter is required for instances in multi-AZ deployment mode when **ReadonlyNodeNum** is not set to **0**.
                      * 
                      */
                     std::vector<std::string> GetReadonlyNodeAvailabilityZoneList() const;
 
                     /**
-                     * 设置AZ of read-only nodes, which is required when `ReadonlyNodeNum` is not `0` in cross-AZ instance deployment.
-                     * @param _readonlyNodeAvailabilityZoneList AZ of read-only nodes, which is required when `ReadonlyNodeNum` is not `0` in cross-AZ instance deployment.
+                     * 设置Array of AZs of read-only nodes. This parameter is required for instances in multi-AZ deployment mode when **ReadonlyNodeNum** is not set to **0**.
+                     * @param _readonlyNodeAvailabilityZoneList Array of AZs of read-only nodes. This parameter is required for instances in multi-AZ deployment mode when **ReadonlyNodeNum** is not set to **0**.
                      * 
                      */
                     void SetReadonlyNodeAvailabilityZoneList(const std::vector<std::string>& _readonlyNodeAvailabilityZoneList);
@@ -705,48 +717,71 @@ namespace TencentCloud
                      */
                     bool HiddenZoneHasBeenSet() const;
 
+                    /**
+                     * 获取Parameter template ID. A parameter template is a collection of MongoDB parameters with preset values. You can save a group of parameters and values with the same requirements as a template. When you create an instance, you can directly reference these parameter values in the instance. Proper use of parameter templates can improve the efficiency of operations on TencentDB for MongoDB databases. The template list can be obtained by calling the DescribeDBInstanceParamTpl API. Pay attention to the database versions supported by templates.
+                     * @return ParamTemplateId Parameter template ID. A parameter template is a collection of MongoDB parameters with preset values. You can save a group of parameters and values with the same requirements as a template. When you create an instance, you can directly reference these parameter values in the instance. Proper use of parameter templates can improve the efficiency of operations on TencentDB for MongoDB databases. The template list can be obtained by calling the DescribeDBInstanceParamTpl API. Pay attention to the database versions supported by templates.
+                     * 
+                     */
+                    std::string GetParamTemplateId() const;
+
+                    /**
+                     * 设置Parameter template ID. A parameter template is a collection of MongoDB parameters with preset values. You can save a group of parameters and values with the same requirements as a template. When you create an instance, you can directly reference these parameter values in the instance. Proper use of parameter templates can improve the efficiency of operations on TencentDB for MongoDB databases. The template list can be obtained by calling the DescribeDBInstanceParamTpl API. Pay attention to the database versions supported by templates.
+                     * @param _paramTemplateId Parameter template ID. A parameter template is a collection of MongoDB parameters with preset values. You can save a group of parameters and values with the same requirements as a template. When you create an instance, you can directly reference these parameter values in the instance. Proper use of parameter templates can improve the efficiency of operations on TencentDB for MongoDB databases. The template list can be obtained by calling the DescribeDBInstanceParamTpl API. Pay attention to the database versions supported by templates.
+                     * 
+                     */
+                    void SetParamTemplateId(const std::string& _paramTemplateId);
+
+                    /**
+                     * 判断参数 ParamTemplateId 是否已赋值
+                     * @return ParamTemplateId 是否已赋值
+                     * 
+                     */
+                    bool ParamTemplateIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance memory size in GB
+                     * Instance memory size. Unit: GB. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain specific saleable memory specifications.
                      */
                     uint64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Instance disk size in GB
+                     * Instance disk size. Unit: GB. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
                      */
                     uint64_t m_volume;
                     bool m_volumeHasBeenSet;
 
                     /**
-                     * Number of replica sets
-- Number of the replica set instances to be created. Valid value: `1`.
-- Number of sharded cluster instances to be created. You can get the specific purchasable specifications through the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API.
+                     *  - Specifies the number of replica sets during replica set instance creation. This parameter can only be set to 1.
+ - Specifies the number of shards during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to query the range of shard quantity. The parameters MinReplicateSetNum and MaxReplicateSetNum in the returned data structure SpecItems correspond to the minimum value and maximum value, respectively.
                      */
                     uint64_t m_replicateSetNum;
                     bool m_replicateSetNumHasBeenSet;
 
                     /**
-                     * The number of nodes in each replica set. You can get the specific purchasable specifications through the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API.
+                     *  - Specifies the number of primary and secondary nodes for each replica set during replica set instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each replica set.
+ - Specifies the number of primary and secondary nodes for each shard during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each shard.
                      */
                     uint64_t m_nodeNum;
                     bool m_nodeNumHasBeenSet;
 
                     /**
-                     * Version information. You can get the specific purchasable specifications through the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API.
-- MONGO_36_WT：MongoDB 3.6 WiredTiger storage engine
-- MONGO_40_WT：MongoDB 4.0 WiredTiger storage engine
-- MONGO_42_WT：MongoDB 4.2 WiredTiger storage engine
-- MONGO_44_WT：MongoDB 4.4 WiredTiger storage engine
+                     * Information on the specific supported versions. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain such versions.
+ - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+ - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+ - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+ - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+ - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+ - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
                      */
                     std::string m_mongoVersion;
                     bool m_mongoVersionHasBeenSet;
 
                     /**
-                     * Machine type
-- HIO: High IO
-- HIO10G: 10-Gigabit high IO
+                     * Product specification type.
+ - HIO10G: general high-I/O 10GE type.
+ - HCD: cloud disk type.
                      */
                     std::string m_machineCode;
                     bool m_machineCodeHasBeenSet;
@@ -774,27 +809,30 @@ namespace TencentCloud
                     bool m_clusterTypeHasBeenSet;
 
                     /**
-                     * VPC ID
+                     * VPC ID. Log in to the [VPC console](https://console.cloud.tencent.com/vpc) to query the correct ID. Example value: vpc-pxyzim13.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * VPC subnet ID. If `VpcId` is set, then `SubnetId` will be required.
+                     * VPC subnet. Log in to the [VPC console](https://console.cloud.tencent.com/VPC) to query the subnet list and confirm the correct ID. Example value: subnet-7jbabche.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Instance password
-- If it is left empty, the password is in the default format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001". 
-- The custom password must contain 8-32 characters in at least two of the following types: letters, digits, and symbols (!@#%^*()_).
+                     * Instance password. The requirements are as follows:
+ - The number of characters should be in the range of [8, 32].
+ - Characters within the ranges [A,Z], [a,z], and [0,9] are allowed.
+ - Special characters that can be entered include exclamation marks (!), at signs (@), number signs (#), percent signs (%), carets (^), asterisks (\*), brackets (()), and underscores (_).
+ - It cannot contain only the same letters or digits.
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;
 
                     /**
-                     * Project ID. If it is left empty, `Default project` will be used.
+                     * Project ID. - The default project is used if this parameter is not specified.
+ - The project ID can be obtained on the [project management page in the TencentDB for MongoDB console](https://console.cloud.tencent.com/project).
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
@@ -806,10 +844,7 @@ namespace TencentCloud
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Instance type. Valid values:
-- `1`: Primary instance
-- `3`: Read-only instance
-- `4`: Disaster recovery instance
+                     * Instance type. 1: formal instance; 3: read-only instance; 4: disaster recovery instance; 5: cloned instance. Note: For a cloned instance, RestoreTime is required.
                      */
                     int64_t m_clone;
                     bool m_cloneHasBeenSet;
@@ -821,7 +856,7 @@ namespace TencentCloud
                     bool m_fatherHasBeenSet;
 
                     /**
-                     * Security group
+                     * Security group ID.
                      */
                     std::vector<std::string> m_securityGroup;
                     bool m_securityGroupHasBeenSet;
@@ -841,47 +876,48 @@ namespace TencentCloud
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * List of multi-AZ deployed nodes. For more information, query through the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API.
-- Nodes of a multi-AZ instance must be deployed across three AZs. Most nodes of the cluster can’t be deployed in the same AZ. For example, a three-node sharded cluster instance does not support deploying two or more nodes in the same AZ.
-- MongoDB 4.2 and later versions do not support multi-AZ deployment.
-- Read-only and disaster recovery instances do not support multi-AZ deployment.
--Instances in the classic network do not support multi-AZ deployment.
+                     * Specifies the list of AZs during multi-AZ deployment of TencentDB for MongoDB instances.
+ - For instances in multi-AZ deployment mode, the **Zone** parameter specifies the primary AZ, and **AvailabilityZoneList** specifies all AZs, including the primary AZ. Format: [ap-guangzhou-2,ap-guangzhou-3,ap-guangzhou-4].
+ - The [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain AZs planned for TencentDB for MongoDB instances in different regions, helping you specify valid AZs.
+ - Nodes in multi-AZ deployment mode can only be deployed in 3 different AZs. Deploying most nodes of a cluster in the same AZ is not supported. For example, a 3-node cluster does not support deploying 2 nodes in the same AZ.
+
                      */
                     std::vector<std::string> m_availabilityZoneList;
                     bool m_availabilityZoneListHasBeenSet;
 
                     /**
-                     * Number of Mongos CPU cores
-- This parameter is not required for a sharded cluster instance of MongoDB 3.6 WiredTiger or later.
-- If this parameter is not configured, the mongos specification will be configured based on the mongod specification, and the default specification is free of charge.
+                     * Number of Mongos node CPU cores. Valid values: 1, 2, 4, 8, and 16. This parameter is required during sharded cluster instance purchase.
+
                      */
                     uint64_t m_mongosCpu;
                     bool m_mongosCpuHasBeenSet;
 
                     /**
-                     * Mongos memory size
-- This parameter is not required for a sharded cluster instance of MongoDB 3.6 WiredTiger or later.
-- If this parameter is not configured, the mongos specification will be configured based on the mongod specification, and the default specification is free of charge.
+                     * Mongos node memory size.
+ - This parameter is required during sharded cluster instance purchase.
+ - Unit: GB. 1-core 2GB, 2-core 4GB, 4-core 8GB, 8-core 16GB, and 16-core 32GB are supported.
+
+
                      */
                     uint64_t m_mongosMemory;
                     bool m_mongosMemoryHasBeenSet;
 
                     /**
-                     * Number of Monogs
-- This parameter is not required for a sharded cluster instance of MongoDB 3.6 WiredTiger or later.
-- If this parameter is not configured, the mongos specification will be configured based on the mongod specification, and the default specification is free of charge.
+                     * Number of Mongos nodes. This parameter is required during sharded cluster instance purchase.
+ - For instances in single-AZ deployment mode, the value range is [3,32].
+ - For instances in multi-AZ deployment mode, the value range is [6,32].
                      */
                     uint64_t m_mongosNodeNum;
                     bool m_mongosNodeNumHasBeenSet;
 
                     /**
-                     * Number of read-only nodes. Value range: 0-5.
+                     * Number of read-only nodes. Value ranges: [0,5].
                      */
                     uint64_t m_readonlyNodeNum;
                     bool m_readonlyNodeNumHasBeenSet;
 
                     /**
-                     * AZ of read-only nodes, which is required when `ReadonlyNodeNum` is not `0` in cross-AZ instance deployment.
+                     * Array of AZs of read-only nodes. This parameter is required for instances in multi-AZ deployment mode when **ReadonlyNodeNum** is not set to **0**.
                      */
                     std::vector<std::string> m_readonlyNodeAvailabilityZoneList;
                     bool m_readonlyNodeAvailabilityZoneListHasBeenSet;
@@ -891,6 +927,12 @@ namespace TencentCloud
                      */
                     std::string m_hiddenZone;
                     bool m_hiddenZoneHasBeenSet;
+
+                    /**
+                     * Parameter template ID. A parameter template is a collection of MongoDB parameters with preset values. You can save a group of parameters and values with the same requirements as a template. When you create an instance, you can directly reference these parameter values in the instance. Proper use of parameter templates can improve the efficiency of operations on TencentDB for MongoDB databases. The template list can be obtained by calling the DescribeDBInstanceParamTpl API. Pay attention to the database versions supported by templates.
+                     */
+                    std::string m_paramTemplateId;
+                    bool m_paramTemplateIdHasBeenSet;
 
                 };
             }
