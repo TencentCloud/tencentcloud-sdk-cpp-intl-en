@@ -384,6 +384,92 @@ LiveClient::CreateLiveCallbackTemplateOutcomeCallable LiveClient::CreateLiveCall
     return task->get_future();
 }
 
+LiveClient::CreateLivePadRuleOutcome LiveClient::CreateLivePadRule(const CreateLivePadRuleRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateLivePadRule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateLivePadRuleResponse rsp = CreateLivePadRuleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateLivePadRuleOutcome(rsp);
+        else
+            return CreateLivePadRuleOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateLivePadRuleOutcome(outcome.GetError());
+    }
+}
+
+void LiveClient::CreateLivePadRuleAsync(const CreateLivePadRuleRequest& request, const CreateLivePadRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateLivePadRule(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+LiveClient::CreateLivePadRuleOutcomeCallable LiveClient::CreateLivePadRuleCallable(const CreateLivePadRuleRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateLivePadRuleOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateLivePadRule(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+LiveClient::CreateLivePadTemplateOutcome LiveClient::CreateLivePadTemplate(const CreateLivePadTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateLivePadTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateLivePadTemplateResponse rsp = CreateLivePadTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateLivePadTemplateOutcome(rsp);
+        else
+            return CreateLivePadTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateLivePadTemplateOutcome(outcome.GetError());
+    }
+}
+
+void LiveClient::CreateLivePadTemplateAsync(const CreateLivePadTemplateRequest& request, const CreateLivePadTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateLivePadTemplate(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+LiveClient::CreateLivePadTemplateOutcomeCallable LiveClient::CreateLivePadTemplateCallable(const CreateLivePadTemplateRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateLivePadTemplateOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateLivePadTemplate(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 LiveClient::CreateLivePullStreamTaskOutcome LiveClient::CreateLivePullStreamTask(const CreateLivePullStreamTaskRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateLivePullStreamTask");

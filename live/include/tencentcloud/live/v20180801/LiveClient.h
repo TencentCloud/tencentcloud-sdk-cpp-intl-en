@@ -39,6 +39,10 @@
 #include <tencentcloud/live/v20180801/model/CreateLiveCallbackRuleResponse.h>
 #include <tencentcloud/live/v20180801/model/CreateLiveCallbackTemplateRequest.h>
 #include <tencentcloud/live/v20180801/model/CreateLiveCallbackTemplateResponse.h>
+#include <tencentcloud/live/v20180801/model/CreateLivePadRuleRequest.h>
+#include <tencentcloud/live/v20180801/model/CreateLivePadRuleResponse.h>
+#include <tencentcloud/live/v20180801/model/CreateLivePadTemplateRequest.h>
+#include <tencentcloud/live/v20180801/model/CreateLivePadTemplateResponse.h>
 #include <tencentcloud/live/v20180801/model/CreateLivePullStreamTaskRequest.h>
 #include <tencentcloud/live/v20180801/model/CreateLivePullStreamTaskResponse.h>
 #include <tencentcloud/live/v20180801/model/CreateLiveRecordRequest.h>
@@ -297,6 +301,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateLiveCallbackTemplateResponse> CreateLiveCallbackTemplateOutcome;
                 typedef std::future<CreateLiveCallbackTemplateOutcome> CreateLiveCallbackTemplateOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::CreateLiveCallbackTemplateRequest&, CreateLiveCallbackTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLiveCallbackTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateLivePadRuleResponse> CreateLivePadRuleOutcome;
+                typedef std::future<CreateLivePadRuleOutcome> CreateLivePadRuleOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::CreateLivePadRuleRequest&, CreateLivePadRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLivePadRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateLivePadTemplateResponse> CreateLivePadTemplateOutcome;
+                typedef std::future<CreateLivePadTemplateOutcome> CreateLivePadTemplateOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::CreateLivePadTemplateRequest&, CreateLivePadTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLivePadTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateLivePullStreamTaskResponse> CreateLivePullStreamTaskOutcome;
                 typedef std::future<CreateLivePullStreamTaskOutcome> CreateLivePullStreamTaskOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::CreateLivePullStreamTaskRequest&, CreateLivePullStreamTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLivePullStreamTaskAsyncHandler;
@@ -709,6 +719,24 @@ Note: You need to specify at least one callback URL.
                 CreateLiveCallbackTemplateOutcome CreateLiveCallbackTemplate(const Model::CreateLiveCallbackTemplateRequest &request);
                 void CreateLiveCallbackTemplateAsync(const Model::CreateLiveCallbackTemplateRequest& request, const CreateLiveCallbackTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateLiveCallbackTemplateOutcomeCallable CreateLiveCallbackTemplateCallable(const Model::CreateLiveCallbackTemplateRequest& request);
+
+                /**
+                 *create a live pad rule.
+                 * @param req CreateLivePadRuleRequest
+                 * @return CreateLivePadRuleOutcome
+                 */
+                CreateLivePadRuleOutcome CreateLivePadRule(const Model::CreateLivePadRuleRequest &request);
+                void CreateLivePadRuleAsync(const Model::CreateLivePadRuleRequest& request, const CreateLivePadRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateLivePadRuleOutcomeCallable CreateLivePadRuleCallable(const Model::CreateLivePadRuleRequest& request);
+
+                /**
+                 *create a live pad template
+                 * @param req CreateLivePadTemplateRequest
+                 * @return CreateLivePadTemplateOutcome
+                 */
+                CreateLivePadTemplateOutcome CreateLivePadTemplate(const Model::CreateLivePadTemplateRequest &request);
+                void CreateLivePadTemplateAsync(const Model::CreateLivePadTemplateRequest& request, const CreateLivePadTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateLivePadTemplateOutcomeCallable CreateLivePadTemplateCallable(const Model::CreateLivePadTemplateRequest& request);
 
                 /**
                  *This API is used to create a task to pull streams from video files or an external live streaming source and publish them to a specified destination URL.
