@@ -130,6 +130,27 @@ namespace TencentCloud
                      */
                     bool AutoBackupTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the retention days of full backup files. unit: day.
+                     * @return BackupStorageDays Specifies the retention days of full backup files. unit: day.
+                     * 
+                     */
+                    int64_t GetBackupStorageDays() const;
+
+                    /**
+                     * 设置Specifies the retention days of full backup files. unit: day.
+                     * @param _backupStorageDays Specifies the retention days of full backup files. unit: day.
+                     * 
+                     */
+                    void SetBackupStorageDays(const int64_t& _backupStorageDays);
+
+                    /**
+                     * 判断参数 BackupStorageDays 是否已赋值
+                     * @return BackupStorageDays 是否已赋值
+                     * 
+                     */
+                    bool BackupStorageDaysHasBeenSet() const;
+
                 private:
 
                     /**
@@ -156,6 +177,12 @@ namespace TencentCloud
                      */
                     int64_t m_autoBackupType;
                     bool m_autoBackupTypeHasBeenSet;
+
+                    /**
+                     * Specifies the retention days of full backup files. unit: day.
+                     */
+                    int64_t m_backupStorageDays;
+                    bool m_backupStorageDaysHasBeenSet;
 
                 };
             }
