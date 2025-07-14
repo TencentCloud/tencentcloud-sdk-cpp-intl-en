@@ -23,6 +23,7 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/DescribeRecordingUsageResponse.h
   include/tencentcloud/trtc/v20190722/model/AudioEncodeParams.h
   include/tencentcloud/trtc/v20190722/model/ServerPushText.h
+  include/tencentcloud/trtc/v20190722/model/McuRecordParams.h
   include/tencentcloud/trtc/v20190722/model/MixLayout.h
   include/tencentcloud/trtc/v20190722/model/McuVideoParams.h
   include/tencentcloud/trtc/v20190722/model/DescribeTRTCRealTimeScaleDataRequest.h
@@ -47,6 +48,7 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/VideoEncode.h
   include/tencentcloud/trtc/v20190722/model/DescribeCallDetailInfoRequest.h
   include/tencentcloud/trtc/v20190722/model/DescribeTRTCMarketScaleDataResponse.h
+  include/tencentcloud/trtc/v20190722/model/McuTencentVod.h
   include/tencentcloud/trtc/v20190722/model/DescribeUserInfoRequest.h
   include/tencentcloud/trtc/v20190722/model/DescribeRelayUsageRequest.h
   include/tencentcloud/trtc/v20190722/model/CloudStorage.h
@@ -87,6 +89,7 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/DescribeRecordingUsageRequest.h
   include/tencentcloud/trtc/v20190722/model/StorageFile.h
   include/tencentcloud/trtc/v20190722/model/WaterMark.h
+  include/tencentcloud/trtc/v20190722/model/McuStorageParams.h
   include/tencentcloud/trtc/v20190722/model/DescribeScaleInfoResponse.h
   include/tencentcloud/trtc/v20190722/model/MixLayoutParams.h
   include/tencentcloud/trtc/v20190722/model/DescribeMixTranscodingUsageResponse.h
@@ -148,6 +151,7 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/AudioParams.h
   include/tencentcloud/trtc/v20190722/model/StopAITranscriptionResponse.h
   include/tencentcloud/trtc/v20190722/model/WaterMarkTimestamp.h
+  include/tencentcloud/trtc/v20190722/model/McuCloudVod.h
   include/tencentcloud/trtc/v20190722/model/SingleSubscribeParams.h
   include/tencentcloud/trtc/v20190722/model/DescribeAITranscriptionResponse.h
   include/tencentcloud/trtc/v20190722/model/McuWaterMarkParams.h
@@ -164,6 +168,7 @@ set(trtc_src
   src/v20190722/model/DescribeRecordingUsageResponse.cpp
   src/v20190722/model/AudioEncodeParams.cpp
   src/v20190722/model/ServerPushText.cpp
+  src/v20190722/model/McuRecordParams.cpp
   src/v20190722/model/MixLayout.cpp
   src/v20190722/model/McuVideoParams.cpp
   src/v20190722/model/DescribeTRTCRealTimeScaleDataRequest.cpp
@@ -188,6 +193,7 @@ set(trtc_src
   src/v20190722/model/VideoEncode.cpp
   src/v20190722/model/DescribeCallDetailInfoRequest.cpp
   src/v20190722/model/DescribeTRTCMarketScaleDataResponse.cpp
+  src/v20190722/model/McuTencentVod.cpp
   src/v20190722/model/DescribeUserInfoRequest.cpp
   src/v20190722/model/DescribeRelayUsageRequest.cpp
   src/v20190722/model/CloudStorage.cpp
@@ -228,6 +234,7 @@ set(trtc_src
   src/v20190722/model/DescribeRecordingUsageRequest.cpp
   src/v20190722/model/StorageFile.cpp
   src/v20190722/model/WaterMark.cpp
+  src/v20190722/model/McuStorageParams.cpp
   src/v20190722/model/DescribeScaleInfoResponse.cpp
   src/v20190722/model/MixLayoutParams.cpp
   src/v20190722/model/DescribeMixTranscodingUsageResponse.cpp
@@ -289,6 +296,7 @@ set(trtc_src
   src/v20190722/model/AudioParams.cpp
   src/v20190722/model/StopAITranscriptionResponse.cpp
   src/v20190722/model/WaterMarkTimestamp.cpp
+  src/v20190722/model/McuCloudVod.cpp
   src/v20190722/model/SingleSubscribeParams.cpp
   src/v20190722/model/DescribeAITranscriptionResponse.cpp
   src/v20190722/model/McuWaterMarkParams.cpp

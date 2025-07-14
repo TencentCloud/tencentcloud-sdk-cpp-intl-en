@@ -28,6 +28,7 @@
 #include <tencentcloud/trtc/v20190722/model/McuPublishCdnParam.h>
 #include <tencentcloud/trtc/v20190722/model/McuSeiParams.h>
 #include <tencentcloud/trtc/v20190722/model/McuFeedBackRoomParams.h>
+#include <tencentcloud/trtc/v20190722/model/McuRecordParams.h>
 
 
 namespace TencentCloud
@@ -280,6 +281,31 @@ namespace TencentCloud
                      */
                     bool FeedBackRoomParamsHasBeenSet() const;
 
+                    /**
+                     * 获取Relay Recording Parameters.
+Example value:{"UniRecord":1,"RecordKey": "test_recore_key_a"}
+                     * @return RecordParams Relay Recording Parameters.
+Example value:{"UniRecord":1,"RecordKey": "test_recore_key_a"}
+                     * 
+                     */
+                    McuRecordParams GetRecordParams() const;
+
+                    /**
+                     * 设置Relay Recording Parameters.
+Example value:{"UniRecord":1,"RecordKey": "test_recore_key_a"}
+                     * @param _recordParams Relay Recording Parameters.
+Example value:{"UniRecord":1,"RecordKey": "test_recore_key_a"}
+                     * 
+                     */
+                    void SetRecordParams(const McuRecordParams& _recordParams);
+
+                    /**
+                     * 判断参数 RecordParams 是否已赋值
+                     * @return RecordParams 是否已赋值
+                     * 
+                     */
+                    bool RecordParamsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -347,6 +373,13 @@ namespace TencentCloud
                      */
                     std::vector<McuFeedBackRoomParams> m_feedBackRoomParams;
                     bool m_feedBackRoomParamsHasBeenSet;
+
+                    /**
+                     * Relay Recording Parameters.
+Example value:{"UniRecord":1,"RecordKey": "test_recore_key_a"}
+                     */
+                    McuRecordParams m_recordParams;
+                    bool m_recordParamsHasBeenSet;
 
                 };
             }
