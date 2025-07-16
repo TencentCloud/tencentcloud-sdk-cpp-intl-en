@@ -87,6 +87,20 @@ If `EncryptionPublicKey` is specified, this field will return the Base64-encoded
                      */
                     bool CiphertextBlobHasBeenSet() const;
 
+                    /**
+                     * 获取Globally unique id of the data key, returned when KMS hosting is enabled.
+                     * @return DataKeyId Globally unique id of the data key, returned when KMS hosting is enabled.
+                     * 
+                     */
+                    std::string GetDataKeyId() const;
+
+                    /**
+                     * 判断参数 DataKeyId 是否已赋值
+                     * @return DataKeyId 是否已赋值
+                     * 
+                     */
+                    bool DataKeyIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -107,6 +121,12 @@ If `EncryptionPublicKey` is specified, this field will return the Base64-encoded
                      */
                     std::string m_ciphertextBlob;
                     bool m_ciphertextBlobHasBeenSet;
+
+                    /**
+                     * Globally unique id of the data key, returned when KMS hosting is enabled.
+                     */
+                    std::string m_dataKeyId;
+                    bool m_dataKeyIdHasBeenSet;
 
                 };
             }

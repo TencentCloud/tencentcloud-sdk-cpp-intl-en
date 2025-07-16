@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/kms/v20190118/model/GenerateDataKeyResponse.h>
+#include <tencentcloud/kms/v20190118/model/CancelDataKeyDeletionResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,15 +23,12 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Kms::V20190118::Model;
 using namespace std;
 
-GenerateDataKeyResponse::GenerateDataKeyResponse() :
-    m_keyIdHasBeenSet(false),
-    m_plaintextHasBeenSet(false),
-    m_ciphertextBlobHasBeenSet(false),
+CancelDataKeyDeletionResponse::CancelDataKeyDeletionResponse() :
     m_dataKeyIdHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome GenerateDataKeyResponse::Deserialize(const string &payload)
+CoreInternalOutcome CancelDataKeyDeletionResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -65,36 +62,6 @@ CoreInternalOutcome GenerateDataKeyResponse::Deserialize(const string &payload)
     }
 
 
-    if (rsp.HasMember("KeyId") && !rsp["KeyId"].IsNull())
-    {
-        if (!rsp["KeyId"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `KeyId` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_keyId = string(rsp["KeyId"].GetString());
-        m_keyIdHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("Plaintext") && !rsp["Plaintext"].IsNull())
-    {
-        if (!rsp["Plaintext"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `Plaintext` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_plaintext = string(rsp["Plaintext"].GetString());
-        m_plaintextHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("CiphertextBlob") && !rsp["CiphertextBlob"].IsNull())
-    {
-        if (!rsp["CiphertextBlob"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `CiphertextBlob` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_ciphertextBlob = string(rsp["CiphertextBlob"].GetString());
-        m_ciphertextBlobHasBeenSet = true;
-    }
-
     if (rsp.HasMember("DataKeyId") && !rsp["DataKeyId"].IsNull())
     {
         if (!rsp["DataKeyId"].IsString())
@@ -109,35 +76,11 @@ CoreInternalOutcome GenerateDataKeyResponse::Deserialize(const string &payload)
     return CoreInternalOutcome(true);
 }
 
-string GenerateDataKeyResponse::ToJsonString() const
+string CancelDataKeyDeletionResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
-
-    if (m_keyIdHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "KeyId";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_keyId.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_plaintextHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Plaintext";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_plaintext.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_ciphertextBlobHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "CiphertextBlob";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_ciphertextBlob.c_str(), allocator).Move(), allocator);
-    }
 
     if (m_dataKeyIdHasBeenSet)
     {
@@ -159,42 +102,12 @@ string GenerateDataKeyResponse::ToJsonString() const
 }
 
 
-string GenerateDataKeyResponse::GetKeyId() const
-{
-    return m_keyId;
-}
-
-bool GenerateDataKeyResponse::KeyIdHasBeenSet() const
-{
-    return m_keyIdHasBeenSet;
-}
-
-string GenerateDataKeyResponse::GetPlaintext() const
-{
-    return m_plaintext;
-}
-
-bool GenerateDataKeyResponse::PlaintextHasBeenSet() const
-{
-    return m_plaintextHasBeenSet;
-}
-
-string GenerateDataKeyResponse::GetCiphertextBlob() const
-{
-    return m_ciphertextBlob;
-}
-
-bool GenerateDataKeyResponse::CiphertextBlobHasBeenSet() const
-{
-    return m_ciphertextBlobHasBeenSet;
-}
-
-string GenerateDataKeyResponse::GetDataKeyId() const
+string CancelDataKeyDeletionResponse::GetDataKeyId() const
 {
     return m_dataKeyId;
 }
 
-bool GenerateDataKeyResponse::DataKeyIdHasBeenSet() const
+bool CancelDataKeyDeletionResponse::DataKeyIdHasBeenSet() const
 {
     return m_dataKeyIdHasBeenSet;
 }

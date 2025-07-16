@@ -424,6 +424,153 @@ namespace TencentCloud
                      */
                     bool LastRotateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies whether the key is a primary replica. valid values: 0 (primary replica), 1 (synced replica).
+                     * @return IsSyncReplica Specifies whether the key is a primary replica. valid values: 0 (primary replica), 1 (synced replica).
+                     * 
+                     */
+                    int64_t GetIsSyncReplica() const;
+
+                    /**
+                     * 设置Specifies whether the key is a primary replica. valid values: 0 (primary replica), 1 (synced replica).
+                     * @param _isSyncReplica Specifies whether the key is a primary replica. valid values: 0 (primary replica), 1 (synced replica).
+                     * 
+                     */
+                    void SetIsSyncReplica(const int64_t& _isSyncReplica);
+
+                    /**
+                     * 判断参数 IsSyncReplica 是否已赋值
+                     * @return IsSyncReplica 是否已赋值
+                     * 
+                     */
+                    bool IsSyncReplicaHasBeenSet() const;
+
+                    /**
+                     * 获取Synchronous original region.
+                     * @return SourceRegion Synchronous original region.
+                     * 
+                     */
+                    std::string GetSourceRegion() const;
+
+                    /**
+                     * 设置Synchronous original region.
+                     * @param _sourceRegion Synchronous original region.
+                     * 
+                     */
+                    void SetSourceRegion(const std::string& _sourceRegion);
+
+                    /**
+                     * 判断参数 SourceRegion 是否已赋值
+                     * @return SourceRegion 是否已赋值
+                     * 
+                     */
+                    bool SourceRegionHasBeenSet() const;
+
+                    /**
+                     * 获取The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
+                     * @return SyncStatus The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
+                     * 
+                     */
+                    int64_t GetSyncStatus() const;
+
+                    /**
+                     * 设置The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
+                     * @param _syncStatus The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
+                     * 
+                     */
+                    void SetSyncStatus(const int64_t& _syncStatus);
+
+                    /**
+                     * 判断参数 SyncStatus 是否已赋值
+                     * @return SyncStatus 是否已赋值
+                     * 
+                     */
+                    bool SyncStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Describes the synchronous result.
+                     * @return SyncMessages Describes the synchronous result.
+                     * 
+                     */
+                    std::string GetSyncMessages() const;
+
+                    /**
+                     * 设置Describes the synchronous result.
+                     * @param _syncMessages Describes the synchronous result.
+                     * 
+                     */
+                    void SetSyncMessages(const std::string& _syncMessages);
+
+                    /**
+                     * 判断参数 SyncMessages 是否已赋值
+                     * @return SyncMessages 是否已赋值
+                     * 
+                     */
+                    bool SyncMessagesHasBeenSet() const;
+
+                    /**
+                     * 获取Start time of synchronization.
+                     * @return SyncStartTime Start time of synchronization.
+                     * 
+                     */
+                    uint64_t GetSyncStartTime() const;
+
+                    /**
+                     * 设置Start time of synchronization.
+                     * @param _syncStartTime Start time of synchronization.
+                     * 
+                     */
+                    void SetSyncStartTime(const uint64_t& _syncStartTime);
+
+                    /**
+                     * 判断参数 SyncStartTime 是否已赋值
+                     * @return SyncStartTime 是否已赋值
+                     * 
+                     */
+                    bool SyncStartTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the synchronous end time.
+                     * @return SyncEndTime Specifies the synchronous end time.
+                     * 
+                     */
+                    uint64_t GetSyncEndTime() const;
+
+                    /**
+                     * 设置Specifies the synchronous end time.
+                     * @param _syncEndTime Specifies the synchronous end time.
+                     * 
+                     */
+                    void SetSyncEndTime(const uint64_t& _syncEndTime);
+
+                    /**
+                     * 判断参数 SyncEndTime 是否已赋值
+                     * @return SyncEndTime 是否已赋值
+                     * 
+                     */
+                    bool SyncEndTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Synchronous original cluster. if empty, it is a public cloud public cluster.
+                     * @return SourceHsmClusterId Synchronous original cluster. if empty, it is a public cloud public cluster.
+                     * 
+                     */
+                    std::string GetSourceHsmClusterId() const;
+
+                    /**
+                     * 设置Synchronous original cluster. if empty, it is a public cloud public cluster.
+                     * @param _sourceHsmClusterId Synchronous original cluster. if empty, it is a public cloud public cluster.
+                     * 
+                     */
+                    void SetSourceHsmClusterId(const std::string& _sourceHsmClusterId);
+
+                    /**
+                     * 判断参数 SourceHsmClusterId 是否已赋值
+                     * @return SourceHsmClusterId 是否已赋值
+                     * 
+                     */
+                    bool SourceHsmClusterIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -533,6 +680,48 @@ namespace TencentCloud
                      */
                     uint64_t m_lastRotateTime;
                     bool m_lastRotateTimeHasBeenSet;
+
+                    /**
+                     * Specifies whether the key is a primary replica. valid values: 0 (primary replica), 1 (synced replica).
+                     */
+                    int64_t m_isSyncReplica;
+                    bool m_isSyncReplicaHasBeenSet;
+
+                    /**
+                     * Synchronous original region.
+                     */
+                    std::string m_sourceRegion;
+                    bool m_sourceRegionHasBeenSet;
+
+                    /**
+                     * The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
+                     */
+                    int64_t m_syncStatus;
+                    bool m_syncStatusHasBeenSet;
+
+                    /**
+                     * Describes the synchronous result.
+                     */
+                    std::string m_syncMessages;
+                    bool m_syncMessagesHasBeenSet;
+
+                    /**
+                     * Start time of synchronization.
+                     */
+                    uint64_t m_syncStartTime;
+                    bool m_syncStartTimeHasBeenSet;
+
+                    /**
+                     * Specifies the synchronous end time.
+                     */
+                    uint64_t m_syncEndTime;
+                    bool m_syncEndTimeHasBeenSet;
+
+                    /**
+                     * Synchronous original cluster. if empty, it is a public cloud public cluster.
+                     */
+                    std::string m_sourceHsmClusterId;
+                    bool m_sourceHsmClusterIdHasBeenSet;
 
                 };
             }

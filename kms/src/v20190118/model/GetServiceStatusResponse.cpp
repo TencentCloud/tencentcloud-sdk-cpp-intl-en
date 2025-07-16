@@ -35,7 +35,13 @@ GetServiceStatusResponse::GetServiceStatusResponse() :
     m_subscriptionInfoHasBeenSet(false),
     m_cmkUserCountHasBeenSet(false),
     m_cmkLimitHasBeenSet(false),
-    m_exclusiveHSMListHasBeenSet(false)
+    m_exclusiveHSMListHasBeenSet(false),
+    m_isAllowedDataKeyHostedHasBeenSet(false),
+    m_dataKeyLimitHasBeenSet(false),
+    m_freeDataKeyLimitHasBeenSet(false),
+    m_dataKeyUsedCountHasBeenSet(false),
+    m_syncTaskListHasBeenSet(false),
+    m_isAllowedSyncHasBeenSet(false)
 {
 }
 
@@ -203,6 +209,76 @@ CoreInternalOutcome GetServiceStatusResponse::Deserialize(const string &payload)
         m_exclusiveHSMListHasBeenSet = true;
     }
 
+    if (rsp.HasMember("IsAllowedDataKeyHosted") && !rsp["IsAllowedDataKeyHosted"].IsNull())
+    {
+        if (!rsp["IsAllowedDataKeyHosted"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `IsAllowedDataKeyHosted` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_isAllowedDataKeyHosted = rsp["IsAllowedDataKeyHosted"].GetBool();
+        m_isAllowedDataKeyHostedHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("DataKeyLimit") && !rsp["DataKeyLimit"].IsNull())
+    {
+        if (!rsp["DataKeyLimit"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `DataKeyLimit` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_dataKeyLimit = rsp["DataKeyLimit"].GetUint64();
+        m_dataKeyLimitHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("FreeDataKeyLimit") && !rsp["FreeDataKeyLimit"].IsNull())
+    {
+        if (!rsp["FreeDataKeyLimit"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `FreeDataKeyLimit` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_freeDataKeyLimit = rsp["FreeDataKeyLimit"].GetUint64();
+        m_freeDataKeyLimitHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("DataKeyUsedCount") && !rsp["DataKeyUsedCount"].IsNull())
+    {
+        if (!rsp["DataKeyUsedCount"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `DataKeyUsedCount` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_dataKeyUsedCount = rsp["DataKeyUsedCount"].GetUint64();
+        m_dataKeyUsedCountHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("SyncTaskList") && !rsp["SyncTaskList"].IsNull())
+    {
+        if (!rsp["SyncTaskList"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `SyncTaskList` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["SyncTaskList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            DestinationSyncConfig item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_syncTaskList.push_back(item);
+        }
+        m_syncTaskListHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("IsAllowedSync") && !rsp["IsAllowedSync"].IsNull())
+    {
+        if (!rsp["IsAllowedSync"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `IsAllowedSync` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_isAllowedSync = rsp["IsAllowedSync"].GetBool();
+        m_isAllowedSyncHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -314,6 +390,61 @@ string GetServiceStatusResponse::ToJsonString() const
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_isAllowedDataKeyHostedHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsAllowedDataKeyHosted";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_isAllowedDataKeyHosted, allocator);
+    }
+
+    if (m_dataKeyLimitHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DataKeyLimit";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_dataKeyLimit, allocator);
+    }
+
+    if (m_freeDataKeyLimitHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FreeDataKeyLimit";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_freeDataKeyLimit, allocator);
+    }
+
+    if (m_dataKeyUsedCountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DataKeyUsedCount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_dataKeyUsedCount, allocator);
+    }
+
+    if (m_syncTaskListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SyncTaskList";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_syncTaskList.begin(); itr != m_syncTaskList.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_isAllowedSyncHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsAllowedSync";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_isAllowedSync, allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -446,6 +577,66 @@ vector<ExclusiveHSM> GetServiceStatusResponse::GetExclusiveHSMList() const
 bool GetServiceStatusResponse::ExclusiveHSMListHasBeenSet() const
 {
     return m_exclusiveHSMListHasBeenSet;
+}
+
+bool GetServiceStatusResponse::GetIsAllowedDataKeyHosted() const
+{
+    return m_isAllowedDataKeyHosted;
+}
+
+bool GetServiceStatusResponse::IsAllowedDataKeyHostedHasBeenSet() const
+{
+    return m_isAllowedDataKeyHostedHasBeenSet;
+}
+
+uint64_t GetServiceStatusResponse::GetDataKeyLimit() const
+{
+    return m_dataKeyLimit;
+}
+
+bool GetServiceStatusResponse::DataKeyLimitHasBeenSet() const
+{
+    return m_dataKeyLimitHasBeenSet;
+}
+
+uint64_t GetServiceStatusResponse::GetFreeDataKeyLimit() const
+{
+    return m_freeDataKeyLimit;
+}
+
+bool GetServiceStatusResponse::FreeDataKeyLimitHasBeenSet() const
+{
+    return m_freeDataKeyLimitHasBeenSet;
+}
+
+uint64_t GetServiceStatusResponse::GetDataKeyUsedCount() const
+{
+    return m_dataKeyUsedCount;
+}
+
+bool GetServiceStatusResponse::DataKeyUsedCountHasBeenSet() const
+{
+    return m_dataKeyUsedCountHasBeenSet;
+}
+
+vector<DestinationSyncConfig> GetServiceStatusResponse::GetSyncTaskList() const
+{
+    return m_syncTaskList;
+}
+
+bool GetServiceStatusResponse::SyncTaskListHasBeenSet() const
+{
+    return m_syncTaskListHasBeenSet;
+}
+
+bool GetServiceStatusResponse::GetIsAllowedSync() const
+{
+    return m_isAllowedSync;
+}
+
+bool GetServiceStatusResponse::IsAllowedSyncHasBeenSet() const
+{
+    return m_isAllowedSyncHasBeenSet;
 }
 
 

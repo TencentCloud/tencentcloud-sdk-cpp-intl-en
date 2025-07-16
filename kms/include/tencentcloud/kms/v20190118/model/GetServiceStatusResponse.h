@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/kms/v20190118/model/ExclusiveHSM.h>
+#include <tencentcloud/kms/v20190118/model/DestinationSyncConfig.h>
 
 
 namespace TencentCloud
@@ -115,8 +116,8 @@ namespace TencentCloud
                     bool ProRenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取Unique identifier for the purchase record of the flagship edition. if the flagship edition is enabled, the return value is null.
-                     * @return ProResourceId Unique identifier for the purchase record of the flagship edition. if the flagship edition is enabled, the return value is null.
+                     * 获取Flagship edition purchase record unique identifier. if not activated, the return value is empty.
+                     * @return ProResourceId Flagship edition purchase record unique identifier. if not activated, the return value is empty.
                      * 
                      */
                     std::string GetProResourceId() const;
@@ -212,6 +213,90 @@ namespace TencentCloud
                      */
                     bool ExclusiveHSMListHasBeenSet() const;
 
+                    /**
+                     * 获取Whether data key management is supported. valid values: 1 (supported), 0 (unsupported).
+                     * @return IsAllowedDataKeyHosted Whether data key management is supported. valid values: 1 (supported), 0 (unsupported).
+                     * 
+                     */
+                    bool GetIsAllowedDataKeyHosted() const;
+
+                    /**
+                     * 判断参数 IsAllowedDataKeyHosted 是否已赋值
+                     * @return IsAllowedDataKeyHosted 是否已赋值
+                     * 
+                     */
+                    bool IsAllowedDataKeyHostedHasBeenSet() const;
+
+                    /**
+                     * 获取Valid when IsAllowedDataKeyHosted is 1. specifies the purchase quota for data keys.
+                     * @return DataKeyLimit Valid when IsAllowedDataKeyHosted is 1. specifies the purchase quota for data keys.
+                     * 
+                     */
+                    uint64_t GetDataKeyLimit() const;
+
+                    /**
+                     * 判断参数 DataKeyLimit 是否已赋值
+                     * @return DataKeyLimit 是否已赋值
+                     * 
+                     */
+                    bool DataKeyLimitHasBeenSet() const;
+
+                    /**
+                     * 获取Valid when IsAllowedDataKeyHosted is 1. data key free quota.
+                     * @return FreeDataKeyLimit Valid when IsAllowedDataKeyHosted is 1. data key free quota.
+                     * 
+                     */
+                    uint64_t GetFreeDataKeyLimit() const;
+
+                    /**
+                     * 判断参数 FreeDataKeyLimit 是否已赋值
+                     * @return FreeDataKeyLimit 是否已赋值
+                     * 
+                     */
+                    bool FreeDataKeyLimitHasBeenSet() const;
+
+                    /**
+                     * 获取Valid at that time when IsAllowedDataKeyHosted is 1. specifies the number of keys used.
+                     * @return DataKeyUsedCount Valid at that time when IsAllowedDataKeyHosted is 1. specifies the number of keys used.
+                     * 
+                     */
+                    uint64_t GetDataKeyUsedCount() const;
+
+                    /**
+                     * 判断参数 DataKeyUsedCount 是否已赋值
+                     * @return DataKeyUsedCount 是否已赋值
+                     * 
+                     */
+                    bool DataKeyUsedCountHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the target region of the sync task.
+                     * @return SyncTaskList Specifies the target region of the sync task.
+                     * 
+                     */
+                    std::vector<DestinationSyncConfig> GetSyncTaskList() const;
+
+                    /**
+                     * 判断参数 SyncTaskList 是否已赋值
+                     * @return SyncTaskList 是否已赋值
+                     * 
+                     */
+                    bool SyncTaskListHasBeenSet() const;
+
+                    /**
+                     * 获取Whether synchronization task is supported. true: supported; false: unsupported.
+                     * @return IsAllowedSync Whether synchronization task is supported. true: supported; false: unsupported.
+                     * 
+                     */
+                    bool GetIsAllowedSync() const;
+
+                    /**
+                     * 判断参数 IsAllowedSync 是否已赋值
+                     * @return IsAllowedSync 是否已赋值
+                     * 
+                     */
+                    bool IsAllowedSyncHasBeenSet() const;
+
                 private:
 
                     /**
@@ -245,7 +330,7 @@ namespace TencentCloud
                     bool m_proRenewFlagHasBeenSet;
 
                     /**
-                     * Unique identifier for the purchase record of the flagship edition. if the flagship edition is enabled, the return value is null.
+                     * Flagship edition purchase record unique identifier. if not activated, the return value is empty.
                      */
                     std::string m_proResourceId;
                     bool m_proResourceIdHasBeenSet;
@@ -285,6 +370,42 @@ namespace TencentCloud
                      */
                     std::vector<ExclusiveHSM> m_exclusiveHSMList;
                     bool m_exclusiveHSMListHasBeenSet;
+
+                    /**
+                     * Whether data key management is supported. valid values: 1 (supported), 0 (unsupported).
+                     */
+                    bool m_isAllowedDataKeyHosted;
+                    bool m_isAllowedDataKeyHostedHasBeenSet;
+
+                    /**
+                     * Valid when IsAllowedDataKeyHosted is 1. specifies the purchase quota for data keys.
+                     */
+                    uint64_t m_dataKeyLimit;
+                    bool m_dataKeyLimitHasBeenSet;
+
+                    /**
+                     * Valid when IsAllowedDataKeyHosted is 1. data key free quota.
+                     */
+                    uint64_t m_freeDataKeyLimit;
+                    bool m_freeDataKeyLimitHasBeenSet;
+
+                    /**
+                     * Valid at that time when IsAllowedDataKeyHosted is 1. specifies the number of keys used.
+                     */
+                    uint64_t m_dataKeyUsedCount;
+                    bool m_dataKeyUsedCountHasBeenSet;
+
+                    /**
+                     * Specifies the target region of the sync task.
+                     */
+                    std::vector<DestinationSyncConfig> m_syncTaskList;
+                    bool m_syncTaskListHasBeenSet;
+
+                    /**
+                     * Whether synchronization task is supported. true: supported; false: unsupported.
+                     */
+                    bool m_isAllowedSync;
+                    bool m_isAllowedSyncHasBeenSet;
 
                 };
             }

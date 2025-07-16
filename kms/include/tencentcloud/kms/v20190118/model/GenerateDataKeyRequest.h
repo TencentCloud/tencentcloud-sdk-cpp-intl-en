@@ -168,6 +168,90 @@ namespace TencentCloud
                      */
                     bool EncryptionAlgorithmHasBeenSet() const;
 
+                    /**
+                     * 获取Indicates whether the data generated key is managed by KMS. 1 means the key is managed and saved by KMS. 0 means the key is not managed by KMS.
+                     * @return IsHostedByKms Indicates whether the data generated key is managed by KMS. 1 means the key is managed and saved by KMS. 0 means the key is not managed by KMS.
+                     * 
+                     */
+                    uint64_t GetIsHostedByKms() const;
+
+                    /**
+                     * 设置Indicates whether the data generated key is managed by KMS. 1 means the key is managed and saved by KMS. 0 means the key is not managed by KMS.
+                     * @param _isHostedByKms Indicates whether the data generated key is managed by KMS. 1 means the key is managed and saved by KMS. 0 means the key is not managed by KMS.
+                     * 
+                     */
+                    void SetIsHostedByKms(const uint64_t& _isHostedByKms);
+
+                    /**
+                     * 判断参数 IsHostedByKms 是否已赋值
+                     * @return IsHostedByKms 是否已赋值
+                     * 
+                     */
+                    bool IsHostedByKmsHasBeenSet() const;
+
+                    /**
+                     * 获取Name of the data key. required when IsHostedByKms is 1. optional when IsHostedByKms is 0 as KMS does not manage it.
+                     * @return DataKeyName Name of the data key. required when IsHostedByKms is 1. optional when IsHostedByKms is 0 as KMS does not manage it.
+                     * 
+                     */
+                    std::string GetDataKeyName() const;
+
+                    /**
+                     * 设置Name of the data key. required when IsHostedByKms is 1. optional when IsHostedByKms is 0 as KMS does not manage it.
+                     * @param _dataKeyName Name of the data key. required when IsHostedByKms is 1. optional when IsHostedByKms is 0 as KMS does not manage it.
+                     * 
+                     */
+                    void SetDataKeyName(const std::string& _dataKeyName);
+
+                    /**
+                     * 判断参数 DataKeyName 是否已赋值
+                     * @return DataKeyName 是否已赋值
+                     * 
+                     */
+                    bool DataKeyNameHasBeenSet() const;
+
+                    /**
+                     * 获取Describes the data key. maximum 100 bytes.
+                     * @return Description Describes the data key. maximum 100 bytes.
+                     * 
+                     */
+                    std::string GetDescription() const;
+
+                    /**
+                     * 设置Describes the data key. maximum 100 bytes.
+                     * @param _description Describes the data key. maximum 100 bytes.
+                     * 
+                     */
+                    void SetDescription(const std::string& _description);
+
+                    /**
+                     * 判断参数 Description 是否已赋值
+                     * @return Description 是否已赋值
+                     * 
+                     */
+                    bool DescriptionHasBeenSet() const;
+
+                    /**
+                     * 获取HSM cluster ID corresponding to the KMS exclusive edition. if HsmClusterId is specified, it indicates the root key is in this cluster and verifies whether KeyId corresponds to HsmClusterId.
+                     * @return HsmClusterId HSM cluster ID corresponding to the KMS exclusive edition. if HsmClusterId is specified, it indicates the root key is in this cluster and verifies whether KeyId corresponds to HsmClusterId.
+                     * 
+                     */
+                    std::string GetHsmClusterId() const;
+
+                    /**
+                     * 设置HSM cluster ID corresponding to the KMS exclusive edition. if HsmClusterId is specified, it indicates the root key is in this cluster and verifies whether KeyId corresponds to HsmClusterId.
+                     * @param _hsmClusterId HSM cluster ID corresponding to the KMS exclusive edition. if HsmClusterId is specified, it indicates the root key is in this cluster and verifies whether KeyId corresponds to HsmClusterId.
+                     * 
+                     */
+                    void SetHsmClusterId(const std::string& _hsmClusterId);
+
+                    /**
+                     * 判断参数 HsmClusterId 是否已赋值
+                     * @return HsmClusterId 是否已赋值
+                     * 
+                     */
+                    bool HsmClusterIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -205,6 +289,30 @@ namespace TencentCloud
                      */
                     std::string m_encryptionAlgorithm;
                     bool m_encryptionAlgorithmHasBeenSet;
+
+                    /**
+                     * Indicates whether the data generated key is managed by KMS. 1 means the key is managed and saved by KMS. 0 means the key is not managed by KMS.
+                     */
+                    uint64_t m_isHostedByKms;
+                    bool m_isHostedByKmsHasBeenSet;
+
+                    /**
+                     * Name of the data key. required when IsHostedByKms is 1. optional when IsHostedByKms is 0 as KMS does not manage it.
+                     */
+                    std::string m_dataKeyName;
+                    bool m_dataKeyNameHasBeenSet;
+
+                    /**
+                     * Describes the data key. maximum 100 bytes.
+                     */
+                    std::string m_description;
+                    bool m_descriptionHasBeenSet;
+
+                    /**
+                     * HSM cluster ID corresponding to the KMS exclusive edition. if HsmClusterId is specified, it indicates the root key is in this cluster and verifies whether KeyId corresponds to HsmClusterId.
+                     */
+                    std::string m_hsmClusterId;
+                    bool m_hsmClusterIdHasBeenSet;
 
                 };
             }

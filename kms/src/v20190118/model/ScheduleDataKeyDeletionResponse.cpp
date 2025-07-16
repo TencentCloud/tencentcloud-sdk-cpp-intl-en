@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/kms/v20190118/model/GenerateDataKeyResponse.h>
+#include <tencentcloud/kms/v20190118/model/ScheduleDataKeyDeletionResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,15 +23,13 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Kms::V20190118::Model;
 using namespace std;
 
-GenerateDataKeyResponse::GenerateDataKeyResponse() :
-    m_keyIdHasBeenSet(false),
-    m_plaintextHasBeenSet(false),
-    m_ciphertextBlobHasBeenSet(false),
+ScheduleDataKeyDeletionResponse::ScheduleDataKeyDeletionResponse() :
+    m_deletionDateHasBeenSet(false),
     m_dataKeyIdHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome GenerateDataKeyResponse::Deserialize(const string &payload)
+CoreInternalOutcome ScheduleDataKeyDeletionResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -65,34 +63,14 @@ CoreInternalOutcome GenerateDataKeyResponse::Deserialize(const string &payload)
     }
 
 
-    if (rsp.HasMember("KeyId") && !rsp["KeyId"].IsNull())
+    if (rsp.HasMember("DeletionDate") && !rsp["DeletionDate"].IsNull())
     {
-        if (!rsp["KeyId"].IsString())
+        if (!rsp["DeletionDate"].IsUint64())
         {
-            return CoreInternalOutcome(Core::Error("response `KeyId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DeletionDate` IsUint64=false incorrectly").SetRequestId(requestId));
         }
-        m_keyId = string(rsp["KeyId"].GetString());
-        m_keyIdHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("Plaintext") && !rsp["Plaintext"].IsNull())
-    {
-        if (!rsp["Plaintext"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `Plaintext` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_plaintext = string(rsp["Plaintext"].GetString());
-        m_plaintextHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("CiphertextBlob") && !rsp["CiphertextBlob"].IsNull())
-    {
-        if (!rsp["CiphertextBlob"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `CiphertextBlob` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_ciphertextBlob = string(rsp["CiphertextBlob"].GetString());
-        m_ciphertextBlobHasBeenSet = true;
+        m_deletionDate = rsp["DeletionDate"].GetUint64();
+        m_deletionDateHasBeenSet = true;
     }
 
     if (rsp.HasMember("DataKeyId") && !rsp["DataKeyId"].IsNull())
@@ -109,34 +87,18 @@ CoreInternalOutcome GenerateDataKeyResponse::Deserialize(const string &payload)
     return CoreInternalOutcome(true);
 }
 
-string GenerateDataKeyResponse::ToJsonString() const
+string ScheduleDataKeyDeletionResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_keyIdHasBeenSet)
+    if (m_deletionDateHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "KeyId";
+        string key = "DeletionDate";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_keyId.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_plaintextHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Plaintext";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_plaintext.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_ciphertextBlobHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "CiphertextBlob";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_ciphertextBlob.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, m_deletionDate, allocator);
     }
 
     if (m_dataKeyIdHasBeenSet)
@@ -159,42 +121,22 @@ string GenerateDataKeyResponse::ToJsonString() const
 }
 
 
-string GenerateDataKeyResponse::GetKeyId() const
+uint64_t ScheduleDataKeyDeletionResponse::GetDeletionDate() const
 {
-    return m_keyId;
+    return m_deletionDate;
 }
 
-bool GenerateDataKeyResponse::KeyIdHasBeenSet() const
+bool ScheduleDataKeyDeletionResponse::DeletionDateHasBeenSet() const
 {
-    return m_keyIdHasBeenSet;
+    return m_deletionDateHasBeenSet;
 }
 
-string GenerateDataKeyResponse::GetPlaintext() const
-{
-    return m_plaintext;
-}
-
-bool GenerateDataKeyResponse::PlaintextHasBeenSet() const
-{
-    return m_plaintextHasBeenSet;
-}
-
-string GenerateDataKeyResponse::GetCiphertextBlob() const
-{
-    return m_ciphertextBlob;
-}
-
-bool GenerateDataKeyResponse::CiphertextBlobHasBeenSet() const
-{
-    return m_ciphertextBlobHasBeenSet;
-}
-
-string GenerateDataKeyResponse::GetDataKeyId() const
+string ScheduleDataKeyDeletionResponse::GetDataKeyId() const
 {
     return m_dataKeyId;
 }
 
-bool GenerateDataKeyResponse::DataKeyIdHasBeenSet() const
+bool ScheduleDataKeyDeletionResponse::DataKeyIdHasBeenSet() const
 {
     return m_dataKeyIdHasBeenSet;
 }
