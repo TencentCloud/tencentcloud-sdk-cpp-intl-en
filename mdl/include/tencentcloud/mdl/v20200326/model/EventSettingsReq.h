@@ -52,15 +52,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, SCTE35_TIME_SIGNAL, SCTE35_SPLICE_INSERT, SCTE35_RETURN_TO_NETWORK. If it is not specified, `INPUT_SWITCH` will be used.
-                     * @return EventType Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, SCTE35_TIME_SIGNAL, SCTE35_SPLICE_INSERT, SCTE35_RETURN_TO_NETWORK. If it is not specified, `INPUT_SWITCH` will be used.
+                     * 获取Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, `SCTE35_TIME_SIGNAL`, `SCTE35_SPLICE_INSERT`, `SCTE35_RETURN_TO_NETWORK`,`TIMED_METADATA `,`STATIC_IMAGE_ACTIVATE `,`STATIC_IMAGE_DEACTIVATE `. If it is not specified, `INPUT_SWITCH` will be used.
+                     * @return EventType Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, `SCTE35_TIME_SIGNAL`, `SCTE35_SPLICE_INSERT`, `SCTE35_RETURN_TO_NETWORK`,`TIMED_METADATA `,`STATIC_IMAGE_ACTIVATE `,`STATIC_IMAGE_DEACTIVATE `. If it is not specified, `INPUT_SWITCH` will be used.
                      * 
                      */
                     std::string GetEventType() const;
 
                     /**
-                     * 设置Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, SCTE35_TIME_SIGNAL, SCTE35_SPLICE_INSERT, SCTE35_RETURN_TO_NETWORK. If it is not specified, `INPUT_SWITCH` will be used.
-                     * @param _eventType Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, SCTE35_TIME_SIGNAL, SCTE35_SPLICE_INSERT, SCTE35_RETURN_TO_NETWORK. If it is not specified, `INPUT_SWITCH` will be used.
+                     * 设置Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, `SCTE35_TIME_SIGNAL`, `SCTE35_SPLICE_INSERT`, `SCTE35_RETURN_TO_NETWORK`,`TIMED_METADATA `,`STATIC_IMAGE_ACTIVATE `,`STATIC_IMAGE_DEACTIVATE `. If it is not specified, `INPUT_SWITCH` will be used.
+                     * @param _eventType Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, `SCTE35_TIME_SIGNAL`, `SCTE35_SPLICE_INSERT`, `SCTE35_RETURN_TO_NETWORK`,`TIMED_METADATA `,`STATIC_IMAGE_ACTIVATE `,`STATIC_IMAGE_DEACTIVATE `. If it is not specified, `INPUT_SWITCH` will be used.
                      * 
                      */
                     void SetEventType(const std::string& _eventType);
@@ -285,7 +285,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, SCTE35_TIME_SIGNAL, SCTE35_SPLICE_INSERT, SCTE35_RETURN_TO_NETWORK. If it is not specified, `INPUT_SWITCH` will be used.
+                     * Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, `SCTE35_TIME_SIGNAL`, `SCTE35_SPLICE_INSERT`, `SCTE35_RETURN_TO_NETWORK`,`TIMED_METADATA `,`STATIC_IMAGE_ACTIVATE `,`STATIC_IMAGE_DEACTIVATE `. If it is not specified, `INPUT_SWITCH` will be used.
                      */
                     std::string m_eventType;
                     bool m_eventTypeHasBeenSet;

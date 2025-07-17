@@ -52,15 +52,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Valid values: INPUT_SWITCH, TIMED_RECORD, SCTE35_TIME_SIGNAL, SCTE35_SPLICE_INSERT, SCTE35_RETURN_TO_NETWORK.
-                     * @return EventType Valid values: INPUT_SWITCH, TIMED_RECORD, SCTE35_TIME_SIGNAL, SCTE35_SPLICE_INSERT, SCTE35_RETURN_TO_NETWORK.
+                     * 获取Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, `SCTE35_TIME_SIGNAL`, `SCTE35_SPLICE_INSERT`, `SCTE35_RETURN_TO_NETWORK`, `STATIC_IMAGE_ACTIVATE`, `STATIC_IMAGE_DEACTIVATE`.
+                     * @return EventType Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, `SCTE35_TIME_SIGNAL`, `SCTE35_SPLICE_INSERT`, `SCTE35_RETURN_TO_NETWORK`, `STATIC_IMAGE_ACTIVATE`, `STATIC_IMAGE_DEACTIVATE`.
                      * 
                      */
                     std::string GetEventType() const;
 
                     /**
-                     * 设置Valid values: INPUT_SWITCH, TIMED_RECORD, SCTE35_TIME_SIGNAL, SCTE35_SPLICE_INSERT, SCTE35_RETURN_TO_NETWORK.
-                     * @param _eventType Valid values: INPUT_SWITCH, TIMED_RECORD, SCTE35_TIME_SIGNAL, SCTE35_SPLICE_INSERT, SCTE35_RETURN_TO_NETWORK.
+                     * 设置Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, `SCTE35_TIME_SIGNAL`, `SCTE35_SPLICE_INSERT`, `SCTE35_RETURN_TO_NETWORK`, `STATIC_IMAGE_ACTIVATE`, `STATIC_IMAGE_DEACTIVATE`.
+                     * @param _eventType Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, `SCTE35_TIME_SIGNAL`, `SCTE35_SPLICE_INSERT`, `SCTE35_RETURN_TO_NETWORK`, `STATIC_IMAGE_ACTIVATE`, `STATIC_IMAGE_DEACTIVATE`.
                      * 
                      */
                     void SetEventType(const std::string& _eventType);
@@ -285,7 +285,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Valid values: INPUT_SWITCH, TIMED_RECORD, SCTE35_TIME_SIGNAL, SCTE35_SPLICE_INSERT, SCTE35_RETURN_TO_NETWORK.
+                     * Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, `SCTE35_TIME_SIGNAL`, `SCTE35_SPLICE_INSERT`, `SCTE35_RETURN_TO_NETWORK`, `STATIC_IMAGE_ACTIVATE`, `STATIC_IMAGE_DEACTIVATE`.
                      */
                     std::string m_eventType;
                     bool m_eventTypeHasBeenSet;
