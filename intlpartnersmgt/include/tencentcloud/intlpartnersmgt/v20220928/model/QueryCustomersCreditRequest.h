@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Search condition type. You can only search by customer ID, name, remarks, or email.
-                     * @return FilterType Search condition type. You can only search by customer ID, name, remarks, or email.
+                     * 获取Search condition type. You can only search by ClientUin, Name, Remark, or Email.
+                     * @return FilterType Search condition type. You can only search by ClientUin, Name, Remark, or Email.
                      * 
                      */
                     std::string GetFilterType() const;
 
                     /**
-                     * 设置Search condition type. You can only search by customer ID, name, remarks, or email.
-                     * @param _filterType Search condition type. You can only search by customer ID, name, remarks, or email.
+                     * 设置Search condition type. You can only search by ClientUin, Name, Remark, or Email.
+                     * @param _filterType Search condition type. You can only search by ClientUin, Name, Remark, or Email.
                      * 
                      */
                     void SetFilterType(const std::string& _filterType);
@@ -150,7 +150,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Search condition type. You can only search by customer ID, name, remarks, or email.
+                     * Search condition type. You can only search by ClientUin, Name, Remark, or Email.
                      */
                     std::string m_filterType;
                     bool m_filterTypeHasBeenSet;

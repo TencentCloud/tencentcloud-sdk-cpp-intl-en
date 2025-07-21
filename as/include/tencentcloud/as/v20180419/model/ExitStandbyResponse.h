@@ -45,9 +45,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Scaling activity ID.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @return ActivityId Scaling activity ID.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetActivityId() const;
@@ -63,7 +61,6 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * Scaling activity ID.
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_activityId;
                     bool m_activityIdHasBeenSet;

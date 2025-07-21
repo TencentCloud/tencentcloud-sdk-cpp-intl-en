@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Rolling update settings parameters. RefreshMode is the rolling update. This parameter must be filled in.Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return RollingUpdateSettings Rolling update settings parameters. RefreshMode is the rolling update. This parameter must be filled in.Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Rolling update settings parameters. RefreshMode is rolling update. this parameter must be filled in.
+                     * @return RollingUpdateSettings Rolling update settings parameters. RefreshMode is rolling update. this parameter must be filled in.
                      * 
                      */
                     RollingUpdateSettings GetRollingUpdateSettings() const;
 
                     /**
-                     * 设置Rolling update settings parameters. RefreshMode is the rolling update. This parameter must be filled in.Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _rollingUpdateSettings Rolling update settings parameters. RefreshMode is the rolling update. This parameter must be filled in.Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Rolling update settings parameters. RefreshMode is rolling update. this parameter must be filled in.
+                     * @param _rollingUpdateSettings Rolling update settings parameters. RefreshMode is rolling update. this parameter must be filled in.
                      * 
                      */
                     void SetRollingUpdateSettings(const RollingUpdateSettings& _rollingUpdateSettings);
@@ -92,7 +92,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Rolling update settings parameters. RefreshMode is the rolling update. This parameter must be filled in.Note: This field may return null, indicating that no valid value can be obtained.
+                     * Rolling update settings parameters. RefreshMode is rolling update. this parameter must be filled in.
                      */
                     RollingUpdateSettings m_rollingUpdateSettings;
                     bool m_rollingUpdateSettingsHasBeenSet;

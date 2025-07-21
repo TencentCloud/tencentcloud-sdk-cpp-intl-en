@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Lifecycle hook ID
-                     * @return LifecycleHookId Lifecycle hook ID
+                     * 获取Lifecycle hook ID. you can get the lifecycle hook ID by calling the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieving the `LifecycleHookId` from the returned information.
+                     * @return LifecycleHookId Lifecycle hook ID. you can get the lifecycle hook ID by calling the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieving the `LifecycleHookId` from the returned information.
                      * 
                      */
                     std::string GetLifecycleHookId() const;
 
                     /**
-                     * 设置Lifecycle hook ID
-                     * @param _lifecycleHookId Lifecycle hook ID
+                     * 设置Lifecycle hook ID. you can get the lifecycle hook ID by calling the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieving the `LifecycleHookId` from the returned information.
+                     * @param _lifecycleHookId Lifecycle hook ID. you can get the lifecycle hook ID by calling the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieving the `LifecycleHookId` from the returned information.
                      * 
                      */
                     void SetLifecycleHookId(const std::string& _lifecycleHookId);
@@ -64,15 +64,23 @@ namespace TencentCloud
                     bool LifecycleHookIdHasBeenSet() const;
 
                     /**
-                     * 获取Result of the lifecycle action. Value range: "CONTINUE", "ABANDON"
-                     * @return LifecycleActionResult Result of the lifecycle action. Value range: "CONTINUE", "ABANDON"
+                     * 获取Describes the result of the lifecycle action. valid values are as follows:.
+<Li>CONTINUE: default value, means continue execution of capacity expansion or reduction</li>.
+<li>ABANDON: for scale-out hooks, CVM instances with hook timeout or failed LifecycleCommand execution will be released directly or moved; for scale-in hooks, scale-in activities will continue.</li>.
+                     * @return LifecycleActionResult Describes the result of the lifecycle action. valid values are as follows:.
+<Li>CONTINUE: default value, means continue execution of capacity expansion or reduction</li>.
+<li>ABANDON: for scale-out hooks, CVM instances with hook timeout or failed LifecycleCommand execution will be released directly or moved; for scale-in hooks, scale-in activities will continue.</li>.
                      * 
                      */
                     std::string GetLifecycleActionResult() const;
 
                     /**
-                     * 设置Result of the lifecycle action. Value range: "CONTINUE", "ABANDON"
-                     * @param _lifecycleActionResult Result of the lifecycle action. Value range: "CONTINUE", "ABANDON"
+                     * 设置Describes the result of the lifecycle action. valid values are as follows:.
+<Li>CONTINUE: default value, means continue execution of capacity expansion or reduction</li>.
+<li>ABANDON: for scale-out hooks, CVM instances with hook timeout or failed LifecycleCommand execution will be released directly or moved; for scale-in hooks, scale-in activities will continue.</li>.
+                     * @param _lifecycleActionResult Describes the result of the lifecycle action. valid values are as follows:.
+<Li>CONTINUE: default value, means continue execution of capacity expansion or reduction</li>.
+<li>ABANDON: for scale-out hooks, CVM instances with hook timeout or failed LifecycleCommand execution will be released directly or moved; for scale-in hooks, scale-in activities will continue.</li>.
                      * 
                      */
                     void SetLifecycleActionResult(const std::string& _lifecycleActionResult);
@@ -85,15 +93,15 @@ namespace TencentCloud
                     bool LifecycleActionResultHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID. Either "InstanceId" or "LifecycleActionToken" must be specified
-                     * @return InstanceId Instance ID. Either "InstanceId" or "LifecycleActionToken" must be specified
+                     * 获取One of the parameters `InstanceId` or `LifecycleActionToken` is required. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
+                     * @return InstanceId One of the parameters `InstanceId` or `LifecycleActionToken` is required. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID. Either "InstanceId" or "LifecycleActionToken" must be specified
-                     * @param _instanceId Instance ID. Either "InstanceId" or "LifecycleActionToken" must be specified
+                     * 设置One of the parameters `InstanceId` or `LifecycleActionToken` is required. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
+                     * @param _instanceId One of the parameters `InstanceId` or `LifecycleActionToken` is required. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -106,15 +114,19 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Either "InstanceId" or "LifecycleActionToken" must be specified
-                     * @return LifecycleActionToken Either "InstanceId" or "LifecycleActionToken" must be specified
+                     * 获取Lifecycle action token. specifies that one of `InstanceId` or `LifecycleActionToken` must be filled.
+The method for accessing the parameter is as follows: when the hook of the `NotificationTarget` parameter is triggered, deliver a message containing the token to the message queue specified in the `NotificationTarget` parameter. the message queue consumer can obtain the token from the message.
+                     * @return LifecycleActionToken Lifecycle action token. specifies that one of `InstanceId` or `LifecycleActionToken` must be filled.
+The method for accessing the parameter is as follows: when the hook of the `NotificationTarget` parameter is triggered, deliver a message containing the token to the message queue specified in the `NotificationTarget` parameter. the message queue consumer can obtain the token from the message.
                      * 
                      */
                     std::string GetLifecycleActionToken() const;
 
                     /**
-                     * 设置Either "InstanceId" or "LifecycleActionToken" must be specified
-                     * @param _lifecycleActionToken Either "InstanceId" or "LifecycleActionToken" must be specified
+                     * 设置Lifecycle action token. specifies that one of `InstanceId` or `LifecycleActionToken` must be filled.
+The method for accessing the parameter is as follows: when the hook of the `NotificationTarget` parameter is triggered, deliver a message containing the token to the message queue specified in the `NotificationTarget` parameter. the message queue consumer can obtain the token from the message.
+                     * @param _lifecycleActionToken Lifecycle action token. specifies that one of `InstanceId` or `LifecycleActionToken` must be filled.
+The method for accessing the parameter is as follows: when the hook of the `NotificationTarget` parameter is triggered, deliver a message containing the token to the message queue specified in the `NotificationTarget` parameter. the message queue consumer can obtain the token from the message.
                      * 
                      */
                     void SetLifecycleActionToken(const std::string& _lifecycleActionToken);
@@ -129,25 +141,28 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Lifecycle hook ID
+                     * Lifecycle hook ID. you can get the lifecycle hook ID by calling the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieving the `LifecycleHookId` from the returned information.
                      */
                     std::string m_lifecycleHookId;
                     bool m_lifecycleHookIdHasBeenSet;
 
                     /**
-                     * Result of the lifecycle action. Value range: "CONTINUE", "ABANDON"
+                     * Describes the result of the lifecycle action. valid values are as follows:.
+<Li>CONTINUE: default value, means continue execution of capacity expansion or reduction</li>.
+<li>ABANDON: for scale-out hooks, CVM instances with hook timeout or failed LifecycleCommand execution will be released directly or moved; for scale-in hooks, scale-in activities will continue.</li>.
                      */
                     std::string m_lifecycleActionResult;
                     bool m_lifecycleActionResultHasBeenSet;
 
                     /**
-                     * Instance ID. Either "InstanceId" or "LifecycleActionToken" must be specified
+                     * One of the parameters `InstanceId` or `LifecycleActionToken` is required. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Either "InstanceId" or "LifecycleActionToken" must be specified
+                     * Lifecycle action token. specifies that one of `InstanceId` or `LifecycleActionToken` must be filled.
+The method for accessing the parameter is as follows: when the hook of the `NotificationTarget` parameter is triggered, deliver a message containing the token to the message queue specified in the `NotificationTarget` parameter. the message queue consumer can obtain the token from the message.
                      */
                     std::string m_lifecycleActionToken;
                     bool m_lifecycleActionTokenHasBeenSet;

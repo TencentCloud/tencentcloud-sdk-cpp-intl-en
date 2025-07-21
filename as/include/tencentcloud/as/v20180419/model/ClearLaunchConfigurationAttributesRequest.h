@@ -43,15 +43,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Launch configuration ID
-                     * @return LaunchConfigurationId Launch configuration ID
+                     * 获取Launch configuration ID. obtain in the following ways:.
+<li>Queries the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>.
+<li>Get the launch configuration ID by calling the api [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the returned information.</li>.
+                     * @return LaunchConfigurationId Launch configuration ID. obtain in the following ways:.
+<li>Queries the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>.
+<li>Get the launch configuration ID by calling the api [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the returned information.</li>.
                      * 
                      */
                     std::string GetLaunchConfigurationId() const;
 
                     /**
-                     * 设置Launch configuration ID
-                     * @param _launchConfigurationId Launch configuration ID
+                     * 设置Launch configuration ID. obtain in the following ways:.
+<li>Queries the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>.
+<li>Get the launch configuration ID by calling the api [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the returned information.</li>.
+                     * @param _launchConfigurationId Launch configuration ID. obtain in the following ways:.
+<li>Queries the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>.
+<li>Get the launch configuration ID by calling the api [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the returned information.</li>.
                      * 
                      */
                     void SetLaunchConfigurationId(const std::string& _launchConfigurationId);
@@ -212,7 +220,9 @@ If true is filled in, it indicates that the instance tag list should be cleared.
                 private:
 
                     /**
-                     * Launch configuration ID
+                     * Launch configuration ID. obtain in the following ways:.
+<li>Queries the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>.
+<li>Get the launch configuration ID by calling the api [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the returned information.</li>.
                      */
                     std::string m_launchConfigurationId;
                     bool m_launchConfigurationIdHasBeenSet;

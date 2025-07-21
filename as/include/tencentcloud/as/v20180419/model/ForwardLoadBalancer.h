@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Load balancer ID
-                     * @return LoadBalancerId Load balancer ID
+                     * 获取ID of the load balancer. this parameter is required as an input parameter. you can obtain it through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
+                     * @return LoadBalancerId ID of the load balancer. this parameter is required as an input parameter. you can obtain it through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
-                     * 设置Load balancer ID
-                     * @param _loadBalancerId Load balancer ID
+                     * 设置ID of the load balancer. this parameter is required as an input parameter. you can obtain it through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
+                     * @param _loadBalancerId ID of the load balancer. this parameter is required as an input parameter. you can obtain it through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
                      * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
-                     * 获取Application load balancer listener ID
-                     * @return ListenerId Application load balancer listener ID
+                     * 获取CLB listener ID. as an input parameter, this parameter is required. you can obtain it through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
+                     * @return ListenerId CLB listener ID. as an input parameter, this parameter is required. you can obtain it through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetListenerId() const;
 
                     /**
-                     * 设置Application load balancer listener ID
-                     * @param _listenerId Application load balancer listener ID
+                     * 设置CLB listener ID. as an input parameter, this parameter is required. you can obtain it through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
+                     * @param _listenerId CLB listener ID. as an input parameter, this parameter is required. you can obtain it through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
                      * 
                      */
                     void SetListenerId(const std::string& _listenerId);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool ListenerIdHasBeenSet() const;
 
                     /**
-                     * 获取List of target rule attributes
-                     * @return TargetAttributes List of target rule attributes
+                     * 获取Target rule attribute list. as an input parameter, this parameter is required.
+                     * @return TargetAttributes Target rule attribute list. as an input parameter, this parameter is required.
                      * 
                      */
                     std::vector<TargetAttribute> GetTargetAttributes() const;
 
                     /**
-                     * 设置List of target rule attributes
-                     * @param _targetAttributes List of target rule attributes
+                     * 设置Target rule attribute list. as an input parameter, this parameter is required.
+                     * @param _targetAttributes Target rule attribute list. as an input parameter, this parameter is required.
                      * 
                      */
                     void SetTargetAttributes(const std::vector<TargetAttribute>& _targetAttributes);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool TargetAttributesHasBeenSet() const;
 
                     /**
-                     * 获取ID of a forwarding rule. This parameter is required for layer-7 listeners.
-                     * @return LocationId ID of a forwarding rule. This parameter is required for layer-7 listeners.
+                     * 获取The forwarding rule ID. note: this parameter is required for layer-7 (http/https) listeners. it can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
+                     * @return LocationId The forwarding rule ID. note: this parameter is required for layer-7 (http/https) listeners. it can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetLocationId() const;
 
                     /**
-                     * 设置ID of a forwarding rule. This parameter is required for layer-7 listeners.
-                     * @param _locationId ID of a forwarding rule. This parameter is required for layer-7 listeners.
+                     * 设置The forwarding rule ID. note: this parameter is required for layer-7 (http/https) listeners. it can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
+                     * @param _locationId The forwarding rule ID. note: this parameter is required for layer-7 (http/https) listeners. it can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
                      * 
                      */
                     void SetLocationId(const std::string& _locationId);
@@ -155,25 +155,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Load balancer ID
+                     * ID of the load balancer. this parameter is required as an input parameter. you can obtain it through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
                      */
                     std::string m_loadBalancerId;
                     bool m_loadBalancerIdHasBeenSet;
 
                     /**
-                     * Application load balancer listener ID
+                     * CLB listener ID. as an input parameter, this parameter is required. you can obtain it through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
                      */
                     std::string m_listenerId;
                     bool m_listenerIdHasBeenSet;
 
                     /**
-                     * List of target rule attributes
+                     * Target rule attribute list. as an input parameter, this parameter is required.
                      */
                     std::vector<TargetAttribute> m_targetAttributes;
                     bool m_targetAttributesHasBeenSet;
 
                     /**
-                     * ID of a forwarding rule. This parameter is required for layer-7 listeners.
+                     * The forwarding rule ID. note: this parameter is required for layer-7 (http/https) listeners. it can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
                      */
                     std::string m_locationId;
                     bool m_locationIdHasBeenSet;

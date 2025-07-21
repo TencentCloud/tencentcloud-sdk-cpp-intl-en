@@ -182,15 +182,15 @@ namespace TencentCloud
                     bool AdjustmentValueHasBeenSet() const;
 
                     /**
-                     * 获取Cooldown period. This parameter is only applicable to a simple policy.
-                     * @return Cooldown Cooldown period. This parameter is only applicable to a simple policy.
+                     * 获取Cooldown duration in seconds, applies only to simple policies. value range [0,3600]. default cooldown: 300 seconds.
+                     * @return Cooldown Cooldown duration in seconds, applies only to simple policies. value range [0,3600]. default cooldown: 300 seconds.
                      * 
                      */
                     uint64_t GetCooldown() const;
 
                     /**
-                     * 设置Cooldown period. This parameter is only applicable to a simple policy.
-                     * @param _cooldown Cooldown period. This parameter is only applicable to a simple policy.
+                     * 设置Cooldown duration in seconds, applies only to simple policies. value range [0,3600]. default cooldown: 300 seconds.
+                     * @param _cooldown Cooldown duration in seconds, applies only to simple policies. value range [0,3600]. default cooldown: 300 seconds.
                      * 
                      */
                     void SetCooldown(const uint64_t& _cooldown);
@@ -410,7 +410,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_adjustmentValueHasBeenSet;
 
                     /**
-                     * Cooldown period. This parameter is only applicable to a simple policy.
+                     * Cooldown duration in seconds, applies only to simple policies. value range [0,3600]. default cooldown: 300 seconds.
                      */
                     uint64_t m_cooldown;
                     bool m_cooldownHasBeenSet;

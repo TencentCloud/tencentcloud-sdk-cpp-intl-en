@@ -91,19 +91,15 @@ namespace TencentCloud
                     bool RefreshActivityIdHasBeenSet() const;
 
                     /**
-                     * 获取Original refresh activity ID, which exists only in the rollback refresh activity.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return OriginRefreshActivityId Original refresh activity ID, which exists only in the rollback refresh activity.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Original refresh activity ID. exists only in rollback refresh activity.
+                     * @return OriginRefreshActivityId Original refresh activity ID. exists only in rollback refresh activity.
                      * 
                      */
                     std::string GetOriginRefreshActivityId() const;
 
                     /**
-                     * 设置Original refresh activity ID, which exists only in the rollback refresh activity.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _originRefreshActivityId Original refresh activity ID, which exists only in the rollback refresh activity.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Original refresh activity ID. exists only in rollback refresh activity.
+                     * @param _originRefreshActivityId Original refresh activity ID. exists only in rollback refresh activity.
                      * 
                      */
                     void SetOriginRefreshActivityId(const std::string& _originRefreshActivityId);
@@ -137,15 +133,23 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool RefreshBatchSetHasBeenSet() const;
 
                     /**
-                     * 获取Refresh mode.
-                     * @return RefreshMode Refresh mode.
+                     * 获取Refresh mode. valid values as follows:.
+<Li>ROLLING_UPDATE_RESET: reinstall the system for rolling updates.</li>.
+<li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
+                     * @return RefreshMode Refresh mode. valid values as follows:.
+<Li>ROLLING_UPDATE_RESET: reinstall the system for rolling updates.</li>.
+<li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
                      * 
                      */
                     std::string GetRefreshMode() const;
 
                     /**
-                     * 设置Refresh mode.
-                     * @param _refreshMode Refresh mode.
+                     * 设置Refresh mode. valid values as follows:.
+<Li>ROLLING_UPDATE_RESET: reinstall the system for rolling updates.</li>.
+<li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
+                     * @param _refreshMode Refresh mode. valid values as follows:.
+<Li>ROLLING_UPDATE_RESET: reinstall the system for rolling updates.</li>.
+<li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
                      * 
                      */
                     void SetRefreshMode(const std::string& _refreshMode);
@@ -261,19 +265,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Current refresh batch number. For example, a value of 2 indicates that the current activity is refreshing the second batch of instances.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return CurrentRefreshBatchNum Current refresh batch number. For example, a value of 2 indicates that the current activity is refreshing the second batch of instances.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Current refresh batch number. for example, 2 indicates the second batch of instances is being refreshed by the current activity.
+                     * @return CurrentRefreshBatchNum Current refresh batch number. for example, 2 indicates the second batch of instances is being refreshed by the current activity.
                      * 
                      */
                     uint64_t GetCurrentRefreshBatchNum() const;
 
                     /**
-                     * 设置Current refresh batch number. For example, a value of 2 indicates that the current activity is refreshing the second batch of instances.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _currentRefreshBatchNum Current refresh batch number. For example, a value of 2 indicates that the current activity is refreshing the second batch of instances.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Current refresh batch number. for example, 2 indicates the second batch of instances is being refreshed by the current activity.
+                     * @param _currentRefreshBatchNum Current refresh batch number. for example, 2 indicates the second batch of instances is being refreshed by the current activity.
                      * 
                      */
                     void SetCurrentRefreshBatchNum(const uint64_t& _currentRefreshBatchNum);
@@ -286,19 +286,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool CurrentRefreshBatchNumHasBeenSet() const;
 
                     /**
-                     * 获取Refresh activity start time.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return StartTime Refresh activity start time.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取The activity start time is refreshed in standard `UTC` time, in the format `YYYY-MM-DDTHH:MM:ssZ`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return StartTime The activity start time is refreshed in standard `UTC` time, in the format `YYYY-MM-DDTHH:MM:ssZ`.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Refresh activity start time.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _startTime Refresh activity start time.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置The activity start time is refreshed in standard `UTC` time, in the format `YYYY-MM-DDTHH:MM:ssZ`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _startTime The activity start time is refreshed in standard `UTC` time, in the format `YYYY-MM-DDTHH:MM:ssZ`.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -311,19 +311,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Refresh activity end time.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return EndTime Refresh activity end time.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Refresh activity end time, in standard UTC time, in the format YYYY-MM-DDTHH:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EndTime Refresh activity end time, in standard UTC time, in the format YYYY-MM-DDTHH:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Refresh activity end time.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _endTime Refresh activity end time.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Refresh activity end time, in standard UTC time, in the format YYYY-MM-DDTHH:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _endTime Refresh activity end time, in standard UTC time, in the format YYYY-MM-DDTHH:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -336,19 +336,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Refresh activity creation time.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return CreatedTime Refresh activity creation time.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Refresh activity creation time, in standard UTC time, in the format YYYY-MM-DDTHH:MM:ssZ.
+                     * @return CreatedTime Refresh activity creation time, in standard UTC time, in the format YYYY-MM-DDTHH:MM:ssZ.
                      * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
-                     * 设置Refresh activity creation time.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _createdTime Refresh activity creation time.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Refresh activity creation time, in standard UTC time, in the format YYYY-MM-DDTHH:MM:ssZ.
+                     * @param _createdTime Refresh activity creation time, in standard UTC time, in the format YYYY-MM-DDTHH:MM:ssZ.
                      * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
@@ -375,8 +371,7 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_refreshActivityIdHasBeenSet;
 
                     /**
-                     * Original refresh activity ID, which exists only in the rollback refresh activity.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Original refresh activity ID. exists only in rollback refresh activity.
                      */
                     std::string m_originRefreshActivityId;
                     bool m_originRefreshActivityIdHasBeenSet;
@@ -388,7 +383,9 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_refreshBatchSetHasBeenSet;
 
                     /**
-                     * Refresh mode.
+                     * Refresh mode. valid values as follows:.
+<Li>ROLLING_UPDATE_RESET: reinstall the system for rolling updates.</li>.
+<li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
                      */
                     std::string m_refreshMode;
                     bool m_refreshModeHasBeenSet;
@@ -422,29 +419,27 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Current refresh batch number. For example, a value of 2 indicates that the current activity is refreshing the second batch of instances.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Current refresh batch number. for example, 2 indicates the second batch of instances is being refreshed by the current activity.
                      */
                     uint64_t m_currentRefreshBatchNum;
                     bool m_currentRefreshBatchNumHasBeenSet;
 
                     /**
-                     * Refresh activity start time.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * The activity start time is refreshed in standard `UTC` time, in the format `YYYY-MM-DDTHH:MM:ssZ`.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Refresh activity end time.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Refresh activity end time, in standard UTC time, in the format YYYY-MM-DDTHH:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Refresh activity creation time.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Refresh activity creation time, in standard UTC time, in the format YYYY-MM-DDTHH:MM:ssZ.
                      */
                     std::string m_createdTime;
                     bool m_createdTimeHasBeenSet;

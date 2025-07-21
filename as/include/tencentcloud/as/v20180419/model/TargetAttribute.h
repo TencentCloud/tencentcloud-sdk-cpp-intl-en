@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Port
-                     * @return Port Port
+                     * 获取Port. value range: [1,65535]. as an input parameter, this parameter is required.
+                     * @return Port Port. value range: [1,65535]. as an input parameter, this parameter is required.
                      * 
                      */
                     uint64_t GetPort() const;
 
                     /**
-                     * 设置Port
-                     * @param _port Port
+                     * 设置Port. value range: [1,65535]. as an input parameter, this parameter is required.
+                     * @param _port Port. value range: [1,65535]. as an input parameter, this parameter is required.
                      * 
                      */
                     void SetPort(const uint64_t& _port);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取Weight
-                     * @return Weight Weight
+                     * 获取Weight. value range: [0,100]. this parameter is required as an input parameter.
+                     * @return Weight Weight. value range: [0,100]. this parameter is required as an input parameter.
                      * 
                      */
                     uint64_t GetWeight() const;
 
                     /**
-                     * 设置Weight
-                     * @param _weight Weight
+                     * 设置Weight. value range: [0,100]. this parameter is required as an input parameter.
+                     * @param _weight Weight. value range: [0,100]. this parameter is required as an input parameter.
                      * 
                      */
                     void SetWeight(const uint64_t& _weight);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Port
+                     * Port. value range: [1,65535]. as an input parameter, this parameter is required.
                      */
                     uint64_t m_port;
                     bool m_portHasBeenSet;
 
                     /**
-                     * Weight
+                     * Weight. value range: [0,100]. this parameter is required as an input parameter.
                      */
                     uint64_t m_weight;
                     bool m_weightHasBeenSet;

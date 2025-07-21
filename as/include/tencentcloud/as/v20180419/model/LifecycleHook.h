@@ -112,15 +112,23 @@ namespace TencentCloud
                     bool AutoScalingGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Default result of the lifecycle hook
-                     * @return DefaultResult Default result of the lifecycle hook
+                     * 获取Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values:.
+-CONTINUE execution by default means capacity expansion or reduction.
+-For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue.
+                     * @return DefaultResult Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values:.
+-CONTINUE execution by default means capacity expansion or reduction.
+-For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue.
                      * 
                      */
                     std::string GetDefaultResult() const;
 
                     /**
-                     * 设置Default result of the lifecycle hook
-                     * @param _defaultResult Default result of the lifecycle hook
+                     * 设置Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values:.
+-CONTINUE execution by default means capacity expansion or reduction.
+-For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue.
+                     * @param _defaultResult Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values:.
+-CONTINUE execution by default means capacity expansion or reduction.
+-For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue.
                      * 
                      */
                     void SetDefaultResult(const std::string& _defaultResult);
@@ -133,15 +141,15 @@ namespace TencentCloud
                     bool DefaultResultHasBeenSet() const;
 
                     /**
-                     * 获取Wait timeout period of the lifecycle hook
-                     * @return HeartbeatTimeout Wait timeout period of the lifecycle hook
+                     * 获取Specifies the timeout waiting time of the lifecycle hook in seconds. value range: 30 to 7200.
+                     * @return HeartbeatTimeout Specifies the timeout waiting time of the lifecycle hook in seconds. value range: 30 to 7200.
                      * 
                      */
                     int64_t GetHeartbeatTimeout() const;
 
                     /**
-                     * 设置Wait timeout period of the lifecycle hook
-                     * @param _heartbeatTimeout Wait timeout period of the lifecycle hook
+                     * 设置Specifies the timeout waiting time of the lifecycle hook in seconds. value range: 30 to 7200.
+                     * @param _heartbeatTimeout Specifies the timeout waiting time of the lifecycle hook in seconds. value range: 30 to 7200.
                      * 
                      */
                     void SetHeartbeatTimeout(const int64_t& _heartbeatTimeout);
@@ -154,15 +162,23 @@ namespace TencentCloud
                     bool HeartbeatTimeoutHasBeenSet() const;
 
                     /**
-                     * 获取Applicable scenario of the lifecycle hook
-                     * @return LifecycleTransition Applicable scenario of the lifecycle hook
+                     * 获取Scenario for entering the lifecycle hook. valid values:.
+-`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+-INSTANCE_TERMINATING: scale-in lifecycle hook.
+                     * @return LifecycleTransition Scenario for entering the lifecycle hook. valid values:.
+-`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+-INSTANCE_TERMINATING: scale-in lifecycle hook.
                      * 
                      */
                     std::string GetLifecycleTransition() const;
 
                     /**
-                     * 设置Applicable scenario of the lifecycle hook
-                     * @param _lifecycleTransition Applicable scenario of the lifecycle hook
+                     * 设置Scenario for entering the lifecycle hook. valid values:.
+-`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+-INSTANCE_TERMINATING: scale-in lifecycle hook.
+                     * @param _lifecycleTransition Scenario for entering the lifecycle hook. valid values:.
+-`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+-INSTANCE_TERMINATING: scale-in lifecycle hook.
                      * 
                      */
                     void SetLifecycleTransition(const std::string& _lifecycleTransition);
@@ -196,15 +212,15 @@ namespace TencentCloud
                     bool NotificationMetadataHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-                     * @return CreatedTime Creation time
+                     * 获取Creation time. uses UTC for timing.
+                     * @return CreatedTime Creation time. uses UTC for timing.
                      * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
-                     * 设置Creation time
-                     * @param _createdTime Creation time
+                     * 设置Creation time. uses UTC for timing.
+                     * @param _createdTime Creation time. uses UTC for timing.
                      * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
@@ -238,15 +254,19 @@ namespace TencentCloud
                     bool NotificationTargetHasBeenSet() const;
 
                     /**
-                     * 获取Applicable scenario of the lifecycle hook
-                     * @return LifecycleTransitionType Applicable scenario of the lifecycle hook
+                     * 获取Specifies the scenario type for performing the lifecycle hook. valid values: NORMAL and EXTENSION. default value: NORMAL.
+Description: when set to `EXTENSION`, the lifecycle hook will be triggered during `AttachInstances`, `DetachInstances`, or `RemoveInstances` API calls. if set to `NORMAL`, the lifecycle hook will not be triggered by these apis.
+                     * @return LifecycleTransitionType Specifies the scenario type for performing the lifecycle hook. valid values: NORMAL and EXTENSION. default value: NORMAL.
+Description: when set to `EXTENSION`, the lifecycle hook will be triggered during `AttachInstances`, `DetachInstances`, or `RemoveInstances` API calls. if set to `NORMAL`, the lifecycle hook will not be triggered by these apis.
                      * 
                      */
                     std::string GetLifecycleTransitionType() const;
 
                     /**
-                     * 设置Applicable scenario of the lifecycle hook
-                     * @param _lifecycleTransitionType Applicable scenario of the lifecycle hook
+                     * 设置Specifies the scenario type for performing the lifecycle hook. valid values: NORMAL and EXTENSION. default value: NORMAL.
+Description: when set to `EXTENSION`, the lifecycle hook will be triggered during `AttachInstances`, `DetachInstances`, or `RemoveInstances` API calls. if set to `NORMAL`, the lifecycle hook will not be triggered by these apis.
+                     * @param _lifecycleTransitionType Specifies the scenario type for performing the lifecycle hook. valid values: NORMAL and EXTENSION. default value: NORMAL.
+Description: when set to `EXTENSION`, the lifecycle hook will be triggered during `AttachInstances`, `DetachInstances`, or `RemoveInstances` API calls. if set to `NORMAL`, the lifecycle hook will not be triggered by these apis.
                      * 
                      */
                     void SetLifecycleTransitionType(const std::string& _lifecycleTransitionType);
@@ -260,18 +280,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Remote command execution object.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LifecycleCommand Remote command execution object.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     LifecycleCommand GetLifecycleCommand() const;
 
                     /**
                      * 设置Remote command execution object.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _lifecycleCommand Remote command execution object.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLifecycleCommand(const LifecycleCommand& _lifecycleCommand);
@@ -304,19 +320,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_autoScalingGroupIdHasBeenSet;
 
                     /**
-                     * Default result of the lifecycle hook
+                     * Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values:.
+-CONTINUE execution by default means capacity expansion or reduction.
+-For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue.
                      */
                     std::string m_defaultResult;
                     bool m_defaultResultHasBeenSet;
 
                     /**
-                     * Wait timeout period of the lifecycle hook
+                     * Specifies the timeout waiting time of the lifecycle hook in seconds. value range: 30 to 7200.
                      */
                     int64_t m_heartbeatTimeout;
                     bool m_heartbeatTimeoutHasBeenSet;
 
                     /**
-                     * Applicable scenario of the lifecycle hook
+                     * Scenario for entering the lifecycle hook. valid values:.
+-`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+-INSTANCE_TERMINATING: scale-in lifecycle hook.
                      */
                     std::string m_lifecycleTransition;
                     bool m_lifecycleTransitionHasBeenSet;
@@ -328,7 +348,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_notificationMetadataHasBeenSet;
 
                     /**
-                     * Creation time
+                     * Creation time. uses UTC for timing.
                      */
                     std::string m_createdTime;
                     bool m_createdTimeHasBeenSet;
@@ -340,14 +360,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_notificationTargetHasBeenSet;
 
                     /**
-                     * Applicable scenario of the lifecycle hook
+                     * Specifies the scenario type for performing the lifecycle hook. valid values: NORMAL and EXTENSION. default value: NORMAL.
+Description: when set to `EXTENSION`, the lifecycle hook will be triggered during `AttachInstances`, `DetachInstances`, or `RemoveInstances` API calls. if set to `NORMAL`, the lifecycle hook will not be triggered by these apis.
                      */
                     std::string m_lifecycleTransitionType;
                     bool m_lifecycleTransitionTypeHasBeenSet;
 
                     /**
                      * Remote command execution object.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     LifecycleCommand m_lifecycleCommand;
                     bool m_lifecycleCommandHasBeenSet;

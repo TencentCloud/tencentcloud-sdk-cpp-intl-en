@@ -86,22 +86,22 @@ namespace TencentCloud
                     bool RefreshSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Refresh mode. Valid values:
-<li>ROLLING_UPDATE_RESET: Reinstall the system for rolling updates.</li>
+                     * 获取Refresh mode. default value: ROLLING_UPDATE_RESET. valid values:.
+<Li>ROLLING_UPDATE_RESET: reinstall the system for rolling updates.</li>.
 <li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
-                     * @return RefreshMode Refresh mode. Valid values:
-<li>ROLLING_UPDATE_RESET: Reinstall the system for rolling updates.</li>
+                     * @return RefreshMode Refresh mode. default value: ROLLING_UPDATE_RESET. valid values:.
+<Li>ROLLING_UPDATE_RESET: reinstall the system for rolling updates.</li>.
 <li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
                      * 
                      */
                     std::string GetRefreshMode() const;
 
                     /**
-                     * 设置Refresh mode. Valid values:
-<li>ROLLING_UPDATE_RESET: Reinstall the system for rolling updates.</li>
+                     * 设置Refresh mode. default value: ROLLING_UPDATE_RESET. valid values:.
+<Li>ROLLING_UPDATE_RESET: reinstall the system for rolling updates.</li>.
 <li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
-                     * @param _refreshMode Refresh mode. Valid values:
-<li>ROLLING_UPDATE_RESET: Reinstall the system for rolling updates.</li>
+                     * @param _refreshMode Refresh mode. default value: ROLLING_UPDATE_RESET. valid values:.
+<Li>ROLLING_UPDATE_RESET: reinstall the system for rolling updates.</li>.
 <li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
                      * 
                      */
@@ -129,8 +129,8 @@ namespace TencentCloud
                     bool m_refreshSettingsHasBeenSet;
 
                     /**
-                     * Refresh mode. Valid values:
-<li>ROLLING_UPDATE_RESET: Reinstall the system for rolling updates.</li>
+                     * Refresh mode. default value: ROLLING_UPDATE_RESET. valid values:.
+<Li>ROLLING_UPDATE_RESET: reinstall the system for rolling updates.</li>.
 <li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
                      */
                     std::string m_refreshMode;

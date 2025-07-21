@@ -449,15 +449,23 @@ namespace TencentCloud
                     bool SubnetIdSetHasBeenSet() const;
 
                     /**
-                     * 获取Termination policy
-                     * @return TerminationPolicySet Termination policy
+                     * 获取Destruction policy. valid values are as follows:.
+<Li>OLDEST_INSTANCE: terminate the oldest instance in the scaling group first, default value.</li>.
+<Li>NEWEST_INSTANCE: terminate the newest instance in the scaling group first.</li>.
+                     * @return TerminationPolicySet Destruction policy. valid values are as follows:.
+<Li>OLDEST_INSTANCE: terminate the oldest instance in the scaling group first, default value.</li>.
+<Li>NEWEST_INSTANCE: terminate the newest instance in the scaling group first.</li>.
                      * 
                      */
                     std::vector<std::string> GetTerminationPolicySet() const;
 
                     /**
-                     * 设置Termination policy
-                     * @param _terminationPolicySet Termination policy
+                     * 设置Destruction policy. valid values are as follows:.
+<Li>OLDEST_INSTANCE: terminate the oldest instance in the scaling group first, default value.</li>.
+<Li>NEWEST_INSTANCE: terminate the newest instance in the scaling group first.</li>.
+                     * @param _terminationPolicySet Destruction policy. valid values are as follows:.
+<Li>OLDEST_INSTANCE: terminate the oldest instance in the scaling group first, default value.</li>.
+<Li>NEWEST_INSTANCE: terminate the newest instance in the scaling group first.</li>.
                      * 
                      */
                     void SetTerminationPolicySet(const std::vector<std::string>& _terminationPolicySet);
@@ -470,15 +478,15 @@ namespace TencentCloud
                     bool TerminationPolicySetHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID
-                     * @return VpcId VPC ID
+                     * 获取VPC ID.
+                     * @return VpcId VPC ID.
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC ID
-                     * @param _vpcId VPC ID
+                     * 设置VPC ID.
+                     * @param _vpcId VPC ID.
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -512,15 +520,27 @@ namespace TencentCloud
                     bool ZoneSetHasBeenSet() const;
 
                     /**
-                     * 获取Retry policy
-                     * @return RetryPolicy Retry policy
+                     * 获取Retry policy. a partially successful scaling operation is considered a failed activity. valid values are as follows:.
+<Li>IMMEDIATE_RETRY: default value, means retry immediately, attempting retries in rapid succession over a short period. cease further retries after a certain number of consecutive failures (5).</li>.
+<Li>INCREMENTAL_INTERVALS: specifies incremental interval retry. with the number of consecutive failures, the retry interval gradually increases. the first 10 retries are quick retry, and the follow-up retry interval gradually expands to 10 minutes, 30 minutes, 60 minutes, and one day.</li>.
+<Li>NO_RETRY: there will be no retry until another user call or Alarm information is received.</li>.
+                     * @return RetryPolicy Retry policy. a partially successful scaling operation is considered a failed activity. valid values are as follows:.
+<Li>IMMEDIATE_RETRY: default value, means retry immediately, attempting retries in rapid succession over a short period. cease further retries after a certain number of consecutive failures (5).</li>.
+<Li>INCREMENTAL_INTERVALS: specifies incremental interval retry. with the number of consecutive failures, the retry interval gradually increases. the first 10 retries are quick retry, and the follow-up retry interval gradually expands to 10 minutes, 30 minutes, 60 minutes, and one day.</li>.
+<Li>NO_RETRY: there will be no retry until another user call or Alarm information is received.</li>.
                      * 
                      */
                     std::string GetRetryPolicy() const;
 
                     /**
-                     * 设置Retry policy
-                     * @param _retryPolicy Retry policy
+                     * 设置Retry policy. a partially successful scaling operation is considered a failed activity. valid values are as follows:.
+<Li>IMMEDIATE_RETRY: default value, means retry immediately, attempting retries in rapid succession over a short period. cease further retries after a certain number of consecutive failures (5).</li>.
+<Li>INCREMENTAL_INTERVALS: specifies incremental interval retry. with the number of consecutive failures, the retry interval gradually increases. the first 10 retries are quick retry, and the follow-up retry interval gradually expands to 10 minutes, 30 minutes, 60 minutes, and one day.</li>.
+<Li>NO_RETRY: there will be no retry until another user call or Alarm information is received.</li>.
+                     * @param _retryPolicy Retry policy. a partially successful scaling operation is considered a failed activity. valid values are as follows:.
+<Li>IMMEDIATE_RETRY: default value, means retry immediately, attempting retries in rapid succession over a short period. cease further retries after a certain number of consecutive failures (5).</li>.
+<Li>INCREMENTAL_INTERVALS: specifies incremental interval retry. with the number of consecutive failures, the retry interval gradually increases. the first 10 retries are quick retry, and the follow-up retry interval gradually expands to 10 minutes, 30 minutes, 60 minutes, and one day.</li>.
+<Li>NO_RETRY: there will be no retry until another user call or Alarm information is received.</li>.
                      * 
                      */
                     void SetRetryPolicy(const std::string& _retryPolicy);
@@ -596,15 +616,15 @@ namespace TencentCloud
                     bool ServiceSettingsHasBeenSet() const;
 
                     /**
-                     * 获取The number of IPv6 addresses that an instance has.
-                     * @return Ipv6AddressCount The number of IPv6 addresses that an instance has.
+                     * 获取The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports ip and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
+                     * @return Ipv6AddressCount The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports ip and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
                      * 
                      */
                     int64_t GetIpv6AddressCount() const;
 
                     /**
-                     * 设置The number of IPv6 addresses that an instance has.
-                     * @param _ipv6AddressCount The number of IPv6 addresses that an instance has.
+                     * 设置The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports ip and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
+                     * @param _ipv6AddressCount The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports ip and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
                      * 
                      */
                     void SetIpv6AddressCount(const int64_t& _ipv6AddressCount);
@@ -675,15 +695,19 @@ namespace TencentCloud
                     bool HealthCheckTypeHasBeenSet() const;
 
                     /**
-                     * 获取Grace period of the CLB health check
-                     * @return LoadBalancerHealthCheckGracePeriod Grace period of the CLB health check
+                     * 获取Grace period of the CLB health check. the scaled-out instances IN `IN_SERVICE` will not be marked as `CLB_UNHEALTHY` within the specified time range.
+Default value: 0. value range: [0, 7200]. measurement unit: seconds.
+                     * @return LoadBalancerHealthCheckGracePeriod Grace period of the CLB health check. the scaled-out instances IN `IN_SERVICE` will not be marked as `CLB_UNHEALTHY` within the specified time range.
+Default value: 0. value range: [0, 7200]. measurement unit: seconds.
                      * 
                      */
                     uint64_t GetLoadBalancerHealthCheckGracePeriod() const;
 
                     /**
-                     * 设置Grace period of the CLB health check
-                     * @param _loadBalancerHealthCheckGracePeriod Grace period of the CLB health check
+                     * 设置Grace period of the CLB health check. the scaled-out instances IN `IN_SERVICE` will not be marked as `CLB_UNHEALTHY` within the specified time range.
+Default value: 0. value range: [0, 7200]. measurement unit: seconds.
+                     * @param _loadBalancerHealthCheckGracePeriod Grace period of the CLB health check. the scaled-out instances IN `IN_SERVICE` will not be marked as `CLB_UNHEALTHY` within the specified time range.
+Default value: 0. value range: [0, 7200]. measurement unit: seconds.
                      * 
                      */
                     void SetLoadBalancerHealthCheckGracePeriod(const uint64_t& _loadBalancerHealthCheckGracePeriod);
@@ -780,18 +804,14 @@ A valid value will be returned only when `InstanceAllocationPolicy` is set to `S
 
                     /**
                      * 获取Instance name sequencing settings.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @return InstanceNameIndexSettings Instance name sequencing settings.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     InstanceNameIndexSettings GetInstanceNameIndexSettings() const;
 
                     /**
                      * 设置Instance name sequencing settings.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _instanceNameIndexSettings Instance name sequencing settings.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetInstanceNameIndexSettings(const InstanceNameIndexSettings& _instanceNameIndexSettings);
@@ -918,13 +938,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_subnetIdSetHasBeenSet;
 
                     /**
-                     * Termination policy
+                     * Destruction policy. valid values are as follows:.
+<Li>OLDEST_INSTANCE: terminate the oldest instance in the scaling group first, default value.</li>.
+<Li>NEWEST_INSTANCE: terminate the newest instance in the scaling group first.</li>.
                      */
                     std::vector<std::string> m_terminationPolicySet;
                     bool m_terminationPolicySetHasBeenSet;
 
                     /**
-                     * VPC ID
+                     * VPC ID.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
@@ -936,7 +958,10 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_zoneSetHasBeenSet;
 
                     /**
-                     * Retry policy
+                     * Retry policy. a partially successful scaling operation is considered a failed activity. valid values are as follows:.
+<Li>IMMEDIATE_RETRY: default value, means retry immediately, attempting retries in rapid succession over a short period. cease further retries after a certain number of consecutive failures (5).</li>.
+<Li>INCREMENTAL_INTERVALS: specifies incremental interval retry. with the number of consecutive failures, the retry interval gradually increases. the first 10 retries are quick retry, and the follow-up retry interval gradually expands to 10 minutes, 30 minutes, 60 minutes, and one day.</li>.
+<Li>NO_RETRY: there will be no retry until another user call or Alarm information is received.</li>.
                      */
                     std::string m_retryPolicy;
                     bool m_retryPolicyHasBeenSet;
@@ -960,7 +985,7 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_serviceSettingsHasBeenSet;
 
                     /**
-                     * The number of IPv6 addresses that an instance has.
+                     * The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports ip and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
                      */
                     int64_t m_ipv6AddressCount;
                     bool m_ipv6AddressCountHasBeenSet;
@@ -982,7 +1007,8 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_healthCheckTypeHasBeenSet;
 
                     /**
-                     * Grace period of the CLB health check
+                     * Grace period of the CLB health check. the scaled-out instances IN `IN_SERVICE` will not be marked as `CLB_UNHEALTHY` within the specified time range.
+Default value: 0. value range: [0, 7200]. measurement unit: seconds.
                      */
                     uint64_t m_loadBalancerHealthCheckGracePeriod;
                     bool m_loadBalancerHealthCheckGracePeriodHasBeenSet;
@@ -1012,7 +1038,6 @@ A valid value will be returned only when `InstanceAllocationPolicy` is set to `S
 
                     /**
                      * Instance name sequencing settings.
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     InstanceNameIndexSettings m_instanceNameIndexSettings;
                     bool m_instanceNameIndexSettingsHasBeenSet;

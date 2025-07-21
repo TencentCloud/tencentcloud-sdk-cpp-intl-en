@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Auto scaling group ID
-                     * @return AutoScalingGroupId Auto scaling group ID
+                     * 获取Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
+                     * @return AutoScalingGroupId Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
                      * 
                      */
                     std::string GetAutoScalingGroupId() const;
 
                     /**
-                     * 设置Auto scaling group ID
-                     * @param _autoScalingGroupId Auto scaling group ID
+                     * 设置Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
+                     * @param _autoScalingGroupId Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
                      * 
                      */
                     void SetAutoScalingGroupId(const std::string& _autoScalingGroupId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool AutoScalingGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Desired capacity
-                     * @return DesiredCapacity Desired capacity
+                     * 获取Expected number of instances, value ranges from 0 to 2000, to meet MaxSize >= DesiredCapacity >= MinSize.
+                     * @return DesiredCapacity Expected number of instances, value ranges from 0 to 2000, to meet MaxSize >= DesiredCapacity >= MinSize.
                      * 
                      */
                     uint64_t GetDesiredCapacity() const;
 
                     /**
-                     * 设置Desired capacity
-                     * @param _desiredCapacity Desired capacity
+                     * 设置Expected number of instances, value ranges from 0 to 2000, to meet MaxSize >= DesiredCapacity >= MinSize.
+                     * @param _desiredCapacity Expected number of instances, value ranges from 0 to 2000, to meet MaxSize >= DesiredCapacity >= MinSize.
                      * 
                      */
                     void SetDesiredCapacity(const uint64_t& _desiredCapacity);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool DesiredCapacityHasBeenSet() const;
 
                     /**
-                     * 获取Minimum number of instances. Value range: 0-2000.
-                     * @return MinSize Minimum number of instances. Value range: 0-2000.
+                     * 获取Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
+                     * @return MinSize Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
                      * 
                      */
                     uint64_t GetMinSize() const;
 
                     /**
-                     * 设置Minimum number of instances. Value range: 0-2000.
-                     * @param _minSize Minimum number of instances. Value range: 0-2000.
+                     * 设置Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
+                     * @param _minSize Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
                      * 
                      */
                     void SetMinSize(const uint64_t& _minSize);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool MinSizeHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of instances. Value range: 0-2000.
-                     * @return MaxSize Maximum number of instances. Value range: 0-2000.
+                     * 获取Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
+                     * @return MaxSize Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
                      * 
                      */
                     uint64_t GetMaxSize() const;
 
                     /**
-                     * 设置Maximum number of instances. Value range: 0-2000.
-                     * @param _maxSize Maximum number of instances. Value range: 0-2000.
+                     * 设置Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
+                     * @param _maxSize Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
                      * 
                      */
                     void SetMaxSize(const uint64_t& _maxSize);
@@ -129,25 +129,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Auto scaling group ID
+                     * Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
                      */
                     std::string m_autoScalingGroupId;
                     bool m_autoScalingGroupIdHasBeenSet;
 
                     /**
-                     * Desired capacity
+                     * Expected number of instances, value ranges from 0 to 2000, to meet MaxSize >= DesiredCapacity >= MinSize.
                      */
                     uint64_t m_desiredCapacity;
                     bool m_desiredCapacityHasBeenSet;
 
                     /**
-                     * Minimum number of instances. Value range: 0-2000.
+                     * Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
                      */
                     uint64_t m_minSize;
                     bool m_minSizeHasBeenSet;
 
                     /**
-                     * Maximum number of instances. Value range: 0-2000.
+                     * Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
                      */
                     uint64_t m_maxSize;
                     bool m_maxSizeHasBeenSet;

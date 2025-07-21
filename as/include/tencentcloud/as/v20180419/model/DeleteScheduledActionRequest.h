@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the scheduled task to be deleted.
-                     * @return ScheduledActionId ID of the scheduled task to be deleted.
+                     * 获取Scheduled task ID to be deleted. obtain the scheduled task ID by calling the api [DescribeScheduledActions](https://intl.cloud.tencent.com/document/api/377/20450?from_cn_redirect=1) and retrieving the ScheduledActionId from the returned information.
+                     * @return ScheduledActionId Scheduled task ID to be deleted. obtain the scheduled task ID by calling the api [DescribeScheduledActions](https://intl.cloud.tencent.com/document/api/377/20450?from_cn_redirect=1) and retrieving the ScheduledActionId from the returned information.
                      * 
                      */
                     std::string GetScheduledActionId() const;
 
                     /**
-                     * 设置ID of the scheduled task to be deleted.
-                     * @param _scheduledActionId ID of the scheduled task to be deleted.
+                     * 设置Scheduled task ID to be deleted. obtain the scheduled task ID by calling the api [DescribeScheduledActions](https://intl.cloud.tencent.com/document/api/377/20450?from_cn_redirect=1) and retrieving the ScheduledActionId from the returned information.
+                     * @param _scheduledActionId Scheduled task ID to be deleted. obtain the scheduled task ID by calling the api [DescribeScheduledActions](https://intl.cloud.tencent.com/document/api/377/20450?from_cn_redirect=1) and retrieving the ScheduledActionId from the returned information.
                      * 
                      */
                     void SetScheduledActionId(const std::string& _scheduledActionId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the scheduled task to be deleted.
+                     * Scheduled task ID to be deleted. obtain the scheduled task ID by calling the api [DescribeScheduledActions](https://intl.cloud.tencent.com/document/api/377/20450?from_cn_redirect=1) and retrieving the ScheduledActionId from the returned information.
                      */
                     std::string m_scheduledActionId;
                     bool m_scheduledActionIdHasBeenSet;

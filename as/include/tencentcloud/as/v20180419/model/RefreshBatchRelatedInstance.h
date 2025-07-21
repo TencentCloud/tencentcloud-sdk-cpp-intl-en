@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Refresh instance status. If an instance is removed or destroyed during the refresh process, its status will be updated to NOT_FOUND. Valid values: <br><li>WAITING: pending refresh.</li> <li>INIT: Initializing.</li> <li>RUNNING: Refreshing in progress.</li> <li>FAILED: Refresh failed.</li> <li>CANCELLED: Canceled.</li> <li>SUCCESSFUL: Refreshed.</li> <li>NOT_FOUND: Instance not found.
-                     * @return InstanceStatus Refresh instance status. If an instance is removed or destroyed during the refresh process, its status will be updated to NOT_FOUND. Valid values: <br><li>WAITING: pending refresh.</li> <li>INIT: Initializing.</li> <li>RUNNING: Refreshing in progress.</li> <li>FAILED: Refresh failed.</li> <li>CANCELLED: Canceled.</li> <li>SUCCESSFUL: Refreshed.</li> <li>NOT_FOUND: Instance not found.
+                     * 获取Refresh instance status. if the instance is removed or terminated during refresh, the status will be updated to NOT_FOUND. valid values: <li>WAITING: pending refresh;</li> <li>INIT: initializing;</li> <li>RUNNING: refreshing;</li> <li>FAILED: refresh FAILED;</li> <li>CANCELLED: CANCELLED;</li> <li>SUCCESSFUL: refresh SUCCESSFUL;</li> <li>NOT_FOUND: instance does NOT exist.</li>.
+                     * @return InstanceStatus Refresh instance status. if the instance is removed or terminated during refresh, the status will be updated to NOT_FOUND. valid values: <li>WAITING: pending refresh;</li> <li>INIT: initializing;</li> <li>RUNNING: refreshing;</li> <li>FAILED: refresh FAILED;</li> <li>CANCELLED: CANCELLED;</li> <li>SUCCESSFUL: refresh SUCCESSFUL;</li> <li>NOT_FOUND: instance does NOT exist.</li>.
                      * 
                      */
                     std::string GetInstanceStatus() const;
 
                     /**
-                     * 设置Refresh instance status. If an instance is removed or destroyed during the refresh process, its status will be updated to NOT_FOUND. Valid values: <br><li>WAITING: pending refresh.</li> <li>INIT: Initializing.</li> <li>RUNNING: Refreshing in progress.</li> <li>FAILED: Refresh failed.</li> <li>CANCELLED: Canceled.</li> <li>SUCCESSFUL: Refreshed.</li> <li>NOT_FOUND: Instance not found.
-                     * @param _instanceStatus Refresh instance status. If an instance is removed or destroyed during the refresh process, its status will be updated to NOT_FOUND. Valid values: <br><li>WAITING: pending refresh.</li> <li>INIT: Initializing.</li> <li>RUNNING: Refreshing in progress.</li> <li>FAILED: Refresh failed.</li> <li>CANCELLED: Canceled.</li> <li>SUCCESSFUL: Refreshed.</li> <li>NOT_FOUND: Instance not found.
+                     * 设置Refresh instance status. if the instance is removed or terminated during refresh, the status will be updated to NOT_FOUND. valid values: <li>WAITING: pending refresh;</li> <li>INIT: initializing;</li> <li>RUNNING: refreshing;</li> <li>FAILED: refresh FAILED;</li> <li>CANCELLED: CANCELLED;</li> <li>SUCCESSFUL: refresh SUCCESSFUL;</li> <li>NOT_FOUND: instance does NOT exist.</li>.
+                     * @param _instanceStatus Refresh instance status. if the instance is removed or terminated during refresh, the status will be updated to NOT_FOUND. valid values: <li>WAITING: pending refresh;</li> <li>INIT: initializing;</li> <li>RUNNING: refreshing;</li> <li>FAILED: refresh FAILED;</li> <li>CANCELLED: CANCELLED;</li> <li>SUCCESSFUL: refresh SUCCESSFUL;</li> <li>NOT_FOUND: instance does NOT exist.</li>.
                      * 
                      */
                     void SetInstanceStatus(const std::string& _instanceStatus);
@@ -89,23 +89,19 @@ namespace TencentCloud
                     bool InstanceStatusHasBeenSet() const;
 
                     /**
-                     * 获取The most recent scaling activity ID during instance refresh can be queried via the DescribeAutoScalingActivities API.
+                     * 获取The most recent scaling activity ID during instance refresh can be queried via the DescribeAutoScalingActivities api.
 Please note that scaling activities differ from instance refresh activities; a single instance refresh activity may involve multiple scaling activities.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return LastActivityId The most recent scaling activity ID during instance refresh can be queried via the DescribeAutoScalingActivities API.
+                     * @return LastActivityId The most recent scaling activity ID during instance refresh can be queried via the DescribeAutoScalingActivities api.
 Please note that scaling activities differ from instance refresh activities; a single instance refresh activity may involve multiple scaling activities.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetLastActivityId() const;
 
                     /**
-                     * 设置The most recent scaling activity ID during instance refresh can be queried via the DescribeAutoScalingActivities API.
+                     * 设置The most recent scaling activity ID during instance refresh can be queried via the DescribeAutoScalingActivities api.
 Please note that scaling activities differ from instance refresh activities; a single instance refresh activity may involve multiple scaling activities.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _lastActivityId The most recent scaling activity ID during instance refresh can be queried via the DescribeAutoScalingActivities API.
+                     * @param _lastActivityId The most recent scaling activity ID during instance refresh can be queried via the DescribeAutoScalingActivities api.
 Please note that scaling activities differ from instance refresh activities; a single instance refresh activity may involve multiple scaling activities.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetLastActivityId(const std::string& _lastActivityId);
@@ -118,19 +114,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool LastActivityIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance refresh status information.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return InstanceStatusMessage Instance refresh status information.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Describes the instance refresh status.
+                     * @return InstanceStatusMessage Describes the instance refresh status.
                      * 
                      */
                     std::string GetInstanceStatusMessage() const;
 
                     /**
-                     * 设置Instance refresh status information.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _instanceStatusMessage Instance refresh status information.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Describes the instance refresh status.
+                     * @param _instanceStatusMessage Describes the instance refresh status.
                      * 
                      */
                     void SetInstanceStatusMessage(const std::string& _instanceStatusMessage);
@@ -151,22 +143,20 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Refresh instance status. If an instance is removed or destroyed during the refresh process, its status will be updated to NOT_FOUND. Valid values: <br><li>WAITING: pending refresh.</li> <li>INIT: Initializing.</li> <li>RUNNING: Refreshing in progress.</li> <li>FAILED: Refresh failed.</li> <li>CANCELLED: Canceled.</li> <li>SUCCESSFUL: Refreshed.</li> <li>NOT_FOUND: Instance not found.
+                     * Refresh instance status. if the instance is removed or terminated during refresh, the status will be updated to NOT_FOUND. valid values: <li>WAITING: pending refresh;</li> <li>INIT: initializing;</li> <li>RUNNING: refreshing;</li> <li>FAILED: refresh FAILED;</li> <li>CANCELLED: CANCELLED;</li> <li>SUCCESSFUL: refresh SUCCESSFUL;</li> <li>NOT_FOUND: instance does NOT exist.</li>.
                      */
                     std::string m_instanceStatus;
                     bool m_instanceStatusHasBeenSet;
 
                     /**
-                     * The most recent scaling activity ID during instance refresh can be queried via the DescribeAutoScalingActivities API.
+                     * The most recent scaling activity ID during instance refresh can be queried via the DescribeAutoScalingActivities api.
 Please note that scaling activities differ from instance refresh activities; a single instance refresh activity may involve multiple scaling activities.
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_lastActivityId;
                     bool m_lastActivityIdHasBeenSet;
 
                     /**
-                     * Instance refresh status information.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Describes the instance refresh status.
                      */
                     std::string m_instanceStatusMessage;
                     bool m_instanceStatusMessageHasBeenSet;

@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool AutoScalingGroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Launch configuration ID
-                     * @return LaunchConfigurationId Launch configuration ID
+                     * 获取Launch configuration ID. you can obtain the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config) or making an api call to [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the returned information.
+                     * @return LaunchConfigurationId Launch configuration ID. you can obtain the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config) or making an api call to [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the returned information.
                      * 
                      */
                     std::string GetLaunchConfigurationId() const;
 
                     /**
-                     * 设置Launch configuration ID
-                     * @param _launchConfigurationId Launch configuration ID
+                     * 设置Launch configuration ID. you can obtain the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config) or making an api call to [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the returned information.
+                     * @param _launchConfigurationId Launch configuration ID. you can obtain the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config) or making an api call to [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the returned information.
                      * 
                      */
                     void SetLaunchConfigurationId(const std::string& _launchConfigurationId);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool LaunchConfigurationIdHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of instances. Value range: 0-2,000.
-                     * @return MaxSize Maximum number of instances. Value range: 0-2,000.
+                     * 获取Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
+                     * @return MaxSize Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
                      * 
                      */
                     uint64_t GetMaxSize() const;
 
                     /**
-                     * 设置Maximum number of instances. Value range: 0-2,000.
-                     * @param _maxSize Maximum number of instances. Value range: 0-2,000.
+                     * 设置Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
+                     * @param _maxSize Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
                      * 
                      */
                     void SetMaxSize(const uint64_t& _maxSize);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool MaxSizeHasBeenSet() const;
 
                     /**
-                     * 获取Minimum number of instances. Value range: 0-2,000.
-                     * @return MinSize Minimum number of instances. Value range: 0-2,000.
+                     * 获取Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
+                     * @return MinSize Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
                      * 
                      */
                     uint64_t GetMinSize() const;
 
                     /**
-                     * 设置Minimum number of instances. Value range: 0-2,000.
-                     * @param _minSize Minimum number of instances. Value range: 0-2,000.
+                     * 设置Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
+                     * @param _minSize Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
                      * 
                      */
                     void SetMinSize(const uint64_t& _minSize);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool MinSizeHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID; if on a basic network, enter an empty string
-                     * @return VpcId VPC ID; if on a basic network, enter an empty string
+                     * 获取vpc ID. a valid vpc ID can be queried by logging in to the console (https://console.cloud.tencent.com/vpc/vpc). you can also call the api DescribeVpc (https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) and obtain it from the VpcId field in the api response.
+                     * @return VpcId vpc ID. a valid vpc ID can be queried by logging in to the console (https://console.cloud.tencent.com/vpc/vpc). you can also call the api DescribeVpc (https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) and obtain it from the VpcId field in the api response.
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC ID; if on a basic network, enter an empty string
-                     * @param _vpcId VPC ID; if on a basic network, enter an empty string
+                     * 设置vpc ID. a valid vpc ID can be queried by logging in to the console (https://console.cloud.tencent.com/vpc/vpc). you can also call the api DescribeVpc (https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) and obtain it from the VpcId field in the api response.
+                     * @param _vpcId vpc ID. a valid vpc ID can be queried by logging in to the console (https://console.cloud.tencent.com/vpc/vpc). you can also call the api DescribeVpc (https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) and obtain it from the VpcId field in the api response.
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Default cooldown period in seconds. Default value: 300
-                     * @return DefaultCooldown Default cooldown period in seconds. Default value: 300
+                     * 获取Default cooldown period in seconds. default value: 300. value range: [0,3600].
+                     * @return DefaultCooldown Default cooldown period in seconds. default value: 300. value range: [0,3600].
                      * 
                      */
                     uint64_t GetDefaultCooldown() const;
 
                     /**
-                     * 设置Default cooldown period in seconds. Default value: 300
-                     * @param _defaultCooldown Default cooldown period in seconds. Default value: 300
+                     * 设置Default cooldown period in seconds. default value: 300. value range: [0,3600].
+                     * @param _defaultCooldown Default cooldown period in seconds. default value: 300. value range: [0,3600].
                      * 
                      */
                     void SetDefaultCooldown(const uint64_t& _defaultCooldown);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool DefaultCooldownHasBeenSet() const;
 
                     /**
-                     * 获取Desired number of instances. The number should be no larger than the maximum and no smaller than minimum number of instances
-                     * @return DesiredCapacity Desired number of instances. The number should be no larger than the maximum and no smaller than minimum number of instances
+                     * 获取The expected number of instances, in the range of [0,2000], default value equals current MinSize, and must meet MaxSize >= DesiredCapacity >= MinSize.
+                     * @return DesiredCapacity The expected number of instances, in the range of [0,2000], default value equals current MinSize, and must meet MaxSize >= DesiredCapacity >= MinSize.
                      * 
                      */
                     uint64_t GetDesiredCapacity() const;
 
                     /**
-                     * 设置Desired number of instances. The number should be no larger than the maximum and no smaller than minimum number of instances
-                     * @param _desiredCapacity Desired number of instances. The number should be no larger than the maximum and no smaller than minimum number of instances
+                     * 设置The expected number of instances, in the range of [0,2000], default value equals current MinSize, and must meet MaxSize >= DesiredCapacity >= MinSize.
+                     * @param _desiredCapacity The expected number of instances, in the range of [0,2000], default value equals current MinSize, and must meet MaxSize >= DesiredCapacity >= MinSize.
                      * 
                      */
                     void SetDesiredCapacity(const uint64_t& _desiredCapacity);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool DesiredCapacityHasBeenSet() const;
 
                     /**
-                     * 获取List of classic CLB IDs. Currently, the maximum length is 20. You cannot specify LoadBalancerIds and ForwardLoadBalancers at the same time.
-                     * @return LoadBalancerIds List of classic CLB IDs. Currently, the maximum length is 20. You cannot specify LoadBalancerIds and ForwardLoadBalancers at the same time.
+                     * 获取A list of classic load balancer ids with a current maximum length of 20. either LoadBalancerIds or ForwardLoadBalancers can be specified at the same time. can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
+                     * @return LoadBalancerIds A list of classic load balancer ids with a current maximum length of 20. either LoadBalancerIds or ForwardLoadBalancers can be specified at the same time. can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
                      * 
                      */
                     std::vector<std::string> GetLoadBalancerIds() const;
 
                     /**
-                     * 设置List of classic CLB IDs. Currently, the maximum length is 20. You cannot specify LoadBalancerIds and ForwardLoadBalancers at the same time.
-                     * @param _loadBalancerIds List of classic CLB IDs. Currently, the maximum length is 20. You cannot specify LoadBalancerIds and ForwardLoadBalancers at the same time.
+                     * 设置A list of classic load balancer ids with a current maximum length of 20. either LoadBalancerIds or ForwardLoadBalancers can be specified at the same time. can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
+                     * @param _loadBalancerIds A list of classic load balancer ids with a current maximum length of 20. either LoadBalancerIds or ForwardLoadBalancers can be specified at the same time. can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
                      * 
                      */
                     void SetLoadBalancerIds(const std::vector<std::string>& _loadBalancerIds);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool LoadBalancerIdsHasBeenSet() const;
 
                     /**
-                     * 获取Project ID of an instance in a scaling group. The default project is used if it’s left blank.
-                     * @return ProjectId Project ID of an instance in a scaling group. The default project is used if it’s left blank.
+                     * 获取Project ID of the instance within the scaling group. default value is 0, indicates usage of the default project. obtain this parameter by calling [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1), `projectId` field in the return value.
+                     * @return ProjectId Project ID of the instance within the scaling group. default value is 0, indicates usage of the default project. obtain this parameter by calling [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1), `projectId` field in the return value.
                      * 
                      */
                     uint64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID of an instance in a scaling group. The default project is used if it’s left blank.
-                     * @param _projectId Project ID of an instance in a scaling group. The default project is used if it’s left blank.
+                     * 设置Project ID of the instance within the scaling group. default value is 0, indicates usage of the default project. obtain this parameter by calling [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1), `projectId` field in the return value.
+                     * @param _projectId Project ID of the instance within the scaling group. default value is 0, indicates usage of the default project. obtain this parameter by calling [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1), `projectId` field in the return value.
                      * 
                      */
                     void SetProjectId(const uint64_t& _projectId);
@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取List of application CLBs. Up to 100 CLBs are allowed. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
-                     * @return ForwardLoadBalancers List of application CLBs. Up to 100 CLBs are allowed. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
+                     * 获取Specifies the list of load balancers with a current maximum length of 100. either LoadBalancerIds or ForwardLoadBalancers can be specified at the same time.
+                     * @return ForwardLoadBalancers Specifies the list of load balancers with a current maximum length of 100. either LoadBalancerIds or ForwardLoadBalancers can be specified at the same time.
                      * 
                      */
                     std::vector<ForwardLoadBalancer> GetForwardLoadBalancers() const;
 
                     /**
-                     * 设置List of application CLBs. Up to 100 CLBs are allowed. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
-                     * @param _forwardLoadBalancers List of application CLBs. Up to 100 CLBs are allowed. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
+                     * 设置Specifies the list of load balancers with a current maximum length of 100. either LoadBalancerIds or ForwardLoadBalancers can be specified at the same time.
+                     * @param _forwardLoadBalancers Specifies the list of load balancers with a current maximum length of 100. either LoadBalancerIds or ForwardLoadBalancers can be specified at the same time.
                      * 
                      */
                     void SetForwardLoadBalancers(const std::vector<ForwardLoadBalancer>& _forwardLoadBalancers);
@@ -258,15 +258,15 @@ namespace TencentCloud
                     bool ForwardLoadBalancersHasBeenSet() const;
 
                     /**
-                     * 获取List of subnet IDs. A subnet must be specified in the VPC scenario. If multiple subnets are entered, their priority will be determined by the order in which they are entered, and they will be tried one by one until instances can be successfully created.
-                     * @return SubnetIds List of subnet IDs. A subnet must be specified in the VPC scenario. If multiple subnets are entered, their priority will be determined by the order in which they are entered, and they will be tried one by one until instances can be successfully created.
+                     * 获取The subnet ID list must specify a subnet in VPC scenarios. multiple subnets are attempted sequentially based on the fill-in order as priority until successful instance creation. effective VPC subnet ids can be queried by logging in to the console (https://console.cloud.tencent.com/VPC/subnet) or obtained from the SubnetId field in the API response by calling the DescribeSubnets API (https://intl.cloud.tencent.com/document/product/215/15784?from_cn_redirect=1).
+                     * @return SubnetIds The subnet ID list must specify a subnet in VPC scenarios. multiple subnets are attempted sequentially based on the fill-in order as priority until successful instance creation. effective VPC subnet ids can be queried by logging in to the console (https://console.cloud.tencent.com/VPC/subnet) or obtained from the SubnetId field in the API response by calling the DescribeSubnets API (https://intl.cloud.tencent.com/document/product/215/15784?from_cn_redirect=1).
                      * 
                      */
                     std::vector<std::string> GetSubnetIds() const;
 
                     /**
-                     * 设置List of subnet IDs. A subnet must be specified in the VPC scenario. If multiple subnets are entered, their priority will be determined by the order in which they are entered, and they will be tried one by one until instances can be successfully created.
-                     * @param _subnetIds List of subnet IDs. A subnet must be specified in the VPC scenario. If multiple subnets are entered, their priority will be determined by the order in which they are entered, and they will be tried one by one until instances can be successfully created.
+                     * 设置The subnet ID list must specify a subnet in VPC scenarios. multiple subnets are attempted sequentially based on the fill-in order as priority until successful instance creation. effective VPC subnet ids can be queried by logging in to the console (https://console.cloud.tencent.com/VPC/subnet) or obtained from the SubnetId field in the API response by calling the DescribeSubnets API (https://intl.cloud.tencent.com/document/product/215/15784?from_cn_redirect=1).
+                     * @param _subnetIds The subnet ID list must specify a subnet in VPC scenarios. multiple subnets are attempted sequentially based on the fill-in order as priority until successful instance creation. effective VPC subnet ids can be queried by logging in to the console (https://console.cloud.tencent.com/VPC/subnet) or obtained from the SubnetId field in the API response by calling the DescribeSubnets API (https://intl.cloud.tencent.com/document/product/215/15784?from_cn_redirect=1).
                      * 
                      */
                     void SetSubnetIds(const std::vector<std::string>& _subnetIds);
@@ -403,15 +403,15 @@ If there is no AZ or subnet in Zones/SubnetIds, a verification error will be rep
                     bool ZonesCheckPolicyHasBeenSet() const;
 
                     /**
-                     * 获取List of tag descriptions. In this parameter, you can specify the tags to be bound with a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
-                     * @return Tags List of tag descriptions. In this parameter, you can specify the tags to be bound with a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
+                     * 获取List of Tag descriptions. by specifying this parameter, you can bind tags to a scaling group and corresponding resource instances. each scaling group supports up to 30 tags. you can call the [GetTags](https://intl.cloud.tencent.com/document/product/651/72275?from_cn_redirect=1) API to retrieve existing Tag key-value pairs based on the response.
+                     * @return Tags List of Tag descriptions. by specifying this parameter, you can bind tags to a scaling group and corresponding resource instances. each scaling group supports up to 30 tags. you can call the [GetTags](https://intl.cloud.tencent.com/document/product/651/72275?from_cn_redirect=1) API to retrieve existing Tag key-value pairs based on the response.
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置List of tag descriptions. In this parameter, you can specify the tags to be bound with a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
-                     * @param _tags List of tag descriptions. In this parameter, you can specify the tags to be bound with a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
+                     * 设置List of Tag descriptions. by specifying this parameter, you can bind tags to a scaling group and corresponding resource instances. each scaling group supports up to 30 tags. you can call the [GetTags](https://intl.cloud.tencent.com/document/product/651/72275?from_cn_redirect=1) API to retrieve existing Tag key-value pairs based on the response.
+                     * @param _tags List of Tag descriptions. by specifying this parameter, you can bind tags to a scaling group and corresponding resource instances. each scaling group supports up to 30 tags. you can call the [GetTags](https://intl.cloud.tencent.com/document/product/651/72275?from_cn_redirect=1) API to retrieve existing Tag key-value pairs based on the response.
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -445,15 +445,15 @@ If there is no AZ or subnet in Zones/SubnetIds, a verification error will be rep
                     bool ServiceSettingsHasBeenSet() const;
 
                     /**
-                     * 获取The number of IPv6 addresses that an instance has. Valid values: 0 and 1. Default value: 0.
-                     * @return Ipv6AddressCount The number of IPv6 addresses that an instance has. Valid values: 0 and 1. Default value: 0.
+                     * 获取The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports IPv6 and enable IPv6 CIDR in the subnet. for other usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
+                     * @return Ipv6AddressCount The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports IPv6 and enable IPv6 CIDR in the subnet. for other usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
                      * 
                      */
                     int64_t GetIpv6AddressCount() const;
 
                     /**
-                     * 设置The number of IPv6 addresses that an instance has. Valid values: 0 and 1. Default value: 0.
-                     * @param _ipv6AddressCount The number of IPv6 addresses that an instance has. Valid values: 0 and 1. Default value: 0.
+                     * 设置The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports IPv6 and enable IPv6 CIDR in the subnet. for other usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
+                     * @param _ipv6AddressCount The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports IPv6 and enable IPv6 CIDR in the subnet. for other usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
                      * 
                      */
                     void SetIpv6AddressCount(const int64_t& _ipv6AddressCount);
@@ -689,61 +689,61 @@ Default value: FALSE.
                     bool m_autoScalingGroupNameHasBeenSet;
 
                     /**
-                     * Launch configuration ID
+                     * Launch configuration ID. you can obtain the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config) or making an api call to [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the returned information.
                      */
                     std::string m_launchConfigurationId;
                     bool m_launchConfigurationIdHasBeenSet;
 
                     /**
-                     * Maximum number of instances. Value range: 0-2,000.
+                     * Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
                      */
                     uint64_t m_maxSize;
                     bool m_maxSizeHasBeenSet;
 
                     /**
-                     * Minimum number of instances. Value range: 0-2,000.
+                     * Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
                      */
                     uint64_t m_minSize;
                     bool m_minSizeHasBeenSet;
 
                     /**
-                     * VPC ID; if on a basic network, enter an empty string
+                     * vpc ID. a valid vpc ID can be queried by logging in to the console (https://console.cloud.tencent.com/vpc/vpc). you can also call the api DescribeVpc (https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) and obtain it from the VpcId field in the api response.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Default cooldown period in seconds. Default value: 300
+                     * Default cooldown period in seconds. default value: 300. value range: [0,3600].
                      */
                     uint64_t m_defaultCooldown;
                     bool m_defaultCooldownHasBeenSet;
 
                     /**
-                     * Desired number of instances. The number should be no larger than the maximum and no smaller than minimum number of instances
+                     * The expected number of instances, in the range of [0,2000], default value equals current MinSize, and must meet MaxSize >= DesiredCapacity >= MinSize.
                      */
                     uint64_t m_desiredCapacity;
                     bool m_desiredCapacityHasBeenSet;
 
                     /**
-                     * List of classic CLB IDs. Currently, the maximum length is 20. You cannot specify LoadBalancerIds and ForwardLoadBalancers at the same time.
+                     * A list of classic load balancer ids with a current maximum length of 20. either LoadBalancerIds or ForwardLoadBalancers can be specified at the same time. can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
                      */
                     std::vector<std::string> m_loadBalancerIds;
                     bool m_loadBalancerIdsHasBeenSet;
 
                     /**
-                     * Project ID of an instance in a scaling group. The default project is used if it’s left blank.
+                     * Project ID of the instance within the scaling group. default value is 0, indicates usage of the default project. obtain this parameter by calling [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1), `projectId` field in the return value.
                      */
                     uint64_t m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * List of application CLBs. Up to 100 CLBs are allowed. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
+                     * Specifies the list of load balancers with a current maximum length of 100. either LoadBalancerIds or ForwardLoadBalancers can be specified at the same time.
                      */
                     std::vector<ForwardLoadBalancer> m_forwardLoadBalancers;
                     bool m_forwardLoadBalancersHasBeenSet;
 
                     /**
-                     * List of subnet IDs. A subnet must be specified in the VPC scenario. If multiple subnets are entered, their priority will be determined by the order in which they are entered, and they will be tried one by one until instances can be successfully created.
+                     * The subnet ID list must specify a subnet in VPC scenarios. multiple subnets are attempted sequentially based on the fill-in order as priority until successful instance creation. effective VPC subnet ids can be queried by logging in to the console (https://console.cloud.tencent.com/VPC/subnet) or obtained from the SubnetId field in the API response by calling the DescribeSubnets API (https://intl.cloud.tencent.com/document/product/215/15784?from_cn_redirect=1).
                      */
                     std::vector<std::string> m_subnetIds;
                     bool m_subnetIdsHasBeenSet;
@@ -783,7 +783,7 @@ If there is no AZ or subnet in Zones/SubnetIds, a verification error will be rep
                     bool m_zonesCheckPolicyHasBeenSet;
 
                     /**
-                     * List of tag descriptions. In this parameter, you can specify the tags to be bound with a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
+                     * List of Tag descriptions. by specifying this parameter, you can bind tags to a scaling group and corresponding resource instances. each scaling group supports up to 30 tags. you can call the [GetTags](https://intl.cloud.tencent.com/document/product/651/72275?from_cn_redirect=1) API to retrieve existing Tag key-value pairs based on the response.
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
@@ -795,7 +795,7 @@ If there is no AZ or subnet in Zones/SubnetIds, a verification error will be rep
                     bool m_serviceSettingsHasBeenSet;
 
                     /**
-                     * The number of IPv6 addresses that an instance has. Valid values: 0 and 1. Default value: 0.
+                     * The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports IPv6 and enable IPv6 CIDR in the subnet. for other usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
                      */
                     int64_t m_ipv6AddressCount;
                     bool m_ipv6AddressCountHasBeenSet;

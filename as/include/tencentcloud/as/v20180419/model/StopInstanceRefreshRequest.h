@@ -43,15 +43,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Scaling group ID.
-                     * @return AutoScalingGroupId Scaling group ID.
+                     * 获取Scaling group ID. you can obtain available scaling group ids in the following ways.
+<li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+<li>Get the scaling group ID by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
+                     * @return AutoScalingGroupId Scaling group ID. you can obtain available scaling group ids in the following ways.
+<li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+<li>Get the scaling group ID by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
                      * 
                      */
                     std::string GetAutoScalingGroupId() const;
 
                     /**
-                     * 设置Scaling group ID.
-                     * @param _autoScalingGroupId Scaling group ID.
+                     * 设置Scaling group ID. you can obtain available scaling group ids in the following ways.
+<li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+<li>Get the scaling group ID by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
+                     * @param _autoScalingGroupId Scaling group ID. you can obtain available scaling group ids in the following ways.
+<li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+<li>Get the scaling group ID by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
                      * 
                      */
                     void SetAutoScalingGroupId(const std::string& _autoScalingGroupId);
@@ -64,15 +72,15 @@ namespace TencentCloud
                     bool AutoScalingGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Refresh activity ID.
-                     * @return RefreshActivityId Refresh activity ID.
+                     * 获取Refresh activity ID. you can call the api [DescribeRefreshActivities](https://intl.cloud.tencent.com/document/api/377/99175?from_cn_redirect=1) and obtain the instance refresh activity ID from the returned information.
+                     * @return RefreshActivityId Refresh activity ID. you can call the api [DescribeRefreshActivities](https://intl.cloud.tencent.com/document/api/377/99175?from_cn_redirect=1) and obtain the instance refresh activity ID from the returned information.
                      * 
                      */
                     std::string GetRefreshActivityId() const;
 
                     /**
-                     * 设置Refresh activity ID.
-                     * @param _refreshActivityId Refresh activity ID.
+                     * 设置Refresh activity ID. you can call the api [DescribeRefreshActivities](https://intl.cloud.tencent.com/document/api/377/99175?from_cn_redirect=1) and obtain the instance refresh activity ID from the returned information.
+                     * @param _refreshActivityId Refresh activity ID. you can call the api [DescribeRefreshActivities](https://intl.cloud.tencent.com/document/api/377/99175?from_cn_redirect=1) and obtain the instance refresh activity ID from the returned information.
                      * 
                      */
                     void SetRefreshActivityId(const std::string& _refreshActivityId);
@@ -87,13 +95,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Scaling group ID.
+                     * Scaling group ID. you can obtain available scaling group ids in the following ways.
+<li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+<li>Get the scaling group ID by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
                      */
                     std::string m_autoScalingGroupId;
                     bool m_autoScalingGroupIdHasBeenSet;
 
                     /**
-                     * Refresh activity ID.
+                     * Refresh activity ID. you can call the api [DescribeRefreshActivities](https://intl.cloud.tencent.com/document/api/377/99175?from_cn_redirect=1) and obtain the instance refresh activity ID from the returned information.
                      */
                     std::string m_refreshActivityId;
                     bool m_refreshActivityIdHasBeenSet;

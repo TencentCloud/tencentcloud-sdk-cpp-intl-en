@@ -295,15 +295,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UserDataHasBeenSet() const;
 
                     /**
-                     * 获取Creation time of the launch configuration.
-                     * @return CreatedTime Creation time of the launch configuration.
+                     * 获取Specifies the startup configuration creation time. uses UTC standard time.
+                     * @return CreatedTime Specifies the startup configuration creation time. uses UTC standard time.
                      * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
-                     * 设置Creation time of the launch configuration.
-                     * @param _createdTime Creation time of the launch configuration.
+                     * 设置Specifies the startup configuration creation time. uses UTC standard time.
+                     * @param _createdTime Specifies the startup configuration creation time. uses UTC standard time.
                      * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
@@ -379,15 +379,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LaunchConfigurationStatusHasBeenSet() const;
 
                     /**
-                     * 获取Instance billing type, with the CVM default value processed as POSTPAID_BY_HOUR. <li>POSTPAID_BY_HOUR: Hourly postpaid billing.</li> <li>SPOTPAID: Spot billing.</li>
-                     * @return InstanceChargeType Instance billing type, with the CVM default value processed as POSTPAID_BY_HOUR. <li>POSTPAID_BY_HOUR: Hourly postpaid billing.</li> <li>SPOTPAID: Spot billing.</li>
+                     * 获取Instance billing type. valid values:.
+<Li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>.
+<Li>SPOTPAID: spot payment</li>.
+<Li>PREPAID: prepaid, i.e., monthly subscription</li>.
+<Li>CDCPAID: dedicated cluster payment</li>.
+                     * @return InstanceChargeType Instance billing type. valid values:.
+<Li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>.
+<Li>SPOTPAID: spot payment</li>.
+<Li>PREPAID: prepaid, i.e., monthly subscription</li>.
+<Li>CDCPAID: dedicated cluster payment</li>.
                      * 
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
-                     * 设置Instance billing type, with the CVM default value processed as POSTPAID_BY_HOUR. <li>POSTPAID_BY_HOUR: Hourly postpaid billing.</li> <li>SPOTPAID: Spot billing.</li>
-                     * @param _instanceChargeType Instance billing type, with the CVM default value processed as POSTPAID_BY_HOUR. <li>POSTPAID_BY_HOUR: Hourly postpaid billing.</li> <li>SPOTPAID: Spot billing.</li>
+                     * 设置Instance billing type. valid values:.
+<Li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>.
+<Li>SPOTPAID: spot payment</li>.
+<Li>PREPAID: prepaid, i.e., monthly subscription</li>.
+<Li>CDCPAID: dedicated cluster payment</li>.
+                     * @param _instanceChargeType Instance billing type. valid values:.
+<Li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>.
+<Li>SPOTPAID: spot payment</li>.
+<Li>PREPAID: prepaid, i.e., monthly subscription</li>.
+<Li>CDCPAID: dedicated cluster payment</li>.
                      * 
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
@@ -467,19 +483,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceTagsHasBeenSet() const;
 
                     /**
-                     * 获取Tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Tags Tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it.
+                     * @return Tags Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it.
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置Tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tags Tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it.
+                     * @param _tags Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it.
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -513,15 +525,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VersionNumberHasBeenSet() const;
 
                     /**
-                     * 获取Update time
-                     * @return UpdatedTime Update time
+                     * 获取Last update time is in standard UTC time.
+                     * @return UpdatedTime Last update time is in standard UTC time.
                      * 
                      */
                     std::string GetUpdatedTime() const;
 
                     /**
-                     * 设置Update time
-                     * @param _updatedTime Update time
+                     * 设置Last update time is in standard UTC time.
+                     * @param _updatedTime Last update time is in standard UTC time.
                      * 
                      */
                     void SetUpdatedTime(const std::string& _updatedTime);
@@ -534,15 +546,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UpdatedTimeHasBeenSet() const;
 
                     /**
-                     * 获取CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
-                     * @return CamRoleName CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
+                     * 获取Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
+                     * @return CamRoleName Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
                      * 
                      */
                     std::string GetCamRoleName() const;
 
                     /**
-                     * 设置CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
-                     * @param _camRoleName CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
+                     * 设置Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
+                     * @param _camRoleName Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
                      * 
                      */
                     void SetCamRoleName(const std::string& _camRoleName);
@@ -728,18 +740,14 @@ Note: This field is default to empty
 
                     /**
                      * 获取Image family name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ImageFamily Image family name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetImageFamily() const;
 
                     /**
                      * 设置Image family name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _imageFamily Image family name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetImageFamily(const std::string& _imageFamily);
@@ -842,7 +850,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_userDataHasBeenSet;
 
                     /**
-                     * Creation time of the launch configuration.
+                     * Specifies the startup configuration creation time. uses UTC standard time.
                      */
                     std::string m_createdTime;
                     bool m_createdTimeHasBeenSet;
@@ -866,7 +874,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_launchConfigurationStatusHasBeenSet;
 
                     /**
-                     * Instance billing type, with the CVM default value processed as POSTPAID_BY_HOUR. <li>POSTPAID_BY_HOUR: Hourly postpaid billing.</li> <li>SPOTPAID: Spot billing.</li>
+                     * Instance billing type. valid values:.
+<Li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>.
+<Li>SPOTPAID: spot payment</li>.
+<Li>PREPAID: prepaid, i.e., monthly subscription</li>.
+<Li>CDCPAID: dedicated cluster payment</li>.
                      */
                     std::string m_instanceChargeType;
                     bool m_instanceChargeTypeHasBeenSet;
@@ -891,8 +903,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_instanceTagsHasBeenSet;
 
                     /**
-                     * Tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it.
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
@@ -904,13 +915,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_versionNumberHasBeenSet;
 
                     /**
-                     * Update time
+                     * Last update time is in standard UTC time.
                      */
                     std::string m_updatedTime;
                     bool m_updatedTimeHasBeenSet;
 
                     /**
-                     * CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
+                     * Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
                      */
                     std::string m_camRoleName;
                     bool m_camRoleNameHasBeenSet;
@@ -966,7 +977,6 @@ Note: This field is default to empty
 
                     /**
                      * Image family name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_imageFamily;
                     bool m_imageFamilyHasBeenSet;

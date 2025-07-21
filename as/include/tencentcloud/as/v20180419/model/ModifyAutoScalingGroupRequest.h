@@ -46,15 +46,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Auto scaling group ID
-                     * @return AutoScalingGroupId Auto scaling group ID
+                     * 获取Scaling group ID. obtain available scaling group ids in the following ways:.
+<li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+<li>Specifies the scaling group ID obtained by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the return information.</li>.
+                     * @return AutoScalingGroupId Scaling group ID. obtain available scaling group ids in the following ways:.
+<li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+<li>Specifies the scaling group ID obtained by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the return information.</li>.
                      * 
                      */
                     std::string GetAutoScalingGroupId() const;
 
                     /**
-                     * 设置Auto scaling group ID
-                     * @param _autoScalingGroupId Auto scaling group ID
+                     * 设置Scaling group ID. obtain available scaling group ids in the following ways:.
+<li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+<li>Specifies the scaling group ID obtained by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the return information.</li>.
+                     * @param _autoScalingGroupId Scaling group ID. obtain available scaling group ids in the following ways:.
+<li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+<li>Specifies the scaling group ID obtained by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the return information.</li>.
                      * 
                      */
                     void SetAutoScalingGroupId(const std::string& _autoScalingGroupId);
@@ -88,15 +96,15 @@ namespace TencentCloud
                     bool AutoScalingGroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Default cooldown period in seconds. Default value: 300
-                     * @return DefaultCooldown Default cooldown period in seconds. Default value: 300
+                     * 获取Default cooldown period in seconds. value ranges from 0 to 3600. default value: 300.
+                     * @return DefaultCooldown Default cooldown period in seconds. value ranges from 0 to 3600. default value: 300.
                      * 
                      */
                     uint64_t GetDefaultCooldown() const;
 
                     /**
-                     * 设置Default cooldown period in seconds. Default value: 300
-                     * @param _defaultCooldown Default cooldown period in seconds. Default value: 300
+                     * 设置Default cooldown period in seconds. value ranges from 0 to 3600. default value: 300.
+                     * @param _defaultCooldown Default cooldown period in seconds. value ranges from 0 to 3600. default value: 300.
                      * 
                      */
                     void SetDefaultCooldown(const uint64_t& _defaultCooldown);
@@ -109,15 +117,15 @@ namespace TencentCloud
                     bool DefaultCooldownHasBeenSet() const;
 
                     /**
-                     * 获取Desired number of instances. The number should be no larger than the maximum and no smaller than minimum number of instances
-                     * @return DesiredCapacity Desired number of instances. The number should be no larger than the maximum and no smaller than minimum number of instances
+                     * 获取Expected number of instances, value ranges from 0 to 2000. to meet maximum value greater than or equal to expected value, expected value greater than or equal to minimum value.
+                     * @return DesiredCapacity Expected number of instances, value ranges from 0 to 2000. to meet maximum value greater than or equal to expected value, expected value greater than or equal to minimum value.
                      * 
                      */
                     uint64_t GetDesiredCapacity() const;
 
                     /**
-                     * 设置Desired number of instances. The number should be no larger than the maximum and no smaller than minimum number of instances
-                     * @param _desiredCapacity Desired number of instances. The number should be no larger than the maximum and no smaller than minimum number of instances
+                     * 设置Expected number of instances, value ranges from 0 to 2000. to meet maximum value greater than or equal to expected value, expected value greater than or equal to minimum value.
+                     * @param _desiredCapacity Expected number of instances, value ranges from 0 to 2000. to meet maximum value greater than or equal to expected value, expected value greater than or equal to minimum value.
                      * 
                      */
                     void SetDesiredCapacity(const uint64_t& _desiredCapacity);
@@ -130,15 +138,23 @@ namespace TencentCloud
                     bool DesiredCapacityHasBeenSet() const;
 
                     /**
-                     * 获取Launch configuration ID
-                     * @return LaunchConfigurationId Launch configuration ID
+                     * 获取Launch configuration ID. obtain available launch configuration ids in the following ways:.
+<li>Queries the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>.
+<li>Specifies the launch configuration ID obtained by calling the api [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the return information.</li>.
+                     * @return LaunchConfigurationId Launch configuration ID. obtain available launch configuration ids in the following ways:.
+<li>Queries the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>.
+<li>Specifies the launch configuration ID obtained by calling the api [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the return information.</li>.
                      * 
                      */
                     std::string GetLaunchConfigurationId() const;
 
                     /**
-                     * 设置Launch configuration ID
-                     * @param _launchConfigurationId Launch configuration ID
+                     * 设置Launch configuration ID. obtain available launch configuration ids in the following ways:.
+<li>Queries the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>.
+<li>Specifies the launch configuration ID obtained by calling the api [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the return information.</li>.
+                     * @param _launchConfigurationId Launch configuration ID. obtain available launch configuration ids in the following ways:.
+<li>Queries the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>.
+<li>Specifies the launch configuration ID obtained by calling the api [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the return information.</li>.
                      * 
                      */
                     void SetLaunchConfigurationId(const std::string& _launchConfigurationId);
@@ -151,15 +167,15 @@ namespace TencentCloud
                     bool LaunchConfigurationIdHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of instances. Value range: 0-2,000.
-                     * @return MaxSize Maximum number of instances. Value range: 0-2,000.
+                     * 获取Maximum number of instances, value range from 0 to 2000. to meet maximum value greater than or equal to expected value, expected value greater than or equal to minimum value.
+                     * @return MaxSize Maximum number of instances, value range from 0 to 2000. to meet maximum value greater than or equal to expected value, expected value greater than or equal to minimum value.
                      * 
                      */
                     uint64_t GetMaxSize() const;
 
                     /**
-                     * 设置Maximum number of instances. Value range: 0-2,000.
-                     * @param _maxSize Maximum number of instances. Value range: 0-2,000.
+                     * 设置Maximum number of instances, value range from 0 to 2000. to meet maximum value greater than or equal to expected value, expected value greater than or equal to minimum value.
+                     * @param _maxSize Maximum number of instances, value range from 0 to 2000. to meet maximum value greater than or equal to expected value, expected value greater than or equal to minimum value.
                      * 
                      */
                     void SetMaxSize(const uint64_t& _maxSize);
@@ -172,15 +188,15 @@ namespace TencentCloud
                     bool MaxSizeHasBeenSet() const;
 
                     /**
-                     * 获取Minimum number of instances. Value range: 0-2,000.
-                     * @return MinSize Minimum number of instances. Value range: 0-2,000.
+                     * 获取Minimum number of instances. value range [0,2000]. to meet maximum value equal to or greater than expected value, expected value equal to or greater than minimum value.
+                     * @return MinSize Minimum number of instances. value range [0,2000]. to meet maximum value equal to or greater than expected value, expected value equal to or greater than minimum value.
                      * 
                      */
                     uint64_t GetMinSize() const;
 
                     /**
-                     * 设置Minimum number of instances. Value range: 0-2,000.
-                     * @param _minSize Minimum number of instances. Value range: 0-2,000.
+                     * 设置Minimum number of instances. value range [0,2000]. to meet maximum value equal to or greater than expected value, expected value equal to or greater than minimum value.
+                     * @param _minSize Minimum number of instances. value range [0,2000]. to meet maximum value equal to or greater than expected value, expected value equal to or greater than minimum value.
                      * 
                      */
                     void SetMinSize(const uint64_t& _minSize);
@@ -193,15 +209,15 @@ namespace TencentCloud
                     bool MinSizeHasBeenSet() const;
 
                     /**
-                     * 获取Project ID
-                     * @return ProjectId Project ID
+                     * 获取Project ID. obtain this parameter by calling [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1), `ProjectId` field in the return value. default value is 0, indicates usage of the default project.
+                     * @return ProjectId Project ID. obtain this parameter by calling [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1), `ProjectId` field in the return value. default value is 0, indicates usage of the default project.
                      * 
                      */
                     uint64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID
-                     * @param _projectId Project ID
+                     * 设置Project ID. obtain this parameter by calling [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1), `ProjectId` field in the return value. default value is 0, indicates usage of the default project.
+                     * @param _projectId Project ID. obtain this parameter by calling [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1), `ProjectId` field in the return value. default value is 0, indicates usage of the default project.
                      * 
                      */
                     void SetProjectId(const uint64_t& _projectId);
@@ -214,15 +230,15 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取List of subnet IDs
-                     * @return SubnetIds List of subnet IDs
+                     * 获取subnet ID list. you can obtain a valid vpc subnet ID by logging in to the [console](https://console.cloud.tencent.com/vpc/subnet). you can also call the API [DescribeSubnets](https://intl.cloud.tencent.com/document/product/215/15784?from_cn_redirect=1) and retrieve the valid vpc subnet ID from the SubnetId field in the API response.
+                     * @return SubnetIds subnet ID list. you can obtain a valid vpc subnet ID by logging in to the [console](https://console.cloud.tencent.com/vpc/subnet). you can also call the API [DescribeSubnets](https://intl.cloud.tencent.com/document/product/215/15784?from_cn_redirect=1) and retrieve the valid vpc subnet ID from the SubnetId field in the API response.
                      * 
                      */
                     std::vector<std::string> GetSubnetIds() const;
 
                     /**
-                     * 设置List of subnet IDs
-                     * @param _subnetIds List of subnet IDs
+                     * 设置subnet ID list. you can obtain a valid vpc subnet ID by logging in to the [console](https://console.cloud.tencent.com/vpc/subnet). you can also call the API [DescribeSubnets](https://intl.cloud.tencent.com/document/product/215/15784?from_cn_redirect=1) and retrieve the valid vpc subnet ID from the SubnetId field in the API response.
+                     * @param _subnetIds subnet ID list. you can obtain a valid vpc subnet ID by logging in to the [console](https://console.cloud.tencent.com/vpc/subnet). you can also call the API [DescribeSubnets](https://intl.cloud.tencent.com/document/product/215/15784?from_cn_redirect=1) and retrieve the valid vpc subnet ID from the SubnetId field in the API response.
                      * 
                      */
                     void SetSubnetIds(const std::vector<std::string>& _subnetIds);
@@ -264,15 +280,15 @@ namespace TencentCloud
                     bool TerminationPoliciesHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID. This field is left empty for basic networks. You need to specify SubnetIds when modifying the network of the auto scaling group to a VPC with a specified VPC ID. Specify Zones when modifying the network to a basic network.
-                     * @return VpcId VPC ID. This field is left empty for basic networks. You need to specify SubnetIds when modifying the network of the auto scaling group to a VPC with a specified VPC ID. Specify Zones when modifying the network to a basic network.
+                     * 获取vpc ID. when modifying the vpc, you need to change the SubnetIds parameter to the subnet of this vpc. effective VpcId can be queried by logging in to the console (https://console.cloud.tencent.com/vpc/vpc) or obtained from the VpcId field in the api response by calling the DescribeVpc api (https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1).
+                     * @return VpcId vpc ID. when modifying the vpc, you need to change the SubnetIds parameter to the subnet of this vpc. effective VpcId can be queried by logging in to the console (https://console.cloud.tencent.com/vpc/vpc) or obtained from the VpcId field in the api response by calling the DescribeVpc api (https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1).
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC ID. This field is left empty for basic networks. You need to specify SubnetIds when modifying the network of the auto scaling group to a VPC with a specified VPC ID. Specify Zones when modifying the network to a basic network.
-                     * @param _vpcId VPC ID. This field is left empty for basic networks. You need to specify SubnetIds when modifying the network of the auto scaling group to a VPC with a specified VPC ID. Specify Zones when modifying the network to a basic network.
+                     * 设置vpc ID. when modifying the vpc, you need to change the SubnetIds parameter to the subnet of this vpc. effective VpcId can be queried by logging in to the console (https://console.cloud.tencent.com/vpc/vpc) or obtained from the VpcId field in the api response by calling the DescribeVpc api (https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1).
+                     * @param _vpcId vpc ID. when modifying the vpc, you need to change the SubnetIds parameter to the subnet of this vpc. effective VpcId can be queried by logging in to the console (https://console.cloud.tencent.com/vpc/vpc) or obtained from the VpcId field in the api response by calling the DescribeVpc api (https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1).
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -401,15 +417,15 @@ If there is no AZ or subnet in Zones/SubnetIds, a verification error will be rep
                     bool ServiceSettingsHasBeenSet() const;
 
                     /**
-                     * 获取The number of IPv6 addresses that an instance has. Valid values: 0 and 1.
-                     * @return Ipv6AddressCount The number of IPv6 addresses that an instance has. Valid values: 0 and 1.
+                     * 获取The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports IPv6 and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
+                     * @return Ipv6AddressCount The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports IPv6 and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
                      * 
                      */
                     int64_t GetIpv6AddressCount() const;
 
                     /**
-                     * 设置The number of IPv6 addresses that an instance has. Valid values: 0 and 1.
-                     * @param _ipv6AddressCount The number of IPv6 addresses that an instance has. Valid values: 0 and 1.
+                     * 设置The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports IPv6 and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
+                     * @param _ipv6AddressCount The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports IPv6 and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
                      * 
                      */
                     void SetIpv6AddressCount(const int64_t& _ipv6AddressCount);
@@ -627,7 +643,9 @@ This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIX
                 private:
 
                     /**
-                     * Auto scaling group ID
+                     * Scaling group ID. obtain available scaling group ids in the following ways:.
+<li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+<li>Specifies the scaling group ID obtained by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the return information.</li>.
                      */
                     std::string m_autoScalingGroupId;
                     bool m_autoScalingGroupIdHasBeenSet;
@@ -639,43 +657,45 @@ This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIX
                     bool m_autoScalingGroupNameHasBeenSet;
 
                     /**
-                     * Default cooldown period in seconds. Default value: 300
+                     * Default cooldown period in seconds. value ranges from 0 to 3600. default value: 300.
                      */
                     uint64_t m_defaultCooldown;
                     bool m_defaultCooldownHasBeenSet;
 
                     /**
-                     * Desired number of instances. The number should be no larger than the maximum and no smaller than minimum number of instances
+                     * Expected number of instances, value ranges from 0 to 2000. to meet maximum value greater than or equal to expected value, expected value greater than or equal to minimum value.
                      */
                     uint64_t m_desiredCapacity;
                     bool m_desiredCapacityHasBeenSet;
 
                     /**
-                     * Launch configuration ID
+                     * Launch configuration ID. obtain available launch configuration ids in the following ways:.
+<li>Queries the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>.
+<li>Specifies the launch configuration ID obtained by calling the api [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the return information.</li>.
                      */
                     std::string m_launchConfigurationId;
                     bool m_launchConfigurationIdHasBeenSet;
 
                     /**
-                     * Maximum number of instances. Value range: 0-2,000.
+                     * Maximum number of instances, value range from 0 to 2000. to meet maximum value greater than or equal to expected value, expected value greater than or equal to minimum value.
                      */
                     uint64_t m_maxSize;
                     bool m_maxSizeHasBeenSet;
 
                     /**
-                     * Minimum number of instances. Value range: 0-2,000.
+                     * Minimum number of instances. value range [0,2000]. to meet maximum value equal to or greater than expected value, expected value equal to or greater than minimum value.
                      */
                     uint64_t m_minSize;
                     bool m_minSizeHasBeenSet;
 
                     /**
-                     * Project ID
+                     * Project ID. obtain this parameter by calling [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1), `ProjectId` field in the return value. default value is 0, indicates usage of the default project.
                      */
                     uint64_t m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * List of subnet IDs
+                     * subnet ID list. you can obtain a valid vpc subnet ID by logging in to the [console](https://console.cloud.tencent.com/vpc/subnet). you can also call the API [DescribeSubnets](https://intl.cloud.tencent.com/document/product/215/15784?from_cn_redirect=1) and retrieve the valid vpc subnet ID from the SubnetId field in the API response.
                      */
                     std::vector<std::string> m_subnetIds;
                     bool m_subnetIdsHasBeenSet;
@@ -689,7 +709,7 @@ This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIX
                     bool m_terminationPoliciesHasBeenSet;
 
                     /**
-                     * VPC ID. This field is left empty for basic networks. You need to specify SubnetIds when modifying the network of the auto scaling group to a VPC with a specified VPC ID. Specify Zones when modifying the network to a basic network.
+                     * vpc ID. when modifying the vpc, you need to change the SubnetIds parameter to the subnet of this vpc. effective VpcId can be queried by logging in to the console (https://console.cloud.tencent.com/vpc/vpc) or obtained from the VpcId field in the api response by calling the DescribeVpc api (https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1).
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
@@ -727,7 +747,7 @@ If there is no AZ or subnet in Zones/SubnetIds, a verification error will be rep
                     bool m_serviceSettingsHasBeenSet;
 
                     /**
-                     * The number of IPv6 addresses that an instance has. Valid values: 0 and 1.
+                     * The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports IPv6 and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
                      */
                     int64_t m_ipv6AddressCount;
                     bool m_ipv6AddressCountHasBeenSet;

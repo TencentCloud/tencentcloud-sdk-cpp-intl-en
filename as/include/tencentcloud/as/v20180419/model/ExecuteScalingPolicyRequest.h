@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Auto-scaling policy ID. This parameter is not available to a target tracking policy.
-                     * @return AutoScalingPolicyId Auto-scaling policy ID. This parameter is not available to a target tracking policy.
+                     * 获取Alarm scaling policy ID. target tracking policy is unsupported. the alert policy type can be obtained via the `ScalingPolicyType` parameter in the api response of [DescribeScalingPolicies](https://intl.cloud.tencent.com/document/api/377/33178?from_cn_redirect=1).
+                     * @return AutoScalingPolicyId Alarm scaling policy ID. target tracking policy is unsupported. the alert policy type can be obtained via the `ScalingPolicyType` parameter in the api response of [DescribeScalingPolicies](https://intl.cloud.tencent.com/document/api/377/33178?from_cn_redirect=1).
                      * 
                      */
                     std::string GetAutoScalingPolicyId() const;
 
                     /**
-                     * 设置Auto-scaling policy ID. This parameter is not available to a target tracking policy.
-                     * @param _autoScalingPolicyId Auto-scaling policy ID. This parameter is not available to a target tracking policy.
+                     * 设置Alarm scaling policy ID. target tracking policy is unsupported. the alert policy type can be obtained via the `ScalingPolicyType` parameter in the api response of [DescribeScalingPolicies](https://intl.cloud.tencent.com/document/api/377/33178?from_cn_redirect=1).
+                     * @param _autoScalingPolicyId Alarm scaling policy ID. target tracking policy is unsupported. the alert policy type can be obtained via the `ScalingPolicyType` parameter in the api response of [DescribeScalingPolicies](https://intl.cloud.tencent.com/document/api/377/33178?from_cn_redirect=1).
                      * 
                      */
                     void SetAutoScalingPolicyId(const std::string& _autoScalingPolicyId);
@@ -108,7 +108,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Auto-scaling policy ID. This parameter is not available to a target tracking policy.
+                     * Alarm scaling policy ID. target tracking policy is unsupported. the alert policy type can be obtained via the `ScalingPolicyType` parameter in the api response of [DescribeScalingPolicies](https://intl.cloud.tencent.com/document/api/377/33178?from_cn_redirect=1).
                      */
                     std::string m_autoScalingPolicyId;
                     bool m_autoScalingPolicyIdHasBeenSet;

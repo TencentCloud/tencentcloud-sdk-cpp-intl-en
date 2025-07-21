@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Lifecycle hook ID
-                     * @return LifecycleHookId Lifecycle hook ID
+                     * 获取Lifecycle hook ID. calling the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieving the LifecycleHookId from the returned information obtains the lifecycle hook ID.
+                     * @return LifecycleHookId Lifecycle hook ID. calling the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieving the LifecycleHookId from the returned information obtains the lifecycle hook ID.
                      * 
                      */
                     std::string GetLifecycleHookId() const;
 
                     /**
-                     * 设置Lifecycle hook ID
-                     * @param _lifecycleHookId Lifecycle hook ID
+                     * 设置Lifecycle hook ID. calling the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieving the LifecycleHookId from the returned information obtains the lifecycle hook ID.
+                     * @param _lifecycleHookId Lifecycle hook ID. calling the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieving the LifecycleHookId from the returned information obtains the lifecycle hook ID.
                      * 
                      */
                     void SetLifecycleHookId(const std::string& _lifecycleHookId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Lifecycle hook ID
+                     * Lifecycle hook ID. calling the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieving the LifecycleHookId from the returned information obtains the lifecycle hook ID.
                      */
                     std::string m_lifecycleHookId;
                     bool m_lifecycleHookIdHasBeenSet;

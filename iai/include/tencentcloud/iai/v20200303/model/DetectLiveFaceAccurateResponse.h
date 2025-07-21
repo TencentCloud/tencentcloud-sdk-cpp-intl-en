@@ -44,8 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Liveness score. Value range: [0, 100]. You can set several thresholds such as 5, 10, 40, 70 and 90 to determine whether the image is photographed. We recommend you use the threshold of 40.
-                     * @return Score Liveness score. Value range: [0, 100]. You can set several thresholds such as 5, 10, 40, 70 and 90 to determine whether the image is photographed. We recommend you use the threshold of 40.
+                     * 获取Liveness scoring.
+-Value range: [0,100].
+-Determines whether it is a rephotograph based on the liveness score and threshold range.
+-Current threshold can be divided into [5,10,40,70,90]. among them, the recommended threshold is 40.
+                     * @return Score Liveness scoring.
+-Value range: [0,100].
+-Determines whether it is a rephotograph based on the liveness score and threshold range.
+-Current threshold can be divided into [5,10,40,70,90]. among them, the recommended threshold is 40.
                      * 
                      */
                     double GetScore() const;
@@ -74,7 +80,10 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Liveness score. Value range: [0, 100]. You can set several thresholds such as 5, 10, 40, 70 and 90 to determine whether the image is photographed. We recommend you use the threshold of 40.
+                     * Liveness scoring.
+-Value range: [0,100].
+-Determines whether it is a rephotograph based on the liveness score and threshold range.
+-Current threshold can be divided into [5,10,40,70,90]. among them, the recommended threshold is 40.
                      */
                     double m_score;
                     bool m_scoreHasBeenSet;

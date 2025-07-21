@@ -43,31 +43,35 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Base64-encoded image data, which cannot exceed 5 MB.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats. 
-The recommended image aspect ratio is 3:4 (generally, the aspect ratio of images taken by mobile phones).
-The face must be greater than 100*100 px in size.
-Supported image formats are PNG, JPG, JPEG, and BMP. GIF is currently not supported.
-                     * @return Image Base64-encoded image data, which cannot exceed 5 MB.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats. 
-The recommended image aspect ratio is 3:4 (generally, the aspect ratio of images taken by mobile phones).
-The face must be greater than 100*100 px in size.
-Supported image formats are PNG, JPG, JPEG, and BMP. GIF is currently not supported.
+                     * 获取Specifies the base64 code of the image.
+-base64-Encoded size cannot exceed 5M.
+-The long side pixel of a jpg image must not exceed 4000. the long side pixel of another format image cannot exceed 2000. 
+-Specifies the image aspect ratio should be close to 3:4. mobile phone shooting proportion is best.
+-Specifies the human face dimension is greater than 100X100 pixels.
+-Supported image formats include PNG, JPG, JPEG, and BMP. GIF is not supported.
+                     * @return Image Specifies the base64 code of the image.
+-base64-Encoded size cannot exceed 5M.
+-The long side pixel of a jpg image must not exceed 4000. the long side pixel of another format image cannot exceed 2000. 
+-Specifies the image aspect ratio should be close to 3:4. mobile phone shooting proportion is best.
+-Specifies the human face dimension is greater than 100X100 pixels.
+-Supported image formats include PNG, JPG, JPEG, and BMP. GIF is not supported.
                      * 
                      */
                     std::string GetImage() const;
 
                     /**
-                     * 设置Base64-encoded image data, which cannot exceed 5 MB.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats. 
-The recommended image aspect ratio is 3:4 (generally, the aspect ratio of images taken by mobile phones).
-The face must be greater than 100*100 px in size.
-Supported image formats are PNG, JPG, JPEG, and BMP. GIF is currently not supported.
-                     * @param _image Base64-encoded image data, which cannot exceed 5 MB.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats. 
-The recommended image aspect ratio is 3:4 (generally, the aspect ratio of images taken by mobile phones).
-The face must be greater than 100*100 px in size.
-Supported image formats are PNG, JPG, JPEG, and BMP. GIF is currently not supported.
+                     * 设置Specifies the base64 code of the image.
+-base64-Encoded size cannot exceed 5M.
+-The long side pixel of a jpg image must not exceed 4000. the long side pixel of another format image cannot exceed 2000. 
+-Specifies the image aspect ratio should be close to 3:4. mobile phone shooting proportion is best.
+-Specifies the human face dimension is greater than 100X100 pixels.
+-Supported image formats include PNG, JPG, JPEG, and BMP. GIF is not supported.
+                     * @param _image Specifies the base64 code of the image.
+-base64-Encoded size cannot exceed 5M.
+-The long side pixel of a jpg image must not exceed 4000. the long side pixel of another format image cannot exceed 2000. 
+-Specifies the image aspect ratio should be close to 3:4. mobile phone shooting proportion is best.
+-Specifies the human face dimension is greater than 100X100 pixels.
+-Supported image formats include PNG, JPG, JPEG, and BMP. GIF is not supported.
                      * 
                      */
                     void SetImage(const std::string& _image);
@@ -80,39 +84,43 @@ Supported image formats are PNG, JPG, JPEG, and BMP. GIF is currently not suppor
                     bool ImageHasBeenSet() const;
 
                     /**
-                     * 获取Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
-Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used. 
-The recommended image aspect ratio is 3:4 (generally, the aspect ratio of images taken by mobile phones).
-The face must be greater than 100*100 px in size.
-We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
-Supported image formats are PNG, JPG, JPEG, and BMP. GIF is currently not supported.
-                     * @return Url Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
-Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used. 
-The recommended image aspect ratio is 3:4 (generally, the aspect ratio of images taken by mobile phones).
-The face must be greater than 100*100 px in size.
-We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
-Supported image formats are PNG, JPG, JPEG, and BMP. GIF is currently not supported.
+                     * 获取Specifies the Url of the image.
+-Specifies the maximum size of the corresponding image after base64 encoding is 5M.
+-The long side pixel of a jpg image must not exceed 4000. the long side pixel of another format image must not exceed 2000.
+-Url or Image must be provided. if both are provided, only use Url. 
+-Specifies the image aspect ratio should be close to 3:4. mobile phone shooting proportion is best.
+-Specifies the human face dimension is greater than 100X100 pixels.
+-Image storage Url on tencent cloud guarantees higher download speed and stability. it is recommended to store images on tencent cloud. non-tencent cloud storage urls may be impacted in speed and stability.
+-Supported image formats include PNG, JPG, JPEG, and BMP. GIF is not supported.
+                     * @return Url Specifies the Url of the image.
+-Specifies the maximum size of the corresponding image after base64 encoding is 5M.
+-The long side pixel of a jpg image must not exceed 4000. the long side pixel of another format image must not exceed 2000.
+-Url or Image must be provided. if both are provided, only use Url. 
+-Specifies the image aspect ratio should be close to 3:4. mobile phone shooting proportion is best.
+-Specifies the human face dimension is greater than 100X100 pixels.
+-Image storage Url on tencent cloud guarantees higher download speed and stability. it is recommended to store images on tencent cloud. non-tencent cloud storage urls may be impacted in speed and stability.
+-Supported image formats include PNG, JPG, JPEG, and BMP. GIF is not supported.
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
-Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used. 
-The recommended image aspect ratio is 3:4 (generally, the aspect ratio of images taken by mobile phones).
-The face must be greater than 100*100 px in size.
-We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
-Supported image formats are PNG, JPG, JPEG, and BMP. GIF is currently not supported.
-                     * @param _url Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
-Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used. 
-The recommended image aspect ratio is 3:4 (generally, the aspect ratio of images taken by mobile phones).
-The face must be greater than 100*100 px in size.
-We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
-Supported image formats are PNG, JPG, JPEG, and BMP. GIF is currently not supported.
+                     * 设置Specifies the Url of the image.
+-Specifies the maximum size of the corresponding image after base64 encoding is 5M.
+-The long side pixel of a jpg image must not exceed 4000. the long side pixel of another format image must not exceed 2000.
+-Url or Image must be provided. if both are provided, only use Url. 
+-Specifies the image aspect ratio should be close to 3:4. mobile phone shooting proportion is best.
+-Specifies the human face dimension is greater than 100X100 pixels.
+-Image storage Url on tencent cloud guarantees higher download speed and stability. it is recommended to store images on tencent cloud. non-tencent cloud storage urls may be impacted in speed and stability.
+-Supported image formats include PNG, JPG, JPEG, and BMP. GIF is not supported.
+                     * @param _url Specifies the Url of the image.
+-Specifies the maximum size of the corresponding image after base64 encoding is 5M.
+-The long side pixel of a jpg image must not exceed 4000. the long side pixel of another format image must not exceed 2000.
+-Url or Image must be provided. if both are provided, only use Url. 
+-Specifies the image aspect ratio should be close to 3:4. mobile phone shooting proportion is best.
+-Specifies the human face dimension is greater than 100X100 pixels.
+-Image storage Url on tencent cloud guarantees higher download speed and stability. it is recommended to store images on tencent cloud. non-tencent cloud storage urls may be impacted in speed and stability.
+-Supported image formats include PNG, JPG, JPEG, and BMP. GIF is not supported.
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -148,23 +156,25 @@ Supported image formats are PNG, JPG, JPEG, and BMP. GIF is currently not suppor
                 private:
 
                     /**
-                     * Base64-encoded image data, which cannot exceed 5 MB.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats. 
-The recommended image aspect ratio is 3:4 (generally, the aspect ratio of images taken by mobile phones).
-The face must be greater than 100*100 px in size.
-Supported image formats are PNG, JPG, JPEG, and BMP. GIF is currently not supported.
+                     * Specifies the base64 code of the image.
+-base64-Encoded size cannot exceed 5M.
+-The long side pixel of a jpg image must not exceed 4000. the long side pixel of another format image cannot exceed 2000. 
+-Specifies the image aspect ratio should be close to 3:4. mobile phone shooting proportion is best.
+-Specifies the human face dimension is greater than 100X100 pixels.
+-Supported image formats include PNG, JPG, JPEG, and BMP. GIF is not supported.
                      */
                     std::string m_image;
                     bool m_imageHasBeenSet;
 
                     /**
-                     * Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
-Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used. 
-The recommended image aspect ratio is 3:4 (generally, the aspect ratio of images taken by mobile phones).
-The face must be greater than 100*100 px in size.
-We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
-Supported image formats are PNG, JPG, JPEG, and BMP. GIF is currently not supported.
+                     * Specifies the Url of the image.
+-Specifies the maximum size of the corresponding image after base64 encoding is 5M.
+-The long side pixel of a jpg image must not exceed 4000. the long side pixel of another format image must not exceed 2000.
+-Url or Image must be provided. if both are provided, only use Url. 
+-Specifies the image aspect ratio should be close to 3:4. mobile phone shooting proportion is best.
+-Specifies the human face dimension is greater than 100X100 pixels.
+-Image storage Url on tencent cloud guarantees higher download speed and stability. it is recommended to store images on tencent cloud. non-tencent cloud storage urls may be impacted in speed and stability.
+-Supported image formats include PNG, JPG, JPEG, and BMP. GIF is not supported.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

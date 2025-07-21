@@ -24,9 +24,12 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/teo/v20220901/model/DenyActionParameters.h>
+#include <tencentcloud/teo/v20220901/model/RedirectActionParameters.h>
+#include <tencentcloud/teo/v20220901/model/AllowActionParameters.h>
+#include <tencentcloud/teo/v20220901/model/ChallengeActionParameters.h>
 #include <tencentcloud/teo/v20220901/model/BlockIPActionParameters.h>
 #include <tencentcloud/teo/v20220901/model/ReturnCustomPageActionParameters.h>
-#include <tencentcloud/teo/v20220901/model/RedirectActionParameters.h>
 
 
 namespace TencentCloud
@@ -50,19 +53,55 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specific action name for security operation. Values:
-<li>`Deny`: block</li> <li>`Monitor`: monitor</li> <li>`ReturnCustomPage`: block with customized page</li> <li>`Redirect`: Redirect to URL</li> <li>`BlockIP`: IP block</li> <li>`JSChallenge`: javaScript challenge</li> <li>`ManagedChallenge`: managed challenge</li> <li>`Disabled`: disabled</li> <li>`Allow`: allow</li>.
-                     * @return Name Specific action name for security operation. Values:
-<li>`Deny`: block</li> <li>`Monitor`: monitor</li> <li>`ReturnCustomPage`: block with customized page</li> <li>`Redirect`: Redirect to URL</li> <li>`BlockIP`: IP block</li> <li>`JSChallenge`: javaScript challenge</li> <li>`ManagedChallenge`: managed challenge</li> <li>`Disabled`: disabled</li> <li>`Allow`: allow</li>.
+                     * 获取Safe execution actions. valid values:.
+<Li>Deny: block request to access site resource;</li>.
+<Li>`Monitor`: observe; only record logs</li>.
+<li>`Redirect`: Redirect to URL</li>.
+<Li>Disabled: disabled; specify rule is not enabled.</li>.
+<Li>Allow: allow access but delay processing the request.</li>.
+<Li>Challenge: challenge, respond to challenge content;</li>.
+<Li>BlockIP: to be deprecated, ip block;</li>.
+<Li>`ReturnCustomPage`: to be deprecated, use specified page block;</li>.
+<li>JSChallenge: to be deprecated, JavaScript challenge;</li>.
+<Li>ManagedChallenge: to be deprecated. managed challenge.</li>.
+                     * @return Name Safe execution actions. valid values:.
+<Li>Deny: block request to access site resource;</li>.
+<Li>`Monitor`: observe; only record logs</li>.
+<li>`Redirect`: Redirect to URL</li>.
+<Li>Disabled: disabled; specify rule is not enabled.</li>.
+<Li>Allow: allow access but delay processing the request.</li>.
+<Li>Challenge: challenge, respond to challenge content;</li>.
+<Li>BlockIP: to be deprecated, ip block;</li>.
+<Li>`ReturnCustomPage`: to be deprecated, use specified page block;</li>.
+<li>JSChallenge: to be deprecated, JavaScript challenge;</li>.
+<Li>ManagedChallenge: to be deprecated. managed challenge.</li>.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Specific action name for security operation. Values:
-<li>`Deny`: block</li> <li>`Monitor`: monitor</li> <li>`ReturnCustomPage`: block with customized page</li> <li>`Redirect`: Redirect to URL</li> <li>`BlockIP`: IP block</li> <li>`JSChallenge`: javaScript challenge</li> <li>`ManagedChallenge`: managed challenge</li> <li>`Disabled`: disabled</li> <li>`Allow`: allow</li>.
-                     * @param _name Specific action name for security operation. Values:
-<li>`Deny`: block</li> <li>`Monitor`: monitor</li> <li>`ReturnCustomPage`: block with customized page</li> <li>`Redirect`: Redirect to URL</li> <li>`BlockIP`: IP block</li> <li>`JSChallenge`: javaScript challenge</li> <li>`ManagedChallenge`: managed challenge</li> <li>`Disabled`: disabled</li> <li>`Allow`: allow</li>.
+                     * 设置Safe execution actions. valid values:.
+<Li>Deny: block request to access site resource;</li>.
+<Li>`Monitor`: observe; only record logs</li>.
+<li>`Redirect`: Redirect to URL</li>.
+<Li>Disabled: disabled; specify rule is not enabled.</li>.
+<Li>Allow: allow access but delay processing the request.</li>.
+<Li>Challenge: challenge, respond to challenge content;</li>.
+<Li>BlockIP: to be deprecated, ip block;</li>.
+<Li>`ReturnCustomPage`: to be deprecated, use specified page block;</li>.
+<li>JSChallenge: to be deprecated, JavaScript challenge;</li>.
+<Li>ManagedChallenge: to be deprecated. managed challenge.</li>.
+                     * @param _name Safe execution actions. valid values:.
+<Li>Deny: block request to access site resource;</li>.
+<Li>`Monitor`: observe; only record logs</li>.
+<li>`Redirect`: Redirect to URL</li>.
+<Li>Disabled: disabled; specify rule is not enabled.</li>.
+<Li>Allow: allow access but delay processing the request.</li>.
+<Li>Challenge: challenge, respond to challenge content;</li>.
+<Li>BlockIP: to be deprecated, ip block;</li>.
+<Li>`ReturnCustomPage`: to be deprecated, use specified page block;</li>.
+<li>JSChallenge: to be deprecated, JavaScript challenge;</li>.
+<Li>ManagedChallenge: to be deprecated. managed challenge.</li>.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -75,46 +114,25 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Additional parameter when Name is BlockIP.
-                     * @return BlockIPActionParameters Additional parameter when Name is BlockIP.
+                     * 获取Additional parameters when Name is Deny.
+                     * @return DenyActionParameters Additional parameters when Name is Deny.
                      * 
                      */
-                    BlockIPActionParameters GetBlockIPActionParameters() const;
+                    DenyActionParameters GetDenyActionParameters() const;
 
                     /**
-                     * 设置Additional parameter when Name is BlockIP.
-                     * @param _blockIPActionParameters Additional parameter when Name is BlockIP.
+                     * 设置Additional parameters when Name is Deny.
+                     * @param _denyActionParameters Additional parameters when Name is Deny.
                      * 
                      */
-                    void SetBlockIPActionParameters(const BlockIPActionParameters& _blockIPActionParameters);
+                    void SetDenyActionParameters(const DenyActionParameters& _denyActionParameters);
 
                     /**
-                     * 判断参数 BlockIPActionParameters 是否已赋值
-                     * @return BlockIPActionParameters 是否已赋值
+                     * 判断参数 DenyActionParameters 是否已赋值
+                     * @return DenyActionParameters 是否已赋值
                      * 
                      */
-                    bool BlockIPActionParametersHasBeenSet() const;
-
-                    /**
-                     * 获取Additional parameter when Name is ReturnCustomPage.
-                     * @return ReturnCustomPageActionParameters Additional parameter when Name is ReturnCustomPage.
-                     * 
-                     */
-                    ReturnCustomPageActionParameters GetReturnCustomPageActionParameters() const;
-
-                    /**
-                     * 设置Additional parameter when Name is ReturnCustomPage.
-                     * @param _returnCustomPageActionParameters Additional parameter when Name is ReturnCustomPage.
-                     * 
-                     */
-                    void SetReturnCustomPageActionParameters(const ReturnCustomPageActionParameters& _returnCustomPageActionParameters);
-
-                    /**
-                     * 判断参数 ReturnCustomPageActionParameters 是否已赋值
-                     * @return ReturnCustomPageActionParameters 是否已赋值
-                     * 
-                     */
-                    bool ReturnCustomPageActionParametersHasBeenSet() const;
+                    bool DenyActionParametersHasBeenSet() const;
 
                     /**
                      * 获取Additional parameter when Name is Redirect.
@@ -137,32 +155,143 @@ namespace TencentCloud
                      */
                     bool RedirectActionParametersHasBeenSet() const;
 
+                    /**
+                     * 获取Additional parameters when Name is Allow.
+                     * @return AllowActionParameters Additional parameters when Name is Allow.
+                     * 
+                     */
+                    AllowActionParameters GetAllowActionParameters() const;
+
+                    /**
+                     * 设置Additional parameters when Name is Allow.
+                     * @param _allowActionParameters Additional parameters when Name is Allow.
+                     * 
+                     */
+                    void SetAllowActionParameters(const AllowActionParameters& _allowActionParameters);
+
+                    /**
+                     * 判断参数 AllowActionParameters 是否已赋值
+                     * @return AllowActionParameters 是否已赋值
+                     * 
+                     */
+                    bool AllowActionParametersHasBeenSet() const;
+
+                    /**
+                     * 获取Additional parameter when Name is Challenge.
+                     * @return ChallengeActionParameters Additional parameter when Name is Challenge.
+                     * 
+                     */
+                    ChallengeActionParameters GetChallengeActionParameters() const;
+
+                    /**
+                     * 设置Additional parameter when Name is Challenge.
+                     * @param _challengeActionParameters Additional parameter when Name is Challenge.
+                     * 
+                     */
+                    void SetChallengeActionParameters(const ChallengeActionParameters& _challengeActionParameters);
+
+                    /**
+                     * 判断参数 ChallengeActionParameters 是否已赋值
+                     * @return ChallengeActionParameters 是否已赋值
+                     * 
+                     */
+                    bool ChallengeActionParametersHasBeenSet() const;
+
+                    /**
+                     * 获取To be deprecated, additional parameter when Name is BlockIP.
+                     * @return BlockIPActionParameters To be deprecated, additional parameter when Name is BlockIP.
+                     * 
+                     */
+                    BlockIPActionParameters GetBlockIPActionParameters() const;
+
+                    /**
+                     * 设置To be deprecated, additional parameter when Name is BlockIP.
+                     * @param _blockIPActionParameters To be deprecated, additional parameter when Name is BlockIP.
+                     * 
+                     */
+                    void SetBlockIPActionParameters(const BlockIPActionParameters& _blockIPActionParameters);
+
+                    /**
+                     * 判断参数 BlockIPActionParameters 是否已赋值
+                     * @return BlockIPActionParameters 是否已赋值
+                     * 
+                     */
+                    bool BlockIPActionParametersHasBeenSet() const;
+
+                    /**
+                     * 获取To be deprecated, additional parameter when Name is ReturnCustomPage.
+                     * @return ReturnCustomPageActionParameters To be deprecated, additional parameter when Name is ReturnCustomPage.
+                     * 
+                     */
+                    ReturnCustomPageActionParameters GetReturnCustomPageActionParameters() const;
+
+                    /**
+                     * 设置To be deprecated, additional parameter when Name is ReturnCustomPage.
+                     * @param _returnCustomPageActionParameters To be deprecated, additional parameter when Name is ReturnCustomPage.
+                     * 
+                     */
+                    void SetReturnCustomPageActionParameters(const ReturnCustomPageActionParameters& _returnCustomPageActionParameters);
+
+                    /**
+                     * 判断参数 ReturnCustomPageActionParameters 是否已赋值
+                     * @return ReturnCustomPageActionParameters 是否已赋值
+                     * 
+                     */
+                    bool ReturnCustomPageActionParametersHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Specific action name for security operation. Values:
-<li>`Deny`: block</li> <li>`Monitor`: monitor</li> <li>`ReturnCustomPage`: block with customized page</li> <li>`Redirect`: Redirect to URL</li> <li>`BlockIP`: IP block</li> <li>`JSChallenge`: javaScript challenge</li> <li>`ManagedChallenge`: managed challenge</li> <li>`Disabled`: disabled</li> <li>`Allow`: allow</li>.
+                     * Safe execution actions. valid values:.
+<Li>Deny: block request to access site resource;</li>.
+<Li>`Monitor`: observe; only record logs</li>.
+<li>`Redirect`: Redirect to URL</li>.
+<Li>Disabled: disabled; specify rule is not enabled.</li>.
+<Li>Allow: allow access but delay processing the request.</li>.
+<Li>Challenge: challenge, respond to challenge content;</li>.
+<Li>BlockIP: to be deprecated, ip block;</li>.
+<Li>`ReturnCustomPage`: to be deprecated, use specified page block;</li>.
+<li>JSChallenge: to be deprecated, JavaScript challenge;</li>.
+<Li>ManagedChallenge: to be deprecated. managed challenge.</li>.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Additional parameter when Name is BlockIP.
+                     * Additional parameters when Name is Deny.
                      */
-                    BlockIPActionParameters m_blockIPActionParameters;
-                    bool m_blockIPActionParametersHasBeenSet;
-
-                    /**
-                     * Additional parameter when Name is ReturnCustomPage.
-                     */
-                    ReturnCustomPageActionParameters m_returnCustomPageActionParameters;
-                    bool m_returnCustomPageActionParametersHasBeenSet;
+                    DenyActionParameters m_denyActionParameters;
+                    bool m_denyActionParametersHasBeenSet;
 
                     /**
                      * Additional parameter when Name is Redirect.
                      */
                     RedirectActionParameters m_redirectActionParameters;
                     bool m_redirectActionParametersHasBeenSet;
+
+                    /**
+                     * Additional parameters when Name is Allow.
+                     */
+                    AllowActionParameters m_allowActionParameters;
+                    bool m_allowActionParametersHasBeenSet;
+
+                    /**
+                     * Additional parameter when Name is Challenge.
+                     */
+                    ChallengeActionParameters m_challengeActionParameters;
+                    bool m_challengeActionParametersHasBeenSet;
+
+                    /**
+                     * To be deprecated, additional parameter when Name is BlockIP.
+                     */
+                    BlockIPActionParameters m_blockIPActionParameters;
+                    bool m_blockIPActionParametersHasBeenSet;
+
+                    /**
+                     * To be deprecated, additional parameter when Name is ReturnCustomPage.
+                     */
+                    ReturnCustomPageActionParameters m_returnCustomPageActionParameters;
+                    bool m_returnCustomPageActionParametersHasBeenSet;
 
                 };
             }

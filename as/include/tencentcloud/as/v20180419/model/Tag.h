@@ -89,19 +89,15 @@ namespace TencentCloud
                     bool ValueHasBeenSet() const;
 
                     /**
-                     * 获取Resource type bound with tags. Valid values: auto-scaling-group and launch-configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ResourceType Resource type bound with tags. Valid values: auto-scaling-group and launch-configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the resource type bound to the tag. type currently supported: "auto-scaling-group", "launch-configuration". valid values: scaling group resources and launch configuration resources respectively.
+                     * @return ResourceType Specifies the resource type bound to the tag. type currently supported: "auto-scaling-group", "launch-configuration". valid values: scaling group resources and launch configuration resources respectively.
                      * 
                      */
                     std::string GetResourceType() const;
 
                     /**
-                     * 设置Resource type bound with tags. Valid values: auto-scaling-group and launch-configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _resourceType Resource type bound with tags. Valid values: auto-scaling-group and launch-configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the resource type bound to the tag. type currently supported: "auto-scaling-group", "launch-configuration". valid values: scaling group resources and launch configuration resources respectively.
+                     * @param _resourceType Specifies the resource type bound to the tag. type currently supported: "auto-scaling-group", "launch-configuration". valid values: scaling group resources and launch configuration resources respectively.
                      * 
                      */
                     void SetResourceType(const std::string& _resourceType);
@@ -128,8 +124,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_valueHasBeenSet;
 
                     /**
-                     * Resource type bound with tags. Valid values: auto-scaling-group and launch-configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the resource type bound to the tag. type currently supported: "auto-scaling-group", "launch-configuration". valid values: scaling group resources and launch configuration resources respectively.
                      */
                     std::string m_resourceType;
                     bool m_resourceTypeHasBeenSet;

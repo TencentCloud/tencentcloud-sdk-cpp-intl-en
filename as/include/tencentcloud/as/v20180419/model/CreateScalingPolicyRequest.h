@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Auto scaling group ID.
-                     * @return AutoScalingGroupId Auto scaling group ID.
+                     * 获取Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
+                     * @return AutoScalingGroupId Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
                      * 
                      */
                     std::string GetAutoScalingGroupId() const;
 
                     /**
-                     * 设置Auto scaling group ID.
-                     * @param _autoScalingGroupId Auto scaling group ID.
+                     * 设置Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
+                     * @param _autoScalingGroupId Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
                      * 
                      */
                     void SetAutoScalingGroupId(const std::string& _autoScalingGroupId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool AutoScalingGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Alarm trigger policy name.
-                     * @return ScalingPolicyName Alarm trigger policy name.
+                     * 获取The Alarm policy name must be unique in your account. the name length cannot exceed 60 characters. the name only supports chinese, english, digits, underscores, hyphens, and decimal points.
+                     * @return ScalingPolicyName The Alarm policy name must be unique in your account. the name length cannot exceed 60 characters. the name only supports chinese, english, digits, underscores, hyphens, and decimal points.
                      * 
                      */
                     std::string GetScalingPolicyName() const;
 
                     /**
-                     * 设置Alarm trigger policy name.
-                     * @param _scalingPolicyName Alarm trigger policy name.
+                     * 设置The Alarm policy name must be unique in your account. the name length cannot exceed 60 characters. the name only supports chinese, english, digits, underscores, hyphens, and decimal points.
+                     * @param _scalingPolicyName The Alarm policy name must be unique in your account. the name length cannot exceed 60 characters. the name only supports chinese, english, digits, underscores, hyphens, and decimal points.
                      * 
                      */
                     void SetScalingPolicyName(const std::string& _scalingPolicyName);
@@ -86,15 +86,23 @@ namespace TencentCloud
                     bool ScalingPolicyNameHasBeenSet() const;
 
                     /**
-                     * 获取Scaling policy type. Valid values: <br><li>`SIMPLE` (default): A simple policy</li><li>`TARGET_TRACKING`: A target tracking policy</li>.
-                     * @return ScalingPolicyType Scaling policy type. Valid values: <br><li>`SIMPLE` (default): A simple policy</li><li>`TARGET_TRACKING`: A target tracking policy</li>.
+                     * 获取Alarm trigger policy type. default: SIMPLE. valid values:.
+<Li>`SIMPLE`: a simple policy.</li>.
+<Li>`TARGET_TRACKING`: a target tracking policy.</li>.
+                     * @return ScalingPolicyType Alarm trigger policy type. default: SIMPLE. valid values:.
+<Li>`SIMPLE`: a simple policy.</li>.
+<Li>`TARGET_TRACKING`: a target tracking policy.</li>.
                      * 
                      */
                     std::string GetScalingPolicyType() const;
 
                     /**
-                     * 设置Scaling policy type. Valid values: <br><li>`SIMPLE` (default): A simple policy</li><li>`TARGET_TRACKING`: A target tracking policy</li>.
-                     * @param _scalingPolicyType Scaling policy type. Valid values: <br><li>`SIMPLE` (default): A simple policy</li><li>`TARGET_TRACKING`: A target tracking policy</li>.
+                     * 设置Alarm trigger policy type. default: SIMPLE. valid values:.
+<Li>`SIMPLE`: a simple policy.</li>.
+<Li>`TARGET_TRACKING`: a target tracking policy.</li>.
+                     * @param _scalingPolicyType Alarm trigger policy type. default: SIMPLE. valid values:.
+<Li>`SIMPLE`: a simple policy.</li>.
+<Li>`TARGET_TRACKING`: a target tracking policy.</li>.
                      * 
                      */
                     void SetScalingPolicyType(const std::string& _scalingPolicyType);
@@ -107,15 +115,27 @@ namespace TencentCloud
                     bool ScalingPolicyTypeHasBeenSet() const;
 
                     /**
-                     * 获取The method to adjust the desired capacity after the alarm is triggered. It is only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
-                     * @return AdjustmentType The method to adjust the desired capacity after the alarm is triggered. It is only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
+                     * 获取After an Alarm is triggered, specifies the method for modifying the expected number of instances. required in the scenario of simple policies. valid values:.
+<Li>CHANGE_IN_CAPACITY: increase or decrease the expected number of instances</li>.
+<Li>EXACT_CAPACITY: adjust to the expected number of instances</li>.
+<Li>PERCENT_CHANGE_IN_CAPACITY: adjust expected instance number by percent</li>.
+                     * @return AdjustmentType After an Alarm is triggered, specifies the method for modifying the expected number of instances. required in the scenario of simple policies. valid values:.
+<Li>CHANGE_IN_CAPACITY: increase or decrease the expected number of instances</li>.
+<Li>EXACT_CAPACITY: adjust to the expected number of instances</li>.
+<Li>PERCENT_CHANGE_IN_CAPACITY: adjust expected instance number by percent</li>.
                      * 
                      */
                     std::string GetAdjustmentType() const;
 
                     /**
-                     * 设置The method to adjust the desired capacity after the alarm is triggered. It is only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
-                     * @param _adjustmentType The method to adjust the desired capacity after the alarm is triggered. It is only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
+                     * 设置After an Alarm is triggered, specifies the method for modifying the expected number of instances. required in the scenario of simple policies. valid values:.
+<Li>CHANGE_IN_CAPACITY: increase or decrease the expected number of instances</li>.
+<Li>EXACT_CAPACITY: adjust to the expected number of instances</li>.
+<Li>PERCENT_CHANGE_IN_CAPACITY: adjust expected instance number by percent</li>.
+                     * @param _adjustmentType After an Alarm is triggered, specifies the method for modifying the expected number of instances. required in the scenario of simple policies. valid values:.
+<Li>CHANGE_IN_CAPACITY: increase or decrease the expected number of instances</li>.
+<Li>EXACT_CAPACITY: adjust to the expected number of instances</li>.
+<Li>PERCENT_CHANGE_IN_CAPACITY: adjust expected instance number by percent</li>.
                      * 
                      */
                     void SetAdjustmentType(const std::string& _adjustmentType);
@@ -128,26 +148,26 @@ namespace TencentCloud
                     bool AdjustmentTypeHasBeenSet() const;
 
                     /**
-                     * 获取Adjustment value for the expected number of instances after an alarm is triggered, which is applicable only to simple policies.
-<li>When AdjustmentType is set to CHANGE_IN_CAPACITY, a positive value of AdjustmentValue indicates an increase in the number of instances after the alarm is triggered, while a negative value indicates a decrease in the number of instances after the alarm is triggered.</li>
-<li>When AdjustmentType is set to EXACT_CAPACITY, the value of AdjustmentValue indicates the new desired number of instances after the alarm is triggered. It should be greater than or equal to 0.</li>
+                     * 获取Adjustment value for the expected number of instances after an Alarm is triggered, which is applicable only to simple policies and required in simple policy scenarios.
+<li>When AdjustmentType is CHANGE_IN_CAPACITY, a positive AdjustmentValue indicates an increase IN instances after Alarm trigger, while a negative value indicates a decrease IN instances after Alarm trigger.</li>. 
+<li>When AdjustmentType is set to EXACT_CAPACITY, the value of AdjustmentValue indicates the new desired number of instances after the Alarm is triggered. it must be at least 0.</li>. 
 <li>When AdjustmentType is set to PERCENT_CHANGE_IN_CAPACITY, a positive value of AdjustmentValue indicates an increase in the number of instances by a percentage after the alarm is triggered, while a negative value indicates a decrease in the number of instances by a percentage after the alarm is triggered. Unit: %.</li>
-                     * @return AdjustmentValue Adjustment value for the expected number of instances after an alarm is triggered, which is applicable only to simple policies.
-<li>When AdjustmentType is set to CHANGE_IN_CAPACITY, a positive value of AdjustmentValue indicates an increase in the number of instances after the alarm is triggered, while a negative value indicates a decrease in the number of instances after the alarm is triggered.</li>
-<li>When AdjustmentType is set to EXACT_CAPACITY, the value of AdjustmentValue indicates the new desired number of instances after the alarm is triggered. It should be greater than or equal to 0.</li>
+                     * @return AdjustmentValue Adjustment value for the expected number of instances after an Alarm is triggered, which is applicable only to simple policies and required in simple policy scenarios.
+<li>When AdjustmentType is CHANGE_IN_CAPACITY, a positive AdjustmentValue indicates an increase IN instances after Alarm trigger, while a negative value indicates a decrease IN instances after Alarm trigger.</li>. 
+<li>When AdjustmentType is set to EXACT_CAPACITY, the value of AdjustmentValue indicates the new desired number of instances after the Alarm is triggered. it must be at least 0.</li>. 
 <li>When AdjustmentType is set to PERCENT_CHANGE_IN_CAPACITY, a positive value of AdjustmentValue indicates an increase in the number of instances by a percentage after the alarm is triggered, while a negative value indicates a decrease in the number of instances by a percentage after the alarm is triggered. Unit: %.</li>
                      * 
                      */
                     int64_t GetAdjustmentValue() const;
 
                     /**
-                     * 设置Adjustment value for the expected number of instances after an alarm is triggered, which is applicable only to simple policies.
-<li>When AdjustmentType is set to CHANGE_IN_CAPACITY, a positive value of AdjustmentValue indicates an increase in the number of instances after the alarm is triggered, while a negative value indicates a decrease in the number of instances after the alarm is triggered.</li>
-<li>When AdjustmentType is set to EXACT_CAPACITY, the value of AdjustmentValue indicates the new desired number of instances after the alarm is triggered. It should be greater than or equal to 0.</li>
+                     * 设置Adjustment value for the expected number of instances after an Alarm is triggered, which is applicable only to simple policies and required in simple policy scenarios.
+<li>When AdjustmentType is CHANGE_IN_CAPACITY, a positive AdjustmentValue indicates an increase IN instances after Alarm trigger, while a negative value indicates a decrease IN instances after Alarm trigger.</li>. 
+<li>When AdjustmentType is set to EXACT_CAPACITY, the value of AdjustmentValue indicates the new desired number of instances after the Alarm is triggered. it must be at least 0.</li>. 
 <li>When AdjustmentType is set to PERCENT_CHANGE_IN_CAPACITY, a positive value of AdjustmentValue indicates an increase in the number of instances by a percentage after the alarm is triggered, while a negative value indicates a decrease in the number of instances by a percentage after the alarm is triggered. Unit: %.</li>
-                     * @param _adjustmentValue Adjustment value for the expected number of instances after an alarm is triggered, which is applicable only to simple policies.
-<li>When AdjustmentType is set to CHANGE_IN_CAPACITY, a positive value of AdjustmentValue indicates an increase in the number of instances after the alarm is triggered, while a negative value indicates a decrease in the number of instances after the alarm is triggered.</li>
-<li>When AdjustmentType is set to EXACT_CAPACITY, the value of AdjustmentValue indicates the new desired number of instances after the alarm is triggered. It should be greater than or equal to 0.</li>
+                     * @param _adjustmentValue Adjustment value for the expected number of instances after an Alarm is triggered, which is applicable only to simple policies and required in simple policy scenarios.
+<li>When AdjustmentType is CHANGE_IN_CAPACITY, a positive AdjustmentValue indicates an increase IN instances after Alarm trigger, while a negative value indicates a decrease IN instances after Alarm trigger.</li>. 
+<li>When AdjustmentType is set to EXACT_CAPACITY, the value of AdjustmentValue indicates the new desired number of instances after the Alarm is triggered. it must be at least 0.</li>. 
 <li>When AdjustmentType is set to PERCENT_CHANGE_IN_CAPACITY, a positive value of AdjustmentValue indicates an increase in the number of instances by a percentage after the alarm is triggered, while a negative value indicates a decrease in the number of instances by a percentage after the alarm is triggered. Unit: %.</li>
                      * 
                      */
@@ -182,15 +202,15 @@ namespace TencentCloud
                     bool CooldownHasBeenSet() const;
 
                     /**
-                     * 获取Alarm monitoring metric. It is only available when `ScalingPolicyType` is `Simple`.
-                     * @return MetricAlarm Alarm monitoring metric. It is only available when `ScalingPolicyType` is `Simple`.
+                     * 获取Alarm monitoring metric, apply only to simple policies, required in the scenario of simple policy.
+                     * @return MetricAlarm Alarm monitoring metric, apply only to simple policies, required in the scenario of simple policy.
                      * 
                      */
                     MetricAlarm GetMetricAlarm() const;
 
                     /**
-                     * 设置Alarm monitoring metric. It is only available when `ScalingPolicyType` is `Simple`.
-                     * @param _metricAlarm Alarm monitoring metric. It is only available when `ScalingPolicyType` is `Simple`.
+                     * 设置Alarm monitoring metric, apply only to simple policies, required in the scenario of simple policy.
+                     * @param _metricAlarm Alarm monitoring metric, apply only to simple policies, required in the scenario of simple policy.
                      * 
                      */
                     void SetMetricAlarm(const MetricAlarm& _metricAlarm);
@@ -203,34 +223,34 @@ namespace TencentCloud
                     bool MetricAlarmHasBeenSet() const;
 
                     /**
-                     * 获取Predefined monitoring item, applicable only to target tracking policies. Valid values:
-<li>ASG_AVG_CPU_UTILIZATION: average CPU utilization</li>
-<li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth</li>
-<li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>
-<li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth</li>
+                     * 获取Predefined monitoring item, applicable only to target tracking policies. required in the scenario. value range:.
+<Li>ASG_AVG_CPU_UTILIZATION: average cpu utilization</li>.
+<Li>ASG_AVG_LAN_TRAFFIC_OUT: specifies the average outbound private network bandwidth.</li>.
+<Li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>.
+<Li>ASG_AVG_WAN_TRAFFIC_OUT: specifies the average outbound public network bandwidth.</li>.
 <li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth</li>
-                     * @return PredefinedMetricType Predefined monitoring item, applicable only to target tracking policies. Valid values:
-<li>ASG_AVG_CPU_UTILIZATION: average CPU utilization</li>
-<li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth</li>
-<li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>
-<li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth</li>
+                     * @return PredefinedMetricType Predefined monitoring item, applicable only to target tracking policies. required in the scenario. value range:.
+<Li>ASG_AVG_CPU_UTILIZATION: average cpu utilization</li>.
+<Li>ASG_AVG_LAN_TRAFFIC_OUT: specifies the average outbound private network bandwidth.</li>.
+<Li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>.
+<Li>ASG_AVG_WAN_TRAFFIC_OUT: specifies the average outbound public network bandwidth.</li>.
 <li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth</li>
                      * 
                      */
                     std::string GetPredefinedMetricType() const;
 
                     /**
-                     * 设置Predefined monitoring item, applicable only to target tracking policies. Valid values:
-<li>ASG_AVG_CPU_UTILIZATION: average CPU utilization</li>
-<li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth</li>
-<li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>
-<li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth</li>
+                     * 设置Predefined monitoring item, applicable only to target tracking policies. required in the scenario. value range:.
+<Li>ASG_AVG_CPU_UTILIZATION: average cpu utilization</li>.
+<Li>ASG_AVG_LAN_TRAFFIC_OUT: specifies the average outbound private network bandwidth.</li>.
+<Li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>.
+<Li>ASG_AVG_WAN_TRAFFIC_OUT: specifies the average outbound public network bandwidth.</li>.
 <li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth</li>
-                     * @param _predefinedMetricType Predefined monitoring item, applicable only to target tracking policies. Valid values:
-<li>ASG_AVG_CPU_UTILIZATION: average CPU utilization</li>
-<li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth</li>
-<li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>
-<li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth</li>
+                     * @param _predefinedMetricType Predefined monitoring item, applicable only to target tracking policies. required in the scenario. value range:.
+<Li>ASG_AVG_CPU_UTILIZATION: average cpu utilization</li>.
+<Li>ASG_AVG_LAN_TRAFFIC_OUT: specifies the average outbound private network bandwidth.</li>.
+<Li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>.
+<Li>ASG_AVG_WAN_TRAFFIC_OUT: specifies the average outbound public network bandwidth.</li>.
 <li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth</li>
                      * 
                      */
@@ -244,34 +264,34 @@ namespace TencentCloud
                     bool PredefinedMetricTypeHasBeenSet() const;
 
                     /**
-                     * 获取Target value, which is applicable only to target tracking policies.
-<li>ASG_AVG_CPU_UTILIZATION: value range: [1, 100); unit: %.</li>
-<li>ASG_AVG_LAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>
-<li>ASG_AVG_LAN_TRAFFIC_IN: value range: > 0; unit: Mbps.</li>
-<li>ASG_AVG_WAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>
+                     * 获取Target value, applicable only to the target tracking policy, required in the scenario.
+<Li>ASG_AVG_CPU_UTILIZATION: value range: [1, 100); unit: %.</li>.
+<li>ASG_AVG_LAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>.
+<li>ASG_AVG_LAN_TRAFFIC_IN: value range: > 0; unit: Mbps.</li>.
+<li>ASG_AVG_WAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>.
 <li>ASG_AVG_WAN_TRAFFIC_IN: value range: > 0; unit: Mbps.</li>
-                     * @return TargetValue Target value, which is applicable only to target tracking policies.
-<li>ASG_AVG_CPU_UTILIZATION: value range: [1, 100); unit: %.</li>
-<li>ASG_AVG_LAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>
-<li>ASG_AVG_LAN_TRAFFIC_IN: value range: > 0; unit: Mbps.</li>
-<li>ASG_AVG_WAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>
+                     * @return TargetValue Target value, applicable only to the target tracking policy, required in the scenario.
+<Li>ASG_AVG_CPU_UTILIZATION: value range: [1, 100); unit: %.</li>.
+<li>ASG_AVG_LAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>.
+<li>ASG_AVG_LAN_TRAFFIC_IN: value range: > 0; unit: Mbps.</li>.
+<li>ASG_AVG_WAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>.
 <li>ASG_AVG_WAN_TRAFFIC_IN: value range: > 0; unit: Mbps.</li>
                      * 
                      */
                     uint64_t GetTargetValue() const;
 
                     /**
-                     * 设置Target value, which is applicable only to target tracking policies.
-<li>ASG_AVG_CPU_UTILIZATION: value range: [1, 100); unit: %.</li>
-<li>ASG_AVG_LAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>
-<li>ASG_AVG_LAN_TRAFFIC_IN: value range: > 0; unit: Mbps.</li>
-<li>ASG_AVG_WAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>
+                     * 设置Target value, applicable only to the target tracking policy, required in the scenario.
+<Li>ASG_AVG_CPU_UTILIZATION: value range: [1, 100); unit: %.</li>.
+<li>ASG_AVG_LAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>.
+<li>ASG_AVG_LAN_TRAFFIC_IN: value range: > 0; unit: Mbps.</li>.
+<li>ASG_AVG_WAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>.
 <li>ASG_AVG_WAN_TRAFFIC_IN: value range: > 0; unit: Mbps.</li>
-                     * @param _targetValue Target value, which is applicable only to target tracking policies.
-<li>ASG_AVG_CPU_UTILIZATION: value range: [1, 100); unit: %.</li>
-<li>ASG_AVG_LAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>
-<li>ASG_AVG_LAN_TRAFFIC_IN: value range: > 0; unit: Mbps.</li>
-<li>ASG_AVG_WAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>
+                     * @param _targetValue Target value, applicable only to the target tracking policy, required in the scenario.
+<Li>ASG_AVG_CPU_UTILIZATION: value range: [1, 100); unit: %.</li>.
+<li>ASG_AVG_LAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>.
+<li>ASG_AVG_LAN_TRAFFIC_IN: value range: > 0; unit: Mbps.</li>.
+<li>ASG_AVG_WAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>.
 <li>ASG_AVG_WAN_TRAFFIC_IN: value range: > 0; unit: Mbps.</li>
                      * 
                      */
@@ -362,33 +382,38 @@ Notification group ID, which is the set of user group IDs.
                 private:
 
                     /**
-                     * Auto scaling group ID.
+                     * Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
                      */
                     std::string m_autoScalingGroupId;
                     bool m_autoScalingGroupIdHasBeenSet;
 
                     /**
-                     * Alarm trigger policy name.
+                     * The Alarm policy name must be unique in your account. the name length cannot exceed 60 characters. the name only supports chinese, english, digits, underscores, hyphens, and decimal points.
                      */
                     std::string m_scalingPolicyName;
                     bool m_scalingPolicyNameHasBeenSet;
 
                     /**
-                     * Scaling policy type. Valid values: <br><li>`SIMPLE` (default): A simple policy</li><li>`TARGET_TRACKING`: A target tracking policy</li>.
+                     * Alarm trigger policy type. default: SIMPLE. valid values:.
+<Li>`SIMPLE`: a simple policy.</li>.
+<Li>`TARGET_TRACKING`: a target tracking policy.</li>.
                      */
                     std::string m_scalingPolicyType;
                     bool m_scalingPolicyTypeHasBeenSet;
 
                     /**
-                     * The method to adjust the desired capacity after the alarm is triggered. It is only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
+                     * After an Alarm is triggered, specifies the method for modifying the expected number of instances. required in the scenario of simple policies. valid values:.
+<Li>CHANGE_IN_CAPACITY: increase or decrease the expected number of instances</li>.
+<Li>EXACT_CAPACITY: adjust to the expected number of instances</li>.
+<Li>PERCENT_CHANGE_IN_CAPACITY: adjust expected instance number by percent</li>.
                      */
                     std::string m_adjustmentType;
                     bool m_adjustmentTypeHasBeenSet;
 
                     /**
-                     * Adjustment value for the expected number of instances after an alarm is triggered, which is applicable only to simple policies.
-<li>When AdjustmentType is set to CHANGE_IN_CAPACITY, a positive value of AdjustmentValue indicates an increase in the number of instances after the alarm is triggered, while a negative value indicates a decrease in the number of instances after the alarm is triggered.</li>
-<li>When AdjustmentType is set to EXACT_CAPACITY, the value of AdjustmentValue indicates the new desired number of instances after the alarm is triggered. It should be greater than or equal to 0.</li>
+                     * Adjustment value for the expected number of instances after an Alarm is triggered, which is applicable only to simple policies and required in simple policy scenarios.
+<li>When AdjustmentType is CHANGE_IN_CAPACITY, a positive AdjustmentValue indicates an increase IN instances after Alarm trigger, while a negative value indicates a decrease IN instances after Alarm trigger.</li>. 
+<li>When AdjustmentType is set to EXACT_CAPACITY, the value of AdjustmentValue indicates the new desired number of instances after the Alarm is triggered. it must be at least 0.</li>. 
 <li>When AdjustmentType is set to PERCENT_CHANGE_IN_CAPACITY, a positive value of AdjustmentValue indicates an increase in the number of instances by a percentage after the alarm is triggered, while a negative value indicates a decrease in the number of instances by a percentage after the alarm is triggered. Unit: %.</li>
                      */
                     int64_t m_adjustmentValue;
@@ -401,28 +426,28 @@ Notification group ID, which is the set of user group IDs.
                     bool m_cooldownHasBeenSet;
 
                     /**
-                     * Alarm monitoring metric. It is only available when `ScalingPolicyType` is `Simple`.
+                     * Alarm monitoring metric, apply only to simple policies, required in the scenario of simple policy.
                      */
                     MetricAlarm m_metricAlarm;
                     bool m_metricAlarmHasBeenSet;
 
                     /**
-                     * Predefined monitoring item, applicable only to target tracking policies. Valid values:
-<li>ASG_AVG_CPU_UTILIZATION: average CPU utilization</li>
-<li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth</li>
-<li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>
-<li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth</li>
+                     * Predefined monitoring item, applicable only to target tracking policies. required in the scenario. value range:.
+<Li>ASG_AVG_CPU_UTILIZATION: average cpu utilization</li>.
+<Li>ASG_AVG_LAN_TRAFFIC_OUT: specifies the average outbound private network bandwidth.</li>.
+<Li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>.
+<Li>ASG_AVG_WAN_TRAFFIC_OUT: specifies the average outbound public network bandwidth.</li>.
 <li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth</li>
                      */
                     std::string m_predefinedMetricType;
                     bool m_predefinedMetricTypeHasBeenSet;
 
                     /**
-                     * Target value, which is applicable only to target tracking policies.
-<li>ASG_AVG_CPU_UTILIZATION: value range: [1, 100); unit: %.</li>
-<li>ASG_AVG_LAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>
-<li>ASG_AVG_LAN_TRAFFIC_IN: value range: > 0; unit: Mbps.</li>
-<li>ASG_AVG_WAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>
+                     * Target value, applicable only to the target tracking policy, required in the scenario.
+<Li>ASG_AVG_CPU_UTILIZATION: value range: [1, 100); unit: %.</li>.
+<li>ASG_AVG_LAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>.
+<li>ASG_AVG_LAN_TRAFFIC_IN: value range: > 0; unit: Mbps.</li>.
+<li>ASG_AVG_WAN_TRAFFIC_OUT: value range: > 0; unit: Mbps.</li>.
 <li>ASG_AVG_WAN_TRAFFIC_IN: value range: > 0; unit: Mbps.</li>
                      */
                     uint64_t m_targetValue;

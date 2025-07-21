@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Remote command ID. It’s required to execute a command.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CommandId Remote command ID. It’s required to execute a command.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Remote command ID. this item is required if you select to execute command.
+                     * @return CommandId Remote command ID. this item is required if you select to execute command.
                      * 
                      */
                     std::string GetCommandId() const;
 
                     /**
-                     * 设置Remote command ID. It’s required to execute a command.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _commandId Remote command ID. It’s required to execute a command.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Remote command ID. this item is required if you select to execute command.
+                     * @param _commandId Remote command ID. this item is required if you select to execute command.
                      * 
                      */
                     void SetCommandId(const std::string& _commandId);
@@ -72,31 +68,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CommandIdHasBeenSet() const;
 
                     /**
-                     * 获取Custom parameter. The field type is JSON encoded string. For example, {"varA": "222"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If this parameter is not specified, the `DefaultParameters` of `Command` is used.
-Up to 20 customer parameters allowed. The parameter name can contain up to 64 characters, including [a-z], [A-Z], [0-9] and [-_].
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Parameters Custom parameter. The field type is JSON encoded string. For example, {"varA": "222"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If this parameter is not specified, the `DefaultParameters` of `Command` is used.
-Up to 20 customer parameters allowed. The parameter name can contain up to 64 characters, including [a-z], [A-Z], [0-9] and [-_].
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Custom parameter. field type is json encoded string, for example: {"varA": "222"}.
+key specifies the custom parameter name, and value specifies the default. both are string type.
+If the parameter value is not provided, the DefaultParameters of Command will be used to replace it.
+Custom parameters support a maximum of 20 entries. the custom parameter name must meet the following standard: number of characters has a cap of 64, value range [a-zA-Z0-9-_].
+                     * @return Parameters Custom parameter. field type is json encoded string, for example: {"varA": "222"}.
+key specifies the custom parameter name, and value specifies the default. both are string type.
+If the parameter value is not provided, the DefaultParameters of Command will be used to replace it.
+Custom parameters support a maximum of 20 entries. the custom parameter name must meet the following standard: number of characters has a cap of 64, value range [a-zA-Z0-9-_].
                      * 
                      */
                     std::string GetParameters() const;
 
                     /**
-                     * 设置Custom parameter. The field type is JSON encoded string. For example, {"varA": "222"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If this parameter is not specified, the `DefaultParameters` of `Command` is used.
-Up to 20 customer parameters allowed. The parameter name can contain up to 64 characters, including [a-z], [A-Z], [0-9] and [-_].
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _parameters Custom parameter. The field type is JSON encoded string. For example, {"varA": "222"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If this parameter is not specified, the `DefaultParameters` of `Command` is used.
-Up to 20 customer parameters allowed. The parameter name can contain up to 64 characters, including [a-z], [A-Z], [0-9] and [-_].
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Custom parameter. field type is json encoded string, for example: {"varA": "222"}.
+key specifies the custom parameter name, and value specifies the default. both are string type.
+If the parameter value is not provided, the DefaultParameters of Command will be used to replace it.
+Custom parameters support a maximum of 20 entries. the custom parameter name must meet the following standard: number of characters has a cap of 64, value range [a-zA-Z0-9-_].
+                     * @param _parameters Custom parameter. field type is json encoded string, for example: {"varA": "222"}.
+key specifies the custom parameter name, and value specifies the default. both are string type.
+If the parameter value is not provided, the DefaultParameters of Command will be used to replace it.
+Custom parameters support a maximum of 20 entries. the custom parameter name must meet the following standard: number of characters has a cap of 64, value range [a-zA-Z0-9-_].
                      * 
                      */
                     void SetParameters(const std::string& _parameters);
@@ -111,18 +103,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Remote command ID. It’s required to execute a command.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Remote command ID. this item is required if you select to execute command.
                      */
                     std::string m_commandId;
                     bool m_commandIdHasBeenSet;
 
                     /**
-                     * Custom parameter. The field type is JSON encoded string. For example, {"varA": "222"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If this parameter is not specified, the `DefaultParameters` of `Command` is used.
-Up to 20 customer parameters allowed. The parameter name can contain up to 64 characters, including [a-z], [A-Z], [0-9] and [-_].
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Custom parameter. field type is json encoded string, for example: {"varA": "222"}.
+key specifies the custom parameter name, and value specifies the default. both are string type.
+If the parameter value is not provided, the DefaultParameters of Command will be used to replace it.
+Custom parameters support a maximum of 20 entries. the custom parameter name must meet the following standard: number of characters has a cap of 64, value range [a-zA-Z0-9-_].
                      */
                     std::string m_parameters;
                     bool m_parametersHasBeenSet;

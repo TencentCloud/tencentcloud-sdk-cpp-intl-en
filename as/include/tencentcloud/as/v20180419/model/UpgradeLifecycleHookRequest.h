@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Lifecycle hook ID
-                     * @return LifecycleHookId Lifecycle hook ID
+                     * 获取Lifecycle hook ID. you can call the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieve the LifecycleHookId from the returned information to obtain the lifecycle hook ID.
+                     * @return LifecycleHookId Lifecycle hook ID. you can call the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieve the LifecycleHookId from the returned information to obtain the lifecycle hook ID.
                      * 
                      */
                     std::string GetLifecycleHookId() const;
 
                     /**
-                     * 设置Lifecycle hook ID
-                     * @param _lifecycleHookId Lifecycle hook ID
+                     * 设置Lifecycle hook ID. you can call the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieve the LifecycleHookId from the returned information to obtain the lifecycle hook ID.
+                     * @param _lifecycleHookId Lifecycle hook ID. you can call the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieve the LifecycleHookId from the returned information to obtain the lifecycle hook ID.
                      * 
                      */
                     void SetLifecycleHookId(const std::string& _lifecycleHookId);
@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool LifecycleHookIdHasBeenSet() const;
 
                     /**
-                     * 获取Lifecycle hook name
-                     * @return LifecycleHookName Lifecycle hook name
+                     * 获取Lifecycle hook name, which can contain chinese characters, letters, numbers, underscores (_), hyphens (-), and periods (.) with a maximum length of 128 characters.
+                     * @return LifecycleHookName Lifecycle hook name, which can contain chinese characters, letters, numbers, underscores (_), hyphens (-), and periods (.) with a maximum length of 128 characters.
                      * 
                      */
                     std::string GetLifecycleHookName() const;
 
                     /**
-                     * 设置Lifecycle hook name
-                     * @param _lifecycleHookName Lifecycle hook name
+                     * 设置Lifecycle hook name, which can contain chinese characters, letters, numbers, underscores (_), hyphens (-), and periods (.) with a maximum length of 128 characters.
+                     * @param _lifecycleHookName Lifecycle hook name, which can contain chinese characters, letters, numbers, underscores (_), hyphens (-), and periods (.) with a maximum length of 128 characters.
                      * 
                      */
                     void SetLifecycleHookName(const std::string& _lifecycleHookName);
@@ -87,15 +87,23 @@ namespace TencentCloud
                     bool LifecycleHookNameHasBeenSet() const;
 
                     /**
-                     * 获取Scenario for the lifecycle hook. Value range: "INSTANCE_LAUNCHING", "INSTANCE_TERMINATING"
-                     * @return LifecycleTransition Scenario for the lifecycle hook. Value range: "INSTANCE_LAUNCHING", "INSTANCE_TERMINATING"
+                     * 获取Scenario for performing the lifecycle hook. valid values:.
+`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+`INSTANCE_TERMINATING`: the lifecycle hook is being scaled in.
+                     * @return LifecycleTransition Scenario for performing the lifecycle hook. valid values:.
+`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+`INSTANCE_TERMINATING`: the lifecycle hook is being scaled in.
                      * 
                      */
                     std::string GetLifecycleTransition() const;
 
                     /**
-                     * 设置Scenario for the lifecycle hook. Value range: "INSTANCE_LAUNCHING", "INSTANCE_TERMINATING"
-                     * @param _lifecycleTransition Scenario for the lifecycle hook. Value range: "INSTANCE_LAUNCHING", "INSTANCE_TERMINATING"
+                     * 设置Scenario for performing the lifecycle hook. valid values:.
+`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+`INSTANCE_TERMINATING`: the lifecycle hook is being scaled in.
+                     * @param _lifecycleTransition Scenario for performing the lifecycle hook. valid values:.
+`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+`INSTANCE_TERMINATING`: the lifecycle hook is being scaled in.
                      * 
                      */
                     void SetLifecycleTransition(const std::string& _lifecycleTransition);
@@ -108,15 +116,23 @@ namespace TencentCloud
                     bool LifecycleTransitionHasBeenSet() const;
 
                     /**
-                     * 获取Defines the action to be taken by the auto scaling group upon lifecycle hook timeout. Value range: "CONTINUE", "ABANDON". Default value: "CONTINUE"
-                     * @return DefaultResult Defines the action to be taken by the auto scaling group upon lifecycle hook timeout. Value range: "CONTINUE", "ABANDON". Default value: "CONTINUE"
+                     * 获取Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values are as follows:.
+Default value, means CONTINUE to execute capacity expansion or reduction.
+* ABANDON: for scale-out hooks, cvms that time out or fail to execute LifecycleCommand will be released directly or removed. for scale-in hooks, scale-in activities will continue.
+                     * @return DefaultResult Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values are as follows:.
+Default value, means CONTINUE to execute capacity expansion or reduction.
+* ABANDON: for scale-out hooks, cvms that time out or fail to execute LifecycleCommand will be released directly or removed. for scale-in hooks, scale-in activities will continue.
                      * 
                      */
                     std::string GetDefaultResult() const;
 
                     /**
-                     * 设置Defines the action to be taken by the auto scaling group upon lifecycle hook timeout. Value range: "CONTINUE", "ABANDON". Default value: "CONTINUE"
-                     * @param _defaultResult Defines the action to be taken by the auto scaling group upon lifecycle hook timeout. Value range: "CONTINUE", "ABANDON". Default value: "CONTINUE"
+                     * 设置Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values are as follows:.
+Default value, means CONTINUE to execute capacity expansion or reduction.
+* ABANDON: for scale-out hooks, cvms that time out or fail to execute LifecycleCommand will be released directly or removed. for scale-in hooks, scale-in activities will continue.
+                     * @param _defaultResult Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values are as follows:.
+Default value, means CONTINUE to execute capacity expansion or reduction.
+* ABANDON: for scale-out hooks, cvms that time out or fail to execute LifecycleCommand will be released directly or removed. for scale-in hooks, scale-in activities will continue.
                      * 
                      */
                     void SetDefaultResult(const std::string& _defaultResult);
@@ -150,15 +166,15 @@ namespace TencentCloud
                     bool HeartbeatTimeoutHasBeenSet() const;
 
                     /**
-                     * 获取Additional information of a notification that Auto Scaling sends to targets. This parameter is set when you configure a notification (default value: "").
-                     * @return NotificationMetadata Additional information of a notification that Auto Scaling sends to targets. This parameter is set when you configure a notification (default value: "").
+                     * 获取Additional information sent by auto scaling to notification targets, used when configuring a notification (default value: ""). NotificationMetadata and LifecycleCommand are mutually exclusive parameters and cannot be specified simultaneously.
+                     * @return NotificationMetadata Additional information sent by auto scaling to notification targets, used when configuring a notification (default value: ""). NotificationMetadata and LifecycleCommand are mutually exclusive parameters and cannot be specified simultaneously.
                      * 
                      */
                     std::string GetNotificationMetadata() const;
 
                     /**
-                     * 设置Additional information of a notification that Auto Scaling sends to targets. This parameter is set when you configure a notification (default value: "").
-                     * @param _notificationMetadata Additional information of a notification that Auto Scaling sends to targets. This parameter is set when you configure a notification (default value: "").
+                     * 设置Additional information sent by auto scaling to notification targets, used when configuring a notification (default value: ""). NotificationMetadata and LifecycleCommand are mutually exclusive parameters and cannot be specified simultaneously.
+                     * @param _notificationMetadata Additional information sent by auto scaling to notification targets, used when configuring a notification (default value: ""). NotificationMetadata and LifecycleCommand are mutually exclusive parameters and cannot be specified simultaneously.
                      * 
                      */
                     void SetNotificationMetadata(const std::string& _notificationMetadata);
@@ -213,15 +229,15 @@ namespace TencentCloud
                     bool LifecycleTransitionTypeHasBeenSet() const;
 
                     /**
-                     * 获取Remote command execution object. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
-                     * @return LifecycleCommand Remote command execution object. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
+                     * 获取Remote command execution object. `NotificationMetadata`, `NotificationTarget`, and `LifecycleCommand` are mutually exclusive and cannot be specified simultaneously.
+                     * @return LifecycleCommand Remote command execution object. `NotificationMetadata`, `NotificationTarget`, and `LifecycleCommand` are mutually exclusive and cannot be specified simultaneously.
                      * 
                      */
                     LifecycleCommand GetLifecycleCommand() const;
 
                     /**
-                     * 设置Remote command execution object. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
-                     * @param _lifecycleCommand Remote command execution object. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
+                     * 设置Remote command execution object. `NotificationMetadata`, `NotificationTarget`, and `LifecycleCommand` are mutually exclusive and cannot be specified simultaneously.
+                     * @param _lifecycleCommand Remote command execution object. `NotificationMetadata`, `NotificationTarget`, and `LifecycleCommand` are mutually exclusive and cannot be specified simultaneously.
                      * 
                      */
                     void SetLifecycleCommand(const LifecycleCommand& _lifecycleCommand);
@@ -236,25 +252,29 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Lifecycle hook ID
+                     * Lifecycle hook ID. you can call the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieve the LifecycleHookId from the returned information to obtain the lifecycle hook ID.
                      */
                     std::string m_lifecycleHookId;
                     bool m_lifecycleHookIdHasBeenSet;
 
                     /**
-                     * Lifecycle hook name
+                     * Lifecycle hook name, which can contain chinese characters, letters, numbers, underscores (_), hyphens (-), and periods (.) with a maximum length of 128 characters.
                      */
                     std::string m_lifecycleHookName;
                     bool m_lifecycleHookNameHasBeenSet;
 
                     /**
-                     * Scenario for the lifecycle hook. Value range: "INSTANCE_LAUNCHING", "INSTANCE_TERMINATING"
+                     * Scenario for performing the lifecycle hook. valid values:.
+`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+`INSTANCE_TERMINATING`: the lifecycle hook is being scaled in.
                      */
                     std::string m_lifecycleTransition;
                     bool m_lifecycleTransitionHasBeenSet;
 
                     /**
-                     * Defines the action to be taken by the auto scaling group upon lifecycle hook timeout. Value range: "CONTINUE", "ABANDON". Default value: "CONTINUE"
+                     * Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values are as follows:.
+Default value, means CONTINUE to execute capacity expansion or reduction.
+* ABANDON: for scale-out hooks, cvms that time out or fail to execute LifecycleCommand will be released directly or removed. for scale-in hooks, scale-in activities will continue.
                      */
                     std::string m_defaultResult;
                     bool m_defaultResultHasBeenSet;
@@ -266,7 +286,7 @@ namespace TencentCloud
                     bool m_heartbeatTimeoutHasBeenSet;
 
                     /**
-                     * Additional information of a notification that Auto Scaling sends to targets. This parameter is set when you configure a notification (default value: "").
+                     * Additional information sent by auto scaling to notification targets, used when configuring a notification (default value: ""). NotificationMetadata and LifecycleCommand are mutually exclusive parameters and cannot be specified simultaneously.
                      */
                     std::string m_notificationMetadata;
                     bool m_notificationMetadataHasBeenSet;
@@ -284,7 +304,7 @@ namespace TencentCloud
                     bool m_lifecycleTransitionTypeHasBeenSet;
 
                     /**
-                     * Remote command execution object. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
+                     * Remote command execution object. `NotificationMetadata`, `NotificationTarget`, and `LifecycleCommand` are mutually exclusive and cannot be specified simultaneously.
                      */
                     LifecycleCommand m_lifecycleCommand;
                     bool m_lifecycleCommandHasBeenSet;

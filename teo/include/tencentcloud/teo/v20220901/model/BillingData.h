@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Time.
-                     * @return Time Time.
+                     * 获取Data timestamp.
+                     * @return Time Data timestamp.
                      * 
                      */
                     std::string GetTime() const;
 
                     /**
-                     * 设置Time.
-                     * @param _time Time.
+                     * 设置Data timestamp.
+                     * @param _time Data timestamp.
                      * 
                      */
                     void SetTime(const std::string& _time);
@@ -88,10 +88,98 @@ namespace TencentCloud
                      */
                     bool ValueHasBeenSet() const;
 
+                    /**
+                     * 获取Zone ID (or content identifier if enabled).
+                     * @return ZoneId Zone ID (or content identifier if enabled).
+                     * 
+                     */
+                    std::string GetZoneId() const;
+
+                    /**
+                     * 设置Zone ID (or content identifier if enabled).
+                     * @param _zoneId Zone ID (or content identifier if enabled).
+                     * 
+                     */
+                    void SetZoneId(const std::string& _zoneId);
+
+                    /**
+                     * 判断参数 ZoneId 是否已赋值
+                     * @return ZoneId 是否已赋值
+                     * 
+                     */
+                    bool ZoneIdHasBeenSet() const;
+
+                    /**
+                     * 获取Domain name.
+                     * @return Host Domain name.
+                     * 
+                     */
+                    std::string GetHost() const;
+
+                    /**
+                     * 设置Domain name.
+                     * @param _host Domain name.
+                     * 
+                     */
+                    void SetHost(const std::string& _host);
+
+                    /**
+                     * 判断参数 Host 是否已赋值
+                     * @return Host 是否已赋值
+                     * 
+                     */
+                    bool HostHasBeenSet() const;
+
+                    /**
+                     * 获取Layer-4 proxy instance ID.
+                     * @return ProxyId Layer-4 proxy instance ID.
+                     * 
+                     */
+                    std::string GetProxyId() const;
+
+                    /**
+                     * 设置Layer-4 proxy instance ID.
+                     * @param _proxyId Layer-4 proxy instance ID.
+                     * 
+                     */
+                    void SetProxyId(const std::string& _proxyId);
+
+                    /**
+                     * 判断参数 ProxyId 是否已赋值
+                     * @return ProxyId 是否已赋值
+                     * 
+                     */
+                    bool ProxyIdHasBeenSet() const;
+
+                    /**
+                     * 获取Billing region (based on EdgeOne node location). Values: 
+<li>CH: Mainland China</li> <li>AF: Africa</li> <li>AS1: Asia Pacific Region 1</li> <li>AS2: Asia Pacific Region 2</li> <li>AS3: Asia Pacific Region 3</li> <li>EU: Europe</li> <li>MidEast: Middle East</li> <li>NA: North America</li> <li>SA: South America</li>
+                     * @return RegionId Billing region (based on EdgeOne node location). Values: 
+<li>CH: Mainland China</li> <li>AF: Africa</li> <li>AS1: Asia Pacific Region 1</li> <li>AS2: Asia Pacific Region 2</li> <li>AS3: Asia Pacific Region 3</li> <li>EU: Europe</li> <li>MidEast: Middle East</li> <li>NA: North America</li> <li>SA: South America</li>
+                     * 
+                     */
+                    std::string GetRegionId() const;
+
+                    /**
+                     * 设置Billing region (based on EdgeOne node location). Values: 
+<li>CH: Mainland China</li> <li>AF: Africa</li> <li>AS1: Asia Pacific Region 1</li> <li>AS2: Asia Pacific Region 2</li> <li>AS3: Asia Pacific Region 3</li> <li>EU: Europe</li> <li>MidEast: Middle East</li> <li>NA: North America</li> <li>SA: South America</li>
+                     * @param _regionId Billing region (based on EdgeOne node location). Values: 
+<li>CH: Mainland China</li> <li>AF: Africa</li> <li>AS1: Asia Pacific Region 1</li> <li>AS2: Asia Pacific Region 2</li> <li>AS3: Asia Pacific Region 3</li> <li>EU: Europe</li> <li>MidEast: Middle East</li> <li>NA: North America</li> <li>SA: South America</li>
+                     * 
+                     */
+                    void SetRegionId(const std::string& _regionId);
+
+                    /**
+                     * 判断参数 RegionId 是否已赋值
+                     * @return RegionId 是否已赋值
+                     * 
+                     */
+                    bool RegionIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Time.
+                     * Data timestamp.
                      */
                     std::string m_time;
                     bool m_timeHasBeenSet;
@@ -101,6 +189,31 @@ namespace TencentCloud
                      */
                     uint64_t m_value;
                     bool m_valueHasBeenSet;
+
+                    /**
+                     * Zone ID (or content identifier if enabled).
+                     */
+                    std::string m_zoneId;
+                    bool m_zoneIdHasBeenSet;
+
+                    /**
+                     * Domain name.
+                     */
+                    std::string m_host;
+                    bool m_hostHasBeenSet;
+
+                    /**
+                     * Layer-4 proxy instance ID.
+                     */
+                    std::string m_proxyId;
+                    bool m_proxyIdHasBeenSet;
+
+                    /**
+                     * Billing region (based on EdgeOne node location). Values: 
+<li>CH: Mainland China</li> <li>AF: Africa</li> <li>AS1: Asia Pacific Region 1</li> <li>AS2: Asia Pacific Region 2</li> <li>AS3: Asia Pacific Region 3</li> <li>EU: Europe</li> <li>MidEast: Middle East</li> <li>NA: North America</li> <li>SA: South America</li>
+                     */
+                    std::string m_regionId;
+                    bool m_regionIdHasBeenSet;
 
                 };
             }

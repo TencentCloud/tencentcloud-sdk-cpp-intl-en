@@ -122,31 +122,27 @@ Default value: CLASSIC_SCALING
                     bool ReplaceLoadBalancerUnhealthyHasBeenSet() const;
 
                     /**
-                     * 获取Replace mode of unhealthy replacement service. Valid values:
-RECREATE: Rebuild an instance to replace the original unhealthy instance.
-RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
+                     * 获取Replacement mode of the unhealthy replacement service. valid values:.
+RECREATE: rebuild an instance to replace the unhealthy instance.
+RESET: performs a system reinstallation on unhealthy instances while keeping the data disk, private IP address, instance id, and other information unchanged. the instance login settings, hostname, enhanced services, and UserData remain consistent with the current launch configuration.
 Default value: RECREATE.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ReplaceMode Replace mode of unhealthy replacement service. Valid values:
-RECREATE: Rebuild an instance to replace the original unhealthy instance.
-RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
+                     * @return ReplaceMode Replacement mode of the unhealthy replacement service. valid values:.
+RECREATE: rebuild an instance to replace the unhealthy instance.
+RESET: performs a system reinstallation on unhealthy instances while keeping the data disk, private IP address, instance id, and other information unchanged. the instance login settings, hostname, enhanced services, and UserData remain consistent with the current launch configuration.
 Default value: RECREATE.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetReplaceMode() const;
 
                     /**
-                     * 设置Replace mode of unhealthy replacement service. Valid values:
-RECREATE: Rebuild an instance to replace the original unhealthy instance.
-RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
+                     * 设置Replacement mode of the unhealthy replacement service. valid values:.
+RECREATE: rebuild an instance to replace the unhealthy instance.
+RESET: performs a system reinstallation on unhealthy instances while keeping the data disk, private IP address, instance id, and other information unchanged. the instance login settings, hostname, enhanced services, and UserData remain consistent with the current launch configuration.
 Default value: RECREATE.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _replaceMode Replace mode of unhealthy replacement service. Valid values:
-RECREATE: Rebuild an instance to replace the original unhealthy instance.
-RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
+                     * @param _replaceMode Replacement mode of the unhealthy replacement service. valid values:.
+RECREATE: rebuild an instance to replace the unhealthy instance.
+RESET: performs a system reinstallation on unhealthy instances while keeping the data disk, private IP address, instance id, and other information unchanged. the instance login settings, hostname, enhanced services, and UserData remain consistent with the current launch configuration.
 Default value: RECREATE.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetReplaceMode(const std::string& _replaceMode);
@@ -159,15 +155,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ReplaceModeHasBeenSet() const;
 
                     /**
-                     * 获取Automatic instance tag update. The default value is false. If this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (This feature takes effect for tag creation and editing but not tag deletion.) The update does not take effect immediately due to certain latency.
-                     * @return AutoUpdateInstanceTags Automatic instance tag update. The default value is false. If this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (This feature takes effect for tag creation and editing but not tag deletion.) The update does not take effect immediately due to certain latency.
+                     * 获取Automatic instance Tag update. the default value is False. if this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (this feature takes effect for Tag creation and editing but not Tag deletion.) the update does not take effect immediately due to certain latency.
+                     * @return AutoUpdateInstanceTags Automatic instance Tag update. the default value is False. if this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (this feature takes effect for Tag creation and editing but not Tag deletion.) the update does not take effect immediately due to certain latency.
                      * 
                      */
                     bool GetAutoUpdateInstanceTags() const;
 
                     /**
-                     * 设置Automatic instance tag update. The default value is false. If this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (This feature takes effect for tag creation and editing but not tag deletion.) The update does not take effect immediately due to certain latency.
-                     * @param _autoUpdateInstanceTags Automatic instance tag update. The default value is false. If this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (This feature takes effect for tag creation and editing but not tag deletion.) The update does not take effect immediately due to certain latency.
+                     * 设置Automatic instance Tag update. the default value is False. if this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (this feature takes effect for Tag creation and editing but not Tag deletion.) the update does not take effect immediately due to certain latency.
+                     * @param _autoUpdateInstanceTags Automatic instance Tag update. the default value is False. if this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (this feature takes effect for Tag creation and editing but not Tag deletion.) the update does not take effect immediately due to certain latency.
                      * 
                      */
                     void SetAutoUpdateInstanceTags(const bool& _autoUpdateInstanceTags);
@@ -178,6 +174,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool AutoUpdateInstanceTagsHasBeenSet() const;
+
+                    /**
+                     * 获取Expected number of instances sync minimum and maximum value. default value is False. this parameter only takes effect in scenarios where the expected number is not passed in to modify scaling group api.
+<Li>True: when modifying the maximum or minimum value, if a conflict exists with the current expected value, synchronously adjust the expected value. for example, if the input minimum value is 2 while the current expected value is 1, the expected value will be synchronously adjusted to 2.</li>.
+<Li>False: if a conflict exists between the current expected value when modifying the maximum or minimum value, an error message indicates it is not allowed to be modified.</li>.
+                     * @return DesiredCapacitySyncWithMaxMinSize Expected number of instances sync minimum and maximum value. default value is False. this parameter only takes effect in scenarios where the expected number is not passed in to modify scaling group api.
+<Li>True: when modifying the maximum or minimum value, if a conflict exists with the current expected value, synchronously adjust the expected value. for example, if the input minimum value is 2 while the current expected value is 1, the expected value will be synchronously adjusted to 2.</li>.
+<Li>False: if a conflict exists between the current expected value when modifying the maximum or minimum value, an error message indicates it is not allowed to be modified.</li>.
+                     * 
+                     */
+                    bool GetDesiredCapacitySyncWithMaxMinSize() const;
+
+                    /**
+                     * 设置Expected number of instances sync minimum and maximum value. default value is False. this parameter only takes effect in scenarios where the expected number is not passed in to modify scaling group api.
+<Li>True: when modifying the maximum or minimum value, if a conflict exists with the current expected value, synchronously adjust the expected value. for example, if the input minimum value is 2 while the current expected value is 1, the expected value will be synchronously adjusted to 2.</li>.
+<Li>False: if a conflict exists between the current expected value when modifying the maximum or minimum value, an error message indicates it is not allowed to be modified.</li>.
+                     * @param _desiredCapacitySyncWithMaxMinSize Expected number of instances sync minimum and maximum value. default value is False. this parameter only takes effect in scenarios where the expected number is not passed in to modify scaling group api.
+<Li>True: when modifying the maximum or minimum value, if a conflict exists with the current expected value, synchronously adjust the expected value. for example, if the input minimum value is 2 while the current expected value is 1, the expected value will be synchronously adjusted to 2.</li>.
+<Li>False: if a conflict exists between the current expected value when modifying the maximum or minimum value, an error message indicates it is not allowed to be modified.</li>.
+                     * 
+                     */
+                    void SetDesiredCapacitySyncWithMaxMinSize(const bool& _desiredCapacitySyncWithMaxMinSize);
+
+                    /**
+                     * 判断参数 DesiredCapacitySyncWithMaxMinSize 是否已赋值
+                     * @return DesiredCapacitySyncWithMaxMinSize 是否已赋值
+                     * 
+                     */
+                    bool DesiredCapacitySyncWithMaxMinSizeHasBeenSet() const;
 
                 private:
 
@@ -203,20 +228,27 @@ Default value: CLASSIC_SCALING
                     bool m_replaceLoadBalancerUnhealthyHasBeenSet;
 
                     /**
-                     * Replace mode of unhealthy replacement service. Valid values:
-RECREATE: Rebuild an instance to replace the original unhealthy instance.
-RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
+                     * Replacement mode of the unhealthy replacement service. valid values:.
+RECREATE: rebuild an instance to replace the unhealthy instance.
+RESET: performs a system reinstallation on unhealthy instances while keeping the data disk, private IP address, instance id, and other information unchanged. the instance login settings, hostname, enhanced services, and UserData remain consistent with the current launch configuration.
 Default value: RECREATE.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_replaceMode;
                     bool m_replaceModeHasBeenSet;
 
                     /**
-                     * Automatic instance tag update. The default value is false. If this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (This feature takes effect for tag creation and editing but not tag deletion.) The update does not take effect immediately due to certain latency.
+                     * Automatic instance Tag update. the default value is False. if this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (this feature takes effect for Tag creation and editing but not Tag deletion.) the update does not take effect immediately due to certain latency.
                      */
                     bool m_autoUpdateInstanceTags;
                     bool m_autoUpdateInstanceTagsHasBeenSet;
+
+                    /**
+                     * Expected number of instances sync minimum and maximum value. default value is False. this parameter only takes effect in scenarios where the expected number is not passed in to modify scaling group api.
+<Li>True: when modifying the maximum or minimum value, if a conflict exists with the current expected value, synchronously adjust the expected value. for example, if the input minimum value is 2 while the current expected value is 1, the expected value will be synchronously adjusted to 2.</li>.
+<Li>False: if a conflict exists between the current expected value when modifying the maximum or minimum value, an error message indicates it is not allowed to be modified.</li>.
+                     */
+                    bool m_desiredCapacitySyncWithMaxMinSize;
+                    bool m_desiredCapacitySyncWithMaxMinSizeHasBeenSet;
 
                 };
             }

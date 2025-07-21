@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Auto scaling group ID.
-                     * @return AutoScalingGroupId Auto scaling group ID.
+                     * 获取Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
+                     * @return AutoScalingGroupId Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
                      * 
                      */
                     std::string GetAutoScalingGroupId() const;
 
                     /**
-                     * 设置Auto scaling group ID.
-                     * @param _autoScalingGroupId Auto scaling group ID.
+                     * 设置Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
+                     * @param _autoScalingGroupId Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
                      * 
                      */
                     void SetAutoScalingGroupId(const std::string& _autoScalingGroupId);
@@ -109,15 +109,15 @@ namespace TencentCloud
                     bool NotificationTypesHasBeenSet() const;
 
                     /**
-                     * 获取Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
-                     * @return NotificationUserGroupIds Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
+                     * 获取Notification GROUP ID, which is the USER GROUP ID collection. USER GROUP ID can be accessed through [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1). this parameter is valid only when TargetType is USER_GROUP.
+                     * @return NotificationUserGroupIds Notification GROUP ID, which is the USER GROUP ID collection. USER GROUP ID can be accessed through [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1). this parameter is valid only when TargetType is USER_GROUP.
                      * 
                      */
                     std::vector<std::string> GetNotificationUserGroupIds() const;
 
                     /**
-                     * 设置Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
-                     * @param _notificationUserGroupIds Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
+                     * 设置Notification GROUP ID, which is the USER GROUP ID collection. USER GROUP ID can be accessed through [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1). this parameter is valid only when TargetType is USER_GROUP.
+                     * @param _notificationUserGroupIds Notification GROUP ID, which is the USER GROUP ID collection. USER GROUP ID can be accessed through [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1). this parameter is valid only when TargetType is USER_GROUP.
                      * 
                      */
                     void SetNotificationUserGroupIds(const std::vector<std::string>& _notificationUserGroupIds);
@@ -130,20 +130,20 @@ namespace TencentCloud
                     bool NotificationUserGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取Notification receiver type. Valid values:
-<br><li>USER_GROUP:User group
-<br><li>CMQ_QUEUE:CMQ queue
-<br><li>CMQ_TOPIC:CMQ topic
-<br><li>TDMQ_CMQ_TOPIC:TDMQ CMQ topic
-<br><li>TDMQ_CMQ_QUEUE:TDMQ CMQ queue
+                     * 获取Notification receiver type. values as follows:.
+<Li>USER_GROUP: user group</li>.
+<Li>TDMQ_CMQ_TOPIC: tdmq cmq topic</li>.
+<Li>TDMQ_CMQ_QUEUE: tdmq cmq queue</li>.
+<li>CMQ_QUEUE: CMQ QUEUE. [CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, only TDMQ CMQ is recommended.</li>.
+<li>CMQ_TOPIC: specifies the CMQ TOPIC. [CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, TDMQ CMQ is recommended for use.</li>.
 
 Default value: `USER_GROUP`.
-                     * @return TargetType Notification receiver type. Valid values:
-<br><li>USER_GROUP:User group
-<br><li>CMQ_QUEUE:CMQ queue
-<br><li>CMQ_TOPIC:CMQ topic
-<br><li>TDMQ_CMQ_TOPIC:TDMQ CMQ topic
-<br><li>TDMQ_CMQ_QUEUE:TDMQ CMQ queue
+                     * @return TargetType Notification receiver type. values as follows:.
+<Li>USER_GROUP: user group</li>.
+<Li>TDMQ_CMQ_TOPIC: tdmq cmq topic</li>.
+<Li>TDMQ_CMQ_QUEUE: tdmq cmq queue</li>.
+<li>CMQ_QUEUE: CMQ QUEUE. [CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, only TDMQ CMQ is recommended.</li>.
+<li>CMQ_TOPIC: specifies the CMQ TOPIC. [CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, TDMQ CMQ is recommended for use.</li>.
 
 Default value: `USER_GROUP`.
                      * 
@@ -151,20 +151,20 @@ Default value: `USER_GROUP`.
                     std::string GetTargetType() const;
 
                     /**
-                     * 设置Notification receiver type. Valid values:
-<br><li>USER_GROUP:User group
-<br><li>CMQ_QUEUE:CMQ queue
-<br><li>CMQ_TOPIC:CMQ topic
-<br><li>TDMQ_CMQ_TOPIC:TDMQ CMQ topic
-<br><li>TDMQ_CMQ_QUEUE:TDMQ CMQ queue
+                     * 设置Notification receiver type. values as follows:.
+<Li>USER_GROUP: user group</li>.
+<Li>TDMQ_CMQ_TOPIC: tdmq cmq topic</li>.
+<Li>TDMQ_CMQ_QUEUE: tdmq cmq queue</li>.
+<li>CMQ_QUEUE: CMQ QUEUE. [CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, only TDMQ CMQ is recommended.</li>.
+<li>CMQ_TOPIC: specifies the CMQ TOPIC. [CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, TDMQ CMQ is recommended for use.</li>.
 
 Default value: `USER_GROUP`.
-                     * @param _targetType Notification receiver type. Valid values:
-<br><li>USER_GROUP:User group
-<br><li>CMQ_QUEUE:CMQ queue
-<br><li>CMQ_TOPIC:CMQ topic
-<br><li>TDMQ_CMQ_TOPIC:TDMQ CMQ topic
-<br><li>TDMQ_CMQ_QUEUE:TDMQ CMQ queue
+                     * @param _targetType Notification receiver type. values as follows:.
+<Li>USER_GROUP: user group</li>.
+<Li>TDMQ_CMQ_TOPIC: tdmq cmq topic</li>.
+<Li>TDMQ_CMQ_QUEUE: tdmq cmq queue</li>.
+<li>CMQ_QUEUE: CMQ QUEUE. [CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, only TDMQ CMQ is recommended.</li>.
+<li>CMQ_TOPIC: specifies the CMQ TOPIC. [CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, TDMQ CMQ is recommended for use.</li>.
 
 Default value: `USER_GROUP`.
                      * 
@@ -179,15 +179,15 @@ Default value: `USER_GROUP`.
                     bool TargetTypeHasBeenSet() const;
 
                     /**
-                     * 获取CMQ queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
-                     * @return QueueName CMQ queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
+                     * 获取TDMQ CMQ QUEUE name. this field is required if TargetType value is `TDMQ_CMQ_QUEUE`.
+                     * @return QueueName TDMQ CMQ QUEUE name. this field is required if TargetType value is `TDMQ_CMQ_QUEUE`.
                      * 
                      */
                     std::string GetQueueName() const;
 
                     /**
-                     * 设置CMQ queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
-                     * @param _queueName CMQ queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
+                     * 设置TDMQ CMQ QUEUE name. this field is required if TargetType value is `TDMQ_CMQ_QUEUE`.
+                     * @param _queueName TDMQ CMQ QUEUE name. this field is required if TargetType value is `TDMQ_CMQ_QUEUE`.
                      * 
                      */
                     void SetQueueName(const std::string& _queueName);
@@ -200,15 +200,15 @@ Default value: `USER_GROUP`.
                     bool QueueNameHasBeenSet() const;
 
                     /**
-                     * 获取CMQ topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
-                     * @return TopicName CMQ topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
+                     * 获取TDMQ CMQ TOPIC name. this field is required when `TargetType` is `TDMQ_CMQ_TOPIC`.
+                     * @return TopicName TDMQ CMQ TOPIC name. this field is required when `TargetType` is `TDMQ_CMQ_TOPIC`.
                      * 
                      */
                     std::string GetTopicName() const;
 
                     /**
-                     * 设置CMQ topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
-                     * @param _topicName CMQ topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
+                     * 设置TDMQ CMQ TOPIC name. this field is required when `TargetType` is `TDMQ_CMQ_TOPIC`.
+                     * @param _topicName TDMQ CMQ TOPIC name. this field is required when `TargetType` is `TDMQ_CMQ_TOPIC`.
                      * 
                      */
                     void SetTopicName(const std::string& _topicName);
@@ -223,7 +223,7 @@ Default value: `USER_GROUP`.
                 private:
 
                     /**
-                     * Auto scaling group ID.
+                     * Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
                      */
                     std::string m_autoScalingGroupId;
                     bool m_autoScalingGroupIdHasBeenSet;
@@ -241,18 +241,18 @@ Default value: `USER_GROUP`.
                     bool m_notificationTypesHasBeenSet;
 
                     /**
-                     * Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
+                     * Notification GROUP ID, which is the USER GROUP ID collection. USER GROUP ID can be accessed through [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1). this parameter is valid only when TargetType is USER_GROUP.
                      */
                     std::vector<std::string> m_notificationUserGroupIds;
                     bool m_notificationUserGroupIdsHasBeenSet;
 
                     /**
-                     * Notification receiver type. Valid values:
-<br><li>USER_GROUP:User group
-<br><li>CMQ_QUEUE:CMQ queue
-<br><li>CMQ_TOPIC:CMQ topic
-<br><li>TDMQ_CMQ_TOPIC:TDMQ CMQ topic
-<br><li>TDMQ_CMQ_QUEUE:TDMQ CMQ queue
+                     * Notification receiver type. values as follows:.
+<Li>USER_GROUP: user group</li>.
+<Li>TDMQ_CMQ_TOPIC: tdmq cmq topic</li>.
+<Li>TDMQ_CMQ_QUEUE: tdmq cmq queue</li>.
+<li>CMQ_QUEUE: CMQ QUEUE. [CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, only TDMQ CMQ is recommended.</li>.
+<li>CMQ_TOPIC: specifies the CMQ TOPIC. [CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, TDMQ CMQ is recommended for use.</li>.
 
 Default value: `USER_GROUP`.
                      */
@@ -260,13 +260,13 @@ Default value: `USER_GROUP`.
                     bool m_targetTypeHasBeenSet;
 
                     /**
-                     * CMQ queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
+                     * TDMQ CMQ QUEUE name. this field is required if TargetType value is `TDMQ_CMQ_QUEUE`.
                      */
                     std::string m_queueName;
                     bool m_queueNameHasBeenSet;
 
                     /**
-                     * CMQ topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
+                     * TDMQ CMQ TOPIC name. this field is required when `TargetType` is `TDMQ_CMQ_TOPIC`.
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;

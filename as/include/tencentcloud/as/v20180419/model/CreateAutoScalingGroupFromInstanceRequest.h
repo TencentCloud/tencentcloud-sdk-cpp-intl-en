@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool AutoScalingGroupNameHasBeenSet() const;
 
                     /**
-                     * 获取The instance ID.
-                     * @return InstanceId The instance ID.
+                     * 获取Instance ID. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
+                     * @return InstanceId Instance ID. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置The instance ID.
-                     * @param _instanceId The instance ID.
+                     * 设置Instance ID. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
+                     * @param _instanceId Instance ID. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取The minimum number of instances. Value range: 0-2000.
-                     * @return MinSize The minimum number of instances. Value range: 0-2000.
+                     * 获取Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
+                     * @return MinSize Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
                      * 
                      */
                     int64_t GetMinSize() const;
 
                     /**
-                     * 设置The minimum number of instances. Value range: 0-2000.
-                     * @param _minSize The minimum number of instances. Value range: 0-2000.
+                     * 设置Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
+                     * @param _minSize Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
                      * 
                      */
                     void SetMinSize(const int64_t& _minSize);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool MinSizeHasBeenSet() const;
 
                     /**
-                     * 获取The maximum number of instances. Value range: 0-2000.
-                     * @return MaxSize The maximum number of instances. Value range: 0-2000.
+                     * 获取Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
+                     * @return MaxSize Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
                      * 
                      */
                     int64_t GetMaxSize() const;
 
                     /**
-                     * 设置The maximum number of instances. Value range: 0-2000.
-                     * @param _maxSize The maximum number of instances. Value range: 0-2000.
+                     * 设置Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
+                     * @param _maxSize Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
                      * 
                      */
                     void SetMaxSize(const int64_t& _maxSize);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool MaxSizeHasBeenSet() const;
 
                     /**
-                     * 获取The desired capacity. Its value must be greater than the minimum and smaller than the maximum.
-                     * @return DesiredCapacity The desired capacity. Its value must be greater than the minimum and smaller than the maximum.
+                     * 获取Expected number of instances, value ranges from 0 to 2000, default value equals current MinSize, to meet MaxSize >= DesiredCapacity >= MinSize.
+                     * @return DesiredCapacity Expected number of instances, value ranges from 0 to 2000, default value equals current MinSize, to meet MaxSize >= DesiredCapacity >= MinSize.
                      * 
                      */
                     int64_t GetDesiredCapacity() const;
 
                     /**
-                     * 设置The desired capacity. Its value must be greater than the minimum and smaller than the maximum.
-                     * @param _desiredCapacity The desired capacity. Its value must be greater than the minimum and smaller than the maximum.
+                     * 设置Expected number of instances, value ranges from 0 to 2000, default value equals current MinSize, to meet MaxSize >= DesiredCapacity >= MinSize.
+                     * @param _desiredCapacity Expected number of instances, value ranges from 0 to 2000, default value equals current MinSize, to meet MaxSize >= DesiredCapacity >= MinSize.
                      * 
                      */
                     void SetDesiredCapacity(const int64_t& _desiredCapacity);
@@ -177,25 +177,25 @@ namespace TencentCloud
                     bool m_autoScalingGroupNameHasBeenSet;
 
                     /**
-                     * The instance ID.
+                     * Instance ID. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * The minimum number of instances. Value range: 0-2000.
+                     * Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
                      */
                     int64_t m_minSize;
                     bool m_minSizeHasBeenSet;
 
                     /**
-                     * The maximum number of instances. Value range: 0-2000.
+                     * Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
                      */
                     int64_t m_maxSize;
                     bool m_maxSizeHasBeenSet;
 
                     /**
-                     * The desired capacity. Its value must be greater than the minimum and smaller than the maximum.
+                     * Expected number of instances, value ranges from 0 to 2000, default value equals current MinSize, to meet MaxSize >= DesiredCapacity >= MinSize.
                      */
                     int64_t m_desiredCapacity;
                     bool m_desiredCapacityHasBeenSet;

@@ -89,15 +89,39 @@ namespace TencentCloud
                     bool NotificationUserGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取List of notification events.
-                     * @return NotificationTypes List of notification events.
+                     * 获取Notification event list. valid values are as follows:.
+<Li>SCALE_OUT_SUCCESSFUL: scale-out succeeded</li>.
+<Li>SCALE_OUT_FAILED: scale-out failed</li>.
+<Li>SCALE_IN_SUCCESSFUL: scale-in succeeded</li>.
+<Li>SCALE_IN_FAILED: scale-in failed</li>.
+<Li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL: unhealthy instance replacement succeeded</li>.
+<Li>REPLACE_UNHEALTHY_INSTANCE_FAILED: unhealthy instance replacement failed</li>.
+                     * @return NotificationTypes Notification event list. valid values are as follows:.
+<Li>SCALE_OUT_SUCCESSFUL: scale-out succeeded</li>.
+<Li>SCALE_OUT_FAILED: scale-out failed</li>.
+<Li>SCALE_IN_SUCCESSFUL: scale-in succeeded</li>.
+<Li>SCALE_IN_FAILED: scale-in failed</li>.
+<Li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL: unhealthy instance replacement succeeded</li>.
+<Li>REPLACE_UNHEALTHY_INSTANCE_FAILED: unhealthy instance replacement failed</li>.
                      * 
                      */
                     std::vector<std::string> GetNotificationTypes() const;
 
                     /**
-                     * 设置List of notification events.
-                     * @param _notificationTypes List of notification events.
+                     * 设置Notification event list. valid values are as follows:.
+<Li>SCALE_OUT_SUCCESSFUL: scale-out succeeded</li>.
+<Li>SCALE_OUT_FAILED: scale-out failed</li>.
+<Li>SCALE_IN_SUCCESSFUL: scale-in succeeded</li>.
+<Li>SCALE_IN_FAILED: scale-in failed</li>.
+<Li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL: unhealthy instance replacement succeeded</li>.
+<Li>REPLACE_UNHEALTHY_INSTANCE_FAILED: unhealthy instance replacement failed</li>.
+                     * @param _notificationTypes Notification event list. valid values are as follows:.
+<Li>SCALE_OUT_SUCCESSFUL: scale-out succeeded</li>.
+<Li>SCALE_OUT_FAILED: scale-out failed</li>.
+<Li>SCALE_IN_SUCCESSFUL: scale-in succeeded</li>.
+<Li>SCALE_IN_FAILED: scale-in failed</li>.
+<Li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL: unhealthy instance replacement succeeded</li>.
+<Li>REPLACE_UNHEALTHY_INSTANCE_FAILED: unhealthy instance replacement failed</li>.
                      * 
                      */
                     void SetNotificationTypes(const std::vector<std::string>& _notificationTypes);
@@ -131,15 +155,35 @@ namespace TencentCloud
                     bool AutoScalingNotificationIdHasBeenSet() const;
 
                     /**
-                     * 获取Notification receiver type.
-                     * @return TargetType Notification receiver type.
+                     * 获取Notification receiver type. valid values:.
+USER_GROUP: specifies the user group.
+TDMQ_CMQ_TOPIC: tdmq for cmq topic.
+TDMQ_CMQ_QUEUE: specifies the tdmq cmq queue.
+`CMQ_QUEUE`: cmq queue. [cmq API offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). unable to select.
+CMQ_TOPIC: cmq topic. [cmq API offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1), unable to select.
+                     * @return TargetType Notification receiver type. valid values:.
+USER_GROUP: specifies the user group.
+TDMQ_CMQ_TOPIC: tdmq for cmq topic.
+TDMQ_CMQ_QUEUE: specifies the tdmq cmq queue.
+`CMQ_QUEUE`: cmq queue. [cmq API offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). unable to select.
+CMQ_TOPIC: cmq topic. [cmq API offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1), unable to select.
                      * 
                      */
                     std::string GetTargetType() const;
 
                     /**
-                     * 设置Notification receiver type.
-                     * @param _targetType Notification receiver type.
+                     * 设置Notification receiver type. valid values:.
+USER_GROUP: specifies the user group.
+TDMQ_CMQ_TOPIC: tdmq for cmq topic.
+TDMQ_CMQ_QUEUE: specifies the tdmq cmq queue.
+`CMQ_QUEUE`: cmq queue. [cmq API offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). unable to select.
+CMQ_TOPIC: cmq topic. [cmq API offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1), unable to select.
+                     * @param _targetType Notification receiver type. valid values:.
+USER_GROUP: specifies the user group.
+TDMQ_CMQ_TOPIC: tdmq for cmq topic.
+TDMQ_CMQ_QUEUE: specifies the tdmq cmq queue.
+`CMQ_QUEUE`: cmq queue. [cmq API offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). unable to select.
+CMQ_TOPIC: cmq topic. [cmq API offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1), unable to select.
                      * 
                      */
                     void SetTargetType(const std::string& _targetType);
@@ -152,15 +196,15 @@ namespace TencentCloud
                     bool TargetTypeHasBeenSet() const;
 
                     /**
-                     * 获取CMQ queue name.
-                     * @return QueueName CMQ queue name.
+                     * 获取TDMQ CMQ queue name.
+                     * @return QueueName TDMQ CMQ queue name.
                      * 
                      */
                     std::string GetQueueName() const;
 
                     /**
-                     * 设置CMQ queue name.
-                     * @param _queueName CMQ queue name.
+                     * 设置TDMQ CMQ queue name.
+                     * @param _queueName TDMQ CMQ queue name.
                      * 
                      */
                     void SetQueueName(const std::string& _queueName);
@@ -173,15 +217,15 @@ namespace TencentCloud
                     bool QueueNameHasBeenSet() const;
 
                     /**
-                     * 获取CMQ topic name.
-                     * @return TopicName CMQ topic name.
+                     * 获取TDMQ CMQ topic name.
+                     * @return TopicName TDMQ CMQ topic name.
                      * 
                      */
                     std::string GetTopicName() const;
 
                     /**
-                     * 设置CMQ topic name.
-                     * @param _topicName CMQ topic name.
+                     * 设置TDMQ CMQ topic name.
+                     * @param _topicName TDMQ CMQ topic name.
                      * 
                      */
                     void SetTopicName(const std::string& _topicName);
@@ -208,7 +252,13 @@ namespace TencentCloud
                     bool m_notificationUserGroupIdsHasBeenSet;
 
                     /**
-                     * List of notification events.
+                     * Notification event list. valid values are as follows:.
+<Li>SCALE_OUT_SUCCESSFUL: scale-out succeeded</li>.
+<Li>SCALE_OUT_FAILED: scale-out failed</li>.
+<Li>SCALE_IN_SUCCESSFUL: scale-in succeeded</li>.
+<Li>SCALE_IN_FAILED: scale-in failed</li>.
+<Li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL: unhealthy instance replacement succeeded</li>.
+<Li>REPLACE_UNHEALTHY_INSTANCE_FAILED: unhealthy instance replacement failed</li>.
                      */
                     std::vector<std::string> m_notificationTypes;
                     bool m_notificationTypesHasBeenSet;
@@ -220,19 +270,24 @@ namespace TencentCloud
                     bool m_autoScalingNotificationIdHasBeenSet;
 
                     /**
-                     * Notification receiver type.
+                     * Notification receiver type. valid values:.
+USER_GROUP: specifies the user group.
+TDMQ_CMQ_TOPIC: tdmq for cmq topic.
+TDMQ_CMQ_QUEUE: specifies the tdmq cmq queue.
+`CMQ_QUEUE`: cmq queue. [cmq API offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). unable to select.
+CMQ_TOPIC: cmq topic. [cmq API offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1), unable to select.
                      */
                     std::string m_targetType;
                     bool m_targetTypeHasBeenSet;
 
                     /**
-                     * CMQ queue name.
+                     * TDMQ CMQ queue name.
                      */
                     std::string m_queueName;
                     bool m_queueNameHasBeenSet;
 
                     /**
-                     * CMQ topic name.
+                     * TDMQ CMQ topic name.
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;

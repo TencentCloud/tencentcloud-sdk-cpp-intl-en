@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Queries by one or more scheduled task IDs in the format of asst-am691zxo. The maximum number of instances per request is 100. This parameter does not support specifying both ScheduledActionIds` and `Filters` at the same time.
-                     * @return ScheduledActionIds Queries by one or more scheduled task IDs in the format of asst-am691zxo. The maximum number of instances per request is 100. This parameter does not support specifying both ScheduledActionIds` and `Filters` at the same time.
+                     * 获取Query by one or more scheduled task ids. you can obtain the scheduled task ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group). the maximum number of instances per request is 100. parameters ScheduledActionIds and Filters must not be specified simultaneously.
+                     * @return ScheduledActionIds Query by one or more scheduled task ids. you can obtain the scheduled task ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group). the maximum number of instances per request is 100. parameters ScheduledActionIds and Filters must not be specified simultaneously.
                      * 
                      */
                     std::vector<std::string> GetScheduledActionIds() const;
 
                     /**
-                     * 设置Queries by one or more scheduled task IDs in the format of asst-am691zxo. The maximum number of instances per request is 100. This parameter does not support specifying both ScheduledActionIds` and `Filters` at the same time.
-                     * @param _scheduledActionIds Queries by one or more scheduled task IDs in the format of asst-am691zxo. The maximum number of instances per request is 100. This parameter does not support specifying both ScheduledActionIds` and `Filters` at the same time.
+                     * 设置Query by one or more scheduled task ids. you can obtain the scheduled task ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group). the maximum number of instances per request is 100. parameters ScheduledActionIds and Filters must not be specified simultaneously.
+                     * @param _scheduledActionIds Query by one or more scheduled task ids. you can obtain the scheduled task ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group). the maximum number of instances per request is 100. parameters ScheduledActionIds and Filters must not be specified simultaneously.
                      * 
                      */
                     void SetScheduledActionIds(const std::vector<std::string>& _scheduledActionIds);
@@ -65,27 +65,27 @@ namespace TencentCloud
                     bool ScheduledActionIdsHasBeenSet() const;
 
                     /**
-                     * 获取Filter.
-<li> scheduled-action-id - String - Required: No - (Filter) Filter by scheduled task ID.</li>
-<li> scheduled-action-name - String - Required: No - (Filter) Filter by scheduled task name.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-                     * @return Filters Filter.
-<li> scheduled-action-id - String - Required: No - (Filter) Filter by scheduled task ID.</li>
-<li> scheduled-action-name - String - Required: No - (Filter) Filter by scheduled task name.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
+                     * 获取Filter criteria. obtain the scheduled task ID, scheduled task name, and scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group).
+<li> scheduled-action-id - String - required: no - (filter) filter by scheduled task id.</li>.
+<li> scheduled-action-name - String - required: no - (filter criteria) filters by scheduled task name.</li>.
+<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id.</li>.
+                     * @return Filters Filter criteria. obtain the scheduled task ID, scheduled task name, and scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group).
+<li> scheduled-action-id - String - required: no - (filter) filter by scheduled task id.</li>.
+<li> scheduled-action-name - String - required: no - (filter criteria) filters by scheduled task name.</li>.
+<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id.</li>.
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter.
-<li> scheduled-action-id - String - Required: No - (Filter) Filter by scheduled task ID.</li>
-<li> scheduled-action-name - String - Required: No - (Filter) Filter by scheduled task name.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-                     * @param _filters Filter.
-<li> scheduled-action-id - String - Required: No - (Filter) Filter by scheduled task ID.</li>
-<li> scheduled-action-name - String - Required: No - (Filter) Filter by scheduled task name.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
+                     * 设置Filter criteria. obtain the scheduled task ID, scheduled task name, and scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group).
+<li> scheduled-action-id - String - required: no - (filter) filter by scheduled task id.</li>.
+<li> scheduled-action-name - String - required: no - (filter criteria) filters by scheduled task name.</li>.
+<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id.</li>.
+                     * @param _filters Filter criteria. obtain the scheduled task ID, scheduled task name, and scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group).
+<li> scheduled-action-id - String - required: no - (filter) filter by scheduled task id.</li>.
+<li> scheduled-action-name - String - required: no - (filter criteria) filters by scheduled task name.</li>.
+<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id.</li>.
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -142,16 +142,16 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Queries by one or more scheduled task IDs in the format of asst-am691zxo. The maximum number of instances per request is 100. This parameter does not support specifying both ScheduledActionIds` and `Filters` at the same time.
+                     * Query by one or more scheduled task ids. you can obtain the scheduled task ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group). the maximum number of instances per request is 100. parameters ScheduledActionIds and Filters must not be specified simultaneously.
                      */
                     std::vector<std::string> m_scheduledActionIds;
                     bool m_scheduledActionIdsHasBeenSet;
 
                     /**
-                     * Filter.
-<li> scheduled-action-id - String - Required: No - (Filter) Filter by scheduled task ID.</li>
-<li> scheduled-action-name - String - Required: No - (Filter) Filter by scheduled task name.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
+                     * Filter criteria. obtain the scheduled task ID, scheduled task name, and scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group).
+<li> scheduled-action-id - String - required: no - (filter) filter by scheduled task id.</li>.
+<li> scheduled-action-name - String - required: no - (filter criteria) filters by scheduled task name.</li>.
+<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id.</li>.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

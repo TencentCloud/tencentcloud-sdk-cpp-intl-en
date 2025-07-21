@@ -26,6 +26,10 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/teo/v20220901/model/CustomRules.h>
 #include <tencentcloud/teo/v20220901/model/ManagedRules.h>
+#include <tencentcloud/teo/v20220901/model/HttpDDoSProtection.h>
+#include <tencentcloud/teo/v20220901/model/RateLimitingRules.h>
+#include <tencentcloud/teo/v20220901/model/ExceptionRules.h>
+#include <tencentcloud/teo/v20220901/model/BotManagement.h>
 
 
 namespace TencentCloud
@@ -98,6 +102,90 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool ManagedRulesHasBeenSet() const;
 
+                    /**
+                     * 获取HTTP DDOS protection configuration.
+                     * @return HttpDDoSProtection HTTP DDOS protection configuration.
+                     * 
+                     */
+                    HttpDDoSProtection GetHttpDDoSProtection() const;
+
+                    /**
+                     * 设置HTTP DDOS protection configuration.
+                     * @param _httpDDoSProtection HTTP DDOS protection configuration.
+                     * 
+                     */
+                    void SetHttpDDoSProtection(const HttpDDoSProtection& _httpDDoSProtection);
+
+                    /**
+                     * 判断参数 HttpDDoSProtection 是否已赋值
+                     * @return HttpDDoSProtection 是否已赋值
+                     * 
+                     */
+                    bool HttpDDoSProtectionHasBeenSet() const;
+
+                    /**
+                     * 获取Configures the rate limiting rule.
+                     * @return RateLimitingRules Configures the rate limiting rule.
+                     * 
+                     */
+                    RateLimitingRules GetRateLimitingRules() const;
+
+                    /**
+                     * 设置Configures the rate limiting rule.
+                     * @param _rateLimitingRules Configures the rate limiting rule.
+                     * 
+                     */
+                    void SetRateLimitingRules(const RateLimitingRules& _rateLimitingRules);
+
+                    /**
+                     * 判断参数 RateLimitingRules 是否已赋值
+                     * @return RateLimitingRules 是否已赋值
+                     * 
+                     */
+                    bool RateLimitingRulesHasBeenSet() const;
+
+                    /**
+                     * 获取Exception rule configuration.
+                     * @return ExceptionRules Exception rule configuration.
+                     * 
+                     */
+                    ExceptionRules GetExceptionRules() const;
+
+                    /**
+                     * 设置Exception rule configuration.
+                     * @param _exceptionRules Exception rule configuration.
+                     * 
+                     */
+                    void SetExceptionRules(const ExceptionRules& _exceptionRules);
+
+                    /**
+                     * 判断参数 ExceptionRules 是否已赋值
+                     * @return ExceptionRules 是否已赋值
+                     * 
+                     */
+                    bool ExceptionRulesHasBeenSet() const;
+
+                    /**
+                     * 获取Bot management configuration.
+                     * @return BotManagement Bot management configuration.
+                     * 
+                     */
+                    BotManagement GetBotManagement() const;
+
+                    /**
+                     * 设置Bot management configuration.
+                     * @param _botManagement Bot management configuration.
+                     * 
+                     */
+                    void SetBotManagement(const BotManagement& _botManagement);
+
+                    /**
+                     * 判断参数 BotManagement 是否已赋值
+                     * @return BotManagement 是否已赋值
+                     * 
+                     */
+                    bool BotManagementHasBeenSet() const;
+
                 private:
 
                     /**
@@ -113,6 +201,30 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     ManagedRules m_managedRules;
                     bool m_managedRulesHasBeenSet;
+
+                    /**
+                     * HTTP DDOS protection configuration.
+                     */
+                    HttpDDoSProtection m_httpDDoSProtection;
+                    bool m_httpDDoSProtectionHasBeenSet;
+
+                    /**
+                     * Configures the rate limiting rule.
+                     */
+                    RateLimitingRules m_rateLimitingRules;
+                    bool m_rateLimitingRulesHasBeenSet;
+
+                    /**
+                     * Exception rule configuration.
+                     */
+                    ExceptionRules m_exceptionRules;
+                    bool m_exceptionRulesHasBeenSet;
+
+                    /**
+                     * Bot management configuration.
+                     */
+                    BotManagement m_botManagement;
+                    bool m_botManagementHasBeenSet;
 
                 };
             }

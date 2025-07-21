@@ -40,7 +40,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information on eligible scaling activities.
+                * Information of auto scaling activity.
                 */
                 class Activity : public AbstractModel
                 {
@@ -95,54 +95,54 @@ namespace TencentCloud
 
                     /**
                      * 获取Scaling activity type. Valid values:
-<li>SCALE_OUT: Scale out an instance.</li>
-<li>SCALE_IN: Scale in an instance.</li>
-<li>ATTACH_INSTANCES: Add an instance.</li>
-<li>REMOVE_INSTANCES: Terminate an instance.</li>
-<li>DETACH_INSTANCES: Remove an instance.</li>
-<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Terminate an instance in the CVM console.</li>
-<li>REPLACE_UNHEALTHY_INSTANCE: Replace an unhealthy instance.</li>
-<li>START_INSTANCES: Start an instance.</li>
-<li>STOP_INSTANCES: Stop an instance.</li>
-<li>INVOKE_COMMAND: Execute a command.</li>
+<li>SCALE_OUT: Scale out instance(s).</li>
+<li>SCALE_IN: Scale in instance(s).</li>
+<li>ATTACH_INSTANCES: Add instance(s).</li>
+<li>REMOVE_INSTANCES: Terminate instance(s).</li>
+<li>DETACH_INSTANCES: Remove instance(s).</li>
+<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Instance(s) unexpectedly terminated in the CVM console.</li>
+<li>REPLACE_UNHEALTHY_INSTANCE: Replace unhealthy instance(s).</li>
+<li>START_INSTANCES: Start instance(s).</li>
+<li>STOP_INSTANCES: Stop instance(s).</li>
+<li>INVOKE_COMMAND: Execute a command in instance(s).</li>
                      * @return ActivityType Scaling activity type. Valid values:
-<li>SCALE_OUT: Scale out an instance.</li>
-<li>SCALE_IN: Scale in an instance.</li>
-<li>ATTACH_INSTANCES: Add an instance.</li>
-<li>REMOVE_INSTANCES: Terminate an instance.</li>
-<li>DETACH_INSTANCES: Remove an instance.</li>
-<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Terminate an instance in the CVM console.</li>
-<li>REPLACE_UNHEALTHY_INSTANCE: Replace an unhealthy instance.</li>
-<li>START_INSTANCES: Start an instance.</li>
-<li>STOP_INSTANCES: Stop an instance.</li>
-<li>INVOKE_COMMAND: Execute a command.</li>
+<li>SCALE_OUT: Scale out instance(s).</li>
+<li>SCALE_IN: Scale in instance(s).</li>
+<li>ATTACH_INSTANCES: Add instance(s).</li>
+<li>REMOVE_INSTANCES: Terminate instance(s).</li>
+<li>DETACH_INSTANCES: Remove instance(s).</li>
+<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Instance(s) unexpectedly terminated in the CVM console.</li>
+<li>REPLACE_UNHEALTHY_INSTANCE: Replace unhealthy instance(s).</li>
+<li>START_INSTANCES: Start instance(s).</li>
+<li>STOP_INSTANCES: Stop instance(s).</li>
+<li>INVOKE_COMMAND: Execute a command in instance(s).</li>
                      * 
                      */
                     std::string GetActivityType() const;
 
                     /**
                      * 设置Scaling activity type. Valid values:
-<li>SCALE_OUT: Scale out an instance.</li>
-<li>SCALE_IN: Scale in an instance.</li>
-<li>ATTACH_INSTANCES: Add an instance.</li>
-<li>REMOVE_INSTANCES: Terminate an instance.</li>
-<li>DETACH_INSTANCES: Remove an instance.</li>
-<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Terminate an instance in the CVM console.</li>
-<li>REPLACE_UNHEALTHY_INSTANCE: Replace an unhealthy instance.</li>
-<li>START_INSTANCES: Start an instance.</li>
-<li>STOP_INSTANCES: Stop an instance.</li>
-<li>INVOKE_COMMAND: Execute a command.</li>
+<li>SCALE_OUT: Scale out instance(s).</li>
+<li>SCALE_IN: Scale in instance(s).</li>
+<li>ATTACH_INSTANCES: Add instance(s).</li>
+<li>REMOVE_INSTANCES: Terminate instance(s).</li>
+<li>DETACH_INSTANCES: Remove instance(s).</li>
+<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Instance(s) unexpectedly terminated in the CVM console.</li>
+<li>REPLACE_UNHEALTHY_INSTANCE: Replace unhealthy instance(s).</li>
+<li>START_INSTANCES: Start instance(s).</li>
+<li>STOP_INSTANCES: Stop instance(s).</li>
+<li>INVOKE_COMMAND: Execute a command in instance(s).</li>
                      * @param _activityType Scaling activity type. Valid values:
-<li>SCALE_OUT: Scale out an instance.</li>
-<li>SCALE_IN: Scale in an instance.</li>
-<li>ATTACH_INSTANCES: Add an instance.</li>
-<li>REMOVE_INSTANCES: Terminate an instance.</li>
-<li>DETACH_INSTANCES: Remove an instance.</li>
-<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Terminate an instance in the CVM console.</li>
-<li>REPLACE_UNHEALTHY_INSTANCE: Replace an unhealthy instance.</li>
-<li>START_INSTANCES: Start an instance.</li>
-<li>STOP_INSTANCES: Stop an instance.</li>
-<li>INVOKE_COMMAND: Execute a command.</li>
+<li>SCALE_OUT: Scale out instance(s).</li>
+<li>SCALE_IN: Scale in instance(s).</li>
+<li>ATTACH_INSTANCES: Add instance(s).</li>
+<li>REMOVE_INSTANCES: Terminate instance(s).</li>
+<li>DETACH_INSTANCES: Remove instance(s).</li>
+<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Instance(s) unexpectedly terminated in the CVM console.</li>
+<li>REPLACE_UNHEALTHY_INSTANCE: Replace unhealthy instance(s).</li>
+<li>START_INSTANCES: Start instance(s).</li>
+<li>STOP_INSTANCES: Stop instance(s).</li>
+<li>INVOKE_COMMAND: Execute a command in instance(s).</li>
                      * 
                      */
                     void SetActivityType(const std::string& _activityType);
@@ -263,15 +263,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Start time of the scaling activity.
-                     * @return StartTime Start time of the scaling activity.
+                     * 获取Start time of the auto scaling activity in UTC standard time.
+                     * @return StartTime Start time of the auto scaling activity in UTC standard time.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start time of the scaling activity.
-                     * @param _startTime Start time of the scaling activity.
+                     * 设置Start time of the auto scaling activity in UTC standard time.
+                     * @param _startTime Start time of the auto scaling activity in UTC standard time.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -284,15 +284,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time of the scaling activity.
-                     * @return EndTime End time of the scaling activity.
+                     * 获取End time of the scaling activity in UTC standard time.
+                     * @return EndTime End time of the scaling activity in UTC standard time.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time of the scaling activity.
-                     * @param _endTime End time of the scaling activity.
+                     * 设置End time of the scaling activity in UTC standard time.
+                     * @param _endTime End time of the scaling activity in UTC standard time.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -305,15 +305,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Creation time of the scaling activity.
-                     * @return CreatedTime Creation time of the scaling activity.
+                     * 获取Create time of the scaling activity in UTC standard time.
+                     * @return CreatedTime Create time of the scaling activity in UTC standard time.
                      * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
-                     * 设置Creation time of the scaling activity.
-                     * @param _createdTime Creation time of the scaling activity.
+                     * 设置Create time of the scaling activity in UTC standard time.
+                     * @param _createdTime Create time of the scaling activity in UTC standard time.
                      * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
@@ -389,15 +389,15 @@ namespace TencentCloud
                     bool LifecycleActionResultSetHasBeenSet() const;
 
                     /**
-                     * 获取Detailed description of scaling activity status
-                     * @return DetailedStatusMessageSet Detailed description of scaling activity status
+                     * 获取Detailed description of the scaling activity status
+                     * @return DetailedStatusMessageSet Detailed description of the scaling activity status
                      * 
                      */
                     std::vector<DetailedStatusMessage> GetDetailedStatusMessageSet() const;
 
                     /**
-                     * 设置Detailed description of scaling activity status
-                     * @param _detailedStatusMessageSet Detailed description of scaling activity status
+                     * 设置Detailed description of the scaling activity status
+                     * @param _detailedStatusMessageSet Detailed description of the scaling activity status
                      * 
                      */
                     void SetDetailedStatusMessageSet(const std::vector<DetailedStatusMessage>& _detailedStatusMessageSet);
@@ -431,15 +431,15 @@ namespace TencentCloud
                     bool InvocationResultSetHasBeenSet() const;
 
                     /**
-                     * 获取Information set of the instances related to the scaling activity.
-                     * @return RelatedInstanceSet Information set of the instances related to the scaling activity.
+                     * 获取Related instance information set of the scaling activity.
+                     * @return RelatedInstanceSet Related instance information set of the scaling activity.
                      * 
                      */
                     std::vector<RelatedInstance> GetRelatedInstanceSet() const;
 
                     /**
-                     * 设置Information set of the instances related to the scaling activity.
-                     * @param _relatedInstanceSet Information set of the instances related to the scaling activity.
+                     * 设置Related instance information set of the scaling activity.
+                     * @param _relatedInstanceSet Related instance information set of the scaling activity.
                      * 
                      */
                     void SetRelatedInstanceSet(const std::vector<RelatedInstance>& _relatedInstanceSet);
@@ -467,16 +467,16 @@ namespace TencentCloud
 
                     /**
                      * Scaling activity type. Valid values:
-<li>SCALE_OUT: Scale out an instance.</li>
-<li>SCALE_IN: Scale in an instance.</li>
-<li>ATTACH_INSTANCES: Add an instance.</li>
-<li>REMOVE_INSTANCES: Terminate an instance.</li>
-<li>DETACH_INSTANCES: Remove an instance.</li>
-<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Terminate an instance in the CVM console.</li>
-<li>REPLACE_UNHEALTHY_INSTANCE: Replace an unhealthy instance.</li>
-<li>START_INSTANCES: Start an instance.</li>
-<li>STOP_INSTANCES: Stop an instance.</li>
-<li>INVOKE_COMMAND: Execute a command.</li>
+<li>SCALE_OUT: Scale out instance(s).</li>
+<li>SCALE_IN: Scale in instance(s).</li>
+<li>ATTACH_INSTANCES: Add instance(s).</li>
+<li>REMOVE_INSTANCES: Terminate instance(s).</li>
+<li>DETACH_INSTANCES: Remove instance(s).</li>
+<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Instance(s) unexpectedly terminated in the CVM console.</li>
+<li>REPLACE_UNHEALTHY_INSTANCE: Replace unhealthy instance(s).</li>
+<li>START_INSTANCES: Start instance(s).</li>
+<li>STOP_INSTANCES: Stop instance(s).</li>
+<li>INVOKE_COMMAND: Execute a command in instance(s).</li>
                      */
                     std::string m_activityType;
                     bool m_activityTypeHasBeenSet;
@@ -512,19 +512,19 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Start time of the scaling activity.
+                     * Start time of the auto scaling activity in UTC standard time.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time of the scaling activity.
+                     * End time of the scaling activity in UTC standard time.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Creation time of the scaling activity.
+                     * Create time of the scaling activity in UTC standard time.
                      */
                     std::string m_createdTime;
                     bool m_createdTimeHasBeenSet;
@@ -548,7 +548,7 @@ namespace TencentCloud
                     bool m_lifecycleActionResultSetHasBeenSet;
 
                     /**
-                     * Detailed description of scaling activity status
+                     * Detailed description of the scaling activity status
                      */
                     std::vector<DetailedStatusMessage> m_detailedStatusMessageSet;
                     bool m_detailedStatusMessageSetHasBeenSet;
@@ -560,7 +560,7 @@ namespace TencentCloud
                     bool m_invocationResultSetHasBeenSet;
 
                     /**
-                     * Information set of the instances related to the scaling activity.
+                     * Related instance information set of the scaling activity.
                      */
                     std::vector<RelatedInstance> m_relatedInstanceSet;
                     bool m_relatedInstanceSetHasBeenSet;

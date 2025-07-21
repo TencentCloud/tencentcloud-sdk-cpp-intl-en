@@ -55,15 +55,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Launch configuration ID
-                     * @return LaunchConfigurationId Launch configuration ID
+                     * 获取Launch configuration ID. obtain the launch configuration ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/config) or calling the api DescribeLaunchConfigurations (https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the return information.
+                     * @return LaunchConfigurationId Launch configuration ID. obtain the launch configuration ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/config) or calling the api DescribeLaunchConfigurations (https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the return information.
                      * 
                      */
                     std::string GetLaunchConfigurationId() const;
 
                     /**
-                     * 设置Launch configuration ID
-                     * @param _launchConfigurationId Launch configuration ID
+                     * 设置Launch configuration ID. obtain the launch configuration ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/config) or calling the api DescribeLaunchConfigurations (https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the return information.
+                     * @param _launchConfigurationId Launch configuration ID. obtain the launch configuration ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/config) or calling the api DescribeLaunchConfigurations (https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the return information.
                      * 
                      */
                     void SetLaunchConfigurationId(const std::string& _launchConfigurationId);
@@ -97,19 +97,19 @@ namespace TencentCloud
                     bool ImageIdHasBeenSet() const;
 
                     /**
-                     * 获取List of instance types. Each type specifies different resource specifications. This list contains up to 10 instance types.
-The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. Specifying the `InstanceTypes` field will invalidate the original `InstanceType`.
-                     * @return InstanceTypes List of instance types. Each type specifies different resource specifications. This list contains up to 10 instance types.
-The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. Specifying the `InstanceTypes` field will invalidate the original `InstanceType`.
+                     * 获取Types of cvm instances. different instance models specify different resource specifications. supports up to 10 instance models.
+The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. specifying the `InstanceTypes` field will invalidate the original `InstanceType`. specific values can be obtained by calling the api [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) to obtain the latest specification table or refer to [instance specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
+                     * @return InstanceTypes Types of cvm instances. different instance models specify different resource specifications. supports up to 10 instance models.
+The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. specifying the `InstanceTypes` field will invalidate the original `InstanceType`. specific values can be obtained by calling the api [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) to obtain the latest specification table or refer to [instance specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
                      * 
                      */
                     std::vector<std::string> GetInstanceTypes() const;
 
                     /**
-                     * 设置List of instance types. Each type specifies different resource specifications. This list contains up to 10 instance types.
-The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. Specifying the `InstanceTypes` field will invalidate the original `InstanceType`.
-                     * @param _instanceTypes List of instance types. Each type specifies different resource specifications. This list contains up to 10 instance types.
-The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. Specifying the `InstanceTypes` field will invalidate the original `InstanceType`.
+                     * 设置Types of cvm instances. different instance models specify different resource specifications. supports up to 10 instance models.
+The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. specifying the `InstanceTypes` field will invalidate the original `InstanceType`. specific values can be obtained by calling the api [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) to obtain the latest specification table or refer to [instance specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
+                     * @param _instanceTypes Types of cvm instances. different instance models specify different resource specifications. supports up to 10 instance models.
+The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. specifying the `InstanceTypes` field will invalidate the original `InstanceType`. specific values can be obtained by calling the api [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) to obtain the latest specification table or refer to [instance specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
                      * 
                      */
                     void SetInstanceTypes(const std::vector<std::string>& _instanceTypes);
@@ -508,15 +508,15 @@ This field requires passing in the `InstanceName` field. Other fields that are n
                     bool EnhancedServiceHasBeenSet() const;
 
                     /**
-                     * 获取CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
-                     * @return CamRoleName CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
+                     * 获取Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
+                     * @return CamRoleName Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
                      * 
                      */
                     std::string GetCamRoleName() const;
 
                     /**
-                     * 设置CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
-                     * @param _camRoleName CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
+                     * 设置Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
+                     * @param _camRoleName Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
                      * 
                      */
                     void SetCamRoleName(const std::string& _camRoleName);
@@ -529,19 +529,19 @@ This field requires passing in the `InstanceName` field. Other fields that are n
                     bool CamRoleNameHasBeenSet() const;
 
                     /**
-                     * 获取HPC ID<br>
-Note: This field is default to empty
-                     * @return HpcClusterId HPC ID<br>
-Note: This field is default to empty
+                     * 获取High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+Note: this field is empty by default.
+                     * @return HpcClusterId High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+Note: this field is empty by default.
                      * 
                      */
                     std::string GetHpcClusterId() const;
 
                     /**
-                     * 设置HPC ID<br>
-Note: This field is default to empty
-                     * @param _hpcClusterId HPC ID<br>
-Note: This field is default to empty
+                     * 设置High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+Note: this field is empty by default.
+                     * @param _hpcClusterId High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+Note: this field is empty by default.
                      * 
                      */
                     void SetHpcClusterId(const std::string& _hpcClusterId);
@@ -575,15 +575,15 @@ Note: This field is default to empty
                     bool IPv6InternetAccessibleHasBeenSet() const;
 
                     /**
-                     * 获取Placement group ID. Only one is allowed.
-                     * @return DisasterRecoverGroupIds Placement group ID. Only one is allowed.
+                     * 获取Placement group id. only one can be specified. obtain through the API [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1).
+                     * @return DisasterRecoverGroupIds Placement group id. only one can be specified. obtain through the API [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1).
                      * 
                      */
                     std::vector<std::string> GetDisasterRecoverGroupIds() const;
 
                     /**
-                     * 设置Placement group ID. Only one is allowed.
-                     * @param _disasterRecoverGroupIds Placement group ID. Only one is allowed.
+                     * 设置Placement group id. only one can be specified. obtain through the API [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1).
+                     * @param _disasterRecoverGroupIds Placement group id. only one can be specified. obtain through the API [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1).
                      * 
                      */
                     void SetDisasterRecoverGroupIds(const std::vector<std::string>& _disasterRecoverGroupIds);
@@ -642,15 +642,15 @@ This parameter will overwrite the original instance tag list. To add new tags, y
                     bool InstanceTagsHasBeenSet() const;
 
                     /**
-                     * 获取Image family name.
-                     * @return ImageFamily Image family name.
+                     * 获取Image family name. this parameter can be obtained by calling the [DescribeImages](https://intl.cloud.tencent.com/document/product/213/15715?from_cn_redirect=1) api.
+                     * @return ImageFamily Image family name. this parameter can be obtained by calling the [DescribeImages](https://intl.cloud.tencent.com/document/product/213/15715?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetImageFamily() const;
 
                     /**
-                     * 设置Image family name.
-                     * @param _imageFamily Image family name.
+                     * 设置Image family name. this parameter can be obtained by calling the [DescribeImages](https://intl.cloud.tencent.com/document/product/213/15715?from_cn_redirect=1) api.
+                     * @param _imageFamily Image family name. this parameter can be obtained by calling the [DescribeImages](https://intl.cloud.tencent.com/document/product/213/15715?from_cn_redirect=1) api.
                      * 
                      */
                     void SetImageFamily(const std::string& _imageFamily);
@@ -707,7 +707,7 @@ This parameter will overwrite the original instance tag list. To add new tags, y
                 private:
 
                     /**
-                     * Launch configuration ID
+                     * Launch configuration ID. obtain the launch configuration ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/config) or calling the api DescribeLaunchConfigurations (https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the return information.
                      */
                     std::string m_launchConfigurationId;
                     bool m_launchConfigurationIdHasBeenSet;
@@ -719,8 +719,8 @@ This parameter will overwrite the original instance tag list. To add new tags, y
                     bool m_imageIdHasBeenSet;
 
                     /**
-                     * List of instance types. Each type specifies different resource specifications. This list contains up to 10 instance types.
-The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. Specifying the `InstanceTypes` field will invalidate the original `InstanceType`.
+                     * Types of cvm instances. different instance models specify different resource specifications. supports up to 10 instance models.
+The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. specifying the `InstanceTypes` field will invalidate the original `InstanceType`. specific values can be obtained by calling the api [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) to obtain the latest specification table or refer to [instance specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
                      */
                     std::vector<std::string> m_instanceTypes;
                     bool m_instanceTypesHasBeenSet;
@@ -833,14 +833,14 @@ This field requires passing in the `InstanceName` field. Other fields that are n
                     bool m_enhancedServiceHasBeenSet;
 
                     /**
-                     * CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
+                     * Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
                      */
                     std::string m_camRoleName;
                     bool m_camRoleNameHasBeenSet;
 
                     /**
-                     * HPC ID<br>
-Note: This field is default to empty
+                     * High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+Note: this field is empty by default.
                      */
                     std::string m_hpcClusterId;
                     bool m_hpcClusterIdHasBeenSet;
@@ -852,7 +852,7 @@ Note: This field is default to empty
                     bool m_iPv6InternetAccessibleHasBeenSet;
 
                     /**
-                     * Placement group ID. Only one is allowed.
+                     * Placement group id. only one can be specified. obtain through the API [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1).
                      */
                     std::vector<std::string> m_disasterRecoverGroupIds;
                     bool m_disasterRecoverGroupIdsHasBeenSet;
@@ -871,7 +871,7 @@ This parameter will overwrite the original instance tag list. To add new tags, y
                     bool m_instanceTagsHasBeenSet;
 
                     /**
-                     * Image family name.
+                     * Image family name. this parameter can be obtained by calling the [DescribeImages](https://intl.cloud.tencent.com/document/product/213/15715?from_cn_redirect=1) api.
                      */
                     std::string m_imageFamily;
                     bool m_imageFamilyHasBeenSet;

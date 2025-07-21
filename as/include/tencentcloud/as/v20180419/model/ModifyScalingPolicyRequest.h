@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Alarm policy ID.
-                     * @return AutoScalingPolicyId Alarm policy ID.
+                     * 获取Specifies the alert policy ID. obtain the alert policy ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeScalingPolicies (https://intl.cloud.tencent.com/document/api/377/33178?from_cn_redirect=1), and retrieve the AutoScalingPolicyId from the returned information.
+                     * @return AutoScalingPolicyId Specifies the alert policy ID. obtain the alert policy ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeScalingPolicies (https://intl.cloud.tencent.com/document/api/377/33178?from_cn_redirect=1), and retrieve the AutoScalingPolicyId from the returned information.
                      * 
                      */
                     std::string GetAutoScalingPolicyId() const;
 
                     /**
-                     * 设置Alarm policy ID.
-                     * @param _autoScalingPolicyId Alarm policy ID.
+                     * 设置Specifies the alert policy ID. obtain the alert policy ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeScalingPolicies (https://intl.cloud.tencent.com/document/api/377/33178?from_cn_redirect=1), and retrieve the AutoScalingPolicyId from the returned information.
+                     * @param _autoScalingPolicyId Specifies the alert policy ID. obtain the alert policy ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeScalingPolicies (https://intl.cloud.tencent.com/document/api/377/33178?from_cn_redirect=1), and retrieve the AutoScalingPolicyId from the returned information.
                      * 
                      */
                     void SetAutoScalingPolicyId(const std::string& _autoScalingPolicyId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool AutoScalingPolicyIdHasBeenSet() const;
 
                     /**
-                     * 获取Alarm policy name.
-                     * @return ScalingPolicyName Alarm policy name.
+                     * 获取The Alarm policy name must be unique in your account. the name length cannot exceed 60 characters. the name only supports chinese, english, digits, underscores, hyphens, and decimal separators.
+                     * @return ScalingPolicyName The Alarm policy name must be unique in your account. the name length cannot exceed 60 characters. the name only supports chinese, english, digits, underscores, hyphens, and decimal separators.
                      * 
                      */
                     std::string GetScalingPolicyName() const;
 
                     /**
-                     * 设置Alarm policy name.
-                     * @param _scalingPolicyName Alarm policy name.
+                     * 设置The Alarm policy name must be unique in your account. the name length cannot exceed 60 characters. the name only supports chinese, english, digits, underscores, hyphens, and decimal separators.
+                     * @param _scalingPolicyName The Alarm policy name must be unique in your account. the name length cannot exceed 60 characters. the name only supports chinese, english, digits, underscores, hyphens, and decimal separators.
                      * 
                      */
                     void SetScalingPolicyName(const std::string& _scalingPolicyName);
@@ -281,13 +281,13 @@ Notification group ID, which is the set of user group IDs.
                 private:
 
                     /**
-                     * Alarm policy ID.
+                     * Specifies the alert policy ID. obtain the alert policy ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeScalingPolicies (https://intl.cloud.tencent.com/document/api/377/33178?from_cn_redirect=1), and retrieve the AutoScalingPolicyId from the returned information.
                      */
                     std::string m_autoScalingPolicyId;
                     bool m_autoScalingPolicyIdHasBeenSet;
 
                     /**
-                     * Alarm policy name.
+                     * The Alarm policy name must be unique in your account. the name length cannot exceed 60 characters. the name only supports chinese, english, digits, underscores, hyphens, and decimal separators.
                      */
                     std::string m_scalingPolicyName;
                     bool m_scalingPolicyNameHasBeenSet;

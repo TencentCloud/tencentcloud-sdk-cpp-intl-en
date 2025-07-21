@@ -98,19 +98,19 @@ namespace TencentCloud
                     bool ImageIdHasBeenSet() const;
 
                     /**
-                     * 获取Project ID of the launch configuration. The default project is used if it is left blank.
-Note that this project ID is not the same as the project ID of the scaling group. 
-                     * @return ProjectId Project ID of the launch configuration. The default project is used if it is left blank.
-Note that this project ID is not the same as the project ID of the scaling group. 
+                     * 获取Project ID of the launch configuration. default value is 0, indicating usage of the default project. obtain this parameter by calling the projectId field in the return value of [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1).
+Note: the instance's project ID within the scaling group takes the project ID of the scaling group, which is irrelevant here.
+                     * @return ProjectId Project ID of the launch configuration. default value is 0, indicating usage of the default project. obtain this parameter by calling the projectId field in the return value of [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1).
+Note: the instance's project ID within the scaling group takes the project ID of the scaling group, which is irrelevant here.
                      * 
                      */
                     uint64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID of the launch configuration. The default project is used if it is left blank.
-Note that this project ID is not the same as the project ID of the scaling group. 
-                     * @param _projectId Project ID of the launch configuration. The default project is used if it is left blank.
-Note that this project ID is not the same as the project ID of the scaling group. 
+                     * 设置Project ID of the launch configuration. default value is 0, indicating usage of the default project. obtain this parameter by calling the projectId field in the return value of [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1).
+Note: the instance's project ID within the scaling group takes the project ID of the scaling group, which is irrelevant here.
+                     * @param _projectId Project ID of the launch configuration. default value is 0, indicating usage of the default project. obtain this parameter by calling the projectId field in the return value of [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1).
+Note: the instance's project ID within the scaling group takes the project ID of the scaling group, which is irrelevant here.
                      * 
                      */
                     void SetProjectId(const uint64_t& _projectId);
@@ -349,19 +349,19 @@ Note that this project ID is not the same as the project ID of the scaling group
                     bool InstanceMarketOptionsHasBeenSet() const;
 
                     /**
-                     * 获取List of instance models. Different instance models specify different resource specifications. Up to 10 instance models can be supported.
-`InstanceType` and `InstanceTypes` are mutually exclusive, and one and only one of them must be entered.
-                     * @return InstanceTypes List of instance models. Different instance models specify different resource specifications. Up to 10 instance models can be supported.
-`InstanceType` and `InstanceTypes` are mutually exclusive, and one and only one of them must be entered.
+                     * 获取Instance model list. different instance models specify different resource specifications. supports up to 10 instance models.
+The `InstanceType` and `InstanceTypes` parameters are mutually exclusive. one and only one must be filled in. specific values can be obtained by calling the api [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) to obtain the latest specification table or refer to [instance specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
+                     * @return InstanceTypes Instance model list. different instance models specify different resource specifications. supports up to 10 instance models.
+The `InstanceType` and `InstanceTypes` parameters are mutually exclusive. one and only one must be filled in. specific values can be obtained by calling the api [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) to obtain the latest specification table or refer to [instance specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
                      * 
                      */
                     std::vector<std::string> GetInstanceTypes() const;
 
                     /**
-                     * 设置List of instance models. Different instance models specify different resource specifications. Up to 10 instance models can be supported.
-`InstanceType` and `InstanceTypes` are mutually exclusive, and one and only one of them must be entered.
-                     * @param _instanceTypes List of instance models. Different instance models specify different resource specifications. Up to 10 instance models can be supported.
-`InstanceType` and `InstanceTypes` are mutually exclusive, and one and only one of them must be entered.
+                     * 设置Instance model list. different instance models specify different resource specifications. supports up to 10 instance models.
+The `InstanceType` and `InstanceTypes` parameters are mutually exclusive. one and only one must be filled in. specific values can be obtained by calling the api [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) to obtain the latest specification table or refer to [instance specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
+                     * @param _instanceTypes Instance model list. different instance models specify different resource specifications. supports up to 10 instance models.
+The `InstanceType` and `InstanceTypes` parameters are mutually exclusive. one and only one must be filled in. specific values can be obtained by calling the api [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) to obtain the latest specification table or refer to [instance specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
                      * 
                      */
                     void SetInstanceTypes(const std::vector<std::string>& _instanceTypes);
@@ -374,15 +374,15 @@ Note that this project ID is not the same as the project ID of the scaling group
                     bool InstanceTypesHasBeenSet() const;
 
                     /**
-                     * 获取CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
-                     * @return CamRoleName CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
+                     * 获取CAM role name. you can obtain it from the roleName in the return value from the API [DescribeRoleList](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
+                     * @return CamRoleName CAM role name. you can obtain it from the roleName in the return value from the API [DescribeRoleList](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
                      * 
                      */
                     std::string GetCamRoleName() const;
 
                     /**
-                     * 设置CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
-                     * @param _camRoleName CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
+                     * 设置CAM role name. you can obtain it from the roleName in the return value from the API [DescribeRoleList](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
+                     * @param _camRoleName CAM role name. you can obtain it from the roleName in the return value from the API [DescribeRoleList](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
                      * 
                      */
                     void SetCamRoleName(const std::string& _camRoleName);
@@ -395,34 +395,34 @@ Note that this project ID is not the same as the project ID of the scaling group
                     bool CamRoleNameHasBeenSet() const;
 
                     /**
-                     * 获取InstanceType verification policy, whose valid values include ALL and ANY, with the default value being ANY.
-<li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li>
-<li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li>
+                     * 获取Instance type validation policy. valid values include ALL and ANY. default value: ANY. this parameter is valid only when the InstanceTypes parameter contains multiple instance types.
+<li>ALL: verification passes if ALL instancetypes are available; otherwise, a verification error will be reported.</li>.
+<li>ANY: verification passes if ANY InstanceType is available; otherwise, a verification error will be reported.</li>.
 
-Common reasons for unavailable InstanceTypes include the InstanceType being sold out, and the corresponding cloud disk being sold out.
+Common reasons for unavailable instancetypes include the instancetype being sold out and the corresponding cloud disk being sold out.
 If a model in InstanceTypes does not exist or has been abolished, a verification error will be reported regardless of the valid values set for InstanceTypesCheckPolicy.
-                     * @return InstanceTypesCheckPolicy InstanceType verification policy, whose valid values include ALL and ANY, with the default value being ANY.
-<li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li>
-<li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li>
+                     * @return InstanceTypesCheckPolicy Instance type validation policy. valid values include ALL and ANY. default value: ANY. this parameter is valid only when the InstanceTypes parameter contains multiple instance types.
+<li>ALL: verification passes if ALL instancetypes are available; otherwise, a verification error will be reported.</li>.
+<li>ANY: verification passes if ANY InstanceType is available; otherwise, a verification error will be reported.</li>.
 
-Common reasons for unavailable InstanceTypes include the InstanceType being sold out, and the corresponding cloud disk being sold out.
+Common reasons for unavailable instancetypes include the instancetype being sold out and the corresponding cloud disk being sold out.
 If a model in InstanceTypes does not exist or has been abolished, a verification error will be reported regardless of the valid values set for InstanceTypesCheckPolicy.
                      * 
                      */
                     std::string GetInstanceTypesCheckPolicy() const;
 
                     /**
-                     * 设置InstanceType verification policy, whose valid values include ALL and ANY, with the default value being ANY.
-<li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li>
-<li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li>
+                     * 设置Instance type validation policy. valid values include ALL and ANY. default value: ANY. this parameter is valid only when the InstanceTypes parameter contains multiple instance types.
+<li>ALL: verification passes if ALL instancetypes are available; otherwise, a verification error will be reported.</li>.
+<li>ANY: verification passes if ANY InstanceType is available; otherwise, a verification error will be reported.</li>.
 
-Common reasons for unavailable InstanceTypes include the InstanceType being sold out, and the corresponding cloud disk being sold out.
+Common reasons for unavailable instancetypes include the instancetype being sold out and the corresponding cloud disk being sold out.
 If a model in InstanceTypes does not exist or has been abolished, a verification error will be reported regardless of the valid values set for InstanceTypesCheckPolicy.
-                     * @param _instanceTypesCheckPolicy InstanceType verification policy, whose valid values include ALL and ANY, with the default value being ANY.
-<li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li>
-<li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li>
+                     * @param _instanceTypesCheckPolicy Instance type validation policy. valid values include ALL and ANY. default value: ANY. this parameter is valid only when the InstanceTypes parameter contains multiple instance types.
+<li>ALL: verification passes if ALL instancetypes are available; otherwise, a verification error will be reported.</li>.
+<li>ANY: verification passes if ANY InstanceType is available; otherwise, a verification error will be reported.</li>.
 
-Common reasons for unavailable InstanceTypes include the InstanceType being sold out, and the corresponding cloud disk being sold out.
+Common reasons for unavailable instancetypes include the instancetype being sold out and the corresponding cloud disk being sold out.
 If a model in InstanceTypes does not exist or has been abolished, a verification error will be reported regardless of the valid values set for InstanceTypesCheckPolicy.
                      * 
                      */
@@ -574,19 +574,19 @@ If this field is configured in a launch configuration, the `InstanceName` of a C
                     bool DiskTypePolicyHasBeenSet() const;
 
                     /**
-                     * 获取HPC ID<br>
-Note: This field is default to empty
-                     * @return HpcClusterId HPC ID<br>
-Note: This field is default to empty
+                     * 获取High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+Note: this field is empty by default.
+                     * @return HpcClusterId High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+Note: this field is empty by default.
                      * 
                      */
                     std::string GetHpcClusterId() const;
 
                     /**
-                     * 设置HPC ID<br>
-Note: This field is default to empty
-                     * @param _hpcClusterId HPC ID<br>
-Note: This field is default to empty
+                     * 设置High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+Note: this field is empty by default.
+                     * @param _hpcClusterId High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+Note: this field is empty by default.
                      * 
                      */
                     void SetHpcClusterId(const std::string& _hpcClusterId);
@@ -641,15 +641,15 @@ Note: This field is default to empty
                     bool DisasterRecoverGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取Image family name. Either image ID or image family name should be filled in, and only one of which can be filled.
-                     * @return ImageFamily Image family name. Either image ID or image family name should be filled in, and only one of which can be filled.
+                     * 获取Image family name. one and only one must be filled in between image Id and image family name. this parameter can be obtained by calling the [DescribeImages](https://intl.cloud.tencent.com/document/product/213/15715?from_cn_redirect=1) api.
+                     * @return ImageFamily Image family name. one and only one must be filled in between image Id and image family name. this parameter can be obtained by calling the [DescribeImages](https://intl.cloud.tencent.com/document/product/213/15715?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetImageFamily() const;
 
                     /**
-                     * 设置Image family name. Either image ID or image family name should be filled in, and only one of which can be filled.
-                     * @param _imageFamily Image family name. Either image ID or image family name should be filled in, and only one of which can be filled.
+                     * 设置Image family name. one and only one must be filled in between image Id and image family name. this parameter can be obtained by calling the [DescribeImages](https://intl.cloud.tencent.com/document/product/213/15715?from_cn_redirect=1) api.
+                     * @param _imageFamily Image family name. one and only one must be filled in between image Id and image family name. this parameter can be obtained by calling the [DescribeImages](https://intl.cloud.tencent.com/document/product/213/15715?from_cn_redirect=1) api.
                      * 
                      */
                     void SetImageFamily(const std::string& _imageFamily);
@@ -662,15 +662,15 @@ Note: This field is default to empty
                     bool ImageFamilyHasBeenSet() const;
 
                     /**
-                     * 获取CDC ID.
-                     * @return DedicatedClusterId CDC ID.
+                     * 获取Local exclusive cluster ID. this parameter can be obtained through the [DescribeDedicatedClusters](https://intl.cloud.tencent.com/document/product/1346/73758?from_cn_redirect=1) api.
+                     * @return DedicatedClusterId Local exclusive cluster ID. this parameter can be obtained through the [DescribeDedicatedClusters](https://intl.cloud.tencent.com/document/product/1346/73758?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetDedicatedClusterId() const;
 
                     /**
-                     * 设置CDC ID.
-                     * @param _dedicatedClusterId CDC ID.
+                     * 设置Local exclusive cluster ID. this parameter can be obtained through the [DescribeDedicatedClusters](https://intl.cloud.tencent.com/document/product/1346/73758?from_cn_redirect=1) api.
+                     * @param _dedicatedClusterId Local exclusive cluster ID. this parameter can be obtained through the [DescribeDedicatedClusters](https://intl.cloud.tencent.com/document/product/1346/73758?from_cn_redirect=1) api.
                      * 
                      */
                     void SetDedicatedClusterId(const std::string& _dedicatedClusterId);
@@ -718,8 +718,8 @@ Note: This field is default to empty
                     bool m_imageIdHasBeenSet;
 
                     /**
-                     * Project ID of the launch configuration. The default project is used if it is left blank.
-Note that this project ID is not the same as the project ID of the scaling group. 
+                     * Project ID of the launch configuration. default value is 0, indicating usage of the default project. obtain this parameter by calling the projectId field in the return value of [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1).
+Note: the instance's project ID within the scaling group takes the project ID of the scaling group, which is irrelevant here.
                      */
                     uint64_t m_projectId;
                     bool m_projectIdHasBeenSet;
@@ -789,24 +789,24 @@ Note that this project ID is not the same as the project ID of the scaling group
                     bool m_instanceMarketOptionsHasBeenSet;
 
                     /**
-                     * List of instance models. Different instance models specify different resource specifications. Up to 10 instance models can be supported.
-`InstanceType` and `InstanceTypes` are mutually exclusive, and one and only one of them must be entered.
+                     * Instance model list. different instance models specify different resource specifications. supports up to 10 instance models.
+The `InstanceType` and `InstanceTypes` parameters are mutually exclusive. one and only one must be filled in. specific values can be obtained by calling the api [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) to obtain the latest specification table or refer to [instance specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
                      */
                     std::vector<std::string> m_instanceTypes;
                     bool m_instanceTypesHasBeenSet;
 
                     /**
-                     * CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
+                     * CAM role name. you can obtain it from the roleName in the return value from the API [DescribeRoleList](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
                      */
                     std::string m_camRoleName;
                     bool m_camRoleNameHasBeenSet;
 
                     /**
-                     * InstanceType verification policy, whose valid values include ALL and ANY, with the default value being ANY.
-<li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li>
-<li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li>
+                     * Instance type validation policy. valid values include ALL and ANY. default value: ANY. this parameter is valid only when the InstanceTypes parameter contains multiple instance types.
+<li>ALL: verification passes if ALL instancetypes are available; otherwise, a verification error will be reported.</li>.
+<li>ANY: verification passes if ANY InstanceType is available; otherwise, a verification error will be reported.</li>.
 
-Common reasons for unavailable InstanceTypes include the InstanceType being sold out, and the corresponding cloud disk being sold out.
+Common reasons for unavailable instancetypes include the instancetype being sold out and the corresponding cloud disk being sold out.
 If a model in InstanceTypes does not exist or has been abolished, a verification error will be reported regardless of the valid values set for InstanceTypesCheckPolicy.
                      */
                     std::string m_instanceTypesCheckPolicy;
@@ -852,8 +852,8 @@ If this field is configured in a launch configuration, the `InstanceName` of a C
                     bool m_diskTypePolicyHasBeenSet;
 
                     /**
-                     * HPC ID<br>
-Note: This field is default to empty
+                     * High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+Note: this field is empty by default.
                      */
                     std::string m_hpcClusterId;
                     bool m_hpcClusterIdHasBeenSet;
@@ -871,13 +871,13 @@ Note: This field is default to empty
                     bool m_disasterRecoverGroupIdsHasBeenSet;
 
                     /**
-                     * Image family name. Either image ID or image family name should be filled in, and only one of which can be filled.
+                     * Image family name. one and only one must be filled in between image Id and image family name. this parameter can be obtained by calling the [DescribeImages](https://intl.cloud.tencent.com/document/product/213/15715?from_cn_redirect=1) api.
                      */
                     std::string m_imageFamily;
                     bool m_imageFamilyHasBeenSet;
 
                     /**
-                     * CDC ID.
+                     * Local exclusive cluster ID. this parameter can be obtained through the [DescribeDedicatedClusters](https://intl.cloud.tencent.com/document/product/1346/73758?from_cn_redirect=1) api.
                      */
                     std::string m_dedicatedClusterId;
                     bool m_dedicatedClusterIdHasBeenSet;

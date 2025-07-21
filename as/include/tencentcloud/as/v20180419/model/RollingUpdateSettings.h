@@ -121,6 +121,39 @@ namespace TencentCloud
                      */
                     bool MaxSurgeHasBeenSet() const;
 
+                    /**
+                     * 获取Failure handling strategy. default value: AUTO_PAUSE. valid values:.
+<Li>AUTO_PAUSE: suspended after refresh fails</li>.
+<li>AUTO_ROLLBACK: roll back after a refresh fails. each batch rolls back one instance during ROLLBACK, and the CheckInstanceTargetHealth parameter value matches the original refresh activity. no need to roll back if the shrinkage process introduced by the MaxSurge parameter fails. a cancel action will replace the ROLLBACK.</li>.
+<Li>AUTO_CANCEL: cancel after refresh fails</li>.
+                     * @return FailProcess Failure handling strategy. default value: AUTO_PAUSE. valid values:.
+<Li>AUTO_PAUSE: suspended after refresh fails</li>.
+<li>AUTO_ROLLBACK: roll back after a refresh fails. each batch rolls back one instance during ROLLBACK, and the CheckInstanceTargetHealth parameter value matches the original refresh activity. no need to roll back if the shrinkage process introduced by the MaxSurge parameter fails. a cancel action will replace the ROLLBACK.</li>.
+<Li>AUTO_CANCEL: cancel after refresh fails</li>.
+                     * 
+                     */
+                    std::string GetFailProcess() const;
+
+                    /**
+                     * 设置Failure handling strategy. default value: AUTO_PAUSE. valid values:.
+<Li>AUTO_PAUSE: suspended after refresh fails</li>.
+<li>AUTO_ROLLBACK: roll back after a refresh fails. each batch rolls back one instance during ROLLBACK, and the CheckInstanceTargetHealth parameter value matches the original refresh activity. no need to roll back if the shrinkage process introduced by the MaxSurge parameter fails. a cancel action will replace the ROLLBACK.</li>.
+<Li>AUTO_CANCEL: cancel after refresh fails</li>.
+                     * @param _failProcess Failure handling strategy. default value: AUTO_PAUSE. valid values:.
+<Li>AUTO_PAUSE: suspended after refresh fails</li>.
+<li>AUTO_ROLLBACK: roll back after a refresh fails. each batch rolls back one instance during ROLLBACK, and the CheckInstanceTargetHealth parameter value matches the original refresh activity. no need to roll back if the shrinkage process introduced by the MaxSurge parameter fails. a cancel action will replace the ROLLBACK.</li>.
+<Li>AUTO_CANCEL: cancel after refresh fails</li>.
+                     * 
+                     */
+                    void SetFailProcess(const std::string& _failProcess);
+
+                    /**
+                     * 判断参数 FailProcess 是否已赋值
+                     * @return FailProcess 是否已赋值
+                     * 
+                     */
+                    bool FailProcessHasBeenSet() const;
+
                 private:
 
                     /**
@@ -143,6 +176,15 @@ namespace TencentCloud
                      */
                     int64_t m_maxSurge;
                     bool m_maxSurgeHasBeenSet;
+
+                    /**
+                     * Failure handling strategy. default value: AUTO_PAUSE. valid values:.
+<Li>AUTO_PAUSE: suspended after refresh fails</li>.
+<li>AUTO_ROLLBACK: roll back after a refresh fails. each batch rolls back one instance during ROLLBACK, and the CheckInstanceTargetHealth parameter value matches the original refresh activity. no need to roll back if the shrinkage process introduced by the MaxSurge parameter fails. a cancel action will replace the ROLLBACK.</li>.
+<Li>AUTO_CANCEL: cancel after refresh fails</li>.
+                     */
+                    std::string m_failProcess;
+                    bool m_failProcessHasBeenSet;
 
                 };
             }

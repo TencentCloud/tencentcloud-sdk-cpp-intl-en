@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Queries by one or more notification IDs in the format of asn-2sestqbr. The maximum number of instances per request is 100. This parameter does not support specifying both `AutoScalingNotificationIds` and `Filters` at the same time.
-                     * @return AutoScalingNotificationIds Queries by one or more notification IDs in the format of asn-2sestqbr. The maximum number of instances per request is 100. This parameter does not support specifying both `AutoScalingNotificationIds` and `Filters` at the same time.
+                     * 获取Query by one or more notification ids. the list length limit is 100. you can obtain the notification ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group). parameters AutoScalingNotificationIds and Filters must not be specified simultaneously.
+                     * @return AutoScalingNotificationIds Query by one or more notification ids. the list length limit is 100. you can obtain the notification ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group). parameters AutoScalingNotificationIds and Filters must not be specified simultaneously.
                      * 
                      */
                     std::vector<std::string> GetAutoScalingNotificationIds() const;
 
                     /**
-                     * 设置Queries by one or more notification IDs in the format of asn-2sestqbr. The maximum number of instances per request is 100. This parameter does not support specifying both `AutoScalingNotificationIds` and `Filters` at the same time.
-                     * @param _autoScalingNotificationIds Queries by one or more notification IDs in the format of asn-2sestqbr. The maximum number of instances per request is 100. This parameter does not support specifying both `AutoScalingNotificationIds` and `Filters` at the same time.
+                     * 设置Query by one or more notification ids. the list length limit is 100. you can obtain the notification ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group). parameters AutoScalingNotificationIds and Filters must not be specified simultaneously.
+                     * @param _autoScalingNotificationIds Query by one or more notification ids. the list length limit is 100. you can obtain the notification ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group). parameters AutoScalingNotificationIds and Filters must not be specified simultaneously.
                      * 
                      */
                     void SetAutoScalingNotificationIds(const std::vector<std::string>& _autoScalingNotificationIds);
@@ -65,27 +65,31 @@ namespace TencentCloud
                     bool AutoScalingNotificationIdsHasBeenSet() const;
 
                     /**
-                     * 获取Filter.
-<li> auto-scaling-notification-id - String - Required: No - (Filter) Filter by notification ID.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `AutoScalingNotificationIds` and `Filters` at the same time.
-                     * @return Filters Filter.
-<li> auto-scaling-notification-id - String - Required: No - (Filter) Filter by notification ID.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `AutoScalingNotificationIds` and `Filters` at the same time.
+                     * 获取Filter criteria
+
+<li> auto-scaling-notification-id - String - required: no - (filter) filter by notification id.</li>.
+<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id. you can obtain the scaling group id by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
+The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `AutoScalingNotificationIds` and `Filters` parameters cannot be specified simultaneously.
+                     * @return Filters Filter criteria
+
+<li> auto-scaling-notification-id - String - required: no - (filter) filter by notification id.</li>.
+<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id. you can obtain the scaling group id by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
+The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `AutoScalingNotificationIds` and `Filters` parameters cannot be specified simultaneously.
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter.
-<li> auto-scaling-notification-id - String - Required: No - (Filter) Filter by notification ID.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `AutoScalingNotificationIds` and `Filters` at the same time.
-                     * @param _filters Filter.
-<li> auto-scaling-notification-id - String - Required: No - (Filter) Filter by notification ID.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `AutoScalingNotificationIds` and `Filters` at the same time.
+                     * 设置Filter criteria
+
+<li> auto-scaling-notification-id - String - required: no - (filter) filter by notification id.</li>.
+<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id. you can obtain the scaling group id by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
+The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `AutoScalingNotificationIds` and `Filters` parameters cannot be specified simultaneously.
+                     * @param _filters Filter criteria
+
+<li> auto-scaling-notification-id - String - required: no - (filter) filter by notification id.</li>.
+<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id. you can obtain the scaling group id by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
+The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `AutoScalingNotificationIds` and `Filters` parameters cannot be specified simultaneously.
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -142,16 +146,17 @@ The maximum number of `Filters` per request is 10. The upper limit for `Filter.V
                 private:
 
                     /**
-                     * Queries by one or more notification IDs in the format of asn-2sestqbr. The maximum number of instances per request is 100. This parameter does not support specifying both `AutoScalingNotificationIds` and `Filters` at the same time.
+                     * Query by one or more notification ids. the list length limit is 100. you can obtain the notification ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group). parameters AutoScalingNotificationIds and Filters must not be specified simultaneously.
                      */
                     std::vector<std::string> m_autoScalingNotificationIds;
                     bool m_autoScalingNotificationIdsHasBeenSet;
 
                     /**
-                     * Filter.
-<li> auto-scaling-notification-id - String - Required: No - (Filter) Filter by notification ID.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `AutoScalingNotificationIds` and `Filters` at the same time.
+                     * Filter criteria
+
+<li> auto-scaling-notification-id - String - required: no - (filter) filter by notification id.</li>.
+<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id. you can obtain the scaling group id by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
+The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `AutoScalingNotificationIds` and `Filters` parameters cannot be specified simultaneously.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

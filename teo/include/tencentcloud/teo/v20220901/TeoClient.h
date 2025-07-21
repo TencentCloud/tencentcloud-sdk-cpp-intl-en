@@ -81,6 +81,8 @@
 #include <tencentcloud/teo/v20220901/model/CreateSecurityIPGroupResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateSharedCNAMERequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateSharedCNAMEResponse.h>
+#include <tencentcloud/teo/v20220901/model/CreateWebSecurityTemplateRequest.h>
+#include <tencentcloud/teo/v20220901/model/CreateWebSecurityTemplateResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateZoneRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateZoneResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteAccelerationDomainsRequest.h>
@@ -119,6 +121,8 @@
 #include <tencentcloud/teo/v20220901/model/DeleteSecurityIPGroupResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteSharedCNAMERequest.h>
 #include <tencentcloud/teo/v20220901/model/DeleteSharedCNAMEResponse.h>
+#include <tencentcloud/teo/v20220901/model/DeleteWebSecurityTemplateRequest.h>
+#include <tencentcloud/teo/v20220901/model/DeleteWebSecurityTemplateResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteZoneRequest.h>
 #include <tencentcloud/teo/v20220901/model/DeleteZoneResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeployConfigGroupVersionRequest.h>
@@ -217,6 +221,10 @@
 #include <tencentcloud/teo/v20220901/model/DescribeTopL7AnalysisDataResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeTopL7CacheDataRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeTopL7CacheDataResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeWebSecurityTemplateRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeWebSecurityTemplateResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeWebSecurityTemplatesRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeWebSecurityTemplatesResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeZoneConfigImportResultRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeZoneConfigImportResultResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeZoneSettingRequest.h>
@@ -305,6 +313,8 @@
 #include <tencentcloud/teo/v20220901/model/ModifySecurityIPGroupResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifySecurityPolicyRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifySecurityPolicyResponse.h>
+#include <tencentcloud/teo/v20220901/model/ModifyWebSecurityTemplateRequest.h>
+#include <tencentcloud/teo/v20220901/model/ModifyWebSecurityTemplateResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyZoneRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyZoneResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyZoneSettingRequest.h>
@@ -418,6 +428,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateSharedCNAMEResponse> CreateSharedCNAMEOutcome;
                 typedef std::future<CreateSharedCNAMEOutcome> CreateSharedCNAMEOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateSharedCNAMERequest&, CreateSharedCNAMEOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSharedCNAMEAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateWebSecurityTemplateResponse> CreateWebSecurityTemplateOutcome;
+                typedef std::future<CreateWebSecurityTemplateOutcome> CreateWebSecurityTemplateOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::CreateWebSecurityTemplateRequest&, CreateWebSecurityTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateWebSecurityTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateZoneResponse> CreateZoneOutcome;
                 typedef std::future<CreateZoneOutcome> CreateZoneOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateZoneRequest&, CreateZoneOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateZoneAsyncHandler;
@@ -475,6 +488,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteSharedCNAMEResponse> DeleteSharedCNAMEOutcome;
                 typedef std::future<DeleteSharedCNAMEOutcome> DeleteSharedCNAMEOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DeleteSharedCNAMERequest&, DeleteSharedCNAMEOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteSharedCNAMEAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteWebSecurityTemplateResponse> DeleteWebSecurityTemplateOutcome;
+                typedef std::future<DeleteWebSecurityTemplateOutcome> DeleteWebSecurityTemplateOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DeleteWebSecurityTemplateRequest&, DeleteWebSecurityTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteWebSecurityTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteZoneResponse> DeleteZoneOutcome;
                 typedef std::future<DeleteZoneOutcome> DeleteZoneOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DeleteZoneRequest&, DeleteZoneOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteZoneAsyncHandler;
@@ -622,6 +638,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeTopL7CacheDataResponse> DescribeTopL7CacheDataOutcome;
                 typedef std::future<DescribeTopL7CacheDataOutcome> DescribeTopL7CacheDataOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeTopL7CacheDataRequest&, DescribeTopL7CacheDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTopL7CacheDataAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeWebSecurityTemplateResponse> DescribeWebSecurityTemplateOutcome;
+                typedef std::future<DescribeWebSecurityTemplateOutcome> DescribeWebSecurityTemplateOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeWebSecurityTemplateRequest&, DescribeWebSecurityTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWebSecurityTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeWebSecurityTemplatesResponse> DescribeWebSecurityTemplatesOutcome;
+                typedef std::future<DescribeWebSecurityTemplatesOutcome> DescribeWebSecurityTemplatesOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeWebSecurityTemplatesRequest&, DescribeWebSecurityTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWebSecurityTemplatesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeZoneConfigImportResultResponse> DescribeZoneConfigImportResultOutcome;
                 typedef std::future<DescribeZoneConfigImportResultOutcome> DescribeZoneConfigImportResultOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeZoneConfigImportResultRequest&, DescribeZoneConfigImportResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeZoneConfigImportResultAsyncHandler;
@@ -754,6 +776,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifySecurityPolicyResponse> ModifySecurityPolicyOutcome;
                 typedef std::future<ModifySecurityPolicyOutcome> ModifySecurityPolicyOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifySecurityPolicyRequest&, ModifySecurityPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySecurityPolicyAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyWebSecurityTemplateResponse> ModifyWebSecurityTemplateOutcome;
+                typedef std::future<ModifyWebSecurityTemplateOutcome> ModifyWebSecurityTemplateOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ModifyWebSecurityTemplateRequest&, ModifyWebSecurityTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyWebSecurityTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyZoneResponse> ModifyZoneOutcome;
                 typedef std::future<ModifyZoneOutcome> ModifyZoneOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyZoneRequest&, ModifyZoneOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyZoneAsyncHandler;
@@ -1043,6 +1068,15 @@ An entity (a Layer 7 domain name or a Layer 4 proxy instance) under the combinat
                 CreateSharedCNAMEOutcomeCallable CreateSharedCNAMECallable(const Model::CreateSharedCNAMERequest& request);
 
                 /**
+                 *This API is used to create a security policy configuration template.
+                 * @param req CreateWebSecurityTemplateRequest
+                 * @return CreateWebSecurityTemplateOutcome
+                 */
+                CreateWebSecurityTemplateOutcome CreateWebSecurityTemplate(const Model::CreateWebSecurityTemplateRequest &request);
+                void CreateWebSecurityTemplateAsync(const Model::CreateWebSecurityTemplateRequest& request, const CreateWebSecurityTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateWebSecurityTemplateOutcomeCallable CreateWebSecurityTemplateCallable(const Model::CreateWebSecurityTemplateRequest& request);
+
+                /**
                  *This API is used to create a site. After you create the site, you can connect it to EdgeOne via the CNAME or NS (see [Quick Start](https://intl.cloud.tencent.com/document/product/1552/87601?from_cn_redirect=1)), or connect it without a domain name (see [Quick Access to L4 Proxy Service](https://intl.cloud.tencent.com/document/product/1552/96051?from_cn_redirect=1)).
 
 If there are already EdgeOne plans under the current account, it is recommended to pass in the `PlanId` to bind the site with the plan directly. If `PlanId` is not passed in, the created site is not activated. You need to call [BindZoneToPlan](https://intl.cloud.tencent.com/document/product/1552/83042?from_cn_redirect=1) to bind the site with a plan. To purchase a plan, please go to the EdgeOne console.
@@ -1214,6 +1248,15 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DeleteSharedCNAMEOutcome DeleteSharedCNAME(const Model::DeleteSharedCNAMERequest &request);
                 void DeleteSharedCNAMEAsync(const Model::DeleteSharedCNAMERequest& request, const DeleteSharedCNAMEAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteSharedCNAMEOutcomeCallable DeleteSharedCNAMECallable(const Model::DeleteSharedCNAMERequest& request);
+
+                /**
+                 *This API is used to delete a security policy configuration template.
+                 * @param req DeleteWebSecurityTemplateRequest
+                 * @return DeleteWebSecurityTemplateOutcome
+                 */
+                DeleteWebSecurityTemplateOutcome DeleteWebSecurityTemplate(const Model::DeleteWebSecurityTemplateRequest &request);
+                void DeleteWebSecurityTemplateAsync(const Model::DeleteWebSecurityTemplateRequest& request, const DeleteWebSecurityTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteWebSecurityTemplateOutcomeCallable DeleteWebSecurityTemplateCallable(const Model::DeleteWebSecurityTemplateRequest& request);
 
                 /**
                  *This API is used to delete a site.
@@ -1660,6 +1703,24 @@ This API is used to query the configuration information of an IP group, includin
                 DescribeTopL7CacheDataOutcomeCallable DescribeTopL7CacheDataCallable(const Model::DescribeTopL7CacheDataRequest& request);
 
                 /**
+                 *This API is used to query security policy configuration template details.
+                 * @param req DescribeWebSecurityTemplateRequest
+                 * @return DescribeWebSecurityTemplateOutcome
+                 */
+                DescribeWebSecurityTemplateOutcome DescribeWebSecurityTemplate(const Model::DescribeWebSecurityTemplateRequest &request);
+                void DescribeWebSecurityTemplateAsync(const Model::DescribeWebSecurityTemplateRequest& request, const DescribeWebSecurityTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeWebSecurityTemplateOutcomeCallable DescribeWebSecurityTemplateCallable(const Model::DescribeWebSecurityTemplateRequest& request);
+
+                /**
+                 *This API is used to query the security policy configuration template list.
+                 * @param req DescribeWebSecurityTemplatesRequest
+                 * @return DescribeWebSecurityTemplatesOutcome
+                 */
+                DescribeWebSecurityTemplatesOutcome DescribeWebSecurityTemplates(const Model::DescribeWebSecurityTemplatesRequest &request);
+                void DescribeWebSecurityTemplatesAsync(const Model::DescribeWebSecurityTemplatesRequest& request, const DescribeWebSecurityTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeWebSecurityTemplatesOutcomeCallable DescribeWebSecurityTemplatesCallable(const Model::DescribeWebSecurityTemplatesRequest& request);
+
+                /**
                  *This API is used to query the results of site configuration import via API (ImportZoneConfig). This feature only supports the sites in the plans of the Standard Edition and the Enterprise Edition.
                  * @param req DescribeZoneConfigImportResultRequest
                  * @return DescribeZoneConfigImportResultOutcome
@@ -2073,6 +2134,15 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
                 ModifySecurityPolicyOutcome ModifySecurityPolicy(const Model::ModifySecurityPolicyRequest &request);
                 void ModifySecurityPolicyAsync(const Model::ModifySecurityPolicyRequest& request, const ModifySecurityPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifySecurityPolicyOutcomeCallable ModifySecurityPolicyCallable(const Model::ModifySecurityPolicyRequest& request);
+
+                /**
+                 *This API is used to modify the security policy configuration template.
+                 * @param req ModifyWebSecurityTemplateRequest
+                 * @return ModifyWebSecurityTemplateOutcome
+                 */
+                ModifyWebSecurityTemplateOutcome ModifyWebSecurityTemplate(const Model::ModifyWebSecurityTemplateRequest &request);
+                void ModifyWebSecurityTemplateAsync(const Model::ModifyWebSecurityTemplateRequest& request, const ModifyWebSecurityTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyWebSecurityTemplateOutcomeCallable ModifyWebSecurityTemplateCallable(const Model::ModifyWebSecurityTemplateRequest& request);
 
                 /**
                  *This API is used to modify a site.
