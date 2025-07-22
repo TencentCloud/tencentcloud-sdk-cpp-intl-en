@@ -138,10 +138,8 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Video processing task information. This field has a value only when TaskType is BatchTask.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return BatchTaskResult Video processing task information. This field has a value only when TaskType is BatchTask.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Video processing task information. this field has a value only when TaskType is BatchTask.
+                     * @return BatchTaskResult Video processing task information. this field has a value only when TaskType is BatchTask.
                      * 
                      */
                     BatchSubTaskResult GetBatchTaskResult() const;
@@ -268,8 +266,7 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Video processing task information. This field has a value only when TaskType is BatchTask.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Video processing task information. this field has a value only when TaskType is BatchTask.
                      */
                     BatchSubTaskResult m_batchTaskResult;
                     bool m_batchTaskResultHasBeenSet;

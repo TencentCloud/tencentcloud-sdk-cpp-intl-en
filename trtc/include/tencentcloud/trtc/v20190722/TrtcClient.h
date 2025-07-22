@@ -67,6 +67,8 @@
 #include <tencentcloud/trtc/v20190722/model/DescribeUserEventResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeUserInfoRequest.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeUserInfoResponse.h>
+#include <tencentcloud/trtc/v20190722/model/DescribeWebRecordRequest.h>
+#include <tencentcloud/trtc/v20190722/model/DescribeWebRecordResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DismissRoomRequest.h>
 #include <tencentcloud/trtc/v20190722/model/DismissRoomResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DismissRoomByStrRoomIdRequest.h>
@@ -89,6 +91,8 @@
 #include <tencentcloud/trtc/v20190722/model/StartPublishCdnStreamResponse.h>
 #include <tencentcloud/trtc/v20190722/model/StartStreamIngestRequest.h>
 #include <tencentcloud/trtc/v20190722/model/StartStreamIngestResponse.h>
+#include <tencentcloud/trtc/v20190722/model/StartWebRecordRequest.h>
+#include <tencentcloud/trtc/v20190722/model/StartWebRecordResponse.h>
 #include <tencentcloud/trtc/v20190722/model/StopAIConversationRequest.h>
 #include <tencentcloud/trtc/v20190722/model/StopAIConversationResponse.h>
 #include <tencentcloud/trtc/v20190722/model/StopAITranscriptionRequest.h>
@@ -97,6 +101,8 @@
 #include <tencentcloud/trtc/v20190722/model/StopPublishCdnStreamResponse.h>
 #include <tencentcloud/trtc/v20190722/model/StopStreamIngestRequest.h>
 #include <tencentcloud/trtc/v20190722/model/StopStreamIngestResponse.h>
+#include <tencentcloud/trtc/v20190722/model/StopWebRecordRequest.h>
+#include <tencentcloud/trtc/v20190722/model/StopWebRecordResponse.h>
 #include <tencentcloud/trtc/v20190722/model/UpdateAIConversationRequest.h>
 #include <tencentcloud/trtc/v20190722/model/UpdateAIConversationResponse.h>
 #include <tencentcloud/trtc/v20190722/model/UpdatePublishCdnStreamRequest.h>
@@ -183,6 +189,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeUserInfoResponse> DescribeUserInfoOutcome;
                 typedef std::future<DescribeUserInfoOutcome> DescribeUserInfoOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::DescribeUserInfoRequest&, DescribeUserInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUserInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeWebRecordResponse> DescribeWebRecordOutcome;
+                typedef std::future<DescribeWebRecordOutcome> DescribeWebRecordOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::DescribeWebRecordRequest&, DescribeWebRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWebRecordAsyncHandler;
                 typedef Outcome<Core::Error, Model::DismissRoomResponse> DismissRoomOutcome;
                 typedef std::future<DismissRoomOutcome> DismissRoomOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::DismissRoomRequest&, DismissRoomOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DismissRoomAsyncHandler;
@@ -216,6 +225,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::StartStreamIngestResponse> StartStreamIngestOutcome;
                 typedef std::future<StartStreamIngestOutcome> StartStreamIngestOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::StartStreamIngestRequest&, StartStreamIngestOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartStreamIngestAsyncHandler;
+                typedef Outcome<Core::Error, Model::StartWebRecordResponse> StartWebRecordOutcome;
+                typedef std::future<StartWebRecordOutcome> StartWebRecordOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::StartWebRecordRequest&, StartWebRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartWebRecordAsyncHandler;
                 typedef Outcome<Core::Error, Model::StopAIConversationResponse> StopAIConversationOutcome;
                 typedef std::future<StopAIConversationOutcome> StopAIConversationOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::StopAIConversationRequest&, StopAIConversationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopAIConversationAsyncHandler;
@@ -228,6 +240,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::StopStreamIngestResponse> StopStreamIngestOutcome;
                 typedef std::future<StopStreamIngestOutcome> StopStreamIngestOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::StopStreamIngestRequest&, StopStreamIngestOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopStreamIngestAsyncHandler;
+                typedef Outcome<Core::Error, Model::StopWebRecordResponse> StopWebRecordOutcome;
+                typedef std::future<StopWebRecordOutcome> StopWebRecordOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::StopWebRecordRequest&, StopWebRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopWebRecordAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpdateAIConversationResponse> UpdateAIConversationOutcome;
                 typedef std::future<UpdateAIConversationOutcome> UpdateAIConversationOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::UpdateAIConversationRequest&, UpdateAIConversationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateAIConversationAsyncHandler;
@@ -510,6 +525,15 @@ For details about the error events, see https://intl.cloud.tencent.com/document/
                 DescribeUserInfoOutcomeCallable DescribeUserInfoCallable(const Model::DescribeUserInfoRequest& request);
 
                 /**
+                 *Queries the status of a web-page recording task
+                 * @param req DescribeWebRecordRequest
+                 * @return DescribeWebRecordOutcome
+                 */
+                DescribeWebRecordOutcome DescribeWebRecord(const Model::DescribeWebRecordRequest &request);
+                void DescribeWebRecordAsync(const Model::DescribeWebRecordRequest& request, const DescribeWebRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeWebRecordOutcomeCallable DescribeWebRecordCallable(const Model::DescribeWebRecordRequest& request);
+
+                /**
                  *This API is used to remove all users from a room and dismiss the room. It supports all platforms. For Android, iOS, Windows, and macOS, the TRTC SDK needs to be upgraded to v6.6 or above.
                  * @param req DismissRoomRequest
                  * @return DismissRoomOutcome
@@ -667,6 +691,15 @@ Usage Precautions:
                 StartStreamIngestOutcomeCallable StartStreamIngestCallable(const Model::StartStreamIngestRequest& request);
 
                 /**
+                 *This interface can be used to initiate a web-page recording task. In the interface parameters, specify the recording URL, recording resolution, recording result storage and other parameters. If there are parameter or API logic problems, the result will be returned immediately. If there are page problems, such as the page cannot be accessed, the result will be returned in the callback. Please pay attention.
+                 * @param req StartWebRecordRequest
+                 * @return StartWebRecordOutcome
+                 */
+                StartWebRecordOutcome StartWebRecord(const Model::StartWebRecordRequest &request);
+                void StartWebRecordAsync(const Model::StartWebRecordRequest& request, const StartWebRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                StartWebRecordOutcomeCallable StartWebRecordCallable(const Model::StartWebRecordRequest& request);
+
+                /**
                  *Stop AI conversation task
                  * @param req StopAIConversationRequest
                  * @return StopAIConversationOutcome
@@ -701,6 +734,15 @@ Usage Precautions:
                 StopStreamIngestOutcome StopStreamIngest(const Model::StopStreamIngestRequest &request);
                 void StopStreamIngestAsync(const Model::StopStreamIngestRequest& request, const StopStreamIngestAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 StopStreamIngestOutcomeCallable StopStreamIngestCallable(const Model::StopStreamIngestRequest& request);
+
+                /**
+                 *Stop an web-page recording task
+                 * @param req StopWebRecordRequest
+                 * @return StopWebRecordOutcome
+                 */
+                StopWebRecordOutcome StopWebRecord(const Model::StopWebRecordRequest &request);
+                void StopWebRecordAsync(const Model::StopWebRecordRequest& request, const StopWebRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                StopWebRecordOutcomeCallable StopWebRecordCallable(const Model::StopWebRecordRequest& request);
 
                 /**
                  *Update AI conversation task parameters

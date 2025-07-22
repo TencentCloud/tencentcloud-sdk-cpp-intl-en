@@ -199,19 +199,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TEHDConfigHasBeenSet() const;
 
                     /**
-                     * 获取The subtitle settings.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SubtitleTemplate The subtitle settings.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Subtitle stream configuration parameter.
+                     * @return SubtitleTemplate Subtitle stream configuration parameter.
                      * 
                      */
                     SubtitleTemplate GetSubtitleTemplate() const;
 
                     /**
-                     * 设置The subtitle settings.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _subtitleTemplate The subtitle settings.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Subtitle stream configuration parameter.
+                     * @param _subtitleTemplate Subtitle stream configuration parameter.
                      * 
                      */
                     void SetSubtitleTemplate(const SubtitleTemplate& _subtitleTemplate);
@@ -224,19 +220,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SubtitleTemplateHasBeenSet() const;
 
                     /**
-                     * 获取The information of the external audio track to add.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AddonAudioStream The information of the external audio track to add.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the external audio track parameter.
+                     * @return AddonAudioStream Specifies the external audio track parameter.
                      * 
                      */
                     std::vector<MediaInputInfo> GetAddonAudioStream() const;
 
                     /**
-                     * 设置The information of the external audio track to add.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _addonAudioStream The information of the external audio track to add.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the external audio track parameter.
+                     * @param _addonAudioStream Specifies the external audio track parameter.
                      * 
                      */
                     void SetAddonAudioStream(const std::vector<MediaInputInfo>& _addonAudioStream);
@@ -249,19 +241,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AddonAudioStreamHasBeenSet() const;
 
                     /**
-                     * 获取An extended field for transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StdExtInfo An extended field for transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Extension field for transcoding.
+                     * @return StdExtInfo Extension field for transcoding.
                      * 
                      */
                     std::string GetStdExtInfo() const;
 
                     /**
-                     * 设置An extended field for transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _stdExtInfo An extended field for transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Extension field for transcoding.
+                     * @param _stdExtInfo Extension field for transcoding.
                      * 
                      */
                     void SetStdExtInfo(const std::string& _stdExtInfo);
@@ -274,19 +262,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StdExtInfoHasBeenSet() const;
 
                     /**
-                     * 获取The subtitle file to add.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AddOnSubtitles The subtitle file to add.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Subtitle file to be inserted.
+                     * @return AddOnSubtitles Subtitle file to be inserted.
                      * 
                      */
                     std::vector<AddOnSubtitle> GetAddOnSubtitles() const;
 
                     /**
-                     * 设置The subtitle file to add.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _addOnSubtitles The subtitle file to add.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Subtitle file to be inserted.
+                     * @param _addOnSubtitles Subtitle file to be inserted.
                      * 
                      */
                     void SetAddOnSubtitles(const std::vector<AddOnSubtitle>& _addOnSubtitles);
@@ -342,29 +326,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_tEHDConfigHasBeenSet;
 
                     /**
-                     * The subtitle settings.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Subtitle stream configuration parameter.
                      */
                     SubtitleTemplate m_subtitleTemplate;
                     bool m_subtitleTemplateHasBeenSet;
 
                     /**
-                     * The information of the external audio track to add.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the external audio track parameter.
                      */
                     std::vector<MediaInputInfo> m_addonAudioStream;
                     bool m_addonAudioStreamHasBeenSet;
 
                     /**
-                     * An extended field for transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Extension field for transcoding.
                      */
                     std::string m_stdExtInfo;
                     bool m_stdExtInfoHasBeenSet;
 
                     /**
-                     * The subtitle file to add.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Subtitle file to be inserted.
                      */
                     std::vector<AddOnSubtitle> m_addOnSubtitles;
                     bool m_addOnSubtitlesHasBeenSet;

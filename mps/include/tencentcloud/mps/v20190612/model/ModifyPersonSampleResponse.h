@@ -60,10 +60,8 @@ namespace TencentCloud
                     bool PersonHasBeenSet() const;
 
                     /**
-                     * 获取Information of images that failed the verification by facial feature positioning.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return FailFaceInfoSet Information of images that failed the verification by facial feature positioning.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Indicates the information of facial features with processing failure.
+                     * @return FailFaceInfoSet Indicates the information of facial features with processing failure.
                      * 
                      */
                     std::vector<AiSampleFailFaceInfo> GetFailFaceInfoSet() const;
@@ -84,8 +82,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_personHasBeenSet;
 
                     /**
-                     * Information of images that failed the verification by facial feature positioning.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Indicates the information of facial features with processing failure.
                      */
                     std::vector<AiSampleFailFaceInfo> m_failFaceInfoSet;
                     bool m_failFaceInfoSetHasBeenSet;

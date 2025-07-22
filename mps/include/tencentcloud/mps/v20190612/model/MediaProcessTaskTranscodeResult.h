@@ -179,19 +179,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取Transcoding progress. Value range: 0-100
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return Progress Transcoding progress. Value range: 0-100
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取Transcoding progress, with a value range of [0-100].
+                     * @return Progress Transcoding progress, with a value range of [0-100].
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置Transcoding progress. Value range: 0-100
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _progress Transcoding progress. Value range: 0-100
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置Transcoding progress, with a value range of [0-100].
+                     * @param _progress Transcoding progress, with a value range of [0-100].
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -243,8 +239,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_outputHasBeenSet;
 
                     /**
-                     * Transcoding progress. Value range: 0-100
-Note: This field may return `null`, indicating that no valid value was found.
+                     * Transcoding progress, with a value range of [0-100].
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;

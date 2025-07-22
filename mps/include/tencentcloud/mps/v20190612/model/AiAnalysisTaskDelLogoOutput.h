@@ -91,18 +91,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Path of a subtitle file extracted from a video.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OriginSubtitlePath Path of a subtitle file extracted from a video.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetOriginSubtitlePath() const;
 
                     /**
                      * 设置Path of a subtitle file extracted from a video.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _originSubtitlePath Path of a subtitle file extracted from a video.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetOriginSubtitlePath(const std::string& _originSubtitlePath);
@@ -116,18 +112,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Path of a subtitle translation file extracted from a video.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TranslateSubtitlePath Path of a subtitle translation file extracted from a video.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTranslateSubtitlePath() const;
 
                     /**
                      * 设置Path of a subtitle translation file extracted from a video.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _translateSubtitlePath Path of a subtitle translation file extracted from a video.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTranslateSubtitlePath(const std::string& _translateSubtitlePath);
@@ -155,14 +147,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Path of a subtitle file extracted from a video.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_originSubtitlePath;
                     bool m_originSubtitlePathHasBeenSet;
 
                     /**
                      * Path of a subtitle translation file extracted from a video.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_translateSubtitlePath;
                     bool m_translateSubtitlePathHasBeenSet;

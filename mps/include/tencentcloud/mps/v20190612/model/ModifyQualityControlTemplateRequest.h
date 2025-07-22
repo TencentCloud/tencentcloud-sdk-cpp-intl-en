@@ -127,6 +127,31 @@ namespace TencentCloud
                      */
                     bool QualityControlItemSetHasBeenSet() const;
 
+                    /**
+                     * 获取Recording file format. Valid values:
+<li>PNG: PNG image.</li>
+                     * @return RecordFormat Recording file format. Valid values:
+<li>PNG: PNG image.</li>
+                     * 
+                     */
+                    std::string GetRecordFormat() const;
+
+                    /**
+                     * 设置Recording file format. Valid values:
+<li>PNG: PNG image.</li>
+                     * @param _recordFormat Recording file format. Valid values:
+<li>PNG: PNG image.</li>
+                     * 
+                     */
+                    void SetRecordFormat(const std::string& _recordFormat);
+
+                    /**
+                     * 判断参数 RecordFormat 是否已赋值
+                     * @return RecordFormat 是否已赋值
+                     * 
+                     */
+                    bool RecordFormatHasBeenSet() const;
+
                 private:
 
                     /**
@@ -152,6 +177,13 @@ namespace TencentCloud
                      */
                     std::vector<QualityControlItemConfig> m_qualityControlItemSet;
                     bool m_qualityControlItemSetHasBeenSet;
+
+                    /**
+                     * Recording file format. Valid values:
+<li>PNG: PNG image.</li>
+                     */
+                    std::string m_recordFormat;
+                    bool m_recordFormatHasBeenSet;
 
                 };
             }

@@ -49,15 +49,39 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Live stream URL, which must be a live stream file address. RTMP, HLS, and FLV are supported.
-                     * @return Url Live stream URL, which must be a live stream file address. RTMP, HLS, and FLV are supported.
+                     * 获取Live stream URL. (It should be a live streaming file address. RTMP, HLS, FLV, and TRTC addresses are supported.)
+A TRTC address is as follows:
+ trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
+`<roomid>` is the TRTC room ID, which is a number.
+`<sdkappid>` is the SDK app ID of TRTC.
+`<userid>` is the user ID for accessing a room, which can be used to distinguish robots.
+<`usersig>` is the TRTC user signature.
+                     * @return Url Live stream URL. (It should be a live streaming file address. RTMP, HLS, FLV, and TRTC addresses are supported.)
+A TRTC address is as follows:
+ trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
+`<roomid>` is the TRTC room ID, which is a number.
+`<sdkappid>` is the SDK app ID of TRTC.
+`<userid>` is the user ID for accessing a room, which can be used to distinguish robots.
+<`usersig>` is the TRTC user signature.
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Live stream URL, which must be a live stream file address. RTMP, HLS, and FLV are supported.
-                     * @param _url Live stream URL, which must be a live stream file address. RTMP, HLS, and FLV are supported.
+                     * 设置Live stream URL. (It should be a live streaming file address. RTMP, HLS, FLV, and TRTC addresses are supported.)
+A TRTC address is as follows:
+ trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
+`<roomid>` is the TRTC room ID, which is a number.
+`<sdkappid>` is the SDK app ID of TRTC.
+`<userid>` is the user ID for accessing a room, which can be used to distinguish robots.
+<`usersig>` is the TRTC user signature.
+                     * @param _url Live stream URL. (It should be a live streaming file address. RTMP, HLS, FLV, and TRTC addresses are supported.)
+A TRTC address is as follows:
+ trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
+`<roomid>` is the TRTC room ID, which is a number.
+`<sdkappid>` is the SDK app ID of TRTC.
+`<userid>` is the user ID for accessing a room, which can be used to distinguish robots.
+<`usersig>` is the TRTC user signature.
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -298,7 +322,13 @@ Note 2: If `TaskNotifyConfig` is specified when `ProcessLiveStream` is called, t
                 private:
 
                     /**
-                     * Live stream URL, which must be a live stream file address. RTMP, HLS, and FLV are supported.
+                     * Live stream URL. (It should be a live streaming file address. RTMP, HLS, FLV, and TRTC addresses are supported.)
+A TRTC address is as follows:
+ trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
+`<roomid>` is the TRTC room ID, which is a number.
+`<sdkappid>` is the SDK app ID of TRTC.
+`<userid>` is the user ID for accessing a room, which can be used to distinguish robots.
+<`usersig>` is the TRTC user signature.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

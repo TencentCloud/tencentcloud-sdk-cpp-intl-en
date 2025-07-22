@@ -130,6 +130,90 @@ namespace TencentCloud
                      */
                     bool ConfidenceHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return StartTime 
+                     * 
+                     */
+                    std::string GetStartTime() const;
+
+                    /**
+                     * 设置
+                     * @param _startTime 
+                     * 
+                     */
+                    void SetStartTime(const std::string& _startTime);
+
+                    /**
+                     * 判断参数 StartTime 是否已赋值
+                     * @return StartTime 是否已赋值
+                     * 
+                     */
+                    bool StartTimeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return EndTime 
+                     * 
+                     */
+                    std::string GetEndTime() const;
+
+                    /**
+                     * 设置
+                     * @param _endTime 
+                     * 
+                     */
+                    void SetEndTime(const std::string& _endTime);
+
+                    /**
+                     * 判断参数 EndTime 是否已赋值
+                     * @return EndTime 是否已赋值
+                     * 
+                     */
+                    bool EndTimeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return SteadyState 
+                     * 
+                     */
+                    bool GetSteadyState() const;
+
+                    /**
+                     * 设置
+                     * @param _steadyState 
+                     * 
+                     */
+                    void SetSteadyState(const bool& _steadyState);
+
+                    /**
+                     * 判断参数 SteadyState 是否已赋值
+                     * @return SteadyState 是否已赋值
+                     * 
+                     */
+                    bool SteadyStateHasBeenSet() const;
+
+                    /**
+                     * 获取User ID in the result of recognition via WebSocket and TRTC.Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return UserId User ID in the result of recognition via WebSocket and TRTC.Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetUserId() const;
+
+                    /**
+                     * 设置User ID in the result of recognition via WebSocket and TRTC.Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _userId User ID in the result of recognition via WebSocket and TRTC.Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetUserId(const std::string& _userId);
+
+                    /**
+                     * 判断参数 UserId 是否已赋值
+                     * @return UserId 是否已赋值
+                     * 
+                     */
+                    bool UserIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -155,6 +239,30 @@ namespace TencentCloud
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_startTime;
+                    bool m_startTimeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_endTime;
+                    bool m_endTimeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_steadyState;
+                    bool m_steadyStateHasBeenSet;
+
+                    /**
+                     * User ID in the result of recognition via WebSocket and TRTC.Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_userId;
+                    bool m_userIdHasBeenSet;
 
                 };
             }

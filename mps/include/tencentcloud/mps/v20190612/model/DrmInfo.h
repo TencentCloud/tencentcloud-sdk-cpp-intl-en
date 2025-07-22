@@ -50,34 +50,90 @@ namespace TencentCloud
 
                     /**
                      * 获取Encryption type.
-<li>simpleaes: AES-128 encryption</li>
-<li> widevine</li>
-<li>fairplay: not supported for DASH streams</li>
-<li> playready</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+
+- simpleaes
+Can only be used for HLS. format support ts and mp4.
+Only can be used in slice mode. cannot be used in singlefile mode.
+
+- fairplay:
+Can only be used for HLS. valid values: mp4.
+Available for use in slice mode or singlefile mode.
+
+- widevine:
+Can be used for HLS and DASH. format can only be mp4.
+Output HLS: available for use in slice mode or singlefile mode.
+Output DASH: can only be in singlefile mode.
+
+- playready:
+Can be used for HLS and DASH. format can only be mp4.
+Output HLS: available for use in slice mode or singlefile mode.
+Output DASH: can only be singlefile mode.
+
                      * @return Type Encryption type.
-<li>simpleaes: AES-128 encryption</li>
-<li> widevine</li>
-<li>fairplay: not supported for DASH streams</li>
-<li> playready</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+
+- simpleaes
+Can only be used for HLS. format support ts and mp4.
+Only can be used in slice mode. cannot be used in singlefile mode.
+
+- fairplay:
+Can only be used for HLS. valid values: mp4.
+Available for use in slice mode or singlefile mode.
+
+- widevine:
+Can be used for HLS and DASH. format can only be mp4.
+Output HLS: available for use in slice mode or singlefile mode.
+Output DASH: can only be in singlefile mode.
+
+- playready:
+Can be used for HLS and DASH. format can only be mp4.
+Output HLS: available for use in slice mode or singlefile mode.
+Output DASH: can only be singlefile mode.
+
                      * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Encryption type.
-<li>simpleaes: AES-128 encryption</li>
-<li> widevine</li>
-<li>fairplay: not supported for DASH streams</li>
-<li> playready</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+
+- simpleaes
+Can only be used for HLS. format support ts and mp4.
+Only can be used in slice mode. cannot be used in singlefile mode.
+
+- fairplay:
+Can only be used for HLS. valid values: mp4.
+Available for use in slice mode or singlefile mode.
+
+- widevine:
+Can be used for HLS and DASH. format can only be mp4.
+Output HLS: available for use in slice mode or singlefile mode.
+Output DASH: can only be in singlefile mode.
+
+- playready:
+Can be used for HLS and DASH. format can only be mp4.
+Output HLS: available for use in slice mode or singlefile mode.
+Output DASH: can only be singlefile mode.
+
                      * @param _type Encryption type.
-<li>simpleaes: AES-128 encryption</li>
-<li> widevine</li>
-<li>fairplay: not supported for DASH streams</li>
-<li> playready</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+
+- simpleaes
+Can only be used for HLS. format support ts and mp4.
+Only can be used in slice mode. cannot be used in singlefile mode.
+
+- fairplay:
+Can only be used for HLS. valid values: mp4.
+Available for use in slice mode or singlefile mode.
+
+- widevine:
+Can be used for HLS and DASH. format can only be mp4.
+Output HLS: available for use in slice mode or singlefile mode.
+Output DASH: can only be in singlefile mode.
+
+- playready:
+Can be used for HLS and DASH. format can only be mp4.
+Output HLS: available for use in slice mode or singlefile mode.
+Output DASH: can only be singlefile mode.
+
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -139,11 +195,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Encryption type.
-<li>simpleaes: AES-128 encryption</li>
-<li> widevine</li>
-<li>fairplay: not supported for DASH streams</li>
-<li> playready</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+
+- simpleaes
+Can only be used for HLS. format support ts and mp4.
+Only can be used in slice mode. cannot be used in singlefile mode.
+
+- fairplay:
+Can only be used for HLS. valid values: mp4.
+Available for use in slice mode or singlefile mode.
+
+- widevine:
+Can be used for HLS and DASH. format can only be mp4.
+Output HLS: available for use in slice mode or singlefile mode.
+Output DASH: can only be in singlefile mode.
+
+- playready:
+Can be used for HLS and DASH. format can only be mp4.
+Output HLS: available for use in slice mode or singlefile mode.
+Output DASH: can only be singlefile mode.
+
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

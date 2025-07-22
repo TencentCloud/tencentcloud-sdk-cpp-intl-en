@@ -75,19 +75,19 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Custom video transcoding parameter, which is valid if `Definition` is 0.
-This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
-                     * @return RawParameter Custom video transcoding parameter, which is valid if `Definition` is 0.
-This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
+                     * 获取Custom video transcoding parameter. valid when Definition is set to 0.
+This parameter is used in high customization scenarios. it is recommended that you preferentially use Definition to specify transcoding parameters.
+                     * @return RawParameter Custom video transcoding parameter. valid when Definition is set to 0.
+This parameter is used in high customization scenarios. it is recommended that you preferentially use Definition to specify transcoding parameters.
                      * 
                      */
                     RawTranscodeParameter GetRawParameter() const;
 
                     /**
-                     * 设置Custom video transcoding parameter, which is valid if `Definition` is 0.
-This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
-                     * @param _rawParameter Custom video transcoding parameter, which is valid if `Definition` is 0.
-This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
+                     * 设置Custom video transcoding parameter. valid when Definition is set to 0.
+This parameter is used in high customization scenarios. it is recommended that you preferentially use Definition to specify transcoding parameters.
+                     * @param _rawParameter Custom video transcoding parameter. valid when Definition is set to 0.
+This parameter is used in high customization scenarios. it is recommended that you preferentially use Definition to specify transcoding parameters.
                      * 
                      */
                     void SetRawParameter(const RawTranscodeParameter& _rawParameter);
@@ -133,19 +133,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool OverrideParameterHasBeenSet() const;
 
                     /**
-                     * 获取List of up to 10 image or text watermarks.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return WatermarkSet List of up to 10 image or text watermarks.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
+                     * @return WatermarkSet Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
                      * 
                      */
                     std::vector<WatermarkInput> GetWatermarkSet() const;
 
                     /**
-                     * 设置List of up to 10 image or text watermarks.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _watermarkSet List of up to 10 image or text watermarks.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
+                     * @param _watermarkSet Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
                      * 
                      */
                     void SetWatermarkSet(const std::vector<WatermarkInput>& _watermarkSet);
@@ -394,8 +390,8 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Custom video transcoding parameter, which is valid if `Definition` is 0.
-This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
+                     * Custom video transcoding parameter. valid when Definition is set to 0.
+This parameter is used in high customization scenarios. it is recommended that you preferentially use Definition to specify transcoding parameters.
                      */
                     RawTranscodeParameter m_rawParameter;
                     bool m_rawParameterHasBeenSet;
@@ -410,8 +406,7 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool m_overrideParameterHasBeenSet;
 
                     /**
-                     * List of up to 10 image or text watermarks.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
                      */
                     std::vector<WatermarkInput> m_watermarkSet;
                     bool m_watermarkSetHasBeenSet;

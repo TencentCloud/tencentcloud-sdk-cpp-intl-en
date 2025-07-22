@@ -25,6 +25,8 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/ocr/v20181119/model/BankCardOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/BankCardOCRResponse.h>
+#include <tencentcloud/ocr/v20181119/model/ExtractDocMultiRequest.h>
+#include <tencentcloud/ocr/v20181119/model/ExtractDocMultiResponse.h>
 #include <tencentcloud/ocr/v20181119/model/GeneralAccurateOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/GeneralAccurateOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/GeneralBasicOCRRequest.h>
@@ -112,6 +114,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::BankCardOCRResponse> BankCardOCROutcome;
                 typedef std::future<BankCardOCROutcome> BankCardOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::BankCardOCRRequest&, BankCardOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> BankCardOCRAsyncHandler;
+                typedef Outcome<Core::Error, Model::ExtractDocMultiResponse> ExtractDocMultiOutcome;
+                typedef std::future<ExtractDocMultiOutcome> ExtractDocMultiOutcomeCallable;
+                typedef std::function<void(const OcrClient*, const Model::ExtractDocMultiRequest&, ExtractDocMultiOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExtractDocMultiAsyncHandler;
                 typedef Outcome<Core::Error, Model::GeneralAccurateOCRResponse> GeneralAccurateOCROutcome;
                 typedef std::future<GeneralAccurateOCROutcome> GeneralAccurateOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::GeneralAccurateOCRRequest&, GeneralAccurateOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> GeneralAccurateOCRAsyncHandler;
@@ -230,6 +235,19 @@ This API is not fully available for the time being. For more information, please
                 BankCardOCROutcome BankCardOCR(const Model::BankCardOCRRequest &request);
                 void BankCardOCRAsync(const Model::BankCardOCRRequest& request, const BankCardOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 BankCardOCROutcomeCallable BankCardOCRCallable(const Model::BankCardOCRRequest& request);
+
+                /**
+                 *This API supports identifying and extracting field information in structured scenarios such as complex scenarios and multiple formats. Key scenarios include: finance, health care, transportation, travel, insurance. Click [experience now](https://ocrdemo.cloud.tencent.com/).
+
+This API is used to set the alias SmartStructuralPro.
+
+The default API request rate limit is 5 requests per second.
+                 * @param req ExtractDocMultiRequest
+                 * @return ExtractDocMultiOutcome
+                 */
+                ExtractDocMultiOutcome ExtractDocMulti(const Model::ExtractDocMultiRequest &request);
+                void ExtractDocMultiAsync(const Model::ExtractDocMultiRequest& request, const ExtractDocMultiAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ExtractDocMultiOutcomeCallable ExtractDocMultiCallable(const Model::ExtractDocMultiRequest& request);
 
                 /**
                  *This API is used to detect and recognize characters in an image. It can recognize Chinese, English, Chinese-English, digits, and special symbols and return the text box positions and characters.

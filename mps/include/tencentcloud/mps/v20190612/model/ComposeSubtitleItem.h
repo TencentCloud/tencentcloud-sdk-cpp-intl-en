@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool StyleIdHasBeenSet() const;
 
                     /**
-                     * 获取The subtitle text.
-                     * @return Text The subtitle text.
+                     * 获取Subtitle text. note: long text may exceed the frame. recommend using \n for line breaks.
+                     * @return Text Subtitle text. note: long text may exceed the frame. recommend using \n for line breaks.
                      * 
                      */
                     std::string GetText() const;
 
                     /**
-                     * 设置The subtitle text.
-                     * @param _text The subtitle text.
+                     * 设置Subtitle text. note: long text may exceed the frame. recommend using \n for line breaks.
+                     * @param _text Subtitle text. note: long text may exceed the frame. recommend using \n for line breaks.
                      * 
                      */
                     void SetText(const std::string& _text);
@@ -119,7 +119,7 @@ namespace TencentCloud
                     bool m_styleIdHasBeenSet;
 
                     /**
-                     * The subtitle text.
+                     * Subtitle text. note: long text may exceed the frame. recommend using \n for line breaks.
                      */
                     std::string m_text;
                     bool m_textHasBeenSet;

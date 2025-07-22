@@ -202,18 +202,14 @@ Default value: 0.
 
                     /**
                      * 获取Additional parameter, which is a serialized JSON string.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @return StdExtInfo Additional parameter, which is a serialized JSON string.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetStdExtInfo() const;
 
                     /**
                      * 设置Additional parameter, which is a serialized JSON string.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _stdExtInfo Additional parameter, which is a serialized JSON string.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetStdExtInfo(const std::string& _stdExtInfo);
@@ -296,7 +292,6 @@ Default value: 0.
 
                     /**
                      * Additional parameter, which is a serialized JSON string.
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_stdExtInfo;
                     bool m_stdExtInfoHasBeenSet;

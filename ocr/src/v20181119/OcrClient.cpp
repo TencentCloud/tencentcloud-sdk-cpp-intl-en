@@ -83,6 +83,49 @@ OcrClient::BankCardOCROutcomeCallable OcrClient::BankCardOCRCallable(const BankC
     return task->get_future();
 }
 
+OcrClient::ExtractDocMultiOutcome OcrClient::ExtractDocMulti(const ExtractDocMultiRequest &request)
+{
+    auto outcome = MakeRequest(request, "ExtractDocMulti");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ExtractDocMultiResponse rsp = ExtractDocMultiResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ExtractDocMultiOutcome(rsp);
+        else
+            return ExtractDocMultiOutcome(o.GetError());
+    }
+    else
+    {
+        return ExtractDocMultiOutcome(outcome.GetError());
+    }
+}
+
+void OcrClient::ExtractDocMultiAsync(const ExtractDocMultiRequest& request, const ExtractDocMultiAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ExtractDocMulti(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OcrClient::ExtractDocMultiOutcomeCallable OcrClient::ExtractDocMultiCallable(const ExtractDocMultiRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ExtractDocMultiOutcome()>>(
+        [this, request]()
+        {
+            return this->ExtractDocMulti(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 OcrClient::GeneralAccurateOCROutcome OcrClient::GeneralAccurateOCR(const GeneralAccurateOCRRequest &request)
 {
     auto outcome = MakeRequest(request, "GeneralAccurateOCR");

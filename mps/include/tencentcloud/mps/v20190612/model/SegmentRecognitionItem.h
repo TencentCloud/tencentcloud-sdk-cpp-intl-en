@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SegmentUrl 
+                     * 获取Specifies the split segment URL.
+                     * @return SegmentUrl Specifies the split segment URL.
                      * 
                      */
                     std::string GetSegmentUrl() const;
 
                     /**
-                     * 设置
-                     * @param _segmentUrl 
+                     * 设置Specifies the split segment URL.
+                     * @param _segmentUrl Specifies the split segment URL.
                      * 
                      */
                     void SetSegmentUrl(const std::string& _segmentUrl);
@@ -131,19 +131,15 @@ namespace TencentCloud
                     bool SegmentUrlHasBeenSet() const;
 
                     /**
-                     * 获取Segment cover.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return CovImgUrl Segment cover.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Specifies the segment cover.
+                     * @return CovImgUrl Specifies the segment cover.
                      * 
                      */
                     std::string GetCovImgUrl() const;
 
                     /**
-                     * 设置Segment cover.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _covImgUrl Segment cover.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Specifies the segment cover.
+                     * @param _covImgUrl Specifies the segment cover.
                      * 
                      */
                     void SetCovImgUrl(const std::string& _covImgUrl);
@@ -157,18 +153,14 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * 获取Segment title.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Title Segment title.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTitle() const;
 
                     /**
                      * 设置Segment title.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _title Segment title.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTitle(const std::string& _title);
@@ -181,19 +173,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TitleHasBeenSet() const;
 
                     /**
-                     * 获取Segment summary.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Summary Segment summary.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the segment summary.
+                     * @return Summary Specifies the segment summary.
                      * 
                      */
                     std::string GetSummary() const;
 
                     /**
-                     * 设置Segment summary.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _summary Segment summary.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the segment summary.
+                     * @param _summary Specifies the segment summary.
                      * 
                      */
                     void SetSummary(const std::string& _summary);
@@ -227,19 +215,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool KeywordsHasBeenSet() const;
 
                     /**
-                     * 获取The start time of a live streaming segment, in the ISO date format.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return BeginTime The start time of a live streaming segment, in the ISO date format.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Specifies the start time of a live streaming segment in the ISO date format.
+                     * @return BeginTime Specifies the start time of a live streaming segment in the ISO date format.
                      * 
                      */
                     std::string GetBeginTime() const;
 
                     /**
-                     * 设置The start time of a live streaming segment, in the ISO date format.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _beginTime The start time of a live streaming segment, in the ISO date format.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Specifies the start time of a live streaming segment in the ISO date format.
+                     * @param _beginTime Specifies the start time of a live streaming segment in the ISO date format.
                      * 
                      */
                     void SetBeginTime(const std::string& _beginTime);
@@ -252,19 +236,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool BeginTimeHasBeenSet() const;
 
                     /**
-                     * 获取The end time of a live streaming segment, in the ISO date format.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return EndTime The end time of a live streaming segment, in the ISO date format.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Specifies the end time of a live streaming segment in the ISO date format.
+                     * @return EndTime Specifies the end time of a live streaming segment in the ISO date format.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置The end time of a live streaming segment, in the ISO date format.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _endTime The end time of a live streaming segment, in the ISO date format.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Specifies the end time of a live streaming segment in the ISO date format.
+                     * @param _endTime Specifies the end time of a live streaming segment in the ISO date format.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -318,28 +298,25 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * 
+                     * Specifies the split segment URL.
                      */
                     std::string m_segmentUrl;
                     bool m_segmentUrlHasBeenSet;
 
                     /**
-                     * Segment cover.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Specifies the segment cover.
                      */
                     std::string m_covImgUrl;
                     bool m_covImgUrlHasBeenSet;
 
                     /**
                      * Segment title.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_title;
                     bool m_titleHasBeenSet;
 
                     /**
-                     * Segment summary.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the segment summary.
                      */
                     std::string m_summary;
                     bool m_summaryHasBeenSet;
@@ -351,15 +328,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_keywordsHasBeenSet;
 
                     /**
-                     * The start time of a live streaming segment, in the ISO date format.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Specifies the start time of a live streaming segment in the ISO date format.
                      */
                     std::string m_beginTime;
                     bool m_beginTimeHasBeenSet;
 
                     /**
-                     * The end time of a live streaming segment, in the ISO date format.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Specifies the end time of a live streaming segment in the ISO date format.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;

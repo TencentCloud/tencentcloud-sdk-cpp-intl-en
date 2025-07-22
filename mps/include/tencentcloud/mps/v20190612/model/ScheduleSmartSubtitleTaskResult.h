@@ -133,19 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Recognition task input.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Input Recognition task input.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Input of the recognition task.
+                     * @return Input Input of the recognition task.
                      * 
                      */
                     SmartSubtitlesTaskInput GetInput() const;
 
                     /**
-                     * 设置Recognition task input.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _input Recognition task input.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Input of the recognition task.
+                     * @param _input Input of the recognition task.
                      * 
                      */
                     void SetInput(const SmartSubtitlesTaskInput& _input);
@@ -158,19 +154,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Recognition task output.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Output Recognition task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Output of the identification task.
+                     * @return Output Output of the identification task.
                      * 
                      */
                     std::vector<SmartSubtitlesResult> GetOutput() const;
 
                     /**
-                     * 设置Recognition task output.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _output Recognition task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Output of the identification task.
+                     * @param _output Output of the identification task.
                      * 
                      */
                     void SetOutput(const std::vector<SmartSubtitlesResult>& _output);
@@ -184,18 +176,14 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * 获取Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @return BeginProcessTime Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetBeginProcessTime() const;
 
                     /**
                      * 设置Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _beginProcessTime Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetBeginProcessTime(const std::string& _beginProcessTime);
@@ -209,18 +197,14 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * 获取Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @return FinishTime Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetFinishTime() const;
 
                     /**
                      * 设置Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _finishTime Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetFinishTime(const std::string& _finishTime);
@@ -259,29 +243,25 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Recognition task input.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Input of the recognition task.
                      */
                     SmartSubtitlesTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Recognition task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Output of the identification task.
                      */
                     std::vector<SmartSubtitlesResult> m_output;
                     bool m_outputHasBeenSet;
 
                     /**
                      * Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_beginProcessTime;
                     bool m_beginProcessTimeHasBeenSet;
 
                     /**
                      * Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_finishTime;
                     bool m_finishTimeHasBeenSet;

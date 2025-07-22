@@ -156,6 +156,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ParagraphsHasBeenSet() const;
 
+                    /**
+                     * 获取Address of the mind map of a summary task.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return MindMapUrl Address of the mind map of a summary task.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetMindMapUrl() const;
+
+                    /**
+                     * 设置Address of the mind map of a summary task.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _mindMapUrl Address of the mind map of a summary task.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetMindMapUrl(const std::string& _mindMapUrl);
+
+                    /**
+                     * 判断参数 MindMapUrl 是否已赋值
+                     * @return MindMapUrl 是否已赋值
+                     * 
+                     */
+                    bool MindMapUrlHasBeenSet() const;
+
                 private:
 
                     /**
@@ -188,6 +213,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<AiParagraphInfo> m_paragraphs;
                     bool m_paragraphsHasBeenSet;
+
+                    /**
+                     * Address of the mind map of a summary task.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_mindMapUrl;
+                    bool m_mindMapUrlHasBeenSet;
 
                 };
             }

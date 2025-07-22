@@ -235,18 +235,14 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * 获取Drm information.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @return DrmInfo Drm information.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     DrmInfo GetDrmInfo() const;
 
                     /**
                      * 设置Drm information.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _drmInfo Drm information.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetDrmInfo(const DrmInfo& _drmInfo);
@@ -260,26 +256,22 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * 获取Adaptive transcoding template type.
-Common: audio-video.
+Common: audio/video type.
 PureAudio: audio-only.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DefinitionType Adaptive transcoding template type.
-Common: audio-video.
+Common: audio/video type.
 PureAudio: audio-only.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDefinitionType() const;
 
                     /**
                      * 设置Adaptive transcoding template type.
-Common: audio-video.
+Common: audio/video type.
 PureAudio: audio-only.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _definitionType Adaptive transcoding template type.
-Common: audio-video.
+Common: audio/video type.
 PureAudio: audio-only.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDefinitionType(const std::string& _definitionType);
@@ -290,6 +282,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool DefinitionTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Subtitle setting.
+                     * @return SubtitleTemplate Subtitle setting.
+                     * 
+                     */
+                    std::string GetSubtitleTemplate() const;
+
+                    /**
+                     * 设置Subtitle setting.
+                     * @param _subtitleTemplate Subtitle setting.
+                     * 
+                     */
+                    void SetSubtitleTemplate(const std::string& _subtitleTemplate);
+
+                    /**
+                     * 判断参数 SubtitleTemplate 是否已赋值
+                     * @return SubtitleTemplate 是否已赋值
+                     * 
+                     */
+                    bool SubtitleTemplateHasBeenSet() const;
 
                 private:
 
@@ -346,19 +359,23 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * Drm information.
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     DrmInfo m_drmInfo;
                     bool m_drmInfoHasBeenSet;
 
                     /**
                      * Adaptive transcoding template type.
-Common: audio-video.
+Common: audio/video type.
 PureAudio: audio-only.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_definitionType;
                     bool m_definitionTypeHasBeenSet;
+
+                    /**
+                     * Subtitle setting.
+                     */
+                    std::string m_subtitleTemplate;
+                    bool m_subtitleTemplateHasBeenSet;
 
                 };
             }

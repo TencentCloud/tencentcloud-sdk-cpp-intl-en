@@ -154,19 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取The output of the content recognition task.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Output The output of the content recognition task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Output of the identification task.
+                     * @return Output Output of the identification task.
                      * 
                      */
                     std::vector<AiRecognitionResult> GetOutput() const;
 
                     /**
-                     * 设置The output of the content recognition task.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _output The output of the content recognition task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Output of the identification task.
+                     * @param _output Output of the identification task.
                      * 
                      */
                     void SetOutput(const std::vector<AiRecognitionResult>& _output);
@@ -177,6 +173,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool OutputHasBeenSet() const;
+
+                    /**
+                     * 获取Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * @return BeginProcessTime Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * 
+                     */
+                    std::string GetBeginProcessTime() const;
+
+                    /**
+                     * 设置Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * @param _beginProcessTime Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * 
+                     */
+                    void SetBeginProcessTime(const std::string& _beginProcessTime);
+
+                    /**
+                     * 判断参数 BeginProcessTime 是否已赋值
+                     * @return BeginProcessTime 是否已赋值
+                     * 
+                     */
+                    bool BeginProcessTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * @return FinishTime Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * 
+                     */
+                    std::string GetFinishTime() const;
+
+                    /**
+                     * 设置Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * @param _finishTime Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * 
+                     */
+                    void SetFinishTime(const std::string& _finishTime);
+
+                    /**
+                     * 判断参数 FinishTime 是否已赋值
+                     * @return FinishTime 是否已赋值
+                     * 
+                     */
+                    bool FinishTimeHasBeenSet() const;
 
                 private:
 
@@ -211,11 +249,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_inputHasBeenSet;
 
                     /**
-                     * The output of the content recognition task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Output of the identification task.
                      */
                     std::vector<AiRecognitionResult> m_output;
                     bool m_outputHasBeenSet;
+
+                    /**
+                     * Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+                     */
+                    std::string m_beginProcessTime;
+                    bool m_beginProcessTimeHasBeenSet;
+
+                    /**
+                     * Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+                     */
+                    std::string m_finishTime;
+                    bool m_finishTimeHasBeenSet;
 
                 };
             }

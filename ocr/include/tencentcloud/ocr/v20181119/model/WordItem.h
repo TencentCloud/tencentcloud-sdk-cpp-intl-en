@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/ocr/v20181119/model/Polygon.h>
+#include <tencentcloud/ocr/v20181119/model/WordPolygon.h>
 
 
 namespace TencentCloud
@@ -89,6 +90,48 @@ namespace TencentCloud
                      */
                     bool CoordHasBeenSet() const;
 
+                    /**
+                     * 获取Description.
+                     * @return AdvancedInfo Description.
+                     * 
+                     */
+                    std::string GetAdvancedInfo() const;
+
+                    /**
+                     * 设置Description.
+                     * @param _advancedInfo Description.
+                     * 
+                     */
+                    void SetAdvancedInfo(const std::string& _advancedInfo);
+
+                    /**
+                     * 判断参数 AdvancedInfo 是否已赋值
+                     * @return AdvancedInfo 是否已赋值
+                     * 
+                     */
+                    bool AdvancedInfoHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the four-point coordinate of the word.
+                     * @return WordCoord Specifies the four-point coordinate of the word.
+                     * 
+                     */
+                    std::vector<WordPolygon> GetWordCoord() const;
+
+                    /**
+                     * 设置Specifies the four-point coordinate of the word.
+                     * @param _wordCoord Specifies the four-point coordinate of the word.
+                     * 
+                     */
+                    void SetWordCoord(const std::vector<WordPolygon>& _wordCoord);
+
+                    /**
+                     * 判断参数 WordCoord 是否已赋值
+                     * @return WordCoord 是否已赋值
+                     * 
+                     */
+                    bool WordCoordHasBeenSet() const;
+
                 private:
 
                     /**
@@ -102,6 +145,18 @@ namespace TencentCloud
                      */
                     Polygon m_coord;
                     bool m_coordHasBeenSet;
+
+                    /**
+                     * Description.
+                     */
+                    std::string m_advancedInfo;
+                    bool m_advancedInfoHasBeenSet;
+
+                    /**
+                     * Specifies the four-point coordinate of the word.
+                     */
+                    std::vector<WordPolygon> m_wordCoord;
+                    bool m_wordCoordHasBeenSet;
 
                 };
             }

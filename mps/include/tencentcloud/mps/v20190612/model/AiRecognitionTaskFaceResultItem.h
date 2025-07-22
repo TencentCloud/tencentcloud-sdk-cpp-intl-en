@@ -140,27 +140,23 @@ namespace TencentCloud
                     bool SegmentSetHasBeenSet() const;
 
                     /**
-                     * 获取The person’s gender.
-<li>Male</li>
-<li>Female</li>
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Gender The person’s gender.
-<li>Male</li>
-<li>Female</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Gender of the person.
+<Li>Male: man.</li>.
+<Li>Female: specifies the woman.</li>.
+                     * @return Gender Gender of the person.
+<Li>Male: man.</li>.
+<Li>Female: specifies the woman.</li>.
                      * 
                      */
                     std::string GetGender() const;
 
                     /**
-                     * 设置The person’s gender.
-<li>Male</li>
-<li>Female</li>
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _gender The person’s gender.
-<li>Male</li>
-<li>Female</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Gender of the person.
+<Li>Male: man.</li>.
+<Li>Female: specifies the woman.</li>.
+                     * @param _gender Gender of the person.
+<Li>Male: man.</li>.
+<Li>Female: specifies the woman.</li>.
                      * 
                      */
                     void SetGender(const std::string& _gender);
@@ -173,19 +169,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool GenderHasBeenSet() const;
 
                     /**
-                     * 获取The person’s birth date.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Birthday The person’s birth date.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Date of birth.
+                     * @return Birthday Date of birth.
                      * 
                      */
                     std::string GetBirthday() const;
 
                     /**
-                     * 设置The person’s birth date.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _birthday The person’s birth date.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Date of birth.
+                     * @param _birthday Date of birth.
                      * 
                      */
                     void SetBirthday(const std::string& _birthday);
@@ -198,19 +190,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool BirthdayHasBeenSet() const;
 
                     /**
-                     * 获取The person’s job or job title.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Profession The person’s job or job title.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Occupation or position of a person.
+                     * @return Profession Occupation or position of a person.
                      * 
                      */
                     std::string GetProfession() const;
 
                     /**
-                     * 设置The person’s job or job title.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _profession The person’s job or job title.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Occupation or position of a person.
+                     * @param _profession Occupation or position of a person.
                      * 
                      */
                     void SetProfession(const std::string& _profession);
@@ -223,19 +211,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ProfessionHasBeenSet() const;
 
                     /**
-                     * 获取The college the person graduated from.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return SchoolOfGraduation The college the person graduated from.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Specifies the graduation institution of the person.
+                     * @return SchoolOfGraduation Specifies the graduation institution of the person.
                      * 
                      */
                     std::string GetSchoolOfGraduation() const;
 
                     /**
-                     * 设置The college the person graduated from.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _schoolOfGraduation The college the person graduated from.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Specifies the graduation institution of the person.
+                     * @param _schoolOfGraduation Specifies the graduation institution of the person.
                      * 
                      */
                     void SetSchoolOfGraduation(const std::string& _schoolOfGraduation);
@@ -248,19 +232,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool SchoolOfGraduationHasBeenSet() const;
 
                     /**
-                     * 获取The person’s profile.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Abstract The person’s profile.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Description of the person.
+                     * @return Abstract Description of the person.
                      * 
                      */
                     std::string GetAbstract() const;
 
                     /**
-                     * 设置The person’s profile.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _abstract The person’s profile.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Description of the person.
+                     * @param _abstract Description of the person.
                      * 
                      */
                     void SetAbstract(const std::string& _abstract);
@@ -273,19 +253,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool AbstractHasBeenSet() const;
 
                     /**
-                     * 获取The person’s place of birth.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return PlaceOfBirth The person’s place of birth.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Specifies the birthplace or place of origin.
+                     * @return PlaceOfBirth Specifies the birthplace or place of origin.
                      * 
                      */
                     std::string GetPlaceOfBirth() const;
 
                     /**
-                     * 设置The person’s place of birth.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _placeOfBirth The person’s place of birth.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Specifies the birthplace or place of origin.
+                     * @param _placeOfBirth Specifies the birthplace or place of origin.
                      * 
                      */
                     void SetPlaceOfBirth(const std::string& _placeOfBirth);
@@ -298,27 +274,23 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool PlaceOfBirthHasBeenSet() const;
 
                     /**
-                     * 获取Whether the person is a politician or artist.
-<li>Politician</li>
-<li>Artist</li>
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return PersonType Whether the person is a politician or artist.
-<li>Politician</li>
-<li>Artist</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Person type.
+<Li>Politician: specifies the official.</li>.
+<Li>Artist: specifies the artist.</li>.
+                     * @return PersonType Person type.
+<Li>Politician: specifies the official.</li>.
+<Li>Artist: specifies the artist.</li>.
                      * 
                      */
                     std::string GetPersonType() const;
 
                     /**
-                     * 设置Whether the person is a politician or artist.
-<li>Politician</li>
-<li>Artist</li>
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _personType Whether the person is a politician or artist.
-<li>Politician</li>
-<li>Artist</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Person type.
+<Li>Politician: specifies the official.</li>.
+<Li>Artist: specifies the artist.</li>.
+                     * @param _personType Person type.
+<Li>Politician: specifies the official.</li>.
+<Li>Artist: specifies the artist.</li>.
                      * 
                      */
                     void SetPersonType(const std::string& _personType);
@@ -331,27 +303,23 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool PersonTypeHasBeenSet() const;
 
                     /**
-                     * 获取Sensitivity
-<li>Normal</li>
-<li>Sensitive</li>
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Remark Sensitivity
-<li>Normal</li>
-<li>Sensitive</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Sensitivity labeling.
+<Li>Normal: specifies the scaling group is normal.</li>.
+<Li>Sensitive: specifies sensitivity.</li>.
+                     * @return Remark Sensitivity labeling.
+<Li>Normal: specifies the scaling group is normal.</li>.
+<Li>Sensitive: specifies sensitivity.</li>.
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Sensitivity
-<li>Normal</li>
-<li>Sensitive</li>
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _remark Sensitivity
-<li>Normal</li>
-<li>Sensitive</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Sensitivity labeling.
+<Li>Normal: specifies the scaling group is normal.</li>.
+<Li>Sensitive: specifies sensitivity.</li>.
+                     * @param _remark Sensitivity labeling.
+<Li>Normal: specifies the scaling group is normal.</li>.
+<Li>Sensitive: specifies sensitivity.</li>.
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -364,19 +332,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取The screenshot URL.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Url The screenshot URL.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Specifies the screenshot link.
+                     * @return Url Specifies the screenshot link.
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置The screenshot URL.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _url The screenshot URL.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Specifies the screenshot link.
+                     * @param _url Specifies the screenshot link.
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -417,70 +381,61 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_segmentSetHasBeenSet;
 
                     /**
-                     * The person’s gender.
-<li>Male</li>
-<li>Female</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Gender of the person.
+<Li>Male: man.</li>.
+<Li>Female: specifies the woman.</li>.
                      */
                     std::string m_gender;
                     bool m_genderHasBeenSet;
 
                     /**
-                     * The person’s birth date.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Date of birth.
                      */
                     std::string m_birthday;
                     bool m_birthdayHasBeenSet;
 
                     /**
-                     * The person’s job or job title.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Occupation or position of a person.
                      */
                     std::string m_profession;
                     bool m_professionHasBeenSet;
 
                     /**
-                     * The college the person graduated from.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Specifies the graduation institution of the person.
                      */
                     std::string m_schoolOfGraduation;
                     bool m_schoolOfGraduationHasBeenSet;
 
                     /**
-                     * The person’s profile.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Description of the person.
                      */
                     std::string m_abstract;
                     bool m_abstractHasBeenSet;
 
                     /**
-                     * The person’s place of birth.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Specifies the birthplace or place of origin.
                      */
                     std::string m_placeOfBirth;
                     bool m_placeOfBirthHasBeenSet;
 
                     /**
-                     * Whether the person is a politician or artist.
-<li>Politician</li>
-<li>Artist</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Person type.
+<Li>Politician: specifies the official.</li>.
+<Li>Artist: specifies the artist.</li>.
                      */
                     std::string m_personType;
                     bool m_personTypeHasBeenSet;
 
                     /**
-                     * Sensitivity
-<li>Normal</li>
-<li>Sensitive</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Sensitivity labeling.
+<Li>Normal: specifies the scaling group is normal.</li>.
+<Li>Sensitive: specifies sensitivity.</li>.
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * The screenshot URL.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Specifies the screenshot link.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
