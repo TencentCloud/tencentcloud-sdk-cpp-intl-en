@@ -80,6 +80,7 @@ set(billing_public_header_model
   include/tencentcloud/billing/v20180709/model/DeleteGatherRuleResponse.h
   include/tencentcloud/billing/v20180709/model/ApplicableProducts.h
   include/tencentcloud/billing/v20180709/model/ConditionPayMode.h
+  include/tencentcloud/billing/v20180709/model/PayDealsResponse.h
   include/tencentcloud/billing/v20180709/model/DescribeCostSummaryByProjectRequest.h
   include/tencentcloud/billing/v20180709/model/BillDetailAssociatedOrder.h
   include/tencentcloud/billing/v20180709/model/BillDetail.h
@@ -91,6 +92,7 @@ set(billing_public_header_model
   include/tencentcloud/billing/v20180709/model/DescribeBillAdjustInfoRequest.h
   include/tencentcloud/billing/v20180709/model/DeleteAllocationRuleResponse.h
   include/tencentcloud/billing/v20180709/model/TagDataInfo.h
+  include/tencentcloud/billing/v20180709/model/PayDealsRequest.h
   include/tencentcloud/billing/v20180709/model/SummaryTotal.h
   include/tencentcloud/billing/v20180709/model/BusinessSummaryTotal.h
   include/tencentcloud/billing/v20180709/model/CostComponentSet.h
@@ -229,6 +231,7 @@ set(billing_src
   src/v20180709/model/DeleteGatherRuleResponse.cpp
   src/v20180709/model/ApplicableProducts.cpp
   src/v20180709/model/ConditionPayMode.cpp
+  src/v20180709/model/PayDealsResponse.cpp
   src/v20180709/model/DescribeCostSummaryByProjectRequest.cpp
   src/v20180709/model/BillDetailAssociatedOrder.cpp
   src/v20180709/model/BillDetail.cpp
@@ -240,6 +243,7 @@ set(billing_src
   src/v20180709/model/DescribeBillAdjustInfoRequest.cpp
   src/v20180709/model/DeleteAllocationRuleResponse.cpp
   src/v20180709/model/TagDataInfo.cpp
+  src/v20180709/model/PayDealsRequest.cpp
   src/v20180709/model/SummaryTotal.cpp
   src/v20180709/model/BusinessSummaryTotal.cpp
   src/v20180709/model/CostComponentSet.cpp

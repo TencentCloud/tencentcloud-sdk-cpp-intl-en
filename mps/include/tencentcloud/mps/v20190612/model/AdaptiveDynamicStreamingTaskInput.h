@@ -28,6 +28,7 @@
 #include <tencentcloud/mps/v20190612/model/TaskOutputStorage.h>
 #include <tencentcloud/mps/v20190612/model/AddOnSubtitle.h>
 #include <tencentcloud/mps/v20190612/model/DrmInfo.h>
+#include <tencentcloud/mps/v20190612/model/SubtitleTemplate.h>
 
 
 namespace TencentCloud
@@ -284,18 +285,22 @@ PureAudio: audio-only.
                     bool DefinitionTypeHasBeenSet() const;
 
                     /**
-                     * 获取Subtitle setting.
-                     * @return SubtitleTemplate Subtitle setting.
+                     * 获取Specifies the subtitle parameter.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return SubtitleTemplate Specifies the subtitle parameter.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
-                    std::string GetSubtitleTemplate() const;
+                    SubtitleTemplate GetSubtitleTemplate() const;
 
                     /**
-                     * 设置Subtitle setting.
-                     * @param _subtitleTemplate Subtitle setting.
+                     * 设置Specifies the subtitle parameter.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _subtitleTemplate Specifies the subtitle parameter.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
-                    void SetSubtitleTemplate(const std::string& _subtitleTemplate);
+                    void SetSubtitleTemplate(const SubtitleTemplate& _subtitleTemplate);
 
                     /**
                      * 判断参数 SubtitleTemplate 是否已赋值
@@ -372,9 +377,10 @@ PureAudio: audio-only.
                     bool m_definitionTypeHasBeenSet;
 
                     /**
-                     * Subtitle setting.
+                     * Specifies the subtitle parameter.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
-                    std::string m_subtitleTemplate;
+                    SubtitleTemplate m_subtitleTemplate;
                     bool m_subtitleTemplateHasBeenSet;
 
                 };

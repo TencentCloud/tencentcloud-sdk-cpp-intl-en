@@ -154,6 +154,7 @@ set(cynosdb_public_header_model
   include/tencentcloud/cynosdb/v20190107/model/CreateProxyEndPointResponse.h
   include/tencentcloud/cynosdb/v20190107/model/NetAddr.h
   include/tencentcloud/cynosdb/v20190107/model/OpenWanRequest.h
+  include/tencentcloud/cynosdb/v20190107/model/ReplayInstanceAuditLogRequest.h
   include/tencentcloud/cynosdb/v20190107/model/ModifyAccountPrivilegesResponse.h
   include/tencentcloud/cynosdb/v20190107/model/InquirePriceCreateRequest.h
   include/tencentcloud/cynosdb/v20190107/model/ModifyAuditServiceRequest.h
@@ -310,6 +311,7 @@ set(cynosdb_public_header_model
   include/tencentcloud/cynosdb/v20190107/model/AddClusterSlaveZoneRequest.h
   include/tencentcloud/cynosdb/v20190107/model/CloseClusterPasswordComplexityRequest.h
   include/tencentcloud/cynosdb/v20190107/model/DescribeIsolatedInstancesRequest.h
+  include/tencentcloud/cynosdb/v20190107/model/ReplayInstanceAuditLogResponse.h
   include/tencentcloud/cynosdb/v20190107/model/IsolateInstanceRequest.h
   include/tencentcloud/cynosdb/v20190107/model/DescribeAuditRuleTemplatesResponse.h
   include/tencentcloud/cynosdb/v20190107/model/LogicBackupConfigInfo.h
@@ -512,6 +514,7 @@ set(cynosdb_src
   src/v20190107/model/CreateProxyEndPointResponse.cpp
   src/v20190107/model/NetAddr.cpp
   src/v20190107/model/OpenWanRequest.cpp
+  src/v20190107/model/ReplayInstanceAuditLogRequest.cpp
   src/v20190107/model/ModifyAccountPrivilegesResponse.cpp
   src/v20190107/model/InquirePriceCreateRequest.cpp
   src/v20190107/model/ModifyAuditServiceRequest.cpp
@@ -668,6 +671,7 @@ set(cynosdb_src
   src/v20190107/model/AddClusterSlaveZoneRequest.cpp
   src/v20190107/model/CloseClusterPasswordComplexityRequest.cpp
   src/v20190107/model/DescribeIsolatedInstancesRequest.cpp
+  src/v20190107/model/ReplayInstanceAuditLogResponse.cpp
   src/v20190107/model/IsolateInstanceRequest.cpp
   src/v20190107/model/DescribeAuditRuleTemplatesResponse.cpp
   src/v20190107/model/LogicBackupConfigInfo.cpp

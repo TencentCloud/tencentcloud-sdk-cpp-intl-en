@@ -396,8 +396,6 @@ Temporarily expanded instances due to the maxSurge parameter are automatically d
 
                 /**
                  *This API is used to create launch configurations and scaling groups based on an instance.
-
-Note: for a scaling group that is created based on a monthly-subscribed instance, the instances added for scale-out are pay-as-you-go instance.
                  * @param req CreateAutoScalingGroupFromInstanceRequest
                  * @return CreateAutoScalingGroupFromInstanceOutcome
                  */

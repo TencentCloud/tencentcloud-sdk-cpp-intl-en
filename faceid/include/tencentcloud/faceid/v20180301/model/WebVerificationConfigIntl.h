@@ -94,16 +94,16 @@ Example value: false
 
                     /**
                      * 获取Detection mode, parameter values are as follows:
-1: OCR+living detection & face comparison;
-2: Living detection & face comparison;
-3: Living detection;
+1: OCR+liveness detection & face comparison;
+2: Liveness detection & face comparison;
+3: Liveness detection;
 4: OCR;
 The default value is 2.
 Example value: 3
                      * @return CheckMode Detection mode, parameter values are as follows:
-1: OCR+living detection & face comparison;
-2: Living detection & face comparison;
-3: Living detection;
+1: OCR+liveness detection & face comparison;
+2: Liveness detection & face comparison;
+3: Liveness detection;
 4: OCR;
 The default value is 2.
 Example value: 3
@@ -113,16 +113,16 @@ Example value: 3
 
                     /**
                      * 设置Detection mode, parameter values are as follows:
-1: OCR+living detection & face comparison;
-2: Living detection & face comparison;
-3: Living detection;
+1: OCR+liveness detection & face comparison;
+2: Liveness detection & face comparison;
+3: Liveness detection;
 4: OCR;
 The default value is 2.
 Example value: 3
                      * @param _checkMode Detection mode, parameter values are as follows:
-1: OCR+living detection & face comparison;
-2: Living detection & face comparison;
-3: Living detection;
+1: OCR+liveness detection & face comparison;
+2: Liveness detection & face comparison;
+3: Liveness detection;
 4: OCR;
 The default value is 2.
 Example value: 3
@@ -141,46 +141,30 @@ Example value: 3
                      * 获取The type of lisence used for verification. The following types are supported.
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
-3.IndonesiaIDCard: Indonesia ID card
-4.PhilippinesVoteID: Philippines VoteID card
+3.IndonesialDCard: Indonesia ID card
+4.PhilippinesVoteID: Philippines Vote lD card
 5.PhilippinesDrivingLicense: Philippines driving license
 6.PhilippinesTinID: Philippines TinID card
 7.PhilippinesSSSID: Philippines SSSID card
 8.PhilippinesUMID: Philippines UMID card
-9.InternationalIDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
-10.IndonesiaDrivingLicense:Indonesia driving license
-11.ThailandIDCard: Thailand ID card
-12.ThailandDrivingLicense: Thailand driving license
-13.MLDrivingLicense: Malaysia driving license
-14.SingaporeIDCard: Singapore ID card
-15.SingaporeDrivingLicense: Singapore driving license
-16.JapanIDCard: Japan ID card
-17.JapanDrivingLicense: Japan driving license
-18.PhilippinesIDCard: Philippines ID card
-19.MainlandIDCard: Mainland (China) ID card
-20.MacaoIDCard: Macao (China) ID card
+9.InternationallDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
+10.ThailandIDCard: Thailand ID card
+11.SingaporelDCard: Singapore ID card
+12.MainlandIDCard: Mainland (China) ID card
 Example: HKIDCard
                      * @return IDCardType The type of lisence used for verification. The following types are supported.
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
-3.IndonesiaIDCard: Indonesia ID card
-4.PhilippinesVoteID: Philippines VoteID card
+3.IndonesialDCard: Indonesia ID card
+4.PhilippinesVoteID: Philippines Vote lD card
 5.PhilippinesDrivingLicense: Philippines driving license
 6.PhilippinesTinID: Philippines TinID card
 7.PhilippinesSSSID: Philippines SSSID card
 8.PhilippinesUMID: Philippines UMID card
-9.InternationalIDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
-10.IndonesiaDrivingLicense:Indonesia driving license
-11.ThailandIDCard: Thailand ID card
-12.ThailandDrivingLicense: Thailand driving license
-13.MLDrivingLicense: Malaysia driving license
-14.SingaporeIDCard: Singapore ID card
-15.SingaporeDrivingLicense: Singapore driving license
-16.JapanIDCard: Japan ID card
-17.JapanDrivingLicense: Japan driving license
-18.PhilippinesIDCard: Philippines ID card
-19.MainlandIDCard: Mainland (China) ID card
-20.MacaoIDCard: Macao (China) ID card
+9.InternationallDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
+10.ThailandIDCard: Thailand ID card
+11.SingaporelDCard: Singapore ID card
+12.MainlandIDCard: Mainland (China) ID card
 Example: HKIDCard
                      * 
                      */
@@ -190,46 +174,30 @@ Example: HKIDCard
                      * 设置The type of lisence used for verification. The following types are supported.
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
-3.IndonesiaIDCard: Indonesia ID card
-4.PhilippinesVoteID: Philippines VoteID card
+3.IndonesialDCard: Indonesia ID card
+4.PhilippinesVoteID: Philippines Vote lD card
 5.PhilippinesDrivingLicense: Philippines driving license
 6.PhilippinesTinID: Philippines TinID card
 7.PhilippinesSSSID: Philippines SSSID card
 8.PhilippinesUMID: Philippines UMID card
-9.InternationalIDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
-10.IndonesiaDrivingLicense:Indonesia driving license
-11.ThailandIDCard: Thailand ID card
-12.ThailandDrivingLicense: Thailand driving license
-13.MLDrivingLicense: Malaysia driving license
-14.SingaporeIDCard: Singapore ID card
-15.SingaporeDrivingLicense: Singapore driving license
-16.JapanIDCard: Japan ID card
-17.JapanDrivingLicense: Japan driving license
-18.PhilippinesIDCard: Philippines ID card
-19.MainlandIDCard: Mainland (China) ID card
-20.MacaoIDCard: Macao (China) ID card
+9.InternationallDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
+10.ThailandIDCard: Thailand ID card
+11.SingaporelDCard: Singapore ID card
+12.MainlandIDCard: Mainland (China) ID card
 Example: HKIDCard
                      * @param _iDCardType The type of lisence used for verification. The following types are supported.
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
-3.IndonesiaIDCard: Indonesia ID card
-4.PhilippinesVoteID: Philippines VoteID card
+3.IndonesialDCard: Indonesia ID card
+4.PhilippinesVoteID: Philippines Vote lD card
 5.PhilippinesDrivingLicense: Philippines driving license
 6.PhilippinesTinID: Philippines TinID card
 7.PhilippinesSSSID: Philippines SSSID card
 8.PhilippinesUMID: Philippines UMID card
-9.InternationalIDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
-10.IndonesiaDrivingLicense:Indonesia driving license
-11.ThailandIDCard: Thailand ID card
-12.ThailandDrivingLicense: Thailand driving license
-13.MLDrivingLicense: Malaysia driving license
-14.SingaporeIDCard: Singapore ID card
-15.SingaporeDrivingLicense: Singapore driving license
-16.JapanIDCard: Japan ID card
-17.JapanDrivingLicense: Japan driving license
-18.PhilippinesIDCard: Philippines ID card
-19.MainlandIDCard: Mainland (China) ID card
-20.MacaoIDCard: Macao (China) ID card
+9.InternationallDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
+10.ThailandIDCard: Thailand ID card
+11.SingaporelDCard: Singapore ID card
+12.MainlandIDCard: Mainland (China) ID card
 Example: HKIDCard
                      * 
                      */
@@ -327,15 +295,15 @@ Example: HKIDCard
                     bool IdCardCutReturnHasBeenSet() const;
 
                     /**
-                     * 获取Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72+1". If the format is incorrect, the default value color will be used.
-                     * @return ThemeColor Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72+1". If the format is incorrect, the default value color will be used.
+                     * 获取Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72f1". If the format is incorrect, the default value color will be used. 
+                     * @return ThemeColor Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72f1". If the format is incorrect, the default value color will be used. 
                      * 
                      */
                     std::string GetThemeColor() const;
 
                     /**
-                     * 设置Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72+1". If the format is incorrect, the default value color will be used.
-                     * @param _themeColor Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72+1". If the format is incorrect, the default value color will be used.
+                     * 设置Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72f1". If the format is incorrect, the default value color will be used. 
+                     * @param _themeColor Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72f1". If the format is incorrect, the default value color will be used. 
                      * 
                      */
                     void SetThemeColor(const std::string& _themeColor);
@@ -484,9 +452,9 @@ Example value: false
 
                     /**
                      * Detection mode, parameter values are as follows:
-1: OCR+living detection & face comparison;
-2: Living detection & face comparison;
-3: Living detection;
+1: OCR+liveness detection & face comparison;
+2: Liveness detection & face comparison;
+3: Liveness detection;
 4: OCR;
 The default value is 2.
 Example value: 3
@@ -498,24 +466,16 @@ Example value: 3
                      * The type of lisence used for verification. The following types are supported.
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
-3.IndonesiaIDCard: Indonesia ID card
-4.PhilippinesVoteID: Philippines VoteID card
+3.IndonesialDCard: Indonesia ID card
+4.PhilippinesVoteID: Philippines Vote lD card
 5.PhilippinesDrivingLicense: Philippines driving license
 6.PhilippinesTinID: Philippines TinID card
 7.PhilippinesSSSID: Philippines SSSID card
 8.PhilippinesUMID: Philippines UMID card
-9.InternationalIDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
-10.IndonesiaDrivingLicense:Indonesia driving license
-11.ThailandIDCard: Thailand ID card
-12.ThailandDrivingLicense: Thailand driving license
-13.MLDrivingLicense: Malaysia driving license
-14.SingaporeIDCard: Singapore ID card
-15.SingaporeDrivingLicense: Singapore driving license
-16.JapanIDCard: Japan ID card
-17.JapanDrivingLicense: Japan driving license
-18.PhilippinesIDCard: Philippines ID card
-19.MainlandIDCard: Mainland (China) ID card
-20.MacaoIDCard: Macao (China) ID card
+9.InternationallDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
+10.ThailandIDCard: Thailand ID card
+11.SingaporelDCard: Singapore ID card
+12.MainlandIDCard: Mainland (China) ID card
 Example: HKIDCard
                      */
                     std::string m_iDCardType;
@@ -546,7 +506,7 @@ Example: HKIDCard
                     bool m_idCardCutReturnHasBeenSet;
 
                     /**
-                     * Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72+1". If the format is incorrect, the default value color will be used.
+                     * Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72f1". If the format is incorrect, the default value color will be used. 
                      */
                     std::string m_themeColor;
                     bool m_themeColorHasBeenSet;

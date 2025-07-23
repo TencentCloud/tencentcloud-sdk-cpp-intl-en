@@ -165,11 +165,18 @@ CoreInternalOutcome AdaptiveDynamicStreamingTaskInput::Deserialize(const rapidjs
 
     if (value.HasMember("SubtitleTemplate") && !value["SubtitleTemplate"].IsNull())
     {
-        if (!value["SubtitleTemplate"].IsString())
+        if (!value["SubtitleTemplate"].IsObject())
         {
-            return CoreInternalOutcome(Core::Error("response `AdaptiveDynamicStreamingTaskInput.SubtitleTemplate` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AdaptiveDynamicStreamingTaskInput.SubtitleTemplate` is not object type").SetRequestId(requestId));
         }
-        m_subtitleTemplate = string(value["SubtitleTemplate"].GetString());
+
+        CoreInternalOutcome outcome = m_subtitleTemplate.Deserialize(value["SubtitleTemplate"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
         m_subtitleTemplateHasBeenSet = true;
     }
 
@@ -273,7 +280,8 @@ void AdaptiveDynamicStreamingTaskInput::ToJsonObject(rapidjson::Value &value, ra
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SubtitleTemplate";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_subtitleTemplate.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_subtitleTemplate.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -423,12 +431,12 @@ bool AdaptiveDynamicStreamingTaskInput::DefinitionTypeHasBeenSet() const
     return m_definitionTypeHasBeenSet;
 }
 
-string AdaptiveDynamicStreamingTaskInput::GetSubtitleTemplate() const
+SubtitleTemplate AdaptiveDynamicStreamingTaskInput::GetSubtitleTemplate() const
 {
     return m_subtitleTemplate;
 }
 
-void AdaptiveDynamicStreamingTaskInput::SetSubtitleTemplate(const string& _subtitleTemplate)
+void AdaptiveDynamicStreamingTaskInput::SetSubtitleTemplate(const SubtitleTemplate& _subtitleTemplate)
 {
     m_subtitleTemplate = _subtitleTemplate;
     m_subtitleTemplateHasBeenSet = true;

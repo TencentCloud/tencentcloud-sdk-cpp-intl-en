@@ -1803,3 +1803,46 @@ BillingClient::ModifyGatherRuleOutcomeCallable BillingClient::ModifyGatherRuleCa
     return task->get_future();
 }
 
+BillingClient::PayDealsOutcome BillingClient::PayDeals(const PayDealsRequest &request)
+{
+    auto outcome = MakeRequest(request, "PayDeals");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        PayDealsResponse rsp = PayDealsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return PayDealsOutcome(rsp);
+        else
+            return PayDealsOutcome(o.GetError());
+    }
+    else
+    {
+        return PayDealsOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::PayDealsAsync(const PayDealsRequest& request, const PayDealsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->PayDeals(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+BillingClient::PayDealsOutcomeCallable BillingClient::PayDealsCallable(const PayDealsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<PayDealsOutcome()>>(
+        [this, request]()
+        {
+            return this->PayDeals(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+

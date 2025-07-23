@@ -228,6 +228,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool SentimentAnalysisHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return HitType 
+                     * 
+                     */
+                    std::string GetHitType() const;
+
+                    /**
+                     * 判断参数 HitType 是否已赋值
+                     * @return HitType 是否已赋值
+                     * 
+                     */
+                    bool HitTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -308,6 +322,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     SentimentAnalysis m_sentimentAnalysis;
                     bool m_sentimentAnalysisHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_hitType;
+                    bool m_hitTypeHasBeenSet;
 
                 };
             }

@@ -26,6 +26,7 @@ ApplyWebVerificationBizTokenIntlRequest::ApplyWebVerificationBizTokenIntlRequest
     m_redirectURLHasBeenSet(false),
     m_compareImageBase64HasBeenSet(false),
     m_extraHasBeenSet(false),
+    m_ruleIdHasBeenSet(false),
     m_configHasBeenSet(false)
 {
 }
@@ -59,6 +60,14 @@ string ApplyWebVerificationBizTokenIntlRequest::ToJsonString() const
         string key = "Extra";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_extra.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_ruleIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RuleId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_ruleId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_configHasBeenSet)
@@ -124,6 +133,22 @@ void ApplyWebVerificationBizTokenIntlRequest::SetExtra(const string& _extra)
 bool ApplyWebVerificationBizTokenIntlRequest::ExtraHasBeenSet() const
 {
     return m_extraHasBeenSet;
+}
+
+string ApplyWebVerificationBizTokenIntlRequest::GetRuleId() const
+{
+    return m_ruleId;
+}
+
+void ApplyWebVerificationBizTokenIntlRequest::SetRuleId(const string& _ruleId)
+{
+    m_ruleId = _ruleId;
+    m_ruleIdHasBeenSet = true;
+}
+
+bool ApplyWebVerificationBizTokenIntlRequest::RuleIdHasBeenSet() const
+{
+    return m_ruleIdHasBeenSet;
 }
 
 WebVerificationConfigIntl ApplyWebVerificationBizTokenIntlRequest::GetConfig() const

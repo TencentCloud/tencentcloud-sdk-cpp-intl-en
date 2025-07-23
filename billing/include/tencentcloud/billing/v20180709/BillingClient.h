@@ -105,6 +105,8 @@
 #include <tencentcloud/billing/v20180709/model/ModifyAllocationUnitResponse.h>
 #include <tencentcloud/billing/v20180709/model/ModifyGatherRuleRequest.h>
 #include <tencentcloud/billing/v20180709/model/ModifyGatherRuleResponse.h>
+#include <tencentcloud/billing/v20180709/model/PayDealsRequest.h>
+#include <tencentcloud/billing/v20180709/model/PayDealsResponse.h>
 
 
 namespace TencentCloud
@@ -242,6 +244,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyGatherRuleResponse> ModifyGatherRuleOutcome;
                 typedef std::future<ModifyGatherRuleOutcome> ModifyGatherRuleOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::ModifyGatherRuleRequest&, ModifyGatherRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyGatherRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::PayDealsResponse> PayDealsOutcome;
+                typedef std::future<PayDealsOutcome> PayDealsOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::PayDealsRequest&, PayDealsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PayDealsAsyncHandler;
 
 
 
@@ -617,6 +622,15 @@ Note: The API request may fail due to network instability or other exceptions. I
                 ModifyGatherRuleOutcome ModifyGatherRule(const Model::ModifyGatherRuleRequest &request);
                 void ModifyGatherRuleAsync(const Model::ModifyGatherRuleRequest& request, const ModifyGatherRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyGatherRuleOutcomeCallable ModifyGatherRuleCallable(const Model::ModifyGatherRuleRequest& request);
+
+                /**
+                 *This API is used to pay for an order.
+                 * @param req PayDealsRequest
+                 * @return PayDealsOutcome
+                 */
+                PayDealsOutcome PayDeals(const Model::PayDealsRequest &request);
+                void PayDealsAsync(const Model::PayDealsRequest& request, const PayDealsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                PayDealsOutcomeCallable PayDealsCallable(const Model::PayDealsRequest& request);
 
             };
         }

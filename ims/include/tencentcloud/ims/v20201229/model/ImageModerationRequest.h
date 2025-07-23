@@ -212,6 +212,27 @@ namespace TencentCloud
                      */
                     bool DeviceHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return Type 
+                     * 
+                     */
+                    std::string GetType() const;
+
+                    /**
+                     * 设置
+                     * @param _type 
+                     * 
+                     */
+                    void SetType(const std::string& _type);
+
+                    /**
+                     * 判断参数 Type 是否已赋值
+                     * @return Type 是否已赋值
+                     * 
+                     */
+                    bool TypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -261,6 +282,12 @@ namespace TencentCloud
                      */
                     Device m_device;
                     bool m_deviceHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_type;
+                    bool m_typeHasBeenSet;
 
                 };
             }

@@ -269,6 +269,8 @@
 #include <tencentcloud/cynosdb/v20190107/model/ReloadBalanceProxyNodeResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/RemoveClusterSlaveZoneRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/RemoveClusterSlaveZoneResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/ReplayInstanceAuditLogRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/ReplayInstanceAuditLogResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/ResetAccountPasswordRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/ResetAccountPasswordResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/RestartInstanceRequest.h>
@@ -680,6 +682,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RemoveClusterSlaveZoneResponse> RemoveClusterSlaveZoneOutcome;
                 typedef std::future<RemoveClusterSlaveZoneOutcome> RemoveClusterSlaveZoneOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::RemoveClusterSlaveZoneRequest&, RemoveClusterSlaveZoneOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RemoveClusterSlaveZoneAsyncHandler;
+                typedef Outcome<Core::Error, Model::ReplayInstanceAuditLogResponse> ReplayInstanceAuditLogOutcome;
+                typedef std::future<ReplayInstanceAuditLogOutcome> ReplayInstanceAuditLogOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::ReplayInstanceAuditLogRequest&, ReplayInstanceAuditLogOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReplayInstanceAuditLogAsyncHandler;
                 typedef Outcome<Core::Error, Model::ResetAccountPasswordResponse> ResetAccountPasswordOutcome;
                 typedef std::future<ResetAccountPasswordOutcome> ResetAccountPasswordOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::ResetAccountPasswordRequest&, ResetAccountPasswordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetAccountPasswordAsyncHandler;
@@ -1831,6 +1836,15 @@ namespace TencentCloud
                 RemoveClusterSlaveZoneOutcome RemoveClusterSlaveZone(const Model::RemoveClusterSlaveZoneRequest &request);
                 void RemoveClusterSlaveZoneAsync(const Model::RemoveClusterSlaveZoneRequest& request, const RemoveClusterSlaveZoneAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 RemoveClusterSlaveZoneOutcomeCallable RemoveClusterSlaveZoneCallable(const Model::RemoveClusterSlaveZoneRequest& request);
+
+                /**
+                 *This API is used to replay instance audit logs.
+                 * @param req ReplayInstanceAuditLogRequest
+                 * @return ReplayInstanceAuditLogOutcome
+                 */
+                ReplayInstanceAuditLogOutcome ReplayInstanceAuditLog(const Model::ReplayInstanceAuditLogRequest &request);
+                void ReplayInstanceAuditLogAsync(const Model::ReplayInstanceAuditLogRequest& request, const ReplayInstanceAuditLogAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ReplayInstanceAuditLogOutcomeCallable ReplayInstanceAuditLogCallable(const Model::ReplayInstanceAuditLogRequest& request);
 
                 /**
                  *This API is used to modify the database account password.
