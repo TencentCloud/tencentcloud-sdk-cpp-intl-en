@@ -69,18 +69,22 @@ Such as "10000000001"
 
                     /**
                      * 获取Date.
-Such as" 2025-06-25"
+Such as" 2025-06-25".
+Please note: Historical daily bill dated before "2025-06-01",cannot be queried.
                      * @return Date Date.
-Such as" 2025-06-25"
+Such as" 2025-06-25".
+Please note: Historical daily bill dated before "2025-06-01",cannot be queried.
                      * 
                      */
                     std::string GetDate() const;
 
                     /**
                      * 设置Date.
-Such as" 2025-06-25"
+Such as" 2025-06-25".
+Please note: Historical daily bill dated before "2025-06-01",cannot be queried.
                      * @param _date Date.
-Such as" 2025-06-25"
+Such as" 2025-06-25".
+Please note: Historical daily bill dated before "2025-06-01",cannot be queried.
                      * 
                      */
                     void SetDate(const std::string& _date);
@@ -103,7 +107,8 @@ Such as "10000000001"
 
                     /**
                      * Date.
-Such as" 2025-06-25"
+Such as" 2025-06-25".
+Please note: Historical daily bill dated before "2025-06-01",cannot be queried.
                      */
                     std::string m_date;
                     bool m_dateHasBeenSet;
