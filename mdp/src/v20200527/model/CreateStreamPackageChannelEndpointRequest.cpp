@@ -29,7 +29,9 @@ CreateStreamPackageChannelEndpointRequest::CreateStreamPackageChannelEndpointReq
     m_protocolHasBeenSet(false),
     m_manifestHasBeenSet(false),
     m_timeShiftEnableHasBeenSet(false),
-    m_timeShiftDurationHasBeenSet(false)
+    m_timeShiftDurationHasBeenSet(false),
+    m_dRMEnabledHasBeenSet(false),
+    m_dRMInfoHasBeenSet(false)
 {
 }
 
@@ -95,6 +97,23 @@ string CreateStreamPackageChannelEndpointRequest::ToJsonString() const
         string key = "TimeShiftDuration";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_timeShiftDuration, allocator);
+    }
+
+    if (m_dRMEnabledHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DRMEnabled";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_dRMEnabled, allocator);
+    }
+
+    if (m_dRMInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DRMInfo";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_dRMInfo.ToJsonObject(d[key.c_str()], allocator);
     }
 
 
@@ -215,6 +234,38 @@ void CreateStreamPackageChannelEndpointRequest::SetTimeShiftDuration(const uint6
 bool CreateStreamPackageChannelEndpointRequest::TimeShiftDurationHasBeenSet() const
 {
     return m_timeShiftDurationHasBeenSet;
+}
+
+bool CreateStreamPackageChannelEndpointRequest::GetDRMEnabled() const
+{
+    return m_dRMEnabled;
+}
+
+void CreateStreamPackageChannelEndpointRequest::SetDRMEnabled(const bool& _dRMEnabled)
+{
+    m_dRMEnabled = _dRMEnabled;
+    m_dRMEnabledHasBeenSet = true;
+}
+
+bool CreateStreamPackageChannelEndpointRequest::DRMEnabledHasBeenSet() const
+{
+    return m_dRMEnabledHasBeenSet;
+}
+
+DRMInfo CreateStreamPackageChannelEndpointRequest::GetDRMInfo() const
+{
+    return m_dRMInfo;
+}
+
+void CreateStreamPackageChannelEndpointRequest::SetDRMInfo(const DRMInfo& _dRMInfo)
+{
+    m_dRMInfo = _dRMInfo;
+    m_dRMInfoHasBeenSet = true;
+}
+
+bool CreateStreamPackageChannelEndpointRequest::DRMInfoHasBeenSet() const
+{
+    return m_dRMInfoHasBeenSet;
 }
 
 

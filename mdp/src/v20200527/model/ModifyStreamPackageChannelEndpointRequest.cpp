@@ -33,7 +33,9 @@ ModifyStreamPackageChannelEndpointRequest::ModifyStreamPackageChannelEndpointReq
     m_sSAIEnableHasBeenSet(false),
     m_sSAIInfoHasBeenSet(false),
     m_customUrlParamIndexHasBeenSet(false),
-    m_customUrlParamHasBeenSet(false)
+    m_customUrlParamHasBeenSet(false),
+    m_dRMEnabledHasBeenSet(false),
+    m_dRMInfoHasBeenSet(false)
 {
 }
 
@@ -132,6 +134,23 @@ string ModifyStreamPackageChannelEndpointRequest::ToJsonString() const
         string key = "CustomUrlParam";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_customUrlParam.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_dRMEnabledHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DRMEnabled";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_dRMEnabled, allocator);
+    }
+
+    if (m_dRMInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DRMInfo";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_dRMInfo.ToJsonObject(d[key.c_str()], allocator);
     }
 
 
@@ -316,6 +335,38 @@ void ModifyStreamPackageChannelEndpointRequest::SetCustomUrlParam(const string& 
 bool ModifyStreamPackageChannelEndpointRequest::CustomUrlParamHasBeenSet() const
 {
     return m_customUrlParamHasBeenSet;
+}
+
+bool ModifyStreamPackageChannelEndpointRequest::GetDRMEnabled() const
+{
+    return m_dRMEnabled;
+}
+
+void ModifyStreamPackageChannelEndpointRequest::SetDRMEnabled(const bool& _dRMEnabled)
+{
+    m_dRMEnabled = _dRMEnabled;
+    m_dRMEnabledHasBeenSet = true;
+}
+
+bool ModifyStreamPackageChannelEndpointRequest::DRMEnabledHasBeenSet() const
+{
+    return m_dRMEnabledHasBeenSet;
+}
+
+DRMInfo ModifyStreamPackageChannelEndpointRequest::GetDRMInfo() const
+{
+    return m_dRMInfo;
+}
+
+void ModifyStreamPackageChannelEndpointRequest::SetDRMInfo(const DRMInfo& _dRMInfo)
+{
+    m_dRMInfo = _dRMInfo;
+    m_dRMInfoHasBeenSet = true;
+}
+
+bool ModifyStreamPackageChannelEndpointRequest::DRMInfoHasBeenSet() const
+{
+    return m_dRMInfoHasBeenSet;
 }
 
 

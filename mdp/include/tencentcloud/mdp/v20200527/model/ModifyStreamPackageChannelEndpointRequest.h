@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mdp/v20200527/model/EndpointAuthInfo.h>
 #include <tencentcloud/mdp/v20200527/model/SSAIConf.h>
+#include <tencentcloud/mdp/v20200527/model/DRMInfo.h>
 
 
 namespace TencentCloud
@@ -283,6 +284,48 @@ The parameters can only contain digits, letters, underscores (_), and hyphens (-
                      */
                     bool CustomUrlParamHasBeenSet() const;
 
+                    /**
+                     * 获取Enable DRM. This is only effective for CMAF protocol.
+                     * @return DRMEnabled Enable DRM. This is only effective for CMAF protocol.
+                     * 
+                     */
+                    bool GetDRMEnabled() const;
+
+                    /**
+                     * 设置Enable DRM. This is only effective for CMAF protocol.
+                     * @param _dRMEnabled Enable DRM. This is only effective for CMAF protocol.
+                     * 
+                     */
+                    void SetDRMEnabled(const bool& _dRMEnabled);
+
+                    /**
+                     * 判断参数 DRMEnabled 是否已赋值
+                     * @return DRMEnabled 是否已赋值
+                     * 
+                     */
+                    bool DRMEnabledHasBeenSet() const;
+
+                    /**
+                     * 获取DRM configuration information
+                     * @return DRMInfo DRM configuration information
+                     * 
+                     */
+                    DRMInfo GetDRMInfo() const;
+
+                    /**
+                     * 设置DRM configuration information
+                     * @param _dRMInfo DRM configuration information
+                     * 
+                     */
+                    void SetDRMInfo(const DRMInfo& _dRMInfo);
+
+                    /**
+                     * 判断参数 DRMInfo 是否已赋值
+                     * @return DRMInfo 是否已赋值
+                     * 
+                     */
+                    bool DRMInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -352,6 +395,18 @@ The parameters can only contain digits, letters, underscores (_), and hyphens (-
                      */
                     std::string m_customUrlParam;
                     bool m_customUrlParamHasBeenSet;
+
+                    /**
+                     * Enable DRM. This is only effective for CMAF protocol.
+                     */
+                    bool m_dRMEnabled;
+                    bool m_dRMEnabledHasBeenSet;
+
+                    /**
+                     * DRM configuration information
+                     */
+                    DRMInfo m_dRMInfo;
+                    bool m_dRMInfoHasBeenSet;
 
                 };
             }
