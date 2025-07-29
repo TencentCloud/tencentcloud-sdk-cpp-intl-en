@@ -259,6 +259,7 @@ namespace TencentCloud
 -9101 Alarm for covered certificate,
 -9102 Alarm for photocopied certificate,
 -9103 Alarm for photographed certificate,
+-9104 Alarm for PS certificate,
 -9107 Alarm for reflective certificate,
 -9108 Alarm for blurry image,
 -9109 This capability is not enabled.
@@ -267,6 +268,7 @@ namespace TencentCloud
 -9101 Alarm for covered certificate,
 -9102 Alarm for photocopied certificate,
 -9103 Alarm for photographed certificate,
+-9104 Alarm for PS certificate,
 -9107 Alarm for reflective certificate,
 -9108 Alarm for blurry image,
 -9109 This capability is not enabled.
@@ -282,20 +284,32 @@ namespace TencentCloud
                     bool WarnCardInfosHasBeenSet() const;
 
                     /**
-                     * 获取Field confidence:
- { "ID": { "Confidence": 0.9999 }, "ThaiName": { "Confidence": 0.9996 } }
-                     * @return AdvancedInfo Field confidence:
- { "ID": { "Confidence": 0.9999 }, "ThaiName": { "Confidence": 0.9996 } }
-                     * 
+                     * 获取This field is deprecated and will always return "1". Usage is not recommended.
+                     * @return AdvancedInfo This field is deprecated and will always return "1". Usage is not recommended.
+                     * @deprecated
                      */
                     std::string GetAdvancedInfo() const;
 
                     /**
                      * 判断参数 AdvancedInfo 是否已赋值
                      * @return AdvancedInfo 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool AdvancedInfoHasBeenSet() const;
+
+                    /**
+                     * 获取The number of cards detected in the input image provided via ImageBase64 parameter.(Currently supported only in ap-bangkok region)
+                     * @return CardCount The number of cards detected in the input image provided via ImageBase64 parameter.(Currently supported only in ap-bangkok region)
+                     * 
+                     */
+                    int64_t GetCardCount() const;
+
+                    /**
+                     * 判断参数 CardCount 是否已赋值
+                     * @return CardCount 是否已赋值
+                     * 
+                     */
+                    bool CardCountHasBeenSet() const;
 
                 private:
 
@@ -395,6 +409,7 @@ namespace TencentCloud
 -9101 Alarm for covered certificate,
 -9102 Alarm for photocopied certificate,
 -9103 Alarm for photographed certificate,
+-9104 Alarm for PS certificate,
 -9107 Alarm for reflective certificate,
 -9108 Alarm for blurry image,
 -9109 This capability is not enabled.
@@ -403,11 +418,16 @@ namespace TencentCloud
                     bool m_warnCardInfosHasBeenSet;
 
                     /**
-                     * Field confidence:
- { "ID": { "Confidence": 0.9999 }, "ThaiName": { "Confidence": 0.9996 } }
+                     * This field is deprecated and will always return "1". Usage is not recommended.
                      */
                     std::string m_advancedInfo;
                     bool m_advancedInfoHasBeenSet;
+
+                    /**
+                     * The number of cards detected in the input image provided via ImageBase64 parameter.(Currently supported only in ap-bangkok region)
+                     */
+                    int64_t m_cardCount;
+                    bool m_cardCountHasBeenSet;
 
                 };
             }

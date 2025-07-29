@@ -143,22 +143,16 @@ namespace TencentCloud
                     bool NationalityHasBeenSet() const;
 
                     /**
-                     * 获取Alarm codes
--9102 Alarm for photocopy on a paper document (including black & white and color ones)
--9103 Alarm for photocopy on an electronic device
--9106 Alarm for covered card
-                     * @return Warn Alarm codes
--9102 Alarm for photocopy on a paper document (including black & white and color ones)
--9103 Alarm for photocopy on an electronic device
--9106 Alarm for covered card
-                     * 
+                     * 获取This field is deprecated and will always return an empty array. Usage is not recommended.
+                     * @return Warn This field is deprecated and will always return an empty array. Usage is not recommended.
+                     * @deprecated
                      */
                     std::vector<int64_t> GetWarn() const;
 
                     /**
                      * 判断参数 Warn 是否已赋值
                      * @return Warn 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool WarnHasBeenSet() const;
 
@@ -177,32 +171,16 @@ namespace TencentCloud
                     bool ImageHasBeenSet() const;
 
                     /**
-                     * 获取Extended field:
-{
-    ID:{
-        Confidence:0.9999
-    },
-    Name:{
-        Confidence:0.9996
-    }
-}
-                     * @return AdvancedInfo Extended field:
-{
-    ID:{
-        Confidence:0.9999
-    },
-    Name:{
-        Confidence:0.9996
-    }
-}
-                     * 
+                     * 获取This field is deprecated and will always return "1". Usage is not recommended.
+                     * @return AdvancedInfo This field is deprecated and will always return "1". Usage is not recommended.
+                     * @deprecated
                      */
                     std::string GetAdvancedInfo() const;
 
                     /**
                      * 判断参数 AdvancedInfo 是否已赋值
                      * @return AdvancedInfo 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool AdvancedInfoHasBeenSet() const;
 
@@ -324,6 +302,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool WarnCardInfosHasBeenSet() const;
 
+                    /**
+                     * 获取The number of cards detected in the input image.(Currently supported only in ap-bangkok region)
+                     * @return CardCount The number of cards detected in the input image.(Currently supported only in ap-bangkok region)
+                     * 
+                     */
+                    int64_t GetCardCount() const;
+
+                    /**
+                     * 判断参数 CardCount 是否已赋值
+                     * @return CardCount 是否已赋值
+                     * 
+                     */
+                    bool CardCountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -369,10 +361,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_nationalityHasBeenSet;
 
                     /**
-                     * Alarm codes
--9102 Alarm for photocopy on a paper document (including black & white and color ones)
--9103 Alarm for photocopy on an electronic device
--9106 Alarm for covered card
+                     * This field is deprecated and will always return an empty array. Usage is not recommended.
                      */
                     std::vector<int64_t> m_warn;
                     bool m_warnHasBeenSet;
@@ -384,15 +373,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_imageHasBeenSet;
 
                     /**
-                     * Extended field:
-{
-    ID:{
-        Confidence:0.9999
-    },
-    Name:{
-        Confidence:0.9996
-    }
-}
+                     * This field is deprecated and will always return "1". Usage is not recommended.
                      */
                     std::string m_advancedInfo;
                     bool m_advancedInfoHasBeenSet;
@@ -448,6 +429,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<int64_t> m_warnCardInfos;
                     bool m_warnCardInfosHasBeenSet;
+
+                    /**
+                     * The number of cards detected in the input image.(Currently supported only in ap-bangkok region)
+                     */
+                    int64_t m_cardCount;
+                    bool m_cardCountHasBeenSet;
 
                 };
             }
