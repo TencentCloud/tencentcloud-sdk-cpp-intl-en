@@ -28,7 +28,8 @@ AudioTemplateInfo::AudioTemplateInfo() :
     m_languageCodeHasBeenSet(false),
     m_audioNormalizationHasBeenSet(false),
     m_audioSampleRateHasBeenSet(false),
-    m_audioCodecDetailsHasBeenSet(false)
+    m_audioCodecDetailsHasBeenSet(false),
+    m_languageDescriptionHasBeenSet(false)
 {
 }
 
@@ -131,6 +132,16 @@ CoreInternalOutcome AudioTemplateInfo::Deserialize(const rapidjson::Value &value
         m_audioCodecDetailsHasBeenSet = true;
     }
 
+    if (value.HasMember("LanguageDescription") && !value["LanguageDescription"].IsNull())
+    {
+        if (!value["LanguageDescription"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AudioTemplateInfo.LanguageDescription` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_languageDescription = string(value["LanguageDescription"].GetString());
+        m_languageDescriptionHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -202,6 +213,14 @@ void AudioTemplateInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Documen
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_audioCodecDetails.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_languageDescriptionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LanguageDescription";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_languageDescription.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -333,5 +352,21 @@ void AudioTemplateInfo::SetAudioCodecDetails(const AudioCodecDetail& _audioCodec
 bool AudioTemplateInfo::AudioCodecDetailsHasBeenSet() const
 {
     return m_audioCodecDetailsHasBeenSet;
+}
+
+string AudioTemplateInfo::GetLanguageDescription() const
+{
+    return m_languageDescription;
+}
+
+void AudioTemplateInfo::SetLanguageDescription(const string& _languageDescription)
+{
+    m_languageDescription = _languageDescription;
+    m_languageDescriptionHasBeenSet = true;
+}
+
+bool AudioTemplateInfo::LanguageDescriptionHasBeenSet() const
+{
+    return m_languageDescriptionHasBeenSet;
 }
 

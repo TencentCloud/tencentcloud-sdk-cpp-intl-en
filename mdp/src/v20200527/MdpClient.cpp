@@ -1545,6 +1545,49 @@ MdpClient::DescribeStreamPackageSSAIChannelsOutcomeCallable MdpClient::DescribeS
     return task->get_future();
 }
 
+MdpClient::DescribeStreamPackageSSAIUsageOutcome MdpClient::DescribeStreamPackageSSAIUsage(const DescribeStreamPackageSSAIUsageRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeStreamPackageSSAIUsage");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeStreamPackageSSAIUsageResponse rsp = DescribeStreamPackageSSAIUsageResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeStreamPackageSSAIUsageOutcome(rsp);
+        else
+            return DescribeStreamPackageSSAIUsageOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeStreamPackageSSAIUsageOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::DescribeStreamPackageSSAIUsageAsync(const DescribeStreamPackageSSAIUsageRequest& request, const DescribeStreamPackageSSAIUsageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeStreamPackageSSAIUsage(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::DescribeStreamPackageSSAIUsageOutcomeCallable MdpClient::DescribeStreamPackageSSAIUsageCallable(const DescribeStreamPackageSSAIUsageRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeStreamPackageSSAIUsageOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeStreamPackageSSAIUsage(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 MdpClient::DescribeStreamPackageSourceOutcome MdpClient::DescribeStreamPackageSource(const DescribeStreamPackageSourceRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeStreamPackageSource");

@@ -93,6 +93,8 @@
 #include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageSSAIChannelResponse.h>
 #include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageSSAIChannelsRequest.h>
 #include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageSSAIChannelsResponse.h>
+#include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageSSAIUsageRequest.h>
+#include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageSSAIUsageResponse.h>
 #include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageSourceRequest.h>
 #include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageSourceResponse.h>
 #include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageSourceAlertsRequest.h>
@@ -248,6 +250,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeStreamPackageSSAIChannelsResponse> DescribeStreamPackageSSAIChannelsOutcome;
                 typedef std::future<DescribeStreamPackageSSAIChannelsOutcome> DescribeStreamPackageSSAIChannelsOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::DescribeStreamPackageSSAIChannelsRequest&, DescribeStreamPackageSSAIChannelsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamPackageSSAIChannelsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeStreamPackageSSAIUsageResponse> DescribeStreamPackageSSAIUsageOutcome;
+                typedef std::future<DescribeStreamPackageSSAIUsageOutcome> DescribeStreamPackageSSAIUsageOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::DescribeStreamPackageSSAIUsageRequest&, DescribeStreamPackageSSAIUsageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamPackageSSAIUsageAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeStreamPackageSourceResponse> DescribeStreamPackageSourceOutcome;
                 typedef std::future<DescribeStreamPackageSourceOutcome> DescribeStreamPackageSourceOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::DescribeStreamPackageSourceRequest&, DescribeStreamPackageSourceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamPackageSourceAsyncHandler;
@@ -619,6 +624,15 @@ namespace TencentCloud
                 DescribeStreamPackageSSAIChannelsOutcome DescribeStreamPackageSSAIChannels(const Model::DescribeStreamPackageSSAIChannelsRequest &request);
                 void DescribeStreamPackageSSAIChannelsAsync(const Model::DescribeStreamPackageSSAIChannelsRequest& request, const DescribeStreamPackageSSAIChannelsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeStreamPackageSSAIChannelsOutcomeCallable DescribeStreamPackageSSAIChannelsCallable(const Model::DescribeStreamPackageSSAIChannelsRequest& request);
+
+                /**
+                 *This API is used to query SSAI ad replacement usage.
+                 * @param req DescribeStreamPackageSSAIUsageRequest
+                 * @return DescribeStreamPackageSSAIUsageOutcome
+                 */
+                DescribeStreamPackageSSAIUsageOutcome DescribeStreamPackageSSAIUsage(const Model::DescribeStreamPackageSSAIUsageRequest &request);
+                void DescribeStreamPackageSSAIUsageAsync(const Model::DescribeStreamPackageSSAIUsageRequest& request, const DescribeStreamPackageSSAIUsageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeStreamPackageSSAIUsageOutcomeCallable DescribeStreamPackageSSAIUsageCallable(const Model::DescribeStreamPackageSSAIUsageRequest& request);
 
                 /**
                  *Query channel linear assembly Source information.

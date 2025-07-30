@@ -309,6 +309,27 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool SubtitleTemplateHasBeenSet() const;
 
+                    /**
+                     * 获取Extension field for transcoding.
+                     * @return StdExtInfo Extension field for transcoding.
+                     * 
+                     */
+                    std::string GetStdExtInfo() const;
+
+                    /**
+                     * 设置Extension field for transcoding.
+                     * @param _stdExtInfo Extension field for transcoding.
+                     * 
+                     */
+                    void SetStdExtInfo(const std::string& _stdExtInfo);
+
+                    /**
+                     * 判断参数 StdExtInfo 是否已赋值
+                     * @return StdExtInfo 是否已赋值
+                     * 
+                     */
+                    bool StdExtInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -382,6 +403,12 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     SubtitleTemplate m_subtitleTemplate;
                     bool m_subtitleTemplateHasBeenSet;
+
+                    /**
+                     * Extension field for transcoding.
+                     */
+                    std::string m_stdExtInfo;
+                    bool m_stdExtInfoHasBeenSet;
 
                 };
             }

@@ -89,6 +89,7 @@ set(mdp_public_header_model
   include/tencentcloud/mdp/v20200527/model/ModifyStreamPackageSourceResponse.h
   include/tencentcloud/mdp/v20200527/model/DeleteStreamPackageLinearAssemblyChannelRequest.h
   include/tencentcloud/mdp/v20200527/model/ModifyStreamPackageChannelRequest.h
+  include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageSSAIUsageResponse.h
   include/tencentcloud/mdp/v20200527/model/CreateStreamPackageLinearAssemblyProgramRequest.h
   include/tencentcloud/mdp/v20200527/model/SegmentDeliverInfo.h
   include/tencentcloud/mdp/v20200527/model/DeleteStreamPackageLinearAssemblyChannelResponse.h
@@ -107,6 +108,7 @@ set(mdp_public_header_model
   include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageSourceLocationsResponse.h
   include/tencentcloud/mdp/v20200527/model/StopStreamPackageLinearAssemblyChannelResponse.h
   include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageChannelsRequest.h
+  include/tencentcloud/mdp/v20200527/model/SSAIUsageInfo.h
   include/tencentcloud/mdp/v20200527/model/ModifyStreamPackageChannelInputAuthInfoResponse.h
   include/tencentcloud/mdp/v20200527/model/SlateInfo.h
   include/tencentcloud/mdp/v20200527/model/UnbindLinearAssemblyCDNDomainWithChannelResponse.h
@@ -138,6 +140,7 @@ set(mdp_public_header_model
   include/tencentcloud/mdp/v20200527/model/DeleteStreamPackageLinearAssemblyProgramsRequest.h
   include/tencentcloud/mdp/v20200527/model/DeleteStreamPackageChannelEndpointsResponse.h
   include/tencentcloud/mdp/v20200527/model/CreateStreamPackageHarvestJobRequest.h
+  include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageSSAIUsageRequest.h
   include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageSourceAlertsResponse.h
   include/tencentcloud/mdp/v20200527/model/DeleteStreamPackageLinearAssemblyProgramRequest.h
   include/tencentcloud/mdp/v20200527/model/DeleteStreamPackageChannelsResponse.h
@@ -158,6 +161,7 @@ set(mdp_public_header_model
   include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageSourcesRequest.h
   include/tencentcloud/mdp/v20200527/model/CreateStreamPackageLinearAssemblyChannelResponse.h
   include/tencentcloud/mdp/v20200527/model/LinearAssemblyChannelInfo.h
+  include/tencentcloud/mdp/v20200527/model/UsageDetail.h
   include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageSSAIChannelsResponse.h
   include/tencentcloud/mdp/v20200527/model/OutputReq.h
   include/tencentcloud/mdp/v20200527/model/CacheInfoInfo.h
@@ -241,6 +245,7 @@ set(mdp_src
   src/v20200527/model/ModifyStreamPackageSourceResponse.cpp
   src/v20200527/model/DeleteStreamPackageLinearAssemblyChannelRequest.cpp
   src/v20200527/model/ModifyStreamPackageChannelRequest.cpp
+  src/v20200527/model/DescribeStreamPackageSSAIUsageResponse.cpp
   src/v20200527/model/CreateStreamPackageLinearAssemblyProgramRequest.cpp
   src/v20200527/model/SegmentDeliverInfo.cpp
   src/v20200527/model/DeleteStreamPackageLinearAssemblyChannelResponse.cpp
@@ -259,6 +264,7 @@ set(mdp_src
   src/v20200527/model/DescribeStreamPackageSourceLocationsResponse.cpp
   src/v20200527/model/StopStreamPackageLinearAssemblyChannelResponse.cpp
   src/v20200527/model/DescribeStreamPackageChannelsRequest.cpp
+  src/v20200527/model/SSAIUsageInfo.cpp
   src/v20200527/model/ModifyStreamPackageChannelInputAuthInfoResponse.cpp
   src/v20200527/model/SlateInfo.cpp
   src/v20200527/model/UnbindLinearAssemblyCDNDomainWithChannelResponse.cpp
@@ -290,6 +296,7 @@ set(mdp_src
   src/v20200527/model/DeleteStreamPackageLinearAssemblyProgramsRequest.cpp
   src/v20200527/model/DeleteStreamPackageChannelEndpointsResponse.cpp
   src/v20200527/model/CreateStreamPackageHarvestJobRequest.cpp
+  src/v20200527/model/DescribeStreamPackageSSAIUsageRequest.cpp
   src/v20200527/model/DescribeStreamPackageSourceAlertsResponse.cpp
   src/v20200527/model/DeleteStreamPackageLinearAssemblyProgramRequest.cpp
   src/v20200527/model/DeleteStreamPackageChannelsResponse.cpp
@@ -310,6 +317,7 @@ set(mdp_src
   src/v20200527/model/DescribeStreamPackageSourcesRequest.cpp
   src/v20200527/model/CreateStreamPackageLinearAssemblyChannelResponse.cpp
   src/v20200527/model/LinearAssemblyChannelInfo.cpp
+  src/v20200527/model/UsageDetail.cpp
   src/v20200527/model/DescribeStreamPackageSSAIChannelsResponse.cpp
   src/v20200527/model/OutputReq.cpp
   src/v20200527/model/CacheInfoInfo.cpp

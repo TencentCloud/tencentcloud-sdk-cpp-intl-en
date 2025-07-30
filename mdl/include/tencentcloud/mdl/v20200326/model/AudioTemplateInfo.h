@@ -137,15 +137,15 @@ Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000,
                     bool AudioBitrateHasBeenSet() const;
 
                     /**
-                     * 获取Audio language code, whose length is always 3 characters.
-                     * @return LanguageCode Audio language code, whose length is always 3 characters.
+                     * 获取Audio language code, which length is between 2 and 20.
+                     * @return LanguageCode Audio language code, which length is between 2 and 20.
                      * 
                      */
                     std::string GetLanguageCode() const;
 
                     /**
-                     * 设置Audio language code, whose length is always 3 characters.
-                     * @param _languageCode Audio language code, whose length is always 3 characters.
+                     * 设置Audio language code, which length is between 2 and 20.
+                     * @param _languageCode Audio language code, which length is between 2 and 20.
                      * 
                      */
                     void SetLanguageCode(const std::string& _languageCode);
@@ -220,6 +220,27 @@ Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000,
                      */
                     bool AudioCodecDetailsHasBeenSet() const;
 
+                    /**
+                     * 获取Audio language description, which maximum length is 100.
+                     * @return LanguageDescription Audio language description, which maximum length is 100.
+                     * 
+                     */
+                    std::string GetLanguageDescription() const;
+
+                    /**
+                     * 设置Audio language description, which maximum length is 100.
+                     * @param _languageDescription Audio language description, which maximum length is 100.
+                     * 
+                     */
+                    void SetLanguageDescription(const std::string& _languageDescription);
+
+                    /**
+                     * 判断参数 LanguageDescription 是否已赋值
+                     * @return LanguageDescription 是否已赋值
+                     * 
+                     */
+                    bool LanguageDescriptionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -248,7 +269,7 @@ Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000,
                     bool m_audioBitrateHasBeenSet;
 
                     /**
-                     * Audio language code, whose length is always 3 characters.
+                     * Audio language code, which length is between 2 and 20.
                      */
                     std::string m_languageCode;
                     bool m_languageCodeHasBeenSet;
@@ -270,6 +291,12 @@ Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000,
                      */
                     AudioCodecDetail m_audioCodecDetails;
                     bool m_audioCodecDetailsHasBeenSet;
+
+                    /**
+                     * Audio language description, which maximum length is 100.
+                     */
+                    std::string m_languageDescription;
+                    bool m_languageDescriptionHasBeenSet;
 
                 };
             }
