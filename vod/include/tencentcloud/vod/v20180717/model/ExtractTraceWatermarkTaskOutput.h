@@ -70,21 +70,21 @@ namespace TencentCloud
                     /**
                      * 获取This parameter has been deprecated.
                      * @return Uid This parameter has been deprecated.
-                     * 
+                     * @deprecated
                      */
                     std::string GetUid() const;
 
                     /**
                      * 设置This parameter has been deprecated.
                      * @param _uid This parameter has been deprecated.
-                     * 
+                     * @deprecated
                      */
                     void SetUid(const std::string& _uid);
 
                     /**
                      * 判断参数 Uid 是否已赋值
                      * @return Uid 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool UidHasBeenSet() const;
 

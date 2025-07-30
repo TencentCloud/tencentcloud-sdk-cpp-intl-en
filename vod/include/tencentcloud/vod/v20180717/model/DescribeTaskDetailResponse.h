@@ -43,6 +43,7 @@
 #include <tencentcloud/vod/v20180717/model/QualityInspectTask.h>
 #include <tencentcloud/vod/v20180717/model/QualityEnhanceTask.h>
 #include <tencentcloud/vod/v20180717/model/ComplexAdaptiveDynamicStreamingTask.h>
+#include <tencentcloud/vod/v20180717/model/ProcessMediaByMPS.h>
 
 
 namespace TencentCloud
@@ -80,7 +81,7 @@ namespace TencentCloud
 <li> `ReviewAudioVideo`: Moderation</li>
 <li>`ExtractTraceWatermark`: Digital watermark extraction</li>
 <li>`QualityEnhance`: Enhance audio/video</li>
-<li>`ComplexAdaptiveDynamicStreaming`: Complex adaptive bitrate streaming processing task</li>
+<li>`ComplexAdaptiveDynamicStreaming`: Complex adaptive bitrate streaming processing task</li><li>`ProcessMediaByMPS`: Process media by MPS.</li>
                      * @return TaskType The task type. Valid values:
 <li>`Procedure`: Video processing</li>
 <li>`EditMedia`: Video editing</li>
@@ -95,7 +96,7 @@ namespace TencentCloud
 <li> `ReviewAudioVideo`: Moderation</li>
 <li>`ExtractTraceWatermark`: Digital watermark extraction</li>
 <li>`QualityEnhance`: Enhance audio/video</li>
-<li>`ComplexAdaptiveDynamicStreaming`: Complex adaptive bitrate streaming processing task</li>
+<li>`ComplexAdaptiveDynamicStreaming`: Complex adaptive bitrate streaming processing task</li><li>`ProcessMediaByMPS`: Process media by MPS.</li>
                      * 
                      */
                     std::string GetTaskType() const;
@@ -521,6 +522,20 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool ComplexAdaptiveDynamicStreamingTaskHasBeenSet() const;
 
+                    /**
+                     * 获取Media processing by MPS task information. This field contains a value only when TaskType is ProcessMediaByMPS.
+                     * @return ProcessMediaByMPSTask Media processing by MPS task information. This field contains a value only when TaskType is ProcessMediaByMPS.
+                     * 
+                     */
+                    ProcessMediaByMPS GetProcessMediaByMPSTask() const;
+
+                    /**
+                     * 判断参数 ProcessMediaByMPSTask 是否已赋值
+                     * @return ProcessMediaByMPSTask 是否已赋值
+                     * 
+                     */
+                    bool ProcessMediaByMPSTaskHasBeenSet() const;
+
                 private:
 
                     /**
@@ -538,7 +553,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li> `ReviewAudioVideo`: Moderation</li>
 <li>`ExtractTraceWatermark`: Digital watermark extraction</li>
 <li>`QualityEnhance`: Enhance audio/video</li>
-<li>`ComplexAdaptiveDynamicStreaming`: Complex adaptive bitrate streaming processing task</li>
+<li>`ComplexAdaptiveDynamicStreaming`: Complex adaptive bitrate streaming processing task</li><li>`ProcessMediaByMPS`: Process media by MPS.</li>
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
@@ -723,6 +738,12 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     ComplexAdaptiveDynamicStreamingTask m_complexAdaptiveDynamicStreamingTask;
                     bool m_complexAdaptiveDynamicStreamingTaskHasBeenSet;
+
+                    /**
+                     * Media processing by MPS task information. This field contains a value only when TaskType is ProcessMediaByMPS.
+                     */
+                    ProcessMediaByMPS m_processMediaByMPSTask;
+                    bool m_processMediaByMPSTaskHasBeenSet;
 
                 };
             }

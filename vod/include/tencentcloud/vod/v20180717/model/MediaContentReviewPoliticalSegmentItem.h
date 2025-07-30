@@ -325,21 +325,21 @@ military:
                     /**
                      * 获取This field has been disused. Please use `PicUrlExpireTime`.
                      * @return PicUrlExpireTimeStamp This field has been disused. Please use `PicUrlExpireTime`.
-                     * 
+                     * @deprecated
                      */
                     int64_t GetPicUrlExpireTimeStamp() const;
 
                     /**
                      * 设置This field has been disused. Please use `PicUrlExpireTime`.
                      * @param _picUrlExpireTimeStamp This field has been disused. Please use `PicUrlExpireTime`.
-                     * 
+                     * @deprecated
                      */
                     void SetPicUrlExpireTimeStamp(const int64_t& _picUrlExpireTimeStamp);
 
                     /**
                      * 判断参数 PicUrlExpireTimeStamp 是否已赋值
                      * @return PicUrlExpireTimeStamp 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool PicUrlExpireTimeStampHasBeenSet() const;
 

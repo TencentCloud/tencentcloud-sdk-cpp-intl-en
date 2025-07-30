@@ -106,7 +106,7 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ErrCode Disused. Please use `ErrCode` of each specific task.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     int64_t GetErrCode() const;
 
@@ -115,14 +115,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _errCode Disused. Please use `ErrCode` of each specific task.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     void SetErrCode(const int64_t& _errCode);
 
                     /**
                      * 判断参数 ErrCode 是否已赋值
                      * @return ErrCode 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool ErrCodeHasBeenSet() const;
 
@@ -131,7 +131,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Message Disused. Please use `Message` of each specific task.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     std::string GetMessage() const;
 
@@ -140,14 +140,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _message Disused. Please use `Message` of each specific task.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool MessageHasBeenSet() const;
 
