@@ -771,6 +771,49 @@ IntlpartnersmgtClient::DescribeCustomerInfoOutcomeCallable IntlpartnersmgtClient
     return task->get_future();
 }
 
+IntlpartnersmgtClient::DescribeCustomerOwnVoucherListOutcome IntlpartnersmgtClient::DescribeCustomerOwnVoucherList(const DescribeCustomerOwnVoucherListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCustomerOwnVoucherList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCustomerOwnVoucherListResponse rsp = DescribeCustomerOwnVoucherListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCustomerOwnVoucherListOutcome(rsp);
+        else
+            return DescribeCustomerOwnVoucherListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCustomerOwnVoucherListOutcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::DescribeCustomerOwnVoucherListAsync(const DescribeCustomerOwnVoucherListRequest& request, const DescribeCustomerOwnVoucherListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCustomerOwnVoucherList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IntlpartnersmgtClient::DescribeCustomerOwnVoucherListOutcomeCallable IntlpartnersmgtClient::DescribeCustomerOwnVoucherListCallable(const DescribeCustomerOwnVoucherListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCustomerOwnVoucherListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCustomerOwnVoucherList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 IntlpartnersmgtClient::DescribeCustomerUinOutcome IntlpartnersmgtClient::DescribeCustomerUin(const DescribeCustomerUinRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeCustomerUin");
@@ -807,6 +850,49 @@ IntlpartnersmgtClient::DescribeCustomerUinOutcomeCallable IntlpartnersmgtClient:
         [this, request]()
         {
             return this->DescribeCustomerUin(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+IntlpartnersmgtClient::DescribeCustomerVoucherListOutcome IntlpartnersmgtClient::DescribeCustomerVoucherList(const DescribeCustomerVoucherListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCustomerVoucherList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCustomerVoucherListResponse rsp = DescribeCustomerVoucherListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCustomerVoucherListOutcome(rsp);
+        else
+            return DescribeCustomerVoucherListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCustomerVoucherListOutcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::DescribeCustomerVoucherListAsync(const DescribeCustomerVoucherListRequest& request, const DescribeCustomerVoucherListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCustomerVoucherList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IntlpartnersmgtClient::DescribeCustomerVoucherListOutcomeCallable IntlpartnersmgtClient::DescribeCustomerVoucherListCallable(const DescribeCustomerVoucherListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCustomerVoucherListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCustomerVoucherList(request);
         }
     );
 

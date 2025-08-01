@@ -421,6 +421,48 @@ namespace TencentCloud
                      */
                     bool ConnectionPoolTypeHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return AutoLoadBalance 
+                     * 
+                     */
+                    bool GetAutoLoadBalance() const;
+
+                    /**
+                     * 设置
+                     * @param _autoLoadBalance 
+                     * 
+                     */
+                    void SetAutoLoadBalance(const bool& _autoLoadBalance);
+
+                    /**
+                     * 判断参数 AutoLoadBalance 是否已赋值
+                     * @return AutoLoadBalance 是否已赋值
+                     * 
+                     */
+                    bool AutoLoadBalanceHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return AccessMode 
+                     * 
+                     */
+                    std::string GetAccessMode() const;
+
+                    /**
+                     * 设置
+                     * @param _accessMode 
+                     * 
+                     */
+                    void SetAccessMode(const std::string& _accessMode);
+
+                    /**
+                     * 判断参数 AccessMode 是否已赋值
+                     * @return AccessMode 是否已赋值
+                     * 
+                     */
+                    bool AccessModeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -530,6 +572,18 @@ namespace TencentCloud
                      */
                     std::string m_connectionPoolType;
                     bool m_connectionPoolTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_autoLoadBalance;
+                    bool m_autoLoadBalanceHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_accessMode;
+                    bool m_accessModeHasBeenSet;
 
                 };
             }

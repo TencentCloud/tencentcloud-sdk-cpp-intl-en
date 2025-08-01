@@ -57,8 +57,12 @@
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillSummaryResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerInfoRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerInfoResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerOwnVoucherListRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerOwnVoucherListResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerUinRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerUinResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerVoucherListRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerVoucherListResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeRebateDownloadUrlRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeRebateDownloadUrlResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/ForceQNRequest.h>
@@ -168,9 +172,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeCustomerInfoResponse> DescribeCustomerInfoOutcome;
                 typedef std::future<DescribeCustomerInfoOutcome> DescribeCustomerInfoOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeCustomerInfoRequest&, DescribeCustomerInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomerInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCustomerOwnVoucherListResponse> DescribeCustomerOwnVoucherListOutcome;
+                typedef std::future<DescribeCustomerOwnVoucherListOutcome> DescribeCustomerOwnVoucherListOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeCustomerOwnVoucherListRequest&, DescribeCustomerOwnVoucherListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomerOwnVoucherListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCustomerUinResponse> DescribeCustomerUinOutcome;
                 typedef std::future<DescribeCustomerUinOutcome> DescribeCustomerUinOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeCustomerUinRequest&, DescribeCustomerUinOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomerUinAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCustomerVoucherListResponse> DescribeCustomerVoucherListOutcome;
+                typedef std::future<DescribeCustomerVoucherListOutcome> DescribeCustomerVoucherListOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeCustomerVoucherListRequest&, DescribeCustomerVoucherListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomerVoucherListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRebateDownloadUrlResponse> DescribeRebateDownloadUrlOutcome;
                 typedef std::future<DescribeRebateDownloadUrlOutcome> DescribeRebateDownloadUrlOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeRebateDownloadUrlRequest&, DescribeRebateDownloadUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRebateDownloadUrlAsyncHandler;
@@ -427,6 +437,16 @@ Invocation roles: reseller, first-level distributor.
                 DescribeCustomerInfoOutcomeCallable DescribeCustomerInfoCallable(const Model::DescribeCustomerInfoRequest& request);
 
                 /**
+                 *This API is used to query the voucher list by Customer. 
+Callable roles: Customer.
+                 * @param req DescribeCustomerOwnVoucherListRequest
+                 * @return DescribeCustomerOwnVoucherListOutcome
+                 */
+                DescribeCustomerOwnVoucherListOutcome DescribeCustomerOwnVoucherList(const Model::DescribeCustomerOwnVoucherListRequest &request);
+                void DescribeCustomerOwnVoucherListAsync(const Model::DescribeCustomerOwnVoucherListRequest& request, const DescribeCustomerOwnVoucherListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCustomerOwnVoucherListOutcomeCallable DescribeCustomerOwnVoucherListCallable(const Model::DescribeCustomerOwnVoucherListRequest& request);
+
+                /**
                  *This API is used to query the list of customer UINs.
                  * @param req DescribeCustomerUinRequest
                  * @return DescribeCustomerUinOutcome
@@ -434,6 +454,16 @@ Invocation roles: reseller, first-level distributor.
                 DescribeCustomerUinOutcome DescribeCustomerUin(const Model::DescribeCustomerUinRequest &request);
                 void DescribeCustomerUinAsync(const Model::DescribeCustomerUinRequest& request, const DescribeCustomerUinAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeCustomerUinOutcomeCallable DescribeCustomerUinCallable(const Model::DescribeCustomerUinRequest& request);
+
+                /**
+                 *This API is used to query the customer voucher list by Reseller, Second-level Reseller or Distributor.
+Callable roles: Reseller, Second-level Reseller or Distributor.
+                 * @param req DescribeCustomerVoucherListRequest
+                 * @return DescribeCustomerVoucherListOutcome
+                 */
+                DescribeCustomerVoucherListOutcome DescribeCustomerVoucherList(const Model::DescribeCustomerVoucherListRequest &request);
+                void DescribeCustomerVoucherListAsync(const Model::DescribeCustomerVoucherListRequest& request, const DescribeCustomerVoucherListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCustomerVoucherListOutcomeCallable DescribeCustomerVoucherListCallable(const Model::DescribeCustomerVoucherListRequest& request);
 
                 /**
                  *This API is used to download the commission bill file by resellers/agents. The file URL is returned.

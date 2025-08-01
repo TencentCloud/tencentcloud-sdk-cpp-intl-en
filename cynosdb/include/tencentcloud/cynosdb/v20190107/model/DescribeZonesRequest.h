@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether the virtual zone is included.–
-                     * @return IncludeVirtualZones Whether the virtual zone is included.–
+                     * 获取Whether the virtual zone is included.
+                     * @return IncludeVirtualZones Whether the virtual zone is included.
                      * 
                      */
                     bool GetIncludeVirtualZones() const;
 
                     /**
-                     * 设置Whether the virtual zone is included.–
-                     * @param _includeVirtualZones Whether the virtual zone is included.–
+                     * 设置Whether the virtual zone is included.
+                     * @param _includeVirtualZones Whether the virtual zone is included.
                      * 
                      */
                     void SetIncludeVirtualZones(const bool& _includeVirtualZones);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool IncludeVirtualZonesHasBeenSet() const;
 
                     /**
-                     * 获取Whether to display all AZs in a region and the user’s permissions in each AZ.
-                     * @return ShowPermission Whether to display all AZs in a region and the user’s permissions in each AZ.
+                     * 获取Whether to display all AZs in a region and the user's permissions in each AZ.
+                     * @return ShowPermission Whether to display all AZs in a region and the user's permissions in each AZ.
                      * 
                      */
                     bool GetShowPermission() const;
 
                     /**
-                     * 设置Whether to display all AZs in a region and the user’s permissions in each AZ.
-                     * @param _showPermission Whether to display all AZs in a region and the user’s permissions in each AZ.
+                     * 设置Whether to display all AZs in a region and the user's permissions in each AZ.
+                     * @param _showPermission Whether to display all AZs in a region and the user's permissions in each AZ.
                      * 
                      */
                     void SetShowPermission(const bool& _showPermission);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether the virtual zone is included.–
+                     * Whether the virtual zone is included.
                      */
                     bool m_includeVirtualZones;
                     bool m_includeVirtualZonesHasBeenSet;
 
                     /**
-                     * Whether to display all AZs in a region and the user’s permissions in each AZ.
+                     * Whether to display all AZs in a region and the user's permissions in each AZ.
                      */
                     bool m_showPermission;
                     bool m_showPermissionHasBeenSet;

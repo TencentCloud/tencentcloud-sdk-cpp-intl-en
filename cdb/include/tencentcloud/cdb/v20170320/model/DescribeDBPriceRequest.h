@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取AZ information in the format of "ap-guangzhou-2". You can use the <a href="https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1">DescribeDBZoneConfig</a> API to query the configurable values. This parameter is required when `InstanceId` is empty.
-                     * @return Zone AZ information in the format of "ap-guangzhou-2". You can use the <a href="https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1">DescribeDBZoneConfig</a> API to query the configurable values. This parameter is required when `InstanceId` is empty.
+                     * 获取AZ information in the format of "ap-guangzhou-3". You can use the <a href="https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1">DescribeDBZoneConfig</a> API to query the configurable values. This parameter is required when `InstanceId` is empty.
+                     * @return Zone AZ information in the format of "ap-guangzhou-3". You can use the <a href="https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1">DescribeDBZoneConfig</a> API to query the configurable values. This parameter is required when `InstanceId` is empty.
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置AZ information in the format of "ap-guangzhou-2". You can use the <a href="https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1">DescribeDBZoneConfig</a> API to query the configurable values. This parameter is required when `InstanceId` is empty.
-                     * @param _zone AZ information in the format of "ap-guangzhou-2". You can use the <a href="https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1">DescribeDBZoneConfig</a> API to query the configurable values. This parameter is required when `InstanceId` is empty.
+                     * 设置AZ information in the format of "ap-guangzhou-3". You can use the <a href="https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1">DescribeDBZoneConfig</a> API to query the configurable values. This parameter is required when `InstanceId` is empty.
+                     * @param _zone AZ information in the format of "ap-guangzhou-3". You can use the <a href="https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1">DescribeDBZoneConfig</a> API to query the configurable values. This parameter is required when `InstanceId` is empty.
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -315,6 +315,27 @@ namespace TencentCloud
                      */
                     bool LadderHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return DiskType 
+                     * 
+                     */
+                    std::string GetDiskType() const;
+
+                    /**
+                     * 设置
+                     * @param _diskType 
+                     * 
+                     */
+                    void SetDiskType(const std::string& _diskType);
+
+                    /**
+                     * 判断参数 DiskType 是否已赋值
+                     * @return DiskType 是否已赋值
+                     * 
+                     */
+                    bool DiskTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -324,7 +345,7 @@ namespace TencentCloud
                     bool m_periodHasBeenSet;
 
                     /**
-                     * AZ information in the format of "ap-guangzhou-2". You can use the <a href="https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1">DescribeDBZoneConfig</a> API to query the configurable values. This parameter is required when `InstanceId` is empty.
+                     * AZ information in the format of "ap-guangzhou-3". You can use the <a href="https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1">DescribeDBZoneConfig</a> API to query the configurable values. This parameter is required when `InstanceId` is empty.
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
@@ -394,6 +415,12 @@ namespace TencentCloud
                      */
                     uint64_t m_ladder;
                     bool m_ladderHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_diskType;
+                    bool m_diskTypeHasBeenSet;
 
                 };
             }
