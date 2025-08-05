@@ -80,15 +80,15 @@ namespace TencentCloud
                     bool ModeHasBeenSet() const;
 
                     /**
-                     * 获取Rate-Limiting value, in kb/s. enter a numerical value to specify the rate limit.
-                     * @return MaxSpeed Rate-Limiting value, in kb/s. enter a numerical value to specify the rate limit.
+                     * 获取The speed limit value specifies the size of the speed limit. fill in a value or variable with a unit. the currently supported unit is: KB/s.
+                     * @return MaxSpeed The speed limit value specifies the size of the speed limit. fill in a value or variable with a unit. the currently supported unit is: KB/s.
                      * 
                      */
                     std::string GetMaxSpeed() const;
 
                     /**
-                     * 设置Rate-Limiting value, in kb/s. enter a numerical value to specify the rate limit.
-                     * @param _maxSpeed Rate-Limiting value, in kb/s. enter a numerical value to specify the rate limit.
+                     * 设置The speed limit value specifies the size of the speed limit. fill in a value or variable with a unit. the currently supported unit is: KB/s.
+                     * @param _maxSpeed The speed limit value specifies the size of the speed limit. fill in a value or variable with a unit. the currently supported unit is: KB/s.
                      * 
                      */
                     void SetMaxSpeed(const std::string& _maxSpeed);
@@ -101,15 +101,35 @@ namespace TencentCloud
                     bool MaxSpeedHasBeenSet() const;
 
                     /**
-                     * 获取Rate-Limiting start value, which can be the download size or specified duration, in kb or s. this parameter is required when mode is set to limitafterspecificbytesdownloaded or limitafterspecificsecondsdownloaded. enter a numerical value to specify the download size or duration.
-                     * @return StartAt Rate-Limiting start value, which can be the download size or specified duration, in kb or s. this parameter is required when mode is set to limitafterspecificbytesdownloaded or limitafterspecificsecondsdownloaded. enter a numerical value to specify the download size or duration.
+                     * 获取The speed limit start value can be download size or specified duration. fill in a value with unit or variable to specify download size or specified duration.
+
+-When the Mode value is LimitAfterSpecificBytesDownloaded, the valid values of the unit are: KB.
+
+-When the Mode value is LimitAfterSpecificSecondsDownloaded, the valid value of the unit is: s.
+
+                     * @return StartAt The speed limit start value can be download size or specified duration. fill in a value with unit or variable to specify download size or specified duration.
+
+-When the Mode value is LimitAfterSpecificBytesDownloaded, the valid values of the unit are: KB.
+
+-When the Mode value is LimitAfterSpecificSecondsDownloaded, the valid value of the unit is: s.
+
                      * 
                      */
                     std::string GetStartAt() const;
 
                     /**
-                     * 设置Rate-Limiting start value, which can be the download size or specified duration, in kb or s. this parameter is required when mode is set to limitafterspecificbytesdownloaded or limitafterspecificsecondsdownloaded. enter a numerical value to specify the download size or duration.
-                     * @param _startAt Rate-Limiting start value, which can be the download size or specified duration, in kb or s. this parameter is required when mode is set to limitafterspecificbytesdownloaded or limitafterspecificsecondsdownloaded. enter a numerical value to specify the download size or duration.
+                     * 设置The speed limit start value can be download size or specified duration. fill in a value with unit or variable to specify download size or specified duration.
+
+-When the Mode value is LimitAfterSpecificBytesDownloaded, the valid values of the unit are: KB.
+
+-When the Mode value is LimitAfterSpecificSecondsDownloaded, the valid value of the unit is: s.
+
+                     * @param _startAt The speed limit start value can be download size or specified duration. fill in a value with unit or variable to specify download size or specified duration.
+
+-When the Mode value is LimitAfterSpecificBytesDownloaded, the valid values of the unit are: KB.
+
+-When the Mode value is LimitAfterSpecificSecondsDownloaded, the valid value of the unit is: s.
+
                      * 
                      */
                     void SetStartAt(const std::string& _startAt);
@@ -133,13 +153,18 @@ namespace TencentCloud
                     bool m_modeHasBeenSet;
 
                     /**
-                     * Rate-Limiting value, in kb/s. enter a numerical value to specify the rate limit.
+                     * The speed limit value specifies the size of the speed limit. fill in a value or variable with a unit. the currently supported unit is: KB/s.
                      */
                     std::string m_maxSpeed;
                     bool m_maxSpeedHasBeenSet;
 
                     /**
-                     * Rate-Limiting start value, which can be the download size or specified duration, in kb or s. this parameter is required when mode is set to limitafterspecificbytesdownloaded or limitafterspecificsecondsdownloaded. enter a numerical value to specify the download size or duration.
+                     * The speed limit start value can be download size or specified duration. fill in a value with unit or variable to specify download size or specified duration.
+
+-When the Mode value is LimitAfterSpecificBytesDownloaded, the valid values of the unit are: KB.
+
+-When the Mode value is LimitAfterSpecificSecondsDownloaded, the valid value of the unit is: s.
+
                      */
                     std::string m_startAt;
                     bool m_startAtHasBeenSet;

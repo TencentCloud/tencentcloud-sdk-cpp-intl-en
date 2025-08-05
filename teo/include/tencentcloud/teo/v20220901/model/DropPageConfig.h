@@ -77,19 +77,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The settings of the block page that applies managed rules. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return WafDropPageDetail The settings of the block page that applies managed rules. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Intercept page configuration for Waf(managed rules) module. if null, historical configuration is used by default.
+                     * @return WafDropPageDetail Intercept page configuration for Waf(managed rules) module. if null, historical configuration is used by default.
                      * 
                      */
                     DropPageDetail GetWafDropPageDetail() const;
 
                     /**
-                     * 设置The settings of the block page that applies managed rules. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _wafDropPageDetail The settings of the block page that applies managed rules. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Intercept page configuration for Waf(managed rules) module. if null, historical configuration is used by default.
+                     * @param _wafDropPageDetail Intercept page configuration for Waf(managed rules) module. if null, historical configuration is used by default.
                      * 
                      */
                     void SetWafDropPageDetail(const DropPageDetail& _wafDropPageDetail);
@@ -102,19 +98,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WafDropPageDetailHasBeenSet() const;
 
                     /**
-                     * 获取The settings of the block page that applies custom rules. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AclDropPageDetail The settings of the block page that applies custom rules. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Interception page configuration for custom pages. if null, use the last set configuration by default.
+                     * @return AclDropPageDetail Interception page configuration for custom pages. if null, use the last set configuration by default.
                      * 
                      */
                     DropPageDetail GetAclDropPageDetail() const;
 
                     /**
-                     * 设置The settings of the block page that applies custom rules. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _aclDropPageDetail The settings of the block page that applies custom rules. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Interception page configuration for custom pages. if null, use the last set configuration by default.
+                     * @param _aclDropPageDetail Interception page configuration for custom pages. if null, use the last set configuration by default.
                      * 
                      */
                     void SetAclDropPageDetail(const DropPageDetail& _aclDropPageDetail);
@@ -137,15 +129,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The settings of the block page that applies managed rules. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Intercept page configuration for Waf(managed rules) module. if null, historical configuration is used by default.
                      */
                     DropPageDetail m_wafDropPageDetail;
                     bool m_wafDropPageDetailHasBeenSet;
 
                     /**
-                     * The settings of the block page that applies custom rules. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Interception page configuration for custom pages. if null, use the last set configuration by default.
                      */
                     DropPageDetail m_aclDropPageDetail;
                     bool m_aclDropPageDetailHasBeenSet;

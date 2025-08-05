@@ -44,15 +44,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the site.
-                     * @return ZoneId ID of the site.
+                     * 获取Zone ID.
+
+If you wish to quickly submit Targets urls under different sites, you can fill in * as the value. but the premise is that the account calling this API must have the permission to all site resources under the root account.
+                     * @return ZoneId Zone ID.
+
+If you wish to quickly submit Targets urls under different sites, you can fill in * as the value. but the premise is that the account calling this API must have the permission to all site resources under the root account.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置ID of the site.
-                     * @param _zoneId ID of the site.
+                     * 设置Zone ID.
+
+If you wish to quickly submit Targets urls under different sites, you can fill in * as the value. but the premise is that the account calling this API must have the permission to all site resources under the root account.
+                     * @param _zoneId Zone ID.
+
+If you wish to quickly submit Targets urls under different sites, you can fill in * as the value. but the premise is that the account calling this API must have the permission to all site resources under the root account.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -135,10 +143,73 @@ Note: The number of tasks that can be submitted is limited by the quota of a bil
                      */
                     bool HeadersHasBeenSet() const;
 
+                    /**
+                     * 获取Media fragment preheating control. valid values:.
+<Li>On: enables shard preheating, preheats the description file, and performs recursive resolution of the description file shards for preheating.</li>.
+<Li>Off: only preheat the submitted description file.</li>default value: off if left empty.
+
+Notes:.
+1. the supported description file is M3U8, and the corresponding shard is TS.
+Describes the requirement that the description file can process normal requests and specify the sharding path as per industry standards.
+Recursive resolution depth is no more than 3.
+Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the quota limit, silent processing is triggered and preheating is no longer executed.
+
+This parameter specifies the allowlist feature. if necessary, contact tencent cloud engineers.
+                     * @return PrefetchMediaSegments Media fragment preheating control. valid values:.
+<Li>On: enables shard preheating, preheats the description file, and performs recursive resolution of the description file shards for preheating.</li>.
+<Li>Off: only preheat the submitted description file.</li>default value: off if left empty.
+
+Notes:.
+1. the supported description file is M3U8, and the corresponding shard is TS.
+Describes the requirement that the description file can process normal requests and specify the sharding path as per industry standards.
+Recursive resolution depth is no more than 3.
+Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the quota limit, silent processing is triggered and preheating is no longer executed.
+
+This parameter specifies the allowlist feature. if necessary, contact tencent cloud engineers.
+                     * 
+                     */
+                    std::string GetPrefetchMediaSegments() const;
+
+                    /**
+                     * 设置Media fragment preheating control. valid values:.
+<Li>On: enables shard preheating, preheats the description file, and performs recursive resolution of the description file shards for preheating.</li>.
+<Li>Off: only preheat the submitted description file.</li>default value: off if left empty.
+
+Notes:.
+1. the supported description file is M3U8, and the corresponding shard is TS.
+Describes the requirement that the description file can process normal requests and specify the sharding path as per industry standards.
+Recursive resolution depth is no more than 3.
+Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the quota limit, silent processing is triggered and preheating is no longer executed.
+
+This parameter specifies the allowlist feature. if necessary, contact tencent cloud engineers.
+                     * @param _prefetchMediaSegments Media fragment preheating control. valid values:.
+<Li>On: enables shard preheating, preheats the description file, and performs recursive resolution of the description file shards for preheating.</li>.
+<Li>Off: only preheat the submitted description file.</li>default value: off if left empty.
+
+Notes:.
+1. the supported description file is M3U8, and the corresponding shard is TS.
+Describes the requirement that the description file can process normal requests and specify the sharding path as per industry standards.
+Recursive resolution depth is no more than 3.
+Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the quota limit, silent processing is triggered and preheating is no longer executed.
+
+This parameter specifies the allowlist feature. if necessary, contact tencent cloud engineers.
+                     * 
+                     */
+                    void SetPrefetchMediaSegments(const std::string& _prefetchMediaSegments);
+
+                    /**
+                     * 判断参数 PrefetchMediaSegments 是否已赋值
+                     * @return PrefetchMediaSegments 是否已赋值
+                     * 
+                     */
+                    bool PrefetchMediaSegmentsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * ID of the site.
+                     * Zone ID.
+
+If you wish to quickly submit Targets urls under different sites, you can fill in * as the value. but the premise is that the account calling this API must have the permission to all site resources under the root account.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
@@ -162,6 +233,22 @@ Note: The number of tasks that can be submitted is limited by the quota of a bil
                      */
                     std::vector<Header> m_headers;
                     bool m_headersHasBeenSet;
+
+                    /**
+                     * Media fragment preheating control. valid values:.
+<Li>On: enables shard preheating, preheats the description file, and performs recursive resolution of the description file shards for preheating.</li>.
+<Li>Off: only preheat the submitted description file.</li>default value: off if left empty.
+
+Notes:.
+1. the supported description file is M3U8, and the corresponding shard is TS.
+Describes the requirement that the description file can process normal requests and specify the sharding path as per industry standards.
+Recursive resolution depth is no more than 3.
+Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the quota limit, silent processing is triggered and preheating is no longer executed.
+
+This parameter specifies the allowlist feature. if necessary, contact tencent cloud engineers.
+                     */
+                    std::string m_prefetchMediaSegments;
+                    bool m_prefetchMediaSegmentsHasBeenSet;
 
                 };
             }

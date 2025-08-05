@@ -106,8 +106,8 @@ namespace TencentCloud
                     bool BestFrameHasBeenSet() const;
 
                     /**
-                     * 获取The video file (Base64) for verification.
-                     * @return Video The video file (Base64) for verification.
+                     * 获取The video file (Base64) for verification.Used for verification, contains specific color reflection effects.
+                     * @return Video The video file (Base64) for verification.Used for verification, contains specific color reflection effects.
                      * 
                      */
                     std::string GetVideo() const;
@@ -118,6 +118,20 @@ namespace TencentCloud
                      * 
                      */
                     bool VideoHasBeenSet() const;
+
+                    /**
+                     * 获取Records the specific action performed by the user, used for AI Face Shield analysis.
+                     * @return ActionVideo Records the specific action performed by the user, used for AI Face Shield analysis.
+                     * 
+                     */
+                    std::string GetActionVideo() const;
+
+                    /**
+                     * 判断参数 ActionVideo 是否已赋值
+                     * @return ActionVideo 是否已赋值
+                     * 
+                     */
+                    bool ActionVideoHasBeenSet() const;
 
                     /**
                      * 获取The similarity, with a value range of 0-100. A greater value indicates higher similarity. This parameter is returned only in the `compare` (selfie verification) mode.
@@ -182,10 +196,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_bestFrameHasBeenSet;
 
                     /**
-                     * The video file (Base64) for verification.
+                     * The video file (Base64) for verification.Used for verification, contains specific color reflection effects.
                      */
                     std::string m_video;
                     bool m_videoHasBeenSet;
+
+                    /**
+                     * Records the specific action performed by the user, used for AI Face Shield analysis.
+                     */
+                    std::string m_actionVideo;
+                    bool m_actionVideoHasBeenSet;
 
                     /**
                      * The similarity, with a value range of 0-100. A greater value indicates higher similarity. This parameter is returned only in the `compare` (selfie verification) mode.

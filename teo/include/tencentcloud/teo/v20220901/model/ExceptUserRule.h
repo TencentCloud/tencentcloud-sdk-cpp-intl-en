@@ -141,19 +141,15 @@ namespace TencentCloud
                     bool RuleIDHasBeenSet() const;
 
                     /**
-                     * 获取The update time. If it is null, the current date and time is recorded.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return UpdateTime The update time. If it is null, the current date and time is recorded.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Last update time. if null, the underlying layer generates it using the current system time by default.
+                     * @return UpdateTime Last update time. if null, the underlying layer generates it using the current system time by default.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置The update time. If it is null, the current date and time is recorded.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _updateTime The update time. If it is null, the current date and time is recorded.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Last update time. if null, the underlying layer generates it using the current system time by default.
+                     * @param _updateTime Last update time. if null, the underlying layer generates it using the current system time by default.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -167,18 +163,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
                     /**
                      * 获取The matching condition.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ExceptUserRuleConditions The matching condition.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<ExceptUserRuleCondition> GetExceptUserRuleConditions() const;
 
                     /**
                      * 设置The matching condition.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _exceptUserRuleConditions The matching condition.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetExceptUserRuleConditions(const std::vector<ExceptUserRuleCondition>& _exceptUserRuleConditions);
@@ -191,19 +183,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ExceptUserRuleConditionsHasBeenSet() const;
 
                     /**
-                     * 获取The scope to which the exception rule applies.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExceptUserRuleScope The scope to which the exception rule applies.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Scope where the rule takes effect.
+                     * @return ExceptUserRuleScope Scope where the rule takes effect.
                      * 
                      */
                     ExceptUserRuleScope GetExceptUserRuleScope() const;
 
                     /**
-                     * 设置The scope to which the exception rule applies.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _exceptUserRuleScope The scope to which the exception rule applies.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Scope where the rule takes effect.
+                     * @param _exceptUserRuleScope Scope where the rule takes effect.
                      * 
                      */
                     void SetExceptUserRuleScope(const ExceptUserRuleScope& _exceptUserRuleScope);
@@ -265,22 +253,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_ruleIDHasBeenSet;
 
                     /**
-                     * The update time. If it is null, the current date and time is recorded.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Last update time. if null, the underlying layer generates it using the current system time by default.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
                      * The matching condition.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<ExceptUserRuleCondition> m_exceptUserRuleConditions;
                     bool m_exceptUserRuleConditionsHasBeenSet;
 
                     /**
-                     * The scope to which the exception rule applies.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Scope where the rule takes effect.
                      */
                     ExceptUserRuleScope m_exceptUserRuleScope;
                     bool m_exceptUserRuleScopeHasBeenSet;

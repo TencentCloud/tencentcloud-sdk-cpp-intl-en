@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/RawSmartSubtitleParameter.h>
+#include <tencentcloud/mps/v20190612/model/TaskOutputStorage.h>
 
 
 namespace TencentCloud
@@ -114,6 +115,96 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool RawParameterHasBeenSet() const;
 
+                    /**
+                     * 获取Bucket that stores the output file. If it is left unspecified, the storage location in InputInfo will be inherited.
+**Note**: This parameter is required when InputInfo.Type is set to URL.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return OutputStorage Bucket that stores the output file. If it is left unspecified, the storage location in InputInfo will be inherited.
+**Note**: This parameter is required when InputInfo.Type is set to URL.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    TaskOutputStorage GetOutputStorage() const;
+
+                    /**
+                     * 设置Bucket that stores the output file. If it is left unspecified, the storage location in InputInfo will be inherited.
+**Note**: This parameter is required when InputInfo.Type is set to URL.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _outputStorage Bucket that stores the output file. If it is left unspecified, the storage location in InputInfo will be inherited.
+**Note**: This parameter is required when InputInfo.Type is set to URL.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetOutputStorage(const TaskOutputStorage& _outputStorage);
+
+                    /**
+                     * 判断参数 OutputStorage 是否已赋值
+                     * @return OutputStorage 是否已赋值
+                     * 
+                     */
+                    bool OutputStorageHasBeenSet() const;
+
+                    /**
+                     * 获取Output path of the generated subtitle file, which can be a relative or absolute path.
+To define the output path, end the path with .{format}. For variable names, see the description of file name variables at https://www.tencentcloud.comom/document/product/862/37039.?from_cn_redirect=1
+
+Relative path example:
+ - File name_{variable name}.{format}.
+ - File name.{format}.
+
+Absolute path example:
+ -/Custom path/File name_{variable name}.{format}.
+
+If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
+                     * @return OutputObjectPath Output path of the generated subtitle file, which can be a relative or absolute path.
+To define the output path, end the path with .{format}. For variable names, see the description of file name variables at https://www.tencentcloud.comom/document/product/862/37039.?from_cn_redirect=1
+
+Relative path example:
+ - File name_{variable name}.{format}.
+ - File name.{format}.
+
+Absolute path example:
+ -/Custom path/File name_{variable name}.{format}.
+
+If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
+                     * 
+                     */
+                    std::string GetOutputObjectPath() const;
+
+                    /**
+                     * 设置Output path of the generated subtitle file, which can be a relative or absolute path.
+To define the output path, end the path with .{format}. For variable names, see the description of file name variables at https://www.tencentcloud.comom/document/product/862/37039.?from_cn_redirect=1
+
+Relative path example:
+ - File name_{variable name}.{format}.
+ - File name.{format}.
+
+Absolute path example:
+ -/Custom path/File name_{variable name}.{format}.
+
+If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
+                     * @param _outputObjectPath Output path of the generated subtitle file, which can be a relative or absolute path.
+To define the output path, end the path with .{format}. For variable names, see the description of file name variables at https://www.tencentcloud.comom/document/product/862/37039.?from_cn_redirect=1
+
+Relative path example:
+ - File name_{variable name}.{format}.
+ - File name.{format}.
+
+Absolute path example:
+ -/Custom path/File name_{variable name}.{format}.
+
+If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
+                     * 
+                     */
+                    void SetOutputObjectPath(const std::string& _outputObjectPath);
+
+                    /**
+                     * 判断参数 OutputObjectPath 是否已赋值
+                     * @return OutputObjectPath 是否已赋值
+                     * 
+                     */
+                    bool OutputObjectPathHasBeenSet() const;
+
                 private:
 
                     /**
@@ -134,6 +225,30 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     RawSmartSubtitleParameter m_rawParameter;
                     bool m_rawParameterHasBeenSet;
+
+                    /**
+                     * Bucket that stores the output file. If it is left unspecified, the storage location in InputInfo will be inherited.
+**Note**: This parameter is required when InputInfo.Type is set to URL.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    TaskOutputStorage m_outputStorage;
+                    bool m_outputStorageHasBeenSet;
+
+                    /**
+                     * Output path of the generated subtitle file, which can be a relative or absolute path.
+To define the output path, end the path with .{format}. For variable names, see the description of file name variables at https://www.tencentcloud.comom/document/product/862/37039.?from_cn_redirect=1
+
+Relative path example:
+ - File name_{variable name}.{format}.
+ - File name.{format}.
+
+Absolute path example:
+ -/Custom path/File name_{variable name}.{format}.
+
+If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
+                     */
+                    std::string m_outputObjectPath;
+                    bool m_outputObjectPathHasBeenSet;
 
                 };
             }

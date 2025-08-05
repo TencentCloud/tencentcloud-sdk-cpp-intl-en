@@ -76,19 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The cache prefresh percentage. Values: 1-99
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Percent The cache prefresh percentage. Values: 1-99
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Cache pre-refresh percentage. value range: 1-99.
+                     * @return Percent Cache pre-refresh percentage. value range: 1-99.
                      * 
                      */
                     int64_t GetPercent() const;
 
                     /**
-                     * 设置The cache prefresh percentage. Values: 1-99
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _percent The cache prefresh percentage. Values: 1-99
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Cache pre-refresh percentage. value range: 1-99.
+                     * @param _percent Cache pre-refresh percentage. value range: 1-99.
                      * 
                      */
                     void SetPercent(const int64_t& _percent);
@@ -111,8 +107,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The cache prefresh percentage. Values: 1-99
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Cache pre-refresh percentage. value range: 1-99.
                      */
                     int64_t m_percent;
                     bool m_percentHasBeenSet;

@@ -47,43 +47,39 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Template level name. Valid values:
-<li>sup_loose: super loose;</li>
-<li>loose: loose;</li>
-<li>emergency: emergency;</li>
-<li>normal: normal;</li>
-<li>strict: strict;</li>
-<li>close: disabled, effective only for precise rate limiting.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @return Mode Template level name. Valid values:
-<li>sup_loose: super loose;</li>
-<li>loose: loose;</li>
-<li>emergency: emergency;</li>
-<li>normal: normal;</li>
-<li>strict: strict;</li>
-<li>close: disabled, effective only for precise rate limiting.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Template level name. valid values:.
+<Li>Sup_loose: specifies super loose.</li>.
+<Li>`Loose`: loose</li>.
+<Li>`Emergency`: emergency</li>.
+<li>`normal`: moderate</li>.
+<li>strict</li>.
+<li>`close`: off, precise rate limiting effective.</li>.
+                     * @return Mode Template level name. valid values:.
+<Li>Sup_loose: specifies super loose.</li>.
+<Li>`Loose`: loose</li>.
+<Li>`Emergency`: emergency</li>.
+<li>`normal`: moderate</li>.
+<li>strict</li>.
+<li>`close`: off, precise rate limiting effective.</li>.
                      * 
                      */
                     std::string GetMode() const;
 
                     /**
-                     * 设置Template level name. Valid values:
-<li>sup_loose: super loose;</li>
-<li>loose: loose;</li>
-<li>emergency: emergency;</li>
-<li>normal: normal;</li>
-<li>strict: strict;</li>
-<li>close: disabled, effective only for precise rate limiting.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @param _mode Template level name. Valid values:
-<li>sup_loose: super loose;</li>
-<li>loose: loose;</li>
-<li>emergency: emergency;</li>
-<li>normal: normal;</li>
-<li>strict: strict;</li>
-<li>close: disabled, effective only for precise rate limiting.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Template level name. valid values:.
+<Li>Sup_loose: specifies super loose.</li>.
+<Li>`Loose`: loose</li>.
+<Li>`Emergency`: emergency</li>.
+<li>`normal`: moderate</li>.
+<li>strict</li>.
+<li>`close`: off, precise rate limiting effective.</li>.
+                     * @param _mode Template level name. valid values:.
+<Li>Sup_loose: specifies super loose.</li>.
+<Li>`Loose`: loose</li>.
+<Li>`Emergency`: emergency</li>.
+<li>`normal`: moderate</li>.
+<li>strict</li>.
+<li>`close`: off, precise rate limiting effective.</li>.
                      * 
                      */
                     void SetMode(const std::string& _mode);
@@ -117,27 +113,23 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool IDHasBeenSet() const;
 
                     /**
-                     * 获取Template action. Valid values:
-<li>alg: JavaScript challenge;</li>
-<li>monitor: observation.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @return Action Template action. Valid values:
-<li>alg: JavaScript challenge;</li>
-<li>monitor: observation.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Template action. valid values:.
+<li>alg: JavaScript challenge;</li>.
+<li>`monitor`: observe</li>.
+                     * @return Action Template action. valid values:.
+<li>alg: JavaScript challenge;</li>.
+<li>`monitor`: observe</li>.
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置Template action. Valid values:
-<li>alg: JavaScript challenge;</li>
-<li>monitor: observation.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @param _action Template action. Valid values:
-<li>alg: JavaScript challenge;</li>
-<li>monitor: observation.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Template action. valid values:.
+<li>alg: JavaScript challenge;</li>.
+<li>`monitor`: observe</li>.
+                     * @param _action Template action. valid values:.
+<li>alg: JavaScript challenge;</li>.
+<li>`monitor`: observe</li>.
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -150,19 +142,15 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取Penalty duration, in seconds. Value range: 0-2 days.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @return PunishTime Penalty duration, in seconds. Value range: 0-2 days.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Penalty time, value range 0-2 days, unit second.
+                     * @return PunishTime Penalty time, value range 0-2 days, unit second.
                      * 
                      */
                     int64_t GetPunishTime() const;
 
                     /**
-                     * 设置Penalty duration, in seconds. Value range: 0-2 days.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @param _punishTime Penalty duration, in seconds. Value range: 0-2 days.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Penalty time, value range 0-2 days, unit second.
+                     * @param _punishTime Penalty time, value range 0-2 days, unit second.
                      * 
                      */
                     void SetPunishTime(const int64_t& _punishTime);
@@ -219,14 +207,13 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                 private:
 
                     /**
-                     * Template level name. Valid values:
-<li>sup_loose: super loose;</li>
-<li>loose: loose;</li>
-<li>emergency: emergency;</li>
-<li>normal: normal;</li>
-<li>strict: strict;</li>
-<li>close: disabled, effective only for precise rate limiting.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * Template level name. valid values:.
+<Li>Sup_loose: specifies super loose.</li>.
+<Li>`Loose`: loose</li>.
+<Li>`Emergency`: emergency</li>.
+<li>`normal`: moderate</li>.
+<li>strict</li>.
+<li>`close`: off, precise rate limiting effective.</li>.
                      */
                     std::string m_mode;
                     bool m_modeHasBeenSet;
@@ -238,17 +225,15 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool m_iDHasBeenSet;
 
                     /**
-                     * Template action. Valid values:
-<li>alg: JavaScript challenge;</li>
-<li>monitor: observation.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * Template action. valid values:.
+<li>alg: JavaScript challenge;</li>.
+<li>`monitor`: observe</li>.
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * Penalty duration, in seconds. Value range: 0-2 days.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * Penalty time, value range 0-2 days, unit second.
                      */
                     int64_t m_punishTime;
                     bool m_punishTimeHasBeenSet;

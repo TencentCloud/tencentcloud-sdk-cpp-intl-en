@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Detailed configuration information of security IP groups, including the ID, name, and IP/IP range list information of each security IP group.
-                     * @return IPGroups Detailed configuration information of security IP groups, including the ID, name, and IP/IP range list information of each security IP group.
+                     * 获取Detailed configuration information of security IP groups, including the ID, name, total number of IP/IP ranges, IP/IP range list information, and expiration time of each security IP group.
+                     * @return IPGroups Detailed configuration information of security IP groups, including the ID, name, total number of IP/IP ranges, IP/IP range list information, and expiration time of each security IP group.
                      * 
                      */
                     std::vector<IPGroup> GetIPGroups() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Detailed configuration information of security IP groups, including the ID, name, and IP/IP range list information of each security IP group.
+                     * Detailed configuration information of security IP groups, including the ID, name, total number of IP/IP ranges, IP/IP range list information, and expiration time of each security IP group.
                      */
                     std::vector<IPGroup> m_iPGroups;
                     bool m_iPGroupsHasBeenSet;

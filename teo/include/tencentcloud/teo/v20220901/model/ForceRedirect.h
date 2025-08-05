@@ -76,27 +76,23 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Redirect status code. Values:
-<li>`301`: 301 redirect</li>
-<li>`302`: 302 redirect</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RedirectStatusCode Redirect status code. Values:
-<li>`301`: 301 redirect</li>
-<li>`302`: 302 redirect</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Redirection status code. valid values:.
+<Li>`301`: 301 redirect</li>.
+<Li>`302`: 302 redirect</li>.
+                     * @return RedirectStatusCode Redirection status code. valid values:.
+<Li>`301`: 301 redirect</li>.
+<Li>`302`: 302 redirect</li>.
                      * 
                      */
                     int64_t GetRedirectStatusCode() const;
 
                     /**
-                     * 设置Redirect status code. Values:
-<li>`301`: 301 redirect</li>
-<li>`302`: 302 redirect</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _redirectStatusCode Redirect status code. Values:
-<li>`301`: 301 redirect</li>
-<li>`302`: 302 redirect</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Redirection status code. valid values:.
+<Li>`301`: 301 redirect</li>.
+<Li>`302`: 302 redirect</li>.
+                     * @param _redirectStatusCode Redirection status code. valid values:.
+<Li>`301`: 301 redirect</li>.
+<Li>`302`: 302 redirect</li>.
                      * 
                      */
                     void SetRedirectStatusCode(const int64_t& _redirectStatusCode);
@@ -119,10 +115,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Redirect status code. Values:
-<li>`301`: 301 redirect</li>
-<li>`302`: 302 redirect</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Redirection status code. valid values:.
+<Li>`301`: 301 redirect</li>.
+<Li>`302`: 302 redirect</li>.
                      */
                     int64_t m_redirectStatusCode;
                     bool m_redirectStatusCodeHasBeenSet;

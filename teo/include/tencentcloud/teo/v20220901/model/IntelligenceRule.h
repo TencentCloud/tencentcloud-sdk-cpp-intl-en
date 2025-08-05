@@ -48,27 +48,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+                     * @return Switch Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+                     * @param _switch Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -81,19 +81,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Items in a bot intelligence rule
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IntelligenceRuleItems Items in a bot intelligence rule
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the rule detail.
+                     * @return IntelligenceRuleItems Specifies the rule detail.
                      * 
                      */
                     std::vector<IntelligenceRuleItem> GetIntelligenceRuleItems() const;
 
                     /**
-                     * 设置Items in a bot intelligence rule
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _intelligenceRuleItems Items in a bot intelligence rule
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the rule detail.
+                     * @param _intelligenceRuleItems Specifies the rule detail.
                      * 
                      */
                     void SetIntelligenceRuleItems(const std::vector<IntelligenceRuleItem>& _intelligenceRuleItems);
@@ -108,17 +104,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Items in a bot intelligence rule
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the rule detail.
                      */
                     std::vector<IntelligenceRuleItem> m_intelligenceRuleItems;
                     bool m_intelligenceRuleItemsHasBeenSet;

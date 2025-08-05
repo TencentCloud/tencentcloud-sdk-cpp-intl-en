@@ -49,27 +49,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable HTTP2. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Http2 Whether to enable HTTP2. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取http2 configuration switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+                     * @return Http2 http2 configuration switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetHttp2() const;
 
                     /**
-                     * 设置Whether to enable HTTP2. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _http2 Whether to enable HTTP2. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置http2 configuration switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+                     * @param _http2 http2 configuration switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
                      * 
                      */
                     void SetHttp2(const std::string& _http2);
@@ -82,27 +82,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool Http2HasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable OCSP. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OcspStapling Whether to enable OCSP. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取OCSP configuration switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+                     * @return OcspStapling OCSP configuration switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetOcspStapling() const;
 
                     /**
-                     * 设置Whether to enable OCSP. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ocspStapling Whether to enable OCSP. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置OCSP configuration switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+                     * @param _ocspStapling OCSP configuration switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
                      * 
                      */
                     void SetOcspStapling(const std::string& _ocspStapling);
@@ -115,35 +115,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OcspStaplingHasBeenSet() const;
 
                     /**
-                     * 获取TLS version. Valid values: 
-<li>`TLSv1`: TLSv1 version;</li>
-<li>`TLSV1.1`: TLSv1.1 version;</li>
-<li>`TLSV1.2`: TLSv1.2 version;</li>
-<li>`TLSv1.3`: TLSv1.3 version.</li>Only consecutive versions can be enabled at the same time. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return TlsVersion TLS version. Valid values: 
-<li>`TLSv1`: TLSv1 version;</li>
-<li>`TLSV1.1`: TLSv1.1 version;</li>
-<li>`TLSV1.2`: TLSv1.2 version;</li>
-<li>`TLSv1.3`: TLSv1.3 version.</li>Only consecutive versions can be enabled at the same time. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Tls version settings, valid values:.
+<Li>`TLSv1`: tlsv1 version;</li>.
+<li>`TLSV1.1`: TLSV1.1 version;</li>.
+<li>TLSV1.2: specifies the TLSV1.2 version.</li>.
+<Li>TLSv1.3: specifies the tlsv1.3 version. consecutive versions must be enabled when modifying.</li>.
+                     * @return TlsVersion Tls version settings, valid values:.
+<Li>`TLSv1`: tlsv1 version;</li>.
+<li>`TLSV1.1`: TLSV1.1 version;</li>.
+<li>TLSV1.2: specifies the TLSV1.2 version.</li>.
+<Li>TLSv1.3: specifies the tlsv1.3 version. consecutive versions must be enabled when modifying.</li>.
                      * 
                      */
                     std::vector<std::string> GetTlsVersion() const;
 
                     /**
-                     * 设置TLS version. Valid values: 
-<li>`TLSv1`: TLSv1 version;</li>
-<li>`TLSV1.1`: TLSv1.1 version;</li>
-<li>`TLSV1.2`: TLSv1.2 version;</li>
-<li>`TLSv1.3`: TLSv1.3 version.</li>Only consecutive versions can be enabled at the same time. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _tlsVersion TLS version. Valid values: 
-<li>`TLSv1`: TLSv1 version;</li>
-<li>`TLSV1.1`: TLSv1.1 version;</li>
-<li>`TLSV1.2`: TLSv1.2 version;</li>
-<li>`TLSv1.3`: TLSv1.3 version.</li>Only consecutive versions can be enabled at the same time. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Tls version settings, valid values:.
+<Li>`TLSv1`: tlsv1 version;</li>.
+<li>`TLSV1.1`: TLSV1.1 version;</li>.
+<li>TLSV1.2: specifies the TLSV1.2 version.</li>.
+<Li>TLSv1.3: specifies the tlsv1.3 version. consecutive versions must be enabled when modifying.</li>.
+                     * @param _tlsVersion Tls version settings, valid values:.
+<Li>`TLSv1`: tlsv1 version;</li>.
+<li>`TLSV1.1`: TLSV1.1 version;</li>.
+<li>TLSV1.2: specifies the TLSV1.2 version.</li>.
+<Li>TLSv1.3: specifies the tlsv1.3 version. consecutive versions must be enabled when modifying.</li>.
                      * 
                      */
                     void SetTlsVersion(const std::vector<std::string>& _tlsVersion);
@@ -206,27 +202,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CertInfoHasBeenSet() const;
 
                     /**
-                     * 获取Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne.</li>
-<li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return ApplyType Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne.</li>
-<li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Application type. valid values:.
+<li>`apply`: managed by EdgeOne.</li>.
+<li>`none`: not managed by EdgeOne.</li>if it is left empty, the default value `none` is used.
+                     * @return ApplyType Application type. valid values:.
+<li>`apply`: managed by EdgeOne.</li>.
+<li>`none`: not managed by EdgeOne.</li>if it is left empty, the default value `none` is used.
                      * 
                      */
                     std::string GetApplyType() const;
 
                     /**
-                     * 设置Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne.</li>
-<li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _applyType Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne.</li>
-<li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Application type. valid values:.
+<li>`apply`: managed by EdgeOne.</li>.
+<li>`none`: not managed by EdgeOne.</li>if it is left empty, the default value `none` is used.
+                     * @param _applyType Application type. valid values:.
+<li>`apply`: managed by EdgeOne.</li>.
+<li>`none`: not managed by EdgeOne.</li>if it is left empty, the default value `none` is used.
                      * 
                      */
                     void SetApplyType(const std::string& _applyType);
@@ -239,31 +231,27 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool ApplyTypeHasBeenSet() const;
 
                     /**
-                     * 获取The cipher suite, with values:
-<li>loose-v2023: Provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>
-<li>general-v2023: Provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites;</li>
-<li>strict-v2023: Provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @return CipherSuite The cipher suite, with values:
-<li>loose-v2023: Provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>
-<li>general-v2023: Provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites;</li>
-<li>strict-v2023: Provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 获取The cipher suite, with valid values:.
+<li>loose-v2023: provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>.
+<li>general-v2023: provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites.</li>.
+<li>strict-v2023: provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>.
+                     * @return CipherSuite The cipher suite, with valid values:.
+<li>loose-v2023: provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>.
+<li>general-v2023: provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites.</li>.
+<li>strict-v2023: provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>.
                      * 
                      */
                     std::string GetCipherSuite() const;
 
                     /**
-                     * 设置The cipher suite, with values:
-<li>loose-v2023: Provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>
-<li>general-v2023: Provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites;</li>
-<li>strict-v2023: Provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @param _cipherSuite The cipher suite, with values:
-<li>loose-v2023: Provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>
-<li>general-v2023: Provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites;</li>
-<li>strict-v2023: Provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 设置The cipher suite, with valid values:.
+<li>loose-v2023: provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>.
+<li>general-v2023: provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites.</li>.
+<li>strict-v2023: provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>.
+                     * @param _cipherSuite The cipher suite, with valid values:.
+<li>loose-v2023: provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>.
+<li>general-v2023: provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites.</li>.
+<li>strict-v2023: provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>.
                      * 
                      */
                     void SetCipherSuite(const std::string& _cipherSuite);
@@ -278,30 +266,29 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                 private:
 
                     /**
-                     * Whether to enable HTTP2. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * http2 configuration switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
                      */
                     std::string m_http2;
                     bool m_http2HasBeenSet;
 
                     /**
-                     * Whether to enable OCSP. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * OCSP configuration switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
                      */
                     std::string m_ocspStapling;
                     bool m_ocspStaplingHasBeenSet;
 
                     /**
-                     * TLS version. Valid values: 
-<li>`TLSv1`: TLSv1 version;</li>
-<li>`TLSV1.1`: TLSv1.1 version;</li>
-<li>`TLSV1.2`: TLSv1.2 version;</li>
-<li>`TLSv1.3`: TLSv1.3 version.</li>Only consecutive versions can be enabled at the same time. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Tls version settings, valid values:.
+<Li>`TLSv1`: tlsv1 version;</li>.
+<li>`TLSV1.1`: TLSV1.1 version;</li>.
+<li>TLSV1.2: specifies the TLSV1.2 version.</li>.
+<Li>TLSv1.3: specifies the tlsv1.3 version. consecutive versions must be enabled when modifying.</li>.
                      */
                     std::vector<std::string> m_tlsVersion;
                     bool m_tlsVersionHasBeenSet;
@@ -321,20 +308,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_certInfoHasBeenSet;
 
                     /**
-                     * Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne.</li>
-<li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Application type. valid values:.
+<li>`apply`: managed by EdgeOne.</li>.
+<li>`none`: not managed by EdgeOne.</li>if it is left empty, the default value `none` is used.
                      */
                     std::string m_applyType;
                     bool m_applyTypeHasBeenSet;
 
                     /**
-                     * The cipher suite, with values:
-<li>loose-v2023: Provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>
-<li>general-v2023: Provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites;</li>
-<li>strict-v2023: Provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * The cipher suite, with valid values:.
+<li>loose-v2023: provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>.
+<li>general-v2023: provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites.</li>.
+<li>strict-v2023: provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>.
                      */
                     std::string m_cipherSuite;
                     bool m_cipherSuiteHasBeenSet;

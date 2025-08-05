@@ -144,19 +144,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Release record ID. 
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return RecordId Release record ID. 
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Release record ID.
+                     * @return RecordId Release record ID.
                      * 
                      */
                     std::string GetRecordId() const;
 
                     /**
-                     * 设置Release record ID. 
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _recordId Release record ID. 
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Release record ID.
+                     * @param _recordId Release record ID.
                      * 
                      */
                     void SetRecordId(const std::string& _recordId);
@@ -219,8 +215,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Release record ID. 
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Release record ID.
                      */
                     std::string m_recordId;
                     bool m_recordIdHasBeenSet;

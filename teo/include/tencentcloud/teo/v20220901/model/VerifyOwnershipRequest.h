@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Site or acceleration domain name
-                     * @return Domain Site or acceleration domain name
+                     * 获取Specifies the site domain name or acceleration domain name under the site.
+                     * @return Domain Specifies the site domain name or acceleration domain name under the site.
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置Site or acceleration domain name
-                     * @param _domain Site or acceleration domain name
+                     * 设置Specifies the site domain name or acceleration domain name under the site.
+                     * @param _domain Specifies the site domain name or acceleration domain name under the site.
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Site or acceleration domain name
+                     * Specifies the site domain name or acceleration domain name under the site.
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;

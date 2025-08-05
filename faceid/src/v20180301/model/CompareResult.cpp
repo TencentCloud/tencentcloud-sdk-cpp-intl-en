@@ -25,6 +25,7 @@ CompareResult::CompareResult() :
     m_errorMsgHasBeenSet(false),
     m_liveDataHasBeenSet(false),
     m_liveVideoHasBeenSet(false),
+    m_actionVideoHasBeenSet(false),
     m_liveErrorCodeHasBeenSet(false),
     m_liveErrorMsgHasBeenSet(false),
     m_bestFrameHasBeenSet(false),
@@ -95,6 +96,23 @@ CoreInternalOutcome CompareResult::Deserialize(const rapidjson::Value &value)
         }
 
         m_liveVideoHasBeenSet = true;
+    }
+
+    if (value.HasMember("ActionVideo") && !value["ActionVideo"].IsNull())
+    {
+        if (!value["ActionVideo"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `CompareResult.ActionVideo` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_actionVideo.Deserialize(value["ActionVideo"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_actionVideoHasBeenSet = true;
     }
 
     if (value.HasMember("LiveErrorCode") && !value["LiveErrorCode"].IsNull())
@@ -259,6 +277,15 @@ void CompareResult::ToJsonObject(rapidjson::Value &value, rapidjson::Document::A
         m_liveVideo.ToJsonObject(value[key.c_str()], allocator);
     }
 
+    if (m_actionVideoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ActionVideo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_actionVideo.ToJsonObject(value[key.c_str()], allocator);
+    }
+
     if (m_liveErrorCodeHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -407,6 +434,22 @@ void CompareResult::SetLiveVideo(const FileInfo& _liveVideo)
 bool CompareResult::LiveVideoHasBeenSet() const
 {
     return m_liveVideoHasBeenSet;
+}
+
+FileInfo CompareResult::GetActionVideo() const
+{
+    return m_actionVideo;
+}
+
+void CompareResult::SetActionVideo(const FileInfo& _actionVideo)
+{
+    m_actionVideo = _actionVideo;
+    m_actionVideoHasBeenSet = true;
+}
+
+bool CompareResult::ActionVideoHasBeenSet() const
+{
+    return m_actionVideoHasBeenSet;
 }
 
 string CompareResult::GetLiveErrorCode() const

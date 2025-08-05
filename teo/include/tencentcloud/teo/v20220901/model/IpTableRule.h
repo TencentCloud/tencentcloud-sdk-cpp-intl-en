@@ -237,19 +237,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取The rule name.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RuleName The rule name.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the rule name.
+                     * @return RuleName Specifies the rule name.
                      * 
                      */
                     std::string GetRuleName() const;
 
                     /**
-                     * 设置The rule name.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ruleName The rule name.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the rule name.
+                     * @param _ruleName Specifies the rule name.
                      * 
                      */
                     void SetRuleName(const std::string& _ruleName);
@@ -337,8 +333,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_statusHasBeenSet;
 
                     /**
-                     * The rule name.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the rule name.
                      */
                     std::string m_ruleName;
                     bool m_ruleNameHasBeenSet;

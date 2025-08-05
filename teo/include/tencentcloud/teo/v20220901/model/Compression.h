@@ -76,27 +76,23 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Compression algorithm. Values:
-<li>`brotli`: Brotli algorithm</li>
-<li>`gzip`: Gzip algorithm</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Algorithms Compression algorithm. Values:
-<li>`brotli`: Brotli algorithm</li>
-<li>`gzip`: Gzip algorithm</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Supported compression algorithm list. valid values:.
+<Li>Brotli: specifies the brotli algorithm.</li>.
+<Li>Gzip: specifies the gzip algorithm.</li>.
+                     * @return Algorithms Supported compression algorithm list. valid values:.
+<Li>Brotli: specifies the brotli algorithm.</li>.
+<Li>Gzip: specifies the gzip algorithm.</li>.
                      * 
                      */
                     std::vector<std::string> GetAlgorithms() const;
 
                     /**
-                     * 设置Compression algorithm. Values:
-<li>`brotli`: Brotli algorithm</li>
-<li>`gzip`: Gzip algorithm</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _algorithms Compression algorithm. Values:
-<li>`brotli`: Brotli algorithm</li>
-<li>`gzip`: Gzip algorithm</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Supported compression algorithm list. valid values:.
+<Li>Brotli: specifies the brotli algorithm.</li>.
+<Li>Gzip: specifies the gzip algorithm.</li>.
+                     * @param _algorithms Supported compression algorithm list. valid values:.
+<Li>Brotli: specifies the brotli algorithm.</li>.
+<Li>Gzip: specifies the gzip algorithm.</li>.
                      * 
                      */
                     void SetAlgorithms(const std::vector<std::string>& _algorithms);
@@ -119,10 +115,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Compression algorithm. Values:
-<li>`brotli`: Brotli algorithm</li>
-<li>`gzip`: Gzip algorithm</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Supported compression algorithm list. valid values:.
+<Li>Brotli: specifies the brotli algorithm.</li>.
+<Li>Gzip: specifies the gzip algorithm.</li>.
                      */
                     std::vector<std::string> m_algorithms;
                     bool m_algorithmsHasBeenSet;

@@ -49,26 +49,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Atomic task type.
-<li>LiveRecord: live recording.</li>
-<li>AiQualityControl: media quality inspection.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>LiveRecord: live recording</li>
+<li>AiQualityControl: media quality inspection</li>
                      * @return ActivityType Atomic task type.
-<li>LiveRecord: live recording.</li>
-<li>AiQualityControl: media quality inspection.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>LiveRecord: live recording</li>
+<li>AiQualityControl: media quality inspection</li>
                      * 
                      */
                     std::string GetActivityType() const;
 
                     /**
                      * 设置Atomic task type.
-<li>LiveRecord: live recording.</li>
-<li>AiQualityControl: media quality inspection.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>LiveRecord: live recording</li>
+<li>AiQualityControl: media quality inspection</li>
                      * @param _activityType Atomic task type.
-<li>LiveRecord: live recording.</li>
-<li>AiQualityControl: media quality inspection.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>LiveRecord: live recording</li>
+<li>AiQualityControl: media quality inspection</li>
                      * 
                      */
                     void SetActivityType(const std::string& _activityType);
@@ -109,9 +105,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Atomic task type.
-<li>LiveRecord: live recording.</li>
-<li>AiQualityControl: media quality inspection.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>LiveRecord: live recording</li>
+<li>AiQualityControl: media quality inspection</li>
                      */
                     std::string m_activityType;
                     bool m_activityTypeHasBeenSet;

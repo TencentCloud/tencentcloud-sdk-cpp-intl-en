@@ -76,19 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取MaxAge (in seconds). The maximum value is 1 day. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return MaxAge MaxAge (in seconds). The maximum value is 1 day. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取MaxAge value. expressed in seconds, maximum value is 1 day.
+                     * @return MaxAge MaxAge value. expressed in seconds, maximum value is 1 day.
                      * 
                      */
                     int64_t GetMaxAge() const;
 
                     /**
-                     * 设置MaxAge (in seconds). The maximum value is 1 day. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _maxAge MaxAge (in seconds). The maximum value is 1 day. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置MaxAge value. expressed in seconds, maximum value is 1 day.
+                     * @param _maxAge MaxAge value. expressed in seconds, maximum value is 1 day.
                      * 
                      */
                     void SetMaxAge(const int64_t& _maxAge);
@@ -101,27 +97,27 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool MaxAgeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to contain subdomain names. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IncludeSubDomains Whether to contain subdomain names. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies whether the subdomain is included. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+                     * @return IncludeSubDomains Specifies whether the subdomain is included. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetIncludeSubDomains() const;
 
                     /**
-                     * 设置Whether to contain subdomain names. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _includeSubDomains Whether to contain subdomain names. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies whether the subdomain is included. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+                     * @param _includeSubDomains Specifies whether the subdomain is included. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
                      * 
                      */
                     void SetIncludeSubDomains(const std::string& _includeSubDomains);
@@ -134,27 +130,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IncludeSubDomainsHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable preloading. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Preload Whether to enable preloading. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether to enable preloading. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+                     * @return Preload Whether to enable preloading. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetPreload() const;
 
                     /**
-                     * 设置Whether to enable preloading. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _preload Whether to enable preloading. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether to enable preloading. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+                     * @param _preload Whether to enable preloading. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
                      * 
                      */
                     void SetPreload(const std::string& _preload);
@@ -177,26 +173,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_switchHasBeenSet;
 
                     /**
-                     * MaxAge (in seconds). The maximum value is 1 day. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * MaxAge value. expressed in seconds, maximum value is 1 day.
                      */
                     int64_t m_maxAge;
                     bool m_maxAgeHasBeenSet;
 
                     /**
-                     * Whether to contain subdomain names. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies whether the subdomain is included. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
                      */
                     std::string m_includeSubDomains;
                     bool m_includeSubDomainsHasBeenSet;
 
                     /**
-                     * Whether to enable preloading. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether to enable preloading. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
                      */
                     std::string m_preload;
                     bool m_preloadHasBeenSet;

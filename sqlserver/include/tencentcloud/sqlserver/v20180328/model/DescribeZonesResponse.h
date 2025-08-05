@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of AZs returned
-                     * @return TotalCount Number of AZs returned
+                     * 获取Number of AZs returned.
+                     * @return TotalCount Number of AZs returned.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Array of AZs
-                     * @return ZoneSet Array of AZs
+                     * 获取Array of AZs.
+                     * @return ZoneSet Array of AZs.
                      * 
                      */
                     std::vector<ZoneInfo> GetZoneSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of AZs returned
+                     * Number of AZs returned.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Array of AZs
+                     * Array of AZs.
                      */
                     std::vector<ZoneInfo> m_zoneSet;
                     bool m_zoneSetHasBeenSet;

@@ -93,12 +93,12 @@ namespace TencentCloud
                     /**
                      * 获取Type of a real-time log delivery task. Valid values:
 <li>cls: push to Tencent Cloud CLS;</li>
-<li>custom_endpoint: push to a custom HTTP(S) address;</li>
-<li>s3: push to an AWS S3-compatible bucket address.</li>
+<li>custom_endpoint: push to a custom HTTP(S) endpoint;</li>
+<li>s3: push to an AWS S3-compatible bucket.</li>
                      * @return TaskType Type of a real-time log delivery task. Valid values:
 <li>cls: push to Tencent Cloud CLS;</li>
-<li>custom_endpoint: push to a custom HTTP(S) address;</li>
-<li>s3: push to an AWS S3-compatible bucket address.</li>
+<li>custom_endpoint: push to a custom HTTP(S) endpoint;</li>
+<li>s3: push to an AWS S3-compatible bucket.</li>
                      * 
                      */
                     std::string GetTaskType() const;
@@ -106,12 +106,12 @@ namespace TencentCloud
                     /**
                      * 设置Type of a real-time log delivery task. Valid values:
 <li>cls: push to Tencent Cloud CLS;</li>
-<li>custom_endpoint: push to a custom HTTP(S) address;</li>
-<li>s3: push to an AWS S3-compatible bucket address.</li>
+<li>custom_endpoint: push to a custom HTTP(S) endpoint;</li>
+<li>s3: push to an AWS S3-compatible bucket.</li>
                      * @param _taskType Type of a real-time log delivery task. Valid values:
 <li>cls: push to Tencent Cloud CLS;</li>
-<li>custom_endpoint: push to a custom HTTP(S) address;</li>
-<li>s3: push to an AWS S3-compatible bucket address.</li>
+<li>custom_endpoint: push to a custom HTTP(S) endpoint;</li>
+<li>s3: push to an AWS S3-compatible bucket.</li>
                      * 
                      */
                     void SetTaskType(const std::string& _taskType);
@@ -124,23 +124,27 @@ namespace TencentCloud
                     bool TaskTypeHasBeenSet() const;
 
                     /**
-                     * 获取List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log delivery task. Valid value examples:
-<li>L7 domain name: domain.example.com;</li>
-<li>L4 proxy instance: sid-2s69eb5wcms7.</li>
-                     * @return EntityList List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log delivery task. Valid value examples:
-<li>L7 domain name: domain.example.com;</li>
-<li>L4 proxy instance: sid-2s69eb5wcms7.</li>
+                     * 获取List of entities associated with the real-time log delivery task. Valid value examples:
+<li>L7 domain name: domain.example.com</li>
+<li>L4 proxy instance: sid-2s69eb5wcms7</li>
+<li>Edge Function instance: test-zone-2mxigizoh9l9-1257626257</li>
+                     * @return EntityList List of entities associated with the real-time log delivery task. Valid value examples:
+<li>L7 domain name: domain.example.com</li>
+<li>L4 proxy instance: sid-2s69eb5wcms7</li>
+<li>Edge Function instance: test-zone-2mxigizoh9l9-1257626257</li>
                      * 
                      */
                     std::vector<std::string> GetEntityList() const;
 
                     /**
-                     * 设置List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log delivery task. Valid value examples:
-<li>L7 domain name: domain.example.com;</li>
-<li>L4 proxy instance: sid-2s69eb5wcms7.</li>
-                     * @param _entityList List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log delivery task. Valid value examples:
-<li>L7 domain name: domain.example.com;</li>
-<li>L4 proxy instance: sid-2s69eb5wcms7.</li>
+                     * 设置List of entities associated with the real-time log delivery task. Valid value examples:
+<li>L7 domain name: domain.example.com</li>
+<li>L4 proxy instance: sid-2s69eb5wcms7</li>
+<li>Edge Function instance: test-zone-2mxigizoh9l9-1257626257</li>
+                     * @param _entityList List of entities associated with the real-time log delivery task. Valid value examples:
+<li>L7 domain name: domain.example.com</li>
+<li>L4 proxy instance: sid-2s69eb5wcms7</li>
+<li>Edge Function instance: test-zone-2mxigizoh9l9-1257626257</li>
                      * 
                      */
                     void SetEntityList(const std::vector<std::string>& _entityList);
@@ -156,14 +160,16 @@ namespace TencentCloud
                      * 获取Dataset type. Valid values:
 <li>domain: site acceleration logs;</li>
 <li>application: L4 proxy logs;</li>
-<li>web-rateLiming: rate limit and CC attack defense logs;</li>
+<li>function: Edge Function execution log;</li>
+<li>web-rateLiming: rate limiting and CC attack protection logs;</li>
 <li>web-attack: managed rule logs;</li>
 <li>web-rule: custom rule logs;</li>
 <li>web-bot: Bot management logs.</li>
                      * @return LogType Dataset type. Valid values:
 <li>domain: site acceleration logs;</li>
 <li>application: L4 proxy logs;</li>
-<li>web-rateLiming: rate limit and CC attack defense logs;</li>
+<li>function: Edge Function execution log;</li>
+<li>web-rateLiming: rate limiting and CC attack protection logs;</li>
 <li>web-attack: managed rule logs;</li>
 <li>web-rule: custom rule logs;</li>
 <li>web-bot: Bot management logs.</li>
@@ -175,14 +181,16 @@ namespace TencentCloud
                      * 设置Dataset type. Valid values:
 <li>domain: site acceleration logs;</li>
 <li>application: L4 proxy logs;</li>
-<li>web-rateLiming: rate limit and CC attack defense logs;</li>
+<li>function: Edge Function execution log;</li>
+<li>web-rateLiming: rate limiting and CC attack protection logs;</li>
 <li>web-attack: managed rule logs;</li>
 <li>web-rule: custom rule logs;</li>
 <li>web-bot: Bot management logs.</li>
                      * @param _logType Dataset type. Valid values:
 <li>domain: site acceleration logs;</li>
 <li>application: L4 proxy logs;</li>
-<li>web-rateLiming: rate limit and CC attack defense logs;</li>
+<li>function: Edge Function execution log;</li>
+<li>web-rateLiming: rate limiting and CC attack protection logs;</li>
 <li>web-attack: managed rule logs;</li>
 <li>web-rule: custom rule logs;</li>
 <li>web-bot: Bot management logs.</li>
@@ -227,15 +235,27 @@ namespace TencentCloud
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取List of predefined fields for delivery.
-                     * @return Fields List of predefined fields for delivery.
+                     * 获取Pre-defined log fields to be delivered. Refer to:
+<li>[Site acceleration log (L7 access log)](https://www.tencentcloud.com/document/product/1145/61300)</li>
+<li>[L4 proxy log](https://www.tencentcloud.com/document/product/1145/61301)</li>
+<li>[Edge Function execution log](https://www.tencentcloud.com/document/product/1145/67840)</li>
+                     * @return Fields Pre-defined log fields to be delivered. Refer to:
+<li>[Site acceleration log (L7 access log)](https://www.tencentcloud.com/document/product/1145/61300)</li>
+<li>[L4 proxy log](https://www.tencentcloud.com/document/product/1145/61301)</li>
+<li>[Edge Function execution log](https://www.tencentcloud.com/document/product/1145/67840)</li>
                      * 
                      */
                     std::vector<std::string> GetFields() const;
 
                     /**
-                     * 设置List of predefined fields for delivery.
-                     * @param _fields List of predefined fields for delivery.
+                     * 设置Pre-defined log fields to be delivered. Refer to:
+<li>[Site acceleration log (L7 access log)](https://www.tencentcloud.com/document/product/1145/61300)</li>
+<li>[L4 proxy log](https://www.tencentcloud.com/document/product/1145/61301)</li>
+<li>[Edge Function execution log](https://www.tencentcloud.com/document/product/1145/67840)</li>
+                     * @param _fields Pre-defined log fields to be delivered. Refer to:
+<li>[Site acceleration log (L7 access log)](https://www.tencentcloud.com/document/product/1145/61300)</li>
+<li>[L4 proxy log](https://www.tencentcloud.com/document/product/1145/61301)</li>
+<li>[Edge Function execution log](https://www.tencentcloud.com/document/product/1145/67840)</li>
                      * 
                      */
                     void SetFields(const std::vector<std::string>& _fields);
@@ -248,15 +268,15 @@ namespace TencentCloud
                     bool FieldsHasBeenSet() const;
 
                     /**
-                     * 获取The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (LogType=domain) support custom fields.
-                     * @return CustomFields The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (LogType=domain) support custom fields.
+                     * 获取The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (`LogType`=`domain`) support custom fields.
+                     * @return CustomFields The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (`LogType`=`domain`) support custom fields.
                      * 
                      */
                     std::vector<CustomField> GetCustomFields() const;
 
                     /**
-                     * 设置The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (LogType=domain) support custom fields.
-                     * @param _customFields The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (LogType=domain) support custom fields.
+                     * 设置The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (`LogType`=`domain`) support custom fields.
+                     * @param _customFields The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (`LogType`=`domain`) support custom fields.
                      * 
                      */
                     void SetCustomFields(const std::vector<CustomField>& _customFields);
@@ -269,15 +289,15 @@ namespace TencentCloud
                     bool CustomFieldsHasBeenSet() const;
 
                     /**
-                     * 获取Filter criteria of log delivery. If this parameter is not specified, all logs will be shipped.
-                     * @return DeliveryConditions Filter criteria of log delivery. If this parameter is not specified, all logs will be shipped.
+                     * 获取Filter criteria of log delivery. If this parameter is not specified, all logs will be delivered.
+                     * @return DeliveryConditions Filter criteria of log delivery. If this parameter is not specified, all logs will be delivered.
                      * 
                      */
                     std::vector<DeliveryCondition> GetDeliveryConditions() const;
 
                     /**
-                     * 设置Filter criteria of log delivery. If this parameter is not specified, all logs will be shipped.
-                     * @param _deliveryConditions Filter criteria of log delivery. If this parameter is not specified, all logs will be shipped.
+                     * 设置Filter criteria of log delivery. If this parameter is not specified, all logs will be delivered.
+                     * @param _deliveryConditions Filter criteria of log delivery. If this parameter is not specified, all logs will be delivered.
                      * 
                      */
                     void SetDeliveryConditions(const std::vector<DeliveryCondition>& _deliveryConditions);
@@ -312,22 +332,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Output format for log delivery. If this field is not specified, the default format is used, which works as follows:
-<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
-<li>When TaskType is 's3', the default format is JSON Lines;</li>Specifically, when TaskType is 'cls', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
+<li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When `TaskType` is `s3`, the default format is JSON Lines;</li>Specifically, when `TaskType` is `cls`, the only allowed value for `LogFormat.FormatType` is `json`, and other parameters in `LogFormat` will be ignored. It is recommended not to input `LogFormat`.
                      * @return LogFormat Output format for log delivery. If this field is not specified, the default format is used, which works as follows:
-<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
-<li>When TaskType is 's3', the default format is JSON Lines;</li>Specifically, when TaskType is 'cls', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
+<li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When `TaskType` is `s3`, the default format is JSON Lines;</li>Specifically, when `TaskType` is `cls`, the only allowed value for `LogFormat.FormatType` is `json`, and other parameters in `LogFormat` will be ignored. It is recommended not to input `LogFormat`.
                      * 
                      */
                     LogFormat GetLogFormat() const;
 
                     /**
                      * 设置Output format for log delivery. If this field is not specified, the default format is used, which works as follows:
-<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
-<li>When TaskType is 's3', the default format is JSON Lines;</li>Specifically, when TaskType is 'cls', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
+<li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When `TaskType` is `s3`, the default format is JSON Lines;</li>Specifically, when `TaskType` is `cls`, the only allowed value for `LogFormat.FormatType` is `json`, and other parameters in `LogFormat` will be ignored. It is recommended not to input `LogFormat`.
                      * @param _logFormat Output format for log delivery. If this field is not specified, the default format is used, which works as follows:
-<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
-<li>When TaskType is 's3', the default format is JSON Lines;</li>Specifically, when TaskType is 'cls', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
+<li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When `TaskType` is `s3`, the default format is JSON Lines;</li>Specifically, when `TaskType` is `cls`, the only allowed value for `LogFormat.FormatType` is `json`, and other parameters in `LogFormat` will be ignored. It is recommended not to input `LogFormat`.
                      * 
                      */
                     void SetLogFormat(const LogFormat& _logFormat);
@@ -340,15 +360,15 @@ namespace TencentCloud
                     bool LogFormatHasBeenSet() const;
 
                     /**
-                     * 获取Configuration information of CLS. This parameter is required when TaskType is cls.
-                     * @return CLS Configuration information of CLS. This parameter is required when TaskType is cls.
+                     * 获取Configuration information of CLS. This parameter is required when `TaskType` is `cls`.
+                     * @return CLS Configuration information of CLS. This parameter is required when `TaskType` is `cls`.
                      * 
                      */
                     CLSTopic GetCLS() const;
 
                     /**
-                     * 设置Configuration information of CLS. This parameter is required when TaskType is cls.
-                     * @param _cLS Configuration information of CLS. This parameter is required when TaskType is cls.
+                     * 设置Configuration information of CLS. This parameter is required when `TaskType` is `cls`.
+                     * @param _cLS Configuration information of CLS. This parameter is required when `TaskType` is `cls`.
                      * 
                      */
                     void SetCLS(const CLSTopic& _cLS);
@@ -361,15 +381,15 @@ namespace TencentCloud
                     bool CLSHasBeenSet() const;
 
                     /**
-                     * 获取Configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
-                     * @return CustomEndpoint Configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
+                     * 获取Configuration information of the custom HTTP endpoint. This parameter is required when `TaskType` is `custom_endpoint`.
+                     * @return CustomEndpoint Configuration information of the custom HTTP endpoint. This parameter is required when `TaskType` is `custom_endpoint`.
                      * 
                      */
                     CustomEndpoint GetCustomEndpoint() const;
 
                     /**
-                     * 设置Configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
-                     * @param _customEndpoint Configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
+                     * 设置Configuration information of the custom HTTP endpoint. This parameter is required when `TaskType` is `custom_endpoint`.
+                     * @param _customEndpoint Configuration information of the custom HTTP endpoint. This parameter is required when `TaskType` is `custom_endpoint`.
                      * 
                      */
                     void SetCustomEndpoint(const CustomEndpoint& _customEndpoint);
@@ -382,15 +402,15 @@ namespace TencentCloud
                     bool CustomEndpointHasBeenSet() const;
 
                     /**
-                     * 获取Configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
-                     * @return S3 Configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
+                     * 获取Configuration information of the AWS S3-compatible bucket. This parameter is required when `TaskType` is `s3`.
+                     * @return S3 Configuration information of the AWS S3-compatible bucket. This parameter is required when `TaskType` is `s3`.
                      * 
                      */
                     S3 GetS3() const;
 
                     /**
-                     * 设置Configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
-                     * @param _s3 Configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
+                     * 设置Configuration information of the AWS S3-compatible bucket. This parameter is required when `TaskType` is `s3`.
+                     * @param _s3 Configuration information of the AWS S3-compatible bucket. This parameter is required when `TaskType` is `s3`.
                      * 
                      */
                     void SetS3(const S3& _s3);
@@ -419,16 +439,17 @@ namespace TencentCloud
                     /**
                      * Type of a real-time log delivery task. Valid values:
 <li>cls: push to Tencent Cloud CLS;</li>
-<li>custom_endpoint: push to a custom HTTP(S) address;</li>
-<li>s3: push to an AWS S3-compatible bucket address.</li>
+<li>custom_endpoint: push to a custom HTTP(S) endpoint;</li>
+<li>s3: push to an AWS S3-compatible bucket.</li>
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
 
                     /**
-                     * List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log delivery task. Valid value examples:
-<li>L7 domain name: domain.example.com;</li>
-<li>L4 proxy instance: sid-2s69eb5wcms7.</li>
+                     * List of entities associated with the real-time log delivery task. Valid value examples:
+<li>L7 domain name: domain.example.com</li>
+<li>L4 proxy instance: sid-2s69eb5wcms7</li>
+<li>Edge Function instance: test-zone-2mxigizoh9l9-1257626257</li>
                      */
                     std::vector<std::string> m_entityList;
                     bool m_entityListHasBeenSet;
@@ -437,7 +458,8 @@ namespace TencentCloud
                      * Dataset type. Valid values:
 <li>domain: site acceleration logs;</li>
 <li>application: L4 proxy logs;</li>
-<li>web-rateLiming: rate limit and CC attack defense logs;</li>
+<li>function: Edge Function execution log;</li>
+<li>web-rateLiming: rate limiting and CC attack protection logs;</li>
 <li>web-attack: managed rule logs;</li>
 <li>web-rule: custom rule logs;</li>
 <li>web-bot: Bot management logs.</li>
@@ -454,19 +476,22 @@ namespace TencentCloud
                     bool m_areaHasBeenSet;
 
                     /**
-                     * List of predefined fields for delivery.
+                     * Pre-defined log fields to be delivered. Refer to:
+<li>[Site acceleration log (L7 access log)](https://www.tencentcloud.com/document/product/1145/61300)</li>
+<li>[L4 proxy log](https://www.tencentcloud.com/document/product/1145/61301)</li>
+<li>[Edge Function execution log](https://www.tencentcloud.com/document/product/1145/67840)</li>
                      */
                     std::vector<std::string> m_fields;
                     bool m_fieldsHasBeenSet;
 
                     /**
-                     * The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (LogType=domain) support custom fields.
+                     * The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (`LogType`=`domain`) support custom fields.
                      */
                     std::vector<CustomField> m_customFields;
                     bool m_customFieldsHasBeenSet;
 
                     /**
-                     * Filter criteria of log delivery. If this parameter is not specified, all logs will be shipped.
+                     * Filter criteria of log delivery. If this parameter is not specified, all logs will be delivered.
                      */
                     std::vector<DeliveryCondition> m_deliveryConditions;
                     bool m_deliveryConditionsHasBeenSet;
@@ -479,26 +504,26 @@ namespace TencentCloud
 
                     /**
                      * Output format for log delivery. If this field is not specified, the default format is used, which works as follows:
-<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
-<li>When TaskType is 's3', the default format is JSON Lines;</li>Specifically, when TaskType is 'cls', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
+<li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When `TaskType` is `s3`, the default format is JSON Lines;</li>Specifically, when `TaskType` is `cls`, the only allowed value for `LogFormat.FormatType` is `json`, and other parameters in `LogFormat` will be ignored. It is recommended not to input `LogFormat`.
                      */
                     LogFormat m_logFormat;
                     bool m_logFormatHasBeenSet;
 
                     /**
-                     * Configuration information of CLS. This parameter is required when TaskType is cls.
+                     * Configuration information of CLS. This parameter is required when `TaskType` is `cls`.
                      */
                     CLSTopic m_cLS;
                     bool m_cLSHasBeenSet;
 
                     /**
-                     * Configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
+                     * Configuration information of the custom HTTP endpoint. This parameter is required when `TaskType` is `custom_endpoint`.
                      */
                     CustomEndpoint m_customEndpoint;
                     bool m_customEndpointHasBeenSet;
 
                     /**
-                     * Configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
+                     * Configuration information of the AWS S3-compatible bucket. This parameter is required when `TaskType` is `s3`.
                      */
                     S3 m_s3;
                     bool m_s3HasBeenSet;

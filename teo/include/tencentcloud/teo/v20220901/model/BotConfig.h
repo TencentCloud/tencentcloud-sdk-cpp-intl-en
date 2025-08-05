@@ -123,19 +123,15 @@ namespace TencentCloud
                     bool BotPortraitRuleHasBeenSet() const;
 
                     /**
-                     * 获取The bot intelligence settings. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IntelligenceRule The bot intelligence settings. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Bot intelligent analysis. if null, use the last set configuration by default.
+                     * @return IntelligenceRule Bot intelligent analysis. if null, use the last set configuration by default.
                      * 
                      */
                     IntelligenceRule GetIntelligenceRule() const;
 
                     /**
-                     * 设置The bot intelligence settings. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _intelligenceRule The bot intelligence settings. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Bot intelligent analysis. if null, use the last set configuration by default.
+                     * @param _intelligenceRule Bot intelligent analysis. if null, use the last set configuration by default.
                      * 
                      */
                     void SetIntelligenceRule(const IntelligenceRule& _intelligenceRule);
@@ -190,19 +186,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AlgDetectRuleHasBeenSet() const;
 
                     /**
-                     * 获取Settings of the bot managed rule. It is only used for output.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return Customizes Settings of the bot managed rule. It is only used for output.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Bot managed custom policy. optional input. output usage only.
+                     * @return Customizes Bot managed custom policy. optional input. output usage only.
                      * 
                      */
                     std::vector<BotUserRule> GetCustomizes() const;
 
                     /**
-                     * 设置Settings of the bot managed rule. It is only used for output.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _customizes Settings of the bot managed rule. It is only used for output.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Bot managed custom policy. optional input. output usage only.
+                     * @param _customizes Bot managed custom policy. optional input. output usage only.
                      * 
                      */
                     void SetCustomizes(const std::vector<BotUserRule>& _customizes);
@@ -237,8 +229,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_botPortraitRuleHasBeenSet;
 
                     /**
-                     * The bot intelligence settings. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Bot intelligent analysis. if null, use the last set configuration by default.
                      */
                     IntelligenceRule m_intelligenceRule;
                     bool m_intelligenceRuleHasBeenSet;
@@ -256,8 +247,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_algDetectRuleHasBeenSet;
 
                     /**
-                     * Settings of the bot managed rule. It is only used for output.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Bot managed custom policy. optional input. output usage only.
                      */
                     std::vector<BotUserRule> m_customizes;
                     bool m_customizesHasBeenSet;

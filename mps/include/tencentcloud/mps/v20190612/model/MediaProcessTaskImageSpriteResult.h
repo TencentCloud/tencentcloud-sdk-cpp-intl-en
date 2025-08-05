@@ -154,15 +154,19 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the output of an image sprite task for a video.
-                     * @return Output Specifies the output of an image sprite task for a video.
+                     * 获取Output of the image sprite task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return Output Output of the image sprite task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     MediaImageSpriteItem GetOutput() const;
 
                     /**
-                     * 设置Specifies the output of an image sprite task for a video.
-                     * @param _output Specifies the output of an image sprite task for a video.
+                     * 设置Output of the image sprite task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _output Output of the image sprite task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetOutput(const MediaImageSpriteItem& _output);
@@ -249,7 +253,8 @@ namespace TencentCloud
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Specifies the output of an image sprite task for a video.
+                     * Output of the image sprite task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     MediaImageSpriteItem m_output;
                     bool m_outputHasBeenSet;

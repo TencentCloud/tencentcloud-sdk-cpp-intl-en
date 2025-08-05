@@ -76,19 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The sampling interval in seconds. In this way, the first 8 KB of the request is ignored. The rest of data is separated in to multiple parts according to this interval for slow attack measurement.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Interval The sampling interval in seconds. In this way, the first 8 KB of the request is ignored. The rest of data is separated in to multiple parts according to this interval for slow attack measurement.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取The statistics interval in seconds. after the first packet transfer, the data transmission axis is split by this parameter for separate computing of slow attacks on each shard.
+                     * @return Interval The statistics interval in seconds. after the first packet transfer, the data transmission axis is split by this parameter for separate computing of slow attacks on each shard.
                      * 
                      */
                     uint64_t GetInterval() const;
 
                     /**
-                     * 设置The sampling interval in seconds. In this way, the first 8 KB of the request is ignored. The rest of data is separated in to multiple parts according to this interval for slow attack measurement.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _interval The sampling interval in seconds. In this way, the first 8 KB of the request is ignored. The rest of data is separated in to multiple parts according to this interval for slow attack measurement.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置The statistics interval in seconds. after the first packet transfer, the data transmission axis is split by this parameter for separate computing of slow attacks on each shard.
+                     * @param _interval The statistics interval in seconds. after the first packet transfer, the data transmission axis is split by this parameter for separate computing of slow attacks on each shard.
                      * 
                      */
                     void SetInterval(const uint64_t& _interval);
@@ -101,19 +97,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool IntervalHasBeenSet() const;
 
                     /**
-                     * 获取The transfer rate threshold in bps. When the transfer rate of a sample is lower than the threshold, it’s considered a slow attack and handled according to the specified `Action`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Threshold The transfer rate threshold in bps. When the transfer rate of a sample is lower than the threshold, it’s considered a slow attack and handled according to the specified `Action`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Specifies the rate threshold applied during statistics in bps. if the transmission rate in this shard does not reach the parameter value, it is identified as a slow attack and the slow attack handling method is applied.
+                     * @return Threshold Specifies the rate threshold applied during statistics in bps. if the transmission rate in this shard does not reach the parameter value, it is identified as a slow attack and the slow attack handling method is applied.
                      * 
                      */
                     uint64_t GetThreshold() const;
 
                     /**
-                     * 设置The transfer rate threshold in bps. When the transfer rate of a sample is lower than the threshold, it’s considered a slow attack and handled according to the specified `Action`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _threshold The transfer rate threshold in bps. When the transfer rate of a sample is lower than the threshold, it’s considered a slow attack and handled according to the specified `Action`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Specifies the rate threshold applied during statistics in bps. if the transmission rate in this shard does not reach the parameter value, it is identified as a slow attack and the slow attack handling method is applied.
+                     * @param _threshold Specifies the rate threshold applied during statistics in bps. if the transmission rate in this shard does not reach the parameter value, it is identified as a slow attack and the slow attack handling method is applied.
                      * 
                      */
                     void SetThreshold(const uint64_t& _threshold);
@@ -136,15 +128,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The sampling interval in seconds. In this way, the first 8 KB of the request is ignored. The rest of data is separated in to multiple parts according to this interval for slow attack measurement.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * The statistics interval in seconds. after the first packet transfer, the data transmission axis is split by this parameter for separate computing of slow attacks on each shard.
                      */
                     uint64_t m_interval;
                     bool m_intervalHasBeenSet;
 
                     /**
-                     * The transfer rate threshold in bps. When the transfer rate of a sample is lower than the threshold, it’s considered a slow attack and handled according to the specified `Action`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Specifies the rate threshold applied during statistics in bps. if the transmission rate in this shard does not reach the parameter value, it is identified as a slow attack and the slow attack handling method is applied.
                      */
                     uint64_t m_threshold;
                     bool m_thresholdHasBeenSet;

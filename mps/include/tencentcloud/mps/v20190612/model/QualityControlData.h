@@ -49,19 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether there is an audio track. `true` indicates that there isn't.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NoAudio Whether there is an audio track. `true` indicates that there isn't.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取When this field is set to true, it indicates that the video has no audio track.
+                     * @return NoAudio When this field is set to true, it indicates that the video has no audio track.
                      * 
                      */
                     bool GetNoAudio() const;
 
                     /**
-                     * 设置Whether there is an audio track. `true` indicates that there isn't.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _noAudio Whether there is an audio track. `true` indicates that there isn't.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置When this field is set to true, it indicates that the video has no audio track.
+                     * @param _noAudio When this field is set to true, it indicates that the video has no audio track.
                      * 
                      */
                     void SetNoAudio(const bool& _noAudio);
@@ -74,19 +70,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NoAudioHasBeenSet() const;
 
                     /**
-                     * 获取Whether there is a video track. `true` indicates that there isn't.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NoVideo Whether there is a video track. `true` indicates that there isn't.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取When this field is set to true, it indicates that the video has no video track.
+                     * @return NoVideo When this field is set to true, it indicates that the video has no video track.
                      * 
                      */
                     bool GetNoVideo() const;
 
                     /**
-                     * 设置Whether there is a video track. `true` indicates that there isn't.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _noVideo Whether there is a video track. `true` indicates that there isn't.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置When this field is set to true, it indicates that the video has no video track.
+                     * @param _noVideo When this field is set to true, it indicates that the video has no video track.
                      * 
                      */
                     void SetNoVideo(const bool& _noVideo);
@@ -100,18 +92,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取No-reference quality score of the video (100 points in total).
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @return QualityEvaluationScore No-reference quality score of the video (100 points in total).
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     int64_t GetQualityEvaluationScore() const;
 
                     /**
                      * 设置No-reference quality score of the video (100 points in total).
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _qualityEvaluationScore No-reference quality score of the video (100 points in total).
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetQualityEvaluationScore(const int64_t& _qualityEvaluationScore);
@@ -125,18 +113,14 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * 获取No-reference quality score of the video (MOS).
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @return QualityEvaluationMeanOpinionScore No-reference quality score of the video (MOS).
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     double GetQualityEvaluationMeanOpinionScore() const;
 
                     /**
                      * 设置No-reference quality score of the video (MOS).
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _qualityEvaluationMeanOpinionScore No-reference quality score of the video (MOS).
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetQualityEvaluationMeanOpinionScore(const double& _qualityEvaluationMeanOpinionScore);
@@ -149,19 +133,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool QualityEvaluationMeanOpinionScoreHasBeenSet() const;
 
                     /**
-                     * 获取Exception items detected in content quality inspection.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return QualityControlResultSet Exception items detected in content quality inspection.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Exception items identified in content quality inspection.
+                     * @return QualityControlResultSet Exception items identified in content quality inspection.
                      * 
                      */
                     std::vector<QualityControlResult> GetQualityControlResultSet() const;
 
                     /**
-                     * 设置Exception items detected in content quality inspection.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _qualityControlResultSet Exception items detected in content quality inspection.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Exception items identified in content quality inspection.
+                     * @param _qualityControlResultSet Exception items identified in content quality inspection.
                      * 
                      */
                     void SetQualityControlResultSet(const std::vector<QualityControlResult>& _qualityControlResultSet);
@@ -174,19 +154,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool QualityControlResultSetHasBeenSet() const;
 
                     /**
-                     * 获取Exception items detected in format diagnosis.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ContainerDiagnoseResultSet Exception items detected in format diagnosis.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Exception items identified in format diagnosis.
+                     * @return ContainerDiagnoseResultSet Exception items identified in format diagnosis.
                      * 
                      */
                     std::vector<ContainerDiagnoseResultItem> GetContainerDiagnoseResultSet() const;
 
                     /**
-                     * 设置Exception items detected in format diagnosis.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _containerDiagnoseResultSet Exception items detected in format diagnosis.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Exception items identified in format diagnosis.
+                     * @param _containerDiagnoseResultSet Exception items identified in format diagnosis.
                      * 
                      */
                     void SetContainerDiagnoseResultSet(const std::vector<ContainerDiagnoseResultItem>& _containerDiagnoseResultSet);
@@ -201,43 +177,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Whether there is an audio track. `true` indicates that there isn't.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * When this field is set to true, it indicates that the video has no audio track.
                      */
                     bool m_noAudio;
                     bool m_noAudioHasBeenSet;
 
                     /**
-                     * Whether there is a video track. `true` indicates that there isn't.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * When this field is set to true, it indicates that the video has no video track.
                      */
                     bool m_noVideo;
                     bool m_noVideoHasBeenSet;
 
                     /**
                      * No-reference quality score of the video (100 points in total).
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     int64_t m_qualityEvaluationScore;
                     bool m_qualityEvaluationScoreHasBeenSet;
 
                     /**
                      * No-reference quality score of the video (MOS).
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     double m_qualityEvaluationMeanOpinionScore;
                     bool m_qualityEvaluationMeanOpinionScoreHasBeenSet;
 
                     /**
-                     * Exception items detected in content quality inspection.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Exception items identified in content quality inspection.
                      */
                     std::vector<QualityControlResult> m_qualityControlResultSet;
                     bool m_qualityControlResultSetHasBeenSet;
 
                     /**
-                     * Exception items detected in format diagnosis.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Exception items identified in format diagnosis.
                      */
                     std::vector<ContainerDiagnoseResultItem> m_containerDiagnoseResultSet;
                     bool m_containerDiagnoseResultSetHasBeenSet;

@@ -28,6 +28,7 @@ GetFaceIdResultIntlResponse::GetFaceIdResultIntlResponse() :
     m_descriptionHasBeenSet(false),
     m_bestFrameHasBeenSet(false),
     m_videoHasBeenSet(false),
+    m_actionVideoHasBeenSet(false),
     m_similarityHasBeenSet(false),
     m_extraHasBeenSet(false)
 {
@@ -107,6 +108,16 @@ CoreInternalOutcome GetFaceIdResultIntlResponse::Deserialize(const string &paylo
         m_videoHasBeenSet = true;
     }
 
+    if (rsp.HasMember("ActionVideo") && !rsp["ActionVideo"].IsNull())
+    {
+        if (!rsp["ActionVideo"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ActionVideo` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_actionVideo = string(rsp["ActionVideo"].GetString());
+        m_actionVideoHasBeenSet = true;
+    }
+
     if (rsp.HasMember("Similarity") && !rsp["Similarity"].IsNull())
     {
         if (!rsp["Similarity"].IsLosslessDouble())
@@ -167,6 +178,14 @@ string GetFaceIdResultIntlResponse::ToJsonString() const
         string key = "Video";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_video.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_actionVideoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ActionVideo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_actionVideo.c_str(), allocator).Move(), allocator);
     }
 
     if (m_similarityHasBeenSet)
@@ -235,6 +254,16 @@ string GetFaceIdResultIntlResponse::GetVideo() const
 bool GetFaceIdResultIntlResponse::VideoHasBeenSet() const
 {
     return m_videoHasBeenSet;
+}
+
+string GetFaceIdResultIntlResponse::GetActionVideo() const
+{
+    return m_actionVideo;
+}
+
+bool GetFaceIdResultIntlResponse::ActionVideoHasBeenSet() const
+{
+    return m_actionVideoHasBeenSet;
 }
 
 double GetFaceIdResultIntlResponse::GetSimilarity() const

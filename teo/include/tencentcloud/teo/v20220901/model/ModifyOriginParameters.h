@@ -163,15 +163,15 @@ namespace TencentCloud
                     bool OriginProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Ports for http origin-pull requests. value range: 1-65535. this parameter takes effect only when the origin-pull protocol originprotocol is http or follow.
-                     * @return HTTPOriginPort Ports for http origin-pull requests. value range: 1-65535. this parameter takes effect only when the origin-pull protocol originprotocol is http or follow.
+                     * 获取The HTTP origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTP or follow.
+                     * @return HTTPOriginPort The HTTP origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTP or follow.
                      * 
                      */
                     int64_t GetHTTPOriginPort() const;
 
                     /**
-                     * 设置Ports for http origin-pull requests. value range: 1-65535. this parameter takes effect only when the origin-pull protocol originprotocol is http or follow.
-                     * @param _hTTPOriginPort Ports for http origin-pull requests. value range: 1-65535. this parameter takes effect only when the origin-pull protocol originprotocol is http or follow.
+                     * 设置The HTTP origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTP or follow.
+                     * @param _hTTPOriginPort The HTTP origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTP or follow.
                      * 
                      */
                     void SetHTTPOriginPort(const int64_t& _hTTPOriginPort);
@@ -184,15 +184,15 @@ namespace TencentCloud
                     bool HTTPOriginPortHasBeenSet() const;
 
                     /**
-                     * 获取Ports for https origin-pull requests. value range: 1-65535. this parameter takes effect only when the origin-pull protocol originprotocol is https or follow.
-                     * @return HTTPSOriginPort Ports for https origin-pull requests. value range: 1-65535. this parameter takes effect only when the origin-pull protocol originprotocol is https or follow.
+                     * 获取The HTTPS origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTPS or follow.
+                     * @return HTTPSOriginPort The HTTPS origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTPS or follow.
                      * 
                      */
                     int64_t GetHTTPSOriginPort() const;
 
                     /**
-                     * 设置Ports for https origin-pull requests. value range: 1-65535. this parameter takes effect only when the origin-pull protocol originprotocol is https or follow.
-                     * @param _hTTPSOriginPort Ports for https origin-pull requests. value range: 1-65535. this parameter takes effect only when the origin-pull protocol originprotocol is https or follow.
+                     * 设置The HTTPS origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTPS or follow.
+                     * @param _hTTPSOriginPort The HTTPS origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTPS or follow.
                      * 
                      */
                     void SetHTTPSOriginPort(const int64_t& _hTTPSOriginPort);
@@ -205,23 +205,23 @@ namespace TencentCloud
                     bool HTTPSOriginPortHasBeenSet() const;
 
                     /**
-                     * 获取Whether access to the private object storage origin server is allowed. this parameter is valid only when the origin server type origintype is COS or awss3. valid values:.
+                     * 获取Specifies whether access to the private object storage origin server is allowed. this parameter is required when the origin server type OriginType is COS or AWSS3. valid values:.
 <Li>On: enable private authentication;</li>.
-<Li>Off: disable private authentication.</li> if not specified, the default value is off.
-                     * @return PrivateAccess Whether access to the private object storage origin server is allowed. this parameter is valid only when the origin server type origintype is COS or awss3. valid values:.
+<li>off: disable private authentication.</li>.
+                     * @return PrivateAccess Specifies whether access to the private object storage origin server is allowed. this parameter is required when the origin server type OriginType is COS or AWSS3. valid values:.
 <Li>On: enable private authentication;</li>.
-<Li>Off: disable private authentication.</li> if not specified, the default value is off.
+<li>off: disable private authentication.</li>.
                      * 
                      */
                     std::string GetPrivateAccess() const;
 
                     /**
-                     * 设置Whether access to the private object storage origin server is allowed. this parameter is valid only when the origin server type origintype is COS or awss3. valid values:.
+                     * 设置Specifies whether access to the private object storage origin server is allowed. this parameter is required when the origin server type OriginType is COS or AWSS3. valid values:.
 <Li>On: enable private authentication;</li>.
-<Li>Off: disable private authentication.</li> if not specified, the default value is off.
-                     * @param _privateAccess Whether access to the private object storage origin server is allowed. this parameter is valid only when the origin server type origintype is COS or awss3. valid values:.
+<li>off: disable private authentication.</li>.
+                     * @param _privateAccess Specifies whether access to the private object storage origin server is allowed. this parameter is required when the origin server type OriginType is COS or AWSS3. valid values:.
 <Li>On: enable private authentication;</li>.
-<Li>Off: disable private authentication.</li> if not specified, the default value is off.
+<li>off: disable private authentication.</li>.
                      * 
                      */
                     void SetPrivateAccess(const std::string& _privateAccess);
@@ -292,21 +292,21 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool m_originProtocolHasBeenSet;
 
                     /**
-                     * Ports for http origin-pull requests. value range: 1-65535. this parameter takes effect only when the origin-pull protocol originprotocol is http or follow.
+                     * The HTTP origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTP or follow.
                      */
                     int64_t m_hTTPOriginPort;
                     bool m_hTTPOriginPortHasBeenSet;
 
                     /**
-                     * Ports for https origin-pull requests. value range: 1-65535. this parameter takes effect only when the origin-pull protocol originprotocol is https or follow.
+                     * The HTTPS origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTPS or follow.
                      */
                     int64_t m_hTTPSOriginPort;
                     bool m_hTTPSOriginPortHasBeenSet;
 
                     /**
-                     * Whether access to the private object storage origin server is allowed. this parameter is valid only when the origin server type origintype is COS or awss3. valid values:.
+                     * Specifies whether access to the private object storage origin server is allowed. this parameter is required when the origin server type OriginType is COS or AWSS3. valid values:.
 <Li>On: enable private authentication;</li>.
-<Li>Off: disable private authentication.</li> if not specified, the default value is off.
+<li>off: disable private authentication.</li>.
                      */
                     std::string m_privateAccess;
                     bool m_privateAccessHasBeenSet;

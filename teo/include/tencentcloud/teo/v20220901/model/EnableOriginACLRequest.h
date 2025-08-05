@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the site ID.
-                     * @return ZoneId Specifies the site ID.
+                     * 获取Zone ID.
+                     * @return ZoneId Zone ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Specifies the site ID.
-                     * @param _zoneId Specifies the site ID.
+                     * 设置Zone ID.
+                     * @param _zoneId Zone ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,31 +64,23 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取The mode of configurating origin ACLs for L7 acceleration domains.
-- all: configurate origin ACLs for all L7 acceleration domains under the site.
-- specific: configurate origin ACLs for designated L7 acceleration domains under the site.
-When the parameter is empty, it defaults to specific.
-
-                     * @return L7EnableMode The mode of configurating origin ACLs for L7 acceleration domains.
-- all: configurate origin ACLs for all L7 acceleration domains under the site.
-- specific: configurate origin ACLs for designated L7 acceleration domains under the site.
-When the parameter is empty, it defaults to specific.
-
+                     * 获取L7 acceleration domain name activation in origin protection mode.
+<li>`all`: enable layer-7 acceleration domain names for the site.</li>.
+<Li>Specific: enable for the site's designated layer-7 acceleration domain name.</li>when no parameter is defined, the default is specific.
+                     * @return L7EnableMode L7 acceleration domain name activation in origin protection mode.
+<li>`all`: enable layer-7 acceleration domain names for the site.</li>.
+<Li>Specific: enable for the site's designated layer-7 acceleration domain name.</li>when no parameter is defined, the default is specific.
                      * 
                      */
                     std::string GetL7EnableMode() const;
 
                     /**
-                     * 设置The mode of configurating origin ACLs for L7 acceleration domains.
-- all: configurate origin ACLs for all L7 acceleration domains under the site.
-- specific: configurate origin ACLs for designated L7 acceleration domains under the site.
-When the parameter is empty, it defaults to specific.
-
-                     * @param _l7EnableMode The mode of configurating origin ACLs for L7 acceleration domains.
-- all: configurate origin ACLs for all L7 acceleration domains under the site.
-- specific: configurate origin ACLs for designated L7 acceleration domains under the site.
-When the parameter is empty, it defaults to specific.
-
+                     * 设置L7 acceleration domain name activation in origin protection mode.
+<li>`all`: enable layer-7 acceleration domain names for the site.</li>.
+<Li>Specific: enable for the site's designated layer-7 acceleration domain name.</li>when no parameter is defined, the default is specific.
+                     * @param _l7EnableMode L7 acceleration domain name activation in origin protection mode.
+<li>`all`: enable layer-7 acceleration domain names for the site.</li>.
+<Li>Specific: enable for the site's designated layer-7 acceleration domain name.</li>when no parameter is defined, the default is specific.
                      * 
                      */
                     void SetL7EnableMode(const std::string& _l7EnableMode);
@@ -101,15 +93,15 @@ When the parameter is empty, it defaults to specific.
                     bool L7EnableModeHasBeenSet() const;
 
                     /**
-                     * 获取The list of L7 acceleration domains that require enabling the origin ACLs. This list must be empty when the request parameter L7EnableMode is set to 'all'. A maximum of 200 domains are supported at a time.
-                     * @return L7Hosts The list of L7 acceleration domains that require enabling the origin ACLs. This list must be empty when the request parameter L7EnableMode is set to 'all'. A maximum of 200 domains are supported at a time.
+                     * 获取Enable the list of layer-7 acceleration domain names with origin protection. this parameter is valid only when L7EnableMode is set to specific. when L7EnableMode is set to all, retain this parameter as empty. only supports up to 200 layer-7 acceleration domain names in a single operation.
+                     * @return L7Hosts Enable the list of layer-7 acceleration domain names with origin protection. this parameter is valid only when L7EnableMode is set to specific. when L7EnableMode is set to all, retain this parameter as empty. only supports up to 200 layer-7 acceleration domain names in a single operation.
                      * 
                      */
                     std::vector<std::string> GetL7Hosts() const;
 
                     /**
-                     * 设置The list of L7 acceleration domains that require enabling the origin ACLs. This list must be empty when the request parameter L7EnableMode is set to 'all'. A maximum of 200 domains are supported at a time.
-                     * @param _l7Hosts The list of L7 acceleration domains that require enabling the origin ACLs. This list must be empty when the request parameter L7EnableMode is set to 'all'. A maximum of 200 domains are supported at a time.
+                     * 设置Enable the list of layer-7 acceleration domain names with origin protection. this parameter is valid only when L7EnableMode is set to specific. when L7EnableMode is set to all, retain this parameter as empty. only supports up to 200 layer-7 acceleration domain names in a single operation.
+                     * @param _l7Hosts Enable the list of layer-7 acceleration domain names with origin protection. this parameter is valid only when L7EnableMode is set to specific. when L7EnableMode is set to all, retain this parameter as empty. only supports up to 200 layer-7 acceleration domain names in a single operation.
                      * 
                      */
                     void SetL7Hosts(const std::vector<std::string>& _l7Hosts);
@@ -122,27 +114,23 @@ When the parameter is empty, it defaults to specific.
                     bool L7HostsHasBeenSet() const;
 
                     /**
-                     * 获取The mode of configurating origin ACLs for L4 proxy Instances.
-- all: configurate origin ACLs for all L4 proxy Instances under the site.
-- specific: configurate origin ACLs for designated  L4 proxy Instances under the site.
-When the parameter is empty, it defaults to specific.
-                     * @return L4EnableMode The mode of configurating origin ACLs for L4 proxy Instances.
-- all: configurate origin ACLs for all L4 proxy Instances under the site.
-- specific: configurate origin ACLs for designated  L4 proxy Instances under the site.
-When the parameter is empty, it defaults to specific.
+                     * 获取Specifies the origin protection mode of the l4 proxy instance.
+<Li>ALL: enable for all l4 proxy instances under the site.</li>.
+<Li>Specific: enable for the designated layer 4 proxy instance of the site.</li>when no parameter is defined, the default is specific.
+                     * @return L4EnableMode Specifies the origin protection mode of the l4 proxy instance.
+<Li>ALL: enable for all l4 proxy instances under the site.</li>.
+<Li>Specific: enable for the designated layer 4 proxy instance of the site.</li>when no parameter is defined, the default is specific.
                      * 
                      */
                     std::string GetL4EnableMode() const;
 
                     /**
-                     * 设置The mode of configurating origin ACLs for L4 proxy Instances.
-- all: configurate origin ACLs for all L4 proxy Instances under the site.
-- specific: configurate origin ACLs for designated  L4 proxy Instances under the site.
-When the parameter is empty, it defaults to specific.
-                     * @param _l4EnableMode The mode of configurating origin ACLs for L4 proxy Instances.
-- all: configurate origin ACLs for all L4 proxy Instances under the site.
-- specific: configurate origin ACLs for designated  L4 proxy Instances under the site.
-When the parameter is empty, it defaults to specific.
+                     * 设置Specifies the origin protection mode of the l4 proxy instance.
+<Li>ALL: enable for all l4 proxy instances under the site.</li>.
+<Li>Specific: enable for the designated layer 4 proxy instance of the site.</li>when no parameter is defined, the default is specific.
+                     * @param _l4EnableMode Specifies the origin protection mode of the l4 proxy instance.
+<Li>ALL: enable for all l4 proxy instances under the site.</li>.
+<Li>Specific: enable for the designated layer 4 proxy instance of the site.</li>when no parameter is defined, the default is specific.
                      * 
                      */
                     void SetL4EnableMode(const std::string& _l4EnableMode);
@@ -155,15 +143,15 @@ When the parameter is empty, it defaults to specific.
                     bool L4EnableModeHasBeenSet() const;
 
                     /**
-                     * 获取The list of L4 proxy Instances that require enabling origin ACLs. This list must be empty when the request parameter L4EnableMode is set to 'all'. A maximum of 100 instances are supported at a time.
-                     * @return L4ProxyIds The list of L4 proxy Instances that require enabling origin ACLs. This list must be empty when the request parameter L4EnableMode is set to 'all'. A maximum of 100 instances are supported at a time.
+                     * 获取The list of L4 proxy instances with origin protection enabled. this parameter is valid only when L4EnableMode is set to specific. retain this parameter empty when L4EnableMode is set to all. only supports up to 100 layer-4 proxy instances per operation.
+                     * @return L4ProxyIds The list of L4 proxy instances with origin protection enabled. this parameter is valid only when L4EnableMode is set to specific. retain this parameter empty when L4EnableMode is set to all. only supports up to 100 layer-4 proxy instances per operation.
                      * 
                      */
                     std::vector<std::string> GetL4ProxyIds() const;
 
                     /**
-                     * 设置The list of L4 proxy Instances that require enabling origin ACLs. This list must be empty when the request parameter L4EnableMode is set to 'all'. A maximum of 100 instances are supported at a time.
-                     * @param _l4ProxyIds The list of L4 proxy Instances that require enabling origin ACLs. This list must be empty when the request parameter L4EnableMode is set to 'all'. A maximum of 100 instances are supported at a time.
+                     * 设置The list of L4 proxy instances with origin protection enabled. this parameter is valid only when L4EnableMode is set to specific. retain this parameter empty when L4EnableMode is set to all. only supports up to 100 layer-4 proxy instances per operation.
+                     * @param _l4ProxyIds The list of L4 proxy instances with origin protection enabled. this parameter is valid only when L4EnableMode is set to specific. retain this parameter empty when L4EnableMode is set to all. only supports up to 100 layer-4 proxy instances per operation.
                      * 
                      */
                     void SetL4ProxyIds(const std::vector<std::string>& _l4ProxyIds);
@@ -178,38 +166,35 @@ When the parameter is empty, it defaults to specific.
                 private:
 
                     /**
-                     * Specifies the site ID.
+                     * Zone ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * The mode of configurating origin ACLs for L7 acceleration domains.
-- all: configurate origin ACLs for all L7 acceleration domains under the site.
-- specific: configurate origin ACLs for designated L7 acceleration domains under the site.
-When the parameter is empty, it defaults to specific.
-
+                     * L7 acceleration domain name activation in origin protection mode.
+<li>`all`: enable layer-7 acceleration domain names for the site.</li>.
+<Li>Specific: enable for the site's designated layer-7 acceleration domain name.</li>when no parameter is defined, the default is specific.
                      */
                     std::string m_l7EnableMode;
                     bool m_l7EnableModeHasBeenSet;
 
                     /**
-                     * The list of L7 acceleration domains that require enabling the origin ACLs. This list must be empty when the request parameter L7EnableMode is set to 'all'. A maximum of 200 domains are supported at a time.
+                     * Enable the list of layer-7 acceleration domain names with origin protection. this parameter is valid only when L7EnableMode is set to specific. when L7EnableMode is set to all, retain this parameter as empty. only supports up to 200 layer-7 acceleration domain names in a single operation.
                      */
                     std::vector<std::string> m_l7Hosts;
                     bool m_l7HostsHasBeenSet;
 
                     /**
-                     * The mode of configurating origin ACLs for L4 proxy Instances.
-- all: configurate origin ACLs for all L4 proxy Instances under the site.
-- specific: configurate origin ACLs for designated  L4 proxy Instances under the site.
-When the parameter is empty, it defaults to specific.
+                     * Specifies the origin protection mode of the l4 proxy instance.
+<Li>ALL: enable for all l4 proxy instances under the site.</li>.
+<Li>Specific: enable for the designated layer 4 proxy instance of the site.</li>when no parameter is defined, the default is specific.
                      */
                     std::string m_l4EnableMode;
                     bool m_l4EnableModeHasBeenSet;
 
                     /**
-                     * The list of L4 proxy Instances that require enabling origin ACLs. This list must be empty when the request parameter L4EnableMode is set to 'all'. A maximum of 100 instances are supported at a time.
+                     * The list of L4 proxy instances with origin protection enabled. this parameter is valid only when L4EnableMode is set to specific. retain this parameter empty when L4EnableMode is set to all. only supports up to 100 layer-4 proxy instances per operation.
                      */
                     std::vector<std::string> m_l4ProxyIds;
                     bool m_l4ProxyIdsHasBeenSet;

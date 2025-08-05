@@ -93,27 +93,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CnameHasBeenSet() const;
 
                     /**
-                     * 获取The CNAME status. Values:
-<li>`active`: Activated</li>
-<li>`moved`: Not activated </li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status The CNAME status. Values:
-<li>`active`: Activated</li>
-<li>`moved`: Not activated </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取CNAME status. valid values:.
+<li>`active`: activated</li>.
+<li>`moved`: not effective;</li>.
+                     * @return Status CNAME status. valid values:.
+<li>`active`: activated</li>.
+<li>`moved`: not effective;</li>.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置The CNAME status. Values:
-<li>`active`: Activated</li>
-<li>`moved`: Not activated </li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status The CNAME status. Values:
-<li>`active`: Activated</li>
-<li>`moved`: Not activated </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置CNAME status. valid values:.
+<li>`active`: activated</li>.
+<li>`moved`: not effective;</li>.
+                     * @param _status CNAME status. valid values:.
+<li>`active`: activated</li>.
+<li>`moved`: not effective;</li>.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -141,10 +137,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_cnameHasBeenSet;
 
                     /**
-                     * The CNAME status. Values:
-<li>`active`: Activated</li>
-<li>`moved`: Not activated </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * CNAME status. valid values:.
+<li>`active`: activated</li>.
+<li>`moved`: not effective;</li>.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

@@ -76,27 +76,23 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Specifies how to use query strings in the cache key. Values:
-<li>`includeCustom`: `Include partial query strings.</li>
-<li>`excludeCustom`: Exclude partial query strings.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Action Specifies how to use query strings in the cache key. Values:
-<li>`includeCustom`: `Include partial query strings.</li>
-<li>`excludeCustom`: Exclude partial query strings.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取CacheKey usage via QueryString, valid values:.
+<li>includeCustom: use partial url parameter;</li>.
+<li>excludeCustom: exclude partial url parameters.</li>.
+                     * @return Action CacheKey usage via QueryString, valid values:.
+<li>includeCustom: use partial url parameter;</li>.
+<li>excludeCustom: exclude partial url parameters.</li>.
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置Specifies how to use query strings in the cache key. Values:
-<li>`includeCustom`: `Include partial query strings.</li>
-<li>`excludeCustom`: Exclude partial query strings.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _action Specifies how to use query strings in the cache key. Values:
-<li>`includeCustom`: `Include partial query strings.</li>
-<li>`excludeCustom`: Exclude partial query strings.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置CacheKey usage via QueryString, valid values:.
+<li>includeCustom: use partial url parameter;</li>.
+<li>excludeCustom: exclude partial url parameters.</li>.
+                     * @param _action CacheKey usage via QueryString, valid values:.
+<li>includeCustom: use partial url parameter;</li>.
+<li>excludeCustom: exclude partial url parameters.</li>.
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -109,19 +105,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取Array of query strings used/excluded
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Value Array of query strings used/excluded
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the url parameter array for usage/exclusion.
+                     * @return Value Specifies the url parameter array for usage/exclusion.
                      * 
                      */
                     std::vector<std::string> GetValue() const;
 
                     /**
-                     * 设置Array of query strings used/excluded
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _value Array of query strings used/excluded
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the url parameter array for usage/exclusion.
+                     * @param _value Specifies the url parameter array for usage/exclusion.
                      * 
                      */
                     void SetValue(const std::vector<std::string>& _value);
@@ -144,17 +136,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Specifies how to use query strings in the cache key. Values:
-<li>`includeCustom`: `Include partial query strings.</li>
-<li>`excludeCustom`: Exclude partial query strings.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * CacheKey usage via QueryString, valid values:.
+<li>includeCustom: use partial url parameter;</li>.
+<li>excludeCustom: exclude partial url parameters.</li>.
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * Array of query strings used/excluded
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the url parameter array for usage/exclusion.
                      */
                     std::vector<std::string> m_value;
                     bool m_valueHasBeenSet;

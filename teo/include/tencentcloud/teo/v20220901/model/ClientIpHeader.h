@@ -76,19 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Name of the request header containing the client IP address for origin-pull. When Switch is on, this parameter is required. X-Forwarded-For is not allowed for this parameter.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @return HeaderName Name of the request header containing the client IP address for origin-pull. When Switch is on, this parameter is required. X-Forwarded-For is not allowed for this parameter.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Specifies the request header name containing the client IP For origin-pull. this parameter is required when Switch is on. X-Forwarded-For is not allowed For this parameter.
+                     * @return HeaderName Specifies the request header name containing the client IP For origin-pull. this parameter is required when Switch is on. X-Forwarded-For is not allowed For this parameter.
                      * 
                      */
                     std::string GetHeaderName() const;
 
                     /**
-                     * 设置Name of the request header containing the client IP address for origin-pull. When Switch is on, this parameter is required. X-Forwarded-For is not allowed for this parameter.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @param _headerName Name of the request header containing the client IP address for origin-pull. When Switch is on, this parameter is required. X-Forwarded-For is not allowed for this parameter.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Specifies the request header name containing the client IP For origin-pull. this parameter is required when Switch is on. X-Forwarded-For is not allowed For this parameter.
+                     * @param _headerName Specifies the request header name containing the client IP For origin-pull. this parameter is required when Switch is on. X-Forwarded-For is not allowed For this parameter.
                      * 
                      */
                     void SetHeaderName(const std::string& _headerName);
@@ -111,8 +107,7 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Name of the request header containing the client IP address for origin-pull. When Switch is on, this parameter is required. X-Forwarded-For is not allowed for this parameter.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * Specifies the request header name containing the client IP For origin-pull. this parameter is required when Switch is on. X-Forwarded-For is not allowed For this parameter.
                      */
                     std::string m_headerName;
                     bool m_headerNameHasBeenSet;

@@ -96,19 +96,15 @@ namespace TencentCloud
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取The probability for triggering the action. Value range: 0-100.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return Percent The probability for triggering the action. Value range: 0-100.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取The probability for triggering the action. value range: 0-100.
+                     * @return Percent The probability for triggering the action. value range: 0-100.
                      * 
                      */
                     uint64_t GetPercent() const;
 
                     /**
-                     * 设置The probability for triggering the action. Value range: 0-100.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _percent The probability for triggering the action. Value range: 0-100.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置The probability for triggering the action. value range: 0-100.
+                     * @param _percent The probability for triggering the action. value range: 0-100.
                      * 
                      */
                     void SetPercent(const uint64_t& _percent);
@@ -136,8 +132,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_actionHasBeenSet;
 
                     /**
-                     * The probability for triggering the action. Value range: 0-100.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * The probability for triggering the action. value range: 0-100.
                      */
                     uint64_t m_percent;
                     bool m_percentHasBeenSet;

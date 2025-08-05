@@ -469,15 +469,15 @@ namespace TencentCloud
                     bool RenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (private consumption)
-                     * @return Model High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (private consumption)
+                     * 获取Instance disaster recovery type. 1: dual-server high availability; 2: single-node; 3: cross-AZ; 4: cross-AZ cluster; 5: cluster; 6: multi-node cluster; 7: multi-node cross-AZ cluster.
+                     * @return Model Instance disaster recovery type. 1: dual-server high availability; 2: single-node; 3: cross-AZ; 4: cross-AZ cluster; 5: cluster; 6: multi-node cluster; 7: multi-node cross-AZ cluster.
                      * 
                      */
                     int64_t GetModel() const;
 
                     /**
-                     * 设置High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (private consumption)
-                     * @param _model High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (private consumption)
+                     * 设置Instance disaster recovery type. 1: dual-server high availability; 2: single-node; 3: cross-AZ; 4: cross-AZ cluster; 5: cluster; 6: multi-node cluster; 7: multi-node cross-AZ cluster.
+                     * @param _model Instance disaster recovery type. 1: dual-server high availability; 2: single-node; 3: cross-AZ; 4: cross-AZ cluster; 5: cluster; 6: multi-node cluster; 7: multi-node cross-AZ cluster.
                      * 
                      */
                     void SetModel(const int64_t& _model);
@@ -721,15 +721,15 @@ namespace TencentCloud
                     bool UniqSubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsolateOperator Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance isolation operation.
+                     * @return IsolateOperator Instance isolation operation.
                      * 
                      */
                     std::string GetIsolateOperator() const;
 
                     /**
-                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isolateOperator Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance isolation operation.
+                     * @param _isolateOperator Instance isolation operation.
                      * 
                      */
                     void SetIsolateOperator(const std::string& _isolateOperator);
@@ -742,15 +742,15 @@ namespace TencentCloud
                     bool IsolateOperatorHasBeenSet() const;
 
                     /**
-                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SubFlag Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Publishing/Subscription flag. SUB: subscription instance; PUB: publishing instance. If this parameter is left blank, the instance is an ordinary instance that does not involve publishing or subscription.
+                     * @return SubFlag Publishing/Subscription flag. SUB: subscription instance; PUB: publishing instance. If this parameter is left blank, the instance is an ordinary instance that does not involve publishing or subscription.
                      * 
                      */
                     std::string GetSubFlag() const;
 
                     /**
-                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _subFlag Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Publishing/Subscription flag. SUB: subscription instance; PUB: publishing instance. If this parameter is left blank, the instance is an ordinary instance that does not involve publishing or subscription.
+                     * @param _subFlag Publishing/Subscription flag. SUB: subscription instance; PUB: publishing instance. If this parameter is left blank, the instance is an ordinary instance that does not involve publishing or subscription.
                      * 
                      */
                     void SetSubFlag(const std::string& _subFlag);
@@ -763,15 +763,15 @@ namespace TencentCloud
                     bool SubFlagHasBeenSet() const;
 
                     /**
-                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ROFlag Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Read-only flag. RO: read-only instance; MASTER: primary instance bound to a read-only instance. If this parameter is left blank, the instance is not a read-only instance and is not in any read-only group.
+                     * @return ROFlag Read-only flag. RO: read-only instance; MASTER: primary instance bound to a read-only instance. If this parameter is left blank, the instance is not a read-only instance and is not in any read-only group.
                      * 
                      */
                     std::string GetROFlag() const;
 
                     /**
-                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _rOFlag Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Read-only flag. RO: read-only instance; MASTER: primary instance bound to a read-only instance. If this parameter is left blank, the instance is not a read-only instance and is not in any read-only group.
+                     * @param _rOFlag Read-only flag. RO: read-only instance; MASTER: primary instance bound to a read-only instance. If this parameter is left blank, the instance is not a read-only instance and is not in any read-only group.
                      * 
                      */
                     void SetROFlag(const std::string& _rOFlag);
@@ -784,15 +784,15 @@ namespace TencentCloud
                     bool ROFlagHasBeenSet() const;
 
                     /**
-                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HAFlag Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Disaster recovery type. MIRROR: image; ALWAYSON: Always On; SINGLE: single instance.
+                     * @return HAFlag Disaster recovery type. MIRROR: image; ALWAYSON: Always On; SINGLE: single instance.
                      * 
                      */
                     std::string GetHAFlag() const;
 
                     /**
-                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hAFlag Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Disaster recovery type. MIRROR: image; ALWAYSON: Always On; SINGLE: single instance.
+                     * @param _hAFlag Disaster recovery type. MIRROR: image; ALWAYSON: Always On; SINGLE: single instance.
                      * 
                      */
                     void SetHAFlag(const std::string& _hAFlag);
@@ -826,15 +826,15 @@ namespace TencentCloud
                     bool ResourceTagsHasBeenSet() const;
 
                     /**
-                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BackupModel Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Backup mode. master_pkg: backup on the primary node (default value); master_no_pkg: no backup on the primary node; slave_pkg: backup on secondary nodes (valid for Always On clusters); slave_no_pkg: no backup on secondary nodes (valid for Always On clusters). This parameter is invalid for read-only instances.
+                     * @return BackupModel Backup mode. master_pkg: backup on the primary node (default value); master_no_pkg: no backup on the primary node; slave_pkg: backup on secondary nodes (valid for Always On clusters); slave_no_pkg: no backup on secondary nodes (valid for Always On clusters). This parameter is invalid for read-only instances.
                      * 
                      */
                     std::string GetBackupModel() const;
 
                     /**
-                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _backupModel Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Backup mode. master_pkg: backup on the primary node (default value); master_no_pkg: no backup on the primary node; slave_pkg: backup on secondary nodes (valid for Always On clusters); slave_no_pkg: no backup on secondary nodes (valid for Always On clusters). This parameter is invalid for read-only instances.
+                     * @param _backupModel Backup mode. master_pkg: backup on the primary node (default value); master_no_pkg: no backup on the primary node; slave_pkg: backup on secondary nodes (valid for Always On clusters); slave_no_pkg: no backup on secondary nodes (valid for Always On clusters). This parameter is invalid for read-only instances.
                      * 
                      */
                     void SetBackupModel(const std::string& _backupModel);
@@ -847,15 +847,15 @@ namespace TencentCloud
                     bool BackupModelHasBeenSet() const;
 
                     /**
-                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceNote Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance backup information.
+                     * @return InstanceNote Instance backup information.
                      * 
                      */
                     std::string GetInstanceNote() const;
 
                     /**
-                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceNote Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance backup information.
+                     * @param _instanceNote Instance backup information.
                      * 
                      */
                     void SetInstanceNote(const std::string& _instanceNote);
@@ -931,15 +931,19 @@ namespace TencentCloud
                     bool BackupSaveDaysHasBeenSet() const;
 
                     /**
-                     * 获取Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
-                     * @return InstanceType Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+                     * 获取Instance type. HA: high-availability instance; RO: read-only instance; SI: basic edition instance; BI: business intelligence service instance; cvmHA: high-availability instance with cloud disk; cvmRO: read-only instance with cloud disk; MultiHA: multi-node instance; cvmMultiHA: multi-node instance with cloud disk.
+
+                     * @return InstanceType Instance type. HA: high-availability instance; RO: read-only instance; SI: basic edition instance; BI: business intelligence service instance; cvmHA: high-availability instance with cloud disk; cvmRO: read-only instance with cloud disk; MultiHA: multi-node instance; cvmMultiHA: multi-node instance with cloud disk.
+
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
-                     * @param _instanceType Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+                     * 设置Instance type. HA: high-availability instance; RO: read-only instance; SI: basic edition instance; BI: business intelligence service instance; cvmHA: high-availability instance with cloud disk; cvmRO: read-only instance with cloud disk; MultiHA: multi-node instance; cvmMultiHA: multi-node instance with cloud disk.
+
+                     * @param _instanceType Instance type. HA: high-availability instance; RO: read-only instance; SI: basic edition instance; BI: business intelligence service instance; cvmHA: high-availability instance with cloud disk; cvmRO: read-only instance with cloud disk; MultiHA: multi-node instance; cvmMultiHA: multi-node instance with cloud disk.
+
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -1120,15 +1124,15 @@ namespace TencentCloud
                     bool IsDrZoneHasBeenSet() const;
 
                     /**
-                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SlaveZones Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Secondary AZ information on the two-node instance.
+                     * @return SlaveZones Secondary AZ information on the two-node instance.
                      * 
                      */
                     SlaveZones GetSlaveZones() const;
 
                     /**
-                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _slaveZones Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Secondary AZ information on the two-node instance.
+                     * @param _slaveZones Secondary AZ information on the two-node instance.
                      * 
                      */
                     void SetSlaveZones(const SlaveZones& _slaveZones);
@@ -1141,15 +1145,15 @@ namespace TencentCloud
                     bool SlaveZonesHasBeenSet() const;
 
                     /**
-                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Architecture Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Architecture flag. SINGLE: single-node; DOUBLE: two-node.
+                     * @return Architecture Architecture flag. SINGLE: single-node; DOUBLE: two-node.
                      * 
                      */
                     std::string GetArchitecture() const;
 
                     /**
-                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _architecture Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Architecture flag. SINGLE: single-node; DOUBLE: two-node.
+                     * @param _architecture Architecture flag. SINGLE: single-node; DOUBLE: two-node.
                      * 
                      */
                     void SetArchitecture(const std::string& _architecture);
@@ -1162,15 +1166,15 @@ namespace TencentCloud
                     bool ArchitectureHasBeenSet() const;
 
                     /**
-                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Style Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Type flag. EXCLUSIVE: exclusive; SHARED: shared.
+                     * @return Style Type flag. EXCLUSIVE: exclusive; SHARED: shared.
                      * 
                      */
                     std::string GetStyle() const;
 
                     /**
-                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _style Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Type flag. EXCLUSIVE: exclusive; SHARED: shared.
+                     * @param _style Type flag. EXCLUSIVE: exclusive; SHARED: shared.
                      * 
                      */
                     void SetStyle(const std::string& _style);
@@ -1181,6 +1185,27 @@ namespace TencentCloud
                      * 
                      */
                     bool StyleHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return MultiSlaveZones 
+                     * 
+                     */
+                    std::vector<SlaveZones> GetMultiSlaveZones() const;
+
+                    /**
+                     * 设置
+                     * @param _multiSlaveZones 
+                     * 
+                     */
+                    void SetMultiSlaveZones(const std::vector<SlaveZones>& _multiSlaveZones);
+
+                    /**
+                     * 判断参数 MultiSlaveZones 是否已赋值
+                     * @return MultiSlaveZones 是否已赋值
+                     * 
+                     */
+                    bool MultiSlaveZonesHasBeenSet() const;
 
                 private:
 
@@ -1305,7 +1330,7 @@ namespace TencentCloud
                     bool m_renewFlagHasBeenSet;
 
                     /**
-                     * High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (private consumption)
+                     * Instance disaster recovery type. 1: dual-server high availability; 2: single-node; 3: cross-AZ; 4: cross-AZ cluster; 5: cluster; 6: multi-node cluster; 7: multi-node cross-AZ cluster.
                      */
                     int64_t m_model;
                     bool m_modelHasBeenSet;
@@ -1377,25 +1402,25 @@ namespace TencentCloud
                     bool m_uniqSubnetIdHasBeenSet;
 
                     /**
-                     * Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance isolation operation.
                      */
                     std::string m_isolateOperator;
                     bool m_isolateOperatorHasBeenSet;
 
                     /**
-                     * Note: This field may return null, indicating that no valid values can be obtained.
+                     * Publishing/Subscription flag. SUB: subscription instance; PUB: publishing instance. If this parameter is left blank, the instance is an ordinary instance that does not involve publishing or subscription.
                      */
                     std::string m_subFlag;
                     bool m_subFlagHasBeenSet;
 
                     /**
-                     * Note: This field may return null, indicating that no valid values can be obtained.
+                     * Read-only flag. RO: read-only instance; MASTER: primary instance bound to a read-only instance. If this parameter is left blank, the instance is not a read-only instance and is not in any read-only group.
                      */
                     std::string m_rOFlag;
                     bool m_rOFlagHasBeenSet;
 
                     /**
-                     * Note: This field may return null, indicating that no valid values can be obtained.
+                     * Disaster recovery type. MIRROR: image; ALWAYSON: Always On; SINGLE: single instance.
                      */
                     std::string m_hAFlag;
                     bool m_hAFlagHasBeenSet;
@@ -1407,13 +1432,13 @@ namespace TencentCloud
                     bool m_resourceTagsHasBeenSet;
 
                     /**
-                     * Note: This field may return null, indicating that no valid values can be obtained.
+                     * Backup mode. master_pkg: backup on the primary node (default value); master_no_pkg: no backup on the primary node; slave_pkg: backup on secondary nodes (valid for Always On clusters); slave_no_pkg: no backup on secondary nodes (valid for Always On clusters). This parameter is invalid for read-only instances.
                      */
                     std::string m_backupModel;
                     bool m_backupModelHasBeenSet;
 
                     /**
-                     * Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance backup information.
                      */
                     std::string m_instanceNote;
                     bool m_instanceNoteHasBeenSet;
@@ -1437,7 +1462,8 @@ namespace TencentCloud
                     bool m_backupSaveDaysHasBeenSet;
 
                     /**
-                     * Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+                     * Instance type. HA: high-availability instance; RO: read-only instance; SI: basic edition instance; BI: business intelligence service instance; cvmHA: high-availability instance with cloud disk; cvmRO: read-only instance with cloud disk; MultiHA: multi-node instance; cvmMultiHA: multi-node instance with cloud disk.
+
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
@@ -1491,22 +1517,28 @@ namespace TencentCloud
                     bool m_isDrZoneHasBeenSet;
 
                     /**
-                     * Note: This field may return null, indicating that no valid values can be obtained.
+                     * Secondary AZ information on the two-node instance.
                      */
                     SlaveZones m_slaveZones;
                     bool m_slaveZonesHasBeenSet;
 
                     /**
-                     * Note: This field may return null, indicating that no valid values can be obtained.
+                     * Architecture flag. SINGLE: single-node; DOUBLE: two-node.
                      */
                     std::string m_architecture;
                     bool m_architectureHasBeenSet;
 
                     /**
-                     * Note: This field may return null, indicating that no valid values can be obtained.
+                     * Type flag. EXCLUSIVE: exclusive; SHARED: shared.
                      */
                     std::string m_style;
                     bool m_styleHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<SlaveZones> m_multiSlaveZones;
+                    bool m_multiSlaveZonesHasBeenSet;
 
                 };
             }

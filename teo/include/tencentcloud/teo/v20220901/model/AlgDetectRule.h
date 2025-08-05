@@ -134,19 +134,15 @@ namespace TencentCloud
                     bool AlgConditionsHasBeenSet() const;
 
                     /**
-                     * 获取Validate Cookie when the condition is satisfied.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return AlgDetectSession Validate Cookie when the condition is satisfied.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Checksum of the Cookie and behavior analysis of the session.
+                     * @return AlgDetectSession Checksum of the Cookie and behavior analysis of the session.
                      * 
                      */
                     AlgDetectSession GetAlgDetectSession() const;
 
                     /**
-                     * 设置Validate Cookie when the condition is satisfied.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _algDetectSession Validate Cookie when the condition is satisfied.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Checksum of the Cookie and behavior analysis of the session.
+                     * @param _algDetectSession Checksum of the Cookie and behavior analysis of the session.
                      * 
                      */
                     void SetAlgDetectSession(const AlgDetectSession& _algDetectSession);
@@ -227,8 +223,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_algConditionsHasBeenSet;
 
                     /**
-                     * Validate Cookie when the condition is satisfied.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Checksum of the Cookie and behavior analysis of the session.
                      */
                     AlgDetectSession m_algDetectSession;
                     bool m_algDetectSessionHasBeenSet;

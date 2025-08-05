@@ -50,22 +50,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Task type. Valid values:
-<Li>AsrFullTextRecognition: full speech recognition</li>
-<Li>TransTextRecognition: speech translation</li>
+<li>AsrFullTextRecognition: full speech recognition</li>
+<li>TransTextRecognition: speech translation</li>
                      * @return Type Task type. Valid values:
-<Li>AsrFullTextRecognition: full speech recognition</li>
-<Li>TransTextRecognition: speech translation</li>
+<li>AsrFullTextRecognition: full speech recognition</li>
+<li>TransTextRecognition: speech translation</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Task type. Valid values:
-<Li>AsrFullTextRecognition: full speech recognition</li>
-<Li>TransTextRecognition: speech translation</li>
+<li>AsrFullTextRecognition: full speech recognition</li>
+<li>TransTextRecognition: speech translation</li>
                      * @param _type Task type. Valid values:
-<Li>AsrFullTextRecognition: full speech recognition</li>
-<Li>TransTextRecognition: speech translation</li>
+<li>AsrFullTextRecognition: full speech recognition</li>
+<li>TransTextRecognition: speech translation</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -143,8 +143,8 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * Task type. Valid values:
-<Li>AsrFullTextRecognition: full speech recognition</li>
-<Li>TransTextRecognition: speech translation</li>
+<li>AsrFullTextRecognition: full speech recognition</li>
+<li>TransTextRecognition: speech translation</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

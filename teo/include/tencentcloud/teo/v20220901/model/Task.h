@@ -110,27 +110,23 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Node cache purge method, with values:
-<li>invalidate: Marks as expired. A back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; if the origin server responds with 304, the cache will not be updated;</li>
-<li>delete: Directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @return Method Node cache purge method, with values:
-<li>invalidate: Marks as expired. A back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; if the origin server responds with 304, the cache will not be updated;</li>
-<li>delete: Directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Node cache purge method. valid values:.
+<li>invalidate: marks as expired. a back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; If the origin server responds with 304, the cache will not be updated;</li>.
+<Li>Delete: directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>.
+                     * @return Method Node cache purge method. valid values:.
+<li>invalidate: marks as expired. a back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; If the origin server responds with 304, the cache will not be updated;</li>.
+<Li>Delete: directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>.
                      * 
                      */
                     std::string GetMethod() const;
 
                     /**
-                     * 设置Node cache purge method, with values:
-<li>invalidate: Marks as expired. A back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; if the origin server responds with 304, the cache will not be updated;</li>
-<li>delete: Directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @param _method Node cache purge method, with values:
-<li>invalidate: Marks as expired. A back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; if the origin server responds with 304, the cache will not be updated;</li>
-<li>delete: Directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Node cache purge method. valid values:.
+<li>invalidate: marks as expired. a back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; If the origin server responds with 304, the cache will not be updated;</li>.
+<Li>Delete: directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>.
+                     * @param _method Node cache purge method. valid values:.
+<li>invalidate: marks as expired. a back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; If the origin server responds with 304, the cache will not be updated;</li>.
+<Li>Delete: directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>.
                      * 
                      */
                     void SetMethod(const std::string& _method);
@@ -143,31 +139,35 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool MethodHasBeenSet() const;
 
                     /**
-                     * 获取Status. Valid values:
-<li>processing: Processing;</li>
-<li>success: Succeeded;</li>
-<li>failed: Failed;</li>
-<li>timeout: Timed out. </li>
-                     * @return Status Status. Valid values:
-<li>processing: Processing;</li>
-<li>success: Succeeded;</li>
-<li>failed: Failed;</li>
-<li>timeout: Timed out. </li>
+                     * 获取Status. valid values:.
+<li>processing: indicates the operation is in progress.</li>.
+<Li>Success: specifies the success status.</li>.
+<li>failed: indicates a failure.</li>.
+<Li>Timeout: specifies the timeout period.</li>.
+<Li>Canceled: canceled.</li>.
+                     * @return Status Status. valid values:.
+<li>processing: indicates the operation is in progress.</li>.
+<Li>Success: specifies the success status.</li>.
+<li>failed: indicates a failure.</li>.
+<Li>Timeout: specifies the timeout period.</li>.
+<Li>Canceled: canceled.</li>.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Status. Valid values:
-<li>processing: Processing;</li>
-<li>success: Succeeded;</li>
-<li>failed: Failed;</li>
-<li>timeout: Timed out. </li>
-                     * @param _status Status. Valid values:
-<li>processing: Processing;</li>
-<li>success: Succeeded;</li>
-<li>failed: Failed;</li>
-<li>timeout: Timed out. </li>
+                     * 设置Status. valid values:.
+<li>processing: indicates the operation is in progress.</li>.
+<Li>Success: specifies the success status.</li>.
+<li>failed: indicates a failure.</li>.
+<Li>Timeout: specifies the timeout period.</li>.
+<Li>Canceled: canceled.</li>.
+                     * @param _status Status. valid values:.
+<li>processing: indicates the operation is in progress.</li>.
+<Li>Success: specifies the success status.</li>.
+<li>failed: indicates a failure.</li>.
+<Li>Timeout: specifies the timeout period.</li>.
+<Li>Canceled: canceled.</li>.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -221,6 +221,68 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                      */
                     bool UpdateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Refresh and preheat failure type. valid values:.
+<li>taskFailed: specifies the task failure.</li>.
+<li>quotaExceeded: specifies the quota exceeded status.</li>.
+<li>downloadManifestFailed: specifies the file failed to download.</li>.
+<li>accessDenied: specifies access denied.</li>.
+<li>originPullFailed: specifies the origin-pull failure.</li>.
+                     * @return FailType Refresh and preheat failure type. valid values:.
+<li>taskFailed: specifies the task failure.</li>.
+<li>quotaExceeded: specifies the quota exceeded status.</li>.
+<li>downloadManifestFailed: specifies the file failed to download.</li>.
+<li>accessDenied: specifies access denied.</li>.
+<li>originPullFailed: specifies the origin-pull failure.</li>.
+                     * 
+                     */
+                    std::string GetFailType() const;
+
+                    /**
+                     * 设置Refresh and preheat failure type. valid values:.
+<li>taskFailed: specifies the task failure.</li>.
+<li>quotaExceeded: specifies the quota exceeded status.</li>.
+<li>downloadManifestFailed: specifies the file failed to download.</li>.
+<li>accessDenied: specifies access denied.</li>.
+<li>originPullFailed: specifies the origin-pull failure.</li>.
+                     * @param _failType Refresh and preheat failure type. valid values:.
+<li>taskFailed: specifies the task failure.</li>.
+<li>quotaExceeded: specifies the quota exceeded status.</li>.
+<li>downloadManifestFailed: specifies the file failed to download.</li>.
+<li>accessDenied: specifies access denied.</li>.
+<li>originPullFailed: specifies the origin-pull failure.</li>.
+                     * 
+                     */
+                    void SetFailType(const std::string& _failType);
+
+                    /**
+                     * 判断参数 FailType 是否已赋值
+                     * @return FailType 是否已赋值
+                     * 
+                     */
+                    bool FailTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Failure description for refresh and preheating.
+                     * @return FailMessage Failure description for refresh and preheating.
+                     * 
+                     */
+                    std::string GetFailMessage() const;
+
+                    /**
+                     * 设置Failure description for refresh and preheating.
+                     * @param _failMessage Failure description for refresh and preheating.
+                     * 
+                     */
+                    void SetFailMessage(const std::string& _failMessage);
+
+                    /**
+                     * 判断参数 FailMessage 是否已赋值
+                     * @return FailMessage 是否已赋值
+                     * 
+                     */
+                    bool FailMessageHasBeenSet() const;
+
                 private:
 
                     /**
@@ -242,20 +304,20 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Node cache purge method, with values:
-<li>invalidate: Marks as expired. A back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; if the origin server responds with 304, the cache will not be updated;</li>
-<li>delete: Directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * Node cache purge method. valid values:.
+<li>invalidate: marks as expired. a back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; If the origin server responds with 304, the cache will not be updated;</li>.
+<Li>Delete: directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>.
                      */
                     std::string m_method;
                     bool m_methodHasBeenSet;
 
                     /**
-                     * Status. Valid values:
-<li>processing: Processing;</li>
-<li>success: Succeeded;</li>
-<li>failed: Failed;</li>
-<li>timeout: Timed out. </li>
+                     * Status. valid values:.
+<li>processing: indicates the operation is in progress.</li>.
+<Li>Success: specifies the success status.</li>.
+<li>failed: indicates a failure.</li>.
+<Li>Timeout: specifies the timeout period.</li>.
+<Li>Canceled: canceled.</li>.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
@@ -271,6 +333,23 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
+
+                    /**
+                     * Refresh and preheat failure type. valid values:.
+<li>taskFailed: specifies the task failure.</li>.
+<li>quotaExceeded: specifies the quota exceeded status.</li>.
+<li>downloadManifestFailed: specifies the file failed to download.</li>.
+<li>accessDenied: specifies access denied.</li>.
+<li>originPullFailed: specifies the origin-pull failure.</li>.
+                     */
+                    std::string m_failType;
+                    bool m_failTypeHasBeenSet;
+
+                    /**
+                     * Failure description for refresh and preheating.
+                     */
+                    std::string m_failMessage;
+                    bool m_failMessageHasBeenSet;
 
                 };
             }

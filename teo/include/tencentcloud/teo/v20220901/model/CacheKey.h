@@ -48,27 +48,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable full-path cache. Values:
-<li>`on`: Enable full-path cache (i.e., disable Ignore Query String).</li>
-<li>`off`: Disable full-path cache (i.e., enable Ignore Query String).</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FullUrlCache Whether to enable full-path cache. Values:
-<li>`on`: Enable full-path cache (i.e., disable Ignore Query String).</li>
-<li>`off`: Disable full-path cache (i.e., enable Ignore Query String).</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether to enable full path cache. valid values:.
+<li>`on`: enable full-path cache (i.e., disable ignore query string).</li>.
+<li>`off`: disable full-path cache (i.e., enable parameter ignore).</li>.
+                     * @return FullUrlCache Whether to enable full path cache. valid values:.
+<li>`on`: enable full-path cache (i.e., disable ignore query string).</li>.
+<li>`off`: disable full-path cache (i.e., enable parameter ignore).</li>.
                      * 
                      */
                     std::string GetFullUrlCache() const;
 
                     /**
-                     * 设置Whether to enable full-path cache. Values:
-<li>`on`: Enable full-path cache (i.e., disable Ignore Query String).</li>
-<li>`off`: Disable full-path cache (i.e., enable Ignore Query String).</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fullUrlCache Whether to enable full-path cache. Values:
-<li>`on`: Enable full-path cache (i.e., disable Ignore Query String).</li>
-<li>`off`: Disable full-path cache (i.e., enable Ignore Query String).</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether to enable full path cache. valid values:.
+<li>`on`: enable full-path cache (i.e., disable ignore query string).</li>.
+<li>`off`: disable full-path cache (i.e., enable parameter ignore).</li>.
+                     * @param _fullUrlCache Whether to enable full path cache. valid values:.
+<li>`on`: enable full-path cache (i.e., disable ignore query string).</li>.
+<li>`off`: disable full-path cache (i.e., enable parameter ignore).</li>.
                      * 
                      */
                     void SetFullUrlCache(const std::string& _fullUrlCache);
@@ -81,27 +77,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FullUrlCacheHasBeenSet() const;
 
                     /**
-                     * 获取Whether to ignore case in the cache key. Values:
-<li>`on`: Ignore</li>
-<li>`off`: Not ignore</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IgnoreCase Whether to ignore case in the cache key. Values:
-<li>`on`: Ignore</li>
-<li>`off`: Not ignore</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies whether to use case-insensitive cache. valid values:.
+<li>`on`: ignore</li>.
+<li>`off`: not ignore</li>.
+                     * @return IgnoreCase Specifies whether to use case-insensitive cache. valid values:.
+<li>`on`: ignore</li>.
+<li>`off`: not ignore</li>.
                      * 
                      */
                     std::string GetIgnoreCase() const;
 
                     /**
-                     * 设置Whether to ignore case in the cache key. Values:
-<li>`on`: Ignore</li>
-<li>`off`: Not ignore</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ignoreCase Whether to ignore case in the cache key. Values:
-<li>`on`: Ignore</li>
-<li>`off`: Not ignore</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies whether to use case-insensitive cache. valid values:.
+<li>`on`: ignore</li>.
+<li>`off`: not ignore</li>.
+                     * @param _ignoreCase Specifies whether to use case-insensitive cache. valid values:.
+<li>`on`: ignore</li>.
+<li>`off`: not ignore</li>.
                      * 
                      */
                     void SetIgnoreCase(const std::string& _ignoreCase);
@@ -141,19 +133,17 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Whether to enable full-path cache. Values:
-<li>`on`: Enable full-path cache (i.e., disable Ignore Query String).</li>
-<li>`off`: Disable full-path cache (i.e., enable Ignore Query String).</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether to enable full path cache. valid values:.
+<li>`on`: enable full-path cache (i.e., disable ignore query string).</li>.
+<li>`off`: disable full-path cache (i.e., enable parameter ignore).</li>.
                      */
                     std::string m_fullUrlCache;
                     bool m_fullUrlCacheHasBeenSet;
 
                     /**
-                     * Whether to ignore case in the cache key. Values:
-<li>`on`: Ignore</li>
-<li>`off`: Not ignore</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies whether to use case-insensitive cache. valid values:.
+<li>`on`: ignore</li>.
+<li>`off`: not ignore</li>.
                      */
                     std::string m_ignoreCase;
                     bool m_ignoreCaseHasBeenSet;

@@ -77,19 +77,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExceptUserRules The settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The settings of the exception rule. if it is null, the settings that were last configured will be used.
+                     * @return ExceptUserRules The settings of the exception rule. if it is null, the settings that were last configured will be used.
                      * 
                      */
                     std::vector<ExceptUserRule> GetExceptUserRules() const;
 
                     /**
-                     * 设置The settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _exceptUserRules The settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The settings of the exception rule. if it is null, the settings that were last configured will be used.
+                     * @param _exceptUserRules The settings of the exception rule. if it is null, the settings that were last configured will be used.
                      * 
                      */
                     void SetExceptUserRules(const std::vector<ExceptUserRule>& _exceptUserRules);
@@ -112,8 +108,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The settings of the exception rule. if it is null, the settings that were last configured will be used.
                      */
                     std::vector<ExceptUserRule> m_exceptUserRules;
                     bool m_exceptUserRulesHasBeenSet;

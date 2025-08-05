@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/teo/v20220901/model/IPExpireInfo.h>
 
 
 namespace TencentCloud
@@ -89,15 +90,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取IP group content. Only supports IP and IP mask.
-                     * @return Content IP group content. Only supports IP and IP mask.
+                     * 获取IP group content, supports ip and ip range.
+                     * @return Content IP group content, supports ip and ip range.
                      * 
                      */
                     std::vector<std::string> GetContent() const;
 
                     /**
-                     * 设置IP group content. Only supports IP and IP mask.
-                     * @param _content IP group content. Only supports IP and IP mask.
+                     * 设置IP group content, supports ip and ip range.
+                     * @param _content IP group content, supports ip and ip range.
                      * 
                      */
                     void SetContent(const std::vector<std::string>& _content);
@@ -108,6 +109,64 @@ namespace TencentCloud
                      * 
                      */
                     bool ContentHasBeenSet() const;
+
+                    /**
+                     * 获取Number of ips or ranges in effect in the IP group. valid as an output parameter, no need to specify this field as an input parameter.
+                     * @return IPTotalCount Number of ips or ranges in effect in the IP group. valid as an output parameter, no need to specify this field as an input parameter.
+                     * 
+                     */
+                    int64_t GetIPTotalCount() const;
+
+                    /**
+                     * 设置Number of ips or ranges in effect in the IP group. valid as an output parameter, no need to specify this field as an input parameter.
+                     * @param _iPTotalCount Number of ips or ranges in effect in the IP group. valid as an output parameter, no need to specify this field as an input parameter.
+                     * 
+                     */
+                    void SetIPTotalCount(const int64_t& _iPTotalCount);
+
+                    /**
+                     * 判断参数 IPTotalCount 是否已赋值
+                     * @return IPTotalCount 是否已赋值
+                     * 
+                     */
+                    bool IPTotalCountHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the scheduled expiration information of the IP.
+Specifies the IP address or IP range configuration with scheduled expiration time as an input parameter.
+As an output parameter, contains the following two categories of information.
+<Li>Currently not expired scheduled expiration information: expiration configuration not triggered.</li>.
+<Li>Scheduled expiration information expired within a week: cache expiration configuration has been triggered.</li>.
+                     * @return IPExpireInfo Specifies the scheduled expiration information of the IP.
+Specifies the IP address or IP range configuration with scheduled expiration time as an input parameter.
+As an output parameter, contains the following two categories of information.
+<Li>Currently not expired scheduled expiration information: expiration configuration not triggered.</li>.
+<Li>Scheduled expiration information expired within a week: cache expiration configuration has been triggered.</li>.
+                     * 
+                     */
+                    std::vector<IPExpireInfo> GetIPExpireInfo() const;
+
+                    /**
+                     * 设置Specifies the scheduled expiration information of the IP.
+Specifies the IP address or IP range configuration with scheduled expiration time as an input parameter.
+As an output parameter, contains the following two categories of information.
+<Li>Currently not expired scheduled expiration information: expiration configuration not triggered.</li>.
+<Li>Scheduled expiration information expired within a week: cache expiration configuration has been triggered.</li>.
+                     * @param _iPExpireInfo Specifies the scheduled expiration information of the IP.
+Specifies the IP address or IP range configuration with scheduled expiration time as an input parameter.
+As an output parameter, contains the following two categories of information.
+<Li>Currently not expired scheduled expiration information: expiration configuration not triggered.</li>.
+<Li>Scheduled expiration information expired within a week: cache expiration configuration has been triggered.</li>.
+                     * 
+                     */
+                    void SetIPExpireInfo(const std::vector<IPExpireInfo>& _iPExpireInfo);
+
+                    /**
+                     * 判断参数 IPExpireInfo 是否已赋值
+                     * @return IPExpireInfo 是否已赋值
+                     * 
+                     */
+                    bool IPExpireInfoHasBeenSet() const;
 
                 private:
 
@@ -124,10 +183,26 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * IP group content. Only supports IP and IP mask.
+                     * IP group content, supports ip and ip range.
                      */
                     std::vector<std::string> m_content;
                     bool m_contentHasBeenSet;
+
+                    /**
+                     * Number of ips or ranges in effect in the IP group. valid as an output parameter, no need to specify this field as an input parameter.
+                     */
+                    int64_t m_iPTotalCount;
+                    bool m_iPTotalCountHasBeenSet;
+
+                    /**
+                     * Specifies the scheduled expiration information of the IP.
+Specifies the IP address or IP range configuration with scheduled expiration time as an input parameter.
+As an output parameter, contains the following two categories of information.
+<Li>Currently not expired scheduled expiration information: expiration configuration not triggered.</li>.
+<Li>Scheduled expiration information expired within a week: cache expiration configuration has been triggered.</li>.
+                     */
+                    std::vector<IPExpireInfo> m_iPExpireInfo;
+                    bool m_iPExpireInfoHasBeenSet;
 
                 };
             }

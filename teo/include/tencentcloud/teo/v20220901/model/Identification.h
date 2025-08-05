@@ -70,19 +70,15 @@ namespace TencentCloud
                     bool ZoneNameHasBeenSet() const;
 
                     /**
-                     * 获取The subdomain name to be verified. To verify the ownership of a site, leave it blank.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return Domain The subdomain name to be verified. To verify the ownership of a site, leave it blank.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取The subdomain name to be verified. to verify the ownership of a site, leave it blank.
+                     * @return Domain The subdomain name to be verified. to verify the ownership of a site, leave it blank.
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置The subdomain name to be verified. To verify the ownership of a site, leave it blank.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _domain The subdomain name to be verified. To verify the ownership of a site, leave it blank.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置The subdomain name to be verified. to verify the ownership of a site, leave it blank.
+                     * @param _domain The subdomain name to be verified. to verify the ownership of a site, leave it blank.
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -145,19 +141,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool AscriptionHasBeenSet() const;
 
                     /**
-                     * 获取The NS record of the domain name.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OriginalNameServers The NS record of the domain name.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the current NS record of the domain name.
+                     * @return OriginalNameServers Specifies the current NS record of the domain name.
                      * 
                      */
                     std::vector<std::string> GetOriginalNameServers() const;
 
                     /**
-                     * 设置The NS record of the domain name.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _originalNameServers The NS record of the domain name.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the current NS record of the domain name.
+                     * @param _originalNameServers Specifies the current NS record of the domain name.
                      * 
                      */
                     void SetOriginalNameServers(const std::vector<std::string>& _originalNameServers);
@@ -199,8 +191,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_zoneNameHasBeenSet;
 
                     /**
-                     * The subdomain name to be verified. To verify the ownership of a site, leave it blank.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * The subdomain name to be verified. to verify the ownership of a site, leave it blank.
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
@@ -220,8 +211,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_ascriptionHasBeenSet;
 
                     /**
-                     * The NS record of the domain name.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the current NS record of the domain name.
                      */
                     std::vector<std::string> m_originalNameServers;
                     bool m_originalNameServersHasBeenSet;

@@ -47,19 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The module. Values:
-<li>`waf`: Managed rules</li>
-                     * @return Module The module. Values:
-<li>`waf`: Managed rules</li>
+                     * 获取Module name. value is.
+<li>managed-rule: managed rule Id;</li>.
+<Li>Managed-Group: managed rule group;</li>.
+<li>`waf`: to be deprecated, managed rule.</li>.
+                     * @return Module Module name. value is.
+<li>managed-rule: managed rule Id;</li>.
+<Li>Managed-Group: managed rule group;</li>.
+<li>`waf`: to be deprecated, managed rule.</li>.
                      * 
                      */
                     std::string GetModule() const;
 
                     /**
-                     * 设置The module. Values:
-<li>`waf`: Managed rules</li>
-                     * @param _module The module. Values:
-<li>`waf`: Managed rules</li>
+                     * 设置Module name. value is.
+<li>managed-rule: managed rule Id;</li>.
+<Li>Managed-Group: managed rule group;</li>.
+<li>`waf`: to be deprecated, managed rule.</li>.
+                     * @param _module Module name. value is.
+<li>managed-rule: managed rule Id;</li>.
+<Li>Managed-Group: managed rule group;</li>.
+<li>`waf`: to be deprecated, managed rule.</li>.
                      * 
                      */
                     void SetModule(const std::string& _module);
@@ -72,19 +80,15 @@ namespace TencentCloud
                     bool ModuleHasBeenSet() const;
 
                     /**
-                     * 获取List of managed rule IDs to be skipped.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Include List of managed rule IDs to be skipped.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Specifies the list of rule ids that require exceptions under the module.
+                     * @return Include Specifies the list of rule ids that require exceptions under the module.
                      * 
                      */
                     std::vector<int64_t> GetInclude() const;
 
                     /**
-                     * 设置List of managed rule IDs to be skipped.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _include List of managed rule IDs to be skipped.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Specifies the list of rule ids that require exceptions under the module.
+                     * @param _include Specifies the list of rule ids that require exceptions under the module.
                      * 
                      */
                     void SetInclude(const std::vector<int64_t>& _include);
@@ -99,15 +103,16 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * The module. Values:
-<li>`waf`: Managed rules</li>
+                     * Module name. value is.
+<li>managed-rule: managed rule Id;</li>.
+<Li>Managed-Group: managed rule group;</li>.
+<li>`waf`: to be deprecated, managed rule.</li>.
                      */
                     std::string m_module;
                     bool m_moduleHasBeenSet;
 
                     /**
-                     * List of managed rule IDs to be skipped.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Specifies the list of rule ids that require exceptions under the module.
                      */
                     std::vector<int64_t> m_include;
                     bool m_includeHasBeenSet;

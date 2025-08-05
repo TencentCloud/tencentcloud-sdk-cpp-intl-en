@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/TaskOutputStorage.h>
+#include <tencentcloud/mps/v20190612/model/SubtitlePosition.h>
 
 
 namespace TencentCloud
@@ -131,6 +132,31 @@ namespace TencentCloud
                      */
                     bool TranslateSubtitlePathHasBeenSet() const;
 
+                    /**
+                     * 获取Position of the erased subtitle. Note: This field is only valid for subtitle extraction when the option to return subtitle positions is enabled.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return SubtitlePos Position of the erased subtitle. Note: This field is only valid for subtitle extraction when the option to return subtitle positions is enabled.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    SubtitlePosition GetSubtitlePos() const;
+
+                    /**
+                     * 设置Position of the erased subtitle. Note: This field is only valid for subtitle extraction when the option to return subtitle positions is enabled.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _subtitlePos Position of the erased subtitle. Note: This field is only valid for subtitle extraction when the option to return subtitle positions is enabled.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetSubtitlePos(const SubtitlePosition& _subtitlePos);
+
+                    /**
+                     * 判断参数 SubtitlePos 是否已赋值
+                     * @return SubtitlePos 是否已赋值
+                     * 
+                     */
+                    bool SubtitlePosHasBeenSet() const;
+
                 private:
 
                     /**
@@ -156,6 +182,13 @@ namespace TencentCloud
                      */
                     std::string m_translateSubtitlePath;
                     bool m_translateSubtitlePathHasBeenSet;
+
+                    /**
+                     * Position of the erased subtitle. Note: This field is only valid for subtitle extraction when the option to return subtitle positions is enabled.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    SubtitlePosition m_subtitlePos;
+                    bool m_subtitlePosHasBeenSet;
 
                 };
             }

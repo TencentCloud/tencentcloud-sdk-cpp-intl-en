@@ -249,15 +249,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取List of Layer-4 proxy instances bound to a LoadBalancer.
-                     * @return L4UsedList List of Layer-4 proxy instances bound to a LoadBalancer.
+                     * 获取Specifies the list of l4 proxy instances bound to the load balancing instance.
+                     * @return L4UsedList Specifies the list of l4 proxy instances bound to the load balancing instance.
                      * 
                      */
                     std::vector<std::string> GetL4UsedList() const;
 
                     /**
-                     * 设置List of Layer-4 proxy instances bound to a LoadBalancer.
-                     * @param _l4UsedList List of Layer-4 proxy instances bound to a LoadBalancer.
+                     * 设置Specifies the list of l4 proxy instances bound to the load balancing instance.
+                     * @param _l4UsedList Specifies the list of l4 proxy instances bound to the load balancing instance.
                      * 
                      */
                     void SetL4UsedList(const std::vector<std::string>& _l4UsedList);
@@ -349,7 +349,7 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * List of Layer-4 proxy instances bound to a LoadBalancer.
+                     * Specifies the list of l4 proxy instances bound to the load balancing instance.
                      */
                     std::vector<std::string> m_l4UsedList;
                     bool m_l4UsedListHasBeenSet;

@@ -158,15 +158,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the output of a sampling screenshot task for a video.
-                     * @return Output Specifies the output of a sampling screenshot task for a video.
+                     * 获取Output of the sampled screenshot task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return Output Output of the sampled screenshot task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     MediaSampleSnapshotItem GetOutput() const;
 
                     /**
-                     * 设置Specifies the output of a sampling screenshot task for a video.
-                     * @param _output Specifies the output of a sampling screenshot task for a video.
+                     * 设置Output of the sampled screenshot task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _output Output of the sampled screenshot task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetOutput(const MediaSampleSnapshotItem& _output);
@@ -254,7 +258,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Specifies the output of a sampling screenshot task for a video.
+                     * Output of the sampled screenshot task for videos.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     MediaSampleSnapshotItem m_output;
                     bool m_outputHasBeenSet;

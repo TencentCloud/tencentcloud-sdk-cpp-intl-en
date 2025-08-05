@@ -47,23 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+                     * 获取Specifies the server certificate ID, which originates from the SSL side. you can check the CertId from the [SSL certificate list](https://console.cloud.tencent.com/SSL).
 
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @return CertId Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+                     * @return CertId Specifies the server certificate ID, which originates from the SSL side. you can check the CertId from the [SSL certificate list](https://console.cloud.tencent.com/SSL).
 
-Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     std::string GetCertId() const;
 
                     /**
-                     * 设置Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+                     * 设置Specifies the server certificate ID, which originates from the SSL side. you can check the CertId from the [SSL certificate list](https://console.cloud.tencent.com/SSL).
 
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @param _certId Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+                     * @param _certId Specifies the server certificate ID, which originates from the SSL side. you can check the CertId from the [SSL certificate list](https://console.cloud.tencent.com/SSL).
 
-Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     void SetCertId(const std::string& _certId);
@@ -76,19 +72,15 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool CertIdHasBeenSet() const;
 
                     /**
-                     * 获取Alias of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Alias Alias of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Certificate remark name.
+                     * @return Alias Certificate remark name.
                      * 
                      */
                     std::string GetAlias() const;
 
                     /**
-                     * 设置Alias of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _alias Alias of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Certificate remark name.
+                     * @param _alias Certificate remark name.
                      * 
                      */
                     void SetAlias(const std::string& _alias);
@@ -101,31 +93,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AliasHasBeenSet() const;
 
                     /**
-                     * 获取Type of the certificate. Values:
-u200c<li>`default`: Default certificate</li>
-u200c<li>`upload`: Custom certificate</li>
-u200c<li>`managed`: Tencent Cloud-managed certificate</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Type Type of the certificate. Values:
-u200c<li>`default`: Default certificate</li>
-u200c<li>`upload`: Custom certificate</li>
-u200c<li>`managed`: Tencent Cloud-managed certificate</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Certificate type. valid values:.
+<Li>Specifies the default certificate.</li>.
+<Li>Upload: user upload;</li>.
+<li>managed: tencent cloud hosted.</li>.
+                     * @return Type Certificate type. valid values:.
+<Li>Specifies the default certificate.</li>.
+<Li>Upload: user upload;</li>.
+<li>managed: tencent cloud hosted.</li>.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Type of the certificate. Values:
-u200c<li>`default`: Default certificate</li>
-u200c<li>`upload`: Custom certificate</li>
-u200c<li>`managed`: Tencent Cloud-managed certificate</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _type Type of the certificate. Values:
-u200c<li>`default`: Default certificate</li>
-u200c<li>`upload`: Custom certificate</li>
-u200c<li>`managed`: Tencent Cloud-managed certificate</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Certificate type. valid values:.
+<Li>Specifies the default certificate.</li>.
+<Li>Upload: user upload;</li>.
+<li>managed: tencent cloud hosted.</li>.
+                     * @param _type Certificate type. valid values:.
+<Li>Specifies the default certificate.</li>.
+<Li>Upload: user upload;</li>.
+<li>managed: tencent cloud hosted.</li>.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -138,19 +126,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Time when the certificate expires.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExpireTime Time when the certificate expires.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Certificate expiration time.
+                     * @return ExpireTime Certificate expiration time.
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置Time when the certificate expires.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _expireTime Time when the certificate expires.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Certificate expiration time.
+                     * @param _expireTime Certificate expiration time.
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -163,19 +147,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Time when the certificate is deployed.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DeployTime Time when the certificate is deployed.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the cert deployment time.
+                     * @return DeployTime Specifies the cert deployment time.
                      * 
                      */
                     std::string GetDeployTime() const;
 
                     /**
-                     * 设置Time when the certificate is deployed.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _deployTime Time when the certificate is deployed.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the cert deployment time.
+                     * @param _deployTime Specifies the cert deployment time.
                      * 
                      */
                     void SetDeployTime(const std::string& _deployTime);
@@ -189,18 +169,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Signature algorithm.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SignAlgo Signature algorithm.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSignAlgo() const;
 
                     /**
                      * 设置Signature algorithm.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _signAlgo Signature algorithm.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSignAlgo(const std::string& _signAlgo);
@@ -214,18 +190,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Domain name of the certificate.
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CommonName Domain name of the certificate.
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetCommonName() const;
 
                     /**
                      * 设置Domain name of the certificate.
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param _commonName Domain name of the certificate.
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetCommonName(const std::string& _commonName);
@@ -240,54 +212,47 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+                     * Specifies the server certificate ID, which originates from the SSL side. you can check the CertId from the [SSL certificate list](https://console.cloud.tencent.com/SSL).
 
-Note: This field may return null, which indicates a failure to obtain a valid value.
                      */
                     std::string m_certId;
                     bool m_certIdHasBeenSet;
 
                     /**
-                     * Alias of the certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Certificate remark name.
                      */
                     std::string m_alias;
                     bool m_aliasHasBeenSet;
 
                     /**
-                     * Type of the certificate. Values:
-u200c<li>`default`: Default certificate</li>
-u200c<li>`upload`: Custom certificate</li>
-u200c<li>`managed`: Tencent Cloud-managed certificate</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Certificate type. valid values:.
+<Li>Specifies the default certificate.</li>.
+<Li>Upload: user upload;</li>.
+<li>managed: tencent cloud hosted.</li>.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Time when the certificate expires.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Certificate expiration time.
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * Time when the certificate is deployed.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the cert deployment time.
                      */
                     std::string m_deployTime;
                     bool m_deployTimeHasBeenSet;
 
                     /**
                      * Signature algorithm.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_signAlgo;
                     bool m_signAlgoHasBeenSet;
 
                     /**
                      * Domain name of the certificate.
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_commonName;
                     bool m_commonNameHasBeenSet;

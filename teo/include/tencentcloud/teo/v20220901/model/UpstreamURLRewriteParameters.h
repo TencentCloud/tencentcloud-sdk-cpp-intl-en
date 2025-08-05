@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Origin-Pull url rewriting type, only path is supported.
-                     * @return Type Origin-Pull url rewriting type, only path is supported.
+                     * 获取Origin-Pull URL rewrite type. valid values: Path.
+                     * @return Type Origin-Pull URL rewrite type. valid values: Path.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Origin-Pull url rewriting type, only path is supported.
-                     * @param _type Origin-Pull url rewriting type, only path is supported.
+                     * 设置Origin-Pull URL rewrite type. valid values: Path.
+                     * @param _type Origin-Pull URL rewrite type. valid values: Path.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -68,27 +68,47 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Origin-Pull url rewrite action. valid values are:.
-<Li>`Replace`: replace the path prefix.</li>.
-<Li>`AddPrefix`: add the path prefix.</li>.
-<Li>`RmvPrefix`: remove the path prefix.</li>.
-                     * @return Action Origin-Pull url rewrite action. valid values are:.
-<Li>`Replace`: replace the path prefix.</li>.
-<Li>`AddPrefix`: add the path prefix.</li>.
-<Li>`RmvPrefix`: remove the path prefix.</li>.
+                     * 获取Origin-Pull URL rewrite action. valid values:.
+<li><b>replace</b>: replace the full Path. used to replace the complete request URL Path with the specified Path.
+</li>
+<li><b>addPrefix</b>: add Path prefix. used to add specified Path prefix to request URL Path.</li>.
+</li>
+<li><b>rmvPrefix</b>: specifies the removal of Path prefix. used to remove the specified Path prefix from the request URL Path.
+</li>
+<li><b>regexReplace</b>: refers to regular expression replacement of the full path. used for matching and replacing the full path via Google RE2 regular expressions.
+</li>
+                     * @return Action Origin-Pull URL rewrite action. valid values:.
+<li><b>replace</b>: replace the full Path. used to replace the complete request URL Path with the specified Path.
+</li>
+<li><b>addPrefix</b>: add Path prefix. used to add specified Path prefix to request URL Path.</li>.
+</li>
+<li><b>rmvPrefix</b>: specifies the removal of Path prefix. used to remove the specified Path prefix from the request URL Path.
+</li>
+<li><b>regexReplace</b>: refers to regular expression replacement of the full path. used for matching and replacing the full path via Google RE2 regular expressions.
+</li>
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置Origin-Pull url rewrite action. valid values are:.
-<Li>`Replace`: replace the path prefix.</li>.
-<Li>`AddPrefix`: add the path prefix.</li>.
-<Li>`RmvPrefix`: remove the path prefix.</li>.
-                     * @param _action Origin-Pull url rewrite action. valid values are:.
-<Li>`Replace`: replace the path prefix.</li>.
-<Li>`AddPrefix`: add the path prefix.</li>.
-<Li>`RmvPrefix`: remove the path prefix.</li>.
+                     * 设置Origin-Pull URL rewrite action. valid values:.
+<li><b>replace</b>: replace the full Path. used to replace the complete request URL Path with the specified Path.
+</li>
+<li><b>addPrefix</b>: add Path prefix. used to add specified Path prefix to request URL Path.</li>.
+</li>
+<li><b>rmvPrefix</b>: specifies the removal of Path prefix. used to remove the specified Path prefix from the request URL Path.
+</li>
+<li><b>regexReplace</b>: refers to regular expression replacement of the full path. used for matching and replacing the full path via Google RE2 regular expressions.
+</li>
+                     * @param _action Origin-Pull URL rewrite action. valid values:.
+<li><b>replace</b>: replace the full Path. used to replace the complete request URL Path with the specified Path.
+</li>
+<li><b>addPrefix</b>: add Path prefix. used to add specified Path prefix to request URL Path.</li>.
+</li>
+<li><b>rmvPrefix</b>: specifies the removal of Path prefix. used to remove the specified Path prefix from the request URL Path.
+</li>
+<li><b>regexReplace</b>: refers to regular expression replacement of the full path. used for matching and replacing the full path via Google RE2 regular expressions.
+</li>
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -101,15 +121,15 @@ namespace TencentCloud
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取Origin-Pull url rewrite value, maximum length 1024, must start with /.<br>note: when action is addprefix, it cannot end with /; when action is rmvprefix, * cannot be present.
-                     * @return Value Origin-Pull url rewrite value, maximum length 1024, must start with /.<br>note: when action is addprefix, it cannot end with /; when action is rmvprefix, * cannot be present.
+                     * 获取Origin-Pull URL rewrite value. should meet URL Path standard and ensure the rewritten Path starts with / to prevent the Host of the origin-pull URL from being modified, with a length range of 1–1024. when Action is addPrefix, it cannot end with /. when Action is rmvPrefix, * cannot exist. when Action is regexReplace, $NUM can be used to refer to regular expression capture groups, where NUM represents the group number, such as $1, and supports up to $9.
+                     * @return Value Origin-Pull URL rewrite value. should meet URL Path standard and ensure the rewritten Path starts with / to prevent the Host of the origin-pull URL from being modified, with a length range of 1–1024. when Action is addPrefix, it cannot end with /. when Action is rmvPrefix, * cannot exist. when Action is regexReplace, $NUM can be used to refer to regular expression capture groups, where NUM represents the group number, such as $1, and supports up to $9.
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置Origin-Pull url rewrite value, maximum length 1024, must start with /.<br>note: when action is addprefix, it cannot end with /; when action is rmvprefix, * cannot be present.
-                     * @param _value Origin-Pull url rewrite value, maximum length 1024, must start with /.<br>note: when action is addprefix, it cannot end with /; when action is rmvprefix, * cannot be present.
+                     * 设置Origin-Pull URL rewrite value. should meet URL Path standard and ensure the rewritten Path starts with / to prevent the Host of the origin-pull URL from being modified, with a length range of 1–1024. when Action is addPrefix, it cannot end with /. when Action is rmvPrefix, * cannot exist. when Action is regexReplace, $NUM can be used to refer to regular expression capture groups, where NUM represents the group number, such as $1, and supports up to $9.
+                     * @param _value Origin-Pull URL rewrite value. should meet URL Path standard and ensure the rewritten Path starts with / to prevent the Host of the origin-pull URL from being modified, with a length range of 1–1024. when Action is addPrefix, it cannot end with /. when Action is rmvPrefix, * cannot exist. when Action is regexReplace, $NUM can be used to refer to regular expression capture groups, where NUM represents the group number, such as $1, and supports up to $9.
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -121,28 +141,60 @@ namespace TencentCloud
                      */
                     bool ValueHasBeenSet() const;
 
+                    /**
+                     * 获取Origin-Pull URL rewrite used for regex replacement to match the full path regular expression. should meet Google RE2 standard with length range 1–1024. this field is required when Action is regexReplace, otherwise not required.
+                     * @return Regex Origin-Pull URL rewrite used for regex replacement to match the full path regular expression. should meet Google RE2 standard with length range 1–1024. this field is required when Action is regexReplace, otherwise not required.
+                     * 
+                     */
+                    std::string GetRegex() const;
+
+                    /**
+                     * 设置Origin-Pull URL rewrite used for regex replacement to match the full path regular expression. should meet Google RE2 standard with length range 1–1024. this field is required when Action is regexReplace, otherwise not required.
+                     * @param _regex Origin-Pull URL rewrite used for regex replacement to match the full path regular expression. should meet Google RE2 standard with length range 1–1024. this field is required when Action is regexReplace, otherwise not required.
+                     * 
+                     */
+                    void SetRegex(const std::string& _regex);
+
+                    /**
+                     * 判断参数 Regex 是否已赋值
+                     * @return Regex 是否已赋值
+                     * 
+                     */
+                    bool RegexHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Origin-Pull url rewriting type, only path is supported.
+                     * Origin-Pull URL rewrite type. valid values: Path.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Origin-Pull url rewrite action. valid values are:.
-<Li>`Replace`: replace the path prefix.</li>.
-<Li>`AddPrefix`: add the path prefix.</li>.
-<Li>`RmvPrefix`: remove the path prefix.</li>.
+                     * Origin-Pull URL rewrite action. valid values:.
+<li><b>replace</b>: replace the full Path. used to replace the complete request URL Path with the specified Path.
+</li>
+<li><b>addPrefix</b>: add Path prefix. used to add specified Path prefix to request URL Path.</li>.
+</li>
+<li><b>rmvPrefix</b>: specifies the removal of Path prefix. used to remove the specified Path prefix from the request URL Path.
+</li>
+<li><b>regexReplace</b>: refers to regular expression replacement of the full path. used for matching and replacing the full path via Google RE2 regular expressions.
+</li>
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * Origin-Pull url rewrite value, maximum length 1024, must start with /.<br>note: when action is addprefix, it cannot end with /; when action is rmvprefix, * cannot be present.
+                     * Origin-Pull URL rewrite value. should meet URL Path standard and ensure the rewritten Path starts with / to prevent the Host of the origin-pull URL from being modified, with a length range of 1–1024. when Action is addPrefix, it cannot end with /. when Action is rmvPrefix, * cannot exist. when Action is regexReplace, $NUM can be used to refer to regular expression capture groups, where NUM represents the group number, such as $1, and supports up to $9.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;
+
+                    /**
+                     * Origin-Pull URL rewrite used for regex replacement to match the full path regular expression. should meet Google RE2 standard with length range 1–1024. this field is required when Action is regexReplace, otherwise not required.
+                     */
+                    std::string m_regex;
+                    bool m_regexHasBeenSet;
 
                 };
             }

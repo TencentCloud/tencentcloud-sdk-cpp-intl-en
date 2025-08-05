@@ -322,15 +322,15 @@ namespace TencentCloud
                     bool VersionSetHasBeenSet() const;
 
                     /**
-                     * 获取Instance availability zone, such as ap-guangzhou-2
-                     * @return Zone Instance availability zone, such as ap-guangzhou-2
+                     * 获取Instance availability zone, such as ap-guangzhou-3
+                     * @return Zone Instance availability zone, such as ap-guangzhou-3
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Instance availability zone, such as ap-guangzhou-2
-                     * @param _zone Instance availability zone, such as ap-guangzhou-2
+                     * 设置Instance availability zone, such as ap-guangzhou-3
+                     * @param _zone Instance availability zone, such as ap-guangzhou-3
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -406,15 +406,15 @@ namespace TencentCloud
                     bool UidSetHasBeenSet() const;
 
                     /**
-                     * 获取Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
-                     * @return InstanceType Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+                     * 获取Instance type. HA: high-availability instance; RO: read-only instance; SI: basic edition instance; BI: business intelligence service instance; cvmHA: dual-server high-availability instance with cloud disk; cvmRO: read-only instance with cloud disk; MultiHA: multi-node instance; cvmMultiHA: multi-node instance with cloud disk.
+                     * @return InstanceType Instance type. HA: high-availability instance; RO: read-only instance; SI: basic edition instance; BI: business intelligence service instance; cvmHA: dual-server high-availability instance with cloud disk; cvmRO: read-only instance with cloud disk; MultiHA: multi-node instance; cvmMultiHA: multi-node instance with cloud disk.
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
-                     * @param _instanceType Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+                     * 设置Instance type. HA: high-availability instance; RO: read-only instance; SI: basic edition instance; BI: business intelligence service instance; cvmHA: dual-server high-availability instance with cloud disk; cvmRO: read-only instance with cloud disk; MultiHA: multi-node instance; cvmMultiHA: multi-node instance with cloud disk.
+                     * @param _instanceType Instance type. HA: high-availability instance; RO: read-only instance; SI: basic edition instance; BI: business intelligence service instance; cvmHA: dual-server high-availability instance with cloud disk; cvmRO: read-only instance with cloud disk; MultiHA: multi-node instance; cvmMultiHA: multi-node instance with cloud disk.
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -427,15 +427,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PaginationType 
+                     * 获取Pagination query method. offset - pagination query by offset; pageNumber - pagination query by number of pages. The default value is pageNumber.
+                     * @return PaginationType Pagination query method. offset - pagination query by offset; pageNumber - pagination query by number of pages. The default value is pageNumber.
                      * 
                      */
                     std::string GetPaginationType() const;
 
                     /**
-                     * 设置
-                     * @param _paginationType 
+                     * 设置Pagination query method. offset - pagination query by offset; pageNumber - pagination query by number of pages. The default value is pageNumber.
+                     * @param _paginationType Pagination query method. offset - pagination query by offset; pageNumber - pagination query by number of pages. The default value is pageNumber.
                      * 
                      */
                     void SetPaginationType(const std::string& _paginationType);
@@ -528,7 +528,7 @@ namespace TencentCloud
                     bool m_versionSetHasBeenSet;
 
                     /**
-                     * Instance availability zone, such as ap-guangzhou-2
+                     * Instance availability zone, such as ap-guangzhou-3
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
@@ -552,13 +552,13 @@ namespace TencentCloud
                     bool m_uidSetHasBeenSet;
 
                     /**
-                     * Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+                     * Instance type. HA: high-availability instance; RO: read-only instance; SI: basic edition instance; BI: business intelligence service instance; cvmHA: dual-server high-availability instance with cloud disk; cvmRO: read-only instance with cloud disk; MultiHA: multi-node instance; cvmMultiHA: multi-node instance with cloud disk.
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Pagination query method. offset - pagination query by offset; pageNumber - pagination query by number of pages. The default value is pageNumber.
                      */
                     std::string m_paginationType;
                     bool m_paginationTypeHasBeenSet;

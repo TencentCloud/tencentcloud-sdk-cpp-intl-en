@@ -47,35 +47,31 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Type of the custom log filed, which indicates extracting data from a specified position in HTTP requests and responses. Valid values:
-<li>ReqHeader: Extract the value of a specified field from an HTTP request header;</li>
-<li>RspHeader: Extract the value of a specified field from an HTTP response header;</li>
-<li>Cookie: Extract the value of a specified field from a cookie;</li>
-<li>ReqBody: Extract specified content from an HTTP request body using a Google RE2 regular expression.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @return Name Type of the custom log filed, which indicates extracting data from a specified position in HTTP requests and responses. Valid values:
-<li>ReqHeader: Extract the value of a specified field from an HTTP request header;</li>
-<li>RspHeader: Extract the value of a specified field from an HTTP response header;</li>
-<li>Cookie: Extract the value of a specified field from a cookie;</li>
-<li>ReqBody: Extract specified content from an HTTP request body using a Google RE2 regular expression.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Type of the custom log field, which indicates extracting data from specified positions in HTTP requests and responses. valid values:.
+<li>ReqHeader: extract the value of a specified field from an HTTP request header;</li>.
+<li>RspHeader: extracts the value of a specified field from an HTTP response header.</li>.
+<Li>Cookie: extract the specified field value from a cookie;</li>.
+<li>ReqBody: extract specified content from an HTTP request body using a Google RE2 regular expression.</li>.
+                     * @return Name Type of the custom log field, which indicates extracting data from specified positions in HTTP requests and responses. valid values:.
+<li>ReqHeader: extract the value of a specified field from an HTTP request header;</li>.
+<li>RspHeader: extracts the value of a specified field from an HTTP response header.</li>.
+<Li>Cookie: extract the specified field value from a cookie;</li>.
+<li>ReqBody: extract specified content from an HTTP request body using a Google RE2 regular expression.</li>.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Type of the custom log filed, which indicates extracting data from a specified position in HTTP requests and responses. Valid values:
-<li>ReqHeader: Extract the value of a specified field from an HTTP request header;</li>
-<li>RspHeader: Extract the value of a specified field from an HTTP response header;</li>
-<li>Cookie: Extract the value of a specified field from a cookie;</li>
-<li>ReqBody: Extract specified content from an HTTP request body using a Google RE2 regular expression.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @param _name Type of the custom log filed, which indicates extracting data from a specified position in HTTP requests and responses. Valid values:
-<li>ReqHeader: Extract the value of a specified field from an HTTP request header;</li>
-<li>RspHeader: Extract the value of a specified field from an HTTP response header;</li>
-<li>Cookie: Extract the value of a specified field from a cookie;</li>
-<li>ReqBody: Extract specified content from an HTTP request body using a Google RE2 regular expression.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Type of the custom log field, which indicates extracting data from specified positions in HTTP requests and responses. valid values:.
+<li>ReqHeader: extract the value of a specified field from an HTTP request header;</li>.
+<li>RspHeader: extracts the value of a specified field from an HTTP response header.</li>.
+<Li>Cookie: extract the specified field value from a cookie;</li>.
+<li>ReqBody: extract specified content from an HTTP request body using a Google RE2 regular expression.</li>.
+                     * @param _name Type of the custom log field, which indicates extracting data from specified positions in HTTP requests and responses. valid values:.
+<li>ReqHeader: extract the value of a specified field from an HTTP request header;</li>.
+<li>RspHeader: extracts the value of a specified field from an HTTP response header.</li>.
+<Li>Cookie: extract the specified field value from a cookie;</li>.
+<li>ReqBody: extract specified content from an HTTP request body using a Google RE2 regular expression.</li>.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -88,27 +84,23 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Enter the definition of the field value based on the field type (Name). This parameter is case-sensitive.
-<li>When the field type is ReqHeader, RspHeader, or Cookie, enter the name of the parameter for which you need to extract the value, such as Accept-Language. You can enter 1-100 characters. The name should start with a letter, contain letters, digits, and hyphens (-) in the middle, and end with a letter or digit.</li>
-<li>When the field type is ReqBody, enter the Google RE2 regular expression. The maximum length of the regular expression is 4 KB.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @return Value Enter the definition of the field value based on the field type (Name). This parameter is case-sensitive.
-<li>When the field type is ReqHeader, RspHeader, or Cookie, enter the name of the parameter for which you need to extract the value, such as Accept-Language. You can enter 1-100 characters. The name should start with a letter, contain letters, digits, and hyphens (-) in the middle, and end with a letter or digit.</li>
-<li>When the field type is ReqBody, enter the Google RE2 regular expression. The maximum length of the regular expression is 4 KB.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Enter the field value definition based on the field type (Name). this parameter is case-sensitive.
+<li>When the field type is ReqHeader, RspHeader, or Cookie, enter the parameter name for value extraction, such as Accept-Language. you can enter 1-100 characters. the name must start with a letter, contain letters, digits, or hyphens (-) in the middle, and end with a letter or digit.</li>.
+<li>When the field type is ReqBody, enter the Google RE2 regular expression. the maximum length of the regular expression is 4 KB.</li>.
+                     * @return Value Enter the field value definition based on the field type (Name). this parameter is case-sensitive.
+<li>When the field type is ReqHeader, RspHeader, or Cookie, enter the parameter name for value extraction, such as Accept-Language. you can enter 1-100 characters. the name must start with a letter, contain letters, digits, or hyphens (-) in the middle, and end with a letter or digit.</li>.
+<li>When the field type is ReqBody, enter the Google RE2 regular expression. the maximum length of the regular expression is 4 KB.</li>.
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置Enter the definition of the field value based on the field type (Name). This parameter is case-sensitive.
-<li>When the field type is ReqHeader, RspHeader, or Cookie, enter the name of the parameter for which you need to extract the value, such as Accept-Language. You can enter 1-100 characters. The name should start with a letter, contain letters, digits, and hyphens (-) in the middle, and end with a letter or digit.</li>
-<li>When the field type is ReqBody, enter the Google RE2 regular expression. The maximum length of the regular expression is 4 KB.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @param _value Enter the definition of the field value based on the field type (Name). This parameter is case-sensitive.
-<li>When the field type is ReqHeader, RspHeader, or Cookie, enter the name of the parameter for which you need to extract the value, such as Accept-Language. You can enter 1-100 characters. The name should start with a letter, contain letters, digits, and hyphens (-) in the middle, and end with a letter or digit.</li>
-<li>When the field type is ReqBody, enter the Google RE2 regular expression. The maximum length of the regular expression is 4 KB.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Enter the field value definition based on the field type (Name). this parameter is case-sensitive.
+<li>When the field type is ReqHeader, RspHeader, or Cookie, enter the parameter name for value extraction, such as Accept-Language. you can enter 1-100 characters. the name must start with a letter, contain letters, digits, or hyphens (-) in the middle, and end with a letter or digit.</li>.
+<li>When the field type is ReqBody, enter the Google RE2 regular expression. the maximum length of the regular expression is 4 KB.</li>.
+                     * @param _value Enter the field value definition based on the field type (Name). this parameter is case-sensitive.
+<li>When the field type is ReqHeader, RspHeader, or Cookie, enter the parameter name for value extraction, such as Accept-Language. you can enter 1-100 characters. the name must start with a letter, contain letters, digits, or hyphens (-) in the middle, and end with a letter or digit.</li>.
+<li>When the field type is ReqBody, enter the Google RE2 regular expression. the maximum length of the regular expression is 4 KB.</li>.
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -121,19 +113,15 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool ValueHasBeenSet() const;
 
                     /**
-                     * 获取Indicates whether to deliver this field. If not filled in, this field will not be delivered.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Enabled Indicates whether to deliver this field. If not filled in, this field will not be delivered.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether to deliver this field. leave blank to skip delivery.
+                     * @return Enabled Whether to deliver this field. leave blank to skip delivery.
                      * 
                      */
                     bool GetEnabled() const;
 
                     /**
-                     * 设置Indicates whether to deliver this field. If not filled in, this field will not be delivered.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _enabled Indicates whether to deliver this field. If not filled in, this field will not be delivered.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether to deliver this field. leave blank to skip delivery.
+                     * @param _enabled Whether to deliver this field. leave blank to skip delivery.
                      * 
                      */
                     void SetEnabled(const bool& _enabled);
@@ -148,28 +136,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Type of the custom log filed, which indicates extracting data from a specified position in HTTP requests and responses. Valid values:
-<li>ReqHeader: Extract the value of a specified field from an HTTP request header;</li>
-<li>RspHeader: Extract the value of a specified field from an HTTP response header;</li>
-<li>Cookie: Extract the value of a specified field from a cookie;</li>
-<li>ReqBody: Extract specified content from an HTTP request body using a Google RE2 regular expression.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * Type of the custom log field, which indicates extracting data from specified positions in HTTP requests and responses. valid values:.
+<li>ReqHeader: extract the value of a specified field from an HTTP request header;</li>.
+<li>RspHeader: extracts the value of a specified field from an HTTP response header.</li>.
+<Li>Cookie: extract the specified field value from a cookie;</li>.
+<li>ReqBody: extract specified content from an HTTP request body using a Google RE2 regular expression.</li>.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Enter the definition of the field value based on the field type (Name). This parameter is case-sensitive.
-<li>When the field type is ReqHeader, RspHeader, or Cookie, enter the name of the parameter for which you need to extract the value, such as Accept-Language. You can enter 1-100 characters. The name should start with a letter, contain letters, digits, and hyphens (-) in the middle, and end with a letter or digit.</li>
-<li>When the field type is ReqBody, enter the Google RE2 regular expression. The maximum length of the regular expression is 4 KB.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * Enter the field value definition based on the field type (Name). this parameter is case-sensitive.
+<li>When the field type is ReqHeader, RspHeader, or Cookie, enter the parameter name for value extraction, such as Accept-Language. you can enter 1-100 characters. the name must start with a letter, contain letters, digits, or hyphens (-) in the middle, and end with a letter or digit.</li>.
+<li>When the field type is ReqBody, enter the Google RE2 regular expression. the maximum length of the regular expression is 4 KB.</li>.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;
 
                     /**
-                     * Indicates whether to deliver this field. If not filled in, this field will not be delivered.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether to deliver this field. leave blank to skip delivery.
                      */
                     bool m_enabled;
                     bool m_enabledHasBeenSet;

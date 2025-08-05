@@ -119,15 +119,15 @@ namespace TencentCloud
                     bool VanityNameServersHasBeenSet() const;
 
                     /**
-                     * 获取The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
-                     * @return AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+                     * 获取Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters.
+                     * @return AliasZoneName Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters.
                      * 
                      */
                     std::string GetAliasZoneName() const;
 
                     /**
-                     * 设置The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
-                     * @param _aliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+                     * 设置Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters.
+                     * @param _aliasZoneName Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters.
                      * 
                      */
                     void SetAliasZoneName(const std::string& _aliasZoneName);
@@ -217,7 +217,7 @@ namespace TencentCloud
                     bool m_vanityNameServersHasBeenSet;
 
                     /**
-                     * The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+                     * Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters.
                      */
                     std::string m_aliasZoneName;
                     bool m_aliasZoneNameHasBeenSet;

@@ -98,19 +98,15 @@ namespace TencentCloud
                     bool AclUserRulesHasBeenSet() const;
 
                     /**
-                     * 获取Custom managed rules
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Customizes Custom managed rules
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Managed custom rules.
+                     * @return Customizes Managed custom rules.
                      * 
                      */
                     std::vector<AclUserRule> GetCustomizes() const;
 
                     /**
-                     * 设置Custom managed rules
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _customizes Custom managed rules
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Managed custom rules.
+                     * @param _customizes Managed custom rules.
                      * 
                      */
                     void SetCustomizes(const std::vector<AclUserRule>& _customizes);
@@ -139,8 +135,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_aclUserRulesHasBeenSet;
 
                     /**
-                     * Custom managed rules
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Managed custom rules.
                      */
                     std::vector<AclUserRule> m_customizes;
                     bool m_customizesHasBeenSet;

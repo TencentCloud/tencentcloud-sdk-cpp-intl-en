@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Primary origin server list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Origins Primary origin server list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Origin server list.
+                     * @return Origins Origin server list.
                      * 
                      */
                     std::vector<std::string> GetOrigins() const;
 
                     /**
-                     * 设置Primary origin server list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _origins Primary origin server list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Origin server list.
+                     * @param _origins Origin server list.
                      * 
                      */
                     void SetOrigins(const std::vector<std::string>& _origins);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OriginsHasBeenSet() const;
 
                     /**
-                     * 获取The list of backup origin servers.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BackupOrigins The list of backup origin servers.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Backup origin list.
+                     * @return BackupOrigins Backup origin list.
                      * 
                      */
                     std::vector<std::string> GetBackupOrigins() const;
 
                     /**
-                     * 设置The list of backup origin servers.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _backupOrigins The list of backup origin servers.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Backup origin list.
+                     * @param _backupOrigins Backup origin list.
                      * 
                      */
                     void SetBackupOrigins(const std::vector<std::string>& _backupOrigins);
@@ -97,31 +89,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BackupOriginsHasBeenSet() const;
 
                     /**
-                     * 获取Origin-pull protocol configuration. Values:
-<li>`http`: Force HTTP for origin-pull.</li>
-<li>`follow`: Follow protocol.</li>
-<li>`https`: Force HTTPS for origin-pull.</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return OriginPullProtocol Origin-pull protocol configuration. Values:
-<li>`http`: Force HTTP for origin-pull.</li>
-<li>`follow`: Follow protocol.</li>
-<li>`https`: Force HTTPS for origin-pull.</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Origin server protocol configuration. valid values:.
+<Li>Http: forced http back to source;</li>.
+<Li>`Follow`: follow protocol.</li>.
+<Li>Https: enforce https origin-pull.</li>.
+                     * @return OriginPullProtocol Origin server protocol configuration. valid values:.
+<Li>Http: forced http back to source;</li>.
+<Li>`Follow`: follow protocol.</li>.
+<Li>Https: enforce https origin-pull.</li>.
                      * 
                      */
                     std::string GetOriginPullProtocol() const;
 
                     /**
-                     * 设置Origin-pull protocol configuration. Values:
-<li>`http`: Force HTTP for origin-pull.</li>
-<li>`follow`: Follow protocol.</li>
-<li>`https`: Force HTTPS for origin-pull.</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _originPullProtocol Origin-pull protocol configuration. Values:
-<li>`http`: Force HTTP for origin-pull.</li>
-<li>`follow`: Follow protocol.</li>
-<li>`https`: Force HTTPS for origin-pull.</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Origin server protocol configuration. valid values:.
+<Li>Http: forced http back to source;</li>.
+<Li>`Follow`: follow protocol.</li>.
+<Li>Https: enforce https origin-pull.</li>.
+                     * @param _originPullProtocol Origin server protocol configuration. valid values:.
+<Li>Http: forced http back to source;</li>.
+<Li>`Follow`: follow protocol.</li>.
+<Li>Https: enforce https origin-pull.</li>.
                      * 
                      */
                     void SetOriginPullProtocol(const std::string& _originPullProtocol);
@@ -134,27 +122,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool OriginPullProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Whether to allow private access to buckets when `OriginType=cos`. Valid values: 
-<li>`on`: Private access;</li>
-<li>`off`: Public access.</li>
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return CosPrivateAccess Whether to allow private access to buckets when `OriginType=cos`. Valid values: 
-<li>`on`: Private access;</li>
-<li>`off`: Public access.</li>
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取When the origin is tencent cloud COS, whether it is a private access bucket. valid values:.
+<li>`on`: private network access;</li>.
+<li>`off`: public access.</li>.
+                     * @return CosPrivateAccess When the origin is tencent cloud COS, whether it is a private access bucket. valid values:.
+<li>`on`: private network access;</li>.
+<li>`off`: public access.</li>.
                      * 
                      */
                     std::string GetCosPrivateAccess() const;
 
                     /**
-                     * 设置Whether to allow private access to buckets when `OriginType=cos`. Valid values: 
-<li>`on`: Private access;</li>
-<li>`off`: Public access.</li>
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _cosPrivateAccess Whether to allow private access to buckets when `OriginType=cos`. Valid values: 
-<li>`on`: Private access;</li>
-<li>`off`: Public access.</li>
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置When the origin is tencent cloud COS, whether it is a private access bucket. valid values:.
+<li>`on`: private network access;</li>.
+<li>`off`: public access.</li>.
+                     * @param _cosPrivateAccess When the origin is tencent cloud COS, whether it is a private access bucket. valid values:.
+<li>`on`: private network access;</li>.
+<li>`off`: public access.</li>.
                      * 
                      */
                     void SetCosPrivateAccess(const std::string& _cosPrivateAccess);
@@ -169,34 +153,30 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Primary origin server list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Origin server list.
                      */
                     std::vector<std::string> m_origins;
                     bool m_originsHasBeenSet;
 
                     /**
-                     * The list of backup origin servers.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Backup origin list.
                      */
                     std::vector<std::string> m_backupOrigins;
                     bool m_backupOriginsHasBeenSet;
 
                     /**
-                     * Origin-pull protocol configuration. Values:
-<li>`http`: Force HTTP for origin-pull.</li>
-<li>`follow`: Follow protocol.</li>
-<li>`https`: Force HTTPS for origin-pull.</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Origin server protocol configuration. valid values:.
+<Li>Http: forced http back to source;</li>.
+<Li>`Follow`: follow protocol.</li>.
+<Li>Https: enforce https origin-pull.</li>.
                      */
                     std::string m_originPullProtocol;
                     bool m_originPullProtocolHasBeenSet;
 
                     /**
-                     * Whether to allow private access to buckets when `OriginType=cos`. Valid values: 
-<li>`on`: Private access;</li>
-<li>`off`: Public access.</li>
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * When the origin is tencent cloud COS, whether it is a private access bucket. valid values:.
+<li>`on`: private network access;</li>.
+<li>`off`: public access.</li>.
                      */
                     std::string m_cosPrivateAccess;
                     bool m_cosPrivateAccessHasBeenSet;

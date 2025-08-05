@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ID of a live scheme subtask.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TaskId The ID of a live scheme subtask.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Live orchestration task ID.
+                     * @return TaskId Live orchestration task ID.
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置The ID of a live scheme subtask.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _taskId The ID of a live scheme subtask.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Live orchestration task ID.
+                     * @param _taskId Live orchestration task ID.
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -73,27 +69,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取The task status. Valid values:
-<li>`PROCESSING`</li>
-<li>`FINISH` </li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status The task status. Valid values:
-<li>`PROCESSING`</li>
-<li>`FINISH` </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Task stream status. Valid values:
+<li>PROCESSING: processing</li>
+<li>FINISH: completed</li>
+                     * @return Status Task stream status. Valid values:
+<li>PROCESSING: processing</li>
+<li>FINISH: completed</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置The task status. Valid values:
-<li>`PROCESSING`</li>
-<li>`FINISH` </li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status The task status. Valid values:
-<li>`PROCESSING`</li>
-<li>`FINISH` </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Task stream status. Valid values:
+<li>PROCESSING: processing</li>
+<li>FINISH: completed</li>
+                     * @param _status Task stream status. Valid values:
+<li>PROCESSING: processing</li>
+<li>FINISH: completed</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -106,19 +98,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取If the value returned is not `0`, there was a source error. If `0` is returned, refer to the error codes of the corresponding task type.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ErrCode If the value returned is not `0`, there was a source error. If `0` is returned, refer to the error codes of the corresponding task type.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
+                     * @return ErrCode An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置If the value returned is not `0`, there was a source error. If `0` is returned, refer to the error codes of the corresponding task type.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _errCode If the value returned is not `0`, there was a source error. If `0` is returned, refer to the error codes of the corresponding task type.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
+                     * @param _errCode An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -131,19 +119,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Message If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
+                     * @return Message The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _message If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
+                     * @param _message The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -156,19 +140,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取The URL of the live stream.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Url The URL of the live stream.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Live stream URL.
+                     * @return Url Live stream URL.
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置The URL of the live stream.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _url The URL of the live stream.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Live stream URL.
+                     * @param _url Live stream URL.
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -208,38 +188,33 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The ID of a live scheme subtask.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Live orchestration task ID.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * The task status. Valid values:
-<li>`PROCESSING`</li>
-<li>`FINISH` </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Task stream status. Valid values:
+<li>PROCESSING: processing</li>
+<li>FINISH: completed</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * If the value returned is not `0`, there was a source error. If `0` is returned, refer to the error codes of the corresponding task type.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
 
                     /**
-                     * The URL of the live stream.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Live stream URL.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

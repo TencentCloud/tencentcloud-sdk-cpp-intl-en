@@ -76,23 +76,19 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Cache expiration time setting.
-Unit: second. The maximum value is 365 days.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CacheTime Cache expiration time setting.
-Unit: second. The maximum value is 365 days.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the cache expiration time settings.
+Unit: seconds. the maximum settable value is 365 days.
+                     * @return CacheTime Specifies the cache expiration time settings.
+Unit: seconds. the maximum settable value is 365 days.
                      * 
                      */
                     int64_t GetCacheTime() const;
 
                     /**
-                     * 设置Cache expiration time setting.
-Unit: second. The maximum value is 365 days.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cacheTime Cache expiration time setting.
-Unit: second. The maximum value is 365 days.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the cache expiration time settings.
+Unit: seconds. the maximum settable value is 365 days.
+                     * @param _cacheTime Specifies the cache expiration time settings.
+Unit: seconds. the maximum settable value is 365 days.
                      * 
                      */
                     void SetCacheTime(const int64_t& _cacheTime);
@@ -148,9 +144,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Cache expiration time setting.
-Unit: second. The maximum value is 365 days.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the cache expiration time settings.
+Unit: seconds. the maximum settable value is 365 days.
                      */
                     int64_t m_cacheTime;
                     bool m_cacheTimeHasBeenSet;

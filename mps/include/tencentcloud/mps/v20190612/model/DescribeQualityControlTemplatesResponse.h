@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Media quality inspection template details list.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return QualityControlTemplateSet Media quality inspection template details list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List of media quality inspection templates.
+                     * @return QualityControlTemplateSet List of media quality inspection templates.
                      * 
                      */
                     std::vector<QualityControlTemplate> GetQualityControlTemplateSet() const;
@@ -83,8 +81,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Media quality inspection template details list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List of media quality inspection templates.
                      */
                     std::vector<QualityControlTemplate> m_qualityControlTemplateSet;
                     bool m_qualityControlTemplateSetHasBeenSet;

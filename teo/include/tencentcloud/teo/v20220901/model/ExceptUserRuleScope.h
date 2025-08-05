@@ -78,39 +78,35 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取The module to be activated. Values:
-<li>`waf`: Tencent Cloud-managed rules</li>
-<li>`rate`: Rate limiting rules</li>
-<li>`acl`: Custom rule</li>
-<li>`cc`: CC attack defense</li>
-<li>`bot`: Bot protection</li>
-Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @return Modules The module to be activated. Values:
-<li>`waf`: Tencent Cloud-managed rules</li>
-<li>`rate`: Rate limiting rules</li>
-<li>`acl`: Custom rule</li>
-<li>`cc`: CC attack defense</li>
-<li>`bot`: Bot protection</li>
-Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 获取Effective module. the field value can be:.
+<li>`waf`: tencent cloud-managed rules</li>.
+<Li>`Rate`: rate limit</li>.
+<li>`acl`: custom rule</li>.
+<Li>`Cc`: cc attack defense</li>.
+<Li>`Bot`: bot protection</li>.
+                     * @return Modules Effective module. the field value can be:.
+<li>`waf`: tencent cloud-managed rules</li>.
+<Li>`Rate`: rate limit</li>.
+<li>`acl`: custom rule</li>.
+<Li>`Cc`: cc attack defense</li>.
+<Li>`Bot`: bot protection</li>.
                      * 
                      */
                     std::vector<std::string> GetModules() const;
 
                     /**
-                     * 设置The module to be activated. Values:
-<li>`waf`: Tencent Cloud-managed rules</li>
-<li>`rate`: Rate limiting rules</li>
-<li>`acl`: Custom rule</li>
-<li>`cc`: CC attack defense</li>
-<li>`bot`: Bot protection</li>
-Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param _modules The module to be activated. Values:
-<li>`waf`: Tencent Cloud-managed rules</li>
-<li>`rate`: Rate limiting rules</li>
-<li>`acl`: Custom rule</li>
-<li>`cc`: CC attack defense</li>
-<li>`bot`: Bot protection</li>
-Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 设置Effective module. the field value can be:.
+<li>`waf`: tencent cloud-managed rules</li>.
+<Li>`Rate`: rate limit</li>.
+<li>`acl`: custom rule</li>.
+<Li>`Cc`: cc attack defense</li>.
+<Li>`Bot`: bot protection</li>.
+                     * @param _modules Effective module. the field value can be:.
+<li>`waf`: tencent cloud-managed rules</li>.
+<Li>`Rate`: rate limit</li>.
+<li>`acl`: custom rule</li>.
+<Li>`Cc`: cc attack defense</li>.
+<Li>`Bot`: bot protection</li>.
                      * 
                      */
                     void SetModules(const std::vector<std::string>& _modules);
@@ -123,19 +119,15 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                     bool ModulesHasBeenSet() const;
 
                     /**
-                     * 获取Module settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return PartialModules Module settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Skip exception rule details for some rule ids. if null, use the last set configuration by default.
+                     * @return PartialModules Skip exception rule details for some rule ids. if null, use the last set configuration by default.
                      * 
                      */
                     std::vector<PartialModule> GetPartialModules() const;
 
                     /**
-                     * 设置Module settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _partialModules Module settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Skip exception rule details for some rule ids. if null, use the last set configuration by default.
+                     * @param _partialModules Skip exception rule details for some rule ids. if null, use the last set configuration by default.
                      * 
                      */
                     void SetPartialModules(const std::vector<PartialModule>& _partialModules);
@@ -148,19 +140,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool PartialModulesHasBeenSet() const;
 
                     /**
-                     * 获取Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return SkipConditions Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Details of the exception rule for skipping specific fields. if null, use the last set configuration by default.
+                     * @return SkipConditions Details of the exception rule for skipping specific fields. if null, use the last set configuration by default.
                      * 
                      */
                     std::vector<SkipCondition> GetSkipConditions() const;
 
                     /**
-                     * 设置Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _skipConditions Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Details of the exception rule for skipping specific fields. if null, use the last set configuration by default.
+                     * @param _skipConditions Details of the exception rule for skipping specific fields. if null, use the last set configuration by default.
                      * 
                      */
                     void SetSkipConditions(const std::vector<SkipCondition>& _skipConditions);
@@ -183,27 +171,24 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_typeHasBeenSet;
 
                     /**
-                     * The module to be activated. Values:
-<li>`waf`: Tencent Cloud-managed rules</li>
-<li>`rate`: Rate limiting rules</li>
-<li>`acl`: Custom rule</li>
-<li>`cc`: CC attack defense</li>
-<li>`bot`: Bot protection</li>
-Note: this field may return `null`, indicating that no valid value is obtained.
+                     * Effective module. the field value can be:.
+<li>`waf`: tencent cloud-managed rules</li>.
+<Li>`Rate`: rate limit</li>.
+<li>`acl`: custom rule</li>.
+<Li>`Cc`: cc attack defense</li>.
+<Li>`Bot`: bot protection</li>.
                      */
                     std::vector<std::string> m_modules;
                     bool m_modulesHasBeenSet;
 
                     /**
-                     * Module settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Skip exception rule details for some rule ids. if null, use the last set configuration by default.
                      */
                     std::vector<PartialModule> m_partialModules;
                     bool m_partialModulesHasBeenSet;
 
                     /**
-                     * Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Details of the exception rule for skipping specific fields. if null, use the last set configuration by default.
                      */
                     std::vector<SkipCondition> m_skipConditions;
                     bool m_skipConditionsHasBeenSet;

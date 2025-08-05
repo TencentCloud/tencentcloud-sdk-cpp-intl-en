@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/QualityControlItemConfig.h>
+#include <tencentcloud/mps/v20190612/model/QualityControlStrategy.h>
 
 
 namespace TencentCloud
@@ -246,6 +247,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool UpdateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Spot check policy for media quality inspection.
+                     * @return Strategy Spot check policy for media quality inspection.
+                     * 
+                     */
+                    QualityControlStrategy GetStrategy() const;
+
+                    /**
+                     * 设置Spot check policy for media quality inspection.
+                     * @param _strategy Spot check policy for media quality inspection.
+                     * 
+                     */
+                    void SetStrategy(const QualityControlStrategy& _strategy);
+
+                    /**
+                     * 判断参数 Strategy 是否已赋值
+                     * @return Strategy 是否已赋值
+                     * 
+                     */
+                    bool StrategyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -302,6 +324,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
+
+                    /**
+                     * Spot check policy for media quality inspection.
+                     */
+                    QualityControlStrategy m_strategy;
+                    bool m_strategyHasBeenSet;
 
                 };
             }

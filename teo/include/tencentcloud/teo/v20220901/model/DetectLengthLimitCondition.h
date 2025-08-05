@@ -72,31 +72,31 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Parameter value of the matched condition, used in pairs with the `Name` parameter.
-When the `Name` value is body_depth, `Values` only support passing in a single value. Values:
-<li>`8KB`;</li>
-<li>`64KB`;</li>
-<li>`128KB`.</li>
-                     * @return Values Parameter value of the matched condition, used in pairs with the `Name` parameter.
-When the `Name` value is body_depth, `Values` only support passing in a single value. Values:
-<li>`8KB`;</li>
-<li>`64KB`;</li>
-<li>`128KB`.</li>
+                     * 获取The parameter value of the match condition. the value is used in pairs with Name.
+When the Name value is body_depth, Values only support passing in a single value. valid Values:.
+<li>10KB;</li>
+<li>64KB;</li>
+<li>128KB.</li>
+                     * @return Values The parameter value of the match condition. the value is used in pairs with Name.
+When the Name value is body_depth, Values only support passing in a single value. valid Values:.
+<li>10KB;</li>
+<li>64KB;</li>
+<li>128KB.</li>
                      * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
-                     * 设置Parameter value of the matched condition, used in pairs with the `Name` parameter.
-When the `Name` value is body_depth, `Values` only support passing in a single value. Values:
-<li>`8KB`;</li>
-<li>`64KB`;</li>
-<li>`128KB`.</li>
-                     * @param _values Parameter value of the matched condition, used in pairs with the `Name` parameter.
-When the `Name` value is body_depth, `Values` only support passing in a single value. Values:
-<li>`8KB`;</li>
-<li>`64KB`;</li>
-<li>`128KB`.</li>
+                     * 设置The parameter value of the match condition. the value is used in pairs with Name.
+When the Name value is body_depth, Values only support passing in a single value. valid Values:.
+<li>10KB;</li>
+<li>64KB;</li>
+<li>128KB.</li>
+                     * @param _values The parameter value of the match condition. the value is used in pairs with Name.
+When the Name value is body_depth, Values only support passing in a single value. valid Values:.
+<li>10KB;</li>
+<li>64KB;</li>
+<li>128KB.</li>
                      * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
@@ -118,11 +118,11 @@ When the `Name` value is body_depth, `Values` only support passing in a single v
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Parameter value of the matched condition, used in pairs with the `Name` parameter.
-When the `Name` value is body_depth, `Values` only support passing in a single value. Values:
-<li>`8KB`;</li>
-<li>`64KB`;</li>
-<li>`128KB`.</li>
+                     * The parameter value of the match condition. the value is used in pairs with Name.
+When the Name value is body_depth, Values only support passing in a single value. valid Values:.
+<li>10KB;</li>
+<li>64KB;</li>
+<li>128KB.</li>
                      */
                     std::vector<std::string> m_values;
                     bool m_valuesHasBeenSet;

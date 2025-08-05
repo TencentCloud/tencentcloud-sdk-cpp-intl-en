@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取[Match condition](https://www.tencentcloud.com/document/product/1145/54759).
-                     * @return Condition [Match condition](https://www.tencentcloud.com/document/product/1145/54759).
+                     * 获取Match condition (https://intl.cloud.tencent.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
+                     * @return Condition Match condition (https://intl.cloud.tencent.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
                      * 
                      */
                     std::string GetCondition() const;
 
                     /**
-                     * 设置[Match condition](https://www.tencentcloud.com/document/product/1145/54759).
-                     * @param _condition [Match condition](https://www.tencentcloud.com/document/product/1145/54759).
+                     * 设置Match condition (https://intl.cloud.tencent.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
+                     * @param _condition Match condition (https://intl.cloud.tencent.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
                      * 
                      */
                     void SetCondition(const std::string& _condition);
@@ -70,18 +70,18 @@ namespace TencentCloud
                     bool ConditionHasBeenSet() const;
 
                     /**
-                     * 获取[Operations](Https://Cloud.Tencent.Com/Document/Product/1552/90438#C7bd7e02-9247-4a72-B0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
+                     * 获取[Operations]( https://www.tencentcloud.com/document/product/1145/54759#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
 Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return Actions [Operations](Https://Cloud.Tencent.Com/Document/Product/1552/90438#C7bd7e02-9247-4a72-B0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
+                     * @return Actions [Operations]( https://www.tencentcloud.com/document/product/1145/54759#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
 Note: this field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     std::vector<RuleEngineAction> GetActions() const;
 
                     /**
-                     * 设置[Operations](Https://Cloud.Tencent.Com/Document/Product/1552/90438#C7bd7e02-9247-4a72-B0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
+                     * 设置[Operations]( https://www.tencentcloud.com/document/product/1145/54759#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
 Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _actions [Operations](Https://Cloud.Tencent.Com/Document/Product/1552/90438#C7bd7e02-9247-4a72-B0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
+                     * @param _actions [Operations]( https://www.tencentcloud.com/document/product/1145/54759#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
 Note: this field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
@@ -122,13 +122,13 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                 private:
 
                     /**
-                     * [Match condition](https://www.tencentcloud.com/document/product/1145/54759).
+                     * Match condition (https://intl.cloud.tencent.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
                      */
                     std::string m_condition;
                     bool m_conditionHasBeenSet;
 
                     /**
-                     * [Operations](Https://Cloud.Tencent.Com/Document/Product/1552/90438#C7bd7e02-9247-4a72-B0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
+                     * [Operations]( https://www.tencentcloud.com/document/product/1145/54759#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
 Note: this field may return null, which indicates a failure to obtain a valid value.
                      */
                     std::vector<RuleEngineAction> m_actions;

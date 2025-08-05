@@ -105,6 +105,48 @@ namespace TencentCloud
                      */
                     bool ScrollTokenHasBeenSet() const;
 
+                    /**
+                     * 获取Query task start time.
+                     * @return StartTime Query task start time.
+                     * 
+                     */
+                    std::string GetStartTime() const;
+
+                    /**
+                     * 设置Query task start time.
+                     * @param _startTime Query task start time.
+                     * 
+                     */
+                    void SetStartTime(const std::string& _startTime);
+
+                    /**
+                     * 判断参数 StartTime 是否已赋值
+                     * @return StartTime 是否已赋值
+                     * 
+                     */
+                    bool StartTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Query task end time.
+                     * @return EndTime Query task end time.
+                     * 
+                     */
+                    std::string GetEndTime() const;
+
+                    /**
+                     * 设置Query task end time.
+                     * @param _endTime Query task end time.
+                     * 
+                     */
+                    void SetEndTime(const std::string& _endTime);
+
+                    /**
+                     * 判断参数 EndTime 是否已赋值
+                     * @return EndTime 是否已赋值
+                     * 
+                     */
+                    bool EndTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -124,6 +166,18 @@ namespace TencentCloud
                      */
                     std::string m_scrollToken;
                     bool m_scrollTokenHasBeenSet;
+
+                    /**
+                     * Query task start time.
+                     */
+                    std::string m_startTime;
+                    bool m_startTimeHasBeenSet;
+
+                    /**
+                     * Query task end time.
+                     */
+                    std::string m_endTime;
+                    bool m_endTimeHasBeenSet;
 
                 };
             }

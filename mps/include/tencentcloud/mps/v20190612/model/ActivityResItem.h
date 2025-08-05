@@ -34,6 +34,7 @@
 #include <tencentcloud/mps/v20190612/model/ScheduleReviewTaskResult.h>
 #include <tencentcloud/mps/v20190612/model/ScheduleAnalysisTaskResult.h>
 #include <tencentcloud/mps/v20190612/model/ScheduleQualityControlTaskResult.h>
+#include <tencentcloud/mps/v20190612/model/ScheduleExecRuleTaskResult.h>
 #include <tencentcloud/mps/v20190612/model/ScheduleSmartSubtitleTaskResult.h>
 
 
@@ -308,6 +309,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool QualityControlTaskHasBeenSet() const;
 
                     /**
+                     * 获取Conditional judgment task output.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return ExecRuleTask Conditional judgment task output.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    ScheduleExecRuleTaskResult GetExecRuleTask() const;
+
+                    /**
+                     * 设置Conditional judgment task output.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _execRuleTask Conditional judgment task output.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetExecRuleTask(const ScheduleExecRuleTaskResult& _execRuleTask);
+
+                    /**
+                     * 判断参数 ExecRuleTask 是否已赋值
+                     * @return ExecRuleTask 是否已赋值
+                     * 
+                     */
+                    bool ExecRuleTaskHasBeenSet() const;
+
+                    /**
                      * 获取Smart subtitle task output.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @return SmartSubtitlesTask Smart subtitle task output.
@@ -403,6 +429,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     ScheduleQualityControlTaskResult m_qualityControlTask;
                     bool m_qualityControlTaskHasBeenSet;
+
+                    /**
+                     * Conditional judgment task output.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    ScheduleExecRuleTaskResult m_execRuleTask;
+                    bool m_execRuleTaskHasBeenSet;
 
                     /**
                      * Smart subtitle task output.

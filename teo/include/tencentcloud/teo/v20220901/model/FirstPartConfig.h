@@ -47,27 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+                     * @return Switch Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
+                     * @param _switch Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -80,19 +80,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The transfer period threshold of the first 8 KB. If the threshold is reached, it’s considered a slow attack. Default: `5`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return StatTime The transfer period threshold of the first 8 KB. If the threshold is reached, it’s considered a slow attack. Default: `5`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取The statistical period of the first segment packet is in seconds. expect the duration to be 5 seconds by default.
+                     * @return StatTime The statistical period of the first segment packet is in seconds. expect the duration to be 5 seconds by default.
                      * 
                      */
                     uint64_t GetStatTime() const;
 
                     /**
-                     * 设置The transfer period threshold of the first 8 KB. If the threshold is reached, it’s considered a slow attack. Default: `5`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _statTime The transfer period threshold of the first 8 KB. If the threshold is reached, it’s considered a slow attack. Default: `5`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置The statistical period of the first segment packet is in seconds. expect the duration to be 5 seconds by default.
+                     * @param _statTime The statistical period of the first segment packet is in seconds. expect the duration to be 5 seconds by default.
                      * 
                      */
                     void SetStatTime(const uint64_t& _statTime);
@@ -107,17 +103,16 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Switch. valid values:.
+<li>`on`: Enable;</li>
+
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The transfer period threshold of the first 8 KB. If the threshold is reached, it’s considered a slow attack. Default: `5`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * The statistical period of the first segment packet is in seconds. expect the duration to be 5 seconds by default.
                      */
                     uint64_t m_statTime;
                     bool m_statTimeHasBeenSet;

@@ -170,19 +170,15 @@ namespace TencentCloud
                     bool MatchFromTypeHasBeenSet() const;
 
                     /**
-                     * 获取The value that matches the key.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return MatchFrom The value that matches the key.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Match the Key value.
+                     * @return MatchFrom Match the Key value.
                      * 
                      */
                     std::vector<std::string> GetMatchFrom() const;
 
                     /**
-                     * 设置The value that matches the key.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _matchFrom The value that matches the key.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Match the Key value.
+                     * @param _matchFrom Match the Key value.
                      * 
                      */
                     void SetMatchFrom(const std::vector<std::string>& _matchFrom);
@@ -224,19 +220,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool MatchContentTypeHasBeenSet() const;
 
                     /**
-                     * 获取The value that matches the content.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return MatchContent The value that matches the content.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Match the Value.
+                     * @return MatchContent Match the Value.
                      * 
                      */
                     std::vector<std::string> GetMatchContent() const;
 
                     /**
-                     * 设置The value that matches the content.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _matchContent The value that matches the content.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Match the Value.
+                     * @param _matchContent Match the Value.
                      * 
                      */
                     void SetMatchContent(const std::vector<std::string>& _matchContent);
@@ -284,8 +276,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_matchFromTypeHasBeenSet;
 
                     /**
-                     * The value that matches the key.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Match the Key value.
                      */
                     std::vector<std::string> m_matchFrom;
                     bool m_matchFromHasBeenSet;
@@ -299,8 +290,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_matchContentTypeHasBeenSet;
 
                     /**
-                     * The value that matches the content.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Match the Value.
                      */
                     std::vector<std::string> m_matchContent;
                     bool m_matchContentHasBeenSet;

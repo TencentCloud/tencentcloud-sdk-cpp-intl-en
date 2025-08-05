@@ -204,19 +204,15 @@ namespace TencentCloud
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Origin-pull host header
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return HostHeader Origin-pull host header
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Specifies the origin-pull Host Header.
+                     * @return HostHeader Specifies the origin-pull Host Header.
                      * 
                      */
                     std::string GetHostHeader() const;
 
                     /**
-                     * 设置Origin-pull host header
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _hostHeader Origin-pull host header
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Specifies the origin-pull Host Header.
+                     * @param _hostHeader Specifies the origin-pull Host Header.
                      * 
                      */
                     void SetHostHeader(const std::string& _hostHeader);
@@ -275,8 +271,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * Origin-pull host header
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Specifies the origin-pull Host Header.
                      */
                     std::string m_hostHeader;
                     bool m_hostHeaderHasBeenSet;

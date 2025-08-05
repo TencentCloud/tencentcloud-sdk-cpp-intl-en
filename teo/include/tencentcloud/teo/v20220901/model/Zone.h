@@ -489,19 +489,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ActiveStatusHasBeenSet() const;
 
                     /**
-                     * 获取The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Site alias. a composite of digits, numbers, english letters, -, and _, limited to 20 characters.
+                     * @return AliasZoneName Site alias. a composite of digits, numbers, english letters, -, and _, limited to 20 characters.
                      * 
                      */
                     std::string GetAliasZoneName() const;
 
                     /**
-                     * 设置The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _aliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Site alias. a composite of digits, numbers, english letters, -, and _, limited to 20 characters.
+                     * @param _aliasZoneName Site alias. a composite of digits, numbers, english letters, -, and _, limited to 20 characters.
                      * 
                      */
                     void SetAliasZoneName(const std::string& _aliasZoneName);
@@ -713,8 +709,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_activeStatusHasBeenSet;
 
                     /**
-                     * The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Site alias. a composite of digits, numbers, english letters, -, and _, limited to 20 characters.
                      */
                     std::string m_aliasZoneName;
                     bool m_aliasZoneNameHasBeenSet;

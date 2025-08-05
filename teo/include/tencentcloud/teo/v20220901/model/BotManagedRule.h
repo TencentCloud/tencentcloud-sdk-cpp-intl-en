@@ -105,19 +105,15 @@ namespace TencentCloud
                     bool RuleIDHasBeenSet() const;
 
                     /**
-                     * 获取The ID of the rule that applies the "Allow" action.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TransManagedIds The ID of the rule that applies the "Allow" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Rule ID to allow. defaults to no rules configured for allowance.
+                     * @return TransManagedIds Rule ID to allow. defaults to no rules configured for allowance.
                      * 
                      */
                     std::vector<int64_t> GetTransManagedIds() const;
 
                     /**
-                     * 设置The ID of the rule that applies the "Allow" action.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _transManagedIds The ID of the rule that applies the "Allow" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Rule ID to allow. defaults to no rules configured for allowance.
+                     * @param _transManagedIds Rule ID to allow. defaults to no rules configured for allowance.
                      * 
                      */
                     void SetTransManagedIds(const std::vector<int64_t>& _transManagedIds);
@@ -130,19 +126,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TransManagedIdsHasBeenSet() const;
 
                     /**
-                     * 获取The ID of the rule that applies the "JavaScript challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AlgManagedIds The ID of the rule that applies the "JavaScript challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Rule ID of the JS challenge. default is all rules without configuring the JS challenge.
+                     * @return AlgManagedIds Rule ID of the JS challenge. default is all rules without configuring the JS challenge.
                      * 
                      */
                     std::vector<int64_t> GetAlgManagedIds() const;
 
                     /**
-                     * 设置The ID of the rule that applies the "JavaScript challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _algManagedIds The ID of the rule that applies the "JavaScript challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Rule ID of the JS challenge. default is all rules without configuring the JS challenge.
+                     * @param _algManagedIds Rule ID of the JS challenge. default is all rules without configuring the JS challenge.
                      * 
                      */
                     void SetAlgManagedIds(const std::vector<int64_t>& _algManagedIds);
@@ -155,19 +147,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AlgManagedIdsHasBeenSet() const;
 
                     /**
-                     * 获取The ID of the rule that applies the "Managed challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CapManagedIds The ID of the rule that applies the "Managed challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The rule ID for digit verification code. by default, all rules do not configure digit verification code.
+                     * @return CapManagedIds The rule ID for digit verification code. by default, all rules do not configure digit verification code.
                      * 
                      */
                     std::vector<int64_t> GetCapManagedIds() const;
 
                     /**
-                     * 设置The ID of the rule that applies the "Managed challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _capManagedIds The ID of the rule that applies the "Managed challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The rule ID for digit verification code. by default, all rules do not configure digit verification code.
+                     * @param _capManagedIds The rule ID for digit verification code. by default, all rules do not configure digit verification code.
                      * 
                      */
                     void SetCapManagedIds(const std::vector<int64_t>& _capManagedIds);
@@ -180,19 +168,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CapManagedIdsHasBeenSet() const;
 
                     /**
-                     * 获取The ID of the rule that applies the "Observe" action.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MonManagedIds The ID of the rule that applies the "Observe" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Rule ID for observation. by default, observation is not configured for all rules.
+                     * @return MonManagedIds Rule ID for observation. by default, observation is not configured for all rules.
                      * 
                      */
                     std::vector<int64_t> GetMonManagedIds() const;
 
                     /**
-                     * 设置The ID of the rule that applies the "Observe" action.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _monManagedIds The ID of the rule that applies the "Observe" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Rule ID for observation. by default, observation is not configured for all rules.
+                     * @param _monManagedIds Rule ID for observation. by default, observation is not configured for all rules.
                      * 
                      */
                     void SetMonManagedIds(const std::vector<int64_t>& _monManagedIds);
@@ -205,19 +189,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MonManagedIdsHasBeenSet() const;
 
                     /**
-                     * 获取The ID of the rule that applies the "Block" action.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DropManagedIds The ID of the rule that applies the "Block" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Rule ID for interception. by default, all rules have no configuration interception.
+                     * @return DropManagedIds Rule ID for interception. by default, all rules have no configuration interception.
                      * 
                      */
                     std::vector<int64_t> GetDropManagedIds() const;
 
                     /**
-                     * 设置The ID of the rule that applies the "Block" action.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dropManagedIds The ID of the rule that applies the "Block" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Rule ID for interception. by default, all rules have no configuration interception.
+                     * @param _dropManagedIds Rule ID for interception. by default, all rules have no configuration interception.
                      * 
                      */
                     void SetDropManagedIds(const std::vector<int64_t>& _dropManagedIds);
@@ -248,36 +228,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_ruleIDHasBeenSet;
 
                     /**
-                     * The ID of the rule that applies the "Allow" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Rule ID to allow. defaults to no rules configured for allowance.
                      */
                     std::vector<int64_t> m_transManagedIds;
                     bool m_transManagedIdsHasBeenSet;
 
                     /**
-                     * The ID of the rule that applies the "JavaScript challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Rule ID of the JS challenge. default is all rules without configuring the JS challenge.
                      */
                     std::vector<int64_t> m_algManagedIds;
                     bool m_algManagedIdsHasBeenSet;
 
                     /**
-                     * The ID of the rule that applies the "Managed challenge" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The rule ID for digit verification code. by default, all rules do not configure digit verification code.
                      */
                     std::vector<int64_t> m_capManagedIds;
                     bool m_capManagedIdsHasBeenSet;
 
                     /**
-                     * The ID of the rule that applies the "Observe" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Rule ID for observation. by default, observation is not configured for all rules.
                      */
                     std::vector<int64_t> m_monManagedIds;
                     bool m_monManagedIdsHasBeenSet;
 
                     /**
-                     * The ID of the rule that applies the "Block" action.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Rule ID for interception. by default, all rules have no configuration interception.
                      */
                     std::vector<int64_t> m_dropManagedIds;
                     bool m_dropManagedIdsHasBeenSet;

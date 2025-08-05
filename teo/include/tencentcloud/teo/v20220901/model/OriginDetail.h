@@ -259,15 +259,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PrivateParametersHasBeenSet() const;
 
                     /**
-                     * 获取current configured origin HOST header.
-                     * @return HostHeader current configured origin HOST header.
+                     * 获取Specifies the current configuration of the origin-pull HOST header.
+                     * @return HostHeader Specifies the current configuration of the origin-pull HOST header.
                      * 
                      */
                     std::string GetHostHeader() const;
 
                     /**
-                     * 设置current configured origin HOST header.
-                     * @param _hostHeader current configured origin HOST header.
+                     * 设置Specifies the current configuration of the origin-pull HOST header.
+                     * @param _hostHeader Specifies the current configuration of the origin-pull HOST header.
                      * 
                      */
                     void SetHostHeader(const std::string& _hostHeader);
@@ -449,7 +449,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_privateParametersHasBeenSet;
 
                     /**
-                     * current configured origin HOST header.
+                     * Specifies the current configuration of the origin-pull HOST header.
                      */
                     std::string m_hostHeader;
                     bool m_hostHeaderHasBeenSet;

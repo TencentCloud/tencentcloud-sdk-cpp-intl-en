@@ -78,19 +78,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Detect slow attacks by the transfer period of the first 8 KB of requests
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return FirstPartConfig Detect slow attacks by the transfer period of the first 8 KB of requests
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取First packet configuration.
+                     * @return FirstPartConfig First packet configuration.
                      * 
                      */
                     FirstPartConfig GetFirstPartConfig() const;
 
                     /**
-                     * 设置Detect slow attacks by the transfer period of the first 8 KB of requests
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _firstPartConfig Detect slow attacks by the transfer period of the first 8 KB of requests
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置First packet configuration.
+                     * @param _firstPartConfig First packet configuration.
                      * 
                      */
                     void SetFirstPartConfig(const FirstPartConfig& _firstPartConfig);
@@ -103,19 +99,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool FirstPartConfigHasBeenSet() const;
 
                     /**
-                     * 获取Detect slow attacks by the data rate of the main body (excluding the first 8 KB) of requests
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return SlowRateConfig Detect slow attacks by the data rate of the main body (excluding the first 8 KB) of requests
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Specifies the basic configuration.
+                     * @return SlowRateConfig Specifies the basic configuration.
                      * 
                      */
                     SlowRateConfig GetSlowRateConfig() const;
 
                     /**
-                     * 设置Detect slow attacks by the data rate of the main body (excluding the first 8 KB) of requests
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _slowRateConfig Detect slow attacks by the data rate of the main body (excluding the first 8 KB) of requests
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Specifies the basic configuration.
+                     * @param _slowRateConfig Specifies the basic configuration.
                      * 
                      */
                     void SetSlowRateConfig(const SlowRateConfig& _slowRateConfig);
@@ -128,27 +120,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool SlowRateConfigHasBeenSet() const;
 
                     /**
-                     * 获取The action to taken when a slow attack is detected. Values:
-<li>`monitor`: Observe</li>
-<li>`drop`: Block the request</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Action The action to taken when a slow attack is detected. Values:
-<li>`monitor`: Observe</li>
-<li>`drop`: Block the request</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Handling action for slow attack. valid values:.
+<li>`monitor`: observe</li>.
+<li>`drop`: block the request.</li>.
+                     * @return Action Handling action for slow attack. valid values:.
+<li>`monitor`: observe</li>.
+<li>`drop`: block the request.</li>.
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置The action to taken when a slow attack is detected. Values:
-<li>`monitor`: Observe</li>
-<li>`drop`: Block the request</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _action The action to taken when a slow attack is detected. Values:
-<li>`monitor`: Observe</li>
-<li>`drop`: Block the request</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Handling action for slow attack. valid values:.
+<li>`monitor`: observe</li>.
+<li>`drop`: block the request.</li>.
+                     * @param _action Handling action for slow attack. valid values:.
+<li>`monitor`: observe</li>.
+<li>`drop`: block the request.</li>.
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -161,19 +149,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取ID of the rule
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return RuleId ID of the rule
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Specifies the Id of this rule.
+                     * @return RuleId Specifies the Id of this rule.
                      * 
                      */
                     uint64_t GetRuleId() const;
 
                     /**
-                     * 设置ID of the rule
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _ruleId ID of the rule
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Specifies the Id of this rule.
+                     * @param _ruleId Specifies the Id of this rule.
                      * 
                      */
                     void SetRuleId(const uint64_t& _ruleId);
@@ -196,31 +180,27 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Detect slow attacks by the transfer period of the first 8 KB of requests
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * First packet configuration.
                      */
                     FirstPartConfig m_firstPartConfig;
                     bool m_firstPartConfigHasBeenSet;
 
                     /**
-                     * Detect slow attacks by the data rate of the main body (excluding the first 8 KB) of requests
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Specifies the basic configuration.
                      */
                     SlowRateConfig m_slowRateConfig;
                     bool m_slowRateConfigHasBeenSet;
 
                     /**
-                     * The action to taken when a slow attack is detected. Values:
-<li>`monitor`: Observe</li>
-<li>`drop`: Block the request</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Handling action for slow attack. valid values:.
+<li>`monitor`: observe</li>.
+<li>`drop`: block the request.</li>.
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * ID of the rule
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Specifies the Id of this rule.
                      */
                     uint64_t m_ruleId;
                     bool m_ruleIdHasBeenSet;

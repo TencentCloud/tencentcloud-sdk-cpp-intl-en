@@ -34,6 +34,7 @@
 #include <tencentcloud/mps/v20190612/model/AiAnalysisTaskInput.h>
 #include <tencentcloud/mps/v20190612/model/AiRecognitionTaskInput.h>
 #include <tencentcloud/mps/v20190612/model/AiQualityControlTaskInput.h>
+#include <tencentcloud/mps/v20190612/model/ExecRulesTask.h>
 #include <tencentcloud/mps/v20190612/model/SmartSubtitlesTaskInput.h>
 
 
@@ -272,6 +273,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool QualityControlTaskHasBeenSet() const;
 
                     /**
+                     * 获取Conditional judgment of the task.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return ExecRulesTask Conditional judgment of the task.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    ExecRulesTask GetExecRulesTask() const;
+
+                    /**
+                     * 设置Conditional judgment of the task.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _execRulesTask Conditional judgment of the task.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetExecRulesTask(const ExecRulesTask& _execRulesTask);
+
+                    /**
+                     * 判断参数 ExecRulesTask 是否已赋值
+                     * @return ExecRulesTask 是否已赋值
+                     * 
+                     */
+                    bool ExecRulesTaskHasBeenSet() const;
+
+                    /**
                      * 获取Smart subtitle task.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @return SmartSubtitlesTask Smart subtitle task.
@@ -358,6 +384,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     AiQualityControlTaskInput m_qualityControlTask;
                     bool m_qualityControlTaskHasBeenSet;
+
+                    /**
+                     * Conditional judgment of the task.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    ExecRulesTask m_execRulesTask;
+                    bool m_execRulesTaskHasBeenSet;
 
                     /**
                      * Smart subtitle task.

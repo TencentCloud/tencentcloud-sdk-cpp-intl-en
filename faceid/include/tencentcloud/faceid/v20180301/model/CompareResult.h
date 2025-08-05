@@ -147,15 +147,15 @@ namespace TencentCloud
                     bool LiveDataHasBeenSet() const;
 
                     /**
-                     * 获取The download URL of the video used for verification, which is valid for 10 minutes.
-                     * @return LiveVideo The download URL of the video used for verification, which is valid for 10 minutes.
+                     * 获取The download URL of the video used for verification, which contains specific color reflection effects, is valid for 10 minutes.
+                     * @return LiveVideo The download URL of the video used for verification, which contains specific color reflection effects, is valid for 10 minutes.
                      * 
                      */
                     FileInfo GetLiveVideo() const;
 
                     /**
-                     * 设置The download URL of the video used for verification, which is valid for 10 minutes.
-                     * @param _liveVideo The download URL of the video used for verification, which is valid for 10 minutes.
+                     * 设置The download URL of the video used for verification, which contains specific color reflection effects, is valid for 10 minutes.
+                     * @param _liveVideo The download URL of the video used for verification, which contains specific color reflection effects, is valid for 10 minutes.
                      * 
                      */
                     void SetLiveVideo(const FileInfo& _liveVideo);
@@ -166,6 +166,27 @@ namespace TencentCloud
                      * 
                      */
                     bool LiveVideoHasBeenSet() const;
+
+                    /**
+                     * 获取Records the specific action performed by the user, used for AI Face Shield analysis.
+                     * @return ActionVideo Records the specific action performed by the user, used for AI Face Shield analysis.
+                     * 
+                     */
+                    FileInfo GetActionVideo() const;
+
+                    /**
+                     * 设置Records the specific action performed by the user, used for AI Face Shield analysis.
+                     * @param _actionVideo Records the specific action performed by the user, used for AI Face Shield analysis.
+                     * 
+                     */
+                    void SetActionVideo(const FileInfo& _actionVideo);
+
+                    /**
+                     * 判断参数 ActionVideo 是否已赋值
+                     * @return ActionVideo 是否已赋值
+                     * 
+                     */
+                    bool ActionVideoHasBeenSet() const;
 
                     /**
                      * 获取The liveness detection result code.
@@ -467,10 +488,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_liveDataHasBeenSet;
 
                     /**
-                     * The download URL of the video used for verification, which is valid for 10 minutes.
+                     * The download URL of the video used for verification, which contains specific color reflection effects, is valid for 10 minutes.
                      */
                     FileInfo m_liveVideo;
                     bool m_liveVideoHasBeenSet;
+
+                    /**
+                     * Records the specific action performed by the user, used for AI Face Shield analysis.
+                     */
+                    FileInfo m_actionVideo;
+                    bool m_actionVideoHasBeenSet;
 
                     /**
                      * The liveness detection result code.
