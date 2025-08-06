@@ -126,6 +126,49 @@ TrtcClient::CreateCloudRecordingOutcomeCallable TrtcClient::CreateCloudRecording
     return task->get_future();
 }
 
+TrtcClient::CreateCloudSliceTaskOutcome TrtcClient::CreateCloudSliceTask(const CreateCloudSliceTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateCloudSliceTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateCloudSliceTaskResponse rsp = CreateCloudSliceTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateCloudSliceTaskOutcome(rsp);
+        else
+            return CreateCloudSliceTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateCloudSliceTaskOutcome(outcome.GetError());
+    }
+}
+
+void TrtcClient::CreateCloudSliceTaskAsync(const CreateCloudSliceTaskRequest& request, const CreateCloudSliceTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateCloudSliceTask(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TrtcClient::CreateCloudSliceTaskOutcomeCallable TrtcClient::CreateCloudSliceTaskCallable(const CreateCloudSliceTaskRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateCloudSliceTaskOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateCloudSliceTask(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TrtcClient::DeleteCloudRecordingOutcome TrtcClient::DeleteCloudRecording(const DeleteCloudRecordingRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteCloudRecording");
@@ -162,6 +205,49 @@ TrtcClient::DeleteCloudRecordingOutcomeCallable TrtcClient::DeleteCloudRecording
         [this, request]()
         {
             return this->DeleteCloudRecording(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TrtcClient::DeleteCloudSliceTaskOutcome TrtcClient::DeleteCloudSliceTask(const DeleteCloudSliceTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteCloudSliceTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteCloudSliceTaskResponse rsp = DeleteCloudSliceTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteCloudSliceTaskOutcome(rsp);
+        else
+            return DeleteCloudSliceTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteCloudSliceTaskOutcome(outcome.GetError());
+    }
+}
+
+void TrtcClient::DeleteCloudSliceTaskAsync(const DeleteCloudSliceTaskRequest& request, const DeleteCloudSliceTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteCloudSliceTask(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TrtcClient::DeleteCloudSliceTaskOutcomeCallable TrtcClient::DeleteCloudSliceTaskCallable(const DeleteCloudSliceTaskRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteCloudSliceTaskOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteCloudSliceTask(request);
         }
     );
 
@@ -334,6 +420,49 @@ TrtcClient::DescribeCloudRecordingOutcomeCallable TrtcClient::DescribeCloudRecor
         [this, request]()
         {
             return this->DescribeCloudRecording(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TrtcClient::DescribeCloudSliceTaskOutcome TrtcClient::DescribeCloudSliceTask(const DescribeCloudSliceTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCloudSliceTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCloudSliceTaskResponse rsp = DescribeCloudSliceTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCloudSliceTaskOutcome(rsp);
+        else
+            return DescribeCloudSliceTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCloudSliceTaskOutcome(outcome.GetError());
+    }
+}
+
+void TrtcClient::DescribeCloudSliceTaskAsync(const DescribeCloudSliceTaskRequest& request, const DescribeCloudSliceTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCloudSliceTask(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TrtcClient::DescribeCloudSliceTaskOutcomeCallable TrtcClient::DescribeCloudSliceTaskCallable(const DescribeCloudSliceTaskRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCloudSliceTaskOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCloudSliceTask(request);
         }
     );
 
@@ -1151,6 +1280,49 @@ TrtcClient::ModifyCloudRecordingOutcomeCallable TrtcClient::ModifyCloudRecording
         [this, request]()
         {
             return this->ModifyCloudRecording(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TrtcClient::ModifyCloudSliceTaskOutcome TrtcClient::ModifyCloudSliceTask(const ModifyCloudSliceTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyCloudSliceTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyCloudSliceTaskResponse rsp = ModifyCloudSliceTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyCloudSliceTaskOutcome(rsp);
+        else
+            return ModifyCloudSliceTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyCloudSliceTaskOutcome(outcome.GetError());
+    }
+}
+
+void TrtcClient::ModifyCloudSliceTaskAsync(const ModifyCloudSliceTaskRequest& request, const ModifyCloudSliceTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyCloudSliceTask(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TrtcClient::ModifyCloudSliceTaskOutcomeCallable TrtcClient::ModifyCloudSliceTaskCallable(const ModifyCloudSliceTaskRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyCloudSliceTaskOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyCloudSliceTask(request);
         }
     );
 

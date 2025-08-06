@@ -118,15 +118,15 @@ Note: This field may return null, indicating that no valid value was found.
                     bool ChargeUnitHasBeenSet() const;
 
                     /**
-                     * 获取Original price. Unit: CNY. Returned only for prepaid price inquiry.
-                     * @return OriginalPrice Original price. Unit: CNY. Returned only for prepaid price inquiry.
+                     * 获取Original price. Unit: USD. Returned only for prepaid price inquiry.
+                     * @return OriginalPrice Original price. Unit: USD. Returned only for prepaid price inquiry.
                      * 
                      */
                     double GetOriginalPrice() const;
 
                     /**
-                     * 设置Original price. Unit: CNY. Returned only for prepaid price inquiry.
-                     * @param _originalPrice Original price. Unit: CNY. Returned only for prepaid price inquiry.
+                     * 设置Original price. Unit: USD. Returned only for prepaid price inquiry.
+                     * @param _originalPrice Original price. Unit: USD. Returned only for prepaid price inquiry.
                      * 
                      */
                     void SetOriginalPrice(const double& _originalPrice);
@@ -161,7 +161,7 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_chargeUnitHasBeenSet;
 
                     /**
-                     * Original price. Unit: CNY. Returned only for prepaid price inquiry.
+                     * Original price. Unit: USD. Returned only for prepaid price inquiry.
                      */
                     double m_originalPrice;
                     bool m_originalPriceHasBeenSet;
