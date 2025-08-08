@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Filter by instance ID
-                     * @return InstanceId Filter by instance ID
+                     * 获取Filter by instance ID.
+                     * @return InstanceId Filter by instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Filter by instance ID
-                     * @param _instanceId Filter by instance ID
+                     * 设置Filter by instance ID.
+                     * @param _instanceId Filter by instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取The list of instance version numbers
-                     * @return VersionSet The list of instance version numbers
+                     * 获取The list of instance version numbers.
+                     * @return VersionSet The list of instance version numbers.
                      * 
                      */
                     std::vector<std::string> GetVersionSet() const;
 
                     /**
-                     * 设置The list of instance version numbers
-                     * @param _versionSet The list of instance version numbers
+                     * 设置The list of instance version numbers.
+                     * @param _versionSet The list of instance version numbers.
                      * 
                      */
                     void SetVersionSet(const std::vector<std::string>& _versionSet);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool VersionSetHasBeenSet() const;
 
                     /**
-                     * 获取Instance AZ ID in the format of ap-guangzhou-2
-                     * @return Zone Instance AZ ID in the format of ap-guangzhou-2
+                     * 获取Instance AZ ID in the format of ap-guangzhou-3.
+                     * @return Zone Instance AZ ID in the format of ap-guangzhou-3.
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Instance AZ ID in the format of ap-guangzhou-2
-                     * @param _zone Instance AZ ID in the format of ap-guangzhou-2
+                     * 设置Instance AZ ID in the format of ap-guangzhou-3.
+                     * @param _zone Instance AZ ID in the format of ap-guangzhou-3.
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -177,7 +177,7 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Filter by instance ID
+                     * Filter by instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -189,13 +189,13 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * The list of instance version numbers
+                     * The list of instance version numbers.
                      */
                     std::vector<std::string> m_versionSet;
                     bool m_versionSetHasBeenSet;
 
                     /**
-                     * Instance AZ ID in the format of ap-guangzhou-2
+                     * Instance AZ ID in the format of ap-guangzhou-3.
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;

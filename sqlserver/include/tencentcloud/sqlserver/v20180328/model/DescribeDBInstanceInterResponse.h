@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of records returned
-                     * @return TotalCount Number of records returned
+                     * 获取Number of records returned.
+                     * @return TotalCount Number of records returned.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Details of instance in the interworking group
-                     * @return InterInstanceSet Details of instance in the interworking group
+                     * 获取Details of instance in the interworking group.
+                     * @return InterInstanceSet Details of instance in the interworking group.
                      * 
                      */
                     std::vector<InterInstance> GetInterInstanceSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of records returned
+                     * Number of records returned.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Details of instance in the interworking group
+                     * Details of instance in the interworking group.
                      */
                     std::vector<InterInstance> m_interInstanceSet;
                     bool m_interInstanceSetHasBeenSet;

@@ -31,6 +31,8 @@
 #include <tencentcloud/dnspod/v20210323/model/CreateDomainBatchResponse.h>
 #include <tencentcloud/dnspod/v20210323/model/CreateDomainGroupRequest.h>
 #include <tencentcloud/dnspod/v20210323/model/CreateDomainGroupResponse.h>
+#include <tencentcloud/dnspod/v20210323/model/CreatePackageOrderRequest.h>
+#include <tencentcloud/dnspod/v20210323/model/CreatePackageOrderResponse.h>
 #include <tencentcloud/dnspod/v20210323/model/CreateRecordRequest.h>
 #include <tencentcloud/dnspod/v20210323/model/CreateRecordResponse.h>
 #include <tencentcloud/dnspod/v20210323/model/CreateRecordBatchRequest.h>
@@ -123,6 +125,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateDomainGroupResponse> CreateDomainGroupOutcome;
                 typedef std::future<CreateDomainGroupOutcome> CreateDomainGroupOutcomeCallable;
                 typedef std::function<void(const DnspodClient*, const Model::CreateDomainGroupRequest&, CreateDomainGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDomainGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreatePackageOrderResponse> CreatePackageOrderOutcome;
+                typedef std::future<CreatePackageOrderOutcome> CreatePackageOrderOutcomeCallable;
+                typedef std::function<void(const DnspodClient*, const Model::CreatePackageOrderRequest&, CreatePackageOrderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreatePackageOrderAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateRecordResponse> CreateRecordOutcome;
                 typedef std::future<CreateRecordOutcome> CreateRecordOutcomeCallable;
                 typedef std::function<void(const DnspodClient*, const Model::CreateRecordRequest&, CreateRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRecordAsyncHandler;
@@ -260,6 +265,15 @@ namespace TencentCloud
                 CreateDomainGroupOutcome CreateDomainGroup(const Model::CreateDomainGroupRequest &request);
                 void CreateDomainGroupAsync(const Model::CreateDomainGroupRequest& request, const CreateDomainGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateDomainGroupOutcomeCallable CreateDomainGroupCallable(const Model::CreateDomainGroupRequest& request);
+
+                /**
+                 *This API is used to enable a paid plan on the international website.
+                 * @param req CreatePackageOrderRequest
+                 * @return CreatePackageOrderOutcome
+                 */
+                CreatePackageOrderOutcome CreatePackageOrder(const Model::CreatePackageOrderRequest &request);
+                void CreatePackageOrderAsync(const Model::CreatePackageOrderRequest& request, const CreatePackageOrderAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreatePackageOrderOutcomeCallable CreatePackageOrderCallable(const Model::CreatePackageOrderRequest& request);
 
                 /**
                  *This API is used to add a record.

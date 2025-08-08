@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return InstanceId 
+                     * 获取Instance ID in the format of  `mssql-3l3fgqn7`.
+                     * @return InstanceId Instance ID in the format of  `mssql-3l3fgqn7`.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置
-                     * @param _instanceId 
+                     * 设置Instance ID in the format of  `mssql-3l3fgqn7`.
+                     * @param _instanceId Instance ID in the format of  `mssql-3l3fgqn7`.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Zone 
+                     * 获取Instance AZ, such as `ap-guangzhou-1` (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the`DescribeZones` API.
+                     * @return Zone Instance AZ, such as `ap-guangzhou-1` (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the`DescribeZones` API.
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置
-                     * @param _zone 
+                     * 设置Instance AZ, such as `ap-guangzhou-1` (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the`DescribeZones` API.
+                     * @param _zone Instance AZ, such as `ap-guangzhou-1` (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the`DescribeZones` API.
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReadOnlyGroupType 
+                     * 获取Read-only group types. Valid values: `1` (each read-only replica is placed in one auto-created read-only group), `2` (all read-only replicas are placed in one auto-created read-only group), `3` (all read-only replicas are placed in one existing read-only group).
+                     * @return ReadOnlyGroupType Read-only group types. Valid values: `1` (each read-only replica is placed in one auto-created read-only group), `2` (all read-only replicas are placed in one auto-created read-only group), `3` (all read-only replicas are placed in one existing read-only group).
                      * 
                      */
                     int64_t GetReadOnlyGroupType() const;
 
                     /**
-                     * 设置
-                     * @param _readOnlyGroupType 
+                     * 设置Read-only group types. Valid values: `1` (each read-only replica is placed in one auto-created read-only group), `2` (all read-only replicas are placed in one auto-created read-only group), `3` (all read-only replicas are placed in one existing read-only group).
+                     * @param _readOnlyGroupType Read-only group types. Valid values: `1` (each read-only replica is placed in one auto-created read-only group), `2` (all read-only replicas are placed in one auto-created read-only group), `3` (all read-only replicas are placed in one existing read-only group).
                      * 
                      */
                     void SetReadOnlyGroupType(const int64_t& _readOnlyGroupType);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool ReadOnlyGroupTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Memory 
+                     * 获取Instance memory size in GB.
+                     * @return Memory Instance memory size in GB.
                      * 
                      */
                     int64_t GetMemory() const;
 
                     /**
-                     * 设置
-                     * @param _memory 
+                     * 设置Instance memory size in GB.
+                     * @param _memory Instance memory size in GB.
                      * 
                      */
                     void SetMemory(const int64_t& _memory);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Storage 
+                     * 获取Instance disk size in GB.
+                     * @return Storage Instance disk size in GB.
                      * 
                      */
                     int64_t GetStorage() const;
 
                     /**
-                     * 设置
-                     * @param _storage 
+                     * 设置Instance disk size in GB.
+                     * @param _storage Instance disk size in GB.
                      * 
                      */
                     void SetStorage(const int64_t& _storage);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool StorageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReadOnlyGroupForcedUpgrade 
+                     * 获取Valid values: `0` (not upgrade the primary instance by default), `1` (upgrade the primary instance to complete the RO deployment).  You need to pass in `1` for this parameter and upgrade the primary instance to cluster edition.
+                     * @return ReadOnlyGroupForcedUpgrade Valid values: `0` (not upgrade the primary instance by default), `1` (upgrade the primary instance to complete the RO deployment).  You need to pass in `1` for this parameter and upgrade the primary instance to cluster edition.
                      * 
                      */
                     int64_t GetReadOnlyGroupForcedUpgrade() const;
 
                     /**
-                     * 设置
-                     * @param _readOnlyGroupForcedUpgrade 
+                     * 设置Valid values: `0` (not upgrade the primary instance by default), `1` (upgrade the primary instance to complete the RO deployment).  You need to pass in `1` for this parameter and upgrade the primary instance to cluster edition.
+                     * @param _readOnlyGroupForcedUpgrade Valid values: `0` (not upgrade the primary instance by default), `1` (upgrade the primary instance to complete the RO deployment).  You need to pass in `1` for this parameter and upgrade the primary instance to cluster edition.
                      * 
                      */
                     void SetReadOnlyGroupForcedUpgrade(const int64_t& _readOnlyGroupForcedUpgrade);
@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool ReadOnlyGroupForcedUpgradeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReadOnlyGroupId 
+                     * 获取Existing read-only group ID, which is required when `ReadOnlyGroupType` is `3`.
+                     * @return ReadOnlyGroupId Existing read-only group ID, which is required when `ReadOnlyGroupType` is `3`.
                      * 
                      */
                     std::string GetReadOnlyGroupId() const;
 
                     /**
-                     * 设置
-                     * @param _readOnlyGroupId 
+                     * 设置Existing read-only group ID, which is required when `ReadOnlyGroupType` is `3`.
+                     * @param _readOnlyGroupId Existing read-only group ID, which is required when `ReadOnlyGroupType` is `3`.
                      * 
                      */
                     void SetReadOnlyGroupId(const std::string& _readOnlyGroupId);
@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool ReadOnlyGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReadOnlyGroupName 
+                     * 获取New read-only group ID, which is required when `ReadOnlyGroupType` is `2`.
+                     * @return ReadOnlyGroupName New read-only group ID, which is required when `ReadOnlyGroupType` is `2`.
                      * 
                      */
                     std::string GetReadOnlyGroupName() const;
 
                     /**
-                     * 设置
-                     * @param _readOnlyGroupName 
+                     * 设置New read-only group ID, which is required when `ReadOnlyGroupType` is `2`.
+                     * @param _readOnlyGroupName New read-only group ID, which is required when `ReadOnlyGroupType` is `2`.
                      * 
                      */
                     void SetReadOnlyGroupName(const std::string& _readOnlyGroupName);
@@ -212,15 +212,15 @@ namespace TencentCloud
                     bool ReadOnlyGroupNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReadOnlyGroupIsOfflineDelay 
+                     * 获取Whether delayed read-only instance removal is enabled in a new read-only group, which is required when `ReadOnlyGroupType` is `2`. Valid values: `1` (enabled), `0` (disabled).  The read-only replica will be automatically removed when the delay between it and the primary instance exceeds the threshold.
+                     * @return ReadOnlyGroupIsOfflineDelay Whether delayed read-only instance removal is enabled in a new read-only group, which is required when `ReadOnlyGroupType` is `2`. Valid values: `1` (enabled), `0` (disabled).  The read-only replica will be automatically removed when the delay between it and the primary instance exceeds the threshold.
                      * 
                      */
                     int64_t GetReadOnlyGroupIsOfflineDelay() const;
 
                     /**
-                     * 设置
-                     * @param _readOnlyGroupIsOfflineDelay 
+                     * 设置Whether delayed read-only instance removal is enabled in a new read-only group, which is required when `ReadOnlyGroupType` is `2`. Valid values: `1` (enabled), `0` (disabled).  The read-only replica will be automatically removed when the delay between it and the primary instance exceeds the threshold.
+                     * @param _readOnlyGroupIsOfflineDelay Whether delayed read-only instance removal is enabled in a new read-only group, which is required when `ReadOnlyGroupType` is `2`. Valid values: `1` (enabled), `0` (disabled).  The read-only replica will be automatically removed when the delay between it and the primary instance exceeds the threshold.
                      * 
                      */
                     void SetReadOnlyGroupIsOfflineDelay(const int64_t& _readOnlyGroupIsOfflineDelay);
@@ -233,15 +233,15 @@ namespace TencentCloud
                     bool ReadOnlyGroupIsOfflineDelayHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReadOnlyGroupMaxDelayTime 
+                     * 获取The delay threshold for a new read-only group, which is required when `ReadOnlyGroupType` is `2` and `ReadOnlyGroupIsOfflineDelay` is `1`.
+                     * @return ReadOnlyGroupMaxDelayTime The delay threshold for a new read-only group, which is required when `ReadOnlyGroupType` is `2` and `ReadOnlyGroupIsOfflineDelay` is `1`.
                      * 
                      */
                     int64_t GetReadOnlyGroupMaxDelayTime() const;
 
                     /**
-                     * 设置
-                     * @param _readOnlyGroupMaxDelayTime 
+                     * 设置The delay threshold for a new read-only group, which is required when `ReadOnlyGroupType` is `2` and `ReadOnlyGroupIsOfflineDelay` is `1`.
+                     * @param _readOnlyGroupMaxDelayTime The delay threshold for a new read-only group, which is required when `ReadOnlyGroupType` is `2` and `ReadOnlyGroupIsOfflineDelay` is `1`.
                      * 
                      */
                     void SetReadOnlyGroupMaxDelayTime(const int64_t& _readOnlyGroupMaxDelayTime);
@@ -254,15 +254,15 @@ namespace TencentCloud
                     bool ReadOnlyGroupMaxDelayTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReadOnlyGroupMinInGroup 
+                     * 获取Minimum number of reserved read-only replicas when the delayed removal is enabled for the new read-only group, which is required when `ReadOnlyGroupType` is `2` and `ReadOnlyGroupIsOfflineDelay` is `1`.
+                     * @return ReadOnlyGroupMinInGroup Minimum number of reserved read-only replicas when the delayed removal is enabled for the new read-only group, which is required when `ReadOnlyGroupType` is `2` and `ReadOnlyGroupIsOfflineDelay` is `1`.
                      * 
                      */
                     int64_t GetReadOnlyGroupMinInGroup() const;
 
                     /**
-                     * 设置
-                     * @param _readOnlyGroupMinInGroup 
+                     * 设置Minimum number of reserved read-only replicas when the delayed removal is enabled for the new read-only group, which is required when `ReadOnlyGroupType` is `2` and `ReadOnlyGroupIsOfflineDelay` is `1`.
+                     * @param _readOnlyGroupMinInGroup Minimum number of reserved read-only replicas when the delayed removal is enabled for the new read-only group, which is required when `ReadOnlyGroupType` is `2` and `ReadOnlyGroupIsOfflineDelay` is `1`.
                      * 
                      */
                     void SetReadOnlyGroupMinInGroup(const int64_t& _readOnlyGroupMinInGroup);
@@ -275,15 +275,15 @@ namespace TencentCloud
                     bool ReadOnlyGroupMinInGroupHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceChargeType 
+                     * 获取Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
+                     * @return InstanceChargeType Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
                      * 
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
-                     * 设置
-                     * @param _instanceChargeType 
+                     * 设置Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
+                     * @param _instanceChargeType Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
                      * 
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
@@ -296,15 +296,15 @@ namespace TencentCloud
                     bool InstanceChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return GoodsNum 
+                     * 获取Number of read-only instances to be purchased this time. Default value: `2`.
+                     * @return GoodsNum Number of read-only instances to be purchased this time. Default value: `2`.
                      * 
                      */
                     int64_t GetGoodsNum() const;
 
                     /**
-                     * 设置
-                     * @param _goodsNum 
+                     * 设置Number of read-only instances to be purchased this time. Default value: `2`.
+                     * @param _goodsNum Number of read-only instances to be purchased this time. Default value: `2`.
                      * 
                      */
                     void SetGoodsNum(const int64_t& _goodsNum);
@@ -317,15 +317,15 @@ namespace TencentCloud
                     bool GoodsNumHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubnetId 
+                     * 获取VPC subnet ID in the format of `subnet-bdoe83fa`. Both `SubnetId` and `VpcId` need to be set or unset at the same time.
+                     * @return SubnetId VPC subnet ID in the format of `subnet-bdoe83fa`. Both `SubnetId` and `VpcId` need to be set or unset at the same time.
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置
-                     * @param _subnetId 
+                     * 设置VPC subnet ID in the format of `subnet-bdoe83fa`. Both `SubnetId` and `VpcId` need to be set or unset at the same time.
+                     * @param _subnetId VPC subnet ID in the format of `subnet-bdoe83fa`. Both `SubnetId` and `VpcId` need to be set or unset at the same time.
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -338,15 +338,15 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VpcId 
+                     * 获取VPC ID in the format of `vpc-dsp338hz`. Both `SubnetId` and `VpcId` need to be set or unset at the same time.
+                     * @return VpcId VPC ID in the format of `vpc-dsp338hz`. Both `SubnetId` and `VpcId` need to be set or unset at the same time.
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置
-                     * @param _vpcId 
+                     * 设置VPC ID in the format of `vpc-dsp338hz`. Both `SubnetId` and `VpcId` need to be set or unset at the same time.
+                     * @param _vpcId VPC ID in the format of `vpc-dsp338hz`. Both `SubnetId` and `VpcId` need to be set or unset at the same time.
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -359,15 +359,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Period 
+                     * 获取The purchase period of an instance. Default value: `1` (one month).  Maximum value: `48`.
+                     * @return Period The purchase period of an instance. Default value: `1` (one month).  Maximum value: `48`.
                      * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
-                     * 设置
-                     * @param _period 
+                     * 设置The purchase period of an instance. Default value: `1` (one month).  Maximum value: `48`.
+                     * @param _period The purchase period of an instance. Default value: `1` (one month).  Maximum value: `48`.
                      * 
                      */
                     void SetPeriod(const int64_t& _period);
@@ -380,15 +380,15 @@ namespace TencentCloud
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SecurityGroupList 
+                     * 获取Security group list, which contains security group IDs in the format of `sg-xxx`.
+                     * @return SecurityGroupList Security group list, which contains security group IDs in the format of `sg-xxx`.
                      * 
                      */
                     std::vector<std::string> GetSecurityGroupList() const;
 
                     /**
-                     * 设置
-                     * @param _securityGroupList 
+                     * 设置Security group list, which contains security group IDs in the format of `sg-xxx`.
+                     * @param _securityGroupList Security group list, which contains security group IDs in the format of `sg-xxx`.
                      * 
                      */
                     void SetSecurityGroupList(const std::vector<std::string>& _securityGroupList);
@@ -401,15 +401,15 @@ namespace TencentCloud
                     bool SecurityGroupListHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AutoVoucher 
+                     * 获取Whether to automatically use voucher. Valid values: `0` (no, default), `1` (yes).
+                     * @return AutoVoucher Whether to automatically use voucher. Valid values: `0` (no, default), `1` (yes).
                      * 
                      */
                     int64_t GetAutoVoucher() const;
 
                     /**
-                     * 设置
-                     * @param _autoVoucher 
+                     * 设置Whether to automatically use voucher. Valid values: `0` (no, default), `1` (yes).
+                     * @param _autoVoucher Whether to automatically use voucher. Valid values: `0` (no, default), `1` (yes).
                      * 
                      */
                     void SetAutoVoucher(const int64_t& _autoVoucher);
@@ -422,15 +422,15 @@ namespace TencentCloud
                     bool AutoVoucherHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VoucherIds 
+                     * 获取Array of voucher IDs (currently, only one voucher can be used per order).
+                     * @return VoucherIds Array of voucher IDs (currently, only one voucher can be used per order).
                      * 
                      */
                     std::vector<std::string> GetVoucherIds() const;
 
                     /**
-                     * 设置
-                     * @param _voucherIds 
+                     * 设置Array of voucher IDs (currently, only one voucher can be used per order).
+                     * @param _voucherIds Array of voucher IDs (currently, only one voucher can be used per order).
                      * 
                      */
                     void SetVoucherIds(const std::vector<std::string>& _voucherIds);
@@ -443,15 +443,15 @@ namespace TencentCloud
                     bool VoucherIdsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ResourceTags 
+                     * 获取Tags associated with the instances to be created.
+                     * @return ResourceTags Tags associated with the instances to be created.
                      * 
                      */
                     std::vector<ResourceTag> GetResourceTags() const;
 
                     /**
-                     * 设置
-                     * @param _resourceTags 
+                     * 设置Tags associated with the instances to be created.
+                     * @param _resourceTags Tags associated with the instances to be created.
                      * 
                      */
                     void SetResourceTags(const std::vector<ResourceTag>& _resourceTags);
@@ -464,15 +464,15 @@ namespace TencentCloud
                     bool ResourceTagsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Collation 
+                     * 获取Collation of system character sets. Default value:  Chinese_PRC_CI_AS.
+                     * @return Collation Collation of system character sets. Default value:  Chinese_PRC_CI_AS.
                      * 
                      */
                     std::string GetCollation() const;
 
                     /**
-                     * 设置
-                     * @param _collation 
+                     * 设置Collation of system character sets. Default value:  Chinese_PRC_CI_AS.
+                     * @param _collation Collation of system character sets. Default value:  Chinese_PRC_CI_AS.
                      * 
                      */
                     void SetCollation(const std::string& _collation);
@@ -485,15 +485,15 @@ namespace TencentCloud
                     bool CollationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TimeZone 
+                     * 获取System time zone. Default value:  `China Standard Time`.
+                     * @return TimeZone System time zone. Default value:  `China Standard Time`.
                      * 
                      */
                     std::string GetTimeZone() const;
 
                     /**
-                     * 设置
-                     * @param _timeZone 
+                     * 设置System time zone. Default value:  `China Standard Time`.
+                     * @param _timeZone System time zone. Default value:  `China Standard Time`.
                      * 
                      */
                     void SetTimeZone(const std::string& _timeZone);
@@ -508,133 +508,133 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Instance ID in the format of  `mssql-3l3fgqn7`.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * 
+                     * Instance AZ, such as `ap-guangzhou-1` (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the`DescribeZones` API.
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * 
+                     * Read-only group types. Valid values: `1` (each read-only replica is placed in one auto-created read-only group), `2` (all read-only replicas are placed in one auto-created read-only group), `3` (all read-only replicas are placed in one existing read-only group).
                      */
                     int64_t m_readOnlyGroupType;
                     bool m_readOnlyGroupTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Instance memory size in GB.
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * 
+                     * Instance disk size in GB.
                      */
                     int64_t m_storage;
                     bool m_storageHasBeenSet;
 
                     /**
-                     * 
+                     * Valid values: `0` (not upgrade the primary instance by default), `1` (upgrade the primary instance to complete the RO deployment).  You need to pass in `1` for this parameter and upgrade the primary instance to cluster edition.
                      */
                     int64_t m_readOnlyGroupForcedUpgrade;
                     bool m_readOnlyGroupForcedUpgradeHasBeenSet;
 
                     /**
-                     * 
+                     * Existing read-only group ID, which is required when `ReadOnlyGroupType` is `3`.
                      */
                     std::string m_readOnlyGroupId;
                     bool m_readOnlyGroupIdHasBeenSet;
 
                     /**
-                     * 
+                     * New read-only group ID, which is required when `ReadOnlyGroupType` is `2`.
                      */
                     std::string m_readOnlyGroupName;
                     bool m_readOnlyGroupNameHasBeenSet;
 
                     /**
-                     * 
+                     * Whether delayed read-only instance removal is enabled in a new read-only group, which is required when `ReadOnlyGroupType` is `2`. Valid values: `1` (enabled), `0` (disabled).  The read-only replica will be automatically removed when the delay between it and the primary instance exceeds the threshold.
                      */
                     int64_t m_readOnlyGroupIsOfflineDelay;
                     bool m_readOnlyGroupIsOfflineDelayHasBeenSet;
 
                     /**
-                     * 
+                     * The delay threshold for a new read-only group, which is required when `ReadOnlyGroupType` is `2` and `ReadOnlyGroupIsOfflineDelay` is `1`.
                      */
                     int64_t m_readOnlyGroupMaxDelayTime;
                     bool m_readOnlyGroupMaxDelayTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Minimum number of reserved read-only replicas when the delayed removal is enabled for the new read-only group, which is required when `ReadOnlyGroupType` is `2` and `ReadOnlyGroupIsOfflineDelay` is `1`.
                      */
                     int64_t m_readOnlyGroupMinInGroup;
                     bool m_readOnlyGroupMinInGroupHasBeenSet;
 
                     /**
-                     * 
+                     * Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
                      */
                     std::string m_instanceChargeType;
                     bool m_instanceChargeTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Number of read-only instances to be purchased this time. Default value: `2`.
                      */
                     int64_t m_goodsNum;
                     bool m_goodsNumHasBeenSet;
 
                     /**
-                     * 
+                     * VPC subnet ID in the format of `subnet-bdoe83fa`. Both `SubnetId` and `VpcId` need to be set or unset at the same time.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * 
+                     * VPC ID in the format of `vpc-dsp338hz`. Both `SubnetId` and `VpcId` need to be set or unset at the same time.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * 
+                     * The purchase period of an instance. Default value: `1` (one month).  Maximum value: `48`.
                      */
                     int64_t m_period;
                     bool m_periodHasBeenSet;
 
                     /**
-                     * 
+                     * Security group list, which contains security group IDs in the format of `sg-xxx`.
                      */
                     std::vector<std::string> m_securityGroupList;
                     bool m_securityGroupListHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to automatically use voucher. Valid values: `0` (no, default), `1` (yes).
                      */
                     int64_t m_autoVoucher;
                     bool m_autoVoucherHasBeenSet;
 
                     /**
-                     * 
+                     * Array of voucher IDs (currently, only one voucher can be used per order).
                      */
                     std::vector<std::string> m_voucherIds;
                     bool m_voucherIdsHasBeenSet;
 
                     /**
-                     * 
+                     * Tags associated with the instances to be created.
                      */
                     std::vector<ResourceTag> m_resourceTags;
                     bool m_resourceTagsHasBeenSet;
 
                     /**
-                     * 
+                     * Collation of system character sets. Default value:  Chinese_PRC_CI_AS.
                      */
                     std::string m_collation;
                     bool m_collationHasBeenSet;
 
                     /**
-                     * 
+                     * System time zone. Default value:  `China Standard Time`.
                      */
                     std::string m_timeZone;
                     bool m_timeZoneHasBeenSet;

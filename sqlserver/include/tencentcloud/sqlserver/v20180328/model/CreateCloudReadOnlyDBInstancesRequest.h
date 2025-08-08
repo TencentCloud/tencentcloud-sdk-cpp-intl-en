@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool ReadOnlyGroupTypeHasBeenSet() const;
 
                     /**
-                     * 获取Instance memory size in GB
-                     * @return Memory Instance memory size in GB
+                     * 获取Instance memory size in GB.
+                     * @return Memory Instance memory size in GB.
                      * 
                      */
                     int64_t GetMemory() const;
 
                     /**
-                     * 设置Instance memory size in GB
-                     * @param _memory Instance memory size in GB
+                     * 设置Instance memory size in GB.
+                     * @param _memory Instance memory size in GB.
                      * 
                      */
                     void SetMemory(const int64_t& _memory);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Instance disk size in GB
-                     * @return Storage Instance disk size in GB
+                     * 获取Instance disk size in GB.
+                     * @return Storage Instance disk size in GB.
                      * 
                      */
                     int64_t GetStorage() const;
 
                     /**
-                     * 设置Instance disk size in GB
-                     * @param _storage Instance disk size in GB
+                     * 设置Instance disk size in GB.
+                     * @param _storage Instance disk size in GB.
                      * 
                      */
                     void SetStorage(const int64_t& _storage);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool StorageHasBeenSet() const;
 
                     /**
-                     * 获取Number of instance cores
-                     * @return Cpu Number of instance cores
+                     * 获取Number of instance cores.
+                     * @return Cpu Number of instance cores.
                      * 
                      */
                     uint64_t GetCpu() const;
 
                     /**
-                     * 设置Number of instance cores
-                     * @param _cpu Number of instance cores
+                     * 设置Number of instance cores.
+                     * @param _cpu Number of instance cores.
                      * 
                      */
                     void SetCpu(const uint64_t& _cpu);
@@ -464,15 +464,15 @@ namespace TencentCloud
                     bool AutoVoucherHasBeenSet() const;
 
                     /**
-                     * 获取Array of voucher IDs (currently, only one voucher can be used per order)
-                     * @return VoucherIds Array of voucher IDs (currently, only one voucher can be used per order)
+                     * 获取Array of voucher IDs (currently, only one voucher can be used per order).
+                     * @return VoucherIds Array of voucher IDs (currently, only one voucher can be used per order).
                      * 
                      */
                     std::vector<std::string> GetVoucherIds() const;
 
                     /**
-                     * 设置Array of voucher IDs (currently, only one voucher can be used per order)
-                     * @param _voucherIds Array of voucher IDs (currently, only one voucher can be used per order)
+                     * 设置Array of voucher IDs (currently, only one voucher can be used per order).
+                     * @param _voucherIds Array of voucher IDs (currently, only one voucher can be used per order).
                      * 
                      */
                     void SetVoucherIds(const std::vector<std::string>& _voucherIds);
@@ -485,15 +485,15 @@ namespace TencentCloud
                     bool VoucherIdsHasBeenSet() const;
 
                     /**
-                     * 获取Tags associated with the instances to be created
-                     * @return ResourceTags Tags associated with the instances to be created
+                     * 获取Tags associated with the instances to be created.
+                     * @return ResourceTags Tags associated with the instances to be created.
                      * 
                      */
                     std::vector<ResourceTag> GetResourceTags() const;
 
                     /**
-                     * 设置Tags associated with the instances to be created
-                     * @param _resourceTags Tags associated with the instances to be created
+                     * 设置Tags associated with the instances to be created.
+                     * @param _resourceTags Tags associated with the instances to be created.
                      * 
                      */
                     void SetResourceTags(const std::vector<ResourceTag>& _resourceTags);
@@ -506,15 +506,15 @@ namespace TencentCloud
                     bool ResourceTagsHasBeenSet() const;
 
                     /**
-                     * 获取Collation of system character sets. Default value:  Chinese_PRC_CI_AS
-                     * @return Collation Collation of system character sets. Default value:  Chinese_PRC_CI_AS
+                     * 获取Collation of system character sets. Default value:  Chinese_PRC_CI_AS.
+                     * @return Collation Collation of system character sets. Default value:  Chinese_PRC_CI_AS.
                      * 
                      */
                     std::string GetCollation() const;
 
                     /**
-                     * 设置Collation of system character sets. Default value:  Chinese_PRC_CI_AS
-                     * @param _collation Collation of system character sets. Default value:  Chinese_PRC_CI_AS
+                     * 设置Collation of system character sets. Default value:  Chinese_PRC_CI_AS.
+                     * @param _collation Collation of system character sets. Default value:  Chinese_PRC_CI_AS.
                      * 
                      */
                     void SetCollation(const std::string& _collation);
@@ -527,15 +527,15 @@ namespace TencentCloud
                     bool CollationHasBeenSet() const;
 
                     /**
-                     * 获取System time zone. Default value:  `China Standard Time`
-                     * @return TimeZone System time zone. Default value:  `China Standard Time`
+                     * 获取System time zone. Default value:  `China Standard Time`.
+                     * @return TimeZone System time zone. Default value:  `China Standard Time`.
                      * 
                      */
                     std::string GetTimeZone() const;
 
                     /**
-                     * 设置System time zone. Default value:  `China Standard Time`
-                     * @param _timeZone System time zone. Default value:  `China Standard Time`
+                     * 设置System time zone. Default value:  `China Standard Time`.
+                     * @param _timeZone System time zone. Default value:  `China Standard Time`.
                      * 
                      */
                     void SetTimeZone(const std::string& _timeZone);
@@ -546,6 +546,27 @@ namespace TencentCloud
                      * 
                      */
                     bool TimeZoneHasBeenSet() const;
+
+                    /**
+                     * 获取Disk encryption identification, 0 - no encryption, 1 - encryption.
+                     * @return DiskEncryptFlag Disk encryption identification, 0 - no encryption, 1 - encryption.
+                     * 
+                     */
+                    int64_t GetDiskEncryptFlag() const;
+
+                    /**
+                     * 设置Disk encryption identification, 0 - no encryption, 1 - encryption.
+                     * @param _diskEncryptFlag Disk encryption identification, 0 - no encryption, 1 - encryption.
+                     * 
+                     */
+                    void SetDiskEncryptFlag(const int64_t& _diskEncryptFlag);
+
+                    /**
+                     * 判断参数 DiskEncryptFlag 是否已赋值
+                     * @return DiskEncryptFlag 是否已赋值
+                     * 
+                     */
+                    bool DiskEncryptFlagHasBeenSet() const;
 
                 private:
 
@@ -568,19 +589,19 @@ namespace TencentCloud
                     bool m_readOnlyGroupTypeHasBeenSet;
 
                     /**
-                     * Instance memory size in GB
+                     * Instance memory size in GB.
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Instance disk size in GB
+                     * Instance disk size in GB.
                      */
                     int64_t m_storage;
                     bool m_storageHasBeenSet;
 
                     /**
-                     * Number of instance cores
+                     * Number of instance cores.
                      */
                     uint64_t m_cpu;
                     bool m_cpuHasBeenSet;
@@ -670,28 +691,34 @@ namespace TencentCloud
                     bool m_autoVoucherHasBeenSet;
 
                     /**
-                     * Array of voucher IDs (currently, only one voucher can be used per order)
+                     * Array of voucher IDs (currently, only one voucher can be used per order).
                      */
                     std::vector<std::string> m_voucherIds;
                     bool m_voucherIdsHasBeenSet;
 
                     /**
-                     * Tags associated with the instances to be created
+                     * Tags associated with the instances to be created.
                      */
                     std::vector<ResourceTag> m_resourceTags;
                     bool m_resourceTagsHasBeenSet;
 
                     /**
-                     * Collation of system character sets. Default value:  Chinese_PRC_CI_AS
+                     * Collation of system character sets. Default value:  Chinese_PRC_CI_AS.
                      */
                     std::string m_collation;
                     bool m_collationHasBeenSet;
 
                     /**
-                     * System time zone. Default value:  `China Standard Time`
+                     * System time zone. Default value:  `China Standard Time`.
                      */
                     std::string m_timeZone;
                     bool m_timeZoneHasBeenSet;
+
+                    /**
+                     * Disk encryption identification, 0 - no encryption, 1 - encryption.
+                     */
+                    int64_t m_diskEncryptFlag;
+                    bool m_diskEncryptFlagHasBeenSet;
 
                 };
             }

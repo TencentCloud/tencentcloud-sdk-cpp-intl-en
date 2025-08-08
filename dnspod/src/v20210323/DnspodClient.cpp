@@ -212,6 +212,49 @@ DnspodClient::CreateDomainGroupOutcomeCallable DnspodClient::CreateDomainGroupCa
     return task->get_future();
 }
 
+DnspodClient::CreatePackageOrderOutcome DnspodClient::CreatePackageOrder(const CreatePackageOrderRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreatePackageOrder");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreatePackageOrderResponse rsp = CreatePackageOrderResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreatePackageOrderOutcome(rsp);
+        else
+            return CreatePackageOrderOutcome(o.GetError());
+    }
+    else
+    {
+        return CreatePackageOrderOutcome(outcome.GetError());
+    }
+}
+
+void DnspodClient::CreatePackageOrderAsync(const CreatePackageOrderRequest& request, const CreatePackageOrderAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreatePackageOrder(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DnspodClient::CreatePackageOrderOutcomeCallable DnspodClient::CreatePackageOrderCallable(const CreatePackageOrderRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreatePackageOrderOutcome()>>(
+        [this, request]()
+        {
+            return this->CreatePackageOrder(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 DnspodClient::CreateRecordOutcome DnspodClient::CreateRecord(const CreateRecordRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateRecord");

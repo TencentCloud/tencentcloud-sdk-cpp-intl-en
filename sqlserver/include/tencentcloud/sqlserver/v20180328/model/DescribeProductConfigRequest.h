@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取AZ ID in the format of ap-guangzhou-1
-                     * @return Zone AZ ID in the format of ap-guangzhou-1
+                     * 获取AZ ID in the format of ap-guangzhou-1.
+                     * @return Zone AZ ID in the format of ap-guangzhou-1.
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置AZ ID in the format of ap-guangzhou-1
-                     * @param _zone AZ ID in the format of ap-guangzhou-1
+                     * 设置AZ ID in the format of ap-guangzhou-1.
+                     * @param _zone AZ ID in the format of ap-guangzhou-1.
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Type of purchased instance. Valid values: HA - local disk high availability (including dual-machine high availability, AlwaysOn Cluster), RO - local disk read-only replica, SI - cloud disk edition single node, BI - business intelligence service, cvmHA - cloud disk edition high availability, cvmRO - cloud disk edition read-only replica
-                     * @return InstanceType Type of purchased instance. Valid values: HA - local disk high availability (including dual-machine high availability, AlwaysOn Cluster), RO - local disk read-only replica, SI - cloud disk edition single node, BI - business intelligence service, cvmHA - cloud disk edition high availability, cvmRO - cloud disk edition read-only replica
+                     * 获取Type of purchased instance. Valid values: HA - local disk high availability (including dual-machine high availability, AlwaysOn Cluster), RO - local disk read-only replica, SI - cloud disk edition single node, BI - business intelligence service, cvmHA - cloud disk edition high availability, cvmRO - cloud disk edition read-only replica.
+                     * @return InstanceType Type of purchased instance. Valid values: HA - local disk high availability (including dual-machine high availability, AlwaysOn Cluster), RO - local disk read-only replica, SI - cloud disk edition single node, BI - business intelligence service, cvmHA - cloud disk edition high availability, cvmRO - cloud disk edition read-only replica.
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Type of purchased instance. Valid values: HA - local disk high availability (including dual-machine high availability, AlwaysOn Cluster), RO - local disk read-only replica, SI - cloud disk edition single node, BI - business intelligence service, cvmHA - cloud disk edition high availability, cvmRO - cloud disk edition read-only replica
-                     * @param _instanceType Type of purchased instance. Valid values: HA - local disk high availability (including dual-machine high availability, AlwaysOn Cluster), RO - local disk read-only replica, SI - cloud disk edition single node, BI - business intelligence service, cvmHA - cloud disk edition high availability, cvmRO - cloud disk edition read-only replica
+                     * 设置Type of purchased instance. Valid values: HA - local disk high availability (including dual-machine high availability, AlwaysOn Cluster), RO - local disk read-only replica, SI - cloud disk edition single node, BI - business intelligence service, cvmHA - cloud disk edition high availability, cvmRO - cloud disk edition read-only replica.
+                     * @param _instanceType Type of purchased instance. Valid values: HA - local disk high availability (including dual-machine high availability, AlwaysOn Cluster), RO - local disk read-only replica, SI - cloud disk edition single node, BI - business intelligence service, cvmHA - cloud disk edition high availability, cvmRO - cloud disk edition read-only replica.
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * AZ ID in the format of ap-guangzhou-1
+                     * AZ ID in the format of ap-guangzhou-1.
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Type of purchased instance. Valid values: HA - local disk high availability (including dual-machine high availability, AlwaysOn Cluster), RO - local disk read-only replica, SI - cloud disk edition single node, BI - business intelligence service, cvmHA - cloud disk edition high availability, cvmRO - cloud disk edition read-only replica
+                     * Type of purchased instance. Valid values: HA - local disk high availability (including dual-machine high availability, AlwaysOn Cluster), RO - local disk read-only replica, SI - cloud disk edition single node, BI - business intelligence service, cvmHA - cloud disk edition high availability, cvmRO - cloud disk edition read-only replica.
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;

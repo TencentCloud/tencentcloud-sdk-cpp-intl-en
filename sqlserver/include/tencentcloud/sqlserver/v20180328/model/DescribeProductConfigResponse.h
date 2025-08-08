@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specification information array
-                     * @return SpecInfoList Specification information array
+                     * 获取Specification information array.
+                     * @return SpecInfoList Specification information array.
                      * 
                      */
                     std::vector<SpecInfo> GetSpecInfoList() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool SpecInfoListHasBeenSet() const;
 
                     /**
-                     * 获取Number of date entries returned
-                     * @return TotalCount Number of date entries returned
+                     * 获取Number of date entries returned.
+                     * @return TotalCount Number of date entries returned.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specification information array
+                     * Specification information array.
                      */
                     std::vector<SpecInfo> m_specInfoList;
                     bool m_specInfoListHasBeenSet;
 
                     /**
-                     * Number of date entries returned
+                     * Number of date entries returned.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
