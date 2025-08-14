@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Price. Unit: USD (accurate down to the cent)
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return Price Price. Unit: USD (accurate down to the cent)
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Price.
+                     * @return Price Price.
                      * 
                      */
                     double GetPrice() const;
@@ -59,14 +57,82 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool PriceHasBeenSet() const;
 
+                    /**
+                     * 获取High precision price. 
+                     * @return HighPrecisionPrice High precision price. 
+                     * 
+                     */
+                    double GetHighPrecisionPrice() const;
+
+                    /**
+                     * 判断参数 HighPrecisionPrice 是否已赋值
+                     * @return HighPrecisionPrice 是否已赋值
+                     * 
+                     */
+                    bool HighPrecisionPriceHasBeenSet() const;
+
+                    /**
+                     * 获取Currency.
+                     * @return Currency Currency.
+                     * 
+                     */
+                    std::string GetCurrency() const;
+
+                    /**
+                     * 判断参数 Currency 是否已赋值
+                     * @return Currency 是否已赋值
+                     * 
+                     */
+                    bool CurrencyHasBeenSet() const;
+
+                    /**
+                     * 获取Price unit.
+
+ - pent: cent.
+ - microPent: microcent.
+                     * @return AmountUnit Price unit.
+
+ - pent: cent.
+ - microPent: microcent.
+                     * 
+                     */
+                    std::string GetAmountUnit() const;
+
+                    /**
+                     * 判断参数 AmountUnit 是否已赋值
+                     * @return AmountUnit 是否已赋值
+                     * 
+                     */
+                    bool AmountUnitHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Price. Unit: USD (accurate down to the cent)
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Price.
                      */
                     double m_price;
                     bool m_priceHasBeenSet;
+
+                    /**
+                     * High precision price. 
+                     */
+                    double m_highPrecisionPrice;
+                    bool m_highPrecisionPriceHasBeenSet;
+
+                    /**
+                     * Currency.
+                     */
+                    std::string m_currency;
+                    bool m_currencyHasBeenSet;
+
+                    /**
+                     * Price unit.
+
+ - pent: cent.
+ - microPent: microcent.
+                     */
+                    std::string m_amountUnit;
+                    bool m_amountUnitHasBeenSet;
 
                 };
             }

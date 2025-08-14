@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TaskId Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Task ID.
+                     * @return TaskId Task ID.
                      * 
                      */
                     int64_t GetTaskId() const;
@@ -62,8 +60,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Task ID.
                      */
                     int64_t m_taskId;
                     bool m_taskIdHasBeenSet;

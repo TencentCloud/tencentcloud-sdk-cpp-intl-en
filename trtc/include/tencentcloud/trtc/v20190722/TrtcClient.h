@@ -25,10 +25,14 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/trtc/v20190722/model/ControlAIConversationRequest.h>
 #include <tencentcloud/trtc/v20190722/model/ControlAIConversationResponse.h>
+#include <tencentcloud/trtc/v20190722/model/CreateCloudModerationRequest.h>
+#include <tencentcloud/trtc/v20190722/model/CreateCloudModerationResponse.h>
 #include <tencentcloud/trtc/v20190722/model/CreateCloudRecordingRequest.h>
 #include <tencentcloud/trtc/v20190722/model/CreateCloudRecordingResponse.h>
 #include <tencentcloud/trtc/v20190722/model/CreateCloudSliceTaskRequest.h>
 #include <tencentcloud/trtc/v20190722/model/CreateCloudSliceTaskResponse.h>
+#include <tencentcloud/trtc/v20190722/model/DeleteCloudModerationRequest.h>
+#include <tencentcloud/trtc/v20190722/model/DeleteCloudModerationResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DeleteCloudRecordingRequest.h>
 #include <tencentcloud/trtc/v20190722/model/DeleteCloudRecordingResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DeleteCloudSliceTaskRequest.h>
@@ -39,6 +43,8 @@
 #include <tencentcloud/trtc/v20190722/model/DescribeAITranscriptionResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeCallDetailInfoRequest.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeCallDetailInfoResponse.h>
+#include <tencentcloud/trtc/v20190722/model/DescribeCloudModerationRequest.h>
+#include <tencentcloud/trtc/v20190722/model/DescribeCloudModerationResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeCloudRecordingRequest.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeCloudRecordingResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeCloudSliceTaskRequest.h>
@@ -79,6 +85,8 @@
 #include <tencentcloud/trtc/v20190722/model/DismissRoomResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DismissRoomByStrRoomIdRequest.h>
 #include <tencentcloud/trtc/v20190722/model/DismissRoomByStrRoomIdResponse.h>
+#include <tencentcloud/trtc/v20190722/model/ModifyCloudModerationRequest.h>
+#include <tencentcloud/trtc/v20190722/model/ModifyCloudModerationResponse.h>
 #include <tencentcloud/trtc/v20190722/model/ModifyCloudRecordingRequest.h>
 #include <tencentcloud/trtc/v20190722/model/ModifyCloudRecordingResponse.h>
 #include <tencentcloud/trtc/v20190722/model/ModifyCloudSliceTaskRequest.h>
@@ -134,12 +142,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ControlAIConversationResponse> ControlAIConversationOutcome;
                 typedef std::future<ControlAIConversationOutcome> ControlAIConversationOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::ControlAIConversationRequest&, ControlAIConversationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ControlAIConversationAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateCloudModerationResponse> CreateCloudModerationOutcome;
+                typedef std::future<CreateCloudModerationOutcome> CreateCloudModerationOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::CreateCloudModerationRequest&, CreateCloudModerationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCloudModerationAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateCloudRecordingResponse> CreateCloudRecordingOutcome;
                 typedef std::future<CreateCloudRecordingOutcome> CreateCloudRecordingOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::CreateCloudRecordingRequest&, CreateCloudRecordingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCloudRecordingAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateCloudSliceTaskResponse> CreateCloudSliceTaskOutcome;
                 typedef std::future<CreateCloudSliceTaskOutcome> CreateCloudSliceTaskOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::CreateCloudSliceTaskRequest&, CreateCloudSliceTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCloudSliceTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteCloudModerationResponse> DeleteCloudModerationOutcome;
+                typedef std::future<DeleteCloudModerationOutcome> DeleteCloudModerationOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::DeleteCloudModerationRequest&, DeleteCloudModerationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCloudModerationAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteCloudRecordingResponse> DeleteCloudRecordingOutcome;
                 typedef std::future<DeleteCloudRecordingOutcome> DeleteCloudRecordingOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::DeleteCloudRecordingRequest&, DeleteCloudRecordingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCloudRecordingAsyncHandler;
@@ -155,6 +169,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeCallDetailInfoResponse> DescribeCallDetailInfoOutcome;
                 typedef std::future<DescribeCallDetailInfoOutcome> DescribeCallDetailInfoOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::DescribeCallDetailInfoRequest&, DescribeCallDetailInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCallDetailInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCloudModerationResponse> DescribeCloudModerationOutcome;
+                typedef std::future<DescribeCloudModerationOutcome> DescribeCloudModerationOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::DescribeCloudModerationRequest&, DescribeCloudModerationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCloudModerationAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCloudRecordingResponse> DescribeCloudRecordingOutcome;
                 typedef std::future<DescribeCloudRecordingOutcome> DescribeCloudRecordingOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::DescribeCloudRecordingRequest&, DescribeCloudRecordingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCloudRecordingAsyncHandler;
@@ -215,6 +232,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DismissRoomByStrRoomIdResponse> DismissRoomByStrRoomIdOutcome;
                 typedef std::future<DismissRoomByStrRoomIdOutcome> DismissRoomByStrRoomIdOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::DismissRoomByStrRoomIdRequest&, DismissRoomByStrRoomIdOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DismissRoomByStrRoomIdAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyCloudModerationResponse> ModifyCloudModerationOutcome;
+                typedef std::future<ModifyCloudModerationOutcome> ModifyCloudModerationOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::ModifyCloudModerationRequest&, ModifyCloudModerationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCloudModerationAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyCloudRecordingResponse> ModifyCloudRecordingOutcome;
                 typedef std::future<ModifyCloudRecordingOutcome> ModifyCloudRecordingOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::ModifyCloudRecordingRequest&, ModifyCloudRecordingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCloudRecordingAsyncHandler;
@@ -286,6 +306,20 @@ namespace TencentCloud
 
                 /**
                  *API description:
+This API is used to enable the cloud moderation feature to complete audio and video slicing, video frame extraction, and audio stream recording in the room, and submit them to the specified moderation supplier for completing the moderation.
+
+This API is used to achieve the following goals:
+* This API is used to specify the moderation parameters (ModerationParams) to specify the detailed parameters required for moderation.
+* This API is used to specify the storage parameter (SliceStorageParams) to specify the cloud storage you want to upload the file complying with the moderation policy to. Currently, Tencent Cloud Object Storage (COS) and third-party AWS are supported.
+                 * @param req CreateCloudModerationRequest
+                 * @return CreateCloudModerationOutcome
+                 */
+                CreateCloudModerationOutcome CreateCloudModeration(const Model::CreateCloudModerationRequest &request);
+                void CreateCloudModerationAsync(const Model::CreateCloudModerationRequest& request, const CreateCloudModerationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateCloudModerationOutcomeCallable CreateCloudModerationCallable(const Model::CreateCloudModerationRequest& request);
+
+                /**
+                 *API description:
 This API is used to start an on-cloud recording task. It records the audio and video streams in a room and saves them to the specified cloud storage. You can use this API to record the streams in a room separately, or you can mix the streams first and then record the mixed stream.
 
 You can use this API to perform the following operations:
@@ -316,6 +350,15 @@ This API is used to achieve the following goals:
                 CreateCloudSliceTaskOutcome CreateCloudSliceTask(const Model::CreateCloudSliceTaskRequest &request);
                 void CreateCloudSliceTaskAsync(const Model::CreateCloudSliceTaskRequest& request, const CreateCloudSliceTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateCloudSliceTaskOutcomeCallable CreateCloudSliceTaskCallable(const Model::CreateCloudSliceTaskRequest& request);
+
+                /**
+                 *This API is used to stop submission for moderation after the cloud moderation task is successfully started.
+                 * @param req DeleteCloudModerationRequest
+                 * @return DeleteCloudModerationOutcome
+                 */
+                DeleteCloudModerationOutcome DeleteCloudModeration(const Model::DeleteCloudModerationRequest &request);
+                void DeleteCloudModerationAsync(const Model::DeleteCloudModerationRequest& request, const DeleteCloudModerationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteCloudModerationOutcomeCallable DeleteCloudModerationCallable(const Model::DeleteCloudModerationRequest& request);
 
                 /**
                  *This API is used to stop a recording task. If a task is stopped successfully, but the uploading of recording files has not completed, the backend will continue to upload the files and will notify you via a callback when the upload is completed.
@@ -364,6 +407,15 @@ This API is used to achieve the following goals:
                 DescribeCallDetailInfoOutcome DescribeCallDetailInfo(const Model::DescribeCallDetailInfoRequest &request);
                 void DescribeCallDetailInfoAsync(const Model::DescribeCallDetailInfoRequest& request, const DescribeCallDetailInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeCallDetailInfoOutcomeCallable DescribeCallDetailInfoCallable(const Model::DescribeCallDetailInfoRequest& request);
+
+                /**
+                 *This API is used to query the status of the moderation task and information about the subscription blocklist and allowlist after the task is started, which is valid only when the task is in progress. An error will be returned if the task is exited.
+                 * @param req DescribeCloudModerationRequest
+                 * @return DescribeCloudModerationOutcome
+                 */
+                DescribeCloudModerationOutcome DescribeCloudModeration(const Model::DescribeCloudModerationRequest &request);
+                void DescribeCloudModerationAsync(const Model::DescribeCloudModerationRequest& request, const DescribeCloudModerationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCloudModerationOutcomeCallable DescribeCloudModerationCallable(const Model::DescribeCloudModerationRequest& request);
 
                 /**
                  *This API is used to query the status of a recording task after it starts. It works only when a task is in progress. If the task has already ended when this API is called, an error will be returned.
@@ -601,6 +653,15 @@ For details about the error events, see https://intl.cloud.tencent.com/document/
                 DismissRoomByStrRoomIdOutcome DismissRoomByStrRoomId(const Model::DismissRoomByStrRoomIdRequest &request);
                 void DismissRoomByStrRoomIdAsync(const Model::DismissRoomByStrRoomIdRequest& request, const DismissRoomByStrRoomIdAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DismissRoomByStrRoomIdOutcomeCallable DismissRoomByStrRoomIdCallable(const Model::DismissRoomByStrRoomIdRequest& request);
+
+                /**
+                 *This API is used to update the subscription blocklist and allowlist after the cloud moderation task is successfully started.
+                 * @param req ModifyCloudModerationRequest
+                 * @return ModifyCloudModerationOutcome
+                 */
+                ModifyCloudModerationOutcome ModifyCloudModeration(const Model::ModifyCloudModerationRequest &request);
+                void ModifyCloudModerationAsync(const Model::ModifyCloudModerationRequest& request, const ModifyCloudModerationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyCloudModerationOutcomeCallable ModifyCloudModerationCallable(const Model::ModifyCloudModerationRequest& request);
 
                 /**
                  *This API is used to modify a recording task. It works only when a task is in progress. If the task has already ended when this API is called, an error will be returned. You need to specify all the parameters for each request instead of just the ones you want to modify.

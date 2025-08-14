@@ -174,18 +174,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BackupSize Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetBackupSize() const;
 
                     /**
                      * 设置Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _backupSize Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetBackupSize(const int64_t& _backupSize);
@@ -199,18 +195,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FullBackup Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetFullBackup() const;
 
                     /**
                      * 设置Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _fullBackup Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFullBackup(const int64_t& _fullBackup);
@@ -224,18 +216,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceType Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetInstanceType() const;
 
                     /**
                      * 设置Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _instanceType Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetInstanceType(const int64_t& _instanceType);
@@ -413,21 +401,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_backupSize;
                     bool m_backupSizeHasBeenSet;
 
                     /**
                      * Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_fullBackup;
                     bool m_fullBackupHasBeenSet;
 
                     /**
                      * Internal field, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_instanceType;
                     bool m_instanceTypeHasBeenSet;

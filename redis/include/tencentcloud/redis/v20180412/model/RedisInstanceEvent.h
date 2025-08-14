@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Event ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ID Event ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetID() const;
 
                     /**
                      * 设置Event ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _iD Event ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetID(const int64_t& _iD);
@@ -72,15 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IDHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceId Instance ID.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance ID.
+                     * @return InstanceId Instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceId Instance ID.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance ID.
+                     * @param _instanceId Instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -93,15 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance name.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceName Instance name.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance name.
+                     * @return InstanceName Instance name.
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceName Instance name.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance name.
+                     * @param _instanceName Instance name.
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -114,15 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be only set to **InstanceMigration**.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Type Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be only set to **InstanceMigration**.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be set only to **InstanceMigration**.
+                     * @return Type Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be set only to **InstanceMigration**.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be only set to **InstanceMigration**.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _type Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be only set to **InstanceMigration**.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be set only to **InstanceMigration**.
+                     * @param _type Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be set only to **InstanceMigration**.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -135,31 +131,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Event levels are divided into Critical, High, Medium, and Low events according to the severity and urgency.- Critical
-- High
-- Middle
-- Low
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Grade Event levels are divided into Critical, High, Medium, and Low events according to the severity and urgency.- Critical
-- High
-- Middle
-- Low
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Event level. The levels are divided into critical, important, medium, and general based on severity and urgency.
+ - Critical: critical.
+ - High: important.
+ - Middle: medium.
+ - Low.
+                     * @return Grade Event level. The levels are divided into critical, important, medium, and general based on severity and urgency.
+ - Critical: critical.
+ - High: important.
+ - Middle: medium.
+ - Low.
                      * 
                      */
                     std::string GetGrade() const;
 
                     /**
-                     * 设置Event levels are divided into Critical, High, Medium, and Low events according to the severity and urgency.- Critical
-- High
-- Middle
-- Low
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _grade Event levels are divided into Critical, High, Medium, and Low events according to the severity and urgency.- Critical
-- High
-- Middle
-- Low
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Event level. The levels are divided into critical, important, medium, and general based on severity and urgency.
+ - Critical: critical.
+ - High: important.
+ - Middle: medium.
+ - Low.
+                     * @param _grade Event level. The levels are divided into critical, important, medium, and general based on severity and urgency.
+ - Critical: critical.
+ - High: important.
+ - Middle: medium.
+ - Low.
                      * 
                      */
                     void SetGrade(const std::string& _grade);
@@ -172,15 +168,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool GradeHasBeenSet() const;
 
                     /**
-                     * 获取Scheduled event execution date.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExecutionDate Scheduled event execution date.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Scheduled event execution date.
+                     * @return ExecutionDate Scheduled event execution date.
                      * 
                      */
                     std::string GetExecutionDate() const;
 
                     /**
-                     * 设置Scheduled event execution date.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _executionDate Scheduled event execution date.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Scheduled event execution date.
+                     * @param _executionDate Scheduled event execution date.
                      * 
                      */
                     void SetExecutionDate(const std::string& _executionDate);
@@ -193,15 +189,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ExecutionDateHasBeenSet() const;
 
                     /**
-                     * 获取Scheduled start time of event execution.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StartTime Scheduled start time of event execution.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Start date of scheduled event execution.
+                     * @return StartTime Start date of scheduled event execution.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Scheduled start time of event execution.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _startTime Scheduled start time of event execution.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Start date of scheduled event execution.
+                     * @param _startTime Start date of scheduled event execution.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -214,15 +210,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Scheduled end time of event execution.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EndTime Scheduled end time of event execution.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取End date of scheduled event execution.
+                     * @return EndTime End date of scheduled event execution.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Scheduled end time of event execution.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _endTime Scheduled end time of event execution.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置End date of scheduled event execution.
+                     * @param _endTime End date of scheduled event execution.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -235,15 +231,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取The latest execution date of the operations event. Event execution must be completed before this date. Otherwise, the business may be affected.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LatestExecutionDate The latest execution date of the operations event. Event execution must be completed before this date. Otherwise, the business may be affected.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Latest execution date of the Ops event. The event should be completed before this date. Otherwise, the business may be affected.
+                     * @return LatestExecutionDate Latest execution date of the Ops event. The event should be completed before this date. Otherwise, the business may be affected.
                      * 
                      */
                     std::string GetLatestExecutionDate() const;
 
                     /**
-                     * 设置The latest execution date of the operations event. Event execution must be completed before this date. Otherwise, the business may be affected.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _latestExecutionDate The latest execution date of the operations event. Event execution must be completed before this date. Otherwise, the business may be affected.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Latest execution date of the Ops event. The event should be completed before this date. Otherwise, the business may be affected.
+                     * @param _latestExecutionDate Latest execution date of the Ops event. The event should be completed before this date. Otherwise, the business may be affected.
                      * 
                      */
                     void SetLatestExecutionDate(const std::string& _latestExecutionDate);
@@ -256,15 +252,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LatestExecutionDateHasBeenSet() const;
 
                     /**
-                     * 获取Current event status.- Waiting: The event is waiting for execution on the execution date or during the operations period.- Running: The event is being executed during the operations period.- Finished: Execution of the event operations is completed.- Canceled: Execution of the event is canceled.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Current event status.- Waiting: The event is waiting for execution on the execution date or during the operations period.- Running: The event is being executed during the operations period.- Finished: Execution of the event operations is completed.- Canceled: Execution of the event is canceled.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Current event status.
+ - Waiting: event not reached the execution date or not within the maintenance window.
+ - Running: event within the maintenance window and under maintenance execution.
+ - Finished: event with maintenance completed.
+- Canceled: Execution of the event is canceled.
+                     * @return Status Current event status.
+ - Waiting: event not reached the execution date or not within the maintenance window.
+ - Running: event within the maintenance window and under maintenance execution.
+ - Finished: event with maintenance completed.
+- Canceled: Execution of the event is canceled.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Current event status.- Waiting: The event is waiting for execution on the execution date or during the operations period.- Running: The event is being executed during the operations period.- Finished: Execution of the event operations is completed.- Canceled: Execution of the event is canceled.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status Current event status.- Waiting: The event is waiting for execution on the execution date or during the operations period.- Running: The event is being executed during the operations period.- Finished: Execution of the event operations is completed.- Canceled: Execution of the event is canceled.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Current event status.
+ - Waiting: event not reached the execution date or not within the maintenance window.
+ - Running: event within the maintenance window and under maintenance execution.
+ - Finished: event with maintenance completed.
+- Canceled: Execution of the event is canceled.
+                     * @param _status Current event status.
+ - Waiting: event not reached the execution date or not within the maintenance window.
+ - Running: event within the maintenance window and under maintenance execution.
+ - Finished: event with maintenance completed.
+- Canceled: Execution of the event is canceled.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -278,18 +290,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Completion time of the event execution task.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TaskEndTime Completion time of the event execution task.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTaskEndTime() const;
 
                     /**
                      * 设置Completion time of the event execution task.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _taskEndTime Completion time of the event execution task.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTaskEndTime(const std::string& _taskEndTime);
@@ -302,15 +310,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TaskEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Impact of the event.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EffectInfo Impact of the event.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Event impact information.
+                     * @return EffectInfo Event impact information.
                      * 
                      */
                     std::string GetEffectInfo() const;
 
                     /**
-                     * 设置Impact of the event.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _effectInfo Impact of the event.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Event impact information.
+                     * @param _effectInfo Event impact information.
                      * 
                      */
                     void SetEffectInfo(const std::string& _effectInfo);
@@ -323,15 +331,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EffectInfoHasBeenSet() const;
 
                     /**
-                     * 获取Initial scheduled execution date of the event.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InitialExecutionDate Initial scheduled execution date of the event.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Initial scheduled event execution date.
+                     * @return InitialExecutionDate Initial scheduled event execution date.
                      * 
                      */
                     std::string GetInitialExecutionDate() const;
 
                     /**
-                     * 设置Initial scheduled execution date of the event.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _initialExecutionDate Initial scheduled execution date of the event.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Initial scheduled event execution date.
+                     * @param _initialExecutionDate Initial scheduled event execution date.
                      * 
                      */
                     void SetInitialExecutionDate(const std::string& _initialExecutionDate);
@@ -347,84 +355,86 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Event ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_iD;
                     bool m_iDHasBeenSet;
 
                     /**
-                     * Instance ID.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance name.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance name.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be only set to **InstanceMigration**.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be set only to **InstanceMigration**.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Event levels are divided into Critical, High, Medium, and Low events according to the severity and urgency.- Critical
-- High
-- Middle
-- Low
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Event level. The levels are divided into critical, important, medium, and general based on severity and urgency.
+ - Critical: critical.
+ - High: important.
+ - Middle: medium.
+ - Low.
                      */
                     std::string m_grade;
                     bool m_gradeHasBeenSet;
 
                     /**
-                     * Scheduled event execution date.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Scheduled event execution date.
                      */
                     std::string m_executionDate;
                     bool m_executionDateHasBeenSet;
 
                     /**
-                     * Scheduled start time of event execution.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Start date of scheduled event execution.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Scheduled end time of event execution.Note: This field may return null, indicating that no valid values can be obtained.
+                     * End date of scheduled event execution.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * The latest execution date of the operations event. Event execution must be completed before this date. Otherwise, the business may be affected.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Latest execution date of the Ops event. The event should be completed before this date. Otherwise, the business may be affected.
                      */
                     std::string m_latestExecutionDate;
                     bool m_latestExecutionDateHasBeenSet;
 
                     /**
-                     * Current event status.- Waiting: The event is waiting for execution on the execution date or during the operations period.- Running: The event is being executed during the operations period.- Finished: Execution of the event operations is completed.- Canceled: Execution of the event is canceled.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Current event status.
+ - Waiting: event not reached the execution date or not within the maintenance window.
+ - Running: event within the maintenance window and under maintenance execution.
+ - Finished: event with maintenance completed.
+- Canceled: Execution of the event is canceled.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
                      * Completion time of the event execution task.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_taskEndTime;
                     bool m_taskEndTimeHasBeenSet;
 
                     /**
-                     * Impact of the event.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Event impact information.
                      */
                     std::string m_effectInfo;
                     bool m_effectInfoHasBeenSet;
 
                     /**
-                     * Initial scheduled execution date of the event.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Initial scheduled event execution date.
                      */
                     std::string m_initialExecutionDate;
                     bool m_initialExecutionDateHasBeenSet;

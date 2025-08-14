@@ -84,6 +84,27 @@ namespace TencentCloud
                      */
                     bool ProxyIDHasBeenSet() const;
 
+                    /**
+                     * 获取Instance proxy ID list. Call the API [DescribeInstanceNodeInfo](https://www.tencentcloud.comom/document/product/239/48603?from_cn_redirect=1) to obtain IDs from **NodeId** in the **Proxy** response parameter.
+                     * @return ProxyIDList Instance proxy ID list. Call the API [DescribeInstanceNodeInfo](https://www.tencentcloud.comom/document/product/239/48603?from_cn_redirect=1) to obtain IDs from **NodeId** in the **Proxy** response parameter.
+                     * 
+                     */
+                    std::vector<std::string> GetProxyIDList() const;
+
+                    /**
+                     * 设置Instance proxy ID list. Call the API [DescribeInstanceNodeInfo](https://www.tencentcloud.comom/document/product/239/48603?from_cn_redirect=1) to obtain IDs from **NodeId** in the **Proxy** response parameter.
+                     * @param _proxyIDList Instance proxy ID list. Call the API [DescribeInstanceNodeInfo](https://www.tencentcloud.comom/document/product/239/48603?from_cn_redirect=1) to obtain IDs from **NodeId** in the **Proxy** response parameter.
+                     * 
+                     */
+                    void SetProxyIDList(const std::vector<std::string>& _proxyIDList);
+
+                    /**
+                     * 判断参数 ProxyIDList 是否已赋值
+                     * @return ProxyIDList 是否已赋值
+                     * 
+                     */
+                    bool ProxyIDListHasBeenSet() const;
+
                 private:
 
                     /**
@@ -97,6 +118,12 @@ namespace TencentCloud
                      */
                     std::string m_proxyID;
                     bool m_proxyIDHasBeenSet;
+
+                    /**
+                     * Instance proxy ID list. Call the API [DescribeInstanceNodeInfo](https://www.tencentcloud.comom/document/product/239/48603?from_cn_redirect=1) to obtain IDs from **NodeId** in the **Proxy** response parameter.
+                     */
+                    std::vector<std::string> m_proxyIDList;
+                    bool m_proxyIDListHasBeenSet;
 
                 };
             }

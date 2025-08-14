@@ -83,6 +83,49 @@ TrtcClient::ControlAIConversationOutcomeCallable TrtcClient::ControlAIConversati
     return task->get_future();
 }
 
+TrtcClient::CreateCloudModerationOutcome TrtcClient::CreateCloudModeration(const CreateCloudModerationRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateCloudModeration");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateCloudModerationResponse rsp = CreateCloudModerationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateCloudModerationOutcome(rsp);
+        else
+            return CreateCloudModerationOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateCloudModerationOutcome(outcome.GetError());
+    }
+}
+
+void TrtcClient::CreateCloudModerationAsync(const CreateCloudModerationRequest& request, const CreateCloudModerationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateCloudModeration(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TrtcClient::CreateCloudModerationOutcomeCallable TrtcClient::CreateCloudModerationCallable(const CreateCloudModerationRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateCloudModerationOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateCloudModeration(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TrtcClient::CreateCloudRecordingOutcome TrtcClient::CreateCloudRecording(const CreateCloudRecordingRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateCloudRecording");
@@ -162,6 +205,49 @@ TrtcClient::CreateCloudSliceTaskOutcomeCallable TrtcClient::CreateCloudSliceTask
         [this, request]()
         {
             return this->CreateCloudSliceTask(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TrtcClient::DeleteCloudModerationOutcome TrtcClient::DeleteCloudModeration(const DeleteCloudModerationRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteCloudModeration");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteCloudModerationResponse rsp = DeleteCloudModerationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteCloudModerationOutcome(rsp);
+        else
+            return DeleteCloudModerationOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteCloudModerationOutcome(outcome.GetError());
+    }
+}
+
+void TrtcClient::DeleteCloudModerationAsync(const DeleteCloudModerationRequest& request, const DeleteCloudModerationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteCloudModeration(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TrtcClient::DeleteCloudModerationOutcomeCallable TrtcClient::DeleteCloudModerationCallable(const DeleteCloudModerationRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteCloudModerationOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteCloudModeration(request);
         }
     );
 
@@ -377,6 +463,49 @@ TrtcClient::DescribeCallDetailInfoOutcomeCallable TrtcClient::DescribeCallDetail
         [this, request]()
         {
             return this->DescribeCallDetailInfo(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TrtcClient::DescribeCloudModerationOutcome TrtcClient::DescribeCloudModeration(const DescribeCloudModerationRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCloudModeration");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCloudModerationResponse rsp = DescribeCloudModerationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCloudModerationOutcome(rsp);
+        else
+            return DescribeCloudModerationOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCloudModerationOutcome(outcome.GetError());
+    }
+}
+
+void TrtcClient::DescribeCloudModerationAsync(const DescribeCloudModerationRequest& request, const DescribeCloudModerationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCloudModeration(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TrtcClient::DescribeCloudModerationOutcomeCallable TrtcClient::DescribeCloudModerationCallable(const DescribeCloudModerationRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCloudModerationOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCloudModeration(request);
         }
     );
 
@@ -1237,6 +1366,49 @@ TrtcClient::DismissRoomByStrRoomIdOutcomeCallable TrtcClient::DismissRoomByStrRo
         [this, request]()
         {
             return this->DismissRoomByStrRoomId(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TrtcClient::ModifyCloudModerationOutcome TrtcClient::ModifyCloudModeration(const ModifyCloudModerationRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyCloudModeration");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyCloudModerationResponse rsp = ModifyCloudModerationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyCloudModerationOutcome(rsp);
+        else
+            return ModifyCloudModerationOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyCloudModerationOutcome(outcome.GetError());
+    }
+}
+
+void TrtcClient::ModifyCloudModerationAsync(const ModifyCloudModerationRequest& request, const ModifyCloudModerationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyCloudModeration(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TrtcClient::ModifyCloudModerationOutcomeCallable TrtcClient::ModifyCloudModerationCallable(const ModifyCloudModerationRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyCloudModerationOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyCloudModeration(request);
         }
     );
 

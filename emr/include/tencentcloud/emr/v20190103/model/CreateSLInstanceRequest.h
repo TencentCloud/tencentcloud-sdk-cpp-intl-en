@@ -234,6 +234,27 @@ namespace TencentCloud
                      */
                     bool ClientTokenHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return DeploymentMode 
+                     * 
+                     */
+                    std::string GetDeploymentMode() const;
+
+                    /**
+                     * 设置
+                     * @param _deploymentMode 
+                     * 
+                     */
+                    void SetDeploymentMode(const std::string& _deploymentMode);
+
+                    /**
+                     * 判断参数 DeploymentMode 是否已赋值
+                     * @return DeploymentMode 是否已赋值
+                     * 
+                     */
+                    bool DeploymentModeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -289,6 +310,12 @@ namespace TencentCloud
                      */
                     std::string m_clientToken;
                     bool m_clientTokenHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_deploymentMode;
+                    bool m_deploymentModeHasBeenSet;
 
                 };
             }

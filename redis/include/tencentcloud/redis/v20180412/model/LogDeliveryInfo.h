@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether log shipping is enabled. true: enabled; false: disabled.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Enabled Whether log shipping is enabled. true: enabled; false: disabled.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Enabling status of log shipping. true: enabled; false: disabled.
+                     * @return Enabled Enabling status of log shipping. true: enabled; false: disabled.
                      * 
                      */
                     bool GetEnabled() const;
 
                     /**
-                     * 设置Whether log shipping is enabled. true: enabled; false: disabled.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _enabled Whether log shipping is enabled. true: enabled; false: disabled.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Enabling status of log shipping. true: enabled; false: disabled.
+                     * @param _enabled Enabling status of log shipping. true: enabled; false: disabled.
                      * 
                      */
                     void SetEnabled(const bool& _enabled);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool EnabledHasBeenSet() const;
 
                     /**
-                     * 获取Logset ID.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return LogsetId Logset ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Log set ID.
+                     * @return LogsetId Log set ID.
                      * 
                      */
                     std::string GetLogsetId() const;
 
                     /**
-                     * 设置Logset ID.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _logsetId Logset ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Log set ID.
+                     * @param _logsetId Log set ID.
                      * 
                      */
                     void SetLogsetId(const std::string& _logsetId);
@@ -98,18 +90,14 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * 获取Log topic ID.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @return TopicId Log topic ID.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置Log topic ID.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _topicId Log topic ID.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -123,22 +111,14 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * 获取Logset region
-
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @return LogRegion Logset region
-
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetLogRegion() const;
 
                     /**
                      * 设置Logset region
-
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _logRegion Logset region
-
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetLogRegion(const std::string& _logRegion);
@@ -153,30 +133,25 @@ Note: This field may return null, indicating that no valid value can be obtained
                 private:
 
                     /**
-                     * Whether log shipping is enabled. true: enabled; false: disabled.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Enabling status of log shipping. true: enabled; false: disabled.
                      */
                     bool m_enabled;
                     bool m_enabledHasBeenSet;
 
                     /**
-                     * Logset ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Log set ID.
                      */
                     std::string m_logsetId;
                     bool m_logsetIdHasBeenSet;
 
                     /**
                      * Log topic ID.
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
                      * Logset region
-
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_logRegion;
                     bool m_logRegionHasBeenSet;

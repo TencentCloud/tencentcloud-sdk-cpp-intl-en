@@ -215,19 +215,15 @@ namespace TencentCloud
                     bool RedisShardSizeHasBeenSet() const;
 
                     /**
-                     * 获取Instance disk size
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DiskSize Instance disk size
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance disk size.
+                     * @return DiskSize Instance disk size.
                      * 
                      */
                     int64_t GetDiskSize() const;
 
                     /**
-                     * 设置Instance disk size
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _diskSize Instance disk size
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance disk size.
+                     * @param _diskSize Instance disk size.
                      * 
                      */
                     void SetDiskSize(const int64_t& _diskSize);
@@ -303,19 +299,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VipHasBeenSet() const;
 
                     /**
-                     * 获取Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Vip6 Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取This parameter encounters a naming issue. It is recommended to use the parameter IPv6 instead. It is an internal parameter and can be ignored.
+                     * @return Vip6 This parameter encounters a naming issue. It is recommended to use the parameter IPv6 instead. It is an internal parameter and can be ignored.
                      * 
                      */
                     std::string GetVip6() const;
 
                     /**
-                     * 设置Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _vip6 Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置This parameter encounters a naming issue. It is recommended to use the parameter IPv6 instead. It is an internal parameter and can be ignored.
+                     * @param _vip6 This parameter encounters a naming issue. It is recommended to use the parameter IPv6 instead. It is an internal parameter and can be ignored.
                      * 
                      */
                     void SetVip6(const std::string& _vip6);
@@ -328,19 +320,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool Vip6HasBeenSet() const;
 
                     /**
-                     * 获取Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IPv6 Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Internal parameter, which can be ignored.
+                     * @return IPv6 Internal parameter, which can be ignored.
                      * 
                      */
                     std::string GetIPv6() const;
 
                     /**
-                     * 设置Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _iPv6 Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Internal parameter, which can be ignored.
+                     * @param _iPv6 Internal parameter, which can be ignored.
                      * 
                      */
                     void SetIPv6(const std::string& _iPv6);
@@ -590,8 +578,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_redisShardSizeHasBeenSet;
 
                     /**
-                     * Instance disk size
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance disk size.
                      */
                     int64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;
@@ -615,15 +602,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_vipHasBeenSet;
 
                     /**
-                     * Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * This parameter encounters a naming issue. It is recommended to use the parameter IPv6 instead. It is an internal parameter and can be ignored.
                      */
                     std::string m_vip6;
                     bool m_vip6HasBeenSet;
 
                     /**
-                     * Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Internal parameter, which can be ignored.
                      */
                     std::string m_iPv6;
                     bool m_iPv6HasBeenSet;

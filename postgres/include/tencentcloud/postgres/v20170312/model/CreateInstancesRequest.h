@@ -727,6 +727,27 @@ For more information on `KMSRegion`, see [Enabling TDE](https://intl.cloud.tence
                     bool KMSRegionHasBeenSet() const;
 
                     /**
+                     * 获取
+                     * @return KMSClusterId 
+                     * 
+                     */
+                    std::string GetKMSClusterId() const;
+
+                    /**
+                     * 设置
+                     * @param _kMSClusterId 
+                     * 
+                     */
+                    void SetKMSClusterId(const std::string& _kMSClusterId);
+
+                    /**
+                     * 判断参数 KMSClusterId 是否已赋值
+                     * @return KMSClusterId 是否已赋值
+                     * 
+                     */
+                    bool KMSClusterIdHasBeenSet() const;
+
+                    /**
                      * 获取Database engine, which supports:
 <li>`postgresql`: TencentDB for PostgreSQL</li>
 <li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>
@@ -1069,6 +1090,12 @@ For more information on `KMSRegion`, see [Enabling TDE](https://intl.cloud.tence
                      */
                     std::string m_kMSRegion;
                     bool m_kMSRegionHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_kMSClusterId;
+                    bool m_kMSClusterIdHasBeenSet;
 
                     /**
                      * Database engine, which supports:

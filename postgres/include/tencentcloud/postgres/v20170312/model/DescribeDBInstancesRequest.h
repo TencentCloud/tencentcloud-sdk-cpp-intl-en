@@ -93,15 +93,15 @@ db-public-address: filter by instance public network address (in string format)
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取The maximum number of results returned per page. Value range: 1-100. Default: `10`
-                     * @return Limit The maximum number of results returned per page. Value range: 1-100. Default: `10`
+                     * 获取The maximum number of results returned per page. Value range: 1-100. Default: `10`.
+                     * @return Limit The maximum number of results returned per page. Value range: 1-100. Default: `10`.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置The maximum number of results returned per page. Value range: 1-100. Default: `10`
-                     * @param _limit The maximum number of results returned per page. Value range: 1-100. Default: `10`
+                     * 设置The maximum number of results returned per page. Value range: 1-100. Default: `10`.
+                     * @param _limit The maximum number of results returned per page. Value range: 1-100. Default: `10`.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -135,15 +135,15 @@ db-public-address: filter by instance public network address (in string format)
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
-                     * @return OrderBy Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
+                     * 获取Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime.
+                     * @return OrderBy Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime.
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
-                     * @param _orderBy Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
+                     * 设置Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime.
+                     * @param _orderBy Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime.
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -192,7 +192,7 @@ db-public-address: filter by instance public network address (in string format)
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * The maximum number of results returned per page. Value range: 1-100. Default: `10`
+                     * The maximum number of results returned per page. Value range: 1-100. Default: `10`.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
@@ -204,7 +204,7 @@ db-public-address: filter by instance public network address (in string format)
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
+                     * Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime.
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;

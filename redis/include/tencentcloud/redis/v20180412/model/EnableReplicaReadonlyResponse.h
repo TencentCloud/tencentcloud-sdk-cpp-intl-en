@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Valid values: `ERROR`, `OK`. This field has been disused.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Valid values: `ERROR`, `OK`. This field has been disused.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取ERROR: incorrect; OK: correct (discarded).
+                     * @return Status ERROR: incorrect; OK: correct (discarded).
                      * @deprecated
                      */
                     std::string GetStatus() const;
@@ -60,10 +58,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TaskId Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Task ID.
+                     * @return TaskId Task ID.
                      * 
                      */
                     int64_t GetTaskId() const;
@@ -78,15 +74,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Valid values: `ERROR`, `OK`. This field has been disused.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * ERROR: incorrect; OK: correct (discarded).
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Task ID.
                      */
                     int64_t m_taskId;
                     bool m_taskIdHasBeenSet;

@@ -61,10 +61,8 @@ namespace TencentCloud
                     bool ProxyCountHasBeenSet() const;
 
                     /**
-                     * 获取Proxy node information 
-Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @return Proxy Proxy node information 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 获取Proxy node information.
+                     * @return Proxy Proxy node information.
                      * 
                      */
                     std::vector<ProxyNodes> GetProxy() const;
@@ -91,10 +89,8 @@ Note:  This field may return null, indicating that no valid values can be obtain
                     bool RedisCountHasBeenSet() const;
 
                     /**
-                     * 获取Redis node information 
-Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @return Redis Redis node information 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 获取TencentDB for Redis® node information.
+                     * @return Redis TencentDB for Redis® node information.
                      * 
                      */
                     std::vector<RedisNodes> GetRedis() const;
@@ -121,10 +117,8 @@ Note:  This field may return null, indicating that no valid values can be obtain
                     bool TendisCountHasBeenSet() const;
 
                     /**
-                     * 获取This parameter has been disused. 
-Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @return Tendis This parameter has been disused. 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 获取This parameter is no longer used. Please ignore it.
+                     * @return Tendis This parameter is no longer used. Please ignore it.
                      * 
                      */
                     std::vector<TendisNodes> GetTendis() const;
@@ -145,8 +139,7 @@ Note:  This field may return null, indicating that no valid values can be obtain
                     bool m_proxyCountHasBeenSet;
 
                     /**
-                     * Proxy node information 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * Proxy node information.
                      */
                     std::vector<ProxyNodes> m_proxy;
                     bool m_proxyHasBeenSet;
@@ -158,8 +151,7 @@ Note:  This field may return null, indicating that no valid values can be obtain
                     bool m_redisCountHasBeenSet;
 
                     /**
-                     * Redis node information 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * TencentDB for Redis® node information.
                      */
                     std::vector<RedisNodes> m_redis;
                     bool m_redisHasBeenSet;
@@ -171,8 +163,7 @@ Note:  This field may return null, indicating that no valid values can be obtain
                     bool m_tendisCountHasBeenSet;
 
                     /**
-                     * This parameter has been disused. 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * This parameter is no longer used. Please ignore it.
                      */
                     std::vector<TendisNodes> m_tendis;
                     bool m_tendisHasBeenSet;

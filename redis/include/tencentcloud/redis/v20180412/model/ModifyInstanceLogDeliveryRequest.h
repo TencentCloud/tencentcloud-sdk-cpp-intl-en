@@ -114,15 +114,15 @@ namespace TencentCloud
                     bool EnabledHasBeenSet() const;
 
                     /**
-                     * 获取ID of the shipped logset, which can be obtained through the sub-parameter **LogsetId** of the response parameter **SlowLog** of the API [DescribeInstanceLogDelivery](https://intl.cloud.tencent.com/document/product/239/110878?from_cn_redirect=1).
-                     * @return LogsetId ID of the shipped logset, which can be obtained through the sub-parameter **LogsetId** of the response parameter **SlowLog** of the API [DescribeInstanceLogDelivery](https://intl.cloud.tencent.com/document/product/239/110878?from_cn_redirect=1).
+                     * 获取ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://intl.cloud.tencent.com/document/api/614/58624?from_cn_redirect=1).
+                     * @return LogsetId ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://intl.cloud.tencent.com/document/api/614/58624?from_cn_redirect=1).
                      * 
                      */
                     std::string GetLogsetId() const;
 
                     /**
-                     * 设置ID of the shipped logset, which can be obtained through the sub-parameter **LogsetId** of the response parameter **SlowLog** of the API [DescribeInstanceLogDelivery](https://intl.cloud.tencent.com/document/product/239/110878?from_cn_redirect=1).
-                     * @param _logsetId ID of the shipped logset, which can be obtained through the sub-parameter **LogsetId** of the response parameter **SlowLog** of the API [DescribeInstanceLogDelivery](https://intl.cloud.tencent.com/document/product/239/110878?from_cn_redirect=1).
+                     * 设置ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://intl.cloud.tencent.com/document/api/614/58624?from_cn_redirect=1).
+                     * @param _logsetId ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://intl.cloud.tencent.com/document/api/614/58624?from_cn_redirect=1).
                      * 
                      */
                     void SetLogsetId(const std::string& _logsetId);
@@ -135,15 +135,15 @@ namespace TencentCloud
                     bool LogsetIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the shipped log topic, which can be obtained through the sub-parameter **TopicId** of the response parameter **SlowLog** of the API [DescribeInstanceLogDelivery](https://intl.cloud.tencent.com/document/product/239/110878?from_cn_redirect=1).
-                     * @return TopicId ID of the shipped log topic, which can be obtained through the sub-parameter **TopicId** of the response parameter **SlowLog** of the API [DescribeInstanceLogDelivery](https://intl.cloud.tencent.com/document/product/239/110878?from_cn_redirect=1).
+                     * 获取ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://intl.cloud.tencent.com/document/api/614/56454?from_cn_redirect=1).
+                     * @return TopicId ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://intl.cloud.tencent.com/document/api/614/56454?from_cn_redirect=1).
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置ID of the shipped log topic, which can be obtained through the sub-parameter **TopicId** of the response parameter **SlowLog** of the API [DescribeInstanceLogDelivery](https://intl.cloud.tencent.com/document/product/239/110878?from_cn_redirect=1).
-                     * @param _topicId ID of the shipped log topic, which can be obtained through the sub-parameter **TopicId** of the response parameter **SlowLog** of the API [DescribeInstanceLogDelivery](https://intl.cloud.tencent.com/document/product/239/110878?from_cn_redirect=1).
+                     * 设置ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://intl.cloud.tencent.com/document/api/614/56454?from_cn_redirect=1).
+                     * @param _topicId ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://intl.cloud.tencent.com/document/api/614/56454?from_cn_redirect=1).
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -156,15 +156,15 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Logset name. If **LogsetId** is not specified, this parameter needs to be configured and the system will automatically create a logset with the specified name.
-                     * @return LogsetName Logset name. If **LogsetId** is not specified, this parameter needs to be configured and the system will automatically create a logset with the specified name.
+                     * 获取Logset name. It is required when **LogsetId** is left blank. The system will create a logset with the value of LogsetName and ship logs.
+                     * @return LogsetName Logset name. It is required when **LogsetId** is left blank. The system will create a logset with the value of LogsetName and ship logs.
                      * 
                      */
                     std::string GetLogsetName() const;
 
                     /**
-                     * 设置Logset name. If **LogsetId** is not specified, this parameter needs to be configured and the system will automatically create a logset with the specified name.
-                     * @param _logsetName Logset name. If **LogsetId** is not specified, this parameter needs to be configured and the system will automatically create a logset with the specified name.
+                     * 设置Logset name. It is required when **LogsetId** is left blank. The system will create a logset with the value of LogsetName and ship logs.
+                     * @param _logsetName Logset name. It is required when **LogsetId** is left blank. The system will create a logset with the value of LogsetName and ship logs.
                      * 
                      */
                     void SetLogsetName(const std::string& _logsetName);
@@ -177,15 +177,15 @@ namespace TencentCloud
                     bool LogsetNameHasBeenSet() const;
 
                     /**
-                     * 获取Log topic name. This parameter is required when TopicId is empty, and the system will automatically create a log topic.
-                     * @return TopicName Log topic name. This parameter is required when TopicId is empty, and the system will automatically create a log topic.
+                     * 获取Log topic name. It is required when **TopicId** is left blank. The system will create a log topic with the value of TopicName and ship logs.
+                     * @return TopicName Log topic name. It is required when **TopicId** is left blank. The system will create a log topic with the value of TopicName and ship logs.
                      * 
                      */
                     std::string GetTopicName() const;
 
                     /**
-                     * 设置Log topic name. This parameter is required when TopicId is empty, and the system will automatically create a log topic.
-                     * @param _topicName Log topic name. This parameter is required when TopicId is empty, and the system will automatically create a log topic.
+                     * 设置Log topic name. It is required when **TopicId** is left blank. The system will create a log topic with the value of TopicName and ship logs.
+                     * @param _topicName Log topic name. It is required when **TopicId** is left blank. The system will create a log topic with the value of TopicName and ship logs.
                      * 
                      */
                     void SetTopicName(const std::string& _topicName);
@@ -283,25 +283,25 @@ namespace TencentCloud
                     bool m_enabledHasBeenSet;
 
                     /**
-                     * ID of the shipped logset, which can be obtained through the sub-parameter **LogsetId** of the response parameter **SlowLog** of the API [DescribeInstanceLogDelivery](https://intl.cloud.tencent.com/document/product/239/110878?from_cn_redirect=1).
+                     * ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://intl.cloud.tencent.com/document/api/614/58624?from_cn_redirect=1).
                      */
                     std::string m_logsetId;
                     bool m_logsetIdHasBeenSet;
 
                     /**
-                     * ID of the shipped log topic, which can be obtained through the sub-parameter **TopicId** of the response parameter **SlowLog** of the API [DescribeInstanceLogDelivery](https://intl.cloud.tencent.com/document/product/239/110878?from_cn_redirect=1).
+                     * ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://intl.cloud.tencent.com/document/api/614/56454?from_cn_redirect=1).
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * Logset name. If **LogsetId** is not specified, this parameter needs to be configured and the system will automatically create a logset with the specified name.
+                     * Logset name. It is required when **LogsetId** is left blank. The system will create a logset with the value of LogsetName and ship logs.
                      */
                     std::string m_logsetName;
                     bool m_logsetNameHasBeenSet;
 
                     /**
-                     * Log topic name. This parameter is required when TopicId is empty, and the system will automatically create a log topic.
+                     * Log topic name. It is required when **TopicId** is left blank. The system will create a log topic with the value of TopicName and ship logs.
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;

@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task ID 
-Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @return TaskId Task ID 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 获取Task ID.
+                     * @return TaskId Task ID.
                      * 
                      */
                     int64_t GetTaskId() const;
 
                     /**
-                     * 设置Task ID 
-Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @param _taskId Task ID 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 设置Task ID.
+                     * @param _taskId Task ID.
                      * 
                      */
                     void SetTaskId(const int64_t& _taskId);
@@ -72,19 +68,15 @@ Note:  This field may return null, indicating that no valid values can be obtain
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Task start time 
-Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @return StartTime Task start time 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 获取Task start time.
+                     * @return StartTime Task start time.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Task start time 
-Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @param _startTime Task start time 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 设置Task start time.
+                     * @param _startTime Task start time.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -99,120 +91,118 @@ Note:  This field may return null, indicating that no valid values can be obtain
                     /**
                      * 获取Task type.
 
-- FLOW_CREATE: "001" - Create an instance.
-- FLOW_RESIZE: "002" - Change the configuration.
-- FLOW_CLOSE: "003" - Close an instance.
-- FLOW_CLEAN: "004" - Clear an instance.
-- FLOW_STARTUP: "005" - Enable an instance.
-- FLOW_DELETE: "006" - Delete an instance.
-- FLOW_SETPWD: "007" - Reset the password.
-- FLOW_EXPORTBACKUP: "009" - Export the backup file.
-- FLOW_RESTOREBACKUP: "010" - Restore the backup.
-- FLOW_BACKUPINSTANCE: "012" - Back up an instance.
-- FLOW_MIGRATEINSTANCE: "013" - Migrate an instance.
-- FLOW_DELBACKUP: "014" - Delete the backup.
-- FLOW_EXCHANGEINSTANCE: "016" - Switch an instance.
-- FLOW_AUTOBACKUP: "017" - Automatically backup an instance.
-- FLOW_MIGRATECHECK: "022" - Verify migration parameters.
-- FLOW_MIGRATETASK: "023" - Migrating data is in progress.
-- FLOW_CLEANDB: "025" - Clear a database.
-- FLOW_CLONEBACKUP: "026" - Clone the backup.
-- FLOW_CHANGEVIP: "027" - Change the VIP.
-- FLOW_EXPORSHR: "028" - Perform scaling.
-- FLOW_ADDNODES: "029" - Add or remove a node.
-- FLOW_CHANGENET: "031" - Change the network type.
-- FLOW_MODIFYINSTACEREADONLY: "033" - Modify the read-only policy.
-- FLOW_MODIFYINSTANCEPARAMS: "034" - Modify instance parameters.
-- FLOW_MODIFYINSTANCEPASSWORDFREE: "035" - Set password-free access.
-- FLOW_SWITCHINSTANCEVIP: "036" - Switch the instance VIP.
-- FLOW_MODIFYINSTANCEACCOUNT: "037" - Modify the instance account.
-- FLOW_MODIFYINSTANCEBANDWIDTH: "038" - Modify the instance bandwidth.
-- FLOW_ENABLEINSTANCE_REPLICATE: "039" - Enable read-only replica.
-- FLOW_DISABLEINSTANCE_REPLICATE: "040" - Disable read-only replica.
-- FLOW_UpgradeArch: "041" - Upgrade the instance architecture from primary-secondary to cluster.
-- FLOW_DowngradeArch: "042" - Downgrade the instance architecture from cluster to primary-secondary.
-- FLOW_UpgradeVersion: "043" - Upgrade the version.
-- FLOW_MODIFYCONNECTIONCONFIG: "044" - Modify the number of bandwidth connections.
-- FLOW_CLEARNETWORK: "045" - Change the network.
-- FLOW_REMOVE_BACKUP_FILE: "046" - Delete the backup.
-- FLOW_UPGRADE_SUPPORT_MULTI_AZ: "047" - Upgrade an instance to support multiple AZs.
-- FLOW_SHUTDOWN_MASTER: "048" - Simulate a fault.
-- FLOW_CHANGE_REPLICA_TO_MASTER: "049" - Manually promote the replica node to the primary node.
-- FLOW_CODE_ADD_REPLICATION_INSTANCE: "050" - Add a replication group.
-- FLOW_OPEN_WAN: "052" - Enable the public network.
-- FLOW_CLOSE_WAN: "053" - Disable the public network. - FLOW_UPDATE_WAN: "054" - Update the public network.
-- FLOW_CODE_DELETE_REPLICATION_INSTANCE: "055" - Unbind the replication group.
-- FLOW_CODE_CHANGE_MASTER_INSTANCE: "056" - Switch to the primary instance in the replication group.
-- FLOW_CODE_CHANGE_INSTANCE_ROLE: "057" - Change the roles of instances in the replication group.
-- FLOW_MIGRATE_NODE: "058" - Migrate a node.
-- FLOW_SWITCH_NODE: "059" - Switch a node.
-- FLOW_UPGRADE_SMALL_VERSION: "060" - Upgrade the Redis version.
-- FLOW_UPGRADE_PROXY_VERSION: "061" - Upgrade the Proxy version.
-- FLOW_MODIFY_INSTANCE_NETWORK: "062" - Modify the instance network.
-- FLOW_MIGRATE_PROXY_NODE: "063" - Migrate the Proxy node.
-- FLOW_MIGRATION_INSTANCE_ZONE: "066" - Migrate the instance AZ in progress.
-- FLOW_UPGRADE_INSTANCE_CACHE_AND_PROXY: "067" - Upgrading the instance version is in progress.
-- FLOW_MODIFY_PROXY_NUM: "069" - Add or remove a Proxy node.
-- FLOW_MODIFYBACKUPMOD: "070" - Change the instance backup mode.
-Note: This field may return null, indicating that no valid value can be obtained.
+- FLOW_CREATE: "001", indicating instance creation.
+- FLOW_RESIZE: "002", indicating configuration modification.
+- FLOW_CLOSE: "003", indicating instance disabling.
+- FLOW_CLEAN: "004", indicating instance cleanup.
+- FLOW_STARTUP: "005", indicating instance enabling.
+- FLOW_DELETE: "006", indicating instance deletion.
+- FLOW_SETPWD: "007", indicating password reset.
+- FLOW_EXPORTBACKUP: "009", indicating backup file export.
+- FLOW_RESTOREBACKUP: "010", indicating backup restoration.
+- FLOW_BACKUPINSTANCE: "012", indicating instance backup.
+- FLOW_MIGRATEINSTANCE: "013", indicating instance migration.
+- FLOW_DELBACKUP: "014", indicating backup deletion.
+- FLOW_EXCHANGEINSTANCE: "016", indicating instance switch.
+- FLOW_AUTOBACKUP: "017", indicating automatic instance backup.
+- FLOW_MIGRATECHECK: "022", indicating migration parameter verification.
+- FLOW_MIGRATETASK: "023", indicating that data migration is in progress.
+- FLOW_CLEANDB: "025", indicating database cleanup.
+- FLOW_CLONEBACKUP: "026": indicating backup cloning.
+- FLOW_CHANGEVIP: "027", indicating VIP address modification.
+- FLOW_EXPORSHR: "028", indicating scaling.
+- FLOW_ADDNODES: "029", indicating node addition (removal).
+- FLOW_CHANGENET: "031", indicating network type modification.
+- FLOW_MODIFYINSTACEREADONLY: "033": indicating read-only policy modification.
+- FLOW_MODIFYINSTANCEPARAMS: "034", indicating instance parameter modification.
+- FLOW_MODIFYINSTANCEPASSWORDFREE: "035", indicating password-free access settings.
+- FLOW_SWITCHINSTANCEVIP: "036", indicating instance VIP address switch.
+- FLOW_MODIFYINSTANCEACCOUNT: "037", indicating instance account modification.
+- FLOW_MODIFYINSTANCEBANDWIDTH: "038", indicating instance bandwidth modification.
+- FLOW_ENABLEINSTANCE_REPLICATE: "039", indicating enabling of read-only replica.
+- FLOW_DISABLEINSTANCE_REPLICATE: "040", indicating disabling of read-only replica.
+- FLOW_UpgradeArch: "041", indicating instance architecture upgrade from the standard architecture to the cluster architecture.
+- FLOW_DowngradeArch: "042", indicating instance architecture downgrade from the cluster architecture to the standard architecture.
+- FLOW_UpgradeVersion: "043", indicating version upgrade.
+- FLOW_MODIFYCONNECTIONCONFIG: "044", indicating adjustment of the bandwidth and the number of connections.
+- FLOW_CLEARNETWORK: "045", indicating network change.
+- FLOW_REMOVE_BACKUP_FILE: "046", indicating backup deletion.
+- FLOW_UPGRADE_SUPPORT_MULTI_AZ: "047", indicating instance upgrade to multi-AZ deployment.
+- FLOW_SHUTDOWN_MASTER: "048", indicating fault simulation.
+- FLOW_CHANGE_REPLICA_TO_MASTER: "049", indicating manual promotion to the primary node.
+- FLOW_CODE_ADD_REPLICATION_INSTANCE: "050", indicating replication group addition.
+- FLOW_OPEN_WAN: "052", indicating enabling of public network access.
+- FLOW_CLOSE_WAN: "053", indicating disabling of public network access.
+- FLOW_CODE_DELETE_REPLICATION_INSTANCE: "055", indicating replication group unbinding.
+- FLOW_CODE_CHANGE_MASTER_INSTANCE: "056", indicating switching a replication group instance to the primary instance.
+- FLOW_CODE_CHANGE_INSTANCE_ROLE: "057", indicating modification of the replication group instance role.
+- FLOW_MIGRATE_NODE: "058", indicating node migration.
+- FLOW_SWITCH_NODE: "059", indicating node switch.
+- FLOW_UPGRADE_SMALL_VERSION: "060", indicating Redis version upgrade.
+- FLOW_UPGRADE_PROXY_VERSION: "061", indicating proxy version upgrade.
+- FLOW_MODIFY_INSTANCE_NETWORK: "062", indicating instance network modification.
+- FLOW_MIGRATE_PROXY_NODE: "063", indicating proxy node migration.
+- FLOW_MIGRATION_INSTANCE_ZONE: "066", indicating that instance migration to another AZ is in progress.
+- FLOW_UPGRADE_INSTANCE_CACHE_AND_PROXY: "067", indicating that instance version upgrade is in progress.
+- FLOW_MODIFY_PROXY_NUM: "069", indicating proxy node addition (removal).
+- FLOW_MODIFYBACKUPMOD: "070", indicating instance backup mode modification.
                      * @return TaskType Task type.
 
-- FLOW_CREATE: "001" - Create an instance.
-- FLOW_RESIZE: "002" - Change the configuration.
-- FLOW_CLOSE: "003" - Close an instance.
-- FLOW_CLEAN: "004" - Clear an instance.
-- FLOW_STARTUP: "005" - Enable an instance.
-- FLOW_DELETE: "006" - Delete an instance.
-- FLOW_SETPWD: "007" - Reset the password.
-- FLOW_EXPORTBACKUP: "009" - Export the backup file.
-- FLOW_RESTOREBACKUP: "010" - Restore the backup.
-- FLOW_BACKUPINSTANCE: "012" - Back up an instance.
-- FLOW_MIGRATEINSTANCE: "013" - Migrate an instance.
-- FLOW_DELBACKUP: "014" - Delete the backup.
-- FLOW_EXCHANGEINSTANCE: "016" - Switch an instance.
-- FLOW_AUTOBACKUP: "017" - Automatically backup an instance.
-- FLOW_MIGRATECHECK: "022" - Verify migration parameters.
-- FLOW_MIGRATETASK: "023" - Migrating data is in progress.
-- FLOW_CLEANDB: "025" - Clear a database.
-- FLOW_CLONEBACKUP: "026" - Clone the backup.
-- FLOW_CHANGEVIP: "027" - Change the VIP.
-- FLOW_EXPORSHR: "028" - Perform scaling.
-- FLOW_ADDNODES: "029" - Add or remove a node.
-- FLOW_CHANGENET: "031" - Change the network type.
-- FLOW_MODIFYINSTACEREADONLY: "033" - Modify the read-only policy.
-- FLOW_MODIFYINSTANCEPARAMS: "034" - Modify instance parameters.
-- FLOW_MODIFYINSTANCEPASSWORDFREE: "035" - Set password-free access.
-- FLOW_SWITCHINSTANCEVIP: "036" - Switch the instance VIP.
-- FLOW_MODIFYINSTANCEACCOUNT: "037" - Modify the instance account.
-- FLOW_MODIFYINSTANCEBANDWIDTH: "038" - Modify the instance bandwidth.
-- FLOW_ENABLEINSTANCE_REPLICATE: "039" - Enable read-only replica.
-- FLOW_DISABLEINSTANCE_REPLICATE: "040" - Disable read-only replica.
-- FLOW_UpgradeArch: "041" - Upgrade the instance architecture from primary-secondary to cluster.
-- FLOW_DowngradeArch: "042" - Downgrade the instance architecture from cluster to primary-secondary.
-- FLOW_UpgradeVersion: "043" - Upgrade the version.
-- FLOW_MODIFYCONNECTIONCONFIG: "044" - Modify the number of bandwidth connections.
-- FLOW_CLEARNETWORK: "045" - Change the network.
-- FLOW_REMOVE_BACKUP_FILE: "046" - Delete the backup.
-- FLOW_UPGRADE_SUPPORT_MULTI_AZ: "047" - Upgrade an instance to support multiple AZs.
-- FLOW_SHUTDOWN_MASTER: "048" - Simulate a fault.
-- FLOW_CHANGE_REPLICA_TO_MASTER: "049" - Manually promote the replica node to the primary node.
-- FLOW_CODE_ADD_REPLICATION_INSTANCE: "050" - Add a replication group.
-- FLOW_OPEN_WAN: "052" - Enable the public network.
-- FLOW_CLOSE_WAN: "053" - Disable the public network. - FLOW_UPDATE_WAN: "054" - Update the public network.
-- FLOW_CODE_DELETE_REPLICATION_INSTANCE: "055" - Unbind the replication group.
-- FLOW_CODE_CHANGE_MASTER_INSTANCE: "056" - Switch to the primary instance in the replication group.
-- FLOW_CODE_CHANGE_INSTANCE_ROLE: "057" - Change the roles of instances in the replication group.
-- FLOW_MIGRATE_NODE: "058" - Migrate a node.
-- FLOW_SWITCH_NODE: "059" - Switch a node.
-- FLOW_UPGRADE_SMALL_VERSION: "060" - Upgrade the Redis version.
-- FLOW_UPGRADE_PROXY_VERSION: "061" - Upgrade the Proxy version.
-- FLOW_MODIFY_INSTANCE_NETWORK: "062" - Modify the instance network.
-- FLOW_MIGRATE_PROXY_NODE: "063" - Migrate the Proxy node.
-- FLOW_MIGRATION_INSTANCE_ZONE: "066" - Migrate the instance AZ in progress.
-- FLOW_UPGRADE_INSTANCE_CACHE_AND_PROXY: "067" - Upgrading the instance version is in progress.
-- FLOW_MODIFY_PROXY_NUM: "069" - Add or remove a Proxy node.
-- FLOW_MODIFYBACKUPMOD: "070" - Change the instance backup mode.
-Note: This field may return null, indicating that no valid value can be obtained.
+- FLOW_CREATE: "001", indicating instance creation.
+- FLOW_RESIZE: "002", indicating configuration modification.
+- FLOW_CLOSE: "003", indicating instance disabling.
+- FLOW_CLEAN: "004", indicating instance cleanup.
+- FLOW_STARTUP: "005", indicating instance enabling.
+- FLOW_DELETE: "006", indicating instance deletion.
+- FLOW_SETPWD: "007", indicating password reset.
+- FLOW_EXPORTBACKUP: "009", indicating backup file export.
+- FLOW_RESTOREBACKUP: "010", indicating backup restoration.
+- FLOW_BACKUPINSTANCE: "012", indicating instance backup.
+- FLOW_MIGRATEINSTANCE: "013", indicating instance migration.
+- FLOW_DELBACKUP: "014", indicating backup deletion.
+- FLOW_EXCHANGEINSTANCE: "016", indicating instance switch.
+- FLOW_AUTOBACKUP: "017", indicating automatic instance backup.
+- FLOW_MIGRATECHECK: "022", indicating migration parameter verification.
+- FLOW_MIGRATETASK: "023", indicating that data migration is in progress.
+- FLOW_CLEANDB: "025", indicating database cleanup.
+- FLOW_CLONEBACKUP: "026": indicating backup cloning.
+- FLOW_CHANGEVIP: "027", indicating VIP address modification.
+- FLOW_EXPORSHR: "028", indicating scaling.
+- FLOW_ADDNODES: "029", indicating node addition (removal).
+- FLOW_CHANGENET: "031", indicating network type modification.
+- FLOW_MODIFYINSTACEREADONLY: "033": indicating read-only policy modification.
+- FLOW_MODIFYINSTANCEPARAMS: "034", indicating instance parameter modification.
+- FLOW_MODIFYINSTANCEPASSWORDFREE: "035", indicating password-free access settings.
+- FLOW_SWITCHINSTANCEVIP: "036", indicating instance VIP address switch.
+- FLOW_MODIFYINSTANCEACCOUNT: "037", indicating instance account modification.
+- FLOW_MODIFYINSTANCEBANDWIDTH: "038", indicating instance bandwidth modification.
+- FLOW_ENABLEINSTANCE_REPLICATE: "039", indicating enabling of read-only replica.
+- FLOW_DISABLEINSTANCE_REPLICATE: "040", indicating disabling of read-only replica.
+- FLOW_UpgradeArch: "041", indicating instance architecture upgrade from the standard architecture to the cluster architecture.
+- FLOW_DowngradeArch: "042", indicating instance architecture downgrade from the cluster architecture to the standard architecture.
+- FLOW_UpgradeVersion: "043", indicating version upgrade.
+- FLOW_MODIFYCONNECTIONCONFIG: "044", indicating adjustment of the bandwidth and the number of connections.
+- FLOW_CLEARNETWORK: "045", indicating network change.
+- FLOW_REMOVE_BACKUP_FILE: "046", indicating backup deletion.
+- FLOW_UPGRADE_SUPPORT_MULTI_AZ: "047", indicating instance upgrade to multi-AZ deployment.
+- FLOW_SHUTDOWN_MASTER: "048", indicating fault simulation.
+- FLOW_CHANGE_REPLICA_TO_MASTER: "049", indicating manual promotion to the primary node.
+- FLOW_CODE_ADD_REPLICATION_INSTANCE: "050", indicating replication group addition.
+- FLOW_OPEN_WAN: "052", indicating enabling of public network access.
+- FLOW_CLOSE_WAN: "053", indicating disabling of public network access.
+- FLOW_CODE_DELETE_REPLICATION_INSTANCE: "055", indicating replication group unbinding.
+- FLOW_CODE_CHANGE_MASTER_INSTANCE: "056", indicating switching a replication group instance to the primary instance.
+- FLOW_CODE_CHANGE_INSTANCE_ROLE: "057", indicating modification of the replication group instance role.
+- FLOW_MIGRATE_NODE: "058", indicating node migration.
+- FLOW_SWITCH_NODE: "059", indicating node switch.
+- FLOW_UPGRADE_SMALL_VERSION: "060", indicating Redis version upgrade.
+- FLOW_UPGRADE_PROXY_VERSION: "061", indicating proxy version upgrade.
+- FLOW_MODIFY_INSTANCE_NETWORK: "062", indicating instance network modification.
+- FLOW_MIGRATE_PROXY_NODE: "063", indicating proxy node migration.
+- FLOW_MIGRATION_INSTANCE_ZONE: "066", indicating that instance migration to another AZ is in progress.
+- FLOW_UPGRADE_INSTANCE_CACHE_AND_PROXY: "067", indicating that instance version upgrade is in progress.
+- FLOW_MODIFY_PROXY_NUM: "069", indicating proxy node addition (removal).
+- FLOW_MODIFYBACKUPMOD: "070", indicating instance backup mode modification.
                      * 
                      */
                     std::string GetTaskType() const;
@@ -220,120 +210,118 @@ Note: This field may return null, indicating that no valid value can be obtained
                     /**
                      * 设置Task type.
 
-- FLOW_CREATE: "001" - Create an instance.
-- FLOW_RESIZE: "002" - Change the configuration.
-- FLOW_CLOSE: "003" - Close an instance.
-- FLOW_CLEAN: "004" - Clear an instance.
-- FLOW_STARTUP: "005" - Enable an instance.
-- FLOW_DELETE: "006" - Delete an instance.
-- FLOW_SETPWD: "007" - Reset the password.
-- FLOW_EXPORTBACKUP: "009" - Export the backup file.
-- FLOW_RESTOREBACKUP: "010" - Restore the backup.
-- FLOW_BACKUPINSTANCE: "012" - Back up an instance.
-- FLOW_MIGRATEINSTANCE: "013" - Migrate an instance.
-- FLOW_DELBACKUP: "014" - Delete the backup.
-- FLOW_EXCHANGEINSTANCE: "016" - Switch an instance.
-- FLOW_AUTOBACKUP: "017" - Automatically backup an instance.
-- FLOW_MIGRATECHECK: "022" - Verify migration parameters.
-- FLOW_MIGRATETASK: "023" - Migrating data is in progress.
-- FLOW_CLEANDB: "025" - Clear a database.
-- FLOW_CLONEBACKUP: "026" - Clone the backup.
-- FLOW_CHANGEVIP: "027" - Change the VIP.
-- FLOW_EXPORSHR: "028" - Perform scaling.
-- FLOW_ADDNODES: "029" - Add or remove a node.
-- FLOW_CHANGENET: "031" - Change the network type.
-- FLOW_MODIFYINSTACEREADONLY: "033" - Modify the read-only policy.
-- FLOW_MODIFYINSTANCEPARAMS: "034" - Modify instance parameters.
-- FLOW_MODIFYINSTANCEPASSWORDFREE: "035" - Set password-free access.
-- FLOW_SWITCHINSTANCEVIP: "036" - Switch the instance VIP.
-- FLOW_MODIFYINSTANCEACCOUNT: "037" - Modify the instance account.
-- FLOW_MODIFYINSTANCEBANDWIDTH: "038" - Modify the instance bandwidth.
-- FLOW_ENABLEINSTANCE_REPLICATE: "039" - Enable read-only replica.
-- FLOW_DISABLEINSTANCE_REPLICATE: "040" - Disable read-only replica.
-- FLOW_UpgradeArch: "041" - Upgrade the instance architecture from primary-secondary to cluster.
-- FLOW_DowngradeArch: "042" - Downgrade the instance architecture from cluster to primary-secondary.
-- FLOW_UpgradeVersion: "043" - Upgrade the version.
-- FLOW_MODIFYCONNECTIONCONFIG: "044" - Modify the number of bandwidth connections.
-- FLOW_CLEARNETWORK: "045" - Change the network.
-- FLOW_REMOVE_BACKUP_FILE: "046" - Delete the backup.
-- FLOW_UPGRADE_SUPPORT_MULTI_AZ: "047" - Upgrade an instance to support multiple AZs.
-- FLOW_SHUTDOWN_MASTER: "048" - Simulate a fault.
-- FLOW_CHANGE_REPLICA_TO_MASTER: "049" - Manually promote the replica node to the primary node.
-- FLOW_CODE_ADD_REPLICATION_INSTANCE: "050" - Add a replication group.
-- FLOW_OPEN_WAN: "052" - Enable the public network.
-- FLOW_CLOSE_WAN: "053" - Disable the public network. - FLOW_UPDATE_WAN: "054" - Update the public network.
-- FLOW_CODE_DELETE_REPLICATION_INSTANCE: "055" - Unbind the replication group.
-- FLOW_CODE_CHANGE_MASTER_INSTANCE: "056" - Switch to the primary instance in the replication group.
-- FLOW_CODE_CHANGE_INSTANCE_ROLE: "057" - Change the roles of instances in the replication group.
-- FLOW_MIGRATE_NODE: "058" - Migrate a node.
-- FLOW_SWITCH_NODE: "059" - Switch a node.
-- FLOW_UPGRADE_SMALL_VERSION: "060" - Upgrade the Redis version.
-- FLOW_UPGRADE_PROXY_VERSION: "061" - Upgrade the Proxy version.
-- FLOW_MODIFY_INSTANCE_NETWORK: "062" - Modify the instance network.
-- FLOW_MIGRATE_PROXY_NODE: "063" - Migrate the Proxy node.
-- FLOW_MIGRATION_INSTANCE_ZONE: "066" - Migrate the instance AZ in progress.
-- FLOW_UPGRADE_INSTANCE_CACHE_AND_PROXY: "067" - Upgrading the instance version is in progress.
-- FLOW_MODIFY_PROXY_NUM: "069" - Add or remove a Proxy node.
-- FLOW_MODIFYBACKUPMOD: "070" - Change the instance backup mode.
-Note: This field may return null, indicating that no valid value can be obtained.
+- FLOW_CREATE: "001", indicating instance creation.
+- FLOW_RESIZE: "002", indicating configuration modification.
+- FLOW_CLOSE: "003", indicating instance disabling.
+- FLOW_CLEAN: "004", indicating instance cleanup.
+- FLOW_STARTUP: "005", indicating instance enabling.
+- FLOW_DELETE: "006", indicating instance deletion.
+- FLOW_SETPWD: "007", indicating password reset.
+- FLOW_EXPORTBACKUP: "009", indicating backup file export.
+- FLOW_RESTOREBACKUP: "010", indicating backup restoration.
+- FLOW_BACKUPINSTANCE: "012", indicating instance backup.
+- FLOW_MIGRATEINSTANCE: "013", indicating instance migration.
+- FLOW_DELBACKUP: "014", indicating backup deletion.
+- FLOW_EXCHANGEINSTANCE: "016", indicating instance switch.
+- FLOW_AUTOBACKUP: "017", indicating automatic instance backup.
+- FLOW_MIGRATECHECK: "022", indicating migration parameter verification.
+- FLOW_MIGRATETASK: "023", indicating that data migration is in progress.
+- FLOW_CLEANDB: "025", indicating database cleanup.
+- FLOW_CLONEBACKUP: "026": indicating backup cloning.
+- FLOW_CHANGEVIP: "027", indicating VIP address modification.
+- FLOW_EXPORSHR: "028", indicating scaling.
+- FLOW_ADDNODES: "029", indicating node addition (removal).
+- FLOW_CHANGENET: "031", indicating network type modification.
+- FLOW_MODIFYINSTACEREADONLY: "033": indicating read-only policy modification.
+- FLOW_MODIFYINSTANCEPARAMS: "034", indicating instance parameter modification.
+- FLOW_MODIFYINSTANCEPASSWORDFREE: "035", indicating password-free access settings.
+- FLOW_SWITCHINSTANCEVIP: "036", indicating instance VIP address switch.
+- FLOW_MODIFYINSTANCEACCOUNT: "037", indicating instance account modification.
+- FLOW_MODIFYINSTANCEBANDWIDTH: "038", indicating instance bandwidth modification.
+- FLOW_ENABLEINSTANCE_REPLICATE: "039", indicating enabling of read-only replica.
+- FLOW_DISABLEINSTANCE_REPLICATE: "040", indicating disabling of read-only replica.
+- FLOW_UpgradeArch: "041", indicating instance architecture upgrade from the standard architecture to the cluster architecture.
+- FLOW_DowngradeArch: "042", indicating instance architecture downgrade from the cluster architecture to the standard architecture.
+- FLOW_UpgradeVersion: "043", indicating version upgrade.
+- FLOW_MODIFYCONNECTIONCONFIG: "044", indicating adjustment of the bandwidth and the number of connections.
+- FLOW_CLEARNETWORK: "045", indicating network change.
+- FLOW_REMOVE_BACKUP_FILE: "046", indicating backup deletion.
+- FLOW_UPGRADE_SUPPORT_MULTI_AZ: "047", indicating instance upgrade to multi-AZ deployment.
+- FLOW_SHUTDOWN_MASTER: "048", indicating fault simulation.
+- FLOW_CHANGE_REPLICA_TO_MASTER: "049", indicating manual promotion to the primary node.
+- FLOW_CODE_ADD_REPLICATION_INSTANCE: "050", indicating replication group addition.
+- FLOW_OPEN_WAN: "052", indicating enabling of public network access.
+- FLOW_CLOSE_WAN: "053", indicating disabling of public network access.
+- FLOW_CODE_DELETE_REPLICATION_INSTANCE: "055", indicating replication group unbinding.
+- FLOW_CODE_CHANGE_MASTER_INSTANCE: "056", indicating switching a replication group instance to the primary instance.
+- FLOW_CODE_CHANGE_INSTANCE_ROLE: "057", indicating modification of the replication group instance role.
+- FLOW_MIGRATE_NODE: "058", indicating node migration.
+- FLOW_SWITCH_NODE: "059", indicating node switch.
+- FLOW_UPGRADE_SMALL_VERSION: "060", indicating Redis version upgrade.
+- FLOW_UPGRADE_PROXY_VERSION: "061", indicating proxy version upgrade.
+- FLOW_MODIFY_INSTANCE_NETWORK: "062", indicating instance network modification.
+- FLOW_MIGRATE_PROXY_NODE: "063", indicating proxy node migration.
+- FLOW_MIGRATION_INSTANCE_ZONE: "066", indicating that instance migration to another AZ is in progress.
+- FLOW_UPGRADE_INSTANCE_CACHE_AND_PROXY: "067", indicating that instance version upgrade is in progress.
+- FLOW_MODIFY_PROXY_NUM: "069", indicating proxy node addition (removal).
+- FLOW_MODIFYBACKUPMOD: "070", indicating instance backup mode modification.
                      * @param _taskType Task type.
 
-- FLOW_CREATE: "001" - Create an instance.
-- FLOW_RESIZE: "002" - Change the configuration.
-- FLOW_CLOSE: "003" - Close an instance.
-- FLOW_CLEAN: "004" - Clear an instance.
-- FLOW_STARTUP: "005" - Enable an instance.
-- FLOW_DELETE: "006" - Delete an instance.
-- FLOW_SETPWD: "007" - Reset the password.
-- FLOW_EXPORTBACKUP: "009" - Export the backup file.
-- FLOW_RESTOREBACKUP: "010" - Restore the backup.
-- FLOW_BACKUPINSTANCE: "012" - Back up an instance.
-- FLOW_MIGRATEINSTANCE: "013" - Migrate an instance.
-- FLOW_DELBACKUP: "014" - Delete the backup.
-- FLOW_EXCHANGEINSTANCE: "016" - Switch an instance.
-- FLOW_AUTOBACKUP: "017" - Automatically backup an instance.
-- FLOW_MIGRATECHECK: "022" - Verify migration parameters.
-- FLOW_MIGRATETASK: "023" - Migrating data is in progress.
-- FLOW_CLEANDB: "025" - Clear a database.
-- FLOW_CLONEBACKUP: "026" - Clone the backup.
-- FLOW_CHANGEVIP: "027" - Change the VIP.
-- FLOW_EXPORSHR: "028" - Perform scaling.
-- FLOW_ADDNODES: "029" - Add or remove a node.
-- FLOW_CHANGENET: "031" - Change the network type.
-- FLOW_MODIFYINSTACEREADONLY: "033" - Modify the read-only policy.
-- FLOW_MODIFYINSTANCEPARAMS: "034" - Modify instance parameters.
-- FLOW_MODIFYINSTANCEPASSWORDFREE: "035" - Set password-free access.
-- FLOW_SWITCHINSTANCEVIP: "036" - Switch the instance VIP.
-- FLOW_MODIFYINSTANCEACCOUNT: "037" - Modify the instance account.
-- FLOW_MODIFYINSTANCEBANDWIDTH: "038" - Modify the instance bandwidth.
-- FLOW_ENABLEINSTANCE_REPLICATE: "039" - Enable read-only replica.
-- FLOW_DISABLEINSTANCE_REPLICATE: "040" - Disable read-only replica.
-- FLOW_UpgradeArch: "041" - Upgrade the instance architecture from primary-secondary to cluster.
-- FLOW_DowngradeArch: "042" - Downgrade the instance architecture from cluster to primary-secondary.
-- FLOW_UpgradeVersion: "043" - Upgrade the version.
-- FLOW_MODIFYCONNECTIONCONFIG: "044" - Modify the number of bandwidth connections.
-- FLOW_CLEARNETWORK: "045" - Change the network.
-- FLOW_REMOVE_BACKUP_FILE: "046" - Delete the backup.
-- FLOW_UPGRADE_SUPPORT_MULTI_AZ: "047" - Upgrade an instance to support multiple AZs.
-- FLOW_SHUTDOWN_MASTER: "048" - Simulate a fault.
-- FLOW_CHANGE_REPLICA_TO_MASTER: "049" - Manually promote the replica node to the primary node.
-- FLOW_CODE_ADD_REPLICATION_INSTANCE: "050" - Add a replication group.
-- FLOW_OPEN_WAN: "052" - Enable the public network.
-- FLOW_CLOSE_WAN: "053" - Disable the public network. - FLOW_UPDATE_WAN: "054" - Update the public network.
-- FLOW_CODE_DELETE_REPLICATION_INSTANCE: "055" - Unbind the replication group.
-- FLOW_CODE_CHANGE_MASTER_INSTANCE: "056" - Switch to the primary instance in the replication group.
-- FLOW_CODE_CHANGE_INSTANCE_ROLE: "057" - Change the roles of instances in the replication group.
-- FLOW_MIGRATE_NODE: "058" - Migrate a node.
-- FLOW_SWITCH_NODE: "059" - Switch a node.
-- FLOW_UPGRADE_SMALL_VERSION: "060" - Upgrade the Redis version.
-- FLOW_UPGRADE_PROXY_VERSION: "061" - Upgrade the Proxy version.
-- FLOW_MODIFY_INSTANCE_NETWORK: "062" - Modify the instance network.
-- FLOW_MIGRATE_PROXY_NODE: "063" - Migrate the Proxy node.
-- FLOW_MIGRATION_INSTANCE_ZONE: "066" - Migrate the instance AZ in progress.
-- FLOW_UPGRADE_INSTANCE_CACHE_AND_PROXY: "067" - Upgrading the instance version is in progress.
-- FLOW_MODIFY_PROXY_NUM: "069" - Add or remove a Proxy node.
-- FLOW_MODIFYBACKUPMOD: "070" - Change the instance backup mode.
-Note: This field may return null, indicating that no valid value can be obtained.
+- FLOW_CREATE: "001", indicating instance creation.
+- FLOW_RESIZE: "002", indicating configuration modification.
+- FLOW_CLOSE: "003", indicating instance disabling.
+- FLOW_CLEAN: "004", indicating instance cleanup.
+- FLOW_STARTUP: "005", indicating instance enabling.
+- FLOW_DELETE: "006", indicating instance deletion.
+- FLOW_SETPWD: "007", indicating password reset.
+- FLOW_EXPORTBACKUP: "009", indicating backup file export.
+- FLOW_RESTOREBACKUP: "010", indicating backup restoration.
+- FLOW_BACKUPINSTANCE: "012", indicating instance backup.
+- FLOW_MIGRATEINSTANCE: "013", indicating instance migration.
+- FLOW_DELBACKUP: "014", indicating backup deletion.
+- FLOW_EXCHANGEINSTANCE: "016", indicating instance switch.
+- FLOW_AUTOBACKUP: "017", indicating automatic instance backup.
+- FLOW_MIGRATECHECK: "022", indicating migration parameter verification.
+- FLOW_MIGRATETASK: "023", indicating that data migration is in progress.
+- FLOW_CLEANDB: "025", indicating database cleanup.
+- FLOW_CLONEBACKUP: "026": indicating backup cloning.
+- FLOW_CHANGEVIP: "027", indicating VIP address modification.
+- FLOW_EXPORSHR: "028", indicating scaling.
+- FLOW_ADDNODES: "029", indicating node addition (removal).
+- FLOW_CHANGENET: "031", indicating network type modification.
+- FLOW_MODIFYINSTACEREADONLY: "033": indicating read-only policy modification.
+- FLOW_MODIFYINSTANCEPARAMS: "034", indicating instance parameter modification.
+- FLOW_MODIFYINSTANCEPASSWORDFREE: "035", indicating password-free access settings.
+- FLOW_SWITCHINSTANCEVIP: "036", indicating instance VIP address switch.
+- FLOW_MODIFYINSTANCEACCOUNT: "037", indicating instance account modification.
+- FLOW_MODIFYINSTANCEBANDWIDTH: "038", indicating instance bandwidth modification.
+- FLOW_ENABLEINSTANCE_REPLICATE: "039", indicating enabling of read-only replica.
+- FLOW_DISABLEINSTANCE_REPLICATE: "040", indicating disabling of read-only replica.
+- FLOW_UpgradeArch: "041", indicating instance architecture upgrade from the standard architecture to the cluster architecture.
+- FLOW_DowngradeArch: "042", indicating instance architecture downgrade from the cluster architecture to the standard architecture.
+- FLOW_UpgradeVersion: "043", indicating version upgrade.
+- FLOW_MODIFYCONNECTIONCONFIG: "044", indicating adjustment of the bandwidth and the number of connections.
+- FLOW_CLEARNETWORK: "045", indicating network change.
+- FLOW_REMOVE_BACKUP_FILE: "046", indicating backup deletion.
+- FLOW_UPGRADE_SUPPORT_MULTI_AZ: "047", indicating instance upgrade to multi-AZ deployment.
+- FLOW_SHUTDOWN_MASTER: "048", indicating fault simulation.
+- FLOW_CHANGE_REPLICA_TO_MASTER: "049", indicating manual promotion to the primary node.
+- FLOW_CODE_ADD_REPLICATION_INSTANCE: "050", indicating replication group addition.
+- FLOW_OPEN_WAN: "052", indicating enabling of public network access.
+- FLOW_CLOSE_WAN: "053", indicating disabling of public network access.
+- FLOW_CODE_DELETE_REPLICATION_INSTANCE: "055", indicating replication group unbinding.
+- FLOW_CODE_CHANGE_MASTER_INSTANCE: "056", indicating switching a replication group instance to the primary instance.
+- FLOW_CODE_CHANGE_INSTANCE_ROLE: "057", indicating modification of the replication group instance role.
+- FLOW_MIGRATE_NODE: "058", indicating node migration.
+- FLOW_SWITCH_NODE: "059", indicating node switch.
+- FLOW_UPGRADE_SMALL_VERSION: "060", indicating Redis version upgrade.
+- FLOW_UPGRADE_PROXY_VERSION: "061", indicating proxy version upgrade.
+- FLOW_MODIFY_INSTANCE_NETWORK: "062", indicating instance network modification.
+- FLOW_MIGRATE_PROXY_NODE: "063", indicating proxy node migration.
+- FLOW_MIGRATION_INSTANCE_ZONE: "066", indicating that instance migration to another AZ is in progress.
+- FLOW_UPGRADE_INSTANCE_CACHE_AND_PROXY: "067", indicating that instance version upgrade is in progress.
+- FLOW_MODIFY_PROXY_NUM: "069", indicating proxy node addition (removal).
+- FLOW_MODIFYBACKUPMOD: "070", indicating instance backup mode modification.
                      * 
                      */
                     void SetTaskType(const std::string& _taskType);
@@ -346,19 +334,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool TaskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Instance name 
-Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceName Instance name 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance name.
+                     * @return InstanceName Instance name.
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name 
-Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceName Instance name 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance name.
+                     * @param _instanceName Instance name.
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -371,19 +355,15 @@ Note:  This field may return null, indicating that no valid values can be obtain
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID 
-Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceId Instance ID 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance ID.
+                     * @return InstanceId Instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID 
-Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceId Instance ID 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance ID.
+                     * @param _instanceId Instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -396,19 +376,15 @@ Note:  This field may return null, indicating that no valid values can be obtain
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Project ID 
-Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @return ProjectId Project ID 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 获取Project ID.
+                     * @return ProjectId Project ID.
                      * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID 
-Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @param _projectId Project ID 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 设置Project ID.
+                     * @param _projectId Project ID.
                      * 
                      */
                     void SetProjectId(const int64_t& _projectId);
@@ -421,19 +397,15 @@ Note:  This field may return null, indicating that no valid values can be obtain
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Task progress 
-Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @return Progress Task progress 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 获取Task progress.
+                     * @return Progress Task progress.
                      * 
                      */
                     double GetProgress() const;
 
                     /**
-                     * 设置Task progress 
-Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @param _progress Task progress 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 设置Task progress.
+                     * @param _progress Task progress.
                      * 
                      */
                     void SetProgress(const double& _progress);
@@ -446,19 +418,15 @@ Note:  This field may return null, indicating that no valid values can be obtain
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取Task end time 
-Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @return EndTime Task end time 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 获取Task execution end time.
+                     * @return EndTime Task execution end time.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Task end time 
-Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @param _endTime Task end time 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 设置Task execution end time.
+                     * @param _endTime Task execution end time.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -471,19 +439,43 @@ Note:  This field may return null, indicating that no valid values can be obtain
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed) 
-Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @return Result Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed) 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 获取Task execution status.
+
+
+
+0: initializing the task.
+1: executing.
+2. completed.
+4: failed.
+                     * @return Result Task execution status.
+
+
+
+0: initializing the task.
+1: executing.
+2. completed.
+4: failed.
                      * 
                      */
                     int64_t GetResult() const;
 
                     /**
-                     * 设置Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed) 
-Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @param _result Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed) 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 设置Task execution status.
+
+
+
+0: initializing the task.
+1: executing.
+2. completed.
+4: failed.
+                     * @param _result Task execution status.
+
+
+
+0: initializing the task.
+1: executing.
+2. completed.
+4: failed.
                      * 
                      */
                     void SetResult(const int64_t& _result);
@@ -498,15 +490,13 @@ Note:  This field may return null, indicating that no valid values can be obtain
                 private:
 
                     /**
-                     * Task ID 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * Task ID.
                      */
                     int64_t m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Task start time 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * Task start time.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
@@ -514,104 +504,104 @@ Note:  This field may return null, indicating that no valid values can be obtain
                     /**
                      * Task type.
 
-- FLOW_CREATE: "001" - Create an instance.
-- FLOW_RESIZE: "002" - Change the configuration.
-- FLOW_CLOSE: "003" - Close an instance.
-- FLOW_CLEAN: "004" - Clear an instance.
-- FLOW_STARTUP: "005" - Enable an instance.
-- FLOW_DELETE: "006" - Delete an instance.
-- FLOW_SETPWD: "007" - Reset the password.
-- FLOW_EXPORTBACKUP: "009" - Export the backup file.
-- FLOW_RESTOREBACKUP: "010" - Restore the backup.
-- FLOW_BACKUPINSTANCE: "012" - Back up an instance.
-- FLOW_MIGRATEINSTANCE: "013" - Migrate an instance.
-- FLOW_DELBACKUP: "014" - Delete the backup.
-- FLOW_EXCHANGEINSTANCE: "016" - Switch an instance.
-- FLOW_AUTOBACKUP: "017" - Automatically backup an instance.
-- FLOW_MIGRATECHECK: "022" - Verify migration parameters.
-- FLOW_MIGRATETASK: "023" - Migrating data is in progress.
-- FLOW_CLEANDB: "025" - Clear a database.
-- FLOW_CLONEBACKUP: "026" - Clone the backup.
-- FLOW_CHANGEVIP: "027" - Change the VIP.
-- FLOW_EXPORSHR: "028" - Perform scaling.
-- FLOW_ADDNODES: "029" - Add or remove a node.
-- FLOW_CHANGENET: "031" - Change the network type.
-- FLOW_MODIFYINSTACEREADONLY: "033" - Modify the read-only policy.
-- FLOW_MODIFYINSTANCEPARAMS: "034" - Modify instance parameters.
-- FLOW_MODIFYINSTANCEPASSWORDFREE: "035" - Set password-free access.
-- FLOW_SWITCHINSTANCEVIP: "036" - Switch the instance VIP.
-- FLOW_MODIFYINSTANCEACCOUNT: "037" - Modify the instance account.
-- FLOW_MODIFYINSTANCEBANDWIDTH: "038" - Modify the instance bandwidth.
-- FLOW_ENABLEINSTANCE_REPLICATE: "039" - Enable read-only replica.
-- FLOW_DISABLEINSTANCE_REPLICATE: "040" - Disable read-only replica.
-- FLOW_UpgradeArch: "041" - Upgrade the instance architecture from primary-secondary to cluster.
-- FLOW_DowngradeArch: "042" - Downgrade the instance architecture from cluster to primary-secondary.
-- FLOW_UpgradeVersion: "043" - Upgrade the version.
-- FLOW_MODIFYCONNECTIONCONFIG: "044" - Modify the number of bandwidth connections.
-- FLOW_CLEARNETWORK: "045" - Change the network.
-- FLOW_REMOVE_BACKUP_FILE: "046" - Delete the backup.
-- FLOW_UPGRADE_SUPPORT_MULTI_AZ: "047" - Upgrade an instance to support multiple AZs.
-- FLOW_SHUTDOWN_MASTER: "048" - Simulate a fault.
-- FLOW_CHANGE_REPLICA_TO_MASTER: "049" - Manually promote the replica node to the primary node.
-- FLOW_CODE_ADD_REPLICATION_INSTANCE: "050" - Add a replication group.
-- FLOW_OPEN_WAN: "052" - Enable the public network.
-- FLOW_CLOSE_WAN: "053" - Disable the public network. - FLOW_UPDATE_WAN: "054" - Update the public network.
-- FLOW_CODE_DELETE_REPLICATION_INSTANCE: "055" - Unbind the replication group.
-- FLOW_CODE_CHANGE_MASTER_INSTANCE: "056" - Switch to the primary instance in the replication group.
-- FLOW_CODE_CHANGE_INSTANCE_ROLE: "057" - Change the roles of instances in the replication group.
-- FLOW_MIGRATE_NODE: "058" - Migrate a node.
-- FLOW_SWITCH_NODE: "059" - Switch a node.
-- FLOW_UPGRADE_SMALL_VERSION: "060" - Upgrade the Redis version.
-- FLOW_UPGRADE_PROXY_VERSION: "061" - Upgrade the Proxy version.
-- FLOW_MODIFY_INSTANCE_NETWORK: "062" - Modify the instance network.
-- FLOW_MIGRATE_PROXY_NODE: "063" - Migrate the Proxy node.
-- FLOW_MIGRATION_INSTANCE_ZONE: "066" - Migrate the instance AZ in progress.
-- FLOW_UPGRADE_INSTANCE_CACHE_AND_PROXY: "067" - Upgrading the instance version is in progress.
-- FLOW_MODIFY_PROXY_NUM: "069" - Add or remove a Proxy node.
-- FLOW_MODIFYBACKUPMOD: "070" - Change the instance backup mode.
-Note: This field may return null, indicating that no valid value can be obtained.
+- FLOW_CREATE: "001", indicating instance creation.
+- FLOW_RESIZE: "002", indicating configuration modification.
+- FLOW_CLOSE: "003", indicating instance disabling.
+- FLOW_CLEAN: "004", indicating instance cleanup.
+- FLOW_STARTUP: "005", indicating instance enabling.
+- FLOW_DELETE: "006", indicating instance deletion.
+- FLOW_SETPWD: "007", indicating password reset.
+- FLOW_EXPORTBACKUP: "009", indicating backup file export.
+- FLOW_RESTOREBACKUP: "010", indicating backup restoration.
+- FLOW_BACKUPINSTANCE: "012", indicating instance backup.
+- FLOW_MIGRATEINSTANCE: "013", indicating instance migration.
+- FLOW_DELBACKUP: "014", indicating backup deletion.
+- FLOW_EXCHANGEINSTANCE: "016", indicating instance switch.
+- FLOW_AUTOBACKUP: "017", indicating automatic instance backup.
+- FLOW_MIGRATECHECK: "022", indicating migration parameter verification.
+- FLOW_MIGRATETASK: "023", indicating that data migration is in progress.
+- FLOW_CLEANDB: "025", indicating database cleanup.
+- FLOW_CLONEBACKUP: "026": indicating backup cloning.
+- FLOW_CHANGEVIP: "027", indicating VIP address modification.
+- FLOW_EXPORSHR: "028", indicating scaling.
+- FLOW_ADDNODES: "029", indicating node addition (removal).
+- FLOW_CHANGENET: "031", indicating network type modification.
+- FLOW_MODIFYINSTACEREADONLY: "033": indicating read-only policy modification.
+- FLOW_MODIFYINSTANCEPARAMS: "034", indicating instance parameter modification.
+- FLOW_MODIFYINSTANCEPASSWORDFREE: "035", indicating password-free access settings.
+- FLOW_SWITCHINSTANCEVIP: "036", indicating instance VIP address switch.
+- FLOW_MODIFYINSTANCEACCOUNT: "037", indicating instance account modification.
+- FLOW_MODIFYINSTANCEBANDWIDTH: "038", indicating instance bandwidth modification.
+- FLOW_ENABLEINSTANCE_REPLICATE: "039", indicating enabling of read-only replica.
+- FLOW_DISABLEINSTANCE_REPLICATE: "040", indicating disabling of read-only replica.
+- FLOW_UpgradeArch: "041", indicating instance architecture upgrade from the standard architecture to the cluster architecture.
+- FLOW_DowngradeArch: "042", indicating instance architecture downgrade from the cluster architecture to the standard architecture.
+- FLOW_UpgradeVersion: "043", indicating version upgrade.
+- FLOW_MODIFYCONNECTIONCONFIG: "044", indicating adjustment of the bandwidth and the number of connections.
+- FLOW_CLEARNETWORK: "045", indicating network change.
+- FLOW_REMOVE_BACKUP_FILE: "046", indicating backup deletion.
+- FLOW_UPGRADE_SUPPORT_MULTI_AZ: "047", indicating instance upgrade to multi-AZ deployment.
+- FLOW_SHUTDOWN_MASTER: "048", indicating fault simulation.
+- FLOW_CHANGE_REPLICA_TO_MASTER: "049", indicating manual promotion to the primary node.
+- FLOW_CODE_ADD_REPLICATION_INSTANCE: "050", indicating replication group addition.
+- FLOW_OPEN_WAN: "052", indicating enabling of public network access.
+- FLOW_CLOSE_WAN: "053", indicating disabling of public network access.
+- FLOW_CODE_DELETE_REPLICATION_INSTANCE: "055", indicating replication group unbinding.
+- FLOW_CODE_CHANGE_MASTER_INSTANCE: "056", indicating switching a replication group instance to the primary instance.
+- FLOW_CODE_CHANGE_INSTANCE_ROLE: "057", indicating modification of the replication group instance role.
+- FLOW_MIGRATE_NODE: "058", indicating node migration.
+- FLOW_SWITCH_NODE: "059", indicating node switch.
+- FLOW_UPGRADE_SMALL_VERSION: "060", indicating Redis version upgrade.
+- FLOW_UPGRADE_PROXY_VERSION: "061", indicating proxy version upgrade.
+- FLOW_MODIFY_INSTANCE_NETWORK: "062", indicating instance network modification.
+- FLOW_MIGRATE_PROXY_NODE: "063", indicating proxy node migration.
+- FLOW_MIGRATION_INSTANCE_ZONE: "066", indicating that instance migration to another AZ is in progress.
+- FLOW_UPGRADE_INSTANCE_CACHE_AND_PROXY: "067", indicating that instance version upgrade is in progress.
+- FLOW_MODIFY_PROXY_NUM: "069", indicating proxy node addition (removal).
+- FLOW_MODIFYBACKUPMOD: "070", indicating instance backup mode modification.
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
 
                     /**
-                     * Instance name 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * Instance name.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Instance ID 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * Instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Project ID 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * Project ID.
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Task progress 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * Task progress.
                      */
                     double m_progress;
                     bool m_progressHasBeenSet;
 
                     /**
-                     * Task end time 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * Task execution end time.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed) 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * Task execution status.
+
+
+
+0: initializing the task.
+1: executing.
+2. completed.
+4: failed.
                      */
                     int64_t m_result;
                     bool m_resultHasBeenSet;

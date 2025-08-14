@@ -283,18 +283,18 @@ namespace TencentCloud
 
                     /**
                      * 获取The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DBMajorVersion The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDBMajorVersion() const;
 
                     /**
                      * 设置The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _dBMajorVersion The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDBMajorVersion(const std::string& _dBMajorVersion);
@@ -329,18 +329,18 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * 获取PostgreSQL kernel version number (like v12.7_r1.8), which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DBKernelVersion PostgreSQL kernel version number (like v12.7_r1.8), which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDBKernelVersion() const;
 
                     /**
                      * 设置PostgreSQL kernel version number (like v12.7_r1.8), which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _dBKernelVersion PostgreSQL kernel version number (like v12.7_r1.8), which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDBKernelVersion(const std::string& _dBKernelVersion);
@@ -692,18 +692,18 @@ Default value: 0
 
                     /**
                      * 获取The information of tags associated with instances
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TagList The information of tags associated with instances
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<Tag> GetTagList() const;
 
                     /**
                      * 设置The information of tags associated with instances
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _tagList The information of tags associated with instances
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTagList(const std::vector<Tag>& _tagList);
@@ -717,18 +717,18 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * 获取Primary instance information, which is returned only when the instance is read-only.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MasterDBInstanceId Primary instance information, which is returned only when the instance is read-only.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMasterDBInstanceId() const;
 
                     /**
                      * 设置Primary instance information, which is returned only when the instance is read-only.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _masterDBInstanceId Primary instance information, which is returned only when the instance is read-only.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMasterDBInstanceId(const std::string& _masterDBInstanceId);
@@ -742,18 +742,18 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * 获取Number of read-only instances
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ReadOnlyInstanceNum Number of read-only instances
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetReadOnlyInstanceNum() const;
 
                     /**
                      * 设置Number of read-only instances
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _readOnlyInstanceNum Number of read-only instances
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetReadOnlyInstanceNum(const int64_t& _readOnlyInstanceNum);
@@ -767,18 +767,18 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * 获取The status of a read-only instance in a read-only group
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StatusInReadonlyGroup The status of a read-only instance in a read-only group
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetStatusInReadonlyGroup() const;
 
                     /**
                      * 设置The status of a read-only instance in a read-only group
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _statusInReadonlyGroup The status of a read-only instance in a read-only group
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStatusInReadonlyGroup(const std::string& _statusInReadonlyGroup);
@@ -792,18 +792,18 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * 获取Offline time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OfflineTime Offline time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetOfflineTime() const;
 
                     /**
                      * 设置Offline time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _offlineTime Offline time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetOfflineTime(const std::string& _offlineTime);
@@ -817,18 +817,18 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * 获取Instance node information
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DBNodeSet Instance node information
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<DBNode> GetDBNodeSet() const;
 
                     /**
                      * 设置Instance node information
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _dBNodeSet Instance node information
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDBNodeSet(const std::vector<DBNode>& _dBNodeSet);
@@ -1095,7 +1095,7 @@ Default value: 0
 
                     /**
                      * The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dBMajorVersion;
                     bool m_dBMajorVersionHasBeenSet;
@@ -1108,7 +1108,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * PostgreSQL kernel version number (like v12.7_r1.8), which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dBKernelVersion;
                     bool m_dBKernelVersionHasBeenSet;
@@ -1210,42 +1210,42 @@ Default value: 0
 
                     /**
                      * The information of tags associated with instances
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Tag> m_tagList;
                     bool m_tagListHasBeenSet;
 
                     /**
                      * Primary instance information, which is returned only when the instance is read-only.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_masterDBInstanceId;
                     bool m_masterDBInstanceIdHasBeenSet;
 
                     /**
                      * Number of read-only instances
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_readOnlyInstanceNum;
                     bool m_readOnlyInstanceNumHasBeenSet;
 
                     /**
                      * The status of a read-only instance in a read-only group
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_statusInReadonlyGroup;
                     bool m_statusInReadonlyGroupHasBeenSet;
 
                     /**
                      * Offline time
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_offlineTime;
                     bool m_offlineTimeHasBeenSet;
 
                     /**
                      * Instance node information
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<DBNode> m_dBNodeSet;
                     bool m_dBNodeSetHasBeenSet;

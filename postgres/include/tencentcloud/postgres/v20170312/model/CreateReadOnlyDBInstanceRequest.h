@@ -507,25 +507,46 @@ Default value: `0`.
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取(Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
-                     * @return DBVersion (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
-                     * 
+                     * 获取(Disused) You don't need to specify a version, as the kernel version is as the same as that of the instance.
+                     * @return DBVersion (Disused) You don't need to specify a version, as the kernel version is as the same as that of the instance.
+                     * @deprecated
                      */
                     std::string GetDBVersion() const;
 
                     /**
-                     * 设置(Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
-                     * @param _dBVersion (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
-                     * 
+                     * 设置(Disused) You don't need to specify a version, as the kernel version is as the same as that of the instance.
+                     * @param _dBVersion (Disused) You don't need to specify a version, as the kernel version is as the same as that of the instance.
+                     * @deprecated
                      */
                     void SetDBVersion(const std::string& _dBVersion);
 
                     /**
                      * 判断参数 DBVersion 是否已赋值
                      * @return DBVersion 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool DBVersionHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return DedicatedClusterId 
+                     * 
+                     */
+                    std::string GetDedicatedClusterId() const;
+
+                    /**
+                     * 设置
+                     * @param _dedicatedClusterId 
+                     * 
+                     */
+                    void SetDedicatedClusterId(const std::string& _dedicatedClusterId);
+
+                    /**
+                     * 判断参数 DedicatedClusterId 是否已赋值
+                     * @return DedicatedClusterId 是否已赋值
+                     * 
+                     */
+                    bool DedicatedClusterIdHasBeenSet() const;
 
                 private:
 
@@ -660,10 +681,16 @@ Default value: `0`.
                     bool m_nameHasBeenSet;
 
                     /**
-                     * (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+                     * (Disused) You don't need to specify a version, as the kernel version is as the same as that of the instance.
                      */
                     std::string m_dBVersion;
                     bool m_dBVersionHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_dedicatedClusterId;
+                    bool m_dedicatedClusterIdHasBeenSet;
 
                 };
             }

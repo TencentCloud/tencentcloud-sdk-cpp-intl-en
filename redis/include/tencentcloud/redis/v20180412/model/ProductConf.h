@@ -384,27 +384,23 @@ namespace TencentCloud
                     bool EnableRepicaReadOnlyHasBeenSet() const;
 
                     /**
-                     * 获取Whether the Read-Only Replica is supported.
-- true: Supported.
-- false: Not supported.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return EnableReplicaReadOnly Whether the Read-Only Replica is supported.
-- true: Supported.
-- false: Not supported.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Whether read-only replica is supported.
+ - true: read-only replica supported.
+ - false: not supported.
+                     * @return EnableReplicaReadOnly Whether read-only replica is supported.
+ - true: read-only replica supported.
+ - false: not supported.
                      * 
                      */
                     bool GetEnableReplicaReadOnly() const;
 
                     /**
-                     * 设置Whether the Read-Only Replica is supported.
-- true: Supported.
-- false: Not supported.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _enableReplicaReadOnly Whether the Read-Only Replica is supported.
-- true: Supported.
-- false: Not supported.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Whether read-only replica is supported.
+ - true: read-only replica supported.
+ - false: not supported.
+                     * @param _enableReplicaReadOnly Whether read-only replica is supported.
+ - true: read-only replica supported.
+ - false: not supported.
                      * 
                      */
                     void SetEnableReplicaReadOnly(const bool& _enableReplicaReadOnly);
@@ -513,10 +509,9 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_enableRepicaReadOnlyHasBeenSet;
 
                     /**
-                     * Whether the Read-Only Replica is supported.
-- true: Supported.
-- false: Not supported.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Whether read-only replica is supported.
+ - true: read-only replica supported.
+ - false: not supported.
                      */
                     bool m_enableReplicaReadOnly;
                     bool m_enableReplicaReadOnlyHasBeenSet;

@@ -70,38 +70,36 @@ namespace TencentCloud
 
                     /**
                      * 获取Region ID.
-- 1: Guangzhou.
-- 4: Shanghai.
-- 5: Hong Kong (China).
-- 7: Shanghai Finance.
-- 8: Beijing.
-- 9: Singapore.
-- 11: Shenzhen Finance.
-- 15: Western United States (Silicon Valley).
-- 16: Chengdu.
-- 17: Germany.
-- 18: South Korea.
-- 19: Chongqing.
-- 21: India.
-- 22: Eastern United States (Virginia).
-- 23: Thailand.
+ - 1: Guangzhou.
+ - 4: Shanghai.
+ - 5: Hong Kong (China).
+ - 7: Shanghai Finance.
+ - 8: Beijing.
+ - 9: Singapore.
+ - 11: Shenzhen Finance.
+ - 15: Western US (Silicon Valley).
+ - 16: Chengdu.
+ - 17: Germany.
+ - 18: South Korea.
+ - 19: Chongqing.
+ - 22: Eastern US (Virginia).
+ - 23: Thailand.
 - 25: Japan.
                      * @return RegionId Region ID.
-- 1: Guangzhou.
-- 4: Shanghai.
-- 5: Hong Kong (China).
-- 7: Shanghai Finance.
-- 8: Beijing.
-- 9: Singapore.
-- 11: Shenzhen Finance.
-- 15: Western United States (Silicon Valley).
-- 16: Chengdu.
-- 17: Germany.
-- 18: South Korea.
-- 19: Chongqing.
-- 21: India.
-- 22: Eastern United States (Virginia).
-- 23: Thailand.
+ - 1: Guangzhou.
+ - 4: Shanghai.
+ - 5: Hong Kong (China).
+ - 7: Shanghai Finance.
+ - 8: Beijing.
+ - 9: Singapore.
+ - 11: Shenzhen Finance.
+ - 15: Western US (Silicon Valley).
+ - 16: Chengdu.
+ - 17: Germany.
+ - 18: South Korea.
+ - 19: Chongqing.
+ - 22: Eastern US (Virginia).
+ - 23: Thailand.
 - 25: Japan.
                      * 
                      */
@@ -109,38 +107,36 @@ namespace TencentCloud
 
                     /**
                      * 设置Region ID.
-- 1: Guangzhou.
-- 4: Shanghai.
-- 5: Hong Kong (China).
-- 7: Shanghai Finance.
-- 8: Beijing.
-- 9: Singapore.
-- 11: Shenzhen Finance.
-- 15: Western United States (Silicon Valley).
-- 16: Chengdu.
-- 17: Germany.
-- 18: South Korea.
-- 19: Chongqing.
-- 21: India.
-- 22: Eastern United States (Virginia).
-- 23: Thailand.
+ - 1: Guangzhou.
+ - 4: Shanghai.
+ - 5: Hong Kong (China).
+ - 7: Shanghai Finance.
+ - 8: Beijing.
+ - 9: Singapore.
+ - 11: Shenzhen Finance.
+ - 15: Western US (Silicon Valley).
+ - 16: Chengdu.
+ - 17: Germany.
+ - 18: South Korea.
+ - 19: Chongqing.
+ - 22: Eastern US (Virginia).
+ - 23: Thailand.
 - 25: Japan.
                      * @param _regionId Region ID.
-- 1: Guangzhou.
-- 4: Shanghai.
-- 5: Hong Kong (China).
-- 7: Shanghai Finance.
-- 8: Beijing.
-- 9: Singapore.
-- 11: Shenzhen Finance.
-- 15: Western United States (Silicon Valley).
-- 16: Chengdu.
-- 17: Germany.
-- 18: South Korea.
-- 19: Chongqing.
-- 21: India.
-- 22: Eastern United States (Virginia).
-- 23: Thailand.
+ - 1: Guangzhou.
+ - 4: Shanghai.
+ - 5: Hong Kong (China).
+ - 7: Shanghai Finance.
+ - 8: Beijing.
+ - 9: Singapore.
+ - 11: Shenzhen Finance.
+ - 15: Western US (Silicon Valley).
+ - 16: Chengdu.
+ - 17: Germany.
+ - 18: South Korea.
+ - 19: Chongqing.
+ - 22: Eastern US (Virginia).
+ - 23: Thailand.
 - 25: Japan.
                      * 
                      */
@@ -175,19 +171,15 @@ namespace TencentCloud
                     bool GroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Replication group name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return GroupName Replication group name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Replication group name.
+                     * @return GroupName Replication group name.
                      * 
                      */
                     std::string GetGroupName() const;
 
                     /**
-                     * 设置Replication group name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _groupName Replication group name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Replication group name.
+                     * @param _groupName Replication group name.
                      * 
                      */
                     void SetGroupName(const std::string& _groupName);
@@ -262,19 +254,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceCountHasBeenSet() const;
 
                     /**
-                     * 获取Instance information in replication groups
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Instances Instance information in replication groups
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance information on the replication group.
+                     * @return Instances Instance information on the replication group.
                      * 
                      */
                     std::vector<Instances> GetInstances() const;
 
                     /**
-                     * 设置Instance information in replication groups
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instances Instance information in replication groups
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance information on the replication group.
+                     * @param _instances Instance information on the replication group.
                      * 
                      */
                     void SetInstances(const std::vector<Instances>& _instances);
@@ -287,19 +275,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstancesHasBeenSet() const;
 
                     /**
-                     * 获取Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Remark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Remark information.
+                     * @return Remark Remark information.
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _remark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Remark information.
+                     * @param _remark Remark information.
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -321,21 +305,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Region ID.
-- 1: Guangzhou.
-- 4: Shanghai.
-- 5: Hong Kong (China).
-- 7: Shanghai Finance.
-- 8: Beijing.
-- 9: Singapore.
-- 11: Shenzhen Finance.
-- 15: Western United States (Silicon Valley).
-- 16: Chengdu.
-- 17: Germany.
-- 18: South Korea.
-- 19: Chongqing.
-- 21: India.
-- 22: Eastern United States (Virginia).
-- 23: Thailand.
+ - 1: Guangzhou.
+ - 4: Shanghai.
+ - 5: Hong Kong (China).
+ - 7: Shanghai Finance.
+ - 8: Beijing.
+ - 9: Singapore.
+ - 11: Shenzhen Finance.
+ - 15: Western US (Silicon Valley).
+ - 16: Chengdu.
+ - 17: Germany.
+ - 18: South Korea.
+ - 19: Chongqing.
+ - 22: Eastern US (Virginia).
+ - 23: Thailand.
 - 25: Japan.
                      */
                     int64_t m_regionId;
@@ -348,8 +331,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * Replication group name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Replication group name.
                      */
                     std::string m_groupName;
                     bool m_groupNameHasBeenSet;
@@ -372,15 +354,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_instanceCountHasBeenSet;
 
                     /**
-                     * Instance information in replication groups
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance information on the replication group.
                      */
                     std::vector<Instances> m_instances;
                     bool m_instancesHasBeenSet;
 
                     /**
-                     * Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Remark information.
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;

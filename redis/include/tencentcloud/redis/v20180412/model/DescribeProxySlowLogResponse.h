@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Slow query details
-                     * @return InstanceProxySlowLogDetail Slow query details
+                     * 获取Slow query details. Note: If the value of TotalCount is greater than 10,000, indicating that the number of slow logs exceeds 10,000, log details cannot be returned. Instead, the returned data is empty. It is recommended to reduce the interval between BeginTime and EndTime and perform multiple queries.
+                     * @return InstanceProxySlowLogDetail Slow query details. Note: If the value of TotalCount is greater than 10,000, indicating that the number of slow logs exceeds 10,000, log details cannot be returned. Instead, the returned data is empty. It is recommended to reduce the interval between BeginTime and EndTime and perform multiple queries.
                      * 
                      */
                     std::vector<InstanceProxySlowlogDetail> GetInstanceProxySlowLogDetail() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Slow query details
+                     * Slow query details. Note: If the value of TotalCount is greater than 10,000, indicating that the number of slow logs exceeds 10,000, log details cannot be returned. Instead, the returned data is empty. It is recommended to reduce the interval between BeginTime and EndTime and perform multiple queries.
                      */
                     std::vector<InstanceProxySlowlogDetail> m_instanceProxySlowLogDetail;
                     bool m_instanceProxySlowLogDetailHasBeenSet;

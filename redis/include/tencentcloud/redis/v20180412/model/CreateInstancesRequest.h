@@ -46,18 +46,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Instance type.
-<ul><li>2: Redis 2.8 Memory Edition (standard architecture);</li> <li>3: CKV 3.2 Memory Edition (standard architecture);</li> <li>4: CKV 3.2 Memory Edition (cluster architecture);</li> <li>6: Redis 4.0 Memory Edition (standard architecture);</li> <li>7: Redis 4.0 Memory Edition (cluster architecture);</li> <li>8: Redis 5.0 Memory Edition (standard architecture);</li> <li>9: Redis 5.0 Memory Edition (cluster architecture);</li> <li>15: Redis 6.2 Memory Edition (standard architecture);</li> <li>16: Redis 6.2 Memory Edition (cluster architecture);</li> <li>17: Redis 7.0 Memory Edition (standard architecture);</li> <li>18: Redis 7.0 Memory Edition (cluster architecture). </li>Note: The CKV version is currently used by existing users and is temporarily retained.</ul>
+
+<ul><li>2: Redis 2.8 memory edition (standard architecture).</li><li>3: CKV 3.2 memory edition (standard architecture).</li><li>4: CKV 3.2 memory edition (cluster architecture).</li><li>6: Redis 4.0 memory edition (standard architecture).</li><li>7: Redis 4.0 memory edition (cluster architecture).</li><li>8: Redis 5.0 memory edition (standard architecture).</li><li>9: Redis 5.0 memory edition (cluster architecture).</li><li>15: Redis 6.2 memory edition (standard architecture).</li><li>16: Redis 6.2 memory edition (cluster architecture).</li><li>17: Redis 7.0 memory edition (standard architecture).</li><li>18: Redis 7.0 memory edition (cluster architecture).</li><li>200: Memcached 1.6 memory edition (cluster architecture).</li>Note: CKV editions are currently used by some users and are temporarily retained.</ul>
                      * @return TypeId Instance type.
-<ul><li>2: Redis 2.8 Memory Edition (standard architecture);</li> <li>3: CKV 3.2 Memory Edition (standard architecture);</li> <li>4: CKV 3.2 Memory Edition (cluster architecture);</li> <li>6: Redis 4.0 Memory Edition (standard architecture);</li> <li>7: Redis 4.0 Memory Edition (cluster architecture);</li> <li>8: Redis 5.0 Memory Edition (standard architecture);</li> <li>9: Redis 5.0 Memory Edition (cluster architecture);</li> <li>15: Redis 6.2 Memory Edition (standard architecture);</li> <li>16: Redis 6.2 Memory Edition (cluster architecture);</li> <li>17: Redis 7.0 Memory Edition (standard architecture);</li> <li>18: Redis 7.0 Memory Edition (cluster architecture). </li>Note: The CKV version is currently used by existing users and is temporarily retained.</ul>
+
+<ul><li>2: Redis 2.8 memory edition (standard architecture).</li><li>3: CKV 3.2 memory edition (standard architecture).</li><li>4: CKV 3.2 memory edition (cluster architecture).</li><li>6: Redis 4.0 memory edition (standard architecture).</li><li>7: Redis 4.0 memory edition (cluster architecture).</li><li>8: Redis 5.0 memory edition (standard architecture).</li><li>9: Redis 5.0 memory edition (cluster architecture).</li><li>15: Redis 6.2 memory edition (standard architecture).</li><li>16: Redis 6.2 memory edition (cluster architecture).</li><li>17: Redis 7.0 memory edition (standard architecture).</li><li>18: Redis 7.0 memory edition (cluster architecture).</li><li>200: Memcached 1.6 memory edition (cluster architecture).</li>Note: CKV editions are currently used by some users and are temporarily retained.</ul>
                      * 
                      */
                     uint64_t GetTypeId() const;
 
                     /**
                      * 设置Instance type.
-<ul><li>2: Redis 2.8 Memory Edition (standard architecture);</li> <li>3: CKV 3.2 Memory Edition (standard architecture);</li> <li>4: CKV 3.2 Memory Edition (cluster architecture);</li> <li>6: Redis 4.0 Memory Edition (standard architecture);</li> <li>7: Redis 4.0 Memory Edition (cluster architecture);</li> <li>8: Redis 5.0 Memory Edition (standard architecture);</li> <li>9: Redis 5.0 Memory Edition (cluster architecture);</li> <li>15: Redis 6.2 Memory Edition (standard architecture);</li> <li>16: Redis 6.2 Memory Edition (cluster architecture);</li> <li>17: Redis 7.0 Memory Edition (standard architecture);</li> <li>18: Redis 7.0 Memory Edition (cluster architecture). </li>Note: The CKV version is currently used by existing users and is temporarily retained.</ul>
+
+<ul><li>2: Redis 2.8 memory edition (standard architecture).</li><li>3: CKV 3.2 memory edition (standard architecture).</li><li>4: CKV 3.2 memory edition (cluster architecture).</li><li>6: Redis 4.0 memory edition (standard architecture).</li><li>7: Redis 4.0 memory edition (cluster architecture).</li><li>8: Redis 5.0 memory edition (standard architecture).</li><li>9: Redis 5.0 memory edition (cluster architecture).</li><li>15: Redis 6.2 memory edition (standard architecture).</li><li>16: Redis 6.2 memory edition (cluster architecture).</li><li>17: Redis 7.0 memory edition (standard architecture).</li><li>18: Redis 7.0 memory edition (cluster architecture).</li><li>200: Memcached 1.6 memory edition (cluster architecture).</li>Note: CKV editions are currently used by some users and are temporarily retained.</ul>
                      * @param _typeId Instance type.
-<ul><li>2: Redis 2.8 Memory Edition (standard architecture);</li> <li>3: CKV 3.2 Memory Edition (standard architecture);</li> <li>4: CKV 3.2 Memory Edition (cluster architecture);</li> <li>6: Redis 4.0 Memory Edition (standard architecture);</li> <li>7: Redis 4.0 Memory Edition (cluster architecture);</li> <li>8: Redis 5.0 Memory Edition (standard architecture);</li> <li>9: Redis 5.0 Memory Edition (cluster architecture);</li> <li>15: Redis 6.2 Memory Edition (standard architecture);</li> <li>16: Redis 6.2 Memory Edition (cluster architecture);</li> <li>17: Redis 7.0 Memory Edition (standard architecture);</li> <li>18: Redis 7.0 Memory Edition (cluster architecture). </li>Note: The CKV version is currently used by existing users and is temporarily retained.</ul>
+
+<ul><li>2: Redis 2.8 memory edition (standard architecture).</li><li>3: CKV 3.2 memory edition (standard architecture).</li><li>4: CKV 3.2 memory edition (cluster architecture).</li><li>6: Redis 4.0 memory edition (standard architecture).</li><li>7: Redis 4.0 memory edition (cluster architecture).</li><li>8: Redis 5.0 memory edition (standard architecture).</li><li>9: Redis 5.0 memory edition (cluster architecture).</li><li>15: Redis 6.2 memory edition (standard architecture).</li><li>16: Redis 6.2 memory edition (cluster architecture).</li><li>17: Redis 7.0 memory edition (standard architecture).</li><li>18: Redis 7.0 memory edition (cluster architecture).</li><li>200: Memcached 1.6 memory edition (cluster architecture).</li>Note: CKV editions are currently used by some users and are temporarily retained.</ul>
                      * 
                      */
                     void SetTypeId(const uint64_t& _typeId);
@@ -191,27 +195,27 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Password for accessing instances.
-- When the input parameter **NoAuth** is set to **true**, password-free access is set for instances and Password does not need to be configured. Otherwise, Password is required.
-- When the instance type parameter **TypeId** is set to Redis 2.8 Memory Edition (standard architecture) or Redis 4.0, 5.0, or 6.0 Memory Edition (standard architecture or cluster architecture), the password cannot start with a forward slash (/) and should contain 8 to 64 characters, including at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
-- When the instance type parameter **TypeId** is set to CKV 3.2 Memory Edition (standard architecture or cluster architecture), the password should contain 8 to 30 characters, including only letters and digits.
-                     * @return Password Password for accessing instances.
-- When the input parameter **NoAuth** is set to **true**, password-free access is set for instances and Password does not need to be configured. Otherwise, Password is required.
-- When the instance type parameter **TypeId** is set to Redis 2.8 Memory Edition (standard architecture) or Redis 4.0, 5.0, or 6.0 Memory Edition (standard architecture or cluster architecture), the password cannot start with a forward slash (/) and should contain 8 to 64 characters, including at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
-- When the instance type parameter **TypeId** is set to CKV 3.2 Memory Edition (standard architecture or cluster architecture), the password should contain 8 to 30 characters, including only letters and digits.
+                     * 获取Instance access password.
+ - If the input parameter **NoAuth** is set to **true**, indicating that instance access requires no password, Password does not need to be specified. Otherwise, Password is required.
+ - If the instance type (**TypeId**) is Redis 2.8 memory edition standard architecture or Redis 4.0/5.0/6.2/7.0 memory edition standard architecture or cluster architecture, the password complexity requirements are as follows: It should contain 8 to 64 characters but cannot start with a forward slash (/). It should contain at least two types of the following characters: lowercase letters, uppercase letters, digits, and special characters: ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+ - When the instance type parameter **TypeId** is set to CKV 3.2 memory edition (standard architecture or cluster architecture), the password should contain 8 to 30 characters, including only letters and digits.
+                     * @return Password Instance access password.
+ - If the input parameter **NoAuth** is set to **true**, indicating that instance access requires no password, Password does not need to be specified. Otherwise, Password is required.
+ - If the instance type (**TypeId**) is Redis 2.8 memory edition standard architecture or Redis 4.0/5.0/6.2/7.0 memory edition standard architecture or cluster architecture, the password complexity requirements are as follows: It should contain 8 to 64 characters but cannot start with a forward slash (/). It should contain at least two types of the following characters: lowercase letters, uppercase letters, digits, and special characters: ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+ - When the instance type parameter **TypeId** is set to CKV 3.2 memory edition (standard architecture or cluster architecture), the password should contain 8 to 30 characters, including only letters and digits.
                      * 
                      */
                     std::string GetPassword() const;
 
                     /**
-                     * 设置Password for accessing instances.
-- When the input parameter **NoAuth** is set to **true**, password-free access is set for instances and Password does not need to be configured. Otherwise, Password is required.
-- When the instance type parameter **TypeId** is set to Redis 2.8 Memory Edition (standard architecture) or Redis 4.0, 5.0, or 6.0 Memory Edition (standard architecture or cluster architecture), the password cannot start with a forward slash (/) and should contain 8 to 64 characters, including at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
-- When the instance type parameter **TypeId** is set to CKV 3.2 Memory Edition (standard architecture or cluster architecture), the password should contain 8 to 30 characters, including only letters and digits.
-                     * @param _password Password for accessing instances.
-- When the input parameter **NoAuth** is set to **true**, password-free access is set for instances and Password does not need to be configured. Otherwise, Password is required.
-- When the instance type parameter **TypeId** is set to Redis 2.8 Memory Edition (standard architecture) or Redis 4.0, 5.0, or 6.0 Memory Edition (standard architecture or cluster architecture), the password cannot start with a forward slash (/) and should contain 8 to 64 characters, including at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
-- When the instance type parameter **TypeId** is set to CKV 3.2 Memory Edition (standard architecture or cluster architecture), the password should contain 8 to 30 characters, including only letters and digits.
+                     * 设置Instance access password.
+ - If the input parameter **NoAuth** is set to **true**, indicating that instance access requires no password, Password does not need to be specified. Otherwise, Password is required.
+ - If the instance type (**TypeId**) is Redis 2.8 memory edition standard architecture or Redis 4.0/5.0/6.2/7.0 memory edition standard architecture or cluster architecture, the password complexity requirements are as follows: It should contain 8 to 64 characters but cannot start with a forward slash (/). It should contain at least two types of the following characters: lowercase letters, uppercase letters, digits, and special characters: ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+ - When the instance type parameter **TypeId** is set to CKV 3.2 memory edition (standard architecture or cluster architecture), the password should contain 8 to 30 characters, including only letters and digits.
+                     * @param _password Instance access password.
+ - If the input parameter **NoAuth** is set to **true**, indicating that instance access requires no password, Password does not need to be specified. Otherwise, Password is required.
+ - If the instance type (**TypeId**) is Redis 2.8 memory edition standard architecture or Redis 4.0/5.0/6.2/7.0 memory edition standard architecture or cluster architecture, the password complexity requirements are as follows: It should contain 8 to 64 characters but cannot start with a forward slash (/). It should contain at least two types of the following characters: lowercase letters, uppercase letters, digits, and special characters: ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+ - When the instance type parameter **TypeId** is set to CKV 3.2 memory edition (standard architecture or cluster architecture), the password should contain 8 to 30 characters, including only letters and digits.
                      * 
                      */
                     void SetPassword(const std::string& _password);
@@ -636,27 +640,27 @@ Node information of an instance. Currently, information about the node type (mas
                     bool DryRunHasBeenSet() const;
 
                     /**
-                     * 获取The product edition of the instance
-- `local`: Local Disk Edition.
-- `cloud`: Cloud Disk Edition.
-- `cdc`: Dedicated Cluster Edition. Default value: `local`.
-                     * @return ProductVersion The product edition of the instance
-- `local`: Local Disk Edition.
-- `cloud`: Cloud Disk Edition.
-- `cdc`: Dedicated Cluster Edition. Default value: `local`.
+                     * 获取Specifies the instance deployment mode.
+ - local: traditional architecture. It is the default value.
+ - cdc: dedicated cluster.
+ - cloud: cloud native. Currently, this mode is unavailable.
+                     * @return ProductVersion Specifies the instance deployment mode.
+ - local: traditional architecture. It is the default value.
+ - cdc: dedicated cluster.
+ - cloud: cloud native. Currently, this mode is unavailable.
                      * 
                      */
                     std::string GetProductVersion() const;
 
                     /**
-                     * 设置The product edition of the instance
-- `local`: Local Disk Edition.
-- `cloud`: Cloud Disk Edition.
-- `cdc`: Dedicated Cluster Edition. Default value: `local`.
-                     * @param _productVersion The product edition of the instance
-- `local`: Local Disk Edition.
-- `cloud`: Cloud Disk Edition.
-- `cdc`: Dedicated Cluster Edition. Default value: `local`.
+                     * 设置Specifies the instance deployment mode.
+ - local: traditional architecture. It is the default value.
+ - cdc: dedicated cluster.
+ - cloud: cloud native. Currently, this mode is unavailable.
+                     * @param _productVersion Specifies the instance deployment mode.
+ - local: traditional architecture. It is the default value.
+ - cdc: dedicated cluster.
+ - cloud: cloud native. Currently, this mode is unavailable.
                      * 
                      */
                     void SetProductVersion(const std::string& _productVersion);
@@ -714,7 +718,8 @@ Node information of an instance. Currently, information about the node type (mas
 
                     /**
                      * Instance type.
-<ul><li>2: Redis 2.8 Memory Edition (standard architecture);</li> <li>3: CKV 3.2 Memory Edition (standard architecture);</li> <li>4: CKV 3.2 Memory Edition (cluster architecture);</li> <li>6: Redis 4.0 Memory Edition (standard architecture);</li> <li>7: Redis 4.0 Memory Edition (cluster architecture);</li> <li>8: Redis 5.0 Memory Edition (standard architecture);</li> <li>9: Redis 5.0 Memory Edition (cluster architecture);</li> <li>15: Redis 6.2 Memory Edition (standard architecture);</li> <li>16: Redis 6.2 Memory Edition (cluster architecture);</li> <li>17: Redis 7.0 Memory Edition (standard architecture);</li> <li>18: Redis 7.0 Memory Edition (cluster architecture). </li>Note: The CKV version is currently used by existing users and is temporarily retained.</ul>
+
+<ul><li>2: Redis 2.8 memory edition (standard architecture).</li><li>3: CKV 3.2 memory edition (standard architecture).</li><li>4: CKV 3.2 memory edition (cluster architecture).</li><li>6: Redis 4.0 memory edition (standard architecture).</li><li>7: Redis 4.0 memory edition (cluster architecture).</li><li>8: Redis 5.0 memory edition (standard architecture).</li><li>9: Redis 5.0 memory edition (cluster architecture).</li><li>15: Redis 6.2 memory edition (standard architecture).</li><li>16: Redis 6.2 memory edition (cluster architecture).</li><li>17: Redis 7.0 memory edition (standard architecture).</li><li>18: Redis 7.0 memory edition (cluster architecture).</li><li>200: Memcached 1.6 memory edition (cluster architecture).</li>Note: CKV editions are currently used by some users and are temporarily retained.</ul>
                      */
                     uint64_t m_typeId;
                     bool m_typeIdHasBeenSet;
@@ -754,10 +759,10 @@ Node information of an instance. Currently, information about the node type (mas
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Password for accessing instances.
-- When the input parameter **NoAuth** is set to **true**, password-free access is set for instances and Password does not need to be configured. Otherwise, Password is required.
-- When the instance type parameter **TypeId** is set to Redis 2.8 Memory Edition (standard architecture) or Redis 4.0, 5.0, or 6.0 Memory Edition (standard architecture or cluster architecture), the password cannot start with a forward slash (/) and should contain 8 to 64 characters, including at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
-- When the instance type parameter **TypeId** is set to CKV 3.2 Memory Edition (standard architecture or cluster architecture), the password should contain 8 to 30 characters, including only letters and digits.
+                     * Instance access password.
+ - If the input parameter **NoAuth** is set to **true**, indicating that instance access requires no password, Password does not need to be specified. Otherwise, Password is required.
+ - If the instance type (**TypeId**) is Redis 2.8 memory edition standard architecture or Redis 4.0/5.0/6.2/7.0 memory edition standard architecture or cluster architecture, the password complexity requirements are as follows: It should contain 8 to 64 characters but cannot start with a forward slash (/). It should contain at least two types of the following characters: lowercase letters, uppercase letters, digits, and special characters: ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+ - When the instance type parameter **TypeId** is set to CKV 3.2 memory edition (standard architecture or cluster architecture), the password should contain 8 to 30 characters, including only letters and digits.
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;
@@ -878,10 +883,10 @@ Node information of an instance. Currently, information about the node type (mas
                     bool m_dryRunHasBeenSet;
 
                     /**
-                     * The product edition of the instance
-- `local`: Local Disk Edition.
-- `cloud`: Cloud Disk Edition.
-- `cdc`: Dedicated Cluster Edition. Default value: `local`.
+                     * Specifies the instance deployment mode.
+ - local: traditional architecture. It is the default value.
+ - cdc: dedicated cluster.
+ - cloud: cloud native. Currently, this mode is unavailable.
                      */
                     std::string m_productVersion;
                     bool m_productVersionHasBeenSet;

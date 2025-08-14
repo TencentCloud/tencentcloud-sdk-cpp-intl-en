@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取DTS task ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return JobId DTS task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取DTS task ID.
+                     * @return JobId DTS task ID.
                      * 
                      */
                     std::string GetJobId() const;
@@ -61,10 +59,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool JobIdHasBeenSet() const;
 
                     /**
-                     * 获取DTS task name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return JobName DTS task name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取DTS task name.
+                     * @return JobName DTS task name.
                      * 
                      */
                     std::string GetJobName() const;
@@ -77,10 +73,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool JobNameHasBeenSet() const;
 
                     /**
-                     * 获取Task status. Valid values: 1 (Creating), 3 (Checking), 4 (CheckPass), 5 (CheckNotPass), 7 (Running), 8 (ReadyComplete), 9 (Success), 10 (Failed), 11 (Stopping), 12 (Completing)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Task status. Valid values: 1 (Creating), 3 (Checking), 4 (CheckPass), 5 (CheckNotPass), 7 (Running), 8 (ReadyComplete), 9 (Success), 10 (Failed), 11 (Stopping), 12 (Completing)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Task status. 1: creating (Creating); 3: checking (Checking); 4: check successful (CheckPass); 5: check failed (CheckNotPass); 7: task running (Running); 8: preparation completed (ReadyComplete); 9: task successful (Success); 10: task failed (Failed); 11: stopping (Stopping); 12: completing (Completing).
+                     * @return Status Task status. 1: creating (Creating); 3: checking (Checking); 4: check successful (CheckPass); 5: check failed (CheckNotPass); 7: task running (Running); 8: preparation completed (ReadyComplete); 9: task successful (Success); 10: task failed (Failed); 11: stopping (Stopping); 12: completing (Completing).
                      * 
                      */
                     int64_t GetStatus() const;
@@ -93,10 +87,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Status description
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StatusDesc Status description
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Status description.
+                     * @return StatusDesc Status description.
                      * 
                      */
                     std::string GetStatusDesc() const;
@@ -109,10 +101,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StatusDescHasBeenSet() const;
 
                     /**
-                     * 获取Sync latency in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Offset Sync latency in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Synchronization delay. Unit: bytes.
+                     * @return Offset Synchronization delay. Unit: bytes.
                      * 
                      */
                     int64_t GetOffset() const;
@@ -125,10 +115,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Disconnection time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CutDownTime Disconnection time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Disconnection time.
+                     * @return CutDownTime Disconnection time.
                      * 
                      */
                     std::string GetCutDownTime() const;
@@ -141,10 +129,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CutDownTimeHasBeenSet() const;
 
                     /**
-                     * 获取Source instance information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SrcInfo Source instance information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Source instance information.
+                     * @return SrcInfo Source instance information.
                      * 
                      */
                     DescribeInstanceDTSInstanceInfo GetSrcInfo() const;
@@ -157,10 +143,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SrcInfoHasBeenSet() const;
 
                     /**
-                     * 获取Target instance information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DstInfo Target instance information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Destination instance information.
+                     * @return DstInfo Destination instance information.
                      * 
                      */
                     DescribeInstanceDTSInstanceInfo GetDstInfo() const;
@@ -175,57 +159,49 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * DTS task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * DTS task ID.
                      */
                     std::string m_jobId;
                     bool m_jobIdHasBeenSet;
 
                     /**
-                     * DTS task name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * DTS task name.
                      */
                     std::string m_jobName;
                     bool m_jobNameHasBeenSet;
 
                     /**
-                     * Task status. Valid values: 1 (Creating), 3 (Checking), 4 (CheckPass), 5 (CheckNotPass), 7 (Running), 8 (ReadyComplete), 9 (Success), 10 (Failed), 11 (Stopping), 12 (Completing)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Task status. 1: creating (Creating); 3: checking (Checking); 4: check successful (CheckPass); 5: check failed (CheckNotPass); 7: task running (Running); 8: preparation completed (ReadyComplete); 9: task successful (Success); 10: task failed (Failed); 11: stopping (Stopping); 12: completing (Completing).
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Status description
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Status description.
                      */
                     std::string m_statusDesc;
                     bool m_statusDescHasBeenSet;
 
                     /**
-                     * Sync latency in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Synchronization delay. Unit: bytes.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Disconnection time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Disconnection time.
                      */
                     std::string m_cutDownTime;
                     bool m_cutDownTimeHasBeenSet;
 
                     /**
-                     * Source instance information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Source instance information.
                      */
                     DescribeInstanceDTSInstanceInfo m_srcInfo;
                     bool m_srcInfoHasBeenSet;
 
                     /**
-                     * Target instance information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Destination instance information.
                      */
                     DescribeInstanceDTSInstanceInfo m_dstInfo;
                     bool m_dstInfoHasBeenSet;

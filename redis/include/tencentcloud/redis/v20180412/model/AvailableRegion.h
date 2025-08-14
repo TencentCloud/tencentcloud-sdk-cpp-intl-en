@@ -48,22 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Region
-
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @return Region Region
-
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region
-
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _region Region
-
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -76,19 +68,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取AZ information.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return AvailableZones AZ information.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取AZ information
+                     * @return AvailableZones AZ information
                      * 
                      */
                     std::vector<std::string> GetAvailableZones() const;
 
                     /**
-                     * 设置AZ information.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _availableZones AZ information.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置AZ information
+                     * @param _availableZones AZ information
                      * 
                      */
                     void SetAvailableZones(const std::vector<std::string>& _availableZones);
@@ -104,15 +92,12 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * Region
-
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * AZ information.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * AZ information
                      */
                     std::vector<std::string> m_availableZones;
                     bool m_availableZonesHasBeenSet;

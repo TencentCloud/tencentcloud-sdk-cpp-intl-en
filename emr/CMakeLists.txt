@@ -78,6 +78,7 @@ set(emr_public_header_model
   include/tencentcloud/emr/v20190103/model/ModifyResourcesTagsResponse.h
   include/tencentcloud/emr/v20190103/model/ScaleOutServiceConfGroupsInfo.h
   include/tencentcloud/emr/v20190103/model/CreateSLInstanceResponse.h
+  include/tencentcloud/emr/v20190103/model/SLInstance.h
   include/tencentcloud/emr/v20190103/model/MultiZoneSetting.h
   include/tencentcloud/emr/v20190103/model/TerminateInstanceResponse.h
   include/tencentcloud/emr/v20190103/model/InquiryPriceUpdateInstanceResponse.h
@@ -218,6 +219,7 @@ set(emr_src
   src/v20190103/model/ModifyResourcesTagsResponse.cpp
   src/v20190103/model/ScaleOutServiceConfGroupsInfo.cpp
   src/v20190103/model/CreateSLInstanceResponse.cpp
+  src/v20190103/model/SLInstance.cpp
   src/v20190103/model/MultiZoneSetting.cpp
   src/v20190103/model/TerminateInstanceResponse.cpp
   src/v20190103/model/InquiryPriceUpdateInstanceResponse.cpp

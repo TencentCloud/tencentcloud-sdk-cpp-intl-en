@@ -181,19 +181,15 @@ namespace TencentCloud
                     bool NeedRebootHasBeenSet() const;
 
                     /**
-                     * 获取Maximum value of the parameter
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Max Maximum value of the parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Maximum parameter value allowed.
+                     * @return Max Maximum parameter value allowed.
                      * 
                      */
                     std::string GetMax() const;
 
                     /**
-                     * 设置Maximum value of the parameter
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _max Maximum value of the parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Maximum parameter value allowed.
+                     * @param _max Maximum parameter value allowed.
                      * 
                      */
                     void SetMax(const std::string& _max);
@@ -206,19 +202,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MaxHasBeenSet() const;
 
                     /**
-                     * 获取Minimum value of the parameter
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Min Minimum value of the parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Minimum parameter value allowed.
+                     * @return Min Minimum parameter value allowed.
                      * 
                      */
                     std::string GetMin() const;
 
                     /**
-                     * 设置Minimum value of the parameter
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _min Minimum value of the parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Minimum parameter value allowed.
+                     * @param _min Minimum parameter value allowed.
                      * 
                      */
                     void SetMin(const std::string& _min);
@@ -231,19 +223,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MinHasBeenSet() const;
 
                     /**
-                     * 获取Enumerated values of the parameter. It is null if the parameter is non-enumerated
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EnumValue Enumerated values of the parameter. It is null if the parameter is non-enumerated
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Optional enumeration values of a parameter. For non-enumeration parameters, it is empty.
+                     * @return EnumValue Optional enumeration values of a parameter. For non-enumeration parameters, it is empty.
                      * 
                      */
                     std::vector<std::string> GetEnumValue() const;
 
                     /**
-                     * 设置Enumerated values of the parameter. It is null if the parameter is non-enumerated
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _enumValue Enumerated values of the parameter. It is null if the parameter is non-enumerated
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Optional enumeration values of a parameter. For non-enumeration parameters, it is empty.
+                     * @param _enumValue Optional enumeration values of a parameter. For non-enumeration parameters, it is empty.
                      * 
                      */
                     void SetEnumValue(const std::vector<std::string>& _enumValue);
@@ -296,22 +284,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_needRebootHasBeenSet;
 
                     /**
-                     * Maximum value of the parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Maximum parameter value allowed.
                      */
                     std::string m_max;
                     bool m_maxHasBeenSet;
 
                     /**
-                     * Minimum value of the parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Minimum parameter value allowed.
                      */
                     std::string m_min;
                     bool m_minHasBeenSet;
 
                     /**
-                     * Enumerated values of the parameter. It is null if the parameter is non-enumerated
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Optional enumeration values of a parameter. For non-enumeration parameters, it is empty.
                      */
                     std::vector<std::string> m_enumValue;
                     bool m_enumValueHasBeenSet;
