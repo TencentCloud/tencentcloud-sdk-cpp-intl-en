@@ -243,27 +243,6 @@ Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/
                     bool VerifyCodeHasBeenSet() const;
 
                     /**
-                     * 获取Extension field, which is left empty by default.
-                     * @return Extended Extension field, which is left empty by default.
-                     * 
-                     */
-                    std::string GetExtended() const;
-
-                    /**
-                     * 设置Extension field, which is left empty by default.
-                     * @param _extended Extension field, which is left empty by default.
-                     * 
-                     */
-                    void SetExtended(const std::string& _extended);
-
-                    /**
-                     * 判断参数 Extended 是否已赋值
-                     * @return Extended 是否已赋值
-                     * 
-                     */
-                    bool ExtendedHasBeenSet() const;
-
-                    /**
                      * 获取Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
 such as "kghy_01".
                      * @return TradeOne Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
@@ -312,6 +291,27 @@ such as "kghy_0101"
                      * 
                      */
                     bool TradeTwoHasBeenSet() const;
+
+                    /**
+                     * 获取Extension field, which is left empty by default.
+                     * @return Extended Extension field, which is left empty by default.
+                     * 
+                     */
+                    std::string GetExtended() const;
+
+                    /**
+                     * 设置Extension field, which is left empty by default.
+                     * @param _extended Extension field, which is left empty by default.
+                     * 
+                     */
+                    void SetExtended(const std::string& _extended);
+
+                    /**
+                     * 判断参数 Extended 是否已赋值
+                     * @return Extended 是否已赋值
+                     * 
+                     */
+                    bool ExtendedHasBeenSet() const;
 
                 private:
 
@@ -372,12 +372,6 @@ Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/
                     bool m_verifyCodeHasBeenSet;
 
                     /**
-                     * Extension field, which is left empty by default.
-                     */
-                    std::string m_extended;
-                    bool m_extendedHasBeenSet;
-
-                    /**
                      * Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
 such as "kghy_01".
                      */
@@ -390,6 +384,12 @@ such as "kghy_0101"
                      */
                     std::string m_tradeTwo;
                     bool m_tradeTwoHasBeenSet;
+
+                    /**
+                     * Extension field, which is left empty by default.
+                     */
+                    std::string m_extended;
+                    bool m_extendedHasBeenSet;
 
                 };
             }
