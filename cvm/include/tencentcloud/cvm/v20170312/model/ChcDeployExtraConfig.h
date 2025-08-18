@@ -46,7 +46,115 @@ namespace TencentCloud
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
+                    /**
+                     * 获取
+                     * @return MiniOsType 
+                     * 
+                     */
+                    std::string GetMiniOsType() const;
+
+                    /**
+                     * 设置
+                     * @param _miniOsType 
+                     * 
+                     */
+                    void SetMiniOsType(const std::string& _miniOsType);
+
+                    /**
+                     * 判断参数 MiniOsType 是否已赋值
+                     * @return MiniOsType 是否已赋值
+                     * 
+                     */
+                    bool MiniOsTypeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return BootType 
+                     * 
+                     */
+                    std::string GetBootType() const;
+
+                    /**
+                     * 设置
+                     * @param _bootType 
+                     * 
+                     */
+                    void SetBootType(const std::string& _bootType);
+
+                    /**
+                     * 判断参数 BootType 是否已赋值
+                     * @return BootType 是否已赋值
+                     * 
+                     */
+                    bool BootTypeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return BootFile 
+                     * 
+                     */
+                    std::string GetBootFile() const;
+
+                    /**
+                     * 设置
+                     * @param _bootFile 
+                     * 
+                     */
+                    void SetBootFile(const std::string& _bootFile);
+
+                    /**
+                     * 判断参数 BootFile 是否已赋值
+                     * @return BootFile 是否已赋值
+                     * 
+                     */
+                    bool BootFileHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return NextServerAddress 
+                     * 
+                     */
+                    std::string GetNextServerAddress() const;
+
+                    /**
+                     * 设置
+                     * @param _nextServerAddress 
+                     * 
+                     */
+                    void SetNextServerAddress(const std::string& _nextServerAddress);
+
+                    /**
+                     * 判断参数 NextServerAddress 是否已赋值
+                     * @return NextServerAddress 是否已赋值
+                     * 
+                     */
+                    bool NextServerAddressHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * 
+                     */
+                    std::string m_miniOsType;
+                    bool m_miniOsTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_bootType;
+                    bool m_bootTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_bootFile;
+                    bool m_bootFileHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_nextServerAddress;
+                    bool m_nextServerAddressHasBeenSet;
 
                 };
             }

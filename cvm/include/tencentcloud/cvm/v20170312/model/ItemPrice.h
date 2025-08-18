@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The original unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to that the unit price for unlimited usage.
-Note: this field may return null, indicating that no valid value is obtained.
-                     * @return UnitPrice The original unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to that the unit price for unlimited usage.
-Note: this field may return null, indicating that no valid value is obtained.
+                     * 获取Original price of subsequent total costs, postpaid billing mode usage, unit: usd. <li>if other time interval items are returned, such as UnitPriceSecondStep, this item represents the time interval (0, 96) hr. if no other time interval items are returned, this item represents the full period (0, ∞) hr.
+                     * @return UnitPrice Original price of subsequent total costs, postpaid billing mode usage, unit: usd. <li>if other time interval items are returned, such as UnitPriceSecondStep, this item represents the time interval (0, 96) hr. if no other time interval items are returned, this item represents the full period (0, ∞) hr.
                      * 
                      */
                     double GetUnitPrice() const;
 
                     /**
-                     * 设置The original unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to that the unit price for unlimited usage.
-Note: this field may return null, indicating that no valid value is obtained.
-                     * @param _unitPrice The original unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to that the unit price for unlimited usage.
-Note: this field may return null, indicating that no valid value is obtained.
+                     * 设置Original price of subsequent total costs, postpaid billing mode usage, unit: usd. <li>if other time interval items are returned, such as UnitPriceSecondStep, this item represents the time interval (0, 96) hr. if no other time interval items are returned, this item represents the full period (0, ∞) hr.
+                     * @param _unitPrice Original price of subsequent total costs, postpaid billing mode usage, unit: usd. <li>if other time interval items are returned, such as UnitPriceSecondStep, this item represents the time interval (0, 96) hr. if no other time interval items are returned, this item represents the full period (0, ∞) hr.
                      * 
                      */
                     void SetUnitPrice(const double& _unitPrice);
@@ -72,19 +68,15 @@ Note: this field may return null, indicating that no valid value is obtained.
                     bool UnitPriceHasBeenSet() const;
 
                     /**
-                     * 获取Billing unit for pay-as-you-go mode. Valid values: <br><li>HOUR: billed on an hourly basis. It's used for hourly postpaid instances (`POSTPAID_BY_HOUR`). <br><li>GB: bill by traffic in GB. It's used for postpaid products that are billed by the hourly traffic (`TRAFFIC_POSTPAID_BY_HOUR`).
-Note: this field may return null, indicating that no valid value is obtained.
-                     * @return ChargeUnit Billing unit for pay-as-you-go mode. Valid values: <br><li>HOUR: billed on an hourly basis. It's used for hourly postpaid instances (`POSTPAID_BY_HOUR`). <br><li>GB: bill by traffic in GB. It's used for postpaid products that are billed by the hourly traffic (`TRAFFIC_POSTPAID_BY_HOUR`).
-Note: this field may return null, indicating that no valid value is obtained.
+                     * 获取Billing unit for pay-as-you-go mode. valid values: <br><li>HOUR: billed on an hourly basis. it's used for hourly POSTPAID instances (`POSTPAID_BY_HOUR`). <br><li>GB: bill BY TRAFFIC in GB. it's used for POSTPAID products that are billed BY the hourly TRAFFIC (`TRAFFIC_POSTPAID_BY_HOUR`).
+                     * @return ChargeUnit Billing unit for pay-as-you-go mode. valid values: <br><li>HOUR: billed on an hourly basis. it's used for hourly POSTPAID instances (`POSTPAID_BY_HOUR`). <br><li>GB: bill BY TRAFFIC in GB. it's used for POSTPAID products that are billed BY the hourly TRAFFIC (`TRAFFIC_POSTPAID_BY_HOUR`).
                      * 
                      */
                     std::string GetChargeUnit() const;
 
                     /**
-                     * 设置Billing unit for pay-as-you-go mode. Valid values: <br><li>HOUR: billed on an hourly basis. It's used for hourly postpaid instances (`POSTPAID_BY_HOUR`). <br><li>GB: bill by traffic in GB. It's used for postpaid products that are billed by the hourly traffic (`TRAFFIC_POSTPAID_BY_HOUR`).
-Note: this field may return null, indicating that no valid value is obtained.
-                     * @param _chargeUnit Billing unit for pay-as-you-go mode. Valid values: <br><li>HOUR: billed on an hourly basis. It's used for hourly postpaid instances (`POSTPAID_BY_HOUR`). <br><li>GB: bill by traffic in GB. It's used for postpaid products that are billed by the hourly traffic (`TRAFFIC_POSTPAID_BY_HOUR`).
-Note: this field may return null, indicating that no valid value is obtained.
+                     * 设置Billing unit for pay-as-you-go mode. valid values: <br><li>HOUR: billed on an hourly basis. it's used for hourly POSTPAID instances (`POSTPAID_BY_HOUR`). <br><li>GB: bill BY TRAFFIC in GB. it's used for POSTPAID products that are billed BY the hourly TRAFFIC (`TRAFFIC_POSTPAID_BY_HOUR`).
+                     * @param _chargeUnit Billing unit for pay-as-you-go mode. valid values: <br><li>HOUR: billed on an hourly basis. it's used for hourly POSTPAID instances (`POSTPAID_BY_HOUR`). <br><li>GB: bill BY TRAFFIC in GB. it's used for POSTPAID products that are billed BY the hourly TRAFFIC (`TRAFFIC_POSTPAID_BY_HOUR`).
                      * 
                      */
                     void SetChargeUnit(const std::string& _chargeUnit);
@@ -97,19 +89,15 @@ Note: this field may return null, indicating that no valid value is obtained.
                     bool ChargeUnitHasBeenSet() const;
 
                     /**
-                     * 获取The original price of a pay-in-advance instance, in USD.
-Note: this field may return null, indicating that no valid value is obtained.
-                     * @return OriginalPrice The original price of a pay-in-advance instance, in USD.
-Note: this field may return null, indicating that no valid value is obtained.
+                     * 获取Original price of total prepaid costs. measurement unit: usd.
+                     * @return OriginalPrice Original price of total prepaid costs. measurement unit: usd.
                      * 
                      */
                     double GetOriginalPrice() const;
 
                     /**
-                     * 设置The original price of a pay-in-advance instance, in USD.
-Note: this field may return null, indicating that no valid value is obtained.
-                     * @param _originalPrice The original price of a pay-in-advance instance, in USD.
-Note: this field may return null, indicating that no valid value is obtained.
+                     * 设置Original price of total prepaid costs. measurement unit: usd.
+                     * @param _originalPrice Original price of total prepaid costs. measurement unit: usd.
                      * 
                      */
                     void SetOriginalPrice(const double& _originalPrice);
@@ -122,19 +110,15 @@ Note: this field may return null, indicating that no valid value is obtained.
                     bool OriginalPriceHasBeenSet() const;
 
                     /**
-                     * 获取Discount price of a prepaid instance, in USD.
-Note: this field may return null, indicating that no valid value is obtained.
-                     * @return DiscountPrice Discount price of a prepaid instance, in USD.
-Note: this field may return null, indicating that no valid value is obtained.
+                     * 获取Discount price of total prepaid costs. unit: usd.
+                     * @return DiscountPrice Discount price of total prepaid costs. unit: usd.
                      * 
                      */
                     double GetDiscountPrice() const;
 
                     /**
-                     * 设置Discount price of a prepaid instance, in USD.
-Note: this field may return null, indicating that no valid value is obtained.
-                     * @param _discountPrice Discount price of a prepaid instance, in USD.
-Note: this field may return null, indicating that no valid value is obtained.
+                     * 设置Discount price of total prepaid costs. unit: usd.
+                     * @param _discountPrice Discount price of total prepaid costs. unit: usd.
                      * 
                      */
                     void SetDiscountPrice(const double& _discountPrice);
@@ -147,19 +131,15 @@ Note: this field may return null, indicating that no valid value is obtained.
                     bool DiscountPriceHasBeenSet() const;
 
                     /**
-                     * 获取Percentage of the original price. For example, if you enter "20.0", the discounted price will be 20% of the original price.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Discount Percentage of the original price. For example, if you enter "20.0", the discounted price will be 20% of the original price.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Discount, such as 20.0 representing 80% off.
+                     * @return Discount Discount, such as 20.0 representing 80% off.
                      * 
                      */
                     double GetDiscount() const;
 
                     /**
-                     * 设置Percentage of the original price. For example, if you enter "20.0", the discounted price will be 20% of the original price.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _discount Percentage of the original price. For example, if you enter "20.0", the discounted price will be 20% of the original price.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Discount, such as 20.0 representing 80% off.
+                     * @param _discount Discount, such as 20.0 representing 80% off.
                      * 
                      */
                     void SetDiscount(const double& _discount);
@@ -172,19 +152,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DiscountHasBeenSet() const;
 
                     /**
-                     * 获取The discounted unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to that the unit price for unlimited usage.
-Note: this field may return null, indicating that no valid value is obtained.
-                     * @return UnitPriceDiscount The discounted unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to that the unit price for unlimited usage.
-Note: this field may return null, indicating that no valid value is obtained.
+                     * 获取Discounted price of subsequent total cost, postpaid billing mode usage, unit: usd <li>if other time interval items are returned, such as UnitPriceDiscountSecondStep, this item represents the time interval (0, 96) hr; if no other time interval items are returned, this item represents the full period (0, ∞) hr.
+                     * @return UnitPriceDiscount Discounted price of subsequent total cost, postpaid billing mode usage, unit: usd <li>if other time interval items are returned, such as UnitPriceDiscountSecondStep, this item represents the time interval (0, 96) hr; if no other time interval items are returned, this item represents the full period (0, ∞) hr.
                      * 
                      */
                     double GetUnitPriceDiscount() const;
 
                     /**
-                     * 设置The discounted unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to that the unit price for unlimited usage.
-Note: this field may return null, indicating that no valid value is obtained.
-                     * @param _unitPriceDiscount The discounted unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to that the unit price for unlimited usage.
-Note: this field may return null, indicating that no valid value is obtained.
+                     * 设置Discounted price of subsequent total cost, postpaid billing mode usage, unit: usd <li>if other time interval items are returned, such as UnitPriceDiscountSecondStep, this item represents the time interval (0, 96) hr; if no other time interval items are returned, this item represents the full period (0, ∞) hr.
+                     * @param _unitPriceDiscount Discounted price of subsequent total cost, postpaid billing mode usage, unit: usd <li>if other time interval items are returned, such as UnitPriceDiscountSecondStep, this item represents the time interval (0, 96) hr; if no other time interval items are returned, this item represents the full period (0, ∞) hr.
                      * 
                      */
                     void SetUnitPriceDiscount(const double& _unitPriceDiscount);
@@ -197,19 +173,15 @@ Note: this field may return null, indicating that no valid value is obtained.
                     bool UnitPriceDiscountHasBeenSet() const;
 
                     /**
-                     * 获取Original unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
-                     * @return UnitPriceSecondStep Original unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
+                     * 获取Original price of subsequent total costs for usage time range (96, 360) hr in postpaid billing mode. unit: usd.
+                     * @return UnitPriceSecondStep Original price of subsequent total costs for usage time range (96, 360) hr in postpaid billing mode. unit: usd.
                      * 
                      */
                     double GetUnitPriceSecondStep() const;
 
                     /**
-                     * 设置Original unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
-                     * @param _unitPriceSecondStep Original unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
+                     * 设置Original price of subsequent total costs for usage time range (96, 360) hr in postpaid billing mode. unit: usd.
+                     * @param _unitPriceSecondStep Original price of subsequent total costs for usage time range (96, 360) hr in postpaid billing mode. unit: usd.
                      * 
                      */
                     void SetUnitPriceSecondStep(const double& _unitPriceSecondStep);
@@ -222,19 +194,15 @@ Note: this field may return null, indicating that no valid value is obtained.
                     bool UnitPriceSecondStepHasBeenSet() const;
 
                     /**
-                     * 获取Discounted unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
-                     * @return UnitPriceDiscountSecondStep Discounted unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
+                     * 获取Discounted price of subsequent total cost for usage time interval (96, 360) hr in postpaid billing mode. unit: usd.
+                     * @return UnitPriceDiscountSecondStep Discounted price of subsequent total cost for usage time interval (96, 360) hr in postpaid billing mode. unit: usd.
                      * 
                      */
                     double GetUnitPriceDiscountSecondStep() const;
 
                     /**
-                     * 设置Discounted unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
-                     * @param _unitPriceDiscountSecondStep Discounted unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
+                     * 设置Discounted price of subsequent total cost for usage time interval (96, 360) hr in postpaid billing mode. unit: usd.
+                     * @param _unitPriceDiscountSecondStep Discounted price of subsequent total cost for usage time interval (96, 360) hr in postpaid billing mode. unit: usd.
                      * 
                      */
                     void SetUnitPriceDiscountSecondStep(const double& _unitPriceDiscountSecondStep);
@@ -247,19 +215,15 @@ Note: this field may return null, indicating that no valid value is obtained.
                     bool UnitPriceDiscountSecondStepHasBeenSet() const;
 
                     /**
-                     * 获取Original unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
-                     * @return UnitPriceThirdStep Original unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
+                     * 获取Specifies the original price of subsequent total costs with a usage time interval exceeding 360 hr in postpaid billing mode. measurement unit: usd.
+                     * @return UnitPriceThirdStep Specifies the original price of subsequent total costs with a usage time interval exceeding 360 hr in postpaid billing mode. measurement unit: usd.
                      * 
                      */
                     double GetUnitPriceThirdStep() const;
 
                     /**
-                     * 设置Original unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
-                     * @param _unitPriceThirdStep Original unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
+                     * 设置Specifies the original price of subsequent total costs with a usage time interval exceeding 360 hr in postpaid billing mode. measurement unit: usd.
+                     * @param _unitPriceThirdStep Specifies the original price of subsequent total costs with a usage time interval exceeding 360 hr in postpaid billing mode. measurement unit: usd.
                      * 
                      */
                     void SetUnitPriceThirdStep(const double& _unitPriceThirdStep);
@@ -272,19 +236,15 @@ Note: this field may return null, indicating that no valid value is obtained.
                     bool UnitPriceThirdStepHasBeenSet() const;
 
                     /**
-                     * 获取Discounted unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
-                     * @return UnitPriceDiscountThirdStep Discounted unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
+                     * 获取Discounted price of subsequent total cost for usage time interval exceeding 360 hr in postpaid billing mode. measurement unit: usd.
+                     * @return UnitPriceDiscountThirdStep Discounted price of subsequent total cost for usage time interval exceeding 360 hr in postpaid billing mode. measurement unit: usd.
                      * 
                      */
                     double GetUnitPriceDiscountThirdStep() const;
 
                     /**
-                     * 设置Discounted unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
-                     * @param _unitPriceDiscountThirdStep Discounted unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
+                     * 设置Discounted price of subsequent total cost for usage time interval exceeding 360 hr in postpaid billing mode. measurement unit: usd.
+                     * @param _unitPriceDiscountThirdStep Discounted price of subsequent total cost for usage time interval exceeding 360 hr in postpaid billing mode. measurement unit: usd.
                      * 
                      */
                     void SetUnitPriceDiscountThirdStep(const double& _unitPriceDiscountThirdStep);
@@ -297,23 +257,19 @@ Note: this field may return null, indicating that no valid value is obtained.
                     bool UnitPriceDiscountThirdStepHasBeenSet() const;
 
                     /**
-                     * 获取Original 3-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @return OriginalPriceThreeYear Original 3-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 获取Specifies the original price of total 3-year prepaid costs in prepaid billing mode. measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
+                     * @return OriginalPriceThreeYear Specifies the original price of total 3-year prepaid costs in prepaid billing mode. measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     double GetOriginalPriceThreeYear() const;
 
                     /**
-                     * 设置Original 3-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @param _originalPriceThreeYear Original 3-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 设置Specifies the original price of total 3-year prepaid costs in prepaid billing mode. measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
+                     * @param _originalPriceThreeYear Specifies the original price of total 3-year prepaid costs in prepaid billing mode. measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetOriginalPriceThreeYear(const double& _originalPriceThreeYear);
@@ -326,23 +282,19 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool OriginalPriceThreeYearHasBeenSet() const;
 
                     /**
-                     * 获取Discounted 3-year upfront payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @return DiscountPriceThreeYear Discounted 3-year upfront payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 获取Specifies the discount price for an advance payment of the total fee for three years, prepaid mode usage, measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
+                     * @return DiscountPriceThreeYear Specifies the discount price for an advance payment of the total fee for three years, prepaid mode usage, measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     double GetDiscountPriceThreeYear() const;
 
                     /**
-                     * 设置Discounted 3-year upfront payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @param _discountPriceThreeYear Discounted 3-year upfront payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 设置Specifies the discount price for an advance payment of the total fee for three years, prepaid mode usage, measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
+                     * @param _discountPriceThreeYear Specifies the discount price for an advance payment of the total fee for three years, prepaid mode usage, measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetDiscountPriceThreeYear(const double& _discountPriceThreeYear);
@@ -355,23 +307,19 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool DiscountPriceThreeYearHasBeenSet() const;
 
                     /**
-                     * 获取Discount for 3-year upfront payment. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @return DiscountThreeYear Discount for 3-year upfront payment. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 获取Specifies the discount for a 3-year advance payment, for example 20.0 represents 80% off.
+Note: This field may return null, indicating that no valid value is found.
+                     * @return DiscountThreeYear Specifies the discount for a 3-year advance payment, for example 20.0 represents 80% off.
+Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     double GetDiscountThreeYear() const;
 
                     /**
-                     * 设置Discount for 3-year upfront payment. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @param _discountThreeYear Discount for 3-year upfront payment. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 设置Specifies the discount for a 3-year advance payment, for example 20.0 represents 80% off.
+Note: This field may return null, indicating that no valid value is found.
+                     * @param _discountThreeYear Specifies the discount for a 3-year advance payment, for example 20.0 represents 80% off.
+Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetDiscountThreeYear(const double& _discountThreeYear);
@@ -384,23 +332,19 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool DiscountThreeYearHasBeenSet() const;
 
                     /**
-                     * 获取Original 5-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @return OriginalPriceFiveYear Original 5-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 获取Specifies the original price of the 5-year total cost with advance payment, using prepaid billing mode. measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
+                     * @return OriginalPriceFiveYear Specifies the original price of the 5-year total cost with advance payment, using prepaid billing mode. measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     double GetOriginalPriceFiveYear() const;
 
                     /**
-                     * 设置Original 5-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @param _originalPriceFiveYear Original 5-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 设置Specifies the original price of the 5-year total cost with advance payment, using prepaid billing mode. measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
+                     * @param _originalPriceFiveYear Specifies the original price of the 5-year total cost with advance payment, using prepaid billing mode. measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetOriginalPriceFiveYear(const double& _originalPriceFiveYear);
@@ -413,23 +357,19 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool OriginalPriceFiveYearHasBeenSet() const;
 
                     /**
-                     * 获取Discounted 5-year upfront payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @return DiscountPriceFiveYear Discounted 5-year upfront payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 获取Prepaid 5-year total cost discount price, prepaid billing mode usage. unit: usd.
+Note: This field may return null, indicating that no valid value is found.
+                     * @return DiscountPriceFiveYear Prepaid 5-year total cost discount price, prepaid billing mode usage. unit: usd.
+Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     double GetDiscountPriceFiveYear() const;
 
                     /**
-                     * 设置Discounted 5-year upfront payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @param _discountPriceFiveYear Discounted 5-year upfront payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 设置Prepaid 5-year total cost discount price, prepaid billing mode usage. unit: usd.
+Note: This field may return null, indicating that no valid value is found.
+                     * @param _discountPriceFiveYear Prepaid 5-year total cost discount price, prepaid billing mode usage. unit: usd.
+Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetDiscountPriceFiveYear(const double& _discountPriceFiveYear);
@@ -442,23 +382,19 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool DiscountPriceFiveYearHasBeenSet() const;
 
                     /**
-                     * 获取Discount for 5-year upfront payment. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @return DiscountFiveYear Discount for 5-year upfront payment. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 获取Specifies the discount for 5-year advance payment, such as 20.0 for 80% off.
+Note: This field may return null, indicating that no valid value is found.
+                     * @return DiscountFiveYear Specifies the discount for 5-year advance payment, such as 20.0 for 80% off.
+Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     double GetDiscountFiveYear() const;
 
                     /**
-                     * 设置Discount for 5-year upfront payment. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @param _discountFiveYear Discount for 5-year upfront payment. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 设置Specifies the discount for 5-year advance payment, such as 20.0 for 80% off.
+Note: This field may return null, indicating that no valid value is found.
+                     * @param _discountFiveYear Specifies the discount for 5-year advance payment, such as 20.0 for 80% off.
+Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetDiscountFiveYear(const double& _discountFiveYear);
@@ -471,23 +407,19 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool DiscountFiveYearHasBeenSet() const;
 
                     /**
-                     * 获取Original 1-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @return OriginalPriceOneYear Original 1-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 获取Original price of one-year advance payment total cost. prepaid mode usage. unit: usd.
+Note: This field may return null, indicating that no valid value is found.
+                     * @return OriginalPriceOneYear Original price of one-year advance payment total cost. prepaid mode usage. unit: usd.
+Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     double GetOriginalPriceOneYear() const;
 
                     /**
-                     * 设置Original 1-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @param _originalPriceOneYear Original 1-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 设置Original price of one-year advance payment total cost. prepaid mode usage. unit: usd.
+Note: This field may return null, indicating that no valid value is found.
+                     * @param _originalPriceOneYear Original price of one-year advance payment total cost. prepaid mode usage. unit: usd.
+Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetOriginalPriceOneYear(const double& _originalPriceOneYear);
@@ -500,23 +432,19 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool OriginalPriceOneYearHasBeenSet() const;
 
                     /**
-                     * 获取Discounted 1-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @return DiscountPriceOneYear Discounted 1-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 获取Discount price for total advance payment for one year. specifies prepaid mode usage. measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
+                     * @return DiscountPriceOneYear Discount price for total advance payment for one year. specifies prepaid mode usage. measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     double GetDiscountPriceOneYear() const;
 
                     /**
-                     * 设置Discounted 1-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @param _discountPriceOneYear Discounted 1-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 设置Discount price for total advance payment for one year. specifies prepaid mode usage. measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
+                     * @param _discountPriceOneYear Discount price for total advance payment for one year. specifies prepaid mode usage. measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetDiscountPriceOneYear(const double& _discountPriceOneYear);
@@ -529,23 +457,19 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool DiscountPriceOneYearHasBeenSet() const;
 
                     /**
-                     * 获取Discount for 1-year upfront payment. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @return DiscountOneYear Discount for 1-year upfront payment. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 获取Specifies the discount for a one-year advance payment, such as 20.0 for 80% off.
+Note: This field may return null, indicating that no valid value is found.
+                     * @return DiscountOneYear Specifies the discount for a one-year advance payment, such as 20.0 for 80% off.
+Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     double GetDiscountOneYear() const;
 
                     /**
-                     * 设置Discount for 1-year upfront payment. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @param _discountOneYear Discount for 1-year upfront payment. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 设置Specifies the discount for a one-year advance payment, such as 20.0 for 80% off.
+Note: This field may return null, indicating that no valid value is found.
+                     * @param _discountOneYear Specifies the discount for a one-year advance payment, such as 20.0 for 80% off.
+Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetDiscountOneYear(const double& _discountOneYear);
@@ -560,143 +484,124 @@ Note: this field may return `null`, indicating that no valid value was found.
                 private:
 
                     /**
-                     * The original unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to that the unit price for unlimited usage.
-Note: this field may return null, indicating that no valid value is obtained.
+                     * Original price of subsequent total costs, postpaid billing mode usage, unit: usd. <li>if other time interval items are returned, such as UnitPriceSecondStep, this item represents the time interval (0, 96) hr. if no other time interval items are returned, this item represents the full period (0, ∞) hr.
                      */
                     double m_unitPrice;
                     bool m_unitPriceHasBeenSet;
 
                     /**
-                     * Billing unit for pay-as-you-go mode. Valid values: <br><li>HOUR: billed on an hourly basis. It's used for hourly postpaid instances (`POSTPAID_BY_HOUR`). <br><li>GB: bill by traffic in GB. It's used for postpaid products that are billed by the hourly traffic (`TRAFFIC_POSTPAID_BY_HOUR`).
-Note: this field may return null, indicating that no valid value is obtained.
+                     * Billing unit for pay-as-you-go mode. valid values: <br><li>HOUR: billed on an hourly basis. it's used for hourly POSTPAID instances (`POSTPAID_BY_HOUR`). <br><li>GB: bill BY TRAFFIC in GB. it's used for POSTPAID products that are billed BY the hourly TRAFFIC (`TRAFFIC_POSTPAID_BY_HOUR`).
                      */
                     std::string m_chargeUnit;
                     bool m_chargeUnitHasBeenSet;
 
                     /**
-                     * The original price of a pay-in-advance instance, in USD.
-Note: this field may return null, indicating that no valid value is obtained.
+                     * Original price of total prepaid costs. measurement unit: usd.
                      */
                     double m_originalPrice;
                     bool m_originalPriceHasBeenSet;
 
                     /**
-                     * Discount price of a prepaid instance, in USD.
-Note: this field may return null, indicating that no valid value is obtained.
+                     * Discount price of total prepaid costs. unit: usd.
                      */
                     double m_discountPrice;
                     bool m_discountPriceHasBeenSet;
 
                     /**
-                     * Percentage of the original price. For example, if you enter "20.0", the discounted price will be 20% of the original price.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Discount, such as 20.0 representing 80% off.
                      */
                     double m_discount;
                     bool m_discountHasBeenSet;
 
                     /**
-                     * The discounted unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to that the unit price for unlimited usage.
-Note: this field may return null, indicating that no valid value is obtained.
+                     * Discounted price of subsequent total cost, postpaid billing mode usage, unit: usd <li>if other time interval items are returned, such as UnitPriceDiscountSecondStep, this item represents the time interval (0, 96) hr; if no other time interval items are returned, this item represents the full period (0, ∞) hr.
                      */
                     double m_unitPriceDiscount;
                     bool m_unitPriceDiscountHasBeenSet;
 
                     /**
-                     * Original unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
+                     * Original price of subsequent total costs for usage time range (96, 360) hr in postpaid billing mode. unit: usd.
                      */
                     double m_unitPriceSecondStep;
                     bool m_unitPriceSecondStepHasBeenSet;
 
                     /**
-                     * Discounted unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
+                     * Discounted price of subsequent total cost for usage time interval (96, 360) hr in postpaid billing mode. unit: usd.
                      */
                     double m_unitPriceDiscountSecondStep;
                     bool m_unitPriceDiscountSecondStepHasBeenSet;
 
                     /**
-                     * Original unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
+                     * Specifies the original price of subsequent total costs with a usage time interval exceeding 360 hr in postpaid billing mode. measurement unit: usd.
                      */
                     double m_unitPriceThirdStep;
                     bool m_unitPriceThirdStepHasBeenSet;
 
                     /**
-                     * Discounted unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
-Note: this field may return null, indicating that no valid value is obtained.
+                     * Discounted price of subsequent total cost for usage time interval exceeding 360 hr in postpaid billing mode. measurement unit: usd.
                      */
                     double m_unitPriceDiscountThirdStep;
                     bool m_unitPriceDiscountThirdStepHasBeenSet;
 
                     /**
-                     * Original 3-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * Specifies the original price of total 3-year prepaid costs in prepaid billing mode. measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
                      */
                     double m_originalPriceThreeYear;
                     bool m_originalPriceThreeYearHasBeenSet;
 
                     /**
-                     * Discounted 3-year upfront payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * Specifies the discount price for an advance payment of the total fee for three years, prepaid mode usage, measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
                      */
                     double m_discountPriceThreeYear;
                     bool m_discountPriceThreeYearHasBeenSet;
 
                     /**
-                     * Discount for 3-year upfront payment. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * Specifies the discount for a 3-year advance payment, for example 20.0 represents 80% off.
+Note: This field may return null, indicating that no valid value is found.
                      */
                     double m_discountThreeYear;
                     bool m_discountThreeYearHasBeenSet;
 
                     /**
-                     * Original 5-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * Specifies the original price of the 5-year total cost with advance payment, using prepaid billing mode. measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
                      */
                     double m_originalPriceFiveYear;
                     bool m_originalPriceFiveYearHasBeenSet;
 
                     /**
-                     * Discounted 5-year upfront payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * Prepaid 5-year total cost discount price, prepaid billing mode usage. unit: usd.
+Note: This field may return null, indicating that no valid value is found.
                      */
                     double m_discountPriceFiveYear;
                     bool m_discountPriceFiveYearHasBeenSet;
 
                     /**
-                     * Discount for 5-year upfront payment. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * Specifies the discount for 5-year advance payment, such as 20.0 for 80% off.
+Note: This field may return null, indicating that no valid value is found.
                      */
                     double m_discountFiveYear;
                     bool m_discountFiveYearHasBeenSet;
 
                     /**
-                     * Original 1-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * Original price of one-year advance payment total cost. prepaid mode usage. unit: usd.
+Note: This field may return null, indicating that no valid value is found.
                      */
                     double m_originalPriceOneYear;
                     bool m_originalPriceOneYearHasBeenSet;
 
                     /**
-                     * Discounted 1-year payment, in USD. This parameter is only available to upfront payment mode.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * Discount price for total advance payment for one year. specifies prepaid mode usage. measurement unit: usd.
+Note: This field may return null, indicating that no valid value is found.
                      */
                     double m_discountPriceOneYear;
                     bool m_discountPriceOneYearHasBeenSet;
 
                     /**
-                     * Discount for 1-year upfront payment. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * Specifies the discount for a one-year advance payment, such as 20.0 for 80% off.
+Note: This field may return null, indicating that no valid value is found.
                      */
                     double m_discountOneYear;
                     bool m_discountOneYearHasBeenSet;

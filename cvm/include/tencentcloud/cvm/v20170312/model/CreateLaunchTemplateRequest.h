@@ -646,6 +646,27 @@ false (default): sends a normal request. after passing the check, creates an ins
                     bool DisableApiTerminationHasBeenSet() const;
 
                     /**
+                     * 获取
+                     * @return EnableJumboFrame 
+                     * 
+                     */
+                    bool GetEnableJumboFrame() const;
+
+                    /**
+                     * 设置
+                     * @param _enableJumboFrame 
+                     * 
+                     */
+                    void SetEnableJumboFrame(const bool& _enableJumboFrame);
+
+                    /**
+                     * 判断参数 EnableJumboFrame 是否已赋值
+                     * @return EnableJumboFrame 是否已赋值
+                     * 
+                     */
+                    bool EnableJumboFrameHasBeenSet() const;
+
+                    /**
                      * 获取Description list of tags. by specifying this parameter, tags can be bound to the instance launch template.
                      * @return LaunchTemplateTagSpecification Description list of tags. by specifying this parameter, tags can be bound to the instance launch template.
                      * 
@@ -897,6 +918,12 @@ false (default): sends a normal request. after passing the check, creates an ins
                      */
                     bool m_disableApiTermination;
                     bool m_disableApiTerminationHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_enableJumboFrame;
+                    bool m_enableJumboFrameHasBeenSet;
 
                     /**
                      * Description list of tags. by specifying this parameter, tags can be bound to the instance launch template.
