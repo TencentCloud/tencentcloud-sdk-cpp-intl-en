@@ -1,0 +1,134 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_BI_V20220105_MODEL_DELETEPROJECTREQUEST_H_
+#define TENCENTCLOUD_BI_V20220105_MODEL_DELETEPROJECTREQUEST_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/AbstractModel.h>
+
+
+namespace TencentCloud
+{
+    namespace Bi
+    {
+        namespace V20220105
+        {
+            namespace Model
+            {
+                /**
+                * DeleteProject request structure.
+                */
+                class DeleteProjectRequest : public AbstractModel
+                {
+                public:
+                    DeleteProjectRequest();
+                    ~DeleteProjectRequest() = default;
+                    std::string ToJsonString() const;
+
+
+                    /**
+                     * 获取Project ID.
+                     * @return Id Project ID.
+                     * 
+                     */
+                    uint64_t GetId() const;
+
+                    /**
+                     * 设置Project ID.
+                     * @param _id Project ID.
+                     * 
+                     */
+                    void SetId(const uint64_t& _id);
+
+                    /**
+                     * 判断参数 Id 是否已赋值
+                     * @return Id 是否已赋值
+                     * 
+                     */
+                    bool IdHasBeenSet() const;
+
+                    /**
+                     * 获取Random number.
+                     * @return Seed Random number.
+                     * 
+                     */
+                    std::string GetSeed() const;
+
+                    /**
+                     * 设置Random number.
+                     * @param _seed Random number.
+                     * 
+                     */
+                    void SetSeed(const std::string& _seed);
+
+                    /**
+                     * 判断参数 Seed 是否已赋值
+                     * @return Seed 是否已赋值
+                     * 
+                     */
+                    bool SeedHasBeenSet() const;
+
+                    /**
+                     * 获取Default dashboard.
+                     * @return DefaultPanelType Default dashboard.
+                     * 
+                     */
+                    int64_t GetDefaultPanelType() const;
+
+                    /**
+                     * 设置Default dashboard.
+                     * @param _defaultPanelType Default dashboard.
+                     * 
+                     */
+                    void SetDefaultPanelType(const int64_t& _defaultPanelType);
+
+                    /**
+                     * 判断参数 DefaultPanelType 是否已赋值
+                     * @return DefaultPanelType 是否已赋值
+                     * 
+                     */
+                    bool DefaultPanelTypeHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * Project ID.
+                     */
+                    uint64_t m_id;
+                    bool m_idHasBeenSet;
+
+                    /**
+                     * Random number.
+                     */
+                    std::string m_seed;
+                    bool m_seedHasBeenSet;
+
+                    /**
+                     * Default dashboard.
+                     */
+                    int64_t m_defaultPanelType;
+                    bool m_defaultPanelTypeHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_BI_V20220105_MODEL_DELETEPROJECTREQUEST_H_
