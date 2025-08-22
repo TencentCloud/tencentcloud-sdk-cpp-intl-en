@@ -43,6 +43,8 @@
 #include <tencentcloud/mdp/v20200527/model/CreateStreamPackageSourceResponse.h>
 #include <tencentcloud/mdp/v20200527/model/CreateStreamPackageSourceLocationRequest.h>
 #include <tencentcloud/mdp/v20200527/model/CreateStreamPackageSourceLocationResponse.h>
+#include <tencentcloud/mdp/v20200527/model/CreateStreamPackageVodRemuxTaskRequest.h>
+#include <tencentcloud/mdp/v20200527/model/CreateStreamPackageVodRemuxTaskResponse.h>
 #include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageChannelEndpointsRequest.h>
 #include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageChannelEndpointsResponse.h>
 #include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageChannelsRequest.h>
@@ -65,6 +67,10 @@
 #include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageSourceResponse.h>
 #include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageSourceLocationRequest.h>
 #include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageSourceLocationResponse.h>
+#include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageVodRemuxTaskRequest.h>
+#include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageVodRemuxTaskResponse.h>
+#include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageVodRemuxTasksRequest.h>
+#include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageVodRemuxTasksResponse.h>
 #include <tencentcloud/mdp/v20200527/model/DescribeLinearAssemblyCDNDomainWithChannelRequest.h>
 #include <tencentcloud/mdp/v20200527/model/DescribeLinearAssemblyCDNDomainWithChannelResponse.h>
 #include <tencentcloud/mdp/v20200527/model/DescribeLinearAssemblyCDNDomainWithChannelsRequest.h>
@@ -107,6 +113,10 @@
 #include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageSourceLocationsResponse.h>
 #include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageSourcesRequest.h>
 #include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageSourcesResponse.h>
+#include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageVodRemuxTaskRequest.h>
+#include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageVodRemuxTaskResponse.h>
+#include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageVodRemuxTasksRequest.h>
+#include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageVodRemuxTasksResponse.h>
 #include <tencentcloud/mdp/v20200527/model/ModifyStreamPackageChannelRequest.h>
 #include <tencentcloud/mdp/v20200527/model/ModifyStreamPackageChannelResponse.h>
 #include <tencentcloud/mdp/v20200527/model/ModifyStreamPackageChannelEndpointRequest.h>
@@ -125,6 +135,8 @@
 #include <tencentcloud/mdp/v20200527/model/ModifyStreamPackageSourceLocationResponse.h>
 #include <tencentcloud/mdp/v20200527/model/StartStreamPackageLinearAssemblyChannelRequest.h>
 #include <tencentcloud/mdp/v20200527/model/StartStreamPackageLinearAssemblyChannelResponse.h>
+#include <tencentcloud/mdp/v20200527/model/StartStreamPackageVodRemuxTaskRequest.h>
+#include <tencentcloud/mdp/v20200527/model/StartStreamPackageVodRemuxTaskResponse.h>
 #include <tencentcloud/mdp/v20200527/model/StopStreamPackageLinearAssemblyChannelRequest.h>
 #include <tencentcloud/mdp/v20200527/model/StopStreamPackageLinearAssemblyChannelResponse.h>
 #include <tencentcloud/mdp/v20200527/model/UnbindCdnDomainWithChannelRequest.h>
@@ -175,6 +187,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateStreamPackageSourceLocationResponse> CreateStreamPackageSourceLocationOutcome;
                 typedef std::future<CreateStreamPackageSourceLocationOutcome> CreateStreamPackageSourceLocationOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::CreateStreamPackageSourceLocationRequest&, CreateStreamPackageSourceLocationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateStreamPackageSourceLocationAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateStreamPackageVodRemuxTaskResponse> CreateStreamPackageVodRemuxTaskOutcome;
+                typedef std::future<CreateStreamPackageVodRemuxTaskOutcome> CreateStreamPackageVodRemuxTaskOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::CreateStreamPackageVodRemuxTaskRequest&, CreateStreamPackageVodRemuxTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateStreamPackageVodRemuxTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteStreamPackageChannelEndpointsResponse> DeleteStreamPackageChannelEndpointsOutcome;
                 typedef std::future<DeleteStreamPackageChannelEndpointsOutcome> DeleteStreamPackageChannelEndpointsOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::DeleteStreamPackageChannelEndpointsRequest&, DeleteStreamPackageChannelEndpointsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteStreamPackageChannelEndpointsAsyncHandler;
@@ -208,6 +223,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteStreamPackageSourceLocationResponse> DeleteStreamPackageSourceLocationOutcome;
                 typedef std::future<DeleteStreamPackageSourceLocationOutcome> DeleteStreamPackageSourceLocationOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::DeleteStreamPackageSourceLocationRequest&, DeleteStreamPackageSourceLocationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteStreamPackageSourceLocationAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteStreamPackageVodRemuxTaskResponse> DeleteStreamPackageVodRemuxTaskOutcome;
+                typedef std::future<DeleteStreamPackageVodRemuxTaskOutcome> DeleteStreamPackageVodRemuxTaskOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::DeleteStreamPackageVodRemuxTaskRequest&, DeleteStreamPackageVodRemuxTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteStreamPackageVodRemuxTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteStreamPackageVodRemuxTasksResponse> DeleteStreamPackageVodRemuxTasksOutcome;
+                typedef std::future<DeleteStreamPackageVodRemuxTasksOutcome> DeleteStreamPackageVodRemuxTasksOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::DeleteStreamPackageVodRemuxTasksRequest&, DeleteStreamPackageVodRemuxTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteStreamPackageVodRemuxTasksAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeLinearAssemblyCDNDomainWithChannelResponse> DescribeLinearAssemblyCDNDomainWithChannelOutcome;
                 typedef std::future<DescribeLinearAssemblyCDNDomainWithChannelOutcome> DescribeLinearAssemblyCDNDomainWithChannelOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::DescribeLinearAssemblyCDNDomainWithChannelRequest&, DescribeLinearAssemblyCDNDomainWithChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLinearAssemblyCDNDomainWithChannelAsyncHandler;
@@ -271,6 +292,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeStreamPackageSourcesResponse> DescribeStreamPackageSourcesOutcome;
                 typedef std::future<DescribeStreamPackageSourcesOutcome> DescribeStreamPackageSourcesOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::DescribeStreamPackageSourcesRequest&, DescribeStreamPackageSourcesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamPackageSourcesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeStreamPackageVodRemuxTaskResponse> DescribeStreamPackageVodRemuxTaskOutcome;
+                typedef std::future<DescribeStreamPackageVodRemuxTaskOutcome> DescribeStreamPackageVodRemuxTaskOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::DescribeStreamPackageVodRemuxTaskRequest&, DescribeStreamPackageVodRemuxTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamPackageVodRemuxTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeStreamPackageVodRemuxTasksResponse> DescribeStreamPackageVodRemuxTasksOutcome;
+                typedef std::future<DescribeStreamPackageVodRemuxTasksOutcome> DescribeStreamPackageVodRemuxTasksOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::DescribeStreamPackageVodRemuxTasksRequest&, DescribeStreamPackageVodRemuxTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamPackageVodRemuxTasksAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyStreamPackageChannelResponse> ModifyStreamPackageChannelOutcome;
                 typedef std::future<ModifyStreamPackageChannelOutcome> ModifyStreamPackageChannelOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::ModifyStreamPackageChannelRequest&, ModifyStreamPackageChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyStreamPackageChannelAsyncHandler;
@@ -298,6 +325,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::StartStreamPackageLinearAssemblyChannelResponse> StartStreamPackageLinearAssemblyChannelOutcome;
                 typedef std::future<StartStreamPackageLinearAssemblyChannelOutcome> StartStreamPackageLinearAssemblyChannelOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::StartStreamPackageLinearAssemblyChannelRequest&, StartStreamPackageLinearAssemblyChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartStreamPackageLinearAssemblyChannelAsyncHandler;
+                typedef Outcome<Core::Error, Model::StartStreamPackageVodRemuxTaskResponse> StartStreamPackageVodRemuxTaskOutcome;
+                typedef std::future<StartStreamPackageVodRemuxTaskOutcome> StartStreamPackageVodRemuxTaskOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::StartStreamPackageVodRemuxTaskRequest&, StartStreamPackageVodRemuxTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartStreamPackageVodRemuxTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::StopStreamPackageLinearAssemblyChannelResponse> StopStreamPackageLinearAssemblyChannelOutcome;
                 typedef std::future<StopStreamPackageLinearAssemblyChannelOutcome> StopStreamPackageLinearAssemblyChannelOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::StopStreamPackageLinearAssemblyChannelRequest&, StopStreamPackageLinearAssemblyChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopStreamPackageLinearAssemblyChannelAsyncHandler;
@@ -401,6 +431,15 @@ namespace TencentCloud
                 CreateStreamPackageSourceLocationOutcomeCallable CreateStreamPackageSourceLocationCallable(const Model::CreateStreamPackageSourceLocationRequest& request);
 
                 /**
+                 *Create VodRemuxTask
+                 * @param req CreateStreamPackageVodRemuxTaskRequest
+                 * @return CreateStreamPackageVodRemuxTaskOutcome
+                 */
+                CreateStreamPackageVodRemuxTaskOutcome CreateStreamPackageVodRemuxTask(const Model::CreateStreamPackageVodRemuxTaskRequest &request);
+                void CreateStreamPackageVodRemuxTaskAsync(const Model::CreateStreamPackageVodRemuxTaskRequest& request, const CreateStreamPackageVodRemuxTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateStreamPackageVodRemuxTaskOutcomeCallable CreateStreamPackageVodRemuxTaskCallable(const Model::CreateStreamPackageVodRemuxTaskRequest& request);
+
+                /**
                  *This API is used to delete endpoints from a StreamPackage channel in batches.
                  * @param req DeleteStreamPackageChannelEndpointsRequest
                  * @return DeleteStreamPackageChannelEndpointsOutcome
@@ -498,6 +537,24 @@ namespace TencentCloud
                 DeleteStreamPackageSourceLocationOutcome DeleteStreamPackageSourceLocation(const Model::DeleteStreamPackageSourceLocationRequest &request);
                 void DeleteStreamPackageSourceLocationAsync(const Model::DeleteStreamPackageSourceLocationRequest& request, const DeleteStreamPackageSourceLocationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteStreamPackageSourceLocationOutcomeCallable DeleteStreamPackageSourceLocationCallable(const Model::DeleteStreamPackageSourceLocationRequest& request);
+
+                /**
+                 *Delete Vod remux task.
+                 * @param req DeleteStreamPackageVodRemuxTaskRequest
+                 * @return DeleteStreamPackageVodRemuxTaskOutcome
+                 */
+                DeleteStreamPackageVodRemuxTaskOutcome DeleteStreamPackageVodRemuxTask(const Model::DeleteStreamPackageVodRemuxTaskRequest &request);
+                void DeleteStreamPackageVodRemuxTaskAsync(const Model::DeleteStreamPackageVodRemuxTaskRequest& request, const DeleteStreamPackageVodRemuxTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteStreamPackageVodRemuxTaskOutcomeCallable DeleteStreamPackageVodRemuxTaskCallable(const Model::DeleteStreamPackageVodRemuxTaskRequest& request);
+
+                /**
+                 *Delete VOD remux tasks in batches.
+                 * @param req DeleteStreamPackageVodRemuxTasksRequest
+                 * @return DeleteStreamPackageVodRemuxTasksOutcome
+                 */
+                DeleteStreamPackageVodRemuxTasksOutcome DeleteStreamPackageVodRemuxTasks(const Model::DeleteStreamPackageVodRemuxTasksRequest &request);
+                void DeleteStreamPackageVodRemuxTasksAsync(const Model::DeleteStreamPackageVodRemuxTasksRequest& request, const DeleteStreamPackageVodRemuxTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteStreamPackageVodRemuxTasksOutcomeCallable DeleteStreamPackageVodRemuxTasksCallable(const Model::DeleteStreamPackageVodRemuxTasksRequest& request);
 
                 /**
                  *Query the CDN domain name associated with the LinearAssembly channel.
@@ -689,6 +746,24 @@ namespace TencentCloud
                 DescribeStreamPackageSourcesOutcomeCallable DescribeStreamPackageSourcesCallable(const Model::DescribeStreamPackageSourcesRequest& request);
 
                 /**
+                 *Query VOD remux task information.
+                 * @param req DescribeStreamPackageVodRemuxTaskRequest
+                 * @return DescribeStreamPackageVodRemuxTaskOutcome
+                 */
+                DescribeStreamPackageVodRemuxTaskOutcome DescribeStreamPackageVodRemuxTask(const Model::DescribeStreamPackageVodRemuxTaskRequest &request);
+                void DescribeStreamPackageVodRemuxTaskAsync(const Model::DescribeStreamPackageVodRemuxTaskRequest& request, const DescribeStreamPackageVodRemuxTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeStreamPackageVodRemuxTaskOutcomeCallable DescribeStreamPackageVodRemuxTaskCallable(const Model::DescribeStreamPackageVodRemuxTaskRequest& request);
+
+                /**
+                 *Query VOD remux tasks informations.
+                 * @param req DescribeStreamPackageVodRemuxTasksRequest
+                 * @return DescribeStreamPackageVodRemuxTasksOutcome
+                 */
+                DescribeStreamPackageVodRemuxTasksOutcome DescribeStreamPackageVodRemuxTasks(const Model::DescribeStreamPackageVodRemuxTasksRequest &request);
+                void DescribeStreamPackageVodRemuxTasksAsync(const Model::DescribeStreamPackageVodRemuxTasksRequest& request, const DescribeStreamPackageVodRemuxTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeStreamPackageVodRemuxTasksOutcomeCallable DescribeStreamPackageVodRemuxTasksCallable(const Model::DescribeStreamPackageVodRemuxTasksRequest& request);
+
+                /**
                  *This API is used to modify a StreamPackage channel.
                  * @param req ModifyStreamPackageChannelRequest
                  * @return ModifyStreamPackageChannelOutcome
@@ -768,6 +843,15 @@ namespace TencentCloud
                 StartStreamPackageLinearAssemblyChannelOutcome StartStreamPackageLinearAssemblyChannel(const Model::StartStreamPackageLinearAssemblyChannelRequest &request);
                 void StartStreamPackageLinearAssemblyChannelAsync(const Model::StartStreamPackageLinearAssemblyChannelRequest& request, const StartStreamPackageLinearAssemblyChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 StartStreamPackageLinearAssemblyChannelOutcomeCallable StartStreamPackageLinearAssemblyChannelCallable(const Model::StartStreamPackageLinearAssemblyChannelRequest& request);
+
+                /**
+                 *Start VOD remux task.
+                 * @param req StartStreamPackageVodRemuxTaskRequest
+                 * @return StartStreamPackageVodRemuxTaskOutcome
+                 */
+                StartStreamPackageVodRemuxTaskOutcome StartStreamPackageVodRemuxTask(const Model::StartStreamPackageVodRemuxTaskRequest &request);
+                void StartStreamPackageVodRemuxTaskAsync(const Model::StartStreamPackageVodRemuxTaskRequest& request, const StartStreamPackageVodRemuxTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                StartStreamPackageVodRemuxTaskOutcomeCallable StartStreamPackageVodRemuxTaskCallable(const Model::StartStreamPackageVodRemuxTaskRequest& request);
 
                 /**
                  *Stop linear assembly channel.

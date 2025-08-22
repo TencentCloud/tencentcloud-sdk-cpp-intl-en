@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Zone 
+                     * 获取Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API.
+                     * @return Zone Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API.
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置
-                     * @param _zone 
+                     * 设置Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API.
+                     * @param _zone Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API.
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Cpu 
+                     * 获取Number of CPU cores.
+                     * @return Cpu Number of CPU cores.
                      * 
                      */
                     uint64_t GetCpu() const;
 
                     /**
-                     * 设置
-                     * @param _cpu 
+                     * 设置Number of CPU cores.
+                     * @param _cpu Number of CPU cores.
                      * 
                      */
                     void SetCpu(const uint64_t& _cpu);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Memory 
+                     * 获取Instance memory size in GB.
+                     * @return Memory Instance memory size in GB.
                      * 
                      */
                     uint64_t GetMemory() const;
 
                     /**
-                     * 设置
-                     * @param _memory 
+                     * 设置Instance memory size in GB.
+                     * @param _memory Instance memory size in GB.
                      * 
                      */
                     void SetMemory(const uint64_t& _memory);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Storage 
+                     * 获取Instance storage capacity in GB.
+                     * @return Storage Instance storage capacity in GB.
                      * 
                      */
                     uint64_t GetStorage() const;
 
                     /**
-                     * 设置
-                     * @param _storage 
+                     * 设置Instance storage capacity in GB.
+                     * @param _storage Instance storage capacity in GB.
                      * 
                      */
                     void SetStorage(const uint64_t& _storage);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool StorageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubnetId 
+                     * 获取VPC subnet ID in the format of subnet-bdoe83fa.
+                     * @return SubnetId VPC subnet ID in the format of subnet-bdoe83fa.
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置
-                     * @param _subnetId 
+                     * 设置VPC subnet ID in the format of subnet-bdoe83fa.
+                     * @param _subnetId VPC subnet ID in the format of subnet-bdoe83fa.
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VpcId 
+                     * 获取VPC ID in the format of vpc-dsp338hz.
+                     * @return VpcId VPC ID in the format of vpc-dsp338hz.
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置
-                     * @param _vpcId 
+                     * 设置VPC ID in the format of vpc-dsp338hz.
+                     * @param _vpcId VPC ID in the format of vpc-dsp338hz.
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MachineType 
+                     * 获取Host type of purchased instances. CLOUD_PREMIUM: Premium Disk for virtual machines; CLOUD_SSD: Cloud SSD for virtual machines; CLOUD_HSSD: Enhanced SSD for virtual machines; CLOUD_BSSD: Balanced SSD for virtual machines.
+                     * @return MachineType Host type of purchased instances. CLOUD_PREMIUM: Premium Disk for virtual machines; CLOUD_SSD: Cloud SSD for virtual machines; CLOUD_HSSD: Enhanced SSD for virtual machines; CLOUD_BSSD: Balanced SSD for virtual machines.
                      * 
                      */
                     std::string GetMachineType() const;
 
                     /**
-                     * 设置
-                     * @param _machineType 
+                     * 设置Host type of purchased instances. CLOUD_PREMIUM: Premium Disk for virtual machines; CLOUD_SSD: Cloud SSD for virtual machines; CLOUD_HSSD: Enhanced SSD for virtual machines; CLOUD_BSSD: Balanced SSD for virtual machines.
+                     * @param _machineType Host type of purchased instances. CLOUD_PREMIUM: Premium Disk for virtual machines; CLOUD_SSD: Cloud SSD for virtual machines; CLOUD_HSSD: Enhanced SSD for virtual machines; CLOUD_BSSD: Balanced SSD for virtual machines.
                      * 
                      */
                     void SetMachineType(const std::string& _machineType);
@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool MachineTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceChargeType 
+                     * 获取Billing mode. Valid value: POSTPAID (pay-as-you-go).
+                     * @return InstanceChargeType Billing mode. Valid value: POSTPAID (pay-as-you-go).
                      * 
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
-                     * 设置
-                     * @param _instanceChargeType 
+                     * 设置Billing mode. Valid value: POSTPAID (pay-as-you-go).
+                     * @param _instanceChargeType Billing mode. Valid value: POSTPAID (pay-as-you-go).
                      * 
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
@@ -212,15 +212,15 @@ namespace TencentCloud
                     bool InstanceChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ProjectId 
+                     * 获取Project ID.
+                     * @return ProjectId Project ID.
                      * 
                      */
                     uint64_t GetProjectId() const;
 
                     /**
-                     * 设置
-                     * @param _projectId 
+                     * 设置Project ID.
+                     * @param _projectId Project ID.
                      * 
                      */
                     void SetProjectId(const uint64_t& _projectId);
@@ -233,15 +233,15 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return GoodsNum 
+                     * 获取Number of instances purchased this time. Default value: 1. Maximum value: 10.
+                     * @return GoodsNum Number of instances purchased this time. Default value: 1. Maximum value: 10.
                      * 
                      */
                     uint64_t GetGoodsNum() const;
 
                     /**
-                     * 设置
-                     * @param _goodsNum 
+                     * 设置Number of instances purchased this time. Default value: 1. Maximum value: 10.
+                     * @param _goodsNum Number of instances purchased this time. Default value: 1. Maximum value: 10.
                      * 
                      */
                     void SetGoodsNum(const uint64_t& _goodsNum);
@@ -254,15 +254,15 @@ namespace TencentCloud
                     bool GoodsNumHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DBVersion 
+                     * 获取SQL Server version. Valid values: `2008R2` (SQL Server 2008 R2 Enterprise), `2012SP3` (SQL Server 2012 Enterprise), `201202` (SQL Server 2012 Standard), `2014SP2` (SQL Server 2014 Enterprise), 201402 (SQL Server 2014 Standard), `2016SP1` (SQL Server 2016 Enterprise), `201602` (SQL Server 2016 Standard), `2017` (SQL Server 2017 Enterprise), `201702` (SQL Server 2017 Standard), `2019` (SQL Server 2019 Enterprise), `201902` (SQL Server 2019 Standard). Default value: `2008R2`. The available version varies by region, and you can pull the version information by calling the `DescribeProductConfig` API.
+                     * @return DBVersion SQL Server version. Valid values: `2008R2` (SQL Server 2008 R2 Enterprise), `2012SP3` (SQL Server 2012 Enterprise), `201202` (SQL Server 2012 Standard), `2014SP2` (SQL Server 2014 Enterprise), 201402 (SQL Server 2014 Standard), `2016SP1` (SQL Server 2016 Enterprise), `201602` (SQL Server 2016 Standard), `2017` (SQL Server 2017 Enterprise), `201702` (SQL Server 2017 Standard), `2019` (SQL Server 2019 Enterprise), `201902` (SQL Server 2019 Standard). Default value: `2008R2`. The available version varies by region, and you can pull the version information by calling the `DescribeProductConfig` API.
                      * 
                      */
                     std::string GetDBVersion() const;
 
                     /**
-                     * 设置
-                     * @param _dBVersion 
+                     * 设置SQL Server version. Valid values: `2008R2` (SQL Server 2008 R2 Enterprise), `2012SP3` (SQL Server 2012 Enterprise), `201202` (SQL Server 2012 Standard), `2014SP2` (SQL Server 2014 Enterprise), 201402 (SQL Server 2014 Standard), `2016SP1` (SQL Server 2016 Enterprise), `201602` (SQL Server 2016 Standard), `2017` (SQL Server 2017 Enterprise), `201702` (SQL Server 2017 Standard), `2019` (SQL Server 2019 Enterprise), `201902` (SQL Server 2019 Standard). Default value: `2008R2`. The available version varies by region, and you can pull the version information by calling the `DescribeProductConfig` API.
+                     * @param _dBVersion SQL Server version. Valid values: `2008R2` (SQL Server 2008 R2 Enterprise), `2012SP3` (SQL Server 2012 Enterprise), `201202` (SQL Server 2012 Standard), `2014SP2` (SQL Server 2014 Enterprise), 201402 (SQL Server 2014 Standard), `2016SP1` (SQL Server 2016 Enterprise), `201602` (SQL Server 2016 Standard), `2017` (SQL Server 2017 Enterprise), `201702` (SQL Server 2017 Standard), `2019` (SQL Server 2019 Enterprise), `201902` (SQL Server 2019 Standard). Default value: `2008R2`. The available version varies by region, and you can pull the version information by calling the `DescribeProductConfig` API.
                      * 
                      */
                     void SetDBVersion(const std::string& _dBVersion);
@@ -275,15 +275,15 @@ namespace TencentCloud
                     bool DBVersionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Period 
+                     * 获取Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48.
+                     * @return Period Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48.
                      * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
-                     * 设置
-                     * @param _period 
+                     * 设置Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48.
+                     * @param _period Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48.
                      * 
                      */
                     void SetPeriod(const int64_t& _period);
@@ -296,15 +296,15 @@ namespace TencentCloud
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SecurityGroupList 
+                     * 获取Security group list, which contains security group IDs in the format of sg-xxx.
+                     * @return SecurityGroupList Security group list, which contains security group IDs in the format of sg-xxx.
                      * 
                      */
                     std::vector<std::string> GetSecurityGroupList() const;
 
                     /**
-                     * 设置
-                     * @param _securityGroupList 
+                     * 设置Security group list, which contains security group IDs in the format of sg-xxx.
+                     * @param _securityGroupList Security group list, which contains security group IDs in the format of sg-xxx.
                      * 
                      */
                     void SetSecurityGroupList(const std::vector<std::string>& _securityGroupList);
@@ -317,15 +317,15 @@ namespace TencentCloud
                     bool SecurityGroupListHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AutoRenewFlag 
+                     * 获取Auto-renewal flag. 0: normal renewal, 1: auto-renewal. Default value: 1.
+                     * @return AutoRenewFlag Auto-renewal flag. 0: normal renewal, 1: auto-renewal. Default value: 1.
                      * 
                      */
                     int64_t GetAutoRenewFlag() const;
 
                     /**
-                     * 设置
-                     * @param _autoRenewFlag 
+                     * 设置Auto-renewal flag. 0: normal renewal, 1: auto-renewal. Default value: 1.
+                     * @param _autoRenewFlag Auto-renewal flag. 0: normal renewal, 1: auto-renewal. Default value: 1.
                      * 
                      */
                     void SetAutoRenewFlag(const int64_t& _autoRenewFlag);
@@ -338,15 +338,15 @@ namespace TencentCloud
                     bool AutoRenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AutoVoucher 
+                     * 获取Whether to automatically use voucher. 0: no, 1: yes. Default value: no.
+                     * @return AutoVoucher Whether to automatically use voucher. 0: no, 1: yes. Default value: no.
                      * 
                      */
                     int64_t GetAutoVoucher() const;
 
                     /**
-                     * 设置
-                     * @param _autoVoucher 
+                     * 设置Whether to automatically use voucher. 0: no, 1: yes. Default value: no.
+                     * @param _autoVoucher Whether to automatically use voucher. 0: no, 1: yes. Default value: no.
                      * 
                      */
                     void SetAutoVoucher(const int64_t& _autoVoucher);
@@ -359,15 +359,15 @@ namespace TencentCloud
                     bool AutoVoucherHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VoucherIds 
+                     * 获取Array of voucher IDs (currently, only one voucher can be used per order).
+                     * @return VoucherIds Array of voucher IDs (currently, only one voucher can be used per order).
                      * 
                      */
                     std::vector<std::string> GetVoucherIds() const;
 
                     /**
-                     * 设置
-                     * @param _voucherIds 
+                     * 设置Array of voucher IDs (currently, only one voucher can be used per order).
+                     * @param _voucherIds Array of voucher IDs (currently, only one voucher can be used per order).
                      * 
                      */
                     void SetVoucherIds(const std::vector<std::string>& _voucherIds);
@@ -380,15 +380,15 @@ namespace TencentCloud
                     bool VoucherIdsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Weekly 
+                     * 获取Configuration of the maintenance window, which specifies the day of the week when maintenance can be performed. Valid values: 1 (Monday), 2 (Tuesday), 3 (Wednesday), 4 (Thursday), 5 (Friday), 6 (Saturday), 7 (Sunday).
+                     * @return Weekly Configuration of the maintenance window, which specifies the day of the week when maintenance can be performed. Valid values: 1 (Monday), 2 (Tuesday), 3 (Wednesday), 4 (Thursday), 5 (Friday), 6 (Saturday), 7 (Sunday).
                      * 
                      */
                     std::vector<int64_t> GetWeekly() const;
 
                     /**
-                     * 设置
-                     * @param _weekly 
+                     * 设置Configuration of the maintenance window, which specifies the day of the week when maintenance can be performed. Valid values: 1 (Monday), 2 (Tuesday), 3 (Wednesday), 4 (Thursday), 5 (Friday), 6 (Saturday), 7 (Sunday).
+                     * @param _weekly Configuration of the maintenance window, which specifies the day of the week when maintenance can be performed. Valid values: 1 (Monday), 2 (Tuesday), 3 (Wednesday), 4 (Thursday), 5 (Friday), 6 (Saturday), 7 (Sunday).
                      * 
                      */
                     void SetWeekly(const std::vector<int64_t>& _weekly);
@@ -401,15 +401,15 @@ namespace TencentCloud
                     bool WeeklyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StartTime 
+                     * 获取Configuration of the maintenance window, which specifies the start time of daily maintenance.
+                     * @return StartTime Configuration of the maintenance window, which specifies the start time of daily maintenance.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置
-                     * @param _startTime 
+                     * 设置Configuration of the maintenance window, which specifies the start time of daily maintenance.
+                     * @param _startTime Configuration of the maintenance window, which specifies the start time of daily maintenance.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -422,15 +422,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Span 
+                     * 获取Configuration of the maintenance window, which specifies the maintenance duration in hours.
+                     * @return Span Configuration of the maintenance window, which specifies the maintenance duration in hours.
                      * 
                      */
                     int64_t GetSpan() const;
 
                     /**
-                     * 设置
-                     * @param _span 
+                     * 设置Configuration of the maintenance window, which specifies the maintenance duration in hours.
+                     * @param _span Configuration of the maintenance window, which specifies the maintenance duration in hours.
                      * 
                      */
                     void SetSpan(const int64_t& _span);
@@ -443,15 +443,15 @@ namespace TencentCloud
                     bool SpanHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ResourceTags 
+                     * 获取Tags associated with the instances to be created.
+                     * @return ResourceTags Tags associated with the instances to be created.
                      * 
                      */
                     std::vector<ResourceTag> GetResourceTags() const;
 
                     /**
-                     * 设置
-                     * @param _resourceTags 
+                     * 设置Tags associated with the instances to be created.
+                     * @param _resourceTags Tags associated with the instances to be created.
                      * 
                      */
                     void SetResourceTags(const std::vector<ResourceTag>& _resourceTags);
@@ -464,15 +464,15 @@ namespace TencentCloud
                     bool ResourceTagsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Collation 
+                     * 获取Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
+                     * @return Collation Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
                      * 
                      */
                     std::string GetCollation() const;
 
                     /**
-                     * 设置
-                     * @param _collation 
+                     * 设置Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
+                     * @param _collation Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
                      * 
                      */
                     void SetCollation(const std::string& _collation);
@@ -485,15 +485,15 @@ namespace TencentCloud
                     bool CollationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TimeZone 
+                     * 获取System time zone. Default value: `China Standard Time`.
+                     * @return TimeZone System time zone. Default value: `China Standard Time`.
                      * 
                      */
                     std::string GetTimeZone() const;
 
                     /**
-                     * 设置
-                     * @param _timeZone 
+                     * 设置System time zone. Default value: `China Standard Time`.
+                     * @param _timeZone System time zone. Default value: `China Standard Time`.
                      * 
                      */
                     void SetTimeZone(const std::string& _timeZone);
@@ -505,139 +505,166 @@ namespace TencentCloud
                      */
                     bool TimeZoneHasBeenSet() const;
 
+                    /**
+                     * 获取Disk encryption identifier, 0-unencrypted, 1-encrypted.
+                     * @return DiskEncryptFlag Disk encryption identifier, 0-unencrypted, 1-encrypted.
+                     * 
+                     */
+                    int64_t GetDiskEncryptFlag() const;
+
+                    /**
+                     * 设置Disk encryption identifier, 0-unencrypted, 1-encrypted.
+                     * @param _diskEncryptFlag Disk encryption identifier, 0-unencrypted, 1-encrypted.
+                     * 
+                     */
+                    void SetDiskEncryptFlag(const int64_t& _diskEncryptFlag);
+
+                    /**
+                     * 判断参数 DiskEncryptFlag 是否已赋值
+                     * @return DiskEncryptFlag 是否已赋值
+                     * 
+                     */
+                    bool DiskEncryptFlagHasBeenSet() const;
+
                 private:
 
                     /**
-                     * 
+                     * Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API.
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * 
+                     * Number of CPU cores.
                      */
                     uint64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * 
+                     * Instance memory size in GB.
                      */
                     uint64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * 
+                     * Instance storage capacity in GB.
                      */
                     uint64_t m_storage;
                     bool m_storageHasBeenSet;
 
                     /**
-                     * 
+                     * VPC subnet ID in the format of subnet-bdoe83fa.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * 
+                     * VPC ID in the format of vpc-dsp338hz.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * 
+                     * Host type of purchased instances. CLOUD_PREMIUM: Premium Disk for virtual machines; CLOUD_SSD: Cloud SSD for virtual machines; CLOUD_HSSD: Enhanced SSD for virtual machines; CLOUD_BSSD: Balanced SSD for virtual machines.
                      */
                     std::string m_machineType;
                     bool m_machineTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Billing mode. Valid value: POSTPAID (pay-as-you-go).
                      */
                     std::string m_instanceChargeType;
                     bool m_instanceChargeTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Project ID.
                      */
                     uint64_t m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * 
+                     * Number of instances purchased this time. Default value: 1. Maximum value: 10.
                      */
                     uint64_t m_goodsNum;
                     bool m_goodsNumHasBeenSet;
 
                     /**
-                     * 
+                     * SQL Server version. Valid values: `2008R2` (SQL Server 2008 R2 Enterprise), `2012SP3` (SQL Server 2012 Enterprise), `201202` (SQL Server 2012 Standard), `2014SP2` (SQL Server 2014 Enterprise), 201402 (SQL Server 2014 Standard), `2016SP1` (SQL Server 2016 Enterprise), `201602` (SQL Server 2016 Standard), `2017` (SQL Server 2017 Enterprise), `201702` (SQL Server 2017 Standard), `2019` (SQL Server 2019 Enterprise), `201902` (SQL Server 2019 Standard). Default value: `2008R2`. The available version varies by region, and you can pull the version information by calling the `DescribeProductConfig` API.
                      */
                     std::string m_dBVersion;
                     bool m_dBVersionHasBeenSet;
 
                     /**
-                     * 
+                     * Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48.
                      */
                     int64_t m_period;
                     bool m_periodHasBeenSet;
 
                     /**
-                     * 
+                     * Security group list, which contains security group IDs in the format of sg-xxx.
                      */
                     std::vector<std::string> m_securityGroupList;
                     bool m_securityGroupListHasBeenSet;
 
                     /**
-                     * 
+                     * Auto-renewal flag. 0: normal renewal, 1: auto-renewal. Default value: 1.
                      */
                     int64_t m_autoRenewFlag;
                     bool m_autoRenewFlagHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to automatically use voucher. 0: no, 1: yes. Default value: no.
                      */
                     int64_t m_autoVoucher;
                     bool m_autoVoucherHasBeenSet;
 
                     /**
-                     * 
+                     * Array of voucher IDs (currently, only one voucher can be used per order).
                      */
                     std::vector<std::string> m_voucherIds;
                     bool m_voucherIdsHasBeenSet;
 
                     /**
-                     * 
+                     * Configuration of the maintenance window, which specifies the day of the week when maintenance can be performed. Valid values: 1 (Monday), 2 (Tuesday), 3 (Wednesday), 4 (Thursday), 5 (Friday), 6 (Saturday), 7 (Sunday).
                      */
                     std::vector<int64_t> m_weekly;
                     bool m_weeklyHasBeenSet;
 
                     /**
-                     * 
+                     * Configuration of the maintenance window, which specifies the start time of daily maintenance.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Configuration of the maintenance window, which specifies the maintenance duration in hours.
                      */
                     int64_t m_span;
                     bool m_spanHasBeenSet;
 
                     /**
-                     * 
+                     * Tags associated with the instances to be created.
                      */
                     std::vector<ResourceTag> m_resourceTags;
                     bool m_resourceTagsHasBeenSet;
 
                     /**
-                     * 
+                     * Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
                      */
                     std::string m_collation;
                     bool m_collationHasBeenSet;
 
                     /**
-                     * 
+                     * System time zone. Default value: `China Standard Time`.
                      */
                     std::string m_timeZone;
                     bool m_timeZoneHasBeenSet;
+
+                    /**
+                     * Disk encryption identifier, 0-unencrypted, 1-encrypted.
+                     */
+                    int64_t m_diskEncryptFlag;
+                    bool m_diskEncryptFlagHasBeenSet;
 
                 };
             }

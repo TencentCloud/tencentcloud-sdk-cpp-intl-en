@@ -470,6 +470,49 @@ MdpClient::CreateStreamPackageSourceLocationOutcomeCallable MdpClient::CreateStr
     return task->get_future();
 }
 
+MdpClient::CreateStreamPackageVodRemuxTaskOutcome MdpClient::CreateStreamPackageVodRemuxTask(const CreateStreamPackageVodRemuxTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateStreamPackageVodRemuxTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateStreamPackageVodRemuxTaskResponse rsp = CreateStreamPackageVodRemuxTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateStreamPackageVodRemuxTaskOutcome(rsp);
+        else
+            return CreateStreamPackageVodRemuxTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateStreamPackageVodRemuxTaskOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::CreateStreamPackageVodRemuxTaskAsync(const CreateStreamPackageVodRemuxTaskRequest& request, const CreateStreamPackageVodRemuxTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateStreamPackageVodRemuxTask(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::CreateStreamPackageVodRemuxTaskOutcomeCallable MdpClient::CreateStreamPackageVodRemuxTaskCallable(const CreateStreamPackageVodRemuxTaskRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateStreamPackageVodRemuxTaskOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateStreamPackageVodRemuxTask(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 MdpClient::DeleteStreamPackageChannelEndpointsOutcome MdpClient::DeleteStreamPackageChannelEndpoints(const DeleteStreamPackageChannelEndpointsRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteStreamPackageChannelEndpoints");
@@ -936,6 +979,92 @@ MdpClient::DeleteStreamPackageSourceLocationOutcomeCallable MdpClient::DeleteStr
         [this, request]()
         {
             return this->DeleteStreamPackageSourceLocation(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::DeleteStreamPackageVodRemuxTaskOutcome MdpClient::DeleteStreamPackageVodRemuxTask(const DeleteStreamPackageVodRemuxTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteStreamPackageVodRemuxTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteStreamPackageVodRemuxTaskResponse rsp = DeleteStreamPackageVodRemuxTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteStreamPackageVodRemuxTaskOutcome(rsp);
+        else
+            return DeleteStreamPackageVodRemuxTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteStreamPackageVodRemuxTaskOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::DeleteStreamPackageVodRemuxTaskAsync(const DeleteStreamPackageVodRemuxTaskRequest& request, const DeleteStreamPackageVodRemuxTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteStreamPackageVodRemuxTask(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::DeleteStreamPackageVodRemuxTaskOutcomeCallable MdpClient::DeleteStreamPackageVodRemuxTaskCallable(const DeleteStreamPackageVodRemuxTaskRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteStreamPackageVodRemuxTaskOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteStreamPackageVodRemuxTask(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::DeleteStreamPackageVodRemuxTasksOutcome MdpClient::DeleteStreamPackageVodRemuxTasks(const DeleteStreamPackageVodRemuxTasksRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteStreamPackageVodRemuxTasks");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteStreamPackageVodRemuxTasksResponse rsp = DeleteStreamPackageVodRemuxTasksResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteStreamPackageVodRemuxTasksOutcome(rsp);
+        else
+            return DeleteStreamPackageVodRemuxTasksOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteStreamPackageVodRemuxTasksOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::DeleteStreamPackageVodRemuxTasksAsync(const DeleteStreamPackageVodRemuxTasksRequest& request, const DeleteStreamPackageVodRemuxTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteStreamPackageVodRemuxTasks(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::DeleteStreamPackageVodRemuxTasksOutcomeCallable MdpClient::DeleteStreamPackageVodRemuxTasksCallable(const DeleteStreamPackageVodRemuxTasksRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteStreamPackageVodRemuxTasksOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteStreamPackageVodRemuxTasks(request);
         }
     );
 
@@ -1846,6 +1975,92 @@ MdpClient::DescribeStreamPackageSourcesOutcomeCallable MdpClient::DescribeStream
     return task->get_future();
 }
 
+MdpClient::DescribeStreamPackageVodRemuxTaskOutcome MdpClient::DescribeStreamPackageVodRemuxTask(const DescribeStreamPackageVodRemuxTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeStreamPackageVodRemuxTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeStreamPackageVodRemuxTaskResponse rsp = DescribeStreamPackageVodRemuxTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeStreamPackageVodRemuxTaskOutcome(rsp);
+        else
+            return DescribeStreamPackageVodRemuxTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeStreamPackageVodRemuxTaskOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::DescribeStreamPackageVodRemuxTaskAsync(const DescribeStreamPackageVodRemuxTaskRequest& request, const DescribeStreamPackageVodRemuxTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeStreamPackageVodRemuxTask(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::DescribeStreamPackageVodRemuxTaskOutcomeCallable MdpClient::DescribeStreamPackageVodRemuxTaskCallable(const DescribeStreamPackageVodRemuxTaskRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeStreamPackageVodRemuxTaskOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeStreamPackageVodRemuxTask(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::DescribeStreamPackageVodRemuxTasksOutcome MdpClient::DescribeStreamPackageVodRemuxTasks(const DescribeStreamPackageVodRemuxTasksRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeStreamPackageVodRemuxTasks");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeStreamPackageVodRemuxTasksResponse rsp = DescribeStreamPackageVodRemuxTasksResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeStreamPackageVodRemuxTasksOutcome(rsp);
+        else
+            return DescribeStreamPackageVodRemuxTasksOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeStreamPackageVodRemuxTasksOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::DescribeStreamPackageVodRemuxTasksAsync(const DescribeStreamPackageVodRemuxTasksRequest& request, const DescribeStreamPackageVodRemuxTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeStreamPackageVodRemuxTasks(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::DescribeStreamPackageVodRemuxTasksOutcomeCallable MdpClient::DescribeStreamPackageVodRemuxTasksCallable(const DescribeStreamPackageVodRemuxTasksRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeStreamPackageVodRemuxTasksOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeStreamPackageVodRemuxTasks(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 MdpClient::ModifyStreamPackageChannelOutcome MdpClient::ModifyStreamPackageChannel(const ModifyStreamPackageChannelRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyStreamPackageChannel");
@@ -2226,6 +2441,49 @@ MdpClient::StartStreamPackageLinearAssemblyChannelOutcomeCallable MdpClient::Sta
         [this, request]()
         {
             return this->StartStreamPackageLinearAssemblyChannel(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::StartStreamPackageVodRemuxTaskOutcome MdpClient::StartStreamPackageVodRemuxTask(const StartStreamPackageVodRemuxTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "StartStreamPackageVodRemuxTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        StartStreamPackageVodRemuxTaskResponse rsp = StartStreamPackageVodRemuxTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return StartStreamPackageVodRemuxTaskOutcome(rsp);
+        else
+            return StartStreamPackageVodRemuxTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return StartStreamPackageVodRemuxTaskOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::StartStreamPackageVodRemuxTaskAsync(const StartStreamPackageVodRemuxTaskRequest& request, const StartStreamPackageVodRemuxTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->StartStreamPackageVodRemuxTask(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::StartStreamPackageVodRemuxTaskOutcomeCallable MdpClient::StartStreamPackageVodRemuxTaskCallable(const StartStreamPackageVodRemuxTaskRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<StartStreamPackageVodRemuxTaskOutcome()>>(
+        [this, request]()
+        {
+            return this->StartStreamPackageVodRemuxTask(request);
         }
     );
 

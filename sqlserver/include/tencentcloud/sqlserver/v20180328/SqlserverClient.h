@@ -79,6 +79,8 @@
 #include <tencentcloud/sqlserver/v20180328/model/DescribeBackupsResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeBusinessIntelligenceFileRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeBusinessIntelligenceFileResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeCollationTimeZoneRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeCollationTimeZoneResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeDBCharsetsRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeDBCharsetsResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeDBInstanceInterRequest.h>
@@ -119,6 +121,8 @@
 #include <tencentcloud/sqlserver/v20180328/model/DescribeRollbackTimeResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeSlowlogsRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeSlowlogsResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeSpecSellStatusRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeSpecSellStatusResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeUploadBackupInfoRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeUploadBackupInfoResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeXEventsRequest.h>
@@ -287,6 +291,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeBusinessIntelligenceFileResponse> DescribeBusinessIntelligenceFileOutcome;
                 typedef std::future<DescribeBusinessIntelligenceFileOutcome> DescribeBusinessIntelligenceFileOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DescribeBusinessIntelligenceFileRequest&, DescribeBusinessIntelligenceFileOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBusinessIntelligenceFileAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCollationTimeZoneResponse> DescribeCollationTimeZoneOutcome;
+                typedef std::future<DescribeCollationTimeZoneOutcome> DescribeCollationTimeZoneOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::DescribeCollationTimeZoneRequest&, DescribeCollationTimeZoneOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCollationTimeZoneAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDBCharsetsResponse> DescribeDBCharsetsOutcome;
                 typedef std::future<DescribeDBCharsetsOutcome> DescribeDBCharsetsOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DescribeDBCharsetsRequest&, DescribeDBCharsetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBCharsetsAsyncHandler;
@@ -347,6 +354,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeSlowlogsResponse> DescribeSlowlogsOutcome;
                 typedef std::future<DescribeSlowlogsOutcome> DescribeSlowlogsOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DescribeSlowlogsRequest&, DescribeSlowlogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSlowlogsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSpecSellStatusResponse> DescribeSpecSellStatusOutcome;
+                typedef std::future<DescribeSpecSellStatusOutcome> DescribeSpecSellStatusOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::DescribeSpecSellStatusRequest&, DescribeSpecSellStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSpecSellStatusAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeUploadBackupInfoResponse> DescribeUploadBackupInfoOutcome;
                 typedef std::future<DescribeUploadBackupInfoOutcome> DescribeUploadBackupInfoOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DescribeUploadBackupInfoRequest&, DescribeUploadBackupInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUploadBackupInfoAsyncHandler;
@@ -708,6 +718,15 @@ namespace TencentCloud
                 DescribeBusinessIntelligenceFileOutcomeCallable DescribeBusinessIntelligenceFileCallable(const Model::DescribeBusinessIntelligenceFileRequest& request);
 
                 /**
+                 *This API is used to query the character set and time zone supported by the instance.
+                 * @param req DescribeCollationTimeZoneRequest
+                 * @return DescribeCollationTimeZoneOutcome
+                 */
+                DescribeCollationTimeZoneOutcome DescribeCollationTimeZone(const Model::DescribeCollationTimeZoneRequest &request);
+                void DescribeCollationTimeZoneAsync(const Model::DescribeCollationTimeZoneRequest& request, const DescribeCollationTimeZoneAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCollationTimeZoneOutcomeCallable DescribeCollationTimeZoneCallable(const Model::DescribeCollationTimeZoneRequest& request);
+
+                /**
                  *This API is used to query the database character sets supported by an instance.
                  * @param req DescribeDBCharsetsRequest
                  * @return DescribeDBCharsetsOutcome
@@ -888,6 +907,15 @@ namespace TencentCloud
                 DescribeSlowlogsOutcomeCallable DescribeSlowlogsCallable(const Model::DescribeSlowlogsRequest& request);
 
                 /**
+                 *This API is used to query the status information on specifications, including the sales status and reference price. (The actual price is subject to the result returned by price querying APIs.)
+                 * @param req DescribeSpecSellStatusRequest
+                 * @return DescribeSpecSellStatusOutcome
+                 */
+                DescribeSpecSellStatusOutcome DescribeSpecSellStatus(const Model::DescribeSpecSellStatusRequest &request);
+                void DescribeSpecSellStatusAsync(const Model::DescribeSpecSellStatusRequest& request, const DescribeSpecSellStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSpecSellStatusOutcomeCallable DescribeSpecSellStatusCallable(const Model::DescribeSpecSellStatusRequest& request);
+
+                /**
                  *This API is used to query a backup upload permission.
                  * @param req DescribeUploadBackupInfoRequest
                  * @return DescribeUploadBackupInfoOutcome
@@ -924,7 +952,7 @@ namespace TencentCloud
                 InquiryPriceCreateDBInstancesOutcomeCallable InquiryPriceCreateDBInstancesCallable(const Model::InquiryPriceCreateDBInstancesRequest& request);
 
                 /**
-                 *This API is used to query the upgrade prices of a monthly subscribed instance
+                 *This API is used to query the upgrade prices of a monthly subscribed instance.
 .
                  * @param req InquiryPriceUpgradeDBInstanceRequest
                  * @return InquiryPriceUpgradeDBInstanceOutcome

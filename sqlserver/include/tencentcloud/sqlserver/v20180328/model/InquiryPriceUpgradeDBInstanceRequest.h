@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID in the format of mssql-njj2mtpl
-                     * @return InstanceId Instance ID in the format of mssql-njj2mtpl
+                     * 获取Instance ID in the format of mssql-njj2mtpl.
+                     * @return InstanceId Instance ID in the format of mssql-njj2mtpl.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID in the format of mssql-njj2mtpl
-                     * @param _instanceId Instance ID in the format of mssql-njj2mtpl
+                     * 设置Instance ID in the format of mssql-njj2mtpl.
+                     * @param _instanceId Instance ID in the format of mssql-njj2mtpl.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
-                     * @return Memory Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
+                     * 获取Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size.
+                     * @return Memory Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size.
                      * 
                      */
                     int64_t GetMemory() const;
 
                     /**
-                     * 设置Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
-                     * @param _memory Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
+                     * 设置Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size.
+                     * @param _memory Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size.
                      * 
                      */
                     void SetMemory(const int64_t& _memory);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
-                     * @return Storage Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
+                     * 获取Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity.
+                     * @return Storage Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity.
                      * 
                      */
                     int64_t GetStorage() const;
 
                     /**
-                     * 设置Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
-                     * @param _storage Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
+                     * 设置Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity.
+                     * @param _storage Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity.
                      * 
                      */
                     void SetStorage(const int64_t& _storage);
@@ -129,19 +129,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID in the format of mssql-njj2mtpl
+                     * Instance ID in the format of mssql-njj2mtpl.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
+                     * Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size.
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
+                     * Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity.
                      */
                     int64_t m_storage;
                     bool m_storageHasBeenSet;

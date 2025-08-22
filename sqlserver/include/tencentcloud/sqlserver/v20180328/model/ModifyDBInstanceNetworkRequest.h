@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID.
+                     * @return InstanceId Instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID.
+                     * @param _instanceId Instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the new VPC
-                     * @return NewVpcId ID of the new VPC
+                     * 获取ID of the new VPC.
+                     * @return NewVpcId ID of the new VPC.
                      * 
                      */
                     std::string GetNewVpcId() const;
 
                     /**
-                     * 设置ID of the new VPC
-                     * @param _newVpcId ID of the new VPC
+                     * 设置ID of the new VPC.
+                     * @param _newVpcId ID of the new VPC.
                      * 
                      */
                     void SetNewVpcId(const std::string& _newVpcId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool NewVpcIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the new subnet
-                     * @return NewSubnetId ID of the new subnet
+                     * 获取ID of the new subnet.
+                     * @return NewSubnetId ID of the new subnet.
                      * 
                      */
                     std::string GetNewSubnetId() const;
 
                     /**
-                     * 设置ID of the new subnet
-                     * @param _newSubnetId ID of the new subnet
+                     * 设置ID of the new subnet.
+                     * @param _newSubnetId ID of the new subnet.
                      * 
                      */
                     void SetNewSubnetId(const std::string& _newSubnetId);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool OldIpRetainTimeHasBeenSet() const;
 
                     /**
-                     * 获取New VIP
-                     * @return Vip New VIP
+                     * 获取New VIP.
+                     * @return Vip New VIP.
                      * 
                      */
                     std::string GetVip() const;
 
                     /**
-                     * 设置New VIP
-                     * @param _vip New VIP
+                     * 设置New VIP.
+                     * @param _vip New VIP.
                      * 
                      */
                     void SetVip(const std::string& _vip);
@@ -148,15 +148,19 @@ namespace TencentCloud
                     bool VipHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DRNetwork 
+                     * 获取Target node. 0 - modify the primary node network; 1 - modify the secondary node network. The default value is 0.
+
+                     * @return DRNetwork Target node. 0 - modify the primary node network; 1 - modify the secondary node network. The default value is 0.
+
                      * 
                      */
                     uint64_t GetDRNetwork() const;
 
                     /**
-                     * 设置
-                     * @param _dRNetwork 
+                     * 设置Target node. 0 - modify the primary node network; 1 - modify the secondary node network. The default value is 0.
+
+                     * @param _dRNetwork Target node. 0 - modify the primary node network; 1 - modify the secondary node network. The default value is 0.
+
                      * 
                      */
                     void SetDRNetwork(const uint64_t& _dRNetwork);
@@ -168,22 +172,43 @@ namespace TencentCloud
                      */
                     bool DRNetworkHasBeenSet() const;
 
+                    /**
+                     * 获取Secondary server resource ID. It is required when DRNetwork = 1.
+                     * @return DrInstanceId Secondary server resource ID. It is required when DRNetwork = 1.
+                     * 
+                     */
+                    std::string GetDrInstanceId() const;
+
+                    /**
+                     * 设置Secondary server resource ID. It is required when DRNetwork = 1.
+                     * @param _drInstanceId Secondary server resource ID. It is required when DRNetwork = 1.
+                     * 
+                     */
+                    void SetDrInstanceId(const std::string& _drInstanceId);
+
+                    /**
+                     * 判断参数 DrInstanceId 是否已赋值
+                     * @return DrInstanceId 是否已赋值
+                     * 
+                     */
+                    bool DrInstanceIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * ID of the new VPC
+                     * ID of the new VPC.
                      */
                     std::string m_newVpcId;
                     bool m_newVpcIdHasBeenSet;
 
                     /**
-                     * ID of the new subnet
+                     * ID of the new subnet.
                      */
                     std::string m_newSubnetId;
                     bool m_newSubnetIdHasBeenSet;
@@ -195,16 +220,23 @@ namespace TencentCloud
                     bool m_oldIpRetainTimeHasBeenSet;
 
                     /**
-                     * New VIP
+                     * New VIP.
                      */
                     std::string m_vip;
                     bool m_vipHasBeenSet;
 
                     /**
-                     * 
+                     * Target node. 0 - modify the primary node network; 1 - modify the secondary node network. The default value is 0.
+
                      */
                     uint64_t m_dRNetwork;
                     bool m_dRNetworkHasBeenSet;
+
+                    /**
+                     * Secondary server resource ID. It is required when DRNetwork = 1.
+                     */
+                    std::string m_drInstanceId;
+                    bool m_drInstanceIdHasBeenSet;
 
                 };
             }

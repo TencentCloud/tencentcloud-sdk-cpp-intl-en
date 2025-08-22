@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_SQLSERVER_V20180328_MODEL_UPGRADEDBINSTANCERESPONSE_H_
-#define TENCENTCLOUD_SQLSERVER_V20180328_MODEL_UPGRADEDBINSTANCERESPONSE_H_
+#ifndef TENCENTCLOUD_MDP_V20200527_MODEL_DELETESTREAMPACKAGEVODREMUXTASKREQUEST_H_
+#define TENCENTCLOUD_MDP_V20200527_MODEL_DELETESTREAMPACKAGEVODREMUXTASKREQUEST_H_
 
 #include <string>
 #include <vector>
@@ -25,45 +25,51 @@
 
 namespace TencentCloud
 {
-    namespace Sqlserver
+    namespace Mdp
     {
-        namespace V20180328
+        namespace V20200527
         {
             namespace Model
             {
                 /**
-                * UpgradeDBInstance response structure.
+                * DeleteStreamPackageVodRemuxTask request structure.
                 */
-                class UpgradeDBInstanceResponse : public AbstractModel
+                class DeleteStreamPackageVodRemuxTaskRequest : public AbstractModel
                 {
                 public:
-                    UpgradeDBInstanceResponse();
-                    ~UpgradeDBInstanceResponse() = default;
-                    CoreInternalOutcome Deserialize(const std::string &payload);
+                    DeleteStreamPackageVodRemuxTaskRequest();
+                    ~DeleteStreamPackageVodRemuxTaskRequest() = default;
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Order name.
-                     * @return DealName Order name.
+                     * 获取VOD task Id.
+                     * @return Id VOD task Id.
                      * 
                      */
-                    std::string GetDealName() const;
+                    std::string GetId() const;
 
                     /**
-                     * 判断参数 DealName 是否已赋值
-                     * @return DealName 是否已赋值
+                     * 设置VOD task Id.
+                     * @param _id VOD task Id.
                      * 
                      */
-                    bool DealNameHasBeenSet() const;
+                    void SetId(const std::string& _id);
+
+                    /**
+                     * 判断参数 Id 是否已赋值
+                     * @return Id 是否已赋值
+                     * 
+                     */
+                    bool IdHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Order name.
+                     * VOD task Id.
                      */
-                    std::string m_dealName;
-                    bool m_dealNameHasBeenSet;
+                    std::string m_id;
+                    bool m_idHasBeenSet;
 
                 };
             }
@@ -71,4 +77,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_SQLSERVER_V20180328_MODEL_UPGRADEDBINSTANCERESPONSE_H_
+#endif // !TENCENTCLOUD_MDP_V20200527_MODEL_DELETESTREAMPACKAGEVODREMUXTASKREQUEST_H_

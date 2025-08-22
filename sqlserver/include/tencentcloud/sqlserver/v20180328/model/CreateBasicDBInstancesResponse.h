@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return DealName 
+                     * 获取Order name.
+                     * @return DealName Order name.
                      * 
                      */
                     std::string GetDealName() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Order name.
                      */
                     std::string m_dealName;
                     bool m_dealNameHasBeenSet;

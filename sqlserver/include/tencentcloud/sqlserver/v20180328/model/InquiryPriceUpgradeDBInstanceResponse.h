@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Price before discount. This value divided by 100 indicates the price; for example, 10094 means 100.94 USD
-                     * @return OriginalPrice Price before discount. This value divided by 100 indicates the price; for example, 10094 means 100.94 USD
+                     * 获取Price before discount. This value divided by 100 indicates the price; for example, 10094 means 100.94 USD.
+                     * @return OriginalPrice Price before discount. This value divided by 100 indicates the price; for example, 10094 means 100.94 USD.
                      * 
                      */
                     int64_t GetOriginalPrice() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool OriginalPriceHasBeenSet() const;
 
                     /**
-                     * 获取The actual price to be paid. This value divided by 100 indicates the price; for example, 10094 means 100.94 USD
-                     * @return Price The actual price to be paid. This value divided by 100 indicates the price; for example, 10094 means 100.94 USD
+                     * 获取The actual price to be paid. This value divided by 100 indicates the price; for example, 10094 means 100.94 USD.
+                     * @return Price The actual price to be paid. This value divided by 100 indicates the price; for example, 10094 means 100.94 USD.
                      * 
                      */
                     int64_t GetPrice() const;
@@ -74,13 +74,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Price before discount. This value divided by 100 indicates the price; for example, 10094 means 100.94 USD
+                     * Price before discount. This value divided by 100 indicates the price; for example, 10094 means 100.94 USD.
                      */
                     int64_t m_originalPrice;
                     bool m_originalPriceHasBeenSet;
 
                     /**
-                     * The actual price to be paid. This value divided by 100 indicates the price; for example, 10094 means 100.94 USD
+                     * The actual price to be paid. This value divided by 100 indicates the price; for example, 10094 means 100.94 USD.
                      */
                     int64_t m_price;
                     bool m_priceHasBeenSet;

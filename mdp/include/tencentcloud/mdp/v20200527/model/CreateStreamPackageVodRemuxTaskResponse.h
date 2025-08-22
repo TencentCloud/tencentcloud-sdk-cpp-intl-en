@@ -14,57 +14,57 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_SQLSERVER_V20180328_MODEL_DESCRIBEINSTANCEBYORDERSRESPONSE_H_
-#define TENCENTCLOUD_SQLSERVER_V20180328_MODEL_DESCRIBEINSTANCEBYORDERSRESPONSE_H_
+#ifndef TENCENTCLOUD_MDP_V20200527_MODEL_CREATESTREAMPACKAGEVODREMUXTASKRESPONSE_H_
+#define TENCENTCLOUD_MDP_V20200527_MODEL_CREATESTREAMPACKAGEVODREMUXTASKRESPONSE_H_
 
 #include <string>
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/sqlserver/v20180328/model/DealInstance.h>
+#include <tencentcloud/mdp/v20200527/model/VodRemuxTaskInfo.h>
 
 
 namespace TencentCloud
 {
-    namespace Sqlserver
+    namespace Mdp
     {
-        namespace V20180328
+        namespace V20200527
         {
             namespace Model
             {
                 /**
-                * DescribeInstanceByOrders response structure.
+                * CreateStreamPackageVodRemuxTask response structure.
                 */
-                class DescribeInstanceByOrdersResponse : public AbstractModel
+                class CreateStreamPackageVodRemuxTaskResponse : public AbstractModel
                 {
                 public:
-                    DescribeInstanceByOrdersResponse();
-                    ~DescribeInstanceByOrdersResponse() = default;
+                    CreateStreamPackageVodRemuxTaskResponse();
+                    ~CreateStreamPackageVodRemuxTaskResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Resource ID set.
-                     * @return DealInstance Resource ID set.
+                     * 获取Vod remux task information.
+                     * @return Info Vod remux task information.
                      * 
                      */
-                    std::vector<DealInstance> GetDealInstance() const;
+                    VodRemuxTaskInfo GetInfo() const;
 
                     /**
-                     * 判断参数 DealInstance 是否已赋值
-                     * @return DealInstance 是否已赋值
+                     * 判断参数 Info 是否已赋值
+                     * @return Info 是否已赋值
                      * 
                      */
-                    bool DealInstanceHasBeenSet() const;
+                    bool InfoHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Resource ID set.
+                     * Vod remux task information.
                      */
-                    std::vector<DealInstance> m_dealInstance;
-                    bool m_dealInstanceHasBeenSet;
+                    VodRemuxTaskInfo m_info;
+                    bool m_infoHasBeenSet;
 
                 };
             }
@@ -72,4 +72,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_SQLSERVER_V20180328_MODEL_DESCRIBEINSTANCEBYORDERSRESPONSE_H_
+#endif // !TENCENTCLOUD_MDP_V20200527_MODEL_CREATESTREAMPACKAGEVODREMUXTASKRESPONSE_H_

@@ -1244,6 +1244,49 @@ SqlserverClient::DescribeBusinessIntelligenceFileOutcomeCallable SqlserverClient
     return task->get_future();
 }
 
+SqlserverClient::DescribeCollationTimeZoneOutcome SqlserverClient::DescribeCollationTimeZone(const DescribeCollationTimeZoneRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCollationTimeZone");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCollationTimeZoneResponse rsp = DescribeCollationTimeZoneResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCollationTimeZoneOutcome(rsp);
+        else
+            return DescribeCollationTimeZoneOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCollationTimeZoneOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DescribeCollationTimeZoneAsync(const DescribeCollationTimeZoneRequest& request, const DescribeCollationTimeZoneAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCollationTimeZone(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DescribeCollationTimeZoneOutcomeCallable SqlserverClient::DescribeCollationTimeZoneCallable(const DescribeCollationTimeZoneRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCollationTimeZoneOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCollationTimeZone(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 SqlserverClient::DescribeDBCharsetsOutcome SqlserverClient::DescribeDBCharsets(const DescribeDBCharsetsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeDBCharsets");
@@ -2097,6 +2140,49 @@ SqlserverClient::DescribeSlowlogsOutcomeCallable SqlserverClient::DescribeSlowlo
         [this, request]()
         {
             return this->DescribeSlowlogs(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::DescribeSpecSellStatusOutcome SqlserverClient::DescribeSpecSellStatus(const DescribeSpecSellStatusRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeSpecSellStatus");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeSpecSellStatusResponse rsp = DescribeSpecSellStatusResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeSpecSellStatusOutcome(rsp);
+        else
+            return DescribeSpecSellStatusOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeSpecSellStatusOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DescribeSpecSellStatusAsync(const DescribeSpecSellStatusRequest& request, const DescribeSpecSellStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeSpecSellStatus(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DescribeSpecSellStatusOutcomeCallable SqlserverClient::DescribeSpecSellStatusCallable(const DescribeSpecSellStatusRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeSpecSellStatusOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeSpecSellStatus(request);
         }
     );
 

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_SQLSERVER_V20180328_MODEL_DESCRIBEINSTANCEBYORDERSRESPONSE_H_
-#define TENCENTCLOUD_SQLSERVER_V20180328_MODEL_DESCRIBEINSTANCEBYORDERSRESPONSE_H_
+#ifndef TENCENTCLOUD_SQLSERVER_V20180328_MODEL_DESCRIBESPECSELLSTATUSRESPONSE_H_
+#define TENCENTCLOUD_SQLSERVER_V20180328_MODEL_DESCRIBESPECSELLSTATUSRESPONSE_H_
 
 #include <string>
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/sqlserver/v20180328/model/DealInstance.h>
+#include <tencentcloud/sqlserver/v20180328/model/SpecSellStatus.h>
 
 
 namespace TencentCloud
@@ -33,38 +33,38 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * DescribeInstanceByOrders response structure.
+                * DescribeSpecSellStatus response structure.
                 */
-                class DescribeInstanceByOrdersResponse : public AbstractModel
+                class DescribeSpecSellStatusResponse : public AbstractModel
                 {
                 public:
-                    DescribeInstanceByOrdersResponse();
-                    ~DescribeInstanceByOrdersResponse() = default;
+                    DescribeSpecSellStatusResponse();
+                    ~DescribeSpecSellStatusResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Resource ID set.
-                     * @return DealInstance Resource ID set.
+                     * 获取Status set of specifications in different regions.
+                     * @return DescribeSpecSellStatusSet Status set of specifications in different regions.
                      * 
                      */
-                    std::vector<DealInstance> GetDealInstance() const;
+                    std::vector<SpecSellStatus> GetDescribeSpecSellStatusSet() const;
 
                     /**
-                     * 判断参数 DealInstance 是否已赋值
-                     * @return DealInstance 是否已赋值
+                     * 判断参数 DescribeSpecSellStatusSet 是否已赋值
+                     * @return DescribeSpecSellStatusSet 是否已赋值
                      * 
                      */
-                    bool DealInstanceHasBeenSet() const;
+                    bool DescribeSpecSellStatusSetHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Resource ID set.
+                     * Status set of specifications in different regions.
                      */
-                    std::vector<DealInstance> m_dealInstance;
-                    bool m_dealInstanceHasBeenSet;
+                    std::vector<SpecSellStatus> m_describeSpecSellStatusSet;
+                    bool m_describeSpecSellStatusSetHasBeenSet;
 
                 };
             }
@@ -72,4 +72,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_SQLSERVER_V20180328_MODEL_DESCRIBEINSTANCEBYORDERSRESPONSE_H_
+#endif // !TENCENTCLOUD_SQLSERVER_V20180328_MODEL_DESCRIBESPECSELLSTATUSRESPONSE_H_

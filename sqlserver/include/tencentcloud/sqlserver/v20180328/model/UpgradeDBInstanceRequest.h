@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/sqlserver/v20180328/model/DrZoneInfo.h>
 
 
 namespace TencentCloud
@@ -252,6 +253,27 @@ namespace TencentCloud
                      */
                     bool WaitSwitchHasBeenSet() const;
 
+                    /**
+                     * 获取Secondary node AZ of the multi-node architecture instance. The default value is null. It should be specified when modifying the AZ of the specified secondary node needs to be performed during configuration adjustment. When MultiZones = MultiZones, the AZs of the primary nodes and secondary nodes cannot all be the same. The collection of AZs of the secondary node can include 2-5 AZs.
+                     * @return DrZones Secondary node AZ of the multi-node architecture instance. The default value is null. It should be specified when modifying the AZ of the specified secondary node needs to be performed during configuration adjustment. When MultiZones = MultiZones, the AZs of the primary nodes and secondary nodes cannot all be the same. The collection of AZs of the secondary node can include 2-5 AZs.
+                     * 
+                     */
+                    std::vector<DrZoneInfo> GetDrZones() const;
+
+                    /**
+                     * 设置Secondary node AZ of the multi-node architecture instance. The default value is null. It should be specified when modifying the AZ of the specified secondary node needs to be performed during configuration adjustment. When MultiZones = MultiZones, the AZs of the primary nodes and secondary nodes cannot all be the same. The collection of AZs of the secondary node can include 2-5 AZs.
+                     * @param _drZones Secondary node AZ of the multi-node architecture instance. The default value is null. It should be specified when modifying the AZ of the specified secondary node needs to be performed during configuration adjustment. When MultiZones = MultiZones, the AZs of the primary nodes and secondary nodes cannot all be the same. The collection of AZs of the secondary node can include 2-5 AZs.
+                     * 
+                     */
+                    void SetDrZones(const std::vector<DrZoneInfo>& _drZones);
+
+                    /**
+                     * 判断参数 DrZones 是否已赋值
+                     * @return DrZones 是否已赋值
+                     * 
+                     */
+                    bool DrZonesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -313,6 +335,12 @@ namespace TencentCloud
                      */
                     int64_t m_waitSwitch;
                     bool m_waitSwitchHasBeenSet;
+
+                    /**
+                     * Secondary node AZ of the multi-node architecture instance. The default value is null. It should be specified when modifying the AZ of the specified secondary node needs to be performed during configuration adjustment. When MultiZones = MultiZones, the AZs of the primary nodes and secondary nodes cannot all be the same. The collection of AZs of the secondary node can include 2-5 AZs.
+                     */
+                    std::vector<DrZoneInfo> m_drZones;
+                    bool m_drZonesHasBeenSet;
 
                 };
             }
