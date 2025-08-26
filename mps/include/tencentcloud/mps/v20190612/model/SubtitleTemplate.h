@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/mps/v20190612/model/MediaInputInfo.h>
 
 
 namespace TencentCloud
@@ -111,6 +112,31 @@ Note: This field may return null, indicating that no valid value can be obtained
                      * 
                      */
                     bool StreamIndexHasBeenSet() const;
+
+                    /**
+                     * 获取Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SubtitleFileInput Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    MediaInputInfo GetSubtitleFileInput() const;
+
+                    /**
+                     * 设置Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _subtitleFileInput Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetSubtitleFileInput(const MediaInputInfo& _subtitleFileInput);
+
+                    /**
+                     * 判断参数 SubtitleFileInput 是否已赋值
+                     * @return SubtitleFileInput 是否已赋值
+                     * 
+                     */
+                    bool SubtitleFileInputHasBeenSet() const;
 
                     /**
                      * 获取Font type. valid values:.
@@ -542,6 +568,206 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool BoardAlphaHasBeenSet() const;
 
+                    /**
+                     * 获取Stroke width.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return OutlineWidth Stroke width.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    double GetOutlineWidth() const;
+
+                    /**
+                     * 设置Stroke width.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _outlineWidth Stroke width.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetOutlineWidth(const double& _outlineWidth);
+
+                    /**
+                     * 判断参数 OutlineWidth 是否已赋值
+                     * @return OutlineWidth 是否已赋值
+                     * 
+                     */
+                    bool OutlineWidthHasBeenSet() const;
+
+                    /**
+                     * 获取Stroke color. The value should be a 6-digit hexadecimal RGB value.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return OutlineColor Stroke color. The value should be a 6-digit hexadecimal RGB value.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetOutlineColor() const;
+
+                    /**
+                     * 设置Stroke color. The value should be a 6-digit hexadecimal RGB value.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _outlineColor Stroke color. The value should be a 6-digit hexadecimal RGB value.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetOutlineColor(const std::string& _outlineColor);
+
+                    /**
+                     * 判断参数 OutlineColor 是否已赋值
+                     * @return OutlineColor 是否已赋值
+                     * 
+                     */
+                    bool OutlineColorHasBeenSet() const;
+
+                    /**
+                     * 获取Stroke transparency. The value should be a positive floating-point number in the range of (0, 1].
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return OutlineAlpha Stroke transparency. The value should be a positive floating-point number in the range of (0, 1].
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    double GetOutlineAlpha() const;
+
+                    /**
+                     * 设置Stroke transparency. The value should be a positive floating-point number in the range of (0, 1].
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _outlineAlpha Stroke transparency. The value should be a positive floating-point number in the range of (0, 1].
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetOutlineAlpha(const double& _outlineAlpha);
+
+                    /**
+                     * 判断参数 OutlineAlpha 是否已赋值
+                     * @return OutlineAlpha 是否已赋值
+                     * 
+                     */
+                    bool OutlineAlphaHasBeenSet() const;
+
+                    /**
+                     * 获取Shadow width. The value should be a floating-point number in the range of [0, 1000].
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ShadowWidth Shadow width. The value should be a floating-point number in the range of [0, 1000].
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    double GetShadowWidth() const;
+
+                    /**
+                     * 设置Shadow width. The value should be a floating-point number in the range of [0, 1000].
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _shadowWidth Shadow width. The value should be a floating-point number in the range of [0, 1000].
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetShadowWidth(const double& _shadowWidth);
+
+                    /**
+                     * 判断参数 ShadowWidth 是否已赋值
+                     * @return ShadowWidth 是否已赋值
+                     * 
+                     */
+                    bool ShadowWidthHasBeenSet() const;
+
+                    /**
+                     * 获取Shadow color. The value should be a 6-digit hexadecimal RGB value.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ShadowColor Shadow color. The value should be a 6-digit hexadecimal RGB value.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetShadowColor() const;
+
+                    /**
+                     * 设置Shadow color. The value should be a 6-digit hexadecimal RGB value.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _shadowColor Shadow color. The value should be a 6-digit hexadecimal RGB value.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetShadowColor(const std::string& _shadowColor);
+
+                    /**
+                     * 判断参数 ShadowColor 是否已赋值
+                     * @return ShadowColor 是否已赋值
+                     * 
+                     */
+                    bool ShadowColorHasBeenSet() const;
+
+                    /**
+                     * 获取Shadow transparency. The value should be a positive floating-point number in the range of (0, 1].
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ShadowAlpha Shadow transparency. The value should be a positive floating-point number in the range of (0, 1].
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    double GetShadowAlpha() const;
+
+                    /**
+                     * 设置Shadow transparency. The value should be a positive floating-point number in the range of (0, 1].
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _shadowAlpha Shadow transparency. The value should be a positive floating-point number in the range of (0, 1].
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetShadowAlpha(const double& _shadowAlpha);
+
+                    /**
+                     * 判断参数 ShadowAlpha 是否已赋值
+                     * @return ShadowAlpha 是否已赋值
+                     * 
+                     */
+                    bool ShadowAlphaHasBeenSet() const;
+
+                    /**
+                     * 获取Line spacing. The value should be a positive integer in the range of [0, 1000].
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return LineSpacing Line spacing. The value should be a positive integer in the range of [0, 1000].
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetLineSpacing() const;
+
+                    /**
+                     * 设置Line spacing. The value should be a positive integer in the range of [0, 1000].
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _lineSpacing Line spacing. The value should be a positive integer in the range of [0, 1000].
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetLineSpacing(const int64_t& _lineSpacing);
+
+                    /**
+                     * 判断参数 LineSpacing 是否已赋值
+                     * @return LineSpacing 是否已赋值
+                     * 
+                     */
+                    bool LineSpacingHasBeenSet() const;
+
+                    /**
+                     * 获取Alignment mode. Valid values: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Alignment Alignment mode. Valid values: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetAlignment() const;
+
+                    /**
+                     * 设置Alignment mode. Valid values: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _alignment Alignment mode. Valid values: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetAlignment(const std::string& _alignment);
+
+                    /**
+                     * 判断参数 Alignment 是否已赋值
+                     * @return Alignment 是否已赋值
+                     * 
+                     */
+                    bool AlignmentHasBeenSet() const;
+
                 private:
 
                     /**
@@ -561,6 +787,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     int64_t m_streamIndex;
                     bool m_streamIndexHasBeenSet;
+
+                    /**
+                     * Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    MediaInputInfo m_subtitleFileInput;
+                    bool m_subtitleFileInputHasBeenSet;
 
                     /**
                      * Font type. valid values:.
@@ -676,6 +909,62 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     double m_boardAlpha;
                     bool m_boardAlphaHasBeenSet;
+
+                    /**
+                     * Stroke width.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    double m_outlineWidth;
+                    bool m_outlineWidthHasBeenSet;
+
+                    /**
+                     * Stroke color. The value should be a 6-digit hexadecimal RGB value.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_outlineColor;
+                    bool m_outlineColorHasBeenSet;
+
+                    /**
+                     * Stroke transparency. The value should be a positive floating-point number in the range of (0, 1].
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    double m_outlineAlpha;
+                    bool m_outlineAlphaHasBeenSet;
+
+                    /**
+                     * Shadow width. The value should be a floating-point number in the range of [0, 1000].
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    double m_shadowWidth;
+                    bool m_shadowWidthHasBeenSet;
+
+                    /**
+                     * Shadow color. The value should be a 6-digit hexadecimal RGB value.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_shadowColor;
+                    bool m_shadowColorHasBeenSet;
+
+                    /**
+                     * Shadow transparency. The value should be a positive floating-point number in the range of (0, 1].
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    double m_shadowAlpha;
+                    bool m_shadowAlphaHasBeenSet;
+
+                    /**
+                     * Line spacing. The value should be a positive integer in the range of [0, 1000].
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_lineSpacing;
+                    bool m_lineSpacingHasBeenSet;
+
+                    /**
+                     * Alignment mode. Valid values: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_alignment;
+                    bool m_alignmentHasBeenSet;
 
                 };
             }

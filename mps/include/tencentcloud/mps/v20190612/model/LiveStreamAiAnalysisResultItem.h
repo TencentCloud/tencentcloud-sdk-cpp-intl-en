@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/SegmentRecognitionItem.h>
+#include <tencentcloud/mps/v20190612/model/MediaAiAnalysisHighlightItem.h>
 
 
 namespace TencentCloud
@@ -48,15 +49,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Result type. Valid values:
+<li>SegmentRecognition: video splitting.</li>
+<li>Highlight: highlight.</li>
+                     * @return Type Result type. Valid values:
+<li>SegmentRecognition: video splitting.</li>
+<li>Highlight: highlight.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Result type. Valid values:
+<li>SegmentRecognition: video splitting.</li>
+<li>Highlight: highlight.</li>
+                     * @param _type Result type. Valid values:
+<li>SegmentRecognition: video splitting.</li>
+<li>Highlight: highlight.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -89,10 +98,37 @@ namespace TencentCloud
                      */
                     bool SegmentResultSetHasBeenSet() const;
 
+                    /**
+                     * 获取Highlight result. This field is valid when Type is set to Highlight.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HighlightResultSet Highlight result. This field is valid when Type is set to Highlight.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<MediaAiAnalysisHighlightItem> GetHighlightResultSet() const;
+
+                    /**
+                     * 设置Highlight result. This field is valid when Type is set to Highlight.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _highlightResultSet Highlight result. This field is valid when Type is set to Highlight.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetHighlightResultSet(const std::vector<MediaAiAnalysisHighlightItem>& _highlightResultSet);
+
+                    /**
+                     * 判断参数 HighlightResultSet 是否已赋值
+                     * @return HighlightResultSet 是否已赋值
+                     * 
+                     */
+                    bool HighlightResultSetHasBeenSet() const;
+
                 private:
 
                     /**
-                     * 
+                     * Result type. Valid values:
+<li>SegmentRecognition: video splitting.</li>
+<li>Highlight: highlight.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -102,6 +138,13 @@ namespace TencentCloud
                      */
                     std::vector<SegmentRecognitionItem> m_segmentResultSet;
                     bool m_segmentResultSetHasBeenSet;
+
+                    /**
+                     * Highlight result. This field is valid when Type is set to Highlight.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<MediaAiAnalysisHighlightItem> m_highlightResultSet;
+                    bool m_highlightResultSetHasBeenSet;
 
                 };
             }

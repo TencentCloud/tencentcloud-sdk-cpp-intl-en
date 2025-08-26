@@ -28,7 +28,9 @@ DescribeTokenUsageGraphRequest::DescribeTokenUsageGraphRequest() :
     m_modelNameHasBeenSet(false),
     m_startTimeHasBeenSet(false),
     m_endTimeHasBeenSet(false),
-    m_appBizIdsHasBeenSet(false)
+    m_appBizIdsHasBeenSet(false),
+    m_appTypeHasBeenSet(false),
+    m_subScenesHasBeenSet(false)
 {
 }
 
@@ -92,6 +94,27 @@ string DescribeTokenUsageGraphRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_appBizIds.begin(); itr != m_appBizIds.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_appTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AppType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_appType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_subScenesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SubScenes";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_subScenes.begin(); itr != m_subScenes.end(); ++itr)
         {
             d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
@@ -199,6 +222,38 @@ void DescribeTokenUsageGraphRequest::SetAppBizIds(const vector<string>& _appBizI
 bool DescribeTokenUsageGraphRequest::AppBizIdsHasBeenSet() const
 {
     return m_appBizIdsHasBeenSet;
+}
+
+string DescribeTokenUsageGraphRequest::GetAppType() const
+{
+    return m_appType;
+}
+
+void DescribeTokenUsageGraphRequest::SetAppType(const string& _appType)
+{
+    m_appType = _appType;
+    m_appTypeHasBeenSet = true;
+}
+
+bool DescribeTokenUsageGraphRequest::AppTypeHasBeenSet() const
+{
+    return m_appTypeHasBeenSet;
+}
+
+vector<string> DescribeTokenUsageGraphRequest::GetSubScenes() const
+{
+    return m_subScenes;
+}
+
+void DescribeTokenUsageGraphRequest::SetSubScenes(const vector<string>& _subScenes)
+{
+    m_subScenes = _subScenes;
+    m_subScenesHasBeenSet = true;
+}
+
+bool DescribeTokenUsageGraphRequest::SubScenesHasBeenSet() const
+{
+    return m_subScenesHasBeenSet;
 }
 
 

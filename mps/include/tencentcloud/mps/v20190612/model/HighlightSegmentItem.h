@@ -176,6 +176,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool EndTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Highlight title.
+                     * @return Title Highlight title.
+                     * 
+                     */
+                    std::string GetTitle() const;
+
+                    /**
+                     * 设置Highlight title.
+                     * @param _title Highlight title.
+                     * 
+                     */
+                    void SetTitle(const std::string& _title);
+
+                    /**
+                     * 判断参数 Title 是否已赋值
+                     * @return Title 是否已赋值
+                     * 
+                     */
+                    bool TitleHasBeenSet() const;
+
+                    /**
+                     * 获取Highlight overview.
+                     * @return Summary Highlight overview.
+                     * 
+                     */
+                    std::string GetSummary() const;
+
+                    /**
+                     * 设置Highlight overview.
+                     * @param _summary Highlight overview.
+                     * 
+                     */
+                    void SetSummary(const std::string& _summary);
+
+                    /**
+                     * 判断参数 Summary 是否已赋值
+                     * @return Summary 是否已赋值
+                     * 
+                     */
+                    bool SummaryHasBeenSet() const;
+
                 private:
 
                     /**
@@ -214,6 +256,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
+
+                    /**
+                     * Highlight title.
+                     */
+                    std::string m_title;
+                    bool m_titleHasBeenSet;
+
+                    /**
+                     * Highlight overview.
+                     */
+                    std::string m_summary;
+                    bool m_summaryHasBeenSet;
 
                 };
             }

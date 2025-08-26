@@ -47,12 +47,12 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Duration of each loop detection in the spot check policy, in seconds. Valid values:
+                     * 获取Duration of each loop detection, in seconds. Value range:
 
  - Minimum value: 10.
  - Maximum value: 86400.
 
-                     * @return CheckDuration Duration of each loop detection in the spot check policy, in seconds. Valid values:
+                     * @return CheckDuration Duration of each loop detection, in seconds. Value range:
 
  - Minimum value: 10.
  - Maximum value: 86400.
@@ -62,12 +62,12 @@ namespace TencentCloud
                     uint64_t GetCheckDuration() const;
 
                     /**
-                     * 设置Duration of each loop detection in the spot check policy, in seconds. Valid values:
+                     * 设置Duration of each loop detection, in seconds. Value range:
 
  - Minimum value: 10.
  - Maximum value: 86400.
 
-                     * @param _checkDuration Duration of each loop detection in the spot check policy, in seconds. Valid values:
+                     * @param _checkDuration Duration of each loop detection, in seconds. Value range:
 
  - Minimum value: 10.
  - Maximum value: 86400.
@@ -84,15 +84,23 @@ namespace TencentCloud
                     bool CheckDurationHasBeenSet() const;
 
                     /**
-                     * 获取Detection interval of the spot check policy, which indicates how long to wait before conducting the next detection after one detection is completed.
-                     * @return CheckInterval Detection interval of the spot check policy, which indicates how long to wait before conducting the next detection after one detection is completed.
+                     * 获取Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted. Value range:
+ - Minimum value: 10.
+ - Maximum value: 3600.
+                     * @return CheckInterval Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted. Value range:
+ - Minimum value: 10.
+ - Maximum value: 3600.
                      * 
                      */
                     uint64_t GetCheckInterval() const;
 
                     /**
-                     * 设置Detection interval of the spot check policy, which indicates how long to wait before conducting the next detection after one detection is completed.
-                     * @param _checkInterval Detection interval of the spot check policy, which indicates how long to wait before conducting the next detection after one detection is completed.
+                     * 设置Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted. Value range:
+ - Minimum value: 10.
+ - Maximum value: 3600.
+                     * @param _checkInterval Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted. Value range:
+ - Minimum value: 10.
+ - Maximum value: 3600.
                      * 
                      */
                     void SetCheckInterval(const uint64_t& _checkInterval);
@@ -105,15 +113,23 @@ namespace TencentCloud
                     bool CheckIntervalHasBeenSet() const;
 
                     /**
-                     * 获取Duration for which the opening clip is skipped.
-                     * @return SkipDuration Duration for which the opening clip is skipped.
+                     * 获取Skipped opening duration, in seconds. Value range:
+ - Minimum value: 1.
+ - Maximum value: 1800.
+                     * @return SkipDuration Skipped opening duration, in seconds. Value range:
+ - Minimum value: 1.
+ - Maximum value: 1800.
                      * 
                      */
                     uint64_t GetSkipDuration() const;
 
                     /**
-                     * 设置Duration for which the opening clip is skipped.
-                     * @param _skipDuration Duration for which the opening clip is skipped.
+                     * 设置Skipped opening duration, in seconds. Value range:
+ - Minimum value: 1.
+ - Maximum value: 1800.
+                     * @param _skipDuration Skipped opening duration, in seconds. Value range:
+ - Minimum value: 1.
+ - Maximum value: 1800.
                      * 
                      */
                     void SetSkipDuration(const uint64_t& _skipDuration);
@@ -126,15 +142,31 @@ namespace TencentCloud
                     bool SkipDurationHasBeenSet() const;
 
                     /**
-                     * 获取Number of loops. When this field is empty or set to 0, the default behavior is to loop until the video ends.
-                     * @return CirclesNumber Number of loops. When this field is empty or set to 0, the default behavior is to loop until the video ends.
+                     * 获取Number of loops. Value range:
+ - Minimum value: 0.
+ - Maximum value: 1000.
+
+If the value is 0 or not specified, it indicates that loops are executed until the video ends.
+                     * @return CirclesNumber Number of loops. Value range:
+ - Minimum value: 0.
+ - Maximum value: 1000.
+
+If the value is 0 or not specified, it indicates that loops are executed until the video ends.
                      * 
                      */
                     uint64_t GetCirclesNumber() const;
 
                     /**
-                     * 设置Number of loops. When this field is empty or set to 0, the default behavior is to loop until the video ends.
-                     * @param _circlesNumber Number of loops. When this field is empty or set to 0, the default behavior is to loop until the video ends.
+                     * 设置Number of loops. Value range:
+ - Minimum value: 0.
+ - Maximum value: 1000.
+
+If the value is 0 or not specified, it indicates that loops are executed until the video ends.
+                     * @param _circlesNumber Number of loops. Value range:
+ - Minimum value: 0.
+ - Maximum value: 1000.
+
+If the value is 0 or not specified, it indicates that loops are executed until the video ends.
                      * 
                      */
                     void SetCirclesNumber(const uint64_t& _circlesNumber);
@@ -149,7 +181,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Duration of each loop detection in the spot check policy, in seconds. Valid values:
+                     * Duration of each loop detection, in seconds. Value range:
 
  - Minimum value: 10.
  - Maximum value: 86400.
@@ -159,19 +191,27 @@ namespace TencentCloud
                     bool m_checkDurationHasBeenSet;
 
                     /**
-                     * Detection interval of the spot check policy, which indicates how long to wait before conducting the next detection after one detection is completed.
+                     * Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted. Value range:
+ - Minimum value: 10.
+ - Maximum value: 3600.
                      */
                     uint64_t m_checkInterval;
                     bool m_checkIntervalHasBeenSet;
 
                     /**
-                     * Duration for which the opening clip is skipped.
+                     * Skipped opening duration, in seconds. Value range:
+ - Minimum value: 1.
+ - Maximum value: 1800.
                      */
                     uint64_t m_skipDuration;
                     bool m_skipDurationHasBeenSet;
 
                     /**
-                     * Number of loops. When this field is empty or set to 0, the default behavior is to loop until the video ends.
+                     * Number of loops. Value range:
+ - Minimum value: 0.
+ - Maximum value: 1000.
+
+If the value is 0 or not specified, it indicates that loops are executed until the video ends.
                      */
                     uint64_t m_circlesNumber;
                     bool m_circlesNumberHasBeenSet;

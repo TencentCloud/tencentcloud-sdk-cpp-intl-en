@@ -47,6 +47,8 @@
 #include <tencentcloud/ocr/v20181119/model/MainlandPermitOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/PermitOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/PermitOCRResponse.h>
+#include <tencentcloud/ocr/v20181119/model/RecognizeBrazilCommonOCRRequest.h>
+#include <tencentcloud/ocr/v20181119/model/RecognizeBrazilCommonOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizeBrazilDriverLicenseOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizeBrazilDriverLicenseOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizeBrazilIDCardOCRRequest.h>
@@ -147,6 +149,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::PermitOCRResponse> PermitOCROutcome;
                 typedef std::future<PermitOCROutcome> PermitOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::PermitOCRRequest&, PermitOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> PermitOCRAsyncHandler;
+                typedef Outcome<Core::Error, Model::RecognizeBrazilCommonOCRResponse> RecognizeBrazilCommonOCROutcome;
+                typedef std::future<RecognizeBrazilCommonOCROutcome> RecognizeBrazilCommonOCROutcomeCallable;
+                typedef std::function<void(const OcrClient*, const Model::RecognizeBrazilCommonOCRRequest&, RecognizeBrazilCommonOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizeBrazilCommonOCRAsyncHandler;
                 typedef Outcome<Core::Error, Model::RecognizeBrazilDriverLicenseOCRResponse> RecognizeBrazilDriverLicenseOCROutcome;
                 typedef std::future<RecognizeBrazilDriverLicenseOCROutcome> RecognizeBrazilDriverLicenseOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::RecognizeBrazilDriverLicenseOCRRequest&, RecognizeBrazilDriverLicenseOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizeBrazilDriverLicenseOCRAsyncHandler;
@@ -410,6 +415,17 @@ A maximum of 10 requests can be initiated per second for this API.
                 PermitOCROutcome PermitOCR(const Model::PermitOCRRequest &request);
                 void PermitOCRAsync(const Model::PermitOCRRequest& request, const PermitOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 PermitOCROutcomeCallable PermitOCRCallable(const Model::PermitOCRRequest& request);
+
+                /**
+                 *This API is used to identify Brazil RNE documents.
+
+This API is used to set the default request rate limit to 5 requests/second.
+                 * @param req RecognizeBrazilCommonOCRRequest
+                 * @return RecognizeBrazilCommonOCROutcome
+                 */
+                RecognizeBrazilCommonOCROutcome RecognizeBrazilCommonOCR(const Model::RecognizeBrazilCommonOCRRequest &request);
+                void RecognizeBrazilCommonOCRAsync(const Model::RecognizeBrazilCommonOCRRequest& request, const RecognizeBrazilCommonOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RecognizeBrazilCommonOCROutcomeCallable RecognizeBrazilCommonOCRCallable(const Model::RecognizeBrazilCommonOCRRequest& request);
 
                 /**
                  *This interface supports identification of the front and back of Brazilian driver's license. The identification fields include name, driver's license category, number, validity period, etc.

@@ -169,6 +169,34 @@ namespace TencentCloud
                      */
                     bool InternetSearchUsageHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return DosageTypeLimit 
+                     * 
+                     */
+                    double GetDosageTypeLimit() const;
+
+                    /**
+                     * 判断参数 DosageTypeLimit 是否已赋值
+                     * @return DosageTypeLimit 是否已赋值
+                     * 
+                     */
+                    bool DosageTypeLimitHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return DosageTypeCurr 
+                     * 
+                     */
+                    double GetDosageTypeCurr() const;
+
+                    /**
+                     * 判断参数 DosageTypeCurr 是否已赋值
+                     * @return DosageTypeCurr 是否已赋值
+                     * 
+                     */
+                    bool DosageTypeCurrHasBeenSet() const;
+
                 private:
 
                     /**
@@ -224,6 +252,18 @@ namespace TencentCloud
                      */
                     double m_internetSearchUsage;
                     bool m_internetSearchUsageHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    double m_dosageTypeLimit;
+                    bool m_dosageTypeLimitHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    double m_dosageTypeCurr;
+                    bool m_dosageTypeCurrHasBeenSet;
 
                 };
             }

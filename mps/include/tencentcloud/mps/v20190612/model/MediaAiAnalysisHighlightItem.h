@@ -152,6 +152,56 @@ namespace TencentCloud
                      */
                     bool SegmentSetHasBeenSet() const;
 
+                    /**
+                     * 获取Intelligent highlight address.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HighlightUrl Intelligent highlight address.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetHighlightUrl() const;
+
+                    /**
+                     * 设置Intelligent highlight address.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _highlightUrl Intelligent highlight address.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetHighlightUrl(const std::string& _highlightUrl);
+
+                    /**
+                     * 判断参数 HighlightUrl 是否已赋值
+                     * @return HighlightUrl 是否已赋值
+                     * 
+                     */
+                    bool HighlightUrlHasBeenSet() const;
+
+                    /**
+                     * 获取Intelligent highlight cover address.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CovImgUrl Intelligent highlight cover address.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetCovImgUrl() const;
+
+                    /**
+                     * 设置Intelligent highlight cover address.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _covImgUrl Intelligent highlight cover address.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetCovImgUrl(const std::string& _covImgUrl);
+
+                    /**
+                     * 判断参数 CovImgUrl 是否已赋值
+                     * @return CovImgUrl 是否已赋值
+                     * 
+                     */
+                    bool CovImgUrlHasBeenSet() const;
+
                 private:
 
                     /**
@@ -183,6 +233,20 @@ namespace TencentCloud
                      */
                     std::vector<HighlightSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;
+
+                    /**
+                     * Intelligent highlight address.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_highlightUrl;
+                    bool m_highlightUrlHasBeenSet;
+
+                    /**
+                     * Intelligent highlight cover address.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_covImgUrl;
+                    bool m_covImgUrlHasBeenSet;
 
                 };
             }

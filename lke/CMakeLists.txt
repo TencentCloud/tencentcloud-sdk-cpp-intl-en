@@ -159,6 +159,7 @@ set(lke_public_header_model
   include/tencentcloud/lke/v20231130/model/ListDocRequest.h
   include/tencentcloud/lke/v20231130/model/QAQuery.h
   include/tencentcloud/lke/v20231130/model/GroupQARequest.h
+  include/tencentcloud/lke/v20231130/model/UpdatePeriodInfo.h
   include/tencentcloud/lke/v20231130/model/DescribeCallStatsGraphRequest.h
   include/tencentcloud/lke/v20231130/model/GetMsgRecordResponse.h
   include/tencentcloud/lke/v20231130/model/DescribeAppRequest.h
@@ -239,6 +240,7 @@ set(lke_public_header_model
   include/tencentcloud/lke/v20231130/model/DescribeTokenUsageRequest.h
   include/tencentcloud/lke/v20231130/model/GetAppKnowledgeCountResponse.h
   include/tencentcloud/lke/v20231130/model/CreateAttributeLabelResponse.h
+  include/tencentcloud/lke/v20231130/model/DuplicateFileHandle.h
   include/tencentcloud/lke/v20231130/model/ListAppKnowledgeDetailRequest.h
   include/tencentcloud/lke/v20231130/model/CreateQAResponse.h
   include/tencentcloud/lke/v20231130/model/ListQACateRequest.h
@@ -431,6 +433,7 @@ set(lke_src
   src/v20231130/model/ListDocRequest.cpp
   src/v20231130/model/QAQuery.cpp
   src/v20231130/model/GroupQARequest.cpp
+  src/v20231130/model/UpdatePeriodInfo.cpp
   src/v20231130/model/DescribeCallStatsGraphRequest.cpp
   src/v20231130/model/GetMsgRecordResponse.cpp
   src/v20231130/model/DescribeAppRequest.cpp
@@ -511,6 +514,7 @@ set(lke_src
   src/v20231130/model/DescribeTokenUsageRequest.cpp
   src/v20231130/model/GetAppKnowledgeCountResponse.cpp
   src/v20231130/model/CreateAttributeLabelResponse.cpp
+  src/v20231130/model/DuplicateFileHandle.cpp
   src/v20231130/model/ListAppKnowledgeDetailRequest.cpp
   src/v20231130/model/CreateQAResponse.cpp
   src/v20231130/model/ListQACateRequest.cpp

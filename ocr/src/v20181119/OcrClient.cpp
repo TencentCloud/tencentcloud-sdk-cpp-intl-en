@@ -556,6 +556,49 @@ OcrClient::PermitOCROutcomeCallable OcrClient::PermitOCRCallable(const PermitOCR
     return task->get_future();
 }
 
+OcrClient::RecognizeBrazilCommonOCROutcome OcrClient::RecognizeBrazilCommonOCR(const RecognizeBrazilCommonOCRRequest &request)
+{
+    auto outcome = MakeRequest(request, "RecognizeBrazilCommonOCR");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RecognizeBrazilCommonOCRResponse rsp = RecognizeBrazilCommonOCRResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RecognizeBrazilCommonOCROutcome(rsp);
+        else
+            return RecognizeBrazilCommonOCROutcome(o.GetError());
+    }
+    else
+    {
+        return RecognizeBrazilCommonOCROutcome(outcome.GetError());
+    }
+}
+
+void OcrClient::RecognizeBrazilCommonOCRAsync(const RecognizeBrazilCommonOCRRequest& request, const RecognizeBrazilCommonOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RecognizeBrazilCommonOCR(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OcrClient::RecognizeBrazilCommonOCROutcomeCallable OcrClient::RecognizeBrazilCommonOCRCallable(const RecognizeBrazilCommonOCRRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RecognizeBrazilCommonOCROutcome()>>(
+        [this, request]()
+        {
+            return this->RecognizeBrazilCommonOCR(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 OcrClient::RecognizeBrazilDriverLicenseOCROutcome OcrClient::RecognizeBrazilDriverLicenseOCR(const RecognizeBrazilDriverLicenseOCRRequest &request)
 {
     auto outcome = MakeRequest(request, "RecognizeBrazilDriverLicenseOCR");

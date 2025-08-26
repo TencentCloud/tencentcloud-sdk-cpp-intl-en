@@ -22,6 +22,8 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/lke/v20231130/model/AttrLabelRefer.h>
+#include <tencentcloud/lke/v20231130/model/DuplicateFileHandle.h>
+#include <tencentcloud/lke/v20231130/model/UpdatePeriodInfo.h>
 
 
 namespace TencentCloud
@@ -363,15 +365,15 @@ When the value is 1, the weburl field cannot be empty; otherwise, it will not ta
                     bool IsReferHasBeenSet() const;
 
                     /**
-                     * 获取Document operation type: 1: batch import (import Q&A pairs in batches); 2: document import (normally import a single document). The default value is 1.<br>Please note that when opt = 1, please download the Excel template from the Tencent Cloud Agent Development Platform/TCADP page.
-                     * @return Opt Document operation type: 1: batch import (import Q&A pairs in batches); 2: document import (normally import a single document). The default value is 1.<br>Please note that when opt = 1, please download the Excel template from the Tencent Cloud Agent Development Platform/TCADP page.
+                     * 获取Document operation type: 1: batch import (import Q&A pairs in batches); 2: document import (normally import a single document). The default value is 1.<br>Please note that when opt = 1, please download the Excel template from the Tencent Cloud Agent Development Platform/ADP page.
+                     * @return Opt Document operation type: 1: batch import (import Q&A pairs in batches); 2: document import (normally import a single document). The default value is 1.<br>Please note that when opt = 1, please download the Excel template from the Tencent Cloud Agent Development Platform/ADP page.
                      * 
                      */
                     uint64_t GetOpt() const;
 
                     /**
-                     * 设置Document operation type: 1: batch import (import Q&A pairs in batches); 2: document import (normally import a single document). The default value is 1.<br>Please note that when opt = 1, please download the Excel template from the Tencent Cloud Agent Development Platform/TCADP page.
-                     * @param _opt Document operation type: 1: batch import (import Q&A pairs in batches); 2: document import (normally import a single document). The default value is 1.<br>Please note that when opt = 1, please download the Excel template from the Tencent Cloud Agent Development Platform/TCADP page.
+                     * 设置Document operation type: 1: batch import (import Q&A pairs in batches); 2: document import (normally import a single document). The default value is 1.<br>Please note that when opt = 1, please download the Excel template from the Tencent Cloud Agent Development Platform/ADP page.
+                     * @param _opt Document operation type: 1: batch import (import Q&A pairs in batches); 2: document import (normally import a single document). The default value is 1.<br>Please note that when opt = 1, please download the Excel template from the Tencent Cloud Agent Development Platform/ADP page.
                      * 
                      */
                     void SetOpt(const uint64_t& _opt);
@@ -403,6 +405,90 @@ When the value is 1, the weburl field cannot be empty; otherwise, it will not ta
                      * 
                      */
                     bool CateBizIdHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return IsDownload 
+                     * 
+                     */
+                    bool GetIsDownload() const;
+
+                    /**
+                     * 设置
+                     * @param _isDownload 
+                     * 
+                     */
+                    void SetIsDownload(const bool& _isDownload);
+
+                    /**
+                     * 判断参数 IsDownload 是否已赋值
+                     * @return IsDownload 是否已赋值
+                     * 
+                     */
+                    bool IsDownloadHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return DuplicateFileHandles 
+                     * 
+                     */
+                    std::vector<DuplicateFileHandle> GetDuplicateFileHandles() const;
+
+                    /**
+                     * 设置
+                     * @param _duplicateFileHandles 
+                     * 
+                     */
+                    void SetDuplicateFileHandles(const std::vector<DuplicateFileHandle>& _duplicateFileHandles);
+
+                    /**
+                     * 判断参数 DuplicateFileHandles 是否已赋值
+                     * @return DuplicateFileHandles 是否已赋值
+                     * 
+                     */
+                    bool DuplicateFileHandlesHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return SplitRule 
+                     * 
+                     */
+                    std::string GetSplitRule() const;
+
+                    /**
+                     * 设置
+                     * @param _splitRule 
+                     * 
+                     */
+                    void SetSplitRule(const std::string& _splitRule);
+
+                    /**
+                     * 判断参数 SplitRule 是否已赋值
+                     * @return SplitRule 是否已赋值
+                     * 
+                     */
+                    bool SplitRuleHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return UpdatePeriodInfo 
+                     * 
+                     */
+                    UpdatePeriodInfo GetUpdatePeriodInfo() const;
+
+                    /**
+                     * 设置
+                     * @param _updatePeriodInfo 
+                     * 
+                     */
+                    void SetUpdatePeriodInfo(const UpdatePeriodInfo& _updatePeriodInfo);
+
+                    /**
+                     * 判断参数 UpdatePeriodInfo 是否已赋值
+                     * @return UpdatePeriodInfo 是否已赋值
+                     * 
+                     */
+                    bool UpdatePeriodInfoHasBeenSet() const;
 
                 private:
 
@@ -498,7 +584,7 @@ When the value is 1, the weburl field cannot be empty; otherwise, it will not ta
                     bool m_isReferHasBeenSet;
 
                     /**
-                     * Document operation type: 1: batch import (import Q&A pairs in batches); 2: document import (normally import a single document). The default value is 1.<br>Please note that when opt = 1, please download the Excel template from the Tencent Cloud Agent Development Platform/TCADP page.
+                     * Document operation type: 1: batch import (import Q&A pairs in batches); 2: document import (normally import a single document). The default value is 1.<br>Please note that when opt = 1, please download the Excel template from the Tencent Cloud Agent Development Platform/ADP page.
                      */
                     uint64_t m_opt;
                     bool m_optHasBeenSet;
@@ -508,6 +594,30 @@ When the value is 1, the weburl field cannot be empty; otherwise, it will not ta
                      */
                     std::string m_cateBizId;
                     bool m_cateBizIdHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_isDownload;
+                    bool m_isDownloadHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<DuplicateFileHandle> m_duplicateFileHandles;
+                    bool m_duplicateFileHandlesHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_splitRule;
+                    bool m_splitRuleHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    UpdatePeriodInfo m_updatePeriodInfo;
+                    bool m_updatePeriodInfoHasBeenSet;
 
                 };
             }

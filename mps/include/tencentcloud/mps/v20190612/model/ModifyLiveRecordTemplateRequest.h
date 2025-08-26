@@ -149,6 +149,27 @@ namespace TencentCloud
                      */
                     bool CommentHasBeenSet() const;
 
+                    /**
+                     * 获取Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection.
+                     * @return RecordType Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection.
+                     * 
+                     */
+                    std::string GetRecordType() const;
+
+                    /**
+                     * 设置Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection.
+                     * @param _recordType Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection.
+                     * 
+                     */
+                    void SetRecordType(const std::string& _recordType);
+
+                    /**
+                     * 判断参数 RecordType 是否已赋值
+                     * @return RecordType 是否已赋值
+                     * 
+                     */
+                    bool RecordTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -180,6 +201,12 @@ namespace TencentCloud
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
+
+                    /**
+                     * Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection.
+                     */
+                    std::string m_recordType;
+                    bool m_recordTypeHasBeenSet;
 
                 };
             }

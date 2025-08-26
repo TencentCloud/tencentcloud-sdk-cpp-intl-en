@@ -28,6 +28,7 @@
 #include <tencentcloud/mps/v20190612/model/AudioTemplateInfo.h>
 #include <tencentcloud/mps/v20190612/model/TEHDConfig.h>
 #include <tencentcloud/mps/v20190612/model/EnhanceConfig.h>
+#include <tencentcloud/mps/v20190612/model/SubtitleTemplate.h>
 
 
 namespace TencentCloud
@@ -246,6 +247,31 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool EnhanceConfigHasBeenSet() const;
 
+                    /**
+                     * 获取Subtitle parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SubtitleTemplate Subtitle parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    SubtitleTemplate GetSubtitleTemplate() const;
+
+                    /**
+                     * 设置Subtitle parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _subtitleTemplate Subtitle parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetSubtitleTemplate(const SubtitleTemplate& _subtitleTemplate);
+
+                    /**
+                     * 判断参数 SubtitleTemplate 是否已赋值
+                     * @return SubtitleTemplate 是否已赋值
+                     * 
+                     */
+                    bool SubtitleTemplateHasBeenSet() const;
+
                 private:
 
                     /**
@@ -302,6 +328,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     EnhanceConfig m_enhanceConfig;
                     bool m_enhanceConfigHasBeenSet;
+
+                    /**
+                     * Subtitle parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    SubtitleTemplate m_subtitleTemplate;
+                    bool m_subtitleTemplateHasBeenSet;
 
                 };
             }
