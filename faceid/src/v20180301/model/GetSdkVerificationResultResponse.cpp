@@ -29,7 +29,8 @@ GetSdkVerificationResultResponse::GetSdkVerificationResultResponse() :
     m_chargeCountHasBeenSet(false),
     m_cardVerifyResultsHasBeenSet(false),
     m_compareResultsHasBeenSet(false),
-    m_extraHasBeenSet(false)
+    m_extraHasBeenSet(false),
+    m_deviceInfoLevelHasBeenSet(false)
 {
 }
 
@@ -147,6 +148,16 @@ CoreInternalOutcome GetSdkVerificationResultResponse::Deserialize(const string &
         m_extraHasBeenSet = true;
     }
 
+    if (rsp.HasMember("DeviceInfoLevel") && !rsp["DeviceInfoLevel"].IsNull())
+    {
+        if (!rsp["DeviceInfoLevel"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DeviceInfoLevel` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_deviceInfoLevel = string(rsp["DeviceInfoLevel"].GetString());
+        m_deviceInfoLevelHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -219,6 +230,14 @@ string GetSdkVerificationResultResponse::ToJsonString() const
         value.AddMember(iKey, rapidjson::Value(m_extra.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_deviceInfoLevelHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DeviceInfoLevel";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_deviceInfoLevel.c_str(), allocator).Move(), allocator);
+    }
+
     rapidjson::Value iKey(rapidjson::kStringType);
     string key = "RequestId";
     iKey.SetString(key.c_str(), allocator);
@@ -289,6 +308,16 @@ string GetSdkVerificationResultResponse::GetExtra() const
 bool GetSdkVerificationResultResponse::ExtraHasBeenSet() const
 {
     return m_extraHasBeenSet;
+}
+
+string GetSdkVerificationResultResponse::GetDeviceInfoLevel() const
+{
+    return m_deviceInfoLevel;
+}
+
+bool GetSdkVerificationResultResponse::DeviceInfoLevelHasBeenSet() const
+{
+    return m_deviceInfoLevelHasBeenSet;
 }
 
 

@@ -126,6 +126,49 @@ SqlserverClient::CloseInterCommunicationOutcomeCallable SqlserverClient::CloseIn
     return task->get_future();
 }
 
+SqlserverClient::CompleteExpansionOutcome SqlserverClient::CompleteExpansion(const CompleteExpansionRequest &request)
+{
+    auto outcome = MakeRequest(request, "CompleteExpansion");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CompleteExpansionResponse rsp = CompleteExpansionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CompleteExpansionOutcome(rsp);
+        else
+            return CompleteExpansionOutcome(o.GetError());
+    }
+    else
+    {
+        return CompleteExpansionOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::CompleteExpansionAsync(const CompleteExpansionRequest& request, const CompleteExpansionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CompleteExpansion(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::CompleteExpansionOutcomeCallable SqlserverClient::CompleteExpansionCallable(const CompleteExpansionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CompleteExpansionOutcome()>>(
+        [this, request]()
+        {
+            return this->CompleteExpansion(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 SqlserverClient::CreateAccountOutcome SqlserverClient::CreateAccount(const CreateAccountRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateAccount");
@@ -678,6 +721,49 @@ SqlserverClient::CreateReadOnlyDBInstancesOutcomeCallable SqlserverClient::Creat
         [this, request]()
         {
             return this->CreateReadOnlyDBInstances(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::CutXEventsOutcome SqlserverClient::CutXEvents(const CutXEventsRequest &request)
+{
+    auto outcome = MakeRequest(request, "CutXEvents");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CutXEventsResponse rsp = CutXEventsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CutXEventsOutcome(rsp);
+        else
+            return CutXEventsOutcome(o.GetError());
+    }
+    else
+    {
+        return CutXEventsOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::CutXEventsAsync(const CutXEventsRequest& request, const CutXEventsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CutXEvents(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::CutXEventsOutcomeCallable SqlserverClient::CutXEventsCallable(const CutXEventsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CutXEventsOutcome()>>(
+        [this, request]()
+        {
+            return this->CutXEvents(request);
         }
     );
 
@@ -1287,6 +1373,49 @@ SqlserverClient::DescribeCollationTimeZoneOutcomeCallable SqlserverClient::Descr
     return task->get_future();
 }
 
+SqlserverClient::DescribeCrossRegionZoneOutcome SqlserverClient::DescribeCrossRegionZone(const DescribeCrossRegionZoneRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCrossRegionZone");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCrossRegionZoneResponse rsp = DescribeCrossRegionZoneResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCrossRegionZoneOutcome(rsp);
+        else
+            return DescribeCrossRegionZoneOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCrossRegionZoneOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DescribeCrossRegionZoneAsync(const DescribeCrossRegionZoneRequest& request, const DescribeCrossRegionZoneAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCrossRegionZone(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DescribeCrossRegionZoneOutcomeCallable SqlserverClient::DescribeCrossRegionZoneCallable(const DescribeCrossRegionZoneRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCrossRegionZoneOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCrossRegionZone(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 SqlserverClient::DescribeDBCharsetsOutcome SqlserverClient::DescribeDBCharsets(const DescribeDBCharsetsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeDBCharsets");
@@ -1545,6 +1674,49 @@ SqlserverClient::DescribeDBsNormalOutcomeCallable SqlserverClient::DescribeDBsNo
     return task->get_future();
 }
 
+SqlserverClient::DescribeDatabasesOutcome SqlserverClient::DescribeDatabases(const DescribeDatabasesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDatabases");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDatabasesResponse rsp = DescribeDatabasesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDatabasesOutcome(rsp);
+        else
+            return DescribeDatabasesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDatabasesOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DescribeDatabasesAsync(const DescribeDatabasesRequest& request, const DescribeDatabasesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeDatabases(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DescribeDatabasesOutcomeCallable SqlserverClient::DescribeDatabasesCallable(const DescribeDatabasesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeDatabasesOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeDatabases(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 SqlserverClient::DescribeFlowStatusOutcome SqlserverClient::DescribeFlowStatus(const DescribeFlowStatusRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeFlowStatus");
@@ -1753,6 +1925,92 @@ SqlserverClient::DescribeInstanceParamsOutcomeCallable SqlserverClient::Describe
         [this, request]()
         {
             return this->DescribeInstanceParams(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::DescribeInstanceTasksOutcome SqlserverClient::DescribeInstanceTasks(const DescribeInstanceTasksRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeInstanceTasks");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeInstanceTasksResponse rsp = DescribeInstanceTasksResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeInstanceTasksOutcome(rsp);
+        else
+            return DescribeInstanceTasksOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeInstanceTasksOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DescribeInstanceTasksAsync(const DescribeInstanceTasksRequest& request, const DescribeInstanceTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeInstanceTasks(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DescribeInstanceTasksOutcomeCallable SqlserverClient::DescribeInstanceTasksCallable(const DescribeInstanceTasksRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeInstanceTasksOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeInstanceTasks(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::DescribeInstanceTradeParameterOutcome SqlserverClient::DescribeInstanceTradeParameter(const DescribeInstanceTradeParameterRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeInstanceTradeParameter");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeInstanceTradeParameterResponse rsp = DescribeInstanceTradeParameterResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeInstanceTradeParameterOutcome(rsp);
+        else
+            return DescribeInstanceTradeParameterOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeInstanceTradeParameterOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DescribeInstanceTradeParameterAsync(const DescribeInstanceTradeParameterRequest& request, const DescribeInstanceTradeParameterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeInstanceTradeParameter(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DescribeInstanceTradeParameterOutcomeCallable SqlserverClient::DescribeInstanceTradeParameterCallable(const DescribeInstanceTradeParameterRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeInstanceTradeParameterOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeInstanceTradeParameter(request);
         }
     );
 
@@ -2183,6 +2441,49 @@ SqlserverClient::DescribeSpecSellStatusOutcomeCallable SqlserverClient::Describe
         [this, request]()
         {
             return this->DescribeSpecSellStatus(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::DescribeUpgradeInstanceCheckOutcome SqlserverClient::DescribeUpgradeInstanceCheck(const DescribeUpgradeInstanceCheckRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeUpgradeInstanceCheck");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeUpgradeInstanceCheckResponse rsp = DescribeUpgradeInstanceCheckResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeUpgradeInstanceCheckOutcome(rsp);
+        else
+            return DescribeUpgradeInstanceCheckOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeUpgradeInstanceCheckOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DescribeUpgradeInstanceCheckAsync(const DescribeUpgradeInstanceCheckRequest& request, const DescribeUpgradeInstanceCheckAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeUpgradeInstanceCheck(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DescribeUpgradeInstanceCheckOutcomeCallable SqlserverClient::DescribeUpgradeInstanceCheckCallable(const DescribeUpgradeInstanceCheckRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeUpgradeInstanceCheckOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeUpgradeInstanceCheck(request);
         }
     );
 
@@ -2699,6 +3000,49 @@ SqlserverClient::ModifyDBInstanceNetworkOutcomeCallable SqlserverClient::ModifyD
         [this, request]()
         {
             return this->ModifyDBInstanceNetwork(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::ModifyDBInstanceNoteOutcome SqlserverClient::ModifyDBInstanceNote(const ModifyDBInstanceNoteRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyDBInstanceNote");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyDBInstanceNoteResponse rsp = ModifyDBInstanceNoteResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyDBInstanceNoteOutcome(rsp);
+        else
+            return ModifyDBInstanceNoteOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyDBInstanceNoteOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::ModifyDBInstanceNoteAsync(const ModifyDBInstanceNoteRequest& request, const ModifyDBInstanceNoteAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyDBInstanceNote(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::ModifyDBInstanceNoteOutcomeCallable SqlserverClient::ModifyDBInstanceNoteCallable(const ModifyDBInstanceNoteRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyDBInstanceNoteOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyDBInstanceNote(request);
         }
     );
 

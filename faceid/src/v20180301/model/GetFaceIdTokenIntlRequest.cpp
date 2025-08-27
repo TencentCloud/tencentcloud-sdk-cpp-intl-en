@@ -27,7 +27,8 @@ GetFaceIdTokenIntlRequest::GetFaceIdTokenIntlRequest() :
     m_secureLevelHasBeenSet(false),
     m_imageHasBeenSet(false),
     m_extraHasBeenSet(false),
-    m_actionListHasBeenSet(false)
+    m_actionListHasBeenSet(false),
+    m_sdkVersionHasBeenSet(false)
 {
 }
 
@@ -76,6 +77,14 @@ string GetFaceIdTokenIntlRequest::ToJsonString() const
         string key = "ActionList";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_actionList.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_sdkVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SdkVersion";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_sdkVersion.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -164,6 +173,22 @@ void GetFaceIdTokenIntlRequest::SetActionList(const string& _actionList)
 bool GetFaceIdTokenIntlRequest::ActionListHasBeenSet() const
 {
     return m_actionListHasBeenSet;
+}
+
+string GetFaceIdTokenIntlRequest::GetSdkVersion() const
+{
+    return m_sdkVersion;
+}
+
+void GetFaceIdTokenIntlRequest::SetSdkVersion(const string& _sdkVersion)
+{
+    m_sdkVersion = _sdkVersion;
+    m_sdkVersionHasBeenSet = true;
+}
+
+bool GetFaceIdTokenIntlRequest::SdkVersionHasBeenSet() const
+{
+    return m_sdkVersionHasBeenSet;
 }
 
 

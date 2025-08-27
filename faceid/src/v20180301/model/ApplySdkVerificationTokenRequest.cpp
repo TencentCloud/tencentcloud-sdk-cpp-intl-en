@@ -31,6 +31,7 @@ ApplySdkVerificationTokenRequest::ApplySdkVerificationTokenRequest() :
     m_disableChangeOcrResultHasBeenSet(false),
     m_disableCheckOcrWarningsHasBeenSet(false),
     m_extraHasBeenSet(false),
+    m_sdkVersionHasBeenSet(false),
     m_actionListHasBeenSet(false)
 {
 }
@@ -104,6 +105,14 @@ string ApplySdkVerificationTokenRequest::ToJsonString() const
         string key = "Extra";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_extra.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_sdkVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SdkVersion";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_sdkVersion.c_str(), allocator).Move(), allocator);
     }
 
     if (m_actionListHasBeenSet)
@@ -248,6 +257,22 @@ void ApplySdkVerificationTokenRequest::SetExtra(const string& _extra)
 bool ApplySdkVerificationTokenRequest::ExtraHasBeenSet() const
 {
     return m_extraHasBeenSet;
+}
+
+string ApplySdkVerificationTokenRequest::GetSdkVersion() const
+{
+    return m_sdkVersion;
+}
+
+void ApplySdkVerificationTokenRequest::SetSdkVersion(const string& _sdkVersion)
+{
+    m_sdkVersion = _sdkVersion;
+    m_sdkVersionHasBeenSet = true;
+}
+
+bool ApplySdkVerificationTokenRequest::SdkVersionHasBeenSet() const
+{
+    return m_sdkVersionHasBeenSet;
 }
 
 string ApplySdkVerificationTokenRequest::GetActionList() const

@@ -27,6 +27,8 @@
 #include <tencentcloud/sqlserver/v20180328/model/CloneDBResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/CloseInterCommunicationRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/CloseInterCommunicationResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/CompleteExpansionRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/CompleteExpansionResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/CreateAccountRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/CreateAccountResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/CreateBackupRequest.h>
@@ -53,6 +55,8 @@
 #include <tencentcloud/sqlserver/v20180328/model/CreateMigrationResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/CreateReadOnlyDBInstancesRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/CreateReadOnlyDBInstancesResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/CutXEventsRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/CutXEventsResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DeleteAccountRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DeleteAccountResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DeleteBackupMigrationRequest.h>
@@ -81,6 +85,8 @@
 #include <tencentcloud/sqlserver/v20180328/model/DescribeBusinessIntelligenceFileResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeCollationTimeZoneRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeCollationTimeZoneResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeCrossRegionZoneRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeCrossRegionZoneResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeDBCharsetsRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeDBCharsetsResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeDBInstanceInterRequest.h>
@@ -93,6 +99,8 @@
 #include <tencentcloud/sqlserver/v20180328/model/DescribeDBsResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeDBsNormalRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeDBsNormalResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeDatabasesRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeDatabasesResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeFlowStatusRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeFlowStatusResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeIncrementalMigrationRequest.h>
@@ -103,6 +111,10 @@
 #include <tencentcloud/sqlserver/v20180328/model/DescribeInstanceParamRecordsResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeInstanceParamsRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeInstanceParamsResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeInstanceTasksRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeInstanceTasksResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeInstanceTradeParameterRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeInstanceTradeParameterResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeMaintenanceSpanRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeMaintenanceSpanResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeMigrationDetailRequest.h>
@@ -123,6 +135,8 @@
 #include <tencentcloud/sqlserver/v20180328/model/DescribeSlowlogsResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeSpecSellStatusRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeSpecSellStatusResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeUpgradeInstanceCheckRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeUpgradeInstanceCheckResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeUploadBackupInfoRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeUploadBackupInfoResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeXEventsRequest.h>
@@ -147,6 +161,8 @@
 #include <tencentcloud/sqlserver/v20180328/model/ModifyDBInstanceNameResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/ModifyDBInstanceNetworkRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/ModifyDBInstanceNetworkResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/ModifyDBInstanceNoteRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/ModifyDBInstanceNoteResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/ModifyDBInstanceProjectRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/ModifyDBInstanceProjectResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/ModifyDBNameRequest.h>
@@ -213,6 +229,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CloseInterCommunicationResponse> CloseInterCommunicationOutcome;
                 typedef std::future<CloseInterCommunicationOutcome> CloseInterCommunicationOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::CloseInterCommunicationRequest&, CloseInterCommunicationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloseInterCommunicationAsyncHandler;
+                typedef Outcome<Core::Error, Model::CompleteExpansionResponse> CompleteExpansionOutcome;
+                typedef std::future<CompleteExpansionOutcome> CompleteExpansionOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::CompleteExpansionRequest&, CompleteExpansionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CompleteExpansionAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateAccountResponse> CreateAccountOutcome;
                 typedef std::future<CreateAccountOutcome> CreateAccountOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::CreateAccountRequest&, CreateAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAccountAsyncHandler;
@@ -252,6 +271,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateReadOnlyDBInstancesResponse> CreateReadOnlyDBInstancesOutcome;
                 typedef std::future<CreateReadOnlyDBInstancesOutcome> CreateReadOnlyDBInstancesOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::CreateReadOnlyDBInstancesRequest&, CreateReadOnlyDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateReadOnlyDBInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::CutXEventsResponse> CutXEventsOutcome;
+                typedef std::future<CutXEventsOutcome> CutXEventsOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::CutXEventsRequest&, CutXEventsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CutXEventsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteAccountResponse> DeleteAccountOutcome;
                 typedef std::future<DeleteAccountOutcome> DeleteAccountOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DeleteAccountRequest&, DeleteAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAccountAsyncHandler;
@@ -294,6 +316,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeCollationTimeZoneResponse> DescribeCollationTimeZoneOutcome;
                 typedef std::future<DescribeCollationTimeZoneOutcome> DescribeCollationTimeZoneOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DescribeCollationTimeZoneRequest&, DescribeCollationTimeZoneOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCollationTimeZoneAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCrossRegionZoneResponse> DescribeCrossRegionZoneOutcome;
+                typedef std::future<DescribeCrossRegionZoneOutcome> DescribeCrossRegionZoneOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::DescribeCrossRegionZoneRequest&, DescribeCrossRegionZoneOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCrossRegionZoneAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDBCharsetsResponse> DescribeDBCharsetsOutcome;
                 typedef std::future<DescribeDBCharsetsOutcome> DescribeDBCharsetsOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DescribeDBCharsetsRequest&, DescribeDBCharsetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBCharsetsAsyncHandler;
@@ -312,6 +337,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDBsNormalResponse> DescribeDBsNormalOutcome;
                 typedef std::future<DescribeDBsNormalOutcome> DescribeDBsNormalOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DescribeDBsNormalRequest&, DescribeDBsNormalOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBsNormalAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDatabasesResponse> DescribeDatabasesOutcome;
+                typedef std::future<DescribeDatabasesOutcome> DescribeDatabasesOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::DescribeDatabasesRequest&, DescribeDatabasesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDatabasesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeFlowStatusResponse> DescribeFlowStatusOutcome;
                 typedef std::future<DescribeFlowStatusOutcome> DescribeFlowStatusOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DescribeFlowStatusRequest&, DescribeFlowStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeFlowStatusAsyncHandler;
@@ -327,6 +355,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeInstanceParamsResponse> DescribeInstanceParamsOutcome;
                 typedef std::future<DescribeInstanceParamsOutcome> DescribeInstanceParamsOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DescribeInstanceParamsRequest&, DescribeInstanceParamsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceParamsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeInstanceTasksResponse> DescribeInstanceTasksOutcome;
+                typedef std::future<DescribeInstanceTasksOutcome> DescribeInstanceTasksOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::DescribeInstanceTasksRequest&, DescribeInstanceTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceTasksAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeInstanceTradeParameterResponse> DescribeInstanceTradeParameterOutcome;
+                typedef std::future<DescribeInstanceTradeParameterOutcome> DescribeInstanceTradeParameterOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::DescribeInstanceTradeParameterRequest&, DescribeInstanceTradeParameterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceTradeParameterAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMaintenanceSpanResponse> DescribeMaintenanceSpanOutcome;
                 typedef std::future<DescribeMaintenanceSpanOutcome> DescribeMaintenanceSpanOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DescribeMaintenanceSpanRequest&, DescribeMaintenanceSpanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMaintenanceSpanAsyncHandler;
@@ -357,6 +391,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeSpecSellStatusResponse> DescribeSpecSellStatusOutcome;
                 typedef std::future<DescribeSpecSellStatusOutcome> DescribeSpecSellStatusOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DescribeSpecSellStatusRequest&, DescribeSpecSellStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSpecSellStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeUpgradeInstanceCheckResponse> DescribeUpgradeInstanceCheckOutcome;
+                typedef std::future<DescribeUpgradeInstanceCheckOutcome> DescribeUpgradeInstanceCheckOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::DescribeUpgradeInstanceCheckRequest&, DescribeUpgradeInstanceCheckOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUpgradeInstanceCheckAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeUploadBackupInfoResponse> DescribeUploadBackupInfoOutcome;
                 typedef std::future<DescribeUploadBackupInfoOutcome> DescribeUploadBackupInfoOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DescribeUploadBackupInfoRequest&, DescribeUploadBackupInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUploadBackupInfoAsyncHandler;
@@ -393,6 +430,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyDBInstanceNetworkResponse> ModifyDBInstanceNetworkOutcome;
                 typedef std::future<ModifyDBInstanceNetworkOutcome> ModifyDBInstanceNetworkOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::ModifyDBInstanceNetworkRequest&, ModifyDBInstanceNetworkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBInstanceNetworkAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyDBInstanceNoteResponse> ModifyDBInstanceNoteOutcome;
+                typedef std::future<ModifyDBInstanceNoteOutcome> ModifyDBInstanceNoteOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::ModifyDBInstanceNoteRequest&, ModifyDBInstanceNoteOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBInstanceNoteAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyDBInstanceProjectResponse> ModifyDBInstanceProjectOutcome;
                 typedef std::future<ModifyDBInstanceProjectOutcome> ModifyDBInstanceProjectOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::ModifyDBInstanceProjectRequest&, ModifyDBInstanceProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBInstanceProjectAsyncHandler;
@@ -482,6 +522,15 @@ namespace TencentCloud
                 CloseInterCommunicationOutcome CloseInterCommunication(const Model::CloseInterCommunicationRequest &request);
                 void CloseInterCommunicationAsync(const Model::CloseInterCommunicationRequest& request, const CloseInterCommunicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CloseInterCommunicationOutcomeCallable CloseInterCommunicationCallable(const Model::CloseInterCommunicationRequest& request);
+
+                /**
+                 *This API is used to complete the instance upgrade and switch immediately without waiting for the maintenance window when the instance status is "upgrade pending switch" after scale-out is initiated. This API needs to be called during off-peak hours of the instance. Some databases cannot be accessed before the switch is completed.
+                 * @param req CompleteExpansionRequest
+                 * @return CompleteExpansionOutcome
+                 */
+                CompleteExpansionOutcome CompleteExpansion(const Model::CompleteExpansionRequest &request);
+                void CompleteExpansionAsync(const Model::CompleteExpansionRequest& request, const CompleteExpansionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CompleteExpansionOutcomeCallable CompleteExpansionCallable(const Model::CompleteExpansionRequest& request);
 
                 /**
                  *This API is used to create an instance account.
@@ -599,6 +648,15 @@ namespace TencentCloud
                 CreateReadOnlyDBInstancesOutcome CreateReadOnlyDBInstances(const Model::CreateReadOnlyDBInstancesRequest &request);
                 void CreateReadOnlyDBInstancesAsync(const Model::CreateReadOnlyDBInstancesRequest& request, const CreateReadOnlyDBInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateReadOnlyDBInstancesOutcomeCallable CreateReadOnlyDBInstancesCallable(const Model::CreateReadOnlyDBInstancesRequest& request);
+
+                /**
+                 *This API is used to manually cut block logs and deadlock logs.
+                 * @param req CutXEventsRequest
+                 * @return CutXEventsOutcome
+                 */
+                CutXEventsOutcome CutXEvents(const Model::CutXEventsRequest &request);
+                void CutXEventsAsync(const Model::CutXEventsRequest& request, const CutXEventsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CutXEventsOutcomeCallable CutXEventsCallable(const Model::CutXEventsRequest& request);
 
                 /**
                  *This API is used to delete an instance account.
@@ -727,6 +785,15 @@ namespace TencentCloud
                 DescribeCollationTimeZoneOutcomeCallable DescribeCollationTimeZoneCallable(const Model::DescribeCollationTimeZoneRequest& request);
 
                 /**
+                 *This API is used to query the disaster recovery region and AZ of the secondary node based on the primary instance.
+                 * @param req DescribeCrossRegionZoneRequest
+                 * @return DescribeCrossRegionZoneOutcome
+                 */
+                DescribeCrossRegionZoneOutcome DescribeCrossRegionZone(const Model::DescribeCrossRegionZoneRequest &request);
+                void DescribeCrossRegionZoneAsync(const Model::DescribeCrossRegionZoneRequest& request, const DescribeCrossRegionZoneAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCrossRegionZoneOutcomeCallable DescribeCrossRegionZoneCallable(const Model::DescribeCrossRegionZoneRequest& request);
+
+                /**
                  *This API is used to query the database character sets supported by an instance.
                  * @param req DescribeDBCharsetsRequest
                  * @return DescribeDBCharsetsOutcome
@@ -781,6 +848,15 @@ namespace TencentCloud
                 DescribeDBsNormalOutcomeCallable DescribeDBsNormalCallable(const Model::DescribeDBsNormalRequest& request);
 
                 /**
+                 *This API is used to query the database list.
+                 * @param req DescribeDatabasesRequest
+                 * @return DescribeDatabasesOutcome
+                 */
+                DescribeDatabasesOutcome DescribeDatabases(const Model::DescribeDatabasesRequest &request);
+                void DescribeDatabasesAsync(const Model::DescribeDatabasesRequest& request, const DescribeDatabasesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDatabasesOutcomeCallable DescribeDatabasesCallable(const Model::DescribeDatabasesRequest& request);
+
+                /**
                  *This API is used to query flow status.
                  * @param req DescribeFlowStatusRequest
                  * @return DescribeFlowStatusOutcome
@@ -824,6 +900,24 @@ namespace TencentCloud
                 DescribeInstanceParamsOutcome DescribeInstanceParams(const Model::DescribeInstanceParamsRequest &request);
                 void DescribeInstanceParamsAsync(const Model::DescribeInstanceParamsRequest& request, const DescribeInstanceParamsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeInstanceParamsOutcomeCallable DescribeInstanceParamsCallable(const Model::DescribeInstanceParamsRequest& request);
+
+                /**
+                 *This API is used to query the list of asynchronous tasks related to an instance.
+                 * @param req DescribeInstanceTasksRequest
+                 * @return DescribeInstanceTasksOutcome
+                 */
+                DescribeInstanceTasksOutcome DescribeInstanceTasks(const Model::DescribeInstanceTasksRequest &request);
+                void DescribeInstanceTasksAsync(const Model::DescribeInstanceTasksRequest& request, const DescribeInstanceTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeInstanceTasksOutcomeCallable DescribeInstanceTasksCallable(const Model::DescribeInstanceTasksRequest& request);
+
+                /**
+                 *This API is used to query the instance billing parameters.
+                 * @param req DescribeInstanceTradeParameterRequest
+                 * @return DescribeInstanceTradeParameterOutcome
+                 */
+                DescribeInstanceTradeParameterOutcome DescribeInstanceTradeParameter(const Model::DescribeInstanceTradeParameterRequest &request);
+                void DescribeInstanceTradeParameterAsync(const Model::DescribeInstanceTradeParameterRequest& request, const DescribeInstanceTradeParameterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeInstanceTradeParameterOutcomeCallable DescribeInstanceTradeParameterCallable(const Model::DescribeInstanceTradeParameterRequest& request);
 
                 /**
                  *This API is used to query the maintenance time window of an instance based on its instance ID.
@@ -914,6 +1008,15 @@ namespace TencentCloud
                 DescribeSpecSellStatusOutcome DescribeSpecSellStatus(const Model::DescribeSpecSellStatusRequest &request);
                 void DescribeSpecSellStatusAsync(const Model::DescribeSpecSellStatusRequest& request, const DescribeSpecSellStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeSpecSellStatusOutcomeCallable DescribeSpecSellStatusCallable(const Model::DescribeSpecSellStatusRequest& request);
+
+                /**
+                 *This API is used to pre-check the impact of the instance configuration adjustment before the adjustment.
+                 * @param req DescribeUpgradeInstanceCheckRequest
+                 * @return DescribeUpgradeInstanceCheckOutcome
+                 */
+                DescribeUpgradeInstanceCheckOutcome DescribeUpgradeInstanceCheck(const Model::DescribeUpgradeInstanceCheckRequest &request);
+                void DescribeUpgradeInstanceCheckAsync(const Model::DescribeUpgradeInstanceCheckRequest& request, const DescribeUpgradeInstanceCheckAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeUpgradeInstanceCheckOutcomeCallable DescribeUpgradeInstanceCheckCallable(const Model::DescribeUpgradeInstanceCheckRequest& request);
 
                 /**
                  *This API is used to query a backup upload permission.
@@ -1023,6 +1126,15 @@ namespace TencentCloud
                 ModifyDBInstanceNetworkOutcome ModifyDBInstanceNetwork(const Model::ModifyDBInstanceNetworkRequest &request);
                 void ModifyDBInstanceNetworkAsync(const Model::ModifyDBInstanceNetworkRequest& request, const ModifyDBInstanceNetworkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyDBInstanceNetworkOutcomeCallable ModifyDBInstanceNetworkCallable(const Model::ModifyDBInstanceNetworkRequest& request);
+
+                /**
+                 *This API is used to modify the instance remarks.
+                 * @param req ModifyDBInstanceNoteRequest
+                 * @return ModifyDBInstanceNoteOutcome
+                 */
+                ModifyDBInstanceNoteOutcome ModifyDBInstanceNote(const Model::ModifyDBInstanceNoteRequest &request);
+                void ModifyDBInstanceNoteAsync(const Model::ModifyDBInstanceNoteRequest& request, const ModifyDBInstanceNoteAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyDBInstanceNoteOutcomeCallable ModifyDBInstanceNoteCallable(const Model::ModifyDBInstanceNoteRequest& request);
 
                 /**
                  *This API is used to modify the project to which a database instance belongs.

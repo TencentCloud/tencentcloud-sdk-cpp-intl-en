@@ -165,6 +165,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ExtraHasBeenSet() const;
 
+                    /**
+                     * 获取Describe the risk level of the device where the current request is located, with a total of 4 levels. The details are as follows:
+1 - Secure
+2 - Low Risk
+3 - Medium Risk
+4 - High Risk
+Empty - Risk level not obtained.
+Only returned for the ENHANCED version, with the default value being empty.
+                     * @return DeviceInfoLevel Describe the risk level of the device where the current request is located, with a total of 4 levels. The details are as follows:
+1 - Secure
+2 - Low Risk
+3 - Medium Risk
+4 - High Risk
+Empty - Risk level not obtained.
+Only returned for the ENHANCED version, with the default value being empty.
+                     * 
+                     */
+                    std::string GetDeviceInfoLevel() const;
+
+                    /**
+                     * 判断参数 DeviceInfoLevel 是否已赋值
+                     * @return DeviceInfoLevel 是否已赋值
+                     * 
+                     */
+                    bool DeviceInfoLevelHasBeenSet() const;
+
                 private:
 
                     /**
@@ -220,6 +246,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_extra;
                     bool m_extraHasBeenSet;
+
+                    /**
+                     * Describe the risk level of the device where the current request is located, with a total of 4 levels. The details are as follows:
+1 - Secure
+2 - Low Risk
+3 - Medium Risk
+4 - High Risk
+Empty - Risk level not obtained.
+Only returned for the ENHANCED version, with the default value being empty.
+                     */
+                    std::string m_deviceInfoLevel;
+                    bool m_deviceInfoLevelHasBeenSet;
 
                 };
             }

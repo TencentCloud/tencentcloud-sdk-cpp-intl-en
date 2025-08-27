@@ -30,7 +30,8 @@ GetFaceIdResultIntlResponse::GetFaceIdResultIntlResponse() :
     m_videoHasBeenSet(false),
     m_actionVideoHasBeenSet(false),
     m_similarityHasBeenSet(false),
-    m_extraHasBeenSet(false)
+    m_extraHasBeenSet(false),
+    m_deviceInfoLevelHasBeenSet(false)
 {
 }
 
@@ -138,6 +139,16 @@ CoreInternalOutcome GetFaceIdResultIntlResponse::Deserialize(const string &paylo
         m_extraHasBeenSet = true;
     }
 
+    if (rsp.HasMember("DeviceInfoLevel") && !rsp["DeviceInfoLevel"].IsNull())
+    {
+        if (!rsp["DeviceInfoLevel"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DeviceInfoLevel` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_deviceInfoLevel = string(rsp["DeviceInfoLevel"].GetString());
+        m_deviceInfoLevelHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -202,6 +213,14 @@ string GetFaceIdResultIntlResponse::ToJsonString() const
         string key = "Extra";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_extra.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_deviceInfoLevelHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DeviceInfoLevel";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_deviceInfoLevel.c_str(), allocator).Move(), allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -284,6 +303,16 @@ string GetFaceIdResultIntlResponse::GetExtra() const
 bool GetFaceIdResultIntlResponse::ExtraHasBeenSet() const
 {
     return m_extraHasBeenSet;
+}
+
+string GetFaceIdResultIntlResponse::GetDeviceInfoLevel() const
+{
+    return m_deviceInfoLevel;
+}
+
+bool GetFaceIdResultIntlResponse::DeviceInfoLevelHasBeenSet() const
+{
+    return m_deviceInfoLevelHasBeenSet;
 }
 
 

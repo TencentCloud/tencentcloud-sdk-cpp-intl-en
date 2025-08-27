@@ -121,6 +121,8 @@
 #include <tencentcloud/cvm/v20170312/model/ImportKeyPairResponse.h>
 #include <tencentcloud/cvm/v20170312/model/InquirePricePurchaseReservedInstancesOfferingRequest.h>
 #include <tencentcloud/cvm/v20170312/model/InquirePricePurchaseReservedInstancesOfferingResponse.h>
+#include <tencentcloud/cvm/v20170312/model/InquiryPriceRenewInstancesRequest.h>
+#include <tencentcloud/cvm/v20170312/model/InquiryPriceRenewInstancesResponse.h>
 #include <tencentcloud/cvm/v20170312/model/InquiryPriceResetInstanceRequest.h>
 #include <tencentcloud/cvm/v20170312/model/InquiryPriceResetInstanceResponse.h>
 #include <tencentcloud/cvm/v20170312/model/InquiryPriceResetInstancesInternetMaxBandwidthRequest.h>
@@ -161,6 +163,8 @@
 #include <tencentcloud/cvm/v20170312/model/RemoveChcAssistVpcResponse.h>
 #include <tencentcloud/cvm/v20170312/model/RemoveChcDeployVpcRequest.h>
 #include <tencentcloud/cvm/v20170312/model/RemoveChcDeployVpcResponse.h>
+#include <tencentcloud/cvm/v20170312/model/RenewInstancesRequest.h>
+#include <tencentcloud/cvm/v20170312/model/RenewInstancesResponse.h>
 #include <tencentcloud/cvm/v20170312/model/ResetInstanceRequest.h>
 #include <tencentcloud/cvm/v20170312/model/ResetInstanceResponse.h>
 #include <tencentcloud/cvm/v20170312/model/ResetInstancesInternetMaxBandwidthRequest.h>
@@ -342,6 +346,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::InquirePricePurchaseReservedInstancesOfferingResponse> InquirePricePurchaseReservedInstancesOfferingOutcome;
                 typedef std::future<InquirePricePurchaseReservedInstancesOfferingOutcome> InquirePricePurchaseReservedInstancesOfferingOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::InquirePricePurchaseReservedInstancesOfferingRequest&, InquirePricePurchaseReservedInstancesOfferingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquirePricePurchaseReservedInstancesOfferingAsyncHandler;
+                typedef Outcome<Core::Error, Model::InquiryPriceRenewInstancesResponse> InquiryPriceRenewInstancesOutcome;
+                typedef std::future<InquiryPriceRenewInstancesOutcome> InquiryPriceRenewInstancesOutcomeCallable;
+                typedef std::function<void(const CvmClient*, const Model::InquiryPriceRenewInstancesRequest&, InquiryPriceRenewInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceRenewInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::InquiryPriceResetInstanceResponse> InquiryPriceResetInstanceOutcome;
                 typedef std::future<InquiryPriceResetInstanceOutcome> InquiryPriceResetInstanceOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::InquiryPriceResetInstanceRequest&, InquiryPriceResetInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceResetInstanceAsyncHandler;
@@ -402,6 +409,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RemoveChcDeployVpcResponse> RemoveChcDeployVpcOutcome;
                 typedef std::future<RemoveChcDeployVpcOutcome> RemoveChcDeployVpcOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::RemoveChcDeployVpcRequest&, RemoveChcDeployVpcOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RemoveChcDeployVpcAsyncHandler;
+                typedef Outcome<Core::Error, Model::RenewInstancesResponse> RenewInstancesOutcome;
+                typedef std::future<RenewInstancesOutcome> RenewInstancesOutcomeCallable;
+                typedef std::function<void(const CvmClient*, const Model::RenewInstancesRequest&, RenewInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RenewInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::ResetInstanceResponse> ResetInstanceOutcome;
                 typedef std::future<ResetInstanceOutcome> ResetInstanceOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::ResetInstanceRequest&, ResetInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetInstanceAsyncHandler;
@@ -924,6 +934,17 @@ This API is used to create an instance launch template. After the initial creati
                 InquirePricePurchaseReservedInstancesOfferingOutcomeCallable InquirePricePurchaseReservedInstancesOfferingCallable(const Model::InquirePricePurchaseReservedInstancesOfferingRequest& request);
 
                 /**
+                 *This API is used to inquire about the price for renewing a monthly subscription instance.
+
+This API is used to query the renewal price of monthly subscription instances.
+                 * @param req InquiryPriceRenewInstancesRequest
+                 * @return InquiryPriceRenewInstancesOutcome
+                 */
+                InquiryPriceRenewInstancesOutcome InquiryPriceRenewInstances(const Model::InquiryPriceRenewInstancesRequest &request);
+                void InquiryPriceRenewInstancesAsync(const Model::InquiryPriceRenewInstancesRequest& request, const InquiryPriceRenewInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                InquiryPriceRenewInstancesOutcomeCallable InquiryPriceRenewInstancesCallable(const Model::InquiryPriceRenewInstancesRequest& request);
+
+                /**
                  *This API is used to inquire about the price for reinstalling an instance.
 
 * If you have specified the parameter `ImageId`, inquire about the price for reinstallation by using the specified image. Otherwise, inquire about the price for reinstallation based on the image currently used by the instance.
@@ -1150,6 +1171,19 @@ This API is used to create an instance launch template. After the initial creati
                 RemoveChcDeployVpcOutcome RemoveChcDeployVpc(const Model::RemoveChcDeployVpcRequest &request);
                 void RemoveChcDeployVpcAsync(const Model::RemoveChcDeployVpcRequest& request, const RemoveChcDeployVpcAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 RemoveChcDeployVpcOutcomeCallable RemoveChcDeployVpcCallable(const Model::RemoveChcDeployVpcRequest& request);
+
+                /**
+                 *This API is used to renew annual and monthly subscription instances.
+
+This API is used to operate on monthly subscription instances only.
+This API is used to ensure your account balance is sufficient for renewal. You can check the balance via the DescribeAccountBalance API (https://www.tencentcloud.comom/document/product/555/20253?from_cn_redirect=1).
+* You can query the result of the instance operation by calling the API [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5). If the latest operation status (LatestOperationState) of the instance is **SUCCESS**, the operation is successful.
+                 * @param req RenewInstancesRequest
+                 * @return RenewInstancesOutcome
+                 */
+                RenewInstancesOutcome RenewInstances(const Model::RenewInstancesRequest &request);
+                void RenewInstancesAsync(const Model::RenewInstancesRequest& request, const RenewInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RenewInstancesOutcomeCallable RenewInstancesCallable(const Model::RenewInstancesRequest& request);
 
                 /**
                  *This API (ResetInstance) is used to reinstall the operating system on a specified instance.

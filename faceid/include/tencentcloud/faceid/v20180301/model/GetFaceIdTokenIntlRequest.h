@@ -45,11 +45,11 @@ namespace TencentCloud
                     /**
                      * 获取The detection mode. Valid values:
 `liveness`: Liveness detection only.
-`compare`: Selfie verification.
+`compare`: Selfie Verification(liveness detection and face comparison).
 Default value: `liveness`.
                      * @return CheckMode The detection mode. Valid values:
 `liveness`: Liveness detection only.
-`compare`: Selfie verification.
+`compare`: Selfie Verification(liveness detection and face comparison).
 Default value: `liveness`.
                      * 
                      */
@@ -58,11 +58,11 @@ Default value: `liveness`.
                     /**
                      * 设置The detection mode. Valid values:
 `liveness`: Liveness detection only.
-`compare`: Selfie verification.
+`compare`: Selfie Verification(liveness detection and face comparison).
 Default value: `liveness`.
                      * @param _checkMode The detection mode. Valid values:
 `liveness`: Liveness detection only.
-`compare`: Selfie verification.
+`compare`: Selfie Verification(liveness detection and face comparison).
 Default value: `liveness`.
                      * 
                      */
@@ -215,12 +215,33 @@ The default value is blink. The different action types passed in this parameter 
                      */
                     bool ActionListHasBeenSet() const;
 
+                    /**
+                     * 获取ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
+                     * @return SdkVersion ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
+                     * 
+                     */
+                    std::string GetSdkVersion() const;
+
+                    /**
+                     * 设置ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
+                     * @param _sdkVersion ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
+                     * 
+                     */
+                    void SetSdkVersion(const std::string& _sdkVersion);
+
+                    /**
+                     * 判断参数 SdkVersion 是否已赋值
+                     * @return SdkVersion 是否已赋值
+                     * 
+                     */
+                    bool SdkVersionHasBeenSet() const;
+
                 private:
 
                     /**
                      * The detection mode. Valid values:
 `liveness`: Liveness detection only.
-`compare`: Selfie verification.
+`compare`: Selfie Verification(liveness detection and face comparison).
 Default value: `liveness`.
                      */
                     std::string m_checkMode;
@@ -263,6 +284,12 @@ The default value is blink. The different action types passed in this parameter 
                      */
                     std::string m_actionList;
                     bool m_actionListHasBeenSet;
+
+                    /**
+                     * ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
+                     */
+                    std::string m_sdkVersion;
+                    bool m_sdkVersionHasBeenSet;
 
                 };
             }

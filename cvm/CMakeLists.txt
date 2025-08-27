@@ -22,6 +22,7 @@ set(cvm_public_header_model
   include/tencentcloud/cvm/v20170312/model/ChargePrepaid.h
   include/tencentcloud/cvm/v20170312/model/LocalDiskType.h
   include/tencentcloud/cvm/v20170312/model/AssociateInstancesKeyPairsResponse.h
+  include/tencentcloud/cvm/v20170312/model/RenewInstancesRequest.h
   include/tencentcloud/cvm/v20170312/model/DescribeImageQuotaResponse.h
   include/tencentcloud/cvm/v20170312/model/ModifyInstancesProjectRequest.h
   include/tencentcloud/cvm/v20170312/model/ConfigureChcDeployVpcResponse.h
@@ -152,7 +153,7 @@ set(cvm_public_header_model
   include/tencentcloud/cvm/v20170312/model/CreateLaunchTemplateResponse.h
   include/tencentcloud/cvm/v20170312/model/CreateKeyPairRequest.h
   include/tencentcloud/cvm/v20170312/model/InstanceStatus.h
-  include/tencentcloud/cvm/v20170312/model/ReservedInstancePriceItem.h
+  include/tencentcloud/cvm/v20170312/model/InquiryPriceRenewInstancesResponse.h
   include/tencentcloud/cvm/v20170312/model/AllocateHostsResponse.h
   include/tencentcloud/cvm/v20170312/model/DescribeImageSharePermissionRequest.h
   include/tencentcloud/cvm/v20170312/model/DescribeInstancesAttributesRequest.h
@@ -191,6 +192,7 @@ set(cvm_public_header_model
   include/tencentcloud/cvm/v20170312/model/DeleteImagesResponse.h
   include/tencentcloud/cvm/v20170312/model/ImportImageResponse.h
   include/tencentcloud/cvm/v20170312/model/ModifyDisasterRecoverGroupAttributeRequest.h
+  include/tencentcloud/cvm/v20170312/model/ReservedInstancePriceItem.h
   include/tencentcloud/cvm/v20170312/model/ConfigureChcAssistVpcResponse.h
   include/tencentcloud/cvm/v20170312/model/RebootInstancesResponse.h
   include/tencentcloud/cvm/v20170312/model/DescribeChcHostsRequest.h
@@ -199,6 +201,7 @@ set(cvm_public_header_model
   include/tencentcloud/cvm/v20170312/model/CreateLaunchTemplateVersionResponse.h
   include/tencentcloud/cvm/v20170312/model/OsVersion.h
   include/tencentcloud/cvm/v20170312/model/ModifyImageAttributeResponse.h
+  include/tencentcloud/cvm/v20170312/model/InquiryPriceRenewInstancesRequest.h
   include/tencentcloud/cvm/v20170312/model/GPUInfo.h
   include/tencentcloud/cvm/v20170312/model/DisasterRecoverGroup.h
   include/tencentcloud/cvm/v20170312/model/RegionInfo.h
@@ -218,6 +221,7 @@ set(cvm_public_header_model
   include/tencentcloud/cvm/v20170312/model/SyncImage.h
   include/tencentcloud/cvm/v20170312/model/KeyPair.h
   include/tencentcloud/cvm/v20170312/model/DescribeReservedInstancesOfferingsResponse.h
+  include/tencentcloud/cvm/v20170312/model/RenewInstancesResponse.h
   include/tencentcloud/cvm/v20170312/model/DescribeLaunchTemplateVersionsResponse.h
   include/tencentcloud/cvm/v20170312/model/RunAutomationServiceEnabled.h
   include/tencentcloud/cvm/v20170312/model/RunMonitorServiceEnabled.h
@@ -246,6 +250,7 @@ set(cvm_src
   src/v20170312/model/ChargePrepaid.cpp
   src/v20170312/model/LocalDiskType.cpp
   src/v20170312/model/AssociateInstancesKeyPairsResponse.cpp
+  src/v20170312/model/RenewInstancesRequest.cpp
   src/v20170312/model/DescribeImageQuotaResponse.cpp
   src/v20170312/model/ModifyInstancesProjectRequest.cpp
   src/v20170312/model/ConfigureChcDeployVpcResponse.cpp
@@ -376,7 +381,7 @@ set(cvm_src
   src/v20170312/model/CreateLaunchTemplateResponse.cpp
   src/v20170312/model/CreateKeyPairRequest.cpp
   src/v20170312/model/InstanceStatus.cpp
-  src/v20170312/model/ReservedInstancePriceItem.cpp
+  src/v20170312/model/InquiryPriceRenewInstancesResponse.cpp
   src/v20170312/model/AllocateHostsResponse.cpp
   src/v20170312/model/DescribeImageSharePermissionRequest.cpp
   src/v20170312/model/DescribeInstancesAttributesRequest.cpp
@@ -415,6 +420,7 @@ set(cvm_src
   src/v20170312/model/DeleteImagesResponse.cpp
   src/v20170312/model/ImportImageResponse.cpp
   src/v20170312/model/ModifyDisasterRecoverGroupAttributeRequest.cpp
+  src/v20170312/model/ReservedInstancePriceItem.cpp
   src/v20170312/model/ConfigureChcAssistVpcResponse.cpp
   src/v20170312/model/RebootInstancesResponse.cpp
   src/v20170312/model/DescribeChcHostsRequest.cpp
@@ -423,6 +429,7 @@ set(cvm_src
   src/v20170312/model/CreateLaunchTemplateVersionResponse.cpp
   src/v20170312/model/OsVersion.cpp
   src/v20170312/model/ModifyImageAttributeResponse.cpp
+  src/v20170312/model/InquiryPriceRenewInstancesRequest.cpp
   src/v20170312/model/GPUInfo.cpp
   src/v20170312/model/DisasterRecoverGroup.cpp
   src/v20170312/model/RegionInfo.cpp
@@ -442,6 +449,7 @@ set(cvm_src
   src/v20170312/model/SyncImage.cpp
   src/v20170312/model/KeyPair.cpp
   src/v20170312/model/DescribeReservedInstancesOfferingsResponse.cpp
+  src/v20170312/model/RenewInstancesResponse.cpp
   src/v20170312/model/DescribeLaunchTemplateVersionsResponse.cpp
   src/v20170312/model/RunAutomationServiceEnabled.cpp
   src/v20170312/model/RunMonitorServiceEnabled.cpp

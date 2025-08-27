@@ -121,99 +121,67 @@ Default value: 4
                     bool SecurityLevelHasBeenSet() const;
 
                     /**
-                     * 获取The identity document type. Valid values: 
-1. HK (default): Identity card of Hong Kong (China)
-2. ML: Malaysian identity card
-3. IndonesiaIDCard: Indonesian identity card
-4. PhilippinesVoteID: Philippine voters ID card
-5. PhilippinesDrivingLicense: Philippine driver's license
-6. PhilippinesTinID: Philippine TIN ID card
-7. PhilippinesSSSID: Philippine SSS ID card
-8. PhilippinesUMID: Philippine UMID card
-9. MLIDPassport: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
-10..MacaoIDCard: Macao ID Card
-11.ThailandIDCard: Thailand ID Card
-12.MainlandIDCard: Mainland ID Card
-13.SingaporeIDCard: Singapore ID Card
-14.JapanIDCard: Japan ID Card
-15.MLDrivingLicense: Malaysian Driving License
-16.IndonesiaDrivingLicense: Indonesia Driving License
-17.ThailandDrivingLicense: Thailand Driving License
-18.SingaporeDrivingLicense: Singapore Driving License
-19.JapanDrivingLicense: Japan Driving License
-20.TaiWanIDCard:Taiwan ID Card
-21.HMTPermit: exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan
-                     * @return IdCardType The identity document type. Valid values: 
-1. HK (default): Identity card of Hong Kong (China)
-2. ML: Malaysian identity card
-3. IndonesiaIDCard: Indonesian identity card
-4. PhilippinesVoteID: Philippine voters ID card
-5. PhilippinesDrivingLicense: Philippine driver's license
-6. PhilippinesTinID: Philippine TIN ID card
-7. PhilippinesSSSID: Philippine SSS ID card
-8. PhilippinesUMID: Philippine UMID card
-9. MLIDPassport: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
-10..MacaoIDCard: Macao ID Card
-11.ThailandIDCard: Thailand ID Card
-12.MainlandIDCard: Mainland ID Card
-13.SingaporeIDCard: Singapore ID Card
-14.JapanIDCard: Japan ID Card
-15.MLDrivingLicense: Malaysian Driving License
-16.IndonesiaDrivingLicense: Indonesia Driving License
-17.ThailandDrivingLicense: Thailand Driving License
-18.SingaporeDrivingLicense: Singapore Driving License
-19.JapanDrivingLicense: Japan Driving License
-20.TaiWanIDCard:Taiwan ID Card
-21.HMTPermit: exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan
+                     * 获取Card Types Supported for Authentication: Currently supported types are as follows:
+1.HK (Default): Hong Kong (China) Identity Card
+2.ML: Malaysia Identity Card
+3.IndonesiaIDCard: Indonesia Identity Card
+4.PhilippinesVoteID: Philippines Voter ID
+5.PhilippinesDrivingLicense: Philippines Driving License
+6.PhilippinesTinID: Philippines Tin ID
+7.PhilippinesSSSID: Philippines SSS ID
+8.PhilippinesUMID: Philippines UMID
+9.MLIDPassport: Passports of Hong Kong, Macao, Taiwan Regions (China) and Foreign Countries
+10.ThailandIDCard: Thailand Identity Card
+11.MainlandIDCard: Mainland China Identity Card
+12.SingaporeIDCard: Singapore Identity Card
+13.HMTPermit: Exit-Entry Permit for Travel to and from Hong Kong, Macao and Taiwan (China)
+                     * @return IdCardType Card Types Supported for Authentication: Currently supported types are as follows:
+1.HK (Default): Hong Kong (China) Identity Card
+2.ML: Malaysia Identity Card
+3.IndonesiaIDCard: Indonesia Identity Card
+4.PhilippinesVoteID: Philippines Voter ID
+5.PhilippinesDrivingLicense: Philippines Driving License
+6.PhilippinesTinID: Philippines Tin ID
+7.PhilippinesSSSID: Philippines SSS ID
+8.PhilippinesUMID: Philippines UMID
+9.MLIDPassport: Passports of Hong Kong, Macao, Taiwan Regions (China) and Foreign Countries
+10.ThailandIDCard: Thailand Identity Card
+11.MainlandIDCard: Mainland China Identity Card
+12.SingaporeIDCard: Singapore Identity Card
+13.HMTPermit: Exit-Entry Permit for Travel to and from Hong Kong, Macao and Taiwan (China)
                      * 
                      */
                     std::string GetIdCardType() const;
 
                     /**
-                     * 设置The identity document type. Valid values: 
-1. HK (default): Identity card of Hong Kong (China)
-2. ML: Malaysian identity card
-3. IndonesiaIDCard: Indonesian identity card
-4. PhilippinesVoteID: Philippine voters ID card
-5. PhilippinesDrivingLicense: Philippine driver's license
-6. PhilippinesTinID: Philippine TIN ID card
-7. PhilippinesSSSID: Philippine SSS ID card
-8. PhilippinesUMID: Philippine UMID card
-9. MLIDPassport: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
-10..MacaoIDCard: Macao ID Card
-11.ThailandIDCard: Thailand ID Card
-12.MainlandIDCard: Mainland ID Card
-13.SingaporeIDCard: Singapore ID Card
-14.JapanIDCard: Japan ID Card
-15.MLDrivingLicense: Malaysian Driving License
-16.IndonesiaDrivingLicense: Indonesia Driving License
-17.ThailandDrivingLicense: Thailand Driving License
-18.SingaporeDrivingLicense: Singapore Driving License
-19.JapanDrivingLicense: Japan Driving License
-20.TaiWanIDCard:Taiwan ID Card
-21.HMTPermit: exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan
-                     * @param _idCardType The identity document type. Valid values: 
-1. HK (default): Identity card of Hong Kong (China)
-2. ML: Malaysian identity card
-3. IndonesiaIDCard: Indonesian identity card
-4. PhilippinesVoteID: Philippine voters ID card
-5. PhilippinesDrivingLicense: Philippine driver's license
-6. PhilippinesTinID: Philippine TIN ID card
-7. PhilippinesSSSID: Philippine SSS ID card
-8. PhilippinesUMID: Philippine UMID card
-9. MLIDPassport: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
-10..MacaoIDCard: Macao ID Card
-11.ThailandIDCard: Thailand ID Card
-12.MainlandIDCard: Mainland ID Card
-13.SingaporeIDCard: Singapore ID Card
-14.JapanIDCard: Japan ID Card
-15.MLDrivingLicense: Malaysian Driving License
-16.IndonesiaDrivingLicense: Indonesia Driving License
-17.ThailandDrivingLicense: Thailand Driving License
-18.SingaporeDrivingLicense: Singapore Driving License
-19.JapanDrivingLicense: Japan Driving License
-20.TaiWanIDCard:Taiwan ID Card
-21.HMTPermit: exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan
+                     * 设置Card Types Supported for Authentication: Currently supported types are as follows:
+1.HK (Default): Hong Kong (China) Identity Card
+2.ML: Malaysia Identity Card
+3.IndonesiaIDCard: Indonesia Identity Card
+4.PhilippinesVoteID: Philippines Voter ID
+5.PhilippinesDrivingLicense: Philippines Driving License
+6.PhilippinesTinID: Philippines Tin ID
+7.PhilippinesSSSID: Philippines SSS ID
+8.PhilippinesUMID: Philippines UMID
+9.MLIDPassport: Passports of Hong Kong, Macao, Taiwan Regions (China) and Foreign Countries
+10.ThailandIDCard: Thailand Identity Card
+11.MainlandIDCard: Mainland China Identity Card
+12.SingaporeIDCard: Singapore Identity Card
+13.HMTPermit: Exit-Entry Permit for Travel to and from Hong Kong, Macao and Taiwan (China)
+                     * @param _idCardType Card Types Supported for Authentication: Currently supported types are as follows:
+1.HK (Default): Hong Kong (China) Identity Card
+2.ML: Malaysia Identity Card
+3.IndonesiaIDCard: Indonesia Identity Card
+4.PhilippinesVoteID: Philippines Voter ID
+5.PhilippinesDrivingLicense: Philippines Driving License
+6.PhilippinesTinID: Philippines Tin ID
+7.PhilippinesSSSID: Philippines SSS ID
+8.PhilippinesUMID: Philippines UMID
+9.MLIDPassport: Passports of Hong Kong, Macao, Taiwan Regions (China) and Foreign Countries
+10.ThailandIDCard: Thailand Identity Card
+11.MainlandIDCard: Mainland China Identity Card
+12.SingaporeIDCard: Singapore Identity Card
+13.HMTPermit: Exit-Entry Permit for Travel to and from Hong Kong, Macao and Taiwan (China)
                      * 
                      */
                     void SetIdCardType(const std::string& _idCardType);
@@ -335,6 +303,27 @@ This feature applies only to Hong Kong (China) identity cards, Malaysian identit
                     bool ExtraHasBeenSet() const;
 
                     /**
+                     * 获取ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
+                     * @return SdkVersion ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
+                     * 
+                     */
+                    std::string GetSdkVersion() const;
+
+                    /**
+                     * 设置ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
+                     * @param _sdkVersion ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
+                     * 
+                     */
+                    void SetSdkVersion(const std::string& _sdkVersion);
+
+                    /**
+                     * 判断参数 SdkVersion 是否已赋值
+                     * @return SdkVersion 是否已赋值
+                     * 
+                     */
+                    bool SdkVersionHasBeenSet() const;
+
+                    /**
                      * 获取This interface is used to control th action sequences.
 Action types are as follows:
 "blink"
@@ -415,28 +404,20 @@ Default value: 4
                     bool m_securityLevelHasBeenSet;
 
                     /**
-                     * The identity document type. Valid values: 
-1. HK (default): Identity card of Hong Kong (China)
-2. ML: Malaysian identity card
-3. IndonesiaIDCard: Indonesian identity card
-4. PhilippinesVoteID: Philippine voters ID card
-5. PhilippinesDrivingLicense: Philippine driver's license
-6. PhilippinesTinID: Philippine TIN ID card
-7. PhilippinesSSSID: Philippine SSS ID card
-8. PhilippinesUMID: Philippine UMID card
-9. MLIDPassport: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
-10..MacaoIDCard: Macao ID Card
-11.ThailandIDCard: Thailand ID Card
-12.MainlandIDCard: Mainland ID Card
-13.SingaporeIDCard: Singapore ID Card
-14.JapanIDCard: Japan ID Card
-15.MLDrivingLicense: Malaysian Driving License
-16.IndonesiaDrivingLicense: Indonesia Driving License
-17.ThailandDrivingLicense: Thailand Driving License
-18.SingaporeDrivingLicense: Singapore Driving License
-19.JapanDrivingLicense: Japan Driving License
-20.TaiWanIDCard:Taiwan ID Card
-21.HMTPermit: exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan
+                     * Card Types Supported for Authentication: Currently supported types are as follows:
+1.HK (Default): Hong Kong (China) Identity Card
+2.ML: Malaysia Identity Card
+3.IndonesiaIDCard: Indonesia Identity Card
+4.PhilippinesVoteID: Philippines Voter ID
+5.PhilippinesDrivingLicense: Philippines Driving License
+6.PhilippinesTinID: Philippines Tin ID
+7.PhilippinesSSSID: Philippines SSS ID
+8.PhilippinesUMID: Philippines UMID
+9.MLIDPassport: Passports of Hong Kong, Macao, Taiwan Regions (China) and Foreign Countries
+10.ThailandIDCard: Thailand Identity Card
+11.MainlandIDCard: Mainland China Identity Card
+12.SingaporeIDCard: Singapore Identity Card
+13.HMTPermit: Exit-Entry Permit for Travel to and from Hong Kong, Macao and Taiwan (China)
                      */
                     std::string m_idCardType;
                     bool m_idCardTypeHasBeenSet;
@@ -471,6 +452,12 @@ This feature applies only to Hong Kong (China) identity cards, Malaysian identit
                      */
                     std::string m_extra;
                     bool m_extraHasBeenSet;
+
+                    /**
+                     * ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
+                     */
+                    std::string m_sdkVersion;
+                    bool m_sdkVersionHasBeenSet;
 
                     /**
                      * This interface is used to control th action sequences.

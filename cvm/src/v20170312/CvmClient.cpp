@@ -2147,6 +2147,49 @@ CvmClient::InquirePricePurchaseReservedInstancesOfferingOutcomeCallable CvmClien
     return task->get_future();
 }
 
+CvmClient::InquiryPriceRenewInstancesOutcome CvmClient::InquiryPriceRenewInstances(const InquiryPriceRenewInstancesRequest &request)
+{
+    auto outcome = MakeRequest(request, "InquiryPriceRenewInstances");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        InquiryPriceRenewInstancesResponse rsp = InquiryPriceRenewInstancesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return InquiryPriceRenewInstancesOutcome(rsp);
+        else
+            return InquiryPriceRenewInstancesOutcome(o.GetError());
+    }
+    else
+    {
+        return InquiryPriceRenewInstancesOutcome(outcome.GetError());
+    }
+}
+
+void CvmClient::InquiryPriceRenewInstancesAsync(const InquiryPriceRenewInstancesRequest& request, const InquiryPriceRenewInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->InquiryPriceRenewInstances(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CvmClient::InquiryPriceRenewInstancesOutcomeCallable CvmClient::InquiryPriceRenewInstancesCallable(const InquiryPriceRenewInstancesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<InquiryPriceRenewInstancesOutcome()>>(
+        [this, request]()
+        {
+            return this->InquiryPriceRenewInstances(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CvmClient::InquiryPriceResetInstanceOutcome CvmClient::InquiryPriceResetInstance(const InquiryPriceResetInstanceRequest &request)
 {
     auto outcome = MakeRequest(request, "InquiryPriceResetInstance");
@@ -3000,6 +3043,49 @@ CvmClient::RemoveChcDeployVpcOutcomeCallable CvmClient::RemoveChcDeployVpcCallab
         [this, request]()
         {
             return this->RemoveChcDeployVpc(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CvmClient::RenewInstancesOutcome CvmClient::RenewInstances(const RenewInstancesRequest &request)
+{
+    auto outcome = MakeRequest(request, "RenewInstances");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RenewInstancesResponse rsp = RenewInstancesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RenewInstancesOutcome(rsp);
+        else
+            return RenewInstancesOutcome(o.GetError());
+    }
+    else
+    {
+        return RenewInstancesOutcome(outcome.GetError());
+    }
+}
+
+void CvmClient::RenewInstancesAsync(const RenewInstancesRequest& request, const RenewInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RenewInstances(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CvmClient::RenewInstancesOutcomeCallable CvmClient::RenewInstancesCallable(const RenewInstancesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RenewInstancesOutcome()>>(
+        [this, request]()
+        {
+            return this->RenewInstances(request);
         }
     );
 
