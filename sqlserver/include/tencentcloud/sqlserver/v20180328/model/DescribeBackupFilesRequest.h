@@ -168,6 +168,27 @@ namespace TencentCloud
                      */
                     bool OrderByHasBeenSet() const;
 
+                    /**
+                     * 获取Sorting field. Size - sort by backup size; DBs - sort by database name. The default value is size.
+                     * @return OrderByType Sorting field. Size - sort by backup size; DBs - sort by database name. The default value is size.
+                     * 
+                     */
+                    std::string GetOrderByType() const;
+
+                    /**
+                     * 设置Sorting field. Size - sort by backup size; DBs - sort by database name. The default value is size.
+                     * @param _orderByType Sorting field. Size - sort by backup size; DBs - sort by database name. The default value is size.
+                     * 
+                     */
+                    void SetOrderByType(const std::string& _orderByType);
+
+                    /**
+                     * 判断参数 OrderByType 是否已赋值
+                     * @return OrderByType 是否已赋值
+                     * 
+                     */
+                    bool OrderByTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -205,6 +226,12 @@ namespace TencentCloud
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
+
+                    /**
+                     * Sorting field. Size - sort by backup size; DBs - sort by database name. The default value is size.
+                     */
+                    std::string m_orderByType;
+                    bool m_orderByTypeHasBeenSet;
 
                 };
             }

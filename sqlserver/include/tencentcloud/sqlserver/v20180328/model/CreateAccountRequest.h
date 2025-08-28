@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Database instance ID in the format of mssql-njj2mtpl
-                     * @return InstanceId Database instance ID in the format of mssql-njj2mtpl
+                     * 获取Database instance ID in the format of mssql-njj2mtpl.
+                     * @return InstanceId Database instance ID in the format of mssql-njj2mtpl.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Database instance ID in the format of mssql-njj2mtpl
-                     * @param _instanceId Database instance ID in the format of mssql-njj2mtpl
+                     * 设置Database instance ID in the format of mssql-njj2mtpl.
+                     * @param _instanceId Database instance ID in the format of mssql-njj2mtpl.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Database instance account information
-                     * @return Accounts Database instance account information
+                     * 获取Database instance account information.
+                     * @return Accounts Database instance account information.
                      * 
                      */
                     std::vector<AccountCreateInfo> GetAccounts() const;
 
                     /**
-                     * 设置Database instance account information
-                     * @param _accounts Database instance account information
+                     * 设置Database instance account information.
+                     * @param _accounts Database instance account information.
                      * 
                      */
                     void SetAccounts(const std::vector<AccountCreateInfo>& _accounts);
@@ -88,13 +88,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Database instance ID in the format of mssql-njj2mtpl
+                     * Database instance ID in the format of mssql-njj2mtpl.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Database instance account information
+                     * Database instance account information.
                      */
                     std::vector<AccountCreateInfo> m_accounts;
                     bool m_accountsHasBeenSet;

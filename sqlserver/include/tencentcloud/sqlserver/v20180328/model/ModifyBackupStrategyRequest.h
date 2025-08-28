@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool BackupModelHasBeenSet() const;
 
                     /**
-                     * 获取The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
-                     * @return BackupCycle The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
+                     * 获取The days of the week on which backup will be performed when "BackupType" is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
+                     * @return BackupCycle The days of the week on which backup will be performed when "BackupType" is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
                      * 
                      */
                     std::vector<uint64_t> GetBackupCycle() const;
 
                     /**
-                     * 设置The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
-                     * @param _backupCycle The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
+                     * 设置The days of the week on which backup will be performed when "BackupType" is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
+                     * @param _backupCycle The days of the week on which backup will be performed when "BackupType" is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
                      * 
                      */
                     void SetBackupCycle(const std::vector<uint64_t>& _backupCycle);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool RegularBackupEnableHasBeenSet() const;
 
                     /**
-                     * 获取Archive backup retention days. Value range: 90–3650 days. Default value: 365 days.
-                     * @return RegularBackupSaveDays Archive backup retention days. Value range: 90–3650 days. Default value: 365 days.
+                     * 获取Archive backup retention days. Value range: 90-3650 days. Default value: 365 days.
+                     * @return RegularBackupSaveDays Archive backup retention days. Value range: 90-3650 days. Default value: 365 days.
                      * 
                      */
                     uint64_t GetRegularBackupSaveDays() const;
 
                     /**
-                     * 设置Archive backup retention days. Value range: 90–3650 days. Default value: 365 days.
-                     * @param _regularBackupSaveDays Archive backup retention days. Value range: 90–3650 days. Default value: 365 days.
+                     * 设置Archive backup retention days. Value range: 90-3650 days. Default value: 365 days.
+                     * @param _regularBackupSaveDays Archive backup retention days. Value range: 90-3650 days. Default value: 365 days.
                      * 
                      */
                     void SetRegularBackupSaveDays(const uint64_t& _regularBackupSaveDays);
@@ -327,7 +327,7 @@ namespace TencentCloud
                     bool m_backupModelHasBeenSet;
 
                     /**
-                     * The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
+                     * The days of the week on which backup will be performed when "BackupType" is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
                      */
                     std::vector<uint64_t> m_backupCycle;
                     bool m_backupCycleHasBeenSet;
@@ -345,7 +345,7 @@ namespace TencentCloud
                     bool m_regularBackupEnableHasBeenSet;
 
                     /**
-                     * Archive backup retention days. Value range: 90–3650 days. Default value: 365 days.
+                     * Archive backup retention days. Value range: 90-3650 days. Default value: 365 days.
                      */
                     uint64_t m_regularBackupSaveDays;
                     bool m_regularBackupSaveDaysHasBeenSet;

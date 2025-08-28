@@ -315,6 +315,27 @@ namespace TencentCloud
                      */
                     bool BackupFormatHasBeenSet() const;
 
+                    /**
+                     * 获取Backup storage policy. 0 - follow the custom backup retention policy; 1 - follow the instance lifecycle until the instance is eliminated. The default value is 0.
+                     * @return StorageStrategy Backup storage policy. 0 - follow the custom backup retention policy; 1 - follow the instance lifecycle until the instance is eliminated. The default value is 0.
+                     * 
+                     */
+                    int64_t GetStorageStrategy() const;
+
+                    /**
+                     * 设置Backup storage policy. 0 - follow the custom backup retention policy; 1 - follow the instance lifecycle until the instance is eliminated. The default value is 0.
+                     * @param _storageStrategy Backup storage policy. 0 - follow the custom backup retention policy; 1 - follow the instance lifecycle until the instance is eliminated. The default value is 0.
+                     * 
+                     */
+                    void SetStorageStrategy(const int64_t& _storageStrategy);
+
+                    /**
+                     * 判断参数 StorageStrategy 是否已赋值
+                     * @return StorageStrategy 是否已赋值
+                     * 
+                     */
+                    bool StorageStrategyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -394,6 +415,12 @@ namespace TencentCloud
                      */
                     std::string m_backupFormat;
                     bool m_backupFormatHasBeenSet;
+
+                    /**
+                     * Backup storage policy. 0 - follow the custom backup retention policy; 1 - follow the instance lifecycle until the instance is eliminated. The default value is 0.
+                     */
+                    int64_t m_storageStrategy;
+                    bool m_storageStrategyHasBeenSet;
 
                 };
             }

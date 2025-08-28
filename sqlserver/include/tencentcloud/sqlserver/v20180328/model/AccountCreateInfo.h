@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool AccountTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether CAM authentication is enabled
-                     * @return IsCam Whether CAM authentication is enabled
+                     * 获取Whether CAM authentication is enabled.
+                     * @return IsCam Whether CAM authentication is enabled.
                      * 
                      */
                     bool GetIsCam() const;
 
                     /**
-                     * 设置Whether CAM authentication is enabled
-                     * @param _isCam Whether CAM authentication is enabled
+                     * 设置Whether CAM authentication is enabled.
+                     * @param _isCam Whether CAM authentication is enabled.
                      * 
                      */
                     void SetIsCam(const bool& _isCam);
@@ -214,6 +214,27 @@ namespace TencentCloud
                      * 
                      */
                     bool IsCamHasBeenSet() const;
+
+                    /**
+                     * 获取Encryption key version number. 0: disable encryption.
+                     * @return EncryptedVersion Encryption key version number. 0: disable encryption.
+                     * 
+                     */
+                    int64_t GetEncryptedVersion() const;
+
+                    /**
+                     * 设置Encryption key version number. 0: disable encryption.
+                     * @param _encryptedVersion Encryption key version number. 0: disable encryption.
+                     * 
+                     */
+                    void SetEncryptedVersion(const int64_t& _encryptedVersion);
+
+                    /**
+                     * 判断参数 EncryptedVersion 是否已赋值
+                     * @return EncryptedVersion 是否已赋值
+                     * 
+                     */
+                    bool EncryptedVersionHasBeenSet() const;
 
                 private:
 
@@ -260,10 +281,16 @@ namespace TencentCloud
                     bool m_accountTypeHasBeenSet;
 
                     /**
-                     * Whether CAM authentication is enabled
+                     * Whether CAM authentication is enabled.
                      */
                     bool m_isCam;
                     bool m_isCamHasBeenSet;
+
+                    /**
+                     * Encryption key version number. 0: disable encryption.
+                     */
+                    int64_t m_encryptedVersion;
+                    bool m_encryptedVersionHasBeenSet;
 
                 };
             }

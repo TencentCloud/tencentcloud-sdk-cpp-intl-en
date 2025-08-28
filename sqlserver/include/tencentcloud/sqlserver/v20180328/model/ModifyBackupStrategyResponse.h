@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool MsgHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Code 
+                     * 获取Returned error code.
+                     * @return Code Returned error code.
                      * 
                      */
                     int64_t GetCode() const;
@@ -100,7 +100,7 @@ namespace TencentCloud
                     bool m_msgHasBeenSet;
 
                     /**
-                     * 
+                     * Returned error code.
                      */
                     int64_t m_code;
                     bool m_codeHasBeenSet;

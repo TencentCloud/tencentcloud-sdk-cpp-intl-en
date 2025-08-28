@@ -40,6 +40,92 @@ SqlserverClient::SqlserverClient(const Credential &credential, const string &reg
 }
 
 
+SqlserverClient::AssociateSecurityGroupsOutcome SqlserverClient::AssociateSecurityGroups(const AssociateSecurityGroupsRequest &request)
+{
+    auto outcome = MakeRequest(request, "AssociateSecurityGroups");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AssociateSecurityGroupsResponse rsp = AssociateSecurityGroupsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AssociateSecurityGroupsOutcome(rsp);
+        else
+            return AssociateSecurityGroupsOutcome(o.GetError());
+    }
+    else
+    {
+        return AssociateSecurityGroupsOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::AssociateSecurityGroupsAsync(const AssociateSecurityGroupsRequest& request, const AssociateSecurityGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->AssociateSecurityGroups(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::AssociateSecurityGroupsOutcomeCallable SqlserverClient::AssociateSecurityGroupsCallable(const AssociateSecurityGroupsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<AssociateSecurityGroupsOutcome()>>(
+        [this, request]()
+        {
+            return this->AssociateSecurityGroups(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::BalanceReadOnlyGroupOutcome SqlserverClient::BalanceReadOnlyGroup(const BalanceReadOnlyGroupRequest &request)
+{
+    auto outcome = MakeRequest(request, "BalanceReadOnlyGroup");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        BalanceReadOnlyGroupResponse rsp = BalanceReadOnlyGroupResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return BalanceReadOnlyGroupOutcome(rsp);
+        else
+            return BalanceReadOnlyGroupOutcome(o.GetError());
+    }
+    else
+    {
+        return BalanceReadOnlyGroupOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::BalanceReadOnlyGroupAsync(const BalanceReadOnlyGroupRequest& request, const BalanceReadOnlyGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->BalanceReadOnlyGroup(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::BalanceReadOnlyGroupOutcomeCallable SqlserverClient::BalanceReadOnlyGroupCallable(const BalanceReadOnlyGroupRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<BalanceReadOnlyGroupOutcome()>>(
+        [this, request]()
+        {
+            return this->BalanceReadOnlyGroup(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 SqlserverClient::CloneDBOutcome SqlserverClient::CloneDB(const CloneDBRequest &request)
 {
     auto outcome = MakeRequest(request, "CloneDB");
@@ -685,6 +771,49 @@ SqlserverClient::CreateMigrationOutcomeCallable SqlserverClient::CreateMigration
     return task->get_future();
 }
 
+SqlserverClient::CreatePublishSubscribeOutcome SqlserverClient::CreatePublishSubscribe(const CreatePublishSubscribeRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreatePublishSubscribe");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreatePublishSubscribeResponse rsp = CreatePublishSubscribeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreatePublishSubscribeOutcome(rsp);
+        else
+            return CreatePublishSubscribeOutcome(o.GetError());
+    }
+    else
+    {
+        return CreatePublishSubscribeOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::CreatePublishSubscribeAsync(const CreatePublishSubscribeRequest& request, const CreatePublishSubscribeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreatePublishSubscribe(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::CreatePublishSubscribeOutcomeCallable SqlserverClient::CreatePublishSubscribeCallable(const CreatePublishSubscribeRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreatePublishSubscribeOutcome()>>(
+        [this, request]()
+        {
+            return this->CreatePublishSubscribe(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 SqlserverClient::CreateReadOnlyDBInstancesOutcome SqlserverClient::CreateReadOnlyDBInstances(const CreateReadOnlyDBInstancesRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateReadOnlyDBInstances");
@@ -943,6 +1072,49 @@ SqlserverClient::DeleteDBOutcomeCallable SqlserverClient::DeleteDBCallable(const
     return task->get_future();
 }
 
+SqlserverClient::DeleteDBInstanceOutcome SqlserverClient::DeleteDBInstance(const DeleteDBInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteDBInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteDBInstanceResponse rsp = DeleteDBInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteDBInstanceOutcome(rsp);
+        else
+            return DeleteDBInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteDBInstanceOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DeleteDBInstanceAsync(const DeleteDBInstanceRequest& request, const DeleteDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteDBInstance(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DeleteDBInstanceOutcomeCallable SqlserverClient::DeleteDBInstanceCallable(const DeleteDBInstanceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteDBInstanceOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteDBInstance(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 SqlserverClient::DeleteIncrementalMigrationOutcome SqlserverClient::DeleteIncrementalMigration(const DeleteIncrementalMigrationRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteIncrementalMigration");
@@ -1029,6 +1201,92 @@ SqlserverClient::DeleteMigrationOutcomeCallable SqlserverClient::DeleteMigration
     return task->get_future();
 }
 
+SqlserverClient::DeletePublishSubscribeOutcome SqlserverClient::DeletePublishSubscribe(const DeletePublishSubscribeRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeletePublishSubscribe");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeletePublishSubscribeResponse rsp = DeletePublishSubscribeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeletePublishSubscribeOutcome(rsp);
+        else
+            return DeletePublishSubscribeOutcome(o.GetError());
+    }
+    else
+    {
+        return DeletePublishSubscribeOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DeletePublishSubscribeAsync(const DeletePublishSubscribeRequest& request, const DeletePublishSubscribeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeletePublishSubscribe(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DeletePublishSubscribeOutcomeCallable SqlserverClient::DeletePublishSubscribeCallable(const DeletePublishSubscribeRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeletePublishSubscribeOutcome()>>(
+        [this, request]()
+        {
+            return this->DeletePublishSubscribe(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::DescribeAccountPrivilegeByDBOutcome SqlserverClient::DescribeAccountPrivilegeByDB(const DescribeAccountPrivilegeByDBRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAccountPrivilegeByDB");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAccountPrivilegeByDBResponse rsp = DescribeAccountPrivilegeByDBResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAccountPrivilegeByDBOutcome(rsp);
+        else
+            return DescribeAccountPrivilegeByDBOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAccountPrivilegeByDBOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DescribeAccountPrivilegeByDBAsync(const DescribeAccountPrivilegeByDBRequest& request, const DescribeAccountPrivilegeByDBAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeAccountPrivilegeByDB(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DescribeAccountPrivilegeByDBOutcomeCallable SqlserverClient::DescribeAccountPrivilegeByDBCallable(const DescribeAccountPrivilegeByDBRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeAccountPrivilegeByDBOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeAccountPrivilegeByDB(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 SqlserverClient::DescribeAccountsOutcome SqlserverClient::DescribeAccounts(const DescribeAccountsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeAccounts");
@@ -1065,6 +1323,49 @@ SqlserverClient::DescribeAccountsOutcomeCallable SqlserverClient::DescribeAccoun
         [this, request]()
         {
             return this->DescribeAccounts(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::DescribeBackupByFlowIdOutcome SqlserverClient::DescribeBackupByFlowId(const DescribeBackupByFlowIdRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBackupByFlowId");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBackupByFlowIdResponse rsp = DescribeBackupByFlowIdResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBackupByFlowIdOutcome(rsp);
+        else
+            return DescribeBackupByFlowIdOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBackupByFlowIdOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DescribeBackupByFlowIdAsync(const DescribeBackupByFlowIdRequest& request, const DescribeBackupByFlowIdAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeBackupByFlowId(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DescribeBackupByFlowIdOutcomeCallable SqlserverClient::DescribeBackupByFlowIdCallable(const DescribeBackupByFlowIdRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeBackupByFlowIdOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeBackupByFlowId(request);
         }
     );
 
@@ -1194,6 +1495,135 @@ SqlserverClient::DescribeBackupMigrationOutcomeCallable SqlserverClient::Describ
         [this, request]()
         {
             return this->DescribeBackupMigration(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::DescribeBackupMonitorOutcome SqlserverClient::DescribeBackupMonitor(const DescribeBackupMonitorRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBackupMonitor");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBackupMonitorResponse rsp = DescribeBackupMonitorResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBackupMonitorOutcome(rsp);
+        else
+            return DescribeBackupMonitorOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBackupMonitorOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DescribeBackupMonitorAsync(const DescribeBackupMonitorRequest& request, const DescribeBackupMonitorAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeBackupMonitor(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DescribeBackupMonitorOutcomeCallable SqlserverClient::DescribeBackupMonitorCallable(const DescribeBackupMonitorRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeBackupMonitorOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeBackupMonitor(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::DescribeBackupStatisticalOutcome SqlserverClient::DescribeBackupStatistical(const DescribeBackupStatisticalRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBackupStatistical");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBackupStatisticalResponse rsp = DescribeBackupStatisticalResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBackupStatisticalOutcome(rsp);
+        else
+            return DescribeBackupStatisticalOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBackupStatisticalOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DescribeBackupStatisticalAsync(const DescribeBackupStatisticalRequest& request, const DescribeBackupStatisticalAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeBackupStatistical(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DescribeBackupStatisticalOutcomeCallable SqlserverClient::DescribeBackupStatisticalCallable(const DescribeBackupStatisticalRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeBackupStatisticalOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeBackupStatistical(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::DescribeBackupSummaryOutcome SqlserverClient::DescribeBackupSummary(const DescribeBackupSummaryRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBackupSummary");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBackupSummaryResponse rsp = DescribeBackupSummaryResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBackupSummaryOutcome(rsp);
+        else
+            return DescribeBackupSummaryOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBackupSummaryOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DescribeBackupSummaryAsync(const DescribeBackupSummaryRequest& request, const DescribeBackupSummaryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeBackupSummary(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DescribeBackupSummaryOutcomeCallable SqlserverClient::DescribeBackupSummaryCallable(const DescribeBackupSummaryRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeBackupSummaryOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeBackupSummary(request);
         }
     );
 
@@ -1373,6 +1803,49 @@ SqlserverClient::DescribeCollationTimeZoneOutcomeCallable SqlserverClient::Descr
     return task->get_future();
 }
 
+SqlserverClient::DescribeCrossBackupStatisticalOutcome SqlserverClient::DescribeCrossBackupStatistical(const DescribeCrossBackupStatisticalRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCrossBackupStatistical");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCrossBackupStatisticalResponse rsp = DescribeCrossBackupStatisticalResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCrossBackupStatisticalOutcome(rsp);
+        else
+            return DescribeCrossBackupStatisticalOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCrossBackupStatisticalOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DescribeCrossBackupStatisticalAsync(const DescribeCrossBackupStatisticalRequest& request, const DescribeCrossBackupStatisticalAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCrossBackupStatistical(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DescribeCrossBackupStatisticalOutcomeCallable SqlserverClient::DescribeCrossBackupStatisticalCallable(const DescribeCrossBackupStatisticalRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCrossBackupStatisticalOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCrossBackupStatistical(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 SqlserverClient::DescribeCrossRegionZoneOutcome SqlserverClient::DescribeCrossRegionZone(const DescribeCrossRegionZoneRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeCrossRegionZone");
@@ -1409,6 +1882,49 @@ SqlserverClient::DescribeCrossRegionZoneOutcomeCallable SqlserverClient::Describ
         [this, request]()
         {
             return this->DescribeCrossRegionZone(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::DescribeCrossRegionsOutcome SqlserverClient::DescribeCrossRegions(const DescribeCrossRegionsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCrossRegions");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCrossRegionsResponse rsp = DescribeCrossRegionsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCrossRegionsOutcome(rsp);
+        else
+            return DescribeCrossRegionsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCrossRegionsOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DescribeCrossRegionsAsync(const DescribeCrossRegionsRequest& request, const DescribeCrossRegionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCrossRegions(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DescribeCrossRegionsOutcomeCallable SqlserverClient::DescribeCrossRegionsCallable(const DescribeCrossRegionsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCrossRegionsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCrossRegions(request);
         }
     );
 
@@ -1588,6 +2104,135 @@ SqlserverClient::DescribeDBInstancesAttributeOutcomeCallable SqlserverClient::De
     return task->get_future();
 }
 
+SqlserverClient::DescribeDBPrivilegeByAccountOutcome SqlserverClient::DescribeDBPrivilegeByAccount(const DescribeDBPrivilegeByAccountRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDBPrivilegeByAccount");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDBPrivilegeByAccountResponse rsp = DescribeDBPrivilegeByAccountResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDBPrivilegeByAccountOutcome(rsp);
+        else
+            return DescribeDBPrivilegeByAccountOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDBPrivilegeByAccountOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DescribeDBPrivilegeByAccountAsync(const DescribeDBPrivilegeByAccountRequest& request, const DescribeDBPrivilegeByAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeDBPrivilegeByAccount(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DescribeDBPrivilegeByAccountOutcomeCallable SqlserverClient::DescribeDBPrivilegeByAccountCallable(const DescribeDBPrivilegeByAccountRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeDBPrivilegeByAccountOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeDBPrivilegeByAccount(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::DescribeDBRestoreTimeOutcome SqlserverClient::DescribeDBRestoreTime(const DescribeDBRestoreTimeRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDBRestoreTime");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDBRestoreTimeResponse rsp = DescribeDBRestoreTimeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDBRestoreTimeOutcome(rsp);
+        else
+            return DescribeDBRestoreTimeOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDBRestoreTimeOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DescribeDBRestoreTimeAsync(const DescribeDBRestoreTimeRequest& request, const DescribeDBRestoreTimeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeDBRestoreTime(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DescribeDBRestoreTimeOutcomeCallable SqlserverClient::DescribeDBRestoreTimeCallable(const DescribeDBRestoreTimeRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeDBRestoreTimeOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeDBRestoreTime(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::DescribeDBSecurityGroupsOutcome SqlserverClient::DescribeDBSecurityGroups(const DescribeDBSecurityGroupsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDBSecurityGroups");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDBSecurityGroupsResponse rsp = DescribeDBSecurityGroupsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDBSecurityGroupsOutcome(rsp);
+        else
+            return DescribeDBSecurityGroupsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDBSecurityGroupsOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DescribeDBSecurityGroupsAsync(const DescribeDBSecurityGroupsRequest& request, const DescribeDBSecurityGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeDBSecurityGroups(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DescribeDBSecurityGroupsOutcomeCallable SqlserverClient::DescribeDBSecurityGroupsCallable(const DescribeDBSecurityGroupsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeDBSecurityGroupsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeDBSecurityGroups(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 SqlserverClient::DescribeDBsOutcome SqlserverClient::DescribeDBs(const DescribeDBsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeDBs");
@@ -1674,6 +2319,49 @@ SqlserverClient::DescribeDBsNormalOutcomeCallable SqlserverClient::DescribeDBsNo
     return task->get_future();
 }
 
+SqlserverClient::DescribeDatabaseNamesOutcome SqlserverClient::DescribeDatabaseNames(const DescribeDatabaseNamesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDatabaseNames");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDatabaseNamesResponse rsp = DescribeDatabaseNamesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDatabaseNamesOutcome(rsp);
+        else
+            return DescribeDatabaseNamesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDatabaseNamesOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DescribeDatabaseNamesAsync(const DescribeDatabaseNamesRequest& request, const DescribeDatabaseNamesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeDatabaseNames(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DescribeDatabaseNamesOutcomeCallable SqlserverClient::DescribeDatabaseNamesCallable(const DescribeDatabaseNamesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeDatabaseNamesOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeDatabaseNames(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 SqlserverClient::DescribeDatabasesOutcome SqlserverClient::DescribeDatabases(const DescribeDatabasesRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeDatabases");
@@ -1717,6 +2405,49 @@ SqlserverClient::DescribeDatabasesOutcomeCallable SqlserverClient::DescribeDatab
     return task->get_future();
 }
 
+SqlserverClient::DescribeDatabasesNormalOutcome SqlserverClient::DescribeDatabasesNormal(const DescribeDatabasesNormalRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDatabasesNormal");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDatabasesNormalResponse rsp = DescribeDatabasesNormalResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDatabasesNormalOutcome(rsp);
+        else
+            return DescribeDatabasesNormalOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDatabasesNormalOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DescribeDatabasesNormalAsync(const DescribeDatabasesNormalRequest& request, const DescribeDatabasesNormalAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeDatabasesNormal(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DescribeDatabasesNormalOutcomeCallable SqlserverClient::DescribeDatabasesNormalCallable(const DescribeDatabasesNormalRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeDatabasesNormalOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeDatabasesNormal(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 SqlserverClient::DescribeFlowStatusOutcome SqlserverClient::DescribeFlowStatus(const DescribeFlowStatusRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeFlowStatus");
@@ -1753,6 +2484,49 @@ SqlserverClient::DescribeFlowStatusOutcomeCallable SqlserverClient::DescribeFlow
         [this, request]()
         {
             return this->DescribeFlowStatus(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::DescribeHASwitchLogOutcome SqlserverClient::DescribeHASwitchLog(const DescribeHASwitchLogRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeHASwitchLog");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeHASwitchLogResponse rsp = DescribeHASwitchLogResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeHASwitchLogOutcome(rsp);
+        else
+            return DescribeHASwitchLogOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeHASwitchLogOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DescribeHASwitchLogAsync(const DescribeHASwitchLogRequest& request, const DescribeHASwitchLogAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeHASwitchLog(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DescribeHASwitchLogOutcomeCallable SqlserverClient::DescribeHASwitchLogCallable(const DescribeHASwitchLogRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeHASwitchLogOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeHASwitchLog(request);
         }
     );
 
@@ -2233,6 +3007,264 @@ SqlserverClient::DescribeProductConfigOutcomeCallable SqlserverClient::DescribeP
     return task->get_future();
 }
 
+SqlserverClient::DescribeProjectSecurityGroupsOutcome SqlserverClient::DescribeProjectSecurityGroups(const DescribeProjectSecurityGroupsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeProjectSecurityGroups");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeProjectSecurityGroupsResponse rsp = DescribeProjectSecurityGroupsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeProjectSecurityGroupsOutcome(rsp);
+        else
+            return DescribeProjectSecurityGroupsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeProjectSecurityGroupsOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DescribeProjectSecurityGroupsAsync(const DescribeProjectSecurityGroupsRequest& request, const DescribeProjectSecurityGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeProjectSecurityGroups(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DescribeProjectSecurityGroupsOutcomeCallable SqlserverClient::DescribeProjectSecurityGroupsCallable(const DescribeProjectSecurityGroupsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeProjectSecurityGroupsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeProjectSecurityGroups(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::DescribePublishSubscribeOutcome SqlserverClient::DescribePublishSubscribe(const DescribePublishSubscribeRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribePublishSubscribe");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribePublishSubscribeResponse rsp = DescribePublishSubscribeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribePublishSubscribeOutcome(rsp);
+        else
+            return DescribePublishSubscribeOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribePublishSubscribeOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DescribePublishSubscribeAsync(const DescribePublishSubscribeRequest& request, const DescribePublishSubscribeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribePublishSubscribe(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DescribePublishSubscribeOutcomeCallable SqlserverClient::DescribePublishSubscribeCallable(const DescribePublishSubscribeRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribePublishSubscribeOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribePublishSubscribe(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::DescribeReadOnlyGroupAutoWeightOutcome SqlserverClient::DescribeReadOnlyGroupAutoWeight(const DescribeReadOnlyGroupAutoWeightRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeReadOnlyGroupAutoWeight");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeReadOnlyGroupAutoWeightResponse rsp = DescribeReadOnlyGroupAutoWeightResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeReadOnlyGroupAutoWeightOutcome(rsp);
+        else
+            return DescribeReadOnlyGroupAutoWeightOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeReadOnlyGroupAutoWeightOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DescribeReadOnlyGroupAutoWeightAsync(const DescribeReadOnlyGroupAutoWeightRequest& request, const DescribeReadOnlyGroupAutoWeightAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeReadOnlyGroupAutoWeight(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DescribeReadOnlyGroupAutoWeightOutcomeCallable SqlserverClient::DescribeReadOnlyGroupAutoWeightCallable(const DescribeReadOnlyGroupAutoWeightRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeReadOnlyGroupAutoWeightOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeReadOnlyGroupAutoWeight(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::DescribeReadOnlyGroupByReadOnlyInstanceOutcome SqlserverClient::DescribeReadOnlyGroupByReadOnlyInstance(const DescribeReadOnlyGroupByReadOnlyInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeReadOnlyGroupByReadOnlyInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeReadOnlyGroupByReadOnlyInstanceResponse rsp = DescribeReadOnlyGroupByReadOnlyInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeReadOnlyGroupByReadOnlyInstanceOutcome(rsp);
+        else
+            return DescribeReadOnlyGroupByReadOnlyInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeReadOnlyGroupByReadOnlyInstanceOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DescribeReadOnlyGroupByReadOnlyInstanceAsync(const DescribeReadOnlyGroupByReadOnlyInstanceRequest& request, const DescribeReadOnlyGroupByReadOnlyInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeReadOnlyGroupByReadOnlyInstance(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DescribeReadOnlyGroupByReadOnlyInstanceOutcomeCallable SqlserverClient::DescribeReadOnlyGroupByReadOnlyInstanceCallable(const DescribeReadOnlyGroupByReadOnlyInstanceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeReadOnlyGroupByReadOnlyInstanceOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeReadOnlyGroupByReadOnlyInstance(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::DescribeReadOnlyGroupDetailsOutcome SqlserverClient::DescribeReadOnlyGroupDetails(const DescribeReadOnlyGroupDetailsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeReadOnlyGroupDetails");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeReadOnlyGroupDetailsResponse rsp = DescribeReadOnlyGroupDetailsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeReadOnlyGroupDetailsOutcome(rsp);
+        else
+            return DescribeReadOnlyGroupDetailsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeReadOnlyGroupDetailsOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DescribeReadOnlyGroupDetailsAsync(const DescribeReadOnlyGroupDetailsRequest& request, const DescribeReadOnlyGroupDetailsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeReadOnlyGroupDetails(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DescribeReadOnlyGroupDetailsOutcomeCallable SqlserverClient::DescribeReadOnlyGroupDetailsCallable(const DescribeReadOnlyGroupDetailsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeReadOnlyGroupDetailsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeReadOnlyGroupDetails(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::DescribeReadOnlyGroupListOutcome SqlserverClient::DescribeReadOnlyGroupList(const DescribeReadOnlyGroupListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeReadOnlyGroupList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeReadOnlyGroupListResponse rsp = DescribeReadOnlyGroupListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeReadOnlyGroupListOutcome(rsp);
+        else
+            return DescribeReadOnlyGroupListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeReadOnlyGroupListOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DescribeReadOnlyGroupListAsync(const DescribeReadOnlyGroupListRequest& request, const DescribeReadOnlyGroupListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeReadOnlyGroupList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DescribeReadOnlyGroupListOutcomeCallable SqlserverClient::DescribeReadOnlyGroupListCallable(const DescribeReadOnlyGroupListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeReadOnlyGroupListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeReadOnlyGroupList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 SqlserverClient::DescribeRegionsOutcome SqlserverClient::DescribeRegions(const DescribeRegionsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeRegions");
@@ -2269,6 +3301,92 @@ SqlserverClient::DescribeRegionsOutcomeCallable SqlserverClient::DescribeRegions
         [this, request]()
         {
             return this->DescribeRegions(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::DescribeRegularBackupPlanOutcome SqlserverClient::DescribeRegularBackupPlan(const DescribeRegularBackupPlanRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRegularBackupPlan");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRegularBackupPlanResponse rsp = DescribeRegularBackupPlanResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRegularBackupPlanOutcome(rsp);
+        else
+            return DescribeRegularBackupPlanOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRegularBackupPlanOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DescribeRegularBackupPlanAsync(const DescribeRegularBackupPlanRequest& request, const DescribeRegularBackupPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeRegularBackupPlan(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DescribeRegularBackupPlanOutcomeCallable SqlserverClient::DescribeRegularBackupPlanCallable(const DescribeRegularBackupPlanRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeRegularBackupPlanOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeRegularBackupPlan(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::DescribeRestoreTaskOutcome SqlserverClient::DescribeRestoreTask(const DescribeRestoreTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRestoreTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRestoreTaskResponse rsp = DescribeRestoreTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRestoreTaskOutcome(rsp);
+        else
+            return DescribeRestoreTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRestoreTaskOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DescribeRestoreTaskAsync(const DescribeRestoreTaskRequest& request, const DescribeRestoreTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeRestoreTask(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DescribeRestoreTaskOutcomeCallable SqlserverClient::DescribeRestoreTaskCallable(const DescribeRestoreTaskRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeRestoreTaskOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeRestoreTask(request);
         }
     );
 
@@ -2620,6 +3738,49 @@ SqlserverClient::DescribeZonesOutcomeCallable SqlserverClient::DescribeZonesCall
     return task->get_future();
 }
 
+SqlserverClient::DisassociateSecurityGroupsOutcome SqlserverClient::DisassociateSecurityGroups(const DisassociateSecurityGroupsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DisassociateSecurityGroups");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DisassociateSecurityGroupsResponse rsp = DisassociateSecurityGroupsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DisassociateSecurityGroupsOutcome(rsp);
+        else
+            return DisassociateSecurityGroupsOutcome(o.GetError());
+    }
+    else
+    {
+        return DisassociateSecurityGroupsOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DisassociateSecurityGroupsAsync(const DisassociateSecurityGroupsRequest& request, const DisassociateSecurityGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DisassociateSecurityGroups(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::DisassociateSecurityGroupsOutcomeCallable SqlserverClient::DisassociateSecurityGroupsCallable(const DisassociateSecurityGroupsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DisassociateSecurityGroupsOutcome()>>(
+        [this, request]()
+        {
+            return this->DisassociateSecurityGroups(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 SqlserverClient::InquiryPriceCreateDBInstancesOutcome SqlserverClient::InquiryPriceCreateDBInstances(const InquiryPriceCreateDBInstancesRequest &request)
 {
     auto outcome = MakeRequest(request, "InquiryPriceCreateDBInstances");
@@ -2835,6 +3996,49 @@ SqlserverClient::ModifyBackupMigrationOutcomeCallable SqlserverClient::ModifyBac
     return task->get_future();
 }
 
+SqlserverClient::ModifyBackupNameOutcome SqlserverClient::ModifyBackupName(const ModifyBackupNameRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyBackupName");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyBackupNameResponse rsp = ModifyBackupNameResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyBackupNameOutcome(rsp);
+        else
+            return ModifyBackupNameOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyBackupNameOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::ModifyBackupNameAsync(const ModifyBackupNameRequest& request, const ModifyBackupNameAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyBackupName(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::ModifyBackupNameOutcomeCallable SqlserverClient::ModifyBackupNameCallable(const ModifyBackupNameRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyBackupNameOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyBackupName(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 SqlserverClient::ModifyBackupStrategyOutcome SqlserverClient::ModifyBackupStrategy(const ModifyBackupStrategyRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyBackupStrategy");
@@ -2871,6 +4075,92 @@ SqlserverClient::ModifyBackupStrategyOutcomeCallable SqlserverClient::ModifyBack
         [this, request]()
         {
             return this->ModifyBackupStrategy(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::ModifyCloseWanIpOutcome SqlserverClient::ModifyCloseWanIp(const ModifyCloseWanIpRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyCloseWanIp");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyCloseWanIpResponse rsp = ModifyCloseWanIpResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyCloseWanIpOutcome(rsp);
+        else
+            return ModifyCloseWanIpOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyCloseWanIpOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::ModifyCloseWanIpAsync(const ModifyCloseWanIpRequest& request, const ModifyCloseWanIpAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyCloseWanIp(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::ModifyCloseWanIpOutcomeCallable SqlserverClient::ModifyCloseWanIpCallable(const ModifyCloseWanIpRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyCloseWanIpOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyCloseWanIp(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::ModifyCrossBackupStrategyOutcome SqlserverClient::ModifyCrossBackupStrategy(const ModifyCrossBackupStrategyRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyCrossBackupStrategy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyCrossBackupStrategyResponse rsp = ModifyCrossBackupStrategyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyCrossBackupStrategyOutcome(rsp);
+        else
+            return ModifyCrossBackupStrategyOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyCrossBackupStrategyOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::ModifyCrossBackupStrategyAsync(const ModifyCrossBackupStrategyRequest& request, const ModifyCrossBackupStrategyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyCrossBackupStrategy(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::ModifyCrossBackupStrategyOutcomeCallable SqlserverClient::ModifyCrossBackupStrategyCallable(const ModifyCrossBackupStrategyRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyCrossBackupStrategyOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyCrossBackupStrategy(request);
         }
     );
 
@@ -3086,6 +4376,92 @@ SqlserverClient::ModifyDBInstanceProjectOutcomeCallable SqlserverClient::ModifyD
         [this, request]()
         {
             return this->ModifyDBInstanceProject(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::ModifyDBInstanceSSLOutcome SqlserverClient::ModifyDBInstanceSSL(const ModifyDBInstanceSSLRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyDBInstanceSSL");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyDBInstanceSSLResponse rsp = ModifyDBInstanceSSLResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyDBInstanceSSLOutcome(rsp);
+        else
+            return ModifyDBInstanceSSLOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyDBInstanceSSLOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::ModifyDBInstanceSSLAsync(const ModifyDBInstanceSSLRequest& request, const ModifyDBInstanceSSLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyDBInstanceSSL(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::ModifyDBInstanceSSLOutcomeCallable SqlserverClient::ModifyDBInstanceSSLCallable(const ModifyDBInstanceSSLRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyDBInstanceSSLOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyDBInstanceSSL(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::ModifyDBInstanceSecurityGroupsOutcome SqlserverClient::ModifyDBInstanceSecurityGroups(const ModifyDBInstanceSecurityGroupsRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyDBInstanceSecurityGroups");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyDBInstanceSecurityGroupsResponse rsp = ModifyDBInstanceSecurityGroupsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyDBInstanceSecurityGroupsOutcome(rsp);
+        else
+            return ModifyDBInstanceSecurityGroupsOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyDBInstanceSecurityGroupsOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::ModifyDBInstanceSecurityGroupsAsync(const ModifyDBInstanceSecurityGroupsRequest& request, const ModifyDBInstanceSecurityGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyDBInstanceSecurityGroups(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::ModifyDBInstanceSecurityGroupsOutcomeCallable SqlserverClient::ModifyDBInstanceSecurityGroupsCallable(const ModifyDBInstanceSecurityGroupsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyDBInstanceSecurityGroupsOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyDBInstanceSecurityGroups(request);
         }
     );
 
@@ -3351,6 +4727,92 @@ SqlserverClient::ModifyDatabaseMdfOutcomeCallable SqlserverClient::ModifyDatabas
     return task->get_future();
 }
 
+SqlserverClient::ModifyDatabasePrivilegeOutcome SqlserverClient::ModifyDatabasePrivilege(const ModifyDatabasePrivilegeRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyDatabasePrivilege");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyDatabasePrivilegeResponse rsp = ModifyDatabasePrivilegeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyDatabasePrivilegeOutcome(rsp);
+        else
+            return ModifyDatabasePrivilegeOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyDatabasePrivilegeOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::ModifyDatabasePrivilegeAsync(const ModifyDatabasePrivilegeRequest& request, const ModifyDatabasePrivilegeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyDatabasePrivilege(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::ModifyDatabasePrivilegeOutcomeCallable SqlserverClient::ModifyDatabasePrivilegeCallable(const ModifyDatabasePrivilegeRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyDatabasePrivilegeOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyDatabasePrivilege(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::ModifyDatabaseShrinkMDFOutcome SqlserverClient::ModifyDatabaseShrinkMDF(const ModifyDatabaseShrinkMDFRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyDatabaseShrinkMDF");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyDatabaseShrinkMDFResponse rsp = ModifyDatabaseShrinkMDFResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyDatabaseShrinkMDFOutcome(rsp);
+        else
+            return ModifyDatabaseShrinkMDFOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyDatabaseShrinkMDFOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::ModifyDatabaseShrinkMDFAsync(const ModifyDatabaseShrinkMDFRequest& request, const ModifyDatabaseShrinkMDFAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyDatabaseShrinkMDF(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::ModifyDatabaseShrinkMDFOutcomeCallable SqlserverClient::ModifyDatabaseShrinkMDFCallable(const ModifyDatabaseShrinkMDFRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyDatabaseShrinkMDFOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyDatabaseShrinkMDF(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 SqlserverClient::ModifyIncrementalMigrationOutcome SqlserverClient::ModifyIncrementalMigration(const ModifyIncrementalMigrationRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyIncrementalMigration");
@@ -3480,6 +4942,49 @@ SqlserverClient::ModifyInstanceParamOutcomeCallable SqlserverClient::ModifyInsta
     return task->get_future();
 }
 
+SqlserverClient::ModifyMaintenanceSpanOutcome SqlserverClient::ModifyMaintenanceSpan(const ModifyMaintenanceSpanRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyMaintenanceSpan");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyMaintenanceSpanResponse rsp = ModifyMaintenanceSpanResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyMaintenanceSpanOutcome(rsp);
+        else
+            return ModifyMaintenanceSpanOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyMaintenanceSpanOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::ModifyMaintenanceSpanAsync(const ModifyMaintenanceSpanRequest& request, const ModifyMaintenanceSpanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyMaintenanceSpan(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::ModifyMaintenanceSpanOutcomeCallable SqlserverClient::ModifyMaintenanceSpanCallable(const ModifyMaintenanceSpanRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyMaintenanceSpanOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyMaintenanceSpan(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 SqlserverClient::ModifyMigrationOutcome SqlserverClient::ModifyMigration(const ModifyMigrationRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyMigration");
@@ -3516,6 +5021,178 @@ SqlserverClient::ModifyMigrationOutcomeCallable SqlserverClient::ModifyMigration
         [this, request]()
         {
             return this->ModifyMigration(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::ModifyOpenWanIpOutcome SqlserverClient::ModifyOpenWanIp(const ModifyOpenWanIpRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyOpenWanIp");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyOpenWanIpResponse rsp = ModifyOpenWanIpResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyOpenWanIpOutcome(rsp);
+        else
+            return ModifyOpenWanIpOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyOpenWanIpOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::ModifyOpenWanIpAsync(const ModifyOpenWanIpRequest& request, const ModifyOpenWanIpAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyOpenWanIp(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::ModifyOpenWanIpOutcomeCallable SqlserverClient::ModifyOpenWanIpCallable(const ModifyOpenWanIpRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyOpenWanIpOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyOpenWanIp(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::ModifyPublishSubscribeOutcome SqlserverClient::ModifyPublishSubscribe(const ModifyPublishSubscribeRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyPublishSubscribe");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyPublishSubscribeResponse rsp = ModifyPublishSubscribeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyPublishSubscribeOutcome(rsp);
+        else
+            return ModifyPublishSubscribeOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyPublishSubscribeOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::ModifyPublishSubscribeAsync(const ModifyPublishSubscribeRequest& request, const ModifyPublishSubscribeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyPublishSubscribe(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::ModifyPublishSubscribeOutcomeCallable SqlserverClient::ModifyPublishSubscribeCallable(const ModifyPublishSubscribeRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyPublishSubscribeOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyPublishSubscribe(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::ModifyPublishSubscribeNameOutcome SqlserverClient::ModifyPublishSubscribeName(const ModifyPublishSubscribeNameRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyPublishSubscribeName");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyPublishSubscribeNameResponse rsp = ModifyPublishSubscribeNameResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyPublishSubscribeNameOutcome(rsp);
+        else
+            return ModifyPublishSubscribeNameOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyPublishSubscribeNameOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::ModifyPublishSubscribeNameAsync(const ModifyPublishSubscribeNameRequest& request, const ModifyPublishSubscribeNameAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyPublishSubscribeName(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::ModifyPublishSubscribeNameOutcomeCallable SqlserverClient::ModifyPublishSubscribeNameCallable(const ModifyPublishSubscribeNameRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyPublishSubscribeNameOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyPublishSubscribeName(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::ModifyReadOnlyGroupDetailsOutcome SqlserverClient::ModifyReadOnlyGroupDetails(const ModifyReadOnlyGroupDetailsRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyReadOnlyGroupDetails");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyReadOnlyGroupDetailsResponse rsp = ModifyReadOnlyGroupDetailsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyReadOnlyGroupDetailsOutcome(rsp);
+        else
+            return ModifyReadOnlyGroupDetailsOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyReadOnlyGroupDetailsOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::ModifyReadOnlyGroupDetailsAsync(const ModifyReadOnlyGroupDetailsRequest& request, const ModifyReadOnlyGroupDetailsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyReadOnlyGroupDetails(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::ModifyReadOnlyGroupDetailsOutcomeCallable SqlserverClient::ModifyReadOnlyGroupDetailsCallable(const ModifyReadOnlyGroupDetailsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyReadOnlyGroupDetailsOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyReadOnlyGroupDetails(request);
         }
     );
 
@@ -3602,6 +5279,135 @@ SqlserverClient::RecycleDBInstanceOutcomeCallable SqlserverClient::RecycleDBInst
         [this, request]()
         {
             return this->RecycleDBInstance(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::RecycleReadOnlyGroupOutcome SqlserverClient::RecycleReadOnlyGroup(const RecycleReadOnlyGroupRequest &request)
+{
+    auto outcome = MakeRequest(request, "RecycleReadOnlyGroup");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RecycleReadOnlyGroupResponse rsp = RecycleReadOnlyGroupResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RecycleReadOnlyGroupOutcome(rsp);
+        else
+            return RecycleReadOnlyGroupOutcome(o.GetError());
+    }
+    else
+    {
+        return RecycleReadOnlyGroupOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::RecycleReadOnlyGroupAsync(const RecycleReadOnlyGroupRequest& request, const RecycleReadOnlyGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RecycleReadOnlyGroup(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::RecycleReadOnlyGroupOutcomeCallable SqlserverClient::RecycleReadOnlyGroupCallable(const RecycleReadOnlyGroupRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RecycleReadOnlyGroupOutcome()>>(
+        [this, request]()
+        {
+            return this->RecycleReadOnlyGroup(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::RemoveBackupsOutcome SqlserverClient::RemoveBackups(const RemoveBackupsRequest &request)
+{
+    auto outcome = MakeRequest(request, "RemoveBackups");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RemoveBackupsResponse rsp = RemoveBackupsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RemoveBackupsOutcome(rsp);
+        else
+            return RemoveBackupsOutcome(o.GetError());
+    }
+    else
+    {
+        return RemoveBackupsOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::RemoveBackupsAsync(const RemoveBackupsRequest& request, const RemoveBackupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RemoveBackups(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::RemoveBackupsOutcomeCallable SqlserverClient::RemoveBackupsCallable(const RemoveBackupsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RemoveBackupsOutcome()>>(
+        [this, request]()
+        {
+            return this->RemoveBackups(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::RenewPostpaidDBInstanceOutcome SqlserverClient::RenewPostpaidDBInstance(const RenewPostpaidDBInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "RenewPostpaidDBInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RenewPostpaidDBInstanceResponse rsp = RenewPostpaidDBInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RenewPostpaidDBInstanceOutcome(rsp);
+        else
+            return RenewPostpaidDBInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return RenewPostpaidDBInstanceOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::RenewPostpaidDBInstanceAsync(const RenewPostpaidDBInstanceRequest& request, const RenewPostpaidDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RenewPostpaidDBInstance(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::RenewPostpaidDBInstanceOutcomeCallable SqlserverClient::RenewPostpaidDBInstanceCallable(const RenewPostpaidDBInstanceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RenewPostpaidDBInstanceOutcome()>>(
+        [this, request]()
+        {
+            return this->RenewPostpaidDBInstance(request);
         }
     );
 
@@ -3946,6 +5752,49 @@ SqlserverClient::StartInstanceXEventOutcomeCallable SqlserverClient::StartInstan
         [this, request]()
         {
             return this->StartInstanceXEvent(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SqlserverClient::SwitchCloudInstanceHAOutcome SqlserverClient::SwitchCloudInstanceHA(const SwitchCloudInstanceHARequest &request)
+{
+    auto outcome = MakeRequest(request, "SwitchCloudInstanceHA");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        SwitchCloudInstanceHAResponse rsp = SwitchCloudInstanceHAResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return SwitchCloudInstanceHAOutcome(rsp);
+        else
+            return SwitchCloudInstanceHAOutcome(o.GetError());
+    }
+    else
+    {
+        return SwitchCloudInstanceHAOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::SwitchCloudInstanceHAAsync(const SwitchCloudInstanceHARequest& request, const SwitchCloudInstanceHAAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->SwitchCloudInstanceHA(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::SwitchCloudInstanceHAOutcomeCallable SqlserverClient::SwitchCloudInstanceHACallable(const SwitchCloudInstanceHARequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<SwitchCloudInstanceHAOutcome()>>(
+        [this, request]()
+        {
+            return this->SwitchCloudInstanceHA(request);
         }
     );
 
