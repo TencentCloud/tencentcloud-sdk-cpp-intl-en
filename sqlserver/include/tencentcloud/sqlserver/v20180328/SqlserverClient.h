@@ -33,6 +33,8 @@
 #include <tencentcloud/sqlserver/v20180328/model/CloseInterCommunicationResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/CompleteExpansionRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/CompleteExpansionResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/CompleteMigrationRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/CompleteMigrationResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/CreateAccountRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/CreateAccountResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/CreateBackupRequest.h>
@@ -153,6 +155,8 @@
 #include <tencentcloud/sqlserver/v20180328/model/DescribeInstanceTradeParameterResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeMaintenanceSpanRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeMaintenanceSpanResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeMigrationDatabasesRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeMigrationDatabasesResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeMigrationDetailRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeMigrationDetailResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeMigrationsRequest.h>
@@ -324,6 +328,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CompleteExpansionResponse> CompleteExpansionOutcome;
                 typedef std::future<CompleteExpansionOutcome> CompleteExpansionOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::CompleteExpansionRequest&, CompleteExpansionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CompleteExpansionAsyncHandler;
+                typedef Outcome<Core::Error, Model::CompleteMigrationResponse> CompleteMigrationOutcome;
+                typedef std::future<CompleteMigrationOutcome> CompleteMigrationOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::CompleteMigrationRequest&, CompleteMigrationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CompleteMigrationAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateAccountResponse> CreateAccountOutcome;
                 typedef std::future<CreateAccountOutcome> CreateAccountOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::CreateAccountRequest&, CreateAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAccountAsyncHandler;
@@ -504,6 +511,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeMaintenanceSpanResponse> DescribeMaintenanceSpanOutcome;
                 typedef std::future<DescribeMaintenanceSpanOutcome> DescribeMaintenanceSpanOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DescribeMaintenanceSpanRequest&, DescribeMaintenanceSpanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMaintenanceSpanAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMigrationDatabasesResponse> DescribeMigrationDatabasesOutcome;
+                typedef std::future<DescribeMigrationDatabasesOutcome> DescribeMigrationDatabasesOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::DescribeMigrationDatabasesRequest&, DescribeMigrationDatabasesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMigrationDatabasesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMigrationDetailResponse> DescribeMigrationDetailOutcome;
                 typedef std::future<DescribeMigrationDetailOutcome> DescribeMigrationDetailOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DescribeMigrationDetailRequest&, DescribeMigrationDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMigrationDetailAsyncHandler;
@@ -764,6 +774,15 @@ namespace TencentCloud
                 CompleteExpansionOutcome CompleteExpansion(const Model::CompleteExpansionRequest &request);
                 void CompleteExpansionAsync(const Model::CompleteExpansionRequest& request, const CompleteExpansionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CompleteExpansionOutcomeCallable CompleteExpansionCallable(const Model::CompleteExpansionRequest& request);
+
+                /**
+                 *This API is used to complete a migration task.
+                 * @param req CompleteMigrationRequest
+                 * @return CompleteMigrationOutcome
+                 */
+                CompleteMigrationOutcome CompleteMigration(const Model::CompleteMigrationRequest &request);
+                void CompleteMigrationAsync(const Model::CompleteMigrationRequest& request, const CompleteMigrationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CompleteMigrationOutcomeCallable CompleteMigrationCallable(const Model::CompleteMigrationRequest& request);
 
                 /**
                  *This API is used to create an instance account.
@@ -1304,6 +1323,15 @@ namespace TencentCloud
                 DescribeMaintenanceSpanOutcome DescribeMaintenanceSpan(const Model::DescribeMaintenanceSpanRequest &request);
                 void DescribeMaintenanceSpanAsync(const Model::DescribeMaintenanceSpanRequest& request, const DescribeMaintenanceSpanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeMaintenanceSpanOutcomeCallable DescribeMaintenanceSpanCallable(const Model::DescribeMaintenanceSpanRequest& request);
+
+                /**
+                 *This API is used to query the list of databases to be migrated.
+                 * @param req DescribeMigrationDatabasesRequest
+                 * @return DescribeMigrationDatabasesOutcome
+                 */
+                DescribeMigrationDatabasesOutcome DescribeMigrationDatabases(const Model::DescribeMigrationDatabasesRequest &request);
+                void DescribeMigrationDatabasesAsync(const Model::DescribeMigrationDatabasesRequest& request, const DescribeMigrationDatabasesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMigrationDatabasesOutcomeCallable DescribeMigrationDatabasesCallable(const Model::DescribeMigrationDatabasesRequest& request);
 
                 /**
                  *This API is used to query migration task details.
