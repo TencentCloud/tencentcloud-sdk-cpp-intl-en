@@ -196,6 +196,10 @@ Default true.
 -- MultiRealEstateCertificate
 -- MultiRealEstateMaterial
 -- HongKongUtilityBill
+-- OverseasCheques
+-- RegistrationCertificate
+-- GridPhoto
+-- SignaturePage
                      * @return ConfigId Configuration ID support: 
 -- General
 -- InvoiceEng
@@ -214,6 +218,10 @@ Default true.
 -- MultiRealEstateCertificate
 -- MultiRealEstateMaterial
 -- HongKongUtilityBill
+-- OverseasCheques
+-- RegistrationCertificate
+-- GridPhoto
+-- SignaturePage
                      * 
                      */
                     std::string GetConfigId() const;
@@ -237,6 +245,10 @@ Default true.
 -- MultiRealEstateCertificate
 -- MultiRealEstateMaterial
 -- HongKongUtilityBill
+-- OverseasCheques
+-- RegistrationCertificate
+-- GridPhoto
+-- SignaturePage
                      * @param _configId Configuration ID support: 
 -- General
 -- InvoiceEng
@@ -255,6 +267,10 @@ Default true.
 -- MultiRealEstateCertificate
 -- MultiRealEstateMaterial
 -- HongKongUtilityBill
+-- OverseasCheques
+-- RegistrationCertificate
+-- GridPhoto
+-- SignaturePage
                      * 
                      */
                     void SetConfigId(const std::string& _configId);
@@ -413,6 +429,10 @@ Default true.
 -- MultiRealEstateCertificate
 -- MultiRealEstateMaterial
 -- HongKongUtilityBill
+-- OverseasCheques
+-- RegistrationCertificate
+-- GridPhoto
+-- SignaturePage
                      */
                     std::string m_configId;
                     bool m_configIdHasBeenSet;
