@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/ccc/v20200210/model/ForwardingConfig.h>
 
 
 namespace TencentCloud
@@ -252,6 +253,27 @@ namespace TencentCloud
                      */
                     bool ExtensionNumberHasBeenSet() const;
 
+                    /**
+                     * 获取Call forwarding configuration.
+                     * @return ForwardingConfig Call forwarding configuration.
+                     * 
+                     */
+                    ForwardingConfig GetForwardingConfig() const;
+
+                    /**
+                     * 设置Call forwarding configuration.
+                     * @param _forwardingConfig Call forwarding configuration.
+                     * 
+                     */
+                    void SetForwardingConfig(const ForwardingConfig& _forwardingConfig);
+
+                    /**
+                     * 判断参数 ForwardingConfig 是否已赋值
+                     * @return ForwardingConfig 是否已赋值
+                     * 
+                     */
+                    bool ForwardingConfigHasBeenSet() const;
+
                 private:
 
                     /**
@@ -313,6 +335,12 @@ namespace TencentCloud
                      */
                     std::string m_extensionNumber;
                     bool m_extensionNumberHasBeenSet;
+
+                    /**
+                     * Call forwarding configuration.
+                     */
+                    ForwardingConfig m_forwardingConfig;
+                    bool m_forwardingConfigHasBeenSet;
 
                 };
             }

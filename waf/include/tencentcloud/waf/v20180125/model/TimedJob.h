@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start timestamp, in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StartDateTime Start timestamp, in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Start timestamp, in seconds.
+                     * @return StartDateTime Start timestamp, in seconds.
                      * 
                      */
                     uint64_t GetStartDateTime() const;
 
                     /**
-                     * 设置Start timestamp, in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _startDateTime Start timestamp, in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Start timestamp, in seconds.
+                     * @param _startDateTime Start timestamp, in seconds.
                      * 
                      */
                     void SetStartDateTime(const uint64_t& _startDateTime);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StartDateTimeHasBeenSet() const;
 
                     /**
-                     * 获取End timestamp, in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EndDateTime End timestamp, in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取End timestamp, in seconds.
+                     * @return EndDateTime End timestamp, in seconds.
                      * 
                      */
                     uint64_t GetEndDateTime() const;
 
                     /**
-                     * 设置End timestamp, in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _endDateTime End timestamp, in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置End timestamp, in seconds.
+                     * @param _endDateTime End timestamp, in seconds.
                      * 
                      */
                     void SetEndDateTime(const uint64_t& _endDateTime);
@@ -99,15 +91,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Start timestamp, in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Start timestamp, in seconds.
                      */
                     uint64_t m_startDateTime;
                     bool m_startDateTimeHasBeenSet;
 
                     /**
-                     * End timestamp, in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * End timestamp, in seconds.
                      */
                     uint64_t m_endDateTime;
                     bool m_endDateTimeHasBeenSet;

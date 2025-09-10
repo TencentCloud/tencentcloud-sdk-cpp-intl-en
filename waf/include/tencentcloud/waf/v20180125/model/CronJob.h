@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Days in each month for execution
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Days Days in each month for execution
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Execution day of each month.
+                     * @return Days Execution day of each month.
                      * 
                      */
                     std::vector<uint64_t> GetDays() const;
 
                     /**
-                     * 设置Days in each month for execution
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _days Days in each month for execution
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Execution day of each month.
+                     * @param _days Execution day of each month.
                      * 
                      */
                     void SetDays(const std::vector<uint64_t>& _days);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DaysHasBeenSet() const;
 
                     /**
-                     * 获取Days of each week for execution
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return WDays Days of each week for execution
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Execution day of each week.
+                     * @return WDays Execution day of each week.
                      * 
                      */
                     std::vector<uint64_t> GetWDays() const;
 
                     /**
-                     * 设置Days of each week for execution
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _wDays Days of each week for execution
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Execution day of each week.
+                     * @param _wDays Execution day of each week.
                      * 
                      */
                     void SetWDays(const std::vector<uint64_t>& _wDays);
@@ -97,23 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WDaysHasBeenSet() const;
 
                     /**
-                     * 获取Start time
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StartTime Start time
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Start time.
+                     * @return StartTime Start time.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start time
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _startTime Start time
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Start time.
+                     * @param _startTime Start time.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -127,22 +111,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取End time
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EndTime End time
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _endTime End time
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -157,31 +133,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Days in each month for execution
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Execution day of each month.
                      */
                     std::vector<uint64_t> m_days;
                     bool m_daysHasBeenSet;
 
                     /**
-                     * Days of each week for execution
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Execution day of each week.
                      */
                     std::vector<uint64_t> m_wDays;
                     bool m_wDaysHasBeenSet;
 
                     /**
-                     * Start time
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Start time.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
                      * End time
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;

@@ -33,7 +33,9 @@ WebVerificationConfigIntl::WebVerificationConfigIntl() :
     m_languageHasBeenSet(false),
     m_autoDowngradeHasBeenSet(false),
     m_actionListHasBeenSet(false),
-    m_livenessRetryLimitHasBeenSet(false)
+    m_livenessRetryLimitHasBeenSet(false),
+    m_livenessTimeoutHasBeenSet(false),
+    m_selectedWarningCodesHasBeenSet(false)
 {
 }
 
@@ -172,6 +174,26 @@ CoreInternalOutcome WebVerificationConfigIntl::Deserialize(const rapidjson::Valu
         m_livenessRetryLimitHasBeenSet = true;
     }
 
+    if (value.HasMember("LivenessTimeout") && !value["LivenessTimeout"].IsNull())
+    {
+        if (!value["LivenessTimeout"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `WebVerificationConfigIntl.LivenessTimeout` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_livenessTimeout = value["LivenessTimeout"].GetUint64();
+        m_livenessTimeoutHasBeenSet = true;
+    }
+
+    if (value.HasMember("SelectedWarningCodes") && !value["SelectedWarningCodes"].IsNull())
+    {
+        if (!value["SelectedWarningCodes"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `WebVerificationConfigIntl.SelectedWarningCodes` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_selectedWarningCodes = string(value["SelectedWarningCodes"].GetString());
+        m_selectedWarningCodesHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -281,6 +303,22 @@ void WebVerificationConfigIntl::ToJsonObject(rapidjson::Value &value, rapidjson:
         string key = "LivenessRetryLimit";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_livenessRetryLimit, allocator);
+    }
+
+    if (m_livenessTimeoutHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LivenessTimeout";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_livenessTimeout, allocator);
+    }
+
+    if (m_selectedWarningCodesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SelectedWarningCodes";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_selectedWarningCodes.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -492,5 +530,37 @@ void WebVerificationConfigIntl::SetLivenessRetryLimit(const int64_t& _livenessRe
 bool WebVerificationConfigIntl::LivenessRetryLimitHasBeenSet() const
 {
     return m_livenessRetryLimitHasBeenSet;
+}
+
+uint64_t WebVerificationConfigIntl::GetLivenessTimeout() const
+{
+    return m_livenessTimeout;
+}
+
+void WebVerificationConfigIntl::SetLivenessTimeout(const uint64_t& _livenessTimeout)
+{
+    m_livenessTimeout = _livenessTimeout;
+    m_livenessTimeoutHasBeenSet = true;
+}
+
+bool WebVerificationConfigIntl::LivenessTimeoutHasBeenSet() const
+{
+    return m_livenessTimeoutHasBeenSet;
+}
+
+string WebVerificationConfigIntl::GetSelectedWarningCodes() const
+{
+    return m_selectedWarningCodes;
+}
+
+void WebVerificationConfigIntl::SetSelectedWarningCodes(const string& _selectedWarningCodes)
+{
+    m_selectedWarningCodes = _selectedWarningCodes;
+    m_selectedWarningCodesHasBeenSet = true;
+}
+
+bool WebVerificationConfigIntl::SelectedWarningCodesHasBeenSet() const
+{
+    return m_selectedWarningCodesHasBeenSet;
 }
 

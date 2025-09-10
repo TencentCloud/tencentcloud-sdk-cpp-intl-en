@@ -435,6 +435,48 @@ The default value is blink. The different action types passed in this parameter 
                      */
                     bool LivenessRetryLimitHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the liveness detection timeout period in seconds. value range: (0,600].
+                     * @return LivenessTimeout Specifies the liveness detection timeout period in seconds. value range: (0,600].
+                     * 
+                     */
+                    uint64_t GetLivenessTimeout() const;
+
+                    /**
+                     * 设置Specifies the liveness detection timeout period in seconds. value range: (0,600].
+                     * @param _livenessTimeout Specifies the liveness detection timeout period in seconds. value range: (0,600].
+                     * 
+                     */
+                    void SetLivenessTimeout(const uint64_t& _livenessTimeout);
+
+                    /**
+                     * 判断参数 LivenessTimeout 是否已赋值
+                     * @return LivenessTimeout 是否已赋值
+                     * 
+                     */
+                    bool LivenessTimeoutHasBeenSet() const;
+
+                    /**
+                     * 获取Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective.
+                     * @return SelectedWarningCodes Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective.
+                     * 
+                     */
+                    std::string GetSelectedWarningCodes() const;
+
+                    /**
+                     * 设置Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective.
+                     * @param _selectedWarningCodes Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective.
+                     * 
+                     */
+                    void SetSelectedWarningCodes(const std::string& _selectedWarningCodes);
+
+                    /**
+                     * 判断参数 SelectedWarningCodes 是否已赋值
+                     * @return SelectedWarningCodes 是否已赋值
+                     * 
+                     */
+                    bool SelectedWarningCodesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -543,6 +585,18 @@ The default value is blink. The different action types passed in this parameter 
                      */
                     int64_t m_livenessRetryLimit;
                     bool m_livenessRetryLimitHasBeenSet;
+
+                    /**
+                     * Specifies the liveness detection timeout period in seconds. value range: (0,600].
+                     */
+                    uint64_t m_livenessTimeout;
+                    bool m_livenessTimeoutHasBeenSet;
+
+                    /**
+                     * Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective.
+                     */
+                    std::string m_selectedWarningCodes;
+                    bool m_selectedWarningCodesHasBeenSet;
 
                 };
             }

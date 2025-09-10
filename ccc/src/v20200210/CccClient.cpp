@@ -126,6 +126,49 @@ CccClient::AbortPredictiveDialingCampaignOutcomeCallable CccClient::AbortPredict
     return task->get_future();
 }
 
+CccClient::BindNumberCallInInterfaceOutcome CccClient::BindNumberCallInInterface(const BindNumberCallInInterfaceRequest &request)
+{
+    auto outcome = MakeRequest(request, "BindNumberCallInInterface");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        BindNumberCallInInterfaceResponse rsp = BindNumberCallInInterfaceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return BindNumberCallInInterfaceOutcome(rsp);
+        else
+            return BindNumberCallInInterfaceOutcome(o.GetError());
+    }
+    else
+    {
+        return BindNumberCallInInterfaceOutcome(outcome.GetError());
+    }
+}
+
+void CccClient::BindNumberCallInInterfaceAsync(const BindNumberCallInInterfaceRequest& request, const BindNumberCallInInterfaceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->BindNumberCallInInterface(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CccClient::BindNumberCallInInterfaceOutcomeCallable CccClient::BindNumberCallInInterfaceCallable(const BindNumberCallInInterfaceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<BindNumberCallInInterfaceOutcome()>>(
+        [this, request]()
+        {
+            return this->BindNumberCallInInterface(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CccClient::BindNumberCallOutSkillGroupOutcome CccClient::BindNumberCallOutSkillGroup(const BindNumberCallOutSkillGroupRequest &request)
 {
     auto outcome = MakeRequest(request, "BindNumberCallOutSkillGroup");
@@ -205,6 +248,49 @@ CccClient::BindStaffSkillGroupListOutcomeCallable CccClient::BindStaffSkillGroup
         [this, request]()
         {
             return this->BindStaffSkillGroupList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CccClient::ControlAIConversationOutcome CccClient::ControlAIConversation(const ControlAIConversationRequest &request)
+{
+    auto outcome = MakeRequest(request, "ControlAIConversation");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ControlAIConversationResponse rsp = ControlAIConversationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ControlAIConversationOutcome(rsp);
+        else
+            return ControlAIConversationOutcome(o.GetError());
+    }
+    else
+    {
+        return ControlAIConversationOutcome(outcome.GetError());
+    }
+}
+
+void CccClient::ControlAIConversationAsync(const ControlAIConversationRequest& request, const ControlAIConversationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ControlAIConversation(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CccClient::ControlAIConversationOutcomeCallable CccClient::ControlAIConversationCallable(const ControlAIConversationRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ControlAIConversationOutcome()>>(
+        [this, request]()
+        {
+            return this->ControlAIConversation(request);
         }
     );
 
@@ -764,6 +850,49 @@ CccClient::CreateStaffOutcomeCallable CccClient::CreateStaffCallable(const Creat
         [this, request]()
         {
             return this->CreateStaff(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CccClient::CreateUserSigOutcome CccClient::CreateUserSig(const CreateUserSigRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateUserSig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateUserSigResponse rsp = CreateUserSigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateUserSigOutcome(rsp);
+        else
+            return CreateUserSigOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateUserSigOutcome(outcome.GetError());
+    }
+}
+
+void CccClient::CreateUserSigAsync(const CreateUserSigRequest& request, const CreateUserSigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateUserSig(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CccClient::CreateUserSigOutcomeCallable CccClient::CreateUserSigCallable(const CreateUserSigRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateUserSigOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateUserSig(request);
         }
     );
 
@@ -1631,6 +1760,49 @@ CccClient::DescribeProtectedTelCdrOutcomeCallable CccClient::DescribeProtectedTe
     return task->get_future();
 }
 
+CccClient::DescribeSessionDetailOutcome CccClient::DescribeSessionDetail(const DescribeSessionDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeSessionDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeSessionDetailResponse rsp = DescribeSessionDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeSessionDetailOutcome(rsp);
+        else
+            return DescribeSessionDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeSessionDetailOutcome(outcome.GetError());
+    }
+}
+
+void CccClient::DescribeSessionDetailAsync(const DescribeSessionDetailRequest& request, const DescribeSessionDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeSessionDetail(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CccClient::DescribeSessionDetailOutcomeCallable CccClient::DescribeSessionDetailCallable(const DescribeSessionDetailRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeSessionDetailOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeSessionDetail(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CccClient::DescribeSkillGroupInfoListOutcome CccClient::DescribeSkillGroupInfoList(const DescribeSkillGroupInfoListRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeSkillGroupInfoList");
@@ -1710,6 +1882,49 @@ CccClient::DescribeStaffInfoListOutcomeCallable CccClient::DescribeStaffInfoList
         [this, request]()
         {
             return this->DescribeStaffInfoList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CccClient::DescribeStaffStatusHistoryOutcome CccClient::DescribeStaffStatusHistory(const DescribeStaffStatusHistoryRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeStaffStatusHistory");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeStaffStatusHistoryResponse rsp = DescribeStaffStatusHistoryResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeStaffStatusHistoryOutcome(rsp);
+        else
+            return DescribeStaffStatusHistoryOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeStaffStatusHistoryOutcome(outcome.GetError());
+    }
+}
+
+void CccClient::DescribeStaffStatusHistoryAsync(const DescribeStaffStatusHistoryRequest& request, const DescribeStaffStatusHistoryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeStaffStatusHistory(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CccClient::DescribeStaffStatusHistoryOutcomeCallable CccClient::DescribeStaffStatusHistoryCallable(const DescribeStaffStatusHistoryRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeStaffStatusHistoryOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeStaffStatusHistory(request);
         }
     );
 

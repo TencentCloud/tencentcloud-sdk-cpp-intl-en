@@ -235,6 +235,27 @@ namespace TencentCloud
                      */
                     bool AliasHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies whether to enable simultaneous ring.
+                     * @return RingAll Specifies whether to enable simultaneous ring.
+                     * 
+                     */
+                    bool GetRingAll() const;
+
+                    /**
+                     * 设置Specifies whether to enable simultaneous ring.
+                     * @param _ringAll Specifies whether to enable simultaneous ring.
+                     * 
+                     */
+                    void SetRingAll(const bool& _ringAll);
+
+                    /**
+                     * 判断参数 RingAll 是否已赋值
+                     * @return RingAll 是否已赋值
+                     * 
+                     */
+                    bool RingAllHasBeenSet() const;
+
                 private:
 
                     /**
@@ -290,6 +311,12 @@ namespace TencentCloud
                      */
                     std::string m_alias;
                     bool m_aliasHasBeenSet;
+
+                    /**
+                     * Specifies whether to enable simultaneous ring.
+                     */
+                    bool m_ringAll;
+                    bool m_ringAllHasBeenSet;
 
                 };
             }

@@ -46,7 +46,7 @@ set(cvm_public_header_model
   include/tencentcloud/cvm/v20170312/model/DescribeHostsResponse.h
   include/tencentcloud/cvm/v20170312/model/DeleteKeyPairsRequest.h
   include/tencentcloud/cvm/v20170312/model/SystemDisk.h
-  include/tencentcloud/cvm/v20170312/model/ResetInstanceRequest.h
+  include/tencentcloud/cvm/v20170312/model/ModifyInstancesDisasterRecoverGroupRequest.h
   include/tencentcloud/cvm/v20170312/model/ExitRescueModeResponse.h
   include/tencentcloud/cvm/v20170312/model/DescribeChcHostsResponse.h
   include/tencentcloud/cvm/v20170312/model/AllocateHostsRequest.h
@@ -190,6 +190,7 @@ set(cvm_public_header_model
   include/tencentcloud/cvm/v20170312/model/SharePermission.h
   include/tencentcloud/cvm/v20170312/model/ReservedInstances.h
   include/tencentcloud/cvm/v20170312/model/DeleteImagesResponse.h
+  include/tencentcloud/cvm/v20170312/model/ResetInstanceRequest.h
   include/tencentcloud/cvm/v20170312/model/ImportImageResponse.h
   include/tencentcloud/cvm/v20170312/model/ModifyDisasterRecoverGroupAttributeRequest.h
   include/tencentcloud/cvm/v20170312/model/ReservedInstancePriceItem.h
@@ -227,6 +228,7 @@ set(cvm_public_header_model
   include/tencentcloud/cvm/v20170312/model/RunMonitorServiceEnabled.h
   include/tencentcloud/cvm/v20170312/model/ResetInstanceResponse.h
   include/tencentcloud/cvm/v20170312/model/MetadataItem.h
+  include/tencentcloud/cvm/v20170312/model/ModifyInstancesDisasterRecoverGroupResponse.h
   include/tencentcloud/cvm/v20170312/model/VirtualPrivateCloud.h
   include/tencentcloud/cvm/v20170312/model/ModifyDisasterRecoverGroupAttributeResponse.h
   include/tencentcloud/cvm/v20170312/model/ResizeInstanceDisksRequest.h
@@ -274,7 +276,7 @@ set(cvm_src
   src/v20170312/model/DescribeHostsResponse.cpp
   src/v20170312/model/DeleteKeyPairsRequest.cpp
   src/v20170312/model/SystemDisk.cpp
-  src/v20170312/model/ResetInstanceRequest.cpp
+  src/v20170312/model/ModifyInstancesDisasterRecoverGroupRequest.cpp
   src/v20170312/model/ExitRescueModeResponse.cpp
   src/v20170312/model/DescribeChcHostsResponse.cpp
   src/v20170312/model/AllocateHostsRequest.cpp
@@ -418,6 +420,7 @@ set(cvm_src
   src/v20170312/model/SharePermission.cpp
   src/v20170312/model/ReservedInstances.cpp
   src/v20170312/model/DeleteImagesResponse.cpp
+  src/v20170312/model/ResetInstanceRequest.cpp
   src/v20170312/model/ImportImageResponse.cpp
   src/v20170312/model/ModifyDisasterRecoverGroupAttributeRequest.cpp
   src/v20170312/model/ReservedInstancePriceItem.cpp
@@ -455,6 +458,7 @@ set(cvm_src
   src/v20170312/model/RunMonitorServiceEnabled.cpp
   src/v20170312/model/ResetInstanceResponse.cpp
   src/v20170312/model/MetadataItem.cpp
+  src/v20170312/model/ModifyInstancesDisasterRecoverGroupResponse.cpp
   src/v20170312/model/VirtualPrivateCloud.cpp
   src/v20170312/model/ModifyDisasterRecoverGroupAttributeResponse.cpp
   src/v20170312/model/ResizeInstanceDisksRequest.cpp

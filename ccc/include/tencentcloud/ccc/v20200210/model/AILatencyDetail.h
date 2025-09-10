@@ -131,6 +131,27 @@ namespace TencentCloud
                     bool LLMLatencyHasBeenSet() const;
 
                     /**
+                     * 获取llm first token latency (ms).
+                     * @return LLMFirstTokenLatency llm first token latency (ms).
+                     * 
+                     */
+                    int64_t GetLLMFirstTokenLatency() const;
+
+                    /**
+                     * 设置llm first token latency (ms).
+                     * @param _lLMFirstTokenLatency llm first token latency (ms).
+                     * 
+                     */
+                    void SetLLMFirstTokenLatency(const int64_t& _lLMFirstTokenLatency);
+
+                    /**
+                     * 判断参数 LLMFirstTokenLatency 是否已赋值
+                     * @return LLMFirstTokenLatency 是否已赋值
+                     * 
+                     */
+                    bool LLMFirstTokenLatencyHasBeenSet() const;
+
+                    /**
                      * 获取End-To-End delay (ms).
                      * @return ETELatency End-To-End delay (ms).
                      * 
@@ -176,6 +197,12 @@ namespace TencentCloud
                      */
                     int64_t m_lLMLatency;
                     bool m_lLMLatencyHasBeenSet;
+
+                    /**
+                     * llm first token latency (ms).
+                     */
+                    int64_t m_lLMFirstTokenLatency;
+                    bool m_lLMFirstTokenLatencyHasBeenSet;
 
                     /**
                      * End-To-End delay (ms).

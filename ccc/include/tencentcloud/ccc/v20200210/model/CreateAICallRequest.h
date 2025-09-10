@@ -24,6 +24,7 @@
 #include <tencentcloud/ccc/v20200210/model/AITransferItem.h>
 #include <tencentcloud/ccc/v20200210/model/Variable.h>
 #include <tencentcloud/ccc/v20200210/model/AICallExtractConfigElement.h>
+#include <tencentcloud/ccc/v20200210/model/ToneWordInfo.h>
 
 
 namespace TencentCloud
@@ -657,15 +658,15 @@ HoaiMy
                     bool WelcomeTypeHasBeenSet() const;
 
                     /**
-                     * 获取0: interruptible by default, 1: high priority and not interruptible.
-                     * @return WelcomeMessagePriority 0: interruptible by default, 1: high priority and not interruptible.
+                     * 获取0: interruptible by default, 2: high priority non-interruptible.
+                     * @return WelcomeMessagePriority 0: interruptible by default, 2: high priority non-interruptible.
                      * 
                      */
                     int64_t GetWelcomeMessagePriority() const;
 
                     /**
-                     * 设置0: interruptible by default, 1: high priority and not interruptible.
-                     * @param _welcomeMessagePriority 0: interruptible by default, 1: high priority and not interruptible.
+                     * 设置0: interruptible by default, 2: high priority non-interruptible.
+                     * @param _welcomeMessagePriority 0: interruptible by default, 2: high priority non-interruptible.
                      * 
                      */
                     void SetWelcomeMessagePriority(const int64_t& _welcomeMessagePriority);
@@ -1338,6 +1339,102 @@ dify-inputs-xxx specifies the inputs variable for dify.
                      */
                     bool VariablesHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the model topP.
+                     * @return TopP Specifies the model topP.
+                     * 
+                     */
+                    double GetTopP() const;
+
+                    /**
+                     * 设置Specifies the model topP.
+                     * @param _topP Specifies the model topP.
+                     * 
+                     */
+                    void SetTopP(const double& _topP);
+
+                    /**
+                     * 判断参数 TopP 是否已赋值
+                     * @return TopP 是否已赋值
+                     * 
+                     */
+                    bool TopPHasBeenSet() const;
+
+                    /**
+                     * 获取The vad far-field voice suppression capacity (does not impact asr recognition performance). value range: [0, 3]. default is 0. recommended setting: 2 for better far-field voice suppression.
+                     * @return VadLevel The vad far-field voice suppression capacity (does not impact asr recognition performance). value range: [0, 3]. default is 0. recommended setting: 2 for better far-field voice suppression.
+                     * 
+                     */
+                    uint64_t GetVadLevel() const;
+
+                    /**
+                     * 设置The vad far-field voice suppression capacity (does not impact asr recognition performance). value range: [0, 3]. default is 0. recommended setting: 2 for better far-field voice suppression.
+                     * @param _vadLevel The vad far-field voice suppression capacity (does not impact asr recognition performance). value range: [0, 3]. default is 0. recommended setting: 2 for better far-field voice suppression.
+                     * 
+                     */
+                    void SetVadLevel(const uint64_t& _vadLevel);
+
+                    /**
+                     * 判断参数 VadLevel 是否已赋值
+                     * @return VadLevel 是否已赋值
+                     * 
+                     */
+                    bool VadLevelHasBeenSet() const;
+
+                    /**
+                     * 获取Transition.
+                     * @return ToneWord Transition.
+                     * 
+                     */
+                    ToneWordInfo GetToneWord() const;
+
+                    /**
+                     * 设置Transition.
+                     * @param _toneWord Transition.
+                     * 
+                     */
+                    void SetToneWord(const ToneWordInfo& _toneWord);
+
+                    /**
+                     * 判断参数 ToneWord 是否已赋值
+                     * @return ToneWord 是否已赋值
+                     * 
+                     */
+                    bool ToneWordHasBeenSet() const;
+
+                    /**
+                     * 获取Compliance prompt sound. 
+This parameter specifies whether to play morse code during call initiation (default: true), indicating the conversation content is AI-generated.
+This parameter signifies disabled when set to false. the parameter indicates you understand and agree to the following protocol:.
+Our side fully acknowledges and understands that according to the laws and regulations including the "cybersecurity law" (https://www.gov.cn/xinwen/2016-11/07/content_5129723.htm), "provision on administration of deep synthesis of internet-based information service" (https://www.gov.cn/zhengce/zhengceku/2022-12/12/content_5731431.htm), "interim measures for the management of generative artificial intelligence services" (https://www.gov.cn/zhengce/zhengceku/202307/content_6891752.htm), and "measures for the identification of artificial intelligence-generated synthetic content" (https://www.gov.cn/zhengce/zhengceku/202503/content_7014286.htm), explicit and implicit identification shall be added to ai-generated synthetic content. based on business needs, we request tencent cloud not to add explicit identification to generated synthetic content. we commit to lawful and compliant use of such content to avoid confusion or misunderstanding. if the ai-generated synthetic content is used to provide services to the public or spread over networks, we will proactively add explicit identification compliant with legal provisions and national standard requirements and bear the legal obligations for ai-generated synthetic content identification. if we fail to properly fulfill the identification obligations for ai-generated content, resulting in adverse consequences or penalties from the competent department, we will fully assume all related responsibilities.
+                     * @return EnableComplianceAudio Compliance prompt sound. 
+This parameter specifies whether to play morse code during call initiation (default: true), indicating the conversation content is AI-generated.
+This parameter signifies disabled when set to false. the parameter indicates you understand and agree to the following protocol:.
+Our side fully acknowledges and understands that according to the laws and regulations including the "cybersecurity law" (https://www.gov.cn/xinwen/2016-11/07/content_5129723.htm), "provision on administration of deep synthesis of internet-based information service" (https://www.gov.cn/zhengce/zhengceku/2022-12/12/content_5731431.htm), "interim measures for the management of generative artificial intelligence services" (https://www.gov.cn/zhengce/zhengceku/202307/content_6891752.htm), and "measures for the identification of artificial intelligence-generated synthetic content" (https://www.gov.cn/zhengce/zhengceku/202503/content_7014286.htm), explicit and implicit identification shall be added to ai-generated synthetic content. based on business needs, we request tencent cloud not to add explicit identification to generated synthetic content. we commit to lawful and compliant use of such content to avoid confusion or misunderstanding. if the ai-generated synthetic content is used to provide services to the public or spread over networks, we will proactively add explicit identification compliant with legal provisions and national standard requirements and bear the legal obligations for ai-generated synthetic content identification. if we fail to properly fulfill the identification obligations for ai-generated content, resulting in adverse consequences or penalties from the competent department, we will fully assume all related responsibilities.
+                     * 
+                     */
+                    bool GetEnableComplianceAudio() const;
+
+                    /**
+                     * 设置Compliance prompt sound. 
+This parameter specifies whether to play morse code during call initiation (default: true), indicating the conversation content is AI-generated.
+This parameter signifies disabled when set to false. the parameter indicates you understand and agree to the following protocol:.
+Our side fully acknowledges and understands that according to the laws and regulations including the "cybersecurity law" (https://www.gov.cn/xinwen/2016-11/07/content_5129723.htm), "provision on administration of deep synthesis of internet-based information service" (https://www.gov.cn/zhengce/zhengceku/2022-12/12/content_5731431.htm), "interim measures for the management of generative artificial intelligence services" (https://www.gov.cn/zhengce/zhengceku/202307/content_6891752.htm), and "measures for the identification of artificial intelligence-generated synthetic content" (https://www.gov.cn/zhengce/zhengceku/202503/content_7014286.htm), explicit and implicit identification shall be added to ai-generated synthetic content. based on business needs, we request tencent cloud not to add explicit identification to generated synthetic content. we commit to lawful and compliant use of such content to avoid confusion or misunderstanding. if the ai-generated synthetic content is used to provide services to the public or spread over networks, we will proactively add explicit identification compliant with legal provisions and national standard requirements and bear the legal obligations for ai-generated synthetic content identification. if we fail to properly fulfill the identification obligations for ai-generated content, resulting in adverse consequences or penalties from the competent department, we will fully assume all related responsibilities.
+                     * @param _enableComplianceAudio Compliance prompt sound. 
+This parameter specifies whether to play morse code during call initiation (default: true), indicating the conversation content is AI-generated.
+This parameter signifies disabled when set to false. the parameter indicates you understand and agree to the following protocol:.
+Our side fully acknowledges and understands that according to the laws and regulations including the "cybersecurity law" (https://www.gov.cn/xinwen/2016-11/07/content_5129723.htm), "provision on administration of deep synthesis of internet-based information service" (https://www.gov.cn/zhengce/zhengceku/2022-12/12/content_5731431.htm), "interim measures for the management of generative artificial intelligence services" (https://www.gov.cn/zhengce/zhengceku/202307/content_6891752.htm), and "measures for the identification of artificial intelligence-generated synthetic content" (https://www.gov.cn/zhengce/zhengceku/202503/content_7014286.htm), explicit and implicit identification shall be added to ai-generated synthetic content. based on business needs, we request tencent cloud not to add explicit identification to generated synthetic content. we commit to lawful and compliant use of such content to avoid confusion or misunderstanding. if the ai-generated synthetic content is used to provide services to the public or spread over networks, we will proactively add explicit identification compliant with legal provisions and national standard requirements and bear the legal obligations for ai-generated synthetic content identification. if we fail to properly fulfill the identification obligations for ai-generated content, resulting in adverse consequences or penalties from the competent department, we will fully assume all related responsibilities.
+                     * 
+                     */
+                    void SetEnableComplianceAudio(const bool& _enableComplianceAudio);
+
+                    /**
+                     * 判断参数 EnableComplianceAudio 是否已赋值
+                     * @return EnableComplianceAudio 是否已赋值
+                     * 
+                     */
+                    bool EnableComplianceAudioHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1502,7 +1599,7 @@ HoaiMy
                     bool m_welcomeTypeHasBeenSet;
 
                     /**
-                     * 0: interruptible by default, 1: high priority and not interruptible.
+                     * 0: interruptible by default, 2: high priority non-interruptible.
                      */
                     int64_t m_welcomeMessagePriority;
                     bool m_welcomeMessagePriorityHasBeenSet;
@@ -1684,6 +1781,33 @@ dify-inputs-xxx specifies the inputs variable for dify.
                      */
                     std::vector<Variable> m_variables;
                     bool m_variablesHasBeenSet;
+
+                    /**
+                     * Specifies the model topP.
+                     */
+                    double m_topP;
+                    bool m_topPHasBeenSet;
+
+                    /**
+                     * The vad far-field voice suppression capacity (does not impact asr recognition performance). value range: [0, 3]. default is 0. recommended setting: 2 for better far-field voice suppression.
+                     */
+                    uint64_t m_vadLevel;
+                    bool m_vadLevelHasBeenSet;
+
+                    /**
+                     * Transition.
+                     */
+                    ToneWordInfo m_toneWord;
+                    bool m_toneWordHasBeenSet;
+
+                    /**
+                     * Compliance prompt sound. 
+This parameter specifies whether to play morse code during call initiation (default: true), indicating the conversation content is AI-generated.
+This parameter signifies disabled when set to false. the parameter indicates you understand and agree to the following protocol:.
+Our side fully acknowledges and understands that according to the laws and regulations including the "cybersecurity law" (https://www.gov.cn/xinwen/2016-11/07/content_5129723.htm), "provision on administration of deep synthesis of internet-based information service" (https://www.gov.cn/zhengce/zhengceku/2022-12/12/content_5731431.htm), "interim measures for the management of generative artificial intelligence services" (https://www.gov.cn/zhengce/zhengceku/202307/content_6891752.htm), and "measures for the identification of artificial intelligence-generated synthetic content" (https://www.gov.cn/zhengce/zhengceku/202503/content_7014286.htm), explicit and implicit identification shall be added to ai-generated synthetic content. based on business needs, we request tencent cloud not to add explicit identification to generated synthetic content. we commit to lawful and compliant use of such content to avoid confusion or misunderstanding. if the ai-generated synthetic content is used to provide services to the public or spread over networks, we will proactively add explicit identification compliant with legal provisions and national standard requirements and bear the legal obligations for ai-generated synthetic content identification. if we fail to properly fulfill the identification obligations for ai-generated content, resulting in adverse consequences or penalties from the competent department, we will fully assume all related responsibilities.
+                     */
+                    bool m_enableComplianceAudio;
+                    bool m_enableComplianceAudioHasBeenSet;
 
                 };
             }

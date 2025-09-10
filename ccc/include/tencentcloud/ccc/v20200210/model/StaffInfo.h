@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/ccc/v20200210/model/SkillGroupItem.h>
+#include <tencentcloud/ccc/v20200210/model/ForwardingConfig.h>
 
 
 namespace TencentCloud
@@ -153,19 +154,15 @@ namespace TencentCloud
                     bool StaffNumberHasBeenSet() const;
 
                     /**
-                     * 获取User role id.
-When a user is bound to multiple roles, RoleIdList shall prevail.
-                     * @return RoleId User role id.
-When a user is bound to multiple roles, RoleIdList shall prevail.
+                     * 获取User role ID. if a user is bound to multiple roles, RoleIdList takes precedence.
+                     * @return RoleId User role ID. if a user is bound to multiple roles, RoleIdList takes precedence.
                      * @deprecated
                      */
                     uint64_t GetRoleId() const;
 
                     /**
-                     * 设置User role id.
-When a user is bound to multiple roles, RoleIdList shall prevail.
-                     * @param _roleId User role id.
-When a user is bound to multiple roles, RoleIdList shall prevail.
+                     * 设置User role ID. if a user is bound to multiple roles, RoleIdList takes precedence.
+                     * @param _roleId User role ID. if a user is bound to multiple roles, RoleIdList takes precedence.
                      * @deprecated
                      */
                     void SetRoleId(const uint64_t& _roleId);
@@ -199,15 +196,15 @@ When a user is bound to multiple roles, RoleIdList shall prevail.
                     bool RoleIdListHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RoleList 
+                     * 获取Specifies the user role id list.
+                     * @return RoleList Specifies the user role id list.
                      * 
                      */
                     std::vector<uint64_t> GetRoleList() const;
 
                     /**
-                     * 设置
-                     * @param _roleList 
+                     * 设置Specifies the user role id list.
+                     * @param _roleList Specifies the user role id list.
                      * 
                      */
                     void SetRoleList(const std::vector<uint64_t>& _roleList);
@@ -282,6 +279,27 @@ When a user is bound to multiple roles, RoleIdList shall prevail.
                      */
                     bool ExtensionNumberHasBeenSet() const;
 
+                    /**
+                     * 获取Call forwarding configuration.
+                     * @return ForwardingConfig Call forwarding configuration.
+                     * 
+                     */
+                    ForwardingConfig GetForwardingConfig() const;
+
+                    /**
+                     * 设置Call forwarding configuration.
+                     * @param _forwardingConfig Call forwarding configuration.
+                     * 
+                     */
+                    void SetForwardingConfig(const ForwardingConfig& _forwardingConfig);
+
+                    /**
+                     * 判断参数 ForwardingConfig 是否已赋值
+                     * @return ForwardingConfig 是否已赋值
+                     * 
+                     */
+                    bool ForwardingConfigHasBeenSet() const;
+
                 private:
 
                     /**
@@ -315,8 +333,7 @@ When a user is bound to multiple roles, RoleIdList shall prevail.
                     bool m_staffNumberHasBeenSet;
 
                     /**
-                     * User role id.
-When a user is bound to multiple roles, RoleIdList shall prevail.
+                     * User role ID. if a user is bound to multiple roles, RoleIdList takes precedence.
                      */
                     uint64_t m_roleId;
                     bool m_roleIdHasBeenSet;
@@ -328,7 +345,7 @@ When a user is bound to multiple roles, RoleIdList shall prevail.
                     bool m_roleIdListHasBeenSet;
 
                     /**
-                     * 
+                     * Specifies the user role id list.
                      */
                     std::vector<uint64_t> m_roleList;
                     bool m_roleListHasBeenSet;
@@ -350,6 +367,12 @@ When a user is bound to multiple roles, RoleIdList shall prevail.
                      */
                     std::string m_extensionNumber;
                     bool m_extensionNumberHasBeenSet;
+
+                    /**
+                     * Call forwarding configuration.
+                     */
+                    ForwardingConfig m_forwardingConfig;
+                    bool m_forwardingConfigHasBeenSet;
 
                 };
             }

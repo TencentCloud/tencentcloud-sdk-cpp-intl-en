@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/ccc/v20200210/model/StaffStatusExtra.h>
+#include <tencentcloud/ccc/v20200210/model/ClientInfo.h>
 
 
 namespace TencentCloud
@@ -391,6 +392,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool LastStatusTimestampHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the endpoint information for customer service logon.
+                     * @return ClientInfo Specifies the endpoint information for customer service logon.
+                     * 
+                     */
+                    std::vector<ClientInfo> GetClientInfo() const;
+
+                    /**
+                     * 设置Specifies the endpoint information for customer service logon.
+                     * @param _clientInfo Specifies the endpoint information for customer service logon.
+                     * 
+                     */
+                    void SetClientInfo(const std::vector<ClientInfo>& _clientInfo);
+
+                    /**
+                     * 判断参数 ClientInfo 是否已赋值
+                     * @return ClientInfo 是否已赋值
+                     * 
+                     */
+                    bool ClientInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -490,6 +512,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_lastStatusTimestamp;
                     bool m_lastStatusTimestampHasBeenSet;
+
+                    /**
+                     * Specifies the endpoint information for customer service logon.
+                     */
+                    std::vector<ClientInfo> m_clientInfo;
+                    bool m_clientInfoHasBeenSet;
 
                 };
             }

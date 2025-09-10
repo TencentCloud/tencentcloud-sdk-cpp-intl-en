@@ -49,19 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Time parameters for scheduled execution
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Timed Time parameters for scheduled execution
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Time parameter for scheduled execution.
+                     * @return Timed Time parameter for scheduled execution.
                      * 
                      */
                     std::vector<TimedJob> GetTimed() const;
 
                     /**
-                     * 设置Time parameters for scheduled execution
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _timed Time parameters for scheduled execution
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Time parameter for scheduled execution.
+                     * @param _timed Time parameter for scheduled execution.
                      * 
                      */
                     void SetTimed(const std::vector<TimedJob>& _timed);
@@ -74,19 +70,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TimedHasBeenSet() const;
 
                     /**
-                     * 获取Time parameters for periodic execution
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Cron Time parameters for periodic execution
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Time parameter for periodic execution.
+                     * @return Cron Time parameter for periodic execution.
                      * 
                      */
                     std::vector<CronJob> GetCron() const;
 
                     /**
-                     * 设置Time parameters for periodic execution
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cron Time parameters for periodic execution
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Time parameter for periodic execution.
+                     * @param _cron Time parameter for periodic execution.
                      * 
                      */
                     void SetCron(const std::vector<CronJob>& _cron);
@@ -99,19 +91,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CronHasBeenSet() const;
 
                     /**
-                     * 获取Time zone
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TimeTZone Time zone
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the time zone.
+                     * @return TimeTZone Specifies the time zone.
                      * 
                      */
                     std::string GetTimeTZone() const;
 
                     /**
-                     * 设置Time zone
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _timeTZone Time zone
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the time zone.
+                     * @param _timeTZone Specifies the time zone.
                      * 
                      */
                     void SetTimeTZone(const std::string& _timeTZone);
@@ -126,22 +114,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Time parameters for scheduled execution
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Time parameter for scheduled execution.
                      */
                     std::vector<TimedJob> m_timed;
                     bool m_timedHasBeenSet;
 
                     /**
-                     * Time parameters for periodic execution
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Time parameter for periodic execution.
                      */
                     std::vector<CronJob> m_cron;
                     bool m_cronHasBeenSet;
 
                     /**
-                     * Time zone
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the time zone.
                      */
                     std::string m_timeTZone;
                     bool m_timeTZoneHasBeenSet;

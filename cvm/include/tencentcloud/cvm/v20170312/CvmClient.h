@@ -145,6 +145,8 @@
 #include <tencentcloud/cvm/v20170312/model/ModifyImageSharePermissionResponse.h>
 #include <tencentcloud/cvm/v20170312/model/ModifyInstancesAttributeRequest.h>
 #include <tencentcloud/cvm/v20170312/model/ModifyInstancesAttributeResponse.h>
+#include <tencentcloud/cvm/v20170312/model/ModifyInstancesDisasterRecoverGroupRequest.h>
+#include <tencentcloud/cvm/v20170312/model/ModifyInstancesDisasterRecoverGroupResponse.h>
 #include <tencentcloud/cvm/v20170312/model/ModifyInstancesProjectRequest.h>
 #include <tencentcloud/cvm/v20170312/model/ModifyInstancesProjectResponse.h>
 #include <tencentcloud/cvm/v20170312/model/ModifyInstancesRenewFlagRequest.h>
@@ -382,6 +384,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyInstancesAttributeResponse> ModifyInstancesAttributeOutcome;
                 typedef std::future<ModifyInstancesAttributeOutcome> ModifyInstancesAttributeOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::ModifyInstancesAttributeRequest&, ModifyInstancesAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstancesAttributeAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyInstancesDisasterRecoverGroupResponse> ModifyInstancesDisasterRecoverGroupOutcome;
+                typedef std::future<ModifyInstancesDisasterRecoverGroupOutcome> ModifyInstancesDisasterRecoverGroupOutcomeCallable;
+                typedef std::function<void(const CvmClient*, const Model::ModifyInstancesDisasterRecoverGroupRequest&, ModifyInstancesDisasterRecoverGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstancesDisasterRecoverGroupAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyInstancesProjectResponse> ModifyInstancesProjectOutcome;
                 typedef std::future<ModifyInstancesProjectOutcome> ModifyInstancesProjectOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::ModifyInstancesProjectRequest&, ModifyInstancesProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstancesProjectAsyncHandler;
@@ -1068,6 +1073,16 @@ This API is used to query the renewal price of monthly subscription instances.
                 ModifyInstancesAttributeOutcome ModifyInstancesAttribute(const Model::ModifyInstancesAttributeRequest &request);
                 void ModifyInstancesAttributeAsync(const Model::ModifyInstancesAttributeRequest& request, const ModifyInstancesAttributeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyInstancesAttributeOutcomeCallable ModifyInstancesAttributeCallable(const Model::ModifyInstancesAttributeRequest& request);
+
+                /**
+                 *This API is used to adjust the placement group of an instance.
+* Currently only basic networks or Virtual Private Cloud (VPC) instances are supported.
+                 * @param req ModifyInstancesDisasterRecoverGroupRequest
+                 * @return ModifyInstancesDisasterRecoverGroupOutcome
+                 */
+                ModifyInstancesDisasterRecoverGroupOutcome ModifyInstancesDisasterRecoverGroup(const Model::ModifyInstancesDisasterRecoverGroupRequest &request);
+                void ModifyInstancesDisasterRecoverGroupAsync(const Model::ModifyInstancesDisasterRecoverGroupRequest& request, const ModifyInstancesDisasterRecoverGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyInstancesDisasterRecoverGroupOutcomeCallable ModifyInstancesDisasterRecoverGroupCallable(const Model::ModifyInstancesDisasterRecoverGroupRequest& request);
 
                 /**
                  *This API is used to change the project to which an instance is assigned.
