@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Configuration group specified for scale-out.
                 */
                 class ScaleOutServiceConfGroupsInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ServiceComponentName 
+                     * 获取Component version name, for example, HDFS-2.8.5.
+                     * @return ServiceComponentName Component version name, for example, HDFS-2.8.5.
                      * 
                      */
                     std::string GetServiceComponentName() const;
 
                     /**
-                     * 设置
-                     * @param _serviceComponentName 
+                     * 设置Component version name, for example, HDFS-2.8.5.
+                     * @param _serviceComponentName Component version name, for example, HDFS-2.8.5.
                      * 
                      */
                     void SetServiceComponentName(const std::string& _serviceComponentName);
@@ -68,15 +68,19 @@ namespace TencentCloud
                     bool ServiceComponentNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ConfGroupName 
+                     * 获取Configuration group name, for example, hdfs-core-defaultGroup. If the ConfGroupName parameter is passed in, the configuration group dimension is used.
+                                                             If the ConfGroupName parameter is not passed in, the cluster dimension is used.
+                     * @return ConfGroupName Configuration group name, for example, hdfs-core-defaultGroup. If the ConfGroupName parameter is passed in, the configuration group dimension is used.
+                                                             If the ConfGroupName parameter is not passed in, the cluster dimension is used.
                      * 
                      */
                     std::string GetConfGroupName() const;
 
                     /**
-                     * 设置
-                     * @param _confGroupName 
+                     * 设置Configuration group name, for example, hdfs-core-defaultGroup. If the ConfGroupName parameter is passed in, the configuration group dimension is used.
+                                                             If the ConfGroupName parameter is not passed in, the cluster dimension is used.
+                     * @param _confGroupName Configuration group name, for example, hdfs-core-defaultGroup. If the ConfGroupName parameter is passed in, the configuration group dimension is used.
+                                                             If the ConfGroupName parameter is not passed in, the cluster dimension is used.
                      * 
                      */
                     void SetConfGroupName(const std::string& _confGroupName);
@@ -91,13 +95,14 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Component version name, for example, HDFS-2.8.5.
                      */
                     std::string m_serviceComponentName;
                     bool m_serviceComponentNameHasBeenSet;
 
                     /**
-                     * 
+                     * Configuration group name, for example, hdfs-core-defaultGroup. If the ConfGroupName parameter is passed in, the configuration group dimension is used.
+                                                             If the ConfGroupName parameter is not passed in, the cluster dimension is used.
                      */
                     std::string m_confGroupName;
                     bool m_confGroupNameHasBeenSet;

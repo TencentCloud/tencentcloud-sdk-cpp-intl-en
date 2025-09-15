@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of cloud disks in this type
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Count Number of cloud disks in this type
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of cloud disks of this type.
+                     * @return Count Number of cloud disks of this type.
                      * 
                      */
                     int64_t GetCount() const;
 
                     /**
-                     * 设置Number of cloud disks in this type
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _count Number of cloud disks in this type
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of cloud disks of this type.
+                     * @param _count Number of cloud disks of this type.
                      * 
                      */
                     void SetCount(const int64_t& _count);
@@ -72,19 +68,63 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CountHasBeenSet() const;
 
                     /**
-                     * 获取Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Type Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Disk type.
+1: Local Disk.
+2: Cloud Disk.
+3: Local SSD.
+4: Cloud SSD.
+5: Premium Cloud Disk.
+6: Enhanced SSD.
+11: Throughput HDD.
+12: Tremendous SSD.
+13: Balanced SSD.
+14: Big Data Cloud Disk.
+15: High IO Cloud Disk.
+16: Remote SSD.
+                     * @return Type Disk type.
+1: Local Disk.
+2: Cloud Disk.
+3: Local SSD.
+4: Cloud SSD.
+5: Premium Cloud Disk.
+6: Enhanced SSD.
+11: Throughput HDD.
+12: Tremendous SSD.
+13: Balanced SSD.
+14: Big Data Cloud Disk.
+15: High IO Cloud Disk.
+16: Remote SSD.
                      * 
                      */
                     int64_t GetType() const;
 
                     /**
-                     * 设置Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _type Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Disk type.
+1: Local Disk.
+2: Cloud Disk.
+3: Local SSD.
+4: Cloud SSD.
+5: Premium Cloud Disk.
+6: Enhanced SSD.
+11: Throughput HDD.
+12: Tremendous SSD.
+13: Balanced SSD.
+14: Big Data Cloud Disk.
+15: High IO Cloud Disk.
+16: Remote SSD.
+                     * @param _type Disk type.
+1: Local Disk.
+2: Cloud Disk.
+3: Local SSD.
+4: Cloud SSD.
+5: Premium Cloud Disk.
+6: Enhanced SSD.
+11: Throughput HDD.
+12: Tremendous SSD.
+13: Balanced SSD.
+14: Big Data Cloud Disk.
+15: High IO Cloud Disk.
+16: Remote SSD.
                      * 
                      */
                     void SetType(const int64_t& _type);
@@ -97,19 +137,36 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Cloud disk size
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Volume Cloud disk size
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Disk size.
+                     * @return Size Disk size.
+                     * 
+                     */
+                    std::string GetSize() const;
+
+                    /**
+                     * 设置Disk size.
+                     * @param _size Disk size.
+                     * 
+                     */
+                    void SetSize(const std::string& _size);
+
+                    /**
+                     * 判断参数 Size 是否已赋值
+                     * @return Size 是否已赋值
+                     * 
+                     */
+                    bool SizeHasBeenSet() const;
+
+                    /**
+                     * 获取Cloud disk size (bytes).
+                     * @return Volume Cloud disk size (bytes).
                      * 
                      */
                     int64_t GetVolume() const;
 
                     /**
-                     * 设置Cloud disk size
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _volume Cloud disk size
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Cloud disk size (bytes).
+                     * @param _volume Cloud disk size (bytes).
                      * 
                      */
                     void SetVolume(const int64_t& _volume);
@@ -124,22 +181,37 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Number of cloud disks in this type
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Number of cloud disks of this type.
                      */
                     int64_t m_count;
                     bool m_countHasBeenSet;
 
                     /**
-                     * Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Disk type.
+1: Local Disk.
+2: Cloud Disk.
+3: Local SSD.
+4: Cloud SSD.
+5: Premium Cloud Disk.
+6: Enhanced SSD.
+11: Throughput HDD.
+12: Tremendous SSD.
+13: Balanced SSD.
+14: Big Data Cloud Disk.
+15: High IO Cloud Disk.
+16: Remote SSD.
                      */
                     int64_t m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Cloud disk size
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Disk size.
+                     */
+                    std::string m_size;
+                    bool m_sizeHasBeenSet;
+
+                    /**
+                     * Cloud disk size (bytes).
                      */
                     int64_t m_volume;
                     bool m_volumeHasBeenSet;

@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Searchable type
-                     * @return SearchType Searchable type
+                     * 获取Searchable type.
+                     * @return SearchType Searchable type.
                      * 
                      */
                     std::string GetSearchType() const;
 
                     /**
-                     * 设置Searchable type
-                     * @param _searchType Searchable type
+                     * 设置Searchable type.
+                     * @param _searchType Searchable type.
                      * 
                      */
                     void SetSearchType(const std::string& _searchType);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SearchTypeHasBeenSet() const;
 
                     /**
-                     * 获取Searchable value
-                     * @return SearchValue Searchable value
+                     * 获取Searchable value.
+                     * @return SearchValue Searchable value.
                      * 
                      */
                     std::string GetSearchValue() const;
 
                     /**
-                     * 设置Searchable value
-                     * @param _searchValue Searchable value
+                     * 设置Searchable value.
+                     * @param _searchValue Searchable value.
                      * 
                      */
                     void SetSearchValue(const std::string& _searchValue);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Searchable type
+                     * Searchable type.
                      */
                     std::string m_searchType;
                     bool m_searchTypeHasBeenSet;
 
                     /**
-                     * Searchable value
+                     * Searchable value.
                      */
                     std::string m_searchValue;
                     bool m_searchValueHasBeenSet;

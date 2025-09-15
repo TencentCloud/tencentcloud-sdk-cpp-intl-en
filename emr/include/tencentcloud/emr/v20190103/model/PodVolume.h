@@ -49,19 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Storage type. Valid values: `pvc` and `hostpath`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VolumeType Storage type. Valid values: `pvc` and `hostpath`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Storage type, which can be "pvc" or "hostpath".
+                     * @return VolumeType Storage type, which can be "pvc" or "hostpath".
                      * 
                      */
                     std::string GetVolumeType() const;
 
                     /**
-                     * 设置Storage type. Valid values: `pvc` and `hostpath`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _volumeType Storage type. Valid values: `pvc` and `hostpath`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Storage type, which can be "pvc" or "hostpath".
+                     * @param _volumeType Storage type, which can be "pvc" or "hostpath".
                      * 
                      */
                     void SetVolumeType(const std::string& _volumeType);
@@ -126,8 +122,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Storage type. Valid values: `pvc` and `hostpath`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Storage type, which can be "pvc" or "hostpath".
                      */
                     std::string m_volumeType;
                     bool m_volumeTypeHasBeenSet;

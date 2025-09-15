@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * HTTPS Mutual authentication.
                 */
                 class MutualTLS : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Mutual authentication configuration switch, the values are:<li>on: enable; </li> <li>off: disable. </li>
+                     * @return Switch Mutual authentication configuration switch, the values are:<li>on: enable; </li> <li>off: disable. </li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Mutual authentication configuration switch, the values are:<li>on: enable; </li> <li>off: disable. </li>
+                     * @param _switch Mutual authentication configuration switch, the values are:<li>on: enable; </li> <li>off: disable. </li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -96,7 +96,7 @@ Note: When using MutualTLS as an input parameter in ModifyHostsCertificate, you 
                 private:
 
                     /**
-                     * 
+                     * Mutual authentication configuration switch, the values are:<li>on: enable; </li> <li>off: disable. </li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

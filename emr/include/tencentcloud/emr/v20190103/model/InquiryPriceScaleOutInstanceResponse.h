@@ -47,9 +47,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Original price.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OriginalCost Original price.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetOriginalCost() const;
@@ -63,9 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Discounted price.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DiscountCost Discounted price.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDiscountCost() const;
@@ -78,12 +74,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DiscountCostHasBeenSet() const;
 
                     /**
-                     * 获取Time unit of scale-out. Valid value:
-<li>s: Second.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Unit Time unit of scale-out. Valid value:
-<li>s: Second.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Time unit of scale-out. Valid values.
+<li>s: second.</li>
+                     * @return Unit Time unit of scale-out. Valid values.
+<li>s: second.</li>
                      * 
                      */
                     std::string GetUnit() const;
@@ -131,22 +125,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Original price.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_originalCost;
                     bool m_originalCostHasBeenSet;
 
                     /**
                      * Discounted price.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_discountCost;
                     bool m_discountCostHasBeenSet;
 
                     /**
-                     * Time unit of scale-out. Valid value:
-<li>s: Second.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Time unit of scale-out. Valid values.
+<li>s: second.</li>
                      */
                     std::string m_unit;
                     bool m_unitHasBeenSet;

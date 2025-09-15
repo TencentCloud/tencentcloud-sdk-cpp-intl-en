@@ -118,6 +118,27 @@ Note: only the above values are supported for the time being. Entering other val
                     bool NodeFlagHasBeenSet() const;
 
                     /**
+                     * 获取Whether to carry CDB information when all node information is exported in CSV format.
+                     * @return ExportDb Whether to carry CDB information when all node information is exported in CSV format.
+                     * 
+                     */
+                    bool GetExportDb() const;
+
+                    /**
+                     * 设置Whether to carry CDB information when all node information is exported in CSV format.
+                     * @param _exportDb Whether to carry CDB information when all node information is exported in CSV format.
+                     * 
+                     */
+                    void SetExportDb(const bool& _exportDb);
+
+                    /**
+                     * 判断参数 ExportDb 是否已赋值
+                     * @return ExportDb 是否已赋值
+                     * 
+                     */
+                    bool ExportDbHasBeenSet() const;
+
+                    /**
                      * 获取Page number. Default value: 0, indicating the first page.
                      * @return Offset Page number. Default value: 0, indicating the first page.
                      * 
@@ -139,15 +160,19 @@ Note: only the above values are supported for the time being. Entering other val
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of returned results per page. Default value: 100. Maximum value: 100
-                     * @return Limit Number of returned results per page. Default value: 100. Maximum value: 100
+                     * 获取Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+If both offset and limit are not set, or both are set to 0, all data will be returned.
+                     * @return Limit Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+If both offset and limit are not set, or both are set to 0, all data will be returned.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of returned results per page. Default value: 100. Maximum value: 100
-                     * @param _limit Number of returned results per page. Default value: 100. Maximum value: 100
+                     * 设置Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+If both offset and limit are not set, or both are set to 0, all data will be returned.
+                     * @param _limit Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+If both offset and limit are not set, or both are set to 0, all data will be returned.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -202,15 +227,15 @@ Note: only the above values are supported for the time being. Entering other val
                     bool SearchFieldsHasBeenSet() const;
 
                     /**
-                     * 获取None
-                     * @return OrderField None
+                     * 获取Order field.
+                     * @return OrderField Order field.
                      * 
                      */
                     std::string GetOrderField() const;
 
                     /**
-                     * 设置None
-                     * @param _orderField None
+                     * 设置Order field.
+                     * @param _orderField Order field.
                      * 
                      */
                     void SetOrderField(const std::string& _orderField);
@@ -223,15 +248,15 @@ Note: only the above values are supported for the time being. Entering other val
                     bool OrderFieldHasBeenSet() const;
 
                     /**
-                     * 获取None
-                     * @return Asc None
+                     * 获取Ascending or not. 1: ascending; 0: descending.
+                     * @return Asc Ascending or not. 1: ascending; 0: descending.
                      * 
                      */
                     int64_t GetAsc() const;
 
                     /**
-                     * 设置None
-                     * @param _asc None
+                     * 设置Ascending or not. 1: ascending; 0: descending.
+                     * @param _asc Ascending or not. 1: ascending; 0: descending.
                      * 
                      */
                     void SetAsc(const int64_t& _asc);
@@ -266,13 +291,20 @@ Note: only the above values are supported for the time being. Entering other val
                     bool m_nodeFlagHasBeenSet;
 
                     /**
+                     * Whether to carry CDB information when all node information is exported in CSV format.
+                     */
+                    bool m_exportDb;
+                    bool m_exportDbHasBeenSet;
+
+                    /**
                      * Page number. Default value: 0, indicating the first page.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of returned results per page. Default value: 100. Maximum value: 100
+                     * Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+If both offset and limit are not set, or both are set to 0, all data will be returned.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
@@ -290,13 +322,13 @@ Note: only the above values are supported for the time being. Entering other val
                     bool m_searchFieldsHasBeenSet;
 
                     /**
-                     * None
+                     * Order field.
                      */
                     std::string m_orderField;
                     bool m_orderFieldHasBeenSet;
 
                     /**
-                     * None
+                     * Ascending or not. 1: ascending; 0: descending.
                      */
                     int64_t m_asc;
                     bool m_ascHasBeenSet;

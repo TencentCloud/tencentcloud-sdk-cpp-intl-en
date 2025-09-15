@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster IDNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return ClusterId Cluster IDNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Cluster ID.
+                     * @return ClusterId Cluster ID.
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster IDNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _clusterId Cluster IDNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Cluster ID.
+                     * @param _clusterId Cluster ID.
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -68,19 +68,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FlowId Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Flow ID.
+                     * @return FlowId Flow ID.
                      * 
                      */
                     uint64_t GetFlowId() const;
 
                     /**
-                     * 设置Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _flowId Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Flow ID.
+                     * @param _flowId Flow ID.
                      * 
                      */
                     void SetFlowId(const uint64_t& _flowId);
@@ -95,14 +91,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Cluster IDNote: This field may return null, indicating that no valid values can be obtained.
+                     * Cluster ID.
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Flow ID.
                      */
                     uint64_t m_flowId;
                     bool m_flowIdHasBeenSet;

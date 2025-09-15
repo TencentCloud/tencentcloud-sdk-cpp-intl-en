@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The instance ID.
-                     * @return InstanceId The instance ID.
+                     * 获取Instance ID.
+                     * @return InstanceId Instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
@@ -58,10 +58,8 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取The client token.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ClientToken The client token.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Client token.
+                     * @return ClientToken Client token.
                      * 
                      */
                     std::string GetClientToken() const;
@@ -74,10 +72,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ClientTokenHasBeenSet() const;
 
                     /**
-                     * 获取The scale-out workflow ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FlowId The scale-out workflow ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Scale-out process ID.
+                     * @return FlowId Scale-out process ID.
                      * 
                      */
                     int64_t GetFlowId() const;
@@ -89,27 +85,88 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool FlowIdHasBeenSet() const;
 
+                    /**
+                     * 获取Query process status and additional flow formation.
+                     * @return TraceId Query process status and additional flow formation.
+                     * 
+                     */
+                    std::string GetTraceId() const;
+
+                    /**
+                     * 判断参数 TraceId 是否已赋值
+                     * @return TraceId 是否已赋值
+                     * 
+                     */
+                    bool TraceIdHasBeenSet() const;
+
+                    /**
+                     * 获取Order number.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DealNames Order number.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<std::string> GetDealNames() const;
+
+                    /**
+                     * 判断参数 DealNames 是否已赋值
+                     * @return DealNames 是否已赋值
+                     * 
+                     */
+                    bool DealNamesHasBeenSet() const;
+
+                    /**
+                     * 获取Large order number.
+                     * @return BillId Large order number.
+                     * 
+                     */
+                    std::string GetBillId() const;
+
+                    /**
+                     * 判断参数 BillId 是否已赋值
+                     * @return BillId 是否已赋值
+                     * 
+                     */
+                    bool BillIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The instance ID.
+                     * Instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * The client token.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Client token.
                      */
                     std::string m_clientToken;
                     bool m_clientTokenHasBeenSet;
 
                     /**
-                     * The scale-out workflow ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Scale-out process ID.
                      */
                     int64_t m_flowId;
                     bool m_flowIdHasBeenSet;
+
+                    /**
+                     * Query process status and additional flow formation.
+                     */
+                    std::string m_traceId;
+                    bool m_traceIdHasBeenSet;
+
+                    /**
+                     * Order number.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_dealNames;
+                    bool m_dealNamesHasBeenSet;
+
+                    /**
+                     * Large order number.
+                     */
+                    std::string m_billId;
+                    bool m_billIdHasBeenSet;
 
                 };
             }

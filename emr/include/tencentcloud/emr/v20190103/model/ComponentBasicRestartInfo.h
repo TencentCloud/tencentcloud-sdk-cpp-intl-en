@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The process name (required), such as NameNode.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ComponentName The process name (required), such as NameNode.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Process name which is required, such as NameNode.
+                     * @return ComponentName Process name which is required, such as NameNode.
                      * 
                      */
                     std::string GetComponentName() const;
 
                     /**
-                     * 设置The process name (required), such as NameNode.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _componentName The process name (required), such as NameNode.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Process name which is required, such as NameNode.
+                     * @param _componentName Process name which is required, such as NameNode.
                      * 
                      */
                     void SetComponentName(const std::string& _componentName);
@@ -99,8 +95,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The process name (required), such as NameNode.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Process name which is required, such as NameNode.
                      */
                     std::string m_componentName;
                     bool m_componentNameHasBeenSet;

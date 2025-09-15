@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool ModifyPayModeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return NeedDetail 
+                     * 获取Whether the renewal price for every node is required.
+                     * @return NeedDetail Whether the renewal price for every node is required.
                      * 
                      */
                     bool GetNeedDetail() const;
 
                     /**
-                     * 设置
-                     * @param _needDetail 
+                     * 设置Whether the renewal price for every node is required.
+                     * @param _needDetail Whether the renewal price for every node is required.
                      * 
                      */
                     void SetNeedDetail(const bool& _needDetail);
@@ -212,15 +212,15 @@ namespace TencentCloud
                     bool NeedDetailHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceId 
+                     * 获取Cluster ID. This parameter can be filled to get renewal information for all yearly/monthly subscription nodes in the cluster.
+                     * @return InstanceId Cluster ID. This parameter can be filled to get renewal information for all yearly/monthly subscription nodes in the cluster.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置
-                     * @param _instanceId 
+                     * 设置Cluster ID. This parameter can be filled to get renewal information for all yearly/monthly subscription nodes in the cluster.
+                     * @param _instanceId Cluster ID. This parameter can be filled to get renewal information for all yearly/monthly subscription nodes in the cluster.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -277,13 +277,13 @@ namespace TencentCloud
                     bool m_modifyPayModeHasBeenSet;
 
                     /**
-                     * 
+                     * Whether the renewal price for every node is required.
                      */
                     bool m_needDetail;
                     bool m_needDetailHasBeenSet;
 
                     /**
-                     * 
+                     * Cluster ID. This parameter can be filled to get renewal information for all yearly/monthly subscription nodes in the cluster.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

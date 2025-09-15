@@ -86,15 +86,19 @@ namespace TencentCloud
                     bool PageNoHasBeenSet() const;
 
                     /**
-                     * 获取Page size
-                     * @return PageSize Page size
+                     * 获取Pagination size.
+All are queried by default. If the PageNo and PageSize settings are inappropriate, all are queried.
+                     * @return PageSize Pagination size.
+All are queried by default. If the PageNo and PageSize settings are inappropriate, all are queried.
                      * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
-                     * 设置Page size
-                     * @param _pageSize Page size
+                     * 设置Pagination size.
+All are queried by default. If the PageNo and PageSize settings are inappropriate, all are queried.
+                     * @param _pageSize Pagination size.
+All are queried by default. If the PageNo and PageSize settings are inappropriate, all are queried.
                      * 
                      */
                     void SetPageSize(const int64_t& _pageSize);
@@ -163,7 +167,8 @@ namespace TencentCloud
                     bool m_pageNoHasBeenSet;
 
                     /**
-                     * Page size
+                     * Pagination size.
+All are queried by default. If the PageNo and PageSize settings are inappropriate, all are queried.
                      */
                     int64_t m_pageSize;
                     bool m_pageSizeHasBeenSet;

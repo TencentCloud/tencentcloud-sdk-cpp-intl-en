@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/emr/v20190103/model/OpScope.h>
 #include <tencentcloud/emr/v20190103/model/StrategyConfig.h>
+#include <tencentcloud/emr/v20190103/model/StopParams.h>
 
 
 namespace TencentCloud
@@ -148,6 +149,48 @@ namespace TencentCloud
                      */
                     bool StrategyConfigHasBeenSet() const;
 
+                    /**
+                     * 获取Parameters used for suspending services.
+                     * @return StopParams Parameters used for suspending services.
+                     * 
+                     */
+                    StopParams GetStopParams() const;
+
+                    /**
+                     * 设置Parameters used for suspending services.
+                     * @param _stopParams Parameters used for suspending services.
+                     * 
+                     */
+                    void SetStopParams(const StopParams& _stopParams);
+
+                    /**
+                     * 判断参数 StopParams 是否已赋值
+                     * @return StopParams 是否已赋值
+                     * 
+                     */
+                    bool StopParamsHasBeenSet() const;
+
+                    /**
+                     * 获取This parameter is available only when OpType is <li>StopMonitor</li>. True indicates that the system enters the maintenance mode but still monitors processes without starting them.
+                     * @return KeepMonitorButNotRecoverProcess This parameter is available only when OpType is <li>StopMonitor</li>. True indicates that the system enters the maintenance mode but still monitors processes without starting them.
+                     * 
+                     */
+                    bool GetKeepMonitorButNotRecoverProcess() const;
+
+                    /**
+                     * 设置This parameter is available only when OpType is <li>StopMonitor</li>. True indicates that the system enters the maintenance mode but still monitors processes without starting them.
+                     * @param _keepMonitorButNotRecoverProcess This parameter is available only when OpType is <li>StopMonitor</li>. True indicates that the system enters the maintenance mode but still monitors processes without starting them.
+                     * 
+                     */
+                    void SetKeepMonitorButNotRecoverProcess(const bool& _keepMonitorButNotRecoverProcess);
+
+                    /**
+                     * 判断参数 KeepMonitorButNotRecoverProcess 是否已赋值
+                     * @return KeepMonitorButNotRecoverProcess 是否已赋值
+                     * 
+                     */
+                    bool KeepMonitorButNotRecoverProcessHasBeenSet() const;
+
                 private:
 
                     /**
@@ -178,6 +221,18 @@ namespace TencentCloud
                      */
                     StrategyConfig m_strategyConfig;
                     bool m_strategyConfigHasBeenSet;
+
+                    /**
+                     * Parameters used for suspending services.
+                     */
+                    StopParams m_stopParams;
+                    bool m_stopParamsHasBeenSet;
+
+                    /**
+                     * This parameter is available only when OpType is <li>StopMonitor</li>. True indicates that the system enters the maintenance mode but still monitors processes without starting them.
+                     */
+                    bool m_keepMonitorButNotRecoverProcess;
+                    bool m_keepMonitorButNotRecoverProcessHasBeenSet;
 
                 };
             }

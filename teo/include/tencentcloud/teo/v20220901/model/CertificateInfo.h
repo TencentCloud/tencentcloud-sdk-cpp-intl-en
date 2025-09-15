@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * HTTPS server certificate configuration
+                * HTTPS server certificate configuration.
                 */
                 class CertificateInfo : public AbstractModel
                 {

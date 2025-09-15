@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Node component renewal pricing details.
                 */
                 class RenewPriceDetail : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return BillingName 
+                     * 获取Billing item name.
+                     * @return BillingName Billing item name.
                      * 
                      */
                     std::string GetBillingName() const;
 
                     /**
-                     * 设置
-                     * @param _billingName 
+                     * 设置Billing item name.
+                     * @param _billingName Billing item name.
                      * 
                      */
                     void SetBillingName(const std::string& _billingName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool BillingNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Policy 
+                     * 获取Discount.
+                     * @return Policy Discount.
                      * 
                      */
                     double GetPolicy() const;
 
                     /**
-                     * 设置
-                     * @param _policy 
+                     * 设置Discount.
+                     * @param _policy Discount.
                      * 
                      */
                     void SetPolicy(const double& _policy);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool PolicyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Quantity 
+                     * 获取Quantity.
+                     * @return Quantity Quantity.
                      * 
                      */
                     int64_t GetQuantity() const;
 
                     /**
-                     * 设置
-                     * @param _quantity 
+                     * 设置Quantity.
+                     * @param _quantity Quantity.
                      * 
                      */
                     void SetQuantity(const int64_t& _quantity);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool QuantityHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OriginalCost 
+                     * 获取Original price.
+                     * @return OriginalCost Original price.
                      * 
                      */
                     double GetOriginalCost() const;
 
                     /**
-                     * 设置
-                     * @param _originalCost 
+                     * 设置Original price.
+                     * @param _originalCost Original price.
                      * 
                      */
                     void SetOriginalCost(const double& _originalCost);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool OriginalCostHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DiscountCost 
+                     * 获取Discount price.
+                     * @return DiscountCost Discount price.
                      * 
                      */
                     double GetDiscountCost() const;
 
                     /**
-                     * 设置
-                     * @param _discountCost 
+                     * 设置Discount price.
+                     * @param _discountCost Discount price.
                      * 
                      */
                     void SetDiscountCost(const double& _discountCost);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Billing item name.
                      */
                     std::string m_billingName;
                     bool m_billingNameHasBeenSet;
 
                     /**
-                     * 
+                     * Discount.
                      */
                     double m_policy;
                     bool m_policyHasBeenSet;
 
                     /**
-                     * 
+                     * Quantity.
                      */
                     int64_t m_quantity;
                     bool m_quantityHasBeenSet;
 
                     /**
-                     * 
+                     * Original price.
                      */
                     double m_originalCost;
                     bool m_originalCostHasBeenSet;
 
                     /**
-                     * 
+                     * Discount price.
                      */
                     double m_discountCost;
                     bool m_discountCostHasBeenSet;

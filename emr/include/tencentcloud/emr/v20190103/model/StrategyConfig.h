@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/emr/v20190103/model/Arg.h>
 
 
 namespace TencentCloud
@@ -47,23 +48,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取`0`: Disable rolling restart
-`1`: Enable rolling restart
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RollingRestartSwitch `0`: Disable rolling restart
-`1`: Enable rolling restart
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取0: disable rolling restart.
+1: enable rolling start.
+                     * @return RollingRestartSwitch 0: disable rolling restart.
+1: enable rolling start.
                      * 
                      */
                     int64_t GetRollingRestartSwitch() const;
 
                     /**
-                     * 设置`0`: Disable rolling restart
-`1`: Enable rolling restart
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _rollingRestartSwitch `0`: Disable rolling restart
-`1`: Enable rolling restart
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置0: disable rolling restart.
+1: enable rolling start.
+                     * @param _rollingRestartSwitch 0: disable rolling restart.
+1: enable rolling start.
                      * 
                      */
                     void SetRollingRestartSwitch(const int64_t& _rollingRestartSwitch);
@@ -76,19 +73,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RollingRestartSwitchHasBeenSet() const;
 
                     /**
-                     * 获取The quantity of restarts per batch during a rolling restart, with the maximum number of restarts being 99999
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BatchSize The quantity of restarts per batch during a rolling restart, with the maximum number of restarts being 99999
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Rolling restart quantity per batch, which is up to 99999.
+                     * @return BatchSize Rolling restart quantity per batch, which is up to 99999.
                      * 
                      */
                     int64_t GetBatchSize() const;
 
                     /**
-                     * 设置The quantity of restarts per batch during a rolling restart, with the maximum number of restarts being 99999
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _batchSize The quantity of restarts per batch during a rolling restart, with the maximum number of restarts being 99999
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Rolling restart quantity per batch, which is up to 99999.
+                     * @param _batchSize Rolling restart quantity per batch, which is up to 99999.
                      * 
                      */
                     void SetBatchSize(const int64_t& _batchSize);
@@ -101,19 +94,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BatchSizeHasBeenSet() const;
 
                     /**
-                     * 获取The wait time (in seconds) per batch in rolling restart, with a maximum value of 5 minutes.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TimeWait The wait time (in seconds) per batch in rolling restart, with a maximum value of 5 minutes.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Stop and wait time for rolling restart per batch, with the maximum interval of 5 minutes and the unit of seconds.
+                     * @return TimeWait Stop and wait time for rolling restart per batch, with the maximum interval of 5 minutes and the unit of seconds.
                      * 
                      */
                     int64_t GetTimeWait() const;
 
                     /**
-                     * 设置The wait time (in seconds) per batch in rolling restart, with a maximum value of 5 minutes.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _timeWait The wait time (in seconds) per batch in rolling restart, with a maximum value of 5 minutes.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Stop and wait time for rolling restart per batch, with the maximum interval of 5 minutes and the unit of seconds.
+                     * @param _timeWait Stop and wait time for rolling restart per batch, with the maximum interval of 5 minutes and the unit of seconds.
                      * 
                      */
                     void SetTimeWait(const int64_t& _timeWait);
@@ -126,19 +115,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TimeWaitHasBeenSet() const;
 
                     /**
-                     * 获取The failure handling policy. Valid values: `0` (blocks the process) and `1` (skips).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DealOnFail The failure handling policy. Valid values: `0` (blocks the process) and `1` (skips).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Operation failure processing policy. 0: Block upon failure, 1: Automatically skipping failure.
+                     * @return DealOnFail Operation failure processing policy. 0: Block upon failure, 1: Automatically skipping failure.
                      * 
                      */
                     int64_t GetDealOnFail() const;
 
                     /**
-                     * 设置The failure handling policy. Valid values: `0` (blocks the process) and `1` (skips).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dealOnFail The failure handling policy. Valid values: `0` (blocks the process) and `1` (skips).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Operation failure processing policy. 0: Block upon failure, 1: Automatically skipping failure.
+                     * @param _dealOnFail Operation failure processing policy. 0: Block upon failure, 1: Automatically skipping failure.
                      * 
                      */
                     void SetDealOnFail(const int64_t& _dealOnFail);
@@ -150,36 +135,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool DealOnFailHasBeenSet() const;
 
+                    /**
+                     * 获取Parameters required in the instruction.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Args Parameters required in the instruction.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<Arg> GetArgs() const;
+
+                    /**
+                     * 设置Parameters required in the instruction.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _args Parameters required in the instruction.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetArgs(const std::vector<Arg>& _args);
+
+                    /**
+                     * 判断参数 Args 是否已赋值
+                     * @return Args 是否已赋值
+                     * 
+                     */
+                    bool ArgsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * `0`: Disable rolling restart
-`1`: Enable rolling restart
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 0: disable rolling restart.
+1: enable rolling start.
                      */
                     int64_t m_rollingRestartSwitch;
                     bool m_rollingRestartSwitchHasBeenSet;
 
                     /**
-                     * The quantity of restarts per batch during a rolling restart, with the maximum number of restarts being 99999
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Rolling restart quantity per batch, which is up to 99999.
                      */
                     int64_t m_batchSize;
                     bool m_batchSizeHasBeenSet;
 
                     /**
-                     * The wait time (in seconds) per batch in rolling restart, with a maximum value of 5 minutes.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Stop and wait time for rolling restart per batch, with the maximum interval of 5 minutes and the unit of seconds.
                      */
                     int64_t m_timeWait;
                     bool m_timeWaitHasBeenSet;
 
                     /**
-                     * The failure handling policy. Valid values: `0` (blocks the process) and `1` (skips).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Operation failure processing policy. 0: Block upon failure, 1: Automatically skipping failure.
                      */
                     int64_t m_dealOnFail;
                     bool m_dealOnFailHasBeenSet;
+
+                    /**
+                     * Parameters required in the instruction.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<Arg> m_args;
+                    bool m_argsHasBeenSet;
 
                 };
             }

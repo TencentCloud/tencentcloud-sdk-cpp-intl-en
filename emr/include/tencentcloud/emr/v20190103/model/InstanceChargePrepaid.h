@@ -35,8 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The instance prepayment parameter. It applies only when the billing type is `PREPAID`.
-
+                * Instance prepayment parameter. This parameter is valid only when the payment type is PREPAID.
                 */
                 class InstanceChargePrepaid : public AbstractModel
                 {

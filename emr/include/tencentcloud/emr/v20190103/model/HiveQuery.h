@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Query statementNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return Statement Query statementNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Query statement.
+                     * @return Statement Query statement.
                      * 
                      */
                     std::string GetStatement() const;
 
                     /**
-                     * 设置Query statementNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _statement Query statementNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Query statement.
+                     * @param _statement Query statement.
                      * 
                      */
                     void SetStatement(const std::string& _statement);
@@ -68,19 +68,15 @@ namespace TencentCloud
                     bool StatementHasBeenSet() const;
 
                     /**
-                     * 获取Execution Duration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Duration Execution Duration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Execution duration.
+                     * @return Duration Execution duration.
                      * 
                      */
                     std::string GetDuration() const;
 
                     /**
-                     * 设置Execution Duration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _duration Execution Duration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Execution duration.
+                     * @param _duration Execution duration.
                      * 
                      */
                     void SetDuration(const std::string& _duration);
@@ -93,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DurationHasBeenSet() const;
 
                     /**
-                     * 获取Start Time in Milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StartTime Start Time in Milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Start time in milliseconds.
+                     * @return StartTime Start time in milliseconds.
                      * 
                      */
                     int64_t GetStartTime() const;
 
                     /**
-                     * 设置Start Time in Milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _startTime Start Time in Milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Start time in milliseconds.
+                     * @param _startTime Start time in milliseconds.
                      * 
                      */
                     void SetStartTime(const int64_t& _startTime);
@@ -118,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End Time in Milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EndTime End Time in Milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取End time in milliseconds.
+                     * @return EndTime End time in milliseconds.
                      * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
-                     * 设置End Time in Milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _endTime End Time in Milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置End time in milliseconds.
+                     * @param _endTime End time in milliseconds.
                      * 
                      */
                     void SetEndTime(const int64_t& _endTime);
@@ -143,15 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取StatusNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return State StatusNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Status.
+                     * @return State Status.
                      * 
                      */
                     std::string GetState() const;
 
                     /**
-                     * 设置StatusNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _state StatusNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Status.
+                     * @param _state Status.
                      * 
                      */
                     void SetState(const std::string& _state);
@@ -164,15 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StateHasBeenSet() const;
 
                     /**
-                     * 获取UserNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return User UserNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取User.
+                     * @return User User.
                      * 
                      */
                     std::string GetUser() const;
 
                     /**
-                     * 设置UserNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _user UserNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置User.
+                     * @param _user User.
                      * 
                      */
                     void SetUser(const std::string& _user);
@@ -210,19 +198,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool JobIdsHasBeenSet() const;
 
                     /**
-                     * 获取Execution Engine
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExecutionEngine Execution Engine
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Execution engine.
+                     * @return ExecutionEngine Execution engine.
                      * 
                      */
                     std::string GetExecutionEngine() const;
 
                     /**
-                     * 设置Execution Engine
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _executionEngine Execution Engine
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Execution engine.
+                     * @param _executionEngine Execution engine.
                      * 
                      */
                     void SetExecutionEngine(const std::string& _executionEngine);
@@ -235,19 +219,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ExecutionEngineHasBeenSet() const;
 
                     /**
-                     * 获取Query ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Id Query ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Query ID.
+                     * @return Id Query ID.
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Query ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _id Query ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Query ID.
+                     * @param _id Query ID.
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -262,40 +242,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Query statementNote: This field may return null, indicating that no valid values can be obtained.
+                     * Query statement.
                      */
                     std::string m_statement;
                     bool m_statementHasBeenSet;
 
                     /**
-                     * Execution Duration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Execution duration.
                      */
                     std::string m_duration;
                     bool m_durationHasBeenSet;
 
                     /**
-                     * Start Time in Milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Start time in milliseconds.
                      */
                     int64_t m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End Time in Milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * End time in milliseconds.
                      */
                     int64_t m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * StatusNote: This field may return null, indicating that no valid values can be obtained.
+                     * Status.
                      */
                     std::string m_state;
                     bool m_stateHasBeenSet;
 
                     /**
-                     * UserNote: This field may return null, indicating that no valid values can be obtained.
+                     * User.
                      */
                     std::string m_user;
                     bool m_userHasBeenSet;
@@ -308,15 +285,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_jobIdsHasBeenSet;
 
                     /**
-                     * Execution Engine
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Execution engine.
                      */
                     std::string m_executionEngine;
                     bool m_executionEngineHasBeenSet;
 
                     /**
-                     * Query ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Query ID.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;

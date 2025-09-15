@@ -86,15 +86,19 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of returned results per page. Default value: `10`; maximum value: `100`.
-                     * @return Limit Number of returned results per page. Default value: `10`; maximum value: `100`.
+                     * 获取Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+If both limit and offset are 0, all records will be queried.
+                     * @return Limit Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+If both limit and offset are 0, all records will be queried.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of returned results per page. Default value: `10`; maximum value: `100`.
-                     * @param _limit Number of returned results per page. Default value: `10`; maximum value: `100`.
+                     * 设置Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+If both limit and offset are 0, all records will be queried.
+                     * @param _limit Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+If both limit and offset are 0, all records will be queried.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -128,15 +132,15 @@ namespace TencentCloud
                     bool OrderFieldHasBeenSet() const;
 
                     /**
-                     * 获取Sort according to OrderField in ascending or descending order. Valid range:<li>0: Descending order.</li><li>1: Ascending order.</li>Default: 0.
-                     * @return Asc Sort according to OrderField in ascending or descending order. Valid range:<li>0: Descending order.</li><li>1: Ascending order.</li>Default: 0.
+                     * 获取Sort by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0.
+                     * @return Asc Sort by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0.
                      * 
                      */
                     int64_t GetAsc() const;
 
                     /**
-                     * 设置Sort according to OrderField in ascending or descending order. Valid range:<li>0: Descending order.</li><li>1: Ascending order.</li>Default: 0.
-                     * @param _asc Sort according to OrderField in ascending or descending order. Valid range:<li>0: Descending order.</li><li>1: Ascending order.</li>Default: 0.
+                     * 设置Sort by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0.
+                     * @param _asc Sort by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0.
                      * 
                      */
                     void SetAsc(const int64_t& _asc);
@@ -149,15 +153,15 @@ namespace TencentCloud
                     bool AscHasBeenSet() const;
 
                     /**
-                     * 获取Custom query
-                     * @return Filters Custom query
+                     * 获取Custom search filter. Examples: <li>instance of filtering by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>instance of filtering by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>instance of filtering by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>.
+                     * @return Filters Custom search filter. Examples: <li>instance of filtering by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>instance of filtering by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>instance of filtering by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>.
                      * 
                      */
                     std::vector<Filters> GetFilters() const;
 
                     /**
-                     * 设置Custom query
-                     * @param _filters Custom query
+                     * 设置Custom search filter. Examples: <li>instance of filtering by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>instance of filtering by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>instance of filtering by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>.
+                     * @param _filters Custom search filter. Examples: <li>instance of filtering by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>instance of filtering by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>instance of filtering by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>.
                      * 
                      */
                     void SetFilters(const std::vector<Filters>& _filters);
@@ -184,7 +188,8 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of returned results per page. Default value: `10`; maximum value: `100`.
+                     * Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+If both limit and offset are 0, all records will be queried.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
@@ -196,13 +201,13 @@ namespace TencentCloud
                     bool m_orderFieldHasBeenSet;
 
                     /**
-                     * Sort according to OrderField in ascending or descending order. Valid range:<li>0: Descending order.</li><li>1: Ascending order.</li>Default: 0.
+                     * Sort by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0.
                      */
                     int64_t m_asc;
                     bool m_ascHasBeenSet;
 
                     /**
-                     * Custom query
+                     * Custom search filter. Examples: <li>instance of filtering by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>instance of filtering by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>instance of filtering by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>.
                      */
                     std::vector<Filters> m_filters;
                     bool m_filtersHasBeenSet;

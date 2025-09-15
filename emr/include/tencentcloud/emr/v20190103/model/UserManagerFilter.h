@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Username
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return UserName Username
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Username.
+                     * @return UserName Username.
                      * 
                      */
                     std::string GetUserName() const;
 
                     /**
-                     * 设置Username
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _userName Username
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Username.
+                     * @param _userName Username.
                      * 
                      */
                     void SetUserName(const std::string& _userName);
@@ -71,14 +67,67 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool UserNameHasBeenSet() const;
 
+                    /**
+                     * 获取User source.
+                     * @return UserType User source.
+                     * 
+                     */
+                    std::string GetUserType() const;
+
+                    /**
+                     * 设置User source.
+                     * @param _userType User source.
+                     * 
+                     */
+                    void SetUserType(const std::string& _userType);
+
+                    /**
+                     * 判断参数 UserType 是否已赋值
+                     * @return UserType 是否已赋值
+                     * 
+                     */
+                    bool UserTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Group name.
+                     * @return Groups Group name.
+                     * 
+                     */
+                    std::string GetGroups() const;
+
+                    /**
+                     * 设置Group name.
+                     * @param _groups Group name.
+                     * 
+                     */
+                    void SetGroups(const std::string& _groups);
+
+                    /**
+                     * 判断参数 Groups 是否已赋值
+                     * @return Groups 是否已赋值
+                     * 
+                     */
+                    bool GroupsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Username
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Username.
                      */
                     std::string m_userName;
                     bool m_userNameHasBeenSet;
+
+                    /**
+                     * User source.
+                     */
+                    std::string m_userType;
+                    bool m_userTypeHasBeenSet;
+
+                    /**
+                     * Group name.
+                     */
+                    std::string m_groups;
+                    bool m_groupsHasBeenSet;
 
                 };
             }

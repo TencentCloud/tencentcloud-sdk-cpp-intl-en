@@ -5329,6 +5329,49 @@ SqlserverClient::OpenInterCommunicationOutcomeCallable SqlserverClient::OpenInte
     return task->get_future();
 }
 
+SqlserverClient::QueryMigrationCheckProcessOutcome SqlserverClient::QueryMigrationCheckProcess(const QueryMigrationCheckProcessRequest &request)
+{
+    auto outcome = MakeRequest(request, "QueryMigrationCheckProcess");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        QueryMigrationCheckProcessResponse rsp = QueryMigrationCheckProcessResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return QueryMigrationCheckProcessOutcome(rsp);
+        else
+            return QueryMigrationCheckProcessOutcome(o.GetError());
+    }
+    else
+    {
+        return QueryMigrationCheckProcessOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::QueryMigrationCheckProcessAsync(const QueryMigrationCheckProcessRequest& request, const QueryMigrationCheckProcessAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->QueryMigrationCheckProcess(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SqlserverClient::QueryMigrationCheckProcessOutcomeCallable SqlserverClient::QueryMigrationCheckProcessCallable(const QueryMigrationCheckProcessRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<QueryMigrationCheckProcessOutcome()>>(
+        [this, request]()
+        {
+            return this->QueryMigrationCheckProcess(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 SqlserverClient::RecycleDBInstanceOutcome SqlserverClient::RecycleDBInstance(const RecycleDBInstanceRequest &request)
 {
     auto outcome = MakeRequest(request, "RecycleDBInstance");

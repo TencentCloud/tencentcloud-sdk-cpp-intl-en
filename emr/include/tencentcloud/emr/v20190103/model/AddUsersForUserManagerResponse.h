@@ -75,6 +75,20 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool FailedUserListHasBeenSet() const;
 
+                    /**
+                     * 获取Flow ID. If the flow ID is larger than 0, it means that the flow is launched; if the flow ID is equal to 0, it means that no flow is launched.
+                     * @return FlowId Flow ID. If the flow ID is larger than 0, it means that the flow is launched; if the flow ID is equal to 0, it means that no flow is launched.
+                     * 
+                     */
+                    int64_t GetFlowId() const;
+
+                    /**
+                     * 判断参数 FlowId 是否已赋值
+                     * @return FlowId 是否已赋值
+                     * 
+                     */
+                    bool FlowIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -90,6 +104,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     std::vector<std::string> m_failedUserList;
                     bool m_failedUserListHasBeenSet;
+
+                    /**
+                     * Flow ID. If the flow ID is larger than 0, it means that the flow is launched; if the flow ID is equal to 0, it means that no flow is launched.
+                     */
+                    int64_t m_flowId;
+                    bool m_flowIdHasBeenSet;
 
                 };
             }

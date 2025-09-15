@@ -49,19 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取AZ ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return ZoneId AZ ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Availability zone ID.
+                     * @return ZoneId Availability zone ID.
                      * 
                      */
                     int64_t GetZoneId() const;
 
                     /**
-                     * 设置AZ ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _zoneId AZ ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Availability zone ID.
+                     * @param _zoneId Availability zone ID.
                      * 
                      */
                     void SetZoneId(const int64_t& _zoneId);
@@ -74,19 +70,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取AZ information
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Zone AZ information
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Availability information.
+                     * @return Zone Availability information.
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置AZ information
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _zone AZ information
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Availability information.
+                     * @param _zone Availability information.
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -151,15 +143,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * AZ ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Availability zone ID.
                      */
                     int64_t m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * AZ information
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Availability information.
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;

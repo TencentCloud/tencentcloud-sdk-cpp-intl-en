@@ -147,6 +147,69 @@ namespace TencentCloud
                      */
                     bool LimitHasBeenSet() const;
 
+                    /**
+                     * 获取Execution status, for example, ERROR.
+                     * @return State Execution status, for example, ERROR.
+                     * 
+                     */
+                    std::vector<std::string> GetState() const;
+
+                    /**
+                     * 设置Execution status, for example, ERROR.
+                     * @param _state Execution status, for example, ERROR.
+                     * 
+                     */
+                    void SetState(const std::vector<std::string>& _state);
+
+                    /**
+                     * 判断参数 State 是否已赋值
+                     * @return State 是否已赋值
+                     * 
+                     */
+                    bool StateHasBeenSet() const;
+
+                    /**
+                     * 获取Time point earlier than the end time.
+                     * @return EndTimeGte Time point earlier than the end time.
+                     * 
+                     */
+                    uint64_t GetEndTimeGte() const;
+
+                    /**
+                     * 设置Time point earlier than the end time.
+                     * @param _endTimeGte Time point earlier than the end time.
+                     * 
+                     */
+                    void SetEndTimeGte(const uint64_t& _endTimeGte);
+
+                    /**
+                     * 判断参数 EndTimeGte 是否已赋值
+                     * @return EndTimeGte 是否已赋值
+                     * 
+                     */
+                    bool EndTimeGteHasBeenSet() const;
+
+                    /**
+                     * 获取Time point later than the end time.
+                     * @return EndTimeLte Time point later than the end time.
+                     * 
+                     */
+                    uint64_t GetEndTimeLte() const;
+
+                    /**
+                     * 设置Time point later than the end time.
+                     * @param _endTimeLte Time point later than the end time.
+                     * 
+                     */
+                    void SetEndTimeLte(const uint64_t& _endTimeLte);
+
+                    /**
+                     * 判断参数 EndTimeLte 是否已赋值
+                     * @return EndTimeLte 是否已赋值
+                     * 
+                     */
+                    bool EndTimeLteHasBeenSet() const;
+
                 private:
 
                     /**
@@ -178,6 +241,24 @@ namespace TencentCloud
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
+
+                    /**
+                     * Execution status, for example, ERROR.
+                     */
+                    std::vector<std::string> m_state;
+                    bool m_stateHasBeenSet;
+
+                    /**
+                     * Time point earlier than the end time.
+                     */
+                    uint64_t m_endTimeGte;
+                    bool m_endTimeGteHasBeenSet;
+
+                    /**
+                     * Time point later than the end time.
+                     */
+                    uint64_t m_endTimeLte;
+                    bool m_endTimeLteHasBeenSet;
 
                 };
             }

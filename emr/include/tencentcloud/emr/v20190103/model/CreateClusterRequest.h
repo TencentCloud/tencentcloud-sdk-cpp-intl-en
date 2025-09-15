@@ -29,6 +29,7 @@
 #include <tencentcloud/emr/v20190103/model/CustomMetaDBInfo.h>
 #include <tencentcloud/emr/v20190103/model/DependService.h>
 #include <tencentcloud/emr/v20190103/model/ZoneResourceConfiguration.h>
+#include <tencentcloud/emr/v20190103/model/NodeMark.h>
 
 
 namespace TencentCloud
@@ -102,10 +103,10 @@ namespace TencentCloud
 
                     /**
                      * 获取The instance name.
-<li>Length limit: 6–36 characters.</li>
+<li>Length limit: 6-36 characters.</li>
 <li>Can contain only Chinese characters, letters, digits, hyphens (-), and underscores (_).</li>
                      * @return InstanceName The instance name.
-<li>Length limit: 6–36 characters.</li>
+<li>Length limit: 6-36 characters.</li>
 <li>Can contain only Chinese characters, letters, digits, hyphens (-), and underscores (_).</li>
                      * 
                      */
@@ -113,10 +114,10 @@ namespace TencentCloud
 
                     /**
                      * 设置The instance name.
-<li>Length limit: 6–36 characters.</li>
+<li>Length limit: 6-36 characters.</li>
 <li>Can contain only Chinese characters, letters, digits, hyphens (-), and underscores (_).</li>
                      * @param _instanceName The instance name.
-<li>Length limit: 6–36 characters.</li>
+<li>Length limit: 6-36 characters.</li>
 <li>Can contain only Chinese characters, letters, digits, hyphens (-), and underscores (_).</li>
                      * 
                      */
@@ -268,15 +269,15 @@ namespace TencentCloud
                     bool ScriptBootstrapActionConfigHasBeenSet() const;
 
                     /**
-                     * 获取A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae360632808`.
-                     * @return ClientToken A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae360632808`.
+                     * 获取Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808.
+                     * @return ClientToken Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808.
                      * 
                      */
                     std::string GetClientToken() const;
 
                     /**
-                     * 设置A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae360632808`.
-                     * @param _clientToken A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae360632808`.
+                     * 设置Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808.
+                     * @param _clientToken Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808.
                      * 
                      */
                     void SetClientToken(const std::string& _clientToken);
@@ -542,6 +543,69 @@ If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `Met
                      */
                     bool ZoneResourceConfigurationHasBeenSet() const;
 
+                    /**
+                     * 获取COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+                     * @return CosBucket COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+                     * 
+                     */
+                    std::string GetCosBucket() const;
+
+                    /**
+                     * 设置COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+                     * @param _cosBucket COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+                     * 
+                     */
+                    void SetCosBucket(const std::string& _cosBucket);
+
+                    /**
+                     * 判断参数 CosBucket 是否已赋值
+                     * @return CosBucket 是否已赋值
+                     * 
+                     */
+                    bool CosBucketHasBeenSet() const;
+
+                    /**
+                     * 获取Node identifier information: currently used only in Terraform.
+                     * @return NodeMarks Node identifier information: currently used only in Terraform.
+                     * 
+                     */
+                    std::vector<NodeMark> GetNodeMarks() const;
+
+                    /**
+                     * 设置Node identifier information: currently used only in Terraform.
+                     * @param _nodeMarks Node identifier information: currently used only in Terraform.
+                     * 
+                     */
+                    void SetNodeMarks(const std::vector<NodeMark>& _nodeMarks);
+
+                    /**
+                     * 判断参数 NodeMarks 是否已赋值
+                     * @return NodeMarks 是否已赋值
+                     * 
+                     */
+                    bool NodeMarksHasBeenSet() const;
+
+                    /**
+                     * 获取clb id
+                     * @return LoadBalancerId clb id
+                     * 
+                     */
+                    std::string GetLoadBalancerId() const;
+
+                    /**
+                     * 设置clb id
+                     * @param _loadBalancerId clb id
+                     * 
+                     */
+                    void SetLoadBalancerId(const std::string& _loadBalancerId);
+
+                    /**
+                     * 判断参数 LoadBalancerId 是否已赋值
+                     * @return LoadBalancerId 是否已赋值
+                     * 
+                     */
+                    bool LoadBalancerIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -560,7 +624,7 @@ If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `Met
 
                     /**
                      * The instance name.
-<li>Length limit: 6–36 characters.</li>
+<li>Length limit: 6-36 characters.</li>
 <li>Can contain only Chinese characters, letters, digits, hyphens (-), and underscores (_).</li>
                      */
                     std::string m_instanceName;
@@ -606,7 +670,7 @@ If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `Met
                     bool m_scriptBootstrapActionConfigHasBeenSet;
 
                     /**
-                     * A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae360632808`.
+                     * Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808.
                      */
                     std::string m_clientToken;
                     bool m_clientTokenHasBeenSet;
@@ -681,6 +745,24 @@ If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `Met
                      */
                     std::vector<ZoneResourceConfiguration> m_zoneResourceConfiguration;
                     bool m_zoneResourceConfigurationHasBeenSet;
+
+                    /**
+                     * COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+                     */
+                    std::string m_cosBucket;
+                    bool m_cosBucketHasBeenSet;
+
+                    /**
+                     * Node identifier information: currently used only in Terraform.
+                     */
+                    std::vector<NodeMark> m_nodeMarks;
+                    bool m_nodeMarksHasBeenSet;
+
+                    /**
+                     * clb id
+                     */
+                    std::string m_loadBalancerId;
+                    bool m_loadBalancerIdHasBeenSet;
 
                 };
             }

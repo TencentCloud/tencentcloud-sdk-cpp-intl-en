@@ -74,10 +74,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DealNamesHasBeenSet() const;
 
                     /**
-                     * 获取Client token.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ClientToken Client token.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Client Token.
+                     * @return ClientToken Client Token.
                      * 
                      */
                     std::string GetClientToken() const;
@@ -90,10 +88,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ClientTokenHasBeenSet() const;
 
                     /**
-                     * 获取Scale-out workflow ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FlowId Scale-out workflow ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Scale-out process ID.
+                     * @return FlowId Scale-out process ID.
                      * 
                      */
                     int64_t GetFlowId() const;
@@ -106,10 +102,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FlowIdHasBeenSet() const;
 
                     /**
-                     * 获取Big order ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BillId Big order ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Large order number.
+                     * @return BillId Large order number.
                      * 
                      */
                     std::string GetBillId() const;
@@ -120,6 +114,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool BillIdHasBeenSet() const;
+
+                    /**
+                     * 获取TraceId for scale-out.
+                     * @return TraceId TraceId for scale-out.
+                     * 
+                     */
+                    std::string GetTraceId() const;
+
+                    /**
+                     * 判断参数 TraceId 是否已赋值
+                     * @return TraceId 是否已赋值
+                     * 
+                     */
+                    bool TraceIdHasBeenSet() const;
 
                 private:
 
@@ -137,25 +145,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_dealNamesHasBeenSet;
 
                     /**
-                     * Client token.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Client Token.
                      */
                     std::string m_clientToken;
                     bool m_clientTokenHasBeenSet;
 
                     /**
-                     * Scale-out workflow ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Scale-out process ID.
                      */
                     int64_t m_flowId;
                     bool m_flowIdHasBeenSet;
 
                     /**
-                     * Big order ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Large order number.
                      */
                     std::string m_billId;
                     bool m_billIdHasBeenSet;
+
+                    /**
+                     * TraceId for scale-out.
+                     */
+                    std::string m_traceId;
+                    bool m_traceIdHasBeenSet;
 
                 };
             }

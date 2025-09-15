@@ -26,7 +26,9 @@ DescribeAutoScaleRecordsRequest::DescribeAutoScaleRecordsRequest() :
     m_instanceIdHasBeenSet(false),
     m_filtersHasBeenSet(false),
     m_offsetHasBeenSet(false),
-    m_limitHasBeenSet(false)
+    m_limitHasBeenSet(false),
+    m_recordSourceHasBeenSet(false),
+    m_ascHasBeenSet(false)
 {
 }
 
@@ -74,6 +76,22 @@ string DescribeAutoScaleRecordsRequest::ToJsonString() const
         string key = "Limit";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_limit, allocator);
+    }
+
+    if (m_recordSourceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RecordSource";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_recordSource, allocator);
+    }
+
+    if (m_ascHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Asc";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_asc, allocator);
     }
 
 
@@ -146,6 +164,38 @@ void DescribeAutoScaleRecordsRequest::SetLimit(const int64_t& _limit)
 bool DescribeAutoScaleRecordsRequest::LimitHasBeenSet() const
 {
     return m_limitHasBeenSet;
+}
+
+int64_t DescribeAutoScaleRecordsRequest::GetRecordSource() const
+{
+    return m_recordSource;
+}
+
+void DescribeAutoScaleRecordsRequest::SetRecordSource(const int64_t& _recordSource)
+{
+    m_recordSource = _recordSource;
+    m_recordSourceHasBeenSet = true;
+}
+
+bool DescribeAutoScaleRecordsRequest::RecordSourceHasBeenSet() const
+{
+    return m_recordSourceHasBeenSet;
+}
+
+int64_t DescribeAutoScaleRecordsRequest::GetAsc() const
+{
+    return m_asc;
+}
+
+void DescribeAutoScaleRecordsRequest::SetAsc(const int64_t& _asc)
+{
+    m_asc = _asc;
+    m_ascHasBeenSet = true;
+}
+
+bool DescribeAutoScaleRecordsRequest::AscHasBeenSet() const
+{
+    return m_ascHasBeenSet;
 }
 
 

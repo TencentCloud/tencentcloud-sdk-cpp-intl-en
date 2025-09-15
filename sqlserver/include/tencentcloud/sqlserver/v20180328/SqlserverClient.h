@@ -269,6 +269,8 @@
 #include <tencentcloud/sqlserver/v20180328/model/ModifyReadOnlyGroupDetailsResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/OpenInterCommunicationRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/OpenInterCommunicationResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/QueryMigrationCheckProcessRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/QueryMigrationCheckProcessResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/RecycleDBInstanceRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/RecycleDBInstanceResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/RecycleReadOnlyGroupRequest.h>
@@ -682,6 +684,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::OpenInterCommunicationResponse> OpenInterCommunicationOutcome;
                 typedef std::future<OpenInterCommunicationOutcome> OpenInterCommunicationOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::OpenInterCommunicationRequest&, OpenInterCommunicationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OpenInterCommunicationAsyncHandler;
+                typedef Outcome<Core::Error, Model::QueryMigrationCheckProcessResponse> QueryMigrationCheckProcessOutcome;
+                typedef std::future<QueryMigrationCheckProcessOutcome> QueryMigrationCheckProcessOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::QueryMigrationCheckProcessRequest&, QueryMigrationCheckProcessOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryMigrationCheckProcessAsyncHandler;
                 typedef Outcome<Core::Error, Model::RecycleDBInstanceResponse> RecycleDBInstanceOutcome;
                 typedef std::future<RecycleDBInstanceOutcome> RecycleDBInstanceOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::RecycleDBInstanceRequest&, RecycleDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecycleDBInstanceAsyncHandler;
@@ -1839,6 +1844,15 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
                 OpenInterCommunicationOutcome OpenInterCommunication(const Model::OpenInterCommunicationRequest &request);
                 void OpenInterCommunicationAsync(const Model::OpenInterCommunicationRequest& request, const OpenInterCommunicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 OpenInterCommunicationOutcomeCallable OpenInterCommunicationCallable(const Model::OpenInterCommunicationRequest& request);
+
+                /**
+                 *This API is used to query the progress of the migration verification task, inquiry of migration check task progress, applicable to the migration method where the migration source type is TencentDB for SQL Server.
+                 * @param req QueryMigrationCheckProcessRequest
+                 * @return QueryMigrationCheckProcessOutcome
+                 */
+                QueryMigrationCheckProcessOutcome QueryMigrationCheckProcess(const Model::QueryMigrationCheckProcessRequest &request);
+                void QueryMigrationCheckProcessAsync(const Model::QueryMigrationCheckProcessRequest& request, const QueryMigrationCheckProcessAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                QueryMigrationCheckProcessOutcomeCallable QueryMigrationCheckProcessCallable(const Model::QueryMigrationCheckProcessRequest& request);
 
                 /**
                  *This API is used to return a deactivated SQL Server instance.

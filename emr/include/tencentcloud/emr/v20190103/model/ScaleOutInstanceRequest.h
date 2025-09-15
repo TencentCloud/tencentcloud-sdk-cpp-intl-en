@@ -25,6 +25,8 @@
 #include <tencentcloud/emr/v20190103/model/Tag.h>
 #include <tencentcloud/emr/v20190103/model/PodSpec.h>
 #include <tencentcloud/emr/v20190103/model/PodParameter.h>
+#include <tencentcloud/emr/v20190103/model/ComputeResourceAdvanceParams.h>
+#include <tencentcloud/emr/v20190103/model/NodeMark.h>
 
 
 namespace TencentCloud
@@ -361,15 +363,15 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Resource type selected for scaling. Valid values: `host` (general CVM resource) and `pod` (resource provided by TKE or EKS cluster).
-                     * @return HardwareResourceType Resource type selected for scaling. Valid values: `host` (general CVM resource) and `pod` (resource provided by TKE or EKS cluster).
+                     * 获取Resource type selected for scale-out. Valid values: "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
+                     * @return HardwareResourceType Resource type selected for scale-out. Valid values: "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
                      * 
                      */
                     std::string GetHardwareResourceType() const;
 
                     /**
-                     * 设置Resource type selected for scaling. Valid values: `host` (general CVM resource) and `pod` (resource provided by TKE or EKS cluster).
-                     * @param _hardwareResourceType Resource type selected for scaling. Valid values: `host` (general CVM resource) and `pod` (resource provided by TKE or EKS cluster).
+                     * 设置Resource type selected for scale-out. Valid values: "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
+                     * @param _hardwareResourceType Resource type selected for scale-out. Valid values: "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
                      * 
                      */
                     void SetHardwareResourceType(const std::string& _hardwareResourceType);
@@ -624,6 +626,90 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
                      */
                     bool AutoRenewHasBeenSet() const;
 
+                    /**
+                     * 获取The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+                     * @return ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+                     * 
+                     */
+                    std::string GetResourceBaseType() const;
+
+                    /**
+                     * 设置The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+                     * @param _resourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+                     * 
+                     */
+                    void SetResourceBaseType(const std::string& _resourceBaseType);
+
+                    /**
+                     * 判断参数 ResourceBaseType 是否已赋值
+                     * @return ResourceBaseType 是否已赋值
+                     * 
+                     */
+                    bool ResourceBaseTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Computing resource ID.
+                     * @return ComputeResourceId Computing resource ID.
+                     * 
+                     */
+                    std::string GetComputeResourceId() const;
+
+                    /**
+                     * 设置Computing resource ID.
+                     * @param _computeResourceId Computing resource ID.
+                     * 
+                     */
+                    void SetComputeResourceId(const std::string& _computeResourceId);
+
+                    /**
+                     * 判断参数 ComputeResourceId 是否已赋值
+                     * @return ComputeResourceId 是否已赋值
+                     * 
+                     */
+                    bool ComputeResourceIdHasBeenSet() const;
+
+                    /**
+                     * 获取Advanced settings of computing resources.
+                     * @return ComputeResourceAdvanceParams Advanced settings of computing resources.
+                     * 
+                     */
+                    ComputeResourceAdvanceParams GetComputeResourceAdvanceParams() const;
+
+                    /**
+                     * 设置Advanced settings of computing resources.
+                     * @param _computeResourceAdvanceParams Advanced settings of computing resources.
+                     * 
+                     */
+                    void SetComputeResourceAdvanceParams(const ComputeResourceAdvanceParams& _computeResourceAdvanceParams);
+
+                    /**
+                     * 判断参数 ComputeResourceAdvanceParams 是否已赋值
+                     * @return ComputeResourceAdvanceParams 是否已赋值
+                     * 
+                     */
+                    bool ComputeResourceAdvanceParamsHasBeenSet() const;
+
+                    /**
+                     * 获取Node tag information: currently used only in Terraform.
+                     * @return NodeMarks Node tag information: currently used only in Terraform.
+                     * 
+                     */
+                    NodeMark GetNodeMarks() const;
+
+                    /**
+                     * 设置Node tag information: currently used only in Terraform.
+                     * @param _nodeMarks Node tag information: currently used only in Terraform.
+                     * 
+                     */
+                    void SetNodeMarks(const NodeMark& _nodeMarks);
+
+                    /**
+                     * 判断参数 NodeMarks 是否已赋值
+                     * @return NodeMarks 是否已赋值
+                     * 
+                     */
+                    bool NodeMarksHasBeenSet() const;
+
                 private:
 
                     /**
@@ -716,7 +802,7 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Resource type selected for scaling. Valid values: `host` (general CVM resource) and `pod` (resource provided by TKE or EKS cluster).
+                     * Resource type selected for scale-out. Valid values: "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
                      */
                     std::string m_hardwareResourceType;
                     bool m_hardwareResourceTypeHasBeenSet;
@@ -789,6 +875,30 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
                      */
                     int64_t m_autoRenew;
                     bool m_autoRenewHasBeenSet;
+
+                    /**
+                     * The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+                     */
+                    std::string m_resourceBaseType;
+                    bool m_resourceBaseTypeHasBeenSet;
+
+                    /**
+                     * Computing resource ID.
+                     */
+                    std::string m_computeResourceId;
+                    bool m_computeResourceIdHasBeenSet;
+
+                    /**
+                     * Advanced settings of computing resources.
+                     */
+                    ComputeResourceAdvanceParams m_computeResourceAdvanceParams;
+                    bool m_computeResourceAdvanceParamsHasBeenSet;
+
+                    /**
+                     * Node tag information: currently used only in Terraform.
+                     */
+                    NodeMark m_nodeMarks;
+                    bool m_nodeMarksHasBeenSet;
 
                 };
             }

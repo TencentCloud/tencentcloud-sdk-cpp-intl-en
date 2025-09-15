@@ -43,27 +43,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Sorting field. Valid values:
-<li>`ZONE`: Sort by the availability zone.
-<li>`INSTANCE_DISPLAY_LABEL`: Sort by visibility labels (`HIDDEN`, `NORMAL` and `SELECTED`). Default: ['HIDDEN', 'NORMAL', 'SELECTED'].
-The default value is `ZONE`.
-                     * @return OrderField Sorting field. Valid values:
-<li>`ZONE`: Sort by the availability zone.
-<li>`INSTANCE_DISPLAY_LABEL`: Sort by visibility labels (`HIDDEN`, `NORMAL` and `SELECTED`). Default: ['HIDDEN', 'NORMAL', 'SELECTED'].
-The default value is `ZONE`.
+                     * 获取Field on which the AZ list is sorted. value range:.
+<Li>ZONE: sorted based on availability zone.</li>.
+INSTANCE_DISPLAY_LABEL: specifies the Tag DISPLAY sorting order based on availability zone. valid values: HIDDEN (hide), NORMAL (ordinary), SELECTED (chosen by default). defaults to ascending order: ['HIDDEN', 'NORMAL', 'SELECTED'].
+Specifies the default sorting order by availability zone.
+                     * @return OrderField Field on which the AZ list is sorted. value range:.
+<Li>ZONE: sorted based on availability zone.</li>.
+INSTANCE_DISPLAY_LABEL: specifies the Tag DISPLAY sorting order based on availability zone. valid values: HIDDEN (hide), NORMAL (ordinary), SELECTED (chosen by default). defaults to ascending order: ['HIDDEN', 'NORMAL', 'SELECTED'].
+Specifies the default sorting order by availability zone.
                      * 
                      */
                     std::string GetOrderField() const;
 
                     /**
-                     * 设置Sorting field. Valid values:
-<li>`ZONE`: Sort by the availability zone.
-<li>`INSTANCE_DISPLAY_LABEL`: Sort by visibility labels (`HIDDEN`, `NORMAL` and `SELECTED`). Default: ['HIDDEN', 'NORMAL', 'SELECTED'].
-The default value is `ZONE`.
-                     * @param _orderField Sorting field. Valid values:
-<li>`ZONE`: Sort by the availability zone.
-<li>`INSTANCE_DISPLAY_LABEL`: Sort by visibility labels (`HIDDEN`, `NORMAL` and `SELECTED`). Default: ['HIDDEN', 'NORMAL', 'SELECTED'].
-The default value is `ZONE`.
+                     * 设置Field on which the AZ list is sorted. value range:.
+<Li>ZONE: sorted based on availability zone.</li>.
+INSTANCE_DISPLAY_LABEL: specifies the Tag DISPLAY sorting order based on availability zone. valid values: HIDDEN (hide), NORMAL (ordinary), SELECTED (chosen by default). defaults to ascending order: ['HIDDEN', 'NORMAL', 'SELECTED'].
+Specifies the default sorting order by availability zone.
+                     * @param _orderField Field on which the AZ list is sorted. value range:.
+<Li>ZONE: sorted based on availability zone.</li>.
+INSTANCE_DISPLAY_LABEL: specifies the Tag DISPLAY sorting order based on availability zone. valid values: HIDDEN (hide), NORMAL (ordinary), SELECTED (chosen by default). defaults to ascending order: ['HIDDEN', 'NORMAL', 'SELECTED'].
+Specifies the default sorting order by availability zone.
                      * 
                      */
                     void SetOrderField(const std::string& _orderField);
@@ -76,27 +76,27 @@ The default value is `ZONE`.
                     bool OrderFieldHasBeenSet() const;
 
                     /**
-                     * 获取Specifies how availability zones are listed. Valid values:
-<li>ASC: Ascending sort. 
-<li>DESC: Descending sort.
-The default value is `ASC`.
-                     * @return Order Specifies how availability zones are listed. Valid values:
-<li>ASC: Ascending sort. 
-<li>DESC: Descending sort.
-The default value is `ASC`.
+                     * 获取Outputs the sorting order of the availability zone list. value range:.
+<Li>ASC: ascending order.</li>.
+<Li>DESC: sort in descending order.</li>.
+Specifies the default ascending order.
+                     * @return Order Outputs the sorting order of the availability zone list. value range:.
+<Li>ASC: ascending order.</li>.
+<Li>DESC: sort in descending order.</li>.
+Specifies the default ascending order.
                      * 
                      */
                     std::string GetOrder() const;
 
                     /**
-                     * 设置Specifies how availability zones are listed. Valid values:
-<li>ASC: Ascending sort. 
-<li>DESC: Descending sort.
-The default value is `ASC`.
-                     * @param _order Specifies how availability zones are listed. Valid values:
-<li>ASC: Ascending sort. 
-<li>DESC: Descending sort.
-The default value is `ASC`.
+                     * 设置Outputs the sorting order of the availability zone list. value range:.
+<Li>ASC: ascending order.</li>.
+<Li>DESC: sort in descending order.</li>.
+Specifies the default ascending order.
+                     * @param _order Outputs the sorting order of the availability zone list. value range:.
+<Li>ASC: ascending order.</li>.
+<Li>DESC: sort in descending order.</li>.
+Specifies the default ascending order.
                      * 
                      */
                     void SetOrder(const std::string& _order);
@@ -111,19 +111,19 @@ The default value is `ASC`.
                 private:
 
                     /**
-                     * Sorting field. Valid values:
-<li>`ZONE`: Sort by the availability zone.
-<li>`INSTANCE_DISPLAY_LABEL`: Sort by visibility labels (`HIDDEN`, `NORMAL` and `SELECTED`). Default: ['HIDDEN', 'NORMAL', 'SELECTED'].
-The default value is `ZONE`.
+                     * Field on which the AZ list is sorted. value range:.
+<Li>ZONE: sorted based on availability zone.</li>.
+INSTANCE_DISPLAY_LABEL: specifies the Tag DISPLAY sorting order based on availability zone. valid values: HIDDEN (hide), NORMAL (ordinary), SELECTED (chosen by default). defaults to ascending order: ['HIDDEN', 'NORMAL', 'SELECTED'].
+Specifies the default sorting order by availability zone.
                      */
                     std::string m_orderField;
                     bool m_orderFieldHasBeenSet;
 
                     /**
-                     * Specifies how availability zones are listed. Valid values:
-<li>ASC: Ascending sort. 
-<li>DESC: Descending sort.
-The default value is `ASC`.
+                     * Outputs the sorting order of the availability zone list. value range:.
+<Li>ASC: ascending order.</li>.
+<Li>DESC: sort in descending order.</li>.
+Specifies the default ascending order.
                      */
                     std::string m_order;
                     bool m_orderHasBeenSet;

@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MNPId Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
                      * 设置Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _mNPId Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TaskId Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _taskId Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取1: Pending; 20: Running; 30: Failed; 60: Succeeded 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TaskStatus 1: Pending; 20: Running; 30: Failed; 60: Succeeded 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取1: Pending; 20: Running; 30: Failed; 60: Succeeded
+                     * @return TaskStatus 1: Pending; 20: Running; 30: Failed; 60: Succeeded
                      * 
                      */
                     int64_t GetTaskStatus() const;
 
                     /**
-                     * 设置1: Pending; 20: Running; 30: Failed; 60: Succeeded 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _taskStatus 1: Pending; 20: Running; 30: Failed; 60: Succeeded 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置1: Pending; 20: Running; 30: Failed; 60: Succeeded
+                     * @param _taskStatus 1: Pending; 20: Running; 30: Failed; 60: Succeeded
                      * 
                      */
                     void SetTaskStatus(const int64_t& _taskStatus);
@@ -123,18 +111,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Task status message
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TaskMsg Task status message
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTaskMsg() const;
 
                     /**
                      * 设置Task status message
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _taskMsg Task status message
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTaskMsg(const std::string& _taskMsg);
@@ -146,35 +130,58 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool TaskMsgHasBeenSet() const;
 
+                    /**
+                     * 获取Mini program version ID (returned when compilation succeeds)
+                     * @return MNPVersionId Mini program version ID (returned when compilation succeeds)
+                     * 
+                     */
+                    int64_t GetMNPVersionId() const;
+
+                    /**
+                     * 设置Mini program version ID (returned when compilation succeeds)
+                     * @param _mNPVersionId Mini program version ID (returned when compilation succeeds)
+                     * 
+                     */
+                    void SetMNPVersionId(const int64_t& _mNPVersionId);
+
+                    /**
+                     * 判断参数 MNPVersionId 是否已赋值
+                     * @return MNPVersionId 是否已赋值
+                     * 
+                     */
+                    bool MNPVersionIdHasBeenSet() const;
+
                 private:
 
                     /**
                      * Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
 
                     /**
                      * Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * 1: Pending; 20: Running; 30: Failed; 60: Succeeded 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 1: Pending; 20: Running; 30: Failed; 60: Succeeded
                      */
                     int64_t m_taskStatus;
                     bool m_taskStatusHasBeenSet;
 
                     /**
                      * Task status message
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_taskMsg;
                     bool m_taskMsgHasBeenSet;
+
+                    /**
+                     * Mini program version ID (returned when compilation succeeds)
+                     */
+                    int64_t m_mNPVersionId;
+                    bool m_mNPVersionIdHasBeenSet;
 
                 };
             }

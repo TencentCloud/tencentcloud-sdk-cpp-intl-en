@@ -21,7 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/tcsas/v20250106/model/BooleanInfo.h>
+#include <tencentcloud/tcsas/v20250106/model/CreateMNPApprovalResp.h>
 
 
 namespace TencentCloud
@@ -49,7 +49,7 @@ namespace TencentCloud
                      * @return Data Response data
                      * 
                      */
-                    BooleanInfo GetData() const;
+                    CreateMNPApprovalResp GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
@@ -63,7 +63,7 @@ namespace TencentCloud
                     /**
                      * Response data
                      */
-                    BooleanInfo m_data;
+                    CreateMNPApprovalResp m_data;
                     bool m_dataHasBeenSet;
 
                 };

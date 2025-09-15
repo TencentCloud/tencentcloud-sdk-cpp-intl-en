@@ -24,7 +24,8 @@ DescribeMNPVersionResp::DescribeMNPVersionResp() :
     m_mNPIdHasBeenSet(false),
     m_taskIdHasBeenSet(false),
     m_taskStatusHasBeenSet(false),
-    m_taskMsgHasBeenSet(false)
+    m_taskMsgHasBeenSet(false),
+    m_mNPVersionIdHasBeenSet(false)
 {
 }
 
@@ -73,6 +74,16 @@ CoreInternalOutcome DescribeMNPVersionResp::Deserialize(const rapidjson::Value &
         m_taskMsgHasBeenSet = true;
     }
 
+    if (value.HasMember("MNPVersionId") && !value["MNPVersionId"].IsNull())
+    {
+        if (!value["MNPVersionId"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeMNPVersionResp.MNPVersionId` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_mNPVersionId = value["MNPVersionId"].GetInt64();
+        m_mNPVersionIdHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -110,6 +121,14 @@ void DescribeMNPVersionResp::ToJsonObject(rapidjson::Value &value, rapidjson::Do
         string key = "TaskMsg";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_taskMsg.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_mNPVersionIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MNPVersionId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_mNPVersionId, allocator);
     }
 
 }
@@ -177,5 +196,21 @@ void DescribeMNPVersionResp::SetTaskMsg(const string& _taskMsg)
 bool DescribeMNPVersionResp::TaskMsgHasBeenSet() const
 {
     return m_taskMsgHasBeenSet;
+}
+
+int64_t DescribeMNPVersionResp::GetMNPVersionId() const
+{
+    return m_mNPVersionId;
+}
+
+void DescribeMNPVersionResp::SetMNPVersionId(const int64_t& _mNPVersionId)
+{
+    m_mNPVersionId = _mNPVersionId;
+    m_mNPVersionIdHasBeenSet = true;
+}
+
+bool DescribeMNPVersionResp::MNPVersionIdHasBeenSet() const
+{
+    return m_mNPVersionIdHasBeenSet;
 }
 

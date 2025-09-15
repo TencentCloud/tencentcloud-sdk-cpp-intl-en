@@ -1,0 +1,111 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_EMR_V20190103_MODEL_METRICTAGS_H_
+#define TENCENTCLOUD_EMR_V20190103_MODEL_METRICTAGS_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/utils/rapidjson/document.h>
+#include <tencentcloud/core/utils/rapidjson/writer.h>
+#include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
+#include <tencentcloud/core/AbstractModel.h>
+
+
+namespace TencentCloud
+{
+    namespace Emr
+    {
+        namespace V20190103
+        {
+            namespace Model
+            {
+                /**
+                * Metric tag.
+                */
+                class MetricTags : public AbstractModel
+                {
+                public:
+                    MetricTags();
+                    ~MetricTags() = default;
+                    void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
+                    CoreInternalOutcome Deserialize(const rapidjson::Value &value);
+
+
+                    /**
+                     * 获取Metric Unit.
+                     * @return Unit Metric Unit.
+                     * 
+                     */
+                    std::string GetUnit() const;
+
+                    /**
+                     * 设置Metric Unit.
+                     * @param _unit Metric Unit.
+                     * 
+                     */
+                    void SetUnit(const std::string& _unit);
+
+                    /**
+                     * 判断参数 Unit 是否已赋值
+                     * @return Unit 是否已赋值
+                     * 
+                     */
+                    bool UnitHasBeenSet() const;
+
+                    /**
+                     * 获取Metric type.
+                     * @return Type Metric type.
+                     * 
+                     */
+                    std::string GetType() const;
+
+                    /**
+                     * 设置Metric type.
+                     * @param _type Metric type.
+                     * 
+                     */
+                    void SetType(const std::string& _type);
+
+                    /**
+                     * 判断参数 Type 是否已赋值
+                     * @return Type 是否已赋值
+                     * 
+                     */
+                    bool TypeHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * Metric Unit.
+                     */
+                    std::string m_unit;
+                    bool m_unitHasBeenSet;
+
+                    /**
+                     * Metric type.
+                     */
+                    std::string m_type;
+                    bool m_typeHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_EMR_V20190103_MODEL_METRICTAGS_H_

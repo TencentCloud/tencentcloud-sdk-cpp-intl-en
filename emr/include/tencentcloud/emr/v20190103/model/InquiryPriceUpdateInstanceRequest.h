@@ -95,27 +95,6 @@ namespace TencentCloud
                     bool TimeSpanHasBeenSet() const;
 
                     /**
-                     * 获取Target node specification.
-                     * @return UpdateSpec Target node specification.
-                     * 
-                     */
-                    UpdateInstanceSettings GetUpdateSpec() const;
-
-                    /**
-                     * 设置Target node specification.
-                     * @param _updateSpec Target node specification.
-                     * 
-                     */
-                    void SetUpdateSpec(const UpdateInstanceSettings& _updateSpec);
-
-                    /**
-                     * 判断参数 UpdateSpec 是否已赋值
-                     * @return UpdateSpec 是否已赋值
-                     * 
-                     */
-                    bool UpdateSpecHasBeenSet() const;
-
-                    /**
                      * 获取Instance billing mode. Valid values:
 <li>0: pay-as-you-go.</li>
                      * @return PayMode Instance billing mode. Valid values:
@@ -141,27 +120,6 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-                     * @return Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-                     * 
-                     */
-                    Placement GetPlacement() const;
-
-                    /**
-                     * 设置Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-                     * @param _placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-                     * 
-                     */
-                    void SetPlacement(const Placement& _placement);
-
-                    /**
-                     * 判断参数 Placement 是否已赋值
-                     * @return Placement 是否已赋值
-                     * 
-                     */
-                    bool PlacementHasBeenSet() const;
-
-                    /**
                      * 获取Currency.
                      * @return Currency Currency.
                      * 
@@ -181,6 +139,48 @@ namespace TencentCloud
                      * 
                      */
                     bool CurrencyHasBeenSet() const;
+
+                    /**
+                     * 获取Target node specification.
+                     * @return UpdateSpec Target node specification.
+                     * 
+                     */
+                    UpdateInstanceSettings GetUpdateSpec() const;
+
+                    /**
+                     * 设置Target node specification.
+                     * @param _updateSpec Target node specification.
+                     * 
+                     */
+                    void SetUpdateSpec(const UpdateInstanceSettings& _updateSpec);
+
+                    /**
+                     * 判断参数 UpdateSpec 是否已赋值
+                     * @return UpdateSpec 是否已赋值
+                     * 
+                     */
+                    bool UpdateSpecHasBeenSet() const;
+
+                    /**
+                     * 获取Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     * @return Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     * 
+                     */
+                    Placement GetPlacement() const;
+
+                    /**
+                     * 设置Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     * @param _placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     * 
+                     */
+                    void SetPlacement(const Placement& _placement);
+
+                    /**
+                     * 判断参数 Placement 是否已赋值
+                     * @return Placement 是否已赋值
+                     * 
+                     */
+                    bool PlacementHasBeenSet() const;
 
                     /**
                      * 获取The resource ID list for batch configuration change.
@@ -220,12 +220,6 @@ namespace TencentCloud
                     bool m_timeSpanHasBeenSet;
 
                     /**
-                     * Target node specification.
-                     */
-                    UpdateInstanceSettings m_updateSpec;
-                    bool m_updateSpecHasBeenSet;
-
-                    /**
                      * Instance billing mode. Valid values:
 <li>0: pay-as-you-go.</li>
                      */
@@ -233,16 +227,22 @@ namespace TencentCloud
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-                     */
-                    Placement m_placement;
-                    bool m_placementHasBeenSet;
-
-                    /**
                      * Currency.
                      */
                     std::string m_currency;
                     bool m_currencyHasBeenSet;
+
+                    /**
+                     * Target node specification.
+                     */
+                    UpdateInstanceSettings m_updateSpec;
+                    bool m_updateSpecHasBeenSet;
+
+                    /**
+                     * Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     */
+                    Placement m_placement;
+                    bool m_placementHasBeenSet;
 
                     /**
                      * The resource ID list for batch configuration change.

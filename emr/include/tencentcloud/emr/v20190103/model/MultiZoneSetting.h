@@ -50,19 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取"master", "standby", "third-party"
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return ZoneTag "master", "standby", "third-party"
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取"master", "standby" or "third-party".
+                     * @return ZoneTag "master", "standby" or "third-party".
                      * 
                      */
                     std::string GetZoneTag() const;
 
                     /**
-                     * 设置"master", "standby", "third-party"
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _zoneTag "master", "standby", "third-party"
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置"master", "standby" or "third-party".
+                     * @param _zoneTag "master", "standby" or "third-party".
                      * 
                      */
                     void SetZoneTag(const std::string& _zoneTag);
@@ -140,8 +136,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * "master", "standby", "third-party"
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * "master", "standby" or "third-party".
                      */
                     std::string m_zoneTag;
                     bool m_zoneTagHasBeenSet;

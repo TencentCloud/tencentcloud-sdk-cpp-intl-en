@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Node type: Master/Core/Task/Router/Common
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return NodeType Node type: Master/Core/Task/Router/Common
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Node type: Master/Core/Task/Router/Common.
+                     * @return NodeType Node type: Master/Core/Task/Router/Common.
                      * 
                      */
                     std::string GetNodeType() const;
 
                     /**
-                     * 设置Node type: Master/Core/Task/Router/Common
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _nodeType Node type: Master/Core/Task/Router/Common
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Node type: Master/Core/Task/Router/Common.
+                     * @param _nodeType Node type: Master/Core/Task/Router/Common.
                      * 
                      */
                     void SetNodeType(const std::string& _nodeType);
@@ -72,19 +68,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool NodeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Number of nodes
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return NodeSize Number of nodes
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Number of nodes.
+                     * @return NodeSize Number of nodes.
                      * 
                      */
                     uint64_t GetNodeSize() const;
 
                     /**
-                     * 设置Number of nodes
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _nodeSize Number of nodes
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Number of nodes.
+                     * @param _nodeSize Number of nodes.
                      * 
                      */
                     void SetNodeSize(const uint64_t& _nodeSize);
@@ -99,15 +91,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Node type: Master/Core/Task/Router/Common
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Node type: Master/Core/Task/Router/Common.
                      */
                     std::string m_nodeType;
                     bool m_nodeTypeHasBeenSet;
 
                     /**
-                     * Number of nodes
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Number of nodes.
                      */
                     uint64_t m_nodeSize;
                     bool m_nodeSizeHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Node renewal pricing details.
                 */
                 class NodeRenewPriceDetail : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ChargeType 
+                     * 获取Billing type (1: monthly subscription, 3: committed use).
+                     * @return ChargeType Billing type (1: monthly subscription, 3: committed use).
                      * 
                      */
                     int64_t GetChargeType() const;
 
                     /**
-                     * 设置
-                     * @param _chargeType 
+                     * 设置Billing type (1: monthly subscription, 3: committed use).
+                     * @param _chargeType Billing type (1: monthly subscription, 3: committed use).
                      * 
                      */
                     void SetChargeType(const int64_t& _chargeType);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool ChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EmrResourceId 
+                     * 获取EMR resource ID.
+                     * @return EmrResourceId EMR resource ID.
                      * 
                      */
                     std::string GetEmrResourceId() const;
 
                     /**
-                     * 设置
-                     * @param _emrResourceId 
+                     * 设置EMR resource ID.
+                     * @param _emrResourceId EMR resource ID.
                      * 
                      */
                     void SetEmrResourceId(const std::string& _emrResourceId);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool EmrResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return NodeType 
+                     * 获取Node type.
+                     * @return NodeType Node type.
                      * 
                      */
                     std::string GetNodeType() const;
 
                     /**
-                     * 设置
-                     * @param _nodeType 
+                     * 设置Node type.
+                     * @param _nodeType Node type.
                      * 
                      */
                     void SetNodeType(const std::string& _nodeType);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool NodeTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Ip 
+                     * 获取Node private network IP.
+                     * @return Ip Node private network IP.
                      * 
                      */
                     std::string GetIp() const;
 
                     /**
-                     * 设置
-                     * @param _ip 
+                     * 设置Node private network IP.
+                     * @param _ip Node private network IP.
                      * 
                      */
                     void SetIp(const std::string& _ip);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool IpHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExpireTime 
+                     * 获取Current expiration time.
+                     * @return ExpireTime Current expiration time.
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置
-                     * @param _expireTime 
+                     * 设置Current expiration time.
+                     * @param _expireTime Current expiration time.
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OriginalCost 
+                     * 获取Original price.
+                     * @return OriginalCost Original price.
                      * 
                      */
                     double GetOriginalCost() const;
 
                     /**
-                     * 设置
-                     * @param _originalCost 
+                     * 设置Original price.
+                     * @param _originalCost Original price.
                      * 
                      */
                     void SetOriginalCost(const double& _originalCost);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool OriginalCostHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DiscountCost 
+                     * 获取Discount price.
+                     * @return DiscountCost Discount price.
                      * 
                      */
                     double GetDiscountCost() const;
 
                     /**
-                     * 设置
-                     * @param _discountCost 
+                     * 设置Discount price.
+                     * @param _discountCost Discount price.
                      * 
                      */
                     void SetDiscountCost(const double& _discountCost);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool DiscountCostHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RenewPriceDetails 
+                     * 获取Node component renewal pricing list.
+                     * @return RenewPriceDetails Node component renewal pricing list.
                      * 
                      */
                     std::vector<RenewPriceDetail> GetRenewPriceDetails() const;
 
                     /**
-                     * 设置
-                     * @param _renewPriceDetails 
+                     * 设置Node component renewal pricing list.
+                     * @param _renewPriceDetails Node component renewal pricing list.
                      * 
                      */
                     void SetRenewPriceDetails(const std::vector<RenewPriceDetail>& _renewPriceDetails);
@@ -218,49 +218,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Billing type (1: monthly subscription, 3: committed use).
                      */
                     int64_t m_chargeType;
                     bool m_chargeTypeHasBeenSet;
 
                     /**
-                     * 
+                     * EMR resource ID.
                      */
                     std::string m_emrResourceId;
                     bool m_emrResourceIdHasBeenSet;
 
                     /**
-                     * 
+                     * Node type.
                      */
                     std::string m_nodeType;
                     bool m_nodeTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Node private network IP.
                      */
                     std::string m_ip;
                     bool m_ipHasBeenSet;
 
                     /**
-                     * 
+                     * Current expiration time.
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Original price.
                      */
                     double m_originalCost;
                     bool m_originalCostHasBeenSet;
 
                     /**
-                     * 
+                     * Discount price.
                      */
                     double m_discountCost;
                     bool m_discountCostHasBeenSet;
 
                     /**
-                     * 
+                     * Node component renewal pricing list.
                      */
                     std::vector<RenewPriceDetail> m_renewPriceDetails;
                     bool m_renewPriceDetailsHasBeenSet;

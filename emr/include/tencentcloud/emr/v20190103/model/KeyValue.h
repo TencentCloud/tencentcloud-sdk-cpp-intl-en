@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Key
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Key Key
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Key.
+                     * @return Key Key.
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置Key
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _key Key
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Key.
+                     * @param _key Key.
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -72,15 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取ValueNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return Value ValueNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Value.
+                     * @return Value Value.
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置ValueNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _value ValueNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Value.
+                     * @param _value Value.
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -95,14 +91,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Key
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Key.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * ValueNote: This field may return null, indicating that no valid values can be obtained.
+                     * Value.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

@@ -236,19 +236,15 @@ namespace TencentCloud
                     bool SpecInfoHasBeenSet() const;
 
                     /**
-                     * 获取Compensatory scale-out. Valid values: 0 (disabled), 1 (enabled).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CompensateFlag Compensatory scale-out. Valid values: 0 (disabled), 1 (enabled).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Compensatory scale-out. 0: disable, 1: enable.
+                     * @return CompensateFlag Compensatory scale-out. 0: disable, 1: enable.
                      * 
                      */
                     int64_t GetCompensateFlag() const;
 
                     /**
-                     * 设置Compensatory scale-out. Valid values: 0 (disabled), 1 (enabled).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _compensateFlag Compensatory scale-out. Valid values: 0 (disabled), 1 (enabled).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Compensatory scale-out. 0: disable, 1: enable.
+                     * @param _compensateFlag Compensatory scale-out. 0: disable, 1: enable.
                      * 
                      */
                     void SetCompensateFlag(const int64_t& _compensateFlag);
@@ -261,19 +257,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CompensateFlagHasBeenSet() const;
 
                     /**
-                     * 获取Number of compensations
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CompensateCount Number of compensations
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of compensations.
+                     * @return CompensateCount Number of compensations.
                      * 
                      */
                     int64_t GetCompensateCount() const;
 
                     /**
-                     * 设置Number of compensations
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _compensateCount Number of compensations
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of compensations.
+                     * @param _compensateCount Number of compensations.
                      * 
                      */
                     void SetCompensateCount(const int64_t& _compensateCount);
@@ -286,15 +278,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CompensateCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RetryCount 
+                     * 获取Number of retries.
+                     * @return RetryCount Number of retries.
                      * 
                      */
                     uint64_t GetRetryCount() const;
 
                     /**
-                     * 设置
-                     * @param _retryCount 
+                     * 设置Number of retries.
+                     * @param _retryCount Number of retries.
                      * 
                      */
                     void SetRetryCount(const uint64_t& _retryCount);
@@ -307,15 +299,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RetryCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RetryInfo 
+                     * 获取Retry information.
+                     * @return RetryInfo Retry information.
                      * 
                      */
                     std::string GetRetryInfo() const;
 
                     /**
-                     * 设置
-                     * @param _retryInfo 
+                     * 设置Retry information.
+                     * @param _retryInfo Retry information.
                      * 
                      */
                     void SetRetryInfo(const std::string& _retryInfo);
@@ -326,6 +318,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool RetryInfoHasBeenSet() const;
+
+                    /**
+                     * 获取Retry description in English.
+                     * @return RetryEnReason Retry description in English.
+                     * 
+                     */
+                    std::string GetRetryEnReason() const;
+
+                    /**
+                     * 设置Retry description in English.
+                     * @param _retryEnReason Retry description in English.
+                     * 
+                     */
+                    void SetRetryEnReason(const std::string& _retryEnReason);
+
+                    /**
+                     * 判断参数 RetryEnReason 是否已赋值
+                     * @return RetryEnReason 是否已赋值
+                     * 
+                     */
+                    bool RetryEnReasonHasBeenSet() const;
+
+                    /**
+                     * 获取Retry description.
+                     * @return RetryReason Retry description.
+                     * 
+                     */
+                    std::string GetRetryReason() const;
+
+                    /**
+                     * 设置Retry description.
+                     * @param _retryReason Retry description.
+                     * 
+                     */
+                    void SetRetryReason(const std::string& _retryReason);
+
+                    /**
+                     * 判断参数 RetryReason 是否已赋值
+                     * @return RetryReason 是否已赋值
+                     * 
+                     */
+                    bool RetryReasonHasBeenSet() const;
 
                 private:
 
@@ -384,30 +418,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_specInfoHasBeenSet;
 
                     /**
-                     * Compensatory scale-out. Valid values: 0 (disabled), 1 (enabled).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Compensatory scale-out. 0: disable, 1: enable.
                      */
                     int64_t m_compensateFlag;
                     bool m_compensateFlagHasBeenSet;
 
                     /**
-                     * Number of compensations
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of compensations.
                      */
                     int64_t m_compensateCount;
                     bool m_compensateCountHasBeenSet;
 
                     /**
-                     * 
+                     * Number of retries.
                      */
                     uint64_t m_retryCount;
                     bool m_retryCountHasBeenSet;
 
                     /**
-                     * 
+                     * Retry information.
                      */
                     std::string m_retryInfo;
                     bool m_retryInfoHasBeenSet;
+
+                    /**
+                     * Retry description in English.
+                     */
+                    std::string m_retryEnReason;
+                    bool m_retryEnReasonHasBeenSet;
+
+                    /**
+                     * Retry description.
+                     */
+                    std::string m_retryReason;
+                    bool m_retryReasonHasBeenSet;
 
                 };
             }

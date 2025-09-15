@@ -26,7 +26,9 @@ StartStopServiceOrMonitorRequest::StartStopServiceOrMonitorRequest() :
     m_instanceIdHasBeenSet(false),
     m_opTypeHasBeenSet(false),
     m_opScopeHasBeenSet(false),
-    m_strategyConfigHasBeenSet(false)
+    m_strategyConfigHasBeenSet(false),
+    m_stopParamsHasBeenSet(false),
+    m_keepMonitorButNotRecoverProcessHasBeenSet(false)
 {
 }
 
@@ -69,6 +71,23 @@ string StartStopServiceOrMonitorRequest::ToJsonString() const
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_strategyConfig.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_stopParamsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StopParams";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_stopParams.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_keepMonitorButNotRecoverProcessHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "KeepMonitorButNotRecoverProcess";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_keepMonitorButNotRecoverProcess, allocator);
     }
 
 
@@ -141,6 +160,38 @@ void StartStopServiceOrMonitorRequest::SetStrategyConfig(const StrategyConfig& _
 bool StartStopServiceOrMonitorRequest::StrategyConfigHasBeenSet() const
 {
     return m_strategyConfigHasBeenSet;
+}
+
+StopParams StartStopServiceOrMonitorRequest::GetStopParams() const
+{
+    return m_stopParams;
+}
+
+void StartStopServiceOrMonitorRequest::SetStopParams(const StopParams& _stopParams)
+{
+    m_stopParams = _stopParams;
+    m_stopParamsHasBeenSet = true;
+}
+
+bool StartStopServiceOrMonitorRequest::StopParamsHasBeenSet() const
+{
+    return m_stopParamsHasBeenSet;
+}
+
+bool StartStopServiceOrMonitorRequest::GetKeepMonitorButNotRecoverProcess() const
+{
+    return m_keepMonitorButNotRecoverProcess;
+}
+
+void StartStopServiceOrMonitorRequest::SetKeepMonitorButNotRecoverProcess(const bool& _keepMonitorButNotRecoverProcess)
+{
+    m_keepMonitorButNotRecoverProcess = _keepMonitorButNotRecoverProcess;
+    m_keepMonitorButNotRecoverProcessHasBeenSet = true;
+}
+
+bool StartStopServiceOrMonitorRequest::KeepMonitorButNotRecoverProcessHasBeenSet() const
+{
+    return m_keepMonitorButNotRecoverProcessHasBeenSet;
 }
 
 

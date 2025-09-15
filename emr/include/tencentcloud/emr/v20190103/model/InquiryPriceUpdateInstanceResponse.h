@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/emr/v20190103/model/PriceDetail.h>
+#include <tencentcloud/emr/v20190103/model/PriceResult.h>
 
 
 namespace TencentCloud
@@ -46,9 +47,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Original price.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return OriginalCost Original price.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     double GetOriginalCost() const;
@@ -62,9 +61,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Discounted price.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DiscountCost Discounted price.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     double GetDiscountCost() const;
@@ -77,12 +74,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DiscountCostHasBeenSet() const;
 
                     /**
-                     * 获取Time unit of scaling. Valid values:
-<li>s: seconds.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TimeUnit Time unit of scaling. Valid values:
-<li>s: seconds.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Time unit of resizing. Valid values:
+<li>s: second.</li>
+                     * @return TimeUnit Time unit of resizing. Valid values:
+<li>s: second.</li>
                      * 
                      */
                     std::string GetTimeUnit() const;
@@ -95,10 +90,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TimeUnitHasBeenSet() const;
 
                     /**
-                     * 获取Duration of scaling.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TimeSpan Duration of scaling.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Desizing duration.
+                     * @return TimeSpan Desizing duration.
                      * 
                      */
                     int64_t GetTimeSpan() const;
@@ -126,33 +119,45 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool PriceDetailHasBeenSet() const;
 
+                    /**
+                     * 获取New configuration price.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return NewConfigPrice New configuration price.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    PriceResult GetNewConfigPrice() const;
+
+                    /**
+                     * 判断参数 NewConfigPrice 是否已赋值
+                     * @return NewConfigPrice 是否已赋值
+                     * 
+                     */
+                    bool NewConfigPriceHasBeenSet() const;
+
                 private:
 
                     /**
                      * Original price.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     double m_originalCost;
                     bool m_originalCostHasBeenSet;
 
                     /**
                      * Discounted price.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     double m_discountCost;
                     bool m_discountCostHasBeenSet;
 
                     /**
-                     * Time unit of scaling. Valid values:
-<li>s: seconds.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Time unit of resizing. Valid values:
+<li>s: second.</li>
                      */
                     std::string m_timeUnit;
                     bool m_timeUnitHasBeenSet;
 
                     /**
-                     * Duration of scaling.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Desizing duration.
                      */
                     int64_t m_timeSpan;
                     bool m_timeSpanHasBeenSet;
@@ -163,6 +168,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<PriceDetail> m_priceDetail;
                     bool m_priceDetailHasBeenSet;
+
+                    /**
+                     * New configuration price.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    PriceResult m_newConfigPrice;
+                    bool m_newConfigPriceHasBeenSet;
 
                 };
             }

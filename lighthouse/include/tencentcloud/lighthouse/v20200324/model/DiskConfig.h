@@ -68,15 +68,31 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Cloud disk type.
-                     * @return DiskType Cloud disk type.
+                     * 获取Cloud disk type. valid values are as follows:.
+
+<Li>CLOUD_BASIC: basic cloud disk.</li>.
+<Li>CLOUD_PREMIUM: specifies the high-performance cloud block storage.</li>.
+<Li>CLOUD_SSD: ssd cloud disk</li>.
+                     * @return DiskType Cloud disk type. valid values are as follows:.
+
+<Li>CLOUD_BASIC: basic cloud disk.</li>.
+<Li>CLOUD_PREMIUM: specifies the high-performance cloud block storage.</li>.
+<Li>CLOUD_SSD: ssd cloud disk</li>.
                      * 
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置Cloud disk type.
-                     * @param _diskType Cloud disk type.
+                     * 设置Cloud disk type. valid values are as follows:.
+
+<Li>CLOUD_BASIC: basic cloud disk.</li>.
+<Li>CLOUD_PREMIUM: specifies the high-performance cloud block storage.</li>.
+<Li>CLOUD_SSD: ssd cloud disk</li>.
+                     * @param _diskType Cloud disk type. valid values are as follows:.
+
+<Li>CLOUD_BASIC: basic cloud disk.</li>.
+<Li>CLOUD_PREMIUM: specifies the high-performance cloud block storage.</li>.
+<Li>CLOUD_SSD: ssd cloud disk</li>.
                      * 
                      */
                     void SetDiskType(const std::string& _diskType);
@@ -181,7 +197,11 @@ namespace TencentCloud
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Cloud disk type.
+                     * Cloud disk type. valid values are as follows:.
+
+<Li>CLOUD_BASIC: basic cloud disk.</li>.
+<Li>CLOUD_PREMIUM: specifies the high-performance cloud block storage.</li>.
+<Li>CLOUD_SSD: ssd cloud disk</li>.
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;

@@ -110,19 +110,15 @@ namespace TencentCloud
                     bool UserTypeHasBeenSet() const;
 
                     /**
-                     * 获取Account creation time
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return CreateTime Account creation time
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取User creation time.
+                     * @return CreateTime User creation time.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Account creation time
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _createTime Account creation time
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置User creation time.
+                     * @param _createTime User creation time.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -156,19 +152,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool SupportDownLoadKeyTabHasBeenSet() const;
 
                     /**
-                     * 获取Download link of the Keytab file
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return DownLoadKeyTabUrl Download link of the Keytab file
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Download address of the keytab file.
+                     * @return DownLoadKeyTabUrl Download address of the keytab file.
                      * 
                      */
                     std::string GetDownLoadKeyTabUrl() const;
 
                     /**
-                     * 设置Download link of the Keytab file
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _downLoadKeyTabUrl Download link of the Keytab file
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Download address of the keytab file.
+                     * @param _downLoadKeyTabUrl Download address of the keytab file.
                      * 
                      */
                     void SetDownLoadKeyTabUrl(const std::string& _downLoadKeyTabUrl);
@@ -201,8 +193,7 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_userTypeHasBeenSet;
 
                     /**
-                     * Account creation time
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * User creation time.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
@@ -214,8 +205,7 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_supportDownLoadKeyTabHasBeenSet;
 
                     /**
-                     * Download link of the Keytab file
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Download address of the keytab file.
                      */
                     std::string m_downLoadKeyTabUrl;
                     bool m_downLoadKeyTabUrlHasBeenSet;

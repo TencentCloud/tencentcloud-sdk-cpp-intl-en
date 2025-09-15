@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Original price.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return OriginalCost Original price.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     double GetOriginalCost() const;
@@ -62,9 +60,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Discounted price.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DiscountCost Discounted price.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     double GetDiscountCost() const;
@@ -77,12 +73,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DiscountCostHasBeenSet() const;
 
                     /**
-                     * 获取Time unit of instance purchase duration. Valid values:
+                     * 获取Time unit of purchase instances. Valid values.
 <li>s: seconds.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TimeUnit Time unit of instance purchase duration. Valid values:
+                     * @return TimeUnit Time unit of purchase instances. Valid values.
 <li>s: seconds.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTimeUnit() const;
@@ -95,10 +89,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TimeUnitHasBeenSet() const;
 
                     /**
-                     * 获取Purchase duration of instance.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TimeSpan Purchase duration of instance.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance purchase duration.
+                     * @return TimeSpan Instance purchase duration.
                      * 
                      */
                     int64_t GetTimeSpan() const;
@@ -130,29 +122,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Original price.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     double m_originalCost;
                     bool m_originalCostHasBeenSet;
 
                     /**
                      * Discounted price.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     double m_discountCost;
                     bool m_discountCostHasBeenSet;
 
                     /**
-                     * Time unit of instance purchase duration. Valid values:
+                     * Time unit of purchase instances. Valid values.
 <li>s: seconds.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_timeUnit;
                     bool m_timeUnitHasBeenSet;
 
                     /**
-                     * Purchase duration of instance.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Instance purchase duration.
                      */
                     int64_t m_timeSpan;
                     bool m_timeSpanHasBeenSet;

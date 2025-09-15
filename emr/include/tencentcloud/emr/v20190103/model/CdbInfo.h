@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Database instance
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceName Database instance
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Database instance.
+                     * @return InstanceName Database instance.
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Database instance
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceName Database instance
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Database instance.
+                     * @param _instanceName Database instance.
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -72,19 +68,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Database IP
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Ip Database IP
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Database IP address.
+                     * @return Ip Database IP address.
                      * 
                      */
                     std::string GetIp() const;
 
                     /**
-                     * 设置Database IP
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _ip Database IP
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Database IP address.
+                     * @param _ip Database IP address.
                      * 
                      */
                     void SetIp(const std::string& _ip);
@@ -97,19 +89,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IpHasBeenSet() const;
 
                     /**
-                     * 获取Database port
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Port Database port
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Database port.
+                     * @return Port Database port.
                      * 
                      */
                     int64_t GetPort() const;
 
                     /**
-                     * 设置Database port
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _port Database port
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Database port.
+                     * @param _port Database port.
                      * 
                      */
                     void SetPort(const int64_t& _port);
@@ -122,19 +110,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取Database memory specification
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MemSize Database memory specification
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Database memory specifications.
+                     * @return MemSize Database memory specifications.
                      * 
                      */
                     int64_t GetMemSize() const;
 
                     /**
-                     * 设置Database memory specification
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _memSize Database memory specification
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Database memory specifications.
+                     * @param _memSize Database memory specifications.
                      * 
                      */
                     void SetMemSize(const int64_t& _memSize);
@@ -147,19 +131,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MemSizeHasBeenSet() const;
 
                     /**
-                     * 获取Database disk specification
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Volume Database disk specification
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Database disk specifications.
+                     * @return Volume Database disk specifications.
                      * 
                      */
                     int64_t GetVolume() const;
 
                     /**
-                     * 设置Database disk specification
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _volume Database disk specification
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Database disk specifications.
+                     * @param _volume Database disk specifications.
                      * 
                      */
                     void SetVolume(const int64_t& _volume);
@@ -172,19 +152,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool VolumeHasBeenSet() const;
 
                     /**
-                     * 获取Service flag
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Service Service flag
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Service identifier.
+                     * @return Service Service identifier.
                      * 
                      */
                     std::string GetService() const;
 
                     /**
-                     * 设置Service flag
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _service Service flag
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Service identifier.
+                     * @param _service Service identifier.
                      * 
                      */
                     void SetService(const std::string& _service);
@@ -197,19 +173,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ServiceHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ExpireTime Expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Expiration time.
+                     * @return ExpireTime Expiration time.
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置Expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _expireTime Expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Expiration time.
+                     * @param _expireTime Expiration time.
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -222,19 +194,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Application time
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ApplyTime Application time
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Application time.
+                     * @return ApplyTime Application time.
                      * 
                      */
                     std::string GetApplyTime() const;
 
                     /**
-                     * 设置Application time
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _applyTime Application time
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Application time.
+                     * @param _applyTime Application time.
                      * 
                      */
                     void SetApplyTime(const std::string& _applyTime);
@@ -247,19 +215,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ApplyTimeHasBeenSet() const;
 
                     /**
-                     * 获取Payment type
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PayType Payment type
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Billing type.
+                     * @return PayType Billing type.
                      * 
                      */
                     int64_t GetPayType() const;
 
                     /**
-                     * 设置Payment type
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _payType Payment type
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Billing type.
+                     * @param _payType Billing type.
                      * 
                      */
                     void SetPayType(const int64_t& _payType);
@@ -272,19 +236,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PayTypeHasBeenSet() const;
 
                     /**
-                     * 获取Expiration flag
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ExpireFlag Expiration flag
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Expiration flag.
+                     * @return ExpireFlag Expiration flag.
                      * 
                      */
                     bool GetExpireFlag() const;
 
                     /**
-                     * 设置Expiration flag
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _expireFlag Expiration flag
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Expiration flag.
+                     * @param _expireFlag Expiration flag.
                      * 
                      */
                     void SetExpireFlag(const bool& _expireFlag);
@@ -297,19 +257,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ExpireFlagHasBeenSet() const;
 
                     /**
-                     * 获取Database status
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Status Database status
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Database status.
+                     * @return Status Database status.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Database status
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _status Database status
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Database status.
+                     * @param _status Database status.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -322,19 +278,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Renewal flag
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return IsAutoRenew Renewal flag
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Renewal flag.
+                     * @return IsAutoRenew Renewal flag.
                      * 
                      */
                     int64_t GetIsAutoRenew() const;
 
                     /**
-                     * 设置Renewal flag
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _isAutoRenew Renewal flag
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Renewal flag.
+                     * @param _isAutoRenew Renewal flag.
                      * 
                      */
                     void SetIsAutoRenew(const int64_t& _isAutoRenew);
@@ -347,19 +299,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IsAutoRenewHasBeenSet() const;
 
                     /**
-                     * 获取Database string
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SerialNo Database string
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Database string.
+                     * @return SerialNo Database string.
                      * 
                      */
                     std::string GetSerialNo() const;
 
                     /**
-                     * 设置Database string
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _serialNo Database string
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Database string.
+                     * @param _serialNo Database string.
                      * 
                      */
                     void SetSerialNo(const std::string& _serialNo);
@@ -373,18 +321,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取ZoneId
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ZoneId ZoneId
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetZoneId() const;
 
                     /**
                      * 设置ZoneId
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _zoneId ZoneId
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetZoneId(const int64_t& _zoneId);
@@ -398,18 +342,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取RegionId
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RegionId RegionId
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetRegionId() const;
 
                     /**
                      * 设置RegionId
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _regionId RegionId
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRegionId(const int64_t& _regionId);
@@ -424,106 +364,91 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Database instance
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Database instance.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Database IP
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Database IP address.
                      */
                     std::string m_ip;
                     bool m_ipHasBeenSet;
 
                     /**
-                     * Database port
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Database port.
                      */
                     int64_t m_port;
                     bool m_portHasBeenSet;
 
                     /**
-                     * Database memory specification
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Database memory specifications.
                      */
                     int64_t m_memSize;
                     bool m_memSizeHasBeenSet;
 
                     /**
-                     * Database disk specification
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Database disk specifications.
                      */
                     int64_t m_volume;
                     bool m_volumeHasBeenSet;
 
                     /**
-                     * Service flag
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Service identifier.
                      */
                     std::string m_service;
                     bool m_serviceHasBeenSet;
 
                     /**
-                     * Expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Expiration time.
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * Application time
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Application time.
                      */
                     std::string m_applyTime;
                     bool m_applyTimeHasBeenSet;
 
                     /**
-                     * Payment type
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Billing type.
                      */
                     int64_t m_payType;
                     bool m_payTypeHasBeenSet;
 
                     /**
-                     * Expiration flag
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Expiration flag.
                      */
                     bool m_expireFlag;
                     bool m_expireFlagHasBeenSet;
 
                     /**
-                     * Database status
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Database status.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Renewal flag
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Renewal flag.
                      */
                     int64_t m_isAutoRenew;
                     bool m_isAutoRenewHasBeenSet;
 
                     /**
-                     * Database string
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Database string.
                      */
                     std::string m_serialNo;
                     bool m_serialNoHasBeenSet;
 
                     /**
                      * ZoneId
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
                      * RegionId
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_regionId;
                     bool m_regionIdHasBeenSet;

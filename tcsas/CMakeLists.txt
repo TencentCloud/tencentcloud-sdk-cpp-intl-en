@@ -166,6 +166,7 @@ set(tcsas_public_header_model
   include/tencentcloud/tcsas/v20250106/model/ConfigureMNPPreviewRequest.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNPReleasedVersionHistoryResponse.h
   include/tencentcloud/tcsas/v20250106/model/DeleteApplicationSensitiveAPIRequest.h
+  include/tencentcloud/tcsas/v20250106/model/CreateMNPApprovalResp.h
   include/tencentcloud/tcsas/v20250106/model/DescribeApplicationSensitiveAPIListData.h
   include/tencentcloud/tcsas/v20250106/model/DescribeApplicationSensitiveAPIListResp.h
   include/tencentcloud/tcsas/v20250106/model/DescribeTeamDetailResp.h
@@ -337,6 +338,7 @@ set(tcsas_src
   src/v20250106/model/ConfigureMNPPreviewRequest.cpp
   src/v20250106/model/DescribeMNPReleasedVersionHistoryResponse.cpp
   src/v20250106/model/DeleteApplicationSensitiveAPIRequest.cpp
+  src/v20250106/model/CreateMNPApprovalResp.cpp
   src/v20250106/model/DescribeApplicationSensitiveAPIListData.cpp
   src/v20250106/model/DescribeApplicationSensitiveAPIListResp.cpp
   src/v20250106/model/DescribeTeamDetailResp.cpp

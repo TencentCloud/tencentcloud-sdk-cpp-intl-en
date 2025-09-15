@@ -50,7 +50,9 @@ EmrListInstance::EmrListInstance() :
     m_isMultiZoneClusterHasBeenSet(false),
     m_isHandsClusterHasBeenSet(false),
     m_outSideSoftInfoHasBeenSet(false),
-    m_isSupportOutsideClusterHasBeenSet(false)
+    m_isSupportOutsideClusterHasBeenSet(false),
+    m_isDedicatedClusterHasBeenSet(false),
+    m_isSupportCloneHasBeenSet(false)
 {
 }
 
@@ -379,6 +381,26 @@ CoreInternalOutcome EmrListInstance::Deserialize(const rapidjson::Value &value)
         m_isSupportOutsideClusterHasBeenSet = true;
     }
 
+    if (value.HasMember("IsDedicatedCluster") && !value["IsDedicatedCluster"].IsNull())
+    {
+        if (!value["IsDedicatedCluster"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `EmrListInstance.IsDedicatedCluster` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_isDedicatedCluster = value["IsDedicatedCluster"].GetBool();
+        m_isDedicatedClusterHasBeenSet = true;
+    }
+
+    if (value.HasMember("IsSupportClone") && !value["IsSupportClone"].IsNull())
+    {
+        if (!value["IsSupportClone"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `EmrListInstance.IsSupportClone` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_isSupportClone = value["IsSupportClone"].GetBool();
+        m_isSupportCloneHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -638,6 +660,22 @@ void EmrListInstance::ToJsonObject(rapidjson::Value &value, rapidjson::Document:
         string key = "IsSupportOutsideCluster";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isSupportOutsideCluster, allocator);
+    }
+
+    if (m_isDedicatedClusterHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsDedicatedCluster";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_isDedicatedCluster, allocator);
+    }
+
+    if (m_isSupportCloneHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsSupportClone";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_isSupportClone, allocator);
     }
 
 }
@@ -1121,5 +1159,37 @@ void EmrListInstance::SetIsSupportOutsideCluster(const bool& _isSupportOutsideCl
 bool EmrListInstance::IsSupportOutsideClusterHasBeenSet() const
 {
     return m_isSupportOutsideClusterHasBeenSet;
+}
+
+bool EmrListInstance::GetIsDedicatedCluster() const
+{
+    return m_isDedicatedCluster;
+}
+
+void EmrListInstance::SetIsDedicatedCluster(const bool& _isDedicatedCluster)
+{
+    m_isDedicatedCluster = _isDedicatedCluster;
+    m_isDedicatedClusterHasBeenSet = true;
+}
+
+bool EmrListInstance::IsDedicatedClusterHasBeenSet() const
+{
+    return m_isDedicatedClusterHasBeenSet;
+}
+
+bool EmrListInstance::GetIsSupportClone() const
+{
+    return m_isSupportClone;
+}
+
+void EmrListInstance::SetIsSupportClone(const bool& _isSupportClone)
+{
+    m_isSupportClone = _isSupportClone;
+    m_isSupportCloneHasBeenSet = true;
+}
+
+bool EmrListInstance::IsSupportCloneHasBeenSet() const
+{
+    return m_isSupportCloneHasBeenSet;
 }
 

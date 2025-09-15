@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The type. Valid values: `node` (node); `rootDisk` (system disk); `dataDisk` and `metaDB` (cloud data disk)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceType The type. Valid values: `node` (node); `rootDisk` (system disk); `dataDisk` and `metaDB` (cloud data disk)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Types, including node: node (denoting node), rootDisk (denoting system disk), dataDisk (denoting cloud data disk), and metaDB.
+                     * @return InstanceType Types, including node: node (denoting node), rootDisk (denoting system disk), dataDisk (denoting cloud data disk), and metaDB.
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置The type. Valid values: `node` (node); `rootDisk` (system disk); `dataDisk` and `metaDB` (cloud data disk)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceType The type. Valid values: `node` (node); `rootDisk` (system disk); `dataDisk` and `metaDB` (cloud data disk)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Types, including node: node (denoting node), rootDisk (denoting system disk), dataDisk (denoting cloud data disk), and metaDB.
+                     * @param _instanceType Types, including node: node (denoting node), rootDisk (denoting system disk), dataDisk (denoting cloud data disk), and metaDB.
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Rate (original)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Price Rate (original)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Unit price (original price).
+                     * @return Price Unit price (original price).
                      * 
                      */
                     double GetPrice() const;
 
                     /**
-                     * 设置Rate (original)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _price Rate (original)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Unit price (original price).
+                     * @param _price Unit price (original price).
                      * 
                      */
                     void SetPrice(const double& _price);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PriceHasBeenSet() const;
 
                     /**
-                     * 获取Rate (discounted)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RealCost Rate (discounted)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Unit price (discounted price).
+                     * @return RealCost Unit price (discounted price).
                      * 
                      */
                     double GetRealCost() const;
 
                     /**
-                     * 设置Rate (discounted)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _realCost Rate (discounted)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Unit price (discounted price).
+                     * @param _realCost Unit price (discounted price).
                      * 
                      */
                     void SetRealCost(const double& _realCost);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RealCostHasBeenSet() const;
 
                     /**
-                     * 获取Total price (discounted)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RealTotalCost Total price (discounted)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Total price (discounted price).
+                     * @return RealTotalCost Total price (discounted price).
                      * 
                      */
                     double GetRealTotalCost() const;
 
                     /**
-                     * 设置Total price (discounted)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _realTotalCost Total price (discounted)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Total price (discounted price).
+                     * @param _realTotalCost Total price (discounted price).
                      * 
                      */
                     void SetRealTotalCost(const double& _realTotalCost);
@@ -147,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RealTotalCostHasBeenSet() const;
 
                     /**
-                     * 获取Discount
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Policy Discount
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Discount.
+                     * @return Policy Discount.
                      * 
                      */
                     double GetPolicy() const;
 
                     /**
-                     * 设置Discount
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _policy Discount
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Discount.
+                     * @param _policy Discount.
                      * 
                      */
                     void SetPolicy(const double& _policy);
@@ -172,19 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PolicyHasBeenSet() const;
 
                     /**
-                     * 获取Quantity
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return GoodsNum Quantity
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Quantity.
+                     * @return GoodsNum Quantity.
                      * 
                      */
                     int64_t GetGoodsNum() const;
 
                     /**
-                     * 设置Quantity
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _goodsNum Quantity
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Quantity.
+                     * @param _goodsNum Quantity.
                      * 
                      */
                     void SetGoodsNum(const int64_t& _goodsNum);
@@ -199,43 +175,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The type. Valid values: `node` (node); `rootDisk` (system disk); `dataDisk` and `metaDB` (cloud data disk)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Types, including node: node (denoting node), rootDisk (denoting system disk), dataDisk (denoting cloud data disk), and metaDB.
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Rate (original)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Unit price (original price).
                      */
                     double m_price;
                     bool m_priceHasBeenSet;
 
                     /**
-                     * Rate (discounted)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Unit price (discounted price).
                      */
                     double m_realCost;
                     bool m_realCostHasBeenSet;
 
                     /**
-                     * Total price (discounted)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Total price (discounted price).
                      */
                     double m_realTotalCost;
                     bool m_realTotalCostHasBeenSet;
 
                     /**
-                     * Discount
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Discount.
                      */
                     double m_policy;
                     bool m_policyHasBeenSet;
 
                     /**
-                     * Quantity
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Quantity.
                      */
                     int64_t m_goodsNum;
                     bool m_goodsNumHasBeenSet;

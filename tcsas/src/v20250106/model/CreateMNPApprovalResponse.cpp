@@ -110,7 +110,7 @@ string CreateMNPApprovalResponse::ToJsonString() const
 }
 
 
-BooleanInfo CreateMNPApprovalResponse::GetData() const
+CreateMNPApprovalResp CreateMNPApprovalResponse::GetData() const
 {
     return m_data;
 }

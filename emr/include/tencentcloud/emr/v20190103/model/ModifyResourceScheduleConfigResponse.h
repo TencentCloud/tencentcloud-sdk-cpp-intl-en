@@ -58,10 +58,8 @@ namespace TencentCloud
                     bool IsDraftHasBeenSet() const;
 
                     /**
-                     * 获取Verification error information. If it is not null, the verification fails and thus the configuration fails.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return ErrorMsg Verification error information. If it is not null, the verification fails and thus the configuration fails.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Verification error information. If it is not empty, it means that verification fails and configuration is not successful.
+                     * @return ErrorMsg Verification error information. If it is not empty, it means that verification fails and configuration is not successful.
                      * 
                      */
                     std::string GetErrorMsg() const;
@@ -74,10 +72,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool ErrorMsgHasBeenSet() const;
 
                     /**
-                     * 获取The response data.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Data The response data.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Returned data.
+                     * @return Data Returned data.
                      * 
                      */
                     std::string GetData() const;
@@ -98,15 +94,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_isDraftHasBeenSet;
 
                     /**
-                     * Verification error information. If it is not null, the verification fails and thus the configuration fails.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Verification error information. If it is not empty, it means that verification fails and configuration is not successful.
                      */
                     std::string m_errorMsg;
                     bool m_errorMsgHasBeenSet;
 
                     /**
-                     * The response data.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Returned data.
                      */
                     std::string m_data;
                     bool m_dataHasBeenSet;

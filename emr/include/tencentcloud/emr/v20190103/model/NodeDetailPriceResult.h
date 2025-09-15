@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The node type. Valid values: `master`, `core`, `task`, `common`, `router`, `mysql`
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NodeType The node type. Valid values: `master`, `core`, `task`, `common`, `router`, `mysql`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Node type: Master, Core, Task, Common, Router, and MySQL.
+                     * @return NodeType Node type: Master, Core, Task, Common, Router, and MySQL.
                      * 
                      */
                     std::string GetNodeType() const;
 
                     /**
-                     * 设置The node type. Valid values: `master`, `core`, `task`, `common`, `router`, `mysql`
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _nodeType The node type. Valid values: `master`, `core`, `task`, `common`, `router`, `mysql`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Node type: Master, Core, Task, Common, Router, and MySQL.
+                     * @param _nodeType Node type: Master, Core, Task, Common, Router, and MySQL.
                      * 
                      */
                     void SetNodeType(const std::string& _nodeType);
@@ -96,8 +92,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The node type. Valid values: `master`, `core`, `task`, `common`, `router`, `mysql`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Node type: Master, Core, Task, Common, Router, and MySQL.
                      */
                     std::string m_nodeType;
                     bool m_nodeTypeHasBeenSet;

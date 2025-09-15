@@ -253,15 +253,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Page limit
-                     * @return Limit Page limit
+                     * 获取Page capacity in the range of [10,100].
+                     * @return Limit Page capacity in the range of [10,100].
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Page limit
-                     * @param _limit Page limit
+                     * 设置Page capacity in the range of [10,100].
+                     * @param _limit Page capacity in the range of [10,100].
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -336,7 +336,7 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Page limit
+                     * Page capacity in the range of [10,100].
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

@@ -398,19 +398,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SecurityOnHasBeenSet() const;
 
                     /**
-                     * 获取Security group name
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SecurityGroup Security group name
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Initial security group ID of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SecurityGroup Initial security group ID of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSecurityGroup() const;
 
                     /**
-                     * 设置Security group name
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _securityGroup Security group name
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Initial security group ID of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _securityGroup Initial security group ID of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSecurityGroup(const std::string& _securityGroup);
@@ -473,19 +473,19 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                     bool ApplicationRoleHasBeenSet() const;
 
                     /**
-                     * 获取Security groups
-Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @return SecurityGroups Security groups
-Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Security group ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SecurityGroups Security group ID.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetSecurityGroups() const;
 
                     /**
-                     * 设置Security groups
-Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param _securityGroups Security groups
-Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Security group ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _securityGroups Security group ID.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSecurityGroups(const std::vector<std::string>& _securityGroups);
@@ -623,8 +623,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_securityOnHasBeenSet;
 
                     /**
-                     * Security group name
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Initial security group ID of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_securityGroup;
                     bool m_securityGroupHasBeenSet;
@@ -644,8 +644,8 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                     bool m_applicationRoleHasBeenSet;
 
                     /**
-                     * Security groups
-Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * Security group ID.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_securityGroups;
                     bool m_securityGroupsHasBeenSet;

@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The published price.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OriginalCost The published price.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List price.
+                     * @return OriginalCost List price.
                      * 
                      */
                     std::string GetOriginalCost() const;
 
                     /**
-                     * 设置The published price.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _originalCost The published price.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置List price.
+                     * @param _originalCost List price.
                      * 
                      */
                     void SetOriginalCost(const std::string& _originalCost);
@@ -73,19 +69,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OriginalCostHasBeenSet() const;
 
                     /**
-                     * 获取The discounted price.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DiscountCost The discounted price.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Discounted price.
+                     * @return DiscountCost Discounted price.
                      * 
                      */
                     std::string GetDiscountCost() const;
 
                     /**
-                     * 设置The discounted price.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _discountCost The discounted price.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Discounted price.
+                     * @param _discountCost Discounted price.
                      * 
                      */
                     void SetDiscountCost(const std::string& _discountCost);
@@ -98,19 +90,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DiscountCostHasBeenSet() const;
 
                     /**
-                     * 获取The unit of the billable item.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Unit The unit of the billable item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Unit.
+                     * @return Unit Unit.
                      * 
                      */
                     std::string GetUnit() const;
 
                     /**
-                     * 设置The unit of the billable item.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _unit The unit of the billable item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Unit.
+                     * @param _unit Unit.
                      * 
                      */
                     void SetUnit(const std::string& _unit);
@@ -149,18 +137,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Whether spot instances are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SupportSpotPaid Whether spot instances are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     bool GetSupportSpotPaid() const;
 
                     /**
                      * 设置Whether spot instances are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _supportSpotPaid Whether spot instances are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSupportSpotPaid(const bool& _supportSpotPaid);
@@ -175,22 +159,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The published price.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List price.
                      */
                     std::string m_originalCost;
                     bool m_originalCostHasBeenSet;
 
                     /**
-                     * The discounted price.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Discounted price.
                      */
                     std::string m_discountCost;
                     bool m_discountCostHasBeenSet;
 
                     /**
-                     * The unit of the billable item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Unit.
                      */
                     std::string m_unit;
                     bool m_unitHasBeenSet;
@@ -204,7 +185,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Whether spot instances are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_supportSpotPaid;
                     bool m_supportSpotPaidHasBeenSet;

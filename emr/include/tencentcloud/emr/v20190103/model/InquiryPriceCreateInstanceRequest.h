@@ -178,31 +178,15 @@ namespace TencentCloud
                     bool SupportHAHasBeenSet() const;
 
                     /**
-                     * 获取List of deployed components. Different required components need to be selected for different EMR product IDs (i.e., `ProductId`; for specific meanings, please see the `ProductId` field in the input parameter):
-<li>When `ProductId` is 1, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
-                     * @return Software List of deployed components. Different required components need to be selected for different EMR product IDs (i.e., `ProductId`; for specific meanings, please see the `ProductId` field in the input parameter):
-<li>When `ProductId` is 1, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
+                     * 获取List of deployed components. Different required components need to be selected for different EMR product IDs (ProductId: For specific meanings, see the ProductId field in the input parameters): <li>When ProductId is 2 (EMR v2.0.1), the required components include hdfs-2.7.3, yarn-2.7.3, zookeeper-3.4.9, and knox-1.2.0.</li> <li>When ProductId is 16 (EMR v2.3.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.5.5, and knox-1.2.0.</li> <li>When ProductId is 20 (EMR v2.5.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 30 (EMR v2.6.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li> <li>When ProductId is 38 (EMR v2.7.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 57 (EMR v2.8.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 7 (EMR v3.0.0), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.4.9, and knox-1.2.0.</li> <li>When ProductId is 25 (EMR v3.1.0), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 31 (EMR v3.1.1), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 28 (EMR v3.2.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 33 (EMR v3.2.1), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li> <li>When ProductId is 34 (EMR v3.3.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li> <li>When ProductId is 37 (EMR v3.4.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 44 (EMR v3.5.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 53 (EMR v3.6.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 58 (EMR v3.6.1), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.46, and knox-1.6.1.</li> <li>When ProductId is 47 (EMR v4.0.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li>
+                     * @return Software List of deployed components. Different required components need to be selected for different EMR product IDs (ProductId: For specific meanings, see the ProductId field in the input parameters): <li>When ProductId is 2 (EMR v2.0.1), the required components include hdfs-2.7.3, yarn-2.7.3, zookeeper-3.4.9, and knox-1.2.0.</li> <li>When ProductId is 16 (EMR v2.3.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.5.5, and knox-1.2.0.</li> <li>When ProductId is 20 (EMR v2.5.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 30 (EMR v2.6.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li> <li>When ProductId is 38 (EMR v2.7.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 57 (EMR v2.8.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 7 (EMR v3.0.0), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.4.9, and knox-1.2.0.</li> <li>When ProductId is 25 (EMR v3.1.0), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 31 (EMR v3.1.1), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 28 (EMR v3.2.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 33 (EMR v3.2.1), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li> <li>When ProductId is 34 (EMR v3.3.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li> <li>When ProductId is 37 (EMR v3.4.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 44 (EMR v3.5.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 53 (EMR v3.6.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 58 (EMR v3.6.1), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.46, and knox-1.6.1.</li> <li>When ProductId is 47 (EMR v4.0.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li>
                      * 
                      */
                     std::vector<std::string> GetSoftware() const;
 
                     /**
-                     * 设置List of deployed components. Different required components need to be selected for different EMR product IDs (i.e., `ProductId`; for specific meanings, please see the `ProductId` field in the input parameter):
-<li>When `ProductId` is 1, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
-                     * @param _software List of deployed components. Different required components need to be selected for different EMR product IDs (i.e., `ProductId`; for specific meanings, please see the `ProductId` field in the input parameter):
-<li>When `ProductId` is 1, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
+                     * 设置List of deployed components. Different required components need to be selected for different EMR product IDs (ProductId: For specific meanings, see the ProductId field in the input parameters): <li>When ProductId is 2 (EMR v2.0.1), the required components include hdfs-2.7.3, yarn-2.7.3, zookeeper-3.4.9, and knox-1.2.0.</li> <li>When ProductId is 16 (EMR v2.3.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.5.5, and knox-1.2.0.</li> <li>When ProductId is 20 (EMR v2.5.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 30 (EMR v2.6.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li> <li>When ProductId is 38 (EMR v2.7.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 57 (EMR v2.8.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 7 (EMR v3.0.0), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.4.9, and knox-1.2.0.</li> <li>When ProductId is 25 (EMR v3.1.0), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 31 (EMR v3.1.1), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 28 (EMR v3.2.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 33 (EMR v3.2.1), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li> <li>When ProductId is 34 (EMR v3.3.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li> <li>When ProductId is 37 (EMR v3.4.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 44 (EMR v3.5.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 53 (EMR v3.6.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 58 (EMR v3.6.1), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.46, and knox-1.6.1.</li> <li>When ProductId is 47 (EMR v4.0.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li>
+                     * @param _software List of deployed components. Different required components need to be selected for different EMR product IDs (ProductId: For specific meanings, see the ProductId field in the input parameters): <li>When ProductId is 2 (EMR v2.0.1), the required components include hdfs-2.7.3, yarn-2.7.3, zookeeper-3.4.9, and knox-1.2.0.</li> <li>When ProductId is 16 (EMR v2.3.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.5.5, and knox-1.2.0.</li> <li>When ProductId is 20 (EMR v2.5.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 30 (EMR v2.6.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li> <li>When ProductId is 38 (EMR v2.7.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 57 (EMR v2.8.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 7 (EMR v3.0.0), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.4.9, and knox-1.2.0.</li> <li>When ProductId is 25 (EMR v3.1.0), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 31 (EMR v3.1.1), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 28 (EMR v3.2.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 33 (EMR v3.2.1), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li> <li>When ProductId is 34 (EMR v3.3.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li> <li>When ProductId is 37 (EMR v3.4.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 44 (EMR v3.5.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 53 (EMR v3.6.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 58 (EMR v3.6.1), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.46, and knox-1.6.1.</li> <li>When ProductId is 47 (EMR v4.0.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li>
                      * 
                      */
                     void SetSoftware(const std::vector<std::string>& _software);
@@ -353,31 +337,15 @@ namespace TencentCloud
                     bool MetaDBInfoHasBeenSet() const;
 
                     /**
-                     * 获取Product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>1: EMR v1.3.1.</li>
-<li>2: EMR v2.0.1.</li>
-<li>4: EMR v2.1.0.</li>
-<li>7: EMR v3.0.0.</li>
-                     * @return ProductId Product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>1: EMR v1.3.1.</li>
-<li>2: EMR v2.0.1.</li>
-<li>4: EMR v2.1.0.</li>
-<li>7: EMR v3.0.0.</li>
+                     * 获取Product ID. Different product IDs represent different EMR product versions. Valid values: <li>2: EMR v2.0.1;</li> <li>16: EMR v2.3.0;</li> <li>20: EMR v2.5.0;</li> <li>30: EMR v2.6.0;</li> <li>38: EMR v2.7.0;</li> <li>57: EMR v2.8.0;</li> <li>7: EMR v3.0.0;</li> <li>25: EMR v3.1.0;</li> <li>31: EMR v3.1.1;</li> <li>28: EMR v3.2.0</li> <li>33: EMR v3.2.1</li> <li>34: EMR v3.3.0</li> <li>37: EMR v3.4.0;</li> <li>44: EMR v3.5.0;</li> <li>53: EMR v3.6.0;</li> <li>58: EMR v3.6.1;</li> <li>47: EMR v4.0.0.</li>
+                     * @return ProductId Product ID. Different product IDs represent different EMR product versions. Valid values: <li>2: EMR v2.0.1;</li> <li>16: EMR v2.3.0;</li> <li>20: EMR v2.5.0;</li> <li>30: EMR v2.6.0;</li> <li>38: EMR v2.7.0;</li> <li>57: EMR v2.8.0;</li> <li>7: EMR v3.0.0;</li> <li>25: EMR v3.1.0;</li> <li>31: EMR v3.1.1;</li> <li>28: EMR v3.2.0</li> <li>33: EMR v3.2.1</li> <li>34: EMR v3.3.0</li> <li>37: EMR v3.4.0;</li> <li>44: EMR v3.5.0;</li> <li>53: EMR v3.6.0;</li> <li>58: EMR v3.6.1;</li> <li>47: EMR v4.0.0.</li>
                      * 
                      */
                     uint64_t GetProductId() const;
 
                     /**
-                     * 设置Product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>1: EMR v1.3.1.</li>
-<li>2: EMR v2.0.1.</li>
-<li>4: EMR v2.1.0.</li>
-<li>7: EMR v3.0.0.</li>
-                     * @param _productId Product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>1: EMR v1.3.1.</li>
-<li>2: EMR v2.0.1.</li>
-<li>4: EMR v2.1.0.</li>
-<li>7: EMR v3.0.0.</li>
+                     * 设置Product ID. Different product IDs represent different EMR product versions. Valid values: <li>2: EMR v2.0.1;</li> <li>16: EMR v2.3.0;</li> <li>20: EMR v2.5.0;</li> <li>30: EMR v2.6.0;</li> <li>38: EMR v2.7.0;</li> <li>57: EMR v2.8.0;</li> <li>7: EMR v3.0.0;</li> <li>25: EMR v3.1.0;</li> <li>31: EMR v3.1.1;</li> <li>28: EMR v3.2.0</li> <li>33: EMR v3.2.1</li> <li>34: EMR v3.3.0</li> <li>37: EMR v3.4.0;</li> <li>44: EMR v3.5.0;</li> <li>53: EMR v3.6.0;</li> <li>58: EMR v3.6.1;</li> <li>47: EMR v4.0.0.</li>
+                     * @param _productId Product ID. Different product IDs represent different EMR product versions. Valid values: <li>2: EMR v2.0.1;</li> <li>16: EMR v2.3.0;</li> <li>20: EMR v2.5.0;</li> <li>30: EMR v2.6.0;</li> <li>38: EMR v2.7.0;</li> <li>57: EMR v2.8.0;</li> <li>7: EMR v3.0.0;</li> <li>25: EMR v3.1.0;</li> <li>31: EMR v3.1.1;</li> <li>28: EMR v3.2.0</li> <li>33: EMR v3.2.1</li> <li>34: EMR v3.3.0</li> <li>37: EMR v3.4.0;</li> <li>44: EMR v3.5.0;</li> <li>53: EMR v3.6.0;</li> <li>58: EMR v3.6.1;</li> <li>47: EMR v4.0.0.</li>
                      * 
                      */
                     void SetProductId(const uint64_t& _productId);
@@ -390,31 +358,15 @@ namespace TencentCloud
                     bool ProductIdHasBeenSet() const;
 
                     /**
-                     * 获取Scenario-based values:
-Hadoop-Kudu
-Hadoop-Zookeeper
-Hadoop-Presto
-Hadoop-Hbase
-                     * @return SceneName Scenario-based values:
-Hadoop-Kudu
-Hadoop-Zookeeper
-Hadoop-Presto
-Hadoop-Hbase
+                     * 获取Scenario values: Hadoop-Kudu, Hadoop-ZooKeeper, Hadoop-Presto, and Hadoop-HBase.
+                     * @return SceneName Scenario values: Hadoop-Kudu, Hadoop-ZooKeeper, Hadoop-Presto, and Hadoop-HBase.
                      * 
                      */
                     std::string GetSceneName() const;
 
                     /**
-                     * 设置Scenario-based values:
-Hadoop-Kudu
-Hadoop-Zookeeper
-Hadoop-Presto
-Hadoop-Hbase
-                     * @param _sceneName Scenario-based values:
-Hadoop-Kudu
-Hadoop-Zookeeper
-Hadoop-Presto
-Hadoop-Hbase
+                     * 设置Scenario values: Hadoop-Kudu, Hadoop-ZooKeeper, Hadoop-Presto, and Hadoop-HBase.
+                     * @param _sceneName Scenario values: Hadoop-Kudu, Hadoop-ZooKeeper, Hadoop-Presto, and Hadoop-HBase.
                      * 
                      */
                     void SetSceneName(const std::string& _sceneName);
@@ -528,11 +480,7 @@ Hadoop-Hbase
                     bool m_supportHAHasBeenSet;
 
                     /**
-                     * List of deployed components. Different required components need to be selected for different EMR product IDs (i.e., `ProductId`; for specific meanings, please see the `ProductId` field in the input parameter):
-<li>When `ProductId` is 1, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
+                     * List of deployed components. Different required components need to be selected for different EMR product IDs (ProductId: For specific meanings, see the ProductId field in the input parameters): <li>When ProductId is 2 (EMR v2.0.1), the required components include hdfs-2.7.3, yarn-2.7.3, zookeeper-3.4.9, and knox-1.2.0.</li> <li>When ProductId is 16 (EMR v2.3.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.5.5, and knox-1.2.0.</li> <li>When ProductId is 20 (EMR v2.5.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 30 (EMR v2.6.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li> <li>When ProductId is 38 (EMR v2.7.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 57 (EMR v2.8.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 7 (EMR v3.0.0), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.4.9, and knox-1.2.0.</li> <li>When ProductId is 25 (EMR v3.1.0), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 31 (EMR v3.1.1), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 28 (EMR v3.2.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 33 (EMR v3.2.1), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li> <li>When ProductId is 34 (EMR v3.3.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li> <li>When ProductId is 37 (EMR v3.4.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 44 (EMR v3.5.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 53 (EMR v3.6.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 58 (EMR v3.6.1), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.46, and knox-1.6.1.</li> <li>When ProductId is 47 (EMR v4.0.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li>
                      */
                     std::vector<std::string> m_software;
                     bool m_softwareHasBeenSet;
@@ -577,21 +525,13 @@ Hadoop-Hbase
                     bool m_metaDBInfoHasBeenSet;
 
                     /**
-                     * Product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>1: EMR v1.3.1.</li>
-<li>2: EMR v2.0.1.</li>
-<li>4: EMR v2.1.0.</li>
-<li>7: EMR v3.0.0.</li>
+                     * Product ID. Different product IDs represent different EMR product versions. Valid values: <li>2: EMR v2.0.1;</li> <li>16: EMR v2.3.0;</li> <li>20: EMR v2.5.0;</li> <li>30: EMR v2.6.0;</li> <li>38: EMR v2.7.0;</li> <li>57: EMR v2.8.0;</li> <li>7: EMR v3.0.0;</li> <li>25: EMR v3.1.0;</li> <li>31: EMR v3.1.1;</li> <li>28: EMR v3.2.0</li> <li>33: EMR v3.2.1</li> <li>34: EMR v3.3.0</li> <li>37: EMR v3.4.0;</li> <li>44: EMR v3.5.0;</li> <li>53: EMR v3.6.0;</li> <li>58: EMR v3.6.1;</li> <li>47: EMR v4.0.0.</li>
                      */
                     uint64_t m_productId;
                     bool m_productIdHasBeenSet;
 
                     /**
-                     * Scenario-based values:
-Hadoop-Kudu
-Hadoop-Zookeeper
-Hadoop-Presto
-Hadoop-Hbase
+                     * Scenario values: Hadoop-Kudu, Hadoop-ZooKeeper, Hadoop-Presto, and Hadoop-HBase.
                      */
                     std::string m_sceneName;
                     bool m_sceneNameHasBeenSet;

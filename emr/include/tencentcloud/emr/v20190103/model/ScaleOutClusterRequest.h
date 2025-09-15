@@ -28,6 +28,7 @@
 #include <tencentcloud/emr/v20190103/model/PodSpecInfo.h>
 #include <tencentcloud/emr/v20190103/model/NodeResourceSpec.h>
 #include <tencentcloud/emr/v20190103/model/ScaleOutServiceConfGroupsInfo.h>
+#include <tencentcloud/emr/v20190103/model/NodeMark.h>
 
 
 namespace TencentCloud
@@ -79,15 +80,15 @@ namespace TencentCloud
                     bool InstanceChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取The cluster instance ID.
-                     * @return InstanceId The cluster instance ID.
+                     * 获取Cluster instance ID.
+                     * @return InstanceId Cluster instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置The cluster instance ID.
-                     * @param _instanceId The cluster instance ID.
+                     * 设置Cluster instance ID.
+                     * @param _instanceId Cluster instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -100,15 +101,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取The type and number of nodes to be added.
-                     * @return ScaleOutNodeConfig The type and number of nodes to be added.
+                     * 获取Scale-up node type and quantity.
+                     * @return ScaleOutNodeConfig Scale-up node type and quantity.
                      * 
                      */
                     ScaleOutNodeConfig GetScaleOutNodeConfig() const;
 
                     /**
-                     * 设置The type and number of nodes to be added.
-                     * @param _scaleOutNodeConfig The type and number of nodes to be added.
+                     * 设置Scale-up node type and quantity.
+                     * @param _scaleOutNodeConfig Scale-up node type and quantity.
                      * 
                      */
                     void SetScaleOutNodeConfig(const ScaleOutNodeConfig& _scaleOutNodeConfig);
@@ -121,15 +122,15 @@ namespace TencentCloud
                     bool ScaleOutNodeConfigHasBeenSet() const;
 
                     /**
-                     * 获取A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae36063280`.
-                     * @return ClientToken A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae36063280`.
+                     * 获取Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
+                     * @return ClientToken Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
                      * 
                      */
                     std::string GetClientToken() const;
 
                     /**
-                     * 设置A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae36063280`.
-                     * @param _clientToken A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae36063280`.
+                     * 设置Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
+                     * @param _clientToken Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
                      * 
                      */
                     void SetClientToken(const std::string& _clientToken);
@@ -142,15 +143,15 @@ namespace TencentCloud
                     bool ClientTokenHasBeenSet() const;
 
                     /**
-                     * 获取The details of the monthly subscription, including the instance period and auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
-                     * @return InstanceChargePrepaid The details of the monthly subscription, including the instance period and auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
+                     * 获取Setting of parameters related to monthly subscription. Through this parameter, you can specify the duration of purchase for monthly subscription instances, whether to set auto-renewal, and other attributes. This parameter is required when the specified instance is subject to the payment mode of prepaid.
+                     * @return InstanceChargePrepaid Setting of parameters related to monthly subscription. Through this parameter, you can specify the duration of purchase for monthly subscription instances, whether to set auto-renewal, and other attributes. This parameter is required when the specified instance is subject to the payment mode of prepaid.
                      * 
                      */
                     InstanceChargePrepaid GetInstanceChargePrepaid() const;
 
                     /**
-                     * 设置The details of the monthly subscription, including the instance period and auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
-                     * @param _instanceChargePrepaid The details of the monthly subscription, including the instance period and auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
+                     * 设置Setting of parameters related to monthly subscription. Through this parameter, you can specify the duration of purchase for monthly subscription instances, whether to set auto-renewal, and other attributes. This parameter is required when the specified instance is subject to the payment mode of prepaid.
+                     * @param _instanceChargePrepaid Setting of parameters related to monthly subscription. Through this parameter, you can specify the duration of purchase for monthly subscription instances, whether to set auto-renewal, and other attributes. This parameter is required when the specified instance is subject to the payment mode of prepaid.
                      * 
                      */
                     void SetInstanceChargePrepaid(const InstanceChargePrepaid& _instanceChargePrepaid);
@@ -163,15 +164,15 @@ namespace TencentCloud
                     bool InstanceChargePrepaidHasBeenSet() const;
 
                     /**
-                     * 获取The [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings.
-                     * @return ScriptBootstrapActionConfig The [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings.
+                     * 获取[Bootstrap Actions](https://www.tencentcloud.comom/document/product/589/35656?from_cn_redirect=1) script settings.
+                     * @return ScriptBootstrapActionConfig [Bootstrap Actions](https://www.tencentcloud.comom/document/product/589/35656?from_cn_redirect=1) script settings.
                      * 
                      */
                     std::vector<ScriptBootstrapActionConfig> GetScriptBootstrapActionConfig() const;
 
                     /**
-                     * 设置The [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings.
-                     * @param _scriptBootstrapActionConfig The [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings.
+                     * 设置[Bootstrap Actions](https://www.tencentcloud.comom/document/product/589/35656?from_cn_redirect=1) script settings.
+                     * @param _scriptBootstrapActionConfig [Bootstrap Actions](https://www.tencentcloud.comom/document/product/589/35656?from_cn_redirect=1) script settings.
                      * 
                      */
                     void SetScriptBootstrapActionConfig(const std::vector<ScriptBootstrapActionConfig>& _scriptBootstrapActionConfig);
@@ -184,15 +185,15 @@ namespace TencentCloud
                     bool ScriptBootstrapActionConfigHasBeenSet() const;
 
                     /**
-                     * 获取The services to be deployed for new nodes. By default, new nodes will inherit services deployed for the current node type, including default optional services. This parameter only supports the inclusion of optional services. For example, if HDFS, YARN, and Impala have been deployed for existing task nodes, when using the API for task node scale-out without deploying Impala, only HDFS and YARN are included in with this parameter. 
-                     * @return SoftDeployInfo The services to be deployed for new nodes. By default, new nodes will inherit services deployed for the current node type, including default optional services. This parameter only supports the inclusion of optional services. For example, if HDFS, YARN, and Impala have been deployed for existing task nodes, when using the API for task node scale-out without deploying Impala, only HDFS and YARN are included in with this parameter. 
+                     * 获取Scale-out deployment service. New nodes inherit services deployed in the current node type by default, including default optional services. This parameter only supports optional service filling, for example: HDFS, YARN, and Impala have been deployed to existing task nodes. When API is used to scale out the task nodes without deploying Impala, only HDFS and YARN are filled for deployment services. For more details, see [Mapping Table of Component Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
+                     * @return SoftDeployInfo Scale-out deployment service. New nodes inherit services deployed in the current node type by default, including default optional services. This parameter only supports optional service filling, for example: HDFS, YARN, and Impala have been deployed to existing task nodes. When API is used to scale out the task nodes without deploying Impala, only HDFS and YARN are filled for deployment services. For more details, see [Mapping Table of Component Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
                      * 
                      */
                     std::vector<int64_t> GetSoftDeployInfo() const;
 
                     /**
-                     * 设置The services to be deployed for new nodes. By default, new nodes will inherit services deployed for the current node type, including default optional services. This parameter only supports the inclusion of optional services. For example, if HDFS, YARN, and Impala have been deployed for existing task nodes, when using the API for task node scale-out without deploying Impala, only HDFS and YARN are included in with this parameter. 
-                     * @param _softDeployInfo The services to be deployed for new nodes. By default, new nodes will inherit services deployed for the current node type, including default optional services. This parameter only supports the inclusion of optional services. For example, if HDFS, YARN, and Impala have been deployed for existing task nodes, when using the API for task node scale-out without deploying Impala, only HDFS and YARN are included in with this parameter. 
+                     * 设置Scale-out deployment service. New nodes inherit services deployed in the current node type by default, including default optional services. This parameter only supports optional service filling, for example: HDFS, YARN, and Impala have been deployed to existing task nodes. When API is used to scale out the task nodes without deploying Impala, only HDFS and YARN are filled for deployment services. For more details, see [Mapping Table of Component Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
+                     * @param _softDeployInfo Scale-out deployment service. New nodes inherit services deployed in the current node type by default, including default optional services. This parameter only supports optional service filling, for example: HDFS, YARN, and Impala have been deployed to existing task nodes. When API is used to scale out the task nodes without deploying Impala, only HDFS and YARN are filled for deployment services. For more details, see [Mapping Table of Component Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
                      * 
                      */
                     void SetSoftDeployInfo(const std::vector<int64_t>& _softDeployInfo);
@@ -205,15 +206,15 @@ namespace TencentCloud
                     bool SoftDeployInfoHasBeenSet() const;
 
                     /**
-                     * 获取The processes to be deployed. All processes for services to be added are deployed by default. Deployed processes can be changed. For example, HDFS, YARN, and Impala have been deployed for current task nodes, and default services are DataNode, NodeManager, and ImpalaServer; if you want to change deployed processes, you can set this parameter to DataNode,NodeManager,ImpalaServerCoordinator or DataNode,NodeManager,ImpalaServerExecutor. 
-                     * @return ServiceNodeInfo The processes to be deployed. All processes for services to be added are deployed by default. Deployed processes can be changed. For example, HDFS, YARN, and Impala have been deployed for current task nodes, and default services are DataNode, NodeManager, and ImpalaServer; if you want to change deployed processes, you can set this parameter to DataNode,NodeManager,ImpalaServerCoordinator or DataNode,NodeManager,ImpalaServerExecutor. 
+                     * 获取Deployment process. By default, all scale-out service processes are deployed. Deployment processes can be modified. For example, HDFS, YARN, or Impala has been deployed for the current Task node. The default deployment services include DataNode,NodeManager,ImpalaServer. If users need to modify deployment process information, the deployment process can be DataNode, NodeManager, ImpalaServerCoordinator or DataNode, NodeManager, ImpalaServerExecutor. For more details, see [Mapping Table of Process Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
+                     * @return ServiceNodeInfo Deployment process. By default, all scale-out service processes are deployed. Deployment processes can be modified. For example, HDFS, YARN, or Impala has been deployed for the current Task node. The default deployment services include DataNode,NodeManager,ImpalaServer. If users need to modify deployment process information, the deployment process can be DataNode, NodeManager, ImpalaServerCoordinator or DataNode, NodeManager, ImpalaServerExecutor. For more details, see [Mapping Table of Process Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
                      * 
                      */
                     std::vector<int64_t> GetServiceNodeInfo() const;
 
                     /**
-                     * 设置The processes to be deployed. All processes for services to be added are deployed by default. Deployed processes can be changed. For example, HDFS, YARN, and Impala have been deployed for current task nodes, and default services are DataNode, NodeManager, and ImpalaServer; if you want to change deployed processes, you can set this parameter to DataNode,NodeManager,ImpalaServerCoordinator or DataNode,NodeManager,ImpalaServerExecutor. 
-                     * @param _serviceNodeInfo The processes to be deployed. All processes for services to be added are deployed by default. Deployed processes can be changed. For example, HDFS, YARN, and Impala have been deployed for current task nodes, and default services are DataNode, NodeManager, and ImpalaServer; if you want to change deployed processes, you can set this parameter to DataNode,NodeManager,ImpalaServerCoordinator or DataNode,NodeManager,ImpalaServerExecutor. 
+                     * 设置Deployment process. By default, all scale-out service processes are deployed. Deployment processes can be modified. For example, HDFS, YARN, or Impala has been deployed for the current Task node. The default deployment services include DataNode,NodeManager,ImpalaServer. If users need to modify deployment process information, the deployment process can be DataNode, NodeManager, ImpalaServerCoordinator or DataNode, NodeManager, ImpalaServerExecutor. For more details, see [Mapping Table of Process Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
+                     * @param _serviceNodeInfo Deployment process. By default, all scale-out service processes are deployed. Deployment processes can be modified. For example, HDFS, YARN, or Impala has been deployed for the current Task node. The default deployment services include DataNode,NodeManager,ImpalaServer. If users need to modify deployment process information, the deployment process can be DataNode, NodeManager, ImpalaServerCoordinator or DataNode, NodeManager, ImpalaServerExecutor. For more details, see [Mapping Table of Process Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
                      * 
                      */
                     void SetServiceNodeInfo(const std::vector<int64_t>& _serviceNodeInfo);
@@ -226,19 +227,19 @@ namespace TencentCloud
                     bool ServiceNodeInfoHasBeenSet() const;
 
                     /**
-                     * 获取The list of spread placement group IDs. Only one can be specified.
-You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1) API and obtain this parameter from the `DisasterRecoverGroupId` field in the response.
-                     * @return DisasterRecoverGroupIds The list of spread placement group IDs. Only one can be specified.
-You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1) API and obtain this parameter from the `DisasterRecoverGroupId` field in the response.
+                     * 获取Spread placement group ID list. Only one can be specified currently.
+This parameter can be obtained by calling the DisasterRecoverGroupId field in the return value of the [DescribeDisasterRecoverGroups](https://www.tencentcloud.comom/document/product/213/17810?from_cn_redirect=1) API.
+                     * @return DisasterRecoverGroupIds Spread placement group ID list. Only one can be specified currently.
+This parameter can be obtained by calling the DisasterRecoverGroupId field in the return value of the [DescribeDisasterRecoverGroups](https://www.tencentcloud.comom/document/product/213/17810?from_cn_redirect=1) API.
                      * 
                      */
                     std::vector<std::string> GetDisasterRecoverGroupIds() const;
 
                     /**
-                     * 设置The list of spread placement group IDs. Only one can be specified.
-You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1) API and obtain this parameter from the `DisasterRecoverGroupId` field in the response.
-                     * @param _disasterRecoverGroupIds The list of spread placement group IDs. Only one can be specified.
-You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1) API and obtain this parameter from the `DisasterRecoverGroupId` field in the response.
+                     * 设置Spread placement group ID list. Only one can be specified currently.
+This parameter can be obtained by calling the DisasterRecoverGroupId field in the return value of the [DescribeDisasterRecoverGroups](https://www.tencentcloud.comom/document/product/213/17810?from_cn_redirect=1) API.
+                     * @param _disasterRecoverGroupIds Spread placement group ID list. Only one can be specified currently.
+This parameter can be obtained by calling the DisasterRecoverGroupId field in the return value of the [DescribeDisasterRecoverGroups](https://www.tencentcloud.comom/document/product/213/17810?from_cn_redirect=1) API.
                      * 
                      */
                     void SetDisasterRecoverGroupIds(const std::vector<std::string>& _disasterRecoverGroupIds);
@@ -251,15 +252,15 @@ You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/
                     bool DisasterRecoverGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取The list of tags bound to added nodes.
-                     * @return Tags The list of tags bound to added nodes.
+                     * 获取List of tags bound to scale-out nodes.
+                     * @return Tags List of tags bound to scale-out nodes.
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置The list of tags bound to added nodes.
-                     * @param _tags The list of tags bound to added nodes.
+                     * 设置List of tags bound to scale-out nodes.
+                     * @param _tags List of tags bound to scale-out nodes.
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -272,15 +273,15 @@ You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取The type of resources to add. Valid values: `host` (general CVM resources) and `pod` (resources provided by a TKE or EKS cluster).
-                     * @return HardwareSourceType The type of resources to add. Valid values: `host` (general CVM resources) and `pod` (resources provided by a TKE or EKS cluster).
+                     * 获取Resource type selected for scale-out with valid values "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
+                     * @return HardwareSourceType Resource type selected for scale-out with valid values "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
                      * 
                      */
                     std::string GetHardwareSourceType() const;
 
                     /**
-                     * 设置The type of resources to add. Valid values: `host` (general CVM resources) and `pod` (resources provided by a TKE or EKS cluster).
-                     * @param _hardwareSourceType The type of resources to add. Valid values: `host` (general CVM resources) and `pod` (resources provided by a TKE or EKS cluster).
+                     * 设置Resource type selected for scale-out with valid values "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
+                     * @param _hardwareSourceType Resource type selected for scale-out with valid values "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
                      * 
                      */
                     void SetHardwareSourceType(const std::string& _hardwareSourceType);
@@ -293,15 +294,15 @@ You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/
                     bool HardwareSourceTypeHasBeenSet() const;
 
                     /**
-                     * 获取The pod resource information.
-                     * @return PodSpecInfo The pod resource information.
+                     * 获取Pod-related resource information.
+                     * @return PodSpecInfo Pod-related resource information.
                      * 
                      */
                     PodSpecInfo GetPodSpecInfo() const;
 
                     /**
-                     * 设置The pod resource information.
-                     * @param _podSpecInfo The pod resource information.
+                     * 设置Pod-related resource information.
+                     * @param _podSpecInfo Pod-related resource information.
                      * 
                      */
                     void SetPodSpecInfo(const PodSpecInfo& _podSpecInfo);
@@ -314,15 +315,15 @@ You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/
                     bool PodSpecInfoHasBeenSet() const;
 
                     /**
-                     * 获取The server group name selected for ClickHouse cluster scale-out.
-                     * @return ClickHouseClusterName The server group name selected for ClickHouse cluster scale-out.
+                     * 获取Machine group name selected for ClickHouse cluster scale-out.
+                     * @return ClickHouseClusterName Machine group name selected for ClickHouse cluster scale-out.
                      * 
                      */
                     std::string GetClickHouseClusterName() const;
 
                     /**
-                     * 设置The server group name selected for ClickHouse cluster scale-out.
-                     * @param _clickHouseClusterName The server group name selected for ClickHouse cluster scale-out.
+                     * 设置Machine group name selected for ClickHouse cluster scale-out.
+                     * @param _clickHouseClusterName Machine group name selected for ClickHouse cluster scale-out.
                      * 
                      */
                     void SetClickHouseClusterName(const std::string& _clickHouseClusterName);
@@ -335,15 +336,15 @@ You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/
                     bool ClickHouseClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取The server group type selected for ClickHouse cluster scale-out. Valid values: `new` (create a group) and `old` (select an existing group).
-                     * @return ClickHouseClusterType The server group type selected for ClickHouse cluster scale-out. Valid values: `new` (create a group) and `old` (select an existing group).
+                     * 获取Machine group type selected for ClickHouse cluster scale-out. "New" indicates creating a group type, and "old" indicates using an existing group type.
+                     * @return ClickHouseClusterType Machine group type selected for ClickHouse cluster scale-out. "New" indicates creating a group type, and "old" indicates using an existing group type.
                      * 
                      */
                     std::string GetClickHouseClusterType() const;
 
                     /**
-                     * 设置The server group type selected for ClickHouse cluster scale-out. Valid values: `new` (create a group) and `old` (select an existing group).
-                     * @param _clickHouseClusterType The server group type selected for ClickHouse cluster scale-out. Valid values: `new` (create a group) and `old` (select an existing group).
+                     * 设置Machine group type selected for ClickHouse cluster scale-out. "New" indicates creating a group type, and "old" indicates using an existing group type.
+                     * @param _clickHouseClusterType Machine group type selected for ClickHouse cluster scale-out. "New" indicates creating a group type, and "old" indicates using an existing group type.
                      * 
                      */
                     void SetClickHouseClusterType(const std::string& _clickHouseClusterType);
@@ -356,15 +357,15 @@ You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/
                     bool ClickHouseClusterTypeHasBeenSet() const;
 
                     /**
-                     * 获取The YARN node label specified for scale-out.
-                     * @return YarnNodeLabel The YARN node label specified for scale-out.
+                     * 获取Specified Yarn Node Label for scale-out.
+                     * @return YarnNodeLabel Specified Yarn Node Label for scale-out.
                      * 
                      */
                     std::string GetYarnNodeLabel() const;
 
                     /**
-                     * 设置The YARN node label specified for scale-out.
-                     * @param _yarnNodeLabel The YARN node label specified for scale-out.
+                     * 设置Specified Yarn Node Label for scale-out.
+                     * @param _yarnNodeLabel Specified Yarn Node Label for scale-out.
                      * 
                      */
                     void SetYarnNodeLabel(const std::string& _yarnNodeLabel);
@@ -377,23 +378,23 @@ You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/
                     bool YarnNodeLabelHasBeenSet() const;
 
                     /**
-                     * 获取Whether to start services after scale-out.
-<li>`true`: Yes</li>
-<li>`false` (default): No</li>
-                     * @return EnableStartServiceFlag Whether to start services after scale-out.
-<li>`true`: Yes</li>
-<li>`false` (default): No</li>
+                     * 获取Whether to start a service after scale-out (default: false).
+<li>true: yes</li>.
+<li>false: no</li>.
+                     * @return EnableStartServiceFlag Whether to start a service after scale-out (default: false).
+<li>true: yes</li>.
+<li>false: no</li>.
                      * 
                      */
                     bool GetEnableStartServiceFlag() const;
 
                     /**
-                     * 设置Whether to start services after scale-out.
-<li>`true`: Yes</li>
-<li>`false` (default): No</li>
-                     * @param _enableStartServiceFlag Whether to start services after scale-out.
-<li>`true`: Yes</li>
-<li>`false` (default): No</li>
+                     * 设置Whether to start a service after scale-out (default: false).
+<li>true: yes</li>.
+<li>false: no</li>.
+                     * @param _enableStartServiceFlag Whether to start a service after scale-out (default: false).
+<li>true: yes</li>.
+<li>false: no</li>.
                      * 
                      */
                     void SetEnableStartServiceFlag(const bool& _enableStartServiceFlag);
@@ -406,15 +407,15 @@ You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/
                     bool EnableStartServiceFlagHasBeenSet() const;
 
                     /**
-                     * 获取The spec settings.
-                     * @return ResourceSpec The spec settings.
+                     * 获取Specifications settings.
+                     * @return ResourceSpec Specifications settings.
                      * 
                      */
                     NodeResourceSpec GetResourceSpec() const;
 
                     /**
-                     * 设置The spec settings.
-                     * @param _resourceSpec The spec settings.
+                     * 设置Specifications settings.
+                     * @param _resourceSpec Specifications settings.
                      * 
                      */
                     void SetResourceSpec(const NodeResourceSpec& _resourceSpec);
@@ -427,15 +428,15 @@ You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/
                     bool ResourceSpecHasBeenSet() const;
 
                     /**
-                     * 获取The ID of the AZ where the instance resides, such as `ap-guangzhou-1`. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API and obtain this ID from the `Zone` field in the response.
-                     * @return Zone The ID of the AZ where the instance resides, such as `ap-guangzhou-1`. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API and obtain this ID from the `Zone` field in the response.
+                     * 获取Availability zone of the instance, such as ap-guangzhou-1. This parameter can also be obtained from the Zone field in the return value of [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
+                     * @return Zone Availability zone of the instance, such as ap-guangzhou-1. This parameter can also be obtained from the Zone field in the return value of [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置The ID of the AZ where the instance resides, such as `ap-guangzhou-1`. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API and obtain this ID from the `Zone` field in the response.
-                     * @param _zone The ID of the AZ where the instance resides, such as `ap-guangzhou-1`. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API and obtain this ID from the `Zone` field in the response.
+                     * 设置Availability zone of the instance, such as ap-guangzhou-1. This parameter can also be obtained from the Zone field in the return value of [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
+                     * @param _zone Availability zone of the instance, such as ap-guangzhou-1. This parameter can also be obtained from the Zone field in the return value of [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -448,15 +449,15 @@ You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取The subnet, which defaults to the subnet used when the cluster is created.
-                     * @return SubnetId The subnet, which defaults to the subnet used when the cluster is created.
+                     * 获取Subnet, which is the subnet at the time of cluster creation by default.
+                     * @return SubnetId Subnet, which is the subnet at the time of cluster creation by default.
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置The subnet, which defaults to the subnet used when the cluster is created.
-                     * @param _subnetId The subnet, which defaults to the subnet used when the cluster is created.
+                     * 设置Subnet, which is the subnet at the time of cluster creation by default.
+                     * @param _subnetId Subnet, which is the subnet at the time of cluster creation by default.
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -469,15 +470,15 @@ You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ScaleOutServiceConfGroupsInfo 
+                     * 获取Configuration group specified for scale-out.
+                     * @return ScaleOutServiceConfGroupsInfo Configuration group specified for scale-out.
                      * 
                      */
                     std::vector<ScaleOutServiceConfGroupsInfo> GetScaleOutServiceConfGroupsInfo() const;
 
                     /**
-                     * 设置
-                     * @param _scaleOutServiceConfGroupsInfo 
+                     * 设置Configuration group specified for scale-out.
+                     * @param _scaleOutServiceConfGroupsInfo Configuration group specified for scale-out.
                      * 
                      */
                     void SetScaleOutServiceConfGroupsInfo(const std::vector<ScaleOutServiceConfGroupsInfo>& _scaleOutServiceConfGroupsInfo);
@@ -488,6 +489,27 @@ You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/
                      * 
                      */
                     bool ScaleOutServiceConfGroupsInfoHasBeenSet() const;
+
+                    /**
+                     * 获取Node tag information: currently used only in Terraform.
+                     * @return NodeMarks Node tag information: currently used only in Terraform.
+                     * 
+                     */
+                    NodeMark GetNodeMarks() const;
+
+                    /**
+                     * 设置Node tag information: currently used only in Terraform.
+                     * @param _nodeMarks Node tag information: currently used only in Terraform.
+                     * 
+                     */
+                    void SetNodeMarks(const NodeMark& _nodeMarks);
+
+                    /**
+                     * 判断参数 NodeMarks 是否已赋值
+                     * @return NodeMarks 是否已赋值
+                     * 
+                     */
+                    bool NodeMarksHasBeenSet() const;
 
                 private:
 
@@ -500,121 +522,127 @@ You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/
                     bool m_instanceChargeTypeHasBeenSet;
 
                     /**
-                     * The cluster instance ID.
+                     * Cluster instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * The type and number of nodes to be added.
+                     * Scale-up node type and quantity.
                      */
                     ScaleOutNodeConfig m_scaleOutNodeConfig;
                     bool m_scaleOutNodeConfigHasBeenSet;
 
                     /**
-                     * A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae36063280`.
+                     * Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
                      */
                     std::string m_clientToken;
                     bool m_clientTokenHasBeenSet;
 
                     /**
-                     * The details of the monthly subscription, including the instance period and auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
+                     * Setting of parameters related to monthly subscription. Through this parameter, you can specify the duration of purchase for monthly subscription instances, whether to set auto-renewal, and other attributes. This parameter is required when the specified instance is subject to the payment mode of prepaid.
                      */
                     InstanceChargePrepaid m_instanceChargePrepaid;
                     bool m_instanceChargePrepaidHasBeenSet;
 
                     /**
-                     * The [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings.
+                     * [Bootstrap Actions](https://www.tencentcloud.comom/document/product/589/35656?from_cn_redirect=1) script settings.
                      */
                     std::vector<ScriptBootstrapActionConfig> m_scriptBootstrapActionConfig;
                     bool m_scriptBootstrapActionConfigHasBeenSet;
 
                     /**
-                     * The services to be deployed for new nodes. By default, new nodes will inherit services deployed for the current node type, including default optional services. This parameter only supports the inclusion of optional services. For example, if HDFS, YARN, and Impala have been deployed for existing task nodes, when using the API for task node scale-out without deploying Impala, only HDFS and YARN are included in with this parameter. 
+                     * Scale-out deployment service. New nodes inherit services deployed in the current node type by default, including default optional services. This parameter only supports optional service filling, for example: HDFS, YARN, and Impala have been deployed to existing task nodes. When API is used to scale out the task nodes without deploying Impala, only HDFS and YARN are filled for deployment services. For more details, see [Mapping Table of Component Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
                      */
                     std::vector<int64_t> m_softDeployInfo;
                     bool m_softDeployInfoHasBeenSet;
 
                     /**
-                     * The processes to be deployed. All processes for services to be added are deployed by default. Deployed processes can be changed. For example, HDFS, YARN, and Impala have been deployed for current task nodes, and default services are DataNode, NodeManager, and ImpalaServer; if you want to change deployed processes, you can set this parameter to DataNode,NodeManager,ImpalaServerCoordinator or DataNode,NodeManager,ImpalaServerExecutor. 
+                     * Deployment process. By default, all scale-out service processes are deployed. Deployment processes can be modified. For example, HDFS, YARN, or Impala has been deployed for the current Task node. The default deployment services include DataNode,NodeManager,ImpalaServer. If users need to modify deployment process information, the deployment process can be DataNode, NodeManager, ImpalaServerCoordinator or DataNode, NodeManager, ImpalaServerExecutor. For more details, see [Mapping Table of Process Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
                      */
                     std::vector<int64_t> m_serviceNodeInfo;
                     bool m_serviceNodeInfoHasBeenSet;
 
                     /**
-                     * The list of spread placement group IDs. Only one can be specified.
-You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1) API and obtain this parameter from the `DisasterRecoverGroupId` field in the response.
+                     * Spread placement group ID list. Only one can be specified currently.
+This parameter can be obtained by calling the DisasterRecoverGroupId field in the return value of the [DescribeDisasterRecoverGroups](https://www.tencentcloud.comom/document/product/213/17810?from_cn_redirect=1) API.
                      */
                     std::vector<std::string> m_disasterRecoverGroupIds;
                     bool m_disasterRecoverGroupIdsHasBeenSet;
 
                     /**
-                     * The list of tags bound to added nodes.
+                     * List of tags bound to scale-out nodes.
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * The type of resources to add. Valid values: `host` (general CVM resources) and `pod` (resources provided by a TKE or EKS cluster).
+                     * Resource type selected for scale-out with valid values "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
                      */
                     std::string m_hardwareSourceType;
                     bool m_hardwareSourceTypeHasBeenSet;
 
                     /**
-                     * The pod resource information.
+                     * Pod-related resource information.
                      */
                     PodSpecInfo m_podSpecInfo;
                     bool m_podSpecInfoHasBeenSet;
 
                     /**
-                     * The server group name selected for ClickHouse cluster scale-out.
+                     * Machine group name selected for ClickHouse cluster scale-out.
                      */
                     std::string m_clickHouseClusterName;
                     bool m_clickHouseClusterNameHasBeenSet;
 
                     /**
-                     * The server group type selected for ClickHouse cluster scale-out. Valid values: `new` (create a group) and `old` (select an existing group).
+                     * Machine group type selected for ClickHouse cluster scale-out. "New" indicates creating a group type, and "old" indicates using an existing group type.
                      */
                     std::string m_clickHouseClusterType;
                     bool m_clickHouseClusterTypeHasBeenSet;
 
                     /**
-                     * The YARN node label specified for scale-out.
+                     * Specified Yarn Node Label for scale-out.
                      */
                     std::string m_yarnNodeLabel;
                     bool m_yarnNodeLabelHasBeenSet;
 
                     /**
-                     * Whether to start services after scale-out.
-<li>`true`: Yes</li>
-<li>`false` (default): No</li>
+                     * Whether to start a service after scale-out (default: false).
+<li>true: yes</li>.
+<li>false: no</li>.
                      */
                     bool m_enableStartServiceFlag;
                     bool m_enableStartServiceFlagHasBeenSet;
 
                     /**
-                     * The spec settings.
+                     * Specifications settings.
                      */
                     NodeResourceSpec m_resourceSpec;
                     bool m_resourceSpecHasBeenSet;
 
                     /**
-                     * The ID of the AZ where the instance resides, such as `ap-guangzhou-1`. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API and obtain this ID from the `Zone` field in the response.
+                     * Availability zone of the instance, such as ap-guangzhou-1. This parameter can also be obtained from the Zone field in the return value of [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * The subnet, which defaults to the subnet used when the cluster is created.
+                     * Subnet, which is the subnet at the time of cluster creation by default.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * 
+                     * Configuration group specified for scale-out.
                      */
                     std::vector<ScaleOutServiceConfGroupsInfo> m_scaleOutServiceConfGroupsInfo;
                     bool m_scaleOutServiceConfGroupsInfoHasBeenSet;
+
+                    /**
+                     * Node tag information: currently used only in Terraform.
+                     */
+                    NodeMark m_nodeMarks;
+                    bool m_nodeMarksHasBeenSet;
 
                 };
             }

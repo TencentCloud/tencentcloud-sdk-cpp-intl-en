@@ -250,19 +250,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DynamicPodSpecHasBeenSet() const;
 
                     /**
-                     * 获取The unique VPC ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VpcId The unique VPC ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Unique ID of VPC network.
+                     * @return VpcId Unique ID of VPC network.
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置The unique VPC ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _vpcId The unique VPC ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Unique ID of VPC network.
+                     * @param _vpcId Unique ID of VPC network.
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -275,19 +271,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取The unique VPC subnet ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SubnetId The unique VPC subnet ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Unique ID of a VPC subnet.
+                     * @return SubnetId Unique ID of a VPC subnet.
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置The unique VPC subnet ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _subnetId The unique VPC subnet ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Unique ID of a VPC subnet.
+                     * @param _subnetId Unique ID of a VPC subnet.
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -300,19 +292,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取The pod name.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PodName The pod name.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取pod name
+                     * @return PodName pod name
                      * 
                      */
                     std::string GetPodName() const;
 
                     /**
-                     * 设置The pod name.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _podName The pod name.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置pod name
+                     * @param _podName pod name
                      * 
                      */
                     void SetPodName(const std::string& _podName);
@@ -384,22 +372,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_dynamicPodSpecHasBeenSet;
 
                     /**
-                     * The unique VPC ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Unique ID of VPC network.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * The unique VPC subnet ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Unique ID of a VPC subnet.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * The pod name.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * pod name
                      */
                     std::string m_podName;
                     bool m_podNameHasBeenSet;

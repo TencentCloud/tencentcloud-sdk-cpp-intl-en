@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Disk size in GB.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DiskSize Disk size in GB.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetDiskSize() const;
 
                     /**
                      * 设置Disk size in GB.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _diskSize Disk size in GB.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDiskSize(const uint64_t& _diskSize);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Disk type. Valid values: `CLOUD_PREMIUM` and `CLOUD_SSD`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DiskType Disk type. Valid values: `CLOUD_PREMIUM` and `CLOUD_SSD`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Disk type, CLOUD_PREMIUM or CLOUD_SSD.
+                     * @return DiskType Disk type, CLOUD_PREMIUM or CLOUD_SSD.
                      * 
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置Disk type. Valid values: `CLOUD_PREMIUM` and `CLOUD_SSD`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _diskType Disk type. Valid values: `CLOUD_PREMIUM` and `CLOUD_SSD`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Disk type, CLOUD_PREMIUM or CLOUD_SSD.
+                     * @param _diskType Disk type, CLOUD_PREMIUM or CLOUD_SSD.
                      * 
                      */
                     void SetDiskType(const std::string& _diskType);
@@ -98,18 +90,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of disks.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DiskNum Number of disks.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetDiskNum() const;
 
                     /**
                      * 设置Number of disks.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _diskNum Number of disks.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDiskNum(const int64_t& _diskNum);
@@ -121,28 +109,52 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool DiskNumHasBeenSet() const;
 
+                    /**
+                     * 获取Additional performance of cloud disks.
+                     * @return ExtraPerformance Additional performance of cloud disks.
+                     * 
+                     */
+                    int64_t GetExtraPerformance() const;
+
+                    /**
+                     * 设置Additional performance of cloud disks.
+                     * @param _extraPerformance Additional performance of cloud disks.
+                     * 
+                     */
+                    void SetExtraPerformance(const int64_t& _extraPerformance);
+
+                    /**
+                     * 判断参数 ExtraPerformance 是否已赋值
+                     * @return ExtraPerformance 是否已赋值
+                     * 
+                     */
+                    bool ExtraPerformanceHasBeenSet() const;
+
                 private:
 
                     /**
                      * Disk size in GB.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;
 
                     /**
-                     * Disk type. Valid values: `CLOUD_PREMIUM` and `CLOUD_SSD`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Disk type, CLOUD_PREMIUM or CLOUD_SSD.
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;
 
                     /**
                      * Number of disks.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_diskNum;
                     bool m_diskNumHasBeenSet;
+
+                    /**
+                     * Additional performance of cloud disks.
+                     */
+                    int64_t m_extraPerformance;
+                    bool m_extraPerformanceHasBeenSet;
 
                 };
             }

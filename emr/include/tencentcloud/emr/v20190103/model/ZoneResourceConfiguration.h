@@ -125,31 +125,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AllNodeResourceSpecHasBeenSet() const;
 
                     /**
-                     * 获取For a single AZ, `ZoneTag` can be left out. For a double-AZ mode, `ZoneTag` is set to `master` and `standby` for the first and second AZs, respectively. If there are three AZs, `ZoneTag` is set to `master`, `standby`, and `third-party` for the first, second, and third AZs, respectively. Valid values:
+                     * 获取Leave ZoneTag empty in the case of a single availability zone. In the case of a dual-AZ deployment, select master for the first availability zone's ZoneTag and standby for the second. In the case of a three-AZ deployment, select master for the first availability zone's ZoneTag, standby for the second, and third-party for the third. Valid values.
   <li>master</li>
   <li>standby</li>
   <li>third-party</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ZoneTag For a single AZ, `ZoneTag` can be left out. For a double-AZ mode, `ZoneTag` is set to `master` and `standby` for the first and second AZs, respectively. If there are three AZs, `ZoneTag` is set to `master`, `standby`, and `third-party` for the first, second, and third AZs, respectively. Valid values:
+                     * @return ZoneTag Leave ZoneTag empty in the case of a single availability zone. In the case of a dual-AZ deployment, select master for the first availability zone's ZoneTag and standby for the second. In the case of a three-AZ deployment, select master for the first availability zone's ZoneTag, standby for the second, and third-party for the third. Valid values.
   <li>master</li>
   <li>standby</li>
   <li>third-party</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetZoneTag() const;
 
                     /**
-                     * 设置For a single AZ, `ZoneTag` can be left out. For a double-AZ mode, `ZoneTag` is set to `master` and `standby` for the first and second AZs, respectively. If there are three AZs, `ZoneTag` is set to `master`, `standby`, and `third-party` for the first, second, and third AZs, respectively. Valid values:
+                     * 设置Leave ZoneTag empty in the case of a single availability zone. In the case of a dual-AZ deployment, select master for the first availability zone's ZoneTag and standby for the second. In the case of a three-AZ deployment, select master for the first availability zone's ZoneTag, standby for the second, and third-party for the third. Valid values.
   <li>master</li>
   <li>standby</li>
   <li>third-party</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _zoneTag For a single AZ, `ZoneTag` can be left out. For a double-AZ mode, `ZoneTag` is set to `master` and `standby` for the first and second AZs, respectively. If there are three AZs, `ZoneTag` is set to `master`, `standby`, and `third-party` for the first, second, and third AZs, respectively. Valid values:
+                     * @param _zoneTag Leave ZoneTag empty in the case of a single availability zone. In the case of a dual-AZ deployment, select master for the first availability zone's ZoneTag and standby for the second. In the case of a three-AZ deployment, select master for the first availability zone's ZoneTag, standby for the second, and third-party for the third. Valid values.
   <li>master</li>
   <li>standby</li>
   <li>third-party</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetZoneTag(const std::string& _zoneTag);
@@ -185,11 +181,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_allNodeResourceSpecHasBeenSet;
 
                     /**
-                     * For a single AZ, `ZoneTag` can be left out. For a double-AZ mode, `ZoneTag` is set to `master` and `standby` for the first and second AZs, respectively. If there are three AZs, `ZoneTag` is set to `master`, `standby`, and `third-party` for the first, second, and third AZs, respectively. Valid values:
+                     * Leave ZoneTag empty in the case of a single availability zone. In the case of a dual-AZ deployment, select master for the first availability zone's ZoneTag and standby for the second. In the case of a three-AZ deployment, select master for the first availability zone's ZoneTag, standby for the second, and third-party for the third. Valid values.
   <li>master</li>
   <li>standby</li>
   <li>third-party</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_zoneTag;
                     bool m_zoneTagHasBeenSet;

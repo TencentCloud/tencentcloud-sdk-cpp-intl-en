@@ -65,15 +65,31 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Parameter for record filtration. Valid values: "StartTime", "EndTime" and "StrategyName". StartTime and EndTime support the time format of 2006-01-02 15:04:05 or 2006/01/02 15:04:05.
-                     * @return Filters Parameter for record filtration. Valid values: "StartTime", "EndTime" and "StrategyName". StartTime and EndTime support the time format of 2006-01-02 15:04:05 or 2006/01/02 15:04:05.
+                     * 获取Record filter parameter, which can only be "StartTime", "EndTime", "StrategyName", "ActionStatus", or "ScaleAction".
+Time format. Either 2006-01-02 15:04:05 or 2006/01/02 15:04:05 for StartTime and EndTime.
+ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), 5 (IN_RETRY).
+ScaleAction: 1 (scale out), 2 (scale in).
+
+                     * @return Filters Record filter parameter, which can only be "StartTime", "EndTime", "StrategyName", "ActionStatus", or "ScaleAction".
+Time format. Either 2006-01-02 15:04:05 or 2006/01/02 15:04:05 for StartTime and EndTime.
+ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), 5 (IN_RETRY).
+ScaleAction: 1 (scale out), 2 (scale in).
+
                      * 
                      */
                     std::vector<KeyValue> GetFilters() const;
 
                     /**
-                     * 设置Parameter for record filtration. Valid values: "StartTime", "EndTime" and "StrategyName". StartTime and EndTime support the time format of 2006-01-02 15:04:05 or 2006/01/02 15:04:05.
-                     * @param _filters Parameter for record filtration. Valid values: "StartTime", "EndTime" and "StrategyName". StartTime and EndTime support the time format of 2006-01-02 15:04:05 or 2006/01/02 15:04:05.
+                     * 设置Record filter parameter, which can only be "StartTime", "EndTime", "StrategyName", "ActionStatus", or "ScaleAction".
+Time format. Either 2006-01-02 15:04:05 or 2006/01/02 15:04:05 for StartTime and EndTime.
+ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), 5 (IN_RETRY).
+ScaleAction: 1 (scale out), 2 (scale in).
+
+                     * @param _filters Record filter parameter, which can only be "StartTime", "EndTime", "StrategyName", "ActionStatus", or "ScaleAction".
+Time format. Either 2006-01-02 15:04:05 or 2006/01/02 15:04:05 for StartTime and EndTime.
+ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), 5 (IN_RETRY).
+ScaleAction: 1 (scale out), 2 (scale in).
+
                      * 
                      */
                     void SetFilters(const std::vector<KeyValue>& _filters);
@@ -127,6 +143,48 @@ namespace TencentCloud
                      */
                     bool LimitHasBeenSet() const;
 
+                    /**
+                     * 获取Whether it is automatic scaling (0) or managed scaling (1)
+                     * @return RecordSource Whether it is automatic scaling (0) or managed scaling (1)
+                     * 
+                     */
+                    int64_t GetRecordSource() const;
+
+                    /**
+                     * 设置Whether it is automatic scaling (0) or managed scaling (1)
+                     * @param _recordSource Whether it is automatic scaling (0) or managed scaling (1)
+                     * 
+                     */
+                    void SetRecordSource(const int64_t& _recordSource);
+
+                    /**
+                     * 判断参数 RecordSource 是否已赋值
+                     * @return RecordSource 是否已赋值
+                     * 
+                     */
+                    bool RecordSourceHasBeenSet() const;
+
+                    /**
+                     * 获取Ascending or not. 1: ascending, 0: descending.
+                     * @return Asc Ascending or not. 1: ascending, 0: descending.
+                     * 
+                     */
+                    int64_t GetAsc() const;
+
+                    /**
+                     * 设置Ascending or not. 1: ascending, 0: descending.
+                     * @param _asc Ascending or not. 1: ascending, 0: descending.
+                     * 
+                     */
+                    void SetAsc(const int64_t& _asc);
+
+                    /**
+                     * 判断参数 Asc 是否已赋值
+                     * @return Asc 是否已赋值
+                     * 
+                     */
+                    bool AscHasBeenSet() const;
+
                 private:
 
                     /**
@@ -136,7 +194,11 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Parameter for record filtration. Valid values: "StartTime", "EndTime" and "StrategyName". StartTime and EndTime support the time format of 2006-01-02 15:04:05 or 2006/01/02 15:04:05.
+                     * Record filter parameter, which can only be "StartTime", "EndTime", "StrategyName", "ActionStatus", or "ScaleAction".
+Time format. Either 2006-01-02 15:04:05 or 2006/01/02 15:04:05 for StartTime and EndTime.
+ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), 5 (IN_RETRY).
+ScaleAction: 1 (scale out), 2 (scale in).
+
                      */
                     std::vector<KeyValue> m_filters;
                     bool m_filtersHasBeenSet;
@@ -152,6 +214,18 @@ namespace TencentCloud
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
+
+                    /**
+                     * Whether it is automatic scaling (0) or managed scaling (1)
+                     */
+                    int64_t m_recordSource;
+                    bool m_recordSourceHasBeenSet;
+
+                    /**
+                     * Ascending or not. 1: ascending, 0: descending.
+                     */
+                    int64_t m_asc;
+                    bool m_ascHasBeenSet;
 
                 };
             }

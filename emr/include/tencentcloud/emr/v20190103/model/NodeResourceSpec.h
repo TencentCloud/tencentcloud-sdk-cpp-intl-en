@@ -49,19 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The spec type, such as `S2.MEDIUM8`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceType The spec type, such as `S2.MEDIUM8`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取specifications type, such as S2.MEDIUM8.
+                     * @return InstanceType specifications type, such as S2.MEDIUM8.
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置The spec type, such as `S2.MEDIUM8`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceType The spec type, such as `S2.MEDIUM8`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置specifications type, such as S2.MEDIUM8.
+                     * @param _instanceType specifications type, such as S2.MEDIUM8.
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -176,8 +172,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The spec type, such as `S2.MEDIUM8`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * specifications type, such as S2.MEDIUM8.
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;

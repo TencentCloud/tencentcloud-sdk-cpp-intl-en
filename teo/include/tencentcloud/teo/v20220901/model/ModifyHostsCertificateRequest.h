@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/teo/v20220901/model/ServerCertInfo.h>
 #include <tencentcloud/teo/v20220901/model/MutualTLS.h>
+#include <tencentcloud/teo/v20220901/model/UpstreamCertInfo.h>
 
 
 namespace TencentCloud
@@ -194,6 +195,27 @@ Default value: `none`.
                      */
                     bool ClientCertInfoHasBeenSet() const;
 
+                    /**
+                     * 获取Configures the certificate presented by the EO node during origin-pull for mutual TLS authentication. Disabled by default; leaving the field blank will retain the current configuration. This feature is currently in beta testing. please [contact us](https://cloud.tencent.com/online-service) to request access.
+                     * @return UpstreamCertInfo Configures the certificate presented by the EO node during origin-pull for mutual TLS authentication. Disabled by default; leaving the field blank will retain the current configuration. This feature is currently in beta testing. please [contact us](https://cloud.tencent.com/online-service) to request access.
+                     * 
+                     */
+                    UpstreamCertInfo GetUpstreamCertInfo() const;
+
+                    /**
+                     * 设置Configures the certificate presented by the EO node during origin-pull for mutual TLS authentication. Disabled by default; leaving the field blank will retain the current configuration. This feature is currently in beta testing. please [contact us](https://cloud.tencent.com/online-service) to request access.
+                     * @param _upstreamCertInfo Configures the certificate presented by the EO node during origin-pull for mutual TLS authentication. Disabled by default; leaving the field blank will retain the current configuration. This feature is currently in beta testing. please [contact us](https://cloud.tencent.com/online-service) to request access.
+                     * 
+                     */
+                    void SetUpstreamCertInfo(const UpstreamCertInfo& _upstreamCertInfo);
+
+                    /**
+                     * 判断参数 UpstreamCertInfo 是否已赋值
+                     * @return UpstreamCertInfo 是否已赋值
+                     * 
+                     */
+                    bool UpstreamCertInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -237,6 +259,12 @@ Default value: `none`.
                      */
                     MutualTLS m_clientCertInfo;
                     bool m_clientCertInfoHasBeenSet;
+
+                    /**
+                     * Configures the certificate presented by the EO node during origin-pull for mutual TLS authentication. Disabled by default; leaving the field blank will retain the current configuration. This feature is currently in beta testing. please [contact us](https://cloud.tencent.com/online-service) to request access.
+                     */
+                    UpstreamCertInfo m_upstreamCertInfo;
+                    bool m_upstreamCertInfoHasBeenSet;
 
                 };
             }

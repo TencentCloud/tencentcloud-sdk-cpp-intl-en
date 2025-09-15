@@ -31,6 +31,7 @@
 #include <tencentcloud/emr/v20190103/model/CustomMetaInfo.h>
 #include <tencentcloud/emr/v20190103/model/ExternalService.h>
 #include <tencentcloud/emr/v20190103/model/MultiZoneSetting.h>
+#include <tencentcloud/emr/v20190103/model/NodeMark.h>
 
 
 namespace TencentCloud
@@ -480,15 +481,15 @@ Enter an instance value: `hive` or `flink`.
                     bool AutoRenewHasBeenSet() const;
 
                     /**
-                     * 获取Client token.
-                     * @return ClientToken Client token.
+                     * 获取Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
+                     * @return ClientToken Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
                      * 
                      */
                     std::string GetClientToken() const;
 
                     /**
-                     * 设置Client token.
-                     * @param _clientToken Client token.
+                     * 设置Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
+                     * @param _clientToken Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
                      * 
                      */
                     void SetClientToken(const std::string& _clientToken);
@@ -876,6 +877,69 @@ Hadoop-Hbase
                      */
                     bool MultiZoneSettingsHasBeenSet() const;
 
+                    /**
+                     * 获取COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+                     * @return CosBucket COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+                     * 
+                     */
+                    std::string GetCosBucket() const;
+
+                    /**
+                     * 设置COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+                     * @param _cosBucket COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+                     * 
+                     */
+                    void SetCosBucket(const std::string& _cosBucket);
+
+                    /**
+                     * 判断参数 CosBucket 是否已赋值
+                     * @return CosBucket 是否已赋值
+                     * 
+                     */
+                    bool CosBucketHasBeenSet() const;
+
+                    /**
+                     * 获取Node identifier information: currently used only in Terraform.
+                     * @return NodeMarks Node identifier information: currently used only in Terraform.
+                     * 
+                     */
+                    std::vector<NodeMark> GetNodeMarks() const;
+
+                    /**
+                     * 设置Node identifier information: currently used only in Terraform.
+                     * @param _nodeMarks Node identifier information: currently used only in Terraform.
+                     * 
+                     */
+                    void SetNodeMarks(const std::vector<NodeMark>& _nodeMarks);
+
+                    /**
+                     * 判断参数 NodeMarks 是否已赋值
+                     * @return NodeMarks 是否已赋值
+                     * 
+                     */
+                    bool NodeMarksHasBeenSet() const;
+
+                    /**
+                     * 获取CLB id
+                     * @return LoadBalancerId CLB id
+                     * 
+                     */
+                    std::string GetLoadBalancerId() const;
+
+                    /**
+                     * 设置CLB id
+                     * @param _loadBalancerId CLB id
+                     * 
+                     */
+                    void SetLoadBalancerId(const std::string& _loadBalancerId);
+
+                    /**
+                     * 判断参数 LoadBalancerId 是否已赋值
+                     * @return LoadBalancerId 是否已赋值
+                     * 
+                     */
+                    bool LoadBalancerIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -997,7 +1061,7 @@ Enter an instance value: `hive` or `flink`.
                     bool m_autoRenewHasBeenSet;
 
                     /**
-                     * Client token.
+                     * Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
                      */
                     std::string m_clientToken;
                     bool m_clientTokenHasBeenSet;
@@ -1107,6 +1171,24 @@ Hadoop-Hbase
                      */
                     std::vector<MultiZoneSetting> m_multiZoneSettings;
                     bool m_multiZoneSettingsHasBeenSet;
+
+                    /**
+                     * COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+                     */
+                    std::string m_cosBucket;
+                    bool m_cosBucketHasBeenSet;
+
+                    /**
+                     * Node identifier information: currently used only in Terraform.
+                     */
+                    std::vector<NodeMark> m_nodeMarks;
+                    bool m_nodeMarksHasBeenSet;
+
+                    /**
+                     * CLB id
+                     */
+                    std::string m_loadBalancerId;
+                    bool m_loadBalancerIdHasBeenSet;
 
                 };
             }

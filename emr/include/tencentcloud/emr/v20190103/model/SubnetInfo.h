@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Subnet information (name)
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return SubnetName Subnet information (name)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Subnet information (name).
+                     * @return SubnetName Subnet information (name).
                      * 
                      */
                     std::string GetSubnetName() const;
 
                     /**
-                     * 设置Subnet information (name)
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _subnetName Subnet information (name)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Subnet information (name).
+                     * @param _subnetName Subnet information (name).
                      * 
                      */
                     void SetSubnetName(const std::string& _subnetName);
@@ -72,19 +68,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool SubnetNameHasBeenSet() const;
 
                     /**
-                     * 获取Subnet information (ID)
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return SubnetId Subnet information (ID)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Subnet information (ID).
+                     * @return SubnetId Subnet information (ID).
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置Subnet information (ID)
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _subnetId Subnet information (ID)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Subnet information (ID).
+                     * @param _subnetId Subnet information (ID).
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -99,15 +91,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Subnet information (name)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Subnet information (name).
                      */
                     std::string m_subnetName;
                     bool m_subnetNameHasBeenSet;
 
                     /**
-                     * Subnet information (ID)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Subnet information (ID).
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;

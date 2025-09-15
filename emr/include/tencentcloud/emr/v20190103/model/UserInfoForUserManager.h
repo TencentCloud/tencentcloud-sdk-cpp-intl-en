@@ -130,6 +130,27 @@ namespace TencentCloud
                      */
                     bool ReMarkHasBeenSet() const;
 
+                    /**
+                     * 获取User subgroup.
+                     * @return Groups User subgroup.
+                     * 
+                     */
+                    std::vector<std::string> GetGroups() const;
+
+                    /**
+                     * 设置User subgroup.
+                     * @param _groups User subgroup.
+                     * 
+                     */
+                    void SetGroups(const std::vector<std::string>& _groups);
+
+                    /**
+                     * 判断参数 Groups 是否已赋值
+                     * @return Groups 是否已赋值
+                     * 
+                     */
+                    bool GroupsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -155,6 +176,12 @@ namespace TencentCloud
                      */
                     std::string m_reMark;
                     bool m_reMarkHasBeenSet;
+
+                    /**
+                     * User subgroup.
+                     */
+                    std::vector<std::string> m_groups;
+                    bool m_groupsHasBeenSet;
 
                 };
             }

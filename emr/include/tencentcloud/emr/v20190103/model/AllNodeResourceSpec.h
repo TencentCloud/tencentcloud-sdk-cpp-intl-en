@@ -148,19 +148,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CommonResourceSpecHasBeenSet() const;
 
                     /**
-                     * 获取The number of master nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MasterCount The number of master nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of Master nodes.
+                     * @return MasterCount Number of Master nodes.
                      * 
                      */
                     int64_t GetMasterCount() const;
 
                     /**
-                     * 设置The number of master nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _masterCount The number of master nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of Master nodes.
+                     * @param _masterCount Number of Master nodes.
                      * 
                      */
                     void SetMasterCount(const int64_t& _masterCount);
@@ -173,19 +169,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MasterCountHasBeenSet() const;
 
                     /**
-                     * 获取The number of core nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CoreCount The number of core nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of core nodes.
+                     * @return CoreCount Number of core nodes.
                      * 
                      */
                     int64_t GetCoreCount() const;
 
                     /**
-                     * 设置The number of core nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _coreCount The number of core nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of core nodes.
+                     * @param _coreCount Number of core nodes.
                      * 
                      */
                     void SetCoreCount(const int64_t& _coreCount);
@@ -198,19 +190,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CoreCountHasBeenSet() const;
 
                     /**
-                     * 获取The number of task nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TaskCount The number of task nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of task nodes.
+                     * @return TaskCount Number of task nodes.
                      * 
                      */
                     int64_t GetTaskCount() const;
 
                     /**
-                     * 设置The number of task nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _taskCount The number of task nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of task nodes.
+                     * @param _taskCount Number of task nodes.
                      * 
                      */
                     void SetTaskCount(const int64_t& _taskCount);
@@ -223,19 +211,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TaskCountHasBeenSet() const;
 
                     /**
-                     * 获取The number of common nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CommonCount The number of common nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of common nodes.
+                     * @return CommonCount Number of common nodes.
                      * 
                      */
                     int64_t GetCommonCount() const;
 
                     /**
-                     * 设置The number of common nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _commonCount The number of common nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of common nodes.
+                     * @param _commonCount Number of common nodes.
                      * 
                      */
                     void SetCommonCount(const int64_t& _commonCount);
@@ -278,29 +262,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_commonResourceSpecHasBeenSet;
 
                     /**
-                     * The number of master nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of Master nodes.
                      */
                     int64_t m_masterCount;
                     bool m_masterCountHasBeenSet;
 
                     /**
-                     * The number of core nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of core nodes.
                      */
                     int64_t m_coreCount;
                     bool m_coreCountHasBeenSet;
 
                     /**
-                     * The number of task nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of task nodes.
                      */
                     int64_t m_taskCount;
                     bool m_taskCountHasBeenSet;
 
                     /**
-                     * The number of common nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of common nodes.
                      */
                     int64_t m_commonCount;
                     bool m_commonCountHasBeenSet;

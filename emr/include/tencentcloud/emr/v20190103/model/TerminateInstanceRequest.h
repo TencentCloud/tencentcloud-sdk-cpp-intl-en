@@ -84,6 +84,48 @@ namespace TencentCloud
                      */
                     bool ResourceIdsHasBeenSet() const;
 
+                    /**
+                     * 获取The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+                     * @return ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+                     * 
+                     */
+                    std::string GetResourceBaseType() const;
+
+                    /**
+                     * 设置The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+                     * @param _resourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+                     * 
+                     */
+                    void SetResourceBaseType(const std::string& _resourceBaseType);
+
+                    /**
+                     * 判断参数 ResourceBaseType 是否已赋值
+                     * @return ResourceBaseType 是否已赋值
+                     * 
+                     */
+                    bool ResourceBaseTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Computing resource ID.
+                     * @return ComputeResourceId Computing resource ID.
+                     * 
+                     */
+                    std::string GetComputeResourceId() const;
+
+                    /**
+                     * 设置Computing resource ID.
+                     * @param _computeResourceId Computing resource ID.
+                     * 
+                     */
+                    void SetComputeResourceId(const std::string& _computeResourceId);
+
+                    /**
+                     * 判断参数 ComputeResourceId 是否已赋值
+                     * @return ComputeResourceId 是否已赋值
+                     * 
+                     */
+                    bool ComputeResourceIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -97,6 +139,18 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_resourceIds;
                     bool m_resourceIdsHasBeenSet;
+
+                    /**
+                     * The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+                     */
+                    std::string m_resourceBaseType;
+                    bool m_resourceBaseTypeHasBeenSet;
+
+                    /**
+                     * Computing resource ID.
+                     */
+                    std::string m_computeResourceId;
+                    bool m_computeResourceIdHasBeenSet;
 
                 };
             }
