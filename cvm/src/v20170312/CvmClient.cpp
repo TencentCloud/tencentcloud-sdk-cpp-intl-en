@@ -2147,6 +2147,49 @@ CvmClient::InquirePricePurchaseReservedInstancesOfferingOutcomeCallable CvmClien
     return task->get_future();
 }
 
+CvmClient::InquiryPriceModifyInstancesChargeTypeOutcome CvmClient::InquiryPriceModifyInstancesChargeType(const InquiryPriceModifyInstancesChargeTypeRequest &request)
+{
+    auto outcome = MakeRequest(request, "InquiryPriceModifyInstancesChargeType");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        InquiryPriceModifyInstancesChargeTypeResponse rsp = InquiryPriceModifyInstancesChargeTypeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return InquiryPriceModifyInstancesChargeTypeOutcome(rsp);
+        else
+            return InquiryPriceModifyInstancesChargeTypeOutcome(o.GetError());
+    }
+    else
+    {
+        return InquiryPriceModifyInstancesChargeTypeOutcome(outcome.GetError());
+    }
+}
+
+void CvmClient::InquiryPriceModifyInstancesChargeTypeAsync(const InquiryPriceModifyInstancesChargeTypeRequest& request, const InquiryPriceModifyInstancesChargeTypeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->InquiryPriceModifyInstancesChargeType(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CvmClient::InquiryPriceModifyInstancesChargeTypeOutcomeCallable CvmClient::InquiryPriceModifyInstancesChargeTypeCallable(const InquiryPriceModifyInstancesChargeTypeRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<InquiryPriceModifyInstancesChargeTypeOutcome()>>(
+        [this, request]()
+        {
+            return this->InquiryPriceModifyInstancesChargeType(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CvmClient::InquiryPriceRenewInstancesOutcome CvmClient::InquiryPriceRenewInstances(const InquiryPriceRenewInstancesRequest &request)
 {
     auto outcome = MakeRequest(request, "InquiryPriceRenewInstances");
@@ -2656,6 +2699,49 @@ CvmClient::ModifyInstancesAttributeOutcomeCallable CvmClient::ModifyInstancesAtt
         [this, request]()
         {
             return this->ModifyInstancesAttribute(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CvmClient::ModifyInstancesChargeTypeOutcome CvmClient::ModifyInstancesChargeType(const ModifyInstancesChargeTypeRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyInstancesChargeType");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyInstancesChargeTypeResponse rsp = ModifyInstancesChargeTypeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyInstancesChargeTypeOutcome(rsp);
+        else
+            return ModifyInstancesChargeTypeOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyInstancesChargeTypeOutcome(outcome.GetError());
+    }
+}
+
+void CvmClient::ModifyInstancesChargeTypeAsync(const ModifyInstancesChargeTypeRequest& request, const ModifyInstancesChargeTypeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyInstancesChargeType(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CvmClient::ModifyInstancesChargeTypeOutcomeCallable CvmClient::ModifyInstancesChargeTypeCallable(const ModifyInstancesChargeTypeRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyInstancesChargeTypeOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyInstancesChargeType(request);
         }
     );
 

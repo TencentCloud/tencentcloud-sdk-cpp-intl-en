@@ -45,6 +45,8 @@
 #include <tencentcloud/dnspod/v20210323/model/DeleteDomainAliasResponse.h>
 #include <tencentcloud/dnspod/v20210323/model/DeleteDomainBatchRequest.h>
 #include <tencentcloud/dnspod/v20210323/model/DeleteDomainBatchResponse.h>
+#include <tencentcloud/dnspod/v20210323/model/DeletePackageOrderRequest.h>
+#include <tencentcloud/dnspod/v20210323/model/DeletePackageOrderResponse.h>
 #include <tencentcloud/dnspod/v20210323/model/DeleteRecordRequest.h>
 #include <tencentcloud/dnspod/v20210323/model/DeleteRecordResponse.h>
 #include <tencentcloud/dnspod/v20210323/model/DeleteRecordGroupRequest.h>
@@ -69,6 +71,8 @@
 #include <tencentcloud/dnspod/v20210323/model/DescribeRecordResponse.h>
 #include <tencentcloud/dnspod/v20210323/model/DescribeRecordGroupListRequest.h>
 #include <tencentcloud/dnspod/v20210323/model/DescribeRecordGroupListResponse.h>
+#include <tencentcloud/dnspod/v20210323/model/DescribeRecordLineCategoryListRequest.h>
+#include <tencentcloud/dnspod/v20210323/model/DescribeRecordLineCategoryListResponse.h>
 #include <tencentcloud/dnspod/v20210323/model/DescribeRecordLineListRequest.h>
 #include <tencentcloud/dnspod/v20210323/model/DescribeRecordLineListResponse.h>
 #include <tencentcloud/dnspod/v20210323/model/DescribeRecordListRequest.h>
@@ -146,6 +150,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteDomainBatchResponse> DeleteDomainBatchOutcome;
                 typedef std::future<DeleteDomainBatchOutcome> DeleteDomainBatchOutcomeCallable;
                 typedef std::function<void(const DnspodClient*, const Model::DeleteDomainBatchRequest&, DeleteDomainBatchOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteDomainBatchAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeletePackageOrderResponse> DeletePackageOrderOutcome;
+                typedef std::future<DeletePackageOrderOutcome> DeletePackageOrderOutcomeCallable;
+                typedef std::function<void(const DnspodClient*, const Model::DeletePackageOrderRequest&, DeletePackageOrderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeletePackageOrderAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteRecordResponse> DeleteRecordOutcome;
                 typedef std::future<DeleteRecordOutcome> DeleteRecordOutcomeCallable;
                 typedef std::function<void(const DnspodClient*, const Model::DeleteRecordRequest&, DeleteRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRecordAsyncHandler;
@@ -182,6 +189,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeRecordGroupListResponse> DescribeRecordGroupListOutcome;
                 typedef std::future<DescribeRecordGroupListOutcome> DescribeRecordGroupListOutcomeCallable;
                 typedef std::function<void(const DnspodClient*, const Model::DescribeRecordGroupListRequest&, DescribeRecordGroupListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRecordGroupListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRecordLineCategoryListResponse> DescribeRecordLineCategoryListOutcome;
+                typedef std::future<DescribeRecordLineCategoryListOutcome> DescribeRecordLineCategoryListOutcomeCallable;
+                typedef std::function<void(const DnspodClient*, const Model::DescribeRecordLineCategoryListRequest&, DescribeRecordLineCategoryListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRecordLineCategoryListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRecordLineListResponse> DescribeRecordLineListOutcome;
                 typedef std::future<DescribeRecordLineListOutcome> DescribeRecordLineListOutcomeCallable;
                 typedef std::function<void(const DnspodClient*, const Model::DescribeRecordLineListRequest&, DescribeRecordLineListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRecordLineListAsyncHandler;
@@ -330,6 +340,15 @@ namespace TencentCloud
                 DeleteDomainBatchOutcomeCallable DeleteDomainBatchCallable(const Model::DeleteDomainBatchRequest& request);
 
                 /**
+                 *This API is used to disable the paid plan on the international website.
+                 * @param req DeletePackageOrderRequest
+                 * @return DeletePackageOrderOutcome
+                 */
+                DeletePackageOrderOutcome DeletePackageOrder(const Model::DeletePackageOrderRequest &request);
+                void DeletePackageOrderAsync(const Model::DeletePackageOrderRequest& request, const DeletePackageOrderAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeletePackageOrderOutcomeCallable DeletePackageOrderCallable(const Model::DeletePackageOrderRequest& request);
+
+                /**
                  *This API is used to delete a record.
                  * @param req DeleteRecordRequest
                  * @return DeleteRecordOutcome
@@ -436,6 +455,15 @@ namespace TencentCloud
                 DescribeRecordGroupListOutcome DescribeRecordGroupList(const Model::DescribeRecordGroupListRequest &request);
                 void DescribeRecordGroupListAsync(const Model::DescribeRecordGroupListRequest& request, const DescribeRecordGroupListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeRecordGroupListOutcomeCallable DescribeRecordGroupListCallable(const Model::DescribeRecordGroupListRequest& request);
+
+                /**
+                 *This API is used to return a line list by category.
+                 * @param req DescribeRecordLineCategoryListRequest
+                 * @return DescribeRecordLineCategoryListOutcome
+                 */
+                DescribeRecordLineCategoryListOutcome DescribeRecordLineCategoryList(const Model::DescribeRecordLineCategoryListRequest &request);
+                void DescribeRecordLineCategoryListAsync(const Model::DescribeRecordLineCategoryListRequest& request, const DescribeRecordLineCategoryListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRecordLineCategoryListOutcomeCallable DescribeRecordLineCategoryListCallable(const Model::DescribeRecordLineCategoryListRequest& request);
 
                 /**
                  *This API is used to get the split zones allowed by the domain level.

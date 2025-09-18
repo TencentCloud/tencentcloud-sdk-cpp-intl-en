@@ -121,6 +121,8 @@
 #include <tencentcloud/cvm/v20170312/model/ImportKeyPairResponse.h>
 #include <tencentcloud/cvm/v20170312/model/InquirePricePurchaseReservedInstancesOfferingRequest.h>
 #include <tencentcloud/cvm/v20170312/model/InquirePricePurchaseReservedInstancesOfferingResponse.h>
+#include <tencentcloud/cvm/v20170312/model/InquiryPriceModifyInstancesChargeTypeRequest.h>
+#include <tencentcloud/cvm/v20170312/model/InquiryPriceModifyInstancesChargeTypeResponse.h>
 #include <tencentcloud/cvm/v20170312/model/InquiryPriceRenewInstancesRequest.h>
 #include <tencentcloud/cvm/v20170312/model/InquiryPriceRenewInstancesResponse.h>
 #include <tencentcloud/cvm/v20170312/model/InquiryPriceResetInstanceRequest.h>
@@ -145,6 +147,8 @@
 #include <tencentcloud/cvm/v20170312/model/ModifyImageSharePermissionResponse.h>
 #include <tencentcloud/cvm/v20170312/model/ModifyInstancesAttributeRequest.h>
 #include <tencentcloud/cvm/v20170312/model/ModifyInstancesAttributeResponse.h>
+#include <tencentcloud/cvm/v20170312/model/ModifyInstancesChargeTypeRequest.h>
+#include <tencentcloud/cvm/v20170312/model/ModifyInstancesChargeTypeResponse.h>
 #include <tencentcloud/cvm/v20170312/model/ModifyInstancesDisasterRecoverGroupRequest.h>
 #include <tencentcloud/cvm/v20170312/model/ModifyInstancesDisasterRecoverGroupResponse.h>
 #include <tencentcloud/cvm/v20170312/model/ModifyInstancesProjectRequest.h>
@@ -348,6 +352,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::InquirePricePurchaseReservedInstancesOfferingResponse> InquirePricePurchaseReservedInstancesOfferingOutcome;
                 typedef std::future<InquirePricePurchaseReservedInstancesOfferingOutcome> InquirePricePurchaseReservedInstancesOfferingOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::InquirePricePurchaseReservedInstancesOfferingRequest&, InquirePricePurchaseReservedInstancesOfferingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquirePricePurchaseReservedInstancesOfferingAsyncHandler;
+                typedef Outcome<Core::Error, Model::InquiryPriceModifyInstancesChargeTypeResponse> InquiryPriceModifyInstancesChargeTypeOutcome;
+                typedef std::future<InquiryPriceModifyInstancesChargeTypeOutcome> InquiryPriceModifyInstancesChargeTypeOutcomeCallable;
+                typedef std::function<void(const CvmClient*, const Model::InquiryPriceModifyInstancesChargeTypeRequest&, InquiryPriceModifyInstancesChargeTypeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceModifyInstancesChargeTypeAsyncHandler;
                 typedef Outcome<Core::Error, Model::InquiryPriceRenewInstancesResponse> InquiryPriceRenewInstancesOutcome;
                 typedef std::future<InquiryPriceRenewInstancesOutcome> InquiryPriceRenewInstancesOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::InquiryPriceRenewInstancesRequest&, InquiryPriceRenewInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceRenewInstancesAsyncHandler;
@@ -384,6 +391,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyInstancesAttributeResponse> ModifyInstancesAttributeOutcome;
                 typedef std::future<ModifyInstancesAttributeOutcome> ModifyInstancesAttributeOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::ModifyInstancesAttributeRequest&, ModifyInstancesAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstancesAttributeAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyInstancesChargeTypeResponse> ModifyInstancesChargeTypeOutcome;
+                typedef std::future<ModifyInstancesChargeTypeOutcome> ModifyInstancesChargeTypeOutcomeCallable;
+                typedef std::function<void(const CvmClient*, const Model::ModifyInstancesChargeTypeRequest&, ModifyInstancesChargeTypeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstancesChargeTypeAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyInstancesDisasterRecoverGroupResponse> ModifyInstancesDisasterRecoverGroupOutcome;
                 typedef std::future<ModifyInstancesDisasterRecoverGroupOutcome> ModifyInstancesDisasterRecoverGroupOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::ModifyInstancesDisasterRecoverGroupRequest&, ModifyInstancesDisasterRecoverGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstancesDisasterRecoverGroupAsyncHandler;
@@ -939,6 +949,18 @@ This API is used to create an instance launch template. After the initial creati
                 InquirePricePurchaseReservedInstancesOfferingOutcomeCallable InquirePricePurchaseReservedInstancesOfferingCallable(const Model::InquirePricePurchaseReservedInstancesOfferingRequest& request);
 
                 /**
+                 *This API is used to inquire about the price for switching billing modes of instance.
+
+
+This API is used to indicate that instances with no charge when shut down, instances of the model families Batch Computing BC1 and Batch Computing BS1, instances of scheduled termination, and spot instances do not support this operation.
+                 * @param req InquiryPriceModifyInstancesChargeTypeRequest
+                 * @return InquiryPriceModifyInstancesChargeTypeOutcome
+                 */
+                InquiryPriceModifyInstancesChargeTypeOutcome InquiryPriceModifyInstancesChargeType(const Model::InquiryPriceModifyInstancesChargeTypeRequest &request);
+                void InquiryPriceModifyInstancesChargeTypeAsync(const Model::InquiryPriceModifyInstancesChargeTypeRequest& request, const InquiryPriceModifyInstancesChargeTypeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                InquiryPriceModifyInstancesChargeTypeOutcomeCallable InquiryPriceModifyInstancesChargeTypeCallable(const Model::InquiryPriceModifyInstancesChargeTypeRequest& request);
+
+                /**
                  *This API is used to inquire about the price for renewing a monthly subscription instance.
 
 This API is used to query the renewal price of monthly subscription instances.
@@ -1073,6 +1095,18 @@ This API is used to query the renewal price of monthly subscription instances.
                 ModifyInstancesAttributeOutcome ModifyInstancesAttribute(const Model::ModifyInstancesAttributeRequest &request);
                 void ModifyInstancesAttributeAsync(const Model::ModifyInstancesAttributeRequest& request, const ModifyInstancesAttributeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyInstancesAttributeOutcomeCallable ModifyInstancesAttributeCallable(const Model::ModifyInstancesAttributeRequest& request);
+
+                /**
+                 *This API is used to switch the billing mode of an instance.
+
+This API is used to perform operations that do not support instances with no charge when shut down, instances of the model families Batch Compute BC1 and Batch Compute BS1, or instances of scheduled termination.
+* You can query the result of the instance operation by calling the API [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5). If the latest operation status (LatestOperationState) of the instance is **SUCCESS**, the operation is successful.
+                 * @param req ModifyInstancesChargeTypeRequest
+                 * @return ModifyInstancesChargeTypeOutcome
+                 */
+                ModifyInstancesChargeTypeOutcome ModifyInstancesChargeType(const Model::ModifyInstancesChargeTypeRequest &request);
+                void ModifyInstancesChargeTypeAsync(const Model::ModifyInstancesChargeTypeRequest& request, const ModifyInstancesChargeTypeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyInstancesChargeTypeOutcomeCallable ModifyInstancesChargeTypeCallable(const Model::ModifyInstancesChargeTypeRequest& request);
 
                 /**
                  *This API is used to adjust the placement group of an instance.

@@ -513,6 +513,49 @@ DnspodClient::DeleteDomainBatchOutcomeCallable DnspodClient::DeleteDomainBatchCa
     return task->get_future();
 }
 
+DnspodClient::DeletePackageOrderOutcome DnspodClient::DeletePackageOrder(const DeletePackageOrderRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeletePackageOrder");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeletePackageOrderResponse rsp = DeletePackageOrderResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeletePackageOrderOutcome(rsp);
+        else
+            return DeletePackageOrderOutcome(o.GetError());
+    }
+    else
+    {
+        return DeletePackageOrderOutcome(outcome.GetError());
+    }
+}
+
+void DnspodClient::DeletePackageOrderAsync(const DeletePackageOrderRequest& request, const DeletePackageOrderAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeletePackageOrder(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DnspodClient::DeletePackageOrderOutcomeCallable DnspodClient::DeletePackageOrderCallable(const DeletePackageOrderRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeletePackageOrderOutcome()>>(
+        [this, request]()
+        {
+            return this->DeletePackageOrder(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 DnspodClient::DeleteRecordOutcome DnspodClient::DeleteRecord(const DeleteRecordRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteRecord");
@@ -1022,6 +1065,49 @@ DnspodClient::DescribeRecordGroupListOutcomeCallable DnspodClient::DescribeRecor
         [this, request]()
         {
             return this->DescribeRecordGroupList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DnspodClient::DescribeRecordLineCategoryListOutcome DnspodClient::DescribeRecordLineCategoryList(const DescribeRecordLineCategoryListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRecordLineCategoryList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRecordLineCategoryListResponse rsp = DescribeRecordLineCategoryListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRecordLineCategoryListOutcome(rsp);
+        else
+            return DescribeRecordLineCategoryListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRecordLineCategoryListOutcome(outcome.GetError());
+    }
+}
+
+void DnspodClient::DescribeRecordLineCategoryListAsync(const DescribeRecordLineCategoryListRequest& request, const DescribeRecordLineCategoryListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeRecordLineCategoryList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DnspodClient::DescribeRecordLineCategoryListOutcomeCallable DnspodClient::DescribeRecordLineCategoryListCallable(const DescribeRecordLineCategoryListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeRecordLineCategoryListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeRecordLineCategoryList(request);
         }
     );
 
