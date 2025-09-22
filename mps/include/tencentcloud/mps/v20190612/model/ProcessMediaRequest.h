@@ -28,8 +28,9 @@
 #include <tencentcloud/mps/v20190612/model/AiAnalysisTaskInput.h>
 #include <tencentcloud/mps/v20190612/model/AiRecognitionTaskInput.h>
 #include <tencentcloud/mps/v20190612/model/AiQualityControlTaskInput.h>
-#include <tencentcloud/mps/v20190612/model/TaskNotifyConfig.h>
 #include <tencentcloud/mps/v20190612/model/SmartSubtitlesTaskInput.h>
+#include <tencentcloud/mps/v20190612/model/SmartEraseTaskInput.h>
+#include <tencentcloud/mps/v20190612/model/TaskNotifyConfig.h>
 
 
 namespace TencentCloud
@@ -281,6 +282,48 @@ Note 3: The trigger configured for an orchestration is for automatically startin
                     bool AiQualityControlTaskHasBeenSet() const;
 
                     /**
+                     * 获取Smart subtitle task.
+                     * @return SmartSubtitlesTask Smart subtitle task.
+                     * 
+                     */
+                    SmartSubtitlesTaskInput GetSmartSubtitlesTask() const;
+
+                    /**
+                     * 设置Smart subtitle task.
+                     * @param _smartSubtitlesTask Smart subtitle task.
+                     * 
+                     */
+                    void SetSmartSubtitlesTask(const SmartSubtitlesTaskInput& _smartSubtitlesTask);
+
+                    /**
+                     * 判断参数 SmartSubtitlesTask 是否已赋值
+                     * @return SmartSubtitlesTask 是否已赋值
+                     * 
+                     */
+                    bool SmartSubtitlesTaskHasBeenSet() const;
+
+                    /**
+                     * 获取Smart erase task parameter.
+                     * @return SmartEraseTask Smart erase task parameter.
+                     * 
+                     */
+                    SmartEraseTaskInput GetSmartEraseTask() const;
+
+                    /**
+                     * 设置Smart erase task parameter.
+                     * @param _smartEraseTask Smart erase task parameter.
+                     * 
+                     */
+                    void SetSmartEraseTask(const SmartEraseTaskInput& _smartEraseTask);
+
+                    /**
+                     * 判断参数 SmartEraseTask 是否已赋值
+                     * @return SmartEraseTask 是否已赋值
+                     * 
+                     */
+                    bool SmartEraseTaskHasBeenSet() const;
+
+                    /**
                      * 获取Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
                      * @return TaskNotifyConfig Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
                      * 
@@ -415,27 +458,6 @@ Note 3: The trigger configured for an orchestration is for automatically startin
                     bool ResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取Smart subtitle task.
-                     * @return SmartSubtitlesTask Smart subtitle task.
-                     * 
-                     */
-                    SmartSubtitlesTaskInput GetSmartSubtitlesTask() const;
-
-                    /**
-                     * 设置Smart subtitle task.
-                     * @param _smartSubtitlesTask Smart subtitle task.
-                     * 
-                     */
-                    void SetSmartSubtitlesTask(const SmartSubtitlesTaskInput& _smartSubtitlesTask);
-
-                    /**
-                     * 判断参数 SmartSubtitlesTask 是否已赋值
-                     * @return SmartSubtitlesTask 是否已赋值
-                     * 
-                     */
-                    bool SmartSubtitlesTaskHasBeenSet() const;
-
-                    /**
                      * 获取Whether to skip metadata acquisition. Valid values:
 0: do not skip
 1: skip
@@ -535,6 +557,18 @@ Note 3: The trigger configured for an orchestration is for automatically startin
                     bool m_aiQualityControlTaskHasBeenSet;
 
                     /**
+                     * Smart subtitle task.
+                     */
+                    SmartSubtitlesTaskInput m_smartSubtitlesTask;
+                    bool m_smartSubtitlesTaskHasBeenSet;
+
+                    /**
+                     * Smart erase task parameter.
+                     */
+                    SmartEraseTaskInput m_smartEraseTask;
+                    bool m_smartEraseTaskHasBeenSet;
+
+                    /**
                      * Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
                      */
                     TaskNotifyConfig m_taskNotifyConfig;
@@ -571,12 +605,6 @@ Note 3: The trigger configured for an orchestration is for automatically startin
                      */
                     std::string m_resourceId;
                     bool m_resourceIdHasBeenSet;
-
-                    /**
-                     * Smart subtitle task.
-                     */
-                    SmartSubtitlesTaskInput m_smartSubtitlesTask;
-                    bool m_smartSubtitlesTaskHasBeenSet;
 
                     /**
                      * Whether to skip metadata acquisition. Valid values:

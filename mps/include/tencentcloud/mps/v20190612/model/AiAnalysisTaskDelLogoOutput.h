@@ -157,6 +157,56 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool SubtitlePosHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the file url of the video after voice cloning.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return VoiceClonedVideo Specifies the file url of the video after voice cloning.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetVoiceClonedVideo() const;
+
+                    /**
+                     * 设置Specifies the file url of the video after voice cloning.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _voiceClonedVideo Specifies the file url of the video after voice cloning.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetVoiceClonedVideo(const std::string& _voiceClonedVideo);
+
+                    /**
+                     * 判断参数 VoiceClonedVideo 是否已赋值
+                     * @return VoiceClonedVideo 是否已赋值
+                     * 
+                     */
+                    bool VoiceClonedVideoHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the file address of the voice type clone annotation.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return VoiceClonedMarkFile Specifies the file address of the voice type clone annotation.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetVoiceClonedMarkFile() const;
+
+                    /**
+                     * 设置Specifies the file address of the voice type clone annotation.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _voiceClonedMarkFile Specifies the file address of the voice type clone annotation.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetVoiceClonedMarkFile(const std::string& _voiceClonedMarkFile);
+
+                    /**
+                     * 判断参数 VoiceClonedMarkFile 是否已赋值
+                     * @return VoiceClonedMarkFile 是否已赋值
+                     * 
+                     */
+                    bool VoiceClonedMarkFileHasBeenSet() const;
+
                 private:
 
                     /**
@@ -189,6 +239,20 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     SubtitlePosition m_subtitlePos;
                     bool m_subtitlePosHasBeenSet;
+
+                    /**
+                     * Specifies the file url of the video after voice cloning.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_voiceClonedVideo;
+                    bool m_voiceClonedVideoHasBeenSet;
+
+                    /**
+                     * Specifies the file address of the voice type clone annotation.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_voiceClonedMarkFile;
+                    bool m_voiceClonedMarkFileHasBeenSet;
 
                 };
             }

@@ -49,62 +49,70 @@ namespace TencentCloud
 
                     /**
                      * 获取Atomic task type.
-<Li>Transcode: transcoding</li>
-<Li>SampleSnapshot: sampled screenshot</li>
-<Li>AnimatedGraphics: conversion to GIF</li>
-<Li>SnapshotByTimeOffset: time point screenshot</li>
-<Li>ImageSprites: image sprite</li>
-<Li>AdaptiveDynamicStreaming: adaptive bitrate stream</li>
-<Li>AiContentReview: content review</li>
-<Li>AIRecognition: intelligent recognition</li>
-<Li>AIAnalysis: intelligent analysis</li>
-<li>AiQualityControl: media quality inspection.</li>
+<Li>Transcode: transcoding.</li>.
+<Li>SampleSnapshot: specifies sampled screenshot taking.</li>.
+<Li>AnimatedGraphics: specifies the animated image.</li>.
+<Li>SnapshotByTimeOffset: specifies time point screenshot taking.</li>.
+<Li>ImageSprites: specifies the sprite sheet.</li>.
+<Li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>.
+<Li>AiContentReview: specifies content moderation.</li>.
+<Li>AIRecognition: intelligent identification.</li>.
+<Li>AIAnalysis: specifies ai analysis.</li>.
+<li>AiQualityControl: media quality inspection</li>
 
 <Li>SmartSubtitles: smart subtitle</li>
+
+<Li>SmartErase: smart erasure.</li>.
                      * @return ActivityType Atomic task type.
-<Li>Transcode: transcoding</li>
-<Li>SampleSnapshot: sampled screenshot</li>
-<Li>AnimatedGraphics: conversion to GIF</li>
-<Li>SnapshotByTimeOffset: time point screenshot</li>
-<Li>ImageSprites: image sprite</li>
-<Li>AdaptiveDynamicStreaming: adaptive bitrate stream</li>
-<Li>AiContentReview: content review</li>
-<Li>AIRecognition: intelligent recognition</li>
-<Li>AIAnalysis: intelligent analysis</li>
-<li>AiQualityControl: media quality inspection.</li>
+<Li>Transcode: transcoding.</li>.
+<Li>SampleSnapshot: specifies sampled screenshot taking.</li>.
+<Li>AnimatedGraphics: specifies the animated image.</li>.
+<Li>SnapshotByTimeOffset: specifies time point screenshot taking.</li>.
+<Li>ImageSprites: specifies the sprite sheet.</li>.
+<Li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>.
+<Li>AiContentReview: specifies content moderation.</li>.
+<Li>AIRecognition: intelligent identification.</li>.
+<Li>AIAnalysis: specifies ai analysis.</li>.
+<li>AiQualityControl: media quality inspection</li>
 
 <Li>SmartSubtitles: smart subtitle</li>
+
+<Li>SmartErase: smart erasure.</li>.
                      * 
                      */
                     std::string GetActivityType() const;
 
                     /**
                      * 设置Atomic task type.
-<Li>Transcode: transcoding</li>
-<Li>SampleSnapshot: sampled screenshot</li>
-<Li>AnimatedGraphics: conversion to GIF</li>
-<Li>SnapshotByTimeOffset: time point screenshot</li>
-<Li>ImageSprites: image sprite</li>
-<Li>AdaptiveDynamicStreaming: adaptive bitrate stream</li>
-<Li>AiContentReview: content review</li>
-<Li>AIRecognition: intelligent recognition</li>
-<Li>AIAnalysis: intelligent analysis</li>
-<li>AiQualityControl: media quality inspection.</li>
+<Li>Transcode: transcoding.</li>.
+<Li>SampleSnapshot: specifies sampled screenshot taking.</li>.
+<Li>AnimatedGraphics: specifies the animated image.</li>.
+<Li>SnapshotByTimeOffset: specifies time point screenshot taking.</li>.
+<Li>ImageSprites: specifies the sprite sheet.</li>.
+<Li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>.
+<Li>AiContentReview: specifies content moderation.</li>.
+<Li>AIRecognition: intelligent identification.</li>.
+<Li>AIAnalysis: specifies ai analysis.</li>.
+<li>AiQualityControl: media quality inspection</li>
 
 <Li>SmartSubtitles: smart subtitle</li>
+
+<Li>SmartErase: smart erasure.</li>.
                      * @param _activityType Atomic task type.
-<Li>Transcode: transcoding</li>
-<Li>SampleSnapshot: sampled screenshot</li>
-<Li>AnimatedGraphics: conversion to GIF</li>
-<Li>SnapshotByTimeOffset: time point screenshot</li>
-<Li>ImageSprites: image sprite</li>
-<Li>AdaptiveDynamicStreaming: adaptive bitrate stream</li>
-<Li>AiContentReview: content review</li>
-<Li>AIRecognition: intelligent recognition</li>
-<Li>AIAnalysis: intelligent analysis</li>
-<li>AiQualityControl: media quality inspection.</li>
+<Li>Transcode: transcoding.</li>.
+<Li>SampleSnapshot: specifies sampled screenshot taking.</li>.
+<Li>AnimatedGraphics: specifies the animated image.</li>.
+<Li>SnapshotByTimeOffset: specifies time point screenshot taking.</li>.
+<Li>ImageSprites: specifies the sprite sheet.</li>.
+<Li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>.
+<Li>AiContentReview: specifies content moderation.</li>.
+<Li>AIRecognition: intelligent identification.</li>.
+<Li>AIAnalysis: specifies ai analysis.</li>.
+<li>AiQualityControl: media quality inspection</li>
 
 <Li>SmartSubtitles: smart subtitle</li>
+
+<Li>SmartErase: smart erasure.</li>.
                      * 
                      */
                     void SetActivityType(const std::string& _activityType);
@@ -141,18 +149,20 @@ namespace TencentCloud
 
                     /**
                      * Atomic task type.
-<Li>Transcode: transcoding</li>
-<Li>SampleSnapshot: sampled screenshot</li>
-<Li>AnimatedGraphics: conversion to GIF</li>
-<Li>SnapshotByTimeOffset: time point screenshot</li>
-<Li>ImageSprites: image sprite</li>
-<Li>AdaptiveDynamicStreaming: adaptive bitrate stream</li>
-<Li>AiContentReview: content review</li>
-<Li>AIRecognition: intelligent recognition</li>
-<Li>AIAnalysis: intelligent analysis</li>
-<li>AiQualityControl: media quality inspection.</li>
+<Li>Transcode: transcoding.</li>.
+<Li>SampleSnapshot: specifies sampled screenshot taking.</li>.
+<Li>AnimatedGraphics: specifies the animated image.</li>.
+<Li>SnapshotByTimeOffset: specifies time point screenshot taking.</li>.
+<Li>ImageSprites: specifies the sprite sheet.</li>.
+<Li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>.
+<Li>AiContentReview: specifies content moderation.</li>.
+<Li>AIRecognition: intelligent identification.</li>.
+<Li>AIAnalysis: specifies ai analysis.</li>.
+<li>AiQualityControl: media quality inspection</li>
 
 <Li>SmartSubtitles: smart subtitle</li>
+
+<Li>SmartErase: smart erasure.</li>.
                      */
                     std::string m_activityType;
                     bool m_activityTypeHasBeenSet;

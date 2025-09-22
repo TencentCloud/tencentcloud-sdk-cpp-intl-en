@@ -36,6 +36,7 @@
 #include <tencentcloud/mps/v20190612/model/ScheduleQualityControlTaskResult.h>
 #include <tencentcloud/mps/v20190612/model/ScheduleExecRuleTaskResult.h>
 #include <tencentcloud/mps/v20190612/model/ScheduleSmartSubtitleTaskResult.h>
+#include <tencentcloud/mps/v20190612/model/SmartEraseTaskResult.h>
 
 
 namespace TencentCloud
@@ -358,6 +359,31 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool SmartSubtitlesTaskHasBeenSet() const;
 
+                    /**
+                     * 获取Smart erase task output.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return SmartEraseTask Smart erase task output.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    SmartEraseTaskResult GetSmartEraseTask() const;
+
+                    /**
+                     * 设置Smart erase task output.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _smartEraseTask Smart erase task output.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetSmartEraseTask(const SmartEraseTaskResult& _smartEraseTask);
+
+                    /**
+                     * 判断参数 SmartEraseTask 是否已赋值
+                     * @return SmartEraseTask 是否已赋值
+                     * 
+                     */
+                    bool SmartEraseTaskHasBeenSet() const;
+
                 private:
 
                     /**
@@ -443,6 +469,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     ScheduleSmartSubtitleTaskResult m_smartSubtitlesTask;
                     bool m_smartSubtitlesTaskHasBeenSet;
+
+                    /**
+                     * Smart erase task output.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    SmartEraseTaskResult m_smartEraseTask;
+                    bool m_smartEraseTaskHasBeenSet;
 
                 };
             }

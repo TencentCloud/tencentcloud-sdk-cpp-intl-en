@@ -27,6 +27,7 @@
 #include <tencentcloud/mps/v20190612/model/CosInputInfo.h>
 #include <tencentcloud/mps/v20190612/model/UrlInputInfo.h>
 #include <tencentcloud/mps/v20190612/model/S3InputInfo.h>
+#include <tencentcloud/mps/v20190612/model/VODInputInfo.h>
 
 
 namespace TencentCloud
@@ -50,27 +51,31 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The input type. Valid values:
-<li>`COS`: A COS bucket address.</li>
-<li> `URL`: A URL.</li>
-<li> `AWS-S3`: An AWS S3 bucket address. Currently, this type is only supported for transcoding tasks.</li>
-                     * @return Type The input type. Valid values:
-<li>`COS`: A COS bucket address.</li>
-<li> `URL`: A URL.</li>
-<li> `AWS-S3`: An AWS S3 bucket address. Currently, this type is only supported for transcoding tasks.</li>
+                     * 获取Type of input source object. valid values:.
+<Li>COS: specifies the cos origin.</li>
+<Li>URL: the url source.</li>
+<Li>AWS-S3: aws source. currently only supports transcoding tasks.</li>
+<Li>VOD: video-on-demand pro edition (VOD Pro). </li>
+                     * @return Type Type of input source object. valid values:.
+<Li>COS: specifies the cos origin.</li>
+<Li>URL: the url source.</li>
+<Li>AWS-S3: aws source. currently only supports transcoding tasks.</li>
+<Li>VOD: video-on-demand pro edition (VOD Pro). </li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The input type. Valid values:
-<li>`COS`: A COS bucket address.</li>
-<li> `URL`: A URL.</li>
-<li> `AWS-S3`: An AWS S3 bucket address. Currently, this type is only supported for transcoding tasks.</li>
-                     * @param _type The input type. Valid values:
-<li>`COS`: A COS bucket address.</li>
-<li> `URL`: A URL.</li>
-<li> `AWS-S3`: An AWS S3 bucket address. Currently, this type is only supported for transcoding tasks.</li>
+                     * 设置Type of input source object. valid values:.
+<Li>COS: specifies the cos origin.</li>
+<Li>URL: the url source.</li>
+<Li>AWS-S3: aws source. currently only supports transcoding tasks.</li>
+<Li>VOD: video-on-demand pro edition (VOD Pro). </li>
+                     * @param _type Type of input source object. valid values:.
+<Li>COS: specifies the cos origin.</li>
+<Li>URL: the url source.</li>
+<Li>AWS-S3: aws source. currently only supports transcoding tasks.</li>
+<Li>VOD: video-on-demand pro edition (VOD Pro). </li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -153,13 +158,39 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool S3InputInfoHasBeenSet() const;
 
+                    /**
+                     * 获取The information of the VOD Pro object processed. This parameter is required if `Type` is `VOD`.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return VODInputInfo The information of the VOD Pro object processed. This parameter is required if `Type` is `VOD`.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    VODInputInfo GetVODInputInfo() const;
+
+                    /**
+                     * 设置The information of the VOD Pro object processed. This parameter is required if `Type` is `VOD`.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _vODInputInfo The information of the VOD Pro object processed. This parameter is required if `Type` is `VOD`.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetVODInputInfo(const VODInputInfo& _vODInputInfo);
+
+                    /**
+                     * 判断参数 VODInputInfo 是否已赋值
+                     * @return VODInputInfo 是否已赋值
+                     * 
+                     */
+                    bool VODInputInfoHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The input type. Valid values:
-<li>`COS`: A COS bucket address.</li>
-<li> `URL`: A URL.</li>
-<li> `AWS-S3`: An AWS S3 bucket address. Currently, this type is only supported for transcoding tasks.</li>
+                     * Type of input source object. valid values:.
+<Li>COS: specifies the cos origin.</li>
+<Li>URL: the url source.</li>
+<Li>AWS-S3: aws source. currently only supports transcoding tasks.</li>
+<Li>VOD: video-on-demand pro edition (VOD Pro). </li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -183,6 +214,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     S3InputInfo m_s3InputInfo;
                     bool m_s3InputInfoHasBeenSet;
+
+                    /**
+                     * The information of the VOD Pro object processed. This parameter is required if `Type` is `VOD`.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    VODInputInfo m_vODInputInfo;
+                    bool m_vODInputInfoHasBeenSet;
 
                 };
             }

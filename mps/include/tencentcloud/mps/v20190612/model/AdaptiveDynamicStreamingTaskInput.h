@@ -210,18 +210,18 @@ If not filled in, it is a relative path by default: {inputName}_adaptiveDynamicS
                     bool SegmentObjectNameHasBeenSet() const;
 
                     /**
-                     * 获取Subtitle file to be inserted.
+                     * 获取External subtitle feature specifies the subtitle file to be inserted.
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return AddOnSubtitles Subtitle file to be inserted.
+                     * @return AddOnSubtitles External subtitle feature specifies the subtitle file to be inserted.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::vector<AddOnSubtitle> GetAddOnSubtitles() const;
 
                     /**
-                     * 设置Subtitle file to be inserted.
+                     * 设置External subtitle feature specifies the subtitle file to be inserted.
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _addOnSubtitles Subtitle file to be inserted.
+                     * @param _addOnSubtitles External subtitle feature specifies the subtitle file to be inserted.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
@@ -235,15 +235,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool AddOnSubtitlesHasBeenSet() const;
 
                     /**
-                     * 获取Drm information.
-                     * @return DrmInfo Drm information.
+                     * 获取Specifies the Drm information.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return DrmInfo Specifies the Drm information.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     DrmInfo GetDrmInfo() const;
 
                     /**
-                     * 设置Drm information.
-                     * @param _drmInfo Drm information.
+                     * 设置Specifies the Drm information.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _drmInfo Specifies the Drm information.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetDrmInfo(const DrmInfo& _drmInfo);
@@ -285,18 +289,18 @@ PureAudio: audio-only.
                     bool DefinitionTypeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the subtitle parameter.
+                     * 获取Hard subtitle (suppression subtitle) feature, specify subtitles source, font size, position and other subtitle parameters.
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return SubtitleTemplate Specifies the subtitle parameter.
+                     * @return SubtitleTemplate Hard subtitle (suppression subtitle) feature, specify subtitles source, font size, position and other subtitle parameters.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     SubtitleTemplate GetSubtitleTemplate() const;
 
                     /**
-                     * 设置Specifies the subtitle parameter.
+                     * 设置Hard subtitle (suppression subtitle) feature, specify subtitles source, font size, position and other subtitle parameters.
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _subtitleTemplate Specifies the subtitle parameter.
+                     * @param _subtitleTemplate Hard subtitle (suppression subtitle) feature, specify subtitles source, font size, position and other subtitle parameters.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
@@ -377,14 +381,15 @@ If not filled in, it is a relative path by default: {inputName}_adaptiveDynamicS
                     bool m_segmentObjectNameHasBeenSet;
 
                     /**
-                     * Subtitle file to be inserted.
+                     * External subtitle feature specifies the subtitle file to be inserted.
 Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::vector<AddOnSubtitle> m_addOnSubtitles;
                     bool m_addOnSubtitlesHasBeenSet;
 
                     /**
-                     * Drm information.
+                     * Specifies the Drm information.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     DrmInfo m_drmInfo;
                     bool m_drmInfoHasBeenSet;
@@ -398,7 +403,7 @@ PureAudio: audio-only.
                     bool m_definitionTypeHasBeenSet;
 
                     /**
-                     * Specifies the subtitle parameter.
+                     * Hard subtitle (suppression subtitle) feature, specify subtitles source, font size, position and other subtitle parameters.
 Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     SubtitleTemplate m_subtitleTemplate;

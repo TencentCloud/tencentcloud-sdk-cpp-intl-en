@@ -32,6 +32,7 @@
 #include <tencentcloud/mps/v20190612/model/AiRecognitionResult.h>
 #include <tencentcloud/mps/v20190612/model/ScheduleQualityControlTaskResult.h>
 #include <tencentcloud/mps/v20190612/model/SmartSubtitlesResult.h>
+#include <tencentcloud/mps/v20190612/model/SmartEraseTaskResult.h>
 
 
 namespace TencentCloud
@@ -330,6 +331,31 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool SmartSubtitlesTaskResultHasBeenSet() const;
 
+                    /**
+                     * 获取Execution result of the smart erasure task.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return SmartEraseTaskResult Execution result of the smart erasure task.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    SmartEraseTaskResult GetSmartEraseTaskResult() const;
+
+                    /**
+                     * 设置Execution result of the smart erasure task.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _smartEraseTaskResult Execution result of the smart erasure task.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetSmartEraseTaskResult(const SmartEraseTaskResult& _smartEraseTaskResult);
+
+                    /**
+                     * 判断参数 SmartEraseTaskResult 是否已赋值
+                     * @return SmartEraseTaskResult 是否已赋值
+                     * 
+                     */
+                    bool SmartEraseTaskResultHasBeenSet() const;
+
                 private:
 
                     /**
@@ -409,6 +435,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     std::vector<SmartSubtitlesResult> m_smartSubtitlesTaskResult;
                     bool m_smartSubtitlesTaskResultHasBeenSet;
+
+                    /**
+                     * Execution result of the smart erasure task.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    SmartEraseTaskResult m_smartEraseTaskResult;
+                    bool m_smartEraseTaskResultHasBeenSet;
 
                 };
             }

@@ -34,6 +34,7 @@
 #include <tencentcloud/mps/v20190612/model/AiAnalysisTaskHeadTailResult.h>
 #include <tencentcloud/mps/v20190612/model/AiAnalysisTaskDescriptionResult.h>
 #include <tencentcloud/mps/v20190612/model/AiAnalysisTaskHorizontalToVerticalResult.h>
+#include <tencentcloud/mps/v20190612/model/AiAnalysisTaskDubbingResult.h>
 
 
 namespace TencentCloud
@@ -57,47 +58,51 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task type. Valid values:
-<li>Classification: intelligent classification.</li>
-<li>Cover: intelligent thumbnail generating.</li>
-<li>Tag: intelligent tagging.</li>
-<li>FrameTag: intelligent frame-by-frame tagging.</li>
-<li>Highlight: intelligent highlights generating.</li>
-
-<li>DeLogo: intelligent removal.</li>
+                     * 获取Task type. valid values:.
+<Li>Classification: intelligent classification.</li>.
+<Li>Cover: specifies the intelligent cover.</li>.
+<Li>Tag: intelligent tag.</li>.
+<Li>FrameTag: specifies intelligent frame-by-frame tagging.</li>.
+<Li>Highlight: intelligent highlights</li>.
+<Li>DeLogo: intelligent removal.</li>.
 <li>Description: large model summarization.</li>
-                     * @return Type Task type. Valid values:
-<li>Classification: intelligent classification.</li>
-<li>Cover: intelligent thumbnail generating.</li>
-<li>Tag: intelligent tagging.</li>
-<li>FrameTag: intelligent frame-by-frame tagging.</li>
-<li>Highlight: intelligent highlights generating.</li>
 
-<li>DeLogo: intelligent removal.</li>
+<Li>Dubbing: intelligent dubbing.</li>.
+                     * @return Type Task type. valid values:.
+<Li>Classification: intelligent classification.</li>.
+<Li>Cover: specifies the intelligent cover.</li>.
+<Li>Tag: intelligent tag.</li>.
+<Li>FrameTag: specifies intelligent frame-by-frame tagging.</li>.
+<Li>Highlight: intelligent highlights</li>.
+<Li>DeLogo: intelligent removal.</li>.
 <li>Description: large model summarization.</li>
+
+<Li>Dubbing: intelligent dubbing.</li>.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Task type. Valid values:
-<li>Classification: intelligent classification.</li>
-<li>Cover: intelligent thumbnail generating.</li>
-<li>Tag: intelligent tagging.</li>
-<li>FrameTag: intelligent frame-by-frame tagging.</li>
-<li>Highlight: intelligent highlights generating.</li>
-
-<li>DeLogo: intelligent removal.</li>
+                     * 设置Task type. valid values:.
+<Li>Classification: intelligent classification.</li>.
+<Li>Cover: specifies the intelligent cover.</li>.
+<Li>Tag: intelligent tag.</li>.
+<Li>FrameTag: specifies intelligent frame-by-frame tagging.</li>.
+<Li>Highlight: intelligent highlights</li>.
+<Li>DeLogo: intelligent removal.</li>.
 <li>Description: large model summarization.</li>
-                     * @param _type Task type. Valid values:
-<li>Classification: intelligent classification.</li>
-<li>Cover: intelligent thumbnail generating.</li>
-<li>Tag: intelligent tagging.</li>
-<li>FrameTag: intelligent frame-by-frame tagging.</li>
-<li>Highlight: intelligent highlights generating.</li>
 
-<li>DeLogo: intelligent removal.</li>
+<Li>Dubbing: intelligent dubbing.</li>.
+                     * @param _type Task type. valid values:.
+<Li>Classification: intelligent classification.</li>.
+<Li>Cover: specifies the intelligent cover.</li>.
+<Li>Tag: intelligent tag.</li>.
+<Li>FrameTag: specifies intelligent frame-by-frame tagging.</li>.
+<Li>Highlight: intelligent highlights</li>.
+<Li>DeLogo: intelligent removal.</li>.
 <li>Description: large model summarization.</li>
+
+<Li>Dubbing: intelligent dubbing.</li>.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -343,18 +348,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool HorizontalToVerticalTaskHasBeenSet() const;
 
+                    /**
+                     * 获取The query result of a Dubbing task for video content analysis, which is valid when the task type is Dubbing.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return DubbingTask The query result of a Dubbing task for video content analysis, which is valid when the task type is Dubbing.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    AiAnalysisTaskDubbingResult GetDubbingTask() const;
+
+                    /**
+                     * 设置The query result of a Dubbing task for video content analysis, which is valid when the task type is Dubbing.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _dubbingTask The query result of a Dubbing task for video content analysis, which is valid when the task type is Dubbing.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetDubbingTask(const AiAnalysisTaskDubbingResult& _dubbingTask);
+
+                    /**
+                     * 判断参数 DubbingTask 是否已赋值
+                     * @return DubbingTask 是否已赋值
+                     * 
+                     */
+                    bool DubbingTaskHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Task type. Valid values:
-<li>Classification: intelligent classification.</li>
-<li>Cover: intelligent thumbnail generating.</li>
-<li>Tag: intelligent tagging.</li>
-<li>FrameTag: intelligent frame-by-frame tagging.</li>
-<li>Highlight: intelligent highlights generating.</li>
-
-<li>DeLogo: intelligent removal.</li>
+                     * Task type. valid values:.
+<Li>Classification: intelligent classification.</li>.
+<Li>Cover: specifies the intelligent cover.</li>.
+<Li>Tag: intelligent tag.</li>.
+<Li>FrameTag: specifies intelligent frame-by-frame tagging.</li>.
+<Li>Highlight: intelligent highlights</li>.
+<Li>DeLogo: intelligent removal.</li>.
 <li>Description: large model summarization.</li>
+
+<Li>Dubbing: intelligent dubbing.</li>.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -424,6 +455,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     AiAnalysisTaskHorizontalToVerticalResult m_horizontalToVerticalTask;
                     bool m_horizontalToVerticalTaskHasBeenSet;
+
+                    /**
+                     * The query result of a Dubbing task for video content analysis, which is valid when the task type is Dubbing.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    AiAnalysisTaskDubbingResult m_dubbingTask;
+                    bool m_dubbingTaskHasBeenSet;
 
                 };
             }

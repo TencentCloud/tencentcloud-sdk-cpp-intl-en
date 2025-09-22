@@ -24,6 +24,7 @@
 #include <tencentcloud/mps/v20190612/model/EditMediaTask.h>
 #include <tencentcloud/mps/v20190612/model/WorkflowTask.h>
 #include <tencentcloud/mps/v20190612/model/LiveStreamProcessTask.h>
+#include <tencentcloud/mps/v20190612/model/ExtractBlindWatermarkTask.h>
 #include <tencentcloud/mps/v20190612/model/TaskNotifyConfig.h>
 #include <tencentcloud/mps/v20190612/model/ScheduleTask.h>
 #include <tencentcloud/mps/v20190612/model/LiveScheduleTask.h>
@@ -172,6 +173,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LiveStreamProcessTaskHasBeenSet() const;
 
                     /**
+                     * 获取Extracts digital watermark task information. this field has a value only when TaskType is ExtractBlindWatermark.
+                     * @return ExtractBlindWatermarkTask Extracts digital watermark task information. this field has a value only when TaskType is ExtractBlindWatermark.
+                     * 
+                     */
+                    ExtractBlindWatermarkTask GetExtractBlindWatermarkTask() const;
+
+                    /**
+                     * 判断参数 ExtractBlindWatermarkTask 是否已赋值
+                     * @return ExtractBlindWatermarkTask 是否已赋值
+                     * 
+                     */
+                    bool ExtractBlindWatermarkTaskHasBeenSet() const;
+
+                    /**
                      * 获取Event notification information of a task.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TaskNotifyConfig Event notification information of a task.
@@ -261,9 +276,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取The information of a live scheme. This parameter is valid only if `TaskType` is `LiveScheduleTask`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LiveScheduleTask The information of a live scheme. This parameter is valid only if `TaskType` is `LiveScheduleTask`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     LiveScheduleTask GetLiveScheduleTask() const;
@@ -331,6 +346,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_liveStreamProcessTaskHasBeenSet;
 
                     /**
+                     * Extracts digital watermark task information. this field has a value only when TaskType is ExtractBlindWatermark.
+                     */
+                    ExtractBlindWatermarkTask m_extractBlindWatermarkTask;
+                    bool m_extractBlindWatermarkTaskHasBeenSet;
+
+                    /**
                      * Event notification information of a task.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
@@ -370,7 +391,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * The information of a live scheme. This parameter is valid only if `TaskType` is `LiveScheduleTask`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     LiveScheduleTask m_liveScheduleTask;
                     bool m_liveScheduleTaskHasBeenSet;

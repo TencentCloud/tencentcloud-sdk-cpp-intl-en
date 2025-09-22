@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/CosOutputStorage.h>
 #include <tencentcloud/mps/v20190612/model/S3OutputStorage.h>
+#include <tencentcloud/mps/v20190612/model/VODOutputStorage.h>
 
 
 namespace TencentCloud
@@ -49,23 +50,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The storage type for a media processing output file. Valid values:
-<li>`COS`: Tencent Cloud COS</li>
-<li>`AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
-                     * @return Type The storage type for a media processing output file. Valid values:
-<li>`COS`: Tencent Cloud COS</li>
-<li>`AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
+                     * 获取Specifies the type of storage location for the media processing service output object. valid values:.
+<Li>COS: cos storage.</li>.
+<Li>AWS-S3: aws storage, suitable for aws tasks only and requires the same region.</li>.
+<Li>VOD: video-on-demand (vod) pro edition</li>.
+                     * @return Type Specifies the type of storage location for the media processing service output object. valid values:.
+<Li>COS: cos storage.</li>.
+<Li>AWS-S3: aws storage, suitable for aws tasks only and requires the same region.</li>.
+<Li>VOD: video-on-demand (vod) pro edition</li>.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The storage type for a media processing output file. Valid values:
-<li>`COS`: Tencent Cloud COS</li>
-<li>`AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
-                     * @param _type The storage type for a media processing output file. Valid values:
-<li>`COS`: Tencent Cloud COS</li>
-<li>`AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
+                     * 设置Specifies the type of storage location for the media processing service output object. valid values:.
+<Li>COS: cos storage.</li>.
+<Li>AWS-S3: aws storage, suitable for aws tasks only and requires the same region.</li>.
+<Li>VOD: video-on-demand (vod) pro edition</li>.
+                     * @param _type Specifies the type of storage location for the media processing service output object. valid values:.
+<Li>COS: cos storage.</li>.
+<Li>AWS-S3: aws storage, suitable for aws tasks only and requires the same region.</li>.
+<Li>VOD: video-on-demand (vod) pro edition</li>.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -127,12 +132,38 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool S3OutputStorageHasBeenSet() const;
 
+                    /**
+                     * 获取The VOD Pro application and bucket to save the output file. This parameter is required if `Type` is `VOD`.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return VODOutputStorage The VOD Pro application and bucket to save the output file. This parameter is required if `Type` is `VOD`.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    VODOutputStorage GetVODOutputStorage() const;
+
+                    /**
+                     * 设置The VOD Pro application and bucket to save the output file. This parameter is required if `Type` is `VOD`.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _vODOutputStorage The VOD Pro application and bucket to save the output file. This parameter is required if `Type` is `VOD`.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetVODOutputStorage(const VODOutputStorage& _vODOutputStorage);
+
+                    /**
+                     * 判断参数 VODOutputStorage 是否已赋值
+                     * @return VODOutputStorage 是否已赋值
+                     * 
+                     */
+                    bool VODOutputStorageHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The storage type for a media processing output file. Valid values:
-<li>`COS`: Tencent Cloud COS</li>
-<li>`AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
+                     * Specifies the type of storage location for the media processing service output object. valid values:.
+<Li>COS: cos storage.</li>.
+<Li>AWS-S3: aws storage, suitable for aws tasks only and requires the same region.</li>.
+<Li>VOD: video-on-demand (vod) pro edition</li>.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -150,6 +181,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     S3OutputStorage m_s3OutputStorage;
                     bool m_s3OutputStorageHasBeenSet;
+
+                    /**
+                     * The VOD Pro application and bucket to save the output file. This parameter is required if `Type` is `VOD`.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    VODOutputStorage m_vODOutputStorage;
+                    bool m_vODOutputStorageHasBeenSet;
 
                 };
             }
