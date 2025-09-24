@@ -323,19 +323,15 @@ namespace TencentCloud
                     bool ApiAccessPortHasBeenSet() const;
 
                     /**
-                     * 获取If `PasswordStatus` is `unmodifiable`, the old password has not expired, and this field will display its expiration time; otherwise, this field will be empty
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return OldPasswordExpireTime If `PasswordStatus` is `unmodifiable`, the old password has not expired, and this field will display its expiration time; otherwise, this field will be empty
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取If the value of PasswordStatus is unmodifiable, it indicates that the old password has not expired. This field will display the expiration time of the old password; otherwise, the value is null.
+                     * @return OldPasswordExpireTime If the value of PasswordStatus is unmodifiable, it indicates that the old password has not expired. This field will display the expiration time of the old password; otherwise, the value is null.
                      * 
                      */
                     std::string GetOldPasswordExpireTime() const;
 
                     /**
-                     * 设置If `PasswordStatus` is `unmodifiable`, the old password has not expired, and this field will display its expiration time; otherwise, this field will be empty
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _oldPasswordExpireTime If `PasswordStatus` is `unmodifiable`, the old password has not expired, and this field will display its expiration time; otherwise, this field will be empty
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置If the value of PasswordStatus is unmodifiable, it indicates that the old password has not expired. This field will display the expiration time of the old password; otherwise, the value is null.
+                     * @param _oldPasswordExpireTime If the value of PasswordStatus is unmodifiable, it indicates that the old password has not expired. This field will display the expiration time of the old password; otherwise, the value is null.
                      * 
                      */
                     void SetOldPasswordExpireTime(const std::string& _oldPasswordExpireTime);
@@ -348,19 +344,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool OldPasswordExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取TcaplusDB SDK connection parameter for accessing IPv6 addresses
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ApiAccessIpv6 TcaplusDB SDK connection parameter for accessing IPv6 addresses
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取TencentDB for TcaplusDB (TcaplusDB) SDK connection parameters, which are used to access the IPv6 address.
+                     * @return ApiAccessIpv6 TencentDB for TcaplusDB (TcaplusDB) SDK connection parameters, which are used to access the IPv6 address.
                      * 
                      */
                     std::string GetApiAccessIpv6() const;
 
                     /**
-                     * 设置TcaplusDB SDK connection parameter for accessing IPv6 addresses
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _apiAccessIpv6 TcaplusDB SDK connection parameter for accessing IPv6 addresses
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置TencentDB for TcaplusDB (TcaplusDB) SDK connection parameters, which are used to access the IPv6 address.
+                     * @param _apiAccessIpv6 TencentDB for TcaplusDB (TcaplusDB) SDK connection parameters, which are used to access the IPv6 address.
                      * 
                      */
                     void SetApiAccessIpv6(const std::string& _apiAccessIpv6);
@@ -373,19 +365,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ApiAccessIpv6HasBeenSet() const;
 
                     /**
-                     * 获取Cluster type. Valid values: `0` and `1` (shared cluster), `2` (dedicated cluster).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ClusterType Cluster type. Valid values: `0` and `1` (shared cluster), `2` (dedicated cluster).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Cluster type. 0,1: shared cluster; 2: independent cluster.
+                     * @return ClusterType Cluster type. 0,1: shared cluster; 2: independent cluster.
                      * 
                      */
                     int64_t GetClusterType() const;
 
                     /**
-                     * 设置Cluster type. Valid values: `0` and `1` (shared cluster), `2` (dedicated cluster).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _clusterType Cluster type. Valid values: `0` and `1` (shared cluster), `2` (dedicated cluster).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Cluster type. 0,1: shared cluster; 2: independent cluster.
+                     * @param _clusterType Cluster type. 0,1: shared cluster; 2: independent cluster.
                      * 
                      */
                     void SetClusterType(const int64_t& _clusterType);
@@ -398,19 +386,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ClusterTypeHasBeenSet() const;
 
                     /**
-                     * 获取Cluster status. Valid values: `0` (Running), `1` (Isolated. This status is caused by overdue payments), `2` (To be repossessed. This status is caused when the cluster is actively deleted.),·`3` (To be released. The resources occupied by the table can be released in this status.), `4` (Modifying).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ClusterStatus Cluster status. Valid values: `0` (Running), `1` (Isolated. This status is caused by overdue payments), `2` (To be repossessed. This status is caused when the cluster is actively deleted.),·`3` (To be released. The resources occupied by the table can be released in this status.), `4` (Modifying).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Cluster status. 0: indicates normal operation; 1: indicates frozen isolation (usually due to arrears); 2: indicates to be recycled (usually when the user proactively triggers deletion); 3: pending release (indicating that resources occupied by this table can be released); 4: changing.
+                     * @return ClusterStatus Cluster status. 0: indicates normal operation; 1: indicates frozen isolation (usually due to arrears); 2: indicates to be recycled (usually when the user proactively triggers deletion); 3: pending release (indicating that resources occupied by this table can be released); 4: changing.
                      * 
                      */
                     int64_t GetClusterStatus() const;
 
                     /**
-                     * 设置Cluster status. Valid values: `0` (Running), `1` (Isolated. This status is caused by overdue payments), `2` (To be repossessed. This status is caused when the cluster is actively deleted.),·`3` (To be released. The resources occupied by the table can be released in this status.), `4` (Modifying).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _clusterStatus Cluster status. Valid values: `0` (Running), `1` (Isolated. This status is caused by overdue payments), `2` (To be repossessed. This status is caused when the cluster is actively deleted.),·`3` (To be released. The resources occupied by the table can be released in this status.), `4` (Modifying).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Cluster status. 0: indicates normal operation; 1: indicates frozen isolation (usually due to arrears); 2: indicates to be recycled (usually when the user proactively triggers deletion); 3: pending release (indicating that resources occupied by this table can be released); 4: changing.
+                     * @param _clusterStatus Cluster status. 0: indicates normal operation; 1: indicates frozen isolation (usually due to arrears); 2: indicates to be recycled (usually when the user proactively triggers deletion); 3: pending release (indicating that resources occupied by this table can be released); 4: changing.
                      * 
                      */
                     void SetClusterStatus(const int64_t& _clusterStatus);
@@ -423,19 +407,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ClusterStatusHasBeenSet() const;
 
                     /**
-                     * 获取Read CU
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ReadCapacityUnit Read CU
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Read CU.
+                     * @return ReadCapacityUnit Read CU.
                      * 
                      */
                     int64_t GetReadCapacityUnit() const;
 
                     /**
-                     * 设置Read CU
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _readCapacityUnit Read CU
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Read CU.
+                     * @param _readCapacityUnit Read CU.
                      * 
                      */
                     void SetReadCapacityUnit(const int64_t& _readCapacityUnit);
@@ -448,19 +428,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ReadCapacityUnitHasBeenSet() const;
 
                     /**
-                     * 获取Write CU
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return WriteCapacityUnit Write CU
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Write CU.
+                     * @return WriteCapacityUnit Write CU.
                      * 
                      */
                     int64_t GetWriteCapacityUnit() const;
 
                     /**
-                     * 设置Write CU
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _writeCapacityUnit Write CU
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Write CU.
+                     * @param _writeCapacityUnit Write CU.
                      * 
                      */
                     void SetWriteCapacityUnit(const int64_t& _writeCapacityUnit);
@@ -473,19 +449,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool WriteCapacityUnitHasBeenSet() const;
 
                     /**
-                     * 获取Disk capacity
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return DiskVolume Disk capacity
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Disk capacity.
+                     * @return DiskVolume Disk capacity.
                      * 
                      */
                     int64_t GetDiskVolume() const;
 
                     /**
-                     * 设置Disk capacity
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _diskVolume Disk capacity
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Disk capacity.
+                     * @param _diskVolume Disk capacity.
                      * 
                      */
                     void SetDiskVolume(const int64_t& _diskVolume);
@@ -498,19 +470,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool DiskVolumeHasBeenSet() const;
 
                     /**
-                     * 获取Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ServerList Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Information about the dedicated server.
+                     * @return ServerList Information about the dedicated server.
                      * 
                      */
                     std::vector<ServerDetailInfo> GetServerList() const;
 
                     /**
-                     * 设置Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _serverList Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Information about the dedicated server.
+                     * @param _serverList Information about the dedicated server.
                      * 
                      */
                     void SetServerList(const std::vector<ServerDetailInfo>& _serverList);
@@ -523,19 +491,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ServerListHasBeenSet() const;
 
                     /**
-                     * 获取Information of the machine at the access layer (tcaproxy) in a dedicated cluster
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ProxyList Information of the machine at the access layer (tcaproxy) in a dedicated cluster
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Information about the dedicated proxy server.
+                     * @return ProxyList Information about the dedicated proxy server.
                      * 
                      */
                     std::vector<ProxyDetailInfo> GetProxyList() const;
 
                     /**
-                     * 设置Information of the machine at the access layer (tcaproxy) in a dedicated cluster
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _proxyList Information of the machine at the access layer (tcaproxy) in a dedicated cluster
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Information about the dedicated proxy server.
+                     * @param _proxyList Information about the dedicated proxy server.
                      * 
                      */
                     void SetProxyList(const std::vector<ProxyDetailInfo>& _proxyList);
@@ -569,19 +533,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool CensorshipHasBeenSet() const;
 
                     /**
-                     * 获取Approver UIN list
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return DbaUins Approver UIN list
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取Approver UIN list.
+                     * @return DbaUins Approver UIN list.
                      * 
                      */
                     std::vector<std::string> GetDbaUins() const;
 
                     /**
-                     * 设置Approver UIN list
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param _dbaUins Approver UIN list
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 设置Approver UIN list.
+                     * @param _dbaUins Approver UIN list.
                      * 
                      */
                     void SetDbaUins(const std::vector<std::string>& _dbaUins);
@@ -594,19 +554,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool DbaUinsHasBeenSet() const;
 
                     /**
-                     * 获取Whether data subscription is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return DataFlowStatus Whether data subscription is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Whether data subscription is enabled.
+                     * @return DataFlowStatus Whether data subscription is enabled.
                      * 
                      */
                     int64_t GetDataFlowStatus() const;
 
                     /**
-                     * 设置Whether data subscription is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _dataFlowStatus Whether data subscription is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Whether data subscription is enabled.
+                     * @param _dataFlowStatus Whether data subscription is enabled.
                      * 
                      */
                     void SetDataFlowStatus(const int64_t& _dataFlowStatus);
@@ -619,19 +575,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool DataFlowStatusHasBeenSet() const;
 
                     /**
-                     * 获取CKafka information when data subscription is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return KafkaInfo CKafka information when data subscription is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Kafka information for data subscription.
+                     * @return KafkaInfo Kafka information for data subscription.
                      * 
                      */
                     KafkaInfo GetKafkaInfo() const;
 
                     /**
-                     * 设置CKafka information when data subscription is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _kafkaInfo CKafka information when data subscription is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Kafka information for data subscription.
+                     * @param _kafkaInfo Kafka information for data subscription.
                      * 
                      */
                     void SetKafkaInfo(const KafkaInfo& _kafkaInfo);
@@ -644,19 +596,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool KafkaInfoHasBeenSet() const;
 
                     /**
-                     * 获取The number of days after which the cluster Txh backup file will expire and be deleted.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return TxhBackupExpireDay The number of days after which the cluster Txh backup file will expire and be deleted.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Retention period for the Txh backup file of the cluster before expiration and deletion.
+                     * @return TxhBackupExpireDay Retention period for the Txh backup file of the cluster before expiration and deletion.
                      * 
                      */
                     uint64_t GetTxhBackupExpireDay() const;
 
                     /**
-                     * 设置The number of days after which the cluster Txh backup file will expire and be deleted.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _txhBackupExpireDay The number of days after which the cluster Txh backup file will expire and be deleted.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Retention period for the Txh backup file of the cluster before expiration and deletion.
+                     * @param _txhBackupExpireDay Retention period for the Txh backup file of the cluster before expiration and deletion.
                      * 
                      */
                     void SetTxhBackupExpireDay(const uint64_t& _txhBackupExpireDay);
@@ -669,19 +617,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool TxhBackupExpireDayHasBeenSet() const;
 
                     /**
-                     * 获取The number of days after which the cluster Ulog backup file will expire and be deleted.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return UlogBackupExpireDay The number of days after which the cluster Ulog backup file will expire and be deleted.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Retention period for the Ulog backup file of the cluster before expiration and deletion.
+                     * @return UlogBackupExpireDay Retention period for the Ulog backup file of the cluster before expiration and deletion.
                      * 
                      */
                     uint64_t GetUlogBackupExpireDay() const;
 
                     /**
-                     * 设置The number of days after which the cluster Ulog backup file will expire and be deleted.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _ulogBackupExpireDay The number of days after which the cluster Ulog backup file will expire and be deleted.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Retention period for the Ulog backup file of the cluster before expiration and deletion.
+                     * @param _ulogBackupExpireDay Retention period for the Ulog backup file of the cluster before expiration and deletion.
                      * 
                      */
                     void SetUlogBackupExpireDay(const uint64_t& _ulogBackupExpireDay);
@@ -694,19 +638,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool UlogBackupExpireDayHasBeenSet() const;
 
                     /**
-                     * 获取Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return IsReadOnlyUlogBackupExpireDay Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Whether the expiration policy for the Ulog backup file of the cluster is read-only. 0: UlogBackupExpire is read-only and cannot be modified; 1: UlogBackupExpire can be modified.
+                     * @return IsReadOnlyUlogBackupExpireDay Whether the expiration policy for the Ulog backup file of the cluster is read-only. 0: UlogBackupExpire is read-only and cannot be modified; 1: UlogBackupExpire can be modified.
                      * 
                      */
                     uint64_t GetIsReadOnlyUlogBackupExpireDay() const;
 
                     /**
-                     * 设置Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _isReadOnlyUlogBackupExpireDay Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Whether the expiration policy for the Ulog backup file of the cluster is read-only. 0: UlogBackupExpire is read-only and cannot be modified; 1: UlogBackupExpire can be modified.
+                     * @param _isReadOnlyUlogBackupExpireDay Whether the expiration policy for the Ulog backup file of the cluster is read-only. 0: UlogBackupExpire is read-only and cannot be modified; 1: UlogBackupExpire can be modified.
                      * 
                      */
                     void SetIsReadOnlyUlogBackupExpireDay(const uint64_t& _isReadOnlyUlogBackupExpireDay);
@@ -719,19 +659,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool IsReadOnlyUlogBackupExpireDayHasBeenSet() const;
 
                     /**
-                     * 获取restproxy Status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RestProxyStatus restproxy Status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取restproxy status.
+                     * @return RestProxyStatus restproxy status.
                      * 
                      */
                     int64_t GetRestProxyStatus() const;
 
                     /**
-                     * 设置restproxy Status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _restProxyStatus restproxy Status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置restproxy status.
+                     * @param _restProxyStatus restproxy status.
                      * 
                      */
                     void SetRestProxyStatus(const int64_t& _restProxyStatus);
@@ -742,6 +678,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool RestProxyStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Total number of shards in the cluster.
+                     * @return ShardTotalNum Total number of shards in the cluster.
+                     * 
+                     */
+                    int64_t GetShardTotalNum() const;
+
+                    /**
+                     * 设置Total number of shards in the cluster.
+                     * @param _shardTotalNum Total number of shards in the cluster.
+                     * 
+                     */
+                    void SetShardTotalNum(const int64_t& _shardTotalNum);
+
+                    /**
+                     * 判断参数 ShardTotalNum 是否已赋值
+                     * @return ShardTotalNum 是否已赋值
+                     * 
+                     */
+                    bool ShardTotalNumHasBeenSet() const;
+
+                    /**
+                     * 获取Total number of used shards.
+                     * @return ShardUsedNum Total number of used shards.
+                     * 
+                     */
+                    int64_t GetShardUsedNum() const;
+
+                    /**
+                     * 设置Total number of used shards.
+                     * @param _shardUsedNum Total number of used shards.
+                     * 
+                     */
+                    void SetShardUsedNum(const int64_t& _shardUsedNum);
+
+                    /**
+                     * 判断参数 ShardUsedNum 是否已赋值
+                     * @return ShardUsedNum 是否已赋值
+                     * 
+                     */
+                    bool ShardUsedNumHasBeenSet() const;
 
                 private:
 
@@ -824,64 +802,55 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_apiAccessPortHasBeenSet;
 
                     /**
-                     * If `PasswordStatus` is `unmodifiable`, the old password has not expired, and this field will display its expiration time; otherwise, this field will be empty
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * If the value of PasswordStatus is unmodifiable, it indicates that the old password has not expired. This field will display the expiration time of the old password; otherwise, the value is null.
                      */
                     std::string m_oldPasswordExpireTime;
                     bool m_oldPasswordExpireTimeHasBeenSet;
 
                     /**
-                     * TcaplusDB SDK connection parameter for accessing IPv6 addresses
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * TencentDB for TcaplusDB (TcaplusDB) SDK connection parameters, which are used to access the IPv6 address.
                      */
                     std::string m_apiAccessIpv6;
                     bool m_apiAccessIpv6HasBeenSet;
 
                     /**
-                     * Cluster type. Valid values: `0` and `1` (shared cluster), `2` (dedicated cluster).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Cluster type. 0,1: shared cluster; 2: independent cluster.
                      */
                     int64_t m_clusterType;
                     bool m_clusterTypeHasBeenSet;
 
                     /**
-                     * Cluster status. Valid values: `0` (Running), `1` (Isolated. This status is caused by overdue payments), `2` (To be repossessed. This status is caused when the cluster is actively deleted.),·`3` (To be released. The resources occupied by the table can be released in this status.), `4` (Modifying).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Cluster status. 0: indicates normal operation; 1: indicates frozen isolation (usually due to arrears); 2: indicates to be recycled (usually when the user proactively triggers deletion); 3: pending release (indicating that resources occupied by this table can be released); 4: changing.
                      */
                     int64_t m_clusterStatus;
                     bool m_clusterStatusHasBeenSet;
 
                     /**
-                     * Read CU
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Read CU.
                      */
                     int64_t m_readCapacityUnit;
                     bool m_readCapacityUnitHasBeenSet;
 
                     /**
-                     * Write CU
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Write CU.
                      */
                     int64_t m_writeCapacityUnit;
                     bool m_writeCapacityUnitHasBeenSet;
 
                     /**
-                     * Disk capacity
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Disk capacity.
                      */
                     int64_t m_diskVolume;
                     bool m_diskVolumeHasBeenSet;
 
                     /**
-                     * Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Information about the dedicated server.
                      */
                     std::vector<ServerDetailInfo> m_serverList;
                     bool m_serverListHasBeenSet;
 
                     /**
-                     * Information of the machine at the access layer (tcaproxy) in a dedicated cluster
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Information about the dedicated proxy server.
                      */
                     std::vector<ProxyDetailInfo> m_proxyList;
                     bool m_proxyListHasBeenSet;
@@ -893,53 +862,58 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_censorshipHasBeenSet;
 
                     /**
-                     * Approver UIN list
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * Approver UIN list.
                      */
                     std::vector<std::string> m_dbaUins;
                     bool m_dbaUinsHasBeenSet;
 
                     /**
-                     * Whether data subscription is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Whether data subscription is enabled.
                      */
                     int64_t m_dataFlowStatus;
                     bool m_dataFlowStatusHasBeenSet;
 
                     /**
-                     * CKafka information when data subscription is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Kafka information for data subscription.
                      */
                     KafkaInfo m_kafkaInfo;
                     bool m_kafkaInfoHasBeenSet;
 
                     /**
-                     * The number of days after which the cluster Txh backup file will expire and be deleted.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Retention period for the Txh backup file of the cluster before expiration and deletion.
                      */
                     uint64_t m_txhBackupExpireDay;
                     bool m_txhBackupExpireDayHasBeenSet;
 
                     /**
-                     * The number of days after which the cluster Ulog backup file will expire and be deleted.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Retention period for the Ulog backup file of the cluster before expiration and deletion.
                      */
                     uint64_t m_ulogBackupExpireDay;
                     bool m_ulogBackupExpireDayHasBeenSet;
 
                     /**
-                     * Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Whether the expiration policy for the Ulog backup file of the cluster is read-only. 0: UlogBackupExpire is read-only and cannot be modified; 1: UlogBackupExpire can be modified.
                      */
                     uint64_t m_isReadOnlyUlogBackupExpireDay;
                     bool m_isReadOnlyUlogBackupExpireDayHasBeenSet;
 
                     /**
-                     * restproxy Status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * restproxy status.
                      */
                     int64_t m_restProxyStatus;
                     bool m_restProxyStatusHasBeenSet;
+
+                    /**
+                     * Total number of shards in the cluster.
+                     */
+                    int64_t m_shardTotalNum;
+                    bool m_shardTotalNumHasBeenSet;
+
+                    /**
+                     * Total number of used shards.
+                     */
+                    int64_t m_shardUsedNum;
+                    bool m_shardUsedNumHasBeenSet;
 
                 };
             }

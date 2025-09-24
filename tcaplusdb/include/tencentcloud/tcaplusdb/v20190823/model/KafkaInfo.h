@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CKafka address
-                     * @return Address CKafka address
+                     * 获取Kafka address
+                     * @return Address Kafka address
                      * 
                      */
                     std::string GetAddress() const;
 
                     /**
-                     * 设置CKafka address
-                     * @param _address CKafka address
+                     * 设置Kafka address
+                     * @param _address Kafka address
                      * 
                      */
                     void SetAddress(const std::string& _address);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool AddressHasBeenSet() const;
 
                     /**
-                     * 获取CKafka topic
-                     * @return Topic CKafka topic
+                     * 获取Kafka topic
+                     * @return Topic Kafka topic
                      * 
                      */
                     std::string GetTopic() const;
 
                     /**
-                     * 设置CKafka topic
-                     * @param _topic CKafka topic
+                     * 设置Kafka topic
+                     * @param _topic Kafka topic
                      * 
                      */
                     void SetTopic(const std::string& _topic);
@@ -175,13 +175,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * CKafka address
+                     * Kafka address
                      */
                     std::string m_address;
                     bool m_addressHasBeenSet;
 
                     /**
-                     * CKafka topic
+                     * Kafka topic
                      */
                     std::string m_topic;
                     bool m_topicHasBeenSet;

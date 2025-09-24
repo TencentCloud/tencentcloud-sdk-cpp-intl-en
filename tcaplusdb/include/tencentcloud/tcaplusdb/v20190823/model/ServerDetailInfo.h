@@ -173,19 +173,15 @@ namespace TencentCloud
                     bool WriteNumHasBeenSet() const;
 
                     /**
-                     * 获取Version
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Version Version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Version.
+                     * @return Version Version.
                      * 
                      */
                     std::string GetVersion() const;
 
                     /**
-                     * 设置Version
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _version Version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Version.
+                     * @param _version Version.
                      * 
                      */
                     void SetVersion(const std::string& _version);
@@ -236,8 +232,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_writeNumHasBeenSet;
 
                     /**
-                     * Version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Version.
                      */
                     std::string m_version;
                     bool m_versionHasBeenSet;

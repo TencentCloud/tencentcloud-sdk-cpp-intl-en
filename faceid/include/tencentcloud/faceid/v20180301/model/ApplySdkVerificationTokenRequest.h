@@ -121,67 +121,71 @@ Default value: 4
                     bool SecurityLevelHasBeenSet() const;
 
                     /**
-                     * 获取Card Types Supported for Authentication: Currently supported types are as follows:
-1.HK (Default): Hong Kong (China) Identity Card
-2.ML: Malaysia Identity Card
-3.IndonesiaIDCard: Indonesia Identity Card
-4.PhilippinesVoteID: Philippines Voter ID
-5.PhilippinesDrivingLicense: Philippines Driving License
-6.PhilippinesTinID: Philippines Tin ID
-7.PhilippinesSSSID: Philippines SSS ID
-8.PhilippinesUMID: Philippines UMID
-9.MLIDPassport: Passports of Hong Kong, Macao, Taiwan Regions (China) and Foreign Countries
-10.ThailandIDCard: Thailand Identity Card
-11.MainlandIDCard: Mainland China Identity Card
-12.SingaporeIDCard: Singapore Identity Card
-13.HMTPermit: Exit-Entry Permit for Travel to and from Hong Kong, Macao and Taiwan (China)
-                     * @return IdCardType Card Types Supported for Authentication: Currently supported types are as follows:
-1.HK (Default): Hong Kong (China) Identity Card
-2.ML: Malaysia Identity Card
-3.IndonesiaIDCard: Indonesia Identity Card
-4.PhilippinesVoteID: Philippines Voter ID
-5.PhilippinesDrivingLicense: Philippines Driving License
-6.PhilippinesTinID: Philippines Tin ID
-7.PhilippinesSSSID: Philippines SSS ID
-8.PhilippinesUMID: Philippines UMID
-9.MLIDPassport: Passports of Hong Kong, Macao, Taiwan Regions (China) and Foreign Countries
-10.ThailandIDCard: Thailand Identity Card
-11.MainlandIDCard: Mainland China Identity Card
-12.SingaporeIDCard: Singapore Identity Card
-13.HMTPermit: Exit-Entry Permit for Travel to and from Hong Kong, Macao and Taiwan (China)
+                     * 获取Specifies the identity document type used for authentication. valid values:.  
+
+HK (default): hong kong (china) identity card.
+2. ML: malaysian identity card.
+Indonesian identity card.
+4. PhilippinesVoteID: specifies the voter card in the philippines.
+5. PhilippinesDrivingLicense: specifies the driving license in philippines.
+6. PhilippinesTinID: specifies the philippines tin id.
+7. PhilippinesSSSID: specifies the SSSID in the philippines.
+8. philippines UMID: specifies the philippines UMID.
+9. MLIDPassport: specifies the passport for hong kong (china), macao (china), and taiwan (china) as well as overseas passports.
+ThailandIDCard: specifies the thai identity card.
+Mainland id card.
+12. SingaporeIDCard: specifies the Singapore id card.
+13. HMTPermit: specifies the hong kong, macau and taiwan travel permit.
+                     * @return IdCardType Specifies the identity document type used for authentication. valid values:.  
+
+HK (default): hong kong (china) identity card.
+2. ML: malaysian identity card.
+Indonesian identity card.
+4. PhilippinesVoteID: specifies the voter card in the philippines.
+5. PhilippinesDrivingLicense: specifies the driving license in philippines.
+6. PhilippinesTinID: specifies the philippines tin id.
+7. PhilippinesSSSID: specifies the SSSID in the philippines.
+8. philippines UMID: specifies the philippines UMID.
+9. MLIDPassport: specifies the passport for hong kong (china), macao (china), and taiwan (china) as well as overseas passports.
+ThailandIDCard: specifies the thai identity card.
+Mainland id card.
+12. SingaporeIDCard: specifies the Singapore id card.
+13. HMTPermit: specifies the hong kong, macau and taiwan travel permit.
                      * 
                      */
                     std::string GetIdCardType() const;
 
                     /**
-                     * 设置Card Types Supported for Authentication: Currently supported types are as follows:
-1.HK (Default): Hong Kong (China) Identity Card
-2.ML: Malaysia Identity Card
-3.IndonesiaIDCard: Indonesia Identity Card
-4.PhilippinesVoteID: Philippines Voter ID
-5.PhilippinesDrivingLicense: Philippines Driving License
-6.PhilippinesTinID: Philippines Tin ID
-7.PhilippinesSSSID: Philippines SSS ID
-8.PhilippinesUMID: Philippines UMID
-9.MLIDPassport: Passports of Hong Kong, Macao, Taiwan Regions (China) and Foreign Countries
-10.ThailandIDCard: Thailand Identity Card
-11.MainlandIDCard: Mainland China Identity Card
-12.SingaporeIDCard: Singapore Identity Card
-13.HMTPermit: Exit-Entry Permit for Travel to and from Hong Kong, Macao and Taiwan (China)
-                     * @param _idCardType Card Types Supported for Authentication: Currently supported types are as follows:
-1.HK (Default): Hong Kong (China) Identity Card
-2.ML: Malaysia Identity Card
-3.IndonesiaIDCard: Indonesia Identity Card
-4.PhilippinesVoteID: Philippines Voter ID
-5.PhilippinesDrivingLicense: Philippines Driving License
-6.PhilippinesTinID: Philippines Tin ID
-7.PhilippinesSSSID: Philippines SSS ID
-8.PhilippinesUMID: Philippines UMID
-9.MLIDPassport: Passports of Hong Kong, Macao, Taiwan Regions (China) and Foreign Countries
-10.ThailandIDCard: Thailand Identity Card
-11.MainlandIDCard: Mainland China Identity Card
-12.SingaporeIDCard: Singapore Identity Card
-13.HMTPermit: Exit-Entry Permit for Travel to and from Hong Kong, Macao and Taiwan (China)
+                     * 设置Specifies the identity document type used for authentication. valid values:.  
+
+HK (default): hong kong (china) identity card.
+2. ML: malaysian identity card.
+Indonesian identity card.
+4. PhilippinesVoteID: specifies the voter card in the philippines.
+5. PhilippinesDrivingLicense: specifies the driving license in philippines.
+6. PhilippinesTinID: specifies the philippines tin id.
+7. PhilippinesSSSID: specifies the SSSID in the philippines.
+8. philippines UMID: specifies the philippines UMID.
+9. MLIDPassport: specifies the passport for hong kong (china), macao (china), and taiwan (china) as well as overseas passports.
+ThailandIDCard: specifies the thai identity card.
+Mainland id card.
+12. SingaporeIDCard: specifies the Singapore id card.
+13. HMTPermit: specifies the hong kong, macau and taiwan travel permit.
+                     * @param _idCardType Specifies the identity document type used for authentication. valid values:.  
+
+HK (default): hong kong (china) identity card.
+2. ML: malaysian identity card.
+Indonesian identity card.
+4. PhilippinesVoteID: specifies the voter card in the philippines.
+5. PhilippinesDrivingLicense: specifies the driving license in philippines.
+6. PhilippinesTinID: specifies the philippines tin id.
+7. PhilippinesSSSID: specifies the SSSID in the philippines.
+8. philippines UMID: specifies the philippines UMID.
+9. MLIDPassport: specifies the passport for hong kong (china), macao (china), and taiwan (china) as well as overseas passports.
+ThailandIDCard: specifies the thai identity card.
+Mainland id card.
+12. SingaporeIDCard: specifies the Singapore id card.
+13. HMTPermit: specifies the hong kong, macau and taiwan travel permit.
                      * 
                      */
                     void SetIdCardType(const std::string& _idCardType);
@@ -282,6 +286,31 @@ This feature applies only to Hong Kong (China) identity cards, Malaysian identit
                     bool DisableCheckOcrWarningsHasBeenSet() const;
 
                     /**
+                     * 获取Customize which alarm codes to block. If left blank, all alarm codes will be blocked by default.
+Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -9901 (other alarms).
+                     * @return SelectedWarningCodes Customize which alarm codes to block. If left blank, all alarm codes will be blocked by default.
+Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -9901 (other alarms).
+                     * 
+                     */
+                    std::vector<int64_t> GetSelectedWarningCodes() const;
+
+                    /**
+                     * 设置Customize which alarm codes to block. If left blank, all alarm codes will be blocked by default.
+Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -9901 (other alarms).
+                     * @param _selectedWarningCodes Customize which alarm codes to block. If left blank, all alarm codes will be blocked by default.
+Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -9901 (other alarms).
+                     * 
+                     */
+                    void SetSelectedWarningCodes(const std::vector<int64_t>& _selectedWarningCodes);
+
+                    /**
+                     * 判断参数 SelectedWarningCodes 是否已赋值
+                     * @return SelectedWarningCodes 是否已赋值
+                     * 
+                     */
+                    bool SelectedWarningCodesHasBeenSet() const;
+
+                    /**
                      * 获取A passthrough field, which is returned together with the verification result and can contain up to 1,024 bits.
                      * @return Extra A passthrough field, which is returned together with the verification result and can contain up to 1,024 bits.
                      * 
@@ -303,15 +332,19 @@ This feature applies only to Hong Kong (China) identity cards, Malaysian identit
                     bool ExtraHasBeenSet() const;
 
                     /**
-                     * 获取ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
-                     * @return SdkVersion ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
+                     * 获取ENHANCED: enhanced.
+BASIC: basic version (default).
+                     * @return SdkVersion ENHANCED: enhanced.
+BASIC: basic version (default).
                      * 
                      */
                     std::string GetSdkVersion() const;
 
                     /**
-                     * 设置ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
-                     * @param _sdkVersion ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
+                     * 设置ENHANCED: enhanced.
+BASIC: basic version (default).
+                     * @param _sdkVersion ENHANCED: enhanced.
+BASIC: basic version (default).
                      * 
                      */
                     void SetSdkVersion(const std::string& _sdkVersion);
@@ -404,20 +437,21 @@ Default value: 4
                     bool m_securityLevelHasBeenSet;
 
                     /**
-                     * Card Types Supported for Authentication: Currently supported types are as follows:
-1.HK (Default): Hong Kong (China) Identity Card
-2.ML: Malaysia Identity Card
-3.IndonesiaIDCard: Indonesia Identity Card
-4.PhilippinesVoteID: Philippines Voter ID
-5.PhilippinesDrivingLicense: Philippines Driving License
-6.PhilippinesTinID: Philippines Tin ID
-7.PhilippinesSSSID: Philippines SSS ID
-8.PhilippinesUMID: Philippines UMID
-9.MLIDPassport: Passports of Hong Kong, Macao, Taiwan Regions (China) and Foreign Countries
-10.ThailandIDCard: Thailand Identity Card
-11.MainlandIDCard: Mainland China Identity Card
-12.SingaporeIDCard: Singapore Identity Card
-13.HMTPermit: Exit-Entry Permit for Travel to and from Hong Kong, Macao and Taiwan (China)
+                     * Specifies the identity document type used for authentication. valid values:.  
+
+HK (default): hong kong (china) identity card.
+2. ML: malaysian identity card.
+Indonesian identity card.
+4. PhilippinesVoteID: specifies the voter card in the philippines.
+5. PhilippinesDrivingLicense: specifies the driving license in philippines.
+6. PhilippinesTinID: specifies the philippines tin id.
+7. PhilippinesSSSID: specifies the SSSID in the philippines.
+8. philippines UMID: specifies the philippines UMID.
+9. MLIDPassport: specifies the passport for hong kong (china), macao (china), and taiwan (china) as well as overseas passports.
+ThailandIDCard: specifies the thai identity card.
+Mainland id card.
+12. SingaporeIDCard: specifies the Singapore id card.
+13. HMTPermit: specifies the hong kong, macau and taiwan travel permit.
                      */
                     std::string m_idCardType;
                     bool m_idCardTypeHasBeenSet;
@@ -448,13 +482,21 @@ This feature applies only to Hong Kong (China) identity cards, Malaysian identit
                     bool m_disableCheckOcrWarningsHasBeenSet;
 
                     /**
+                     * Customize which alarm codes to block. If left blank, all alarm codes will be blocked by default.
+Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -9901 (other alarms).
+                     */
+                    std::vector<int64_t> m_selectedWarningCodes;
+                    bool m_selectedWarningCodesHasBeenSet;
+
+                    /**
                      * A passthrough field, which is returned together with the verification result and can contain up to 1,024 bits.
                      */
                     std::string m_extra;
                     bool m_extraHasBeenSet;
 
                     /**
-                     * ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
+                     * ENHANCED: enhanced.
+BASIC: basic version (default).
                      */
                     std::string m_sdkVersion;
                     bool m_sdkVersionHasBeenSet;

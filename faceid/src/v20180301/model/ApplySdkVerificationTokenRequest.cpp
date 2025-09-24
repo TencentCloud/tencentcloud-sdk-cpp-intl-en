@@ -30,6 +30,7 @@ ApplySdkVerificationTokenRequest::ApplySdkVerificationTokenRequest() :
     m_needVerifyIdCardHasBeenSet(false),
     m_disableChangeOcrResultHasBeenSet(false),
     m_disableCheckOcrWarningsHasBeenSet(false),
+    m_selectedWarningCodesHasBeenSet(false),
     m_extraHasBeenSet(false),
     m_sdkVersionHasBeenSet(false),
     m_actionListHasBeenSet(false)
@@ -97,6 +98,19 @@ string ApplySdkVerificationTokenRequest::ToJsonString() const
         string key = "DisableCheckOcrWarnings";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_disableCheckOcrWarnings, allocator);
+    }
+
+    if (m_selectedWarningCodesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SelectedWarningCodes";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_selectedWarningCodes.begin(); itr != m_selectedWarningCodes.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
+        }
     }
 
     if (m_extraHasBeenSet)
@@ -241,6 +255,22 @@ void ApplySdkVerificationTokenRequest::SetDisableCheckOcrWarnings(const bool& _d
 bool ApplySdkVerificationTokenRequest::DisableCheckOcrWarningsHasBeenSet() const
 {
     return m_disableCheckOcrWarningsHasBeenSet;
+}
+
+vector<int64_t> ApplySdkVerificationTokenRequest::GetSelectedWarningCodes() const
+{
+    return m_selectedWarningCodes;
+}
+
+void ApplySdkVerificationTokenRequest::SetSelectedWarningCodes(const vector<int64_t>& _selectedWarningCodes)
+{
+    m_selectedWarningCodes = _selectedWarningCodes;
+    m_selectedWarningCodesHasBeenSet = true;
+}
+
+bool ApplySdkVerificationTokenRequest::SelectedWarningCodesHasBeenSet() const
+{
+    return m_selectedWarningCodesHasBeenSet;
 }
 
 string ApplySdkVerificationTokenRequest::GetExtra() const
