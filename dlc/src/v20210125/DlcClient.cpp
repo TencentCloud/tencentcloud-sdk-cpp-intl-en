@@ -2276,6 +2276,49 @@ DlcClient::DescribeResultDownloadOutcomeCallable DlcClient::DescribeResultDownlo
     return task->get_future();
 }
 
+DlcClient::DescribeSessionImageVersionOutcome DlcClient::DescribeSessionImageVersion(const DescribeSessionImageVersionRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeSessionImageVersion");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeSessionImageVersionResponse rsp = DescribeSessionImageVersionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeSessionImageVersionOutcome(rsp);
+        else
+            return DescribeSessionImageVersionOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeSessionImageVersionOutcome(outcome.GetError());
+    }
+}
+
+void DlcClient::DescribeSessionImageVersionAsync(const DescribeSessionImageVersionRequest& request, const DescribeSessionImageVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeSessionImageVersion(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DlcClient::DescribeSessionImageVersionOutcomeCallable DlcClient::DescribeSessionImageVersionCallable(const DescribeSessionImageVersionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeSessionImageVersionOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeSessionImageVersion(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 DlcClient::DescribeSparkAppJobOutcome DlcClient::DescribeSparkAppJob(const DescribeSparkAppJobRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeSparkAppJob");

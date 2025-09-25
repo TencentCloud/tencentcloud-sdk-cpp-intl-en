@@ -135,6 +135,7 @@ set(dlc_public_header_model
   include/tencentcloud/dlc/v20210125/model/CheckDataEngineImageCanBeRollbackRequest.h
   include/tencentcloud/dlc/v20210125/model/CreateDataEngineRequest.h
   include/tencentcloud/dlc/v20210125/model/ModifySparkAppBatchRequest.h
+  include/tencentcloud/dlc/v20210125/model/DescribeSparkAppTasksRequest.h
   include/tencentcloud/dlc/v20210125/model/DescribeDataEnginePythonSparkImagesRequest.h
   include/tencentcloud/dlc/v20210125/model/SmartOptimizerPolicy.h
   include/tencentcloud/dlc/v20210125/model/CreateTaskRequest.h
@@ -151,6 +152,7 @@ set(dlc_public_header_model
   include/tencentcloud/dlc/v20210125/model/Property.h
   include/tencentcloud/dlc/v20210125/model/TasksOverview.h
   include/tencentcloud/dlc/v20210125/model/DescribeUpdatableDataEnginesRequest.h
+  include/tencentcloud/dlc/v20210125/model/Execution.h
   include/tencentcloud/dlc/v20210125/model/DescribeSparkAppJobResponse.h
   include/tencentcloud/dlc/v20210125/model/SmartOptimizerLifecyclePolicy.h
   include/tencentcloud/dlc/v20210125/model/DeleteUsersFromWorkGroupResponse.h
@@ -194,7 +196,7 @@ set(dlc_public_header_model
   include/tencentcloud/dlc/v20210125/model/ResourceInfo.h
   include/tencentcloud/dlc/v20210125/model/CreateDLCTableRequest.h
   include/tencentcloud/dlc/v20210125/model/DMSSourceDatabaseInfo.h
-  include/tencentcloud/dlc/v20210125/model/Execution.h
+  include/tencentcloud/dlc/v20210125/model/DescribeSubUserAccessPolicyRequest.h
   include/tencentcloud/dlc/v20210125/model/UpgradeDataEngineImageRequest.h
   include/tencentcloud/dlc/v20210125/model/SmartPolicy.h
   include/tencentcloud/dlc/v20210125/model/SmartOptimizerIndexPolicy.h
@@ -285,8 +287,8 @@ set(dlc_public_header_model
   include/tencentcloud/dlc/v20210125/model/CreateWorkGroupRequest.h
   include/tencentcloud/dlc/v20210125/model/CreateInternalTableResponse.h
   include/tencentcloud/dlc/v20210125/model/DataEngineInfo.h
-  include/tencentcloud/dlc/v20210125/model/DescribeSparkAppTasksRequest.h
-  include/tencentcloud/dlc/v20210125/model/DescribeSubUserAccessPolicyRequest.h
+  include/tencentcloud/dlc/v20210125/model/DescribeSessionImageVersionResponse.h
+  include/tencentcloud/dlc/v20210125/model/DescribeSessionImageVersionRequest.h
   include/tencentcloud/dlc/v20210125/model/AlterDMSDatabaseRequest.h
   include/tencentcloud/dlc/v20210125/model/CheckDataEngineImageCanBeUpgradeRequest.h
   include/tencentcloud/dlc/v20210125/model/SQLTask.h
@@ -302,6 +304,7 @@ set(dlc_public_header_model
   include/tencentcloud/dlc/v20210125/model/DescribeDataEnginePythonSparkImagesResponse.h
   include/tencentcloud/dlc/v20210125/model/ModifyUserRequest.h
   include/tencentcloud/dlc/v20210125/model/DMSColumn.h
+  include/tencentcloud/dlc/v20210125/model/EngineSessionImage.h
   include/tencentcloud/dlc/v20210125/model/UpdateRowFilterRequest.h
   include/tencentcloud/dlc/v20210125/model/TColumn.h
   include/tencentcloud/dlc/v20210125/model/DescribeResultDownloadRequest.h
@@ -425,6 +428,7 @@ set(dlc_src
   src/v20210125/model/CheckDataEngineImageCanBeRollbackRequest.cpp
   src/v20210125/model/CreateDataEngineRequest.cpp
   src/v20210125/model/ModifySparkAppBatchRequest.cpp
+  src/v20210125/model/DescribeSparkAppTasksRequest.cpp
   src/v20210125/model/DescribeDataEnginePythonSparkImagesRequest.cpp
   src/v20210125/model/SmartOptimizerPolicy.cpp
   src/v20210125/model/CreateTaskRequest.cpp
@@ -441,6 +445,7 @@ set(dlc_src
   src/v20210125/model/Property.cpp
   src/v20210125/model/TasksOverview.cpp
   src/v20210125/model/DescribeUpdatableDataEnginesRequest.cpp
+  src/v20210125/model/Execution.cpp
   src/v20210125/model/DescribeSparkAppJobResponse.cpp
   src/v20210125/model/SmartOptimizerLifecyclePolicy.cpp
   src/v20210125/model/DeleteUsersFromWorkGroupResponse.cpp
@@ -484,7 +489,7 @@ set(dlc_src
   src/v20210125/model/ResourceInfo.cpp
   src/v20210125/model/CreateDLCTableRequest.cpp
   src/v20210125/model/DMSSourceDatabaseInfo.cpp
-  src/v20210125/model/Execution.cpp
+  src/v20210125/model/DescribeSubUserAccessPolicyRequest.cpp
   src/v20210125/model/UpgradeDataEngineImageRequest.cpp
   src/v20210125/model/SmartPolicy.cpp
   src/v20210125/model/SmartOptimizerIndexPolicy.cpp
@@ -575,8 +580,8 @@ set(dlc_src
   src/v20210125/model/CreateWorkGroupRequest.cpp
   src/v20210125/model/CreateInternalTableResponse.cpp
   src/v20210125/model/DataEngineInfo.cpp
-  src/v20210125/model/DescribeSparkAppTasksRequest.cpp
-  src/v20210125/model/DescribeSubUserAccessPolicyRequest.cpp
+  src/v20210125/model/DescribeSessionImageVersionResponse.cpp
+  src/v20210125/model/DescribeSessionImageVersionRequest.cpp
   src/v20210125/model/AlterDMSDatabaseRequest.cpp
   src/v20210125/model/CheckDataEngineImageCanBeUpgradeRequest.cpp
   src/v20210125/model/SQLTask.cpp
@@ -592,6 +597,7 @@ set(dlc_src
   src/v20210125/model/DescribeDataEnginePythonSparkImagesResponse.cpp
   src/v20210125/model/ModifyUserRequest.cpp
   src/v20210125/model/DMSColumn.cpp
+  src/v20210125/model/EngineSessionImage.cpp
   src/v20210125/model/UpdateRowFilterRequest.cpp
   src/v20210125/model/TColumn.cpp
   src/v20210125/model/DescribeResultDownloadRequest.cpp

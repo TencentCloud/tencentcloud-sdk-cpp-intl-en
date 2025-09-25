@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/trtc/v20190722/model/TranscriptionParams.h>
 #include <tencentcloud/trtc/v20190722/model/RecognizeConfig.h>
+#include <tencentcloud/trtc/v20190722/model/TranslationConfig.h>
 
 
 namespace TencentCloud
@@ -178,6 +179,27 @@ namespace TencentCloud
                      */
                     bool RecognizeConfigHasBeenSet() const;
 
+                    /**
+                     * 获取Translation config.
+                     * @return TranslationConfig Translation config.
+                     * 
+                     */
+                    TranslationConfig GetTranslationConfig() const;
+
+                    /**
+                     * 设置Translation config.
+                     * @param _translationConfig Translation config.
+                     * 
+                     */
+                    void SetTranslationConfig(const TranslationConfig& _translationConfig);
+
+                    /**
+                     * 判断参数 TranslationConfig 是否已赋值
+                     * @return TranslationConfig 是否已赋值
+                     * 
+                     */
+                    bool TranslationConfigHasBeenSet() const;
+
                 private:
 
                     /**
@@ -217,6 +239,12 @@ namespace TencentCloud
                      */
                     RecognizeConfig m_recognizeConfig;
                     bool m_recognizeConfigHasBeenSet;
+
+                    /**
+                     * Translation config.
+                     */
+                    TranslationConfig m_translationConfig;
+                    bool m_translationConfigHasBeenSet;
 
                 };
             }

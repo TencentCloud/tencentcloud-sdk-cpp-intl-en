@@ -127,6 +127,8 @@
 #include <tencentcloud/dlc/v20210125/model/DescribeQueryResponse.h>
 #include <tencentcloud/dlc/v20210125/model/DescribeResultDownloadRequest.h>
 #include <tencentcloud/dlc/v20210125/model/DescribeResultDownloadResponse.h>
+#include <tencentcloud/dlc/v20210125/model/DescribeSessionImageVersionRequest.h>
+#include <tencentcloud/dlc/v20210125/model/DescribeSessionImageVersionResponse.h>
 #include <tencentcloud/dlc/v20210125/model/DescribeSparkAppJobRequest.h>
 #include <tencentcloud/dlc/v20210125/model/DescribeSparkAppJobResponse.h>
 #include <tencentcloud/dlc/v20210125/model/DescribeSparkAppJobsRequest.h>
@@ -399,6 +401,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeResultDownloadResponse> DescribeResultDownloadOutcome;
                 typedef std::future<DescribeResultDownloadOutcome> DescribeResultDownloadOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::DescribeResultDownloadRequest&, DescribeResultDownloadOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeResultDownloadAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSessionImageVersionResponse> DescribeSessionImageVersionOutcome;
+                typedef std::future<DescribeSessionImageVersionOutcome> DescribeSessionImageVersionOutcomeCallable;
+                typedef std::function<void(const DlcClient*, const Model::DescribeSessionImageVersionRequest&, DescribeSessionImageVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSessionImageVersionAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeSparkAppJobResponse> DescribeSparkAppJobOutcome;
                 typedef std::future<DescribeSparkAppJobOutcome> DescribeSparkAppJobOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::DescribeSparkAppJobRequest&, DescribeSparkAppJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSparkAppJobAsyncHandler;
@@ -1022,6 +1027,15 @@ namespace TencentCloud
                 DescribeResultDownloadOutcome DescribeResultDownload(const Model::DescribeResultDownloadRequest &request);
                 void DescribeResultDownloadAsync(const Model::DescribeResultDownloadRequest& request, const DescribeResultDownloadAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeResultDownloadOutcomeCallable DescribeResultDownloadCallable(const Model::DescribeResultDownloadRequest& request);
+
+                /**
+                 *This API is used to retrieve all built-in images of all minor versions under a specified major version.
+                 * @param req DescribeSessionImageVersionRequest
+                 * @return DescribeSessionImageVersionOutcome
+                 */
+                DescribeSessionImageVersionOutcome DescribeSessionImageVersion(const Model::DescribeSessionImageVersionRequest &request);
+                void DescribeSessionImageVersionAsync(const Model::DescribeSessionImageVersionRequest& request, const DescribeSessionImageVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSessionImageVersionOutcomeCallable DescribeSessionImageVersionCallable(const Model::DescribeSessionImageVersionRequest& request);
 
                 /**
                  *u200cThis API is used to query the information of a Spark job.

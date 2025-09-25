@@ -54,6 +54,7 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/DescribeCallDetailInfoRequest.h
   include/tencentcloud/trtc/v20190722/model/CreateCloudModerationResponse.h
   include/tencentcloud/trtc/v20190722/model/DescribeTRTCMarketScaleDataResponse.h
+  include/tencentcloud/trtc/v20190722/model/TranslationConfig.h
   include/tencentcloud/trtc/v20190722/model/McuTencentVod.h
   include/tencentcloud/trtc/v20190722/model/DescribeWebRecordResponse.h
   include/tencentcloud/trtc/v20190722/model/DescribeUserInfoRequest.h
@@ -141,6 +142,7 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/CreateCloudSliceTaskResponse.h
   include/tencentcloud/trtc/v20190722/model/DeleteCloudRecordingRequest.h
   include/tencentcloud/trtc/v20190722/model/ModifyCloudModerationResponse.h
+  include/tencentcloud/trtc/v20190722/model/Terminology.h
   include/tencentcloud/trtc/v20190722/model/VideoParams.h
   include/tencentcloud/trtc/v20190722/model/StopStreamIngestResponse.h
   include/tencentcloud/trtc/v20190722/model/SetUserBlockedByStrRoomIdRequest.h
@@ -178,6 +180,7 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/RemoveUserByStrRoomIdRequest.h
   include/tencentcloud/trtc/v20190722/model/RecordParams.h
   include/tencentcloud/trtc/v20190722/model/DescribeStreamIngestRequest.h
+  include/tencentcloud/trtc/v20190722/model/TTSConfig.h
   include/tencentcloud/trtc/v20190722/model/McuAudioParams.h
   include/tencentcloud/trtc/v20190722/model/McuPublishCdnParam.h
   include/tencentcloud/trtc/v20190722/model/AudioParams.h
@@ -231,6 +234,7 @@ set(trtc_src
   src/v20190722/model/DescribeCallDetailInfoRequest.cpp
   src/v20190722/model/CreateCloudModerationResponse.cpp
   src/v20190722/model/DescribeTRTCMarketScaleDataResponse.cpp
+  src/v20190722/model/TranslationConfig.cpp
   src/v20190722/model/McuTencentVod.cpp
   src/v20190722/model/DescribeWebRecordResponse.cpp
   src/v20190722/model/DescribeUserInfoRequest.cpp
@@ -318,6 +322,7 @@ set(trtc_src
   src/v20190722/model/CreateCloudSliceTaskResponse.cpp
   src/v20190722/model/DeleteCloudRecordingRequest.cpp
   src/v20190722/model/ModifyCloudModerationResponse.cpp
+  src/v20190722/model/Terminology.cpp
   src/v20190722/model/VideoParams.cpp
   src/v20190722/model/StopStreamIngestResponse.cpp
   src/v20190722/model/SetUserBlockedByStrRoomIdRequest.cpp
@@ -355,6 +360,7 @@ set(trtc_src
   src/v20190722/model/RemoveUserByStrRoomIdRequest.cpp
   src/v20190722/model/RecordParams.cpp
   src/v20190722/model/DescribeStreamIngestRequest.cpp
+  src/v20190722/model/TTSConfig.cpp
   src/v20190722/model/McuAudioParams.cpp
   src/v20190722/model/McuPublishCdnParam.cpp
   src/v20190722/model/AudioParams.cpp
