@@ -19,14 +19,32 @@ set(quota_public_header
   )
 
 set(quota_public_header_model
-  include/tencentcloud/quota/v20241204/model/CreateAlarmRequest.h
+  include/tencentcloud/quota/v20241204/model/EnableAlarmResponse.h
   include/tencentcloud/quota/v20241204/model/CreateAlarmResponse.h
+  include/tencentcloud/quota/v20241204/model/CreateAlarmRequest.h
+  include/tencentcloud/quota/v20241204/model/Alarm.h
+  include/tencentcloud/quota/v20241204/model/EnableAlarmRequest.h
+  include/tencentcloud/quota/v20241204/model/DeleteAlarmResponse.h
+  include/tencentcloud/quota/v20241204/model/DeleteAlarmRequest.h
+  include/tencentcloud/quota/v20241204/model/DescribeAlarmsResponse.h
+  include/tencentcloud/quota/v20241204/model/UpdateAlarmRequest.h
+  include/tencentcloud/quota/v20241204/model/UpdateAlarmResponse.h
+  include/tencentcloud/quota/v20241204/model/DescribeAlarmsRequest.h
   )
 
 set(quota_src
   src/v20241204/QuotaClient.cpp
-  src/v20241204/model/CreateAlarmRequest.cpp
+  src/v20241204/model/EnableAlarmResponse.cpp
   src/v20241204/model/CreateAlarmResponse.cpp
+  src/v20241204/model/CreateAlarmRequest.cpp
+  src/v20241204/model/Alarm.cpp
+  src/v20241204/model/EnableAlarmRequest.cpp
+  src/v20241204/model/DeleteAlarmResponse.cpp
+  src/v20241204/model/DeleteAlarmRequest.cpp
+  src/v20241204/model/DescribeAlarmsResponse.cpp
+  src/v20241204/model/UpdateAlarmRequest.cpp
+  src/v20241204/model/UpdateAlarmResponse.cpp
+  src/v20241204/model/DescribeAlarmsRequest.cpp
   )
 
 set(quota_include

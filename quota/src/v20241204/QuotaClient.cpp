@@ -83,3 +83,175 @@ QuotaClient::CreateAlarmOutcomeCallable QuotaClient::CreateAlarmCallable(const C
     return task->get_future();
 }
 
+QuotaClient::DeleteAlarmOutcome QuotaClient::DeleteAlarm(const DeleteAlarmRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteAlarm");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteAlarmResponse rsp = DeleteAlarmResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteAlarmOutcome(rsp);
+        else
+            return DeleteAlarmOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteAlarmOutcome(outcome.GetError());
+    }
+}
+
+void QuotaClient::DeleteAlarmAsync(const DeleteAlarmRequest& request, const DeleteAlarmAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteAlarm(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+QuotaClient::DeleteAlarmOutcomeCallable QuotaClient::DeleteAlarmCallable(const DeleteAlarmRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteAlarmOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteAlarm(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+QuotaClient::DescribeAlarmsOutcome QuotaClient::DescribeAlarms(const DescribeAlarmsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAlarms");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAlarmsResponse rsp = DescribeAlarmsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAlarmsOutcome(rsp);
+        else
+            return DescribeAlarmsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAlarmsOutcome(outcome.GetError());
+    }
+}
+
+void QuotaClient::DescribeAlarmsAsync(const DescribeAlarmsRequest& request, const DescribeAlarmsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeAlarms(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+QuotaClient::DescribeAlarmsOutcomeCallable QuotaClient::DescribeAlarmsCallable(const DescribeAlarmsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeAlarmsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeAlarms(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+QuotaClient::EnableAlarmOutcome QuotaClient::EnableAlarm(const EnableAlarmRequest &request)
+{
+    auto outcome = MakeRequest(request, "EnableAlarm");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        EnableAlarmResponse rsp = EnableAlarmResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return EnableAlarmOutcome(rsp);
+        else
+            return EnableAlarmOutcome(o.GetError());
+    }
+    else
+    {
+        return EnableAlarmOutcome(outcome.GetError());
+    }
+}
+
+void QuotaClient::EnableAlarmAsync(const EnableAlarmRequest& request, const EnableAlarmAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->EnableAlarm(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+QuotaClient::EnableAlarmOutcomeCallable QuotaClient::EnableAlarmCallable(const EnableAlarmRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<EnableAlarmOutcome()>>(
+        [this, request]()
+        {
+            return this->EnableAlarm(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+QuotaClient::UpdateAlarmOutcome QuotaClient::UpdateAlarm(const UpdateAlarmRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateAlarm");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateAlarmResponse rsp = UpdateAlarmResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateAlarmOutcome(rsp);
+        else
+            return UpdateAlarmOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateAlarmOutcome(outcome.GetError());
+    }
+}
+
+void QuotaClient::UpdateAlarmAsync(const UpdateAlarmRequest& request, const UpdateAlarmAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UpdateAlarm(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+QuotaClient::UpdateAlarmOutcomeCallable QuotaClient::UpdateAlarmCallable(const UpdateAlarmRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UpdateAlarmOutcome()>>(
+        [this, request]()
+        {
+            return this->UpdateAlarm(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+

@@ -25,6 +25,14 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/quota/v20241204/model/CreateAlarmRequest.h>
 #include <tencentcloud/quota/v20241204/model/CreateAlarmResponse.h>
+#include <tencentcloud/quota/v20241204/model/DeleteAlarmRequest.h>
+#include <tencentcloud/quota/v20241204/model/DeleteAlarmResponse.h>
+#include <tencentcloud/quota/v20241204/model/DescribeAlarmsRequest.h>
+#include <tencentcloud/quota/v20241204/model/DescribeAlarmsResponse.h>
+#include <tencentcloud/quota/v20241204/model/EnableAlarmRequest.h>
+#include <tencentcloud/quota/v20241204/model/EnableAlarmResponse.h>
+#include <tencentcloud/quota/v20241204/model/UpdateAlarmRequest.h>
+#include <tencentcloud/quota/v20241204/model/UpdateAlarmResponse.h>
 
 
 namespace TencentCloud
@@ -42,6 +50,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateAlarmResponse> CreateAlarmOutcome;
                 typedef std::future<CreateAlarmOutcome> CreateAlarmOutcomeCallable;
                 typedef std::function<void(const QuotaClient*, const Model::CreateAlarmRequest&, CreateAlarmOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAlarmAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteAlarmResponse> DeleteAlarmOutcome;
+                typedef std::future<DeleteAlarmOutcome> DeleteAlarmOutcomeCallable;
+                typedef std::function<void(const QuotaClient*, const Model::DeleteAlarmRequest&, DeleteAlarmOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAlarmAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAlarmsResponse> DescribeAlarmsOutcome;
+                typedef std::future<DescribeAlarmsOutcome> DescribeAlarmsOutcomeCallable;
+                typedef std::function<void(const QuotaClient*, const Model::DescribeAlarmsRequest&, DescribeAlarmsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAlarmsAsyncHandler;
+                typedef Outcome<Core::Error, Model::EnableAlarmResponse> EnableAlarmOutcome;
+                typedef std::future<EnableAlarmOutcome> EnableAlarmOutcomeCallable;
+                typedef std::function<void(const QuotaClient*, const Model::EnableAlarmRequest&, EnableAlarmOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableAlarmAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateAlarmResponse> UpdateAlarmOutcome;
+                typedef std::future<UpdateAlarmOutcome> UpdateAlarmOutcomeCallable;
+                typedef std::function<void(const QuotaClient*, const Model::UpdateAlarmRequest&, UpdateAlarmOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateAlarmAsyncHandler;
 
 
 
@@ -53,6 +73,42 @@ namespace TencentCloud
                 CreateAlarmOutcome CreateAlarm(const Model::CreateAlarmRequest &request);
                 void CreateAlarmAsync(const Model::CreateAlarmRequest& request, const CreateAlarmAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateAlarmOutcomeCallable CreateAlarmCallable(const Model::CreateAlarmRequest& request);
+
+                /**
+                 *Deletes alarm rules
+                 * @param req DeleteAlarmRequest
+                 * @return DeleteAlarmOutcome
+                 */
+                DeleteAlarmOutcome DeleteAlarm(const Model::DeleteAlarmRequest &request);
+                void DeleteAlarmAsync(const Model::DeleteAlarmRequest& request, const DeleteAlarmAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteAlarmOutcomeCallable DeleteAlarmCallable(const Model::DeleteAlarmRequest& request);
+
+                /**
+                 *This API is used to query the alarm rule list.
+                 * @param req DescribeAlarmsRequest
+                 * @return DescribeAlarmsOutcome
+                 */
+                DescribeAlarmsOutcome DescribeAlarms(const Model::DescribeAlarmsRequest &request);
+                void DescribeAlarmsAsync(const Model::DescribeAlarmsRequest& request, const DescribeAlarmsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAlarmsOutcomeCallable DescribeAlarmsCallable(const Model::DescribeAlarmsRequest& request);
+
+                /**
+                 *This API is used to enable alarm rules.
+                 * @param req EnableAlarmRequest
+                 * @return EnableAlarmOutcome
+                 */
+                EnableAlarmOutcome EnableAlarm(const Model::EnableAlarmRequest &request);
+                void EnableAlarmAsync(const Model::EnableAlarmRequest& request, const EnableAlarmAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                EnableAlarmOutcomeCallable EnableAlarmCallable(const Model::EnableAlarmRequest& request);
+
+                /**
+                 *Modifies alarm rules
+                 * @param req UpdateAlarmRequest
+                 * @return UpdateAlarmOutcome
+                 */
+                UpdateAlarmOutcome UpdateAlarm(const Model::UpdateAlarmRequest &request);
+                void UpdateAlarmAsync(const Model::UpdateAlarmRequest& request, const UpdateAlarmAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateAlarmOutcomeCallable UpdateAlarmCallable(const Model::UpdateAlarmRequest& request);
 
             };
         }
