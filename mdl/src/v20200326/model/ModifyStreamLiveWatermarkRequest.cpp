@@ -26,7 +26,8 @@ ModifyStreamLiveWatermarkRequest::ModifyStreamLiveWatermarkRequest() :
     m_idHasBeenSet(false),
     m_nameHasBeenSet(false),
     m_imageSettingsHasBeenSet(false),
-    m_textSettingsHasBeenSet(false)
+    m_textSettingsHasBeenSet(false),
+    m_abWatermarkSettingsHasBeenSet(false)
 {
 }
 
@@ -69,6 +70,15 @@ string ModifyStreamLiveWatermarkRequest::ToJsonString() const
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_textSettings.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_abWatermarkSettingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AbWatermarkSettings";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_abWatermarkSettings.ToJsonObject(d[key.c_str()], allocator);
     }
 
 
@@ -141,6 +151,22 @@ void ModifyStreamLiveWatermarkRequest::SetTextSettings(const CreateTextSettings&
 bool ModifyStreamLiveWatermarkRequest::TextSettingsHasBeenSet() const
 {
     return m_textSettingsHasBeenSet;
+}
+
+AbWatermarkSettingsReq ModifyStreamLiveWatermarkRequest::GetAbWatermarkSettings() const
+{
+    return m_abWatermarkSettings;
+}
+
+void ModifyStreamLiveWatermarkRequest::SetAbWatermarkSettings(const AbWatermarkSettingsReq& _abWatermarkSettings)
+{
+    m_abWatermarkSettings = _abWatermarkSettings;
+    m_abWatermarkSettingsHasBeenSet = true;
+}
+
+bool ModifyStreamLiveWatermarkRequest::AbWatermarkSettingsHasBeenSet() const
+{
+    return m_abWatermarkSettingsHasBeenSet;
 }
 
 

@@ -142,6 +142,7 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/AdditionalRateSetting.h
   include/tencentcloud/mdl/v20200326/model/PlanSettings.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveInputSecurityGroupsResponse.h
+  include/tencentcloud/mdl/v20200326/model/AbWatermarkSettingsReq.h
   include/tencentcloud/mdl/v20200326/model/EventNotifySetting.h
   include/tencentcloud/mdl/v20200326/model/DeleteStreamLiveInputResponse.h
   include/tencentcloud/mdl/v20200326/model/StartStreamLiveChannelRequest.h
@@ -302,6 +303,7 @@ set(mdl_src
   src/v20200326/model/AdditionalRateSetting.cpp
   src/v20200326/model/PlanSettings.cpp
   src/v20200326/model/DescribeStreamLiveInputSecurityGroupsResponse.cpp
+  src/v20200326/model/AbWatermarkSettingsReq.cpp
   src/v20200326/model/EventNotifySetting.cpp
   src/v20200326/model/DeleteStreamLiveInputResponse.cpp
   src/v20200326/model/StartStreamLiveChannelRequest.cpp

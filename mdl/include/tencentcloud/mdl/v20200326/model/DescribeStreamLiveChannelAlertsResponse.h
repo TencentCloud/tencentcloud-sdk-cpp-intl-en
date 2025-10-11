@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Alarm information of the channel’s two pipelines
-                     * @return Infos Alarm information of the channel’s two pipelines
+                     * 获取Alarm information of the channel's two pipelines
+                     * @return Infos Alarm information of the channel's two pipelines
                      * 
                      */
                     ChannelAlertInfos GetInfos() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Alarm information of the channel’s two pipelines
+                     * Alarm information of the channel's two pipelines
                      */
                     ChannelAlertInfos m_infos;
                     bool m_infosHasBeenSet;

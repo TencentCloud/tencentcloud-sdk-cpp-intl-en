@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mdp/v20200527/model/SourcePackageConf.h>
+#include <tencentcloud/mdp/v20200527/model/SourceTag.h>
 
 
 namespace TencentCloud
@@ -127,6 +128,27 @@ namespace TencentCloud
                      */
                     bool PackageConfsHasBeenSet() const;
 
+                    /**
+                     * 获取The sourcetag allows ADS to deliver more precise ads based on the Source Tag information
+                     * @return SourceTags The sourcetag allows ADS to deliver more precise ads based on the Source Tag information
+                     * 
+                     */
+                    std::vector<SourceTag> GetSourceTags() const;
+
+                    /**
+                     * 设置The sourcetag allows ADS to deliver more precise ads based on the Source Tag information
+                     * @param _sourceTags The sourcetag allows ADS to deliver more precise ads based on the Source Tag information
+                     * 
+                     */
+                    void SetSourceTags(const std::vector<SourceTag>& _sourceTags);
+
+                    /**
+                     * 判断参数 SourceTags 是否已赋值
+                     * @return SourceTags 是否已赋值
+                     * 
+                     */
+                    bool SourceTagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -152,6 +174,12 @@ namespace TencentCloud
                      */
                     std::vector<SourcePackageConf> m_packageConfs;
                     bool m_packageConfsHasBeenSet;
+
+                    /**
+                     * The sourcetag allows ADS to deliver more precise ads based on the Source Tag information
+                     */
+                    std::vector<SourceTag> m_sourceTags;
+                    bool m_sourceTagsHasBeenSet;
 
                 };
             }

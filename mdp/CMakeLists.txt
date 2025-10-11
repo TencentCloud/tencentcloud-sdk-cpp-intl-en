@@ -159,6 +159,7 @@ set(mdp_public_header_model
   include/tencentcloud/mdp/v20200527/model/DeleteStreamPackageLinearAssemblyProgramRequest.h
   include/tencentcloud/mdp/v20200527/model/DeleteStreamPackageChannelsResponse.h
   include/tencentcloud/mdp/v20200527/model/ProgramScheduleInfo.h
+  include/tencentcloud/mdp/v20200527/model/SourceTag.h
   include/tencentcloud/mdp/v20200527/model/DeleteStreamPackageLinearAssemblyProgramsResponse.h
   include/tencentcloud/mdp/v20200527/model/SpliceInsertInfo.h
   include/tencentcloud/mdp/v20200527/model/CreateStreamPackageLinearAssemblyProgramResponse.h
@@ -332,6 +333,7 @@ set(mdp_src
   src/v20200527/model/DeleteStreamPackageLinearAssemblyProgramRequest.cpp
   src/v20200527/model/DeleteStreamPackageChannelsResponse.cpp
   src/v20200527/model/ProgramScheduleInfo.cpp
+  src/v20200527/model/SourceTag.cpp
   src/v20200527/model/DeleteStreamPackageLinearAssemblyProgramsResponse.cpp
   src/v20200527/model/SpliceInsertInfo.cpp
   src/v20200527/model/CreateStreamPackageLinearAssemblyProgramResponse.cpp

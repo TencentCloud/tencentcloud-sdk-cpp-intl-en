@@ -26,7 +26,8 @@ CreateStreamPackageSourceRequest::CreateStreamPackageSourceRequest() :
     m_attachedLocationHasBeenSet(false),
     m_nameHasBeenSet(false),
     m_typeHasBeenSet(false),
-    m_packageConfsHasBeenSet(false)
+    m_packageConfsHasBeenSet(false),
+    m_sourceTagsHasBeenSet(false)
 {
 }
 
@@ -70,6 +71,21 @@ string CreateStreamPackageSourceRequest::ToJsonString() const
 
         int i=0;
         for (auto itr = m_packageConfs.begin(); itr != m_packageConfs.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_sourceTagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SourceTags";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_sourceTags.begin(); itr != m_sourceTags.end(); ++itr, ++i)
         {
             d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(d[key.c_str()][i], allocator);
@@ -146,6 +162,22 @@ void CreateStreamPackageSourceRequest::SetPackageConfs(const vector<SourcePackag
 bool CreateStreamPackageSourceRequest::PackageConfsHasBeenSet() const
 {
     return m_packageConfsHasBeenSet;
+}
+
+vector<SourceTag> CreateStreamPackageSourceRequest::GetSourceTags() const
+{
+    return m_sourceTags;
+}
+
+void CreateStreamPackageSourceRequest::SetSourceTags(const vector<SourceTag>& _sourceTags)
+{
+    m_sourceTags = _sourceTags;
+    m_sourceTagsHasBeenSet = true;
+}
+
+bool CreateStreamPackageSourceRequest::SourceTagsHasBeenSet() const
+{
+    return m_sourceTagsHasBeenSet;
 }
 
 

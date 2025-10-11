@@ -32,6 +32,7 @@
 #include <tencentcloud/cvm/v20170312/model/LoginSettings.h>
 #include <tencentcloud/cvm/v20170312/model/Tag.h>
 #include <tencentcloud/cvm/v20170312/model/GPUInfo.h>
+#include <tencentcloud/cvm/v20170312/model/Metadata.h>
 
 
 namespace TencentCloud
@@ -139,15 +140,15 @@ namespace TencentCloud
                     bool CPUHasBeenSet() const;
 
                     /**
-                     * 获取Memory capacity; unit: `GB`.
-                     * @return Memory Memory capacity; unit: `GB`.
+                     * 获取Instance memory capacity. unit: GiB.
+                     * @return Memory Instance memory capacity. unit: GiB.
                      * 
                      */
                     int64_t GetMemory() const;
 
                     /**
-                     * 设置Memory capacity; unit: `GB`.
-                     * @param _memory Memory capacity; unit: `GB`.
+                     * 设置Instance memory capacity. unit: GiB.
+                     * @param _memory Instance memory capacity. unit: GiB.
                      * 
                      */
                     void SetMemory(const int64_t& _memory);
@@ -160,15 +161,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Instance status. Valid values: <br><li>NORMAL: instance is normal. <br><li>EXPIRED: instance expired. <br><li>PROTECTIVELY_ISOLATED: instance is protectively isolated.
-                     * @return RestrictState Instance status. Valid values: <br><li>NORMAL: instance is normal. <br><li>EXPIRED: instance expired. <br><li>PROTECTIVELY_ISOLATED: instance is protectively isolated.
+                     * 获取Instance business status. valid values:<br><li>NORMAL: indicates an instance in the NORMAL state</li><li>EXPIRED: indicates an EXPIRED instance</li><li>PROTECTIVELY_ISOLATED: PROTECTIVELY ISOLATED instance</li>.
+                     * @return RestrictState Instance business status. valid values:<br><li>NORMAL: indicates an instance in the NORMAL state</li><li>EXPIRED: indicates an EXPIRED instance</li><li>PROTECTIVELY_ISOLATED: PROTECTIVELY ISOLATED instance</li>.
                      * 
                      */
                     std::string GetRestrictState() const;
 
                     /**
-                     * 设置Instance status. Valid values: <br><li>NORMAL: instance is normal. <br><li>EXPIRED: instance expired. <br><li>PROTECTIVELY_ISOLATED: instance is protectively isolated.
-                     * @param _restrictState Instance status. Valid values: <br><li>NORMAL: instance is normal. <br><li>EXPIRED: instance expired. <br><li>PROTECTIVELY_ISOLATED: instance is protectively isolated.
+                     * 设置Instance business status. valid values:<br><li>NORMAL: indicates an instance in the NORMAL state</li><li>EXPIRED: indicates an EXPIRED instance</li><li>PROTECTIVELY_ISOLATED: PROTECTIVELY ISOLATED instance</li>.
+                     * @param _restrictState Instance business status. valid values:<br><li>NORMAL: indicates an instance in the NORMAL state</li><li>EXPIRED: indicates an EXPIRED instance</li><li>PROTECTIVELY_ISOLATED: PROTECTIVELY ISOLATED instance</li>.
                      * 
                      */
                     void SetRestrictState(const std::string& _restrictState);
@@ -374,19 +375,19 @@ Note: This field may return null, indicating that no valid value is found.
                     bool ImageIdHasBeenSet() const;
 
                     /**
-                     * 获取Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: do not notify upon expiration and do not renew automatically.
-<br><li>Note: this parameter is `null` for postpaid instances.
-                     * @return RenewFlag Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: do not notify upon expiration and do not renew automatically.
-<br><li>Note: this parameter is `null` for postpaid instances.
+                     * 获取AUTO-Renewal flag. valid values:<br><li>`NOTIFY_AND_MANUAL_RENEW`: indicates that a notification of impending expiration is made but AUTO-renewal is not performed</li><li>`NOTIFY_AND_AUTO_RENEW`: indicates that a notification of impending expiration is made AND AUTO-renewal is performed</li><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: indicates that notification that it is about to expire is not made AND AUTO-renewal is not performed.
+Note: this field is null in postpaid mode.
+                     * @return RenewFlag AUTO-Renewal flag. valid values:<br><li>`NOTIFY_AND_MANUAL_RENEW`: indicates that a notification of impending expiration is made but AUTO-renewal is not performed</li><li>`NOTIFY_AND_AUTO_RENEW`: indicates that a notification of impending expiration is made AND AUTO-renewal is performed</li><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: indicates that notification that it is about to expire is not made AND AUTO-renewal is not performed.
+Note: this field is null in postpaid mode.
                      * 
                      */
                     std::string GetRenewFlag() const;
 
                     /**
-                     * 设置Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: do not notify upon expiration and do not renew automatically.
-<br><li>Note: this parameter is `null` for postpaid instances.
-                     * @param _renewFlag Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: do not notify upon expiration and do not renew automatically.
-<br><li>Note: this parameter is `null` for postpaid instances.
+                     * 设置AUTO-Renewal flag. valid values:<br><li>`NOTIFY_AND_MANUAL_RENEW`: indicates that a notification of impending expiration is made but AUTO-renewal is not performed</li><li>`NOTIFY_AND_AUTO_RENEW`: indicates that a notification of impending expiration is made AND AUTO-renewal is performed</li><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: indicates that notification that it is about to expire is not made AND AUTO-renewal is not performed.
+Note: this field is null in postpaid mode.
+                     * @param _renewFlag AUTO-Renewal flag. valid values:<br><li>`NOTIFY_AND_MANUAL_RENEW`: indicates that a notification of impending expiration is made but AUTO-renewal is not performed</li><li>`NOTIFY_AND_AUTO_RENEW`: indicates that a notification of impending expiration is made AND AUTO-renewal is performed</li><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: indicates that notification that it is about to expire is not made AND AUTO-renewal is not performed.
+Note: this field is null in postpaid mode.
                      * 
                      */
                     void SetRenewFlag(const std::string& _renewFlag);
@@ -504,15 +505,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool LoginSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Instance state. Valid values: <br><li>PENDING: creating <br></li><li>LAUNCH_FAILED: creation failed <br></li><li>RUNNING: running <br></li><li>STOPPED: shut down <br></li><li>STARTING: starting <br></li><li>STOPPING: shutting down <br></li><li>REBOOTING: rebooting <br></li><li>SHUTDOWN: shut down and to be terminated <br></li><li>TERMINATING: terminating. <br></li>
-                     * @return InstanceState Instance state. Valid values: <br><li>PENDING: creating <br></li><li>LAUNCH_FAILED: creation failed <br></li><li>RUNNING: running <br></li><li>STOPPED: shut down <br></li><li>STARTING: starting <br></li><li>STOPPING: shutting down <br></li><li>REBOOTING: rebooting <br></li><li>SHUTDOWN: shut down and to be terminated <br></li><li>TERMINATING: terminating. <br></li>
+                     * 获取Instance status. for specific status types, see the instance status table (https://www.tencentcloud.comom/document/api/213/15753?from_cn_redirect=1#InstanceStatus).
+                     * @return InstanceState Instance status. for specific status types, see the instance status table (https://www.tencentcloud.comom/document/api/213/15753?from_cn_redirect=1#InstanceStatus).
                      * 
                      */
                     std::string GetInstanceState() const;
 
                     /**
-                     * 设置Instance state. Valid values: <br><li>PENDING: creating <br></li><li>LAUNCH_FAILED: creation failed <br></li><li>RUNNING: running <br></li><li>STOPPED: shut down <br></li><li>STARTING: starting <br></li><li>STOPPING: shutting down <br></li><li>REBOOTING: rebooting <br></li><li>SHUTDOWN: shut down and to be terminated <br></li><li>TERMINATING: terminating. <br></li>
-                     * @param _instanceState Instance state. Valid values: <br><li>PENDING: creating <br></li><li>LAUNCH_FAILED: creation failed <br></li><li>RUNNING: running <br></li><li>STOPPED: shut down <br></li><li>STARTING: starting <br></li><li>STOPPING: shutting down <br></li><li>REBOOTING: rebooting <br></li><li>SHUTDOWN: shut down and to be terminated <br></li><li>TERMINATING: terminating. <br></li>
+                     * 设置Instance status. for specific status types, see the instance status table (https://www.tencentcloud.comom/document/api/213/15753?from_cn_redirect=1#InstanceStatus).
+                     * @param _instanceState Instance status. for specific status types, see the instance status table (https://www.tencentcloud.comom/document/api/213/15753?from_cn_redirect=1#InstanceStatus).
                      * 
                      */
                     void SetInstanceState(const std::string& _instanceState);
@@ -546,19 +547,23 @@ Note: This field may return null, indicating that no valid value is found.
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Instance billing method after shutdown.
-Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>STOP_CHARGING: billing stops after shutdown <li>NOT_APPLICABLE: the instance is not shut down or stopping billing after shutdown is not applicable to the instance. <br>
-                     * @return StopChargingMode Instance billing method after shutdown.
-Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>STOP_CHARGING: billing stops after shutdown <li>NOT_APPLICABLE: the instance is not shut down or stopping billing after shutdown is not applicable to the instance. <br>
+                     * 获取Shutdown billing mode of an instance.
+
+Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown</li><li>STOP_CHARGING: billing stops after shutdown</li><li>NOT_APPLICABLE: the instance is NOT shut down or stopping billing after shutdown is NOT APPLICABLE to the instance</li>.
+                     * @return StopChargingMode Shutdown billing mode of an instance.
+
+Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown</li><li>STOP_CHARGING: billing stops after shutdown</li><li>NOT_APPLICABLE: the instance is NOT shut down or stopping billing after shutdown is NOT APPLICABLE to the instance</li>.
                      * 
                      */
                     std::string GetStopChargingMode() const;
 
                     /**
-                     * 设置Instance billing method after shutdown.
-Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>STOP_CHARGING: billing stops after shutdown <li>NOT_APPLICABLE: the instance is not shut down or stopping billing after shutdown is not applicable to the instance. <br>
-                     * @param _stopChargingMode Instance billing method after shutdown.
-Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>STOP_CHARGING: billing stops after shutdown <li>NOT_APPLICABLE: the instance is not shut down or stopping billing after shutdown is not applicable to the instance. <br>
+                     * 设置Shutdown billing mode of an instance.
+
+Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown</li><li>STOP_CHARGING: billing stops after shutdown</li><li>NOT_APPLICABLE: the instance is NOT shut down or stopping billing after shutdown is NOT APPLICABLE to the instance</li>.
+                     * @param _stopChargingMode Shutdown billing mode of an instance.
+
+Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown</li><li>STOP_CHARGING: billing stops after shutdown</li><li>NOT_APPLICABLE: the instance is NOT shut down or stopping billing after shutdown is NOT APPLICABLE to the instance</li>.
                      * 
                      */
                     void SetStopChargingMode(const std::string& _stopChargingMode);
@@ -613,15 +618,19 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
                     bool LatestOperationHasBeenSet() const;
 
                     /**
-                     * 获取The latest operation status of the instance. Valid values:<br><li>SUCCESS: operation succeeded<br><li>OPERATING: operation in progress<br><li>FAILED: operation failed
-                     * @return LatestOperationState The latest operation status of the instance. Valid values:<br><li>SUCCESS: operation succeeded<br><li>OPERATING: operation in progress<br><li>FAILED: operation failed
+                     * 获取The latest operation status of the instance. valid values:<br><li>SUCCESS: indicates that the operation succeeded</li><li>OPERATING: indicates that the operation is in progress</li><li>FAILED: indicates that the operation FAILED</li>.
+Note: This field may return null, indicating that no valid value is found.
+                     * @return LatestOperationState The latest operation status of the instance. valid values:<br><li>SUCCESS: indicates that the operation succeeded</li><li>OPERATING: indicates that the operation is in progress</li><li>FAILED: indicates that the operation FAILED</li>.
+Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     std::string GetLatestOperationState() const;
 
                     /**
-                     * 设置The latest operation status of the instance. Valid values:<br><li>SUCCESS: operation succeeded<br><li>OPERATING: operation in progress<br><li>FAILED: operation failed
-                     * @param _latestOperationState The latest operation status of the instance. Valid values:<br><li>SUCCESS: operation succeeded<br><li>OPERATING: operation in progress<br><li>FAILED: operation failed
+                     * 设置The latest operation status of the instance. valid values:<br><li>SUCCESS: indicates that the operation succeeded</li><li>OPERATING: indicates that the operation is in progress</li><li>FAILED: indicates that the operation FAILED</li>.
+Note: This field may return null, indicating that no valid value is found.
+                     * @param _latestOperationState The latest operation status of the instance. valid values:<br><li>SUCCESS: indicates that the operation succeeded</li><li>OPERATING: indicates that the operation is in progress</li><li>FAILED: indicates that the operation FAILED</li>.
+Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetLatestOperationState(const std::string& _latestOperationState);
@@ -655,19 +664,15 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
                     bool LatestOperationRequestIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of a spread placement group.
-Note: this field may return null, indicating that no valid value is obtained.
-                     * @return DisasterRecoverGroupId ID of a spread placement group.
-Note: this field may return null, indicating that no valid value is obtained.
+                     * 获取Spread placement group ID.
+                     * @return DisasterRecoverGroupId Spread placement group ID.
                      * 
                      */
                     std::string GetDisasterRecoverGroupId() const;
 
                     /**
-                     * 设置ID of a spread placement group.
-Note: this field may return null, indicating that no valid value is obtained.
-                     * @param _disasterRecoverGroupId ID of a spread placement group.
-Note: this field may return null, indicating that no valid value is obtained.
+                     * 设置Spread placement group ID.
+                     * @param _disasterRecoverGroupId Spread placement group ID.
                      * 
                      */
                     void SetDisasterRecoverGroupId(const std::string& _disasterRecoverGroupId);
@@ -730,19 +735,15 @@ Note: this field may return null, indicating that no valid value is obtained.
                     bool CamRoleNameHasBeenSet() const;
 
                     /**
-                     * 获取HPC cluster ID.
-Note: this field may return null, indicating that no valid value was found.
-                     * @return HpcClusterId HPC cluster ID.
-Note: this field may return null, indicating that no valid value was found.
+                     * 获取High-performance computing cluster ID.
+                     * @return HpcClusterId High-performance computing cluster ID.
                      * 
                      */
                     std::string GetHpcClusterId() const;
 
                     /**
-                     * 设置HPC cluster ID.
-Note: this field may return null, indicating that no valid value was found.
-                     * @param _hpcClusterId HPC cluster ID.
-Note: this field may return null, indicating that no valid value was found.
+                     * 设置High-performance computing cluster ID.
+                     * @param _hpcClusterId High-performance computing cluster ID.
                      * 
                      */
                     void SetHpcClusterId(const std::string& _hpcClusterId);
@@ -780,15 +781,15 @@ Note: this field may return null, indicating that no valid value was found.
                     bool RdmaIpAddressesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DedicatedClusterId 
+                     * 获取Dedicated cluster ID where the instance is located.
+                     * @return DedicatedClusterId Dedicated cluster ID where the instance is located.
                      * 
                      */
                     std::string GetDedicatedClusterId() const;
 
                     /**
-                     * 设置
-                     * @param _dedicatedClusterId 
+                     * 设置Dedicated cluster ID where the instance is located.
+                     * @param _dedicatedClusterId Dedicated cluster ID where the instance is located.
                      * 
                      */
                     void SetDedicatedClusterId(const std::string& _dedicatedClusterId);
@@ -801,19 +802,15 @@ Note: this field may return null, indicating that no valid value was found.
                     bool DedicatedClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
-Note: this field may return null, indicating that no valid value was found.
-                     * @return IsolatedSource The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
-Note: this field may return null, indicating that no valid value was found.
+                     * 获取Instance isolation type. valid values:<br><li>ARREAR: indicates arrears isolation<br></li><li>EXPIRE: indicates isolation upon expiration<br></li><li>MANMADE: indicates voluntarily refunded isolation<br></li><li>NOTISOLATED: indicates unisolated<br></li>.
+                     * @return IsolatedSource Instance isolation type. valid values:<br><li>ARREAR: indicates arrears isolation<br></li><li>EXPIRE: indicates isolation upon expiration<br></li><li>MANMADE: indicates voluntarily refunded isolation<br></li><li>NOTISOLATED: indicates unisolated<br></li>.
                      * 
                      */
                     std::string GetIsolatedSource() const;
 
                     /**
-                     * 设置The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
-Note: this field may return null, indicating that no valid value was found.
-                     * @param _isolatedSource The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
-Note: this field may return null, indicating that no valid value was found.
+                     * 设置Instance isolation type. valid values:<br><li>ARREAR: indicates arrears isolation<br></li><li>EXPIRE: indicates isolation upon expiration<br></li><li>MANMADE: indicates voluntarily refunded isolation<br></li><li>NOTISOLATED: indicates unisolated<br></li>.
+                     * @param _isolatedSource Instance isolation type. valid values:<br><li>ARREAR: indicates arrears isolation<br></li><li>EXPIRE: indicates isolation upon expiration<br></li><li>MANMADE: indicates voluntarily refunded isolation<br></li><li>NOTISOLATED: indicates unisolated<br></li>.
                      * 
                      */
                     void SetIsolatedSource(const std::string& _isolatedSource);
@@ -826,19 +823,15 @@ Note: this field may return null, indicating that no valid value was found.
                     bool IsolatedSourceHasBeenSet() const;
 
                     /**
-                     * 获取GPU information. This field is only returned for GPU instances.
-Note: this field may return null, indicating that no valid value was found.
-                     * @return GPUInfo GPU information. This field is only returned for GPU instances.
-Note: this field may return null, indicating that no valid value was found.
+                     * 获取GPU information. if it is a gpu type instance, this value will be returned. for other type instances, it does not return.
+                     * @return GPUInfo GPU information. if it is a gpu type instance, this value will be returned. for other type instances, it does not return.
                      * 
                      */
                     GPUInfo GetGPUInfo() const;
 
                     /**
-                     * 设置GPU information. This field is only returned for GPU instances.
-Note: this field may return null, indicating that no valid value was found.
-                     * @param _gPUInfo GPU information. This field is only returned for GPU instances.
-Note: this field may return null, indicating that no valid value was found.
+                     * 设置GPU information. if it is a gpu type instance, this value will be returned. for other type instances, it does not return.
+                     * @param _gPUInfo GPU information. if it is a gpu type instance, this value will be returned. for other type instances, it does not return.
                      * 
                      */
                     void SetGPUInfo(const GPUInfo& _gPUInfo);
@@ -872,15 +865,15 @@ Note: this field may return null, indicating that no valid value was found.
                     bool LicenseTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
-                     * @return DisableApiTermination Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
+                     * 获取Instance destruction protection flag indicates whether an instance is allowed to be deleted through an api. value ranges from:<br><li>true: indicates that instance protection is enabled, deletion through apis is not allowed</li><li>false: indicates that instance protection is disabled, allow passage</li><br>default value: false.
+                     * @return DisableApiTermination Instance destruction protection flag indicates whether an instance is allowed to be deleted through an api. value ranges from:<br><li>true: indicates that instance protection is enabled, deletion through apis is not allowed</li><li>false: indicates that instance protection is disabled, allow passage</li><br>default value: false.
                      * 
                      */
                     bool GetDisableApiTermination() const;
 
                     /**
-                     * 设置Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
-                     * @param _disableApiTermination Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
+                     * 设置Instance destruction protection flag indicates whether an instance is allowed to be deleted through an api. value ranges from:<br><li>true: indicates that instance protection is enabled, deletion through apis is not allowed</li><li>false: indicates that instance protection is disabled, allow passage</li><br>default value: false.
+                     * @param _disableApiTermination Instance destruction protection flag indicates whether an instance is allowed to be deleted through an api. value ranges from:<br><li>true: indicates that instance protection is enabled, deletion through apis is not allowed</li><li>false: indicates that instance protection is disabled, allow passage</li><br>default value: false.
                      * 
                      */
                     void SetDisableApiTermination(const bool& _disableApiTermination);
@@ -960,19 +953,36 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool LatestOperationErrorMsgHasBeenSet() const;
 
                     /**
-                     * 获取Public IPv6 address of the instance.
-Note: this field may return null, indicating that no valid value was found.
-                     * @return PublicIPv6Addresses Public IPv6 address of the instance.
-Note: this field may return null, indicating that no valid value was found.
+                     * 获取Custom metadata. this parameter corresponds to the metadata information specified when creating a CVM. **note: in beta test**.
+                     * @return Metadata Custom metadata. this parameter corresponds to the metadata information specified when creating a CVM. **note: in beta test**.
+                     * 
+                     */
+                    Metadata GetMetadata() const;
+
+                    /**
+                     * 设置Custom metadata. this parameter corresponds to the metadata information specified when creating a CVM. **note: in beta test**.
+                     * @param _metadata Custom metadata. this parameter corresponds to the metadata information specified when creating a CVM. **note: in beta test**.
+                     * 
+                     */
+                    void SetMetadata(const Metadata& _metadata);
+
+                    /**
+                     * 判断参数 Metadata 是否已赋值
+                     * @return Metadata 是否已赋值
+                     * 
+                     */
+                    bool MetadataHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the public IPv6 address bound to the instance.
+                     * @return PublicIPv6Addresses Specifies the public IPv6 address bound to the instance.
                      * 
                      */
                     std::vector<std::string> GetPublicIPv6Addresses() const;
 
                     /**
-                     * 设置Public IPv6 address of the instance.
-Note: this field may return null, indicating that no valid value was found.
-                     * @param _publicIPv6Addresses Public IPv6 address of the instance.
-Note: this field may return null, indicating that no valid value was found.
+                     * 设置Specifies the public IPv6 address bound to the instance.
+                     * @param _publicIPv6Addresses Specifies the public IPv6 address bound to the instance.
                      * 
                      */
                     void SetPublicIPv6Addresses(const std::vector<std::string>& _publicIPv6Addresses);
@@ -1011,13 +1021,13 @@ Note: this field may return null, indicating that no valid value was found.
                     bool m_cPUHasBeenSet;
 
                     /**
-                     * Memory capacity; unit: `GB`.
+                     * Instance memory capacity. unit: GiB.
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Instance status. Valid values: <br><li>NORMAL: instance is normal. <br><li>EXPIRED: instance expired. <br><li>PROTECTIVELY_ISOLATED: instance is protectively isolated.
+                     * Instance business status. valid values:<br><li>NORMAL: indicates an instance in the NORMAL state</li><li>EXPIRED: indicates an EXPIRED instance</li><li>PROTECTIVELY_ISOLATED: PROTECTIVELY ISOLATED instance</li>.
                      */
                     std::string m_restrictState;
                     bool m_restrictStateHasBeenSet;
@@ -1078,8 +1088,8 @@ Note: This field may return null, indicating that no valid value is found.
                     bool m_imageIdHasBeenSet;
 
                     /**
-                     * Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: do not notify upon expiration and do not renew automatically.
-<br><li>Note: this parameter is `null` for postpaid instances.
+                     * AUTO-Renewal flag. valid values:<br><li>`NOTIFY_AND_MANUAL_RENEW`: indicates that a notification of impending expiration is made but AUTO-renewal is not performed</li><li>`NOTIFY_AND_AUTO_RENEW`: indicates that a notification of impending expiration is made AND AUTO-renewal is performed</li><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: indicates that notification that it is about to expire is not made AND AUTO-renewal is not performed.
+Note: this field is null in postpaid mode.
                      */
                     std::string m_renewFlag;
                     bool m_renewFlagHasBeenSet;
@@ -1115,7 +1125,7 @@ Note: This field may return null, indicating that no valid value is found.
                     bool m_loginSettingsHasBeenSet;
 
                     /**
-                     * Instance state. Valid values: <br><li>PENDING: creating <br></li><li>LAUNCH_FAILED: creation failed <br></li><li>RUNNING: running <br></li><li>STOPPED: shut down <br></li><li>STARTING: starting <br></li><li>STOPPING: shutting down <br></li><li>REBOOTING: rebooting <br></li><li>SHUTDOWN: shut down and to be terminated <br></li><li>TERMINATING: terminating. <br></li>
+                     * Instance status. for specific status types, see the instance status table (https://www.tencentcloud.comom/document/api/213/15753?from_cn_redirect=1#InstanceStatus).
                      */
                     std::string m_instanceState;
                     bool m_instanceStateHasBeenSet;
@@ -1127,8 +1137,9 @@ Note: This field may return null, indicating that no valid value is found.
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Instance billing method after shutdown.
-Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>STOP_CHARGING: billing stops after shutdown <li>NOT_APPLICABLE: the instance is not shut down or stopping billing after shutdown is not applicable to the instance. <br>
+                     * Shutdown billing mode of an instance.
+
+Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown</li><li>STOP_CHARGING: billing stops after shutdown</li><li>NOT_APPLICABLE: the instance is NOT shut down or stopping billing after shutdown is NOT APPLICABLE to the instance</li>.
                      */
                     std::string m_stopChargingMode;
                     bool m_stopChargingModeHasBeenSet;
@@ -1146,7 +1157,8 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
                     bool m_latestOperationHasBeenSet;
 
                     /**
-                     * The latest operation status of the instance. Valid values:<br><li>SUCCESS: operation succeeded<br><li>OPERATING: operation in progress<br><li>FAILED: operation failed
+                     * The latest operation status of the instance. valid values:<br><li>SUCCESS: indicates that the operation succeeded</li><li>OPERATING: indicates that the operation is in progress</li><li>FAILED: indicates that the operation FAILED</li>.
+Note: This field may return null, indicating that no valid value is found.
                      */
                     std::string m_latestOperationState;
                     bool m_latestOperationStateHasBeenSet;
@@ -1158,8 +1170,7 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
                     bool m_latestOperationRequestIdHasBeenSet;
 
                     /**
-                     * ID of a spread placement group.
-Note: this field may return null, indicating that no valid value is obtained.
+                     * Spread placement group ID.
                      */
                     std::string m_disasterRecoverGroupId;
                     bool m_disasterRecoverGroupIdHasBeenSet;
@@ -1179,8 +1190,7 @@ Note: this field may return null, indicating that no valid value is obtained.
                     bool m_camRoleNameHasBeenSet;
 
                     /**
-                     * HPC cluster ID.
-Note: this field may return null, indicating that no valid value was found.
+                     * High-performance computing cluster ID.
                      */
                     std::string m_hpcClusterId;
                     bool m_hpcClusterIdHasBeenSet;
@@ -1193,21 +1203,19 @@ Note: this field may return null, indicating that no valid value was found.
                     bool m_rdmaIpAddressesHasBeenSet;
 
                     /**
-                     * 
+                     * Dedicated cluster ID where the instance is located.
                      */
                     std::string m_dedicatedClusterId;
                     bool m_dedicatedClusterIdHasBeenSet;
 
                     /**
-                     * The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
-Note: this field may return null, indicating that no valid value was found.
+                     * Instance isolation type. valid values:<br><li>ARREAR: indicates arrears isolation<br></li><li>EXPIRE: indicates isolation upon expiration<br></li><li>MANMADE: indicates voluntarily refunded isolation<br></li><li>NOTISOLATED: indicates unisolated<br></li>.
                      */
                     std::string m_isolatedSource;
                     bool m_isolatedSourceHasBeenSet;
 
                     /**
-                     * GPU information. This field is only returned for GPU instances.
-Note: this field may return null, indicating that no valid value was found.
+                     * GPU information. if it is a gpu type instance, this value will be returned. for other type instances, it does not return.
                      */
                     GPUInfo m_gPUInfo;
                     bool m_gPUInfoHasBeenSet;
@@ -1219,7 +1227,7 @@ Note: this field may return null, indicating that no valid value was found.
                     bool m_licenseTypeHasBeenSet;
 
                     /**
-                     * Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
+                     * Instance destruction protection flag indicates whether an instance is allowed to be deleted through an api. value ranges from:<br><li>true: indicates that instance protection is enabled, deletion through apis is not allowed</li><li>false: indicates that instance protection is disabled, allow passage</li><br>default value: false.
                      */
                     bool m_disableApiTermination;
                     bool m_disableApiTerminationHasBeenSet;
@@ -1244,8 +1252,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_latestOperationErrorMsgHasBeenSet;
 
                     /**
-                     * Public IPv6 address of the instance.
-Note: this field may return null, indicating that no valid value was found.
+                     * Custom metadata. this parameter corresponds to the metadata information specified when creating a CVM. **note: in beta test**.
+                     */
+                    Metadata m_metadata;
+                    bool m_metadataHasBeenSet;
+
+                    /**
+                     * Specifies the public IPv6 address bound to the instance.
                      */
                     std::vector<std::string> m_publicIPv6Addresses;
                     bool m_publicIPv6AddressesHasBeenSet;

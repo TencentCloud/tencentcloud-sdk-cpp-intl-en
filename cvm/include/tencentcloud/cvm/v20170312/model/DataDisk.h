@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Data disk type. For the detailed restrictions on the data disk type, refer to [Storage Overview](https://cloud.tencent.com/document/product/213/4952). Valid values: <br /><li>LOCAL_BASIC: Local Disk <br /><li>LOCAL_SSD: Local SSD <br /><li>LOCAL_NVME: Local NVMe Disk, which is strongly related with InstanceType and can not be specified <br /><li>LOCAL_PRO: Local HDD, which is strongly related with InstanceType and can not be specified <br /><li>CLOUD_BASIC: Basic Cloud Disk <br /><li>CLOUD_PREMIUM: Premium Disk <br /><li>CLOUD_SSD: Cloud SSD <br /><li>CLOUD_HSSD: Enhanced SSD <br /><li>CLOUD_TSSD: Tremendous SSD <br /><li>CLOUD_BSSD: Balanced SSD <br /><br />Default value: LOCAL_BASIC. <br /><br />This parameter is invalid for the `ResizeInstanceDisk` API.</li></li></li> </li> </li></li></li></li></li></li>
-                     * @return DiskType Data disk type. For the detailed restrictions on the data disk type, refer to [Storage Overview](https://cloud.tencent.com/document/product/213/4952). Valid values: <br /><li>LOCAL_BASIC: Local Disk <br /><li>LOCAL_SSD: Local SSD <br /><li>LOCAL_NVME: Local NVMe Disk, which is strongly related with InstanceType and can not be specified <br /><li>LOCAL_PRO: Local HDD, which is strongly related with InstanceType and can not be specified <br /><li>CLOUD_BASIC: Basic Cloud Disk <br /><li>CLOUD_PREMIUM: Premium Disk <br /><li>CLOUD_SSD: Cloud SSD <br /><li>CLOUD_HSSD: Enhanced SSD <br /><li>CLOUD_TSSD: Tremendous SSD <br /><li>CLOUD_BSSD: Balanced SSD <br /><br />Default value: LOCAL_BASIC. <br /><br />This parameter is invalid for the `ResizeInstanceDisk` API.</li></li></li> </li> </li></li></li></li></li></li>
+                     * 获取Specifies the data disk type. for restrictions on data disk types, refer to [storage overview](https://www.tencentcloud.comom/document/product/213/4952?from_cn_redirect=1). valid values: <br /><li>LOCAL_BASIC: LOCAL disk</li> <li>LOCAL_SSD: LOCAL SSD</li><li>LOCAL_NVME: LOCAL NVME disk, which is closely related to InstanceType and cannot be specified</li><li>LOCAL_PRO: LOCAL HDD, which is closely related to InstanceType and cannot be specified</li><li>cloud_BASIC: BASIC cloud disk</li><li>cloud_PREMIUM: high-performance cloud block storage</li><li>cloud_SSD: SSD cloud disk</li><li>cloud_HSSD: enhanced SSD cloud disk</li> <li>cloud_TSSD: ultra-fast SSD cbs</li><li>cloud_BSSD: universal SSD cloud disk</li><br />default: LOCAL_BASIC.<br/><br />this parameter is invalid for the `ResizeInstanceDisk` api.
+                     * @return DiskType Specifies the data disk type. for restrictions on data disk types, refer to [storage overview](https://www.tencentcloud.comom/document/product/213/4952?from_cn_redirect=1). valid values: <br /><li>LOCAL_BASIC: LOCAL disk</li> <li>LOCAL_SSD: LOCAL SSD</li><li>LOCAL_NVME: LOCAL NVME disk, which is closely related to InstanceType and cannot be specified</li><li>LOCAL_PRO: LOCAL HDD, which is closely related to InstanceType and cannot be specified</li><li>cloud_BASIC: BASIC cloud disk</li><li>cloud_PREMIUM: high-performance cloud block storage</li><li>cloud_SSD: SSD cloud disk</li><li>cloud_HSSD: enhanced SSD cloud disk</li> <li>cloud_TSSD: ultra-fast SSD cbs</li><li>cloud_BSSD: universal SSD cloud disk</li><br />default: LOCAL_BASIC.<br/><br />this parameter is invalid for the `ResizeInstanceDisk` api.
                      * 
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置Data disk type. For the detailed restrictions on the data disk type, refer to [Storage Overview](https://cloud.tencent.com/document/product/213/4952). Valid values: <br /><li>LOCAL_BASIC: Local Disk <br /><li>LOCAL_SSD: Local SSD <br /><li>LOCAL_NVME: Local NVMe Disk, which is strongly related with InstanceType and can not be specified <br /><li>LOCAL_PRO: Local HDD, which is strongly related with InstanceType and can not be specified <br /><li>CLOUD_BASIC: Basic Cloud Disk <br /><li>CLOUD_PREMIUM: Premium Disk <br /><li>CLOUD_SSD: Cloud SSD <br /><li>CLOUD_HSSD: Enhanced SSD <br /><li>CLOUD_TSSD: Tremendous SSD <br /><li>CLOUD_BSSD: Balanced SSD <br /><br />Default value: LOCAL_BASIC. <br /><br />This parameter is invalid for the `ResizeInstanceDisk` API.</li></li></li> </li> </li></li></li></li></li></li>
-                     * @param _diskType Data disk type. For the detailed restrictions on the data disk type, refer to [Storage Overview](https://cloud.tencent.com/document/product/213/4952). Valid values: <br /><li>LOCAL_BASIC: Local Disk <br /><li>LOCAL_SSD: Local SSD <br /><li>LOCAL_NVME: Local NVMe Disk, which is strongly related with InstanceType and can not be specified <br /><li>LOCAL_PRO: Local HDD, which is strongly related with InstanceType and can not be specified <br /><li>CLOUD_BASIC: Basic Cloud Disk <br /><li>CLOUD_PREMIUM: Premium Disk <br /><li>CLOUD_SSD: Cloud SSD <br /><li>CLOUD_HSSD: Enhanced SSD <br /><li>CLOUD_TSSD: Tremendous SSD <br /><li>CLOUD_BSSD: Balanced SSD <br /><br />Default value: LOCAL_BASIC. <br /><br />This parameter is invalid for the `ResizeInstanceDisk` API.</li></li></li> </li> </li></li></li></li></li></li>
+                     * 设置Specifies the data disk type. for restrictions on data disk types, refer to [storage overview](https://www.tencentcloud.comom/document/product/213/4952?from_cn_redirect=1). valid values: <br /><li>LOCAL_BASIC: LOCAL disk</li> <li>LOCAL_SSD: LOCAL SSD</li><li>LOCAL_NVME: LOCAL NVME disk, which is closely related to InstanceType and cannot be specified</li><li>LOCAL_PRO: LOCAL HDD, which is closely related to InstanceType and cannot be specified</li><li>cloud_BASIC: BASIC cloud disk</li><li>cloud_PREMIUM: high-performance cloud block storage</li><li>cloud_SSD: SSD cloud disk</li><li>cloud_HSSD: enhanced SSD cloud disk</li> <li>cloud_TSSD: ultra-fast SSD cbs</li><li>cloud_BSSD: universal SSD cloud disk</li><br />default: LOCAL_BASIC.<br/><br />this parameter is invalid for the `ResizeInstanceDisk` api.
+                     * @param _diskType Specifies the data disk type. for restrictions on data disk types, refer to [storage overview](https://www.tencentcloud.comom/document/product/213/4952?from_cn_redirect=1). valid values: <br /><li>LOCAL_BASIC: LOCAL disk</li> <li>LOCAL_SSD: LOCAL SSD</li><li>LOCAL_NVME: LOCAL NVME disk, which is closely related to InstanceType and cannot be specified</li><li>LOCAL_PRO: LOCAL HDD, which is closely related to InstanceType and cannot be specified</li><li>cloud_BASIC: BASIC cloud disk</li><li>cloud_PREMIUM: high-performance cloud block storage</li><li>cloud_SSD: SSD cloud disk</li><li>cloud_HSSD: enhanced SSD cloud disk</li> <li>cloud_TSSD: ultra-fast SSD cbs</li><li>cloud_BSSD: universal SSD cloud disk</li><br />default: LOCAL_BASIC.<br/><br />this parameter is invalid for the `ResizeInstanceDisk` api.
                      * 
                      */
                     void SetDiskType(const std::string& _diskType);
@@ -177,23 +177,27 @@ This parameter currently only serves as a response parameter for query apis such
                     bool EncryptHasBeenSet() const;
 
                     /**
-                     * 获取Custom CMK's corresponding ID, with a value of UUID or something similar to kms - abcd1234. used for encrypting cloud disks.
+                     * 获取Custom CMK ID, value is UUID or similar to kms-abcd1234. used for encrypted cloud disk.
 
 This parameter is currently only used for the `RunInstances` api.
-                     * @return KmsKeyId Custom CMK's corresponding ID, with a value of UUID or something similar to kms - abcd1234. used for encrypting cloud disks.
+Note: This field may return null, indicating that no valid value is found.
+                     * @return KmsKeyId Custom CMK ID, value is UUID or similar to kms-abcd1234. used for encrypted cloud disk.
 
 This parameter is currently only used for the `RunInstances` api.
+Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     std::string GetKmsKeyId() const;
 
                     /**
-                     * 设置Custom CMK's corresponding ID, with a value of UUID or something similar to kms - abcd1234. used for encrypting cloud disks.
+                     * 设置Custom CMK ID, value is UUID or similar to kms-abcd1234. used for encrypted cloud disk.
 
 This parameter is currently only used for the `RunInstances` api.
-                     * @param _kmsKeyId Custom CMK's corresponding ID, with a value of UUID or something similar to kms - abcd1234. used for encrypting cloud disks.
+Note: This field may return null, indicating that no valid value is found.
+                     * @param _kmsKeyId Custom CMK ID, value is UUID or similar to kms-abcd1234. used for encrypted cloud disk.
 
 This parameter is currently only used for the `RunInstances` api.
+Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetKmsKeyId(const std::string& _kmsKeyId);
@@ -206,19 +210,23 @@ This parameter is currently only used for the `RunInstances` api.
                     bool KmsKeyIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the cloud disk performance (unit: MiB/s). using this parameter allows you to purchase additional performance for the cloud disk.
-Currently only supports ultra-fast CLOUD disk (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD).
-                     * @return ThroughputPerformance Specifies the cloud disk performance (unit: MiB/s). using this parameter allows you to purchase additional performance for the cloud disk.
-Currently only supports ultra-fast CLOUD disk (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD).
+                     * 获取Cloud disk performance (unit: MiB/s). specifies additional performance for cloud disks.
+Currently only supports extreme cbs (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD).
+Note: This field may return null, indicating that no valid value is found.
+                     * @return ThroughputPerformance Cloud disk performance (unit: MiB/s). specifies additional performance for cloud disks.
+Currently only supports extreme cbs (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD).
+Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     int64_t GetThroughputPerformance() const;
 
                     /**
-                     * 设置Specifies the cloud disk performance (unit: MiB/s). using this parameter allows you to purchase additional performance for the cloud disk.
-Currently only supports ultra-fast CLOUD disk (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD).
-                     * @param _throughputPerformance Specifies the cloud disk performance (unit: MiB/s). using this parameter allows you to purchase additional performance for the cloud disk.
-Currently only supports ultra-fast CLOUD disk (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD).
+                     * 设置Cloud disk performance (unit: MiB/s). specifies additional performance for cloud disks.
+Currently only supports extreme cbs (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD).
+Note: This field may return null, indicating that no valid value is found.
+                     * @param _throughputPerformance Cloud disk performance (unit: MiB/s). specifies additional performance for cloud disks.
+Currently only supports extreme cbs (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD).
+Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetThroughputPerformance(const int64_t& _throughputPerformance);
@@ -231,15 +239,19 @@ Currently only supports ultra-fast CLOUD disk (CLOUD_TSSD) and enhanced SSD CLOU
                     bool ThroughputPerformanceHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the exclusive cluster ID it belongs to.
-                     * @return CdcId Specifies the exclusive cluster ID it belongs to.
+                     * 获取Specifies the dedicated cluster ID belonging to.
+Note: This field may return null, indicating that no valid value is found.
+                     * @return CdcId Specifies the dedicated cluster ID belonging to.
+Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     std::string GetCdcId() const;
 
                     /**
-                     * 设置Specifies the exclusive cluster ID it belongs to.
-                     * @param _cdcId Specifies the exclusive cluster ID it belongs to.
+                     * 设置Specifies the dedicated cluster ID belonging to.
+Note: This field may return null, indicating that no valid value is found.
+                     * @param _cdcId Specifies the dedicated cluster ID belonging to.
+Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetCdcId(const std::string& _cdcId);
@@ -252,23 +264,23 @@ Currently only supports ultra-fast CLOUD disk (CLOUD_TSSD) and enhanced SSD CLOU
                     bool CdcIdHasBeenSet() const;
 
                     /**
-                     * 获取Burst performance.
+                     * 获取Burstable performance.
 
-<B>Note: this feature is in beta test.</b>.
-                     * @return BurstPerformance Burst performance.
+<B>Note: this field is in beta test.</b>.
+                     * @return BurstPerformance Burstable performance.
 
-<B>Note: this feature is in beta test.</b>.
+<B>Note: this field is in beta test.</b>.
                      * 
                      */
                     bool GetBurstPerformance() const;
 
                     /**
-                     * 设置Burst performance.
+                     * 设置Burstable performance.
 
-<B>Note: this feature is in beta test.</b>.
-                     * @param _burstPerformance Burst performance.
+<B>Note: this field is in beta test.</b>.
+                     * @param _burstPerformance Burstable performance.
 
-<B>Note: this feature is in beta test.</b>.
+<B>Note: this field is in beta test.</b>.
                      * 
                      */
                     void SetBurstPerformance(const bool& _burstPerformance);
@@ -310,7 +322,7 @@ Currently only supports ultra-fast CLOUD disk (CLOUD_TSSD) and enhanced SSD CLOU
                     bool m_diskSizeHasBeenSet;
 
                     /**
-                     * Data disk type. For the detailed restrictions on the data disk type, refer to [Storage Overview](https://cloud.tencent.com/document/product/213/4952). Valid values: <br /><li>LOCAL_BASIC: Local Disk <br /><li>LOCAL_SSD: Local SSD <br /><li>LOCAL_NVME: Local NVMe Disk, which is strongly related with InstanceType and can not be specified <br /><li>LOCAL_PRO: Local HDD, which is strongly related with InstanceType and can not be specified <br /><li>CLOUD_BASIC: Basic Cloud Disk <br /><li>CLOUD_PREMIUM: Premium Disk <br /><li>CLOUD_SSD: Cloud SSD <br /><li>CLOUD_HSSD: Enhanced SSD <br /><li>CLOUD_TSSD: Tremendous SSD <br /><li>CLOUD_BSSD: Balanced SSD <br /><br />Default value: LOCAL_BASIC. <br /><br />This parameter is invalid for the `ResizeInstanceDisk` API.</li></li></li> </li> </li></li></li></li></li></li>
+                     * Specifies the data disk type. for restrictions on data disk types, refer to [storage overview](https://www.tencentcloud.comom/document/product/213/4952?from_cn_redirect=1). valid values: <br /><li>LOCAL_BASIC: LOCAL disk</li> <li>LOCAL_SSD: LOCAL SSD</li><li>LOCAL_NVME: LOCAL NVME disk, which is closely related to InstanceType and cannot be specified</li><li>LOCAL_PRO: LOCAL HDD, which is closely related to InstanceType and cannot be specified</li><li>cloud_BASIC: BASIC cloud disk</li><li>cloud_PREMIUM: high-performance cloud block storage</li><li>cloud_SSD: SSD cloud disk</li><li>cloud_HSSD: enhanced SSD cloud disk</li> <li>cloud_TSSD: ultra-fast SSD cbs</li><li>cloud_BSSD: universal SSD cloud disk</li><br />default: LOCAL_BASIC.<br/><br />this parameter is invalid for the `ResizeInstanceDisk` api.
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;
@@ -341,30 +353,33 @@ This parameter currently only serves as a response parameter for query apis such
                     bool m_encryptHasBeenSet;
 
                     /**
-                     * Custom CMK's corresponding ID, with a value of UUID or something similar to kms - abcd1234. used for encrypting cloud disks.
+                     * Custom CMK ID, value is UUID or similar to kms-abcd1234. used for encrypted cloud disk.
 
 This parameter is currently only used for the `RunInstances` api.
+Note: This field may return null, indicating that no valid value is found.
                      */
                     std::string m_kmsKeyId;
                     bool m_kmsKeyIdHasBeenSet;
 
                     /**
-                     * Specifies the cloud disk performance (unit: MiB/s). using this parameter allows you to purchase additional performance for the cloud disk.
-Currently only supports ultra-fast CLOUD disk (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD).
+                     * Cloud disk performance (unit: MiB/s). specifies additional performance for cloud disks.
+Currently only supports extreme cbs (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD).
+Note: This field may return null, indicating that no valid value is found.
                      */
                     int64_t m_throughputPerformance;
                     bool m_throughputPerformanceHasBeenSet;
 
                     /**
-                     * Specifies the exclusive cluster ID it belongs to.
+                     * Specifies the dedicated cluster ID belonging to.
+Note: This field may return null, indicating that no valid value is found.
                      */
                     std::string m_cdcId;
                     bool m_cdcIdHasBeenSet;
 
                     /**
-                     * Burst performance.
+                     * Burstable performance.
 
-<B>Note: this feature is in beta test.</b>.
+<B>Note: this field is in beta test.</b>.
                      */
                     bool m_burstPerformance;
                     bool m_burstPerformanceHasBeenSet;

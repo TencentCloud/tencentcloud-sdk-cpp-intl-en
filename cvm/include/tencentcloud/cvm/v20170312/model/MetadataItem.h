@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Custom metadata key. it must comply with the regular expression ^[a-zA-Z0-9_-]+$. the length is less than or equal to 128 bytes (case-sensitive).
-
-                     * @return Key Custom metadata key. it must comply with the regular expression ^[a-zA-Z0-9_-]+$. the length is less than or equal to 128 bytes (case-sensitive).
-
+                     * 获取Custom metadata key, consisting of uppercase letters (A-Z), lowercase letters (A-Z), digits (0-9), underscores (_), or hyphens (-), with a size limit of 128 bytes.
+                     * @return Key Custom metadata key, consisting of uppercase letters (A-Z), lowercase letters (A-Z), digits (0-9), underscores (_), or hyphens (-), with a size limit of 128 bytes.
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置Custom metadata key. it must comply with the regular expression ^[a-zA-Z0-9_-]+$. the length is less than or equal to 128 bytes (case-sensitive).
-
-                     * @param _key Custom metadata key. it must comply with the regular expression ^[a-zA-Z0-9_-]+$. the length is less than or equal to 128 bytes (case-sensitive).
-
+                     * 设置Custom metadata key, consisting of uppercase letters (A-Z), lowercase letters (A-Z), digits (0-9), underscores (_), or hyphens (-), with a size limit of 128 bytes.
+                     * @param _key Custom metadata key, consisting of uppercase letters (A-Z), lowercase letters (A-Z), digits (0-9), underscores (_), or hyphens (-), with a size limit of 128 bytes.
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -72,15 +68,15 @@ namespace TencentCloud
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取Specifies a custom metadata value. it supports any data . The size is &le; 256 KB. it is case-sensitive.
-                     * @return Value Specifies a custom metadata value. it supports any data . The size is &le; 256 KB. it is case-sensitive.
+                     * 获取Custom metadata value. The upper limit of message size is 256 KB.
+                     * @return Value Custom metadata value. The upper limit of message size is 256 KB.
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置Specifies a custom metadata value. it supports any data . The size is &le; 256 KB. it is case-sensitive.
-                     * @param _value Specifies a custom metadata value. it supports any data . The size is &le; 256 KB. it is case-sensitive.
+                     * 设置Custom metadata value. The upper limit of message size is 256 KB.
+                     * @param _value Custom metadata value. The upper limit of message size is 256 KB.
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -95,14 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Custom metadata key. it must comply with the regular expression ^[a-zA-Z0-9_-]+$. the length is less than or equal to 128 bytes (case-sensitive).
-
+                     * Custom metadata key, consisting of uppercase letters (A-Z), lowercase letters (A-Z), digits (0-9), underscores (_), or hyphens (-), with a size limit of 128 bytes.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * Specifies a custom metadata value. it supports any data . The size is &le; 256 KB. it is case-sensitive.
+                     * Custom metadata value. The upper limit of message size is 256 KB.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

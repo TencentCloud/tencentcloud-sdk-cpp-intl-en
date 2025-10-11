@@ -70,21 +70,21 @@ namespace TencentCloud
                     /**
                      * 获取Offset, valid when Type is SpecifyTimeRange.
                      * @return Offset Offset, valid when Type is SpecifyTimeRange.
-                     * 
+                     * @deprecated
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset, valid when Type is SpecifyTimeRange.
                      * @param _offset Offset, valid when Type is SpecifyTimeRange.
-                     * 
+                     * @deprecated
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool OffsetHasBeenSet() const;
 

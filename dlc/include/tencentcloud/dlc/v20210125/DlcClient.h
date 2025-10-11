@@ -27,6 +27,8 @@
 #include <tencentcloud/dlc/v20210125/model/AddUsersToWorkGroupResponse.h>
 #include <tencentcloud/dlc/v20210125/model/AlterDMSDatabaseRequest.h>
 #include <tencentcloud/dlc/v20210125/model/AlterDMSDatabaseResponse.h>
+#include <tencentcloud/dlc/v20210125/model/AttachDataMaskPolicyRequest.h>
+#include <tencentcloud/dlc/v20210125/model/AttachDataMaskPolicyResponse.h>
 #include <tencentcloud/dlc/v20210125/model/AttachUserPolicyRequest.h>
 #include <tencentcloud/dlc/v20210125/model/AttachUserPolicyResponse.h>
 #include <tencentcloud/dlc/v20210125/model/AttachWorkGroupPolicyRequest.h>
@@ -55,6 +57,8 @@
 #include <tencentcloud/dlc/v20210125/model/CreateDMSDatabaseResponse.h>
 #include <tencentcloud/dlc/v20210125/model/CreateDataEngineRequest.h>
 #include <tencentcloud/dlc/v20210125/model/CreateDataEngineResponse.h>
+#include <tencentcloud/dlc/v20210125/model/CreateDataMaskStrategyRequest.h>
+#include <tencentcloud/dlc/v20210125/model/CreateDataMaskStrategyResponse.h>
 #include <tencentcloud/dlc/v20210125/model/CreateInternalTableRequest.h>
 #include <tencentcloud/dlc/v20210125/model/CreateInternalTableResponse.h>
 #include <tencentcloud/dlc/v20210125/model/CreateResultDownloadRequest.h>
@@ -251,6 +255,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AlterDMSDatabaseResponse> AlterDMSDatabaseOutcome;
                 typedef std::future<AlterDMSDatabaseOutcome> AlterDMSDatabaseOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::AlterDMSDatabaseRequest&, AlterDMSDatabaseOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AlterDMSDatabaseAsyncHandler;
+                typedef Outcome<Core::Error, Model::AttachDataMaskPolicyResponse> AttachDataMaskPolicyOutcome;
+                typedef std::future<AttachDataMaskPolicyOutcome> AttachDataMaskPolicyOutcomeCallable;
+                typedef std::function<void(const DlcClient*, const Model::AttachDataMaskPolicyRequest&, AttachDataMaskPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AttachDataMaskPolicyAsyncHandler;
                 typedef Outcome<Core::Error, Model::AttachUserPolicyResponse> AttachUserPolicyOutcome;
                 typedef std::future<AttachUserPolicyOutcome> AttachUserPolicyOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::AttachUserPolicyRequest&, AttachUserPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AttachUserPolicyAsyncHandler;
@@ -293,6 +300,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateDataEngineResponse> CreateDataEngineOutcome;
                 typedef std::future<CreateDataEngineOutcome> CreateDataEngineOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::CreateDataEngineRequest&, CreateDataEngineOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDataEngineAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateDataMaskStrategyResponse> CreateDataMaskStrategyOutcome;
+                typedef std::future<CreateDataMaskStrategyOutcome> CreateDataMaskStrategyOutcomeCallable;
+                typedef std::function<void(const DlcClient*, const Model::CreateDataMaskStrategyRequest&, CreateDataMaskStrategyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDataMaskStrategyAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateInternalTableResponse> CreateInternalTableOutcome;
                 typedef std::future<CreateInternalTableOutcome> CreateInternalTableOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::CreateInternalTableRequest&, CreateInternalTableOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateInternalTableAsyncHandler;
@@ -579,6 +589,15 @@ namespace TencentCloud
                 AlterDMSDatabaseOutcomeCallable AlterDMSDatabaseCallable(const Model::AlterDMSDatabaseRequest& request);
 
                 /**
+                 *This API is used to bind a DMask policy.
+                 * @param req AttachDataMaskPolicyRequest
+                 * @return AttachDataMaskPolicyOutcome
+                 */
+                AttachDataMaskPolicyOutcome AttachDataMaskPolicy(const Model::AttachDataMaskPolicyRequest &request);
+                void AttachDataMaskPolicyAsync(const Model::AttachDataMaskPolicyRequest& request, const AttachDataMaskPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AttachDataMaskPolicyOutcomeCallable AttachDataMaskPolicyCallable(const Model::AttachDataMaskPolicyRequest& request);
+
+                /**
                  *This API is used to bind the authentication policy to the user.
                  * @param req AttachUserPolicyRequest
                  * @return AttachUserPolicyOutcome
@@ -703,6 +722,15 @@ namespace TencentCloud
                 CreateDataEngineOutcome CreateDataEngine(const Model::CreateDataEngineRequest &request);
                 void CreateDataEngineAsync(const Model::CreateDataEngineRequest& request, const CreateDataEngineAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateDataEngineOutcomeCallable CreateDataEngineCallable(const Model::CreateDataEngineRequest& request);
+
+                /**
+                 *This API is used to create a DMask policy.
+                 * @param req CreateDataMaskStrategyRequest
+                 * @return CreateDataMaskStrategyOutcome
+                 */
+                CreateDataMaskStrategyOutcome CreateDataMaskStrategy(const Model::CreateDataMaskStrategyRequest &request);
+                void CreateDataMaskStrategyAsync(const Model::CreateDataMaskStrategyRequest& request, const CreateDataMaskStrategyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateDataMaskStrategyOutcomeCallable CreateDataMaskStrategyCallable(const Model::CreateDataMaskStrategyRequest& request);
 
                 /**
                  *This API is used to create a managed internal table. It has been disused.

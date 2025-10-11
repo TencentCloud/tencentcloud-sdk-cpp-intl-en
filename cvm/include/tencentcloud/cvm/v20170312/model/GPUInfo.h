@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of GPUs. 
-Note: this field may return `null`, indicating that no valid value can be found.
-                     * @return GPUCount Number of GPUs. 
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * 获取Specifies the GPU count of the instance. a value less than 1 indicates VGPU type, and a value larger than 1 indicates GPU passthrough type.
+                     * @return GPUCount Specifies the GPU count of the instance. a value less than 1 indicates VGPU type, and a value larger than 1 indicates GPU passthrough type.
                      * 
                      */
                     double GetGPUCount() const;
 
                     /**
-                     * 设置Number of GPUs. 
-Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param _gPUCount Number of GPUs. 
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * 设置Specifies the GPU count of the instance. a value less than 1 indicates VGPU type, and a value larger than 1 indicates GPU passthrough type.
+                     * @param _gPUCount Specifies the GPU count of the instance. a value less than 1 indicates VGPU type, and a value larger than 1 indicates GPU passthrough type.
                      * 
                      */
                     void SetGPUCount(const double& _gPUCount);
@@ -72,19 +68,15 @@ Note: this field may return `null`, indicating that no valid value can be found.
                     bool GPUCountHasBeenSet() const;
 
                     /**
-                     * 获取GPU address
-Note: this field may return `null`, indicating that no valid value can be found.
-                     * @return GPUId GPU address
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * 获取Specifies the GPU address of the instance.
+                     * @return GPUId Specifies the GPU address of the instance.
                      * 
                      */
                     std::vector<std::string> GetGPUId() const;
 
                     /**
-                     * 设置GPU address
-Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param _gPUId GPU address
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * 设置Specifies the GPU address of the instance.
+                     * @param _gPUId Specifies the GPU address of the instance.
                      * 
                      */
                     void SetGPUId(const std::vector<std::string>& _gPUId);
@@ -97,19 +89,15 @@ Note: this field may return `null`, indicating that no valid value can be found.
                     bool GPUIdHasBeenSet() const;
 
                     /**
-                     * 获取GPU type of the instance.
-Note: this field may return `null`, indicating that no valid value can be found.
-                     * @return GPUType GPU type of the instance.
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * 获取Specifies the GPU type of the instance.
+                     * @return GPUType Specifies the GPU type of the instance.
                      * 
                      */
                     std::string GetGPUType() const;
 
                     /**
-                     * 设置GPU type of the instance.
-Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param _gPUType GPU type of the instance.
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * 设置Specifies the GPU type of the instance.
+                     * @param _gPUType Specifies the GPU type of the instance.
                      * 
                      */
                     void SetGPUType(const std::string& _gPUType);
@@ -124,22 +112,19 @@ Note: this field may return `null`, indicating that no valid value can be found.
                 private:
 
                     /**
-                     * Number of GPUs. 
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * Specifies the GPU count of the instance. a value less than 1 indicates VGPU type, and a value larger than 1 indicates GPU passthrough type.
                      */
                     double m_gPUCount;
                     bool m_gPUCountHasBeenSet;
 
                     /**
-                     * GPU address
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * Specifies the GPU address of the instance.
                      */
                     std::vector<std::string> m_gPUId;
                     bool m_gPUIdHasBeenSet;
 
                     /**
-                     * GPU type of the instance.
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * Specifies the GPU type of the instance.
                      */
                     std::string m_gPUType;
                     bool m_gPUTypeHasBeenSet;

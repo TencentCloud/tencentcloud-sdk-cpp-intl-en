@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The name of the target database. `*` represents all databases in the current catalog. To grant admin permissions, it must be `*`; to grant data connection permissions, it must be null; to grant other permissions, it can be any database.
-                     * @return Database The name of the target database. `*` represents all databases in the current catalog. To grant admin permissions, it must be `*`; to grant data connection permissions, it must be null; to grant other permissions, it can be any database.
+                     * 获取The database name requiring authorization. use * to represent all databases under the current Catalog. for administrator level authorization type, only * is allowed. for data connection level authorization type, leave it blank. for other types, any specified database is allowed.
+                     * @return Database The database name requiring authorization. use * to represent all databases under the current Catalog. for administrator level authorization type, only * is allowed. for data connection level authorization type, leave it blank. for other types, any specified database is allowed.
                      * 
                      */
                     std::string GetDatabase() const;
 
                     /**
-                     * 设置The name of the target database. `*` represents all databases in the current catalog. To grant admin permissions, it must be `*`; to grant data connection permissions, it must be null; to grant other permissions, it can be any database.
-                     * @param _database The name of the target database. `*` represents all databases in the current catalog. To grant admin permissions, it must be `*`; to grant data connection permissions, it must be null; to grant other permissions, it can be any database.
+                     * 设置The database name requiring authorization. use * to represent all databases under the current Catalog. for administrator level authorization type, only * is allowed. for data connection level authorization type, leave it blank. for other types, any specified database is allowed.
+                     * @param _database The database name requiring authorization. use * to represent all databases under the current Catalog. for administrator level authorization type, only * is allowed. for data connection level authorization type, leave it blank. for other types, any specified database is allowed.
                      * 
                      */
                     void SetDatabase(const std::string& _database);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DatabaseHasBeenSet() const;
 
                     /**
-                     * 获取The name of the target data source. To grant admin permission, it must be `*` (all resources at this level); to grant data source and database permissions, it must be `COSDataCatalog` or `*`; to grant table permissions, it can be a custom data source; if it is left empty, `DataLakeCatalog` is used. Note: To grant permissions on a custom data source, the permissions that can be managed in the Data Lake Compute console are subsets of the account permissions granted when you connect the data source to the console.
-                     * @return Catalog The name of the target data source. To grant admin permission, it must be `*` (all resources at this level); to grant data source and database permissions, it must be `COSDataCatalog` or `*`; to grant table permissions, it can be a custom data source; if it is left empty, `DataLakeCatalog` is used. Note: To grant permissions on a custom data source, the permissions that can be managed in the Data Lake Compute console are subsets of the account permissions granted when you connect the data source to the console.
+                     * 获取Specifies the name of the data source requiring authorization. at administrator level, only * is supported (representing all resources at this level). for database-level or data source-level authentication, only COSDataCatalog or * is supported. for table-level authentication, user-defined data sources can be filled. defaults to DataLakeCatalog if left blank. note: if authenticating a user-defined data source, the permissions DLC can manage are a subset of the account provided when the user accesses the data source.
+                     * @return Catalog Specifies the name of the data source requiring authorization. at administrator level, only * is supported (representing all resources at this level). for database-level or data source-level authentication, only COSDataCatalog or * is supported. for table-level authentication, user-defined data sources can be filled. defaults to DataLakeCatalog if left blank. note: if authenticating a user-defined data source, the permissions DLC can manage are a subset of the account provided when the user accesses the data source.
                      * 
                      */
                     std::string GetCatalog() const;
 
                     /**
-                     * 设置The name of the target data source. To grant admin permission, it must be `*` (all resources at this level); to grant data source and database permissions, it must be `COSDataCatalog` or `*`; to grant table permissions, it can be a custom data source; if it is left empty, `DataLakeCatalog` is used. Note: To grant permissions on a custom data source, the permissions that can be managed in the Data Lake Compute console are subsets of the account permissions granted when you connect the data source to the console.
-                     * @param _catalog The name of the target data source. To grant admin permission, it must be `*` (all resources at this level); to grant data source and database permissions, it must be `COSDataCatalog` or `*`; to grant table permissions, it can be a custom data source; if it is left empty, `DataLakeCatalog` is used. Note: To grant permissions on a custom data source, the permissions that can be managed in the Data Lake Compute console are subsets of the account permissions granted when you connect the data source to the console.
+                     * 设置Specifies the name of the data source requiring authorization. at administrator level, only * is supported (representing all resources at this level). for database-level or data source-level authentication, only COSDataCatalog or * is supported. for table-level authentication, user-defined data sources can be filled. defaults to DataLakeCatalog if left blank. note: if authenticating a user-defined data source, the permissions DLC can manage are a subset of the account provided when the user accesses the data source.
+                     * @param _catalog Specifies the name of the data source requiring authorization. at administrator level, only * is supported (representing all resources at this level). for database-level or data source-level authentication, only COSDataCatalog or * is supported. for table-level authentication, user-defined data sources can be filled. defaults to DataLakeCatalog if left blank. note: if authenticating a user-defined data source, the permissions DLC can manage are a subset of the account provided when the user accesses the data source.
                      * 
                      */
                     void SetCatalog(const std::string& _catalog);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CatalogHasBeenSet() const;
 
                     /**
-                     * 获取The name of the target table. `*` represents all tables in the current database. To grant admin permissions, it must be `*`; to grant data connection and database permissions, it must be null; to grant other permissions, it can be any table.
-                     * @return Table The name of the target table. `*` represents all tables in the current database. To grant admin permissions, it must be `*`; to grant data connection and database permissions, it must be null; to grant other permissions, it can be any table.
+                     * 获取Specifies the table name requiring authorization. use * to represent all tables in the current Database. for administrator-level authorization type, only * is allowed. for data connection level or Database-level authorization type, leave it blank. for other types, any specific data table can be specified.
+                     * @return Table Specifies the table name requiring authorization. use * to represent all tables in the current Database. for administrator-level authorization type, only * is allowed. for data connection level or Database-level authorization type, leave it blank. for other types, any specific data table can be specified.
                      * 
                      */
                     std::string GetTable() const;
 
                     /**
-                     * 设置The name of the target table. `*` represents all tables in the current database. To grant admin permissions, it must be `*`; to grant data connection and database permissions, it must be null; to grant other permissions, it can be any table.
-                     * @param _table The name of the target table. `*` represents all tables in the current database. To grant admin permissions, it must be `*`; to grant data connection and database permissions, it must be null; to grant other permissions, it can be any table.
+                     * 设置Specifies the table name requiring authorization. use * to represent all tables in the current Database. for administrator-level authorization type, only * is allowed. for data connection level or Database-level authorization type, leave it blank. for other types, any specific data table can be specified.
+                     * @param _table Specifies the table name requiring authorization. use * to represent all tables in the current Database. for administrator-level authorization type, only * is allowed. for data connection level or Database-level authorization type, leave it blank. for other types, any specific data table can be specified.
                      * 
                      */
                     void SetTable(const std::string& _table);
@@ -152,18 +152,18 @@ namespace TencentCloud
                     bool PolicyTypeHasBeenSet() const;
 
                     /**
-                     * 获取The name of the target function. `*` represents all functions in the current catalog. To grant admin permissions, it must be `*`; to grant data connection permissions, it must be null; to grant other permissions, it can be any function.
+                     * 获取Name of the function requiring authorization. use * to represent all functions in the current Catalog. for administrator-level authorization type, only * is allowed. for data connection-level authorization type, leave it blank. for other types, any function can be specified.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Function The name of the target function. `*` represents all functions in the current catalog. To grant admin permissions, it must be `*`; to grant data connection permissions, it must be null; to grant other permissions, it can be any function.
+                     * @return Function Name of the function requiring authorization. use * to represent all functions in the current Catalog. for administrator-level authorization type, only * is allowed. for data connection-level authorization type, leave it blank. for other types, any function can be specified.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetFunction() const;
 
                     /**
-                     * 设置The name of the target function. `*` represents all functions in the current catalog. To grant admin permissions, it must be `*`; to grant data connection permissions, it must be null; to grant other permissions, it can be any function.
+                     * 设置Name of the function requiring authorization. use * to represent all functions in the current Catalog. for administrator-level authorization type, only * is allowed. for data connection-level authorization type, leave it blank. for other types, any function can be specified.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _function The name of the target function. `*` represents all functions in the current catalog. To grant admin permissions, it must be `*`; to grant data connection permissions, it must be null; to grant other permissions, it can be any function.
+                     * @param _function Name of the function requiring authorization. use * to represent all functions in the current Catalog. for administrator-level authorization type, only * is allowed. for data connection-level authorization type, leave it blank. for other types, any function can be specified.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -177,18 +177,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FunctionHasBeenSet() const;
 
                     /**
-                     * 获取The name of the target view. `*` represents all views in the current database. To grant admin permissions, it must be `*`; to grant data connection and database permissions, it must be null; to grant other permissions, it can be any view.
+                     * 获取Authorization is required for the view. fill in * to represent all views under the current Database. when the authorization type is administrator level, only * is allowed. when the authorization type is data connection level or Database level, only blank is allowed. for other types, any view can be specified.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return View The name of the target view. `*` represents all views in the current database. To grant admin permissions, it must be `*`; to grant data connection and database permissions, it must be null; to grant other permissions, it can be any view.
+                     * @return View Authorization is required for the view. fill in * to represent all views under the current Database. when the authorization type is administrator level, only * is allowed. when the authorization type is data connection level or Database level, only blank is allowed. for other types, any view can be specified.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetView() const;
 
                     /**
-                     * 设置The name of the target view. `*` represents all views in the current database. To grant admin permissions, it must be `*`; to grant data connection and database permissions, it must be null; to grant other permissions, it can be any view.
+                     * 设置Authorization is required for the view. fill in * to represent all views under the current Database. when the authorization type is administrator level, only * is allowed. when the authorization type is data connection level or Database level, only blank is allowed. for other types, any view can be specified.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _view The name of the target view. `*` represents all views in the current database. To grant admin permissions, it must be `*`; to grant data connection and database permissions, it must be null; to grant other permissions, it can be any view.
+                     * @param _view Authorization is required for the view. fill in * to represent all views under the current Database. when the authorization type is administrator level, only * is allowed. when the authorization type is data connection level or Database level, only blank is allowed. for other types, any view can be specified.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -202,18 +202,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ViewHasBeenSet() const;
 
                     /**
-                     * 获取The name of the target column. `*` represents all columns. To grant admin permissions, it must be `*`.
+                     * 获取Columns requiring authorization. use * to represent all current columns. when the authorization type is administrator level, only * is allowed.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Column The name of the target column. `*` represents all columns. To grant admin permissions, it must be `*`.
+                     * @return Column Columns requiring authorization. use * to represent all current columns. when the authorization type is administrator level, only * is allowed.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetColumn() const;
 
                     /**
-                     * 设置The name of the target column. `*` represents all columns. To grant admin permissions, it must be `*`.
+                     * 设置Columns requiring authorization. use * to represent all current columns. when the authorization type is administrator level, only * is allowed.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _column The name of the target column. `*` represents all columns. To grant admin permissions, it must be `*`.
+                     * @param _column Columns requiring authorization. use * to represent all current columns. when the authorization type is administrator level, only * is allowed.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -227,18 +227,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ColumnHasBeenSet() const;
 
                     /**
-                     * 获取The name of the target data engine. `*` represents all engines. To grant admin permissions, it must be `*`.
+                     * 获取The data engine requiring authorization. use * to represent all current engines. when the authorization type is administrator level, only * is allowed.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DataEngine The name of the target data engine. `*` represents all engines. To grant admin permissions, it must be `*`.
+                     * @return DataEngine The data engine requiring authorization. use * to represent all current engines. when the authorization type is administrator level, only * is allowed.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDataEngine() const;
 
                     /**
-                     * 设置The name of the target data engine. `*` represents all engines. To grant admin permissions, it must be `*`.
+                     * 设置The data engine requiring authorization. use * to represent all current engines. when the authorization type is administrator level, only * is allowed.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dataEngine The name of the target data engine. `*` represents all engines. To grant admin permissions, it must be `*`.
+                     * @param _dataEngine The data engine requiring authorization. use * to represent all current engines. when the authorization type is administrator level, only * is allowed.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -451,22 +451,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool IdHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the engine type.
+
+                     * @return EngineGeneration Specifies the engine type.
+
+                     * 
+                     */
+                    std::string GetEngineGeneration() const;
+
+                    /**
+                     * 设置Specifies the engine type.
+
+                     * @param _engineGeneration Specifies the engine type.
+
+                     * 
+                     */
+                    void SetEngineGeneration(const std::string& _engineGeneration);
+
+                    /**
+                     * 判断参数 EngineGeneration 是否已赋值
+                     * @return EngineGeneration 是否已赋值
+                     * 
+                     */
+                    bool EngineGenerationHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The name of the target database. `*` represents all databases in the current catalog. To grant admin permissions, it must be `*`; to grant data connection permissions, it must be null; to grant other permissions, it can be any database.
+                     * The database name requiring authorization. use * to represent all databases under the current Catalog. for administrator level authorization type, only * is allowed. for data connection level authorization type, leave it blank. for other types, any specified database is allowed.
                      */
                     std::string m_database;
                     bool m_databaseHasBeenSet;
 
                     /**
-                     * The name of the target data source. To grant admin permission, it must be `*` (all resources at this level); to grant data source and database permissions, it must be `COSDataCatalog` or `*`; to grant table permissions, it can be a custom data source; if it is left empty, `DataLakeCatalog` is used. Note: To grant permissions on a custom data source, the permissions that can be managed in the Data Lake Compute console are subsets of the account permissions granted when you connect the data source to the console.
+                     * Specifies the name of the data source requiring authorization. at administrator level, only * is supported (representing all resources at this level). for database-level or data source-level authentication, only COSDataCatalog or * is supported. for table-level authentication, user-defined data sources can be filled. defaults to DataLakeCatalog if left blank. note: if authenticating a user-defined data source, the permissions DLC can manage are a subset of the account provided when the user accesses the data source.
                      */
                     std::string m_catalog;
                     bool m_catalogHasBeenSet;
 
                     /**
-                     * The name of the target table. `*` represents all tables in the current database. To grant admin permissions, it must be `*`; to grant data connection and database permissions, it must be null; to grant other permissions, it can be any table.
+                     * Specifies the table name requiring authorization. use * to represent all tables in the current Database. for administrator-level authorization type, only * is allowed. for data connection level or Database-level authorization type, leave it blank. for other types, any specific data table can be specified.
                      */
                     std::string m_table;
                     bool m_tableHasBeenSet;
@@ -484,28 +509,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_policyTypeHasBeenSet;
 
                     /**
-                     * The name of the target function. `*` represents all functions in the current catalog. To grant admin permissions, it must be `*`; to grant data connection permissions, it must be null; to grant other permissions, it can be any function.
+                     * Name of the function requiring authorization. use * to represent all functions in the current Catalog. for administrator-level authorization type, only * is allowed. for data connection-level authorization type, leave it blank. for other types, any function can be specified.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_function;
                     bool m_functionHasBeenSet;
 
                     /**
-                     * The name of the target view. `*` represents all views in the current database. To grant admin permissions, it must be `*`; to grant data connection and database permissions, it must be null; to grant other permissions, it can be any view.
+                     * Authorization is required for the view. fill in * to represent all views under the current Database. when the authorization type is administrator level, only * is allowed. when the authorization type is data connection level or Database level, only blank is allowed. for other types, any view can be specified.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_view;
                     bool m_viewHasBeenSet;
 
                     /**
-                     * The name of the target column. `*` represents all columns. To grant admin permissions, it must be `*`.
+                     * Columns requiring authorization. use * to represent all current columns. when the authorization type is administrator level, only * is allowed.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_column;
                     bool m_columnHasBeenSet;
 
                     /**
-                     * The name of the target data engine. `*` represents all engines. To grant admin permissions, it must be `*`.
+                     * The data engine requiring authorization. use * to represent all current engines. when the authorization type is administrator level, only * is allowed.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dataEngine;
@@ -566,6 +591,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_id;
                     bool m_idHasBeenSet;
+
+                    /**
+                     * Specifies the engine type.
+
+                     */
+                    std::string m_engineGeneration;
+                    bool m_engineGenerationHasBeenSet;
 
                 };
             }

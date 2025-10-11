@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Channel protocol. Valid values: HLS, DASH, CMAF.
-                     * @return Protocol Channel protocol. Valid values: HLS, DASH, CMAF.
+                     * 获取Channel protocol. Valid values: HLS/DASH.
+                     * @return Protocol Channel protocol. Valid values: HLS/DASH.
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置Channel protocol. Valid values: HLS, DASH, CMAF.
-                     * @param _protocol Channel protocol. Valid values: HLS, DASH, CMAF.
+                     * 设置Channel protocol. Valid values: HLS/DASH.
+                     * @param _protocol Channel protocol. Valid values: HLS/DASH.
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -115,7 +115,7 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Channel protocol. Valid values: HLS, DASH, CMAF.
+                     * Channel protocol. Valid values: HLS/DASH.
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;

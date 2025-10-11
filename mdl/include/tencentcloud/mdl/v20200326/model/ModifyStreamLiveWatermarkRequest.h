@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mdl/v20200326/model/CreateImageSettings.h>
 #include <tencentcloud/mdl/v20200326/model/CreateTextSettings.h>
+#include <tencentcloud/mdl/v20200326/model/AbWatermarkSettingsReq.h>
 
 
 namespace TencentCloud
@@ -128,6 +129,27 @@ namespace TencentCloud
                      */
                     bool TextSettingsHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return AbWatermarkSettings 
+                     * 
+                     */
+                    AbWatermarkSettingsReq GetAbWatermarkSettings() const;
+
+                    /**
+                     * 设置
+                     * @param _abWatermarkSettings 
+                     * 
+                     */
+                    void SetAbWatermarkSettings(const AbWatermarkSettingsReq& _abWatermarkSettings);
+
+                    /**
+                     * 判断参数 AbWatermarkSettings 是否已赋值
+                     * @return AbWatermarkSettings 是否已赋值
+                     * 
+                     */
+                    bool AbWatermarkSettingsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -153,6 +175,12 @@ namespace TencentCloud
                      */
                     CreateTextSettings m_textSettings;
                     bool m_textSettingsHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    AbWatermarkSettingsReq m_abWatermarkSettings;
+                    bool m_abWatermarkSettingsHasBeenSet;
 
                 };
             }

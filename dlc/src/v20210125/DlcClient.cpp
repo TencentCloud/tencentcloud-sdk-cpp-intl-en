@@ -126,6 +126,49 @@ DlcClient::AlterDMSDatabaseOutcomeCallable DlcClient::AlterDMSDatabaseCallable(c
     return task->get_future();
 }
 
+DlcClient::AttachDataMaskPolicyOutcome DlcClient::AttachDataMaskPolicy(const AttachDataMaskPolicyRequest &request)
+{
+    auto outcome = MakeRequest(request, "AttachDataMaskPolicy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AttachDataMaskPolicyResponse rsp = AttachDataMaskPolicyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AttachDataMaskPolicyOutcome(rsp);
+        else
+            return AttachDataMaskPolicyOutcome(o.GetError());
+    }
+    else
+    {
+        return AttachDataMaskPolicyOutcome(outcome.GetError());
+    }
+}
+
+void DlcClient::AttachDataMaskPolicyAsync(const AttachDataMaskPolicyRequest& request, const AttachDataMaskPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->AttachDataMaskPolicy(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DlcClient::AttachDataMaskPolicyOutcomeCallable DlcClient::AttachDataMaskPolicyCallable(const AttachDataMaskPolicyRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<AttachDataMaskPolicyOutcome()>>(
+        [this, request]()
+        {
+            return this->AttachDataMaskPolicy(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 DlcClient::AttachUserPolicyOutcome DlcClient::AttachUserPolicy(const AttachUserPolicyRequest &request)
 {
     auto outcome = MakeRequest(request, "AttachUserPolicy");
@@ -721,6 +764,49 @@ DlcClient::CreateDataEngineOutcomeCallable DlcClient::CreateDataEngineCallable(c
         [this, request]()
         {
             return this->CreateDataEngine(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DlcClient::CreateDataMaskStrategyOutcome DlcClient::CreateDataMaskStrategy(const CreateDataMaskStrategyRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateDataMaskStrategy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateDataMaskStrategyResponse rsp = CreateDataMaskStrategyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateDataMaskStrategyOutcome(rsp);
+        else
+            return CreateDataMaskStrategyOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateDataMaskStrategyOutcome(outcome.GetError());
+    }
+}
+
+void DlcClient::CreateDataMaskStrategyAsync(const CreateDataMaskStrategyRequest& request, const CreateDataMaskStrategyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateDataMaskStrategy(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DlcClient::CreateDataMaskStrategyOutcomeCallable DlcClient::CreateDataMaskStrategyCallable(const CreateDataMaskStrategyRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateDataMaskStrategyOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateDataMaskStrategy(request);
         }
     );
 
