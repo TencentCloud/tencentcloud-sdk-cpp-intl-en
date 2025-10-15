@@ -101,15 +101,15 @@ Note: different DRM manufacturers have different limitations on the number of su
                     bool KeyServerUrlHasBeenSet() const;
 
                     /**
-                     * 获取Encryption initialization vector (32-byte string). the field content is user-customized.
-                     * @return Vector Encryption initialization vector (32-byte string). the field content is user-customized.
+                     * 获取Initialization vector for encryption (32-byte hexadecimal string). the field content is user-customized.
+                     * @return Vector Initialization vector for encryption (32-byte hexadecimal string). the field content is user-customized.
                      * 
                      */
                     std::string GetVector() const;
 
                     /**
-                     * 设置Encryption initialization vector (32-byte string). the field content is user-customized.
-                     * @param _vector Encryption initialization vector (32-byte string). the field content is user-customized.
+                     * 设置Initialization vector for encryption (32-byte hexadecimal string). the field content is user-customized.
+                     * @param _vector Initialization vector for encryption (32-byte hexadecimal string). the field content is user-customized.
                      * 
                      */
                     void SetVector(const std::string& _vector);
@@ -205,7 +205,7 @@ Note: different DRM manufacturers have different limitations on the number of su
                     bool m_keyServerUrlHasBeenSet;
 
                     /**
-                     * Encryption initialization vector (32-byte string). the field content is user-customized.
+                     * Initialization vector for encryption (32-byte hexadecimal string). the field content is user-customized.
                      */
                     std::string m_vector;
                     bool m_vectorHasBeenSet;

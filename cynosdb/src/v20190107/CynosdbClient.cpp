@@ -728,6 +728,49 @@ CynosdbClient::CreateClustersOutcomeCallable CynosdbClient::CreateClustersCallab
     return task->get_future();
 }
 
+CynosdbClient::CreateIntegrateClusterOutcome CynosdbClient::CreateIntegrateCluster(const CreateIntegrateClusterRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateIntegrateCluster");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateIntegrateClusterResponse rsp = CreateIntegrateClusterResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateIntegrateClusterOutcome(rsp);
+        else
+            return CreateIntegrateClusterOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateIntegrateClusterOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::CreateIntegrateClusterAsync(const CreateIntegrateClusterRequest& request, const CreateIntegrateClusterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateIntegrateCluster(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::CreateIntegrateClusterOutcomeCallable CynosdbClient::CreateIntegrateClusterCallable(const CreateIntegrateClusterRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateIntegrateClusterOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateIntegrateCluster(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CynosdbClient::CreateParamTemplateOutcome CynosdbClient::CreateParamTemplate(const CreateParamTemplateRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateParamTemplate");
@@ -2441,6 +2484,49 @@ CynosdbClient::DescribeInstancesWithinSameClusterOutcomeCallable CynosdbClient::
         [this, request]()
         {
             return this->DescribeInstancesWithinSameCluster(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::DescribeIntegrateTaskOutcome CynosdbClient::DescribeIntegrateTask(const DescribeIntegrateTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeIntegrateTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeIntegrateTaskResponse rsp = DescribeIntegrateTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeIntegrateTaskOutcome(rsp);
+        else
+            return DescribeIntegrateTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeIntegrateTaskOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::DescribeIntegrateTaskAsync(const DescribeIntegrateTaskRequest& request, const DescribeIntegrateTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeIntegrateTask(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::DescribeIntegrateTaskOutcomeCallable CynosdbClient::DescribeIntegrateTaskCallable(const DescribeIntegrateTaskRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeIntegrateTaskOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeIntegrateTask(request);
         }
     );
 

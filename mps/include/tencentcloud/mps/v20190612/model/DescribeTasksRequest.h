@@ -43,15 +43,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filter: Task status. Valid values: WAITING (waiting), PROCESSING (processing), FINISH (completed).
-                     * @return Status Filter: Task status. Valid values: WAITING (waiting), PROCESSING (processing), FINISH (completed).
+                     * 获取Filters task status. available values:.
+-WAITING.
+-PROCESSING (processing).
+-FINISH (completed).
+                     * @return Status Filters task status. available values:.
+-WAITING.
+-PROCESSING (processing).
+-FINISH (completed).
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Filter: Task status. Valid values: WAITING (waiting), PROCESSING (processing), FINISH (completed).
-                     * @param _status Filter: Task status. Valid values: WAITING (waiting), PROCESSING (processing), FINISH (completed).
+                     * 设置Filters task status. available values:.
+-WAITING.
+-PROCESSING (processing).
+-FINISH (completed).
+                     * @param _status Filters task status. available values:.
+-WAITING.
+-PROCESSING (processing).
+-FINISH (completed).
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -62,6 +74,27 @@ namespace TencentCloud
                      * 
                      */
                     bool StatusHasBeenSet() const;
+
+                    /**
+                     * 获取Indicates whether there is a subtask failure when the task is complete.
+                     * @return SubTaskHasFailed Indicates whether there is a subtask failure when the task is complete.
+                     * 
+                     */
+                    bool GetSubTaskHasFailed() const;
+
+                    /**
+                     * 设置Indicates whether there is a subtask failure when the task is complete.
+                     * @param _subTaskHasFailed Indicates whether there is a subtask failure when the task is complete.
+                     * 
+                     */
+                    void SetSubTaskHasFailed(const bool& _subTaskHasFailed);
+
+                    /**
+                     * 判断参数 SubTaskHasFailed 是否已赋值
+                     * @return SubTaskHasFailed 是否已赋值
+                     * 
+                     */
+                    bool SubTaskHasFailedHasBeenSet() const;
 
                     /**
                      * 获取Number of returned entries. Default value: 10. Maximum value: 100.
@@ -150,10 +183,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Filter: Task status. Valid values: WAITING (waiting), PROCESSING (processing), FINISH (completed).
+                     * Filters task status. available values:.
+-WAITING.
+-PROCESSING (processing).
+-FINISH (completed).
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
+
+                    /**
+                     * Indicates whether there is a subtask failure when the task is complete.
+                     */
+                    bool m_subTaskHasFailed;
+                    bool m_subTaskHasFailedHasBeenSet;
 
                     /**
                      * Number of returned entries. Default value: 10. Maximum value: 100.

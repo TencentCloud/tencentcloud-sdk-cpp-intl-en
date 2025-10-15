@@ -48,79 +48,87 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The issue type. Valid values:
-`Jitter`
-`Blur`
-`LowLighting`
-`HighLighting` (overexposure)
-`CrashScreen` (video corruption)
-`BlackWhiteEdge`
-`SolidColorScreen` (blank screen)
-`Noise`
-`Mosaic` (pixelation)
-`QRCode`
-`AppletCode` (Weixin Mini Program code)
-`BarCode`
-`LowVoice`
-`HighVoice`
-`NoVoice`
-`LowEvaluation` (low no-reference video quality score)
-                     * @return Type The issue type. Valid values:
-`Jitter`
-`Blur`
-`LowLighting`
-`HighLighting` (overexposure)
-`CrashScreen` (video corruption)
-`BlackWhiteEdge`
-`SolidColorScreen` (blank screen)
-`Noise`
-`Mosaic` (pixelation)
-`QRCode`
-`AppletCode` (Weixin Mini Program code)
-`BarCode`
-`LowVoice`
-`HighVoice`
-`NoVoice`
-`LowEvaluation` (low no-reference video quality score)
+                     * 获取Exception type. valid values:.
+Jitter: jitter.
+Blur: specifies the blur effect.
+LowLighting: specifies low light.
+HighLighting: overexposure.
+CrashScreen: specifies screen glitch.
+BlackWhiteEdge: specifies the black and white edges.
+SolidColorScreen: specifies the solid color screen.
+Noise: specifies the noise.
+Mosaic: mosaic.
+QRCode: specifies the qr code.
+AppletCode: specifies the mini program code.
+BarCode: specifies the barcode.
+LowVoice: specifies the bass.
+HighVoice: specifies high voice detection.
+NoVoice: specifies mute.
+LowEvaluation: specifies the video no-reference score (MOS) is below the threshold.
+AudioEvaluation: specifies the audio no-reference scoring (MOS) is below the threshold.
+AudioNoise: specifies the audio noise.
+                     * @return Type Exception type. valid values:.
+Jitter: jitter.
+Blur: specifies the blur effect.
+LowLighting: specifies low light.
+HighLighting: overexposure.
+CrashScreen: specifies screen glitch.
+BlackWhiteEdge: specifies the black and white edges.
+SolidColorScreen: specifies the solid color screen.
+Noise: specifies the noise.
+Mosaic: mosaic.
+QRCode: specifies the qr code.
+AppletCode: specifies the mini program code.
+BarCode: specifies the barcode.
+LowVoice: specifies the bass.
+HighVoice: specifies high voice detection.
+NoVoice: specifies mute.
+LowEvaluation: specifies the video no-reference score (MOS) is below the threshold.
+AudioEvaluation: specifies the audio no-reference scoring (MOS) is below the threshold.
+AudioNoise: specifies the audio noise.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The issue type. Valid values:
-`Jitter`
-`Blur`
-`LowLighting`
-`HighLighting` (overexposure)
-`CrashScreen` (video corruption)
-`BlackWhiteEdge`
-`SolidColorScreen` (blank screen)
-`Noise`
-`Mosaic` (pixelation)
-`QRCode`
-`AppletCode` (Weixin Mini Program code)
-`BarCode`
-`LowVoice`
-`HighVoice`
-`NoVoice`
-`LowEvaluation` (low no-reference video quality score)
-                     * @param _type The issue type. Valid values:
-`Jitter`
-`Blur`
-`LowLighting`
-`HighLighting` (overexposure)
-`CrashScreen` (video corruption)
-`BlackWhiteEdge`
-`SolidColorScreen` (blank screen)
-`Noise`
-`Mosaic` (pixelation)
-`QRCode`
-`AppletCode` (Weixin Mini Program code)
-`BarCode`
-`LowVoice`
-`HighVoice`
-`NoVoice`
-`LowEvaluation` (low no-reference video quality score)
+                     * 设置Exception type. valid values:.
+Jitter: jitter.
+Blur: specifies the blur effect.
+LowLighting: specifies low light.
+HighLighting: overexposure.
+CrashScreen: specifies screen glitch.
+BlackWhiteEdge: specifies the black and white edges.
+SolidColorScreen: specifies the solid color screen.
+Noise: specifies the noise.
+Mosaic: mosaic.
+QRCode: specifies the qr code.
+AppletCode: specifies the mini program code.
+BarCode: specifies the barcode.
+LowVoice: specifies the bass.
+HighVoice: specifies high voice detection.
+NoVoice: specifies mute.
+LowEvaluation: specifies the video no-reference score (MOS) is below the threshold.
+AudioEvaluation: specifies the audio no-reference scoring (MOS) is below the threshold.
+AudioNoise: specifies the audio noise.
+                     * @param _type Exception type. valid values:.
+Jitter: jitter.
+Blur: specifies the blur effect.
+LowLighting: specifies low light.
+HighLighting: overexposure.
+CrashScreen: specifies screen glitch.
+BlackWhiteEdge: specifies the black and white edges.
+SolidColorScreen: specifies the solid color screen.
+Noise: specifies the noise.
+Mosaic: mosaic.
+QRCode: specifies the qr code.
+AppletCode: specifies the mini program code.
+BarCode: specifies the barcode.
+LowVoice: specifies the bass.
+HighVoice: specifies high voice detection.
+NoVoice: specifies mute.
+LowEvaluation: specifies the video no-reference score (MOS) is below the threshold.
+AudioEvaluation: specifies the audio no-reference scoring (MOS) is below the threshold.
+AudioNoise: specifies the audio noise.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -156,23 +164,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The issue type. Valid values:
-`Jitter`
-`Blur`
-`LowLighting`
-`HighLighting` (overexposure)
-`CrashScreen` (video corruption)
-`BlackWhiteEdge`
-`SolidColorScreen` (blank screen)
-`Noise`
-`Mosaic` (pixelation)
-`QRCode`
-`AppletCode` (Weixin Mini Program code)
-`BarCode`
-`LowVoice`
-`HighVoice`
-`NoVoice`
-`LowEvaluation` (low no-reference video quality score)
+                     * Exception type. valid values:.
+Jitter: jitter.
+Blur: specifies the blur effect.
+LowLighting: specifies low light.
+HighLighting: overexposure.
+CrashScreen: specifies screen glitch.
+BlackWhiteEdge: specifies the black and white edges.
+SolidColorScreen: specifies the solid color screen.
+Noise: specifies the noise.
+Mosaic: mosaic.
+QRCode: specifies the qr code.
+AppletCode: specifies the mini program code.
+BarCode: specifies the barcode.
+LowVoice: specifies the bass.
+HighVoice: specifies high voice detection.
+NoVoice: specifies mute.
+LowEvaluation: specifies the video no-reference score (MOS) is below the threshold.
+AudioEvaluation: specifies the audio no-reference scoring (MOS) is below the threshold.
+AudioNoise: specifies the audio noise.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

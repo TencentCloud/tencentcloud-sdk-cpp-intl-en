@@ -71,6 +71,8 @@
 #include <tencentcloud/ccc/v20200210/model/DeletePredictiveDialingCampaignResponse.h>
 #include <tencentcloud/ccc/v20200210/model/DeleteStaffRequest.h>
 #include <tencentcloud/ccc/v20200210/model/DeleteStaffResponse.h>
+#include <tencentcloud/ccc/v20200210/model/DescribeAIAnalysisResultRequest.h>
+#include <tencentcloud/ccc/v20200210/model/DescribeAIAnalysisResultResponse.h>
 #include <tencentcloud/ccc/v20200210/model/DescribeAICallExtractResultRequest.h>
 #include <tencentcloud/ccc/v20200210/model/DescribeAICallExtractResultResponse.h>
 #include <tencentcloud/ccc/v20200210/model/DescribeAILatencyRequest.h>
@@ -243,6 +245,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteStaffResponse> DeleteStaffOutcome;
                 typedef std::future<DeleteStaffOutcome> DeleteStaffOutcomeCallable;
                 typedef std::function<void(const CccClient*, const Model::DeleteStaffRequest&, DeleteStaffOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteStaffAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAIAnalysisResultResponse> DescribeAIAnalysisResultOutcome;
+                typedef std::future<DescribeAIAnalysisResultOutcome> DescribeAIAnalysisResultOutcomeCallable;
+                typedef std::function<void(const CccClient*, const Model::DescribeAIAnalysisResultRequest&, DescribeAIAnalysisResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAIAnalysisResultAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAICallExtractResultResponse> DescribeAICallExtractResultOutcome;
                 typedef std::future<DescribeAICallExtractResultOutcome> DescribeAICallExtractResultOutcomeCallable;
                 typedef std::function<void(const CccClient*, const Model::DescribeAICallExtractResultRequest&, DescribeAICallExtractResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAICallExtractResultAsyncHandler;
@@ -598,6 +603,15 @@ This API is used to make calls. Currently, the agent side can only call the user
                 DeleteStaffOutcome DeleteStaff(const Model::DeleteStaffRequest &request);
                 void DeleteStaffAsync(const Model::DeleteStaffRequest& request, const DeleteStaffAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteStaffOutcomeCallable DeleteStaffCallable(const Model::DeleteStaffRequest& request);
+
+                /**
+                 *This API is used to obtain AI Conversation Analytics results.
+                 * @param req DescribeAIAnalysisResultRequest
+                 * @return DescribeAIAnalysisResultOutcome
+                 */
+                DescribeAIAnalysisResultOutcome DescribeAIAnalysisResult(const Model::DescribeAIAnalysisResultRequest &request);
+                void DescribeAIAnalysisResultAsync(const Model::DescribeAIAnalysisResultRequest& request, const DescribeAIAnalysisResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAIAnalysisResultOutcomeCallable DescribeAIAnalysisResultCallable(const Model::DescribeAIAnalysisResultRequest& request);
 
                 /**
                  *Obtain AI call content extraction result

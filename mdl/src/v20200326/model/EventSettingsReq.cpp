@@ -31,7 +31,8 @@ EventSettingsReq::EventSettingsReq() :
     m_spliceDurationHasBeenSet(false),
     m_timedMetadataSettingHasBeenSet(false),
     m_staticImageActivateSettingHasBeenSet(false),
-    m_staticImageDeactivateSettingHasBeenSet(false)
+    m_staticImageDeactivateSettingHasBeenSet(false),
+    m_motionGraphicsActivateSettingHasBeenSet(false)
 {
 }
 
@@ -191,6 +192,23 @@ CoreInternalOutcome EventSettingsReq::Deserialize(const rapidjson::Value &value)
         m_staticImageDeactivateSettingHasBeenSet = true;
     }
 
+    if (value.HasMember("MotionGraphicsActivateSetting") && !value["MotionGraphicsActivateSetting"].IsNull())
+    {
+        if (!value["MotionGraphicsActivateSetting"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `EventSettingsReq.MotionGraphicsActivateSetting` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_motionGraphicsActivateSetting.Deserialize(value["MotionGraphicsActivateSetting"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_motionGraphicsActivateSettingHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -301,6 +319,15 @@ void EventSettingsReq::ToJsonObject(rapidjson::Value &value, rapidjson::Document
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_staticImageDeactivateSetting.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_motionGraphicsActivateSettingHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MotionGraphicsActivateSetting";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_motionGraphicsActivateSetting.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -480,5 +507,21 @@ void EventSettingsReq::SetStaticImageDeactivateSetting(const StaticImageDeactiva
 bool EventSettingsReq::StaticImageDeactivateSettingHasBeenSet() const
 {
     return m_staticImageDeactivateSettingHasBeenSet;
+}
+
+MotionGraphicsActivateSetting EventSettingsReq::GetMotionGraphicsActivateSetting() const
+{
+    return m_motionGraphicsActivateSetting;
+}
+
+void EventSettingsReq::SetMotionGraphicsActivateSetting(const MotionGraphicsActivateSetting& _motionGraphicsActivateSetting)
+{
+    m_motionGraphicsActivateSetting = _motionGraphicsActivateSetting;
+    m_motionGraphicsActivateSettingHasBeenSet = true;
+}
+
+bool EventSettingsReq::MotionGraphicsActivateSettingHasBeenSet() const
+{
+    return m_motionGraphicsActivateSettingHasBeenSet;
 }
 

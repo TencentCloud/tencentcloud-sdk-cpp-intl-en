@@ -139,23 +139,23 @@ Advanced edition: better effectiveness, suitable for mini-drama and reality styl
                     bool WatermarkModelHasBeenSet() const;
 
                     /**
-                     * 获取Specifies automatic removal of a custom region.
-Specifies the use of an AI model to automatically detect and erase existing targets in the specified region.
-Note that this parameter will not take effect when the removal method is custom.
-                     * @return AutoAreas Specifies automatic removal of a custom region.
-Specifies the use of an AI model to automatically detect and erase existing targets in the specified region.
-Note that this parameter will not take effect when the removal method is custom.
+                     * 获取Automatically erase the custom region.
+Automatically detects and erases the targeted removal in the specified region using the AI model.
+Note that this parameter will not take effect when the removal method is custom. to modify the template, input [] for the clean-up region. if not provided, the template region information remains unchanged.
+                     * @return AutoAreas Automatically erase the custom region.
+Automatically detects and erases the targeted removal in the specified region using the AI model.
+Note that this parameter will not take effect when the removal method is custom. to modify the template, input [] for the clean-up region. if not provided, the template region information remains unchanged.
                      * 
                      */
                     std::vector<EraseArea> GetAutoAreas() const;
 
                     /**
-                     * 设置Specifies automatic removal of a custom region.
-Specifies the use of an AI model to automatically detect and erase existing targets in the specified region.
-Note that this parameter will not take effect when the removal method is custom.
-                     * @param _autoAreas Specifies automatic removal of a custom region.
-Specifies the use of an AI model to automatically detect and erase existing targets in the specified region.
-Note that this parameter will not take effect when the removal method is custom.
+                     * 设置Automatically erase the custom region.
+Automatically detects and erases the targeted removal in the specified region using the AI model.
+Note that this parameter will not take effect when the removal method is custom. to modify the template, input [] for the clean-up region. if not provided, the template region information remains unchanged.
+                     * @param _autoAreas Automatically erase the custom region.
+Automatically detects and erases the targeted removal in the specified region using the AI model.
+Note that this parameter will not take effect when the removal method is custom. to modify the template, input [] for the clean-up region. if not provided, the template region information remains unchanged.
                      * 
                      */
                     void SetAutoAreas(const std::vector<EraseArea>& _autoAreas);
@@ -168,19 +168,23 @@ Note that this parameter will not take effect when the removal method is custom.
                     bool AutoAreasHasBeenSet() const;
 
                     /**
-                     * 获取Specifies erasure of a custom region.
-Detects and directly performs removal within a specified time range for the selected region.
-                     * @return CustomAreas Specifies erasure of a custom region.
-Detects and directly performs removal within a specified time range for the selected region.
+                     * 获取Specifies the removal of a custom region.
+Specifies to directly perform removal without detection and recognition within a selected time range for the specified region.
+Note: when modifying the template, pass [] to clear the region. the template region information remains unchanged if not passed.
+                     * @return CustomAreas Specifies the removal of a custom region.
+Specifies to directly perform removal without detection and recognition within a selected time range for the specified region.
+Note: when modifying the template, pass [] to clear the region. the template region information remains unchanged if not passed.
                      * 
                      */
                     std::vector<EraseTimeArea> GetCustomAreas() const;
 
                     /**
-                     * 设置Specifies erasure of a custom region.
-Detects and directly performs removal within a specified time range for the selected region.
-                     * @param _customAreas Specifies erasure of a custom region.
-Detects and directly performs removal within a specified time range for the selected region.
+                     * 设置Specifies the removal of a custom region.
+Specifies to directly perform removal without detection and recognition within a selected time range for the specified region.
+Note: when modifying the template, pass [] to clear the region. the template region information remains unchanged if not passed.
+                     * @param _customAreas Specifies the removal of a custom region.
+Specifies to directly perform removal without detection and recognition within a selected time range for the specified region.
+Note: when modifying the template, pass [] to clear the region. the template region information remains unchanged if not passed.
                      * 
                      */
                     void SetCustomAreas(const std::vector<EraseTimeArea>& _customAreas);
@@ -219,16 +223,17 @@ Advanced edition: better effectiveness, suitable for mini-drama and reality styl
                     bool m_watermarkModelHasBeenSet;
 
                     /**
-                     * Specifies automatic removal of a custom region.
-Specifies the use of an AI model to automatically detect and erase existing targets in the specified region.
-Note that this parameter will not take effect when the removal method is custom.
+                     * Automatically erase the custom region.
+Automatically detects and erases the targeted removal in the specified region using the AI model.
+Note that this parameter will not take effect when the removal method is custom. to modify the template, input [] for the clean-up region. if not provided, the template region information remains unchanged.
                      */
                     std::vector<EraseArea> m_autoAreas;
                     bool m_autoAreasHasBeenSet;
 
                     /**
-                     * Specifies erasure of a custom region.
-Detects and directly performs removal within a specified time range for the selected region.
+                     * Specifies the removal of a custom region.
+Specifies to directly perform removal without detection and recognition within a selected time range for the specified region.
+Note: when modifying the template, pass [] to clear the region. the template region information remains unchanged if not passed.
                      */
                     std::vector<EraseTimeArea> m_customAreas;
                     bool m_customAreasHasBeenSet;

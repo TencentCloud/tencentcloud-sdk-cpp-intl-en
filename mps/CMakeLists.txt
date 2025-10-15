@@ -257,6 +257,7 @@ set(mps_public_header_model
   include/tencentcloud/mps/v20190612/model/AiRecognitionTaskTransTextResultInput.h
   include/tencentcloud/mps/v20190612/model/DescribeSchedulesResponse.h
   include/tencentcloud/mps/v20190612/model/ImageQualityEnhanceConfig.h
+  include/tencentcloud/mps/v20190612/model/AiAnalysisTaskVideoRemakeOutput.h
   include/tencentcloud/mps/v20190612/model/ManageTaskRequest.h
   include/tencentcloud/mps/v20190612/model/AiAnalysisTaskSegmentResult.h
   include/tencentcloud/mps/v20190612/model/RawSmartSubtitleParameter.h
@@ -273,6 +274,7 @@ set(mps_public_header_model
   include/tencentcloud/mps/v20190612/model/ImageWatermarkTemplate.h
   include/tencentcloud/mps/v20190612/model/ModifyQualityControlTemplateResponse.h
   include/tencentcloud/mps/v20190612/model/AsrWordsConfigureInfo.h
+  include/tencentcloud/mps/v20190612/model/AiAnalysisTaskVideoRemakeInput.h
   include/tencentcloud/mps/v20190612/model/LiveStreamAsrWordsRecognitionResult.h
   include/tencentcloud/mps/v20190612/model/AiSamplePerson.h
   include/tencentcloud/mps/v20190612/model/SmartSubtitleTaskAsrFullTextResult.h
@@ -422,6 +424,7 @@ set(mps_public_header_model
   include/tencentcloud/mps/v20190612/model/ModifyPersonSampleRequest.h
   include/tencentcloud/mps/v20190612/model/AudioTemplateInfo.h
   include/tencentcloud/mps/v20190612/model/AsrFullTextConfigureInfo.h
+  include/tencentcloud/mps/v20190612/model/AiAnalysisTaskVideoRemakeResult.h
   include/tencentcloud/mps/v20190612/model/ArtifactRepairConfig.h
   include/tencentcloud/mps/v20190612/model/CreateAIRecognitionTemplateRequest.h
   include/tencentcloud/mps/v20190612/model/DescribeBatchTaskDetailResponse.h
@@ -854,6 +857,7 @@ set(mps_src
   src/v20190612/model/AiRecognitionTaskTransTextResultInput.cpp
   src/v20190612/model/DescribeSchedulesResponse.cpp
   src/v20190612/model/ImageQualityEnhanceConfig.cpp
+  src/v20190612/model/AiAnalysisTaskVideoRemakeOutput.cpp
   src/v20190612/model/ManageTaskRequest.cpp
   src/v20190612/model/AiAnalysisTaskSegmentResult.cpp
   src/v20190612/model/RawSmartSubtitleParameter.cpp
@@ -870,6 +874,7 @@ set(mps_src
   src/v20190612/model/ImageWatermarkTemplate.cpp
   src/v20190612/model/ModifyQualityControlTemplateResponse.cpp
   src/v20190612/model/AsrWordsConfigureInfo.cpp
+  src/v20190612/model/AiAnalysisTaskVideoRemakeInput.cpp
   src/v20190612/model/LiveStreamAsrWordsRecognitionResult.cpp
   src/v20190612/model/AiSamplePerson.cpp
   src/v20190612/model/SmartSubtitleTaskAsrFullTextResult.cpp
@@ -1019,6 +1024,7 @@ set(mps_src
   src/v20190612/model/ModifyPersonSampleRequest.cpp
   src/v20190612/model/AudioTemplateInfo.cpp
   src/v20190612/model/AsrFullTextConfigureInfo.cpp
+  src/v20190612/model/AiAnalysisTaskVideoRemakeResult.cpp
   src/v20190612/model/ArtifactRepairConfig.cpp
   src/v20190612/model/CreateAIRecognitionTemplateRequest.cpp
   src/v20190612/model/DescribeBatchTaskDetailResponse.cpp

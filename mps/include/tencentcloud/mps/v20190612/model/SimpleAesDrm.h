@@ -72,19 +72,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UriHasBeenSet() const;
 
                     /**
-                     * 获取The encryption key (a 32-byte string).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Key The encryption key (a 32-byte string).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Encryption key (32-byte hexadecimal string).
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return Key Encryption key (32-byte hexadecimal string).
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置The encryption key (a 32-byte string).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _key The encryption key (a 32-byte string).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Encryption key (32-byte hexadecimal string).
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _key Encryption key (32-byte hexadecimal string).
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -97,19 +97,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取The initialization vector for encryption (a 32-byte string).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Vector The initialization vector for encryption (a 32-byte string).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Initialization vector for encryption (32-byte hexadecimal string).
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return Vector Initialization vector for encryption (32-byte hexadecimal string).
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetVector() const;
 
                     /**
-                     * 设置The initialization vector for encryption (a 32-byte string).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _vector The initialization vector for encryption (a 32-byte string).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Initialization vector for encryption (32-byte hexadecimal string).
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _vector Initialization vector for encryption (32-byte hexadecimal string).
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetVector(const std::string& _vector);
@@ -131,15 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_uriHasBeenSet;
 
                     /**
-                     * The encryption key (a 32-byte string).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Encryption key (32-byte hexadecimal string).
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * The initialization vector for encryption (a 32-byte string).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Initialization vector for encryption (32-byte hexadecimal string).
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_vector;
                     bool m_vectorHasBeenSet;

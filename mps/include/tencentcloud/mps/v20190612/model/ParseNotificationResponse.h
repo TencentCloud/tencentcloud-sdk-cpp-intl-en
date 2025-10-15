@@ -24,6 +24,7 @@
 #include <tencentcloud/mps/v20190612/model/WorkflowTask.h>
 #include <tencentcloud/mps/v20190612/model/EditMediaTask.h>
 #include <tencentcloud/mps/v20190612/model/ScheduleTask.h>
+#include <tencentcloud/mps/v20190612/model/BatchSubTaskResult.h>
 
 
 namespace TencentCloud
@@ -176,6 +177,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool SignHasBeenSet() const;
 
+                    /**
+                     * 获取Batch processing task information. this field has a value only when EventType is BatchTask.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return BatchTaskEvent Batch processing task information. this field has a value only when EventType is BatchTask.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    BatchSubTaskResult GetBatchTaskEvent() const;
+
+                    /**
+                     * 判断参数 BatchTaskEvent 是否已赋值
+                     * @return BatchTaskEvent 是否已赋值
+                     * 
+                     */
+                    bool BatchTaskEventHasBeenSet() const;
+
                 private:
 
                     /**
@@ -234,6 +251,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_sign;
                     bool m_signHasBeenSet;
+
+                    /**
+                     * Batch processing task information. this field has a value only when EventType is BatchTask.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    BatchSubTaskResult m_batchTaskEvent;
+                    bool m_batchTaskEventHasBeenSet;
 
                 };
             }

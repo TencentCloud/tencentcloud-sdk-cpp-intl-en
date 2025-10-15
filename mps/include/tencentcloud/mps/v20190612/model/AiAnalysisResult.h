@@ -35,6 +35,7 @@
 #include <tencentcloud/mps/v20190612/model/AiAnalysisTaskDescriptionResult.h>
 #include <tencentcloud/mps/v20190612/model/AiAnalysisTaskHorizontalToVerticalResult.h>
 #include <tencentcloud/mps/v20190612/model/AiAnalysisTaskDubbingResult.h>
+#include <tencentcloud/mps/v20190612/model/AiAnalysisTaskVideoRemakeResult.h>
 
 
 namespace TencentCloud
@@ -61,23 +62,25 @@ namespace TencentCloud
                      * 获取Task type. valid values:.
 <Li>Classification: intelligent classification.</li>.
 <Li>Cover: specifies the intelligent cover.</li>.
-<Li>Tag: intelligent tag.</li>.
-<Li>FrameTag: specifies intelligent frame-by-frame tagging.</li>.
+<Li>Tag: intelligent tagging.</li>.
+<Li>FrameTag: intelligent frame-by-frame tagging.</li>.
 <Li>Highlight: intelligent highlights</li>.
 <Li>DeLogo: intelligent removal.</li>.
 <li>Description: large model summarization.</li>
 
 <Li>Dubbing: intelligent dubbing.</li>.
+<Li>VideoRemake: specifies video deduplication.</li>.
                      * @return Type Task type. valid values:.
 <Li>Classification: intelligent classification.</li>.
 <Li>Cover: specifies the intelligent cover.</li>.
-<Li>Tag: intelligent tag.</li>.
-<Li>FrameTag: specifies intelligent frame-by-frame tagging.</li>.
+<Li>Tag: intelligent tagging.</li>.
+<Li>FrameTag: intelligent frame-by-frame tagging.</li>.
 <Li>Highlight: intelligent highlights</li>.
 <Li>DeLogo: intelligent removal.</li>.
 <li>Description: large model summarization.</li>
 
 <Li>Dubbing: intelligent dubbing.</li>.
+<Li>VideoRemake: specifies video deduplication.</li>.
                      * 
                      */
                     std::string GetType() const;
@@ -86,23 +89,25 @@ namespace TencentCloud
                      * 设置Task type. valid values:.
 <Li>Classification: intelligent classification.</li>.
 <Li>Cover: specifies the intelligent cover.</li>.
-<Li>Tag: intelligent tag.</li>.
-<Li>FrameTag: specifies intelligent frame-by-frame tagging.</li>.
+<Li>Tag: intelligent tagging.</li>.
+<Li>FrameTag: intelligent frame-by-frame tagging.</li>.
 <Li>Highlight: intelligent highlights</li>.
 <Li>DeLogo: intelligent removal.</li>.
 <li>Description: large model summarization.</li>
 
 <Li>Dubbing: intelligent dubbing.</li>.
+<Li>VideoRemake: specifies video deduplication.</li>.
                      * @param _type Task type. valid values:.
 <Li>Classification: intelligent classification.</li>.
 <Li>Cover: specifies the intelligent cover.</li>.
-<Li>Tag: intelligent tag.</li>.
-<Li>FrameTag: specifies intelligent frame-by-frame tagging.</li>.
+<Li>Tag: intelligent tagging.</li>.
+<Li>FrameTag: intelligent frame-by-frame tagging.</li>.
 <Li>Highlight: intelligent highlights</li>.
 <Li>DeLogo: intelligent removal.</li>.
 <li>Description: large model summarization.</li>
 
 <Li>Dubbing: intelligent dubbing.</li>.
+<Li>VideoRemake: specifies video deduplication.</li>.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -373,19 +378,45 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool DubbingTaskHasBeenSet() const;
 
+                    /**
+                     * 获取The query result of a video content deduplication task, which is valid when the task type is VideoRemake.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return VideoRemakeTask The query result of a video content deduplication task, which is valid when the task type is VideoRemake.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    AiAnalysisTaskVideoRemakeResult GetVideoRemakeTask() const;
+
+                    /**
+                     * 设置The query result of a video content deduplication task, which is valid when the task type is VideoRemake.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _videoRemakeTask The query result of a video content deduplication task, which is valid when the task type is VideoRemake.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetVideoRemakeTask(const AiAnalysisTaskVideoRemakeResult& _videoRemakeTask);
+
+                    /**
+                     * 判断参数 VideoRemakeTask 是否已赋值
+                     * @return VideoRemakeTask 是否已赋值
+                     * 
+                     */
+                    bool VideoRemakeTaskHasBeenSet() const;
+
                 private:
 
                     /**
                      * Task type. valid values:.
 <Li>Classification: intelligent classification.</li>.
 <Li>Cover: specifies the intelligent cover.</li>.
-<Li>Tag: intelligent tag.</li>.
-<Li>FrameTag: specifies intelligent frame-by-frame tagging.</li>.
+<Li>Tag: intelligent tagging.</li>.
+<Li>FrameTag: intelligent frame-by-frame tagging.</li>.
 <Li>Highlight: intelligent highlights</li>.
 <Li>DeLogo: intelligent removal.</li>.
 <li>Description: large model summarization.</li>
 
 <Li>Dubbing: intelligent dubbing.</li>.
+<Li>VideoRemake: specifies video deduplication.</li>.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -462,6 +493,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     AiAnalysisTaskDubbingResult m_dubbingTask;
                     bool m_dubbingTaskHasBeenSet;
+
+                    /**
+                     * The query result of a video content deduplication task, which is valid when the task type is VideoRemake.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    AiAnalysisTaskVideoRemakeResult m_videoRemakeTask;
+                    bool m_videoRemakeTaskHasBeenSet;
 
                 };
             }

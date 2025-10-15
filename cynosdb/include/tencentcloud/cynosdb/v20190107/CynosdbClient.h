@@ -55,6 +55,8 @@
 #include <tencentcloud/cynosdb/v20190107/model/CreateClusterDatabaseResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/CreateClustersRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/CreateClustersResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/CreateIntegrateClusterRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/CreateIntegrateClusterResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/CreateParamTemplateRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/CreateParamTemplateResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/CreateProxyRequest.h>
@@ -135,6 +137,8 @@
 #include <tencentcloud/cynosdb/v20190107/model/DescribeInstancesResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeInstancesWithinSameClusterRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeInstancesWithinSameClusterResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeIntegrateTaskRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeIntegrateTaskResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeIsolatedInstancesRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeIsolatedInstancesResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeMaintainPeriodRequest.h>
@@ -361,6 +365,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateClustersResponse> CreateClustersOutcome;
                 typedef std::future<CreateClustersOutcome> CreateClustersOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::CreateClustersRequest&, CreateClustersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateClustersAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateIntegrateClusterResponse> CreateIntegrateClusterOutcome;
+                typedef std::future<CreateIntegrateClusterOutcome> CreateIntegrateClusterOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::CreateIntegrateClusterRequest&, CreateIntegrateClusterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateIntegrateClusterAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateParamTemplateResponse> CreateParamTemplateOutcome;
                 typedef std::future<CreateParamTemplateOutcome> CreateParamTemplateOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::CreateParamTemplateRequest&, CreateParamTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateParamTemplateAsyncHandler;
@@ -481,6 +488,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeInstancesWithinSameClusterResponse> DescribeInstancesWithinSameClusterOutcome;
                 typedef std::future<DescribeInstancesWithinSameClusterOutcome> DescribeInstancesWithinSameClusterOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::DescribeInstancesWithinSameClusterRequest&, DescribeInstancesWithinSameClusterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstancesWithinSameClusterAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeIntegrateTaskResponse> DescribeIntegrateTaskOutcome;
+                typedef std::future<DescribeIntegrateTaskOutcome> DescribeIntegrateTaskOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::DescribeIntegrateTaskRequest&, DescribeIntegrateTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIntegrateTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeIsolatedInstancesResponse> DescribeIsolatedInstancesOutcome;
                 typedef std::future<DescribeIsolatedInstancesOutcome> DescribeIsolatedInstancesOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::DescribeIsolatedInstancesRequest&, DescribeIsolatedInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIsolatedInstancesAsyncHandler;
@@ -875,6 +885,15 @@ namespace TencentCloud
                 CreateClustersOutcomeCallable CreateClustersCallable(const Model::CreateClustersRequest& request);
 
                 /**
+                 *This API is used to create a newly purchased cluster.
+                 * @param req CreateIntegrateClusterRequest
+                 * @return CreateIntegrateClusterOutcome
+                 */
+                CreateIntegrateClusterOutcome CreateIntegrateCluster(const Model::CreateIntegrateClusterRequest &request);
+                void CreateIntegrateClusterAsync(const Model::CreateIntegrateClusterRequest& request, const CreateIntegrateClusterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateIntegrateClusterOutcomeCallable CreateIntegrateClusterCallable(const Model::CreateIntegrateClusterRequest& request);
+
+                /**
                  *This API is used to create parameter templates.
                  * @param req CreateParamTemplateRequest
                  * @return CreateParamTemplateOutcome
@@ -1233,6 +1252,15 @@ namespace TencentCloud
                 DescribeInstancesWithinSameClusterOutcome DescribeInstancesWithinSameCluster(const Model::DescribeInstancesWithinSameClusterRequest &request);
                 void DescribeInstancesWithinSameClusterAsync(const Model::DescribeInstancesWithinSameClusterRequest& request, const DescribeInstancesWithinSameClusterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeInstancesWithinSameClusterOutcomeCallable DescribeInstancesWithinSameClusterCallable(const Model::DescribeInstancesWithinSameClusterRequest& request);
+
+                /**
+                 *This API is used to query cluster tasks.
+                 * @param req DescribeIntegrateTaskRequest
+                 * @return DescribeIntegrateTaskOutcome
+                 */
+                DescribeIntegrateTaskOutcome DescribeIntegrateTask(const Model::DescribeIntegrateTaskRequest &request);
+                void DescribeIntegrateTaskAsync(const Model::DescribeIntegrateTaskRequest& request, const DescribeIntegrateTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeIntegrateTaskOutcomeCallable DescribeIntegrateTaskCallable(const Model::DescribeIntegrateTaskRequest& request);
 
                 /**
                  *This interface is used for querying the recycle bin instance list.

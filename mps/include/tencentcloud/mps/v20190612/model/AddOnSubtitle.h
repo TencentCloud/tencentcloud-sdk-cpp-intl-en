@@ -138,6 +138,56 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool SubtitleNameHasBeenSet() const;
 
+                    /**
+                     * 获取Output format of the subtitle. valid values: "WebVTT", "TTML".
+Default value: "WebVTT".
+                     * @return OutputFormat Output format of the subtitle. valid values: "WebVTT", "TTML".
+Default value: "WebVTT".
+                     * 
+                     */
+                    std::string GetOutputFormat() const;
+
+                    /**
+                     * 设置Output format of the subtitle. valid values: "WebVTT", "TTML".
+Default value: "WebVTT".
+                     * @param _outputFormat Output format of the subtitle. valid values: "WebVTT", "TTML".
+Default value: "WebVTT".
+                     * 
+                     */
+                    void SetOutputFormat(const std::string& _outputFormat);
+
+                    /**
+                     * 判断参数 OutputFormat 是否已赋值
+                     * @return OutputFormat 是否已赋值
+                     * 
+                     */
+                    bool OutputFormatHasBeenSet() const;
+
+                    /**
+                     * 获取Default subtitle track. specifies the current subtitle as the default track when true. a maximum of 1 default subtitle track can be specified.
+Default value: `false`.
+                     * @return DefaultTrack Default subtitle track. specifies the current subtitle as the default track when true. a maximum of 1 default subtitle track can be specified.
+Default value: `false`.
+                     * 
+                     */
+                    bool GetDefaultTrack() const;
+
+                    /**
+                     * 设置Default subtitle track. specifies the current subtitle as the default track when true. a maximum of 1 default subtitle track can be specified.
+Default value: `false`.
+                     * @param _defaultTrack Default subtitle track. specifies the current subtitle as the default track when true. a maximum of 1 default subtitle track can be specified.
+Default value: `false`.
+                     * 
+                     */
+                    void SetDefaultTrack(const bool& _defaultTrack);
+
+                    /**
+                     * 判断参数 DefaultTrack 是否已赋值
+                     * @return DefaultTrack 是否已赋值
+                     * 
+                     */
+                    bool DefaultTrackHasBeenSet() const;
+
                 private:
 
                     /**
@@ -164,6 +214,20 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     std::string m_subtitleName;
                     bool m_subtitleNameHasBeenSet;
+
+                    /**
+                     * Output format of the subtitle. valid values: "WebVTT", "TTML".
+Default value: "WebVTT".
+                     */
+                    std::string m_outputFormat;
+                    bool m_outputFormatHasBeenSet;
+
+                    /**
+                     * Default subtitle track. specifies the current subtitle as the default track when true. a maximum of 1 default subtitle track can be specified.
+Default value: `false`.
+                     */
+                    bool m_defaultTrack;
+                    bool m_defaultTrackHasBeenSet;
 
                 };
             }

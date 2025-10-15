@@ -25,6 +25,8 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mdl/v20200326/model/StaticImageSettings.h>
+#include <tencentcloud/mdl/v20200326/model/MotionGraphicsSetting.h>
+#include <tencentcloud/mdl/v20200326/model/ThumbnailSettings.h>
 
 
 namespace TencentCloud
@@ -68,6 +70,48 @@ namespace TencentCloud
                      */
                     bool StaticImageSettingsHasBeenSet() const;
 
+                    /**
+                     * 获取Dynamic graphic overlay configuration.
+                     * @return MotionGraphicsSettings Dynamic graphic overlay configuration.
+                     * 
+                     */
+                    MotionGraphicsSetting GetMotionGraphicsSettings() const;
+
+                    /**
+                     * 设置Dynamic graphic overlay configuration.
+                     * @param _motionGraphicsSettings Dynamic graphic overlay configuration.
+                     * 
+                     */
+                    void SetMotionGraphicsSettings(const MotionGraphicsSetting& _motionGraphicsSettings);
+
+                    /**
+                     * 判断参数 MotionGraphicsSettings 是否已赋值
+                     * @return MotionGraphicsSettings 是否已赋值
+                     * 
+                     */
+                    bool MotionGraphicsSettingsHasBeenSet() const;
+
+                    /**
+                     * 获取Thumbnail Configuration.
+                     * @return ThumbnailSettings Thumbnail Configuration.
+                     * 
+                     */
+                    ThumbnailSettings GetThumbnailSettings() const;
+
+                    /**
+                     * 设置Thumbnail Configuration.
+                     * @param _thumbnailSettings Thumbnail Configuration.
+                     * 
+                     */
+                    void SetThumbnailSettings(const ThumbnailSettings& _thumbnailSettings);
+
+                    /**
+                     * 判断参数 ThumbnailSettings 是否已赋值
+                     * @return ThumbnailSettings 是否已赋值
+                     * 
+                     */
+                    bool ThumbnailSettingsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -75,6 +119,18 @@ namespace TencentCloud
                      */
                     StaticImageSettings m_staticImageSettings;
                     bool m_staticImageSettingsHasBeenSet;
+
+                    /**
+                     * Dynamic graphic overlay configuration.
+                     */
+                    MotionGraphicsSetting m_motionGraphicsSettings;
+                    bool m_motionGraphicsSettingsHasBeenSet;
+
+                    /**
+                     * Thumbnail Configuration.
+                     */
+                    ThumbnailSettings m_thumbnailSettings;
+                    bool m_thumbnailSettingsHasBeenSet;
 
                 };
             }

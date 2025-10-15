@@ -29,6 +29,7 @@
 #include <tencentcloud/mdl/v20200326/model/TimedMetadataInfo.h>
 #include <tencentcloud/mdl/v20200326/model/StaticImageActivateSetting.h>
 #include <tencentcloud/mdl/v20200326/model/StaticImageDeactivateSetting.h>
+#include <tencentcloud/mdl/v20200326/model/MotionGraphicsActivateSetting.h>
 
 
 namespace TencentCloud
@@ -282,6 +283,27 @@ namespace TencentCloud
                      */
                     bool StaticImageDeactivateSettingHasBeenSet() const;
 
+                    /**
+                     * 获取Dynamic graphic overlay activate configuration.
+                     * @return MotionGraphicsActivateSetting Dynamic graphic overlay activate configuration.
+                     * 
+                     */
+                    MotionGraphicsActivateSetting GetMotionGraphicsActivateSetting() const;
+
+                    /**
+                     * 设置Dynamic graphic overlay activate configuration.
+                     * @param _motionGraphicsActivateSetting Dynamic graphic overlay activate configuration.
+                     * 
+                     */
+                    void SetMotionGraphicsActivateSetting(const MotionGraphicsActivateSetting& _motionGraphicsActivateSetting);
+
+                    /**
+                     * 判断参数 MotionGraphicsActivateSetting 是否已赋值
+                     * @return MotionGraphicsActivateSetting 是否已赋值
+                     * 
+                     */
+                    bool MotionGraphicsActivateSettingHasBeenSet() const;
+
                 private:
 
                     /**
@@ -349,6 +371,12 @@ namespace TencentCloud
                      */
                     StaticImageDeactivateSetting m_staticImageDeactivateSetting;
                     bool m_staticImageDeactivateSettingHasBeenSet;
+
+                    /**
+                     * Dynamic graphic overlay activate configuration.
+                     */
+                    MotionGraphicsActivateSetting m_motionGraphicsActivateSetting;
+                    bool m_motionGraphicsActivateSettingHasBeenSet;
 
                 };
             }

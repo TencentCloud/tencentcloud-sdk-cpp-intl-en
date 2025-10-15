@@ -129,15 +129,39 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection. If it is left blank, the default value video is used.
-                     * @return RecordType Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection. If it is left blank, the default value video is used.
+                     * 获取Recording type. Valid values: 
+
+- video: audio and video recording; 
+- audio: audio recording; 
+- auto: automatic detection;
+
+If it is left blank, "video" will be used as the default value.
+                     * @return RecordType Recording type. Valid values: 
+
+- video: audio and video recording; 
+- audio: audio recording; 
+- auto: automatic detection;
+
+If it is left blank, "video" will be used as the default value.
                      * 
                      */
                     std::string GetRecordType() const;
 
                     /**
-                     * 设置Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection. If it is left blank, the default value video is used.
-                     * @param _recordType Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection. If it is left blank, the default value video is used.
+                     * 设置Recording type. Valid values: 
+
+- video: audio and video recording; 
+- audio: audio recording; 
+- auto: automatic detection;
+
+If it is left blank, "video" will be used as the default value.
+                     * @param _recordType Recording type. Valid values: 
+
+- video: audio and video recording; 
+- audio: audio recording; 
+- auto: automatic detection;
+
+If it is left blank, "video" will be used as the default value.
                      * 
                      */
                     void SetRecordType(const std::string& _recordType);
@@ -176,7 +200,13 @@ namespace TencentCloud
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection. If it is left blank, the default value video is used.
+                     * Recording type. Valid values: 
+
+- video: audio and video recording; 
+- audio: audio recording; 
+- auto: automatic detection;
+
+If it is left blank, "video" will be used as the default value.
                      */
                     std::string m_recordType;
                     bool m_recordTypeHasBeenSet;
