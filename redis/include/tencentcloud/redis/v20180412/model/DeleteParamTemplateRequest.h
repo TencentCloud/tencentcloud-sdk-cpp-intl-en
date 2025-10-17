@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Parameter template ID.
-                     * @return TemplateId Parameter template ID.
+                     * 获取Parameter template ID. Log in to the [Redis console and go to the parameter template page](https://console.cloud.tencent.com/redis/templates) to obtain the template ID.
+                     * @return TemplateId Parameter template ID. Log in to the [Redis console and go to the parameter template page](https://console.cloud.tencent.com/redis/templates) to obtain the template ID.
                      * 
                      */
                     std::string GetTemplateId() const;
 
                     /**
-                     * 设置Parameter template ID.
-                     * @param _templateId Parameter template ID.
+                     * 设置Parameter template ID. Log in to the [Redis console and go to the parameter template page](https://console.cloud.tencent.com/redis/templates) to obtain the template ID.
+                     * @param _templateId Parameter template ID. Log in to the [Redis console and go to the parameter template page](https://console.cloud.tencent.com/redis/templates) to obtain the template ID.
                      * 
                      */
                     void SetTemplateId(const std::string& _templateId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Parameter template ID.
+                     * Parameter template ID. Log in to the [Redis console and go to the parameter template page](https://console.cloud.tencent.com/redis/templates) to obtain the template ID.
                      */
                     std::string m_templateId;
                     bool m_templateIdHasBeenSet;

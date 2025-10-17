@@ -44,26 +44,30 @@ namespace TencentCloud
 
                     /**
                      * 获取Instance modification operation. Valid values:
-- rename: Rename the instance.
-- modifyProject: Modify the project to which the instance belongs.
-- modifyAutoRenew: Modify the instance renewal flag.
+- rename: rename an instance.
+- modifyProject: modify the project to which the instance belongs.
+- modifyAutoRenew: modify the instance renewal flag.
+- modifyDeleteProtectionSwitch: modify the instance deletion protection switch status.
                      * @return Operation Instance modification operation. Valid values:
-- rename: Rename the instance.
-- modifyProject: Modify the project to which the instance belongs.
-- modifyAutoRenew: Modify the instance renewal flag.
+- rename: rename an instance.
+- modifyProject: modify the project to which the instance belongs.
+- modifyAutoRenew: modify the instance renewal flag.
+- modifyDeleteProtectionSwitch: modify the instance deletion protection switch status.
                      * 
                      */
                     std::string GetOperation() const;
 
                     /**
                      * 设置Instance modification operation. Valid values:
-- rename: Rename the instance.
-- modifyProject: Modify the project to which the instance belongs.
-- modifyAutoRenew: Modify the instance renewal flag.
+- rename: rename an instance.
+- modifyProject: modify the project to which the instance belongs.
+- modifyAutoRenew: modify the instance renewal flag.
+- modifyDeleteProtectionSwitch: modify the instance deletion protection switch status.
                      * @param _operation Instance modification operation. Valid values:
-- rename: Rename the instance.
-- modifyProject: Modify the project to which the instance belongs.
-- modifyAutoRenew: Modify the instance renewal flag.
+- rename: rename an instance.
+- modifyProject: modify the project to which the instance belongs.
+- modifyAutoRenew: modify the instance renewal flag.
+- modifyDeleteProtectionSwitch: modify the instance deletion protection switch status.
                      * 
                      */
                     void SetOperation(const std::string& _operation);
@@ -97,15 +101,15 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取New name of the instance.
-                     * @return InstanceNames New name of the instance.
+                     * 获取New name of the instance. Only Chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. The length can be up to 60 characters.
+                     * @return InstanceNames New name of the instance. Only Chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. The length can be up to 60 characters.
                      * 
                      */
                     std::vector<std::string> GetInstanceNames() const;
 
                     /**
-                     * 设置New name of the instance.
-                     * @param _instanceNames New name of the instance.
+                     * 设置New name of the instance. Only Chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. The length can be up to 60 characters.
+                     * @param _instanceNames New name of the instance. Only Chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. The length can be up to 60 characters.
                      * 
                      */
                     void SetInstanceNames(const std::vector<std::string>& _instanceNames);
@@ -176,6 +180,27 @@ namespace TencentCloud
                     bool AutoRenewsHasBeenSet() const;
 
                     /**
+                     * 获取Deletion protection switch. - 0: disabled by default; - 1: enabled.
+                     * @return DeleteProtectionSwitches Deletion protection switch. - 0: disabled by default; - 1: enabled.
+                     * 
+                     */
+                    std::vector<int64_t> GetDeleteProtectionSwitches() const;
+
+                    /**
+                     * 设置Deletion protection switch. - 0: disabled by default; - 1: enabled.
+                     * @param _deleteProtectionSwitches Deletion protection switch. - 0: disabled by default; - 1: enabled.
+                     * 
+                     */
+                    void SetDeleteProtectionSwitches(const std::vector<int64_t>& _deleteProtectionSwitches);
+
+                    /**
+                     * 判断参数 DeleteProtectionSwitches 是否已赋值
+                     * @return DeleteProtectionSwitches 是否已赋值
+                     * 
+                     */
+                    bool DeleteProtectionSwitchesHasBeenSet() const;
+
+                    /**
                      * 获取This parameter is currently being deprecated and can still be used by existing users. It is recommended that new users use InstanceIds.
                      * @return InstanceId This parameter is currently being deprecated and can still be used by existing users. It is recommended that new users use InstanceIds.
                      * @deprecated
@@ -242,9 +267,10 @@ namespace TencentCloud
 
                     /**
                      * Instance modification operation. Valid values:
-- rename: Rename the instance.
-- modifyProject: Modify the project to which the instance belongs.
-- modifyAutoRenew: Modify the instance renewal flag.
+- rename: rename an instance.
+- modifyProject: modify the project to which the instance belongs.
+- modifyAutoRenew: modify the instance renewal flag.
+- modifyDeleteProtectionSwitch: modify the instance deletion protection switch status.
                      */
                     std::string m_operation;
                     bool m_operationHasBeenSet;
@@ -256,7 +282,7 @@ namespace TencentCloud
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * New name of the instance.
+                     * New name of the instance. Only Chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. The length can be up to 60 characters.
                      */
                     std::vector<std::string> m_instanceNames;
                     bool m_instanceNamesHasBeenSet;
@@ -276,6 +302,12 @@ namespace TencentCloud
                      */
                     std::vector<int64_t> m_autoRenews;
                     bool m_autoRenewsHasBeenSet;
+
+                    /**
+                     * Deletion protection switch. - 0: disabled by default; - 1: enabled.
+                     */
+                    std::vector<int64_t> m_deleteProtectionSwitches;
+                    bool m_deleteProtectionSwitchesHasBeenSet;
 
                     /**
                      * This parameter is currently being deprecated and can still be used by existing users. It is recommended that new users use InstanceIds.

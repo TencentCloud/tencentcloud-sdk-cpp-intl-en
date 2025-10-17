@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
+                     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
+                     * @param _instanceId Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of results returned per page
-                     * @return Limit Maximum number of results returned per page
+                     * 获取Pagination size. The default value is 100, and the maximum value is 200.
+                     * @return Limit Pagination size. The default value is 100, and the maximum value is 200.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Maximum number of results returned per page
-                     * @param _limit Maximum number of results returned per page
+                     * 设置Pagination size. The default value is 100, and the maximum value is 200.
+                     * @param _limit Pagination size. The default value is 100, and the maximum value is 200.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset, which is an integral multiple of `Limit`.
-                     * @return Offset Offset, which is an integral multiple of `Limit`.
+                     * 获取Offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
+                     * @return Offset Offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset, which is an integral multiple of `Limit`.
-                     * @param _offset Offset, which is an integral multiple of `Limit`.
+                     * 设置Offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
+                     * @param _offset Offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Maximum number of results returned per page
+                     * Pagination size. The default value is 100, and the maximum value is 200.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset, which is an integral multiple of `Limit`.
+                     * Offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;

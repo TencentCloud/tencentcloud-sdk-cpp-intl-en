@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool FrequencyHasBeenSet() const;
 
                     /**
-                     * 获取  Member UIN
-                     * @return MemberUin   Member UIN
+                     * 获取  Member UIN.
+                     * @return MemberUin   Member UIN.
                      * 
                      */
                     int64_t GetMemberUin() const;
 
                     /**
-                     * 设置  Member UIN
-                     * @param _memberUin   Member UIN
+                     * 设置  Member UIN.
+                     * @param _memberUin   Member UIN.
                      * 
                      */
                     void SetMemberUin(const int64_t& _memberUin);
@@ -228,7 +228,7 @@ namespace TencentCloud
                     bool m_frequencyHasBeenSet;
 
                     /**
-                     *   Member UIN
+                     *   Member UIN.
                      */
                     int64_t m_memberUin;
                     bool m_memberUinHasBeenSet;

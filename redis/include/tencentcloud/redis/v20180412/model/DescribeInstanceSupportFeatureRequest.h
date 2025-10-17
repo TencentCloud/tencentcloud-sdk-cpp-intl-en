@@ -43,23 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specify the instance ID.
- For example: crs-xjhsdj****. Please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
-Sample value: crs-asdasdas.
-                     * @return InstanceId Specify the instance ID.
- For example: crs-xjhsdj****. Please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
-Sample value: crs-asdasdas.
+                     * 获取Specifies the instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and copy it from the instance list.
+                     * @return InstanceId Specifies the instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and copy it from the instance list.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Specify the instance ID.
- For example: crs-xjhsdj****. Please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
-Sample value: crs-asdasdas.
-                     * @param _instanceId Specify the instance ID.
- For example: crs-xjhsdj****. Please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
-Sample value: crs-asdasdas.
+                     * 设置Specifies the instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and copy it from the instance list.
+                     * @param _instanceId Specifies the instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and copy it from the instance list.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -72,19 +64,27 @@ Sample value: crs-asdasdas.
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Feature names.
-- Read-local-node-only: Proximity access feature.- multi-account: Multiple accounts feature.
-                     * @return FeatureName Feature names.
-- Read-local-node-only: Proximity access feature.- multi-account: Multiple accounts feature.
+                     * 获取The features that support queries are as follows.
+- read-local-node-only: nearby access.
+- multi-account: multi-account management.
+- auto-failback: fault recovery scenario, such as whether automatic failback is enabled for the primary node.
+                     * @return FeatureName The features that support queries are as follows.
+- read-local-node-only: nearby access.
+- multi-account: multi-account management.
+- auto-failback: fault recovery scenario, such as whether automatic failback is enabled for the primary node.
                      * 
                      */
                     std::string GetFeatureName() const;
 
                     /**
-                     * 设置Feature names.
-- Read-local-node-only: Proximity access feature.- multi-account: Multiple accounts feature.
-                     * @param _featureName Feature names.
-- Read-local-node-only: Proximity access feature.- multi-account: Multiple accounts feature.
+                     * 设置The features that support queries are as follows.
+- read-local-node-only: nearby access.
+- multi-account: multi-account management.
+- auto-failback: fault recovery scenario, such as whether automatic failback is enabled for the primary node.
+                     * @param _featureName The features that support queries are as follows.
+- read-local-node-only: nearby access.
+- multi-account: multi-account management.
+- auto-failback: fault recovery scenario, such as whether automatic failback is enabled for the primary node.
                      * 
                      */
                     void SetFeatureName(const std::string& _featureName);
@@ -99,16 +99,16 @@ Sample value: crs-asdasdas.
                 private:
 
                     /**
-                     * Specify the instance ID.
- For example: crs-xjhsdj****. Please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
-Sample value: crs-asdasdas.
+                     * Specifies the instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and copy it from the instance list.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Feature names.
-- Read-local-node-only: Proximity access feature.- multi-account: Multiple accounts feature.
+                     * The features that support queries are as follows.
+- read-local-node-only: nearby access.
+- multi-account: multi-account management.
+- auto-failback: fault recovery scenario, such as whether automatic failback is enabled for the primary node.
                      */
                     std::string m_featureName;
                     bool m_featureNameHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the instance ID. For example, crs-xjhsdj****. Log in to the TencentDB for Redis® console and copy the instance ID from the instance list.
-                     * @return InstanceId Specifies the instance ID. For example, crs-xjhsdj****. Log in to the TencentDB for Redis® console and copy the instance ID from the instance list.
+                     * 获取Specifies the instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
+                     * @return InstanceId Specifies the instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Specifies the instance ID. For example, crs-xjhsdj****. Log in to the TencentDB for Redis® console and copy the instance ID from the instance list.
-                     * @param _instanceId Specifies the instance ID. For example, crs-xjhsdj****. Log in to the TencentDB for Redis® console and copy the instance ID from the instance list.
+                     * 设置Specifies the instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
+                     * @param _instanceId Specifies the instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,23 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Second-level backup timestamp. The corresponding time should be within the last 7 days.
-                     * @return BackupTimestamp Second-level backup timestamp. The corresponding time should be within the last 7 days.
+                     * 获取Second-level backup timestamp.
+- Setting range: support any second-level time point within 7 days.
+- Timestamp format: UNIX timestamp.
+                     * @return BackupTimestamp Second-level backup timestamp.
+- Setting range: support any second-level time point within 7 days.
+- Timestamp format: UNIX timestamp.
                      * 
                      */
                     int64_t GetBackupTimestamp() const;
 
                     /**
-                     * 设置Second-level backup timestamp. The corresponding time should be within the last 7 days.
-                     * @param _backupTimestamp Second-level backup timestamp. The corresponding time should be within the last 7 days.
+                     * 设置Second-level backup timestamp.
+- Setting range: support any second-level time point within 7 days.
+- Timestamp format: UNIX timestamp.
+                     * @param _backupTimestamp Second-level backup timestamp.
+- Setting range: support any second-level time point within 7 days.
+- Timestamp format: UNIX timestamp.
                      * 
                      */
                     void SetBackupTimestamp(const int64_t& _backupTimestamp);
@@ -87,13 +95,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the instance ID. For example, crs-xjhsdj****. Log in to the TencentDB for Redis® console and copy the instance ID from the instance list.
+                     * Specifies the instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Second-level backup timestamp. The corresponding time should be within the last 7 days.
+                     * Second-level backup timestamp.
+- Setting range: support any second-level time point within 7 days.
+- Timestamp format: UNIX timestamp.
                      */
                     int64_t m_backupTimestamp;
                     bool m_backupTimestampHasBeenSet;

@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Slow query threshold in ms
-                     * @return MinQueryTime Slow query threshold in ms
+                     * 获取Slow query threshold, in milliseconds. The value is a positive integer greater than 0.
+                     * @return MinQueryTime Slow query threshold, in milliseconds. The value is a positive integer greater than 0.
                      * 
                      */
                     int64_t GetMinQueryTime() const;
 
                     /**
-                     * 设置Slow query threshold in ms
-                     * @param _minQueryTime Slow query threshold in ms
+                     * 设置Slow query threshold, in milliseconds. The value is a positive integer greater than 0.
+                     * @param _minQueryTime Slow query threshold, in milliseconds. The value is a positive integer greater than 0.
                      * 
                      */
                     void SetMinQueryTime(const int64_t& _minQueryTime);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool MinQueryTimeHasBeenSet() const;
 
                     /**
-                     * 获取Page size. Default value 20. Maximum value 100.
-                     * @return Limit Page size. Default value 20. Maximum value 100.
+                     * 获取Page size. The default value is 20, the minimum value is 1, and the maximum value is 100.
+                     * @return Limit Page size. The default value is 20, the minimum value is 1, and the maximum value is 100.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Page size. Default value 20. Maximum value 100.
-                     * @param _limit Page size. Default value 20. Maximum value 100.
+                     * 设置Page size. The default value is 20, the minimum value is 1, and the maximum value is 100.
+                     * @param _limit Page size. The default value is 20, the minimum value is 1, and the maximum value is 100.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
-                     * @return Offset Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
+                     * 获取Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
+                     * @return Offset Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
-                     * @param _offset Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
+                     * 设置Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
+                     * @param _offset Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -189,19 +189,19 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Slow query threshold in ms
+                     * Slow query threshold, in milliseconds. The value is a positive integer greater than 0.
                      */
                     int64_t m_minQueryTime;
                     bool m_minQueryTimeHasBeenSet;
 
                     /**
-                     * Page size. Default value 20. Maximum value 100.
+                     * Page size. The default value is 20, the minimum value is 1, and the maximum value is 100.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
+                     * Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;

@@ -155,23 +155,23 @@ namespace TencentCloud
                     bool ReadonlyPolicyHasBeenSet() const;
 
                     /**
-                     * 获取The read/write permission of the account supports the selection of read-only and read/write permissions.
-- r: read-only
-- rw: Read/Write permission.
-                     * @return Privilege The read/write permission of the account supports the selection of read-only and read/write permissions.
-- r: read-only
-- rw: Read/Write permission.
+                     * 获取Read-write permissions of the account. It supports the selection of read-only and read-write permissions.
+- r: read-only.
+- rw: read-write.
+                     * @return Privilege Read-write permissions of the account. It supports the selection of read-only and read-write permissions.
+- r: read-only.
+- rw: read-write.
                      * 
                      */
                     std::string GetPrivilege() const;
 
                     /**
-                     * 设置The read/write permission of the account supports the selection of read-only and read/write permissions.
-- r: read-only
-- rw: Read/Write permission.
-                     * @param _privilege The read/write permission of the account supports the selection of read-only and read/write permissions.
-- r: read-only
-- rw: Read/Write permission.
+                     * 设置Read-write permissions of the account. It supports the selection of read-only and read-write permissions.
+- r: read-only.
+- rw: read-write.
+                     * @param _privilege Read-write permissions of the account. It supports the selection of read-only and read-write permissions.
+- r: read-only.
+- rw: read-write.
                      * 
                      */
                     void SetPrivilege(const std::string& _privilege);
@@ -184,15 +184,15 @@ namespace TencentCloud
                     bool PrivilegeHasBeenSet() const;
 
                     /**
-                     * 获取Sub-account description information, with a length of [0, 64] bytes, supports Chinese characters.
-                     * @return Remark Sub-account description information, with a length of [0, 64] bytes, supports Chinese characters.
+                     * 获取Description information about account remarks, with a length of [0, 64] bytes.
+                     * @return Remark Description information about account remarks, with a length of [0, 64] bytes.
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Sub-account description information, with a length of [0, 64] bytes, supports Chinese characters.
-                     * @param _remark Sub-account description information, with a length of [0, 64] bytes, supports Chinese characters.
+                     * 设置Description information about account remarks, with a length of [0, 64] bytes.
+                     * @param _remark Description information about account remarks, with a length of [0, 64] bytes.
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -203,6 +203,27 @@ namespace TencentCloud
                      * 
                      */
                     bool RemarkHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to encrypt the password.
+                     * @return EncryptPassword Whether to encrypt the password.
+                     * 
+                     */
+                    bool GetEncryptPassword() const;
+
+                    /**
+                     * 设置Whether to encrypt the password.
+                     * @param _encryptPassword Whether to encrypt the password.
+                     * 
+                     */
+                    void SetEncryptPassword(const bool& _encryptPassword);
+
+                    /**
+                     * 判断参数 EncryptPassword 是否已赋值
+                     * @return EncryptPassword 是否已赋值
+                     * 
+                     */
+                    bool EncryptPasswordHasBeenSet() const;
 
                 private:
 
@@ -238,18 +259,24 @@ namespace TencentCloud
                     bool m_readonlyPolicyHasBeenSet;
 
                     /**
-                     * The read/write permission of the account supports the selection of read-only and read/write permissions.
-- r: read-only
-- rw: Read/Write permission.
+                     * Read-write permissions of the account. It supports the selection of read-only and read-write permissions.
+- r: read-only.
+- rw: read-write.
                      */
                     std::string m_privilege;
                     bool m_privilegeHasBeenSet;
 
                     /**
-                     * Sub-account description information, with a length of [0, 64] bytes, supports Chinese characters.
+                     * Description information about account remarks, with a length of [0, 64] bytes.
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
+
+                    /**
+                     * Whether to encrypt the password.
+                     */
+                    bool m_encryptPassword;
+                    bool m_encryptPasswordHasBeenSet;
 
                 };
             }

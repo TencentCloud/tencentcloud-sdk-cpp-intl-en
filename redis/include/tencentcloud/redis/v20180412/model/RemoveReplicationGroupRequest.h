@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Replication group ID.
-                     * @return GroupId Replication group ID.
+                     * 获取Replication group ID. Log in to the [Redis console and go to the global replication](https://console.cloud.tencent.com/redis/replication) page to obtain the ID.
+                     * @return GroupId Replication group ID. Log in to the [Redis console and go to the global replication](https://console.cloud.tencent.com/redis/replication) page to obtain the ID.
                      * 
                      */
                     std::string GetGroupId() const;
 
                     /**
-                     * 设置Replication group ID.
-                     * @param _groupId Replication group ID.
+                     * 设置Replication group ID. Log in to the [Redis console and go to the global replication](https://console.cloud.tencent.com/redis/replication) page to obtain the ID.
+                     * @param _groupId Replication group ID. Log in to the [Redis console and go to the global replication](https://console.cloud.tencent.com/redis/replication) page to obtain the ID.
                      * 
                      */
                     void SetGroupId(const std::string& _groupId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Replication group ID.
+                     * Replication group ID. Log in to the [Redis console and go to the global replication](https://console.cloud.tencent.com/redis/replication) page to obtain the ID.
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;

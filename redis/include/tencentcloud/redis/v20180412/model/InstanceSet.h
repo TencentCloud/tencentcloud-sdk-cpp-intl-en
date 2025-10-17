@@ -92,18 +92,18 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取App ID of a user, which is an application ID that uniquely corresponds to the account ID. Some Tencent Cloud products use this app ID.
+                     * 获取App ID of a user, which is an application ID that uniquely corresponds to the account ID. Certain Tencent Cloud products use this app ID.
 
-                     * @return Appid App ID of a user, which is an application ID that uniquely corresponds to the account ID. Some Tencent Cloud products use this app ID.
+                     * @return Appid App ID of a user, which is an application ID that uniquely corresponds to the account ID. Certain Tencent Cloud products use this app ID.
 
                      * 
                      */
                     int64_t GetAppid() const;
 
                     /**
-                     * 设置App ID of a user, which is an application ID that uniquely corresponds to the account ID. Some Tencent Cloud products use this app ID.
+                     * 设置App ID of a user, which is an application ID that uniquely corresponds to the account ID. Certain Tencent Cloud products use this app ID.
 
-                     * @param _appid App ID of a user, which is an application ID that uniquely corresponds to the account ID. Some Tencent Cloud products use this app ID.
+                     * @param _appid App ID of a user, which is an application ID that uniquely corresponds to the account ID. Certain Tencent Cloud products use this app ID.
 
                      * 
                      */
@@ -791,14 +791,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Read weight of a secondary node.
+- 0: disable read-only replicas.
+- 100: enable read-only replicas.
                      * @return SlaveReadWeight Read weight of a secondary node.
+- 0: disable read-only replicas.
+- 100: enable read-only replicas.
                      * 
                      */
                     int64_t GetSlaveReadWeight() const;
 
                     /**
                      * 设置Read weight of a secondary node.
+- 0: disable read-only replicas.
+- 100: enable read-only replicas.
                      * @param _slaveReadWeight Read weight of a secondary node.
+- 0: disable read-only replicas.
+- 100: enable read-only replicas.
                      * 
                      */
                     void SetSlaveReadWeight(const int64_t& _slaveReadWeight);
@@ -1385,6 +1393,27 @@ It is returned only for multi-AZ instances.
                      */
                     bool BackupModeHasBeenSet() const;
 
+                    /**
+                     * 获取Deletion protection switch. 0: disabled; 1: enabled.
+                     * @return DeleteProtectionSwitch Deletion protection switch. 0: disabled; 1: enabled.
+                     * 
+                     */
+                    int64_t GetDeleteProtectionSwitch() const;
+
+                    /**
+                     * 设置Deletion protection switch. 0: disabled; 1: enabled.
+                     * @param _deleteProtectionSwitch Deletion protection switch. 0: disabled; 1: enabled.
+                     * 
+                     */
+                    void SetDeleteProtectionSwitch(const int64_t& _deleteProtectionSwitch);
+
+                    /**
+                     * 判断参数 DeleteProtectionSwitch 是否已赋值
+                     * @return DeleteProtectionSwitch 是否已赋值
+                     * 
+                     */
+                    bool DeleteProtectionSwitchHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1400,7 +1429,7 @@ It is returned only for multi-AZ instances.
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * App ID of a user, which is an application ID that uniquely corresponds to the account ID. Some Tencent Cloud products use this app ID.
+                     * App ID of a user, which is an application ID that uniquely corresponds to the account ID. Certain Tencent Cloud products use this app ID.
 
                      */
                     int64_t m_appid;
@@ -1598,6 +1627,8 @@ It is returned only for multi-AZ instances.
 
                     /**
                      * Read weight of a secondary node.
+- 0: disable read-only replicas.
+- 100: enable read-only replicas.
                      */
                     int64_t m_slaveReadWeight;
                     bool m_slaveReadWeightHasBeenSet;
@@ -1765,6 +1796,12 @@ It is returned only for multi-AZ instances.
                      */
                     std::string m_backupMode;
                     bool m_backupModeHasBeenSet;
+
+                    /**
+                     * Deletion protection switch. 0: disabled; 1: enabled.
+                     */
+                    int64_t m_deleteProtectionSwitch;
+                    bool m_deleteProtectionSwitchHasBeenSet;
 
                 };
             }

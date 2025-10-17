@@ -23,7 +23,8 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Quota::V20241204::Model;
 using namespace std;
 
-CreateAlarmResponse::CreateAlarmResponse()
+CreateAlarmResponse::CreateAlarmResponse() :
+    m_alarmIdHasBeenSet(false)
 {
 }
 
@@ -61,6 +62,16 @@ CoreInternalOutcome CreateAlarmResponse::Deserialize(const string &payload)
     }
 
 
+    if (rsp.HasMember("AlarmId") && !rsp["AlarmId"].IsNull())
+    {
+        if (!rsp["AlarmId"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `AlarmId` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_alarmId = rsp["AlarmId"].GetInt64();
+        m_alarmIdHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -70,6 +81,14 @@ string CreateAlarmResponse::ToJsonString() const
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_alarmIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AlarmId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_alarmId, allocator);
+    }
 
     rapidjson::Value iKey(rapidjson::kStringType);
     string key = "RequestId";
@@ -82,5 +101,15 @@ string CreateAlarmResponse::ToJsonString() const
     return buffer.GetString();
 }
 
+
+int64_t CreateAlarmResponse::GetAlarmId() const
+{
+    return m_alarmId;
+}
+
+bool CreateAlarmResponse::AlarmIdHasBeenSet() const
+{
+    return m_alarmIdHasBeenSet;
+}
 
 

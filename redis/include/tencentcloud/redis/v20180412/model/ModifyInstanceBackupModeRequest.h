@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID, which can contain 12 to 36 characters.
-                     * @return InstanceId Instance ID, which can contain 12 to 36 characters.
+                     * 获取Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
+                     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID, which can contain 12 to 36 characters.
-                     * @param _instanceId Instance ID, which can contain 12 to 36 characters.
+                     * 设置Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
+                     * @param _instanceId Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -65,22 +65,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Backup mode:
- - SecondLevelBackup: second-level backup.
- - NormalLevelBackup: ordinary backup.
+- SecondLevelBackup: second-level backup.
+- NormalLevelBackup: ordinary backup.
                      * @return BackupMode Backup mode:
- - SecondLevelBackup: second-level backup.
- - NormalLevelBackup: ordinary backup.
+- SecondLevelBackup: second-level backup.
+- NormalLevelBackup: ordinary backup.
                      * 
                      */
                     std::string GetBackupMode() const;
 
                     /**
                      * 设置Backup mode:
- - SecondLevelBackup: second-level backup.
- - NormalLevelBackup: ordinary backup.
+- SecondLevelBackup: second-level backup.
+- NormalLevelBackup: ordinary backup.
                      * @param _backupMode Backup mode:
- - SecondLevelBackup: second-level backup.
- - NormalLevelBackup: ordinary backup.
+- SecondLevelBackup: second-level backup.
+- NormalLevelBackup: ordinary backup.
                      * 
                      */
                     void SetBackupMode(const std::string& _backupMode);
@@ -95,15 +95,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID, which can contain 12 to 36 characters.
+                     * Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
                      * Backup mode:
- - SecondLevelBackup: second-level backup.
- - NormalLevelBackup: ordinary backup.
+- SecondLevelBackup: second-level backup.
+- NormalLevelBackup: ordinary backup.
                      */
                     std::string m_backupMode;
                     bool m_backupModeHasBeenSet;

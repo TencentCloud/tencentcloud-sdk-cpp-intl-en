@@ -106,15 +106,23 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Number of events displayed per page. Default value: 10. Maximum value: 100.
-                     * @return PageSize Number of events displayed per page. Default value: 10. Maximum value: 100.
+                     * 获取Outputs the number of events displayed per page.
+- Default value: 10.
+- Value range: [1, 100].
+                     * @return PageSize Outputs the number of events displayed per page.
+- Default value: 10.
+- Value range: [1, 100].
                      * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
-                     * 设置Number of events displayed per page. Default value: 10. Maximum value: 100.
-                     * @param _pageSize Number of events displayed per page. Default value: 10. Maximum value: 100.
+                     * 设置Outputs the number of events displayed per page.
+- Default value: 10.
+- Value range: [1, 100].
+                     * @param _pageSize Outputs the number of events displayed per page.
+- Default value: 10.
+- Value range: [1, 100].
                      * 
                      */
                     void SetPageSize(const int64_t& _pageSize);
@@ -127,15 +135,23 @@ namespace TencentCloud
                     bool PageSizeHasBeenSet() const;
 
                     /**
-                     * 获取Configures the page number for querying events. You can query events on a certain page by specifying PageNo and PageSize. Default value: 1.
-                     * @return PageNo Configures the page number for querying events. You can query events on a certain page by specifying PageNo and PageSize. Default value: 1.
+                     * 获取Configures the output page number for querying events. You can query events on a certain page by specifying PageNo (page number) and PageSize (number of output results per page).
+- Default value: 1.
+- Value range: positive integers greater than 0.
+                     * @return PageNo Configures the output page number for querying events. You can query events on a certain page by specifying PageNo (page number) and PageSize (number of output results per page).
+- Default value: 1.
+- Value range: positive integers greater than 0.
                      * 
                      */
                     int64_t GetPageNo() const;
 
                     /**
-                     * 设置Configures the page number for querying events. You can query events on a certain page by specifying PageNo and PageSize. Default value: 1.
-                     * @param _pageNo Configures the page number for querying events. You can query events on a certain page by specifying PageNo and PageSize. Default value: 1.
+                     * 设置Configures the output page number for querying events. You can query events on a certain page by specifying PageNo (page number) and PageSize (number of output results per page).
+- Default value: 1.
+- Value range: positive integers greater than 0.
+                     * @param _pageNo Configures the output page number for querying events. You can query events on a certain page by specifying PageNo (page number) and PageSize (number of output results per page).
+- Default value: 1.
+- Value range: positive integers greater than 0.
                      * 
                      */
                     void SetPageNo(const int64_t& _pageNo);
@@ -231,13 +247,17 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Number of events displayed per page. Default value: 10. Maximum value: 100.
+                     * Outputs the number of events displayed per page.
+- Default value: 10.
+- Value range: [1, 100].
                      */
                     int64_t m_pageSize;
                     bool m_pageSizeHasBeenSet;
 
                     /**
-                     * Configures the page number for querying events. You can query events on a certain page by specifying PageNo and PageSize. Default value: 1.
+                     * Configures the output page number for querying events. You can query events on a certain page by specifying PageNo (page number) and PageSize (number of output results per page).
+- Default value: 1.
+- Value range: positive integers greater than 0.
                      */
                     int64_t m_pageNo;
                     bool m_pageNoHasBeenSet;

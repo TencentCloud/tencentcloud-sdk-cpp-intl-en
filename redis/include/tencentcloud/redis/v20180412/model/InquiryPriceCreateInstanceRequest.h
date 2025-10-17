@@ -204,15 +204,19 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
                     bool BillingModeHasBeenSet() const;
 
                     /**
-                     * 获取ID of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
-                     * @return ZoneId ID of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+                     * 获取ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+**Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
+                     * @return ZoneId ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+**Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
                      * 
                      */
                     uint64_t GetZoneId() const;
 
                     /**
-                     * 设置ID of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
-                     * @param _zoneId ID of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+                     * 设置ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+**Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
+                     * @param _zoneId ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+**Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
                      * 
                      */
                     void SetZoneId(const uint64_t& _zoneId);
@@ -225,15 +229,23 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Number of instance shards. For the standard architecture of 2.8, the number of shards does not need to be configured. For the standard architecture of other versions, the number of shards should be set to 1. For the cluster architecture, the number of shards to be purchased needs to be specified.
-                     * @return RedisShardNum Number of instance shards. For the standard architecture of 2.8, the number of shards does not need to be configured. For the standard architecture of other versions, the number of shards should be set to 1. For the cluster architecture, the number of shards to be purchased needs to be specified.
+                     * 获取Number of instance shards.
+- The number of shards is required to be set to 1 for the standard architecture.
+- The number of shards can be set to 1, 3, 5, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96, or 128 for the cluster architecture.
+                     * @return RedisShardNum Number of instance shards.
+- The number of shards is required to be set to 1 for the standard architecture.
+- The number of shards can be set to 1, 3, 5, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96, or 128 for the cluster architecture.
                      * 
                      */
                     int64_t GetRedisShardNum() const;
 
                     /**
-                     * 设置Number of instance shards. For the standard architecture of 2.8, the number of shards does not need to be configured. For the standard architecture of other versions, the number of shards should be set to 1. For the cluster architecture, the number of shards to be purchased needs to be specified.
-                     * @param _redisShardNum Number of instance shards. For the standard architecture of 2.8, the number of shards does not need to be configured. For the standard architecture of other versions, the number of shards should be set to 1. For the cluster architecture, the number of shards to be purchased needs to be specified.
+                     * 设置Number of instance shards.
+- The number of shards is required to be set to 1 for the standard architecture.
+- The number of shards can be set to 1, 3, 5, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96, or 128 for the cluster architecture.
+                     * @param _redisShardNum Number of instance shards.
+- The number of shards is required to be set to 1 for the standard architecture.
+- The number of shards can be set to 1, 3, 5, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96, or 128 for the cluster architecture.
                      * 
                      */
                     void SetRedisShardNum(const int64_t& _redisShardNum);
@@ -246,15 +258,15 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
                     bool RedisShardNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of instance replicas. For the standard architecture of 2.8, the number of replicas does not need to be configured.
-                     * @return RedisReplicasNum Number of instance replicas. For the standard architecture of 2.8, the number of replicas does not need to be configured.
+                     * 获取Number of instance replicas. Valid values: 1, 2, 3, 4, and 5.
+                     * @return RedisReplicasNum Number of instance replicas. Valid values: 1, 2, 3, 4, and 5.
                      * 
                      */
                     int64_t GetRedisReplicasNum() const;
 
                     /**
-                     * 设置Number of instance replicas. For the standard architecture of 2.8, the number of replicas does not need to be configured.
-                     * @param _redisReplicasNum Number of instance replicas. For the standard architecture of 2.8, the number of replicas does not need to be configured.
+                     * 设置Number of instance replicas. Valid values: 1, 2, 3, 4, and 5.
+                     * @param _redisReplicasNum Number of instance replicas. Valid values: 1, 2, 3, 4, and 5.
                      * 
                      */
                     void SetRedisReplicasNum(const int64_t& _redisReplicasNum);
@@ -296,15 +308,19 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
                     bool ReplicasReadonlyHasBeenSet() const;
 
                     /**
-                     * 获取Name of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
-                     * @return ZoneName Name of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+                     * 获取Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+**Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
+                     * @return ZoneName Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+**Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
                      * 
                      */
                     std::string GetZoneName() const;
 
                     /**
-                     * 设置Name of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
-                     * @param _zoneName Name of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+                     * 设置Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+**Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
+                     * @param _zoneName Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+**Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
                      * 
                      */
                     void SetZoneName(const std::string& _zoneName);
@@ -396,19 +412,22 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
                     bool m_billingModeHasBeenSet;
 
                     /**
-                     * ID of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+                     * ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+**Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
                      */
                     uint64_t m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Number of instance shards. For the standard architecture of 2.8, the number of shards does not need to be configured. For the standard architecture of other versions, the number of shards should be set to 1. For the cluster architecture, the number of shards to be purchased needs to be specified.
+                     * Number of instance shards.
+- The number of shards is required to be set to 1 for the standard architecture.
+- The number of shards can be set to 1, 3, 5, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96, or 128 for the cluster architecture.
                      */
                     int64_t m_redisShardNum;
                     bool m_redisShardNumHasBeenSet;
 
                     /**
-                     * Number of instance replicas. For the standard architecture of 2.8, the number of replicas does not need to be configured.
+                     * Number of instance replicas. Valid values: 1, 2, 3, 4, and 5.
                      */
                     int64_t m_redisReplicasNum;
                     bool m_redisReplicasNumHasBeenSet;
@@ -422,7 +441,8 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
                     bool m_replicasReadonlyHasBeenSet;
 
                     /**
-                     * Name of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+                     * Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+**Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
                      */
                     std::string m_zoneName;
                     bool m_zoneNameHasBeenSet;

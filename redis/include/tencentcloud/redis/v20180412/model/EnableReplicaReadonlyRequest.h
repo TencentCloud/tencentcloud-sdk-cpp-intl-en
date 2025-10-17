@@ -66,12 +66,10 @@ namespace TencentCloud
                     /**
                      * 获取Read-only routing policy.
 - master: read-only routing to the primary node.
-- replication: read-only routing to the secondary node.
-- Default policy: writing to the primary node and reading from the secondary node.
+- replication: read-only routing to the secondary node. The default value is replication.
                      * @return ReadonlyPolicy Read-only routing policy.
 - master: read-only routing to the primary node.
-- replication: read-only routing to the secondary node.
-- Default policy: writing to the primary node and reading from the secondary node.
+- replication: read-only routing to the secondary node. The default value is replication.
                      * 
                      */
                     std::vector<std::string> GetReadonlyPolicy() const;
@@ -79,12 +77,10 @@ namespace TencentCloud
                     /**
                      * 设置Read-only routing policy.
 - master: read-only routing to the primary node.
-- replication: read-only routing to the secondary node.
-- Default policy: writing to the primary node and reading from the secondary node.
+- replication: read-only routing to the secondary node. The default value is replication.
                      * @param _readonlyPolicy Read-only routing policy.
 - master: read-only routing to the primary node.
-- replication: read-only routing to the secondary node.
-- Default policy: writing to the primary node and reading from the secondary node.
+- replication: read-only routing to the secondary node. The default value is replication.
                      * 
                      */
                     void SetReadonlyPolicy(const std::vector<std::string>& _readonlyPolicy);
@@ -107,8 +103,7 @@ namespace TencentCloud
                     /**
                      * Read-only routing policy.
 - master: read-only routing to the primary node.
-- replication: read-only routing to the secondary node.
-- Default policy: writing to the primary node and reading from the secondary node.
+- replication: read-only routing to the secondary node. The default value is replication.
                      */
                     std::vector<std::string> m_readonlyPolicy;
                     bool m_readonlyPolicyHasBeenSet;

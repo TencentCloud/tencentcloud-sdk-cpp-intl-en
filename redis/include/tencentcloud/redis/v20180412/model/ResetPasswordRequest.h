@@ -64,15 +64,27 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Reset password. This parameter can be left blank when a password-free instance is used. It is required in other cases.
-                     * @return Password Reset password. This parameter can be left blank when a password-free instance is used. It is required in other cases.
+                     * 获取Reset password. This parameter can be left unspecified when a password-free instance is used.
+- It should contain 8 to 32 characters. 12 or more characters are recommended.
+- It cannot start with a forward slash (/).
+- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()~!@#$%^&*-+=_|{}[]:;<>,.?/).
+                     * @return Password Reset password. This parameter can be left unspecified when a password-free instance is used.
+- It should contain 8 to 32 characters. 12 or more characters are recommended.
+- It cannot start with a forward slash (/).
+- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()~!@#$%^&*-+=_|{}[]:;<>,.?/).
                      * 
                      */
                     std::string GetPassword() const;
 
                     /**
-                     * 设置Reset password. This parameter can be left blank when a password-free instance is used. It is required in other cases.
-                     * @param _password Reset password. This parameter can be left blank when a password-free instance is used. It is required in other cases.
+                     * 设置Reset password. This parameter can be left unspecified when a password-free instance is used.
+- It should contain 8 to 32 characters. 12 or more characters are recommended.
+- It cannot start with a forward slash (/).
+- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()~!@#$%^&*-+=_|{}[]:;<>,.?/).
+                     * @param _password Reset password. This parameter can be left unspecified when a password-free instance is used.
+- It should contain 8 to 32 characters. 12 or more characters are recommended.
+- It cannot start with a forward slash (/).
+- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()~!@#$%^&*-+=_|{}[]:;<>,.?/).
                      * 
                      */
                     void SetPassword(const std::string& _password);
@@ -86,22 +98,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Whether to switch to a password-free instance.
-- false: Switch to a non-password-free instance.
-- true: Switch to a password-free instance. Default value: false.
+- false: switch to an instance that requires a password. The default value is false.
+- true: switch to a password-free instance.
                      * @return NoAuth Whether to switch to a password-free instance.
-- false: Switch to a non-password-free instance.
-- true: Switch to a password-free instance. Default value: false.
+- false: switch to an instance that requires a password. The default value is false.
+- true: switch to a password-free instance.
                      * 
                      */
                     bool GetNoAuth() const;
 
                     /**
                      * 设置Whether to switch to a password-free instance.
-- false: Switch to a non-password-free instance.
-- true: Switch to a password-free instance. Default value: false.
+- false: switch to an instance that requires a password. The default value is false.
+- true: switch to a password-free instance.
                      * @param _noAuth Whether to switch to a password-free instance.
-- false: Switch to a non-password-free instance.
-- true: Switch to a password-free instance. Default value: false.
+- false: switch to an instance that requires a password. The default value is false.
+- true: switch to a password-free instance.
                      * 
                      */
                     void SetNoAuth(const bool& _noAuth);
@@ -113,6 +125,35 @@ namespace TencentCloud
                      */
                     bool NoAuthHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to encrypt the password.
+- false: non-encrypted password. The default value is false.
+- true: encrypted password.
+                     * @return EncryptPassword Whether to encrypt the password.
+- false: non-encrypted password. The default value is false.
+- true: encrypted password.
+                     * 
+                     */
+                    bool GetEncryptPassword() const;
+
+                    /**
+                     * 设置Whether to encrypt the password.
+- false: non-encrypted password. The default value is false.
+- true: encrypted password.
+                     * @param _encryptPassword Whether to encrypt the password.
+- false: non-encrypted password. The default value is false.
+- true: encrypted password.
+                     * 
+                     */
+                    void SetEncryptPassword(const bool& _encryptPassword);
+
+                    /**
+                     * 判断参数 EncryptPassword 是否已赋值
+                     * @return EncryptPassword 是否已赋值
+                     * 
+                     */
+                    bool EncryptPasswordHasBeenSet() const;
+
                 private:
 
                     /**
@@ -122,18 +163,29 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Reset password. This parameter can be left blank when a password-free instance is used. It is required in other cases.
+                     * Reset password. This parameter can be left unspecified when a password-free instance is used.
+- It should contain 8 to 32 characters. 12 or more characters are recommended.
+- It cannot start with a forward slash (/).
+- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()~!@#$%^&*-+=_|{}[]:;<>,.?/).
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;
 
                     /**
                      * Whether to switch to a password-free instance.
-- false: Switch to a non-password-free instance.
-- true: Switch to a password-free instance. Default value: false.
+- false: switch to an instance that requires a password. The default value is false.
+- true: switch to a password-free instance.
                      */
                     bool m_noAuth;
                     bool m_noAuthHasBeenSet;
+
+                    /**
+                     * Whether to encrypt the password.
+- false: non-encrypted password. The default value is false.
+- true: encrypted password.
+                     */
+                    bool m_encryptPassword;
+                    bool m_encryptPasswordHasBeenSet;
 
                 };
             }

@@ -158,15 +158,15 @@ namespace TencentCloud
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取Security group ID, which can be obtained on the <b>Security Group</b> page in the console.
-                     * @return SecurityGroupIdList Security group ID, which can be obtained on the <b>Security Group</b> page in the console.
+                     * 获取Security group ID. Call the [DescribeInstanceSecurityGroup](https://www.tencentcloud.comom/document/product/239/34447?from_cn_redirect=1) API to obtain the security group ID for the instance.
+                     * @return SecurityGroupIdList Security group ID. Call the [DescribeInstanceSecurityGroup](https://www.tencentcloud.comom/document/product/239/34447?from_cn_redirect=1) API to obtain the security group ID for the instance.
                      * 
                      */
                     std::vector<std::string> GetSecurityGroupIdList() const;
 
                     /**
-                     * 设置Security group ID, which can be obtained on the <b>Security Group</b> page in the console.
-                     * @param _securityGroupIdList Security group ID, which can be obtained on the <b>Security Group</b> page in the console.
+                     * 设置Security group ID. Call the [DescribeInstanceSecurityGroup](https://www.tencentcloud.comom/document/product/239/34447?from_cn_redirect=1) API to obtain the security group ID for the instance.
+                     * @param _securityGroupIdList Security group ID. Call the [DescribeInstanceSecurityGroup](https://www.tencentcloud.comom/document/product/239/34447?from_cn_redirect=1) API to obtain the security group ID for the instance.
                      * 
                      */
                     void SetSecurityGroupIdList(const std::vector<std::string>& _securityGroupIdList);
@@ -488,6 +488,27 @@ Only instances with second-level backup enabled are supported.
                      */
                     bool CloneTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to encrypt the password.
+                     * @return EncryptPassword Whether to encrypt the password.
+                     * 
+                     */
+                    bool GetEncryptPassword() const;
+
+                    /**
+                     * 设置Whether to encrypt the password.
+                     * @param _encryptPassword Whether to encrypt the password.
+                     * 
+                     */
+                    void SetEncryptPassword(const bool& _encryptPassword);
+
+                    /**
+                     * 判断参数 EncryptPassword 是否已赋值
+                     * @return EncryptPassword 是否已赋值
+                     * 
+                     */
+                    bool EncryptPasswordHasBeenSet() const;
+
                 private:
 
                     /**
@@ -523,7 +544,7 @@ Only instances with second-level backup enabled are supported.
                     bool m_periodHasBeenSet;
 
                     /**
-                     * Security group ID, which can be obtained on the <b>Security Group</b> page in the console.
+                     * Security group ID. Call the [DescribeInstanceSecurityGroup](https://www.tencentcloud.comom/document/product/239/34447?from_cn_redirect=1) API to obtain the security group ID for the instance.
                      */
                     std::vector<std::string> m_securityGroupIdList;
                     bool m_securityGroupIdListHasBeenSet;
@@ -615,6 +636,12 @@ Only instances with second-level backup enabled are supported.
                      */
                     std::string m_cloneTime;
                     bool m_cloneTimeHasBeenSet;
+
+                    /**
+                     * Whether to encrypt the password.
+                     */
+                    bool m_encryptPassword;
+                    bool m_encryptPasswordHasBeenSet;
 
                 };
             }

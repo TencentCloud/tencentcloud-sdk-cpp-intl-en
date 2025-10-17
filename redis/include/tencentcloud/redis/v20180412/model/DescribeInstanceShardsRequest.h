@@ -64,15 +64,23 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to filter out the replica node information. Valid values: `true` (yes),  `false` (no).
-                     * @return FilterSlave Whether to filter out the replica node information. Valid values: `true` (yes),  `false` (no).
+                     * 获取Specifies whether to filter out secondary node information.
+- true: filter out secondary nodes.
+- false: filtering not required. The default value is false.
+                     * @return FilterSlave Specifies whether to filter out secondary node information.
+- true: filter out secondary nodes.
+- false: filtering not required. The default value is false.
                      * 
                      */
                     bool GetFilterSlave() const;
 
                     /**
-                     * 设置Whether to filter out the replica node information. Valid values: `true` (yes),  `false` (no).
-                     * @param _filterSlave Whether to filter out the replica node information. Valid values: `true` (yes),  `false` (no).
+                     * 设置Specifies whether to filter out secondary node information.
+- true: filter out secondary nodes.
+- false: filtering not required. The default value is false.
+                     * @param _filterSlave Specifies whether to filter out secondary node information.
+- true: filter out secondary nodes.
+- false: filtering not required. The default value is false.
                      * 
                      */
                     void SetFilterSlave(const bool& _filterSlave);
@@ -93,7 +101,9 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Whether to filter out the replica node information. Valid values: `true` (yes),  `false` (no).
+                     * Specifies whether to filter out secondary node information.
+- true: filter out secondary nodes.
+- false: filtering not required. The default value is false.
                      */
                     bool m_filterSlave;
                     bool m_filterSlaveHasBeenSet;

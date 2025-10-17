@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of instances returned per page. Default value: `20`.
-                     * @return Limit Number of instances returned per page. Default value: `20`.
+                     * 获取Size of the output instance list per page. The value is a positive integer greater than 0, and the default value is 20.
+                     * @return Limit Size of the output instance list per page. The value is a positive integer greater than 0, and the default value is 20.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of instances returned per page. Default value: `20`.
-                     * @param _limit Number of instances returned per page. Default value: `20`.
+                     * 设置Size of the output instance list per page. The value is a positive integer greater than 0, and the default value is 20.
+                     * @param _limit Size of the output instance list per page. The value is a positive integer greater than 0, and the default value is 20.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -129,7 +129,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of instances returned per page. Default value: `20`.
+                     * Size of the output instance list per page. The value is a positive integer greater than 0, and the default value is 20.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

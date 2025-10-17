@@ -85,15 +85,23 @@ namespace TencentCloud
                     bool MemSizeHasBeenSet() const;
 
                     /**
-                     * 获取Number of shards. This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Single-node Edition.
-                     * @return RedisShardNum Number of shards. This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Single-node Edition.
+                     * 获取Number of shards.
+- The instance adopts the standard architecture. The default value of RedisShardNum is 1.
+- This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Stand-Alone Edition.
+                     * @return RedisShardNum Number of shards.
+- The instance adopts the standard architecture. The default value of RedisShardNum is 1.
+- This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Stand-Alone Edition.
                      * 
                      */
                     uint64_t GetRedisShardNum() const;
 
                     /**
-                     * 设置Number of shards. This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Single-node Edition.
-                     * @param _redisShardNum Number of shards. This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Single-node Edition.
+                     * 设置Number of shards.
+- The instance adopts the standard architecture. The default value of RedisShardNum is 1.
+- This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Stand-Alone Edition.
+                     * @param _redisShardNum Number of shards.
+- The instance adopts the standard architecture. The default value of RedisShardNum is 1.
+- This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Stand-Alone Edition.
                      * 
                      */
                     void SetRedisShardNum(const uint64_t& _redisShardNum);
@@ -141,7 +149,9 @@ namespace TencentCloud
                     bool m_memSizeHasBeenSet;
 
                     /**
-                     * Number of shards. This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Single-node Edition.
+                     * Number of shards.
+- The instance adopts the standard architecture. The default value of RedisShardNum is 1.
+- This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Stand-Alone Edition.
                      */
                     uint64_t m_redisShardNum;
                     bool m_redisShardNumHasBeenSet;

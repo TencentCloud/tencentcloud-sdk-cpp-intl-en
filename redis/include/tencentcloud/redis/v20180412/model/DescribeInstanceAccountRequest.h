@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Number of entries per page
-                     * @return Limit Number of entries per page
+                     * 获取Pagination size. The default value is 20, the minimum value is 1, and the maximum value is 100.
+                     * @return Limit Pagination size. The default value is 20, the minimum value is 1, and the maximum value is 100.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of entries per page
-                     * @param _limit Number of entries per page
+                     * 设置Pagination size. The default value is 20, the minimum value is 1, and the maximum value is 100.
+                     * @param _limit Pagination size. The default value is 20, the minimum value is 1, and the maximum value is 100.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -114,7 +114,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Number of entries per page
+                     * Pagination size. The default value is 20, the minimum value is 1, and the maximum value is 100.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

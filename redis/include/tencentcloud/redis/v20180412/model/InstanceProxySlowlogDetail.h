@@ -151,6 +151,48 @@ namespace TencentCloud
                      */
                     bool ExecuteTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Duration of receiving client requests (ms).
+                     * @return RecvClientEnd Duration of receiving client requests (ms).
+                     * 
+                     */
+                    int64_t GetRecvClientEnd() const;
+
+                    /**
+                     * 设置Duration of receiving client requests (ms).
+                     * @param _recvClientEnd Duration of receiving client requests (ms).
+                     * 
+                     */
+                    void SetRecvClientEnd(const int64_t& _recvClientEnd);
+
+                    /**
+                     * 判断参数 RecvClientEnd 是否已赋值
+                     * @return RecvClientEnd 是否已赋值
+                     * 
+                     */
+                    bool RecvClientEndHasBeenSet() const;
+
+                    /**
+                     * 获取Duration of sending client requests (ms).
+                     * @return SendClientEnd Duration of sending client requests (ms).
+                     * 
+                     */
+                    int64_t GetSendClientEnd() const;
+
+                    /**
+                     * 设置Duration of sending client requests (ms).
+                     * @param _sendClientEnd Duration of sending client requests (ms).
+                     * 
+                     */
+                    void SetSendClientEnd(const int64_t& _sendClientEnd);
+
+                    /**
+                     * 判断参数 SendClientEnd 是否已赋值
+                     * @return SendClientEnd 是否已赋值
+                     * 
+                     */
+                    bool SendClientEndHasBeenSet() const;
+
                 private:
 
                     /**
@@ -182,6 +224,18 @@ namespace TencentCloud
                      */
                     std::string m_executeTime;
                     bool m_executeTimeHasBeenSet;
+
+                    /**
+                     * Duration of receiving client requests (ms).
+                     */
+                    int64_t m_recvClientEnd;
+                    bool m_recvClientEndHasBeenSet;
+
+                    /**
+                     * Duration of sending client requests (ms).
+                     */
+                    int64_t m_sendClientEnd;
+                    bool m_sendClientEndHasBeenSet;
 
                 };
             }

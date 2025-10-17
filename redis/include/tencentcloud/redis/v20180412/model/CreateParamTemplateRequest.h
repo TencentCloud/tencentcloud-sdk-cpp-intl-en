@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Parameter template name.
-                     * @return Name Parameter template name.
+                     * 获取Parameter template name, which can contain [2, 64] characters.
+                     * @return Name Parameter template name, which can contain [2, 64] characters.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Parameter template name.
-                     * @param _name Parameter template name.
+                     * 设置Parameter template name, which can contain [2, 64] characters.
+                     * @param _name Parameter template name, which can contain [2, 64] characters.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -87,7 +87,6 @@ namespace TencentCloud
 
                     /**
                      * 获取Product type.
-- 2: Redis 2.8 Memory Edition (standard architecture).
 - 6: Redis 4.0 Memory Edition (standard architecture).
 - 7: Redis 4.0 Memory Edition (cluster architecture).
 - 8: Redis 5.0 Memory Edition (standard architecture).
@@ -97,7 +96,6 @@ namespace TencentCloud
 - 17: Redis 7.0 Memory Edition (standard architecture).
 - 18: Redis 7.0 Memory Edition (cluster architecture).
                      * @return ProductType Product type.
-- 2: Redis 2.8 Memory Edition (standard architecture).
 - 6: Redis 4.0 Memory Edition (standard architecture).
 - 7: Redis 4.0 Memory Edition (cluster architecture).
 - 8: Redis 5.0 Memory Edition (standard architecture).
@@ -112,7 +110,6 @@ namespace TencentCloud
 
                     /**
                      * 设置Product type.
-- 2: Redis 2.8 Memory Edition (standard architecture).
 - 6: Redis 4.0 Memory Edition (standard architecture).
 - 7: Redis 4.0 Memory Edition (cluster architecture).
 - 8: Redis 5.0 Memory Edition (standard architecture).
@@ -122,7 +119,6 @@ namespace TencentCloud
 - 17: Redis 7.0 Memory Edition (standard architecture).
 - 18: Redis 7.0 Memory Edition (cluster architecture).
                      * @param _productType Product type.
-- 2: Redis 2.8 Memory Edition (standard architecture).
 - 6: Redis 4.0 Memory Edition (standard architecture).
 - 7: Redis 4.0 Memory Edition (cluster architecture).
 - 8: Redis 5.0 Memory Edition (standard architecture).
@@ -187,7 +183,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Parameter template name.
+                     * Parameter template name, which can contain [2, 64] characters.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -200,7 +196,6 @@ namespace TencentCloud
 
                     /**
                      * Product type.
-- 2: Redis 2.8 Memory Edition (standard architecture).
 - 6: Redis 4.0 Memory Edition (standard architecture).
 - 7: Redis 4.0 Memory Edition (cluster architecture).
 - 8: Redis 5.0 Memory Edition (standard architecture).

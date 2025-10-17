@@ -714,6 +714,27 @@ Node information of an instance. Currently, information about the node type (mas
                      */
                     bool AlarmPolicyListHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to encrypt the password.
+                     * @return EncryptPassword Whether to encrypt the password.
+                     * 
+                     */
+                    bool GetEncryptPassword() const;
+
+                    /**
+                     * 设置Whether to encrypt the password.
+                     * @param _encryptPassword Whether to encrypt the password.
+                     * 
+                     */
+                    void SetEncryptPassword(const bool& _encryptPassword);
+
+                    /**
+                     * 判断参数 EncryptPassword 是否已赋值
+                     * @return EncryptPassword 是否已赋值
+                     * 
+                     */
+                    bool EncryptPasswordHasBeenSet() const;
+
                 private:
 
                     /**
@@ -902,6 +923,12 @@ Node information of an instance. Currently, information about the node type (mas
                      */
                     std::vector<std::string> m_alarmPolicyList;
                     bool m_alarmPolicyListHasBeenSet;
+
+                    /**
+                     * Whether to encrypt the password.
+                     */
+                    bool m_encryptPassword;
+                    bool m_encryptPasswordHasBeenSet;
 
                 };
             }

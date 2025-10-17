@@ -86,14 +86,18 @@ namespace TencentCloud
 
                     /**
                      * 获取End time of the maintenance window, for example, 19:00.
+**Note:** Maintenance window duration. Valid values: 30 minutes, 1 hour, 1.5 hours, 2 hours, and 3 hours.
                      * @return EndTime End time of the maintenance window, for example, 19:00.
+**Note:** Maintenance window duration. Valid values: 30 minutes, 1 hour, 1.5 hours, 2 hours, and 3 hours.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time of the maintenance window, for example, 19:00.
+**Note:** Maintenance window duration. Valid values: 30 minutes, 1 hour, 1.5 hours, 2 hours, and 3 hours.
                      * @param _endTime End time of the maintenance window, for example, 19:00.
+**Note:** Maintenance window duration. Valid values: 30 minutes, 1 hour, 1.5 hours, 2 hours, and 3 hours.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -121,6 +125,7 @@ namespace TencentCloud
 
                     /**
                      * End time of the maintenance window, for example, 19:00.
+**Note:** Maintenance window duration. Valid values: 30 minutes, 1 hour, 1.5 hours, 2 hours, and 3 hours.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;

@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取The average execution time threshold of slow query  in microseconds
-                     * @return MinQueryTime The average execution time threshold of slow query  in microseconds
+                     * 获取Average execution time threshold for slow queries, in milliseconds. The value is a positive integer greater than 0
+                     * @return MinQueryTime Average execution time threshold for slow queries, in milliseconds. The value is a positive integer greater than 0
                      * 
                      */
                     int64_t GetMinQueryTime() const;
 
                     /**
-                     * 设置The average execution time threshold of slow query  in microseconds
-                     * @param _minQueryTime The average execution time threshold of slow query  in microseconds
+                     * 设置Average execution time threshold for slow queries, in milliseconds. The value is a positive integer greater than 0
+                     * @param _minQueryTime Average execution time threshold for slow queries, in milliseconds. The value is a positive integer greater than 0
                      * 
                      */
                     void SetMinQueryTime(const int64_t& _minQueryTime);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool MinQueryTimeHasBeenSet() const;
 
                     /**
-                     * 获取Number of slow query logs displayed per page. Default value: 20. Maximum value: 100.
-                     * @return Limit Number of slow query logs displayed per page. Default value: 20. Maximum value: 100.
+                     * 获取Number of slow query results displayed per page. The default value is 20, the minimum value is 1, and the maximum value is 100.
+                     * @return Limit Number of slow query results displayed per page. The default value is 20, the minimum value is 1, and the maximum value is 100.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of slow query logs displayed per page. Default value: 20. Maximum value: 100.
-                     * @param _limit Number of slow query logs displayed per page. Default value: 20. Maximum value: 100.
+                     * 设置Number of slow query results displayed per page. The default value is 20, the minimum value is 1, and the maximum value is 100.
+                     * @param _limit Number of slow query results displayed per page. The default value is 20, the minimum value is 1, and the maximum value is 100.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
-                     * @return Offset Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+                     * 获取Offset of the number of slow queries. The value is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
+                     * @return Offset Offset of the number of slow queries. The value is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
-                     * @param _offset Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+                     * 设置Offset of the number of slow queries. The value is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
+                     * @param _offset Offset of the number of slow queries. The value is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -219,19 +219,19 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * The average execution time threshold of slow query  in microseconds
+                     * Average execution time threshold for slow queries, in milliseconds. The value is a positive integer greater than 0
                      */
                     int64_t m_minQueryTime;
                     bool m_minQueryTimeHasBeenSet;
 
                     /**
-                     * Number of slow query logs displayed per page. Default value: 20. Maximum value: 100.
+                     * Number of slow query results displayed per page. The default value is 20, the minimum value is 1, and the maximum value is 100.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+                     * Offset of the number of slow queries. The value is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;

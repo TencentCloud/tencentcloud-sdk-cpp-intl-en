@@ -74,9 +74,9 @@ namespace TencentCloud
 
                     /**
                      * 获取Timestamp range within which backup is missing.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MissingTimestamps Timestamp range within which backup is missing.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<SecondLevelBackupMissingTimestamps> GetMissingTimestamps() const;
@@ -118,7 +118,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * Timestamp range within which backup is missing.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<SecondLevelBackupMissingTimestamps> m_missingTimestamps;
                     bool m_missingTimestampsHasBeenSet;

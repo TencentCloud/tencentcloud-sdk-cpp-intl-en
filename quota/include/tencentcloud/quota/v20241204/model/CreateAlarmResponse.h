@@ -43,7 +43,27 @@ namespace TencentCloud
                     std::string ToJsonString() const;
 
 
+                    /**
+                     * 获取1001
+                     * @return AlarmId 1001
+                     * 
+                     */
+                    int64_t GetAlarmId() const;
+
+                    /**
+                     * 判断参数 AlarmId 是否已赋值
+                     * @return AlarmId 是否已赋值
+                     * 
+                     */
+                    bool AlarmIdHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * 1001
+                     */
+                    int64_t m_alarmId;
+                    bool m_alarmIdHasBeenSet;
 
                 };
             }

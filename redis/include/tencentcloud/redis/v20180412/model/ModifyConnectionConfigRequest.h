@@ -64,15 +64,19 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Additional bandwidth in MB, which should be greater than 0.
-                     * @return Bandwidth Additional bandwidth in MB, which should be greater than 0.
+                     * 获取Additional bandwidth, in MB, which should be greater than 0.
+**Note**: The Bandwidth and ClientLimit parameters cannot be empty simultaneously. You should select at least one of them for configuration.
+                     * @return Bandwidth Additional bandwidth, in MB, which should be greater than 0.
+**Note**: The Bandwidth and ClientLimit parameters cannot be empty simultaneously. You should select at least one of them for configuration.
                      * 
                      */
                     int64_t GetBandwidth() const;
 
                     /**
-                     * 设置Additional bandwidth in MB, which should be greater than 0.
-                     * @param _bandwidth Additional bandwidth in MB, which should be greater than 0.
+                     * 设置Additional bandwidth, in MB, which should be greater than 0.
+**Note**: The Bandwidth and ClientLimit parameters cannot be empty simultaneously. You should select at least one of them for configuration.
+                     * @param _bandwidth Additional bandwidth, in MB, which should be greater than 0.
+**Note**: The Bandwidth and ClientLimit parameters cannot be empty simultaneously. You should select at least one of them for configuration.
                      * 
                      */
                     void SetBandwidth(const int64_t& _bandwidth);
@@ -88,9 +92,11 @@ namespace TencentCloud
                      * 获取Total number of connections per shard.
 - When read-only replicas are not enabled, the lower limit is 10,000 and the upper limit is 40,000.
 - When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is calculated as follows: 10,000 x (Number of read-only replicas + 3).
+**Note**: The Bandwidth and ClientLimit parameters cannot be empty simultaneously. You should select at least one of them for configuration.
                      * @return ClientLimit Total number of connections per shard.
 - When read-only replicas are not enabled, the lower limit is 10,000 and the upper limit is 40,000.
 - When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is calculated as follows: 10,000 x (Number of read-only replicas + 3).
+**Note**: The Bandwidth and ClientLimit parameters cannot be empty simultaneously. You should select at least one of them for configuration.
                      * 
                      */
                     int64_t GetClientLimit() const;
@@ -99,9 +105,11 @@ namespace TencentCloud
                      * 设置Total number of connections per shard.
 - When read-only replicas are not enabled, the lower limit is 10,000 and the upper limit is 40,000.
 - When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is calculated as follows: 10,000 x (Number of read-only replicas + 3).
+**Note**: The Bandwidth and ClientLimit parameters cannot be empty simultaneously. You should select at least one of them for configuration.
                      * @param _clientLimit Total number of connections per shard.
 - When read-only replicas are not enabled, the lower limit is 10,000 and the upper limit is 40,000.
 - When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is calculated as follows: 10,000 x (Number of read-only replicas + 3).
+**Note**: The Bandwidth and ClientLimit parameters cannot be empty simultaneously. You should select at least one of them for configuration.
                      * 
                      */
                     void SetClientLimit(const int64_t& _clientLimit);
@@ -122,7 +130,8 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Additional bandwidth in MB, which should be greater than 0.
+                     * Additional bandwidth, in MB, which should be greater than 0.
+**Note**: The Bandwidth and ClientLimit parameters cannot be empty simultaneously. You should select at least one of them for configuration.
                      */
                     int64_t m_bandwidth;
                     bool m_bandwidthHasBeenSet;
@@ -131,6 +140,7 @@ namespace TencentCloud
                      * Total number of connections per shard.
 - When read-only replicas are not enabled, the lower limit is 10,000 and the upper limit is 40,000.
 - When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is calculated as follows: 10,000 x (Number of read-only replicas + 3).
+**Note**: The Bandwidth and ClientLimit parameters cannot be empty simultaneously. You should select at least one of them for configuration.
                      */
                     int64_t m_clientLimit;
                     bool m_clientLimitHasBeenSet;
