@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Specifies the instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+                     * @return InstanceId Specifies the instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Specifies the instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+                     * @param _instanceId Specifies the instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance account name
-                     * @return UserName Instance account name
+                     * 获取Specifies the account name for which the password needs to be changed. The [DescribeAccountUsers](https://www.tencentcloud.comom/document/product/240/80800?from_cn_redirect=1) API can be called to obtain the account list and copy the account name for which the password needs to be changed.
+                     * @return UserName Specifies the account name for which the password needs to be changed. The [DescribeAccountUsers](https://www.tencentcloud.comom/document/product/240/80800?from_cn_redirect=1) API can be called to obtain the account list and copy the account name for which the password needs to be changed.
                      * 
                      */
                     std::string GetUserName() const;
 
                     /**
-                     * 设置Instance account name
-                     * @param _userName Instance account name
+                     * 设置Specifies the account name for which the password needs to be changed. The [DescribeAccountUsers](https://www.tencentcloud.comom/document/product/240/80800?from_cn_redirect=1) API can be called to obtain the account list and copy the account name for which the password needs to be changed.
+                     * @param _userName Specifies the account name for which the password needs to be changed. The [DescribeAccountUsers](https://www.tencentcloud.comom/document/product/240/80800?from_cn_redirect=1) API can be called to obtain the account list and copy the account name for which the password needs to be changed.
                      * 
                      */
                     void SetUserName(const std::string& _userName);
@@ -85,15 +85,23 @@ namespace TencentCloud
                     bool UserNameHasBeenSet() const;
 
                     /**
-                     * 获取New password, which must contain at least eight characters
-                     * @return Password New password, which must contain at least eight characters
+                     * 获取Specifies a new password for the account. Password complexity requirements:
+- It should contain 8–32 characters.
+- It should contain at least two types of the following: letters, digits, and special characters (!@#%^\*()\_).
+                     * @return Password Specifies a new password for the account. Password complexity requirements:
+- It should contain 8–32 characters.
+- It should contain at least two types of the following: letters, digits, and special characters (!@#%^\*()\_).
                      * 
                      */
                     std::string GetPassword() const;
 
                     /**
-                     * 设置New password, which must contain at least eight characters
-                     * @param _password New password, which must contain at least eight characters
+                     * 设置Specifies a new password for the account. Password complexity requirements:
+- It should contain 8–32 characters.
+- It should contain at least two types of the following: letters, digits, and special characters (!@#%^\*()\_).
+                     * @param _password Specifies a new password for the account. Password complexity requirements:
+- It should contain 8–32 characters.
+- It should contain at least two types of the following: letters, digits, and special characters (!@#%^\*()\_).
                      * 
                      */
                     void SetPassword(const std::string& _password);
@@ -108,19 +116,21 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Specifies the instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance account name
+                     * Specifies the account name for which the password needs to be changed. The [DescribeAccountUsers](https://www.tencentcloud.comom/document/product/240/80800?from_cn_redirect=1) API can be called to obtain the account list and copy the account name for which the password needs to be changed.
                      */
                     std::string m_userName;
                     bool m_userNameHasBeenSet;
 
                     /**
-                     * New password, which must contain at least eight characters
+                     * Specifies a new password for the account. Password complexity requirements:
+- It should contain 8–32 characters.
+- It should contain at least two types of the following: letters, digits, and special characters (!@#%^\*()\_).
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;

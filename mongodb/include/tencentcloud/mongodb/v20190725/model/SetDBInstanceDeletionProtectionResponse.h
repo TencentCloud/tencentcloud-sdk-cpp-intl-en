@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_MONGODB_V20190725_MODEL_ASSIGNPROJECTRESPONSE_H_
-#define TENCENTCLOUD_MONGODB_V20190725_MODEL_ASSIGNPROJECTRESPONSE_H_
+#ifndef TENCENTCLOUD_MONGODB_V20190725_MODEL_SETDBINSTANCEDELETIONPROTECTIONRESPONSE_H_
+#define TENCENTCLOUD_MONGODB_V20190725_MODEL_SETDBINSTANCEDELETIONPROTECTIONRESPONSE_H_
 
 #include <string>
 #include <vector>
@@ -32,38 +32,18 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * AssignProject response structure.
+                * SetDBInstanceDeletionProtection response structure.
                 */
-                class AssignProjectResponse : public AbstractModel
+                class SetDBInstanceDeletionProtectionResponse : public AbstractModel
                 {
                 public:
-                    AssignProjectResponse();
-                    ~AssignProjectResponse() = default;
+                    SetDBInstanceDeletionProtectionResponse();
+                    ~SetDBInstanceDeletionProtectionResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
-                    /**
-                     * 获取Lists async task ids returned.
-                     * @return FlowIds Lists async task ids returned.
-                     * 
-                     */
-                    std::vector<uint64_t> GetFlowIds() const;
-
-                    /**
-                     * 判断参数 FlowIds 是否已赋值
-                     * @return FlowIds 是否已赋值
-                     * 
-                     */
-                    bool FlowIdsHasBeenSet() const;
-
                 private:
-
-                    /**
-                     * Lists async task ids returned.
-                     */
-                    std::vector<uint64_t> m_flowIds;
-                    bool m_flowIdsHasBeenSet;
 
                 };
             }
@@ -71,4 +51,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_MONGODB_V20190725_MODEL_ASSIGNPROJECTRESPONSE_H_
+#endif // !TENCENTCLOUD_MONGODB_V20190725_MODEL_SETDBINSTANCEDELETIONPROTECTIONRESPONSE_H_

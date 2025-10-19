@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of purchasable instance specifications
-                     * @return SpecInfoList List of purchasable instance specifications
+                     * 获取List of sales specification information on the instance.
+                     * @return SpecInfoList List of sales specification information on the instance.
                      * 
                      */
                     std::vector<SpecificationInfo> GetSpecInfoList() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of purchasable instance specifications
+                     * List of sales specification information on the instance.
                      */
                     std::vector<SpecificationInfo> m_specInfoList;
                     bool m_specInfoListHasBeenSet;

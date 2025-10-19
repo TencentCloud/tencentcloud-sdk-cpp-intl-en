@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
-                     * @return InstanceId Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+                     * 获取Instance ID. Log in to the [TencentDB for MongoDB console recycle bin](https://console.cloud.tencent.com/mongodb/recycle), and copy the ID of the instance to be eliminated from the instance list.
+                     * @return InstanceId Instance ID. Log in to the [TencentDB for MongoDB console recycle bin](https://console.cloud.tencent.com/mongodb/recycle), and copy the ID of the instance to be eliminated from the instance list.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
-                     * @param _instanceId Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+                     * 设置Instance ID. Log in to the [TencentDB for MongoDB console recycle bin](https://console.cloud.tencent.com/mongodb/recycle), and copy the ID of the instance to be eliminated from the instance list.
+                     * @param _instanceId Instance ID. Log in to the [TencentDB for MongoDB console recycle bin](https://console.cloud.tencent.com/mongodb/recycle), and copy the ID of the instance to be eliminated from the instance list.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+                     * Instance ID. Log in to the [TencentDB for MongoDB console recycle bin](https://console.cloud.tencent.com/mongodb/recycle), and copy the ID of the instance to be eliminated from the instance list.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

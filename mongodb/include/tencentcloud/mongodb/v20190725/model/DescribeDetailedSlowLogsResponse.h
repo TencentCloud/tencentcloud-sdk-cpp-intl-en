@@ -14,13 +14,14 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_MONGODB_V20190725_MODEL_DESCRIBESLOWLOGSRESPONSE_H_
-#define TENCENTCLOUD_MONGODB_V20190725_MODEL_DESCRIBESLOWLOGSRESPONSE_H_
+#ifndef TENCENTCLOUD_MONGODB_V20190725_MODEL_DESCRIBEDETAILEDSLOWLOGSRESPONSE_H_
+#define TENCENTCLOUD_MONGODB_V20190725_MODEL_DESCRIBEDETAILEDSLOWLOGSRESPONSE_H_
 
 #include <string>
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/mongodb/v20190725/model/SlowLogItem.h>
 
 
 namespace TencentCloud
@@ -32,58 +33,58 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * DescribeSlowLogs response structure.
+                * DescribeDetailedSlowLogs response structure.
                 */
-                class DescribeSlowLogsResponse : public AbstractModel
+                class DescribeDetailedSlowLogsResponse : public AbstractModel
                 {
                 public:
-                    DescribeSlowLogsResponse();
-                    ~DescribeSlowLogsResponse() = default;
+                    DescribeDetailedSlowLogsResponse();
+                    ~DescribeDetailedSlowLogsResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Total number of slow logs.
-                     * @return Count Total number of slow logs.
+                     * 获取Number of slow logs that meet the conditions.
+                     * @return TotalCount Number of slow logs that meet the conditions.
                      * 
                      */
-                    uint64_t GetCount() const;
+                    int64_t GetTotalCount() const;
 
                     /**
-                     * 判断参数 Count 是否已赋值
-                     * @return Count 是否已赋值
+                     * 判断参数 TotalCount 是否已赋值
+                     * @return TotalCount 是否已赋值
                      * 
                      */
-                    bool CountHasBeenSet() const;
+                    bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Slow log details.
-                     * @return SlowLogs Slow log details.
+                     * @return DetailedSlowLogs Slow log details.
                      * 
                      */
-                    std::vector<std::string> GetSlowLogs() const;
+                    std::vector<SlowLogItem> GetDetailedSlowLogs() const;
 
                     /**
-                     * 判断参数 SlowLogs 是否已赋值
-                     * @return SlowLogs 是否已赋值
+                     * 判断参数 DetailedSlowLogs 是否已赋值
+                     * @return DetailedSlowLogs 是否已赋值
                      * 
                      */
-                    bool SlowLogsHasBeenSet() const;
+                    bool DetailedSlowLogsHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Total number of slow logs.
+                     * Number of slow logs that meet the conditions.
                      */
-                    uint64_t m_count;
-                    bool m_countHasBeenSet;
+                    int64_t m_totalCount;
+                    bool m_totalCountHasBeenSet;
 
                     /**
                      * Slow log details.
                      */
-                    std::vector<std::string> m_slowLogs;
-                    bool m_slowLogsHasBeenSet;
+                    std::vector<SlowLogItem> m_detailedSlowLogs;
+                    bool m_detailedSlowLogsHasBeenSet;
 
                 };
             }
@@ -91,4 +92,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_MONGODB_V20190725_MODEL_DESCRIBESLOWLOGSRESPONSE_H_
+#endif // !TENCENTCLOUD_MONGODB_V20190725_MODEL_DESCRIBEDETAILEDSLOWLOGSRESPONSE_H_

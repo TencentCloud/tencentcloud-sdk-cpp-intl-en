@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task creation time
-                     * @return CreateTime Task creation time
+                     * 获取Task creation time.
+                     * @return CreateTime Task creation time.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Task creation time
-                     * @param _createTime Task creation time
+                     * 设置Task creation time.
+                     * @param _createTime Task creation time.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Backup name
-                     * @return BackupName Backup name
+                     * 获取Backup file name.
+                     * @return BackupName Backup file name.
                      * 
                      */
                     std::string GetBackupName() const;
 
                     /**
-                     * 设置Backup name
-                     * @param _backupName Backup name
+                     * 设置Backup file name.
+                     * @param _backupName Backup file name.
                      * 
                      */
                     void SetBackupName(const std::string& _backupName);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool BackupNameHasBeenSet() const;
 
                     /**
-                     * 获取Shard name
-                     * @return ReplicaSetId Shard name
+                     * 获取Shard name.
+                     * @return ReplicaSetId Shard name.
                      * 
                      */
                     std::string GetReplicaSetId() const;
 
                     /**
-                     * 设置Shard name
-                     * @param _replicaSetId Shard name
+                     * 设置Shard name.
+                     * @param _replicaSetId Shard name.
                      * 
                      */
                     void SetReplicaSetId(const std::string& _replicaSetId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ReplicaSetIdHasBeenSet() const;
 
                     /**
-                     * 获取Backup size in bytes
-                     * @return BackupSize Backup size in bytes
+                     * 获取Backup data size, in bytes.
+                     * @return BackupSize Backup data size, in bytes.
                      * 
                      */
                     int64_t GetBackupSize() const;
 
                     /**
-                     * 设置Backup size in bytes
-                     * @param _backupSize Backup size in bytes
+                     * 设置Backup data size, in bytes.
+                     * @param _backupSize Backup data size, in bytes.
                      * 
                      */
                     void SetBackupSize(const int64_t& _backupSize);
@@ -131,15 +131,35 @@ namespace TencentCloud
                     bool BackupSizeHasBeenSet() const;
 
                     /**
-                     * 获取Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
-                     * @return Status Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
+                     * 获取Task status.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
+                     * @return Status Task status.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
-                     * @param _status Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
+                     * 设置Task status.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
+                     * @param _status Task status.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -152,15 +172,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Task progress in percentage
-                     * @return Percent Task progress in percentage
+                     * 获取Task progress percentage.
+                     * @return Percent Task progress percentage.
                      * 
                      */
                     int64_t GetPercent() const;
 
                     /**
-                     * 设置Task progress in percentage
-                     * @param _percent Task progress in percentage
+                     * 设置Task progress percentage.
+                     * @param _percent Task progress percentage.
                      * 
                      */
                     void SetPercent(const int64_t& _percent);
@@ -173,15 +193,15 @@ namespace TencentCloud
                     bool PercentHasBeenSet() const;
 
                     /**
-                     * 获取Task duration in seconds
-                     * @return TimeSpend Task duration in seconds
+                     * 获取Duration, in seconds.
+                     * @return TimeSpend Duration, in seconds.
                      * 
                      */
                     int64_t GetTimeSpend() const;
 
                     /**
-                     * 设置Task duration in seconds
-                     * @param _timeSpend Task duration in seconds
+                     * 设置Duration, in seconds.
+                     * @param _timeSpend Duration, in seconds.
                      * 
                      */
                     void SetTimeSpend(const int64_t& _timeSpend);
@@ -194,15 +214,15 @@ namespace TencentCloud
                     bool TimeSpendHasBeenSet() const;
 
                     /**
-                     * 获取Backup download address
-                     * @return Url Backup download address
+                     * 获取Download link for backup data.
+                     * @return Url Download link for backup data.
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Backup download address
-                     * @param _url Backup download address
+                     * 设置Download link for backup data.
+                     * @param _url Download link for backup data.
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -215,15 +235,39 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
-                     * @return BackupMethod Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
+                     * 获取Backup method.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance.
+                     * @return BackupMethod Backup method.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance.
                      * 
                      */
                     int64_t GetBackupMethod() const;
 
                     /**
-                     * 设置Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
-                     * @param _backupMethod Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
+                     * 设置Backup method.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance.
+                     * @param _backupMethod Backup method.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance.
                      * 
                      */
                     void SetBackupMethod(const int64_t& _backupMethod);
@@ -236,15 +280,15 @@ namespace TencentCloud
                     bool BackupMethodHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the remarks for backup.
-                     * @return BackupDesc Specifies the remarks for backup.
+                     * 获取Specified remarks for initiating backup tasks.
+                     * @return BackupDesc Specified remarks for initiating backup tasks.
                      * 
                      */
                     std::string GetBackupDesc() const;
 
                     /**
-                     * 设置Specifies the remarks for backup.
-                     * @param _backupDesc Specifies the remarks for backup.
+                     * 设置Specified remarks for initiating backup tasks.
+                     * @param _backupDesc Specified remarks for initiating backup tasks.
                      * 
                      */
                     void SetBackupDesc(const std::string& _backupDesc);
@@ -301,61 +345,72 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task creation time
+                     * Task creation time.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Backup name
+                     * Backup file name.
                      */
                     std::string m_backupName;
                     bool m_backupNameHasBeenSet;
 
                     /**
-                     * Shard name
+                     * Shard name.
                      */
                     std::string m_replicaSetId;
                     bool m_replicaSetIdHasBeenSet;
 
                     /**
-                     * Backup size in bytes
+                     * Backup data size, in bytes.
                      */
                     int64_t m_backupSize;
                     bool m_backupSizeHasBeenSet;
 
                     /**
-                     * Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
+                     * Task status.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Task progress in percentage
+                     * Task progress percentage.
                      */
                     int64_t m_percent;
                     bool m_percentHasBeenSet;
 
                     /**
-                     * Task duration in seconds
+                     * Duration, in seconds.
                      */
                     int64_t m_timeSpend;
                     bool m_timeSpendHasBeenSet;
 
                     /**
-                     * Backup download address
+                     * Download link for backup data.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
+                     * Backup method.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance.
                      */
                     int64_t m_backupMethod;
                     bool m_backupMethodHasBeenSet;
 
                     /**
-                     * Specifies the remarks for backup.
+                     * Specified remarks for initiating backup tasks.
                      */
                     std::string m_backupDesc;
                     bool m_backupDescHasBeenSet;

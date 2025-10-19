@@ -47,6 +47,8 @@
 #include <tencentcloud/mongodb/v20190725/model/DescribeDBInstanceNamespaceResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeDBInstancesRequest.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeDBInstancesResponse.h>
+#include <tencentcloud/mongodb/v20190725/model/DescribeDetailedSlowLogsRequest.h>
+#include <tencentcloud/mongodb/v20190725/model/DescribeDetailedSlowLogsResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeInstanceParamsRequest.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeInstanceParamsResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeSecurityGroupRequest.h>
@@ -81,6 +83,10 @@
 #include <tencentcloud/mongodb/v20190725/model/RenewDBInstancesResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/ResetDBInstancePasswordRequest.h>
 #include <tencentcloud/mongodb/v20190725/model/ResetDBInstancePasswordResponse.h>
+#include <tencentcloud/mongodb/v20190725/model/SetDBInstanceDeletionProtectionRequest.h>
+#include <tencentcloud/mongodb/v20190725/model/SetDBInstanceDeletionProtectionResponse.h>
+#include <tencentcloud/mongodb/v20190725/model/TerminateDBInstancesRequest.h>
+#include <tencentcloud/mongodb/v20190725/model/TerminateDBInstancesResponse.h>
 
 
 namespace TencentCloud
@@ -131,6 +137,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDBInstancesResponse> DescribeDBInstancesOutcome;
                 typedef std::future<DescribeDBInstancesOutcome> DescribeDBInstancesOutcomeCallable;
                 typedef std::function<void(const MongodbClient*, const Model::DescribeDBInstancesRequest&, DescribeDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDetailedSlowLogsResponse> DescribeDetailedSlowLogsOutcome;
+                typedef std::future<DescribeDetailedSlowLogsOutcome> DescribeDetailedSlowLogsOutcomeCallable;
+                typedef std::function<void(const MongodbClient*, const Model::DescribeDetailedSlowLogsRequest&, DescribeDetailedSlowLogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDetailedSlowLogsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeInstanceParamsResponse> DescribeInstanceParamsOutcome;
                 typedef std::future<DescribeInstanceParamsOutcome> DescribeInstanceParamsOutcomeCallable;
                 typedef std::function<void(const MongodbClient*, const Model::DescribeInstanceParamsRequest&, DescribeInstanceParamsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceParamsAsyncHandler;
@@ -182,6 +191,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ResetDBInstancePasswordResponse> ResetDBInstancePasswordOutcome;
                 typedef std::future<ResetDBInstancePasswordOutcome> ResetDBInstancePasswordOutcomeCallable;
                 typedef std::function<void(const MongodbClient*, const Model::ResetDBInstancePasswordRequest&, ResetDBInstancePasswordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetDBInstancePasswordAsyncHandler;
+                typedef Outcome<Core::Error, Model::SetDBInstanceDeletionProtectionResponse> SetDBInstanceDeletionProtectionOutcome;
+                typedef std::future<SetDBInstanceDeletionProtectionOutcome> SetDBInstanceDeletionProtectionOutcomeCallable;
+                typedef std::function<void(const MongodbClient*, const Model::SetDBInstanceDeletionProtectionRequest&, SetDBInstanceDeletionProtectionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetDBInstanceDeletionProtectionAsyncHandler;
+                typedef Outcome<Core::Error, Model::TerminateDBInstancesResponse> TerminateDBInstancesOutcome;
+                typedef std::future<TerminateDBInstancesOutcome> TerminateDBInstancesOutcomeCallable;
+                typedef std::function<void(const MongodbClient*, const Model::TerminateDBInstancesRequest&, TerminateDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TerminateDBInstancesAsyncHandler;
 
 
 
@@ -213,7 +228,7 @@ namespace TencentCloud
                 CreateBackupDownloadTaskOutcomeCallable CreateBackupDownloadTaskCallable(const Model::CreateBackupDownloadTaskRequest& request);
 
                 /**
-                 *This API is used to create a monthly subscription TencentDB for MongoDB instance. The purchasable specifications supported by this API can be obtained through the `DescribeSpecInfo` API.
+                 *This API is used to create a yearly/monthly subscription TencentDB for MongoDB instance. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/35767?from_cn_redirect=1) API can be called to query and obtain the supported sales specifications.
                  * @param req CreateDBInstanceRequest
                  * @return CreateDBInstanceOutcome
                  */
@@ -240,7 +255,7 @@ namespace TencentCloud
                 DescribeAsyncRequestInfoOutcomeCallable DescribeAsyncRequestInfoCallable(const Model::DescribeAsyncRequestInfoRequest& request);
 
                 /**
-                 *This API is used to query backup download task information.
+                 *This API is used to query information about the backup download task.
                  * @param req DescribeBackupDownloadTaskRequest
                  * @return DescribeBackupDownloadTaskOutcome
                  */
@@ -294,6 +309,15 @@ namespace TencentCloud
                 DescribeDBInstancesOutcomeCallable DescribeDBInstancesCallable(const Model::DescribeDBInstancesRequest& request);
 
                 /**
+                 *This API is used to query slow log details of the instance.
+                 * @param req DescribeDetailedSlowLogsRequest
+                 * @return DescribeDetailedSlowLogsOutcome
+                 */
+                DescribeDetailedSlowLogsOutcome DescribeDetailedSlowLogs(const Model::DescribeDetailedSlowLogsRequest &request);
+                void DescribeDetailedSlowLogsAsync(const Model::DescribeDetailedSlowLogsRequest& request, const DescribeDetailedSlowLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDetailedSlowLogsOutcomeCallable DescribeDetailedSlowLogsCallable(const Model::DescribeDetailedSlowLogsRequest& request);
+
+                /**
                  *This API is used to query the list of parameters that can be modified for the current instance.
                  * @param req DescribeInstanceParamsRequest
                  * @return DescribeInstanceParamsOutcome
@@ -330,7 +354,7 @@ namespace TencentCloud
                 DescribeSlowLogsOutcomeCallable DescribeSlowLogsCallable(const Model::DescribeSlowLogsRequest& request);
 
                 /**
-                 *This API is used to query the purchasable instance specifications.
+                 *This API is used to query the sales specification of an instance.
                  * @param req DescribeSpecInfoRequest
                  * @return DescribeSpecInfoOutcome
                  */
@@ -375,7 +399,7 @@ namespace TencentCloud
                 InquirePriceRenewDBInstancesOutcomeCallable InquirePriceRenewDBInstancesCallable(const Model::InquirePriceRenewDBInstancesRequest& request);
 
                 /**
-                 *This API is used to isolate a pay-as-you-go TencentDB for MongoDB instance. An isolated instance is retained in the recycle bin and data can no longer be written to it. After it is isolated for a certain period of time, it will be completely deleted. For the retention period in the recycle bin, please see the terms of service for pay-as-you-go billing. Isolated pay-as-you-go instances cannot be recovered, so please proceed with caution.
+                 *This API is used to isolate a pay-as-you-go TencentDB for MongoDB instance. After isolation, the instance is retained in the recycle bin, and data cannot be written into it. After a certain period of isolation, the instance is deleted permanently. For the retention time in the recycle bin, see the pay-as-you-go service terms. The deleted pay-as-you-go instance cannot be recovered. Proceed with caution.
                  * @param req IsolateDBInstanceRequest
                  * @return IsolateDBInstanceOutcome
                  */
@@ -402,7 +426,7 @@ namespace TencentCloud
                 ModifyDBInstanceSecurityGroupOutcomeCallable ModifyDBInstanceSecurityGroupCallable(const Model::ModifyDBInstanceSecurityGroupRequest& request);
 
                 /**
-                 *This API is used to adjust the configuration of a TencentDB for MongoDB instance. Saleable specifications supported for this API can be obtained from the DescribeSpecInfo API for querying saleable TencentDB for MongoDB specifications.
+                 *This API is used to adjust the TencentDB for MongoDB instance configuration. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to query and obtain the supported sales specifications.
                  * @param req ModifyDBInstanceSpecRequest
                  * @return ModifyDBInstanceSpecOutcome
                  */
@@ -438,13 +462,31 @@ namespace TencentCloud
                 RenewDBInstancesOutcomeCallable RenewDBInstancesCallable(const Model::RenewDBInstancesRequest& request);
 
                 /**
-                 *This API is used to modify instance password.
+                 *This API is used to reset the instance access password.
                  * @param req ResetDBInstancePasswordRequest
                  * @return ResetDBInstancePasswordOutcome
                  */
                 ResetDBInstancePasswordOutcome ResetDBInstancePassword(const Model::ResetDBInstancePasswordRequest &request);
                 void ResetDBInstancePasswordAsync(const Model::ResetDBInstancePasswordRequest& request, const ResetDBInstancePasswordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ResetDBInstancePasswordOutcomeCallable ResetDBInstancePasswordCallable(const Model::ResetDBInstancePasswordRequest& request);
+
+                /**
+                 *This API is used to set instance termination protection.
+                 * @param req SetDBInstanceDeletionProtectionRequest
+                 * @return SetDBInstanceDeletionProtectionOutcome
+                 */
+                SetDBInstanceDeletionProtectionOutcome SetDBInstanceDeletionProtection(const Model::SetDBInstanceDeletionProtectionRequest &request);
+                void SetDBInstanceDeletionProtectionAsync(const Model::SetDBInstanceDeletionProtectionRequest& request, const SetDBInstanceDeletionProtectionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SetDBInstanceDeletionProtectionOutcomeCallable SetDBInstanceDeletionProtectionCallable(const Model::SetDBInstanceDeletionProtectionRequest& request);
+
+                /**
+                 *This API is used to terminate monthly subscription billing instances.
+                 * @param req TerminateDBInstancesRequest
+                 * @return TerminateDBInstancesOutcome
+                 */
+                TerminateDBInstancesOutcome TerminateDBInstances(const Model::TerminateDBInstancesRequest &request);
+                void TerminateDBInstancesAsync(const Model::TerminateDBInstancesRequest& request, const TerminateDBInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                TerminateDBInstancesOutcomeCallable TerminateDBInstancesCallable(const Model::TerminateDBInstancesRequest& request);
 
             };
         }

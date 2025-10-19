@@ -556,6 +556,49 @@ MongodbClient::DescribeDBInstancesOutcomeCallable MongodbClient::DescribeDBInsta
     return task->get_future();
 }
 
+MongodbClient::DescribeDetailedSlowLogsOutcome MongodbClient::DescribeDetailedSlowLogs(const DescribeDetailedSlowLogsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDetailedSlowLogs");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDetailedSlowLogsResponse rsp = DescribeDetailedSlowLogsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDetailedSlowLogsOutcome(rsp);
+        else
+            return DescribeDetailedSlowLogsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDetailedSlowLogsOutcome(outcome.GetError());
+    }
+}
+
+void MongodbClient::DescribeDetailedSlowLogsAsync(const DescribeDetailedSlowLogsRequest& request, const DescribeDetailedSlowLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeDetailedSlowLogs(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MongodbClient::DescribeDetailedSlowLogsOutcomeCallable MongodbClient::DescribeDetailedSlowLogsCallable(const DescribeDetailedSlowLogsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeDetailedSlowLogsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeDetailedSlowLogs(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 MongodbClient::DescribeInstanceParamsOutcome MongodbClient::DescribeInstanceParams(const DescribeInstanceParamsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeInstanceParams");
@@ -1280,6 +1323,92 @@ MongodbClient::ResetDBInstancePasswordOutcomeCallable MongodbClient::ResetDBInst
         [this, request]()
         {
             return this->ResetDBInstancePassword(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MongodbClient::SetDBInstanceDeletionProtectionOutcome MongodbClient::SetDBInstanceDeletionProtection(const SetDBInstanceDeletionProtectionRequest &request)
+{
+    auto outcome = MakeRequest(request, "SetDBInstanceDeletionProtection");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        SetDBInstanceDeletionProtectionResponse rsp = SetDBInstanceDeletionProtectionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return SetDBInstanceDeletionProtectionOutcome(rsp);
+        else
+            return SetDBInstanceDeletionProtectionOutcome(o.GetError());
+    }
+    else
+    {
+        return SetDBInstanceDeletionProtectionOutcome(outcome.GetError());
+    }
+}
+
+void MongodbClient::SetDBInstanceDeletionProtectionAsync(const SetDBInstanceDeletionProtectionRequest& request, const SetDBInstanceDeletionProtectionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->SetDBInstanceDeletionProtection(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MongodbClient::SetDBInstanceDeletionProtectionOutcomeCallable MongodbClient::SetDBInstanceDeletionProtectionCallable(const SetDBInstanceDeletionProtectionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<SetDBInstanceDeletionProtectionOutcome()>>(
+        [this, request]()
+        {
+            return this->SetDBInstanceDeletionProtection(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MongodbClient::TerminateDBInstancesOutcome MongodbClient::TerminateDBInstances(const TerminateDBInstancesRequest &request)
+{
+    auto outcome = MakeRequest(request, "TerminateDBInstances");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        TerminateDBInstancesResponse rsp = TerminateDBInstancesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return TerminateDBInstancesOutcome(rsp);
+        else
+            return TerminateDBInstancesOutcome(o.GetError());
+    }
+    else
+    {
+        return TerminateDBInstancesOutcome(outcome.GetError());
+    }
+}
+
+void MongodbClient::TerminateDBInstancesAsync(const TerminateDBInstancesRequest& request, const TerminateDBInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->TerminateDBInstances(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MongodbClient::TerminateDBInstancesOutcomeCallable MongodbClient::TerminateDBInstancesCallable(const TerminateDBInstancesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<TerminateDBInstancesOutcome()>>(
+        [this, request]()
+        {
+            return this->TerminateDBInstances(request);
         }
     );
 

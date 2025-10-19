@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The result of the created backup download task
+                * Result of creating a backup download task.
                 */
                 class BackupDownloadTaskStatus : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Shard name
-                     * @return ReplicaSetId Shard name
+                     * 获取Shard name.
+                     * @return ReplicaSetId Shard name.
                      * 
                      */
                     std::string GetReplicaSetId() const;
 
                     /**
-                     * 设置Shard name
-                     * @param _replicaSetId Shard name
+                     * 设置Shard name.
+                     * @param _replicaSetId Shard name.
                      * 
                      */
                     void SetReplicaSetId(const std::string& _replicaSetId);
@@ -68,15 +68,35 @@ namespace TencentCloud
                     bool ReplicaSetIdHasBeenSet() const;
 
                     /**
-                     * 获取Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
-                     * @return Status Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
+                     * 获取Current status of the task.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
+                     * @return Status Current status of the task.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
-                     * @param _status Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
+                     * 设置Current status of the task.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
+                     * @param _status Current status of the task.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -91,13 +111,18 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Shard name
+                     * Shard name.
                      */
                     std::string m_replicaSetId;
                     bool m_replicaSetIdHasBeenSet;
 
                     /**
-                     * Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
+                     * Current status of the task.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;

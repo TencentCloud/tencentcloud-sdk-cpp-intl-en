@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Node details of an instance to be modified.
+                * Node details of the instance to be modified.
                 */
                 class AddNodeList : public AbstractModel
                 {
@@ -80,23 +80,23 @@ namespace TencentCloud
                     bool RoleHasBeenSet() const;
 
                     /**
-                     * 获取AZs corresponding to the nodes.
- - Single AZ: All nodes are in the same AZ.
- - Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be added should be specified. After addition, the number of nodes in any two AZs should be larger than that in the third AZ.
-                     * @return Zone AZs corresponding to the nodes.
- - Single AZ: All nodes are in the same AZ.
- - Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be added should be specified. After addition, the number of nodes in any two AZs should be larger than that in the third AZ.
+                     * 获取AZ corresponding to the node. For the currently supported AZs, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
+- Single AZ: All nodes are in the same AZ.
+- Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be added should be specified. After addition, the number of nodes in any 2 AZs should be greater than that in the third AZ.
+                     * @return Zone AZ corresponding to the node. For the currently supported AZs, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
+- Single AZ: All nodes are in the same AZ.
+- Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be added should be specified. After addition, the number of nodes in any 2 AZs should be greater than that in the third AZ.
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置AZs corresponding to the nodes.
- - Single AZ: All nodes are in the same AZ.
- - Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be added should be specified. After addition, the number of nodes in any two AZs should be larger than that in the third AZ.
-                     * @param _zone AZs corresponding to the nodes.
- - Single AZ: All nodes are in the same AZ.
- - Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be added should be specified. After addition, the number of nodes in any two AZs should be larger than that in the third AZ.
+                     * 设置AZ corresponding to the node. For the currently supported AZs, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
+- Single AZ: All nodes are in the same AZ.
+- Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be added should be specified. After addition, the number of nodes in any 2 AZs should be greater than that in the third AZ.
+                     * @param _zone AZ corresponding to the node. For the currently supported AZs, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
+- Single AZ: All nodes are in the same AZ.
+- Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be added should be specified. After addition, the number of nodes in any 2 AZs should be greater than that in the third AZ.
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -120,9 +120,9 @@ namespace TencentCloud
                     bool m_roleHasBeenSet;
 
                     /**
-                     * AZs corresponding to the nodes.
- - Single AZ: All nodes are in the same AZ.
- - Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be added should be specified. After addition, the number of nodes in any two AZs should be larger than that in the third AZ.
+                     * AZ corresponding to the node. For the currently supported AZs, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
+- Single AZ: All nodes are in the same AZ.
+- Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be added should be specified. After addition, the number of nodes in any 2 AZs should be greater than that in the third AZ.
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;

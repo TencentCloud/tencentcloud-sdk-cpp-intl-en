@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Async request ID, which is used to query the running status of the process.
-                     * @return AsyncRequestId Async request ID, which is used to query the running status of the process.
+                     * 获取Task request ID.
+                     * @return AsyncRequestId Task request ID.
                      * 
                      */
                     std::string GetAsyncRequestId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Async request ID, which is used to query the running status of the process.
+                     * Task request ID.
                      */
                     std::string m_asyncRequestId;
                     bool m_asyncRequestIdHasBeenSet;

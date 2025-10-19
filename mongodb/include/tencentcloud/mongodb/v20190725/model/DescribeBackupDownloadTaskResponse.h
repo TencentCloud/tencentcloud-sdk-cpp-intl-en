@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of results
-                     * @return TotalCount Total number of results
+                     * 获取All entries that meet the query conditions.
+                     * @return TotalCount All entries that meet the query conditions.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取The list of download tasks
-                     * @return Tasks The list of download tasks
+                     * 获取Download task list.
+                     * @return Tasks Download task list.
                      * 
                      */
                     std::vector<BackupDownloadTask> GetTasks() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of results
+                     * All entries that meet the query conditions.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * The list of download tasks
+                     * Download task list.
                      */
                     std::vector<BackupDownloadTask> m_tasks;
                     bool m_tasksHasBeenSet;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/mongodb/v20190725/model/DescribeAsyncRequestInfoResponse.h>
+#include <tencentcloud/mongodb/v20190725/model/DescribeDetailedSlowLogsResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,14 +23,13 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mongodb::V20190725::Model;
 using namespace std;
 
-DescribeAsyncRequestInfoResponse::DescribeAsyncRequestInfoResponse() :
-    m_statusHasBeenSet(false),
-    m_startTimeHasBeenSet(false),
-    m_endTimeHasBeenSet(false)
+DescribeDetailedSlowLogsResponse::DescribeDetailedSlowLogsResponse() :
+    m_totalCountHasBeenSet(false),
+    m_detailedSlowLogsHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DescribeAsyncRequestInfoResponse::Deserialize(const string &payload)
+CoreInternalOutcome DescribeDetailedSlowLogsResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -64,68 +63,67 @@ CoreInternalOutcome DescribeAsyncRequestInfoResponse::Deserialize(const string &
     }
 
 
-    if (rsp.HasMember("Status") && !rsp["Status"].IsNull())
+    if (rsp.HasMember("TotalCount") && !rsp["TotalCount"].IsNull())
     {
-        if (!rsp["Status"].IsString())
+        if (!rsp["TotalCount"].IsInt64())
         {
-            return CoreInternalOutcome(Core::Error("response `Status` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
-        m_status = string(rsp["Status"].GetString());
-        m_statusHasBeenSet = true;
+        m_totalCount = rsp["TotalCount"].GetInt64();
+        m_totalCountHasBeenSet = true;
     }
 
-    if (rsp.HasMember("StartTime") && !rsp["StartTime"].IsNull())
+    if (rsp.HasMember("DetailedSlowLogs") && !rsp["DetailedSlowLogs"].IsNull())
     {
-        if (!rsp["StartTime"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `StartTime` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_startTime = string(rsp["StartTime"].GetString());
-        m_startTimeHasBeenSet = true;
-    }
+        if (!rsp["DetailedSlowLogs"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `DetailedSlowLogs` is not array type"));
 
-    if (rsp.HasMember("EndTime") && !rsp["EndTime"].IsNull())
-    {
-        if (!rsp["EndTime"].IsString())
+        const rapidjson::Value &tmpValue = rsp["DetailedSlowLogs"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            return CoreInternalOutcome(Core::Error("response `EndTime` IsString=false incorrectly").SetRequestId(requestId));
+            SlowLogItem item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_detailedSlowLogs.push_back(item);
         }
-        m_endTime = string(rsp["EndTime"].GetString());
-        m_endTimeHasBeenSet = true;
+        m_detailedSlowLogsHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string DescribeAsyncRequestInfoResponse::ToJsonString() const
+string DescribeDetailedSlowLogsResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_statusHasBeenSet)
+    if (m_totalCountHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Status";
+        string key = "TotalCount";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, m_totalCount, allocator);
     }
 
-    if (m_startTimeHasBeenSet)
+    if (m_detailedSlowLogsHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "StartTime";
+        string key = "DetailedSlowLogs";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_startTime.c_str(), allocator).Move(), allocator);
-    }
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
-    if (m_endTimeHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "EndTime";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_endTime.c_str(), allocator).Move(), allocator);
+        int i=0;
+        for (auto itr = m_detailedSlowLogs.begin(); itr != m_detailedSlowLogs.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -140,34 +138,24 @@ string DescribeAsyncRequestInfoResponse::ToJsonString() const
 }
 
 
-string DescribeAsyncRequestInfoResponse::GetStatus() const
+int64_t DescribeDetailedSlowLogsResponse::GetTotalCount() const
 {
-    return m_status;
+    return m_totalCount;
 }
 
-bool DescribeAsyncRequestInfoResponse::StatusHasBeenSet() const
+bool DescribeDetailedSlowLogsResponse::TotalCountHasBeenSet() const
 {
-    return m_statusHasBeenSet;
+    return m_totalCountHasBeenSet;
 }
 
-string DescribeAsyncRequestInfoResponse::GetStartTime() const
+vector<SlowLogItem> DescribeDetailedSlowLogsResponse::GetDetailedSlowLogs() const
 {
-    return m_startTime;
+    return m_detailedSlowLogs;
 }
 
-bool DescribeAsyncRequestInfoResponse::StartTimeHasBeenSet() const
+bool DescribeDetailedSlowLogsResponse::DetailedSlowLogsHasBeenSet() const
 {
-    return m_startTimeHasBeenSet;
-}
-
-string DescribeAsyncRequestInfoResponse::GetEndTime() const
-{
-    return m_endTime;
-}
-
-bool DescribeAsyncRequestInfoResponse::EndTimeHasBeenSet() const
-{
-    return m_endTimeHasBeenSet;
+    return m_detailedSlowLogsHasBeenSet;
 }
 
 

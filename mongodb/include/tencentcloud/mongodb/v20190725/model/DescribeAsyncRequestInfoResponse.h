@@ -57,6 +57,34 @@ namespace TencentCloud
                      */
                     bool StatusHasBeenSet() const;
 
+                    /**
+                     * 获取Task execution start time.
+                     * @return StartTime Task execution start time.
+                     * 
+                     */
+                    std::string GetStartTime() const;
+
+                    /**
+                     * 判断参数 StartTime 是否已赋值
+                     * @return StartTime 是否已赋值
+                     * 
+                     */
+                    bool StartTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Task execution end time.
+                     * @return EndTime Task execution end time.
+                     * 
+                     */
+                    std::string GetEndTime() const;
+
+                    /**
+                     * 判断参数 EndTime 是否已赋值
+                     * @return EndTime 是否已赋值
+                     * 
+                     */
+                    bool EndTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -64,6 +92,18 @@ namespace TencentCloud
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
+
+                    /**
+                     * Task execution start time.
+                     */
+                    std::string m_startTime;
+                    bool m_startTimeHasBeenSet;
+
+                    /**
+                     * Task execution end time.
+                     */
+                    std::string m_endTime;
+                    bool m_endTimeHasBeenSet;
 
                 };
             }

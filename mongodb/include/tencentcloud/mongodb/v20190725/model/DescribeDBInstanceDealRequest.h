@@ -43,15 +43,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Order ID. It is returned by the `CreateDBInstance` and other APIs.
-                     * @return DealId Order ID. It is returned by the `CreateDBInstance` and other APIs.
+                     * 获取Order ID.
+- Pay-as-you-go instance. It can be obtained through the output parameter **DealId** of the [CreateDBInstanceHour](https://www.tencentcloud.comom/document/product/240/38570?from_cn_redirect=1) API.
+- Yearly/monthly subscription instance. It can be obtained through the output parameter **DealId** of the [CreateDBInstance](https://www.tencentcloud.comom/document/product/240/38571?from_cn_redirect=1) API.
+                     * @return DealId Order ID.
+- Pay-as-you-go instance. It can be obtained through the output parameter **DealId** of the [CreateDBInstanceHour](https://www.tencentcloud.comom/document/product/240/38570?from_cn_redirect=1) API.
+- Yearly/monthly subscription instance. It can be obtained through the output parameter **DealId** of the [CreateDBInstance](https://www.tencentcloud.comom/document/product/240/38571?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetDealId() const;
 
                     /**
-                     * 设置Order ID. It is returned by the `CreateDBInstance` and other APIs.
-                     * @param _dealId Order ID. It is returned by the `CreateDBInstance` and other APIs.
+                     * 设置Order ID.
+- Pay-as-you-go instance. It can be obtained through the output parameter **DealId** of the [CreateDBInstanceHour](https://www.tencentcloud.comom/document/product/240/38570?from_cn_redirect=1) API.
+- Yearly/monthly subscription instance. It can be obtained through the output parameter **DealId** of the [CreateDBInstance](https://www.tencentcloud.comom/document/product/240/38571?from_cn_redirect=1) API.
+                     * @param _dealId Order ID.
+- Pay-as-you-go instance. It can be obtained through the output parameter **DealId** of the [CreateDBInstanceHour](https://www.tencentcloud.comom/document/product/240/38570?from_cn_redirect=1) API.
+- Yearly/monthly subscription instance. It can be obtained through the output parameter **DealId** of the [CreateDBInstance](https://www.tencentcloud.comom/document/product/240/38571?from_cn_redirect=1) API.
                      * 
                      */
                     void SetDealId(const std::string& _dealId);
@@ -66,7 +74,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Order ID. It is returned by the `CreateDBInstance` and other APIs.
+                     * Order ID.
+- Pay-as-you-go instance. It can be obtained through the output parameter **DealId** of the [CreateDBInstanceHour](https://www.tencentcloud.comom/document/product/240/38570?from_cn_redirect=1) API.
+- Yearly/monthly subscription instance. It can be obtained through the output parameter **DealId** of the [CreateDBInstance](https://www.tencentcloud.comom/document/product/240/38571?from_cn_redirect=1) API.
                      */
                     std::string m_dealId;
                     bool m_dealIdHasBeenSet;

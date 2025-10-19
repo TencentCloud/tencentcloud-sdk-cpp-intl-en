@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Backup information
+                * Backup information.
                 */
                 class BackupInfo : public AbstractModel
                 {
@@ -68,15 +68,23 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Backup mode. 0: automatic backup; 1: manual backup
-                     * @return BackupType Backup mode. 0: automatic backup; 1: manual backup
+                     * 获取Backup method.
+- 0: automatic backup.
+- 1: manual backup.
+                     * @return BackupType Backup method.
+- 0: automatic backup.
+- 1: manual backup.
                      * 
                      */
                     uint64_t GetBackupType() const;
 
                     /**
-                     * 设置Backup mode. 0: automatic backup; 1: manual backup
-                     * @param _backupType Backup mode. 0: automatic backup; 1: manual backup
+                     * 设置Backup method.
+- 0: automatic backup.
+- 1: manual backup.
+                     * @param _backupType Backup method.
+- 0: automatic backup.
+- 1: manual backup.
                      * 
                      */
                     void SetBackupType(const uint64_t& _backupType);
@@ -89,15 +97,15 @@ namespace TencentCloud
                     bool BackupTypeHasBeenSet() const;
 
                     /**
-                     * 获取Backup name
-                     * @return BackupName Backup name
+                     * 获取Backup file name.
+                     * @return BackupName Backup file name.
                      * 
                      */
                     std::string GetBackupName() const;
 
                     /**
-                     * 设置Backup name
-                     * @param _backupName Backup name
+                     * 设置Backup file name.
+                     * @param _backupName Backup file name.
                      * 
                      */
                     void SetBackupName(const std::string& _backupName);
@@ -110,15 +118,15 @@ namespace TencentCloud
                     bool BackupNameHasBeenSet() const;
 
                     /**
-                     * 获取Backup remarks.
-                     * @return BackupDesc Backup remarks.
+                     * 获取Backup task remarks.
+                     * @return BackupDesc Backup task remarks.
                      * 
                      */
                     std::string GetBackupDesc() const;
 
                     /**
-                     * 设置Backup remarks.
-                     * @param _backupDesc Backup remarks.
+                     * 设置Backup task remarks.
+                     * @param _backupDesc Backup task remarks.
                      * 
                      */
                     void SetBackupDesc(const std::string& _backupDesc);
@@ -131,15 +139,15 @@ namespace TencentCloud
                     bool BackupDescHasBeenSet() const;
 
                     /**
-                     * 获取Backup file size. Unit: KB.
-                     * @return BackupSize Backup file size. Unit: KB.
+                     * 获取Backup file size, in KB.
+                     * @return BackupSize Backup file size, in KB.
                      * 
                      */
                     uint64_t GetBackupSize() const;
 
                     /**
-                     * 设置Backup file size. Unit: KB.
-                     * @param _backupSize Backup file size. Unit: KB.
+                     * 设置Backup file size, in KB.
+                     * @param _backupSize Backup file size, in KB.
                      * 
                      */
                     void SetBackupSize(const uint64_t& _backupSize);
@@ -194,15 +202,23 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Backup status. 1: backing up; 2: backed up successful
-                     * @return Status Backup status. 1: backing up; 2: backed up successful
+                     * 获取Backup status.
+- 1: backing up.
+- 2: backup successful.
+                     * @return Status Backup status.
+- 1: backing up.
+- 2: backup successful.
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置Backup status. 1: backing up; 2: backed up successful
-                     * @param _status Backup status. 1: backing up; 2: backed up successful
+                     * 设置Backup status.
+- 1: backing up.
+- 2: backup successful.
+                     * @param _status Backup status.
+- 1: backing up.
+- 2: backup successful.
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -215,15 +231,39 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Backup method. 0: logical backup; 1: physical backup
-                     * @return BackupMethod Backup method. 0: logical backup; 1: physical backup
+                     * 获取Backup method.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note:**
+- The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+- Physical backup is not supported when storage encryption is enabled for the instance.
+                     * @return BackupMethod Backup method.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note:**
+- The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+- Physical backup is not supported when storage encryption is enabled for the instance.
                      * 
                      */
                     uint64_t GetBackupMethod() const;
 
                     /**
-                     * 设置Backup method. 0: logical backup; 1: physical backup
-                     * @param _backupMethod Backup method. 0: logical backup; 1: physical backup
+                     * 设置Backup method.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note:**
+- The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+- Physical backup is not supported when storage encryption is enabled for the instance.
+                     * @param _backupMethod Backup method.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note:**
+- The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+- Physical backup is not supported when storage encryption is enabled for the instance.
                      * 
                      */
                     void SetBackupMethod(const uint64_t& _backupMethod);
@@ -278,15 +318,15 @@ namespace TencentCloud
                     bool DeleteTimeHasBeenSet() const;
 
                     /**
-                     * 获取Region for cross-region backup.
-                     * @return BackupRegion Region for cross-region backup.
+                     * 获取Cross-region backup region.
+                     * @return BackupRegion Cross-region backup region.
                      * 
                      */
                     std::string GetBackupRegion() const;
 
                     /**
-                     * 设置Region for cross-region backup.
-                     * @param _backupRegion Region for cross-region backup.
+                     * 设置Cross-region backup region.
+                     * @param _backupRegion Cross-region backup region.
                      * 
                      */
                     void SetBackupRegion(const std::string& _backupRegion);
@@ -298,6 +338,27 @@ namespace TencentCloud
                      */
                     bool BackupRegionHasBeenSet() const;
 
+                    /**
+                     * 获取Rollback time supported by the backup.
+                     * @return RestoreTime Rollback time supported by the backup.
+                     * 
+                     */
+                    std::string GetRestoreTime() const;
+
+                    /**
+                     * 设置Rollback time supported by the backup.
+                     * @param _restoreTime Rollback time supported by the backup.
+                     * 
+                     */
+                    void SetRestoreTime(const std::string& _restoreTime);
+
+                    /**
+                     * 判断参数 RestoreTime 是否已赋值
+                     * @return RestoreTime 是否已赋值
+                     * 
+                     */
+                    bool RestoreTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -307,25 +368,27 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Backup mode. 0: automatic backup; 1: manual backup
+                     * Backup method.
+- 0: automatic backup.
+- 1: manual backup.
                      */
                     uint64_t m_backupType;
                     bool m_backupTypeHasBeenSet;
 
                     /**
-                     * Backup name
+                     * Backup file name.
                      */
                     std::string m_backupName;
                     bool m_backupNameHasBeenSet;
 
                     /**
-                     * Backup remarks.
+                     * Backup task remarks.
                      */
                     std::string m_backupDesc;
                     bool m_backupDescHasBeenSet;
 
                     /**
-                     * Backup file size. Unit: KB.
+                     * Backup file size, in KB.
                      */
                     uint64_t m_backupSize;
                     bool m_backupSizeHasBeenSet;
@@ -343,13 +406,21 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Backup status. 1: backing up; 2: backed up successful
+                     * Backup status.
+- 1: backing up.
+- 2: backup successful.
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Backup method. 0: logical backup; 1: physical backup
+                     * Backup method.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note:**
+- The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+- Physical backup is not supported when storage encryption is enabled for the instance.
                      */
                     uint64_t m_backupMethod;
                     bool m_backupMethodHasBeenSet;
@@ -367,10 +438,16 @@ namespace TencentCloud
                     bool m_deleteTimeHasBeenSet;
 
                     /**
-                     * Region for cross-region backup.
+                     * Cross-region backup region.
                      */
                     std::string m_backupRegion;
                     bool m_backupRegionHasBeenSet;
+
+                    /**
+                     * Rollback time supported by the backup.
+                     */
+                    std::string m_restoreTime;
+                    bool m_restoreTimeHasBeenSet;
 
                 };
             }

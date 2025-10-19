@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID list. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
-                     * @return InstanceIds Instance ID list. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+                     * 获取Instance ID list. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+                     * @return InstanceIds Instance ID list. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置Instance ID list. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
-                     * @param _instanceIds Instance ID list. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+                     * 设置Instance ID list. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+                     * @param _instanceIds Instance ID list. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
                      * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
@@ -65,15 +65,35 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the instance type for querying.<ul><li>0: all instances.</li><li>1: formal instance.</li><li>3: read-only instance.</li><li>4: disaster recovery instance.</li></ul>
-                     * @return InstanceType Specifies the instance type for querying.<ul><li>0: all instances.</li><li>1: formal instance.</li><li>3: read-only instance.</li><li>4: disaster recovery instance.</li></ul>
+                     * 获取Specifies the instance type for querying. Valid values:
+- 0: all instances.
+- 1: formal instance.
+- 2: temporary instance.
+- 3: read-only instance.
+- -1: the query range includes the formal, read-only, and disaster recovery instances simultaneously.
+                     * @return InstanceType Specifies the instance type for querying. Valid values:
+- 0: all instances.
+- 1: formal instance.
+- 2: temporary instance.
+- 3: read-only instance.
+- -1: the query range includes the formal, read-only, and disaster recovery instances simultaneously.
                      * 
                      */
                     int64_t GetInstanceType() const;
 
                     /**
-                     * 设置Specifies the instance type for querying.<ul><li>0: all instances.</li><li>1: formal instance.</li><li>3: read-only instance.</li><li>4: disaster recovery instance.</li></ul>
-                     * @param _instanceType Specifies the instance type for querying.<ul><li>0: all instances.</li><li>1: formal instance.</li><li>3: read-only instance.</li><li>4: disaster recovery instance.</li></ul>
+                     * 设置Specifies the instance type for querying. Valid values:
+- 0: all instances.
+- 1: formal instance.
+- 2: temporary instance.
+- 3: read-only instance.
+- -1: the query range includes the formal, read-only, and disaster recovery instances simultaneously.
+                     * @param _instanceType Specifies the instance type for querying. Valid values:
+- 0: all instances.
+- 1: formal instance.
+- 2: temporary instance.
+- 3: read-only instance.
+- -1: the query range includes the formal, read-only, and disaster recovery instances simultaneously.
                      * 
                      */
                     void SetInstanceType(const int64_t& _instanceType);
@@ -86,15 +106,27 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the cluster type of the queried instance.<ul><li>0: replica set instance.</li><li>1: sharded cluster instance.</li><li>-1: replica set and sharded cluster instance.</li></ul>
-                     * @return ClusterType Specifies the cluster type of the queried instance.<ul><li>0: replica set instance.</li><li>1: sharded cluster instance.</li><li>-1: replica set and sharded cluster instance.</li></ul>
+                     * 获取Specifies the cluster type of the instance to be queried. Valid values:
+- 0: replica set instance.
+- 1: sharded cluster instance.
+- -1: replica set and sharded cluster instance.
+                     * @return ClusterType Specifies the cluster type of the instance to be queried. Valid values:
+- 0: replica set instance.
+- 1: sharded cluster instance.
+- -1: replica set and sharded cluster instance.
                      * 
                      */
                     int64_t GetClusterType() const;
 
                     /**
-                     * 设置Specifies the cluster type of the queried instance.<ul><li>0: replica set instance.</li><li>1: sharded cluster instance.</li><li>-1: replica set and sharded cluster instance.</li></ul>
-                     * @param _clusterType Specifies the cluster type of the queried instance.<ul><li>0: replica set instance.</li><li>1: sharded cluster instance.</li><li>-1: replica set and sharded cluster instance.</li></ul>
+                     * 设置Specifies the cluster type of the instance to be queried. Valid values:
+- 0: replica set instance.
+- 1: sharded cluster instance.
+- -1: replica set and sharded cluster instance.
+                     * @param _clusterType Specifies the cluster type of the instance to be queried. Valid values:
+- 0: replica set instance.
+- 1: sharded cluster instance.
+- -1: replica set and sharded cluster instance.
                      * 
                      */
                     void SetClusterType(const int64_t& _clusterType);
@@ -107,15 +139,35 @@ namespace TencentCloud
                     bool ClusterTypeHasBeenSet() const;
 
                     /**
-                     * 获取Specify the current status of the queried instance.<ul><li>0: pending initialization.</li><li>1: processing, such as modifying specifications or modifying parameters.</li><li>2: instance running normally.</li><li>-2: instance expired.</li></ul>
-                     * @return Status Specify the current status of the queried instance.<ul><li>0: pending initialization.</li><li>1: processing, such as modifying specifications or modifying parameters.</li><li>2: instance running normally.</li><li>-2: instance expired.</li></ul>
+                     * 获取Specifies the current status of the instance to be queried. Valid values:
+- 0: to be initialized.
+- 1: processing, such as specification changes and parameter modifications.
+- 2: running normally.
+- -2: isolated (yearly/monthly subscription).
+- -3: isolated (pay-as-you-go).
+                     * @return Status Specifies the current status of the instance to be queried. Valid values:
+- 0: to be initialized.
+- 1: processing, such as specification changes and parameter modifications.
+- 2: running normally.
+- -2: isolated (yearly/monthly subscription).
+- -3: isolated (pay-as-you-go).
                      * 
                      */
                     std::vector<int64_t> GetStatus() const;
 
                     /**
-                     * 设置Specify the current status of the queried instance.<ul><li>0: pending initialization.</li><li>1: processing, such as modifying specifications or modifying parameters.</li><li>2: instance running normally.</li><li>-2: instance expired.</li></ul>
-                     * @param _status Specify the current status of the queried instance.<ul><li>0: pending initialization.</li><li>1: processing, such as modifying specifications or modifying parameters.</li><li>2: instance running normally.</li><li>-2: instance expired.</li></ul>
+                     * 设置Specifies the current status of the instance to be queried. Valid values:
+- 0: to be initialized.
+- 1: processing, such as specification changes and parameter modifications.
+- 2: running normally.
+- -2: isolated (yearly/monthly subscription).
+- -3: isolated (pay-as-you-go).
+                     * @param _status Specifies the current status of the instance to be queried. Valid values:
+- 0: to be initialized.
+- 1: processing, such as specification changes and parameter modifications.
+- 2: running normally.
+- -2: isolated (yearly/monthly subscription).
+- -3: isolated (pay-as-you-go).
                      * 
                      */
                     void SetStatus(const std::vector<int64_t>& _status);
@@ -207,15 +259,15 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取Number of results returned per request. Default value: `20`. Value range: [1,100].
-                     * @return Limit Number of results returned per request. Default value: `20`. Value range: [1,100].
+                     * 获取Number of entries returned per request. The default value is 20, and the value range is (1, 100].
+                     * @return Limit Number of entries returned per request. The default value is 20, and the value range is (1, 100].
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results returned per request. Default value: `20`. Value range: [1,100].
-                     * @param _limit Number of results returned per request. Default value: `20`. Value range: [1,100].
+                     * 设置Number of entries returned per request. The default value is 20, and the value range is (1, 100].
+                     * @param _limit Number of entries returned per request. The default value is 20, and the value range is (1, 100].
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -364,25 +416,38 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID list. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+                     * Instance ID list. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * Specifies the instance type for querying.<ul><li>0: all instances.</li><li>1: formal instance.</li><li>3: read-only instance.</li><li>4: disaster recovery instance.</li></ul>
+                     * Specifies the instance type for querying. Valid values:
+- 0: all instances.
+- 1: formal instance.
+- 2: temporary instance.
+- 3: read-only instance.
+- -1: the query range includes the formal, read-only, and disaster recovery instances simultaneously.
                      */
                     int64_t m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Specifies the cluster type of the queried instance.<ul><li>0: replica set instance.</li><li>1: sharded cluster instance.</li><li>-1: replica set and sharded cluster instance.</li></ul>
+                     * Specifies the cluster type of the instance to be queried. Valid values:
+- 0: replica set instance.
+- 1: sharded cluster instance.
+- -1: replica set and sharded cluster instance.
                      */
                     int64_t m_clusterType;
                     bool m_clusterTypeHasBeenSet;
 
                     /**
-                     * Specify the current status of the queried instance.<ul><li>0: pending initialization.</li><li>1: processing, such as modifying specifications or modifying parameters.</li><li>2: instance running normally.</li><li>-2: instance expired.</li></ul>
+                     * Specifies the current status of the instance to be queried. Valid values:
+- 0: to be initialized.
+- 1: processing, such as specification changes and parameter modifications.
+- 2: running normally.
+- -2: isolated (yearly/monthly subscription).
+- -3: isolated (pay-as-you-go).
                      */
                     std::vector<int64_t> m_status;
                     bool m_statusHasBeenSet;
@@ -410,7 +475,7 @@ namespace TencentCloud
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * Number of results returned per request. Default value: `20`. Value range: [1,100].
+                     * Number of entries returned per request. The default value is 20, and the value range is (1, 100].
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

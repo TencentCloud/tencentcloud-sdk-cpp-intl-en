@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Shard information
+                * Shard information.
                 */
                 class ReplicaSetInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Replica set ID
-                     * @return ReplicaSetId Replica set ID
+                     * 获取Replica set ID.
+                     * @return ReplicaSetId Replica set ID.
                      * 
                      */
                     std::string GetReplicaSetId() const;
 
                     /**
-                     * 设置Replica set ID
-                     * @param _replicaSetId Replica set ID
+                     * 设置Replica set ID.
+                     * @param _replicaSetId Replica set ID.
                      * 
                      */
                     void SetReplicaSetId(const std::string& _replicaSetId);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Replica set ID
+                     * Replica set ID.
                      */
                     std::string m_replicaSetId;
                     bool m_replicaSetIdHasBeenSet;

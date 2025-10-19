@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Unique ID of an existing project (instead of a new project).
-                     * @return ProjectId Unique ID of an existing project (instead of a new project).
+                     * 获取Project ID, the unique ID of the project created by the user. Go to the [project management](https://console.cloud.tencent.com/project) area of the account center in the console to copy the project ID.
+                     * @return ProjectId Project ID, the unique ID of the project created by the user. Go to the [project management](https://console.cloud.tencent.com/project) area of the account center in the console to copy the project ID.
                      * 
                      */
                     uint64_t GetProjectId() const;
 
                     /**
-                     * 设置Unique ID of an existing project (instead of a new project).
-                     * @param _projectId Unique ID of an existing project (instead of a new project).
+                     * 设置Project ID, the unique ID of the project created by the user. Go to the [project management](https://console.cloud.tencent.com/project) area of the account center in the console to copy the project ID.
+                     * @param _projectId Project ID, the unique ID of the project created by the user. Go to the [project management](https://console.cloud.tencent.com/project) area of the account center in the console to copy the project ID.
                      * 
                      */
                     void SetProjectId(const uint64_t& _projectId);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * Unique ID of an existing project (instead of a new project).
+                     * Project ID, the unique ID of the project created by the user. Go to the [project management](https://console.cloud.tencent.com/project) area of the account center in the console to copy the project ID.
                      */
                     uint64_t m_projectId;
                     bool m_projectIdHasBeenSet;

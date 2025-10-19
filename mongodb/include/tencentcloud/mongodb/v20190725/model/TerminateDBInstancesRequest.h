@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_MONGODB_V20190725_MODEL_ISOLATEDBINSTANCEREQUEST_H_
-#define TENCENTCLOUD_MONGODB_V20190725_MODEL_ISOLATEDBINSTANCEREQUEST_H_
+#ifndef TENCENTCLOUD_MONGODB_V20190725_MODEL_TERMINATEDBINSTANCESREQUEST_H_
+#define TENCENTCLOUD_MONGODB_V20190725_MODEL_TERMINATEDBINSTANCESREQUEST_H_
 
 #include <string>
 #include <vector>
@@ -32,26 +32,26 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * IsolateDBInstance request structure.
+                * TerminateDBInstances request structure.
                 */
-                class IsolateDBInstanceRequest : public AbstractModel
+                class TerminateDBInstancesRequest : public AbstractModel
                 {
                 public:
-                    IsolateDBInstanceRequest();
-                    ~IsolateDBInstanceRequest() = default;
+                    TerminateDBInstancesRequest();
+                    ~TerminateDBInstancesRequest() = default;
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the ID of the instance to be isolated from the instance list.
-                     * @return InstanceId Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the ID of the instance to be isolated from the instance list.
+                     * 获取Specifies the ID of the pre-isolated instance. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+                     * @return InstanceId Specifies the ID of the pre-isolated instance. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the ID of the instance to be isolated from the instance list.
-                     * @param _instanceId Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the ID of the instance to be isolated from the instance list.
+                     * 设置Specifies the ID of the pre-isolated instance. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+                     * @param _instanceId Specifies the ID of the pre-isolated instance. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the ID of the instance to be isolated from the instance list.
+                     * Specifies the ID of the pre-isolated instance. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -77,4 +77,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_MONGODB_V20190725_MODEL_ISOLATEDBINSTANCEREQUEST_H_
+#endif // !TENCENTCLOUD_MONGODB_V20190725_MODEL_TERMINATEDBINSTANCESREQUEST_H_

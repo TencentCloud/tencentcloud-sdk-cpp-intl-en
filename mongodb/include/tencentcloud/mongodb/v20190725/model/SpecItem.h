@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Specifications of purchasable MongoDB instances
+                * TencentDB for MongoDB instance sales specification.
                 */
                 class SpecItem : public AbstractModel
                 {
@@ -48,54 +48,26 @@ namespace TencentCloud
 
                     /**
                      * 获取Specification information identifier. Format: mongo.HIO10G.128G. It consists of three parts: node type, specification type, and memory specification.
- - Node types are as follows:
- - mongo: Mongod node.
- - mongos: Mongos node.
- - cfgstr: ConfigServer node.
- - Specification types are as follows:
- - HIO10G: general high-I/O 10GE type.
- - HCD: cloud disk type.
- - Memory specifications are as follows:
- - Valid values: 4, 8, 16, 32, 64, 128, 240, and 512.
- - Unit: g, indicating GB. 128g means 128 GB.
+- Node type: **mongo** indicates a Mongod node; **mongos** indicates a Mongos node; **cfgstr** indicates a ConfigServer node.
+- Specification type: **HIO10G** indicates the general HIO 10GE type; **HCD** indicates the Cloud Disk Edition type.
+- Memory specification, in GB. Valid values: 4, 8, 16, 32, 64, 128, 240, and 512. 128g indicates 128 GB.
                      * @return SpecCode Specification information identifier. Format: mongo.HIO10G.128G. It consists of three parts: node type, specification type, and memory specification.
- - Node types are as follows:
- - mongo: Mongod node.
- - mongos: Mongos node.
- - cfgstr: ConfigServer node.
- - Specification types are as follows:
- - HIO10G: general high-I/O 10GE type.
- - HCD: cloud disk type.
- - Memory specifications are as follows:
- - Valid values: 4, 8, 16, 32, 64, 128, 240, and 512.
- - Unit: g, indicating GB. 128g means 128 GB.
+- Node type: **mongo** indicates a Mongod node; **mongos** indicates a Mongos node; **cfgstr** indicates a ConfigServer node.
+- Specification type: **HIO10G** indicates the general HIO 10GE type; **HCD** indicates the Cloud Disk Edition type.
+- Memory specification, in GB. Valid values: 4, 8, 16, 32, 64, 128, 240, and 512. 128g indicates 128 GB.
                      * 
                      */
                     std::string GetSpecCode() const;
 
                     /**
                      * 设置Specification information identifier. Format: mongo.HIO10G.128G. It consists of three parts: node type, specification type, and memory specification.
- - Node types are as follows:
- - mongo: Mongod node.
- - mongos: Mongos node.
- - cfgstr: ConfigServer node.
- - Specification types are as follows:
- - HIO10G: general high-I/O 10GE type.
- - HCD: cloud disk type.
- - Memory specifications are as follows:
- - Valid values: 4, 8, 16, 32, 64, 128, 240, and 512.
- - Unit: g, indicating GB. 128g means 128 GB.
+- Node type: **mongo** indicates a Mongod node; **mongos** indicates a Mongos node; **cfgstr** indicates a ConfigServer node.
+- Specification type: **HIO10G** indicates the general HIO 10GE type; **HCD** indicates the Cloud Disk Edition type.
+- Memory specification, in GB. Valid values: 4, 8, 16, 32, 64, 128, 240, and 512. 128g indicates 128 GB.
                      * @param _specCode Specification information identifier. Format: mongo.HIO10G.128G. It consists of three parts: node type, specification type, and memory specification.
- - Node types are as follows:
- - mongo: Mongod node.
- - mongos: Mongos node.
- - cfgstr: ConfigServer node.
- - Specification types are as follows:
- - HIO10G: general high-I/O 10GE type.
- - HCD: cloud disk type.
- - Memory specifications are as follows:
- - Valid values: 4, 8, 16, 32, 64, 128, 240, and 512.
- - Unit: g, indicating GB. 128g means 128 GB.
+- Node type: **mongo** indicates a Mongod node; **mongos** indicates a Mongos node; **cfgstr** indicates a ConfigServer node.
+- Specification type: **HIO10G** indicates the general HIO 10GE type; **HCD** indicates the Cloud Disk Edition type.
+- Memory specification, in GB. Valid values: 4, 8, 16, 32, 64, 128, 240, and 512. 128g indicates 128 GB.
                      * 
                      */
                     void SetSpecCode(const std::string& _specCode);
@@ -285,38 +257,38 @@ namespace TencentCloud
 
                     /**
                      * 获取Storage engine version information on instances.
- - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
- - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
- - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
- - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
- - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
- - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
                      * @return MongoVersionCode Storage engine version information on instances.
- - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
- - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
- - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
- - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
- - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
- - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
                      * 
                      */
                     std::string GetMongoVersionCode() const;
 
                     /**
                      * 设置Storage engine version information on instances.
- - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
- - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
- - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
- - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
- - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
- - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
                      * @param _mongoVersionCode Storage engine version information on instances.
- - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
- - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
- - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
- - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
- - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
- - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
                      * 
                      */
                     void SetMongoVersionCode(const std::string& _mongoVersionCode);
@@ -350,19 +322,15 @@ namespace TencentCloud
                     bool MongoVersionValueHasBeenSet() const;
 
                     /**
-                     * 获取Instance version information. Valid values: 3.6, 4.2, 4.4, 5.0, and 6.0.
-
-                     * @return Version Instance version information. Valid values: 3.6, 4.2, 4.4, 5.0, and 6.0.
-
+                     * 获取Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, and 7.0.
+                     * @return Version Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, and 7.0.
                      * 
                      */
                     std::string GetVersion() const;
 
                     /**
-                     * 设置Instance version information. Valid values: 3.6, 4.2, 4.4, 5.0, and 6.0.
-
-                     * @param _version Instance version information. Valid values: 3.6, 4.2, 4.4, 5.0, and 6.0.
-
+                     * 设置Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, and 7.0.
+                     * @param _version Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, and 7.0.
                      * 
                      */
                     void SetVersion(const std::string& _version);
@@ -583,16 +551,9 @@ namespace TencentCloud
 
                     /**
                      * Specification information identifier. Format: mongo.HIO10G.128G. It consists of three parts: node type, specification type, and memory specification.
- - Node types are as follows:
- - mongo: Mongod node.
- - mongos: Mongos node.
- - cfgstr: ConfigServer node.
- - Specification types are as follows:
- - HIO10G: general high-I/O 10GE type.
- - HCD: cloud disk type.
- - Memory specifications are as follows:
- - Valid values: 4, 8, 16, 32, 64, 128, 240, and 512.
- - Unit: g, indicating GB. 128g means 128 GB.
+- Node type: **mongo** indicates a Mongod node; **mongos** indicates a Mongos node; **cfgstr** indicates a ConfigServer node.
+- Specification type: **HIO10G** indicates the general HIO 10GE type; **HCD** indicates the Cloud Disk Edition type.
+- Memory specification, in GB. Valid values: 4, 8, 16, 32, 64, 128, 240, and 512. 128g indicates 128 GB.
                      */
                     std::string m_specCode;
                     bool m_specCodeHasBeenSet;
@@ -649,12 +610,12 @@ namespace TencentCloud
 
                     /**
                      * Storage engine version information on instances.
- - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
- - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
- - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
- - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
- - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
- - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
                      */
                     std::string m_mongoVersionCode;
                     bool m_mongoVersionCodeHasBeenSet;
@@ -666,8 +627,7 @@ namespace TencentCloud
                     bool m_mongoVersionValueHasBeenSet;
 
                     /**
-                     * Instance version information. Valid values: 3.6, 4.2, 4.4, 5.0, and 6.0.
-
+                     * Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, and 7.0.
                      */
                     std::string m_version;
                     bool m_versionHasBeenSet;

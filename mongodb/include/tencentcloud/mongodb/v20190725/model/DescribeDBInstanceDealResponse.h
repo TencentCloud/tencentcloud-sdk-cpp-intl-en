@@ -44,8 +44,24 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Order status. Valid values: 1 (unpaid), 2 (paid), 3 (delivering), 4 (delivered), 5 (delivery failed), 6 (refunded), 7 (order closed), 8 (order closed because it failed to be paid within timeout period).
-                     * @return Status Order status. Valid values: 1 (unpaid), 2 (paid), 3 (delivering), 4 (delivered), 5 (delivery failed), 6 (refunded), 7 (order closed), 8 (order closed because it failed to be paid within timeout period).
+                     * 获取Order status.
+- 1: unpaid.
+- 2: paid.
+- 3: delivering.
+- 4: delivered successfully.
+- 5: delivery failed.
+- 6: refund.
+- 7: order closed.
+- 8: closed due to unpaid timeout.
+                     * @return Status Order status.
+- 1: unpaid.
+- 2: paid.
+- 3: delivering.
+- 4: delivered successfully.
+- 5: delivery failed.
+- 6: refund.
+- 7: order closed.
+- 8: closed due to unpaid timeout.
                      * 
                      */
                     int64_t GetStatus() const;
@@ -58,8 +74,8 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Original price of the order.
-                     * @return OriginalPrice Original price of the order.
+                     * 获取Original price of the order, in USD.
+                     * @return OriginalPrice Original price of the order, in USD.
                      * 
                      */
                     double GetOriginalPrice() const;
@@ -72,8 +88,8 @@ namespace TencentCloud
                     bool OriginalPriceHasBeenSet() const;
 
                     /**
-                     * 获取Discounted price of the order.
-                     * @return DiscountPrice Discounted price of the order.
+                     * 获取Discount price of the order, in USD.
+                     * @return DiscountPrice Discount price of the order, in USD.
                      * 
                      */
                     double GetDiscountPrice() const;
@@ -86,8 +102,18 @@ namespace TencentCloud
                     bool DiscountPriceHasBeenSet() const;
 
                     /**
-                     * 获取Operation performed by the order. Valid values: purchase, renew, upgrade, downgrade, refund.
-                     * @return Action Operation performed by the order. Valid values: purchase, renew, upgrade, downgrade, refund.
+                     * 获取Order operation behavior.
+- purchase: newly purchased.
+- renew: renewed.
+- upgrade: configuration upgraded.
+- downgrade: configuration downgraded.
+- refund: return and refund.
+                     * @return Action Order operation behavior.
+- purchase: newly purchased.
+- renew: renewed.
+- upgrade: configuration upgraded.
+- downgrade: configuration downgraded.
+- refund: return and refund.
                      * 
                      */
                     std::string GetAction() const;
@@ -100,8 +126,8 @@ namespace TencentCloud
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取Resource ID of the current order.
-                     * @return InstanceId Resource ID of the current order.
+                     * 获取Instance ID of the current order.
+                     * @return InstanceId Instance ID of the current order.
                      * 
                      */
                     std::string GetInstanceId() const;
@@ -116,31 +142,44 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Order status. Valid values: 1 (unpaid), 2 (paid), 3 (delivering), 4 (delivered), 5 (delivery failed), 6 (refunded), 7 (order closed), 8 (order closed because it failed to be paid within timeout period).
+                     * Order status.
+- 1: unpaid.
+- 2: paid.
+- 3: delivering.
+- 4: delivered successfully.
+- 5: delivery failed.
+- 6: refund.
+- 7: order closed.
+- 8: closed due to unpaid timeout.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Original price of the order.
+                     * Original price of the order, in USD.
                      */
                     double m_originalPrice;
                     bool m_originalPriceHasBeenSet;
 
                     /**
-                     * Discounted price of the order.
+                     * Discount price of the order, in USD.
                      */
                     double m_discountPrice;
                     bool m_discountPriceHasBeenSet;
 
                     /**
-                     * Operation performed by the order. Valid values: purchase, renew, upgrade, downgrade, refund.
+                     * Order operation behavior.
+- purchase: newly purchased.
+- renew: renewed.
+- upgrade: configuration upgraded.
+- downgrade: configuration downgraded.
+- refund: return and refund.
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * Resource ID of the current order.
+                     * Instance ID of the current order.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

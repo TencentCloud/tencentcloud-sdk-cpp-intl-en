@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unit price.
-                     * @return UnitPrice Unit price.
+                     * 获取Unit price of the instance, in USD.
+                     * @return UnitPrice Unit price of the instance, in USD.
                      * 
                      */
                     double GetUnitPrice() const;
 
                     /**
-                     * 设置Unit price.
-                     * @param _unitPrice Unit price.
+                     * 设置Unit price of the instance, in USD.
+                     * @param _unitPrice Unit price of the instance, in USD.
                      * 
                      */
                     void SetUnitPrice(const double& _unitPrice);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool UnitPriceHasBeenSet() const;
 
                     /**
-                     * 获取Original price.
-                     * @return OriginalPrice Original price.
+                     * 获取Original price of the instance, in USD.
+                     * @return OriginalPrice Original price of the instance, in USD.
                      * 
                      */
                     double GetOriginalPrice() const;
 
                     /**
-                     * 设置Original price.
-                     * @param _originalPrice Original price.
+                     * 设置Original price of the instance, in USD.
+                     * @param _originalPrice Original price of the instance, in USD.
                      * 
                      */
                     void SetOriginalPrice(const double& _originalPrice);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool OriginalPriceHasBeenSet() const;
 
                     /**
-                     * 获取Discount price.
-                     * @return DiscountPrice Discount price.
+                     * 获取Discount price of the instance, in USD.
+                     * @return DiscountPrice Discount price of the instance, in USD.
                      * 
                      */
                     double GetDiscountPrice() const;
 
                     /**
-                     * 设置Discount price.
-                     * @param _discountPrice Discount price.
+                     * 设置Discount price of the instance, in USD.
+                     * @param _discountPrice Discount price of the instance, in USD.
                      * 
                      */
                     void SetDiscountPrice(const double& _discountPrice);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unit price.
+                     * Unit price of the instance, in USD.
                      */
                     double m_unitPrice;
                     bool m_unitPriceHasBeenSet;
 
                     /**
-                     * Original price.
+                     * Original price of the instance, in USD.
                      */
                     double m_originalPrice;
                     bool m_originalPriceHasBeenSet;
 
                     /**
-                     * Discount price.
+                     * Discount price of the instance, in USD.
                      */
                     double m_discountPrice;
                     bool m_discountPriceHasBeenSet;

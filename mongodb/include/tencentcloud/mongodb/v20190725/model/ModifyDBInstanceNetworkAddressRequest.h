@@ -102,15 +102,15 @@ namespace TencentCloud
                     bool OldIpExpiredTimeHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID after the switch. If the instance is using a basic network, this field is not required.
-                     * @return NewUniqVpcId VPC ID after the switch. If the instance is using a basic network, this field is not required.
+                     * 获取VPC ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the VPC ID.
+                     * @return NewUniqVpcId VPC ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the VPC ID.
                      * 
                      */
                     std::string GetNewUniqVpcId() const;
 
                     /**
-                     * 设置VPC ID after the switch. If the instance is using a basic network, this field is not required.
-                     * @param _newUniqVpcId VPC ID after the switch. If the instance is using a basic network, this field is not required.
+                     * 设置VPC ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the VPC ID.
+                     * @param _newUniqVpcId VPC ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the VPC ID.
                      * 
                      */
                     void SetNewUniqVpcId(const std::string& _newUniqVpcId);
@@ -123,15 +123,15 @@ namespace TencentCloud
                     bool NewUniqVpcIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC subnet ID after the switch. If the instance is using a basic network, this field is not required.
-                     * @return NewUniqSubnetId VPC subnet ID after the switch. If the instance is using a basic network, this field is not required.
+                     * 获取VPC subnet ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the subnet ID of the VPC.
+                     * @return NewUniqSubnetId VPC subnet ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the subnet ID of the VPC.
                      * 
                      */
                     std::string GetNewUniqSubnetId() const;
 
                     /**
-                     * 设置VPC subnet ID after the switch. If the instance is using a basic network, this field is not required.
-                     * @param _newUniqSubnetId VPC subnet ID after the switch. If the instance is using a basic network, this field is not required.
+                     * 设置VPC subnet ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the subnet ID of the VPC.
+                     * @param _newUniqSubnetId VPC subnet ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the subnet ID of the VPC.
                      * 
                      */
                     void SetNewUniqSubnetId(const std::string& _newUniqSubnetId);
@@ -183,13 +183,13 @@ namespace TencentCloud
                     bool m_oldIpExpiredTimeHasBeenSet;
 
                     /**
-                     * VPC ID after the switch. If the instance is using a basic network, this field is not required.
+                     * VPC ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the VPC ID.
                      */
                     std::string m_newUniqVpcId;
                     bool m_newUniqVpcIdHasBeenSet;
 
                     /**
-                     * VPC subnet ID after the switch. If the instance is using a basic network, this field is not required.
+                     * VPC subnet ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the subnet ID of the VPC.
                      */
                     std::string m_newUniqSubnetId;
                     bool m_newUniqSubnetIdHasBeenSet;

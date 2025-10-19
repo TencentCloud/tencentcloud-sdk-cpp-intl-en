@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Async task ID, which is returned by APIs related to async tasks, such as `CreateBackupDBInstance`.
-                     * @return AsyncRequestId Async task ID, which is returned by APIs related to async tasks, such as `CreateBackupDBInstance`.
+                     * 获取Specifies the ID of the asynchronous request to be queried. When an asynchronous process is involved in the API operation (such as [CreateBackupDBInstance](https://www.tencentcloud.comom/document/product/240/46599?from_cn_redirect=1)), the response value of AsyncRequestId is the ID to be filled in for this parameter.
+                     * @return AsyncRequestId Specifies the ID of the asynchronous request to be queried. When an asynchronous process is involved in the API operation (such as [CreateBackupDBInstance](https://www.tencentcloud.comom/document/product/240/46599?from_cn_redirect=1)), the response value of AsyncRequestId is the ID to be filled in for this parameter.
                      * 
                      */
                     std::string GetAsyncRequestId() const;
 
                     /**
-                     * 设置Async task ID, which is returned by APIs related to async tasks, such as `CreateBackupDBInstance`.
-                     * @param _asyncRequestId Async task ID, which is returned by APIs related to async tasks, such as `CreateBackupDBInstance`.
+                     * 设置Specifies the ID of the asynchronous request to be queried. When an asynchronous process is involved in the API operation (such as [CreateBackupDBInstance](https://www.tencentcloud.comom/document/product/240/46599?from_cn_redirect=1)), the response value of AsyncRequestId is the ID to be filled in for this parameter.
+                     * @param _asyncRequestId Specifies the ID of the asynchronous request to be queried. When an asynchronous process is involved in the API operation (such as [CreateBackupDBInstance](https://www.tencentcloud.comom/document/product/240/46599?from_cn_redirect=1)), the response value of AsyncRequestId is the ID to be filled in for this parameter.
                      * 
                      */
                     void SetAsyncRequestId(const std::string& _asyncRequestId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Async task ID, which is returned by APIs related to async tasks, such as `CreateBackupDBInstance`.
+                     * Specifies the ID of the asynchronous request to be queried. When an asynchronous process is involved in the API operation (such as [CreateBackupDBInstance](https://www.tencentcloud.comom/document/product/240/46599?from_cn_redirect=1)), the response value of AsyncRequestId is the ID to be filled in for this parameter.
                      */
                     std::string m_asyncRequestId;
                     bool m_asyncRequestIdHasBeenSet;

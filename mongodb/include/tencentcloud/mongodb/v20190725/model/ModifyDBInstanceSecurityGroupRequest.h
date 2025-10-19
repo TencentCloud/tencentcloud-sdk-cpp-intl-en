@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID. For example, cmgo-7pje****.
-                     * @return InstanceId Instance ID. For example, cmgo-7pje****.
+                     * 获取Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+                     * @return InstanceId Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID. For example, cmgo-7pje****.
-                     * @param _instanceId Instance ID. For example, cmgo-7pje****.
+                     * 设置Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+                     * @param _instanceId Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,19 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取IDs of target security groups. Call the [DescribeSecurityGroup](https://intl.cloud.tencent.com/document/product/240/55675?from_cn_redirect=1) API to view IDs of specific security groups.
-                     * @return SecurityGroupIds IDs of target security groups. Call the [DescribeSecurityGroup](https://intl.cloud.tencent.com/document/product/240/55675?from_cn_redirect=1) API to view IDs of specific security groups.
+                     * 获取Target security group ID. Log in to the [security group console](https://console.cloud.tencent.com/vpc/security-group) page to copy the target security group ID.
+**Note**: This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
+                     * @return SecurityGroupIds Target security group ID. Log in to the [security group console](https://console.cloud.tencent.com/vpc/security-group) page to copy the target security group ID.
+**Note**: This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
                      * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
-                     * 设置IDs of target security groups. Call the [DescribeSecurityGroup](https://intl.cloud.tencent.com/document/product/240/55675?from_cn_redirect=1) API to view IDs of specific security groups.
-                     * @param _securityGroupIds IDs of target security groups. Call the [DescribeSecurityGroup](https://intl.cloud.tencent.com/document/product/240/55675?from_cn_redirect=1) API to view IDs of specific security groups.
+                     * 设置Target security group ID. Log in to the [security group console](https://console.cloud.tencent.com/vpc/security-group) page to copy the target security group ID.
+**Note**: This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
+                     * @param _securityGroupIds Target security group ID. Log in to the [security group console](https://console.cloud.tencent.com/vpc/security-group) page to copy the target security group ID.
+**Note**: This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
                      * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
@@ -87,13 +91,14 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID. For example, cmgo-7pje****.
+                     * Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * IDs of target security groups. Call the [DescribeSecurityGroup](https://intl.cloud.tencent.com/document/product/240/55675?from_cn_redirect=1) API to view IDs of specific security groups.
+                     * Target security group ID. Log in to the [security group console](https://console.cloud.tencent.com/vpc/security-group) page to copy the target security group ID.
+**Note**: This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;

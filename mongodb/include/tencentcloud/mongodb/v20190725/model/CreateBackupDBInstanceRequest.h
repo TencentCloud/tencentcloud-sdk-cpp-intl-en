@@ -65,22 +65,38 @@ namespace TencentCloud
 
                     /**
                      * 获取Sets the backup method.
- - 0: logical backup.
- - 1: physical backup.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance.
                      * @return BackupMethod Sets the backup method.
- - 0: logical backup.
- - 1: physical backup.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance.
                      * 
                      */
                     int64_t GetBackupMethod() const;
 
                     /**
                      * 设置Sets the backup method.
- - 0: logical backup.
- - 1: physical backup.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance.
                      * @param _backupMethod Sets the backup method.
- - 0: logical backup.
- - 1: physical backup.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance.
                      * 
                      */
                     void SetBackupMethod(const int64_t& _backupMethod);
@@ -123,8 +139,12 @@ namespace TencentCloud
 
                     /**
                      * Sets the backup method.
- - 0: logical backup.
- - 1: physical backup.
+- 0: logical backup.
+- 1: physical backup.
+- 3: snapshot backup.
+**Note**:
+1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+2. Physical backup is not supported when storage encryption is enabled for the instance.
                      */
                     int64_t m_backupMethod;
                     bool m_backupMethodHasBeenSet;

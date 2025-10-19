@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console
-                     * @return InstanceId Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console
+                     * 获取Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+                     * @return InstanceId Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console
-                     * @param _instanceId Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console
+                     * 设置Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
+                     * @param _instanceId Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取The name of a backup file with download tasks to be queried
-                     * @return BackupName The name of a backup file with download tasks to be queried
+                     * 获取Specifies the backup file name for filtering download tasks of the specified file. The [DescribeDBBackups](https://www.tencentcloud.comom/document/product/240/38574?from_cn_redirect=1) API can be called to obtain the backup file name.
+                     * @return BackupName Specifies the backup file name for filtering download tasks of the specified file. The [DescribeDBBackups](https://www.tencentcloud.comom/document/product/240/38574?from_cn_redirect=1) API can be called to obtain the backup file name.
                      * 
                      */
                     std::string GetBackupName() const;
 
                     /**
-                     * 设置The name of a backup file with download tasks to be queried
-                     * @param _backupName The name of a backup file with download tasks to be queried
+                     * 设置Specifies the backup file name for filtering download tasks of the specified file. The [DescribeDBBackups](https://www.tencentcloud.comom/document/product/240/38574?from_cn_redirect=1) API can be called to obtain the backup file name.
+                     * @param _backupName Specifies the backup file name for filtering download tasks of the specified file. The [DescribeDBBackups](https://www.tencentcloud.comom/document/product/240/38574?from_cn_redirect=1) API can be called to obtain the backup file name.
                      * 
                      */
                     void SetBackupName(const std::string& _backupName);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool BackupNameHasBeenSet() const;
 
                     /**
-                     * 获取The start time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the start time can be any time earlier than the end time.
-                     * @return StartTime The start time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the start time can be any time earlier than the end time.
+                     * 获取Specifies the task within the query time range, and StartTime specifies the start time. If not specified, there are no limitations on the start time by default.
+                     * @return StartTime Specifies the task within the query time range, and StartTime specifies the start time. If not specified, there are no limitations on the start time by default.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置The start time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the start time can be any time earlier than the end time.
-                     * @param _startTime The start time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the start time can be any time earlier than the end time.
+                     * 设置Specifies the task within the query time range, and StartTime specifies the start time. If not specified, there are no limitations on the start time by default.
+                     * @param _startTime Specifies the task within the query time range, and StartTime specifies the start time. If not specified, there are no limitations on the start time by default.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取The end time of the query period. Tasks will be queried if their start and end times fall within the query period. If it is left empty, the end time can be any time later than the start time.
-                     * @return EndTime The end time of the query period. Tasks will be queried if their start and end times fall within the query period. If it is left empty, the end time can be any time later than the start time.
+                     * 获取Specifies the task within the query time range, and EndTime specifies the end time. If not specified, there are no limitations on the end time by default.
+                     * @return EndTime Specifies the task within the query time range, and EndTime specifies the end time. If not specified, there are no limitations on the end time by default.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置The end time of the query period. Tasks will be queried if their start and end times fall within the query period. If it is left empty, the end time can be any time later than the start time.
-                     * @param _endTime The end time of the query period. Tasks will be queried if their start and end times fall within the query period. If it is left empty, the end time can be any time later than the start time.
+                     * 设置Specifies the task within the query time range, and EndTime specifies the end time. If not specified, there are no limitations on the end time by default.
+                     * @param _endTime Specifies the task within the query time range, and EndTime specifies the end time. If not specified, there are no limitations on the end time by default.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取The maximum number of results returned per page. Value range: 1-100. Default value: `20`.
-                     * @return Limit The maximum number of results returned per page. Value range: 1-100. Default value: `20`.
+                     * 获取Number of entries returned for this query. Value range: 1–100. The default value is 20.
+                     * @return Limit Number of entries returned for this query. Value range: 1–100. The default value is 20.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置The maximum number of results returned per page. Value range: 1-100. Default value: `20`.
-                     * @param _limit The maximum number of results returned per page. Value range: 1-100. Default value: `20`.
+                     * 设置Number of entries returned for this query. Value range: 1–100. The default value is 20.
+                     * @param _limit Number of entries returned for this query. Value range: 1–100. The default value is 20.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset for pagination. Default value: `0`.
-                     * @return Offset Offset for pagination. Default value: `0`.
+                     * 获取Specifies the number of pages returned for this query. The default value is 0.
+                     * @return Offset Specifies the number of pages returned for this query. The default value is 0.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset for pagination. Default value: `0`.
-                     * @param _offset Offset for pagination. Default value: `0`.
+                     * 设置Specifies the number of pages returned for this query. The default value is 0.
+                     * @param _offset Specifies the number of pages returned for this query. The default value is 0.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -169,15 +169,23 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取The field used to sort the results. Valid values: `createTime` (default), `finishTime`.
-                     * @return OrderBy The field used to sort the results. Valid values: `createTime` (default), `finishTime`.
+                     * 获取Sorting field.
+- createTime: sort by the creation time of the backup download task. The default value is createTime.
+- finishTime: sort by the completion time of the backup download task.
+                     * @return OrderBy Sorting field.
+- createTime: sort by the creation time of the backup download task. The default value is createTime.
+- finishTime: sort by the completion time of the backup download task.
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置The field used to sort the results. Valid values: `createTime` (default), `finishTime`.
-                     * @param _orderBy The field used to sort the results. Valid values: `createTime` (default), `finishTime`.
+                     * 设置Sorting field.
+- createTime: sort by the creation time of the backup download task. The default value is createTime.
+- finishTime: sort by the completion time of the backup download task.
+                     * @param _orderBy Sorting field.
+- createTime: sort by the creation time of the backup download task. The default value is createTime.
+- finishTime: sort by the completion time of the backup download task.
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -190,15 +198,23 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Sort order. Valid values: `asc`, `desc` (default).
-                     * @return OrderByType Sort order. Valid values: `asc`, `desc` (default).
+                     * 获取Sorting method.
+- asc: ascending order.
+- desc: descending order. The default value is desc.
+                     * @return OrderByType Sorting method.
+- asc: ascending order.
+- desc: descending order. The default value is desc.
                      * 
                      */
                     std::string GetOrderByType() const;
 
                     /**
-                     * 设置Sort order. Valid values: `asc`, `desc` (default).
-                     * @param _orderByType Sort order. Valid values: `asc`, `desc` (default).
+                     * 设置Sorting method.
+- asc: ascending order.
+- desc: descending order. The default value is desc.
+                     * @param _orderByType Sorting method.
+- asc: ascending order.
+- desc: descending order. The default value is desc.
                      * 
                      */
                     void SetOrderByType(const std::string& _orderByType);
@@ -211,15 +227,35 @@ namespace TencentCloud
                     bool OrderByTypeHasBeenSet() const;
 
                     /**
-                     * 获取The status of the tasks to be queried. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry). If it is left empty, tasks in any status will be returned.
-                     * @return Status The status of the tasks to be queried. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry). If it is left empty, tasks in any status will be returned.
+                     * 获取Specifies the task status for filtering download tasks. If this parameter is not configured, tasks of all status types will be returned.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
+                     * @return Status Specifies the task status for filtering download tasks. If this parameter is not configured, tasks of all status types will be returned.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
                      * 
                      */
                     std::vector<int64_t> GetStatus() const;
 
                     /**
-                     * 设置The status of the tasks to be queried. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry). If it is left empty, tasks in any status will be returned.
-                     * @param _status The status of the tasks to be queried. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry). If it is left empty, tasks in any status will be returned.
+                     * 设置Specifies the task status for filtering download tasks. If this parameter is not configured, tasks of all status types will be returned.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
+                     * @param _status Specifies the task status for filtering download tasks. If this parameter is not configured, tasks of all status types will be returned.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
                      * 
                      */
                     void SetStatus(const std::vector<int64_t>& _status);
@@ -234,55 +270,64 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console
+                     * Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * The name of a backup file with download tasks to be queried
+                     * Specifies the backup file name for filtering download tasks of the specified file. The [DescribeDBBackups](https://www.tencentcloud.comom/document/product/240/38574?from_cn_redirect=1) API can be called to obtain the backup file name.
                      */
                     std::string m_backupName;
                     bool m_backupNameHasBeenSet;
 
                     /**
-                     * The start time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the start time can be any time earlier than the end time.
+                     * Specifies the task within the query time range, and StartTime specifies the start time. If not specified, there are no limitations on the start time by default.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * The end time of the query period. Tasks will be queried if their start and end times fall within the query period. If it is left empty, the end time can be any time later than the start time.
+                     * Specifies the task within the query time range, and EndTime specifies the end time. If not specified, there are no limitations on the end time by default.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * The maximum number of results returned per page. Value range: 1-100. Default value: `20`.
+                     * Number of entries returned for this query. Value range: 1–100. The default value is 20.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset for pagination. Default value: `0`.
+                     * Specifies the number of pages returned for this query. The default value is 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * The field used to sort the results. Valid values: `createTime` (default), `finishTime`.
+                     * Sorting field.
+- createTime: sort by the creation time of the backup download task. The default value is createTime.
+- finishTime: sort by the completion time of the backup download task.
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Sort order. Valid values: `asc`, `desc` (default).
+                     * Sorting method.
+- asc: ascending order.
+- desc: descending order. The default value is desc.
                      */
                     std::string m_orderByType;
                     bool m_orderByTypeHasBeenSet;
 
                     /**
-                     * The status of the tasks to be queried. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry). If it is left empty, tasks in any status will be returned.
+                     * Specifies the task status for filtering download tasks. If this parameter is not configured, tasks of all status types will be returned.
+- 0: wait for execution.
+- 1: downloading.
+- 2: download completed.
+- 3: download failed.
+- 4: wait for retry.
                      */
                     std::vector<int64_t> m_status;
                     bool m_statusHasBeenSet;

@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Client IP of a connection
-                     * @return IP Client IP of a connection
+                     * 获取IP address of the connected client.
+                     * @return IP IP address of the connected client.
                      * 
                      */
                     std::string GetIP() const;
 
                     /**
-                     * 设置Client IP of a connection
-                     * @param _iP Client IP of a connection
+                     * 设置IP address of the connected client.
+                     * @param _iP IP address of the connected client.
                      * 
                      */
                     void SetIP(const std::string& _iP);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IPHasBeenSet() const;
 
                     /**
-                     * 获取Number of connections corresponding to a client IP
-                     * @return Count Number of connections corresponding to a client IP
+                     * 获取Number of connections corresponding to the client IP address.
+                     * @return Count Number of connections corresponding to the client IP address.
                      * 
                      */
                     uint64_t GetCount() const;
 
                     /**
-                     * 设置Number of connections corresponding to a client IP
-                     * @param _count Number of connections corresponding to a client IP
+                     * 设置Number of connections corresponding to the client IP address.
+                     * @param _count Number of connections corresponding to the client IP address.
                      * 
                      */
                     void SetCount(const uint64_t& _count);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CountHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is the Tencent Cloud IP for automated testing
-                     * @return InternalService Whether it is the Tencent Cloud IP for automated testing
+                     * 获取Whether it is an internal IP address.
+                     * @return InternalService Whether it is an internal IP address.
                      * 
                      */
                     bool GetInternalService() const;
 
                     /**
-                     * 设置Whether it is the Tencent Cloud IP for automated testing
-                     * @param _internalService Whether it is the Tencent Cloud IP for automated testing
+                     * 设置Whether it is an internal IP address.
+                     * @param _internalService Whether it is an internal IP address.
                      * 
                      */
                     void SetInternalService(const bool& _internalService);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Client IP of a connection
+                     * IP address of the connected client.
                      */
                     std::string m_iP;
                     bool m_iPHasBeenSet;
 
                     /**
-                     * Number of connections corresponding to a client IP
+                     * Number of connections corresponding to the client IP address.
                      */
                     uint64_t m_count;
                     bool m_countHasBeenSet;
 
                     /**
-                     * Whether it is the Tencent Cloud IP for automated testing
+                     * Whether it is an internal IP address.
                      */
                     bool m_internalService;
                     bool m_internalServiceHasBeenSet;

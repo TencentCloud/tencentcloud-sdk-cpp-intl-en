@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Instance specification information
+                * Instance specification information.
                 */
                 class SpecificationInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Region information
-                     * @return Region Region information
+                     * 获取Region information.
+                     * @return Region Region information.
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Region information
-                     * @param _region Region information
+                     * 设置Region information.
+                     * @param _region Region information.
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取AZ information
-                     * @return Zone AZ information
+                     * 获取AZ information.
+                     * @return Zone AZ information.
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置AZ information
-                     * @param _zone AZ information
+                     * 设置AZ information.
+                     * @param _zone AZ information.
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Purchasable specification information
-                     * @return SpecItems Purchasable specification information
+                     * 获取Sales specification information.
+                     * @return SpecItems Sales specification information.
                      * 
                      */
                     std::vector<SpecItem> GetSpecItems() const;
 
                     /**
-                     * 设置Purchasable specification information
-                     * @param _specItems Purchasable specification information
+                     * 设置Sales specification information.
+                     * @param _specItems Sales specification information.
                      * 
                      */
                     void SetSpecItems(const std::vector<SpecItem>& _specItems);
@@ -111,15 +111,23 @@ namespace TencentCloud
                     bool SpecItemsHasBeenSet() const;
 
                     /**
-                     * 获取Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
-                     * @return SupportMultiAZ Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
+                     * 获取Whether cross-AZ deployment is supported.
+- 1: supported.
+- 0: not supported.
+                     * @return SupportMultiAZ Whether cross-AZ deployment is supported.
+- 1: supported.
+- 0: not supported.
                      * 
                      */
                     int64_t GetSupportMultiAZ() const;
 
                     /**
-                     * 设置Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
-                     * @param _supportMultiAZ Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
+                     * 设置Whether cross-AZ deployment is supported.
+- 1: supported.
+- 0: not supported.
+                     * @param _supportMultiAZ Whether cross-AZ deployment is supported.
+- 1: supported.
+- 0: not supported.
                      * 
                      */
                     void SetSupportMultiAZ(const int64_t& _supportMultiAZ);
@@ -134,25 +142,27 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Region information
+                     * Region information.
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * AZ information
+                     * AZ information.
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Purchasable specification information
+                     * Sales specification information.
                      */
                     std::vector<SpecItem> m_specItems;
                     bool m_specItemsHasBeenSet;
 
                     /**
-                     * Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
+                     * Whether cross-AZ deployment is supported.
+- 1: supported.
+- 0: not supported.
                      */
                     int64_t m_supportMultiAZ;
                     bool m_supportMultiAZHasBeenSet;

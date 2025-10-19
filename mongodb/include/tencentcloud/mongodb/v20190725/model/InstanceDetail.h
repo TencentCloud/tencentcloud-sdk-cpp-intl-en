@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Instance details
+                * Instance details.
                 */
                 class InstanceDetail : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID.
+                     * @return InstanceId Instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID.
+                     * @param _instanceId Instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -113,15 +113,15 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取Project ID
-                     * @return ProjectId Project ID
+                     * 获取Project ID.
+                     * @return ProjectId Project ID.
                      * 
                      */
                     uint64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID
-                     * @param _projectId Project ID
+                     * 设置Project ID.
+                     * @param _projectId Project ID.
                      * 
                      */
                     void SetProjectId(const uint64_t& _projectId);
@@ -134,15 +134,23 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance).
-                     * @return ClusterType Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance).
+                     * 获取Cluster type.
+- 0: replica set instance.
+- 1: sharded cluster instance.
+                     * @return ClusterType Cluster type.
+- 0: replica set instance.
+- 1: sharded cluster instance.
                      * 
                      */
                     uint64_t GetClusterType() const;
 
                     /**
-                     * 设置Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance).
-                     * @param _clusterType Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance).
+                     * 设置Cluster type.
+- 0: replica set instance.
+- 1: sharded cluster instance.
+                     * @param _clusterType Cluster type.
+- 0: replica set instance.
+- 1: sharded cluster instance.
                      * 
                      */
                     void SetClusterType(const uint64_t& _clusterType);
@@ -197,15 +205,23 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Network type. Valid values: 0 (basic network), 1 (VPC)
-                     * @return NetType Network type. Valid values: 0 (basic network), 1 (VPC)
+                     * 获取Network type.
+- 0: basic network.
+- 1: VPC.
+                     * @return NetType Network type.
+- 0: basic network.
+- 1: VPC.
                      * 
                      */
                     uint64_t GetNetType() const;
 
                     /**
-                     * 设置Network type. Valid values: 0 (basic network), 1 (VPC)
-                     * @param _netType Network type. Valid values: 0 (basic network), 1 (VPC)
+                     * 设置Network type.
+- 0: basic network.
+- 1: VPC.
+                     * @param _netType Network type.
+- 0: basic network.
+- 1: VPC.
                      * 
                      */
                     void SetNetType(const uint64_t& _netType);
@@ -260,15 +276,35 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance status. Valid values: 0: creating; 1: processing; 2: running; -2: expired.
-                     * @return Status Instance status. Valid values: 0: creating; 1: processing; 2: running; -2: expired.
+                     * 获取Instance status.
+- 0: to be initialized.
+- 1: processing, such as specification changes and parameter modifications.
+- 2: running normally.
+- -2: isolated (yearly/monthly subscription).
+- -3: isolated (pay-as-you-go).
+                     * @return Status Instance status.
+- 0: to be initialized.
+- 1: processing, such as specification changes and parameter modifications.
+- 2: running normally.
+- -2: isolated (yearly/monthly subscription).
+- -3: isolated (pay-as-you-go).
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Instance status. Valid values: 0: creating; 1: processing; 2: running; -2: expired.
-                     * @param _status Instance status. Valid values: 0: creating; 1: processing; 2: running; -2: expired.
+                     * 设置Instance status.
+- 0: to be initialized.
+- 1: processing, such as specification changes and parameter modifications.
+- 2: running normally.
+- -2: isolated (yearly/monthly subscription).
+- -3: isolated (pay-as-you-go).
+                     * @param _status Instance status.
+- 0: to be initialized.
+- 1: processing, such as specification changes and parameter modifications.
+- 2: running normally.
+- -2: isolated (yearly/monthly subscription).
+- -3: isolated (pay-as-you-go).
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -365,15 +401,43 @@ namespace TencentCloud
                     bool DeadLineHasBeenSet() const;
 
                     /**
-                     * 获取Instance version information
-                     * @return MongoVersion Instance version information
+                     * 获取Storage engine version information on instances.
+- MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+                     * @return MongoVersion Storage engine version information on instances.
+- MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
                      * 
                      */
                     std::string GetMongoVersion() const;
 
                     /**
-                     * 设置Instance version information
-                     * @param _mongoVersion Instance version information
+                     * 设置Storage engine version information on instances.
+- MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+                     * @param _mongoVersion Storage engine version information on instances.
+- MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
                      * 
                      */
                     void SetMongoVersion(const std::string& _mongoVersion);
@@ -386,15 +450,15 @@ namespace TencentCloud
                     bool MongoVersionHasBeenSet() const;
 
                     /**
-                     * 获取Instance memory size in MB
-                     * @return Memory Instance memory size in MB
+                     * 获取Instance memory specification, in MB.
+                     * @return Memory Instance memory specification, in MB.
                      * 
                      */
                     uint64_t GetMemory() const;
 
                     /**
-                     * 设置Instance memory size in MB
-                     * @param _memory Instance memory size in MB
+                     * 设置Instance memory specification, in MB.
+                     * @param _memory Instance memory specification, in MB.
                      * 
                      */
                     void SetMemory(const uint64_t& _memory);
@@ -407,15 +471,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Instance disk size in MB
-                     * @return Volume Instance disk size in MB
+                     * 获取Instance disk specification, in MB.
+                     * @return Volume Instance disk specification, in MB.
                      * 
                      */
                     uint64_t GetVolume() const;
 
                     /**
-                     * 设置Instance disk size in MB
-                     * @param _volume Instance disk size in MB
+                     * 设置Instance disk specification, in MB.
+                     * @param _volume Instance disk specification, in MB.
                      * 
                      */
                     void SetVolume(const uint64_t& _volume);
@@ -428,15 +492,15 @@ namespace TencentCloud
                     bool VolumeHasBeenSet() const;
 
                     /**
-                     * 获取Number of CPU cores of an instance
-                     * @return CpuNum Number of CPU cores of an instance
+                     * 获取Number of the instance CPU cores.
+                     * @return CpuNum Number of the instance CPU cores.
                      * 
                      */
                     uint64_t GetCpuNum() const;
 
                     /**
-                     * 设置Number of CPU cores of an instance
-                     * @param _cpuNum Number of CPU cores of an instance
+                     * 设置Number of the instance CPU cores.
+                     * @param _cpuNum Number of the instance CPU cores.
                      * 
                      */
                     void SetCpuNum(const uint64_t& _cpuNum);
@@ -449,15 +513,23 @@ namespace TencentCloud
                     bool CpuNumHasBeenSet() const;
 
                     /**
-                     * 获取Instance machine type
-                     * @return MachineType Instance machine type
+                     * 获取Instance machine type.
+- HIO10G: general HIO 10GE type.
+- HCD: Cloud Disk Edition type.
+                     * @return MachineType Instance machine type.
+- HIO10G: general HIO 10GE type.
+- HCD: Cloud Disk Edition type.
                      * 
                      */
                     std::string GetMachineType() const;
 
                     /**
-                     * 设置Instance machine type
-                     * @param _machineType Instance machine type
+                     * 设置Instance machine type.
+- HIO10G: general HIO 10GE type.
+- HCD: Cloud Disk Edition type.
+                     * @param _machineType Instance machine type.
+- HIO10G: general HIO 10GE type.
+- HCD: Cloud Disk Edition type.
                      * 
                      */
                     void SetMachineType(const std::string& _machineType);
@@ -512,15 +584,27 @@ namespace TencentCloud
                     bool ReplicationSetNumHasBeenSet() const;
 
                     /**
-                     * 获取Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration)
-                     * @return AutoRenewFlag Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration)
+                     * 获取Automatic renewal flag for the instance.
+- 0: manual renewal.
+- 1: automatic renewal.
+- 2: no renewal after confirmation.
+                     * @return AutoRenewFlag Automatic renewal flag for the instance.
+- 0: manual renewal.
+- 1: automatic renewal.
+- 2: no renewal after confirmation.
                      * 
                      */
                     int64_t GetAutoRenewFlag() const;
 
                     /**
-                     * 设置Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration)
-                     * @param _autoRenewFlag Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration)
+                     * 设置Automatic renewal flag for the instance.
+- 0: manual renewal.
+- 1: automatic renewal.
+- 2: no renewal after confirmation.
+                     * @param _autoRenewFlag Automatic renewal flag for the instance.
+- 0: manual renewal.
+- 1: automatic renewal.
+- 2: no renewal after confirmation.
                      * 
                      */
                     void SetAutoRenewFlag(const int64_t& _autoRenewFlag);
@@ -533,15 +617,15 @@ namespace TencentCloud
                     bool AutoRenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取Used capacity in MB
-                     * @return UsedVolume Used capacity in MB
+                     * 获取Used capacity, in MB.
+                     * @return UsedVolume Used capacity, in MB.
                      * 
                      */
                     uint64_t GetUsedVolume() const;
 
                     /**
-                     * 设置Used capacity in MB
-                     * @param _usedVolume Used capacity in MB
+                     * 设置Used capacity, in MB.
+                     * @param _usedVolume Used capacity, in MB.
                      * 
                      */
                     void SetUsedVolume(const uint64_t& _usedVolume);
@@ -764,15 +848,15 @@ namespace TencentCloud
                     bool ClusterVerHasBeenSet() const;
 
                     /**
-                     * 获取Protocol information. Valid values: `1` (mongodb), `2` (dynamodb).
-                     * @return Protocol Protocol information. Valid values: `1` (mongodb), `2` (dynamodb).
+                     * 获取Protocol information: mongodb.
+                     * @return Protocol Protocol information: mongodb.
                      * 
                      */
                     uint64_t GetProtocol() const;
 
                     /**
-                     * 设置Protocol information. Valid values: `1` (mongodb), `2` (dynamodb).
-                     * @param _protocol Protocol information. Valid values: `1` (mongodb), `2` (dynamodb).
+                     * 设置Protocol information: mongodb.
+                     * @param _protocol Protocol information: mongodb.
                      * 
                      */
                     void SetProtocol(const uint64_t& _protocol);
@@ -785,15 +869,35 @@ namespace TencentCloud
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Instance type. Valid values: 1 (promoted instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance)
-                     * @return InstanceType Instance type. Valid values: 1 (promoted instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance)
+                     * 获取Instance type.
+- 0: all instances.
+- 1: formal instance.
+- 2: temporary instance.
+- 3: read-only instance.
+- -1: include the formal, read-only, and disaster recovery instance simultaneously.
+                     * @return InstanceType Instance type.
+- 0: all instances.
+- 1: formal instance.
+- 2: temporary instance.
+- 3: read-only instance.
+- -1: include the formal, read-only, and disaster recovery instance simultaneously.
                      * 
                      */
                     uint64_t GetInstanceType() const;
 
                     /**
-                     * 设置Instance type. Valid values: 1 (promoted instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance)
-                     * @param _instanceType Instance type. Valid values: 1 (promoted instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance)
+                     * 设置Instance type.
+- 0: all instances.
+- 1: formal instance.
+- 2: temporary instance.
+- 3: read-only instance.
+- -1: include the formal, read-only, and disaster recovery instance simultaneously.
+                     * @param _instanceType Instance type.
+- 0: all instances.
+- 1: formal instance.
+- 2: temporary instance.
+- 3: read-only instance.
+- -1: include the formal, read-only, and disaster recovery instance simultaneously.
                      * 
                      */
                     void SetInstanceType(const uint64_t& _instanceType);
@@ -806,15 +910,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Instance status description
-                     * @return InstanceStatusDesc Instance status description
+                     * 获取Instance status description.
+                     * @return InstanceStatusDesc Instance status description.
                      * 
                      */
                     std::string GetInstanceStatusDesc() const;
 
                     /**
-                     * 设置Instance status description
-                     * @param _instanceStatusDesc Instance status description
+                     * 设置Instance status description.
+                     * @param _instanceStatusDesc Instance status description.
                      * 
                      */
                     void SetInstanceStatusDesc(const std::string& _instanceStatusDesc);
@@ -827,15 +931,15 @@ namespace TencentCloud
                     bool InstanceStatusDescHasBeenSet() const;
 
                     /**
-                     * 获取Physical instance ID. For an instance that has been rolled back and replaced, its InstanceId and RealInstanceId are different. The physical instance ID is needed in such scenarios as getting monitoring data from Barad
-                     * @return RealInstanceId Physical instance ID. For an instance that has been rolled back and replaced, its InstanceId and RealInstanceId are different. The physical instance ID is needed in such scenarios as getting monitoring data from Barad
+                     * 获取Physical instance ID corresponding to the instance. The instances that have been rolled back and replaced have different InstanceIds and RealInstanceIds, which need to be obtained through the physical ID in scenarios such as obtaining monitoring data from Barad.
+                     * @return RealInstanceId Physical instance ID corresponding to the instance. The instances that have been rolled back and replaced have different InstanceIds and RealInstanceIds, which need to be obtained through the physical ID in scenarios such as obtaining monitoring data from Barad.
                      * 
                      */
                     std::string GetRealInstanceId() const;
 
                     /**
-                     * 设置Physical instance ID. For an instance that has been rolled back and replaced, its InstanceId and RealInstanceId are different. The physical instance ID is needed in such scenarios as getting monitoring data from Barad
-                     * @param _realInstanceId Physical instance ID. For an instance that has been rolled back and replaced, its InstanceId and RealInstanceId are different. The physical instance ID is needed in such scenarios as getting monitoring data from Barad
+                     * 设置Physical instance ID corresponding to the instance. The instances that have been rolled back and replaced have different InstanceIds and RealInstanceIds, which need to be obtained through the physical ID in scenarios such as obtaining monitoring data from Barad.
+                     * @param _realInstanceId Physical instance ID corresponding to the instance. The instances that have been rolled back and replaced have different InstanceIds and RealInstanceIds, which need to be obtained through the physical ID in scenarios such as obtaining monitoring data from Barad.
                      * 
                      */
                     void SetRealInstanceId(const std::string& _realInstanceId);
@@ -869,15 +973,15 @@ namespace TencentCloud
                     bool MongosNodeNumHasBeenSet() const;
 
                     /**
-                     * 获取Mongos node memory.
-                     * @return MongosMemory Mongos node memory.
+                     * 获取Mongos node memory, in MB.
+                     * @return MongosMemory Mongos node memory, in MB.
                      * 
                      */
                     uint64_t GetMongosMemory() const;
 
                     /**
-                     * 设置Mongos node memory.
-                     * @param _mongosMemory Mongos node memory.
+                     * 设置Mongos node memory, in MB.
+                     * @param _mongosMemory Mongos node memory, in MB.
                      * 
                      */
                     void SetMongosMemory(const uint64_t& _mongosMemory);
@@ -932,15 +1036,15 @@ namespace TencentCloud
                     bool ConfigServerNodeNumHasBeenSet() const;
 
                     /**
-                     * 获取ConfigServer node memory.
-                     * @return ConfigServerMemory ConfigServer node memory.
+                     * 获取Config Server node memory, in MB.
+                     * @return ConfigServerMemory Config Server node memory, in MB.
                      * 
                      */
                     uint64_t GetConfigServerMemory() const;
 
                     /**
-                     * 设置ConfigServer node memory.
-                     * @param _configServerMemory ConfigServer node memory.
+                     * 设置Config Server node memory, in MB.
+                     * @param _configServerMemory Config Server node memory, in MB.
                      * 
                      */
                     void SetConfigServerMemory(const uint64_t& _configServerMemory);
@@ -953,15 +1057,15 @@ namespace TencentCloud
                     bool ConfigServerMemoryHasBeenSet() const;
 
                     /**
-                     * 获取ConfigServer node disk size.
-                     * @return ConfigServerVolume ConfigServer node disk size.
+                     * 获取Config Server node disk size, in MB.
+                     * @return ConfigServerVolume Config Server node disk size, in MB.
                      * 
                      */
                     uint64_t GetConfigServerVolume() const;
 
                     /**
-                     * 设置ConfigServer node disk size.
-                     * @param _configServerVolume ConfigServer node disk size.
+                     * 设置Config Server node disk size, in MB.
+                     * @param _configServerVolume Config Server node disk size, in MB.
                      * 
                      */
                     void SetConfigServerVolume(const uint64_t& _configServerVolume);
@@ -1018,7 +1122,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -1036,13 +1140,15 @@ namespace TencentCloud
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * Project ID
+                     * Project ID.
                      */
                     uint64_t m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance).
+                     * Cluster type.
+- 0: replica set instance.
+- 1: sharded cluster instance.
                      */
                     uint64_t m_clusterType;
                     bool m_clusterTypeHasBeenSet;
@@ -1060,7 +1166,9 @@ namespace TencentCloud
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Network type. Valid values: 0 (basic network), 1 (VPC)
+                     * Network type.
+- 0: basic network.
+- 1: VPC.
                      */
                     uint64_t m_netType;
                     bool m_netTypeHasBeenSet;
@@ -1078,7 +1186,12 @@ namespace TencentCloud
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Instance status. Valid values: 0: creating; 1: processing; 2: running; -2: expired.
+                     * Instance status.
+- 0: to be initialized.
+- 1: processing, such as specification changes and parameter modifications.
+- 2: running normally.
+- -2: isolated (yearly/monthly subscription).
+- -3: isolated (pay-as-you-go).
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
@@ -1108,31 +1221,40 @@ namespace TencentCloud
                     bool m_deadLineHasBeenSet;
 
                     /**
-                     * Instance version information
+                     * Storage engine version information on instances.
+- MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+- MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+- MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+- MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+- MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+- MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
                      */
                     std::string m_mongoVersion;
                     bool m_mongoVersionHasBeenSet;
 
                     /**
-                     * Instance memory size in MB
+                     * Instance memory specification, in MB.
                      */
                     uint64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Instance disk size in MB
+                     * Instance disk specification, in MB.
                      */
                     uint64_t m_volume;
                     bool m_volumeHasBeenSet;
 
                     /**
-                     * Number of CPU cores of an instance
+                     * Number of the instance CPU cores.
                      */
                     uint64_t m_cpuNum;
                     bool m_cpuNumHasBeenSet;
 
                     /**
-                     * Instance machine type
+                     * Instance machine type.
+- HIO10G: general HIO 10GE type.
+- HCD: Cloud Disk Edition type.
                      */
                     std::string m_machineType;
                     bool m_machineTypeHasBeenSet;
@@ -1150,13 +1272,16 @@ namespace TencentCloud
                     bool m_replicationSetNumHasBeenSet;
 
                     /**
-                     * Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration)
+                     * Automatic renewal flag for the instance.
+- 0: manual renewal.
+- 1: automatic renewal.
+- 2: no renewal after confirmation.
                      */
                     int64_t m_autoRenewFlag;
                     bool m_autoRenewFlagHasBeenSet;
 
                     /**
-                     * Used capacity in MB
+                     * Used capacity, in MB.
                      */
                     uint64_t m_usedVolume;
                     bool m_usedVolumeHasBeenSet;
@@ -1222,25 +1347,30 @@ namespace TencentCloud
                     bool m_clusterVerHasBeenSet;
 
                     /**
-                     * Protocol information. Valid values: `1` (mongodb), `2` (dynamodb).
+                     * Protocol information: mongodb.
                      */
                     uint64_t m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * Instance type. Valid values: 1 (promoted instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance)
+                     * Instance type.
+- 0: all instances.
+- 1: formal instance.
+- 2: temporary instance.
+- 3: read-only instance.
+- -1: include the formal, read-only, and disaster recovery instance simultaneously.
                      */
                     uint64_t m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Instance status description
+                     * Instance status description.
                      */
                     std::string m_instanceStatusDesc;
                     bool m_instanceStatusDescHasBeenSet;
 
                     /**
-                     * Physical instance ID. For an instance that has been rolled back and replaced, its InstanceId and RealInstanceId are different. The physical instance ID is needed in such scenarios as getting monitoring data from Barad
+                     * Physical instance ID corresponding to the instance. The instances that have been rolled back and replaced have different InstanceIds and RealInstanceIds, which need to be obtained through the physical ID in scenarios such as obtaining monitoring data from Barad.
                      */
                     std::string m_realInstanceId;
                     bool m_realInstanceIdHasBeenSet;
@@ -1252,7 +1382,7 @@ namespace TencentCloud
                     bool m_mongosNodeNumHasBeenSet;
 
                     /**
-                     * Mongos node memory.
+                     * Mongos node memory, in MB.
                      */
                     uint64_t m_mongosMemory;
                     bool m_mongosMemoryHasBeenSet;
@@ -1270,13 +1400,13 @@ namespace TencentCloud
                     bool m_configServerNodeNumHasBeenSet;
 
                     /**
-                     * ConfigServer node memory.
+                     * Config Server node memory, in MB.
                      */
                     uint64_t m_configServerMemory;
                     bool m_configServerMemoryHasBeenSet;
 
                     /**
-                     * ConfigServer node disk size.
+                     * Config Server node disk size, in MB.
                      */
                     uint64_t m_configServerVolume;
                     bool m_configServerVolumeHasBeenSet;
