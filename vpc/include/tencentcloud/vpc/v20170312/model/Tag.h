@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Tag key
-Note: This field may return null, indicating no valid value.
                      * @return Key Tag key
-Note: This field may return null, indicating no valid value.
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置Tag key
-Note: This field may return null, indicating no valid value.
                      * @param _key Tag key
-Note: This field may return null, indicating no valid value.
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating no valid value.
 
                     /**
                      * 获取Tag value
-Note: This field may return null, indicating no valid value.
                      * @return Value Tag value
-Note: This field may return null, indicating no valid value.
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Tag value
-Note: This field may return null, indicating no valid value.
                      * @param _value Tag value
-Note: This field may return null, indicating no valid value.
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -100,14 +92,12 @@ Note: This field may return null, indicating no valid value.
 
                     /**
                      * Tag key
-Note: This field may return null, indicating no valid value.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
                      * Tag value
-Note: This field may return null, indicating no valid value.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;
