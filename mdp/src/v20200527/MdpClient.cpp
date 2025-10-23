@@ -126,6 +126,49 @@ MdpClient::BindNewLVBDomainWithChannelOutcomeCallable MdpClient::BindNewLVBDomai
     return task->get_future();
 }
 
+MdpClient::BindSSAICDNDomainWithChannelOutcome MdpClient::BindSSAICDNDomainWithChannel(const BindSSAICDNDomainWithChannelRequest &request)
+{
+    auto outcome = MakeRequest(request, "BindSSAICDNDomainWithChannel");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        BindSSAICDNDomainWithChannelResponse rsp = BindSSAICDNDomainWithChannelResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return BindSSAICDNDomainWithChannelOutcome(rsp);
+        else
+            return BindSSAICDNDomainWithChannelOutcome(o.GetError());
+    }
+    else
+    {
+        return BindSSAICDNDomainWithChannelOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::BindSSAICDNDomainWithChannelAsync(const BindSSAICDNDomainWithChannelRequest& request, const BindSSAICDNDomainWithChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->BindSSAICDNDomainWithChannel(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::BindSSAICDNDomainWithChannelOutcomeCallable MdpClient::BindSSAICDNDomainWithChannelCallable(const BindSSAICDNDomainWithChannelRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<BindSSAICDNDomainWithChannelOutcome()>>(
+        [this, request]()
+        {
+            return this->BindSSAICDNDomainWithChannel(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 MdpClient::CreateStreamPackageChannelOutcome MdpClient::CreateStreamPackageChannel(const CreateStreamPackageChannelRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateStreamPackageChannel");
@@ -2613,6 +2656,49 @@ MdpClient::UnbindLinearAssemblyCDNDomainWithChannelOutcomeCallable MdpClient::Un
         [this, request]()
         {
             return this->UnbindLinearAssemblyCDNDomainWithChannel(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::UnbindSSAICDNDomainWithChannelOutcome MdpClient::UnbindSSAICDNDomainWithChannel(const UnbindSSAICDNDomainWithChannelRequest &request)
+{
+    auto outcome = MakeRequest(request, "UnbindSSAICDNDomainWithChannel");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UnbindSSAICDNDomainWithChannelResponse rsp = UnbindSSAICDNDomainWithChannelResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UnbindSSAICDNDomainWithChannelOutcome(rsp);
+        else
+            return UnbindSSAICDNDomainWithChannelOutcome(o.GetError());
+    }
+    else
+    {
+        return UnbindSSAICDNDomainWithChannelOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::UnbindSSAICDNDomainWithChannelAsync(const UnbindSSAICDNDomainWithChannelRequest& request, const UnbindSSAICDNDomainWithChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UnbindSSAICDNDomainWithChannel(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::UnbindSSAICDNDomainWithChannelOutcomeCallable MdpClient::UnbindSSAICDNDomainWithChannelCallable(const UnbindSSAICDNDomainWithChannelRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UnbindSSAICDNDomainWithChannelOutcome()>>(
+        [this, request]()
+        {
+            return this->UnbindSSAICDNDomainWithChannel(request);
         }
     );
 

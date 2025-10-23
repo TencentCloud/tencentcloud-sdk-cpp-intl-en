@@ -27,6 +27,8 @@
 #include <tencentcloud/mdp/v20200527/model/BindLinearAssemblyCDNDomainWithChannelResponse.h>
 #include <tencentcloud/mdp/v20200527/model/BindNewLVBDomainWithChannelRequest.h>
 #include <tencentcloud/mdp/v20200527/model/BindNewLVBDomainWithChannelResponse.h>
+#include <tencentcloud/mdp/v20200527/model/BindSSAICDNDomainWithChannelRequest.h>
+#include <tencentcloud/mdp/v20200527/model/BindSSAICDNDomainWithChannelResponse.h>
 #include <tencentcloud/mdp/v20200527/model/CreateStreamPackageChannelRequest.h>
 #include <tencentcloud/mdp/v20200527/model/CreateStreamPackageChannelResponse.h>
 #include <tencentcloud/mdp/v20200527/model/CreateStreamPackageChannelEndpointRequest.h>
@@ -143,6 +145,8 @@
 #include <tencentcloud/mdp/v20200527/model/UnbindCdnDomainWithChannelResponse.h>
 #include <tencentcloud/mdp/v20200527/model/UnbindLinearAssemblyCDNDomainWithChannelRequest.h>
 #include <tencentcloud/mdp/v20200527/model/UnbindLinearAssemblyCDNDomainWithChannelResponse.h>
+#include <tencentcloud/mdp/v20200527/model/UnbindSSAICDNDomainWithChannelRequest.h>
+#include <tencentcloud/mdp/v20200527/model/UnbindSSAICDNDomainWithChannelResponse.h>
 
 
 namespace TencentCloud
@@ -163,6 +167,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::BindNewLVBDomainWithChannelResponse> BindNewLVBDomainWithChannelOutcome;
                 typedef std::future<BindNewLVBDomainWithChannelOutcome> BindNewLVBDomainWithChannelOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::BindNewLVBDomainWithChannelRequest&, BindNewLVBDomainWithChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BindNewLVBDomainWithChannelAsyncHandler;
+                typedef Outcome<Core::Error, Model::BindSSAICDNDomainWithChannelResponse> BindSSAICDNDomainWithChannelOutcome;
+                typedef std::future<BindSSAICDNDomainWithChannelOutcome> BindSSAICDNDomainWithChannelOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::BindSSAICDNDomainWithChannelRequest&, BindSSAICDNDomainWithChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BindSSAICDNDomainWithChannelAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateStreamPackageChannelResponse> CreateStreamPackageChannelOutcome;
                 typedef std::future<CreateStreamPackageChannelOutcome> CreateStreamPackageChannelOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::CreateStreamPackageChannelRequest&, CreateStreamPackageChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateStreamPackageChannelAsyncHandler;
@@ -337,6 +344,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::UnbindLinearAssemblyCDNDomainWithChannelResponse> UnbindLinearAssemblyCDNDomainWithChannelOutcome;
                 typedef std::future<UnbindLinearAssemblyCDNDomainWithChannelOutcome> UnbindLinearAssemblyCDNDomainWithChannelOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::UnbindLinearAssemblyCDNDomainWithChannelRequest&, UnbindLinearAssemblyCDNDomainWithChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UnbindLinearAssemblyCDNDomainWithChannelAsyncHandler;
+                typedef Outcome<Core::Error, Model::UnbindSSAICDNDomainWithChannelResponse> UnbindSSAICDNDomainWithChannelOutcome;
+                typedef std::future<UnbindSSAICDNDomainWithChannelOutcome> UnbindSSAICDNDomainWithChannelOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::UnbindSSAICDNDomainWithChannelRequest&, UnbindSSAICDNDomainWithChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UnbindSSAICDNDomainWithChannelAsyncHandler;
 
 
 
@@ -357,6 +367,15 @@ namespace TencentCloud
                 BindNewLVBDomainWithChannelOutcome BindNewLVBDomainWithChannel(const Model::BindNewLVBDomainWithChannelRequest &request);
                 void BindNewLVBDomainWithChannelAsync(const Model::BindNewLVBDomainWithChannelRequest& request, const BindNewLVBDomainWithChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 BindNewLVBDomainWithChannelOutcomeCallable BindNewLVBDomainWithChannelCallable(const Model::BindNewLVBDomainWithChannelRequest& request);
+
+                /**
+                 *BindSSAICDNDomainWithChannel
+                 * @param req BindSSAICDNDomainWithChannelRequest
+                 * @return BindSSAICDNDomainWithChannelOutcome
+                 */
+                BindSSAICDNDomainWithChannelOutcome BindSSAICDNDomainWithChannel(const Model::BindSSAICDNDomainWithChannelRequest &request);
+                void BindSSAICDNDomainWithChannelAsync(const Model::BindSSAICDNDomainWithChannelRequest& request, const BindSSAICDNDomainWithChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                BindSSAICDNDomainWithChannelOutcomeCallable BindSSAICDNDomainWithChannelCallable(const Model::BindSSAICDNDomainWithChannelRequest& request);
 
                 /**
                  *This API is used to create a StreamPackage channel.
@@ -879,6 +898,15 @@ namespace TencentCloud
                 UnbindLinearAssemblyCDNDomainWithChannelOutcome UnbindLinearAssemblyCDNDomainWithChannel(const Model::UnbindLinearAssemblyCDNDomainWithChannelRequest &request);
                 void UnbindLinearAssemblyCDNDomainWithChannelAsync(const Model::UnbindLinearAssemblyCDNDomainWithChannelRequest& request, const UnbindLinearAssemblyCDNDomainWithChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 UnbindLinearAssemblyCDNDomainWithChannelOutcomeCallable UnbindLinearAssemblyCDNDomainWithChannelCallable(const Model::UnbindLinearAssemblyCDNDomainWithChannelRequest& request);
+
+                /**
+                 *UnbindSSAICDNDomainWithChannel
+                 * @param req UnbindSSAICDNDomainWithChannelRequest
+                 * @return UnbindSSAICDNDomainWithChannelOutcome
+                 */
+                UnbindSSAICDNDomainWithChannelOutcome UnbindSSAICDNDomainWithChannel(const Model::UnbindSSAICDNDomainWithChannelRequest &request);
+                void UnbindSSAICDNDomainWithChannelAsync(const Model::UnbindSSAICDNDomainWithChannelRequest& request, const UnbindSSAICDNDomainWithChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UnbindSSAICDNDomainWithChannelOutcomeCallable UnbindSSAICDNDomainWithChannelCallable(const Model::UnbindSSAICDNDomainWithChannelRequest& request);
 
             };
         }

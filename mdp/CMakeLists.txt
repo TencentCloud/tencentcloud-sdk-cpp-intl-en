@@ -45,6 +45,7 @@ set(mdp_public_header_model
   include/tencentcloud/mdp/v20200527/model/DeleteStreamPackageChannelsRequest.h
   include/tencentcloud/mdp/v20200527/model/InputInfo.h
   include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageLinearAssemblyProgramsResponse.h
+  include/tencentcloud/mdp/v20200527/model/UnbindSSAICDNDomainWithChannelRequest.h
   include/tencentcloud/mdp/v20200527/model/PointInfo.h
   include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageSourceAlertsRequest.h
   include/tencentcloud/mdp/v20200527/model/ModifyStreamPackageSSAIChannelRequest.h
@@ -155,6 +156,7 @@ set(mdp_public_header_model
   include/tencentcloud/mdp/v20200527/model/DeleteStreamPackageChannelEndpointsResponse.h
   include/tencentcloud/mdp/v20200527/model/CreateStreamPackageHarvestJobRequest.h
   include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageSSAIUsageRequest.h
+  include/tencentcloud/mdp/v20200527/model/BindSSAICDNDomainWithChannelRequest.h
   include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageSourceAlertsResponse.h
   include/tencentcloud/mdp/v20200527/model/DeleteStreamPackageLinearAssemblyProgramRequest.h
   include/tencentcloud/mdp/v20200527/model/DeleteStreamPackageChannelsResponse.h
@@ -165,8 +167,10 @@ set(mdp_public_header_model
   include/tencentcloud/mdp/v20200527/model/CreateStreamPackageLinearAssemblyProgramResponse.h
   include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageChannelsResponse.h
   include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageSourceResponse.h
+  include/tencentcloud/mdp/v20200527/model/UnbindSSAICDNDomainWithChannelResponse.h
   include/tencentcloud/mdp/v20200527/model/DeleteStreamPackageLinearAssemblyProgramResponse.h
   include/tencentcloud/mdp/v20200527/model/CreateStreamPackageSSAIChannelResponse.h
+  include/tencentcloud/mdp/v20200527/model/BindSSAICDNDomainWithChannelResponse.h
   include/tencentcloud/mdp/v20200527/model/ModifyStreamPackageSourceLocationRequest.h
   include/tencentcloud/mdp/v20200527/model/CreateStreamPackageHarvestJobResponse.h
   include/tencentcloud/mdp/v20200527/model/EndpointAuthInfo.h
@@ -219,6 +223,7 @@ set(mdp_src
   src/v20200527/model/DeleteStreamPackageChannelsRequest.cpp
   src/v20200527/model/InputInfo.cpp
   src/v20200527/model/DescribeStreamPackageLinearAssemblyProgramsResponse.cpp
+  src/v20200527/model/UnbindSSAICDNDomainWithChannelRequest.cpp
   src/v20200527/model/PointInfo.cpp
   src/v20200527/model/DescribeStreamPackageSourceAlertsRequest.cpp
   src/v20200527/model/ModifyStreamPackageSSAIChannelRequest.cpp
@@ -329,6 +334,7 @@ set(mdp_src
   src/v20200527/model/DeleteStreamPackageChannelEndpointsResponse.cpp
   src/v20200527/model/CreateStreamPackageHarvestJobRequest.cpp
   src/v20200527/model/DescribeStreamPackageSSAIUsageRequest.cpp
+  src/v20200527/model/BindSSAICDNDomainWithChannelRequest.cpp
   src/v20200527/model/DescribeStreamPackageSourceAlertsResponse.cpp
   src/v20200527/model/DeleteStreamPackageLinearAssemblyProgramRequest.cpp
   src/v20200527/model/DeleteStreamPackageChannelsResponse.cpp
@@ -339,8 +345,10 @@ set(mdp_src
   src/v20200527/model/CreateStreamPackageLinearAssemblyProgramResponse.cpp
   src/v20200527/model/DescribeStreamPackageChannelsResponse.cpp
   src/v20200527/model/DescribeStreamPackageSourceResponse.cpp
+  src/v20200527/model/UnbindSSAICDNDomainWithChannelResponse.cpp
   src/v20200527/model/DeleteStreamPackageLinearAssemblyProgramResponse.cpp
   src/v20200527/model/CreateStreamPackageSSAIChannelResponse.cpp
+  src/v20200527/model/BindSSAICDNDomainWithChannelResponse.cpp
   src/v20200527/model/ModifyStreamPackageSourceLocationRequest.cpp
   src/v20200527/model/CreateStreamPackageHarvestJobResponse.cpp
   src/v20200527/model/EndpointAuthInfo.cpp
