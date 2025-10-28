@@ -3523,6 +3523,49 @@ CynosdbClient::InquirePriceModifyOutcomeCallable CynosdbClient::InquirePriceModi
     return task->get_future();
 }
 
+CynosdbClient::InquirePriceMultiSpecOutcome CynosdbClient::InquirePriceMultiSpec(const InquirePriceMultiSpecRequest &request)
+{
+    auto outcome = MakeRequest(request, "InquirePriceMultiSpec");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        InquirePriceMultiSpecResponse rsp = InquirePriceMultiSpecResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return InquirePriceMultiSpecOutcome(rsp);
+        else
+            return InquirePriceMultiSpecOutcome(o.GetError());
+    }
+    else
+    {
+        return InquirePriceMultiSpecOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::InquirePriceMultiSpecAsync(const InquirePriceMultiSpecRequest& request, const InquirePriceMultiSpecAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->InquirePriceMultiSpec(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::InquirePriceMultiSpecOutcomeCallable CynosdbClient::InquirePriceMultiSpecCallable(const InquirePriceMultiSpecRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<InquirePriceMultiSpecOutcome()>>(
+        [this, request]()
+        {
+            return this->InquirePriceMultiSpec(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CynosdbClient::InquirePriceRenewOutcome CynosdbClient::InquirePriceRenew(const InquirePriceRenewRequest &request)
 {
     auto outcome = MakeRequest(request, "InquirePriceRenew");

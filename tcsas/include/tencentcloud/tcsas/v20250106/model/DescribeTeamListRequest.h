@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of results per page
-                     * @return Limit Number of results per page
+                     * 获取Page size
+                     * @return Limit Page size
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results per page
-                     * @param _limit Number of results per page
+                     * 设置Page size
+                     * @param _limit Page size
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取Name of the team to be queried
-                     * @return Keyword Name of the team to be queried
+                     * 获取Team name to be queried
+                     * @return Keyword Team name to be queried
                      * 
                      */
                     std::string GetKeyword() const;
 
                     /**
-                     * 设置Name of the team to be queried
-                     * @param _keyword Name of the team to be queried
+                     * 设置Team name to be queried
+                     * @param _keyword Team name to be queried
                      * 
                      */
                     void SetKeyword(const std::string& _keyword);
@@ -135,7 +135,7 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of results per page
+                     * Page size
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
@@ -147,7 +147,7 @@ namespace TencentCloud
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * Name of the team to be queried
+                     * Team name to be queried
                      */
                     std::string m_keyword;
                     bool m_keywordHasBeenSet;

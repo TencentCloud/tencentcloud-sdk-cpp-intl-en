@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Channel Id
-                     * @return ChannelId Channel Id
+                     * 获取Channel Id.
+                     * @return ChannelId Channel Id.
                      * 
                      */
                     std::string GetChannelId() const;
 
                     /**
-                     * 设置Channel Id
-                     * @param _channelId Channel Id
+                     * 设置Channel Id.
+                     * @param _channelId Channel Id.
                      * 
                      */
                     void SetChannelId(const std::string& _channelId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ChannelIdHasBeenSet() const;
 
                     /**
-                     * 获取The domain name for CDN playback.
-                     * @return CdnDomain The domain name for CDN playback.
+                     * 获取Specifies the playback domain of CDN.
+                     * @return CdnDomain Specifies the playback domain of CDN.
                      * 
                      */
                     std::string GetCdnDomain() const;
 
                     /**
-                     * 设置The domain name for CDN playback.
-                     * @param _cdnDomain The domain name for CDN playback.
+                     * 设置Specifies the playback domain of CDN.
+                     * @param _cdnDomain Specifies the playback domain of CDN.
                      * 
                      */
                     void SetCdnDomain(const std::string& _cdnDomain);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Channel Id
+                     * Channel Id.
                      */
                     std::string m_channelId;
                     bool m_channelIdHasBeenSet;
 
                     /**
-                     * The domain name for CDN playback.
+                     * Specifies the playback domain of CDN.
                      */
                     std::string m_cdnDomain;
                     bool m_cdnDomainHasBeenSet;

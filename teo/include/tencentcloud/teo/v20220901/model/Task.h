@@ -263,15 +263,15 @@ namespace TencentCloud
                     bool FailTypeHasBeenSet() const;
 
                     /**
-                     * 获取Failure description for refresh and preheating.
-                     * @return FailMessage Failure description for refresh and preheating.
+                     * 获取Description of the reason for cache purge or warm cache failure.
+                     * @return FailMessage Description of the reason for cache purge or warm cache failure.
                      * 
                      */
                     std::string GetFailMessage() const;
 
                     /**
-                     * 设置Failure description for refresh and preheating.
-                     * @param _failMessage Failure description for refresh and preheating.
+                     * 设置Description of the reason for cache purge or warm cache failure.
+                     * @param _failMessage Description of the reason for cache purge or warm cache failure.
                      * 
                      */
                     void SetFailMessage(const std::string& _failMessage);
@@ -346,7 +346,7 @@ namespace TencentCloud
                     bool m_failTypeHasBeenSet;
 
                     /**
-                     * Failure description for refresh and preheating.
+                     * Description of the reason for cache purge or warm cache failure.
                      */
                     std::string m_failMessage;
                     bool m_failMessageHasBeenSet;

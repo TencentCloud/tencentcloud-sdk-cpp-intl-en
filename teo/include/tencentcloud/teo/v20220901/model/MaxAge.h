@@ -76,18 +76,18 @@ namespace TencentCloud
                     bool FollowOriginHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the maximum amount of time (in seconds). The maximum value is 365 days.
+                     * 获取Specifies the maximum amount of time (in seconds). Value range: 0 to 315360000.
 Note: The value `0` means not to cache.
-                     * @return MaxAgeTime Specifies the maximum amount of time (in seconds). The maximum value is 365 days.
+                     * @return MaxAgeTime Specifies the maximum amount of time (in seconds). Value range: 0 to 315360000.
 Note: The value `0` means not to cache.
                      * 
                      */
                     int64_t GetMaxAgeTime() const;
 
                     /**
-                     * 设置Specifies the maximum amount of time (in seconds). The maximum value is 365 days.
+                     * 设置Specifies the maximum amount of time (in seconds). Value range: 0 to 315360000.
 Note: The value `0` means not to cache.
-                     * @param _maxAgeTime Specifies the maximum amount of time (in seconds). The maximum value is 365 days.
+                     * @param _maxAgeTime Specifies the maximum amount of time (in seconds). Value range: 0 to 315360000.
 Note: The value `0` means not to cache.
                      * 
                      */
@@ -111,7 +111,7 @@ Note: The value `0` means not to cache.
                     bool m_followOriginHasBeenSet;
 
                     /**
-                     * Specifies the maximum amount of time (in seconds). The maximum value is 365 days.
+                     * Specifies the maximum amount of time (in seconds). Value range: 0 to 315360000.
 Note: The value `0` means not to cache.
                      */
                     int64_t m_maxAgeTime;

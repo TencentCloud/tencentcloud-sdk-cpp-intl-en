@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TeamId Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTeamId() const;
 
                     /**
                      * 设置Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _teamId Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTeamId(const std::string& _teamId);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Team name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TeamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTeamName() const;
 
                     /**
                      * 设置Team name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _teamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTeamName(const std::string& _teamName);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TeamNameHasBeenSet() const;
 
                     /**
-                     * 获取Admin ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AdminUserId Admin ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Administrator user ID
+                     * @return AdminUserId Administrator user ID
                      * 
                      */
                     std::string GetAdminUserId() const;
 
                     /**
-                     * 设置Admin ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _adminUserId Admin ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Administrator user ID
+                     * @param _adminUserId Administrator user ID
                      * 
                      */
                     void SetAdminUserId(const std::string& _adminUserId);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AdminUserIdHasBeenSet() const;
 
                     /**
-                     * 获取Admin account
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AdminUserAccount Admin account
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Administrator account
+                     * @return AdminUserAccount Administrator account
                      * 
                      */
                     std::string GetAdminUserAccount() const;
 
                     /**
-                     * 设置Admin account
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _adminUserAccount Admin account
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Administrator account
+                     * @param _adminUserAccount Administrator account
                      * 
                      */
                     void SetAdminUserAccount(const std::string& _adminUserAccount);
@@ -147,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AdminUserAccountHasBeenSet() const;
 
                     /**
-                     * 获取Admin username
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AdminUserName Admin username
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Administrator username
+                     * @return AdminUserName Administrator username
                      * 
                      */
                     std::string GetAdminUserName() const;
 
                     /**
-                     * 设置Admin username
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _adminUserName Admin username
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Administrator username
+                     * @param _adminUserName Administrator username
                      * 
                      */
                     void SetAdminUserName(const std::string& _adminUserName);
@@ -173,18 +153,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of team members
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MemberCount Number of team members
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetMemberCount() const;
 
                     /**
                      * 设置Number of team members
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _memberCount Number of team members
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMemberCount(const int64_t& _memberCount);
@@ -219,18 +195,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Team permission type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TeamRoleTypeList Team permission type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<int64_t> GetTeamRoleTypeList() const;
 
                     /**
                      * 设置Team permission type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _teamRoleTypeList Team permission type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTeamRoleTypeList(const std::vector<int64_t>& _teamRoleTypeList);
@@ -263,46 +235,82 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool RelatedTeamIdHasBeenSet() const;
 
+                    /**
+                     * 获取Team expiration time. 0 means never expire.
+                     * @return ExpireTime Team expiration time. 0 means never expire.
+                     * 
+                     */
+                    int64_t GetExpireTime() const;
+
+                    /**
+                     * 设置Team expiration time. 0 means never expire.
+                     * @param _expireTime Team expiration time. 0 means never expire.
+                     * 
+                     */
+                    void SetExpireTime(const int64_t& _expireTime);
+
+                    /**
+                     * 判断参数 ExpireTime 是否已赋值
+                     * @return ExpireTime 是否已赋值
+                     * 
+                     */
+                    bool ExpireTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Team status. valid values: 1: normal; 2: disabled; 3: expired.
+                     * @return Status Team status. valid values: 1: normal; 2: disabled; 3: expired.
+                     * 
+                     */
+                    int64_t GetStatus() const;
+
+                    /**
+                     * 设置Team status. valid values: 1: normal; 2: disabled; 3: expired.
+                     * @param _status Team status. valid values: 1: normal; 2: disabled; 3: expired.
+                     * 
+                     */
+                    void SetStatus(const int64_t& _status);
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     * 
+                     */
+                    bool StatusHasBeenSet() const;
+
                 private:
 
                     /**
                      * Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_teamId;
                     bool m_teamIdHasBeenSet;
 
                     /**
                      * Team name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_teamName;
                     bool m_teamNameHasBeenSet;
 
                     /**
-                     * Admin ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Administrator user ID
                      */
                     std::string m_adminUserId;
                     bool m_adminUserIdHasBeenSet;
 
                     /**
-                     * Admin account
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Administrator account
                      */
                     std::string m_adminUserAccount;
                     bool m_adminUserAccountHasBeenSet;
 
                     /**
-                     * Admin username
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Administrator username
                      */
                     std::string m_adminUserName;
                     bool m_adminUserNameHasBeenSet;
 
                     /**
                      * Number of team members
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_memberCount;
                     bool m_memberCountHasBeenSet;
@@ -315,7 +323,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Team permission type
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<int64_t> m_teamRoleTypeList;
                     bool m_teamRoleTypeListHasBeenSet;
@@ -325,6 +332,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_relatedTeamId;
                     bool m_relatedTeamIdHasBeenSet;
+
+                    /**
+                     * Team expiration time. 0 means never expire.
+                     */
+                    int64_t m_expireTime;
+                    bool m_expireTimeHasBeenSet;
+
+                    /**
+                     * Team status. valid values: 1: normal; 2: disabled; 3: expired.
+                     */
+                    int64_t m_status;
+                    bool m_statusHasBeenSet;
 
                 };
             }

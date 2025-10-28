@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Team name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TeamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTeamName() const;
 
                     /**
                      * 设置Team name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _teamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTeamName(const std::string& _teamName);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TeamNameHasBeenSet() const;
 
                     /**
-                     * 获取Team role type 1-Mini program team 2-Application team
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TeamRoleType Team role type 1-Mini program team 2-Application team
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Team role type 1-mini program team 2-application team
+                     * @return TeamRoleType Team role type 1-mini program team 2-application team
                      * 
                      */
                     int64_t GetTeamRoleType() const;
 
                     /**
-                     * 设置Team role type 1-Mini program team 2-Application team
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _teamRoleType Team role type 1-Mini program team 2-Application team
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Team role type 1-mini program team 2-application team
+                     * @param _teamRoleType Team role type 1-mini program team 2-application team
                      * 
                      */
                     void SetTeamRoleType(const int64_t& _teamRoleType);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TeamRoleTypeHasBeenSet() const;
 
                     /**
-                     * 获取Admin account
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AdminUserAccount Admin account
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Administrator account
+                     * @return AdminUserAccount Administrator account
                      * 
                      */
                     std::string GetAdminUserAccount() const;
 
                     /**
-                     * 设置Admin account
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _adminUserAccount Admin account
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Administrator account
+                     * @param _adminUserAccount Administrator account
                      * 
                      */
                     void SetAdminUserAccount(const std::string& _adminUserAccount);
@@ -123,18 +111,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Creator
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreateUser Creator
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCreateUser() const;
 
                     /**
                      * 设置Creator
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _createUser Creator
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCreateUser(const std::string& _createUser);
@@ -148,18 +132,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _createTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -173,18 +153,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of team members
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MemberCount Number of team members
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetMemberCount() const;
 
                     /**
                      * 设置Number of team members
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _memberCount Number of team members
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMemberCount(const int64_t& _memberCount);
@@ -198,18 +174,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of bound mini program teams
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BindMiniTeamCount Number of bound mini program teams
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetBindMiniTeamCount() const;
 
                     /**
                      * 设置Number of bound mini program teams
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _bindMiniTeamCount Number of bound mini program teams
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetBindMiniTeamCount(const int64_t& _bindMiniTeamCount);
@@ -264,15 +236,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RegisterLinkHasBeenSet() const;
 
                     /**
-                     * 获取Application name. It’s required when querying details of a mini program team.
-                     * @return ApplicationName Application name. It’s required when querying details of a mini program team.
+                     * 获取Application name. It Is required when querying details of a mini program team.
+                     * @return ApplicationName Application name. It Is required when querying details of a mini program team.
                      * 
                      */
                     std::string GetApplicationName() const;
 
                     /**
-                     * 设置Application name. It’s required when querying details of a mini program team.
-                     * @param _applicationName Application name. It’s required when querying details of a mini program team.
+                     * 设置Application name. It Is required when querying details of a mini program team.
+                     * @param _applicationName Application name. It Is required when querying details of a mini program team.
                      * 
                      */
                     void SetApplicationName(const std::string& _applicationName);
@@ -284,53 +256,88 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ApplicationNameHasBeenSet() const;
 
+                    /**
+                     * 获取Team expiration time. 0 means never expire.
+                     * @return ExpireTime Team expiration time. 0 means never expire.
+                     * 
+                     */
+                    int64_t GetExpireTime() const;
+
+                    /**
+                     * 设置Team expiration time. 0 means never expire.
+                     * @param _expireTime Team expiration time. 0 means never expire.
+                     * 
+                     */
+                    void SetExpireTime(const int64_t& _expireTime);
+
+                    /**
+                     * 判断参数 ExpireTime 是否已赋值
+                     * @return ExpireTime 是否已赋值
+                     * 
+                     */
+                    bool ExpireTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Team status. valid values: 1: normal; 2: disabled; 3: expired.
+                     * @return Status Team status. valid values: 1: normal; 2: disabled; 3: expired.
+                     * 
+                     */
+                    int64_t GetStatus() const;
+
+                    /**
+                     * 设置Team status. valid values: 1: normal; 2: disabled; 3: expired.
+                     * @param _status Team status. valid values: 1: normal; 2: disabled; 3: expired.
+                     * 
+                     */
+                    void SetStatus(const int64_t& _status);
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     * 
+                     */
+                    bool StatusHasBeenSet() const;
+
                 private:
 
                     /**
                      * Team name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_teamName;
                     bool m_teamNameHasBeenSet;
 
                     /**
-                     * Team role type 1-Mini program team 2-Application team
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Team role type 1-mini program team 2-application team
                      */
                     int64_t m_teamRoleType;
                     bool m_teamRoleTypeHasBeenSet;
 
                     /**
-                     * Admin account
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Administrator account
                      */
                     std::string m_adminUserAccount;
                     bool m_adminUserAccountHasBeenSet;
 
                     /**
                      * Creator
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_createUser;
                     bool m_createUserHasBeenSet;
 
                     /**
                      * Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
                      * Number of team members
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_memberCount;
                     bool m_memberCountHasBeenSet;
 
                     /**
                      * Number of bound mini program teams
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_bindMiniTeamCount;
                     bool m_bindMiniTeamCountHasBeenSet;
@@ -348,10 +355,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_registerLinkHasBeenSet;
 
                     /**
-                     * Application name. It’s required when querying details of a mini program team.
+                     * Application name. It Is required when querying details of a mini program team.
                      */
                     std::string m_applicationName;
                     bool m_applicationNameHasBeenSet;
+
+                    /**
+                     * Team expiration time. 0 means never expire.
+                     */
+                    int64_t m_expireTime;
+                    bool m_expireTimeHasBeenSet;
+
+                    /**
+                     * Team status. valid values: 1: normal; 2: disabled; 3: expired.
+                     */
+                    int64_t m_status;
+                    bool m_statusHasBeenSet;
 
                 };
             }

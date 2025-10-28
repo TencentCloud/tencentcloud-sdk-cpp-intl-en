@@ -185,6 +185,8 @@
 #include <tencentcloud/cynosdb/v20190107/model/InquirePriceCreateResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/InquirePriceModifyRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/InquirePriceModifyResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/InquirePriceMultiSpecRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/InquirePriceMultiSpecResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/InquirePriceRenewRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/InquirePriceRenewResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/IsolateClusterRequest.h>
@@ -560,6 +562,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::InquirePriceModifyResponse> InquirePriceModifyOutcome;
                 typedef std::future<InquirePriceModifyOutcome> InquirePriceModifyOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::InquirePriceModifyRequest&, InquirePriceModifyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquirePriceModifyAsyncHandler;
+                typedef Outcome<Core::Error, Model::InquirePriceMultiSpecResponse> InquirePriceMultiSpecOutcome;
+                typedef std::future<InquirePriceMultiSpecOutcome> InquirePriceMultiSpecOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::InquirePriceMultiSpecRequest&, InquirePriceMultiSpecOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquirePriceMultiSpecAsyncHandler;
                 typedef Outcome<Core::Error, Model::InquirePriceRenewResponse> InquirePriceRenewOutcome;
                 typedef std::future<InquirePriceRenewOutcome> InquirePriceRenewOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::InquirePriceRenewRequest&, InquirePriceRenewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquirePriceRenewAsyncHandler;
@@ -1468,6 +1473,15 @@ namespace TencentCloud
                 InquirePriceModifyOutcome InquirePriceModify(const Model::InquirePriceModifyRequest &request);
                 void InquirePriceModifyAsync(const Model::InquirePriceModifyRequest& request, const InquirePriceModifyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 InquirePriceModifyOutcomeCallable InquirePriceModifyCallable(const Model::InquirePriceModifyRequest& request);
+
+                /**
+                 *This API is used to inquire prices in batch.
+                 * @param req InquirePriceMultiSpecRequest
+                 * @return InquirePriceMultiSpecOutcome
+                 */
+                InquirePriceMultiSpecOutcome InquirePriceMultiSpec(const Model::InquirePriceMultiSpecRequest &request);
+                void InquirePriceMultiSpecAsync(const Model::InquirePriceMultiSpecRequest& request, const InquirePriceMultiSpecAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                InquirePriceMultiSpecOutcomeCallable InquirePriceMultiSpecCallable(const Model::InquirePriceMultiSpecRequest& request);
 
                 /**
                  *This API is used to query the renewal price of a cluster.

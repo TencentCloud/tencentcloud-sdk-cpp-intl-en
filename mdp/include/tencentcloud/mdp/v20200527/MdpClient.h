@@ -369,7 +369,7 @@ namespace TencentCloud
                 BindNewLVBDomainWithChannelOutcomeCallable BindNewLVBDomainWithChannelCallable(const Model::BindNewLVBDomainWithChannelRequest& request);
 
                 /**
-                 *BindSSAICDNDomainWithChannel
+                 *This API is used to bind a CDN playback domain to a channel.
                  * @param req BindSSAICDNDomainWithChannelRequest
                  * @return BindSSAICDNDomainWithChannelOutcome
                  */
@@ -900,7 +900,7 @@ namespace TencentCloud
                 UnbindLinearAssemblyCDNDomainWithChannelOutcomeCallable UnbindLinearAssemblyCDNDomainWithChannelCallable(const Model::UnbindLinearAssemblyCDNDomainWithChannelRequest& request);
 
                 /**
-                 *UnbindSSAICDNDomainWithChannel
+                 *This API is used to cancel the correlation between a channel and a CDN playback domain.
                  * @param req UnbindSSAICDNDomainWithChannelRequest
                  * @return UnbindSSAICDNDomainWithChannelOutcome
                  */

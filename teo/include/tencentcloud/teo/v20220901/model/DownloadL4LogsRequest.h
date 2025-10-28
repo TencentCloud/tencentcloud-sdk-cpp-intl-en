@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取ZoneId set. This parameter is required.
-                     * @return ZoneIds ZoneId set. This parameter is required.
+                     * 获取ZoneId set. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980).
+                     * @return ZoneIds ZoneId set. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980).
                      * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
-                     * 设置ZoneId set. This parameter is required.
-                     * @param _zoneIds ZoneId set. This parameter is required.
+                     * 设置ZoneId set. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980).
+                     * @param _zoneIds ZoneId set. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980).
                      * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
@@ -183,7 +183,7 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * ZoneId set. This parameter is required.
+                     * ZoneId set. The parameter will change from optional to mandatory after May 30, 2024.Refer to [Cloud API Change Notification](https://www.tencentcloud.com/document/product/1145/59980).
                      */
                     std::vector<std::string> m_zoneIds;
                     bool m_zoneIdsHasBeenSet;

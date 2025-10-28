@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TotalCount Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Total count
+                     * @return TotalCount Total count
                      * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
-                     * 设置Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _totalCount Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Total count
+                     * @param _totalCount Total count
                      * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
@@ -74,18 +70,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取List information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DataList List information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<DescribeTeamListInfoResp> GetDataList() const;
 
                     /**
                      * 设置List information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _dataList List information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDataList(const std::vector<DescribeTeamListInfoResp>& _dataList);
@@ -100,15 +92,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Total count
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
                      * List information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<DescribeTeamListInfoResp> m_dataList;
                     bool m_dataListHasBeenSet;
