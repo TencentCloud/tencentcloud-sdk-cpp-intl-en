@@ -477,6 +477,7 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/DescribeSecurityGroupReferencesRequest.h
   include/tencentcloud/vpc/v20170312/model/DescribeVpcPrivateIpAddressesResponse.h
   include/tencentcloud/vpc/v20170312/model/ModifyReserveIpAddressRequest.h
+  include/tencentcloud/vpc/v20170312/model/ISPIPv6CidrBlock.h
   include/tencentcloud/vpc/v20170312/model/DisableRoutesRequest.h
   include/tencentcloud/vpc/v20170312/model/DisassociateDirectConnectGatewayNatGatewayRequest.h
   include/tencentcloud/vpc/v20170312/model/ReleaseIPv6AddressesRequest.h
@@ -1181,6 +1182,7 @@ set(vpc_src
   src/v20170312/model/DescribeSecurityGroupReferencesRequest.cpp
   src/v20170312/model/DescribeVpcPrivateIpAddressesResponse.cpp
   src/v20170312/model/ModifyReserveIpAddressRequest.cpp
+  src/v20170312/model/ISPIPv6CidrBlock.cpp
   src/v20170312/model/DisableRoutesRequest.cpp
   src/v20170312/model/DisassociateDirectConnectGatewayNatGatewayRequest.cpp
   src/v20170312/model/ReleaseIPv6AddressesRequest.cpp

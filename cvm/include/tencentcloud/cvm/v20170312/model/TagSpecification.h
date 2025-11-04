@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Tag-Bound resource type. "instance" for cloud virtual machine, "host" for cdh, "image" for mirror, and "keypair" for key.
-                     * @return ResourceType Tag-Bound resource type. "instance" for cloud virtual machine, "host" for cdh, "image" for mirror, and "keypair" for key.
+                     * 获取Specifies the resource type for Tag binding. valid values: "instance" (cloud virtual machine), "host" (cdh), "image" (mirror), "keypair" (key), "ps" (placement group), "hpc" (hyper computing cluster).
+                     * @return ResourceType Specifies the resource type for Tag binding. valid values: "instance" (cloud virtual machine), "host" (cdh), "image" (mirror), "keypair" (key), "ps" (placement group), "hpc" (hyper computing cluster).
                      * 
                      */
                     std::string GetResourceType() const;
 
                     /**
-                     * 设置Tag-Bound resource type. "instance" for cloud virtual machine, "host" for cdh, "image" for mirror, and "keypair" for key.
-                     * @param _resourceType Tag-Bound resource type. "instance" for cloud virtual machine, "host" for cdh, "image" for mirror, and "keypair" for key.
+                     * 设置Specifies the resource type for Tag binding. valid values: "instance" (cloud virtual machine), "host" (cdh), "image" (mirror), "keypair" (key), "ps" (placement group), "hpc" (hyper computing cluster).
+                     * @param _resourceType Specifies the resource type for Tag binding. valid values: "instance" (cloud virtual machine), "host" (cdh), "image" (mirror), "keypair" (key), "ps" (placement group), "hpc" (hyper computing cluster).
                      * 
                      */
                     void SetResourceType(const std::string& _resourceType);
@@ -92,7 +92,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Tag-Bound resource type. "instance" for cloud virtual machine, "host" for cdh, "image" for mirror, and "keypair" for key.
+                     * Specifies the resource type for Tag binding. valid values: "instance" (cloud virtual machine), "host" (cdh), "image" (mirror), "keypair" (key), "ps" (placement group), "hpc" (hyper computing cluster).
                      */
                     std::string m_resourceType;
                     bool m_resourceTypeHasBeenSet;

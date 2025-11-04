@@ -40,6 +40,7 @@
 #include <tencentcloud/teo/v20220901/model/UpstreamHTTP2Parameters.h>
 #include <tencentcloud/teo/v20220901/model/HostHeaderParameters.h>
 #include <tencentcloud/teo/v20220901/model/ForceRedirectHTTPSParameters.h>
+#include <tencentcloud/teo/v20220901/model/OriginPullProtocolParameters.h>
 #include <tencentcloud/teo/v20220901/model/CompressionParameters.h>
 #include <tencentcloud/teo/v20220901/model/HSTSParameters.h>
 #include <tencentcloud/teo/v20220901/model/ClientIPHeaderParameters.h>
@@ -645,6 +646,27 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                      * 
                      */
                     bool ForceRedirectHTTPSParametersHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return OriginPullProtocolParameters 
+                     * 
+                     */
+                    OriginPullProtocolParameters GetOriginPullProtocolParameters() const;
+
+                    /**
+                     * 设置
+                     * @param _originPullProtocolParameters 
+                     * 
+                     */
+                    void SetOriginPullProtocolParameters(const OriginPullProtocolParameters& _originPullProtocolParameters);
+
+                    /**
+                     * 判断参数 OriginPullProtocolParameters 是否已赋值
+                     * @return OriginPullProtocolParameters 是否已赋值
+                     * 
+                     */
+                    bool OriginPullProtocolParametersHasBeenSet() const;
 
                     /**
                      * 获取Intelligent compression configuration. this parameter is required when name is set to compression.
@@ -1276,6 +1298,12 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                      */
                     ForceRedirectHTTPSParameters m_forceRedirectHTTPSParameters;
                     bool m_forceRedirectHTTPSParametersHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    OriginPullProtocolParameters m_originPullProtocolParameters;
+                    bool m_originPullProtocolParametersHasBeenSet;
 
                     /**
                      * Intelligent compression configuration. this parameter is required when name is set to compression.

@@ -38,6 +38,7 @@ RuleEngineAction::RuleEngineAction() :
     m_upstreamHTTP2ParametersHasBeenSet(false),
     m_hostHeaderParametersHasBeenSet(false),
     m_forceRedirectHTTPSParametersHasBeenSet(false),
+    m_originPullProtocolParametersHasBeenSet(false),
     m_compressionParametersHasBeenSet(false),
     m_hSTSParametersHasBeenSet(false),
     m_clientIPHeaderParametersHasBeenSet(false),
@@ -345,6 +346,23 @@ CoreInternalOutcome RuleEngineAction::Deserialize(const rapidjson::Value &value)
         }
 
         m_forceRedirectHTTPSParametersHasBeenSet = true;
+    }
+
+    if (value.HasMember("OriginPullProtocolParameters") && !value["OriginPullProtocolParameters"].IsNull())
+    {
+        if (!value["OriginPullProtocolParameters"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `RuleEngineAction.OriginPullProtocolParameters` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_originPullProtocolParameters.Deserialize(value["OriginPullProtocolParameters"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_originPullProtocolParametersHasBeenSet = true;
     }
 
     if (value.HasMember("CompressionParameters") && !value["CompressionParameters"].IsNull())
@@ -829,6 +847,15 @@ void RuleEngineAction::ToJsonObject(rapidjson::Value &value, rapidjson::Document
         m_forceRedirectHTTPSParameters.ToJsonObject(value[key.c_str()], allocator);
     }
 
+    if (m_originPullProtocolParametersHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OriginPullProtocolParameters";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_originPullProtocolParameters.ToJsonObject(value[key.c_str()], allocator);
+    }
+
     if (m_compressionParametersHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -1273,6 +1300,22 @@ void RuleEngineAction::SetForceRedirectHTTPSParameters(const ForceRedirectHTTPSP
 bool RuleEngineAction::ForceRedirectHTTPSParametersHasBeenSet() const
 {
     return m_forceRedirectHTTPSParametersHasBeenSet;
+}
+
+OriginPullProtocolParameters RuleEngineAction::GetOriginPullProtocolParameters() const
+{
+    return m_originPullProtocolParameters;
+}
+
+void RuleEngineAction::SetOriginPullProtocolParameters(const OriginPullProtocolParameters& _originPullProtocolParameters)
+{
+    m_originPullProtocolParameters = _originPullProtocolParameters;
+    m_originPullProtocolParametersHasBeenSet = true;
+}
+
+bool RuleEngineAction::OriginPullProtocolParametersHasBeenSet() const
+{
+    return m_originPullProtocolParametersHasBeenSet;
 }
 
 CompressionParameters RuleEngineAction::GetCompressionParameters() const

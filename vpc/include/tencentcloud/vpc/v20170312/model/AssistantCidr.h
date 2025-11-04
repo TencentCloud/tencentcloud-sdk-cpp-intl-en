@@ -111,19 +111,15 @@ namespace TencentCloud
                     bool AssistantTypeHasBeenSet() const;
 
                     /**
-                     * 获取Subnets divided by the secondary CIDR.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SubnetSet Subnets divided by the secondary CIDR.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Subnet Split by Auxiliary CIDR
+                     * @return SubnetSet Subnet Split by Auxiliary CIDR
                      * 
                      */
                     std::vector<Subnet> GetSubnetSet() const;
 
                     /**
-                     * 设置Subnets divided by the secondary CIDR.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _subnetSet Subnets divided by the secondary CIDR.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Subnet Split by Auxiliary CIDR
+                     * @param _subnetSet Subnet Split by Auxiliary CIDR
                      * 
                      */
                     void SetSubnetSet(const std::vector<Subnet>& _subnetSet);
@@ -156,8 +152,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_assistantTypeHasBeenSet;
 
                     /**
-                     * Subnets divided by the secondary CIDR.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Subnet Split by Auxiliary CIDR
                      */
                     std::vector<Subnet> m_subnetSet;
                     bool m_subnetSetHasBeenSet;

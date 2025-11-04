@@ -363,19 +363,15 @@ namespace TencentCloud
                     bool TagSetHasBeenSet() const;
 
                     /**
-                     * 获取CDC instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return CdcId CDC instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取CDC instance ID.
+                     * @return CdcId CDC instance ID.
                      * 
                      */
                     std::string GetCdcId() const;
 
                     /**
-                     * 设置CDC instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _cdcId CDC instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置CDC instance ID.
+                     * @param _cdcId CDC instance ID.
                      * 
                      */
                     void SetCdcId(const std::string& _cdcId);
@@ -388,19 +384,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool CdcIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is a CDC subnet. Valid values: 0: no; 1: yes
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return IsCdcSubnet Whether it is a CDC subnet. Valid values: 0: no; 1: yes
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Whether the subnet is associated with CDC. valid values: 0 (no), 1 (yes).
+                     * @return IsCdcSubnet Whether the subnet is associated with CDC. valid values: 0 (no), 1 (yes).
                      * 
                      */
                     int64_t GetIsCdcSubnet() const;
 
                     /**
-                     * 设置Whether it is a CDC subnet. Valid values: 0: no; 1: yes
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _isCdcSubnet Whether it is a CDC subnet. Valid values: 0: no; 1: yes
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Whether the subnet is associated with CDC. valid values: 0 (no), 1 (yes).
+                     * @param _isCdcSubnet Whether the subnet is associated with CDC. valid values: 0 (no), 1 (yes).
                      * 
                      */
                     void SetIsCdcSubnet(const int64_t& _isCdcSubnet);
@@ -505,15 +497,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_tagSetHasBeenSet;
 
                     /**
-                     * CDC instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * CDC instance ID.
                      */
                     std::string m_cdcId;
                     bool m_cdcIdHasBeenSet;
 
                     /**
-                     * Whether it is a CDC subnet. Valid values: 0: no; 1: yes
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Whether the subnet is associated with CDC. valid values: 0 (no), 1 (yes).
                      */
                     int64_t m_isCdcSubnet;
                     bool m_isCdcSubnetHasBeenSet;

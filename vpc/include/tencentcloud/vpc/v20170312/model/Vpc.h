@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/vpc/v20170312/model/Tag.h>
 #include <tencentcloud/vpc/v20170312/model/AssistantCidr.h>
+#include <tencentcloud/vpc/v20170312/model/ISPIPv6CidrBlock.h>
 
 
 namespace TencentCloud
@@ -301,19 +302,15 @@ namespace TencentCloud
                     bool TagSetHasBeenSet() const;
 
                     /**
-                     * 获取The secondary CIDR block.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AssistantCidrSet The secondary CIDR block.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Auxiliary CIDR
+                     * @return AssistantCidrSet Auxiliary CIDR
                      * 
                      */
                     std::vector<AssistantCidr> GetAssistantCidrSet() const;
 
                     /**
-                     * 设置The secondary CIDR block.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _assistantCidrSet The secondary CIDR block.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Auxiliary CIDR
+                     * @param _assistantCidrSet Auxiliary CIDR
                      * 
                      */
                     void SetAssistantCidrSet(const std::vector<AssistantCidr>& _assistantCidrSet);
@@ -324,6 +321,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool AssistantCidrSetHasBeenSet() const;
+
+                    /**
+                     * 获取Vpc association with CCN route publish policy. true: enables cidr route publishing. false: enables subnet route publishing. default is subnet route publishing when creating a vpc. to select cidr route publishing, submit a ticket for adding to allowlist.
+                     * @return EnableRouteVpcPublish Vpc association with CCN route publish policy. true: enables cidr route publishing. false: enables subnet route publishing. default is subnet route publishing when creating a vpc. to select cidr route publishing, submit a ticket for adding to allowlist.
+                     * 
+                     */
+                    bool GetEnableRouteVpcPublish() const;
+
+                    /**
+                     * 设置Vpc association with CCN route publish policy. true: enables cidr route publishing. false: enables subnet route publishing. default is subnet route publishing when creating a vpc. to select cidr route publishing, submit a ticket for adding to allowlist.
+                     * @param _enableRouteVpcPublish Vpc association with CCN route publish policy. true: enables cidr route publishing. false: enables subnet route publishing. default is subnet route publishing when creating a vpc. to select cidr route publishing, submit a ticket for adding to allowlist.
+                     * 
+                     */
+                    void SetEnableRouteVpcPublish(const bool& _enableRouteVpcPublish);
+
+                    /**
+                     * 判断参数 EnableRouteVpcPublish 是否已赋值
+                     * @return EnableRouteVpcPublish 是否已赋值
+                     * 
+                     */
+                    bool EnableRouteVpcPublishHasBeenSet() const;
+
+                    /**
+                     * 获取Returns the multi-operator IPv6 Cidr Block.
+                     * @return Ipv6CidrBlockSet Returns the multi-operator IPv6 Cidr Block.
+                     * 
+                     */
+                    std::vector<ISPIPv6CidrBlock> GetIpv6CidrBlockSet() const;
+
+                    /**
+                     * 设置Returns the multi-operator IPv6 Cidr Block.
+                     * @param _ipv6CidrBlockSet Returns the multi-operator IPv6 Cidr Block.
+                     * 
+                     */
+                    void SetIpv6CidrBlockSet(const std::vector<ISPIPv6CidrBlock>& _ipv6CidrBlockSet);
+
+                    /**
+                     * 判断参数 Ipv6CidrBlockSet 是否已赋值
+                     * @return Ipv6CidrBlockSet 是否已赋值
+                     * 
+                     */
+                    bool Ipv6CidrBlockSetHasBeenSet() const;
 
                 private:
 
@@ -400,11 +439,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_tagSetHasBeenSet;
 
                     /**
-                     * The secondary CIDR block.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Auxiliary CIDR
                      */
                     std::vector<AssistantCidr> m_assistantCidrSet;
                     bool m_assistantCidrSetHasBeenSet;
+
+                    /**
+                     * Vpc association with CCN route publish policy. true: enables cidr route publishing. false: enables subnet route publishing. default is subnet route publishing when creating a vpc. to select cidr route publishing, submit a ticket for adding to allowlist.
+                     */
+                    bool m_enableRouteVpcPublish;
+                    bool m_enableRouteVpcPublishHasBeenSet;
+
+                    /**
+                     * Returns the multi-operator IPv6 Cidr Block.
+                     */
+                    std::vector<ISPIPv6CidrBlock> m_ipv6CidrBlockSet;
+                    bool m_ipv6CidrBlockSetHasBeenSet;
 
                 };
             }

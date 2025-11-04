@@ -169,6 +169,27 @@ namespace TencentCloud
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取Vpc association with CCN route publish policy. true: enables cidr route publishing. false: enables subnet route publishing. default is subnet route publishing when creating a vpc. to select cidr route publishing, submit a ticket for adding to allowlist.
+                     * @return EnableRouteVpcPublish Vpc association with CCN route publish policy. true: enables cidr route publishing. false: enables subnet route publishing. default is subnet route publishing when creating a vpc. to select cidr route publishing, submit a ticket for adding to allowlist.
+                     * 
+                     */
+                    bool GetEnableRouteVpcPublish() const;
+
+                    /**
+                     * 设置Vpc association with CCN route publish policy. true: enables cidr route publishing. false: enables subnet route publishing. default is subnet route publishing when creating a vpc. to select cidr route publishing, submit a ticket for adding to allowlist.
+                     * @param _enableRouteVpcPublish Vpc association with CCN route publish policy. true: enables cidr route publishing. false: enables subnet route publishing. default is subnet route publishing when creating a vpc. to select cidr route publishing, submit a ticket for adding to allowlist.
+                     * 
+                     */
+                    void SetEnableRouteVpcPublish(const bool& _enableRouteVpcPublish);
+
+                    /**
+                     * 判断参数 EnableRouteVpcPublish 是否已赋值
+                     * @return EnableRouteVpcPublish 是否已赋值
+                     * 
+                     */
+                    bool EnableRouteVpcPublishHasBeenSet() const;
+
                 private:
 
                     /**
@@ -206,6 +227,12 @@ namespace TencentCloud
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Vpc association with CCN route publish policy. true: enables cidr route publishing. false: enables subnet route publishing. default is subnet route publishing when creating a vpc. to select cidr route publishing, submit a ticket for adding to allowlist.
+                     */
+                    bool m_enableRouteVpcPublish;
+                    bool m_enableRouteVpcPublishHasBeenSet;
 
                 };
             }

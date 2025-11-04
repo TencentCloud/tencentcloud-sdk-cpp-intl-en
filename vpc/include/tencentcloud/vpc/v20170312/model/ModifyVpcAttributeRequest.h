@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Security group can be named freely, but cannot exceed 60 characters.
-                     * @return VpcId Security group can be named freely, but cannot exceed 60 characters.
+                     * 获取VPC instance ID, in the format of vpc-f49l6u0z.
+                     * @return VpcId VPC instance ID, in the format of vpc-f49l6u0z.
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置Security group can be named freely, but cannot exceed 60 characters.
-                     * @param _vpcId Security group can be named freely, but cannot exceed 60 characters.
+                     * 设置VPC instance ID, in the format of vpc-f49l6u0z.
+                     * @param _vpcId VPC instance ID, in the format of vpc-f49l6u0z.
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -148,6 +148,27 @@ namespace TencentCloud
                     bool DomainNameHasBeenSet() const;
 
                     /**
+                     * 获取Vpc association with CCN route publish policy. true enables cidr route publishing. false enables subnet route publishing. the default is subnet route publishing when creating a vpc. to use cidr route publishing, submit a ticket to add to allowlist.
+                     * @return EnableRouteVpcPublish Vpc association with CCN route publish policy. true enables cidr route publishing. false enables subnet route publishing. the default is subnet route publishing when creating a vpc. to use cidr route publishing, submit a ticket to add to allowlist.
+                     * 
+                     */
+                    bool GetEnableRouteVpcPublish() const;
+
+                    /**
+                     * 设置Vpc association with CCN route publish policy. true enables cidr route publishing. false enables subnet route publishing. the default is subnet route publishing when creating a vpc. to use cidr route publishing, submit a ticket to add to allowlist.
+                     * @param _enableRouteVpcPublish Vpc association with CCN route publish policy. true enables cidr route publishing. false enables subnet route publishing. the default is subnet route publishing when creating a vpc. to use cidr route publishing, submit a ticket to add to allowlist.
+                     * 
+                     */
+                    void SetEnableRouteVpcPublish(const bool& _enableRouteVpcPublish);
+
+                    /**
+                     * 判断参数 EnableRouteVpcPublish 是否已赋值
+                     * @return EnableRouteVpcPublish 是否已赋值
+                     * 
+                     */
+                    bool EnableRouteVpcPublishHasBeenSet() const;
+
+                    /**
                      * 获取Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: Do not publish
                      * @return EnableCdcPublish Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: Do not publish
                      * 
@@ -171,7 +192,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Security group can be named freely, but cannot exceed 60 characters.
+                     * VPC instance ID, in the format of vpc-f49l6u0z.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
@@ -199,6 +220,12 @@ namespace TencentCloud
                      */
                     std::string m_domainName;
                     bool m_domainNameHasBeenSet;
+
+                    /**
+                     * Vpc association with CCN route publish policy. true enables cidr route publishing. false enables subnet route publishing. the default is subnet route publishing when creating a vpc. to use cidr route publishing, submit a ticket to add to allowlist.
+                     */
+                    bool m_enableRouteVpcPublish;
+                    bool m_enableRouteVpcPublishHasBeenSet;
 
                     /**
                      * Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: Do not publish

@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Maximum limit. value range between 1MB and 500MB. byte.
-                     * @return MaxSize Maximum limit. value range between 1MB and 500MB. byte.
+                     * 获取Maximum limit.Takes effect only when Switch is on. Range:1 MB - 800 MB (bytes).
+                     * @return MaxSize Maximum limit.Takes effect only when Switch is on. Range:1 MB - 800 MB (bytes).
                      * 
                      */
                     int64_t GetMaxSize() const;
 
                     /**
-                     * 设置Maximum limit. value range between 1MB and 500MB. byte.
-                     * @param _maxSize Maximum limit. value range between 1MB and 500MB. byte.
+                     * 设置Maximum limit.Takes effect only when Switch is on. Range:1 MB - 800 MB (bytes).
+                     * @param _maxSize Maximum limit.Takes effect only when Switch is on. Range:1 MB - 800 MB (bytes).
                      * 
                      */
                     void SetMaxSize(const int64_t& _maxSize);
@@ -107,7 +107,7 @@ namespace TencentCloud
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Maximum limit. value range between 1MB and 500MB. byte.
+                     * Maximum limit.Takes effect only when Switch is on. Range:1 MB - 800 MB (bytes).
                      */
                     int64_t m_maxSize;
                     bool m_maxSizeHasBeenSet;
