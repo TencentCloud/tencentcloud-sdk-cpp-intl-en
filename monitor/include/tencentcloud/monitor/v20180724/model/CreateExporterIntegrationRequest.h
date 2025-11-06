@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Type
-                     * @return Kind Type
+                     * 获取Type (obtain through the DescribePrometheusIntegrations api, using the ExporterType field of each item).
+                     * @return Kind Type (obtain through the DescribePrometheusIntegrations api, using the ExporterType field of each item).
                      * 
                      */
                     std::string GetKind() const;
 
                     /**
-                     * 设置Type
-                     * @param _kind Type
+                     * 设置Type (obtain through the DescribePrometheusIntegrations api, using the ExporterType field of each item).
+                     * @param _kind Type (obtain through the DescribePrometheusIntegrations api, using the ExporterType field of each item).
                      * 
                      */
                     void SetKind(const std::string& _kind);
@@ -106,27 +106,27 @@ namespace TencentCloud
                     bool ContentHasBeenSet() const;
 
                     /**
-                     * 获取Kubernetes cluster type. Valid values:
-<li> 1 = TKE </li>
-<li> 2 = EKS </li>
-<li> 3 = MEKS </li>
-                     * @return KubeType Kubernetes cluster type. Valid values:
-<li> 1 = TKE </li>
-<li> 2 = EKS </li>
-<li> 3 = MEKS </li>
+                     * 获取Kubernetes cluster type, optional, valid values are as follows:.
+<li>1 = TKE</li>
+<li>2 = EKS</li>
+<li>3 = MEKS</li>
+                     * @return KubeType Kubernetes cluster type, optional, valid values are as follows:.
+<li>1 = TKE</li>
+<li>2 = EKS</li>
+<li>3 = MEKS</li>
                      * 
                      */
                     int64_t GetKubeType() const;
 
                     /**
-                     * 设置Kubernetes cluster type. Valid values:
-<li> 1 = TKE </li>
-<li> 2 = EKS </li>
-<li> 3 = MEKS </li>
-                     * @param _kubeType Kubernetes cluster type. Valid values:
-<li> 1 = TKE </li>
-<li> 2 = EKS </li>
-<li> 3 = MEKS </li>
+                     * 设置Kubernetes cluster type, optional, valid values are as follows:.
+<li>1 = TKE</li>
+<li>2 = EKS</li>
+<li>3 = MEKS</li>
+                     * @param _kubeType Kubernetes cluster type, optional, valid values are as follows:.
+<li>1 = TKE</li>
+<li>2 = EKS</li>
+<li>3 = MEKS</li>
                      * 
                      */
                     void SetKubeType(const int64_t& _kubeType);
@@ -139,15 +139,15 @@ namespace TencentCloud
                     bool KubeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取Cluster ID, optional.
+                     * @return ClusterId Cluster ID, optional.
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置Cluster ID, optional.
+                     * @param _clusterId Cluster ID, optional.
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -168,7 +168,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Type
+                     * Type (obtain through the DescribePrometheusIntegrations api, using the ExporterType field of each item).
                      */
                     std::string m_kind;
                     bool m_kindHasBeenSet;
@@ -180,16 +180,16 @@ namespace TencentCloud
                     bool m_contentHasBeenSet;
 
                     /**
-                     * Kubernetes cluster type. Valid values:
-<li> 1 = TKE </li>
-<li> 2 = EKS </li>
-<li> 3 = MEKS </li>
+                     * Kubernetes cluster type, optional, valid values are as follows:.
+<li>1 = TKE</li>
+<li>2 = EKS</li>
+<li>3 = MEKS</li>
                      */
                     int64_t m_kubeType;
                     bool m_kubeTypeHasBeenSet;
 
                     /**
-                     * Cluster ID
+                     * Cluster ID, optional.
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
