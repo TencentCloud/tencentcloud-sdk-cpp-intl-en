@@ -31,6 +31,8 @@
 #include <tencentcloud/teo/v20220901/model/BindZoneToPlanResponse.h>
 #include <tencentcloud/teo/v20220901/model/CheckCnameStatusRequest.h>
 #include <tencentcloud/teo/v20220901/model/CheckCnameStatusResponse.h>
+#include <tencentcloud/teo/v20220901/model/ConfirmMultiPathGatewayOriginACLRequest.h>
+#include <tencentcloud/teo/v20220901/model/ConfirmMultiPathGatewayOriginACLResponse.h>
 #include <tencentcloud/teo/v20220901/model/ConfirmOriginACLUpdateRequest.h>
 #include <tencentcloud/teo/v20220901/model/ConfirmOriginACLUpdateResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateAccelerationDomainRequest.h>
@@ -221,6 +223,8 @@
 #include <tencentcloud/teo/v20220901/model/DescribeMultiPathGatewayResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeMultiPathGatewayLineRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeMultiPathGatewayLineResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeMultiPathGatewayOriginACLRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeMultiPathGatewayOriginACLResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeMultiPathGatewayRegionsRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeMultiPathGatewayRegionsResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeMultiPathGatewaySecretKeyRequest.h>
@@ -363,6 +367,8 @@
 #include <tencentcloud/teo/v20220901/model/ModifyMultiPathGatewayLineResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyMultiPathGatewaySecretKeyRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyMultiPathGatewaySecretKeyResponse.h>
+#include <tencentcloud/teo/v20220901/model/ModifyMultiPathGatewayStatusRequest.h>
+#include <tencentcloud/teo/v20220901/model/ModifyMultiPathGatewayStatusResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyOriginACLRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyOriginACLResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyOriginGroupRequest.h>
@@ -427,6 +433,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CheckCnameStatusResponse> CheckCnameStatusOutcome;
                 typedef std::future<CheckCnameStatusOutcome> CheckCnameStatusOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CheckCnameStatusRequest&, CheckCnameStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CheckCnameStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::ConfirmMultiPathGatewayOriginACLResponse> ConfirmMultiPathGatewayOriginACLOutcome;
+                typedef std::future<ConfirmMultiPathGatewayOriginACLOutcome> ConfirmMultiPathGatewayOriginACLOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ConfirmMultiPathGatewayOriginACLRequest&, ConfirmMultiPathGatewayOriginACLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ConfirmMultiPathGatewayOriginACLAsyncHandler;
                 typedef Outcome<Core::Error, Model::ConfirmOriginACLUpdateResponse> ConfirmOriginACLUpdateOutcome;
                 typedef std::future<ConfirmOriginACLUpdateOutcome> ConfirmOriginACLUpdateOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ConfirmOriginACLUpdateRequest&, ConfirmOriginACLUpdateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ConfirmOriginACLUpdateAsyncHandler;
@@ -712,6 +721,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeMultiPathGatewayLineResponse> DescribeMultiPathGatewayLineOutcome;
                 typedef std::future<DescribeMultiPathGatewayLineOutcome> DescribeMultiPathGatewayLineOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeMultiPathGatewayLineRequest&, DescribeMultiPathGatewayLineOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMultiPathGatewayLineAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMultiPathGatewayOriginACLResponse> DescribeMultiPathGatewayOriginACLOutcome;
+                typedef std::future<DescribeMultiPathGatewayOriginACLOutcome> DescribeMultiPathGatewayOriginACLOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeMultiPathGatewayOriginACLRequest&, DescribeMultiPathGatewayOriginACLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMultiPathGatewayOriginACLAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMultiPathGatewayRegionsResponse> DescribeMultiPathGatewayRegionsOutcome;
                 typedef std::future<DescribeMultiPathGatewayRegionsOutcome> DescribeMultiPathGatewayRegionsOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeMultiPathGatewayRegionsRequest&, DescribeMultiPathGatewayRegionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMultiPathGatewayRegionsAsyncHandler;
@@ -925,6 +937,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyMultiPathGatewaySecretKeyResponse> ModifyMultiPathGatewaySecretKeyOutcome;
                 typedef std::future<ModifyMultiPathGatewaySecretKeyOutcome> ModifyMultiPathGatewaySecretKeyOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyMultiPathGatewaySecretKeyRequest&, ModifyMultiPathGatewaySecretKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyMultiPathGatewaySecretKeyAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyMultiPathGatewayStatusResponse> ModifyMultiPathGatewayStatusOutcome;
+                typedef std::future<ModifyMultiPathGatewayStatusOutcome> ModifyMultiPathGatewayStatusOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ModifyMultiPathGatewayStatusRequest&, ModifyMultiPathGatewayStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyMultiPathGatewayStatusAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyOriginACLResponse> ModifyOriginACLOutcome;
                 typedef std::future<ModifyOriginACLOutcome> ModifyOriginACLOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyOriginACLRequest&, ModifyOriginACLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyOriginACLAsyncHandler;
@@ -1020,6 +1035,15 @@ namespace TencentCloud
                 CheckCnameStatusOutcome CheckCnameStatus(const Model::CheckCnameStatusRequest &request);
                 void CheckCnameStatusAsync(const Model::CheckCnameStatusRequest& request, const CheckCnameStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CheckCnameStatusOutcomeCallable CheckCnameStatusCallable(const Model::CheckCnameStatusRequest& request);
+
+                /**
+                 *This API is used to confirm the latest origin IP range is updated to the origin server firewall when the multi-channel security acceleration gateway's origin IP range changes.
+                 * @param req ConfirmMultiPathGatewayOriginACLRequest
+                 * @return ConfirmMultiPathGatewayOriginACLOutcome
+                 */
+                ConfirmMultiPathGatewayOriginACLOutcome ConfirmMultiPathGatewayOriginACL(const Model::ConfirmMultiPathGatewayOriginACLRequest &request);
+                void ConfirmMultiPathGatewayOriginACLAsync(const Model::ConfirmMultiPathGatewayOriginACLRequest& request, const ConfirmMultiPathGatewayOriginACLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ConfirmMultiPathGatewayOriginACLOutcomeCallable ConfirmMultiPathGatewayOriginACLCallable(const Model::ConfirmMultiPathGatewayOriginACLRequest& request);
 
                 /**
                  *This API is used to confirm that the latest origin ACLs have been updated to the origin server firewall when the origin ACLs change. After confirming the update to the latest version, related change notifications will stop pushing.
@@ -1897,6 +1921,15 @@ The feature is only supported in the enterprise plan and is currently in closed 
                 DescribeMultiPathGatewayLineOutcomeCallable DescribeMultiPathGatewayLineCallable(const Model::DescribeMultiPathGatewayLineRequest& request);
 
                 /**
+                 *This API is used to query the binding relationship between a multi-channel security acceleration gateway instance and the origin server IP range, as well as the IP range details. If the MultiPathGatewayNextOriginACL field has a return value, the latest origin server IP range must be synchronized to the origin server firewall configuration.
+                 * @param req DescribeMultiPathGatewayOriginACLRequest
+                 * @return DescribeMultiPathGatewayOriginACLOutcome
+                 */
+                DescribeMultiPathGatewayOriginACLOutcome DescribeMultiPathGatewayOriginACL(const Model::DescribeMultiPathGatewayOriginACLRequest &request);
+                void DescribeMultiPathGatewayOriginACLAsync(const Model::DescribeMultiPathGatewayOriginACLRequest& request, const DescribeMultiPathGatewayOriginACLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMultiPathGatewayOriginACLOutcomeCallable DescribeMultiPathGatewayOriginACLCallable(const Model::DescribeMultiPathGatewayOriginACLRequest& request);
+
+                /**
                  *This API is used to query the list of available regions for user-created multi-channel security acceleration gateways (Cloud Gateway).
                  * @param req DescribeMultiPathGatewayRegionsRequest
                  * @return DescribeMultiPathGatewayRegionsOutcome
@@ -2564,6 +2597,15 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
                 ModifyMultiPathGatewaySecretKeyOutcome ModifyMultiPathGatewaySecretKey(const Model::ModifyMultiPathGatewaySecretKeyRequest &request);
                 void ModifyMultiPathGatewaySecretKeyAsync(const Model::ModifyMultiPathGatewaySecretKeyRequest& request, const ModifyMultiPathGatewaySecretKeyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyMultiPathGatewaySecretKeyOutcomeCallable ModifyMultiPathGatewaySecretKeyCallable(const Model::ModifyMultiPathGatewaySecretKeyRequest& request);
+
+                /**
+                 *This API is used to update the status of a multi-channel security gateway.
+                 * @param req ModifyMultiPathGatewayStatusRequest
+                 * @return ModifyMultiPathGatewayStatusOutcome
+                 */
+                ModifyMultiPathGatewayStatusOutcome ModifyMultiPathGatewayStatus(const Model::ModifyMultiPathGatewayStatusRequest &request);
+                void ModifyMultiPathGatewayStatusAsync(const Model::ModifyMultiPathGatewayStatusRequest& request, const ModifyMultiPathGatewayStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyMultiPathGatewayStatusOutcomeCallable ModifyMultiPathGatewayStatusCallable(const Model::ModifyMultiPathGatewayStatusRequest& request);
 
                 /**
                  *This API is used to enable or disable specific origin ACLs for L7 acceleration domain names or L4 proxy instances. A single submission supports up to 200 L7 acceleration domain names or 100 L4 proxy instances. Hybrid submissions of L7 acceleration domain names and L4 proxy instances are supported, with a maximum total number of instances of 200. If changes are needed for exceeding 200 instances, submit them in batches via this API.
