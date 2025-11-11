@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Count
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TotalCount Count
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Counting.
+                     * @return TotalCount Counting.
                      * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
-                     * 设置Count
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _totalCount Count
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Counting.
+                     * @param _totalCount Counting.
                      * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
@@ -74,18 +70,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取GroupList
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return GroupList GroupList
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<DescribeGroup> GetGroupList() const;
 
                     /**
                      * 设置GroupList
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _groupList GroupList
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetGroupList(const std::vector<DescribeGroup>& _groupList);
@@ -98,19 +90,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool GroupListHasBeenSet() const;
 
                     /**
-                     * 获取Consumer group quota
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return GroupCountQuota Consumer group quota
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the consumer group quota.
+                     * @return GroupCountQuota Specifies the consumer group quota.
                      * 
                      */
                     uint64_t GetGroupCountQuota() const;
 
                     /**
-                     * 设置Consumer group quota
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _groupCountQuota Consumer group quota
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the consumer group quota.
+                     * @param _groupCountQuota Specifies the consumer group quota.
                      * 
                      */
                     void SetGroupCountQuota(const uint64_t& _groupCountQuota);
@@ -125,22 +113,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Count
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Counting.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
                      * GroupList
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<DescribeGroup> m_groupList;
                     bool m_groupListHasBeenSet;
 
                     /**
-                     * Consumer group quota
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the consumer group quota.
                      */
                     uint64_t m_groupCountQuota;
                     bool m_groupCountQuotaHasBeenSet;

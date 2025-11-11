@@ -46,15 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+                     * @return InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+                     * @param _instanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -67,15 +67,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Maximum retention period in minutes for instance log, which can be up to 30 days. 0 indicates not to enable the log retention period policy
-                     * @return MsgRetentionTime Maximum retention period in minutes for instance log, which can be up to 30 days. 0 indicates not to enable the log retention period policy
+                     * 获取Maximum retention time of instance logs, in minutes, with a value range of 1min to 90 days.
+                     * @return MsgRetentionTime Maximum retention time of instance logs, in minutes, with a value range of 1min to 90 days.
                      * 
                      */
                     int64_t GetMsgRetentionTime() const;
 
                     /**
-                     * 设置Maximum retention period in minutes for instance log, which can be up to 30 days. 0 indicates not to enable the log retention period policy
-                     * @param _msgRetentionTime Maximum retention period in minutes for instance log, which can be up to 30 days. 0 indicates not to enable the log retention period policy
+                     * 设置Maximum retention time of instance logs, in minutes, with a value range of 1min to 90 days.
+                     * @param _msgRetentionTime Maximum retention time of instance logs, in minutes, with a value range of 1min to 90 days.
                      * 
                      */
                     void SetMsgRetentionTime(const int64_t& _msgRetentionTime);
@@ -88,15 +88,15 @@ namespace TencentCloud
                     bool MsgRetentionTimeHasBeenSet() const;
 
                     /**
-                     * 获取Instance name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
-                     * @return InstanceName Instance name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+                     * 获取Specifies the Name of the ckafka cluster instance.
+                     * @return InstanceName Specifies the Name of the ckafka cluster instance.
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
-                     * @param _instanceName Instance name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+                     * 设置Specifies the Name of the ckafka cluster instance.
+                     * @param _instanceName Specifies the Name of the ckafka cluster instance.
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -151,15 +151,15 @@ namespace TencentCloud
                     bool DynamicRetentionConfigHasBeenSet() const;
 
                     /**
-                     * 获取Modification of the rebalancing time after upgrade
-                     * @return RebalanceTime Modification of the rebalancing time after upgrade
+                     * 获取Specifies the execution time of a scheduled task for edition upgrade or configuration upgrade in Unix timestamp, accurate to the second.
+                     * @return RebalanceTime Specifies the execution time of a scheduled task for edition upgrade or configuration upgrade in Unix timestamp, accurate to the second.
                      * 
                      */
                     int64_t GetRebalanceTime() const;
 
                     /**
-                     * 设置Modification of the rebalancing time after upgrade
-                     * @param _rebalanceTime Modification of the rebalancing time after upgrade
+                     * 设置Specifies the execution time of a scheduled task for edition upgrade or configuration upgrade in Unix timestamp, accurate to the second.
+                     * @param _rebalanceTime Specifies the execution time of a scheduled task for edition upgrade or configuration upgrade in Unix timestamp, accurate to the second.
                      * 
                      */
                     void SetRebalanceTime(const int64_t& _rebalanceTime);
@@ -172,15 +172,15 @@ namespace TencentCloud
                     bool RebalanceTimeHasBeenSet() const;
 
                     /**
-                     * 获取Public network bandwidth
-                     * @return PublicNetwork Public network bandwidth
+                     * 获取Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
+                     * @return PublicNetwork Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
                      * 
                      */
                     int64_t GetPublicNetwork() const;
 
                     /**
-                     * 设置Public network bandwidth
-                     * @param _publicNetwork Public network bandwidth
+                     * 设置Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
+                     * @param _publicNetwork Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
                      * 
                      */
                     void SetPublicNetwork(const int64_t& _publicNetwork);
@@ -195,34 +195,34 @@ namespace TencentCloud
                     /**
                      * 获取Dynamic disk expansion policy configuration.
                      * @return DynamicDiskConfig Dynamic disk expansion policy configuration.
-                     * 
+                     * @deprecated
                      */
                     DynamicDiskConfig GetDynamicDiskConfig() const;
 
                     /**
                      * 设置Dynamic disk expansion policy configuration.
                      * @param _dynamicDiskConfig Dynamic disk expansion policy configuration.
-                     * 
+                     * @deprecated
                      */
                     void SetDynamicDiskConfig(const DynamicDiskConfig& _dynamicDiskConfig);
 
                     /**
                      * 判断参数 DynamicDiskConfig 是否已赋值
                      * @return DynamicDiskConfig 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool DynamicDiskConfigHasBeenSet() const;
 
                     /**
-                     * 获取The size of a single message in bytes at the instance level.
-                     * @return MaxMessageByte The size of a single message in bytes at the instance level.
+                     * 获取Single message size at the instance level (unit: byte). value range: 1024 (excluding) to 12582912 (excluding).
+                     * @return MaxMessageByte Single message size at the instance level (unit: byte). value range: 1024 (excluding) to 12582912 (excluding).
                      * 
                      */
                     uint64_t GetMaxMessageByte() const;
 
                     /**
-                     * 设置The size of a single message in bytes at the instance level.
-                     * @param _maxMessageByte The size of a single message in bytes at the instance level.
+                     * 设置Single message size at the instance level (unit: byte). value range: 1024 (excluding) to 12582912 (excluding).
+                     * @param _maxMessageByte Single message size at the instance level (unit: byte). value range: 1024 (excluding) to 12582912 (excluding).
                      * 
                      */
                     void SetMaxMessageByte(const uint64_t& _maxMessageByte);
@@ -234,22 +234,64 @@ namespace TencentCloud
                      */
                     bool MaxMessageByteHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to allow unsynchronized replicas to be elected as leader. valid values: 1 (enable), 0 (disable).
+                     * @return UncleanLeaderElectionEnable Whether to allow unsynchronized replicas to be elected as leader. valid values: 1 (enable), 0 (disable).
+                     * 
+                     */
+                    int64_t GetUncleanLeaderElectionEnable() const;
+
+                    /**
+                     * 设置Whether to allow unsynchronized replicas to be elected as leader. valid values: 1 (enable), 0 (disable).
+                     * @param _uncleanLeaderElectionEnable Whether to allow unsynchronized replicas to be elected as leader. valid values: 1 (enable), 0 (disable).
+                     * 
+                     */
+                    void SetUncleanLeaderElectionEnable(const int64_t& _uncleanLeaderElectionEnable);
+
+                    /**
+                     * 判断参数 UncleanLeaderElectionEnable 是否已赋值
+                     * @return UncleanLeaderElectionEnable 是否已赋值
+                     * 
+                     */
+                    bool UncleanLeaderElectionEnableHasBeenSet() const;
+
+                    /**
+                     * 获取Instance deletion protection switch. 1: enabled; 0: disabled.
+                     * @return DeleteProtectionEnable Instance deletion protection switch. 1: enabled; 0: disabled.
+                     * 
+                     */
+                    int64_t GetDeleteProtectionEnable() const;
+
+                    /**
+                     * 设置Instance deletion protection switch. 1: enabled; 0: disabled.
+                     * @param _deleteProtectionEnable Instance deletion protection switch. 1: enabled; 0: disabled.
+                     * 
+                     */
+                    void SetDeleteProtectionEnable(const int64_t& _deleteProtectionEnable);
+
+                    /**
+                     * 判断参数 DeleteProtectionEnable 是否已赋值
+                     * @return DeleteProtectionEnable 是否已赋值
+                     * 
+                     */
+                    bool DeleteProtectionEnableHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance ID
+                     * ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Maximum retention period in minutes for instance log, which can be up to 30 days. 0 indicates not to enable the log retention period policy
+                     * Maximum retention time of instance logs, in minutes, with a value range of 1min to 90 days.
                      */
                     int64_t m_msgRetentionTime;
                     bool m_msgRetentionTimeHasBeenSet;
 
                     /**
-                     * Instance name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+                     * Specifies the Name of the ckafka cluster instance.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
@@ -267,13 +309,13 @@ namespace TencentCloud
                     bool m_dynamicRetentionConfigHasBeenSet;
 
                     /**
-                     * Modification of the rebalancing time after upgrade
+                     * Specifies the execution time of a scheduled task for edition upgrade or configuration upgrade in Unix timestamp, accurate to the second.
                      */
                     int64_t m_rebalanceTime;
                     bool m_rebalanceTimeHasBeenSet;
 
                     /**
-                     * Public network bandwidth
+                     * Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
                      */
                     int64_t m_publicNetwork;
                     bool m_publicNetworkHasBeenSet;
@@ -285,10 +327,22 @@ namespace TencentCloud
                     bool m_dynamicDiskConfigHasBeenSet;
 
                     /**
-                     * The size of a single message in bytes at the instance level.
+                     * Single message size at the instance level (unit: byte). value range: 1024 (excluding) to 12582912 (excluding).
                      */
                     uint64_t m_maxMessageByte;
                     bool m_maxMessageByteHasBeenSet;
+
+                    /**
+                     * Whether to allow unsynchronized replicas to be elected as leader. valid values: 1 (enable), 0 (disable).
+                     */
+                    int64_t m_uncleanLeaderElectionEnable;
+                    bool m_uncleanLeaderElectionEnableHasBeenSet;
+
+                    /**
+                     * Instance deletion protection switch. 1: enabled; 0: disabled.
+                     */
+                    int64_t m_deleteProtectionEnable;
+                    bool m_deleteProtectionEnableHasBeenSet;
 
                 };
             }

@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of returned topic information
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TopicList List of returned topic information
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取List of returned topic information.
+                     * @return TopicList List of returned topic information.
                      * 
                      */
                     std::vector<Topic> GetTopicList() const;
 
                     /**
-                     * 设置List of returned topic information
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _topicList List of returned topic information
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置List of returned topic information.
+                     * @param _topicList List of returned topic information.
                      * 
                      */
                     void SetTopicList(const std::vector<Topic>& _topicList);
@@ -73,19 +69,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TopicListHasBeenSet() const;
 
                     /**
-                     * 获取Number of eligible topics
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TotalCount Number of eligible topics
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of eligible topics.
+                     * @return TotalCount Number of eligible topics.
                      * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
-                     * 设置Number of eligible topics
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _totalCount Number of eligible topics
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of eligible topics.
+                     * @param _totalCount Number of eligible topics.
                      * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
@@ -100,15 +92,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * List of returned topic information
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * List of returned topic information.
                      */
                     std::vector<Topic> m_topicList;
                     bool m_topicListHasBeenSet;
 
                     /**
-                     * Number of eligible topics
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Number of eligible topics.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

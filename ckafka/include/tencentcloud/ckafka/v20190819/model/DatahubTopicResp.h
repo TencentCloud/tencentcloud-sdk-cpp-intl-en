@@ -68,19 +68,15 @@ namespace TencentCloud
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取TopicId
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TopicId TopicId
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Topic Id.
+                     * @return TopicId Topic Id.
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置TopicId
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _topicId TopicId
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Topic Id.
+                     * @param _topicId Topic Id.
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -101,8 +97,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * TopicId
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Topic Id.
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;

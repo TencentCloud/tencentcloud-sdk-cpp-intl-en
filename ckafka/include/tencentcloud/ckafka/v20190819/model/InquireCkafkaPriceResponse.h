@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Output parameters
-                     * @return Result Output parameters
+                     * 获取Returned result.
+                     * @return Result Returned result.
                      * 
                      */
                     InquireCkafkaPriceResp GetResult() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Output parameters
+                     * Returned result.
                      */
                     InquireCkafkaPriceResp m_result;
                     bool m_resultHasBeenSet;

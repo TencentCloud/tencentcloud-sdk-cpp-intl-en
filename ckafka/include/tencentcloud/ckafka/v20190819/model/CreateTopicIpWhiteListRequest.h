@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+                     * @return InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+                     * @param _instanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Topic name
-                     * @return TopicName Topic name
+                     * 获取Specifies the topic name, which can be obtained through the [DescribeTopic](https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1) api.
+                     * @return TopicName Specifies the topic name, which can be obtained through the [DescribeTopic](https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetTopicName() const;
 
                     /**
-                     * 设置Topic name
-                     * @param _topicName Topic name
+                     * 设置Specifies the topic name, which can be obtained through the [DescribeTopic](https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1) api.
+                     * @param _topicName Specifies the topic name, which can be obtained through the [DescribeTopic](https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1) api.
                      * 
                      */
                     void SetTopicName(const std::string& _topicName);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取IP allowlist list
-                     * @return IpWhiteList IP allowlist list
+                     * 获取Allowlist list. maximum value is 512. upper limit for incoming ips is 512.
+                     * @return IpWhiteList Allowlist list. maximum value is 512. upper limit for incoming ips is 512.
                      * 
                      */
                     std::vector<std::string> GetIpWhiteList() const;
 
                     /**
-                     * 设置IP allowlist list
-                     * @param _ipWhiteList IP allowlist list
+                     * 设置Allowlist list. maximum value is 512. upper limit for incoming ips is 512.
+                     * @param _ipWhiteList Allowlist list. maximum value is 512. upper limit for incoming ips is 512.
                      * 
                      */
                     void SetIpWhiteList(const std::vector<std::string>& _ipWhiteList);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Topic name
+                     * Specifies the topic name, which can be obtained through the [DescribeTopic](https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1) api.
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * IP allowlist list
+                     * Allowlist list. maximum value is 512. upper limit for incoming ips is 512.
                      */
                     std::vector<std::string> m_ipWhiteList;
                     bool m_ipWhiteListHasBeenSet;

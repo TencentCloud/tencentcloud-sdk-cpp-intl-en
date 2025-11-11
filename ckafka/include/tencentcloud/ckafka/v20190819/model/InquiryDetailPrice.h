@@ -148,19 +148,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TopicPriceHasBeenSet() const;
 
                     /**
-                     * 获取Instance package price
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceTypePrice Instance package price
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance package price.
+                     * @return InstanceTypePrice Instance package price.
                      * 
                      */
                     InquiryBasePrice GetInstanceTypePrice() const;
 
                     /**
-                     * 设置Instance package price
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceTypePrice Instance package price
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance package price.
+                     * @param _instanceTypePrice Instance package price.
                      * 
                      */
                     void SetInstanceTypePrice(const InquiryBasePrice& _instanceTypePrice);
@@ -203,8 +199,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_topicPriceHasBeenSet;
 
                     /**
-                     * Instance package price
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance package price.
                      */
                     InquiryBasePrice m_instanceTypePrice;
                     bool m_instanceTypePriceHasBeenSet;

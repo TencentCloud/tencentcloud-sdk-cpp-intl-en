@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Status code.
-                     * @return Result Status code.
+                     * 获取Status code: 0 - modification succeeded, otherwise modification failed.
+                     * @return Result Status code: 0 - modification succeeded, otherwise modification failed.
                      * 
                      */
                     int64_t GetResult() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Status code.
+                     * Status code: 0 - modification succeeded, otherwise modification failed.
                      */
                     int64_t m_result;
                     bool m_resultHasBeenSet;

@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of the returned results of enumerated regions
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return Result List of the returned results of enumerated regions
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取Returns the region enumeration result list.
+                     * @return Result Returns the region enumeration result list.
                      * 
                      */
                     std::vector<Region> GetResult() const;
@@ -63,8 +61,7 @@ Note: `null` may be returned for this field, indicating that no valid values can
                 private:
 
                     /**
-                     * List of the returned results of enumerated regions
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * Returns the region enumeration result list.
                      */
                     std::vector<Region> m_result;
                     bool m_resultHasBeenSet;

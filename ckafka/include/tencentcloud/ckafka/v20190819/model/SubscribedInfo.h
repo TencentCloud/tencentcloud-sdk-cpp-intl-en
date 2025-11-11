@@ -69,19 +69,15 @@ namespace TencentCloud
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取Subscribed partition
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Partition Subscribed partition
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the subscription partition.
+                     * @return Partition Specifies the subscription partition.
                      * 
                      */
                     std::vector<int64_t> GetPartition() const;
 
                     /**
-                     * 设置Subscribed partition
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _partition Subscribed partition
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the subscription partition.
+                     * @param _partition Specifies the subscription partition.
                      * 
                      */
                     void SetPartition(const std::vector<int64_t>& _partition);
@@ -94,19 +90,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PartitionHasBeenSet() const;
 
                     /**
-                     * 获取Partition offset information
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PartitionOffset Partition offset information
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the partition offset information.
+                     * @return PartitionOffset Specifies the partition offset information.
                      * 
                      */
                     std::vector<PartitionOffset> GetPartitionOffset() const;
 
                     /**
-                     * 设置Partition offset information
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _partitionOffset Partition offset information
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the partition offset information.
+                     * @param _partitionOffset Specifies the partition offset information.
                      * 
                      */
                     void SetPartitionOffset(const std::vector<PartitionOffset>& _partitionOffset);
@@ -119,19 +111,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PartitionOffsetHasBeenSet() const;
 
                     /**
-                     * 获取ID of the subscribed topic. 
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TopicId ID of the subscribed topic. 
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Subscribed topic ID.
+                     * @return TopicId Subscribed topic ID.
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置ID of the subscribed topic. 
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _topicId ID of the subscribed topic. 
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Subscribed topic ID.
+                     * @param _topicId Subscribed topic ID.
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -152,22 +140,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * Subscribed partition
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Specifies the subscription partition.
                      */
                     std::vector<int64_t> m_partition;
                     bool m_partitionHasBeenSet;
 
                     /**
-                     * Partition offset information
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Specifies the partition offset information.
                      */
                     std::vector<PartitionOffset> m_partitionOffset;
                     bool m_partitionOffsetHasBeenSet;
 
                     /**
-                     * ID of the subscribed topic. 
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Subscribed topic ID.
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;

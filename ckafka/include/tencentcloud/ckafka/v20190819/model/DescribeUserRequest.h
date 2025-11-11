@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取The ckafka cluster instance Id.
+                     * @return InstanceId The ckafka cluster instance Id.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置The ckafka cluster instance Id.
+                     * @param _instanceId The ckafka cluster instance Id.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SearchWordHasBeenSet() const;
 
                     /**
-                     * 获取Offset
-                     * @return Offset Offset
+                     * 获取Offset.
+                     * @return Offset Offset.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset
-                     * @param _offset Offset
+                     * 设置Offset.
+                     * @param _offset Offset.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of results to be returned in this request
-                     * @return Limit Number of results to be returned in this request
+                     * 获取The number of returns.
+                     * @return Limit The number of returns.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results to be returned in this request
-                     * @param _limit Number of results to be returned in this request
+                     * 设置The number of returns.
+                     * @param _limit The number of returns.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -129,7 +129,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * The ckafka cluster instance Id.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -141,13 +141,13 @@ namespace TencentCloud
                     bool m_searchWordHasBeenSet;
 
                     /**
-                     * Offset
+                     * Offset.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of results to be returned in this request
+                     * The number of returns.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

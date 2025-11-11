@@ -97,19 +97,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is a supported version
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsUnSupportVersion Whether it is a supported version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies whether supported versions are required or not.
+                     * @return IsUnSupportVersion Specifies whether supported versions are required or not.
                      * 
                      */
                     bool GetIsUnSupportVersion() const;
 
                     /**
-                     * 设置Whether it is a supported version
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isUnSupportVersion Whether it is a supported version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies whether supported versions are required or not.
+                     * @param _isUnSupportVersion Specifies whether supported versions are required or not.
                      * 
                      */
                     void SetIsUnSupportVersion(const bool& _isUnSupportVersion);
@@ -138,8 +134,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_timeHasBeenSet;
 
                     /**
-                     * Whether it is a supported version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies whether supported versions are required or not.
                      */
                     bool m_isUnSupportVersion;
                     bool m_isUnSupportVersionHasBeenSet;

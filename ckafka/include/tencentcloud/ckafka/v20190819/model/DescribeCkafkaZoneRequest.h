@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cloud Dedicated Cluster (CDC) business parameter.
-                     * @return CdcId Cloud Dedicated Cluster (CDC) business parameter.
+                     * 获取cdc cluster Id.
+                     * @return CdcId cdc cluster Id.
                      * 
                      */
                     std::string GetCdcId() const;
 
                     /**
-                     * 设置Cloud Dedicated Cluster (CDC) business parameter.
-                     * @param _cdcId Cloud Dedicated Cluster (CDC) business parameter.
+                     * 设置cdc cluster Id.
+                     * @param _cdcId cdc cluster Id.
                      * 
                      */
                     void SetCdcId(const std::string& _cdcId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cloud Dedicated Cluster (CDC) business parameter.
+                     * cdc cluster Id.
                      */
                     std::string m_cdcId;
                     bool m_cdcIdHasBeenSet;

@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Output information Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Output Output information Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Output information.
+                     * @return Output Output information.
                      * 
                      */
                     std::string GetOutput() const;
 
                     /**
-                     * 设置Output information Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _output Output information Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Output information.
+                     * @param _output Output information.
                      * 
                      */
                     void SetOutput(const std::string& _output);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Output information Note: This field may return null, indicating that no valid values can be obtained.
+                     * Output information.
                      */
                     std::string m_output;
                     bool m_outputHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+                     * @return InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+                     * @param _instanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool RuleNameHasBeenSet() const;
 
                     /**
-                     * 获取ACL rule matching type
-                     * @return PatternType ACL rule matching type
+                     * 获取ACL rule-based matching type (PREFIXED: prefix match, PRESET: PRESET policy).
+                     * @return PatternType ACL rule-based matching type (PREFIXED: prefix match, PRESET: PRESET policy).
                      * 
                      */
                     std::string GetPatternType() const;
 
                     /**
-                     * 设置ACL rule matching type
-                     * @param _patternType ACL rule matching type
+                     * 设置ACL rule-based matching type (PREFIXED: prefix match, PRESET: PRESET policy).
+                     * @param _patternType ACL rule-based matching type (PREFIXED: prefix match, PRESET: PRESET policy).
                      * 
                      */
                     void SetPatternType(const std::string& _patternType);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool PatternTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to read simplified ACL rules
-                     * @return IsSimplified Whether to read simplified ACL rules
+                     * 获取Specifies whether to read the simplified ACL rule. default value is false, which means not to read the simplified ACL rule.
+                     * @return IsSimplified Specifies whether to read the simplified ACL rule. default value is false, which means not to read the simplified ACL rule.
                      * 
                      */
                     bool GetIsSimplified() const;
 
                     /**
-                     * 设置Whether to read simplified ACL rules
-                     * @param _isSimplified Whether to read simplified ACL rules
+                     * 设置Specifies whether to read the simplified ACL rule. default value is false, which means not to read the simplified ACL rule.
+                     * @param _isSimplified Specifies whether to read the simplified ACL rule. default value is false, which means not to read the simplified ACL rule.
                      * 
                      */
                     void SetIsSimplified(const bool& _isSimplified);
@@ -129,7 +129,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -141,13 +141,13 @@ namespace TencentCloud
                     bool m_ruleNameHasBeenSet;
 
                     /**
-                     * ACL rule matching type
+                     * ACL rule-based matching type (PREFIXED: prefix match, PRESET: PRESET policy).
                      */
                     std::string m_patternType;
                     bool m_patternTypeHasBeenSet;
 
                     /**
-                     * Whether to read simplified ACL rules
+                     * Specifies whether to read the simplified ACL rule. default value is false, which means not to read the simplified ACL rule.
                      */
                     bool m_isSimplified;
                     bool m_isSimplifiedHasBeenSet;

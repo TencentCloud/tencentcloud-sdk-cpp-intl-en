@@ -155,19 +155,15 @@ namespace TencentCloud
                     bool MessagePriceHasBeenSet() const;
 
                     /**
-                     * 获取Cluster information dedicated to a user
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return ClusterInfo Cluster information dedicated to a user
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取Specifies the user-exclusive cluster info.
+                     * @return ClusterInfo Specifies the user-exclusive cluster info.
                      * 
                      */
                     std::vector<ClusterInfo> GetClusterInfo() const;
 
                     /**
-                     * 设置Cluster information dedicated to a user
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param _clusterInfo Cluster information dedicated to a user
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 设置Specifies the user-exclusive cluster info.
+                     * @param _clusterInfo Specifies the user-exclusive cluster info.
                      * 
                      */
                     void SetClusterInfo(const std::vector<ClusterInfo>& _clusterInfo);
@@ -180,19 +176,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool ClusterInfoHasBeenSet() const;
 
                     /**
-                     * 获取Purchase of Standard Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return Standard Purchase of Standard Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取Purchase the standard version configuration.
+                     * @return Standard Purchase the standard version configuration.
                      * 
                      */
                     std::string GetStandard() const;
 
                     /**
-                     * 设置Purchase of Standard Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param _standard Purchase of Standard Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 设置Purchase the standard version configuration.
+                     * @param _standard Purchase the standard version configuration.
                      * 
                      */
                     void SetStandard(const std::string& _standard);
@@ -205,19 +197,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool StandardHasBeenSet() const;
 
                     /**
-                     * 获取Purchase of Standard S2 Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return StandardS2 Purchase of Standard S2 Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取Purchase the standard version S2 configuration.
+                     * @return StandardS2 Purchase the standard version S2 configuration.
                      * 
                      */
                     std::string GetStandardS2() const;
 
                     /**
-                     * 设置Purchase of Standard S2 Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param _standardS2 Purchase of Standard S2 Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 设置Purchase the standard version S2 configuration.
+                     * @param _standardS2 Purchase the standard version S2 configuration.
                      * 
                      */
                     void SetStandardS2(const std::string& _standardS2);
@@ -230,19 +218,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool StandardS2HasBeenSet() const;
 
                     /**
-                     * 获取Purchase of Pro Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return Profession Purchase of Pro Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取Specifies the configuration for purchasing the professional edition.
+                     * @return Profession Specifies the configuration for purchasing the professional edition.
                      * 
                      */
                     std::string GetProfession() const;
 
                     /**
-                     * 设置Purchase of Pro Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param _profession Purchase of Pro Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 设置Specifies the configuration for purchasing the professional edition.
+                     * @param _profession Specifies the configuration for purchasing the professional edition.
                      * 
                      */
                     void SetProfession(const std::string& _profession);
@@ -255,19 +239,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool ProfessionHasBeenSet() const;
 
                     /**
-                     * 获取Purchase of Physical Dedicated Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return Physical Purchase of Physical Dedicated Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取Purchase physical dedicated edition configuration.
+                     * @return Physical Purchase physical dedicated edition configuration.
                      * 
                      */
                     std::string GetPhysical() const;
 
                     /**
-                     * 设置Purchase of Physical Dedicated Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param _physical Purchase of Physical Dedicated Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 设置Purchase physical dedicated edition configuration.
+                     * @param _physical Purchase physical dedicated edition configuration.
                      * 
                      */
                     void SetPhysical(const std::string& _physical);
@@ -280,19 +260,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool PhysicalHasBeenSet() const;
 
                     /**
-                     * 获取Public network bandwidth.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return PublicNetwork Public network bandwidth.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. abandoned, meaningless.
+                     * @return PublicNetwork Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. abandoned, meaningless.
                      * 
                      */
                     std::string GetPublicNetwork() const;
 
                     /**
-                     * 设置Public network bandwidth.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _publicNetwork Public network bandwidth.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. abandoned, meaningless.
+                     * @param _publicNetwork Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. abandoned, meaningless.
                      * 
                      */
                     void SetPublicNetwork(const std::string& _publicNetwork);
@@ -305,19 +281,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool PublicNetworkHasBeenSet() const;
 
                     /**
-                     * 获取Public network bandwidth configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return PublicNetworkLimit Public network bandwidth configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Configures the public network bandwidth.
+                     * @return PublicNetworkLimit Configures the public network bandwidth.
                      * 
                      */
                     std::string GetPublicNetworkLimit() const;
 
                     /**
-                     * 设置Public network bandwidth configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _publicNetworkLimit Public network bandwidth configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Configures the public network bandwidth.
+                     * @param _publicNetworkLimit Configures the public network bandwidth.
                      * 
                      */
                     void SetPublicNetworkLimit(const std::string& _publicNetworkLimit);
@@ -328,6 +300,90 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      * 
                      */
                     bool PublicNetworkLimitHasBeenSet() const;
+
+                    /**
+                     * 获取Request ID.
+                     * @return RequestId Request ID.
+                     * 
+                     */
+                    std::string GetRequestId() const;
+
+                    /**
+                     * 设置Request ID.
+                     * @param _requestId Request ID.
+                     * 
+                     */
+                    void SetRequestId(const std::string& _requestId);
+
+                    /**
+                     * 判断参数 RequestId 是否已赋值
+                     * @return RequestId 是否已赋值
+                     * 
+                     */
+                    bool RequestIdHasBeenSet() const;
+
+                    /**
+                     * 获取Pagination Offset
+                     * @return Offset Pagination Offset
+                     * 
+                     */
+                    int64_t GetOffset() const;
+
+                    /**
+                     * 设置Pagination Offset
+                     * @param _offset Pagination Offset
+                     * 
+                     */
+                    void SetOffset(const int64_t& _offset);
+
+                    /**
+                     * 判断参数 Offset 是否已赋值
+                     * @return Offset 是否已赋值
+                     * 
+                     */
+                    bool OffsetHasBeenSet() const;
+
+                    /**
+                     * 获取Pagination Limit
+                     * @return Limit Pagination Limit
+                     * 
+                     */
+                    int64_t GetLimit() const;
+
+                    /**
+                     * 设置Pagination Limit
+                     * @param _limit Pagination Limit
+                     * 
+                     */
+                    void SetLimit(const int64_t& _limit);
+
+                    /**
+                     * 判断参数 Limit 是否已赋值
+                     * @return Limit 是否已赋值
+                     * 
+                     */
+                    bool LimitHasBeenSet() const;
+
+                    /**
+                     * 获取Mandatory. input tag.
+                     * @return ForceCheckTag Mandatory. input tag.
+                     * 
+                     */
+                    bool GetForceCheckTag() const;
+
+                    /**
+                     * 设置Mandatory. input tag.
+                     * @param _forceCheckTag Mandatory. input tag.
+                     * 
+                     */
+                    void SetForceCheckTag(const bool& _forceCheckTag);
+
+                    /**
+                     * 判断参数 ForceCheckTag 是否已赋值
+                     * @return ForceCheckTag 是否已赋值
+                     * 
+                     */
+                    bool ForceCheckTagHasBeenSet() const;
 
                 private:
 
@@ -362,53 +418,70 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_messagePriceHasBeenSet;
 
                     /**
-                     * Cluster information dedicated to a user
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * Specifies the user-exclusive cluster info.
                      */
                     std::vector<ClusterInfo> m_clusterInfo;
                     bool m_clusterInfoHasBeenSet;
 
                     /**
-                     * Purchase of Standard Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * Purchase the standard version configuration.
                      */
                     std::string m_standard;
                     bool m_standardHasBeenSet;
 
                     /**
-                     * Purchase of Standard S2 Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * Purchase the standard version S2 configuration.
                      */
                     std::string m_standardS2;
                     bool m_standardS2HasBeenSet;
 
                     /**
-                     * Purchase of Pro Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * Specifies the configuration for purchasing the professional edition.
                      */
                     std::string m_profession;
                     bool m_professionHasBeenSet;
 
                     /**
-                     * Purchase of Physical Dedicated Edition configurations
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * Purchase physical dedicated edition configuration.
                      */
                     std::string m_physical;
                     bool m_physicalHasBeenSet;
 
                     /**
-                     * Public network bandwidth.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. abandoned, meaningless.
                      */
                     std::string m_publicNetwork;
                     bool m_publicNetworkHasBeenSet;
 
                     /**
-                     * Public network bandwidth configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Configures the public network bandwidth.
                      */
                     std::string m_publicNetworkLimit;
                     bool m_publicNetworkLimitHasBeenSet;
+
+                    /**
+                     * Request ID.
+                     */
+                    std::string m_requestId;
+                    bool m_requestIdHasBeenSet;
+
+                    /**
+                     * Pagination Offset
+                     */
+                    int64_t m_offset;
+                    bool m_offsetHasBeenSet;
+
+                    /**
+                     * Pagination Limit
+                     */
+                    int64_t m_limit;
+                    bool m_limitHasBeenSet;
+
+                    /**
+                     * Mandatory. input tag.
+                     */
+                    bool m_forceCheckTag;
+                    bool m_forceCheckTagHasBeenSet;
 
                 };
             }

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Sales information of Standard Edition
+                * Sales information of versions.
                 */
                 class SaleInfo : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Manually set flag.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Flag Manually set flag.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取The manually configured flag. valid values: true (sold-out), false (available).
+                     * @return Flag The manually configured flag. valid values: true (sold-out), false (available).
                      * 
                      */
                     bool GetFlag() const;
 
                     /**
-                     * 设置Manually set flag.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _flag Manually set flag.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置The manually configured flag. valid values: true (sold-out), false (available).
+                     * @param _flag The manually configured flag. valid values: true (sold-out), false (available).
                      * 
                      */
                     void SetFlag(const bool& _flag);
@@ -72,19 +68,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool FlagHasBeenSet() const;
 
                     /**
-                     * 获取CKafka version (v1.1.1/2.4.2/0.10.2）
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Version CKafka version (v1.1.1/2.4.2/0.10.2）
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Specifies the ckafka version number (1.1.1/2.4.2/0.10.2).
+                     * @return Version Specifies the ckafka version number (1.1.1/2.4.2/0.10.2).
                      * 
                      */
                     std::string GetVersion() const;
 
                     /**
-                     * 设置CKafka version (v1.1.1/2.4.2/0.10.2）
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _version CKafka version (v1.1.1/2.4.2/0.10.2）
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Specifies the ckafka version number (1.1.1/2.4.2/0.10.2).
+                     * @param _version Specifies the ckafka version number (1.1.1/2.4.2/0.10.2).
                      * 
                      */
                     void SetVersion(const std::string& _version);
@@ -97,19 +89,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool VersionHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is Pro Edition or Standard Edition.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Platform Whether it is Pro Edition or Standard Edition.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Pro edition, standard version flag.
+                     * @return Platform Pro edition, standard version flag.
                      * 
                      */
                     std::string GetPlatform() const;
 
                     /**
-                     * 设置Whether it is Pro Edition or Standard Edition.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _platform Whether it is Pro Edition or Standard Edition.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Pro edition, standard version flag.
+                     * @param _platform Pro edition, standard version flag.
                      * 
                      */
                     void SetPlatform(const std::string& _platform);
@@ -122,19 +110,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool PlatformHasBeenSet() const;
 
                     /**
-                     * 获取Whether it has been sold out. `true`: sold out.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return SoldOut Whether it has been sold out. `true`: sold out.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Specifies whether the item is sold-out. valid values: true (sold-out).
+                     * @return SoldOut Specifies whether the item is sold-out. valid values: true (sold-out).
                      * 
                      */
                     bool GetSoldOut() const;
 
                     /**
-                     * 设置Whether it has been sold out. `true`: sold out.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _soldOut Whether it has been sold out. `true`: sold out.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Specifies whether the item is sold-out. valid values: true (sold-out).
+                     * @param _soldOut Specifies whether the item is sold-out. valid values: true (sold-out).
                      * 
                      */
                     void SetSoldOut(const bool& _soldOut);
@@ -149,29 +133,25 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Manually set flag.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * The manually configured flag. valid values: true (sold-out), false (available).
                      */
                     bool m_flag;
                     bool m_flagHasBeenSet;
 
                     /**
-                     * CKafka version (v1.1.1/2.4.2/0.10.2）
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Specifies the ckafka version number (1.1.1/2.4.2/0.10.2).
                      */
                     std::string m_version;
                     bool m_versionHasBeenSet;
 
                     /**
-                     * Whether it is Pro Edition or Standard Edition.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Pro edition, standard version flag.
                      */
                     std::string m_platform;
                     bool m_platformHasBeenSet;
 
                     /**
-                     * Whether it has been sold out. `true`: sold out.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Specifies whether the item is sold-out. valid values: true (sold-out).
                      */
                     bool m_soldOut;
                     bool m_soldOutHasBeenSet;

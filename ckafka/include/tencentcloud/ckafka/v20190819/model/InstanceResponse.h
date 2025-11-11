@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of eligible instances
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceList List of eligible instances
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the list of instances meeting the conditions.
+                     * @return InstanceList Specifies the list of instances meeting the conditions.
                      * 
                      */
                     std::vector<Instance> GetInstanceList() const;
 
                     /**
-                     * 设置List of eligible instances
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceList List of eligible instances
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the list of instances meeting the conditions.
+                     * @param _instanceList Specifies the list of instances meeting the conditions.
                      * 
                      */
                     void SetInstanceList(const std::vector<Instance>& _instanceList);
@@ -73,19 +69,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool InstanceListHasBeenSet() const;
 
                     /**
-                     * 获取Total number of eligible results
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TotalCount Total number of eligible results
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Total results that meet the conditions.
+                     * @return TotalCount Total results that meet the conditions.
                      * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
-                     * 设置Total number of eligible results
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _totalCount Total number of eligible results
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Total results that meet the conditions.
+                     * @param _totalCount Total results that meet the conditions.
                      * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
@@ -100,15 +92,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * List of eligible instances
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Specifies the list of instances meeting the conditions.
                      */
                     std::vector<Instance> m_instanceList;
                     bool m_instanceListHasBeenSet;
 
                     /**
-                     * Total number of eligible results
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Total results that meet the conditions.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

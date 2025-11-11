@@ -89,19 +89,15 @@ namespace TencentCloud
                     bool ResourceNameHasBeenSet() const;
 
                     /**
-                     * 获取User list. The default value is `User:*`, which means that any user can access. The current user can only be one included in the user list
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Principal User list. The default value is `User:*`, which means that any user can access. The current user can only be one included in the user list
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取List of users, defaults to User:*, means any User is accessible in the entire region. the current User can only be the User in the list of users.
+                     * @return Principal List of users, defaults to User:*, means any User is accessible in the entire region. the current User can only be the User in the list of users.
                      * 
                      */
                     std::string GetPrincipal() const;
 
                     /**
-                     * 设置User list. The default value is `User:*`, which means that any user can access. The current user can only be one included in the user list
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _principal User list. The default value is `User:*`, which means that any user can access. The current user can only be one included in the user list
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置List of users, defaults to User:*, means any User is accessible in the entire region. the current User can only be the User in the list of users.
+                     * @param _principal List of users, defaults to User:*, means any User is accessible in the entire region. the current User can only be the User in the list of users.
                      * 
                      */
                     void SetPrincipal(const std::string& _principal);
@@ -114,19 +110,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PrincipalHasBeenSet() const;
 
                     /**
-                     * 获取The default value is `*`, which means that any host can access. Currently, CKafka does not support the host as `*`, but the future product based on the open-source Kafka will directly support this
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Host The default value is `*`, which means that any host can access. Currently, CKafka does not support the host as `*`, but the future product based on the open-source Kafka will directly support this
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Defaults to *, indicating any host is accessible in the entire region. currently, ckafka does not support * as the host, however, the following open-source kafka productization will directly support it.
+                     * @return Host Defaults to *, indicating any host is accessible in the entire region. currently, ckafka does not support * as the host, however, the following open-source kafka productization will directly support it.
                      * 
                      */
                     std::string GetHost() const;
 
                     /**
-                     * 设置The default value is `*`, which means that any host can access. Currently, CKafka does not support the host as `*`, but the future product based on the open-source Kafka will directly support this
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _host The default value is `*`, which means that any host can access. Currently, CKafka does not support the host as `*`, but the future product based on the open-source Kafka will directly support this
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Defaults to *, indicating any host is accessible in the entire region. currently, ckafka does not support * as the host, however, the following open-source kafka productization will directly support it.
+                     * @param _host Defaults to *, indicating any host is accessible in the entire region. currently, ckafka does not support * as the host, however, the following open-source kafka productization will directly support it.
                      * 
                      */
                     void SetHost(const std::string& _host);
@@ -195,15 +187,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_resourceNameHasBeenSet;
 
                     /**
-                     * User list. The default value is `User:*`, which means that any user can access. The current user can only be one included in the user list
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * List of users, defaults to User:*, means any User is accessible in the entire region. the current User can only be the User in the list of users.
                      */
                     std::string m_principal;
                     bool m_principalHasBeenSet;
 
                     /**
-                     * The default value is `*`, which means that any host can access. Currently, CKafka does not support the host as `*`, but the future product based on the open-source Kafka will directly support this
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Defaults to *, indicating any host is accessible in the entire region. currently, ckafka does not support * as the host, however, the following open-source kafka productization will directly support it.
                      */
                     std::string m_host;
                     bool m_hostHasBeenSet;

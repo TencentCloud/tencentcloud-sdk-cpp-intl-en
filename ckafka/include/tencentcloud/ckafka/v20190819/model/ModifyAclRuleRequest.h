@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取The ckafka cluster instance Id.
+                     * @return InstanceId The ckafka cluster instance Id.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置The ckafka cluster instance Id.
+                     * @param _instanceId The ckafka cluster instance Id.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取ACL policy name
-                     * @return RuleName ACL policy name
+                     * 获取ACL rule name.
+                     * @return RuleName ACL rule name.
                      * 
                      */
                     std::string GetRuleName() const;
 
                     /**
-                     * 设置ACL policy name
-                     * @param _ruleName ACL policy name
+                     * 设置ACL rule name.
+                     * @param _ruleName ACL rule name.
                      * 
                      */
                     void SetRuleName(const std::string& _ruleName);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool RuleNameHasBeenSet() const;
 
                     /**
-                     * 获取Whether to be applied to new topics
-                     * @return IsApplied Whether to be applied to new topics
+                     * 获取Specifies whether to apply to newly-added topics when importing predefined rule modifications.
+                     * @return IsApplied Specifies whether to apply to newly-added topics when importing predefined rule modifications.
                      * 
                      */
                     int64_t GetIsApplied() const;
 
                     /**
-                     * 设置Whether to be applied to new topics
-                     * @param _isApplied Whether to be applied to new topics
+                     * 设置Specifies whether to apply to newly-added topics when importing predefined rule modifications.
+                     * @param _isApplied Specifies whether to apply to newly-added topics when importing predefined rule modifications.
                      * 
                      */
                     void SetIsApplied(const int64_t& _isApplied);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * The ckafka cluster instance Id.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * ACL policy name
+                     * ACL rule name.
                      */
                     std::string m_ruleName;
                     bool m_ruleNameHasBeenSet;
 
                     /**
-                     * Whether to be applied to new topics
+                     * Specifies whether to apply to newly-added topics when importing predefined rule modifications.
                      */
                     int64_t m_isApplied;
                     bool m_isAppliedHasBeenSet;

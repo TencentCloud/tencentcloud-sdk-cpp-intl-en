@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Route information list
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Routers Route information list
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Route Information List
+                     * @return Routers Route Information List
                      * 
                      */
                     std::vector<Route> GetRouters() const;
 
                     /**
-                     * 设置Route information list
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _routers Route information list
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Route Information List
+                     * @param _routers Route Information List
                      * 
                      */
                     void SetRouters(const std::vector<Route>& _routers);
@@ -75,8 +71,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Route information list
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Route Information List
                      */
                     std::vector<Route> m_routers;
                     bool m_routersHasBeenSet;

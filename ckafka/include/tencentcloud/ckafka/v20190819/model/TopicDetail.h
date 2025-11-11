@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取Topic ID
-                     * @return TopicId Topic ID
+                     * 获取Topic Id.
+                     * @return TopicId Topic Id.
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置Topic ID
-                     * @param _topicId Topic ID
+                     * 设置Topic Id.
+                     * @param _topicId Topic Id.
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -113,15 +113,15 @@ namespace TencentCloud
                     bool PartitionNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of replicas
-                     * @return ReplicaNum Number of replicas
+                     * 获取Number of topic replicas. valid values: 1, 3.
+                     * @return ReplicaNum Number of topic replicas. valid values: 1, 3.
                      * 
                      */
                     int64_t GetReplicaNum() const;
 
                     /**
-                     * 设置Number of replicas
-                     * @param _replicaNum Number of replicas
+                     * 设置Number of topic replicas. valid values: 1, 3.
+                     * @param _replicaNum Number of topic replicas. valid values: 1, 3.
                      * 
                      */
                     void SetReplicaNum(const int64_t& _replicaNum);
@@ -134,19 +134,15 @@ namespace TencentCloud
                     bool ReplicaNumHasBeenSet() const;
 
                     /**
-                     * 获取Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Note Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Remarks.
+                     * @return Note Remarks.
                      * 
                      */
                     std::string GetNote() const;
 
                     /**
-                     * 设置Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _note Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Remarks.
+                     * @param _note Remarks.
                      * 
                      */
                     void SetNote(const std::string& _note);
@@ -222,19 +218,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IpWhiteListCountHasBeenSet() const;
 
                     /**
-                     * 获取COS bucket for data backup: address of the destination COS bucket
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ForwardCosBucket COS bucket for data backup: address of the destination COS bucket
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Data backup cos bucket. specifies the bucket address for archiving to cos.
+                     * @return ForwardCosBucket Data backup cos bucket. specifies the bucket address for archiving to cos.
                      * 
                      */
                     std::string GetForwardCosBucket() const;
 
                     /**
-                     * 设置COS bucket for data backup: address of the destination COS bucket
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _forwardCosBucket COS bucket for data backup: address of the destination COS bucket
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Data backup cos bucket. specifies the bucket address for archiving to cos.
+                     * @param _forwardCosBucket Data backup cos bucket. specifies the bucket address for archiving to cos.
                      * 
                      */
                     void SetForwardCosBucket(const std::string& _forwardCosBucket);
@@ -289,19 +281,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ForwardIntervalHasBeenSet() const;
 
                     /**
-                     * 获取Advanced configuration
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Config Advanced configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Advanced configuration.
+                     * @return Config Advanced configuration.
                      * 
                      */
                     Config GetConfig() const;
 
                     /**
-                     * 设置Advanced configuration
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _config Advanced configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Advanced configuration.
+                     * @param _config Advanced configuration.
                      * 
                      */
                     void SetConfig(const Config& _config);
@@ -314,19 +302,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ConfigHasBeenSet() const;
 
                     /**
-                     * 获取Message retention time configuration (for recording the latest retention time)
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return RetentionTimeConfig Message retention time configuration (for recording the latest retention time)
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取Message retention period configuration (used for dynamic configuration change records).
+                     * @return RetentionTimeConfig Message retention period configuration (used for dynamic configuration change records).
                      * 
                      */
                     TopicRetentionTimeConfigRsp GetRetentionTimeConfig() const;
 
                     /**
-                     * 设置Message retention time configuration (for recording the latest retention time)
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param _retentionTimeConfig Message retention time configuration (for recording the latest retention time)
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 设置Message retention period configuration (used for dynamic configuration change records).
+                     * @param _retentionTimeConfig Message retention period configuration (used for dynamic configuration change records).
                      * 
                      */
                     void SetRetentionTimeConfig(const TopicRetentionTimeConfigRsp& _retentionTimeConfig);
@@ -339,19 +323,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool RetentionTimeConfigHasBeenSet() const;
 
                     /**
-                     * 获取`0`: normal, `1`: deleted, `2`: deleting
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return Status `0`: normal, `1`: deleted, `2`: deleting
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取0: normal. 1: deleted. 2: deleting.
+                     * @return Status 0: normal. 1: deleted. 2: deleting.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置`0`: normal, `1`: deleted, `2`: deleting
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param _status `0`: normal, `1`: deleted, `2`: deleting
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 设置0: normal. 1: deleted. 2: deleting.
+                     * @param _status 0: normal. 1: deleted. 2: deleting.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -397,7 +377,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * Topic ID
+                     * Topic Id.
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
@@ -409,14 +389,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_partitionNumHasBeenSet;
 
                     /**
-                     * Number of replicas
+                     * Number of topic replicas. valid values: 1, 3.
                      */
                     int64_t m_replicaNum;
                     bool m_replicaNumHasBeenSet;
 
                     /**
-                     * Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Remarks.
                      */
                     std::string m_note;
                     bool m_noteHasBeenSet;
@@ -440,8 +419,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_ipWhiteListCountHasBeenSet;
 
                     /**
-                     * COS bucket for data backup: address of the destination COS bucket
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Data backup cos bucket. specifies the bucket address for archiving to cos.
                      */
                     std::string m_forwardCosBucket;
                     bool m_forwardCosBucketHasBeenSet;
@@ -459,22 +437,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_forwardIntervalHasBeenSet;
 
                     /**
-                     * Advanced configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Advanced configuration.
                      */
                     Config m_config;
                     bool m_configHasBeenSet;
 
                     /**
-                     * Message retention time configuration (for recording the latest retention time)
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * Message retention period configuration (used for dynamic configuration change records).
                      */
                     TopicRetentionTimeConfigRsp m_retentionTimeConfig;
                     bool m_retentionTimeConfigHasBeenSet;
 
                     /**
-                     * `0`: normal, `1`: deleted, `2`: deleting
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 0: normal. 1: deleted. 2: deleting.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;

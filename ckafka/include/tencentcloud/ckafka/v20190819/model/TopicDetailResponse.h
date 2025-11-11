@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of returned topic details
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TopicList List of returned topic details
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取List of returned topic details.
+                     * @return TopicList List of returned topic details.
                      * 
                      */
                     std::vector<TopicDetail> GetTopicList() const;
 
                     /**
-                     * 设置List of returned topic details
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _topicList List of returned topic details
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置List of returned topic details.
+                     * @param _topicList List of returned topic details.
                      * 
                      */
                     void SetTopicList(const std::vector<TopicDetail>& _topicList);
@@ -96,8 +92,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * List of returned topic details
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * List of returned topic details.
                      */
                     std::vector<TopicDetail> m_topicList;
                     bool m_topicListHasBeenSet;

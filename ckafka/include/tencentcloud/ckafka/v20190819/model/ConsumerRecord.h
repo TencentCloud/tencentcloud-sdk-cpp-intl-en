@@ -160,19 +160,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ValueHasBeenSet() const;
 
                     /**
-                     * 获取Message timestamp
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Timestamp Message timestamp
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Message timestamp.
+                     * @return Timestamp Message timestamp.
                      * 
                      */
                     int64_t GetTimestamp() const;
 
                     /**
-                     * 设置Message timestamp
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _timestamp Message timestamp
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Message timestamp.
+                     * @param _timestamp Message timestamp.
                      * 
                      */
                     void SetTimestamp(const int64_t& _timestamp);
@@ -244,8 +240,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_valueHasBeenSet;
 
                     /**
-                     * Message timestamp
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Message timestamp.
                      */
                     int64_t m_timestamp;
                     bool m_timestampHasBeenSet;

@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return InstanceId Instance ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取The ckafka cluster instance Id.
+                     * @return InstanceId The ckafka cluster instance Id.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _instanceId Instance ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置The ckafka cluster instance Id.
+                     * @param _instanceId The ckafka cluster instance Id.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -72,19 +68,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Topic name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return TopicName Topic name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Topic name
+                     * @return TopicName Topic name
                      * 
                      */
                     std::string GetTopicName() const;
 
                     /**
-                     * 设置Topic name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _topicName Topic name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Topic name
+                     * @param _topicName Topic name
                      * 
                      */
                     void SetTopicName(const std::string& _topicName);
@@ -97,19 +89,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取Status code.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ReturnCode Status code.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Operation return code.
+                     * @return ReturnCode Operation return code.
                      * 
                      */
                     std::string GetReturnCode() const;
 
                     /**
-                     * 设置Status code.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _returnCode Status code.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Operation return code.
+                     * @param _returnCode Operation return code.
                      * 
                      */
                     void SetReturnCode(const std::string& _returnCode);
@@ -122,15 +110,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ReturnCodeHasBeenSet() const;
 
                     /**
-                     * 获取Message status.
-                     * @return Message Message status.
+                     * 获取Returned information.
+                     * @return Message Returned information.
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置Message status.
-                     * @param _message Message status.
+                     * 设置Returned information.
+                     * @param _message Returned information.
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -145,28 +133,25 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Instance ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * The ckafka cluster instance Id.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Topic name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Topic name
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * Status code.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Operation return code.
                      */
                     std::string m_returnCode;
                     bool m_returnCodeHasBeenSet;
 
                     /**
-                     * Message status.
+                     * Returned information.
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;

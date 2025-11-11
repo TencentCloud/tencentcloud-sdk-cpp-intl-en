@@ -69,19 +69,15 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Array of partitions in the topic, where each element is a JSON object
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TopicList Array of partitions in the topic, where each element is a JSON object
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取The topic partition array, where each element is a json object.
+                     * @return TopicList The topic partition array, where each element is a json object.
                      * 
                      */
                     std::vector<GroupOffsetTopic> GetTopicList() const;
 
                     /**
-                     * 设置Array of partitions in the topic, where each element is a JSON object
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _topicList Array of partitions in the topic, where each element is a JSON object
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置The topic partition array, where each element is a json object.
+                     * @param _topicList The topic partition array, where each element is a json object.
                      * 
                      */
                     void SetTopicList(const std::vector<GroupOffsetTopic>& _topicList);
@@ -102,8 +98,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Array of partitions in the topic, where each element is a JSON object
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * The topic partition array, where each element is a json object.
                      */
                     std::vector<GroupOffsetTopic> m_topicList;
                     bool m_topicListHasBeenSet;

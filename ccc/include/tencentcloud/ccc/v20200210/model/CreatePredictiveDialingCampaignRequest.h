@@ -193,15 +193,15 @@ namespace TencentCloud
                     bool PriorityHasBeenSet() const;
 
                     /**
-                     * 获取Expected call drop rate, percentage, 5 - 50.
-                     * @return ExpectedAbandonRate Expected call drop rate, percentage, 5 - 50.
+                     * 获取Expected call drop rate. value range: 0-50%.
+                     * @return ExpectedAbandonRate Expected call drop rate. value range: 0-50%.
                      * 
                      */
                     int64_t GetExpectedAbandonRate() const;
 
                     /**
-                     * 设置Expected call drop rate, percentage, 5 - 50.
-                     * @param _expectedAbandonRate Expected call drop rate, percentage, 5 - 50.
+                     * 设置Expected call drop rate. value range: 0-50%.
+                     * @param _expectedAbandonRate Expected call drop rate. value range: 0-50%.
                      * 
                      */
                     void SetExpectedAbandonRate(const int64_t& _expectedAbandonRate);
@@ -468,7 +468,7 @@ namespace TencentCloud
                     bool m_priorityHasBeenSet;
 
                     /**
-                     * Expected call drop rate, percentage, 5 - 50.
+                     * Expected call drop rate. value range: 0-50%.
                      */
                     int64_t m_expectedAbandonRate;
                     bool m_expectedAbandonRateHasBeenSet;

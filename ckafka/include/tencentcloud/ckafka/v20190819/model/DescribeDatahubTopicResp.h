@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool PartitionNumHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time
-                     * @return RetentionMs Expiration time
+                     * 获取Expiration time in milliseconds.
+                     * @return RetentionMs Expiration time in milliseconds.
                      * 
                      */
                     uint64_t GetRetentionMs() const;
 
                     /**
-                     * 设置Expiration time
-                     * @param _retentionMs Expiration time
+                     * 设置Expiration time in milliseconds.
+                     * @param _retentionMs Expiration time in milliseconds.
                      * 
                      */
                     void SetRetentionMs(const uint64_t& _retentionMs);
@@ -152,19 +152,15 @@ namespace TencentCloud
                     bool RetentionMsHasBeenSet() const;
 
                     /**
-                     * 获取Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Note Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Remarks.
+                     * @return Note Remarks.
                      * 
                      */
                     std::string GetNote() const;
 
                     /**
-                     * 设置Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _note Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Remarks.
+                     * @param _note Remarks.
                      * 
                      */
                     void SetNote(const std::string& _note);
@@ -240,19 +236,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Service routing address
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Address Service routing address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the service routing address.
+                     * @return Address Specifies the service routing address.
                      * 
                      */
                     std::string GetAddress() const;
 
                     /**
-                     * 设置Service routing address
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _address Service routing address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the service routing address.
+                     * @param _address Specifies the service routing address.
                      * 
                      */
                     void SetAddress(const std::string& _address);
@@ -291,14 +283,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_partitionNumHasBeenSet;
 
                     /**
-                     * Expiration time
+                     * Expiration time in milliseconds.
                      */
                     uint64_t m_retentionMs;
                     bool m_retentionMsHasBeenSet;
 
                     /**
-                     * Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Remarks.
                      */
                     std::string m_note;
                     bool m_noteHasBeenSet;
@@ -322,8 +313,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Service routing address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the service routing address.
                      */
                     std::string m_address;
                     bool m_addressHasBeenSet;

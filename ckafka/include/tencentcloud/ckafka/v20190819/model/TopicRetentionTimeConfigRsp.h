@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Expected value, i.e., the topic message retention time (min) configured
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return Expect Expected value, i.e., the topic message retention time (min) configured
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取Expected value, the message retention period (in minutes) set by user configuration.
+                     * @return Expect Expected value, the message retention period (in minutes) set by user configuration.
                      * 
                      */
                     int64_t GetExpect() const;
 
                     /**
-                     * 设置Expected value, i.e., the topic message retention time (min) configured
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param _expect Expected value, i.e., the topic message retention time (min) configured
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 设置Expected value, the message retention period (in minutes) set by user configuration.
+                     * @param _expect Expected value, the message retention period (in minutes) set by user configuration.
                      * 
                      */
                     void SetExpect(const int64_t& _expect);
@@ -72,19 +68,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool ExpectHasBeenSet() const;
 
                     /**
-                     * 获取Current value (min), i.e., the retention time currently in effect, which may be dynamically adjusted
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return Current Current value (min), i.e., the retention time currently in effect, which may be dynamically adjusted
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取Current value, which is the current effective value (may contain dynamic adjustment in minutes).
+                     * @return Current Current value, which is the current effective value (may contain dynamic adjustment in minutes).
                      * 
                      */
                     int64_t GetCurrent() const;
 
                     /**
-                     * 设置Current value (min), i.e., the retention time currently in effect, which may be dynamically adjusted
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param _current Current value (min), i.e., the retention time currently in effect, which may be dynamically adjusted
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 设置Current value, which is the current effective value (may contain dynamic adjustment in minutes).
+                     * @param _current Current value, which is the current effective value (may contain dynamic adjustment in minutes).
                      * 
                      */
                     void SetCurrent(const int64_t& _current);
@@ -97,19 +89,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool CurrentHasBeenSet() const;
 
                     /**
-                     * 获取Last modified time
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return ModTimeStamp Last modified time
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取Last modified time.
+                     * @return ModTimeStamp Last modified time.
                      * 
                      */
                     int64_t GetModTimeStamp() const;
 
                     /**
-                     * 设置Last modified time
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param _modTimeStamp Last modified time
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 设置Last modified time.
+                     * @param _modTimeStamp Last modified time.
                      * 
                      */
                     void SetModTimeStamp(const int64_t& _modTimeStamp);
@@ -124,22 +112,19 @@ Note: `null` may be returned for this field, indicating that no valid values can
                 private:
 
                     /**
-                     * Expected value, i.e., the topic message retention time (min) configured
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * Expected value, the message retention period (in minutes) set by user configuration.
                      */
                     int64_t m_expect;
                     bool m_expectHasBeenSet;
 
                     /**
-                     * Current value (min), i.e., the retention time currently in effect, which may be dynamically adjusted
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * Current value, which is the current effective value (may contain dynamic adjustment in minutes).
                      */
                     int64_t m_current;
                     bool m_currentHasBeenSet;
 
                     /**
-                     * Last modified time
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * Last modified time.
                      */
                     int64_t m_modTimeStamp;
                     bool m_modTimeStampHasBeenSet;

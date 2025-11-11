@@ -72,19 +72,15 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Topic list
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TopicList Topic list
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Topic list.
+                     * @return TopicList Topic list.
                      * 
                      */
                     std::vector<ConsumerGroupTopic> GetTopicList() const;
 
                     /**
-                     * 设置Topic list
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _topicList Topic list
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Topic list.
+                     * @param _topicList Topic list.
                      * 
                      */
                     void SetTopicList(const std::vector<ConsumerGroupTopic>& _topicList);
@@ -97,19 +93,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TopicListHasBeenSet() const;
 
                     /**
-                     * 获取Consumer group list
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return GroupList Consumer group list
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the consumption group List.
+                     * @return GroupList Specifies the consumption group List.
                      * 
                      */
                     std::vector<ConsumerGroup> GetGroupList() const;
 
                     /**
-                     * 设置Consumer group list
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _groupList Consumer group list
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the consumption group List.
+                     * @param _groupList Specifies the consumption group List.
                      * 
                      */
                     void SetGroupList(const std::vector<ConsumerGroup>& _groupList);
@@ -122,19 +114,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool GroupListHasBeenSet() const;
 
                     /**
-                     * 获取Total number of partitions
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TotalPartition Total number of partitions
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Total number of partitions.
+                     * @return TotalPartition Total number of partitions.
                      * 
                      */
                     int64_t GetTotalPartition() const;
 
                     /**
-                     * 设置Total number of partitions
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _totalPartition Total number of partitions
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Total number of partitions.
+                     * @param _totalPartition Total number of partitions.
                      * 
                      */
                     void SetTotalPartition(const int64_t& _totalPartition);
@@ -147,19 +135,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TotalPartitionHasBeenSet() const;
 
                     /**
-                     * 获取List of monitored partitions
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PartitionListForMonitor List of monitored partitions
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Monitored partition list.
+                     * @return PartitionListForMonitor Monitored partition list.
                      * 
                      */
                     std::vector<Partition> GetPartitionListForMonitor() const;
 
                     /**
-                     * 设置List of monitored partitions
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _partitionListForMonitor List of monitored partitions
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Monitored partition list.
+                     * @param _partitionListForMonitor Monitored partition list.
                      * 
                      */
                     void SetPartitionListForMonitor(const std::vector<Partition>& _partitionListForMonitor);
@@ -172,19 +156,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PartitionListForMonitorHasBeenSet() const;
 
                     /**
-                     * 获取Total number of topics
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TotalTopic Total number of topics
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Total number of topics.
+                     * @return TotalTopic Total number of topics.
                      * 
                      */
                     int64_t GetTotalTopic() const;
 
                     /**
-                     * 设置Total number of topics
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _totalTopic Total number of topics
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Total number of topics.
+                     * @param _totalTopic Total number of topics.
                      * 
                      */
                     void SetTotalTopic(const int64_t& _totalTopic);
@@ -197,19 +177,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TotalTopicHasBeenSet() const;
 
                     /**
-                     * 获取List of monitored topics
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TopicListForMonitor List of monitored topics
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Monitored topic list.
+                     * @return TopicListForMonitor Monitored topic list.
                      * 
                      */
                     std::vector<ConsumerGroupTopic> GetTopicListForMonitor() const;
 
                     /**
-                     * 设置List of monitored topics
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _topicListForMonitor List of monitored topics
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Monitored topic list.
+                     * @param _topicListForMonitor Monitored topic list.
                      * 
                      */
                     void SetTopicListForMonitor(const std::vector<ConsumerGroupTopic>& _topicListForMonitor);
@@ -222,19 +198,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TopicListForMonitorHasBeenSet() const;
 
                     /**
-                     * 获取List of monitored groups
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return GroupListForMonitor List of monitored groups
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Monitored group list.
+                     * @return GroupListForMonitor Monitored group list.
                      * 
                      */
                     std::vector<Group> GetGroupListForMonitor() const;
 
                     /**
-                     * 设置List of monitored groups
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _groupListForMonitor List of monitored groups
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Monitored group list.
+                     * @param _groupListForMonitor Monitored group list.
                      * 
                      */
                     void SetGroupListForMonitor(const std::vector<Group>& _groupListForMonitor);
@@ -255,50 +227,43 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Topic list
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Topic list.
                      */
                     std::vector<ConsumerGroupTopic> m_topicList;
                     bool m_topicListHasBeenSet;
 
                     /**
-                     * Consumer group list
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Specifies the consumption group List.
                      */
                     std::vector<ConsumerGroup> m_groupList;
                     bool m_groupListHasBeenSet;
 
                     /**
-                     * Total number of partitions
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Total number of partitions.
                      */
                     int64_t m_totalPartition;
                     bool m_totalPartitionHasBeenSet;
 
                     /**
-                     * List of monitored partitions
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Monitored partition list.
                      */
                     std::vector<Partition> m_partitionListForMonitor;
                     bool m_partitionListForMonitorHasBeenSet;
 
                     /**
-                     * Total number of topics
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Total number of topics.
                      */
                     int64_t m_totalTopic;
                     bool m_totalTopicHasBeenSet;
 
                     /**
-                     * List of monitored topics
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Monitored topic list.
                      */
                     std::vector<ConsumerGroupTopic> m_topicListForMonitor;
                     bool m_topicListForMonitorHasBeenSet;
 
                     /**
-                     * List of monitored groups
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Monitored group list.
                      */
                     std::vector<Group> m_groupListForMonitor;
                     bool m_groupListForMonitorHasBeenSet;

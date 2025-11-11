@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Keyword for query
-                     * @return SearchWord Keyword for query
+                     * 获取Search term.
+                     * @return SearchWord Search term.
                      * 
                      */
                     std::string GetSearchWord() const;
 
                     /**
-                     * 设置Keyword for query
-                     * @param _searchWord Keyword for query
+                     * 设置Search term.
+                     * @param _searchWord Search term.
                      * 
                      */
                     void SetSearchWord(const std::string& _searchWord);
@@ -105,10 +105,73 @@ namespace TencentCloud
                      */
                     bool LimitHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies whether to query the topic list from the connection.
+                     * @return QueryFromConnectResource Specifies whether to query the topic list from the connection.
+                     * 
+                     */
+                    bool GetQueryFromConnectResource() const;
+
+                    /**
+                     * 设置Specifies whether to query the topic list from the connection.
+                     * @param _queryFromConnectResource Specifies whether to query the topic list from the connection.
+                     * 
+                     */
+                    void SetQueryFromConnectResource(const bool& _queryFromConnectResource);
+
+                    /**
+                     * 判断参数 QueryFromConnectResource 是否已赋值
+                     * @return QueryFromConnectResource 是否已赋值
+                     * 
+                     */
+                    bool QueryFromConnectResourceHasBeenSet() const;
+
+                    /**
+                     * 获取Connection ID.
+                     * @return ConnectResourceId Connection ID.
+                     * 
+                     */
+                    std::string GetConnectResourceId() const;
+
+                    /**
+                     * 设置Connection ID.
+                     * @param _connectResourceId Connection ID.
+                     * 
+                     */
+                    void SetConnectResourceId(const std::string& _connectResourceId);
+
+                    /**
+                     * 判断参数 ConnectResourceId 是否已赋值
+                     * @return ConnectResourceId 是否已赋值
+                     * 
+                     */
+                    bool ConnectResourceIdHasBeenSet() const;
+
+                    /**
+                     * 获取topic resource expression.
+                     * @return TopicRegularExpression topic resource expression.
+                     * 
+                     */
+                    std::string GetTopicRegularExpression() const;
+
+                    /**
+                     * 设置topic resource expression.
+                     * @param _topicRegularExpression topic resource expression.
+                     * 
+                     */
+                    void SetTopicRegularExpression(const std::string& _topicRegularExpression);
+
+                    /**
+                     * 判断参数 TopicRegularExpression 是否已赋值
+                     * @return TopicRegularExpression 是否已赋值
+                     * 
+                     */
+                    bool TopicRegularExpressionHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Keyword for query
+                     * Search term.
                      */
                     std::string m_searchWord;
                     bool m_searchWordHasBeenSet;
@@ -124,6 +187,24 @@ namespace TencentCloud
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
+
+                    /**
+                     * Specifies whether to query the topic list from the connection.
+                     */
+                    bool m_queryFromConnectResource;
+                    bool m_queryFromConnectResourceHasBeenSet;
+
+                    /**
+                     * Connection ID.
+                     */
+                    std::string m_connectResourceId;
+                    bool m_connectResourceIdHasBeenSet;
+
+                    /**
+                     * topic resource expression.
+                     */
+                    std::string m_topicRegularExpression;
+                    bool m_topicRegularExpressionHasBeenSet;
 
                 };
             }

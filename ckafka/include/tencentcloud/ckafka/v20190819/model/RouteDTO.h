@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取RouteId11 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RouteId RouteId11 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Route ID
+                     * @return RouteId Route ID
                      * 
                      */
                     int64_t GetRouteId() const;
 
                     /**
-                     * 设置RouteId11 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _routeId RouteId11 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Route ID
+                     * @param _routeId Route ID
                      * 
                      */
                     void SetRouteId(const int64_t& _routeId);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * RouteId11 Note: This field may return null, indicating that no valid values can be obtained.
+                     * Route ID
                      */
                     int64_t m_routeId;
                     bool m_routeIdHasBeenSet;

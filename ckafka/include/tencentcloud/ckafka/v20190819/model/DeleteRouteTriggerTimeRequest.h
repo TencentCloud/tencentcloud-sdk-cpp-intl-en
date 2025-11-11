@@ -43,15 +43,36 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Modification time.
-                     * @return DelayTime Modification time.
+                     * 获取ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+                     * @return InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+                     * 
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+                     * @param _instanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+                     * 
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     * 
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
+                    /**
+                     * 获取Modifies the scheduled time for deleting routes.
+                     * @return DelayTime Modifies the scheduled time for deleting routes.
                      * 
                      */
                     std::string GetDelayTime() const;
 
                     /**
-                     * 设置Modification time.
-                     * @param _delayTime Modification time.
+                     * 设置Modifies the scheduled time for deleting routes.
+                     * @param _delayTime Modifies the scheduled time for deleting routes.
                      * 
                      */
                     void SetDelayTime(const std::string& _delayTime);
@@ -66,7 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Modification time.
+                     * ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * Modifies the scheduled time for deleting routes.
                      */
                     std::string m_delayTime;
                     bool m_delayTimeHasBeenSet;

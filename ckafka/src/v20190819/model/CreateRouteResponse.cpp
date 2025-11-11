@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/ckafka/v20190819/model/CreateInstancePostResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/CreateRouteResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,12 +23,12 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ckafka::V20190819::Model;
 using namespace std;
 
-CreateInstancePostResponse::CreateInstancePostResponse() :
+CreateRouteResponse::CreateRouteResponse() :
     m_resultHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome CreateInstancePostResponse::Deserialize(const string &payload)
+CoreInternalOutcome CreateRouteResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -83,7 +83,7 @@ CoreInternalOutcome CreateInstancePostResponse::Deserialize(const string &payloa
     return CoreInternalOutcome(true);
 }
 
-string CreateInstancePostResponse::ToJsonString() const
+string CreateRouteResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
@@ -110,12 +110,12 @@ string CreateInstancePostResponse::ToJsonString() const
 }
 
 
-JgwOperateResponse CreateInstancePostResponse::GetResult() const
+JgwOperateResponse CreateRouteResponse::GetResult() const
 {
     return m_result;
 }
 
-bool CreateInstancePostResponse::ResultHasBeenSet() const
+bool CreateRouteResponse::ResultHasBeenSet() const
 {
     return m_resultHasBeenSet;
 }

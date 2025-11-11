@@ -69,19 +69,15 @@ namespace TencentCloud
                     bool VersionHasBeenSet() const;
 
                     /**
-                     * 获取Topic information list
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Topics Topic information list
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取topic information list.
+                     * @return Topics topic information list.
                      * 
                      */
                     std::vector<GroupInfoTopics> GetTopics() const;
 
                     /**
-                     * 设置Topic information list
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _topics Topic information list
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置topic information list.
+                     * @param _topics topic information list.
                      * 
                      */
                     void SetTopics(const std::vector<GroupInfoTopics>& _topics);
@@ -102,8 +98,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_versionHasBeenSet;
 
                     /**
-                     * Topic information list
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * topic information list.
                      */
                     std::vector<GroupInfoTopics> m_topics;
                     bool m_topicsHasBeenSet;

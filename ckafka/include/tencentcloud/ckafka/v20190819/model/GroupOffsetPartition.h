@@ -89,19 +89,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Metadata can be passed in for other purposes when the consumer submits messages. Currently, this parameter is usually an empty string
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Metadata Metadata can be passed in for other purposes when the consumer submits messages. Currently, this parameter is usually an empty string
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Supports consumers to submit messages with imported metadata for other purposes, currently an empty string.
+                     * @return Metadata Supports consumers to submit messages with imported metadata for other purposes, currently an empty string.
                      * 
                      */
                     std::string GetMetadata() const;
 
                     /**
-                     * 设置Metadata can be passed in for other purposes when the consumer submits messages. Currently, this parameter is usually an empty string
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _metadata Metadata can be passed in for other purposes when the consumer submits messages. Currently, this parameter is usually an empty string
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Supports consumers to submit messages with imported metadata for other purposes, currently an empty string.
+                     * @param _metadata Supports consumers to submit messages with imported metadata for other purposes, currently an empty string.
                      * 
                      */
                     void SetMetadata(const std::string& _metadata);
@@ -191,8 +187,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Metadata can be passed in for other purposes when the consumer submits messages. Currently, this parameter is usually an empty string
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Supports consumers to submit messages with imported metadata for other purposes, currently an empty string.
                      */
                     std::string m_metadata;
                     bool m_metadataHasBeenSet;

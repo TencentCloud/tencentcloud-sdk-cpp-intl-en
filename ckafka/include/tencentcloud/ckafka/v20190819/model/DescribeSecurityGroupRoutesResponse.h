@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_CKAFKA_V20190819_MODEL_CREATEINSTANCEPOSTRESPONSE_H_
-#define TENCENTCLOUD_CKAFKA_V20190819_MODEL_CREATEINSTANCEPOSTRESPONSE_H_
+#ifndef TENCENTCLOUD_CKAFKA_V20190819_MODEL_DESCRIBESECURITYGROUPROUTESRESPONSE_H_
+#define TENCENTCLOUD_CKAFKA_V20190819_MODEL_DESCRIBESECURITYGROUPROUTESRESPONSE_H_
 
 #include <string>
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/ckafka/v20190819/model/JgwOperateResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/SecurityGroupRouteResp.h>
 
 
 namespace TencentCloud
@@ -33,23 +33,23 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * CreateInstancePost response structure.
+                * DescribeSecurityGroupRoutes response structure.
                 */
-                class CreateInstancePostResponse : public AbstractModel
+                class DescribeSecurityGroupRoutesResponse : public AbstractModel
                 {
                 public:
-                    CreateInstancePostResponse();
-                    ~CreateInstancePostResponse() = default;
+                    DescribeSecurityGroupRoutesResponse();
+                    ~DescribeSecurityGroupRoutesResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Returned result
-                     * @return Result Returned result
+                     * 获取Returns the security group routing information result object.
+                     * @return Result Returns the security group routing information result object.
                      * 
                      */
-                    JgwOperateResponse GetResult() const;
+                    SecurityGroupRouteResp GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
@@ -61,9 +61,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Returned result
+                     * Returns the security group routing information result object.
                      */
-                    JgwOperateResponse m_result;
+                    SecurityGroupRouteResp m_result;
                     bool m_resultHasBeenSet;
 
                 };
@@ -72,4 +72,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_CKAFKA_V20190819_MODEL_CREATEINSTANCEPOSTRESPONSE_H_
+#endif // !TENCENTCLOUD_CKAFKA_V20190819_MODEL_DESCRIBESECURITYGROUPROUTESRESPONSE_H_

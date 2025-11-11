@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID.
-                     * @return InstanceId Instance ID.
+                     * 获取The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+                     * @return InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param _instanceId Instance ID.
+                     * 设置The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+                     * @param _instanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Group name.
-                     * @return GroupName Group name.
+                     * 获取Consumer group name.
+                     * @return GroupName Consumer group name.
                      * 
                      */
                     std::string GetGroupName() const;
 
                     /**
-                     * 设置Group name.
-                     * @param _groupName Group name.
+                     * 设置Consumer group name.
+                     * @param _groupName Consumer group name.
                      * 
                      */
                     void SetGroupName(const std::string& _groupName);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool GroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Topic name. You must specify the name of an existing topic for either `TopicName` or `TopicNameList`.
-                     * @return TopicName Topic name. You must specify the name of an existing topic for either `TopicName` or `TopicNameList`.
+                     * 获取Topic name. one of TopicName or TopicNameList must display a specified existing topic name.
+                     * @return TopicName Topic name. one of TopicName or TopicNameList must display a specified existing topic name.
                      * 
                      */
                     std::string GetTopicName() const;
 
                     /**
-                     * 设置Topic name. You must specify the name of an existing topic for either `TopicName` or `TopicNameList`.
-                     * @param _topicName Topic name. You must specify the name of an existing topic for either `TopicName` or `TopicNameList`.
+                     * 设置Topic name. one of TopicName or TopicNameList must display a specified existing topic name.
+                     * @param _topicName Topic name. one of TopicName or TopicNameList must display a specified existing topic name.
                      * 
                      */
                     void SetTopicName(const std::string& _topicName);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取Topic name array.
-                     * @return TopicNameList Topic name array.
+                     * 获取Topic name list.
+                     * @return TopicNameList Topic name list.
                      * 
                      */
                     std::vector<std::string> GetTopicNameList() const;
 
                     /**
-                     * 设置Topic name array.
-                     * @param _topicNameList Topic name array.
+                     * 设置Topic name list.
+                     * @param _topicNameList Topic name list.
                      * 
                      */
                     void SetTopicNameList(const std::vector<std::string>& _topicNameList);
@@ -129,25 +129,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID.
+                     * The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Group name.
+                     * Consumer group name.
                      */
                     std::string m_groupName;
                     bool m_groupNameHasBeenSet;
 
                     /**
-                     * Topic name. You must specify the name of an existing topic for either `TopicName` or `TopicNameList`.
+                     * Topic name. one of TopicName or TopicNameList must display a specified existing topic name.
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * Topic name array.
+                     * Topic name list.
                      */
                     std::vector<std::string> m_topicNameList;
                     bool m_topicNameListHasBeenSet;

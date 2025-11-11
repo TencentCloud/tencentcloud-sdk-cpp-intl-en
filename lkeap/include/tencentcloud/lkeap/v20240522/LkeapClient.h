@@ -33,6 +33,8 @@
 #include <tencentcloud/lkeap/v20240522/model/GetSplitDocumentResultResponse.h>
 #include <tencentcloud/lkeap/v20240522/model/QueryRewriteRequest.h>
 #include <tencentcloud/lkeap/v20240522/model/QueryRewriteResponse.h>
+#include <tencentcloud/lkeap/v20240522/model/ReconstructDocumentSSERequest.h>
+#include <tencentcloud/lkeap/v20240522/model/ReconstructDocumentSSEResponse.h>
 #include <tencentcloud/lkeap/v20240522/model/RunRerankRequest.h>
 #include <tencentcloud/lkeap/v20240522/model/RunRerankResponse.h>
 
@@ -64,6 +66,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::QueryRewriteResponse> QueryRewriteOutcome;
                 typedef std::future<QueryRewriteOutcome> QueryRewriteOutcomeCallable;
                 typedef std::function<void(const LkeapClient*, const Model::QueryRewriteRequest&, QueryRewriteOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryRewriteAsyncHandler;
+                typedef Outcome<Core::Error, Model::ReconstructDocumentSSEResponse> ReconstructDocumentSSEOutcome;
+                typedef std::future<ReconstructDocumentSSEOutcome> ReconstructDocumentSSEOutcomeCallable;
+                typedef std::function<void(const LkeapClient*, const Model::ReconstructDocumentSSERequest&, ReconstructDocumentSSEOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReconstructDocumentSSEAsyncHandler;
                 typedef Outcome<Core::Error, Model::RunRerankResponse> RunRerankOutcome;
                 typedef std::future<RunRerankOutcome> RunRerankOutcomeCallable;
                 typedef std::function<void(const LkeapClient*, const Model::RunRerankRequest&, RunRerankOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RunRerankAsyncHandler;
@@ -117,6 +122,15 @@ There is a call limit for single-account for this API. If you need to increase t
                 QueryRewriteOutcome QueryRewrite(const Model::QueryRewriteRequest &request);
                 void QueryRewriteAsync(const Model::QueryRewriteRequest& request, const QueryRewriteAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 QueryRewriteOutcomeCallable QueryRewriteCallable(const Model::QueryRewriteRequest& request);
+
+                /**
+                 *This API is used for quasi-real-time document parsing, using HTTP SSE protocol for communication.
+                 * @param req ReconstructDocumentSSERequest
+                 * @return ReconstructDocumentSSEOutcome
+                 */
+                ReconstructDocumentSSEOutcome ReconstructDocumentSSE(const Model::ReconstructDocumentSSERequest &request);
+                void ReconstructDocumentSSEAsync(const Model::ReconstructDocumentSSERequest& request, const ReconstructDocumentSSEAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ReconstructDocumentSSEOutcomeCallable ReconstructDocumentSSECallable(const Model::ReconstructDocumentSSERequest& request);
 
                 /**
                  *This API is used to reorder the results of multi-channel recall based on the rerank model of knowledge engine fine-tuning model technology, sort the segments according to the relevance between the query and the segment content from high to low score, and output the corresponding scoring results.

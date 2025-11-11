@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/ckafka/v20190819/model/Filter.h>
 
 
 namespace TencentCloud
@@ -43,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+                     * @return InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+                     * @param _instanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -106,15 +107,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20. This value must be greater than 0
-                     * @return Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20. This value must be greater than 0
+                     * 获取Number of returned results. default: 20. value must be above 0.
+                     * @return Limit Number of returned results. default: 20. value must be above 0.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20. This value must be greater than 0
-                     * @param _limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20. This value must be greater than 0
+                     * 设置Number of returned results. default: 20. value must be above 0.
+                     * @param _limit Number of returned results. default: 20. value must be above 0.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -147,10 +148,73 @@ namespace TencentCloud
                      */
                     bool AclRuleNameHasBeenSet() const;
 
+                    /**
+                     * 获取Sorts based on specific attributes (currently supports PartitionNum/CreateTime). default value: CreateTime.
+                     * @return OrderBy Sorts based on specific attributes (currently supports PartitionNum/CreateTime). default value: CreateTime.
+                     * 
+                     */
+                    std::string GetOrderBy() const;
+
+                    /**
+                     * 设置Sorts based on specific attributes (currently supports PartitionNum/CreateTime). default value: CreateTime.
+                     * @param _orderBy Sorts based on specific attributes (currently supports PartitionNum/CreateTime). default value: CreateTime.
+                     * 
+                     */
+                    void SetOrderBy(const std::string& _orderBy);
+
+                    /**
+                     * 判断参数 OrderBy 是否已赋值
+                     * @return OrderBy 是否已赋值
+                     * 
+                     */
+                    bool OrderByHasBeenSet() const;
+
+                    /**
+                     * 获取0 - sequential, 1 - reverse order. default value: 0.
+                     * @return OrderType 0 - sequential, 1 - reverse order. default value: 0.
+                     * 
+                     */
+                    int64_t GetOrderType() const;
+
+                    /**
+                     * 设置0 - sequential, 1 - reverse order. default value: 0.
+                     * @param _orderType 0 - sequential, 1 - reverse order. default value: 0.
+                     * 
+                     */
+                    void SetOrderType(const int64_t& _orderType);
+
+                    /**
+                     * 判断参数 OrderType 是否已赋值
+                     * @return OrderType 是否已赋值
+                     * 
+                     */
+                    bool OrderTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Currently supports ReplicaNum (number of replicas) filter criteria.
+                     * @return Filters Currently supports ReplicaNum (number of replicas) filter criteria.
+                     * 
+                     */
+                    std::vector<Filter> GetFilters() const;
+
+                    /**
+                     * 设置Currently supports ReplicaNum (number of replicas) filter criteria.
+                     * @param _filters Currently supports ReplicaNum (number of replicas) filter criteria.
+                     * 
+                     */
+                    void SetFilters(const std::vector<Filter>& _filters);
+
+                    /**
+                     * 判断参数 Filters 是否已赋值
+                     * @return Filters 是否已赋值
+                     * 
+                     */
+                    bool FiltersHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance ID
+                     * The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -168,7 +232,7 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20. This value must be greater than 0
+                     * Number of returned results. default: 20. value must be above 0.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
@@ -178,6 +242,24 @@ namespace TencentCloud
                      */
                     std::string m_aclRuleName;
                     bool m_aclRuleNameHasBeenSet;
+
+                    /**
+                     * Sorts based on specific attributes (currently supports PartitionNum/CreateTime). default value: CreateTime.
+                     */
+                    std::string m_orderBy;
+                    bool m_orderByHasBeenSet;
+
+                    /**
+                     * 0 - sequential, 1 - reverse order. default value: 0.
+                     */
+                    int64_t m_orderType;
+                    bool m_orderTypeHasBeenSet;
+
+                    /**
+                     * Currently supports ReplicaNum (number of replicas) filter criteria.
+                     */
+                    std::vector<Filter> m_filters;
+                    bool m_filtersHasBeenSet;
 
                 };
             }

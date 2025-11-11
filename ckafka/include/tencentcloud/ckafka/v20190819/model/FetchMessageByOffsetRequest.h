@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID.
-                     * @return InstanceId Instance ID.
+                     * 获取The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+                     * @return InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param _instanceId Instance ID.
+                     * 设置The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+                     * @param _instanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Topic name
-                     * @return Topic Topic name
+                     * 获取Specifies the topic name, which can be obtained through the [DescribeTopic](https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1) api.
+                     * @return Topic Specifies the topic name, which can be obtained through the [DescribeTopic](https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetTopic() const;
 
                     /**
-                     * 设置Topic name
-                     * @param _topic Topic name
+                     * 设置Specifies the topic name, which can be obtained through the [DescribeTopic](https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1) api.
+                     * @param _topic Specifies the topic name, which can be obtained through the [DescribeTopic](https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1) api.
                      * 
                      */
                     void SetTopic(const std::string& _topic);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool PartitionHasBeenSet() const;
 
                     /**
-                     * 获取Offset information, which is required.
-                     * @return Offset Offset information, which is required.
+                     * 获取Specifies the position information.
+                     * @return Offset Specifies the position information.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset information, which is required.
-                     * @param _offset Offset information, which is required.
+                     * 设置Specifies the position information.
+                     * @param _offset Specifies the position information.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -129,13 +129,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID.
+                     * The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Topic name
+                     * Specifies the topic name, which can be obtained through the [DescribeTopic](https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1) api.
                      */
                     std::string m_topic;
                     bool m_topicHasBeenSet;
@@ -147,7 +147,7 @@ namespace TencentCloud
                     bool m_partitionHasBeenSet;
 
                     /**
-                     * Offset information, which is required.
+                     * Specifies the position information.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;

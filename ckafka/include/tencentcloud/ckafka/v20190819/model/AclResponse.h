@@ -69,19 +69,15 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取ACL list
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AclList ACL list
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取ACL list.
+                     * @return AclList ACL list.
                      * 
                      */
                     std::vector<Acl> GetAclList() const;
 
                     /**
-                     * 设置ACL list
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _aclList ACL list
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置ACL list.
+                     * @param _aclList ACL list.
                      * 
                      */
                     void SetAclList(const std::vector<Acl>& _aclList);
@@ -102,8 +98,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * ACL list
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * ACL list.
                      */
                     std::vector<Acl> m_aclList;
                     bool m_aclListHasBeenSet;

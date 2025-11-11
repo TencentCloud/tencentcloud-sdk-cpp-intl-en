@@ -90,19 +90,15 @@ namespace TencentCloud
                     bool ReturnMessageHasBeenSet() const;
 
                     /**
-                     * 获取Data returned by the operation.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return Data Data returned by the operation.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Specifies the Data returned by the operation.
+                     * @return Data Specifies the Data returned by the operation.
                      * 
                      */
                     CreateInstancePreData GetData() const;
 
                     /**
-                     * 设置Data returned by the operation.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _data Data returned by the operation.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Specifies the Data returned by the operation.
+                     * @param _data Specifies the Data returned by the operation.
                      * 
                      */
                     void SetData(const CreateInstancePreData& _data);
@@ -150,8 +146,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_returnMessageHasBeenSet;
 
                     /**
-                     * Data returned by the operation.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Specifies the Data returned by the operation.
                      */
                     CreateInstancePreData m_data;
                     bool m_dataHasBeenSet;

@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Topic name.
-                     * @return TopicName Topic name.
+                     * 获取Topic name
+                     * @return TopicName Topic name
                      * 
                      */
                     std::string GetTopicName() const;
 
                     /**
-                     * 设置Topic name.
-                     * @param _topicName Topic name.
+                     * 设置Topic name
+                     * @param _topicName Topic name
                      * 
                      */
                     void SetTopicName(const std::string& _topicName);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool RetentionMsHasBeenSet() const;
 
                     /**
-                     * 获取Message retention size in topic dimension. Value range: 1 MB - 1024 GB.
-                     * @return RetentionBytes Message retention size in topic dimension. Value range: 1 MB - 1024 GB.
+                     * 获取Specifies the message retention size in the topic dimension in bytes. value range: 1 GB to 1024 GB.
+                     * @return RetentionBytes Specifies the message retention size in the topic dimension in bytes. value range: 1 GB to 1024 GB.
                      * 
                      */
                     int64_t GetRetentionBytes() const;
 
                     /**
-                     * 设置Message retention size in topic dimension. Value range: 1 MB - 1024 GB.
-                     * @param _retentionBytes Message retention size in topic dimension. Value range: 1 MB - 1024 GB.
+                     * 设置Specifies the message retention size in the topic dimension in bytes. value range: 1 GB to 1024 GB.
+                     * @param _retentionBytes Specifies the message retention size in the topic dimension in bytes. value range: 1 GB to 1024 GB.
                      * 
                      */
                     void SetRetentionBytes(const int64_t& _retentionBytes);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool RetentionBytesHasBeenSet() const;
 
                     /**
-                     * 获取Segment rolling duration in milliseconds. Value range: 1-90 days.
-                     * @return SegmentMs Segment rolling duration in milliseconds. Value range: 1-90 days.
+                     * 获取Duration of Segment shard scrolling in milliseconds. value range: 1 day to 90 days.
+                     * @return SegmentMs Duration of Segment shard scrolling in milliseconds. value range: 1 day to 90 days.
                      * 
                      */
                     int64_t GetSegmentMs() const;
 
                     /**
-                     * 设置Segment rolling duration in milliseconds. Value range: 1-90 days.
-                     * @param _segmentMs Segment rolling duration in milliseconds. Value range: 1-90 days.
+                     * 设置Duration of Segment shard scrolling in milliseconds. value range: 1 day to 90 days.
+                     * @param _segmentMs Duration of Segment shard scrolling in milliseconds. value range: 1 day to 90 days.
                      * 
                      */
                     void SetSegmentMs(const int64_t& _segmentMs);
@@ -277,10 +277,31 @@ namespace TencentCloud
                      */
                     bool MaxMessageBytesHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the time type for message storage: CreateTime/LogAppendTime.
+                     * @return LogMsgTimestampType Specifies the time type for message storage: CreateTime/LogAppendTime.
+                     * 
+                     */
+                    std::string GetLogMsgTimestampType() const;
+
+                    /**
+                     * 设置Specifies the time type for message storage: CreateTime/LogAppendTime.
+                     * @param _logMsgTimestampType Specifies the time type for message storage: CreateTime/LogAppendTime.
+                     * 
+                     */
+                    void SetLogMsgTimestampType(const std::string& _logMsgTimestampType);
+
+                    /**
+                     * 判断参数 LogMsgTimestampType 是否已赋值
+                     * @return LogMsgTimestampType 是否已赋值
+                     * 
+                     */
+                    bool LogMsgTimestampTypeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Topic name.
+                     * Topic name
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;
@@ -328,13 +349,13 @@ namespace TencentCloud
                     bool m_retentionMsHasBeenSet;
 
                     /**
-                     * Message retention size in topic dimension. Value range: 1 MB - 1024 GB.
+                     * Specifies the message retention size in the topic dimension in bytes. value range: 1 GB to 1024 GB.
                      */
                     int64_t m_retentionBytes;
                     bool m_retentionBytesHasBeenSet;
 
                     /**
-                     * Segment rolling duration in milliseconds. Value range: 1-90 days.
+                     * Duration of Segment shard scrolling in milliseconds. value range: 1 day to 90 days.
                      */
                     int64_t m_segmentMs;
                     bool m_segmentMsHasBeenSet;
@@ -344,6 +365,12 @@ namespace TencentCloud
                      */
                     int64_t m_maxMessageBytes;
                     bool m_maxMessageBytesHasBeenSet;
+
+                    /**
+                     * Specifies the time type for message storage: CreateTime/LogAppendTime.
+                     */
+                    std::string m_logMsgTimestampType;
+                    bool m_logMsgTimestampTypeHasBeenSet;
 
                 };
             }

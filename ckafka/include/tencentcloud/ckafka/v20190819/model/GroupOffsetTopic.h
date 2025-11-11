@@ -69,19 +69,15 @@ namespace TencentCloud
                     bool TopicHasBeenSet() const;
 
                     /**
-                     * 获取Array of partitions in the topic, where each element is a JSON object
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Partitions Array of partitions in the topic, where each element is a JSON object
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取The topic partition array, where each element is a json object.
+                     * @return Partitions The topic partition array, where each element is a json object.
                      * 
                      */
                     std::vector<GroupOffsetPartition> GetPartitions() const;
 
                     /**
-                     * 设置Array of partitions in the topic, where each element is a JSON object
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _partitions Array of partitions in the topic, where each element is a JSON object
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置The topic partition array, where each element is a json object.
+                     * @param _partitions The topic partition array, where each element is a json object.
                      * 
                      */
                     void SetPartitions(const std::vector<GroupOffsetPartition>& _partitions);
@@ -102,8 +98,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_topicHasBeenSet;
 
                     /**
-                     * Array of partitions in the topic, where each element is a JSON object
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * The topic partition array, where each element is a json object.
                      */
                     std::vector<GroupOffsetPartition> m_partitions;
                     bool m_partitionsHasBeenSet;

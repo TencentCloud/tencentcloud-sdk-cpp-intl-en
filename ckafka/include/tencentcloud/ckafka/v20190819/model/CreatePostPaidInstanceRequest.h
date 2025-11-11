@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/ckafka/v20190819/model/Tag.h>
 
 
 namespace TencentCloud
@@ -43,36 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance name, which is a string of up to 64 letters, digits, and hyphens (-). It must start with a letter.
-                     * @return InstanceName Instance name, which is a string of up to 64 letters, digits, and hyphens (-). It must start with a letter.
-                     * 
-                     */
-                    std::string GetInstanceName() const;
-
-                    /**
-                     * 设置Instance name, which is a string of up to 64 letters, digits, and hyphens (-). It must start with a letter.
-                     * @param _instanceName Instance name, which is a string of up to 64 letters, digits, and hyphens (-). It must start with a letter.
-                     * 
-                     */
-                    void SetInstanceName(const std::string& _instanceName);
-
-                    /**
-                     * 判断参数 InstanceName 是否已赋值
-                     * @return InstanceName 是否已赋值
-                     * 
-                     */
-                    bool InstanceNameHasBeenSet() const;
-
-                    /**
-                     * 获取ID of the VPC where the default access point of the created instance resides.  This parameter is required as instances cannot be created in the classic network currently.
-                     * @return VpcId ID of the VPC where the default access point of the created instance resides.  This parameter is required as instances cannot be created in the classic network currently.
+                     * 获取VPC Id, obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
+                     * @return VpcId VPC Id, obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置ID of the VPC where the default access point of the created instance resides.  This parameter is required as instances cannot be created in the classic network currently.
-                     * @param _vpcId ID of the VPC where the default access point of the created instance resides.  This parameter is required as instances cannot be created in the classic network currently.
+                     * 设置VPC Id, obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
+                     * @param _vpcId VPC Id, obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -85,15 +65,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the subnet  where the default access point of the created instance resides.
-                     * @return SubnetId ID of the subnet  where the default access point of the created instance resides.
+                     * 获取Subnet Id. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api.
+                     * @return SubnetId Subnet Id. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置ID of the subnet  where the default access point of the created instance resides.
-                     * @param _subnetId ID of the subnet  where the default access point of the created instance resides.
+                     * 设置Subnet Id. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api.
+                     * @param _subnetId Subnet Id. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api.
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -106,15 +86,36 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance specification.  This parameter is required for a Standard Edition instance but not for a Pro Edition instance.  Valid values:  `1` (Small),  `2` (Standard),  `3` (Advanced),  `4` (Large),  `5` (Xlarge L1),  `6` (Xlarge L2),  `7` (Xlarge L3),  `8` (Xlarge L4),  
-                     * @return InstanceType Instance specification.  This parameter is required for a Standard Edition instance but not for a Pro Edition instance.  Valid values:  `1` (Small),  `2` (Standard),  `3` (Advanced),  `4` (Large),  `5` (Xlarge L1),  `6` (Xlarge L2),  `7` (Xlarge L3),  `8` (Xlarge L4),  
+                     * 获取Specifies the cluster instance name of ckafka, an arbitrary character with length not exceeding 128.
+                     * @return InstanceName Specifies the cluster instance name of ckafka, an arbitrary character with length not exceeding 128.
+                     * 
+                     */
+                    std::string GetInstanceName() const;
+
+                    /**
+                     * 设置Specifies the cluster instance name of ckafka, an arbitrary character with length not exceeding 128.
+                     * @param _instanceName Specifies the cluster instance name of ckafka, an arbitrary character with length not exceeding 128.
+                     * 
+                     */
+                    void SetInstanceName(const std::string& _instanceName);
+
+                    /**
+                     * 判断参数 InstanceName 是否已赋值
+                     * @return InstanceName 是否已赋值
+                     * 
+                     */
+                    bool InstanceNameHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the standard edition instance specification for the international site. currently only the international site standard edition uses the current field to distinguish specifications, while the domestic site standard edition distinguishes specifications by peak bandwidth. fill in 1 for all instances except the international site standard edition. for international site standard edition instances: [entry-level (general)] fill 1; [standard type (standard)] fill 2; [advanced] fill 3; [capacity type (capacity)] fill 4; [advanced type 1 (specialized-1)] fill 5; [advanced type 2 (specialized-2)] fill 6; [advanced type 3 (specialized-3)] fill 7; [advanced type 4 (specialized-4)] fill 8.
+                     * @return InstanceType Specifies the standard edition instance specification for the international site. currently only the international site standard edition uses the current field to distinguish specifications, while the domestic site standard edition distinguishes specifications by peak bandwidth. fill in 1 for all instances except the international site standard edition. for international site standard edition instances: [entry-level (general)] fill 1; [standard type (standard)] fill 2; [advanced] fill 3; [capacity type (capacity)] fill 4; [advanced type 1 (specialized-1)] fill 5; [advanced type 2 (specialized-2)] fill 6; [advanced type 3 (specialized-3)] fill 7; [advanced type 4 (specialized-4)] fill 8.
                      * 
                      */
                     int64_t GetInstanceType() const;
 
                     /**
-                     * 设置Instance specification.  This parameter is required for a Standard Edition instance but not for a Pro Edition instance.  Valid values:  `1` (Small),  `2` (Standard),  `3` (Advanced),  `4` (Large),  `5` (Xlarge L1),  `6` (Xlarge L2),  `7` (Xlarge L3),  `8` (Xlarge L4),  
-                     * @param _instanceType Instance specification.  This parameter is required for a Standard Edition instance but not for a Pro Edition instance.  Valid values:  `1` (Small),  `2` (Standard),  `3` (Advanced),  `4` (Large),  `5` (Xlarge L1),  `6` (Xlarge L2),  `7` (Xlarge L3),  `8` (Xlarge L4),  
+                     * 设置Specifies the standard edition instance specification for the international site. currently only the international site standard edition uses the current field to distinguish specifications, while the domestic site standard edition distinguishes specifications by peak bandwidth. fill in 1 for all instances except the international site standard edition. for international site standard edition instances: [entry-level (general)] fill 1; [standard type (standard)] fill 2; [advanced] fill 3; [capacity type (capacity)] fill 4; [advanced type 1 (specialized-1)] fill 5; [advanced type 2 (specialized-2)] fill 6; [advanced type 3 (specialized-3)] fill 7; [advanced type 4 (specialized-4)] fill 8.
+                     * @param _instanceType Specifies the standard edition instance specification for the international site. currently only the international site standard edition uses the current field to distinguish specifications, while the domestic site standard edition distinguishes specifications by peak bandwidth. fill in 1 for all instances except the international site standard edition. for international site standard edition instances: [entry-level (general)] fill 1; [standard type (standard)] fill 2; [advanced] fill 3; [capacity type (capacity)] fill 4; [advanced type 1 (specialized-1)] fill 5; [advanced type 2 (specialized-2)] fill 6; [advanced type 3 (specialized-3)] fill 7; [advanced type 4 (specialized-4)] fill 8.
                      * 
                      */
                     void SetInstanceType(const int64_t& _instanceType);
@@ -169,15 +170,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance version.  Valid values: `0.10.2`, `1.1.1`, `2.4.2`, and `2.8.1`.
-                     * @return KafkaVersion Instance version.  Valid values: `0.10.2`, `1.1.1`, `2.4.2`, and `2.8.1`.
+                     * 获取Instance version. currently supports "2.4.1", "2.4.2", "2.8.1", "3.2.3". default value "2.4.1". "2.4.1" and "2.4.2" belong to the same version. any one can be passed.
+                     * @return KafkaVersion Instance version. currently supports "2.4.1", "2.4.2", "2.8.1", "3.2.3". default value "2.4.1". "2.4.1" and "2.4.2" belong to the same version. any one can be passed.
                      * 
                      */
                     std::string GetKafkaVersion() const;
 
                     /**
-                     * 设置Instance version.  Valid values: `0.10.2`, `1.1.1`, `2.4.2`, and `2.8.1`.
-                     * @param _kafkaVersion Instance version.  Valid values: `0.10.2`, `1.1.1`, `2.4.2`, and `2.8.1`.
+                     * 设置Instance version. currently supports "2.4.1", "2.4.2", "2.8.1", "3.2.3". default value "2.4.1". "2.4.1" and "2.4.2" belong to the same version. any one can be passed.
+                     * @param _kafkaVersion Instance version. currently supports "2.4.1", "2.4.2", "2.8.1", "3.2.3". default value "2.4.1". "2.4.1" and "2.4.2" belong to the same version. any one can be passed.
                      * 
                      */
                     void SetKafkaVersion(const std::string& _kafkaVersion);
@@ -190,15 +191,15 @@ namespace TencentCloud
                     bool KafkaVersionHasBeenSet() const;
 
                     /**
-                     * 获取Instance type. `standard` (Standard Edition),  `profession`  (Pro Edition)
-                     * @return SpecificationsType Instance type. `standard` (Standard Edition),  `profession`  (Pro Edition)
+                     * 获取Instance type. "standard": standard version. "profession": pro edition. (standard version is only supported on the international site. currently, the chinese site supports pro edition.).
+                     * @return SpecificationsType Instance type. "standard": standard version. "profession": pro edition. (standard version is only supported on the international site. currently, the chinese site supports pro edition.).
                      * 
                      */
                     std::string GetSpecificationsType() const;
 
                     /**
-                     * 设置Instance type. `standard` (Standard Edition),  `profession`  (Pro Edition)
-                     * @param _specificationsType Instance type. `standard` (Standard Edition),  `profession`  (Pro Edition)
+                     * 设置Instance type. "standard": standard version. "profession": pro edition. (standard version is only supported on the international site. currently, the chinese site supports pro edition.).
+                     * @param _specificationsType Instance type. "standard": standard version. "profession": pro edition. (standard version is only supported on the international site. currently, the chinese site supports pro edition.).
                      * 
                      */
                     void SetSpecificationsType(const std::string& _specificationsType);
@@ -211,15 +212,15 @@ namespace TencentCloud
                     bool SpecificationsTypeHasBeenSet() const;
 
                     /**
-                     * 获取Instance disk type.  `CLOUD_BASIC` (Premium Cloud Storage),  `CLOUD_SSD` (SSD).  If this parameter is left empty, the default value `CLOUD_BASIC` will be used.
-                     * @return DiskType Instance disk type.  `CLOUD_BASIC` (Premium Cloud Storage),  `CLOUD_SSD` (SSD).  If this parameter is left empty, the default value `CLOUD_BASIC` will be used.
+                     * 获取Specifies the disk type for a pro edition instance. you do not need to fill it in for a standard edition instance. valid values: "CLOUD_SSD" for SSD CLOUD disk; "CLOUD_BASIC" for high-performance CLOUD block storage. default value: "CLOUD_BASIC".
+                     * @return DiskType Specifies the disk type for a pro edition instance. you do not need to fill it in for a standard edition instance. valid values: "CLOUD_SSD" for SSD CLOUD disk; "CLOUD_BASIC" for high-performance CLOUD block storage. default value: "CLOUD_BASIC".
                      * 
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置Instance disk type.  `CLOUD_BASIC` (Premium Cloud Storage),  `CLOUD_SSD` (SSD).  If this parameter is left empty, the default value `CLOUD_BASIC` will be used.
-                     * @param _diskType Instance disk type.  `CLOUD_BASIC` (Premium Cloud Storage),  `CLOUD_SSD` (SSD).  If this parameter is left empty, the default value `CLOUD_BASIC` will be used.
+                     * 设置Specifies the disk type for a pro edition instance. you do not need to fill it in for a standard edition instance. valid values: "CLOUD_SSD" for SSD CLOUD disk; "CLOUD_BASIC" for high-performance CLOUD block storage. default value: "CLOUD_BASIC".
+                     * @param _diskType Specifies the disk type for a pro edition instance. you do not need to fill it in for a standard edition instance. valid values: "CLOUD_SSD" for SSD CLOUD disk; "CLOUD_BASIC" for high-performance CLOUD block storage. default value: "CLOUD_BASIC".
                      * 
                      */
                     void SetDiskType(const std::string& _diskType);
@@ -232,15 +233,15 @@ namespace TencentCloud
                     bool DiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Private network peak bandwidth of an instance  in MB/sec.  If you create a Standard Edition instance, pass in the corresponding peak bandwidth for the current instance specification.  If you create a Pro Edition instance, configure the peak bandwidth, partition count, and other parameters as required by Pro Edition.
-                     * @return BandWidth Private network peak bandwidth of an instance  in MB/sec.  If you create a Standard Edition instance, pass in the corresponding peak bandwidth for the current instance specification.  If you create a Pro Edition instance, configure the peak bandwidth, partition count, and other parameters as required by Pro Edition.
+                     * 获取Specifies the peak bandwidth of the instance private network, with a default value of 40 MB/s. for standard version, input the peak bandwidth corresponding to the current instance specifications. note that if the instance created is a pro edition instance, parameter configuration such as peak bandwidth and number of partitions should meet the billing specification of the professional edition. view billing specifications through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1
+                     * @return BandWidth Specifies the peak bandwidth of the instance private network, with a default value of 40 MB/s. for standard version, input the peak bandwidth corresponding to the current instance specifications. note that if the instance created is a pro edition instance, parameter configuration such as peak bandwidth and number of partitions should meet the billing specification of the professional edition. view billing specifications through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1
                      * 
                      */
                     int64_t GetBandWidth() const;
 
                     /**
-                     * 设置Private network peak bandwidth of an instance  in MB/sec.  If you create a Standard Edition instance, pass in the corresponding peak bandwidth for the current instance specification.  If you create a Pro Edition instance, configure the peak bandwidth, partition count, and other parameters as required by Pro Edition.
-                     * @param _bandWidth Private network peak bandwidth of an instance  in MB/sec.  If you create a Standard Edition instance, pass in the corresponding peak bandwidth for the current instance specification.  If you create a Pro Edition instance, configure the peak bandwidth, partition count, and other parameters as required by Pro Edition.
+                     * 设置Specifies the peak bandwidth of the instance private network, with a default value of 40 MB/s. for standard version, input the peak bandwidth corresponding to the current instance specifications. note that if the instance created is a pro edition instance, parameter configuration such as peak bandwidth and number of partitions should meet the billing specification of the professional edition. view billing specifications through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1
+                     * @param _bandWidth Specifies the peak bandwidth of the instance private network, with a default value of 40 MB/s. for standard version, input the peak bandwidth corresponding to the current instance specifications. note that if the instance created is a pro edition instance, parameter configuration such as peak bandwidth and number of partitions should meet the billing specification of the professional edition. view billing specifications through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1
                      * 
                      */
                     void SetBandWidth(const int64_t& _bandWidth);
@@ -253,15 +254,15 @@ namespace TencentCloud
                     bool BandWidthHasBeenSet() const;
 
                     /**
-                     * 获取Instance disk size, which must meet the requirement of the instance’s specification.
-                     * @return DiskSize Instance disk size, which must meet the requirement of the instance’s specification.
+                     * 获取Instance disk size. default value is 500. step length is set to 100. should meet the billing specification of the current instance. can be accessed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1
+                     * @return DiskSize Instance disk size. default value is 500. step length is set to 100. should meet the billing specification of the current instance. can be accessed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1
                      * 
                      */
                     int64_t GetDiskSize() const;
 
                     /**
-                     * 设置Instance disk size, which must meet the requirement of the instance’s specification.
-                     * @param _diskSize Instance disk size, which must meet the requirement of the instance’s specification.
+                     * 设置Instance disk size. default value is 500. step length is set to 100. should meet the billing specification of the current instance. can be accessed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1
+                     * @param _diskSize Instance disk size. default value is 500. step length is set to 100. should meet the billing specification of the current instance. can be accessed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1
                      * 
                      */
                     void SetDiskSize(const int64_t& _diskSize);
@@ -274,15 +275,15 @@ namespace TencentCloud
                     bool DiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取The maximum number of partitions of the instance, which must meet the requirement of the instance’s specification.
-                     * @return Partition The maximum number of partitions of the instance, which must meet the requirement of the instance’s specification.
+                     * 获取Specifies the maximum number of partitions for the instance, which should meet the billing specification of the current instance. default value is 800 with a step length of 100. the billing specification can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
+                     * @return Partition Specifies the maximum number of partitions for the instance, which should meet the billing specification of the current instance. default value is 800 with a step length of 100. the billing specification can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
                      * 
                      */
                     int64_t GetPartition() const;
 
                     /**
-                     * 设置The maximum number of partitions of the instance, which must meet the requirement of the instance’s specification.
-                     * @param _partition The maximum number of partitions of the instance, which must meet the requirement of the instance’s specification.
+                     * 设置Specifies the maximum number of partitions for the instance, which should meet the billing specification of the current instance. default value is 800 with a step length of 100. the billing specification can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
+                     * @param _partition Specifies the maximum number of partitions for the instance, which should meet the billing specification of the current instance. default value is 800 with a step length of 100. the billing specification can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
                      * 
                      */
                     void SetPartition(const int64_t& _partition);
@@ -295,15 +296,15 @@ namespace TencentCloud
                     bool PartitionHasBeenSet() const;
 
                     /**
-                     * 获取The maximum number of topics of the instance, which must meet the requirement of the instance’s specification.
-                     * @return TopicNum The maximum number of topics of the instance, which must meet the requirement of the instance’s specification.
+                     * 获取Maximum number of topics for the instance should meet the billing specification of the current instance. default value is 800, step length is set to 100.
+                     * @return TopicNum Maximum number of topics for the instance should meet the billing specification of the current instance. default value is 800, step length is set to 100.
                      * 
                      */
                     int64_t GetTopicNum() const;
 
                     /**
-                     * 设置The maximum number of topics of the instance, which must meet the requirement of the instance’s specification.
-                     * @param _topicNum The maximum number of topics of the instance, which must meet the requirement of the instance’s specification.
+                     * 设置Maximum number of topics for the instance should meet the billing specification of the current instance. default value is 800, step length is set to 100.
+                     * @param _topicNum Maximum number of topics for the instance should meet the billing specification of the current instance. default value is 800, step length is set to 100.
                      * 
                      */
                     void SetTopicNum(const int64_t& _topicNum);
@@ -316,15 +317,15 @@ namespace TencentCloud
                     bool TopicNumHasBeenSet() const;
 
                     /**
-                     * 获取AZ of the instance.  When a multi-AZ instance is created, the value of this parameter is the AZ ID of the subnet where the instance’s default access point resides.
-                     * @return ZoneId AZ of the instance.  When a multi-AZ instance is created, the value of this parameter is the AZ ID of the subnet where the instance’s default access point resides.
+                     * 获取Specifies the availability zone of the instance. when creating a multi-az instance, this parameter is the availability zone id of the subnet where the default access point is created. ZoneId and ZoneIds cannot be empty at the same time. obtain through the API [DescribeCkafkaZone](https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1).
+                     * @return ZoneId Specifies the availability zone of the instance. when creating a multi-az instance, this parameter is the availability zone id of the subnet where the default access point is created. ZoneId and ZoneIds cannot be empty at the same time. obtain through the API [DescribeCkafkaZone](https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1).
                      * 
                      */
                     int64_t GetZoneId() const;
 
                     /**
-                     * 设置AZ of the instance.  When a multi-AZ instance is created, the value of this parameter is the AZ ID of the subnet where the instance’s default access point resides.
-                     * @param _zoneId AZ of the instance.  When a multi-AZ instance is created, the value of this parameter is the AZ ID of the subnet where the instance’s default access point resides.
+                     * 设置Specifies the availability zone of the instance. when creating a multi-az instance, this parameter is the availability zone id of the subnet where the default access point is created. ZoneId and ZoneIds cannot be empty at the same time. obtain through the API [DescribeCkafkaZone](https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1).
+                     * @param _zoneId Specifies the availability zone of the instance. when creating a multi-az instance, this parameter is the availability zone id of the subnet where the default access point is created. ZoneId and ZoneIds cannot be empty at the same time. obtain through the API [DescribeCkafkaZone](https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1).
                      * 
                      */
                     void SetZoneId(const int64_t& _zoneId);
@@ -358,15 +359,15 @@ namespace TencentCloud
                     bool MultiZoneFlagHasBeenSet() const;
 
                     /**
-                     * 获取This parameter indicates the list of AZ IDs when the instance is deployed in multiple AZs.  Note that `ZoneId` must be included in the array of this parameter.
-                     * @return ZoneIds This parameter indicates the list of AZ IDs when the instance is deployed in multiple AZs.  Note that `ZoneId` must be included in the array of this parameter.
+                     * 获取Specifies the multi-az id list when the instance is a multi-az instance. note that the multi-az corresponding to parameter ZoneId must be included in this parameter array. ZoneId and ZoneIds cannot be empty at the same time. you can obtain this information through the [DescribeCkafkaZone](https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1) api.
+                     * @return ZoneIds Specifies the multi-az id list when the instance is a multi-az instance. note that the multi-az corresponding to parameter ZoneId must be included in this parameter array. ZoneId and ZoneIds cannot be empty at the same time. you can obtain this information through the [DescribeCkafkaZone](https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1) api.
                      * 
                      */
                     std::vector<int64_t> GetZoneIds() const;
 
                     /**
-                     * 设置This parameter indicates the list of AZ IDs when the instance is deployed in multiple AZs.  Note that `ZoneId` must be included in the array of this parameter.
-                     * @param _zoneIds This parameter indicates the list of AZ IDs when the instance is deployed in multiple AZs.  Note that `ZoneId` must be included in the array of this parameter.
+                     * 设置Specifies the multi-az id list when the instance is a multi-az instance. note that the multi-az corresponding to parameter ZoneId must be included in this parameter array. ZoneId and ZoneIds cannot be empty at the same time. you can obtain this information through the [DescribeCkafkaZone](https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1) api.
+                     * @param _zoneIds Specifies the multi-az id list when the instance is a multi-az instance. note that the multi-az corresponding to parameter ZoneId must be included in this parameter array. ZoneId and ZoneIds cannot be empty at the same time. you can obtain this information through the [DescribeCkafkaZone](https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1) api.
                      * 
                      */
                     void SetZoneIds(const std::vector<int64_t>& _zoneIds);
@@ -420,28 +421,70 @@ namespace TencentCloud
                      */
                     bool PublicNetworkMonthlyHasBeenSet() const;
 
+                    /**
+                     * 获取Tag.
+                     * @return Tags Tag.
+                     * 
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Tag.
+                     * @param _tags Tag.
+                     * 
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     * 
+                     */
+                    bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取Elastic bandwidth switch. valid values: 0 (disable, default), 1 (enable).
+                     * @return ElasticBandwidthSwitch Elastic bandwidth switch. valid values: 0 (disable, default), 1 (enable).
+                     * 
+                     */
+                    int64_t GetElasticBandwidthSwitch() const;
+
+                    /**
+                     * 设置Elastic bandwidth switch. valid values: 0 (disable, default), 1 (enable).
+                     * @param _elasticBandwidthSwitch Elastic bandwidth switch. valid values: 0 (disable, default), 1 (enable).
+                     * 
+                     */
+                    void SetElasticBandwidthSwitch(const int64_t& _elasticBandwidthSwitch);
+
+                    /**
+                     * 判断参数 ElasticBandwidthSwitch 是否已赋值
+                     * @return ElasticBandwidthSwitch 是否已赋值
+                     * 
+                     */
+                    bool ElasticBandwidthSwitchHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance name, which is a string of up to 64 letters, digits, and hyphens (-). It must start with a letter.
-                     */
-                    std::string m_instanceName;
-                    bool m_instanceNameHasBeenSet;
-
-                    /**
-                     * ID of the VPC where the default access point of the created instance resides.  This parameter is required as instances cannot be created in the classic network currently.
+                     * VPC Id, obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * ID of the subnet  where the default access point of the created instance resides.
+                     * Subnet Id. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Instance specification.  This parameter is required for a Standard Edition instance but not for a Pro Edition instance.  Valid values:  `1` (Small),  `2` (Standard),  `3` (Advanced),  `4` (Large),  `5` (Xlarge L1),  `6` (Xlarge L2),  `7` (Xlarge L3),  `8` (Xlarge L4),  
+                     * Specifies the cluster instance name of ckafka, an arbitrary character with length not exceeding 128.
+                     */
+                    std::string m_instanceName;
+                    bool m_instanceNameHasBeenSet;
+
+                    /**
+                     * Specifies the standard edition instance specification for the international site. currently only the international site standard edition uses the current field to distinguish specifications, while the domestic site standard edition distinguishes specifications by peak bandwidth. fill in 1 for all instances except the international site standard edition. for international site standard edition instances: [entry-level (general)] fill 1; [standard type (standard)] fill 2; [advanced] fill 3; [capacity type (capacity)] fill 4; [advanced type 1 (specialized-1)] fill 5; [advanced type 2 (specialized-2)] fill 6; [advanced type 3 (specialized-3)] fill 7; [advanced type 4 (specialized-4)] fill 8.
                      */
                     int64_t m_instanceType;
                     bool m_instanceTypeHasBeenSet;
@@ -459,49 +502,49 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Instance version.  Valid values: `0.10.2`, `1.1.1`, `2.4.2`, and `2.8.1`.
+                     * Instance version. currently supports "2.4.1", "2.4.2", "2.8.1", "3.2.3". default value "2.4.1". "2.4.1" and "2.4.2" belong to the same version. any one can be passed.
                      */
                     std::string m_kafkaVersion;
                     bool m_kafkaVersionHasBeenSet;
 
                     /**
-                     * Instance type. `standard` (Standard Edition),  `profession`  (Pro Edition)
+                     * Instance type. "standard": standard version. "profession": pro edition. (standard version is only supported on the international site. currently, the chinese site supports pro edition.).
                      */
                     std::string m_specificationsType;
                     bool m_specificationsTypeHasBeenSet;
 
                     /**
-                     * Instance disk type.  `CLOUD_BASIC` (Premium Cloud Storage),  `CLOUD_SSD` (SSD).  If this parameter is left empty, the default value `CLOUD_BASIC` will be used.
+                     * Specifies the disk type for a pro edition instance. you do not need to fill it in for a standard edition instance. valid values: "CLOUD_SSD" for SSD CLOUD disk; "CLOUD_BASIC" for high-performance CLOUD block storage. default value: "CLOUD_BASIC".
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;
 
                     /**
-                     * Private network peak bandwidth of an instance  in MB/sec.  If you create a Standard Edition instance, pass in the corresponding peak bandwidth for the current instance specification.  If you create a Pro Edition instance, configure the peak bandwidth, partition count, and other parameters as required by Pro Edition.
+                     * Specifies the peak bandwidth of the instance private network, with a default value of 40 MB/s. for standard version, input the peak bandwidth corresponding to the current instance specifications. note that if the instance created is a pro edition instance, parameter configuration such as peak bandwidth and number of partitions should meet the billing specification of the professional edition. view billing specifications through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1
                      */
                     int64_t m_bandWidth;
                     bool m_bandWidthHasBeenSet;
 
                     /**
-                     * Instance disk size, which must meet the requirement of the instance’s specification.
+                     * Instance disk size. default value is 500. step length is set to 100. should meet the billing specification of the current instance. can be accessed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1
                      */
                     int64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;
 
                     /**
-                     * The maximum number of partitions of the instance, which must meet the requirement of the instance’s specification.
+                     * Specifies the maximum number of partitions for the instance, which should meet the billing specification of the current instance. default value is 800 with a step length of 100. the billing specification can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
                      */
                     int64_t m_partition;
                     bool m_partitionHasBeenSet;
 
                     /**
-                     * The maximum number of topics of the instance, which must meet the requirement of the instance’s specification.
+                     * Maximum number of topics for the instance should meet the billing specification of the current instance. default value is 800, step length is set to 100.
                      */
                     int64_t m_topicNum;
                     bool m_topicNumHasBeenSet;
 
                     /**
-                     * AZ of the instance.  When a multi-AZ instance is created, the value of this parameter is the AZ ID of the subnet where the instance’s default access point resides.
+                     * Specifies the availability zone of the instance. when creating a multi-az instance, this parameter is the availability zone id of the subnet where the default access point is created. ZoneId and ZoneIds cannot be empty at the same time. obtain through the API [DescribeCkafkaZone](https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1).
                      */
                     int64_t m_zoneId;
                     bool m_zoneIdHasBeenSet;
@@ -513,7 +556,7 @@ namespace TencentCloud
                     bool m_multiZoneFlagHasBeenSet;
 
                     /**
-                     * This parameter indicates the list of AZ IDs when the instance is deployed in multiple AZs.  Note that `ZoneId` must be included in the array of this parameter.
+                     * Specifies the multi-az id list when the instance is a multi-az instance. note that the multi-az corresponding to parameter ZoneId must be included in this parameter array. ZoneId and ZoneIds cannot be empty at the same time. you can obtain this information through the [DescribeCkafkaZone](https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1) api.
                      */
                     std::vector<int64_t> m_zoneIds;
                     bool m_zoneIdsHasBeenSet;
@@ -529,6 +572,18 @@ namespace TencentCloud
                      */
                     int64_t m_publicNetworkMonthly;
                     bool m_publicNetworkMonthlyHasBeenSet;
+
+                    /**
+                     * Tag.
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
+
+                    /**
+                     * Elastic bandwidth switch. valid values: 0 (disable, default), 1 (enable).
+                     */
+                    int64_t m_elasticBandwidthSwitch;
+                    bool m_elasticBandwidthSwitchHasBeenSet;
 
                 };
             }

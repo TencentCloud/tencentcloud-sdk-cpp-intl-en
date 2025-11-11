@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Returned result
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Result Returned result
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Returned result.
+                     * @return Result Returned result.
                      * 
                      */
                     TopicResult GetResult() const;
@@ -63,8 +61,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Returned result
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Returned result.
                      */
                     TopicResult m_result;
                     bool m_resultHasBeenSet;

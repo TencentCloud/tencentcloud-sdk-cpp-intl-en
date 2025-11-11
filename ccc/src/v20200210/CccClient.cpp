@@ -1072,6 +1072,49 @@ CccClient::DeleteStaffOutcomeCallable CccClient::DeleteStaffCallable(const Delet
     return task->get_future();
 }
 
+CccClient::DescribeAIAgentInfoListOutcome CccClient::DescribeAIAgentInfoList(const DescribeAIAgentInfoListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAIAgentInfoList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAIAgentInfoListResponse rsp = DescribeAIAgentInfoListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAIAgentInfoListOutcome(rsp);
+        else
+            return DescribeAIAgentInfoListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAIAgentInfoListOutcome(outcome.GetError());
+    }
+}
+
+void CccClient::DescribeAIAgentInfoListAsync(const DescribeAIAgentInfoListRequest& request, const DescribeAIAgentInfoListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeAIAgentInfoList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CccClient::DescribeAIAgentInfoListOutcomeCallable CccClient::DescribeAIAgentInfoListCallable(const DescribeAIAgentInfoListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeAIAgentInfoListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeAIAgentInfoList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CccClient::DescribeAIAnalysisResultOutcome CccClient::DescribeAIAnalysisResult(const DescribeAIAnalysisResultRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeAIAnalysisResult");
@@ -2656,6 +2699,49 @@ CccClient::ResumePredictiveDialingCampaignOutcomeCallable CccClient::ResumePredi
         [this, request]()
         {
             return this->ResumePredictiveDialingCampaign(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CccClient::SetStaffStatusOutcome CccClient::SetStaffStatus(const SetStaffStatusRequest &request)
+{
+    auto outcome = MakeRequest(request, "SetStaffStatus");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        SetStaffStatusResponse rsp = SetStaffStatusResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return SetStaffStatusOutcome(rsp);
+        else
+            return SetStaffStatusOutcome(o.GetError());
+    }
+    else
+    {
+        return SetStaffStatusOutcome(outcome.GetError());
+    }
+}
+
+void CccClient::SetStaffStatusAsync(const SetStaffStatusRequest& request, const SetStaffStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->SetStaffStatus(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CccClient::SetStaffStatusOutcomeCallable CccClient::SetStaffStatusCallable(const SetStaffStatusRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<SetStaffStatusOutcome()>>(
+        [this, request]()
+        {
+            return this->SetStaffStatus(request);
         }
     );
 

@@ -235,15 +235,15 @@ namespace TencentCloud
                     bool TriesHasBeenSet() const;
 
                     /**
-                     * 获取Custom variables (supported only in advanced versions).
-                     * @return Variables Custom variables (supported only in advanced versions).
+                     * 获取Custom variable (advanced edition support). using the same variable in the CalleeAttributes field will overwrite here.
+                     * @return Variables Custom variable (advanced edition support). using the same variable in the CalleeAttributes field will overwrite here.
                      * 
                      */
                     std::vector<Variable> GetVariables() const;
 
                     /**
-                     * 设置Custom variables (supported only in advanced versions).
-                     * @param _variables Custom variables (supported only in advanced versions).
+                     * 设置Custom variable (advanced edition support). using the same variable in the CalleeAttributes field will overwrite here.
+                     * @param _variables Custom variable (advanced edition support). using the same variable in the CalleeAttributes field will overwrite here.
                      * 
                      */
                     void SetVariables(const std::vector<Variable>& _variables);
@@ -256,15 +256,15 @@ namespace TencentCloud
                     bool VariablesHasBeenSet() const;
 
                     /**
-                     * 获取UUI
-                     * @return UUI UUI
+                     * 获取User-Defined data. specifies that using UUI in the CalleeAttributes field will overwrite here.
+                     * @return UUI User-Defined data. specifies that using UUI in the CalleeAttributes field will overwrite here.
                      * 
                      */
                     std::string GetUUI() const;
 
                     /**
-                     * 设置UUI
-                     * @param _uUI UUI
+                     * 设置User-Defined data. specifies that using UUI in the CalleeAttributes field will overwrite here.
+                     * @param _uUI User-Defined data. specifies that using UUI in the CalleeAttributes field will overwrite here.
                      * 
                      */
                     void SetUUI(const std::string& _uUI);
@@ -417,13 +417,13 @@ namespace TencentCloud
                     bool m_triesHasBeenSet;
 
                     /**
-                     * Custom variables (supported only in advanced versions).
+                     * Custom variable (advanced edition support). using the same variable in the CalleeAttributes field will overwrite here.
                      */
                     std::vector<Variable> m_variables;
                     bool m_variablesHasBeenSet;
 
                     /**
-                     * UUI
+                     * User-Defined data. specifies that using UUI in the CalleeAttributes field will overwrite here.
                      */
                     std::string m_uUI;
                     bool m_uUIHasBeenSet;

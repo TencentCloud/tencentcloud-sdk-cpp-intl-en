@@ -31,7 +31,9 @@ ModifyInstanceAttributesRequest::ModifyInstanceAttributesRequest() :
     m_rebalanceTimeHasBeenSet(false),
     m_publicNetworkHasBeenSet(false),
     m_dynamicDiskConfigHasBeenSet(false),
-    m_maxMessageByteHasBeenSet(false)
+    m_maxMessageByteHasBeenSet(false),
+    m_uncleanLeaderElectionEnableHasBeenSet(false),
+    m_deleteProtectionEnableHasBeenSet(false)
 {
 }
 
@@ -115,6 +117,22 @@ string ModifyInstanceAttributesRequest::ToJsonString() const
         string key = "MaxMessageByte";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_maxMessageByte, allocator);
+    }
+
+    if (m_uncleanLeaderElectionEnableHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UncleanLeaderElectionEnable";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_uncleanLeaderElectionEnable, allocator);
+    }
+
+    if (m_deleteProtectionEnableHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DeleteProtectionEnable";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_deleteProtectionEnable, allocator);
     }
 
 
@@ -267,6 +285,38 @@ void ModifyInstanceAttributesRequest::SetMaxMessageByte(const uint64_t& _maxMess
 bool ModifyInstanceAttributesRequest::MaxMessageByteHasBeenSet() const
 {
     return m_maxMessageByteHasBeenSet;
+}
+
+int64_t ModifyInstanceAttributesRequest::GetUncleanLeaderElectionEnable() const
+{
+    return m_uncleanLeaderElectionEnable;
+}
+
+void ModifyInstanceAttributesRequest::SetUncleanLeaderElectionEnable(const int64_t& _uncleanLeaderElectionEnable)
+{
+    m_uncleanLeaderElectionEnable = _uncleanLeaderElectionEnable;
+    m_uncleanLeaderElectionEnableHasBeenSet = true;
+}
+
+bool ModifyInstanceAttributesRequest::UncleanLeaderElectionEnableHasBeenSet() const
+{
+    return m_uncleanLeaderElectionEnableHasBeenSet;
+}
+
+int64_t ModifyInstanceAttributesRequest::GetDeleteProtectionEnable() const
+{
+    return m_deleteProtectionEnable;
+}
+
+void ModifyInstanceAttributesRequest::SetDeleteProtectionEnable(const int64_t& _deleteProtectionEnable)
+{
+    m_deleteProtectionEnable = _deleteProtectionEnable;
+    m_deleteProtectionEnableHasBeenSet = true;
+}
+
+bool ModifyInstanceAttributesRequest::DeleteProtectionEnableHasBeenSet() const
+{
+    return m_deleteProtectionEnableHasBeenSet;
 }
 
 

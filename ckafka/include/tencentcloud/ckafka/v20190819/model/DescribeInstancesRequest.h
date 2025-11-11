@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取(Filter) filter by instance ID
-                     * @return InstanceId (Filter) filter by instance ID
+                     * 获取(Query condition) filter by the ckafka cluster instance Id.
+                     * @return InstanceId (Query condition) filter by the ckafka cluster instance Id.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置(Filter) filter by instance ID
-                     * @param _instanceId (Filter) filter by instance ID
+                     * 设置(Query condition) filter by the ckafka cluster instance Id.
+                     * @param _instanceId (Query condition) filter by the ckafka cluster instance Id.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取(Filter) filter by instance name. Fuzzy search is supported
-                     * @return SearchWord (Filter) filter by instance name. Fuzzy search is supported
+                     * 获取Search term. example: (query condition) filter by instance name. fuzzy query is supported.
+                     * @return SearchWord Search term. example: (query condition) filter by instance name. fuzzy query is supported.
                      * 
                      */
                     std::string GetSearchWord() const;
 
                     /**
-                     * 设置(Filter) filter by instance name. Fuzzy search is supported
-                     * @param _searchWord (Filter) filter by instance name. Fuzzy search is supported
+                     * 设置Search term. example: (query condition) filter by instance name. fuzzy query is supported.
+                     * @param _searchWord Search term. example: (query condition) filter by instance name. fuzzy query is supported.
                      * 
                      */
                     void SetSearchWord(const std::string& _searchWord);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SearchWordHasBeenSet() const;
 
                     /**
-                     * 获取(Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
-                     * @return Status (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
+                     * 获取Instance status (query condition). valid values: 0: creating, 1: running, 2: deleting, 5: isolated, 7: upgrading. default return: all.
+                     * @return Status Instance status (query condition). valid values: 0: creating, 1: running, 2: deleting, 5: isolated, 7: upgrading. default return: all.
                      * 
                      */
                     std::vector<int64_t> GetStatus() const;
 
                     /**
-                     * 设置(Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
-                     * @param _status (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
+                     * 设置Instance status (query condition). valid values: 0: creating, 1: running, 2: deleting, 5: isolated, 7: upgrading. default return: all.
+                     * @param _status Instance status (query condition). valid values: 0: creating, 1: running, 2: deleting, 5: isolated, 7: upgrading. default return: all.
                      * 
                      */
                     void SetStatus(const std::vector<int64_t>& _status);
@@ -150,34 +150,34 @@ namespace TencentCloud
                     /**
                      * 获取Tag key value (this field has been deprecated).
                      * @return TagKey Tag key value (this field has been deprecated).
-                     * 
+                     * @deprecated
                      */
                     std::string GetTagKey() const;
 
                     /**
                      * 设置Tag key value (this field has been deprecated).
                      * @param _tagKey Tag key value (this field has been deprecated).
-                     * 
+                     * @deprecated
                      */
                     void SetTagKey(const std::string& _tagKey);
 
                     /**
                      * 判断参数 TagKey 是否已赋值
                      * @return TagKey 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool TagKeyHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID.
-                     * @return VpcId VPC ID.
+                     * 获取(Query condition) VPC Id.
+                     * @return VpcId (Query condition) VPC Id.
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC ID.
-                     * @param _vpcId VPC ID.
+                     * 设置(Query condition) VPC Id.
+                     * @param _vpcId (Query condition) VPC Id.
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -192,19 +192,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * (Filter) filter by instance ID
+                     * (Query condition) filter by the ckafka cluster instance Id.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * (Filter) filter by instance name. Fuzzy search is supported
+                     * Search term. example: (query condition) filter by instance name. fuzzy query is supported.
                      */
                     std::string m_searchWord;
                     bool m_searchWordHasBeenSet;
 
                     /**
-                     * (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
+                     * Instance status (query condition). valid values: 0: creating, 1: running, 2: deleting, 5: isolated, 7: upgrading. default return: all.
                      */
                     std::vector<int64_t> m_status;
                     bool m_statusHasBeenSet;
@@ -228,7 +228,7 @@ namespace TencentCloud
                     bool m_tagKeyHasBeenSet;
 
                     /**
-                     * VPC ID.
+                     * (Query condition) VPC Id.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;

@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool PublicNetworkChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Public network bandwidth in MB
-                     * @return PublicNetworkMonthly Public network bandwidth in MB
+                     * 获取Public network bandwidth, in MB. value must be 0 or a multiple of 3.
+                     * @return PublicNetworkMonthly Public network bandwidth, in MB. value must be 0 or a multiple of 3.
                      * 
                      */
                     int64_t GetPublicNetworkMonthly() const;
 
                     /**
-                     * 设置Public network bandwidth in MB
-                     * @param _publicNetworkMonthly Public network bandwidth in MB
+                     * 设置Public network bandwidth, in MB. value must be 0 or a multiple of 3.
+                     * @param _publicNetworkMonthly Public network bandwidth, in MB. value must be 0 or a multiple of 3.
                      * 
                      */
                     void SetPublicNetworkMonthly(const int64_t& _publicNetworkMonthly);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_publicNetworkChargeTypeHasBeenSet;
 
                     /**
-                     * Public network bandwidth in MB
+                     * Public network bandwidth, in MB. value must be 0 or a multiple of 3.
                      */
                     int64_t m_publicNetworkMonthly;
                     bool m_publicNetworkMonthlyHasBeenSet;

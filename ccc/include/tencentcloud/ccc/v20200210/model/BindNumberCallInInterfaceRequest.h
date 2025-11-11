@@ -106,6 +106,27 @@ namespace TencentCloud
                      */
                     bool CallInInterfaceHasBeenSet() const;
 
+                    /**
+                     * 获取Bind number type. specifies the type of the bind number. inner: internal number | number: line number.
+                     * @return NumberType Bind number type. specifies the type of the bind number. inner: internal number | number: line number.
+                     * 
+                     */
+                    std::string GetNumberType() const;
+
+                    /**
+                     * 设置Bind number type. specifies the type of the bind number. inner: internal number | number: line number.
+                     * @param _numberType Bind number type. specifies the type of the bind number. inner: internal number | number: line number.
+                     * 
+                     */
+                    void SetNumberType(const std::string& _numberType);
+
+                    /**
+                     * 判断参数 NumberType 是否已赋值
+                     * @return NumberType 是否已赋值
+                     * 
+                     */
+                    bool NumberTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -125,6 +146,12 @@ namespace TencentCloud
                      */
                     Interface m_callInInterface;
                     bool m_callInInterfaceHasBeenSet;
+
+                    /**
+                     * Bind number type. specifies the type of the bind number. inner: internal number | number: line number.
+                     */
+                    std::string m_numberType;
+                    bool m_numberTypeHasBeenSet;
 
                 };
             }

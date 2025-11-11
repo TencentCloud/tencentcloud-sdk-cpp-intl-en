@@ -131,19 +131,15 @@ namespace TencentCloud
                     bool InSyncReplicaHasBeenSet() const;
 
                     /**
-                     * 获取Starting offset
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return BeginOffset Starting offset
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Start Offset.
+                     * @return BeginOffset Start Offset.
                      * 
                      */
                     uint64_t GetBeginOffset() const;
 
                     /**
-                     * 设置Starting offset
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _beginOffset Starting offset
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Start Offset.
+                     * @param _beginOffset Start Offset.
                      * 
                      */
                     void SetBeginOffset(const uint64_t& _beginOffset);
@@ -156,19 +152,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool BeginOffsetHasBeenSet() const;
 
                     /**
-                     * 获取Ending offset
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return EndOffset Ending offset
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取End Offset.
+                     * @return EndOffset End Offset.
                      * 
                      */
                     uint64_t GetEndOffset() const;
 
                     /**
-                     * 设置Ending offset
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _endOffset Ending offset
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置End Offset.
+                     * @param _endOffset End Offset.
                      * 
                      */
                     void SetEndOffset(const uint64_t& _endOffset);
@@ -181,19 +173,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool EndOffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of messages
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MessageCount Number of messages
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Message count.
+                     * @return MessageCount Message count.
                      * 
                      */
                     uint64_t GetMessageCount() const;
 
                     /**
-                     * 设置Number of messages
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _messageCount Number of messages
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Message count.
+                     * @param _messageCount Message count.
                      * 
                      */
                     void SetMessageCount(const uint64_t& _messageCount);
@@ -206,19 +194,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MessageCountHasBeenSet() const;
 
                     /**
-                     * 获取Unsynced replica set
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return OutOfSyncReplica Unsynced replica set
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Unsynced replica.
+                     * @return OutOfSyncReplica Unsynced replica.
                      * 
                      */
                     std::string GetOutOfSyncReplica() const;
 
                     /**
-                     * 设置Unsynced replica set
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _outOfSyncReplica Unsynced replica set
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Unsynced replica.
+                     * @param _outOfSyncReplica Unsynced replica.
                      * 
                      */
                     void SetOutOfSyncReplica(const std::string& _outOfSyncReplica);
@@ -257,29 +241,25 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_inSyncReplicaHasBeenSet;
 
                     /**
-                     * Starting offset
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Start Offset.
                      */
                     uint64_t m_beginOffset;
                     bool m_beginOffsetHasBeenSet;
 
                     /**
-                     * Ending offset
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * End Offset.
                      */
                     uint64_t m_endOffset;
                     bool m_endOffsetHasBeenSet;
 
                     /**
-                     * Number of messages
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Message count.
                      */
                     uint64_t m_messageCount;
                     bool m_messageCountHasBeenSet;
 
                     /**
-                     * Unsynced replica set
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Unsynced replica.
                      */
                     std::string m_outOfSyncReplica;
                     bool m_outOfSyncReplicaHasBeenSet;

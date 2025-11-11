@@ -127,6 +127,48 @@ namespace TencentCloud
                      */
                     bool PrefixHasBeenSet() const;
 
+                    /**
+                     * 获取Domestic long-distance mobile phone prefix.
+                     * @return MobileNddPrefix Domestic long-distance mobile phone prefix.
+                     * 
+                     */
+                    std::string GetMobileNddPrefix() const;
+
+                    /**
+                     * 设置Domestic long-distance mobile phone prefix.
+                     * @param _mobileNddPrefix Domestic long-distance mobile phone prefix.
+                     * 
+                     */
+                    void SetMobileNddPrefix(const std::string& _mobileNddPrefix);
+
+                    /**
+                     * 判断参数 MobileNddPrefix 是否已赋值
+                     * @return MobileNddPrefix 是否已赋值
+                     * 
+                     */
+                    bool MobileNddPrefixHasBeenSet() const;
+
+                    /**
+                     * 获取Removes the area code for local calls.
+                     * @return LocalNumberTrimAC Removes the area code for local calls.
+                     * 
+                     */
+                    bool GetLocalNumberTrimAC() const;
+
+                    /**
+                     * 设置Removes the area code for local calls.
+                     * @param _localNumberTrimAC Removes the area code for local calls.
+                     * 
+                     */
+                    void SetLocalNumberTrimAC(const bool& _localNumberTrimAC);
+
+                    /**
+                     * 判断参数 LocalNumberTrimAC 是否已赋值
+                     * @return LocalNumberTrimAC 是否已赋值
+                     * 
+                     */
+                    bool LocalNumberTrimACHasBeenSet() const;
+
                 private:
 
                     /**
@@ -152,6 +194,18 @@ namespace TencentCloud
                      */
                     std::string m_prefix;
                     bool m_prefixHasBeenSet;
+
+                    /**
+                     * Domestic long-distance mobile phone prefix.
+                     */
+                    std::string m_mobileNddPrefix;
+                    bool m_mobileNddPrefixHasBeenSet;
+
+                    /**
+                     * Removes the area code for local calls.
+                     */
+                    bool m_localNumberTrimAC;
+                    bool m_localNumberTrimACHasBeenSet;
 
                 };
             }

@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Partition, such as "0" or "1"
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Partition Partition, such as "0" or "1"
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Partition
+                     * @return Partition Partition
                      * 
                      */
                     std::string GetPartition() const;
 
                     /**
-                     * 设置Partition, such as "0" or "1"
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _partition Partition, such as "0" or "1"
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Partition
+                     * @param _partition Partition
                      * 
                      */
                     void SetPartition(const std::string& _partition);
@@ -72,19 +68,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PartitionHasBeenSet() const;
 
                     /**
-                     * 获取Offset, such as 100
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Offset Offset, such as 100
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the offset.
+                     * @return Offset Specifies the offset.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset, such as 100
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _offset Offset, such as 100
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the offset.
+                     * @param _offset Specifies the offset.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -99,15 +91,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Partition, such as "0" or "1"
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Partition
                      */
                     std::string m_partition;
                     bool m_partitionHasBeenSet;
 
                     /**
-                     * Offset, such as 100
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Specifies the offset.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;

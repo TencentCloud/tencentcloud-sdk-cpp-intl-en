@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CKafka instance ID.
-                     * @return InstanceId CKafka instance ID.
+                     * 获取ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+                     * @return InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置CKafka instance ID.
-                     * @param _instanceId CKafka instance ID.
+                     * 设置ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+                     * @param _instanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Name of the group to be queried, which is optional.
-                     * @return GroupName Name of the group to be queried, which is optional.
+                     * 获取Specifies the group name you want to query.
+                     * @return GroupName Specifies the group name you want to query.
                      * 
                      */
                     std::string GetGroupName() const;
 
                     /**
-                     * 设置Name of the group to be queried, which is optional.
-                     * @param _groupName Name of the group to be queried, which is optional.
+                     * 设置Specifies the group name you want to query.
+                     * @param _groupName Specifies the group name you want to query.
                      * 
                      */
                     void SetGroupName(const std::string& _groupName);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool GroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Name of the corresponding topic in the group to be queried, which is optional. If this parameter is specified but `group` is not specified, this parameter will be ignored.
-                     * @return TopicName Name of the corresponding topic in the group to be queried, which is optional. If this parameter is specified but `group` is not specified, this parameter will be ignored.
+                     * 获取Specifies the corresponding topic name in the group to be queried by the user. if this parameter is specified while the group is unspecified, ignore this parameter.
+                     * @return TopicName Specifies the corresponding topic name in the group to be queried by the user. if this parameter is specified while the group is unspecified, ignore this parameter.
                      * 
                      */
                     std::string GetTopicName() const;
 
                     /**
-                     * 设置Name of the corresponding topic in the group to be queried, which is optional. If this parameter is specified but `group` is not specified, this parameter will be ignored.
-                     * @param _topicName Name of the corresponding topic in the group to be queried, which is optional. If this parameter is specified but `group` is not specified, this parameter will be ignored.
+                     * 设置Specifies the corresponding topic name in the group to be queried by the user. if this parameter is specified while the group is unspecified, ignore this parameter.
+                     * @param _topicName Specifies the corresponding topic name in the group to be queried by the user. if this parameter is specified while the group is unspecified, ignore this parameter.
                      * 
                      */
                     void SetTopicName(const std::string& _topicName);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取Number of results to be returned in this request
-                     * @return Limit Number of results to be returned in this request
+                     * 获取Returns the limit quantity of the consumption group. supports a maximum of 50.
+                     * @return Limit Returns the limit quantity of the consumption group. supports a maximum of 50.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results to be returned in this request
-                     * @param _limit Number of results to be returned in this request
+                     * 设置Returns the limit quantity of the consumption group. supports a maximum of 50.
+                     * @param _limit Returns the limit quantity of the consumption group. supports a maximum of 50.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset position
-                     * @return Offset Offset position
+                     * 获取Specifies the starting offset amount of the consumer group list.
+                     * @return Offset Specifies the starting offset amount of the consumer group list.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset position
-                     * @param _offset Offset position
+                     * 设置Specifies the starting offset amount of the consumer group list.
+                     * @param _offset Specifies the starting offset amount of the consumer group list.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -150,31 +150,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * CKafka instance ID.
+                     * ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Name of the group to be queried, which is optional.
+                     * Specifies the group name you want to query.
                      */
                     std::string m_groupName;
                     bool m_groupNameHasBeenSet;
 
                     /**
-                     * Name of the corresponding topic in the group to be queried, which is optional. If this parameter is specified but `group` is not specified, this parameter will be ignored.
+                     * Specifies the corresponding topic name in the group to be queried by the user. if this parameter is specified while the group is unspecified, ignore this parameter.
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * Number of results to be returned in this request
+                     * Returns the limit quantity of the consumption group. supports a maximum of 50.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset position
+                     * Specifies the starting offset amount of the consumer group list.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;

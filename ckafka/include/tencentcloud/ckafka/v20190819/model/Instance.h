@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取The ckafka cluster instance Id.
+                     * @return InstanceId The ckafka cluster instance Id.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置The ckafka cluster instance Id.
+                     * @param _instanceId The ckafka cluster instance Id.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance name
-                     * @return InstanceName Instance name
+                     * 获取Specifies the Name of the ckafka cluster instance.
+                     * @return InstanceName Specifies the Name of the ckafka cluster instance.
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name
-                     * @param _instanceName Instance name
+                     * 设置Specifies the Name of the ckafka cluster instance.
+                     * @param _instanceName Specifies the Name of the ckafka cluster instance.
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
-                     * @return Status Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
+                     * 获取Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
+                     * @return Status Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
-                     * @param _status Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
+                     * 设置Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
+                     * @param _status Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -110,19 +110,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is an open-source instance. true: yes, false: no
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return IfCommunity Whether it is an open-source instance. true: yes, false: no
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies whether the instance is open-source. valid values: true (open-source), false (not open-source).
+                     * @return IfCommunity Specifies whether the instance is open-source. valid values: true (open-source), false (not open-source).
                      * 
                      */
                     bool GetIfCommunity() const;
 
                     /**
-                     * 设置Whether it is an open-source instance. true: yes, false: no
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _ifCommunity Whether it is an open-source instance. true: yes, false: no
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies whether the instance is open-source. valid values: true (open-source), false (not open-source).
+                     * @param _ifCommunity Specifies whether the instance is open-source. valid values: true (open-source), false (not open-source).
                      * 
                      */
                     void SetIfCommunity(const bool& _ifCommunity);
@@ -137,26 +133,25 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Instance ID
+                     * The ckafka cluster instance Id.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance name
+                     * Specifies the Name of the ckafka cluster instance.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
+                     * Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Whether it is an open-source instance. true: yes, false: no
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Specifies whether the instance is open-source. valid values: true (open-source), false (not open-source).
                      */
                     bool m_ifCommunity;
                     bool m_ifCommunityHasBeenSet;

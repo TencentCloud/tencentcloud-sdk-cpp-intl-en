@@ -37,12 +37,14 @@
 #include <tencentcloud/ckafka/v20190819/model/CreateConsumerResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/CreateDatahubTopicRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/CreateDatahubTopicResponse.h>
-#include <tencentcloud/ckafka/v20190819/model/CreateInstancePostRequest.h>
-#include <tencentcloud/ckafka/v20190819/model/CreateInstancePostResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/CreateInstancePreRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/CreateInstancePreResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/CreatePartitionRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/CreatePartitionResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/CreatePostPaidInstanceRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/CreatePostPaidInstanceResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/CreateRouteRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/CreateRouteResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/CreateTopicRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/CreateTopicResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/CreateTopicIpWhiteListRequest.h>
@@ -51,6 +53,8 @@
 #include <tencentcloud/ckafka/v20190819/model/CreateUserResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteAclRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteAclResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/DeleteInstancePostRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/DeleteInstancePostResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteInstancePreRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteInstancePreResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteRouteRequest.h>
@@ -73,6 +77,8 @@
 #include <tencentcloud/ckafka/v20190819/model/DescribeCkafkaZoneResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeConsumerGroupRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeConsumerGroupResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/DescribeCvmInfoRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/DescribeCvmInfoResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeDatahubTopicRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeDatahubTopicResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeDatahubTopicsRequest.h>
@@ -93,6 +99,8 @@
 #include <tencentcloud/ckafka/v20190819/model/DescribeRegionResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeRouteRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeRouteResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/DescribeSecurityGroupRoutesRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/DescribeSecurityGroupRoutesResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeTaskStatusRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeTaskStatusResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeTopicRequest.h>
@@ -107,12 +115,16 @@
 #include <tencentcloud/ckafka/v20190819/model/DescribeTopicSubscribeGroupResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeTopicSyncReplicaRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeTopicSyncReplicaResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/DescribeTypeInstancesRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/DescribeTypeInstancesResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeUserRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeUserResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/FetchMessageByOffsetRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/FetchMessageByOffsetResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/FetchMessageListByOffsetRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/FetchMessageListByOffsetResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/FetchMessageListByTimestampRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/FetchMessageListByTimestampResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/InquireCkafkaPriceRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/InquireCkafkaPriceResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/ModifyAclRuleRequest.h>
@@ -166,15 +178,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateDatahubTopicResponse> CreateDatahubTopicOutcome;
                 typedef std::future<CreateDatahubTopicOutcome> CreateDatahubTopicOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::CreateDatahubTopicRequest&, CreateDatahubTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDatahubTopicAsyncHandler;
-                typedef Outcome<Core::Error, Model::CreateInstancePostResponse> CreateInstancePostOutcome;
-                typedef std::future<CreateInstancePostOutcome> CreateInstancePostOutcomeCallable;
-                typedef std::function<void(const CkafkaClient*, const Model::CreateInstancePostRequest&, CreateInstancePostOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateInstancePostAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateInstancePreResponse> CreateInstancePreOutcome;
+                typedef std::future<CreateInstancePreOutcome> CreateInstancePreOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::CreateInstancePreRequest&, CreateInstancePreOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateInstancePreAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreatePartitionResponse> CreatePartitionOutcome;
                 typedef std::future<CreatePartitionOutcome> CreatePartitionOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::CreatePartitionRequest&, CreatePartitionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreatePartitionAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreatePostPaidInstanceResponse> CreatePostPaidInstanceOutcome;
                 typedef std::future<CreatePostPaidInstanceOutcome> CreatePostPaidInstanceOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::CreatePostPaidInstanceRequest&, CreatePostPaidInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreatePostPaidInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateRouteResponse> CreateRouteOutcome;
+                typedef std::future<CreateRouteOutcome> CreateRouteOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::CreateRouteRequest&, CreateRouteOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRouteAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateTopicResponse> CreateTopicOutcome;
                 typedef std::future<CreateTopicOutcome> CreateTopicOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::CreateTopicRequest&, CreateTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateTopicAsyncHandler;
@@ -187,6 +202,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteAclResponse> DeleteAclOutcome;
                 typedef std::future<DeleteAclOutcome> DeleteAclOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DeleteAclRequest&, DeleteAclOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAclAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteInstancePostResponse> DeleteInstancePostOutcome;
+                typedef std::future<DeleteInstancePostOutcome> DeleteInstancePostOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::DeleteInstancePostRequest&, DeleteInstancePostOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteInstancePostAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteInstancePreResponse> DeleteInstancePreOutcome;
                 typedef std::future<DeleteInstancePreOutcome> DeleteInstancePreOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DeleteInstancePreRequest&, DeleteInstancePreOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteInstancePreAsyncHandler;
@@ -220,6 +238,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeConsumerGroupResponse> DescribeConsumerGroupOutcome;
                 typedef std::future<DescribeConsumerGroupOutcome> DescribeConsumerGroupOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DescribeConsumerGroupRequest&, DescribeConsumerGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeConsumerGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCvmInfoResponse> DescribeCvmInfoOutcome;
+                typedef std::future<DescribeCvmInfoOutcome> DescribeCvmInfoOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::DescribeCvmInfoRequest&, DescribeCvmInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCvmInfoAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDatahubTopicResponse> DescribeDatahubTopicOutcome;
                 typedef std::future<DescribeDatahubTopicOutcome> DescribeDatahubTopicOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DescribeDatahubTopicRequest&, DescribeDatahubTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDatahubTopicAsyncHandler;
@@ -250,6 +271,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeRouteResponse> DescribeRouteOutcome;
                 typedef std::future<DescribeRouteOutcome> DescribeRouteOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DescribeRouteRequest&, DescribeRouteOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRouteAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSecurityGroupRoutesResponse> DescribeSecurityGroupRoutesOutcome;
+                typedef std::future<DescribeSecurityGroupRoutesOutcome> DescribeSecurityGroupRoutesOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::DescribeSecurityGroupRoutesRequest&, DescribeSecurityGroupRoutesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSecurityGroupRoutesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeTaskStatusResponse> DescribeTaskStatusOutcome;
                 typedef std::future<DescribeTaskStatusOutcome> DescribeTaskStatusOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DescribeTaskStatusRequest&, DescribeTaskStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTaskStatusAsyncHandler;
@@ -271,6 +295,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeTopicSyncReplicaResponse> DescribeTopicSyncReplicaOutcome;
                 typedef std::future<DescribeTopicSyncReplicaOutcome> DescribeTopicSyncReplicaOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DescribeTopicSyncReplicaRequest&, DescribeTopicSyncReplicaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTopicSyncReplicaAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTypeInstancesResponse> DescribeTypeInstancesOutcome;
+                typedef std::future<DescribeTypeInstancesOutcome> DescribeTypeInstancesOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::DescribeTypeInstancesRequest&, DescribeTypeInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTypeInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeUserResponse> DescribeUserOutcome;
                 typedef std::future<DescribeUserOutcome> DescribeUserOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DescribeUserRequest&, DescribeUserOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUserAsyncHandler;
@@ -280,6 +307,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::FetchMessageListByOffsetResponse> FetchMessageListByOffsetOutcome;
                 typedef std::future<FetchMessageListByOffsetOutcome> FetchMessageListByOffsetOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::FetchMessageListByOffsetRequest&, FetchMessageListByOffsetOutcome, const std::shared_ptr<const AsyncCallerContext>&)> FetchMessageListByOffsetAsyncHandler;
+                typedef Outcome<Core::Error, Model::FetchMessageListByTimestampResponse> FetchMessageListByTimestampOutcome;
+                typedef std::future<FetchMessageListByTimestampOutcome> FetchMessageListByTimestampOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::FetchMessageListByTimestampRequest&, FetchMessageListByTimestampOutcome, const std::shared_ptr<const AsyncCallerContext>&)> FetchMessageListByTimestampAsyncHandler;
                 typedef Outcome<Core::Error, Model::InquireCkafkaPriceResponse> InquireCkafkaPriceOutcome;
                 typedef std::future<InquireCkafkaPriceOutcome> InquireCkafkaPriceOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::InquireCkafkaPriceRequest&, InquireCkafkaPriceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquireCkafkaPriceAsyncHandler;
@@ -365,7 +395,7 @@ namespace TencentCloud
                 CreateConsumerOutcomeCallable CreateConsumerCallable(const Model::CreateConsumerRequest& request);
 
                 /**
-                 *This API is used to create a DataHub topic.
+                 *This API is used to create a DIP topic.
                  * @param req CreateDatahubTopicRequest
                  * @return CreateDatahubTopicOutcome
                  */
@@ -374,13 +404,13 @@ namespace TencentCloud
                 CreateDatahubTopicOutcomeCallable CreateDatahubTopicCallable(const Model::CreateDatahubTopicRequest& request);
 
                 /**
-                 *This API is used to create a pay-as-you-go instance.  It will be deprecated in future versions. We recommend that you use the `CreatePostPaidInstance` API instead.  You can call this API via SDK or the TencentCloud API console to create a pay-as-you-go CKafka instance,  which is an alternate option for making a purchase in the console.
-                 * @param req CreateInstancePostRequest
-                 * @return CreateInstancePostOutcome
+                 *This API is used to create prepaid annual and monthly instances. It only supports creating Pro Edition instances.
+                 * @param req CreateInstancePreRequest
+                 * @return CreateInstancePreOutcome
                  */
-                CreateInstancePostOutcome CreateInstancePost(const Model::CreateInstancePostRequest &request);
-                void CreateInstancePostAsync(const Model::CreateInstancePostRequest& request, const CreateInstancePostAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateInstancePostOutcomeCallable CreateInstancePostCallable(const Model::CreateInstancePostRequest& request);
+                CreateInstancePreOutcome CreateInstancePre(const Model::CreateInstancePreRequest &request);
+                void CreateInstancePreAsync(const Model::CreateInstancePreRequest& request, const CreateInstancePreAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateInstancePreOutcomeCallable CreateInstancePreCallable(const Model::CreateInstancePreRequest& request);
 
                 /**
                  *This API is used to add a partition in a topic.
@@ -399,6 +429,15 @@ namespace TencentCloud
                 CreatePostPaidInstanceOutcome CreatePostPaidInstance(const Model::CreatePostPaidInstanceRequest &request);
                 void CreatePostPaidInstanceAsync(const Model::CreatePostPaidInstanceRequest& request, const CreatePostPaidInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreatePostPaidInstanceOutcomeCallable CreatePostPaidInstanceCallable(const Model::CreatePostPaidInstanceRequest& request);
+
+                /**
+                 *This API is used to add instance routes.
+                 * @param req CreateRouteRequest
+                 * @return CreateRouteOutcome
+                 */
+                CreateRouteOutcome CreateRoute(const Model::CreateRouteRequest &request);
+                void CreateRouteAsync(const Model::CreateRouteRequest& request, const CreateRouteAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateRouteOutcomeCallable CreateRouteCallable(const Model::CreateRouteRequest& request);
 
                 /**
                  *This API is used to create a CKafka topic.
@@ -437,7 +476,16 @@ namespace TencentCloud
                 DeleteAclOutcomeCallable DeleteAclCallable(const Model::DeleteAclRequest& request);
 
                 /**
-                 *This API is used to delete a monthly subscribed (prepaid) instance.
+                 *This API is used to delete post-payment instances. It directly performs instance termination by calling API deletion without associating connectors and tasks in pre-check.
+                 * @param req DeleteInstancePostRequest
+                 * @return DeleteInstancePostOutcome
+                 */
+                DeleteInstancePostOutcome DeleteInstancePost(const Model::DeleteInstancePostRequest &request);
+                void DeleteInstancePostAsync(const Model::DeleteInstancePostRequest& request, const DeleteInstancePostAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteInstancePostOutcomeCallable DeleteInstancePostCallable(const Model::DeleteInstancePostRequest& request);
+
+                /**
+                 *This API is used to delete prepaid instances. It performs isolation and deletion actions on the instance. After successful execution, the instance will be directly deleted and terminated. By calling API deletion, it directly performs instance termination without associating connectors and tasks in pre-check.
                  * @param req DeleteInstancePreRequest
                  * @return DeleteInstancePreOutcome
                  */
@@ -536,7 +584,16 @@ namespace TencentCloud
                 DescribeConsumerGroupOutcomeCallable DescribeConsumerGroupCallable(const Model::DescribeConsumerGroupRequest& request);
 
                 /**
-                 *This API is used to get the DataHub topic attributes.
+                 *This API is used to get instance information corresponding to backend CVM, including cvmId and ip. It is for Pro Edition, while Standard Edition returns empty data.
+                 * @param req DescribeCvmInfoRequest
+                 * @return DescribeCvmInfoOutcome
+                 */
+                DescribeCvmInfoOutcome DescribeCvmInfo(const Model::DescribeCvmInfoRequest &request);
+                void DescribeCvmInfoAsync(const Model::DescribeCvmInfoRequest& request, const DescribeCvmInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCvmInfoOutcomeCallable DescribeCvmInfoCallable(const Model::DescribeCvmInfoRequest& request);
+
+                /**
+                 *This API is used to retrieve DIP topic attributes.
                  * @param req DescribeDatahubTopicRequest
                  * @return DescribeDatahubTopicOutcome
                  */
@@ -581,7 +638,7 @@ namespace TencentCloud
                 DescribeGroupOffsetsOutcomeCallable DescribeGroupOffsetsCallable(const Model::DescribeGroupOffsetsRequest& request);
 
                 /**
-                 *This API is used to get instance attributes. 
+                 *This API is used to obtain instance attributes.
                  * @param req DescribeInstanceAttributesRequest
                  * @return DescribeInstanceAttributesOutcome
                  */
@@ -590,7 +647,7 @@ namespace TencentCloud
                 DescribeInstanceAttributesOutcomeCallable DescribeInstanceAttributesCallable(const Model::DescribeInstanceAttributesRequest& request);
 
                 /**
-                 *This API is used to get the list of CKafka instances under a user account.
+                 *This API is used to search for a list of TDMQ CKafka instances under a user account.
                  * @param req DescribeInstancesRequest
                  * @return DescribeInstancesOutcome
                  */
@@ -626,6 +683,15 @@ namespace TencentCloud
                 DescribeRouteOutcomeCallable DescribeRouteCallable(const Model::DescribeRouteRequest& request);
 
                 /**
+                 *This API is used to retrieve the security group route information list.
+                 * @param req DescribeSecurityGroupRoutesRequest
+                 * @return DescribeSecurityGroupRoutesOutcome
+                 */
+                DescribeSecurityGroupRoutesOutcome DescribeSecurityGroupRoutes(const Model::DescribeSecurityGroupRoutesRequest &request);
+                void DescribeSecurityGroupRoutesAsync(const Model::DescribeSecurityGroupRoutesRequest& request, const DescribeSecurityGroupRoutesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSecurityGroupRoutesOutcomeCallable DescribeSecurityGroupRoutesCallable(const Model::DescribeSecurityGroupRoutesRequest& request);
+
+                /**
                  *This API is used to query the task status.
                  * @param req DescribeTaskStatusRequest
                  * @return DescribeTaskStatusOutcome
@@ -645,8 +711,7 @@ This API is used to get the list of topics in a CKafka instance of a user.
                 DescribeTopicOutcomeCallable DescribeTopicCallable(const Model::DescribeTopicRequest& request);
 
                 /**
-                 *This API is used to get topic attributes.
-
+                 *This API is used to retrieve topic attributes.
                  * @param req DescribeTopicAttributesRequest
                  * @return DescribeTopicAttributesOutcome
                  */
@@ -691,6 +756,15 @@ This API is used to get the list of topics in a CKafka instance of a user.
                 DescribeTopicSyncReplicaOutcomeCallable DescribeTopicSyncReplicaCallable(const Model::DescribeTopicSyncReplicaRequest& request);
 
                 /**
+                 *This API is used to search for a list of TDMQ CKafka instances of the specified type under a user account.
+                 * @param req DescribeTypeInstancesRequest
+                 * @return DescribeTypeInstancesOutcome
+                 */
+                DescribeTypeInstancesOutcome DescribeTypeInstances(const Model::DescribeTypeInstancesRequest &request);
+                void DescribeTypeInstancesAsync(const Model::DescribeTypeInstancesRequest& request, const DescribeTypeInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTypeInstancesOutcomeCallable DescribeTypeInstancesCallable(const Model::DescribeTypeInstancesRequest& request);
+
+                /**
                  *This API is used to query user information.
                  * @param req DescribeUserRequest
                  * @return DescribeUserOutcome
@@ -718,6 +792,15 @@ This API is used to get the list of topics in a CKafka instance of a user.
                 FetchMessageListByOffsetOutcomeCallable FetchMessageListByOffsetCallable(const Model::FetchMessageListByOffsetRequest& request);
 
                 /**
+                 *This API is used to query a message list by timestamp.
+                 * @param req FetchMessageListByTimestampRequest
+                 * @return FetchMessageListByTimestampOutcome
+                 */
+                FetchMessageListByTimestampOutcome FetchMessageListByTimestamp(const Model::FetchMessageListByTimestampRequest &request);
+                void FetchMessageListByTimestampAsync(const Model::FetchMessageListByTimestampRequest& request, const FetchMessageListByTimestampAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                FetchMessageListByTimestampOutcomeCallable FetchMessageListByTimestampCallable(const Model::FetchMessageListByTimestampRequest& request);
+
+                /**
                  *This API is used to purchase a CKafka instance or query the instance renewal price.
                  * @param req InquireCkafkaPriceRequest
                  * @return InquireCkafkaPriceOutcome
@@ -727,7 +810,7 @@ This API is used to get the list of topics in a CKafka instance of a user.
                 InquireCkafkaPriceOutcomeCallable InquireCkafkaPriceCallable(const Model::InquireCkafkaPriceRequest& request);
 
                 /**
-                 *This API is used to modify an ACL policy, and currently only supports specifying whether to apply the preset rule to new topics.
+                 *This API is used to modify ACL policy, currently only support whether to apply preset rules to newly-added topics.
                  * @param req ModifyAclRuleRequest
                  * @return ModifyAclRuleOutcome
                  */
@@ -736,7 +819,7 @@ This API is used to get the list of topics in a CKafka instance of a user.
                 ModifyAclRuleOutcomeCallable ModifyAclRuleCallable(const Model::ModifyAclRuleRequest& request);
 
                 /**
-                 *This API is used to modify the DataHub topic attributes.
+                 *This API is used to modify DIP topic attributes.
                  * @param req ModifyDatahubTopicRequest
                  * @return ModifyDatahubTopicOutcome
                  */
@@ -763,7 +846,7 @@ This API is used to get the list of topics in a CKafka instance of a user.
                 ModifyInstanceAttributesOutcomeCallable ModifyInstanceAttributesCallable(const Model::ModifyInstanceAttributesRequest& request);
 
                 /**
-                 *This API is used to change the configurations of a prepaid instance, such as disk capacity and bandwidth.
+                 *This API is used to change the configuration of prepaid instances, adjust disks, modify bandwidth, and manage partitions.
                  * @param req ModifyInstancePreRequest
                  * @return ModifyInstancePreOutcome
                  */

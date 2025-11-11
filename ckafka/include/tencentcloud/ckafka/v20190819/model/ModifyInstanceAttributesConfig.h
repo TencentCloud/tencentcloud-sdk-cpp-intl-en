@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool AutoCreateTopicEnableHasBeenSet() const;
 
                     /**
-                     * 获取Optional. If `auto.create.topic.enable` is set to `true` and this value is not set, 3 will be used by default
-                     * @return DefaultNumPartitions Optional. If `auto.create.topic.enable` is set to `true` and this value is not set, 3 will be used by default
+                     * 获取Default number of partitions for a newly created topic. if AutoCreateTopicEnable is set to true and no value is set, defaults to 3.
+                     * @return DefaultNumPartitions Default number of partitions for a newly created topic. if AutoCreateTopicEnable is set to true and no value is set, defaults to 3.
                      * 
                      */
                     int64_t GetDefaultNumPartitions() const;
 
                     /**
-                     * 设置Optional. If `auto.create.topic.enable` is set to `true` and this value is not set, 3 will be used by default
-                     * @param _defaultNumPartitions Optional. If `auto.create.topic.enable` is set to `true` and this value is not set, 3 will be used by default
+                     * 设置Default number of partitions for a newly created topic. if AutoCreateTopicEnable is set to true and no value is set, defaults to 3.
+                     * @param _defaultNumPartitions Default number of partitions for a newly created topic. if AutoCreateTopicEnable is set to true and no value is set, defaults to 3.
                      * 
                      */
                     void SetDefaultNumPartitions(const int64_t& _defaultNumPartitions);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool DefaultNumPartitionsHasBeenSet() const;
 
                     /**
-                     * 获取If `auto.create.topic.enable` is set to `true` but this value is not set, 2 will be used by default
-                     * @return DefaultReplicationFactor If `auto.create.topic.enable` is set to `true` but this value is not set, 2 will be used by default
+                     * 获取Default number of replicas for a newly created topic. if AutoCreateTopicEnable is set to true and not specified, defaults to 2.
+                     * @return DefaultReplicationFactor Default number of replicas for a newly created topic. if AutoCreateTopicEnable is set to true and not specified, defaults to 2.
                      * 
                      */
                     int64_t GetDefaultReplicationFactor() const;
 
                     /**
-                     * 设置If `auto.create.topic.enable` is set to `true` but this value is not set, 2 will be used by default
-                     * @param _defaultReplicationFactor If `auto.create.topic.enable` is set to `true` but this value is not set, 2 will be used by default
+                     * 设置Default number of replicas for a newly created topic. if AutoCreateTopicEnable is set to true and not specified, defaults to 2.
+                     * @param _defaultReplicationFactor Default number of replicas for a newly created topic. if AutoCreateTopicEnable is set to true and not specified, defaults to 2.
                      * 
                      */
                     void SetDefaultReplicationFactor(const int64_t& _defaultReplicationFactor);
@@ -118,13 +118,13 @@ namespace TencentCloud
                     bool m_autoCreateTopicEnableHasBeenSet;
 
                     /**
-                     * Optional. If `auto.create.topic.enable` is set to `true` and this value is not set, 3 will be used by default
+                     * Default number of partitions for a newly created topic. if AutoCreateTopicEnable is set to true and no value is set, defaults to 3.
                      */
                     int64_t m_defaultNumPartitions;
                     bool m_defaultNumPartitionsHasBeenSet;
 
                     /**
-                     * If `auto.create.topic.enable` is set to `true` but this value is not set, 2 will be used by default
+                     * Default number of replicas for a newly created topic. if AutoCreateTopicEnable is set to true and not specified, defaults to 2.
                      */
                     int64_t m_defaultReplicationFactor;
                     bool m_defaultReplicationFactorHasBeenSet;

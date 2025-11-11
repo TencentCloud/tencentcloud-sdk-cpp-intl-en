@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Partition ID
-                     * @return Partition Partition ID
+                     * 获取Partition ID. specifies the Partition ID.
+                     * @return Partition Partition ID. specifies the Partition ID.
                      * 
                      */
                     int64_t GetPartition() const;
 
                     /**
-                     * 设置Partition ID
-                     * @param _partition Partition ID
+                     * 设置Partition ID. specifies the Partition ID.
+                     * @param _partition Partition ID. specifies the Partition ID.
                      * 
                      */
                     void SetPartition(const int64_t& _partition);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool PartitionHasBeenSet() const;
 
                     /**
-                     * 获取Leader running status
-                     * @return LeaderStatus Leader running status
+                     * 获取Leader running status. 0 means running normally.
+                     * @return LeaderStatus Leader running status. 0 means running normally.
                      * 
                      */
                     int64_t GetLeaderStatus() const;
 
                     /**
-                     * 设置Leader running status
-                     * @param _leaderStatus Leader running status
+                     * 设置Leader running status. 0 means running normally.
+                     * @param _leaderStatus Leader running status. 0 means running normally.
                      * 
                      */
                     void SetLeaderStatus(const int64_t& _leaderStatus);
@@ -133,13 +133,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Partition ID
+                     * Partition ID. specifies the Partition ID.
                      */
                     int64_t m_partition;
                     bool m_partitionHasBeenSet;
 
                     /**
-                     * Leader running status
+                     * Leader running status. 0 means running normally.
                      */
                     int64_t m_leaderStatus;
                     bool m_leaderStatusHasBeenSet;

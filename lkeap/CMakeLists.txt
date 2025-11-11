@@ -20,47 +20,53 @@ set(lkeap_public_header
 
 set(lkeap_public_header_model
   include/tencentcloud/lkeap/v20240522/model/CreateSplitDocumentFlowRequest.h
-  include/tencentcloud/lkeap/v20240522/model/QueryRewriteRequest.h
-  include/tencentcloud/lkeap/v20240522/model/SplitDocumentFailedPage.h
+  include/tencentcloud/lkeap/v20240522/model/ReconstructDocumentSSEResponse.h
+  include/tencentcloud/lkeap/v20240522/model/GetReconstructDocumentResultRequest.h
   include/tencentcloud/lkeap/v20240522/model/Usage.h
-  include/tencentcloud/lkeap/v20240522/model/RunRerankRequest.h
-  include/tencentcloud/lkeap/v20240522/model/CreateReconstructDocumentFlowRequest.h
+  include/tencentcloud/lkeap/v20240522/model/CreateSplitDocumentFlowResponse.h
+  include/tencentcloud/lkeap/v20240522/model/ReconstructDocumentSSEConfig.h
   include/tencentcloud/lkeap/v20240522/model/DocumentUsage.h
-  include/tencentcloud/lkeap/v20240522/model/RunRerankResponse.h
-  include/tencentcloud/lkeap/v20240522/model/CreateReconstructDocumentFlowResponse.h
   include/tencentcloud/lkeap/v20240522/model/GetReconstructDocumentResultResponse.h
   include/tencentcloud/lkeap/v20240522/model/CreateReconstructDocumentFlowConfig.h
-  include/tencentcloud/lkeap/v20240522/model/CreateSplitDocumentFlowConfig.h
-  include/tencentcloud/lkeap/v20240522/model/GetReconstructDocumentResultRequest.h
-  include/tencentcloud/lkeap/v20240522/model/GetSplitDocumentResultRequest.h
-  include/tencentcloud/lkeap/v20240522/model/QueryRewriteResponse.h
-  include/tencentcloud/lkeap/v20240522/model/ReconstructDocumentFailedPage.h
-  include/tencentcloud/lkeap/v20240522/model/Message.h
+  include/tencentcloud/lkeap/v20240522/model/RunRerankRequest.h
+  include/tencentcloud/lkeap/v20240522/model/ReconstructDocumentSSERequest.h
+  include/tencentcloud/lkeap/v20240522/model/CreateReconstructDocumentFlowRequest.h
   include/tencentcloud/lkeap/v20240522/model/GetSplitDocumentResultResponse.h
-  include/tencentcloud/lkeap/v20240522/model/CreateSplitDocumentFlowResponse.h
+  include/tencentcloud/lkeap/v20240522/model/ReconstructDocumentFailedPage.h
+  include/tencentcloud/lkeap/v20240522/model/SplitDocumentFailedPage.h
+  include/tencentcloud/lkeap/v20240522/model/QueryRewriteRequest.h
+  include/tencentcloud/lkeap/v20240522/model/CreateSplitDocumentFlowConfig.h
+  include/tencentcloud/lkeap/v20240522/model/RunRerankResponse.h
+  include/tencentcloud/lkeap/v20240522/model/CreateReconstructDocumentFlowResponse.h
+  include/tencentcloud/lkeap/v20240522/model/GetSplitDocumentResultRequest.h
+  include/tencentcloud/lkeap/v20240522/model/Message.h
+  include/tencentcloud/lkeap/v20240522/model/QueryRewriteResponse.h
   )
 
 set(lkeap_src
   src/v20240522/LkeapClient.cpp
   src/v20240522/model/CreateSplitDocumentFlowRequest.cpp
-  src/v20240522/model/QueryRewriteRequest.cpp
-  src/v20240522/model/SplitDocumentFailedPage.cpp
+  src/v20240522/model/ReconstructDocumentSSEResponse.cpp
+  src/v20240522/model/GetReconstructDocumentResultRequest.cpp
   src/v20240522/model/Usage.cpp
-  src/v20240522/model/RunRerankRequest.cpp
-  src/v20240522/model/CreateReconstructDocumentFlowRequest.cpp
+  src/v20240522/model/CreateSplitDocumentFlowResponse.cpp
+  src/v20240522/model/ReconstructDocumentSSEConfig.cpp
   src/v20240522/model/DocumentUsage.cpp
-  src/v20240522/model/RunRerankResponse.cpp
-  src/v20240522/model/CreateReconstructDocumentFlowResponse.cpp
   src/v20240522/model/GetReconstructDocumentResultResponse.cpp
   src/v20240522/model/CreateReconstructDocumentFlowConfig.cpp
-  src/v20240522/model/CreateSplitDocumentFlowConfig.cpp
-  src/v20240522/model/GetReconstructDocumentResultRequest.cpp
-  src/v20240522/model/GetSplitDocumentResultRequest.cpp
-  src/v20240522/model/QueryRewriteResponse.cpp
-  src/v20240522/model/ReconstructDocumentFailedPage.cpp
-  src/v20240522/model/Message.cpp
+  src/v20240522/model/RunRerankRequest.cpp
+  src/v20240522/model/ReconstructDocumentSSERequest.cpp
+  src/v20240522/model/CreateReconstructDocumentFlowRequest.cpp
   src/v20240522/model/GetSplitDocumentResultResponse.cpp
-  src/v20240522/model/CreateSplitDocumentFlowResponse.cpp
+  src/v20240522/model/ReconstructDocumentFailedPage.cpp
+  src/v20240522/model/SplitDocumentFailedPage.cpp
+  src/v20240522/model/QueryRewriteRequest.cpp
+  src/v20240522/model/CreateSplitDocumentFlowConfig.cpp
+  src/v20240522/model/RunRerankResponse.cpp
+  src/v20240522/model/CreateReconstructDocumentFlowResponse.cpp
+  src/v20240522/model/GetSplitDocumentResultRequest.cpp
+  src/v20240522/model/Message.cpp
+  src/v20240522/model/QueryRewriteResponse.cpp
   )
 
 set(lkeap_include

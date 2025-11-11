@@ -130,6 +130,69 @@ namespace TencentCloud
                      */
                     bool SessionIdHasBeenSet() const;
 
+                    /**
+                     * 获取Reason for break.
+                     * @return Reason Reason for break.
+                     * 
+                     */
+                    std::string GetReason() const;
+
+                    /**
+                     * 设置Reason for break.
+                     * @param _reason Reason for break.
+                     * 
+                     */
+                    void SetReason(const std::string& _reason);
+
+                    /**
+                     * 判断参数 Reason 是否已赋值
+                     * @return Reason 是否已赋值
+                     * 
+                     */
+                    bool ReasonHasBeenSet() const;
+
+                    /**
+                     * 获取Agent email.
+                     * @return StaffEmail Agent email.
+                     * 
+                     */
+                    std::string GetStaffEmail() const;
+
+                    /**
+                     * 设置Agent email.
+                     * @param _staffEmail Agent email.
+                     * 
+                     */
+                    void SetStaffEmail(const std::string& _staffEmail);
+
+                    /**
+                     * 判断参数 StaffEmail 是否已赋值
+                     * @return StaffEmail 是否已赋值
+                     * 
+                     */
+                    bool StaffEmailHasBeenSet() const;
+
+                    /**
+                     * 获取Agent id.
+                     * @return StaffNo Agent id.
+                     * 
+                     */
+                    std::string GetStaffNo() const;
+
+                    /**
+                     * 设置Agent id.
+                     * @param _staffNo Agent id.
+                     * 
+                     */
+                    void SetStaffNo(const std::string& _staffNo);
+
+                    /**
+                     * 判断参数 StaffNo 是否已赋值
+                     * @return StaffNo 是否已赋值
+                     * 
+                     */
+                    bool StaffNoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -155,6 +218,24 @@ namespace TencentCloud
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
+
+                    /**
+                     * Reason for break.
+                     */
+                    std::string m_reason;
+                    bool m_reasonHasBeenSet;
+
+                    /**
+                     * Agent email.
+                     */
+                    std::string m_staffEmail;
+                    bool m_staffEmailHasBeenSet;
+
+                    /**
+                     * Agent id.
+                     */
+                    std::string m_staffNo;
+                    bool m_staffNoHasBeenSet;
 
                 };
             }

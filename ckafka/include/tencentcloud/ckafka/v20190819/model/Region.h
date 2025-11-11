@@ -110,19 +110,15 @@ namespace TencentCloud
                     bool AreaNameHasBeenSet() const;
 
                     /**
-                     * 获取Region code
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return RegionCode Region code
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取Region code.
+                     * @return RegionCode Region code.
                      * 
                      */
                     std::string GetRegionCode() const;
 
                     /**
-                     * 设置Region code
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param _regionCode Region code
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 设置Region code.
+                     * @param _regionCode Region code.
                      * 
                      */
                     void SetRegionCode(const std::string& _regionCode);
@@ -135,19 +131,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool RegionCodeHasBeenSet() const;
 
                     /**
-                     * 获取Region code (v3)
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return RegionCodeV3 Region code (v3)
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取Region code (V3 version).
+                     * @return RegionCodeV3 Region code (V3 version).
                      * 
                      */
                     std::string GetRegionCodeV3() const;
 
                     /**
-                     * 设置Region code (v3)
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param _regionCodeV3 Region code (v3)
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 设置Region code (V3 version).
+                     * @param _regionCodeV3 Region code (V3 version).
                      * 
                      */
                     void SetRegionCodeV3(const std::string& _regionCodeV3);
@@ -160,19 +152,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool RegionCodeV3HasBeenSet() const;
 
                     /**
-                     * 获取NONE: no special models are supported by default.\nCVM: the CVM type is supported.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return Support NONE: no special models are supported by default.\nCVM: the CVM type is supported.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取Specifies the default value does not support any special type instance type.
+                     * @return Support Specifies the default value does not support any special type instance type.
                      * 
                      */
                     std::string GetSupport() const;
 
                     /**
-                     * 设置NONE: no special models are supported by default.\nCVM: the CVM type is supported.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param _support NONE: no special models are supported by default.\nCVM: the CVM type is supported.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 设置Specifies the default value does not support any special type instance type.
+                     * @param _support Specifies the default value does not support any special type instance type.
                      * 
                      */
                     void SetSupport(const std::string& _support);
@@ -185,19 +173,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool SupportHasBeenSet() const;
 
                     /**
-                     * 获取Whether IPv6 is supported. `0` indicates no, and `1` indicates yes.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return Ipv6 Whether IPv6 is supported. `0` indicates no, and `1` indicates yes.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取Whether ipv6 is supported. 0: indicates no support. 1: indicates support.
+                     * @return Ipv6 Whether ipv6 is supported. 0: indicates no support. 1: indicates support.
                      * 
                      */
                     int64_t GetIpv6() const;
 
                     /**
-                     * 设置Whether IPv6 is supported. `0` indicates no, and `1` indicates yes.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param _ipv6 Whether IPv6 is supported. `0` indicates no, and `1` indicates yes.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 设置Whether ipv6 is supported. 0: indicates no support. 1: indicates support.
+                     * @param _ipv6 Whether ipv6 is supported. 0: indicates no support. 1: indicates support.
                      * 
                      */
                     void SetIpv6(const int64_t& _ipv6);
@@ -210,19 +194,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool Ipv6HasBeenSet() const;
 
                     /**
-                     * 获取Whether cross-AZ clusters are supported.`0` indicates no, and `1` indicates yes.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return MultiZone Whether cross-AZ clusters are supported.`0` indicates no, and `1` indicates yes.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取Whether cross-az is supported. valid values: 0 (unsupported), 1 (supported).
+                     * @return MultiZone Whether cross-az is supported. valid values: 0 (unsupported), 1 (supported).
                      * 
                      */
                     int64_t GetMultiZone() const;
 
                     /**
-                     * 设置Whether cross-AZ clusters are supported.`0` indicates no, and `1` indicates yes.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param _multiZone Whether cross-AZ clusters are supported.`0` indicates no, and `1` indicates yes.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 设置Whether cross-az is supported. valid values: 0 (unsupported), 1 (supported).
+                     * @param _multiZone Whether cross-az is supported. valid values: 0 (unsupported), 1 (supported).
                      * 
                      */
                     void SetMultiZone(const int64_t& _multiZone);
@@ -255,36 +235,31 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool m_areaNameHasBeenSet;
 
                     /**
-                     * Region code
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * Region code.
                      */
                     std::string m_regionCode;
                     bool m_regionCodeHasBeenSet;
 
                     /**
-                     * Region code (v3)
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * Region code (V3 version).
                      */
                     std::string m_regionCodeV3;
                     bool m_regionCodeV3HasBeenSet;
 
                     /**
-                     * NONE: no special models are supported by default.\nCVM: the CVM type is supported.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * Specifies the default value does not support any special type instance type.
                      */
                     std::string m_support;
                     bool m_supportHasBeenSet;
 
                     /**
-                     * Whether IPv6 is supported. `0` indicates no, and `1` indicates yes.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * Whether ipv6 is supported. 0: indicates no support. 1: indicates support.
                      */
                     int64_t m_ipv6;
                     bool m_ipv6HasBeenSet;
 
                     /**
-                     * Whether cross-AZ clusters are supported.`0` indicates no, and `1` indicates yes.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * Whether cross-az is supported. valid values: 0 (unsupported), 1 (supported).
                      */
                     int64_t m_multiZone;
                     bool m_multiZoneHasBeenSet;

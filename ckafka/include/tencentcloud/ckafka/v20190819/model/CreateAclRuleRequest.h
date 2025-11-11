@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+                     * @return InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+                     * @param _instanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool ResourceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Matching type. Valid values: `PREFIXED`(match by prefix), `PRESET` (match by preset policy).
-                     * @return PatternType Matching type. Valid values: `PREFIXED`(match by prefix), `PRESET` (match by preset policy).
+                     * 获取ACL rule-based matching type. currently supports prefix match and PRESET policy. valid values: PREFIXED/PRESET.
+                     * @return PatternType ACL rule-based matching type. currently supports prefix match and PRESET policy. valid values: PREFIXED/PRESET.
                      * 
                      */
                     std::string GetPatternType() const;
 
                     /**
-                     * 设置Matching type. Valid values: `PREFIXED`(match by prefix), `PRESET` (match by preset policy).
-                     * @param _patternType Matching type. Valid values: `PREFIXED`(match by prefix), `PRESET` (match by preset policy).
+                     * 设置ACL rule-based matching type. currently supports prefix match and PRESET policy. valid values: PREFIXED/PRESET.
+                     * @param _patternType ACL rule-based matching type. currently supports prefix match and PRESET policy. valid values: PREFIXED/PRESET.
                      * 
                      */
                     void SetPatternType(const std::string& _patternType);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool RuleListHasBeenSet() const;
 
                     /**
-                     * 获取Prefix value for prefix match
-                     * @return Pattern Prefix value for prefix match
+                     * 获取Indicates the prefix for prefix match. this parameter is required when PatternType value is PREFIXED.
+                     * @return Pattern Indicates the prefix for prefix match. this parameter is required when PatternType value is PREFIXED.
                      * 
                      */
                     std::string GetPattern() const;
 
                     /**
-                     * 设置Prefix value for prefix match
-                     * @param _pattern Prefix value for prefix match
+                     * 设置Indicates the prefix for prefix match. this parameter is required when PatternType value is PREFIXED.
+                     * @param _pattern Indicates the prefix for prefix match. this parameter is required when PatternType value is PREFIXED.
                      * 
                      */
                     void SetPattern(const std::string& _pattern);
@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool PatternHasBeenSet() const;
 
                     /**
-                     * 获取A parameter used to specify whether the preset ACL rule is applied to new topics
-                     * @return IsApplied A parameter used to specify whether the preset ACL rule is applied to new topics
+                     * 获取Specifies whether to apply the preset ACL rule to newly-added topics. defaults to 0, which means no. a value of 1 means yes.
+                     * @return IsApplied Specifies whether to apply the preset ACL rule to newly-added topics. defaults to 0, which means no. a value of 1 means yes.
                      * 
                      */
                     int64_t GetIsApplied() const;
 
                     /**
-                     * 设置A parameter used to specify whether the preset ACL rule is applied to new topics
-                     * @param _isApplied A parameter used to specify whether the preset ACL rule is applied to new topics
+                     * 设置Specifies whether to apply the preset ACL rule to newly-added topics. defaults to 0, which means no. a value of 1 means yes.
+                     * @param _isApplied Specifies whether to apply the preset ACL rule to newly-added topics. defaults to 0, which means no. a value of 1 means yes.
                      * 
                      */
                     void SetIsApplied(const int64_t& _isApplied);
@@ -214,7 +214,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -226,7 +226,7 @@ namespace TencentCloud
                     bool m_resourceTypeHasBeenSet;
 
                     /**
-                     * Matching type. Valid values: `PREFIXED`(match by prefix), `PRESET` (match by preset policy).
+                     * ACL rule-based matching type. currently supports prefix match and PRESET policy. valid values: PREFIXED/PRESET.
                      */
                     std::string m_patternType;
                     bool m_patternTypeHasBeenSet;
@@ -244,13 +244,13 @@ namespace TencentCloud
                     bool m_ruleListHasBeenSet;
 
                     /**
-                     * Prefix value for prefix match
+                     * Indicates the prefix for prefix match. this parameter is required when PatternType value is PREFIXED.
                      */
                     std::string m_pattern;
                     bool m_patternHasBeenSet;
 
                     /**
-                     * A parameter used to specify whether the preset ACL rule is applied to new topics
+                     * Specifies whether to apply the preset ACL rule to newly-added topics. defaults to 0, which means no. a value of 1 means yes.
                      */
                     int64_t m_isApplied;
                     bool m_isAppliedHasBeenSet;

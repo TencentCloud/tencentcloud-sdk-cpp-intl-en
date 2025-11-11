@@ -69,19 +69,15 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TopicList Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Topic list.
+                     * @return TopicList Topic list.
                      * 
                      */
                     std::vector<DatahubTopicDTO> GetTopicList() const;
 
                     /**
-                     * 设置Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _topicList Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Topic list.
+                     * @param _topicList Topic list.
                      * 
                      */
                     void SetTopicList(const std::vector<DatahubTopicDTO>& _topicList);
@@ -102,8 +98,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Topic list.
                      */
                     std::vector<DatahubTopicDTO> m_topicList;
                     bool m_topicListHasBeenSet;

@@ -173,15 +173,15 @@ Stable: each consumer in the consumer group has joined and is in stable state
                     bool MembersHasBeenSet() const;
 
                     /**
-                     * 获取Kafka consumer group
-                     * @return Group Kafka consumer group
+                     * 获取Consumer group name.
+                     * @return Group Consumer group name.
                      * 
                      */
                     std::string GetGroup() const;
 
                     /**
-                     * 设置Kafka consumer group
-                     * @param _group Kafka consumer group
+                     * 设置Consumer group name.
+                     * @param _group Consumer group name.
                      * 
                      */
                     void SetGroup(const std::string& _group);
@@ -231,7 +231,7 @@ Stable: each consumer in the consumer group has joined and is in stable state
                     bool m_membersHasBeenSet;
 
                     /**
-                     * Kafka consumer group
+                     * Consumer group name.
                      */
                     std::string m_group;
                     bool m_groupHasBeenSet;

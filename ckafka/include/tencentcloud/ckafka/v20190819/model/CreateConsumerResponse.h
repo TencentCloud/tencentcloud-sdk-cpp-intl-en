@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Description of the created consumer group.
-                     * @return Result Description of the created consumer group.
+                     * 获取Create consumer group returned results.
+                     * @return Result Create consumer group returned results.
                      * 
                      */
                     JgwOperateResponse GetResult() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Description of the created consumer group.
+                     * Create consumer group returned results.
                      */
                     JgwOperateResponse m_result;
                     bool m_resultHasBeenSet;

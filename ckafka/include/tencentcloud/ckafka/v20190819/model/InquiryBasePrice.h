@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Original unit price
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UnitPrice Original unit price
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Original price unit.
+                     * @return UnitPrice Original price unit.
                      * 
                      */
                     double GetUnitPrice() const;
 
                     /**
-                     * 设置Original unit price
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _unitPrice Original unit price
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Original price unit.
+                     * @param _unitPrice Original price unit.
                      * 
                      */
                     void SetUnitPrice(const double& _unitPrice);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UnitPriceHasBeenSet() const;
 
                     /**
-                     * 获取Discounted unit price
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UnitPriceDiscount Discounted unit price
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Discount unit price.
+                     * @return UnitPriceDiscount Discount unit price.
                      * 
                      */
                     double GetUnitPriceDiscount() const;
 
                     /**
-                     * 设置Discounted unit price
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _unitPriceDiscount Discounted unit price
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Discount unit price.
+                     * @param _unitPriceDiscount Discount unit price.
                      * 
                      */
                     void SetUnitPriceDiscount(const double& _unitPriceDiscount);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UnitPriceDiscountHasBeenSet() const;
 
                     /**
-                     * 获取Original price in total
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OriginalPrice Original price in total
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Total original price.
+                     * @return OriginalPrice Total original price.
                      * 
                      */
                     double GetOriginalPrice() const;
 
                     /**
-                     * 设置Original price in total
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _originalPrice Original price in total
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Total original price.
+                     * @param _originalPrice Total original price.
                      * 
                      */
                     void SetOriginalPrice(const double& _originalPrice);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OriginalPriceHasBeenSet() const;
 
                     /**
-                     * 获取Discounted price in total
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DiscountPrice Discounted price in total
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Total discount price.
+                     * @return DiscountPrice Total discount price.
                      * 
                      */
                     double GetDiscountPrice() const;
 
                     /**
-                     * 设置Discounted price in total
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _discountPrice Discounted price in total
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Total discount price.
+                     * @param _discountPrice Total discount price.
                      * 
                      */
                     void SetDiscountPrice(const double& _discountPrice);
@@ -147,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DiscountPriceHasBeenSet() const;
 
                     /**
-                     * 获取Discount (%)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Discount Discount (%)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Discount (unit: %).
+                     * @return Discount Discount (unit: %).
                      * 
                      */
                     double GetDiscount() const;
 
                     /**
-                     * 设置Discount (%)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _discount Discount (%)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Discount (unit: %).
+                     * @param _discount Discount (unit: %).
                      * 
                      */
                     void SetDiscount(const double& _discount);
@@ -297,19 +277,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TimeUnitHasBeenSet() const;
 
                     /**
-                     * 获取Purchase quantity
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Value Purchase quantity
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Purchase quantity.
+                     * @return Value Purchase quantity.
                      * 
                      */
                     int64_t GetValue() const;
 
                     /**
-                     * 设置Purchase quantity
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _value Purchase quantity
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Purchase quantity.
+                     * @param _value Purchase quantity.
                      * 
                      */
                     void SetValue(const int64_t& _value);
@@ -324,36 +300,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Original unit price
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Original price unit.
                      */
                     double m_unitPrice;
                     bool m_unitPriceHasBeenSet;
 
                     /**
-                     * Discounted unit price
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Discount unit price.
                      */
                     double m_unitPriceDiscount;
                     bool m_unitPriceDiscountHasBeenSet;
 
                     /**
-                     * Original price in total
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Total original price.
                      */
                     double m_originalPrice;
                     bool m_originalPriceHasBeenSet;
 
                     /**
-                     * Discounted price in total
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Total discount price.
                      */
                     double m_discountPrice;
                     bool m_discountPriceHasBeenSet;
 
                     /**
-                     * Discount (%)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Discount (unit: %).
                      */
                     double m_discount;
                     bool m_discountHasBeenSet;
@@ -394,8 +365,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_timeUnitHasBeenSet;
 
                     /**
-                     * Purchase quantity
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Purchase quantity.
                      */
                     int64_t m_value;
                     bool m_valueHasBeenSet;

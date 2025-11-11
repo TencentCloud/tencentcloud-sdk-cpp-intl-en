@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取(Filter) filter by instance ID
-                     * @return InstanceId (Filter) filter by instance ID
+                     * 获取The ckafka cluster instance Id.
+                     * @return InstanceId The ckafka cluster instance Id.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置(Filter) filter by instance ID
-                     * @param _instanceId (Filter) filter by instance ID
+                     * 设置The ckafka cluster instance Id.
+                     * @param _instanceId The ckafka cluster instance Id.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -171,7 +171,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * (Filter) filter by instance ID
+                     * The ckafka cluster instance Id.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

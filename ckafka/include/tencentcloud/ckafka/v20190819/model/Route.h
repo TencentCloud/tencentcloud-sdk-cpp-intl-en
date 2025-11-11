@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool RouteIdHasBeenSet() const;
 
                     /**
-                     * 获取VIP network type (1: Public network TGW; 2: Classic network; 3: VPC; 4: Supporting network (IDC environment); 5: SSL public network access; 6: BM VPC; 7: Supporting network (CVM environment)).
-                     * @return VipType VIP network type (1: Public network TGW; 2: Classic network; 3: VPC; 4: Supporting network (IDC environment); 5: SSL public network access; 6: BM VPC; 7: Supporting network (CVM environment)).
+                     * 获取Specifies the network type of the route (3: vpc routing; 7: internal support route; 1: public network route).
+                     * @return VipType Specifies the network type of the route (3: vpc routing; 7: internal support route; 1: public network route).
                      * 
                      */
                     int64_t GetVipType() const;
 
                     /**
-                     * 设置VIP network type (1: Public network TGW; 2: Classic network; 3: VPC; 4: Supporting network (IDC environment); 5: SSL public network access; 6: BM VPC; 7: Supporting network (CVM environment)).
-                     * @param _vipType VIP network type (1: Public network TGW; 2: Classic network; 3: VPC; 4: Supporting network (IDC environment); 5: SSL public network access; 6: BM VPC; 7: Supporting network (CVM environment)).
+                     * 设置Specifies the network type of the route (3: vpc routing; 7: internal support route; 1: public network route).
+                     * @param _vipType Specifies the network type of the route (3: vpc routing; 7: internal support route; 1: public network route).
                      * 
                      */
                     void SetVipType(const int64_t& _vipType);
@@ -198,19 +198,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DomainPortHasBeenSet() const;
 
                     /**
-                     * 获取Timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return DeleteTimestamp Timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Timestamp.
+                     * @return DeleteTimestamp Timestamp.
                      * 
                      */
                     std::string GetDeleteTimestamp() const;
 
                     /**
-                     * 设置Timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _deleteTimestamp Timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Timestamp.
+                     * @param _deleteTimestamp Timestamp.
                      * 
                      */
                     void SetDeleteTimestamp(const std::string& _deleteTimestamp);
@@ -221,6 +217,127 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool DeleteTimestampHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the subnet Id.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Subnet Specifies the subnet Id.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetSubnet() const;
+
+                    /**
+                     * 设置Specifies the subnet Id.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _subnet Specifies the subnet Id.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetSubnet(const std::string& _subnet);
+
+                    /**
+                     * 判断参数 Subnet 是否已赋值
+                     * @return Subnet 是否已赋值
+                     * 
+                     */
+                    bool SubnetHasBeenSet() const;
+
+                    /**
+                     * 获取Virtual IP list (1:1 broker node).
+                     * @return BrokerVipList Virtual IP list (1:1 broker node).
+                     * 
+                     */
+                    std::vector<VipEntity> GetBrokerVipList() const;
+
+                    /**
+                     * 设置Virtual IP list (1:1 broker node).
+                     * @param _brokerVipList Virtual IP list (1:1 broker node).
+                     * 
+                     */
+                    void SetBrokerVipList(const std::vector<VipEntity>& _brokerVipList);
+
+                    /**
+                     * 判断参数 BrokerVipList 是否已赋值
+                     * @return BrokerVipList 是否已赋值
+                     * 
+                     */
+                    bool BrokerVipListHasBeenSet() const;
+
+                    /**
+                     * 获取VPC Id. specifies the Id of the vpc.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return VpcId VPC Id. specifies the Id of the vpc.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetVpcId() const;
+
+                    /**
+                     * 设置VPC Id. specifies the Id of the vpc.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _vpcId VPC Id. specifies the Id of the vpc.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetVpcId(const std::string& _vpcId);
+
+                    /**
+                     * 判断参数 VpcId 是否已赋值
+                     * @return VpcId 是否已赋值
+                     * 
+                     */
+                    bool VpcIdHasBeenSet() const;
+
+                    /**
+                     * 获取Remarks
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Note Remarks
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetNote() const;
+
+                    /**
+                     * 设置Remarks
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _note Remarks
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetNote(const std::string& _note);
+
+                    /**
+                     * 判断参数 Note 是否已赋值
+                     * @return Note 是否已赋值
+                     * 
+                     */
+                    bool NoteHasBeenSet() const;
+
+                    /**
+                     * 获取Route status. 1: creating, 2: creation succeeded, 3: creation failed, 4: deleting, 6: deletion failed.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Status Route status. 1: creating, 2: creation succeeded, 3: creation failed, 4: deleting, 6: deletion failed.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetStatus() const;
+
+                    /**
+                     * 设置Route status. 1: creating, 2: creation succeeded, 3: creation failed, 4: deleting, 6: deletion failed.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _status Route status. 1: creating, 2: creation succeeded, 3: creation failed, 4: deleting, 6: deletion failed.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetStatus(const int64_t& _status);
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     * 
+                     */
+                    bool StatusHasBeenSet() const;
 
                 private:
 
@@ -241,7 +358,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_routeIdHasBeenSet;
 
                     /**
-                     * VIP network type (1: Public network TGW; 2: Classic network; 3: VPC; 4: Supporting network (IDC environment); 5: SSL public network access; 6: BM VPC; 7: Supporting network (CVM environment)).
+                     * Specifies the network type of the route (3: vpc routing; 7: internal support route; 1: public network route).
                      */
                     int64_t m_vipType;
                     bool m_vipTypeHasBeenSet;
@@ -267,11 +384,44 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_domainPortHasBeenSet;
 
                     /**
-                     * Timestamp
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Timestamp.
                      */
                     std::string m_deleteTimestamp;
                     bool m_deleteTimestampHasBeenSet;
+
+                    /**
+                     * Specifies the subnet Id.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_subnet;
+                    bool m_subnetHasBeenSet;
+
+                    /**
+                     * Virtual IP list (1:1 broker node).
+                     */
+                    std::vector<VipEntity> m_brokerVipList;
+                    bool m_brokerVipListHasBeenSet;
+
+                    /**
+                     * VPC Id. specifies the Id of the vpc.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_vpcId;
+                    bool m_vpcIdHasBeenSet;
+
+                    /**
+                     * Remarks
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_note;
+                    bool m_noteHasBeenSet;
+
+                    /**
+                     * Route status. 1: creating, 2: creation succeeded, 3: creation failed, 4: deleting, 6: deletion failed.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_status;
+                    bool m_statusHasBeenSet;
 
                 };
             }

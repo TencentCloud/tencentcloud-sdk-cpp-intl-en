@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Returned result object
-                     * @return Result Returned result object
+                     * 获取Returned result.
+                     * @return Result Returned result.
                      * 
                      */
                     GroupOffsetResponse GetResult() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Returned result object
+                     * Returned result.
                      */
                     GroupOffsetResponse m_result;
                     bool m_resultHasBeenSet;

@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/ccc/v20200210/model/ServerPushText.h>
+#include <tencentcloud/ccc/v20200210/model/InvokeLLM.h>
 
 
 namespace TencentCloud
@@ -86,23 +87,27 @@ namespace TencentCloud
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Control command. currently supports the following commands:.
+                     * 获取Control command. currently supported commands are as follows:.
 
--ServerPushText. specifies the text sent by the server to the AI robot. the AI robot will broadcast the text.
-                     * @return Command Control command. currently supports the following commands:.
+-ServerPushText. specifies the text sent by the server to the AI robot for broadcast.
+-InvokeLLM. specifies the server sends text to the large model to trigger a dialogue.
+                     * @return Command Control command. currently supported commands are as follows:.
 
--ServerPushText. specifies the text sent by the server to the AI robot. the AI robot will broadcast the text.
+-ServerPushText. specifies the text sent by the server to the AI robot for broadcast.
+-InvokeLLM. specifies the server sends text to the large model to trigger a dialogue.
                      * 
                      */
                     std::string GetCommand() const;
 
                     /**
-                     * 设置Control command. currently supports the following commands:.
+                     * 设置Control command. currently supported commands are as follows:.
 
--ServerPushText. specifies the text sent by the server to the AI robot. the AI robot will broadcast the text.
-                     * @param _command Control command. currently supports the following commands:.
+-ServerPushText. specifies the text sent by the server to the AI robot for broadcast.
+-InvokeLLM. specifies the server sends text to the large model to trigger a dialogue.
+                     * @param _command Control command. currently supported commands are as follows:.
 
--ServerPushText. specifies the text sent by the server to the AI robot. the AI robot will broadcast the text.
+-ServerPushText. specifies the text sent by the server to the AI robot for broadcast.
+-InvokeLLM. specifies the server sends text to the large model to trigger a dialogue.
                      * 
                      */
                     void SetCommand(const std::string& _command);
@@ -135,6 +140,27 @@ namespace TencentCloud
                      */
                     bool ServerPushTextHasBeenSet() const;
 
+                    /**
+                     * 获取The server sends a Command to proactively request the large model. when Command is InvokeLLM, it sends the content to the large model and adds X-Invoke-LLM="1" to the header.
+                     * @return InvokeLLM The server sends a Command to proactively request the large model. when Command is InvokeLLM, it sends the content to the large model and adds X-Invoke-LLM="1" to the header.
+                     * 
+                     */
+                    InvokeLLM GetInvokeLLM() const;
+
+                    /**
+                     * 设置The server sends a Command to proactively request the large model. when Command is InvokeLLM, it sends the content to the large model and adds X-Invoke-LLM="1" to the header.
+                     * @param _invokeLLM The server sends a Command to proactively request the large model. when Command is InvokeLLM, it sends the content to the large model and adds X-Invoke-LLM="1" to the header.
+                     * 
+                     */
+                    void SetInvokeLLM(const InvokeLLM& _invokeLLM);
+
+                    /**
+                     * 判断参数 InvokeLLM 是否已赋值
+                     * @return InvokeLLM 是否已赋值
+                     * 
+                     */
+                    bool InvokeLLMHasBeenSet() const;
+
                 private:
 
                     /**
@@ -150,9 +176,10 @@ namespace TencentCloud
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * Control command. currently supports the following commands:.
+                     * Control command. currently supported commands are as follows:.
 
--ServerPushText. specifies the text sent by the server to the AI robot. the AI robot will broadcast the text.
+-ServerPushText. specifies the text sent by the server to the AI robot for broadcast.
+-InvokeLLM. specifies the server sends text to the large model to trigger a dialogue.
                      */
                     std::string m_command;
                     bool m_commandHasBeenSet;
@@ -162,6 +189,12 @@ namespace TencentCloud
                      */
                     ServerPushText m_serverPushText;
                     bool m_serverPushTextHasBeenSet;
+
+                    /**
+                     * The server sends a Command to proactively request the large model. when Command is InvokeLLM, it sends the content to the large model and adds X-Invoke-LLM="1" to the header.
+                     */
+                    InvokeLLM m_invokeLLM;
+                    bool m_invokeLLMHasBeenSet;
 
                 };
             }

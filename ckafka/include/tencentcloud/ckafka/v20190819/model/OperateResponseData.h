@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取FlowId11
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return FlowId FlowId11
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Flow ID.
+                     * @return FlowId Flow ID.
                      * 
                      */
                     int64_t GetFlowId() const;
 
                     /**
-                     * 设置FlowId11
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _flowId FlowId11
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Flow ID.
+                     * @param _flowId Flow ID.
                      * 
                      */
                     void SetFlowId(const int64_t& _flowId);
@@ -73,15 +69,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool FlowIdHasBeenSet() const;
 
                     /**
-                     * 获取RouteIdDto Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RouteDTO RouteIdDto Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取RouteIdDto
+                     * @return RouteDTO RouteIdDto
                      * 
                      */
                     RouteDTO GetRouteDTO() const;
 
                     /**
-                     * 设置RouteIdDto Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _routeDTO RouteIdDto Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置RouteIdDto
+                     * @param _routeDTO RouteIdDto
                      * 
                      */
                     void SetRouteDTO(const RouteDTO& _routeDTO);
@@ -96,14 +92,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * FlowId11
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Flow ID.
                      */
                     int64_t m_flowId;
                     bool m_flowIdHasBeenSet;
 
                     /**
-                     * RouteIdDto Note: This field may return null, indicating that no valid values can be obtained.
+                     * RouteIdDto
                      */
                     RouteDTO m_routeDTO;
                     bool m_routeDTOHasBeenSet;

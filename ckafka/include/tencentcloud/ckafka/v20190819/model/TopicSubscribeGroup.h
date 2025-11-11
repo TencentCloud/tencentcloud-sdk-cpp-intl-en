@@ -90,19 +90,15 @@ namespace TencentCloud
                     bool StatusCountInfoHasBeenSet() const;
 
                     /**
-                     * 获取Consumer group information
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return GroupsInfo Consumer group information
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Consumer group information.
+                     * @return GroupsInfo Consumer group information.
                      * 
                      */
                     std::vector<GroupInfoResponse> GetGroupsInfo() const;
 
                     /**
-                     * 设置Consumer group information
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _groupsInfo Consumer group information
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Consumer group information.
+                     * @param _groupsInfo Consumer group information.
                      * 
                      */
                     void SetGroupsInfo(const std::vector<GroupInfoResponse>& _groupsInfo);
@@ -115,19 +111,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool GroupsInfoHasBeenSet() const;
 
                     /**
-                     * 获取Whether a request is asynchronous. If there are fewer consumer groups in the instances, the result will be returned directly, and status code is 1. When there are many consumer groups in the instances, cache will be updated asynchronously. When status code is 0, grouping information will not be returned until cache update is completed and status code becomes 1.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Status Whether a request is asynchronous. If there are fewer consumer groups in the instances, the result will be returned directly, and status code is 1. When there are many consumer groups in the instances, cache will be updated asynchronously. When status code is 0, grouping information will not be returned until cache update is completed and status code becomes 1.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Indicates whether the request is asynchronous. instances with fewer groups will return results directly with Status as 1. when there are more groups, the cache will be updated asynchronously. no group information will be returned when Status is 0 until the update is complete and results are returned with Status as 1.
+                     * @return Status Indicates whether the request is asynchronous. instances with fewer groups will return results directly with Status as 1. when there are more groups, the cache will be updated asynchronously. no group information will be returned when Status is 0 until the update is complete and results are returned with Status as 1.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Whether a request is asynchronous. If there are fewer consumer groups in the instances, the result will be returned directly, and status code is 1. When there are many consumer groups in the instances, cache will be updated asynchronously. When status code is 0, grouping information will not be returned until cache update is completed and status code becomes 1.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _status Whether a request is asynchronous. If there are fewer consumer groups in the instances, the result will be returned directly, and status code is 1. When there are many consumer groups in the instances, cache will be updated asynchronously. When status code is 0, grouping information will not be returned until cache update is completed and status code becomes 1.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Indicates whether the request is asynchronous. instances with fewer groups will return results directly with Status as 1. when there are more groups, the cache will be updated asynchronously. no group information will be returned when Status is 0 until the update is complete and results are returned with Status as 1.
+                     * @param _status Indicates whether the request is asynchronous. instances with fewer groups will return results directly with Status as 1. when there are more groups, the cache will be updated asynchronously. no group information will be returned when Status is 0 until the update is complete and results are returned with Status as 1.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -154,15 +146,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_statusCountInfoHasBeenSet;
 
                     /**
-                     * Consumer group information
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Consumer group information.
                      */
                     std::vector<GroupInfoResponse> m_groupsInfo;
                     bool m_groupsInfoHasBeenSet;
 
                     /**
-                     * Whether a request is asynchronous. If there are fewer consumer groups in the instances, the result will be returned directly, and status code is 1. When there are many consumer groups in the instances, cache will be updated asynchronously. When status code is 0, grouping information will not be returned until cache update is completed and status code becomes 1.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Indicates whether the request is asynchronous. instances with fewer groups will return results directly with Status as 1. when there are more groups, the cache will be updated asynchronously. no group information will be returned when Status is 0 until the update is complete and results are returned with Status as 1.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;

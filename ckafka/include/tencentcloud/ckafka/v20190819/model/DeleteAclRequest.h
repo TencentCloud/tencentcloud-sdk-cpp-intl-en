@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID information
-                     * @return InstanceId Instance ID information
+                     * 获取The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+                     * @return InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID information
-                     * @param _instanceId Instance ID information
+                     * 设置The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+                     * @param _instanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool OperationHasBeenSet() const;
 
                     /**
-                     * 获取Permission type (`2`: DENY, `3`: ALLOW). CKafka currently supports `ALLOW`, which is equivalent to allowlist. `DENY` will be supported for ACLs compatible with open-source Kafka.
-                     * @return PermissionType Permission type (`2`: DENY, `3`: ALLOW). CKafka currently supports `ALLOW`, which is equivalent to allowlist. `DENY` will be supported for ACLs compatible with open-source Kafka.
+                     * 获取Permission type (2:DENY, 3:ALLOW). currently ckafka supports ALLOW (equivalent to allowlist), others used when compatible with open-source kafka acl.
+                     * @return PermissionType Permission type (2:DENY, 3:ALLOW). currently ckafka supports ALLOW (equivalent to allowlist), others used when compatible with open-source kafka acl.
                      * 
                      */
                     int64_t GetPermissionType() const;
 
                     /**
-                     * 设置Permission type (`2`: DENY, `3`: ALLOW). CKafka currently supports `ALLOW`, which is equivalent to allowlist. `DENY` will be supported for ACLs compatible with open-source Kafka.
-                     * @param _permissionType Permission type (`2`: DENY, `3`: ALLOW). CKafka currently supports `ALLOW`, which is equivalent to allowlist. `DENY` will be supported for ACLs compatible with open-source Kafka.
+                     * 设置Permission type (2:DENY, 3:ALLOW). currently ckafka supports ALLOW (equivalent to allowlist), others used when compatible with open-source kafka acl.
+                     * @param _permissionType Permission type (2:DENY, 3:ALLOW). currently ckafka supports ALLOW (equivalent to allowlist), others used when compatible with open-source kafka acl.
                      * 
                      */
                     void SetPermissionType(const int64_t& _permissionType);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool HostHasBeenSet() const;
 
                     /**
-                     * 获取User list. The default value is `*`, which means that any user can access. The current user can only be one included in the user list
-                     * @return Principal User list. The default value is `*`, which means that any user can access. The current user can only be one included in the user list
+                     * 获取List of users, defaults to User:*, means any User is accessible in the entire region. the current User can only be the User in the list of users.
+                     * @return Principal List of users, defaults to User:*, means any User is accessible in the entire region. the current User can only be the User in the list of users.
                      * 
                      */
                     std::string GetPrincipal() const;
 
                     /**
-                     * 设置User list. The default value is `*`, which means that any user can access. The current user can only be one included in the user list
-                     * @param _principal User list. The default value is `*`, which means that any user can access. The current user can only be one included in the user list
+                     * 设置List of users, defaults to User:*, means any User is accessible in the entire region. the current User can only be the User in the list of users.
+                     * @param _principal List of users, defaults to User:*, means any User is accessible in the entire region. the current User can only be the User in the list of users.
                      * 
                      */
                     void SetPrincipal(const std::string& _principal);
@@ -192,7 +192,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID information
+                     * The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -216,7 +216,7 @@ namespace TencentCloud
                     bool m_operationHasBeenSet;
 
                     /**
-                     * Permission type (`2`: DENY, `3`: ALLOW). CKafka currently supports `ALLOW`, which is equivalent to allowlist. `DENY` will be supported for ACLs compatible with open-source Kafka.
+                     * Permission type (2:DENY, 3:ALLOW). currently ckafka supports ALLOW (equivalent to allowlist), others used when compatible with open-source kafka acl.
                      */
                     int64_t m_permissionType;
                     bool m_permissionTypeHasBeenSet;
@@ -228,7 +228,7 @@ namespace TencentCloud
                     bool m_hostHasBeenSet;
 
                     /**
-                     * User list. The default value is `*`, which means that any user can access. The current user can only be one included in the user list
+                     * List of users, defaults to User:*, means any User is accessible in the entire region. the current User can only be the User in the list of users.
                      */
                     std::string m_principal;
                     bool m_principalHasBeenSet;

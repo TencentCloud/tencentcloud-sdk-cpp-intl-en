@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool OperationHasBeenSet() const;
 
                     /**
-                     * 获取Permission types: `Deny`, `Allow`.
-                     * @return PermissionType Permission types: `Deny`, `Allow`.
+                     * 获取Permission type. Deny: Deny. Allow: permission.
+                     * @return PermissionType Permission type. Deny: Deny. Allow: permission.
                      * 
                      */
                     std::string GetPermissionType() const;
 
                     /**
-                     * 设置Permission types: `Deny`, `Allow`.
-                     * @param _permissionType Permission types: `Deny`, `Allow`.
+                     * 设置Permission type. Deny: Deny. Allow: permission.
+                     * @param _permissionType Permission type. Deny: Deny. Allow: permission.
                      * 
                      */
                     void SetPermissionType(const std::string& _permissionType);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool PermissionTypeHasBeenSet() const;
 
                     /**
-                     * 获取The default value is `*`, which means that any host can access the topic. CKafka currently does not support specifying a host value of * or an IP range.
-                     * @return Host The default value is `*`, which means that any host can access the topic. CKafka currently does not support specifying a host value of * or an IP range.
+                     * 获取Indicates any host is accessible in the entire region.
+                     * @return Host Indicates any host is accessible in the entire region.
                      * 
                      */
                     std::string GetHost() const;
 
                     /**
-                     * 设置The default value is `*`, which means that any host can access the topic. CKafka currently does not support specifying a host value of * or an IP range.
-                     * @param _host The default value is `*`, which means that any host can access the topic. CKafka currently does not support specifying a host value of * or an IP range.
+                     * 设置Indicates any host is accessible in the entire region.
+                     * @param _host Indicates any host is accessible in the entire region.
                      * 
                      */
                     void SetHost(const std::string& _host);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool HostHasBeenSet() const;
 
                     /**
-                     * 获取The list of users allowed to access the topic. Default value: `User:*`, which means all users. The current user must be in the user list. Add the prefix `User:` before the user name (`User:A`, for example).
-                     * @return Principal The list of users allowed to access the topic. Default value: `User:*`, which means all users. The current user must be in the user list. Add the prefix `User:` before the user name (`User:A`, for example).
+                     * 获取The User. User:* means any User is accessible in the entire region. the current User can only be the User in the list of users. the input format requires the [User:] prefix. for example, for User A, input User:A.
+                     * @return Principal The User. User:* means any User is accessible in the entire region. the current User can only be the User in the list of users. the input format requires the [User:] prefix. for example, for User A, input User:A.
                      * 
                      */
                     std::string GetPrincipal() const;
 
                     /**
-                     * 设置The list of users allowed to access the topic. Default value: `User:*`, which means all users. The current user must be in the user list. Add the prefix `User:` before the user name (`User:A`, for example).
-                     * @param _principal The list of users allowed to access the topic. Default value: `User:*`, which means all users. The current user must be in the user list. Add the prefix `User:` before the user name (`User:A`, for example).
+                     * 设置The User. User:* means any User is accessible in the entire region. the current User can only be the User in the list of users. the input format requires the [User:] prefix. for example, for User A, input User:A.
+                     * @param _principal The User. User:* means any User is accessible in the entire region. the current User can only be the User in the list of users. the input format requires the [User:] prefix. for example, for User A, input User:A.
                      * 
                      */
                     void SetPrincipal(const std::string& _principal);
@@ -139,19 +139,19 @@ namespace TencentCloud
                     bool m_operationHasBeenSet;
 
                     /**
-                     * Permission types: `Deny`, `Allow`.
+                     * Permission type. Deny: Deny. Allow: permission.
                      */
                     std::string m_permissionType;
                     bool m_permissionTypeHasBeenSet;
 
                     /**
-                     * The default value is `*`, which means that any host can access the topic. CKafka currently does not support specifying a host value of * or an IP range.
+                     * Indicates any host is accessible in the entire region.
                      */
                     std::string m_host;
                     bool m_hostHasBeenSet;
 
                     /**
-                     * The list of users allowed to access the topic. Default value: `User:*`, which means all users. The current user must be in the user list. Add the prefix `User:` before the user name (`User:A`, for example).
+                     * The User. User:* means any User is accessible in the entire region. the current User can only be the User in the list of users. the input format requires the [User:] prefix. for example, for User A, input User:A.
                      */
                     std::string m_principal;
                     bool m_principalHasBeenSet;

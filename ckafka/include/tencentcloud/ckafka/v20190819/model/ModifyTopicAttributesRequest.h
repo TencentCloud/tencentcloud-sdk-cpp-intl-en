@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID.
-                     * @return InstanceId Instance ID.
+                     * 获取The ckafka cluster instance Id.
+                     * @return InstanceId The ckafka cluster instance Id.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param _instanceId Instance ID.
+                     * 设置The ckafka cluster instance Id.
+                     * @param _instanceId The ckafka cluster instance Id.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Topic name.
-                     * @return TopicName Topic name.
+                     * 获取Topic name
+                     * @return TopicName Topic name
                      * 
                      */
                     std::string GetTopicName() const;
 
                     /**
-                     * 设置Topic name.
-                     * @param _topicName Topic name.
+                     * 设置Topic name
+                     * @param _topicName Topic name
                      * 
                      */
                     void SetTopicName(const std::string& _topicName);
@@ -191,27 +191,6 @@ namespace TencentCloud
                     bool RetentionMsHasBeenSet() const;
 
                     /**
-                     * 获取Segment rolling duration in ms. The current minimum value is 86,400,000 ms.
-                     * @return SegmentMs Segment rolling duration in ms. The current minimum value is 86,400,000 ms.
-                     * 
-                     */
-                    int64_t GetSegmentMs() const;
-
-                    /**
-                     * 设置Segment rolling duration in ms. The current minimum value is 86,400,000 ms.
-                     * @param _segmentMs Segment rolling duration in ms. The current minimum value is 86,400,000 ms.
-                     * 
-                     */
-                    void SetSegmentMs(const int64_t& _segmentMs);
-
-                    /**
-                     * 判断参数 SegmentMs 是否已赋值
-                     * @return SegmentMs 是否已赋值
-                     * 
-                     */
-                    bool SegmentMsHasBeenSet() const;
-
-                    /**
                      * 获取Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
                      * @return MaxMessageBytes Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
                      * 
@@ -231,6 +210,27 @@ namespace TencentCloud
                      * 
                      */
                     bool MaxMessageBytesHasBeenSet() const;
+
+                    /**
+                     * 获取Duration of Segment shard scrolling in milliseconds. current min value is 86400000 ms.
+                     * @return SegmentMs Duration of Segment shard scrolling in milliseconds. current min value is 86400000 ms.
+                     * 
+                     */
+                    int64_t GetSegmentMs() const;
+
+                    /**
+                     * 设置Duration of Segment shard scrolling in milliseconds. current min value is 86400000 ms.
+                     * @param _segmentMs Duration of Segment shard scrolling in milliseconds. current min value is 86400000 ms.
+                     * 
+                     */
+                    void SetSegmentMs(const int64_t& _segmentMs);
+
+                    /**
+                     * 判断参数 SegmentMs 是否已赋值
+                     * @return SegmentMs 是否已赋值
+                     * 
+                     */
+                    bool SegmentMsHasBeenSet() const;
 
                     /**
                      * 获取Message deletion policy. Valid values: delete, compact
@@ -296,15 +296,15 @@ namespace TencentCloud
                     bool EnableAclRuleHasBeenSet() const;
 
                     /**
-                     * 获取Name of the preset ACL rule.
-                     * @return AclRuleName Name of the preset ACL rule.
+                     * 获取ACL rule name.
+                     * @return AclRuleName ACL rule name.
                      * 
                      */
                     std::string GetAclRuleName() const;
 
                     /**
-                     * 设置Name of the preset ACL rule.
-                     * @param _aclRuleName Name of the preset ACL rule.
+                     * 设置ACL rule name.
+                     * @param _aclRuleName ACL rule name.
                      * 
                      */
                     void SetAclRuleName(const std::string& _aclRuleName);
@@ -359,15 +359,15 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Production throttling in MB/sec.
-                     * @return QuotaProducerByteRate Production throttling in MB/sec.
+                     * 获取Production traffic throttling in MB/s. set to -1 to disable throttling.
+                     * @return QuotaProducerByteRate Production traffic throttling in MB/s. set to -1 to disable throttling.
                      * 
                      */
                     int64_t GetQuotaProducerByteRate() const;
 
                     /**
-                     * 设置Production throttling in MB/sec.
-                     * @param _quotaProducerByteRate Production throttling in MB/sec.
+                     * 设置Production traffic throttling in MB/s. set to -1 to disable throttling.
+                     * @param _quotaProducerByteRate Production traffic throttling in MB/s. set to -1 to disable throttling.
                      * 
                      */
                     void SetQuotaProducerByteRate(const int64_t& _quotaProducerByteRate);
@@ -380,15 +380,15 @@ namespace TencentCloud
                     bool QuotaProducerByteRateHasBeenSet() const;
 
                     /**
-                     * 获取Consumption throttling in MB/sec.
-                     * @return QuotaConsumerByteRate Consumption throttling in MB/sec.
+                     * 获取Consumption traffic throttling in MB/s. set to -1 for unlimited consumption.
+                     * @return QuotaConsumerByteRate Consumption traffic throttling in MB/s. set to -1 for unlimited consumption.
                      * 
                      */
                     int64_t GetQuotaConsumerByteRate() const;
 
                     /**
-                     * 设置Consumption throttling in MB/sec.
-                     * @param _quotaConsumerByteRate Consumption throttling in MB/sec.
+                     * 设置Consumption traffic throttling in MB/s. set to -1 for unlimited consumption.
+                     * @param _quotaConsumerByteRate Consumption traffic throttling in MB/s. set to -1 for unlimited consumption.
                      * 
                      */
                     void SetQuotaConsumerByteRate(const int64_t& _quotaConsumerByteRate);
@@ -401,15 +401,15 @@ namespace TencentCloud
                     bool QuotaConsumerByteRateHasBeenSet() const;
 
                     /**
-                     * 获取The number of topic replicas.
-                     * @return ReplicaNum The number of topic replicas.
+                     * 获取Number of topic replicas. valid values: 1, 3.
+                     * @return ReplicaNum Number of topic replicas. valid values: 1, 3.
                      * 
                      */
                     int64_t GetReplicaNum() const;
 
                     /**
-                     * 设置The number of topic replicas.
-                     * @param _replicaNum The number of topic replicas.
+                     * 设置Number of topic replicas. valid values: 1, 3.
+                     * @param _replicaNum Number of topic replicas. valid values: 1, 3.
                      * 
                      */
                     void SetReplicaNum(const int64_t& _replicaNum);
@@ -424,13 +424,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID.
+                     * The ckafka cluster instance Id.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Topic name.
+                     * Topic name
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;
@@ -466,16 +466,16 @@ namespace TencentCloud
                     bool m_retentionMsHasBeenSet;
 
                     /**
-                     * Segment rolling duration in ms. The current minimum value is 86,400,000 ms.
-                     */
-                    int64_t m_segmentMs;
-                    bool m_segmentMsHasBeenSet;
-
-                    /**
                      * Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
                      */
                     int64_t m_maxMessageBytes;
                     bool m_maxMessageBytesHasBeenSet;
+
+                    /**
+                     * Duration of Segment shard scrolling in milliseconds. current min value is 86400000 ms.
+                     */
+                    int64_t m_segmentMs;
+                    bool m_segmentMsHasBeenSet;
 
                     /**
                      * Message deletion policy. Valid values: delete, compact
@@ -496,7 +496,7 @@ namespace TencentCloud
                     bool m_enableAclRuleHasBeenSet;
 
                     /**
-                     * Name of the preset ACL rule.
+                     * ACL rule name.
                      */
                     std::string m_aclRuleName;
                     bool m_aclRuleNameHasBeenSet;
@@ -514,19 +514,19 @@ namespace TencentCloud
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Production throttling in MB/sec.
+                     * Production traffic throttling in MB/s. set to -1 to disable throttling.
                      */
                     int64_t m_quotaProducerByteRate;
                     bool m_quotaProducerByteRateHasBeenSet;
 
                     /**
-                     * Consumption throttling in MB/sec.
+                     * Consumption traffic throttling in MB/s. set to -1 for unlimited consumption.
                      */
                     int64_t m_quotaConsumerByteRate;
                     bool m_quotaConsumerByteRateHasBeenSet;
 
                     /**
-                     * The number of topic replicas.
+                     * Number of topic replicas. valid values: 1, 3.
                      */
                     int64_t m_replicaNum;
                     bool m_replicaNumHasBeenSet;

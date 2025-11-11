@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取ACL rule name.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return RuleName ACL rule name.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRuleName() const;
 
                     /**
                      * 设置ACL rule name.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @param _ruleName ACL rule name.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRuleName(const std::string& _ruleName);
@@ -72,19 +68,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool RuleNameHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return InstanceId Instance ID.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取The ckafka cluster instance Id.
+                     * @return InstanceId The ckafka cluster instance Id.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param _instanceId Instance ID.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 设置The ckafka cluster instance Id.
+                     * @param _instanceId The ckafka cluster instance Id.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -97,19 +89,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Matching type. Currently, only prefix match is supported. Enumerated value list: PREFIXED
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return PatternType Matching type. Currently, only prefix match is supported. Enumerated value list: PREFIXED
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取ACL rule-based matching type. currently only supports prefix match. valid values: PREFIXED.
+                     * @return PatternType ACL rule-based matching type. currently only supports prefix match. valid values: PREFIXED.
                      * 
                      */
                     std::string GetPatternType() const;
 
                     /**
-                     * 设置Matching type. Currently, only prefix match is supported. Enumerated value list: PREFIXED
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param _patternType Matching type. Currently, only prefix match is supported. Enumerated value list: PREFIXED
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 设置ACL rule-based matching type. currently only supports prefix match. valid values: PREFIXED.
+                     * @param _patternType ACL rule-based matching type. currently only supports prefix match. valid values: PREFIXED.
                      * 
                      */
                     void SetPatternType(const std::string& _patternType);
@@ -122,19 +110,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool PatternTypeHasBeenSet() const;
 
                     /**
-                     * 获取Prefix value for prefix match.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return Pattern Prefix value for prefix match.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取Indicates the prefix value for prefix match.
+                     * @return Pattern Indicates the prefix value for prefix match.
                      * 
                      */
                     std::string GetPattern() const;
 
                     /**
-                     * 设置Prefix value for prefix match.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param _pattern Prefix value for prefix match.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 设置Indicates the prefix value for prefix match.
+                     * @param _pattern Indicates the prefix value for prefix match.
                      * 
                      */
                     void SetPattern(const std::string& _pattern);
@@ -147,19 +131,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool PatternHasBeenSet() const;
 
                     /**
-                     * 获取ACL resource type. Only “Topic” is supported. Enumerated value list: Topic.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return ResourceType ACL resource type. Only “Topic” is supported. Enumerated value list: Topic.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取Acl resource type, currently only support Topic. valid values: Topic.
+                     * @return ResourceType Acl resource type, currently only support Topic. valid values: Topic.
                      * 
                      */
                     std::string GetResourceType() const;
 
                     /**
-                     * 设置ACL resource type. Only “Topic” is supported. Enumerated value list: Topic.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param _resourceType ACL resource type. Only “Topic” is supported. Enumerated value list: Topic.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 设置Acl resource type, currently only support Topic. valid values: Topic.
+                     * @param _resourceType Acl resource type, currently only support Topic. valid values: Topic.
                      * 
                      */
                     void SetResourceType(const std::string& _resourceType);
@@ -172,19 +152,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool ResourceTypeHasBeenSet() const;
 
                     /**
-                     * 获取ACL information contained in the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return AclList ACL information contained in the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取Specifies the ACL information contained in the rule.
+                     * @return AclList Specifies the ACL information contained in the rule.
                      * 
                      */
                     std::string GetAclList() const;
 
                     /**
-                     * 设置ACL information contained in the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param _aclList ACL information contained in the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 设置Specifies the ACL information contained in the rule.
+                     * @param _aclList Specifies the ACL information contained in the rule.
                      * 
                      */
                     void SetAclList(const std::string& _aclList);
@@ -197,19 +173,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool AclListHasBeenSet() const;
 
                     /**
-                     * 获取Creation time of the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return CreateTimeStamp Creation time of the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取Specifies the time when the rule was created.
+                     * @return CreateTimeStamp Specifies the time when the rule was created.
                      * 
                      */
                     std::string GetCreateTimeStamp() const;
 
                     /**
-                     * 设置Creation time of the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param _createTimeStamp Creation time of the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 设置Specifies the time when the rule was created.
+                     * @param _createTimeStamp Specifies the time when the rule was created.
                      * 
                      */
                     void SetCreateTimeStamp(const std::string& _createTimeStamp);
@@ -222,19 +194,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool CreateTimeStampHasBeenSet() const;
 
                     /**
-                     * 获取A parameter used to specify whether the preset ACL rule is applied to new topics.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return IsApplied A parameter used to specify whether the preset ACL rule is applied to new topics.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取Specifies whether to apply the preset ACL rule to newly-added topics.
+                     * @return IsApplied Specifies whether to apply the preset ACL rule to newly-added topics.
                      * 
                      */
                     int64_t GetIsApplied() const;
 
                     /**
-                     * 设置A parameter used to specify whether the preset ACL rule is applied to new topics.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param _isApplied A parameter used to specify whether the preset ACL rule is applied to new topics.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 设置Specifies whether to apply the preset ACL rule to newly-added topics.
+                     * @param _isApplied Specifies whether to apply the preset ACL rule to newly-added topics.
                      * 
                      */
                     void SetIsApplied(const int64_t& _isApplied);
@@ -248,18 +216,14 @@ Note: `null` may be returned for this field, indicating that no valid values can
 
                     /**
                      * 获取Rule update time.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return UpdateTimeStamp Rule update time.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUpdateTimeStamp() const;
 
                     /**
                      * 设置Rule update time.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @param _updateTimeStamp Rule update time.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUpdateTimeStamp(const std::string& _updateTimeStamp);
@@ -272,19 +236,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool UpdateTimeStampHasBeenSet() const;
 
                     /**
-                     * 获取Remarks of the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return Comment Remarks of the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取Specifies the remark of the rule.
+                     * @return Comment Specifies the remark of the rule.
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Remarks of the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param _comment Remarks of the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 设置Specifies the remark of the rule.
+                     * @param _comment Specifies the remark of the rule.
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -297,19 +257,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取One of the corresponding topic names that is displayed.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return TopicName One of the corresponding topic names that is displayed.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取One of the displayed corresponding TopicName.
+                     * @return TopicName One of the displayed corresponding TopicName.
                      * 
                      */
                     std::string GetTopicName() const;
 
                     /**
-                     * 设置One of the corresponding topic names that is displayed.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param _topicName One of the corresponding topic names that is displayed.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 设置One of the displayed corresponding TopicName.
+                     * @param _topicName One of the displayed corresponding TopicName.
                      * 
                      */
                     void SetTopicName(const std::string& _topicName);
@@ -322,19 +278,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取The number of topics that apply this ACL rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return TopicCount The number of topics that apply this ACL rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取Number of topics to which the ACL rule is applied.
+                     * @return TopicCount Number of topics to which the ACL rule is applied.
                      * 
                      */
                     int64_t GetTopicCount() const;
 
                     /**
-                     * 设置The number of topics that apply this ACL rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param _topicCount The number of topics that apply this ACL rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 设置Number of topics to which the ACL rule is applied.
+                     * @param _topicCount Number of topics to which the ACL rule is applied.
                      * 
                      */
                     void SetTopicCount(const int64_t& _topicCount);
@@ -347,19 +299,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool TopicCountHasBeenSet() const;
 
                     /**
-                     * 获取Name of rule type.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return PatternTypeTitle Name of rule type.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Specifies the pattern type.
+                     * @return PatternTypeTitle Specifies the pattern type.
                      * 
                      */
                     std::string GetPatternTypeTitle() const;
 
                     /**
-                     * 设置Name of rule type.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _patternTypeTitle Name of rule type.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Specifies the pattern type.
+                     * @param _patternTypeTitle Specifies the pattern type.
                      * 
                      */
                     void SetPatternTypeTitle(const std::string& _patternTypeTitle);
@@ -375,91 +323,78 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * ACL rule name.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      */
                     std::string m_ruleName;
                     bool m_ruleNameHasBeenSet;
 
                     /**
-                     * Instance ID.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * The ckafka cluster instance Id.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Matching type. Currently, only prefix match is supported. Enumerated value list: PREFIXED
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * ACL rule-based matching type. currently only supports prefix match. valid values: PREFIXED.
                      */
                     std::string m_patternType;
                     bool m_patternTypeHasBeenSet;
 
                     /**
-                     * Prefix value for prefix match.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * Indicates the prefix value for prefix match.
                      */
                     std::string m_pattern;
                     bool m_patternHasBeenSet;
 
                     /**
-                     * ACL resource type. Only “Topic” is supported. Enumerated value list: Topic.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * Acl resource type, currently only support Topic. valid values: Topic.
                      */
                     std::string m_resourceType;
                     bool m_resourceTypeHasBeenSet;
 
                     /**
-                     * ACL information contained in the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * Specifies the ACL information contained in the rule.
                      */
                     std::string m_aclList;
                     bool m_aclListHasBeenSet;
 
                     /**
-                     * Creation time of the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * Specifies the time when the rule was created.
                      */
                     std::string m_createTimeStamp;
                     bool m_createTimeStampHasBeenSet;
 
                     /**
-                     * A parameter used to specify whether the preset ACL rule is applied to new topics.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * Specifies whether to apply the preset ACL rule to newly-added topics.
                      */
                     int64_t m_isApplied;
                     bool m_isAppliedHasBeenSet;
 
                     /**
                      * Rule update time.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      */
                     std::string m_updateTimeStamp;
                     bool m_updateTimeStampHasBeenSet;
 
                     /**
-                     * Remarks of the rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * Specifies the remark of the rule.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * One of the corresponding topic names that is displayed.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * One of the displayed corresponding TopicName.
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * The number of topics that apply this ACL rule.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * Number of topics to which the ACL rule is applied.
                      */
                     int64_t m_topicCount;
                     bool m_topicCountHasBeenSet;
 
                     /**
-                     * Name of rule type.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Specifies the pattern type.
                      */
                     std::string m_patternTypeTitle;
                     bool m_patternTypeTitleHasBeenSet;

@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Order list.  Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DealName Order list.  Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Order transaction.
+                     * @return DealName Order transaction.
                      * 
                      */
                     std::string GetDealName() const;
 
                     /**
-                     * 设置Order list.  Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dealName Order list.  Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Order transaction.
+                     * @param _dealName Order transaction.
                      * 
                      */
                     void SetDealName(const std::string& _dealName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DealNameHasBeenSet() const;
 
                     /**
-                     * 获取ID list of the purchased CKafka instances corresponding to the order list.  Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceIdList ID list of the purchased CKafka instances corresponding to the order list.  Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Order transaction corresponds to the list of purchased CKafka instance ids.
+                     * @return InstanceIdList Order transaction corresponds to the list of purchased CKafka instance ids.
                      * 
                      */
                     std::vector<std::string> GetInstanceIdList() const;
 
                     /**
-                     * 设置ID list of the purchased CKafka instances corresponding to the order list.  Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceIdList ID list of the purchased CKafka instances corresponding to the order list.  Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Order transaction corresponds to the list of purchased CKafka instance ids.
+                     * @param _instanceIdList Order transaction corresponds to the list of purchased CKafka instance ids.
                      * 
                      */
                     void SetInstanceIdList(const std::vector<std::string>& _instanceIdList);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Order list.  Note: This field may return null, indicating that no valid values can be obtained.
+                     * Order transaction.
                      */
                     std::string m_dealName;
                     bool m_dealNameHasBeenSet;
 
                     /**
-                     * ID list of the purchased CKafka instances corresponding to the order list.  Note: This field may return null, indicating that no valid values can be obtained.
+                     * Order transaction corresponds to the list of purchased CKafka instance ids.
                      */
                     std::vector<std::string> m_instanceIdList;
                     bool m_instanceIdListHasBeenSet;

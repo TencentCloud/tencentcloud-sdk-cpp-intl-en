@@ -255,6 +255,49 @@ LkeapClient::QueryRewriteOutcomeCallable LkeapClient::QueryRewriteCallable(const
     return task->get_future();
 }
 
+LkeapClient::ReconstructDocumentSSEOutcome LkeapClient::ReconstructDocumentSSE(const ReconstructDocumentSSERequest &request)
+{
+    auto outcome = MakeRequest(request, "ReconstructDocumentSSE");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ReconstructDocumentSSEResponse rsp = ReconstructDocumentSSEResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ReconstructDocumentSSEOutcome(rsp);
+        else
+            return ReconstructDocumentSSEOutcome(o.GetError());
+    }
+    else
+    {
+        return ReconstructDocumentSSEOutcome(outcome.GetError());
+    }
+}
+
+void LkeapClient::ReconstructDocumentSSEAsync(const ReconstructDocumentSSERequest& request, const ReconstructDocumentSSEAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ReconstructDocumentSSE(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+LkeapClient::ReconstructDocumentSSEOutcomeCallable LkeapClient::ReconstructDocumentSSECallable(const ReconstructDocumentSSERequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ReconstructDocumentSSEOutcome()>>(
+        [this, request]()
+        {
+            return this->ReconstructDocumentSSE(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 LkeapClient::RunRerankOutcome LkeapClient::RunRerank(const RunRerankRequest &request)
 {
     auto outcome = MakeRequest(request, "RunRerank");

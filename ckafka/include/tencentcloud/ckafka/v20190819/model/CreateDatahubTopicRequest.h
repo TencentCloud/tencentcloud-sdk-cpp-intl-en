@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
-                     * @return Name Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * 获取Name, a string of no more than 128 characters, must start with "AppId-" and can contain letters, digits, and hyphens (-).
+                     * @return Name Name, a string of no more than 128 characters, must start with "AppId-" and can contain letters, digits, and hyphens (-).
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
-                     * @param _name Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * 设置Name, a string of no more than 128 characters, must start with "AppId-" and can contain letters, digits, and hyphens (-).
+                     * @param _name Name, a string of no more than 128 characters, must start with "AppId-" and can contain letters, digits, and hyphens (-).
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -151,7 +151,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * Name, a string of no more than 128 characters, must start with "AppId-" and can contain letters, digits, and hyphens (-).
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

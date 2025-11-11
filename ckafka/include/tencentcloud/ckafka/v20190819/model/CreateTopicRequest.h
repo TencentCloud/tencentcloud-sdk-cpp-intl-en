@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance Id. you can obtain it by calling the DescribeInstances api.
+                     * @return InstanceId Instance Id. you can obtain it by calling the DescribeInstances api.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance Id. you can obtain it by calling the DescribeInstances api.
+                     * @param _instanceId Instance Id. you can obtain it by calling the DescribeInstances api.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
-                     * @return TopicName Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * 获取Can only contain letters, digits, underscores, "-", or ".".
+                     * @return TopicName Can only contain letters, digits, underscores, "-", or ".".
                      * 
                      */
                     std::string GetTopicName() const;
 
                     /**
-                     * 设置Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
-                     * @param _topicName Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * 设置Can only contain letters, digits, underscores, "-", or ".".
+                     * @param _topicName Can only contain letters, digits, underscores, "-", or ".".
                      * 
                      */
                     void SetTopicName(const std::string& _topicName);
@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool CleanUpPolicyHasBeenSet() const;
 
                     /**
-                     * 获取Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
-                     * @return Note Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+                     * 获取Topic remark is a string of no more than 64 characters. the first character can be a letter or digit, and the remaining part can contain letters, digits, and hyphens (-).
+                     * @return Note Topic remark is a string of no more than 64 characters. the first character can be a letter or digit, and the remaining part can contain letters, digits, and hyphens (-).
                      * 
                      */
                     std::string GetNote() const;
 
                     /**
-                     * 设置Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
-                     * @param _note Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+                     * 设置Topic remark is a string of no more than 64 characters. the first character can be a letter or digit, and the remaining part can contain letters, digits, and hyphens (-).
+                     * @param _note Topic remark is a string of no more than 64 characters. the first character can be a letter or digit, and the remaining part can contain letters, digits, and hyphens (-).
                      * 
                      */
                     void SetNote(const std::string& _note);
@@ -212,15 +212,15 @@ namespace TencentCloud
                     bool NoteHasBeenSet() const;
 
                     /**
-                     * 获取Default value: 1
-                     * @return MinInsyncReplicas Default value: 1
+                     * 获取Minimum number of synchronous replicas, defaults to 1.
+                     * @return MinInsyncReplicas Minimum number of synchronous replicas, defaults to 1.
                      * 
                      */
                     int64_t GetMinInsyncReplicas() const;
 
                     /**
-                     * 设置Default value: 1
-                     * @param _minInsyncReplicas Default value: 1
+                     * 设置Minimum number of synchronous replicas, defaults to 1.
+                     * @param _minInsyncReplicas Minimum number of synchronous replicas, defaults to 1.
                      * 
                      */
                     void SetMinInsyncReplicas(const int64_t& _minInsyncReplicas);
@@ -233,15 +233,15 @@ namespace TencentCloud
                     bool MinInsyncReplicasHasBeenSet() const;
 
                     /**
-                     * 获取Whether to allow an unsynced replica to be elected as leader. false: no, true: yes. Default value: false
-                     * @return UncleanLeaderElectionEnable Whether to allow an unsynced replica to be elected as leader. false: no, true: yes. Default value: false
+                     * 获取Whether to allow unsynchronized replicas to be elected as leader. valid values: 0 (not allowed), 1 (allowed). default: not allowed.
+                     * @return UncleanLeaderElectionEnable Whether to allow unsynchronized replicas to be elected as leader. valid values: 0 (not allowed), 1 (allowed). default: not allowed.
                      * 
                      */
                     int64_t GetUncleanLeaderElectionEnable() const;
 
                     /**
-                     * 设置Whether to allow an unsynced replica to be elected as leader. false: no, true: yes. Default value: false
-                     * @param _uncleanLeaderElectionEnable Whether to allow an unsynced replica to be elected as leader. false: no, true: yes. Default value: false
+                     * 设置Whether to allow unsynchronized replicas to be elected as leader. valid values: 0 (not allowed), 1 (allowed). default: not allowed.
+                     * @param _uncleanLeaderElectionEnable Whether to allow unsynchronized replicas to be elected as leader. valid values: 0 (not allowed), 1 (allowed). default: not allowed.
                      * 
                      */
                     void SetUncleanLeaderElectionEnable(const int64_t& _uncleanLeaderElectionEnable);
@@ -254,15 +254,15 @@ namespace TencentCloud
                     bool UncleanLeaderElectionEnableHasBeenSet() const;
 
                     /**
-                     * 获取Message retention period in milliseconds, which is optional. Min value: 60,000 ms.
-                     * @return RetentionMs Message retention period in milliseconds, which is optional. Min value: 60,000 ms.
+                     * 获取Optional parameter. specifies the message retention period in milliseconds. current min value is 60000. default value is 7200000 ms (2 hours). maximum value is 7776000000 ms (90 days).
+                     * @return RetentionMs Optional parameter. specifies the message retention period in milliseconds. current min value is 60000. default value is 7200000 ms (2 hours). maximum value is 7776000000 ms (90 days).
                      * 
                      */
                     int64_t GetRetentionMs() const;
 
                     /**
-                     * 设置Message retention period in milliseconds, which is optional. Min value: 60,000 ms.
-                     * @param _retentionMs Message retention period in milliseconds, which is optional. Min value: 60,000 ms.
+                     * 设置Optional parameter. specifies the message retention period in milliseconds. current min value is 60000. default value is 7200000 ms (2 hours). maximum value is 7776000000 ms (90 days).
+                     * @param _retentionMs Optional parameter. specifies the message retention period in milliseconds. current min value is 60000. default value is 7200000 ms (2 hours). maximum value is 7776000000 ms (90 days).
                      * 
                      */
                     void SetRetentionMs(const int64_t& _retentionMs);
@@ -275,15 +275,15 @@ namespace TencentCloud
                     bool RetentionMsHasBeenSet() const;
 
                     /**
-                     * 获取Segment rolling duration in ms. The current minimum value is 3,600,000 ms
-                     * @return SegmentMs Segment rolling duration in ms. The current minimum value is 3,600,000 ms
+                     * 获取Duration of Segment shard scrolling in milliseconds. minimum value is 86400000 ms (1 day).
+                     * @return SegmentMs Duration of Segment shard scrolling in milliseconds. minimum value is 86400000 ms (1 day).
                      * 
                      */
                     int64_t GetSegmentMs() const;
 
                     /**
-                     * 设置Segment rolling duration in ms. The current minimum value is 3,600,000 ms
-                     * @param _segmentMs Segment rolling duration in ms. The current minimum value is 3,600,000 ms
+                     * 设置Duration of Segment shard scrolling in milliseconds. minimum value is 86400000 ms (1 day).
+                     * @param _segmentMs Duration of Segment shard scrolling in milliseconds. minimum value is 86400000 ms (1 day).
                      * 
                      */
                     void SetSegmentMs(const int64_t& _segmentMs);
@@ -296,15 +296,15 @@ namespace TencentCloud
                     bool SegmentMsHasBeenSet() const;
 
                     /**
-                     * 获取Max message size in bytes. Value range: 1,024 bytes (1 KB) to 8,388,608 bytes (8 MB).
-                     * @return MaxMessageBytes Max message size in bytes. Value range: 1,024 bytes (1 KB) to 8,388,608 bytes (8 MB).
+                     * 获取Maximum topic messages in Bytes. value range: 1024 (1 KB) to 12582912 (12 MB).
+                     * @return MaxMessageBytes Maximum topic messages in Bytes. value range: 1024 (1 KB) to 12582912 (12 MB).
                      * 
                      */
                     int64_t GetMaxMessageBytes() const;
 
                     /**
-                     * 设置Max message size in bytes. Value range: 1,024 bytes (1 KB) to 8,388,608 bytes (8 MB).
-                     * @param _maxMessageBytes Max message size in bytes. Value range: 1,024 bytes (1 KB) to 8,388,608 bytes (8 MB).
+                     * 设置Maximum topic messages in Bytes. value range: 1024 (1 KB) to 12582912 (12 MB).
+                     * @param _maxMessageBytes Maximum topic messages in Bytes. value range: 1024 (1 KB) to 12582912 (12 MB).
                      * 
                      */
                     void SetMaxMessageBytes(const int64_t& _maxMessageBytes);
@@ -359,15 +359,15 @@ namespace TencentCloud
                     bool AclRuleNameHasBeenSet() const;
 
                     /**
-                     * 获取Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
-                     * @return RetentionBytes Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+                     * 获取Optional. retain file size. defaults to -1, unit Byte. current min value is 1073741824.
+                     * @return RetentionBytes Optional. retain file size. defaults to -1, unit Byte. current min value is 1073741824.
                      * 
                      */
                     int64_t GetRetentionBytes() const;
 
                     /**
-                     * 设置Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
-                     * @param _retentionBytes Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+                     * 设置Optional. retain file size. defaults to -1, unit Byte. current min value is 1073741824.
+                     * @param _retentionBytes Optional. retain file size. defaults to -1, unit Byte. current min value is 1073741824.
                      * 
                      */
                     void SetRetentionBytes(const int64_t& _retentionBytes);
@@ -403,13 +403,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance Id. you can obtain it by calling the DescribeInstances api.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * Can only contain letters, digits, underscores, "-", or ".".
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;
@@ -445,37 +445,37 @@ namespace TencentCloud
                     bool m_cleanUpPolicyHasBeenSet;
 
                     /**
-                     * Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+                     * Topic remark is a string of no more than 64 characters. the first character can be a letter or digit, and the remaining part can contain letters, digits, and hyphens (-).
                      */
                     std::string m_note;
                     bool m_noteHasBeenSet;
 
                     /**
-                     * Default value: 1
+                     * Minimum number of synchronous replicas, defaults to 1.
                      */
                     int64_t m_minInsyncReplicas;
                     bool m_minInsyncReplicasHasBeenSet;
 
                     /**
-                     * Whether to allow an unsynced replica to be elected as leader. false: no, true: yes. Default value: false
+                     * Whether to allow unsynchronized replicas to be elected as leader. valid values: 0 (not allowed), 1 (allowed). default: not allowed.
                      */
                     int64_t m_uncleanLeaderElectionEnable;
                     bool m_uncleanLeaderElectionEnableHasBeenSet;
 
                     /**
-                     * Message retention period in milliseconds, which is optional. Min value: 60,000 ms.
+                     * Optional parameter. specifies the message retention period in milliseconds. current min value is 60000. default value is 7200000 ms (2 hours). maximum value is 7776000000 ms (90 days).
                      */
                     int64_t m_retentionMs;
                     bool m_retentionMsHasBeenSet;
 
                     /**
-                     * Segment rolling duration in ms. The current minimum value is 3,600,000 ms
+                     * Duration of Segment shard scrolling in milliseconds. minimum value is 86400000 ms (1 day).
                      */
                     int64_t m_segmentMs;
                     bool m_segmentMsHasBeenSet;
 
                     /**
-                     * Max message size in bytes. Value range: 1,024 bytes (1 KB) to 8,388,608 bytes (8 MB).
+                     * Maximum topic messages in Bytes. value range: 1024 (1 KB) to 12582912 (12 MB).
                      */
                     int64_t m_maxMessageBytes;
                     bool m_maxMessageBytesHasBeenSet;
@@ -493,7 +493,7 @@ namespace TencentCloud
                     bool m_aclRuleNameHasBeenSet;
 
                     /**
-                     * Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+                     * Optional. retain file size. defaults to -1, unit Byte. current min value is 1073741824.
                      */
                     int64_t m_retentionBytes;
                     bool m_retentionBytesHasBeenSet;

@@ -68,19 +68,15 @@ namespace TencentCloud
                     bool TopicHasBeenSet() const;
 
                     /**
-                     * 获取Information of assigned partition
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Partitions Information of assigned partition
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Allocates partition info.
+                     * @return Partitions Allocates partition info.
                      * 
                      */
                     std::vector<int64_t> GetPartitions() const;
 
                     /**
-                     * 设置Information of assigned partition
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _partitions Information of assigned partition
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Allocates partition info.
+                     * @param _partitions Allocates partition info.
                      * 
                      */
                     void SetPartitions(const std::vector<int64_t>& _partitions);
@@ -101,8 +97,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_topicHasBeenSet;
 
                     /**
-                     * Information of assigned partition
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Allocates partition info.
                      */
                     std::vector<int64_t> m_partitions;
                     bool m_partitionsHasBeenSet;

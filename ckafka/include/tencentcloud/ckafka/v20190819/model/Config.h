@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Message retention period
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Retention Message retention period
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Message retention period in milliseconds.
+                     * @return Retention Message retention period in milliseconds.
                      * 
                      */
                     int64_t GetRetention() const;
 
                     /**
-                     * 设置Message retention period
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _retention Message retention period
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Message retention period in milliseconds.
+                     * @param _retention Message retention period in milliseconds.
                      * 
                      */
                     void SetRetention(const int64_t& _retention);
@@ -126,19 +122,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CleanUpPolicyHasBeenSet() const;
 
                     /**
-                     * 获取Segment rolling duration
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SegmentMs Segment rolling duration
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Duration of Segment shard scrolling in milliseconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SegmentMs Duration of Segment shard scrolling in milliseconds.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetSegmentMs() const;
 
                     /**
-                     * 设置Segment rolling duration
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _segmentMs Segment rolling duration
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Duration of Segment shard scrolling in milliseconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _segmentMs Duration of Segment shard scrolling in milliseconds.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSegmentMs(const int64_t& _segmentMs);
@@ -176,19 +172,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool UncleanLeaderElectionEnableHasBeenSet() const;
 
                     /**
-                     * 获取Number of bytes for segment rolling
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SegmentBytes Number of bytes for segment rolling
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Segment specifies the number of bytes for sharding scroll. unit: bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SegmentBytes Segment specifies the number of bytes for sharding scroll. unit: bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetSegmentBytes() const;
 
                     /**
-                     * 设置Number of bytes for segment rolling
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _segmentBytes Number of bytes for segment rolling
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Segment specifies the number of bytes for sharding scroll. unit: bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _segmentBytes Segment specifies the number of bytes for sharding scroll. unit: bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSegmentBytes(const int64_t& _segmentBytes);
@@ -201,19 +197,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SegmentBytesHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of message bytes
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MaxMessageBytes Maximum number of message bytes
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Maximum message byte size. unit: bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MaxMessageBytes Maximum message byte size. unit: bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetMaxMessageBytes() const;
 
                     /**
-                     * 设置Maximum number of message bytes
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _maxMessageBytes Maximum number of message bytes
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Maximum message byte size. unit: bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _maxMessageBytes Maximum message byte size. unit: bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMaxMessageBytes(const int64_t& _maxMessageBytes);
@@ -226,19 +222,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MaxMessageBytesHasBeenSet() const;
 
                     /**
-                     * 获取Message retention file size.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return RetentionBytes Message retention file size.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Specifies the message retention file size in Bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RetentionBytes Specifies the message retention file size in Bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetRetentionBytes() const;
 
                     /**
-                     * 设置Message retention file size.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _retentionBytes Message retention file size.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Specifies the message retention file size in Bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _retentionBytes Specifies the message retention file size in Bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRetentionBytes(const int64_t& _retentionBytes);
@@ -250,11 +246,35 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool RetentionBytesHasBeenSet() const;
 
+                    /**
+                     * 获取The time type for message saving. CreateTime means the time when the producer created this message. LogAppendTime means the time when the broker received the message.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return LogMsgTimestampType The time type for message saving. CreateTime means the time when the producer created this message. LogAppendTime means the time when the broker received the message.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetLogMsgTimestampType() const;
+
+                    /**
+                     * 设置The time type for message saving. CreateTime means the time when the producer created this message. LogAppendTime means the time when the broker received the message.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _logMsgTimestampType The time type for message saving. CreateTime means the time when the producer created this message. LogAppendTime means the time when the broker received the message.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetLogMsgTimestampType(const std::string& _logMsgTimestampType);
+
+                    /**
+                     * 判断参数 LogMsgTimestampType 是否已赋值
+                     * @return LogMsgTimestampType 是否已赋值
+                     * 
+                     */
+                    bool LogMsgTimestampTypeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Message retention period
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Message retention period in milliseconds.
                      */
                     int64_t m_retention;
                     bool m_retentionHasBeenSet;
@@ -275,8 +295,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_cleanUpPolicyHasBeenSet;
 
                     /**
-                     * Segment rolling duration
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Duration of Segment shard scrolling in milliseconds.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_segmentMs;
                     bool m_segmentMsHasBeenSet;
@@ -289,25 +309,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_uncleanLeaderElectionEnableHasBeenSet;
 
                     /**
-                     * Number of bytes for segment rolling
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Segment specifies the number of bytes for sharding scroll. unit: bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_segmentBytes;
                     bool m_segmentBytesHasBeenSet;
 
                     /**
-                     * Maximum number of message bytes
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Maximum message byte size. unit: bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_maxMessageBytes;
                     bool m_maxMessageBytesHasBeenSet;
 
                     /**
-                     * Message retention file size.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Specifies the message retention file size in Bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_retentionBytes;
                     bool m_retentionBytesHasBeenSet;
+
+                    /**
+                     * The time type for message saving. CreateTime means the time when the producer created this message. LogAppendTime means the time when the broker received the message.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_logMsgTimestampType;
+                    bool m_logMsgTimestampTypeHasBeenSet;
 
                 };
             }

@@ -72,15 +72,15 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-                     * @return CreateTime Creation time
+                     * 获取Specifies the unix second-level timestamp of the creation time.
+                     * @return CreateTime Specifies the unix second-level timestamp of the creation time.
                      * 
                      */
                     int64_t GetCreateTime() const;
 
                     /**
-                     * 设置Creation time
-                     * @param _createTime Creation time
+                     * 设置Specifies the unix second-level timestamp of the creation time.
+                     * @param _createTime Specifies the unix second-level timestamp of the creation time.
                      * 
                      */
                     void SetCreateTime(const int64_t& _createTime);
@@ -93,19 +93,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Topic remarks
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Note Topic remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Describes the topic remark.
+                     * @return Note Describes the topic remark.
                      * 
                      */
                     std::string GetNote() const;
 
                     /**
-                     * 设置Topic remarks
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _note Topic remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Describes the topic remark.
+                     * @param _note Describes the topic remark.
                      * 
                      */
                     void SetNote(const std::string& _note);
@@ -223,19 +219,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PartitionsHasBeenSet() const;
 
                     /**
-                     * 获取Switch of the preset ACL rule. `1`: enable, `0`: disable.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return EnableAclRule Switch of the preset ACL rule. `1`: enable, `0`: disable.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取ACL preset policy switch. valid values: 1 (on); 0 (off).
+                     * @return EnableAclRule ACL preset policy switch. valid values: 1 (on); 0 (off).
                      * 
                      */
                     int64_t GetEnableAclRule() const;
 
                     /**
-                     * 设置Switch of the preset ACL rule. `1`: enable, `0`: disable.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param _enableAclRule Switch of the preset ACL rule. `1`: enable, `0`: disable.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 设置ACL preset policy switch. valid values: 1 (on); 0 (off).
+                     * @param _enableAclRule ACL preset policy switch. valid values: 1 (on); 0 (off).
                      * 
                      */
                     void SetEnableAclRule(const int64_t& _enableAclRule);
@@ -248,19 +240,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool EnableAclRuleHasBeenSet() const;
 
                     /**
-                     * 获取Preset ACL rule list.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return AclRuleList Preset ACL rule list.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取Preset policy list.
+                     * @return AclRuleList Preset policy list.
                      * 
                      */
                     std::vector<AclRule> GetAclRuleList() const;
 
                     /**
-                     * 设置Preset ACL rule list.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param _aclRuleList Preset ACL rule list.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 设置Preset policy list.
+                     * @param _aclRuleList Preset policy list.
                      * 
                      */
                     void SetAclRuleList(const std::vector<AclRule>& _aclRuleList);
@@ -273,19 +261,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool AclRuleListHasBeenSet() const;
 
                     /**
-                     * 获取Traffic throttling policy in topic dimension.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return QuotaConfig Traffic throttling policy in topic dimension.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取topic throttling policy.
+                     * @return QuotaConfig topic throttling policy.
                      * 
                      */
                     InstanceQuotaConfigResp GetQuotaConfig() const;
 
                     /**
-                     * 设置Traffic throttling policy in topic dimension.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _quotaConfig Traffic throttling policy in topic dimension.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置topic throttling policy.
+                     * @param _quotaConfig topic throttling policy.
                      * 
                      */
                     void SetQuotaConfig(const InstanceQuotaConfigResp& _quotaConfig);
@@ -299,18 +283,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取Number of replicas
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ReplicaNum Number of replicas
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetReplicaNum() const;
 
                     /**
                      * 设置Number of replicas
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _replicaNum Number of replicas
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetReplicaNum(const int64_t& _replicaNum);
@@ -331,14 +311,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * Creation time
+                     * Specifies the unix second-level timestamp of the creation time.
                      */
                     int64_t m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Topic remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Describes the topic remark.
                      */
                     std::string m_note;
                     bool m_noteHasBeenSet;
@@ -374,29 +353,25 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_partitionsHasBeenSet;
 
                     /**
-                     * Switch of the preset ACL rule. `1`: enable, `0`: disable.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * ACL preset policy switch. valid values: 1 (on); 0 (off).
                      */
                     int64_t m_enableAclRule;
                     bool m_enableAclRuleHasBeenSet;
 
                     /**
-                     * Preset ACL rule list.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * Preset policy list.
                      */
                     std::vector<AclRule> m_aclRuleList;
                     bool m_aclRuleListHasBeenSet;
 
                     /**
-                     * Traffic throttling policy in topic dimension.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * topic throttling policy.
                      */
                     InstanceQuotaConfigResp m_quotaConfig;
                     bool m_quotaConfigHasBeenSet;
 
                     /**
                      * Number of replicas
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_replicaNum;
                     bool m_replicaNumHasBeenSet;

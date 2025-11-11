@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Name
-                     * @return Name Name
+                     * 获取Elastic topic name.
+                     * @return Name Elastic topic name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Name
-                     * @param _name Name
+                     * 设置Elastic topic name.
+                     * @param _name Elastic topic name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -130,7 +130,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Name
+                     * Elastic topic name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

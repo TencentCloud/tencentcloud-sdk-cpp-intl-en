@@ -52,15 +52,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取The ckafka cluster instance Id.
+                     * @return InstanceId The ckafka cluster instance Id.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置The ckafka cluster instance Id.
+                     * @param _instanceId The ckafka cluster instance Id.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -73,15 +73,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance name
-                     * @return InstanceName Instance name
+                     * 获取Specifies the Name of the ckafka cluster instance.
+                     * @return InstanceName Specifies the Name of the ckafka cluster instance.
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name
-                     * @param _instanceName Instance name
+                     * 设置Specifies the Name of the ckafka cluster instance.
+                     * @param _instanceName Specifies the Name of the ckafka cluster instance.
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -157,15 +157,15 @@ namespace TencentCloud
                     bool VportHasBeenSet() const;
 
                     /**
-                     * 获取Instance status. 0: creating, 1: running, 2: deleting
-                     * @return Status Instance status. 0: creating, 1: running, 2: deleting
+                     * 获取Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
+                     * @return Status Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Instance status. 0: creating, 1: running, 2: deleting
-                     * @param _status Instance status. 0: creating, 1: running, 2: deleting
+                     * 设置Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
+                     * @param _status Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -473,18 +473,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Tag array
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Tags Tag array
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tag array
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _tags Tag array
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -498,18 +494,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ExpireTime Expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetExpireTime() const;
 
                     /**
                      * 设置Expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _expireTime Expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetExpireTime(const uint64_t& _expireTime);
@@ -522,19 +514,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Cross-AZ
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ZoneIds Cross-AZ
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Availability Zone List
+                     * @return ZoneIds Availability Zone List
                      * 
                      */
                     std::vector<int64_t> GetZoneIds() const;
 
                     /**
-                     * 设置Cross-AZ
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _zoneIds Cross-AZ
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Availability Zone List
+                     * @param _zoneIds Availability Zone List
                      * 
                      */
                     void SetZoneIds(const std::vector<int64_t>& _zoneIds);
@@ -547,19 +535,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ZoneIdsHasBeenSet() const;
 
                     /**
-                     * 获取Kafka version information
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Version Kafka version information
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the ckafka cluster instance version.
+                     * @return Version Specifies the ckafka cluster instance version.
                      * 
                      */
                     std::string GetVersion() const;
 
                     /**
-                     * 设置Kafka version information
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _version Kafka version information
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the ckafka cluster instance version.
+                     * @param _version Specifies the ckafka cluster instance version.
                      * 
                      */
                     void SetVersion(const std::string& _version);
@@ -572,19 +556,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool VersionHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of groups
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MaxGroupNum Maximum number of groups
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Maximum number of groups.
+                     * @return MaxGroupNum Maximum number of groups.
                      * 
                      */
                     int64_t GetMaxGroupNum() const;
 
                     /**
-                     * 设置Maximum number of groups
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _maxGroupNum Maximum number of groups
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Maximum number of groups.
+                     * @param _maxGroupNum Maximum number of groups.
                      * 
                      */
                     void SetMaxGroupNum(const int64_t& _maxGroupNum);
@@ -597,19 +577,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MaxGroupNumHasBeenSet() const;
 
                     /**
-                     * 获取Offering type. `0`: Standard Edition; `1`: Professional Edition
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @return Cvm Offering type. `0`: Standard Edition; `1`: Professional Edition
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 获取Sale type. valid values: 0 (standard version), 1 (pro edition).
+                     * @return Cvm Sale type. valid values: 0 (standard version), 1 (pro edition).
                      * 
                      */
                     int64_t GetCvm() const;
 
                     /**
-                     * 设置Offering type. `0`: Standard Edition; `1`: Professional Edition
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @param _cvm Offering type. `0`: Standard Edition; `1`: Professional Edition
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 设置Sale type. valid values: 0 (standard version), 1 (pro edition).
+                     * @param _cvm Sale type. valid values: 0 (standard version), 1 (pro edition).
                      * 
                      */
                     void SetCvm(const int64_t& _cvm);
@@ -622,19 +598,31 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool CvmHasBeenSet() const;
 
                     /**
-                     * 获取Type.
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @return InstanceType Type.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 获取Instance type. valid values:. 
+Specifies the pro edition.    
+Standard version.
+premium. specifies the advanced edition.
+Specifies the serverless version.
+                     * @return InstanceType Instance type. valid values:. 
+Specifies the pro edition.    
+Standard version.
+premium. specifies the advanced edition.
+Specifies the serverless version.
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Type.
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @param _instanceType Type.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 设置Instance type. valid values:. 
+Specifies the pro edition.    
+Standard version.
+premium. specifies the advanced edition.
+Specifies the serverless version.
+                     * @param _instanceType Instance type. valid values:. 
+Specifies the pro edition.    
+Standard version.
+premium. specifies the advanced edition.
+Specifies the serverless version.
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -647,19 +635,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Features Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL means the policy support for configuring subnets.
+                     * @return Features Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL means the policy support for configuring subnets.
                      * 
                      */
                     std::vector<std::string> GetFeatures() const;
 
                     /**
-                     * 设置Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _features Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL means the policy support for configuring subnets.
+                     * @param _features Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL means the policy support for configuring subnets.
                      * 
                      */
                     void SetFeatures(const std::vector<std::string>& _features);
@@ -672,19 +656,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool FeaturesHasBeenSet() const;
 
                     /**
-                     * 获取Dynamic message retention policy
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return RetentionTimeConfig Dynamic message retention policy
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取Dynamic message retention policy.
+                     * @return RetentionTimeConfig Dynamic message retention policy.
                      * 
                      */
                     DynamicRetentionTime GetRetentionTimeConfig() const;
 
                     /**
-                     * 设置Dynamic message retention policy
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param _retentionTimeConfig Dynamic message retention policy
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 设置Dynamic message retention policy.
+                     * @param _retentionTimeConfig Dynamic message retention policy.
                      * 
                      */
                     void SetRetentionTimeConfig(const DynamicRetentionTime& _retentionTimeConfig);
@@ -697,19 +677,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool RetentionTimeConfigHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of connections
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MaxConnection Maximum number of connections
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Maximum number of connections.
+                     * @return MaxConnection Maximum number of connections.
                      * 
                      */
                     uint64_t GetMaxConnection() const;
 
                     /**
-                     * 设置Maximum number of connections
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _maxConnection Maximum number of connections
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Maximum number of connections.
+                     * @param _maxConnection Maximum number of connections.
                      * 
                      */
                     void SetMaxConnection(const uint64_t& _maxConnection);
@@ -723,18 +699,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Public network bandwidth
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PublicNetwork Public network bandwidth
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetPublicNetwork() const;
 
                     /**
                      * 设置Public network bandwidth
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _publicNetwork Public network bandwidth
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPublicNetwork(const int64_t& _publicNetwork);
@@ -747,19 +719,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PublicNetworkHasBeenSet() const;
 
                     /**
-                     * 获取Time
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return DeleteRouteTimestamp Time
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the deprecated field with no actual meaning.
+                     * @return DeleteRouteTimestamp Specifies the deprecated field with no actual meaning.
                      * 
                      */
                     std::string GetDeleteRouteTimestamp() const;
 
                     /**
-                     * 设置Time
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _deleteRouteTimestamp Time
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Specifies the deprecated field with no actual meaning.
+                     * @param _deleteRouteTimestamp Specifies the deprecated field with no actual meaning.
                      * 
                      */
                     void SetDeleteRouteTimestamp(const std::string& _deleteRouteTimestamp);
@@ -772,19 +740,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DeleteRouteTimestampHasBeenSet() const;
 
                     /**
-                     * 获取Number of remaining creatable partitions
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return RemainingPartitions Number of remaining creatable partitions
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Number of remaining creatable partitions.
+                     * @return RemainingPartitions Number of remaining creatable partitions.
                      * 
                      */
                     int64_t GetRemainingPartitions() const;
 
                     /**
-                     * 设置Number of remaining creatable partitions
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _remainingPartitions Number of remaining creatable partitions
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Number of remaining creatable partitions.
+                     * @param _remainingPartitions Number of remaining creatable partitions.
                      * 
                      */
                     void SetRemainingPartitions(const int64_t& _remainingPartitions);
@@ -797,19 +761,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool RemainingPartitionsHasBeenSet() const;
 
                     /**
-                     * 获取Number of remaining creatable topics
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return RemainingTopics Number of remaining creatable topics
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Number of remaining creatable topics.
+                     * @return RemainingTopics Number of remaining creatable topics.
                      * 
                      */
                     int64_t GetRemainingTopics() const;
 
                     /**
-                     * 设置Number of remaining creatable topics
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _remainingTopics Number of remaining creatable topics
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Number of remaining creatable topics.
+                     * @param _remainingTopics Number of remaining creatable topics.
                      * 
                      */
                     void SetRemainingTopics(const int64_t& _remainingTopics);
@@ -822,19 +782,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool RemainingTopicsHasBeenSet() const;
 
                     /**
-                     * 获取Dynamic disk expansion policy.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return DynamicDiskConfig Dynamic disk expansion policy.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Scaling policy for dynamic disk.
+                     * @return DynamicDiskConfig Scaling policy for dynamic disk.
                      * 
                      */
                     DynamicDiskConfig GetDynamicDiskConfig() const;
 
                     /**
-                     * 设置Dynamic disk expansion policy.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _dynamicDiskConfig Dynamic disk expansion policy.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Scaling policy for dynamic disk.
+                     * @param _dynamicDiskConfig Scaling policy for dynamic disk.
                      * 
                      */
                     void SetDynamicDiskConfig(const DynamicDiskConfig& _dynamicDiskConfig);
@@ -846,16 +802,265 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool DynamicDiskConfigHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
+                     * @return InstanceChargeType Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
+                     * 
+                     */
+                    std::string GetInstanceChargeType() const;
+
+                    /**
+                     * 设置Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
+                     * @param _instanceChargeType Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
+                     * 
+                     */
+                    void SetInstanceChargeType(const std::string& _instanceChargeType);
+
+                    /**
+                     * 判断参数 InstanceChargeType 是否已赋值
+                     * @return InstanceChargeType 是否已赋值
+                     * 
+                     */
+                    bool InstanceChargeTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable the elastic bandwidth allowlist.   
+Indicates the allowlist feature with elastic bandwidth enabled.
+0: elastic bandwidth allowlist feature is disabled.
+                     * @return ElasticBandwidthSwitch Whether to enable the elastic bandwidth allowlist.   
+Indicates the allowlist feature with elastic bandwidth enabled.
+0: elastic bandwidth allowlist feature is disabled.
+                     * 
+                     */
+                    int64_t GetElasticBandwidthSwitch() const;
+
+                    /**
+                     * 设置Whether to enable the elastic bandwidth allowlist.   
+Indicates the allowlist feature with elastic bandwidth enabled.
+0: elastic bandwidth allowlist feature is disabled.
+                     * @param _elasticBandwidthSwitch Whether to enable the elastic bandwidth allowlist.   
+Indicates the allowlist feature with elastic bandwidth enabled.
+0: elastic bandwidth allowlist feature is disabled.
+                     * 
+                     */
+                    void SetElasticBandwidthSwitch(const int64_t& _elasticBandwidthSwitch);
+
+                    /**
+                     * 判断参数 ElasticBandwidthSwitch 是否已赋值
+                     * @return ElasticBandwidthSwitch 是否已赋值
+                     * 
+                     */
+                    bool ElasticBandwidthSwitchHasBeenSet() const;
+
+                    /**
+                     * 获取Indicates the elastic bandwidth activation status.
+1: indicates elastic bandwidth is disabled.
+Enable elastic bandwidth.
+Enable elastic bandwidth successfully.
+33: disabling elastic bandwidth.
+Indicates that the elastic bandwidth is successfully disabled.
+Enable elastic bandwidth failed.
+Bandwidth failure.
+                     * @return ElasticBandwidthOpenStatus Indicates the elastic bandwidth activation status.
+1: indicates elastic bandwidth is disabled.
+Enable elastic bandwidth.
+Enable elastic bandwidth successfully.
+33: disabling elastic bandwidth.
+Indicates that the elastic bandwidth is successfully disabled.
+Enable elastic bandwidth failed.
+Bandwidth failure.
+                     * 
+                     */
+                    int64_t GetElasticBandwidthOpenStatus() const;
+
+                    /**
+                     * 设置Indicates the elastic bandwidth activation status.
+1: indicates elastic bandwidth is disabled.
+Enable elastic bandwidth.
+Enable elastic bandwidth successfully.
+33: disabling elastic bandwidth.
+Indicates that the elastic bandwidth is successfully disabled.
+Enable elastic bandwidth failed.
+Bandwidth failure.
+                     * @param _elasticBandwidthOpenStatus Indicates the elastic bandwidth activation status.
+1: indicates elastic bandwidth is disabled.
+Enable elastic bandwidth.
+Enable elastic bandwidth successfully.
+33: disabling elastic bandwidth.
+Indicates that the elastic bandwidth is successfully disabled.
+Enable elastic bandwidth failed.
+Bandwidth failure.
+                     * 
+                     */
+                    void SetElasticBandwidthOpenStatus(const int64_t& _elasticBandwidthOpenStatus);
+
+                    /**
+                     * 判断参数 ElasticBandwidthOpenStatus 是否已赋值
+                     * @return ElasticBandwidthOpenStatus 是否已赋值
+                     * 
+                     */
+                    bool ElasticBandwidthOpenStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster type.  
+CLOUD_IDC idc cluster.
+CLOUD_CVM_SHARE shared cluster.
+CLOUD_CVM_YUNTI yunti cvm cluster.
+CLOUD_CVM. specifies the cvm cluster.
+CLOUD_CDC cdc cluster.
+CLOUD_EKS_TSE eks cluster.
+                     * @return ClusterType Cluster type.  
+CLOUD_IDC idc cluster.
+CLOUD_CVM_SHARE shared cluster.
+CLOUD_CVM_YUNTI yunti cvm cluster.
+CLOUD_CVM. specifies the cvm cluster.
+CLOUD_CDC cdc cluster.
+CLOUD_EKS_TSE eks cluster.
+                     * 
+                     */
+                    std::string GetClusterType() const;
+
+                    /**
+                     * 设置Cluster type.  
+CLOUD_IDC idc cluster.
+CLOUD_CVM_SHARE shared cluster.
+CLOUD_CVM_YUNTI yunti cvm cluster.
+CLOUD_CVM. specifies the cvm cluster.
+CLOUD_CDC cdc cluster.
+CLOUD_EKS_TSE eks cluster.
+                     * @param _clusterType Cluster type.  
+CLOUD_IDC idc cluster.
+CLOUD_CVM_SHARE shared cluster.
+CLOUD_CVM_YUNTI yunti cvm cluster.
+CLOUD_CVM. specifies the cvm cluster.
+CLOUD_CDC cdc cluster.
+CLOUD_EKS_TSE eks cluster.
+                     * 
+                     */
+                    void SetClusterType(const std::string& _clusterType);
+
+                    /**
+                     * 判断参数 ClusterType 是否已赋值
+                     * @return ClusterType 是否已赋值
+                     * 
+                     */
+                    bool ClusterTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Number of free partitions.
+                     * @return FreePartitionNumber Number of free partitions.
+                     * 
+                     */
+                    int64_t GetFreePartitionNumber() const;
+
+                    /**
+                     * 设置Number of free partitions.
+                     * @param _freePartitionNumber Number of free partitions.
+                     * 
+                     */
+                    void SetFreePartitionNumber(const int64_t& _freePartitionNumber);
+
+                    /**
+                     * 判断参数 FreePartitionNumber 是否已赋值
+                     * @return FreePartitionNumber 是否已赋值
+                     * 
+                     */
+                    bool FreePartitionNumberHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the elastic bandwidth upper limit.
+                     * @return ElasticFloatBandwidth Specifies the elastic bandwidth upper limit.
+                     * 
+                     */
+                    int64_t GetElasticFloatBandwidth() const;
+
+                    /**
+                     * 设置Specifies the elastic bandwidth upper limit.
+                     * @param _elasticFloatBandwidth Specifies the elastic bandwidth upper limit.
+                     * 
+                     */
+                    void SetElasticFloatBandwidth(const int64_t& _elasticFloatBandwidth);
+
+                    /**
+                     * 判断参数 ElasticFloatBandwidth 是否已赋值
+                     * @return ElasticFloatBandwidth 是否已赋值
+                     * 
+                     */
+                    bool ElasticFloatBandwidthHasBeenSet() const;
+
+                    /**
+                     * 获取ssl custom certificate id. only returned for instance clusters with custom certificates.
+                     * @return CustomCertId ssl custom certificate id. only returned for instance clusters with custom certificates.
+                     * 
+                     */
+                    std::string GetCustomCertId() const;
+
+                    /**
+                     * 设置ssl custom certificate id. only returned for instance clusters with custom certificates.
+                     * @param _customCertId ssl custom certificate id. only returned for instance clusters with custom certificates.
+                     * 
+                     */
+                    void SetCustomCertId(const std::string& _customCertId);
+
+                    /**
+                     * 判断参数 CustomCertId 是否已赋值
+                     * @return CustomCertId 是否已赋值
+                     * 
+                     */
+                    bool CustomCertIdHasBeenSet() const;
+
+                    /**
+                     * 获取Default unclean.leader.election.enable configuration for cluster topic: 1 enable 0 disable.
+                     * @return UncleanLeaderElectionEnable Default unclean.leader.election.enable configuration for cluster topic: 1 enable 0 disable.
+                     * 
+                     */
+                    int64_t GetUncleanLeaderElectionEnable() const;
+
+                    /**
+                     * 设置Default unclean.leader.election.enable configuration for cluster topic: 1 enable 0 disable.
+                     * @param _uncleanLeaderElectionEnable Default unclean.leader.election.enable configuration for cluster topic: 1 enable 0 disable.
+                     * 
+                     */
+                    void SetUncleanLeaderElectionEnable(const int64_t& _uncleanLeaderElectionEnable);
+
+                    /**
+                     * 判断参数 UncleanLeaderElectionEnable 是否已赋值
+                     * @return UncleanLeaderElectionEnable 是否已赋值
+                     * 
+                     */
+                    bool UncleanLeaderElectionEnableHasBeenSet() const;
+
+                    /**
+                     * 获取Instance deletion protection switch. 1: enabled; 0: disabled.
+                     * @return DeleteProtectionEnable Instance deletion protection switch. 1: enabled; 0: disabled.
+                     * 
+                     */
+                    int64_t GetDeleteProtectionEnable() const;
+
+                    /**
+                     * 设置Instance deletion protection switch. 1: enabled; 0: disabled.
+                     * @param _deleteProtectionEnable Instance deletion protection switch. 1: enabled; 0: disabled.
+                     * 
+                     */
+                    void SetDeleteProtectionEnable(const int64_t& _deleteProtectionEnable);
+
+                    /**
+                     * 判断参数 DeleteProtectionEnable 是否已赋值
+                     * @return DeleteProtectionEnable 是否已赋值
+                     * 
+                     */
+                    bool DeleteProtectionEnableHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance ID
+                     * The ckafka cluster instance Id.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance name
+                     * Specifies the Name of the ckafka cluster instance.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
@@ -879,7 +1084,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_vportHasBeenSet;
 
                     /**
-                     * Instance status. 0: creating, 1: running, 2: deleting
+                     * Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
@@ -970,108 +1175,166 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Tag array
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
                      * Expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * Cross-AZ
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Availability Zone List
                      */
                     std::vector<int64_t> m_zoneIds;
                     bool m_zoneIdsHasBeenSet;
 
                     /**
-                     * Kafka version information
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Specifies the ckafka cluster instance version.
                      */
                     std::string m_version;
                     bool m_versionHasBeenSet;
 
                     /**
-                     * Maximum number of groups
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Maximum number of groups.
                      */
                     int64_t m_maxGroupNum;
                     bool m_maxGroupNumHasBeenSet;
 
                     /**
-                     * Offering type. `0`: Standard Edition; `1`: Professional Edition
-Note: this field may return `null`, indicating that no valid value was found.
+                     * Sale type. valid values: 0 (standard version), 1 (pro edition).
                      */
                     int64_t m_cvm;
                     bool m_cvmHasBeenSet;
 
                     /**
-                     * Type.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * Instance type. valid values:. 
+Specifies the pro edition.    
+Standard version.
+premium. specifies the advanced edition.
+Specifies the serverless version.
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL means the policy support for configuring subnets.
                      */
                     std::vector<std::string> m_features;
                     bool m_featuresHasBeenSet;
 
                     /**
-                     * Dynamic message retention policy
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * Dynamic message retention policy.
                      */
                     DynamicRetentionTime m_retentionTimeConfig;
                     bool m_retentionTimeConfigHasBeenSet;
 
                     /**
-                     * Maximum number of connections
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Maximum number of connections.
                      */
                     uint64_t m_maxConnection;
                     bool m_maxConnectionHasBeenSet;
 
                     /**
                      * Public network bandwidth
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_publicNetwork;
                     bool m_publicNetworkHasBeenSet;
 
                     /**
-                     * Time
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Specifies the deprecated field with no actual meaning.
                      */
                     std::string m_deleteRouteTimestamp;
                     bool m_deleteRouteTimestampHasBeenSet;
 
                     /**
-                     * Number of remaining creatable partitions
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Number of remaining creatable partitions.
                      */
                     int64_t m_remainingPartitions;
                     bool m_remainingPartitionsHasBeenSet;
 
                     /**
-                     * Number of remaining creatable topics
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Number of remaining creatable topics.
                      */
                     int64_t m_remainingTopics;
                     bool m_remainingTopicsHasBeenSet;
 
                     /**
-                     * Dynamic disk expansion policy.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Scaling policy for dynamic disk.
                      */
                     DynamicDiskConfig m_dynamicDiskConfig;
                     bool m_dynamicDiskConfigHasBeenSet;
+
+                    /**
+                     * Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
+                     */
+                    std::string m_instanceChargeType;
+                    bool m_instanceChargeTypeHasBeenSet;
+
+                    /**
+                     * Whether to enable the elastic bandwidth allowlist.   
+Indicates the allowlist feature with elastic bandwidth enabled.
+0: elastic bandwidth allowlist feature is disabled.
+                     */
+                    int64_t m_elasticBandwidthSwitch;
+                    bool m_elasticBandwidthSwitchHasBeenSet;
+
+                    /**
+                     * Indicates the elastic bandwidth activation status.
+1: indicates elastic bandwidth is disabled.
+Enable elastic bandwidth.
+Enable elastic bandwidth successfully.
+33: disabling elastic bandwidth.
+Indicates that the elastic bandwidth is successfully disabled.
+Enable elastic bandwidth failed.
+Bandwidth failure.
+                     */
+                    int64_t m_elasticBandwidthOpenStatus;
+                    bool m_elasticBandwidthOpenStatusHasBeenSet;
+
+                    /**
+                     * Cluster type.  
+CLOUD_IDC idc cluster.
+CLOUD_CVM_SHARE shared cluster.
+CLOUD_CVM_YUNTI yunti cvm cluster.
+CLOUD_CVM. specifies the cvm cluster.
+CLOUD_CDC cdc cluster.
+CLOUD_EKS_TSE eks cluster.
+                     */
+                    std::string m_clusterType;
+                    bool m_clusterTypeHasBeenSet;
+
+                    /**
+                     * Number of free partitions.
+                     */
+                    int64_t m_freePartitionNumber;
+                    bool m_freePartitionNumberHasBeenSet;
+
+                    /**
+                     * Specifies the elastic bandwidth upper limit.
+                     */
+                    int64_t m_elasticFloatBandwidth;
+                    bool m_elasticFloatBandwidthHasBeenSet;
+
+                    /**
+                     * ssl custom certificate id. only returned for instance clusters with custom certificates.
+                     */
+                    std::string m_customCertId;
+                    bool m_customCertIdHasBeenSet;
+
+                    /**
+                     * Default unclean.leader.election.enable configuration for cluster topic: 1 enable 0 disable.
+                     */
+                    int64_t m_uncleanLeaderElectionEnable;
+                    bool m_uncleanLeaderElectionEnableHasBeenSet;
+
+                    /**
+                     * Instance deletion protection switch. 1: enabled; 0: disabled.
+                     */
+                    int64_t m_deleteProtectionEnable;
+                    bool m_deleteProtectionEnableHasBeenSet;
 
                 };
             }
