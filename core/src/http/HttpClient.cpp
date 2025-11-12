@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2019 Tencent. All Rights Reserved.
+ * Copyright (c) 2017-2019 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -90,7 +90,9 @@ namespace
 }
 
 HttpClient::HttpClient() :
-    m_curlHandle(curl_easy_init())
+    m_curlHandle(curl_easy_init()),
+    m_caInfo(""),
+    m_caPath("")
 {
 }
 
@@ -119,6 +121,16 @@ void HttpClient::SetConnectTimeout(int64_t timeoutOfMs)
     m_connectTimeout = timeoutOfMs;
 }
 
+void HttpClient::SetCaInfo(std::string caInfo)
+{
+    m_caInfo = caInfo;
+}
+
+void HttpClient::SetCaPath(std::string caPath)
+{
+    m_caPath = caPath;
+}
+
 void HttpClient::SetProxy(const NetworkProxy &proxy)
 {
     m_proxy = proxy;
@@ -137,6 +149,15 @@ HttpClient::HttpResponseOutcome HttpClient::SendRequest(const HttpRequest &reque
             if (request.BodySize() > 0)
             {
                 curl_easy_setopt(m_curlHandle, CURLOPT_POSTFIELDS, request.Body());
+                // explicitly set body size because libcurl use strlen() to determine body size
+                // which could fail when there is a '\0' in the middle
+                if (request.BodySize() > (size_t)2 * 1024 * 1024 * 1024) {
+                    // https://curl.se/libcurl/c/CURLOPT_POSTFIELDSIZE.html
+                    // If you post more than 2GB, use CURLOPT_POSTFIELDSIZE_LARGE
+                    curl_easy_setopt(m_curlHandle, CURLOPT_POSTFIELDSIZE_LARGE, request.BodySize());
+                } else {
+                    curl_easy_setopt(m_curlHandle, CURLOPT_POSTFIELDSIZE, request.BodySize());
+                }
             }
             else
             {
@@ -155,6 +176,14 @@ HttpClient::HttpResponseOutcome HttpClient::SendRequest(const HttpRequest &reque
     curl_easy_setopt(m_curlHandle, CURLOPT_URL, url.c_str());
     curl_easy_setopt(m_curlHandle, CURLOPT_SSL_VERIFYPEER, 1L);
     curl_easy_setopt(m_curlHandle, CURLOPT_SSL_VERIFYHOST, 2L);
+
+    if (m_caInfo != ""){
+        curl_easy_setopt(m_curlHandle, CURLOPT_CAINFO, m_caInfo.c_str());
+    }
+    if (m_caPath != ""){
+        curl_easy_setopt(m_curlHandle, CURLOPT_CAPATH, m_caPath.c_str());
+    }
+
     curl_easy_setopt(m_curlHandle, CURLOPT_HEADERDATA, &response);
     curl_easy_setopt(m_curlHandle, CURLOPT_HEADERFUNCTION, recvHeaders);
 
@@ -193,7 +222,7 @@ HttpClient::HttpResponseOutcome HttpClient::SendRequest(const HttpRequest &reque
         {
             std::string decompressData;
             if (TryDecompress(out.str().c_str(), out.str().size(), decompressData)) {
-                
+
                 response.SetBody(decompressData);
             }
         }
