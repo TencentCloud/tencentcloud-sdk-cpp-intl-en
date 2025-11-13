@@ -88,15 +88,15 @@ namespace TencentCloud
                     bool ClientTokenHasBeenSet() const;
 
                     /**
-                     * 获取Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
-                     * @return HostChargePrepaid Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
+                     * 获取Not supported. Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
+                     * @return HostChargePrepaid Not supported. Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
                      * 
                      */
                     ChargePrepaid GetHostChargePrepaid() const;
 
                     /**
-                     * 设置Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
-                     * @param _hostChargePrepaid Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
+                     * 设置Not supported. Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
+                     * @param _hostChargePrepaid Not supported. Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
                      * 
                      */
                     void SetHostChargePrepaid(const ChargePrepaid& _hostChargePrepaid);
@@ -109,15 +109,15 @@ namespace TencentCloud
                     bool HostChargePrepaidHasBeenSet() const;
 
                     /**
-                     * 获取Instance billing model, only monthly or yearly subscription supported. Default value: `PREPAID'.
-                     * @return HostChargeType Instance billing model, only monthly or yearly subscription supported. Default value: `PREPAID'.
+                     * 获取Instance [billing type](https://intl.cloud.tencent.com/document/product/213/2180?from_cn_redirect=1). <br><li>`POSTPAID_BY_HOUR`: Hourly-based pay-as-you-go <br>
+                     * @return HostChargeType Instance [billing type](https://intl.cloud.tencent.com/document/product/213/2180?from_cn_redirect=1). <br><li>`POSTPAID_BY_HOUR`: Hourly-based pay-as-you-go <br>
                      * 
                      */
                     std::string GetHostChargeType() const;
 
                     /**
-                     * 设置Instance billing model, only monthly or yearly subscription supported. Default value: `PREPAID'.
-                     * @param _hostChargeType Instance billing model, only monthly or yearly subscription supported. Default value: `PREPAID'.
+                     * 设置Instance [billing type](https://intl.cloud.tencent.com/document/product/213/2180?from_cn_redirect=1). <br><li>`POSTPAID_BY_HOUR`: Hourly-based pay-as-you-go <br>
+                     * @param _hostChargeType Instance [billing type](https://intl.cloud.tencent.com/document/product/213/2180?from_cn_redirect=1). <br><li>`POSTPAID_BY_HOUR`: Hourly-based pay-as-you-go <br>
                      * 
                      */
                     void SetHostChargeType(const std::string& _hostChargeType);
@@ -207,13 +207,13 @@ namespace TencentCloud
                     bool m_clientTokenHasBeenSet;
 
                     /**
-                     * Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
+                     * Not supported. Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
                      */
                     ChargePrepaid m_hostChargePrepaid;
                     bool m_hostChargePrepaidHasBeenSet;
 
                     /**
-                     * Instance billing model, only monthly or yearly subscription supported. Default value: `PREPAID'.
+                     * Instance [billing type](https://intl.cloud.tencent.com/document/product/213/2180?from_cn_redirect=1). <br><li>`POSTPAID_BY_HOUR`: Hourly-based pay-as-you-go <br>
                      */
                     std::string m_hostChargeType;
                     bool m_hostChargeTypeHasBeenSet;

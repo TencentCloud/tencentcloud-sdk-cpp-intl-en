@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/RawSmartEraseParameter.h>
+#include <tencentcloud/mps/v20190612/model/OverrideEraseParameter.h>
 #include <tencentcloud/mps/v20190612/model/TaskOutputStorage.h>
 
 
@@ -93,6 +94,27 @@ Note: This field may return null, indicating that no valid value can be obtained
                      * 
                      */
                     bool RawParameterHasBeenSet() const;
+
+                    /**
+                     * 获取Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.
+                     * @return OverrideParameter Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.
+                     * 
+                     */
+                    OverrideEraseParameter GetOverrideParameter() const;
+
+                    /**
+                     * 设置Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.
+                     * @param _overrideParameter Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.
+                     * 
+                     */
+                    void SetOverrideParameter(const OverrideEraseParameter& _overrideParameter);
+
+                    /**
+                     * 判断参数 OverrideParameter 是否已赋值
+                     * @return OverrideParameter 是否已赋值
+                     * 
+                     */
+                    bool OverrideParameterHasBeenSet() const;
 
                     /**
                      * 获取Specifies the target storage for files. if left blank, it inherits the upper-level OutputStorage value.
@@ -190,6 +212,12 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     RawSmartEraseParameter m_rawParameter;
                     bool m_rawParameterHasBeenSet;
+
+                    /**
+                     * Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.
+                     */
+                    OverrideEraseParameter m_overrideParameter;
+                    bool m_overrideParameterHasBeenSet;
 
                     /**
                      * Specifies the target storage for files. if left blank, it inherits the upper-level OutputStorage value.

@@ -23,6 +23,7 @@ using namespace std;
 EventSettingsReq::EventSettingsReq() :
     m_eventTypeHasBeenSet(false),
     m_inputAttachmentHasBeenSet(false),
+    m_pipelineIdHasBeenSet(false),
     m_outputGroupNameHasBeenSet(false),
     m_manifestNameHasBeenSet(false),
     m_destinationsHasBeenSet(false),
@@ -59,6 +60,16 @@ CoreInternalOutcome EventSettingsReq::Deserialize(const rapidjson::Value &value)
         }
         m_inputAttachment = string(value["InputAttachment"].GetString());
         m_inputAttachmentHasBeenSet = true;
+    }
+
+    if (value.HasMember("PipelineId") && !value["PipelineId"].IsNull())
+    {
+        if (!value["PipelineId"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `EventSettingsReq.PipelineId` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_pipelineId = value["PipelineId"].GetInt64();
+        m_pipelineIdHasBeenSet = true;
     }
 
     if (value.HasMember("OutputGroupName") && !value["OutputGroupName"].IsNull())
@@ -232,6 +243,14 @@ void EventSettingsReq::ToJsonObject(rapidjson::Value &value, rapidjson::Document
         value.AddMember(iKey, rapidjson::Value(m_inputAttachment.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_pipelineIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PipelineId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_pipelineId, allocator);
+    }
+
     if (m_outputGroupNameHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -363,6 +382,22 @@ void EventSettingsReq::SetInputAttachment(const string& _inputAttachment)
 bool EventSettingsReq::InputAttachmentHasBeenSet() const
 {
     return m_inputAttachmentHasBeenSet;
+}
+
+int64_t EventSettingsReq::GetPipelineId() const
+{
+    return m_pipelineId;
+}
+
+void EventSettingsReq::SetPipelineId(const int64_t& _pipelineId)
+{
+    m_pipelineId = _pipelineId;
+    m_pipelineIdHasBeenSet = true;
+}
+
+bool EventSettingsReq::PipelineIdHasBeenSet() const
+{
+    return m_pipelineIdHasBeenSet;
 }
 
 string EventSettingsReq::GetOutputGroupName() const

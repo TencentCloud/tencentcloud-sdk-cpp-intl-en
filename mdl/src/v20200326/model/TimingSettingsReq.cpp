@@ -24,7 +24,8 @@ TimingSettingsReq::TimingSettingsReq() :
     m_startTypeHasBeenSet(false),
     m_timeHasBeenSet(false),
     m_startTimeHasBeenSet(false),
-    m_endTimeHasBeenSet(false)
+    m_endTimeHasBeenSet(false),
+    m_pTSHasBeenSet(false)
 {
 }
 
@@ -73,6 +74,16 @@ CoreInternalOutcome TimingSettingsReq::Deserialize(const rapidjson::Value &value
         m_endTimeHasBeenSet = true;
     }
 
+    if (value.HasMember("PTS") && !value["PTS"].IsNull())
+    {
+        if (!value["PTS"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `TimingSettingsReq.PTS` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_pTS = value["PTS"].GetUint64();
+        m_pTSHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -110,6 +121,14 @@ void TimingSettingsReq::ToJsonObject(rapidjson::Value &value, rapidjson::Documen
         string key = "EndTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_endTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_pTSHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PTS";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_pTS, allocator);
     }
 
 }
@@ -177,5 +196,21 @@ void TimingSettingsReq::SetEndTime(const string& _endTime)
 bool TimingSettingsReq::EndTimeHasBeenSet() const
 {
     return m_endTimeHasBeenSet;
+}
+
+uint64_t TimingSettingsReq::GetPTS() const
+{
+    return m_pTS;
+}
+
+void TimingSettingsReq::SetPTS(const uint64_t& _pTS)
+{
+    m_pTS = _pTS;
+    m_pTSHasBeenSet = true;
+}
+
+bool TimingSettingsReq::PTSHasBeenSet() const
+{
+    return m_pTSHasBeenSet;
 }
 

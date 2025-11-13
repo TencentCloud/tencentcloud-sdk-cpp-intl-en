@@ -47,19 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Resource tagging. the field content is user-customized.
+                     * 获取Resource ID. The field content is user-defined.
 It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
-                     * @return ResourceId Resource tagging. the field content is user-customized.
+This field corresponds to the cid field in the Speke request.
+Note: Different DRM vendors have different restrictions on this field (for example, SDMC Technology Co., Ltd. does not support this field containing underscores). For specific rules, check with the vendors.
+                     * @return ResourceId Resource ID. The field content is user-defined.
 It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
+This field corresponds to the cid field in the Speke request.
+Note: Different DRM vendors have different restrictions on this field (for example, SDMC Technology Co., Ltd. does not support this field containing underscores). For specific rules, check with the vendors.
                      * 
                      */
                     std::string GetResourceId() const;
 
                     /**
-                     * 设置Resource tagging. the field content is user-customized.
+                     * 设置Resource ID. The field content is user-defined.
 It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
-                     * @param _resourceId Resource tagging. the field content is user-customized.
+This field corresponds to the cid field in the Speke request.
+Note: Different DRM vendors have different restrictions on this field (for example, SDMC Technology Co., Ltd. does not support this field containing underscores). For specific rules, check with the vendors.
+                     * @param _resourceId Resource ID. The field content is user-defined.
 It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
+This field corresponds to the cid field in the Speke request.
+Note: Different DRM vendors have different restrictions on this field (for example, SDMC Technology Co., Ltd. does not support this field containing underscores). For specific rules, check with the vendors.
                      * 
                      */
                     void SetResourceId(const std::string& _resourceId);
@@ -122,27 +130,47 @@ Note: different DRM manufacturers have different limitations on the number of su
                     bool VectorHasBeenSet() const;
 
                     /**
-                     * 获取Encryption method. cbcs: default method of FairPlay; cenc: default method of PlayReady and Widevine.
+                     * 获取Encryption method. Options:  
+- **cbcs**: Supports PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.  
+- **cenc**: Supports PlayReady, Widevine, and Widevine+PlayReady.  
 
-cbcs: supported by PlayReady, Widevine, and FairPlay
-cenc: supported by PlayReady and Widevine
-                     * @return EncryptionMethod Encryption method. cbcs: default method of FairPlay; cenc: default method of PlayReady and Widevine.
+If not specified:  
+- FairPlay defaults to **cbcs**.  
+- PlayReady and Widevine default to **cenc**.  
+- Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay default to **cbcs**.  
+- Widevine+PlayReady defaults to **cenc**.
+                     * @return EncryptionMethod Encryption method. Options:  
+- **cbcs**: Supports PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.  
+- **cenc**: Supports PlayReady, Widevine, and Widevine+PlayReady.  
 
-cbcs: supported by PlayReady, Widevine, and FairPlay
-cenc: supported by PlayReady and Widevine
+If not specified:  
+- FairPlay defaults to **cbcs**.  
+- PlayReady and Widevine default to **cenc**.  
+- Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay default to **cbcs**.  
+- Widevine+PlayReady defaults to **cenc**.
                      * 
                      */
                     std::string GetEncryptionMethod() const;
 
                     /**
-                     * 设置Encryption method. cbcs: default method of FairPlay; cenc: default method of PlayReady and Widevine.
+                     * 设置Encryption method. Options:  
+- **cbcs**: Supports PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.  
+- **cenc**: Supports PlayReady, Widevine, and Widevine+PlayReady.  
 
-cbcs: supported by PlayReady, Widevine, and FairPlay
-cenc: supported by PlayReady and Widevine
-                     * @param _encryptionMethod Encryption method. cbcs: default method of FairPlay; cenc: default method of PlayReady and Widevine.
+If not specified:  
+- FairPlay defaults to **cbcs**.  
+- PlayReady and Widevine default to **cenc**.  
+- Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay default to **cbcs**.  
+- Widevine+PlayReady defaults to **cenc**.
+                     * @param _encryptionMethod Encryption method. Options:  
+- **cbcs**: Supports PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.  
+- **cenc**: Supports PlayReady, Widevine, and Widevine+PlayReady.  
 
-cbcs: supported by PlayReady, Widevine, and FairPlay
-cenc: supported by PlayReady and Widevine
+If not specified:  
+- FairPlay defaults to **cbcs**.  
+- PlayReady and Widevine default to **cenc**.  
+- Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay default to **cbcs**.  
+- Widevine+PlayReady defaults to **cenc**.
                      * 
                      */
                     void SetEncryptionMethod(const std::string& _encryptionMethod);
@@ -190,8 +218,10 @@ preset1: use different keys for each substream
                 private:
 
                     /**
-                     * Resource tagging. the field content is user-customized.
+                     * Resource ID. The field content is user-defined.
 It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
+This field corresponds to the cid field in the Speke request.
+Note: Different DRM vendors have different restrictions on this field (for example, SDMC Technology Co., Ltd. does not support this field containing underscores). For specific rules, check with the vendors.
                      */
                     std::string m_resourceId;
                     bool m_resourceIdHasBeenSet;
@@ -211,10 +241,15 @@ Note: different DRM manufacturers have different limitations on the number of su
                     bool m_vectorHasBeenSet;
 
                     /**
-                     * Encryption method. cbcs: default method of FairPlay; cenc: default method of PlayReady and Widevine.
+                     * Encryption method. Options:  
+- **cbcs**: Supports PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.  
+- **cenc**: Supports PlayReady, Widevine, and Widevine+PlayReady.  
 
-cbcs: supported by PlayReady, Widevine, and FairPlay
-cenc: supported by PlayReady and Widevine
+If not specified:  
+- FairPlay defaults to **cbcs**.  
+- PlayReady and Widevine default to **cenc**.  
+- Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay default to **cbcs**.  
+- Widevine+PlayReady defaults to **cenc**.
                      */
                     std::string m_encryptionMethod;
                     bool m_encryptionMethodHasBeenSet;

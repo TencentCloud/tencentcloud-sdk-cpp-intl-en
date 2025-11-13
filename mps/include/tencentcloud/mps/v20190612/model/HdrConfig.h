@@ -83,15 +83,15 @@ Default value: ON.
                      * 获取Type. Valid values:
 <li>HDR10</li>
 <li>HLG</li>
-Default Value: HDR10.
-Note: The video encoding method should be H.265.
+Default value: HDR10.
+Note: The video encoding method should be h264 or h265.
 Note: The video encoding bit depth is 10.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Type Type. Valid values:
 <li>HDR10</li>
 <li>HLG</li>
-Default Value: HDR10.
-Note: The video encoding method should be H.265.
+Default value: HDR10.
+Note: The video encoding method should be h264 or h265.
 Note: The video encoding bit depth is 10.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
@@ -102,15 +102,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置Type. Valid values:
 <li>HDR10</li>
 <li>HLG</li>
-Default Value: HDR10.
-Note: The video encoding method should be H.265.
+Default value: HDR10.
+Note: The video encoding method should be h264 or h265.
 Note: The video encoding bit depth is 10.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _type Type. Valid values:
 <li>HDR10</li>
 <li>HLG</li>
-Default Value: HDR10.
-Note: The video encoding method should be H.265.
+Default value: HDR10.
+Note: The video encoding method should be h264 or h265.
 Note: The video encoding bit depth is 10.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
@@ -139,8 +139,8 @@ Default value: ON.
                      * Type. Valid values:
 <li>HDR10</li>
 <li>HLG</li>
-Default Value: HDR10.
-Note: The video encoding method should be H.265.
+Default value: HDR10.
+Note: The video encoding method should be h264 or h265.
 Note: The video encoding bit depth is 10.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */

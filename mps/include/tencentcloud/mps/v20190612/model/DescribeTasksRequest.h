@@ -76,15 +76,23 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Indicates whether there is a subtask failure when the task is complete.
-                     * @return SubTaskHasFailed Indicates whether there is a subtask failure when the task is complete.
+                     * 获取Whether there is a failed subtask when the task ends. If this parameter is left unspecified, ignore it.
+<li>false: filter the main tasks to identify those that have no failed subtasks.</li>
+<li>true: filter the main tasks to identify those that have failed subtasks.</li>
+                     * @return SubTaskHasFailed Whether there is a failed subtask when the task ends. If this parameter is left unspecified, ignore it.
+<li>false: filter the main tasks to identify those that have no failed subtasks.</li>
+<li>true: filter the main tasks to identify those that have failed subtasks.</li>
                      * 
                      */
                     bool GetSubTaskHasFailed() const;
 
                     /**
-                     * 设置Indicates whether there is a subtask failure when the task is complete.
-                     * @param _subTaskHasFailed Indicates whether there is a subtask failure when the task is complete.
+                     * 设置Whether there is a failed subtask when the task ends. If this parameter is left unspecified, ignore it.
+<li>false: filter the main tasks to identify those that have no failed subtasks.</li>
+<li>true: filter the main tasks to identify those that have failed subtasks.</li>
+                     * @param _subTaskHasFailed Whether there is a failed subtask when the task ends. If this parameter is left unspecified, ignore it.
+<li>false: filter the main tasks to identify those that have no failed subtasks.</li>
+<li>true: filter the main tasks to identify those that have failed subtasks.</li>
                      * 
                      */
                     void SetSubTaskHasFailed(const bool& _subTaskHasFailed);
@@ -192,7 +200,9 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Indicates whether there is a subtask failure when the task is complete.
+                     * Whether there is a failed subtask when the task ends. If this parameter is left unspecified, ignore it.
+<li>false: filter the main tasks to identify those that have no failed subtasks.</li>
+<li>true: filter the main tasks to identify those that have failed subtasks.</li>
                      */
                     bool m_subTaskHasFailed;
                     bool m_subTaskHasFailedHasBeenSet;

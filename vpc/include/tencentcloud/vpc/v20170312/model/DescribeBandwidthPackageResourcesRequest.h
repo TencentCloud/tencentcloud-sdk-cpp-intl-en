@@ -65,22 +65,22 @@ namespace TencentCloud
                     bool BandwidthPackageIdHasBeenSet() const;
 
                     /**
-                     * 获取Each request can have up to 10 `Filters` and 5 `Filter.Values`. `AddressIds` and `Filters` cannot be specified at the same time. The specific filter conditions are as follows:
-<li>resource-id - String - Required: no -  (Filter condition) Filters by the unique ID of resources in a bandwidth package, such as `eip-11112222`.</li>
+                     * 获取Each request can have up to 10 `Filters` and 5 `Filter.Values`. The specific filter conditions are as follows:
+<li>resource-id - String - Required: no - (Filter condition) Filters by the unique ID of resources in a bandwidth package, such as `eip-11112222`.</li>
 <li>resource-type - String - Required: no - (Filter condition) Filters by the type of resources in a bandwidth package. It now supports only EIP (`Address`) and load balancer (`LoadBalance`).</li>
-                     * @return Filters Each request can have up to 10 `Filters` and 5 `Filter.Values`. `AddressIds` and `Filters` cannot be specified at the same time. The specific filter conditions are as follows:
-<li>resource-id - String - Required: no -  (Filter condition) Filters by the unique ID of resources in a bandwidth package, such as `eip-11112222`.</li>
+                     * @return Filters Each request can have up to 10 `Filters` and 5 `Filter.Values`. The specific filter conditions are as follows:
+<li>resource-id - String - Required: no - (Filter condition) Filters by the unique ID of resources in a bandwidth package, such as `eip-11112222`.</li>
 <li>resource-type - String - Required: no - (Filter condition) Filters by the type of resources in a bandwidth package. It now supports only EIP (`Address`) and load balancer (`LoadBalance`).</li>
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Each request can have up to 10 `Filters` and 5 `Filter.Values`. `AddressIds` and `Filters` cannot be specified at the same time. The specific filter conditions are as follows:
-<li>resource-id - String - Required: no -  (Filter condition) Filters by the unique ID of resources in a bandwidth package, such as `eip-11112222`.</li>
+                     * 设置Each request can have up to 10 `Filters` and 5 `Filter.Values`. The specific filter conditions are as follows:
+<li>resource-id - String - Required: no - (Filter condition) Filters by the unique ID of resources in a bandwidth package, such as `eip-11112222`.</li>
 <li>resource-type - String - Required: no - (Filter condition) Filters by the type of resources in a bandwidth package. It now supports only EIP (`Address`) and load balancer (`LoadBalance`).</li>
-                     * @param _filters Each request can have up to 10 `Filters` and 5 `Filter.Values`. `AddressIds` and `Filters` cannot be specified at the same time. The specific filter conditions are as follows:
-<li>resource-id - String - Required: no -  (Filter condition) Filters by the unique ID of resources in a bandwidth package, such as `eip-11112222`.</li>
+                     * @param _filters Each request can have up to 10 `Filters` and 5 `Filter.Values`. The specific filter conditions are as follows:
+<li>resource-id - String - Required: no - (Filter condition) Filters by the unique ID of resources in a bandwidth package, such as `eip-11112222`.</li>
 <li>resource-type - String - Required: no - (Filter condition) Filters by the type of resources in a bandwidth package. It now supports only EIP (`Address`) and load balancer (`LoadBalance`).</li>
                      * 
                      */
@@ -94,15 +94,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取The offset. Default value: 0. For more information on `Offset`, see the relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
-                     * @return Offset The offset. Default value: 0. For more information on `Offset`, see the relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
+                     * 获取The offset. Default value: 0. For more information on `Offset`, see the relevant sections in API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
+                     * @return Offset The offset. Default value: 0. For more information on `Offset`, see the relevant sections in API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置The offset. Default value: 0. For more information on `Offset`, see the relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
-                     * @param _offset The offset. Default value: 0. For more information on `Offset`, see the relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
+                     * 设置The offset. Default value: 0. For more information on `Offset`, see the relevant sections in API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
+                     * @param _offset The offset. Default value: 0. For more information on `Offset`, see the relevant sections in API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -115,15 +115,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取The number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
-                     * @return Limit The number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
+                     * 获取The number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant sections in API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
+                     * @return Limit The number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant sections in API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置The number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
-                     * @param _limit The number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
+                     * 设置The number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant sections in API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
+                     * @param _limit The number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant sections in API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -144,21 +144,21 @@ namespace TencentCloud
                     bool m_bandwidthPackageIdHasBeenSet;
 
                     /**
-                     * Each request can have up to 10 `Filters` and 5 `Filter.Values`. `AddressIds` and `Filters` cannot be specified at the same time. The specific filter conditions are as follows:
-<li>resource-id - String - Required: no -  (Filter condition) Filters by the unique ID of resources in a bandwidth package, such as `eip-11112222`.</li>
+                     * Each request can have up to 10 `Filters` and 5 `Filter.Values`. The specific filter conditions are as follows:
+<li>resource-id - String - Required: no - (Filter condition) Filters by the unique ID of resources in a bandwidth package, such as `eip-11112222`.</li>
 <li>resource-type - String - Required: no - (Filter condition) Filters by the type of resources in a bandwidth package. It now supports only EIP (`Address`) and load balancer (`LoadBalance`).</li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * The offset. Default value: 0. For more information on `Offset`, see the relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
+                     * The offset. Default value: 0. For more information on `Offset`, see the relevant sections in API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * The number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
+                     * The number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant sections in API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

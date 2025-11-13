@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`. This parameter is required if `EventType` is `INPUT_SWITCH`.
-                     * @return StartType Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`. This parameter is required if `EventType` is `INPUT_SWITCH`.
+                     * 获取Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`,`FIXED_PTS `. This parameter is required if `EventType` is `INPUT_SWITCH`.
+                     * @return StartType Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`,`FIXED_PTS `. This parameter is required if `EventType` is `INPUT_SWITCH`.
                      * 
                      */
                     std::string GetStartType() const;
 
                     /**
-                     * 设置Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`. This parameter is required if `EventType` is `INPUT_SWITCH`.
-                     * @param _startType Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`. This parameter is required if `EventType` is `INPUT_SWITCH`.
+                     * 设置Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`,`FIXED_PTS `. This parameter is required if `EventType` is `INPUT_SWITCH`.
+                     * @param _startType Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`,`FIXED_PTS `. This parameter is required if `EventType` is `INPUT_SWITCH`.
                      * 
                      */
                     void SetStartType(const std::string& _startType);
@@ -142,10 +142,31 @@ It specifies the recording end time in UTC format (e.g., `2020-01-01T12:00:00Z`)
                      */
                     bool EndTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Effective only when StartType is FIXED_PTS, with a range of 1-8589934592
+                     * @return PTS Effective only when StartType is FIXED_PTS, with a range of 1-8589934592
+                     * 
+                     */
+                    uint64_t GetPTS() const;
+
+                    /**
+                     * 设置Effective only when StartType is FIXED_PTS, with a range of 1-8589934592
+                     * @param _pTS Effective only when StartType is FIXED_PTS, with a range of 1-8589934592
+                     * 
+                     */
+                    void SetPTS(const uint64_t& _pTS);
+
+                    /**
+                     * 判断参数 PTS 是否已赋值
+                     * @return PTS 是否已赋值
+                     * 
+                     */
+                    bool PTSHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`. This parameter is required if `EventType` is `INPUT_SWITCH`.
+                     * Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`,`FIXED_PTS `. This parameter is required if `EventType` is `INPUT_SWITCH`.
                      */
                     std::string m_startType;
                     bool m_startTypeHasBeenSet;
@@ -170,6 +191,12 @@ It specifies the recording end time in UTC format (e.g., `2020-01-01T12:00:00Z`)
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
+
+                    /**
+                     * Effective only when StartType is FIXED_PTS, with a range of 1-8589934592
+                     */
+                    uint64_t m_pTS;
+                    bool m_pTSHasBeenSet;
 
                 };
             }

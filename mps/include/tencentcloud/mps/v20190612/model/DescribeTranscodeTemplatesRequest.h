@@ -340,6 +340,125 @@ no_config: Not configured.
                      */
                     bool CompressTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Enhancement scenario configuration. Valid values:
+<li>common: common enhancement parameters, which are basic optimization parameters suitable for various video types, enhancing overall image quality.</li>
+<li>AIGC: overall resolution enhancement. It uses AI technology to improve the overall video resolution and image clarity.</li>
+<li>short_play: enhance facial and subtitle details, emphasizing characters' facial expressions and subtitle clarity to improve the viewing experience.</li>
+<li>short_video: optimize complex and diverse image quality issues, tailoring quality enhancements for the complex scenarios such as short videos to address various visual issues.</li>
+<li>game: fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
+<li>HD_movie_series: provide a smooth playback effect for UHD videos. Standard 4K HDR videos with an FPS of 60 are generated to meet the needs of broadcasting/OTT for UHD videos. Formats for broadcasting scenarios are supported.</li>
+<li>LQ_material: low-definition material/old video restoration. It enhances overall resolution, and solves issues of old videos, such as low resolution, blur, distortion, scratches, and color temperature due to their age.</li>
+<li>lecture: live shows, e-commerce, conferences, and lectures. It improves the face display effect and performs specific optimizations, including face region enhancement, noise reduction, and artifacts removal, for scenarios involving human explanation, such as live shows, e-commerce, conferences, and lectures.</li>
+                     * @return EnhanceSceneType Enhancement scenario configuration. Valid values:
+<li>common: common enhancement parameters, which are basic optimization parameters suitable for various video types, enhancing overall image quality.</li>
+<li>AIGC: overall resolution enhancement. It uses AI technology to improve the overall video resolution and image clarity.</li>
+<li>short_play: enhance facial and subtitle details, emphasizing characters' facial expressions and subtitle clarity to improve the viewing experience.</li>
+<li>short_video: optimize complex and diverse image quality issues, tailoring quality enhancements for the complex scenarios such as short videos to address various visual issues.</li>
+<li>game: fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
+<li>HD_movie_series: provide a smooth playback effect for UHD videos. Standard 4K HDR videos with an FPS of 60 are generated to meet the needs of broadcasting/OTT for UHD videos. Formats for broadcasting scenarios are supported.</li>
+<li>LQ_material: low-definition material/old video restoration. It enhances overall resolution, and solves issues of old videos, such as low resolution, blur, distortion, scratches, and color temperature due to their age.</li>
+<li>lecture: live shows, e-commerce, conferences, and lectures. It improves the face display effect and performs specific optimizations, including face region enhancement, noise reduction, and artifacts removal, for scenarios involving human explanation, such as live shows, e-commerce, conferences, and lectures.</li>
+                     * 
+                     */
+                    std::string GetEnhanceSceneType() const;
+
+                    /**
+                     * 设置Enhancement scenario configuration. Valid values:
+<li>common: common enhancement parameters, which are basic optimization parameters suitable for various video types, enhancing overall image quality.</li>
+<li>AIGC: overall resolution enhancement. It uses AI technology to improve the overall video resolution and image clarity.</li>
+<li>short_play: enhance facial and subtitle details, emphasizing characters' facial expressions and subtitle clarity to improve the viewing experience.</li>
+<li>short_video: optimize complex and diverse image quality issues, tailoring quality enhancements for the complex scenarios such as short videos to address various visual issues.</li>
+<li>game: fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
+<li>HD_movie_series: provide a smooth playback effect for UHD videos. Standard 4K HDR videos with an FPS of 60 are generated to meet the needs of broadcasting/OTT for UHD videos. Formats for broadcasting scenarios are supported.</li>
+<li>LQ_material: low-definition material/old video restoration. It enhances overall resolution, and solves issues of old videos, such as low resolution, blur, distortion, scratches, and color temperature due to their age.</li>
+<li>lecture: live shows, e-commerce, conferences, and lectures. It improves the face display effect and performs specific optimizations, including face region enhancement, noise reduction, and artifacts removal, for scenarios involving human explanation, such as live shows, e-commerce, conferences, and lectures.</li>
+                     * @param _enhanceSceneType Enhancement scenario configuration. Valid values:
+<li>common: common enhancement parameters, which are basic optimization parameters suitable for various video types, enhancing overall image quality.</li>
+<li>AIGC: overall resolution enhancement. It uses AI technology to improve the overall video resolution and image clarity.</li>
+<li>short_play: enhance facial and subtitle details, emphasizing characters' facial expressions and subtitle clarity to improve the viewing experience.</li>
+<li>short_video: optimize complex and diverse image quality issues, tailoring quality enhancements for the complex scenarios such as short videos to address various visual issues.</li>
+<li>game: fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
+<li>HD_movie_series: provide a smooth playback effect for UHD videos. Standard 4K HDR videos with an FPS of 60 are generated to meet the needs of broadcasting/OTT for UHD videos. Formats for broadcasting scenarios are supported.</li>
+<li>LQ_material: low-definition material/old video restoration. It enhances overall resolution, and solves issues of old videos, such as low resolution, blur, distortion, scratches, and color temperature due to their age.</li>
+<li>lecture: live shows, e-commerce, conferences, and lectures. It improves the face display effect and performs specific optimizations, including face region enhancement, noise reduction, and artifacts removal, for scenarios involving human explanation, such as live shows, e-commerce, conferences, and lectures.</li>
+                     * 
+                     */
+                    void SetEnhanceSceneType(const std::string& _enhanceSceneType);
+
+                    /**
+                     * 判断参数 EnhanceSceneType 是否已赋值
+                     * @return EnhanceSceneType 是否已赋值
+                     * 
+                     */
+                    bool EnhanceSceneTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Enhanced transcoding type. Valid values:
+<li>Common: standard transcoding.</li>
+<li>TEHD-100: top speed codec video transcoding.</li>
+<li>TEHD-200: top speed codec audio transcoding.</li>
+                     * @return EnhanceTranscodeType Enhanced transcoding type. Valid values:
+<li>Common: standard transcoding.</li>
+<li>TEHD-100: top speed codec video transcoding.</li>
+<li>TEHD-200: top speed codec audio transcoding.</li>
+                     * 
+                     */
+                    std::string GetEnhanceTranscodeType() const;
+
+                    /**
+                     * 设置Enhanced transcoding type. Valid values:
+<li>Common: standard transcoding.</li>
+<li>TEHD-100: top speed codec video transcoding.</li>
+<li>TEHD-200: top speed codec audio transcoding.</li>
+                     * @param _enhanceTranscodeType Enhanced transcoding type. Valid values:
+<li>Common: standard transcoding.</li>
+<li>TEHD-100: top speed codec video transcoding.</li>
+<li>TEHD-200: top speed codec audio transcoding.</li>
+                     * 
+                     */
+                    void SetEnhanceTranscodeType(const std::string& _enhanceTranscodeType);
+
+                    /**
+                     * 判断参数 EnhanceTranscodeType 是否已赋值
+                     * @return EnhanceTranscodeType 是否已赋值
+                     * 
+                     */
+                    bool EnhanceTranscodeTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Enhancement type. Valid values:
+<li>VideoEnhance: video enhancement only.</li>
+<li>AudioEnhance (audio enhancement only).</li>
+<li>VideoAudioEnhance: video and audio enhancement included.</li>
+                     * @return EnhanceType Enhancement type. Valid values:
+<li>VideoEnhance: video enhancement only.</li>
+<li>AudioEnhance (audio enhancement only).</li>
+<li>VideoAudioEnhance: video and audio enhancement included.</li>
+                     * 
+                     */
+                    std::string GetEnhanceType() const;
+
+                    /**
+                     * 设置Enhancement type. Valid values:
+<li>VideoEnhance: video enhancement only.</li>
+<li>AudioEnhance (audio enhancement only).</li>
+<li>VideoAudioEnhance: video and audio enhancement included.</li>
+                     * @param _enhanceType Enhancement type. Valid values:
+<li>VideoEnhance: video enhancement only.</li>
+<li>AudioEnhance (audio enhancement only).</li>
+<li>VideoAudioEnhance: video and audio enhancement included.</li>
+                     * 
+                     */
+                    void SetEnhanceType(const std::string& _enhanceType);
+
+                    /**
+                     * 判断参数 EnhanceType 是否已赋值
+                     * @return EnhanceType 是否已赋值
+                     * 
+                     */
+                    bool EnhanceTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -423,6 +542,38 @@ no_config: Not configured.
                      */
                     std::string m_compressType;
                     bool m_compressTypeHasBeenSet;
+
+                    /**
+                     * Enhancement scenario configuration. Valid values:
+<li>common: common enhancement parameters, which are basic optimization parameters suitable for various video types, enhancing overall image quality.</li>
+<li>AIGC: overall resolution enhancement. It uses AI technology to improve the overall video resolution and image clarity.</li>
+<li>short_play: enhance facial and subtitle details, emphasizing characters' facial expressions and subtitle clarity to improve the viewing experience.</li>
+<li>short_video: optimize complex and diverse image quality issues, tailoring quality enhancements for the complex scenarios such as short videos to address various visual issues.</li>
+<li>game: fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
+<li>HD_movie_series: provide a smooth playback effect for UHD videos. Standard 4K HDR videos with an FPS of 60 are generated to meet the needs of broadcasting/OTT for UHD videos. Formats for broadcasting scenarios are supported.</li>
+<li>LQ_material: low-definition material/old video restoration. It enhances overall resolution, and solves issues of old videos, such as low resolution, blur, distortion, scratches, and color temperature due to their age.</li>
+<li>lecture: live shows, e-commerce, conferences, and lectures. It improves the face display effect and performs specific optimizations, including face region enhancement, noise reduction, and artifacts removal, for scenarios involving human explanation, such as live shows, e-commerce, conferences, and lectures.</li>
+                     */
+                    std::string m_enhanceSceneType;
+                    bool m_enhanceSceneTypeHasBeenSet;
+
+                    /**
+                     * Enhanced transcoding type. Valid values:
+<li>Common: standard transcoding.</li>
+<li>TEHD-100: top speed codec video transcoding.</li>
+<li>TEHD-200: top speed codec audio transcoding.</li>
+                     */
+                    std::string m_enhanceTranscodeType;
+                    bool m_enhanceTranscodeTypeHasBeenSet;
+
+                    /**
+                     * Enhancement type. Valid values:
+<li>VideoEnhance: video enhancement only.</li>
+<li>AudioEnhance (audio enhancement only).</li>
+<li>VideoAudioEnhance: video and audio enhancement included.</li>
+                     */
+                    std::string m_enhanceType;
+                    bool m_enhanceTypeHasBeenSet;
 
                 };
             }

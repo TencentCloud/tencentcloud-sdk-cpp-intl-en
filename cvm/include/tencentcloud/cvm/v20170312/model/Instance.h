@@ -505,15 +505,15 @@ Note: this field is null in postpaid mode.
                     bool LoginSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Instance status. for specific status types, see the instance status table (https://www.tencentcloud.comom/document/api/213/15753?from_cn_redirect=1#InstanceStatus).
-                     * @return InstanceState Instance status. for specific status types, see the instance status table (https://www.tencentcloud.comom/document/api/213/15753?from_cn_redirect=1#InstanceStatus).
+                     * 获取Instance status. for specific status types, see the  [instance status table](https://www.tencentcloud.com/document/product/213/15753#instancestatus)
+                     * @return InstanceState Instance status. for specific status types, see the  [instance status table](https://www.tencentcloud.com/document/product/213/15753#instancestatus)
                      * 
                      */
                     std::string GetInstanceState() const;
 
                     /**
-                     * 设置Instance status. for specific status types, see the instance status table (https://www.tencentcloud.comom/document/api/213/15753?from_cn_redirect=1#InstanceStatus).
-                     * @param _instanceState Instance status. for specific status types, see the instance status table (https://www.tencentcloud.comom/document/api/213/15753?from_cn_redirect=1#InstanceStatus).
+                     * 设置Instance status. for specific status types, see the  [instance status table](https://www.tencentcloud.com/document/product/213/15753#instancestatus)
+                     * @param _instanceState Instance status. for specific status types, see the  [instance status table](https://www.tencentcloud.com/document/product/213/15753#instancestatus)
                      * 
                      */
                     void SetInstanceState(const std::string& _instanceState);
@@ -1125,7 +1125,7 @@ Note: this field is null in postpaid mode.
                     bool m_loginSettingsHasBeenSet;
 
                     /**
-                     * Instance status. for specific status types, see the instance status table (https://www.tencentcloud.comom/document/api/213/15753?from_cn_redirect=1#InstanceStatus).
+                     * Instance status. for specific status types, see the  [instance status table](https://www.tencentcloud.com/document/product/213/15753#instancestatus)
                      */
                     std::string m_instanceState;
                     bool m_instanceStateHasBeenSet;

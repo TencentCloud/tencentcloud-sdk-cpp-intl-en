@@ -334,6 +334,31 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool StdExtInfoHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the frame at the given pts time as a key frame and segments it. unit: milliseconds (relative deviation <=1ms is allowed). when gop and segment duration are specified simultaneously, they function together. note: enable RawPts, keep the frame rate as source, and ensure the passed-in pts time corresponds to a frame in the source.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return KeyPTSList Specifies the frame at the given pts time as a key frame and segments it. unit: milliseconds (relative deviation <=1ms is allowed). when gop and segment duration are specified simultaneously, they function together. note: enable RawPts, keep the frame rate as source, and ensure the passed-in pts time corresponds to a frame in the source.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<int64_t> GetKeyPTSList() const;
+
+                    /**
+                     * 设置Specifies the frame at the given pts time as a key frame and segments it. unit: milliseconds (relative deviation <=1ms is allowed). when gop and segment duration are specified simultaneously, they function together. note: enable RawPts, keep the frame rate as source, and ensure the passed-in pts time corresponds to a frame in the source.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _keyPTSList Specifies the frame at the given pts time as a key frame and segments it. unit: milliseconds (relative deviation <=1ms is allowed). when gop and segment duration are specified simultaneously, they function together. note: enable RawPts, keep the frame rate as source, and ensure the passed-in pts time corresponds to a frame in the source.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetKeyPTSList(const std::vector<int64_t>& _keyPTSList);
+
+                    /**
+                     * 判断参数 KeyPTSList 是否已赋值
+                     * @return KeyPTSList 是否已赋值
+                     * 
+                     */
+                    bool KeyPTSListHasBeenSet() const;
+
                 private:
 
                     /**
@@ -414,6 +439,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     std::string m_stdExtInfo;
                     bool m_stdExtInfoHasBeenSet;
+
+                    /**
+                     * Specifies the frame at the given pts time as a key frame and segments it. unit: milliseconds (relative deviation <=1ms is allowed). when gop and segment duration are specified simultaneously, they function together. note: enable RawPts, keep the frame rate as source, and ensure the passed-in pts time corresponds to a frame in the source.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<int64_t> m_keyPTSList;
+                    bool m_keyPTSListHasBeenSet;
 
                 };
             }

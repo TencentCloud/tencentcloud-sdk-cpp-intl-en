@@ -95,6 +95,27 @@ namespace TencentCloud
                     bool InputAttachmentHasBeenSet() const;
 
                     /**
+                     * 获取When the type is FIXED_PTS, it is mandatory and defaults to 0
+                     * @return PipelineId When the type is FIXED_PTS, it is mandatory and defaults to 0
+                     * 
+                     */
+                    int64_t GetPipelineId() const;
+
+                    /**
+                     * 设置When the type is FIXED_PTS, it is mandatory and defaults to 0
+                     * @param _pipelineId When the type is FIXED_PTS, it is mandatory and defaults to 0
+                     * 
+                     */
+                    void SetPipelineId(const int64_t& _pipelineId);
+
+                    /**
+                     * 判断参数 PipelineId 是否已赋值
+                     * @return PipelineId 是否已赋值
+                     * 
+                     */
+                    bool PipelineIdHasBeenSet() const;
+
+                    /**
                      * 获取Name of the output group to attach. This parameter is required if `EventType` is `TIMED_RECORD`.
                      * @return OutputGroupName Name of the output group to attach. This parameter is required if `EventType` is `TIMED_RECORD`.
                      * 
@@ -317,6 +338,12 @@ namespace TencentCloud
                      */
                     std::string m_inputAttachment;
                     bool m_inputAttachmentHasBeenSet;
+
+                    /**
+                     * When the type is FIXED_PTS, it is mandatory and defaults to 0
+                     */
+                    int64_t m_pipelineId;
+                    bool m_pipelineIdHasBeenSet;
 
                     /**
                      * Name of the output group to attach. This parameter is required if `EventType` is `TIMED_RECORD`.

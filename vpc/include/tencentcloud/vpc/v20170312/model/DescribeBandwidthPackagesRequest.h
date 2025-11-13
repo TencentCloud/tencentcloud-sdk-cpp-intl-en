@@ -65,55 +65,59 @@ namespace TencentCloud
                     bool BandwidthPackageIdsHasBeenSet() const;
 
                     /**
-                     * 获取Each request can have up to 10 `Filters`. `BandwidthPackageIds` and `Filters` cannot be specified at the same time. The specific filter conditions are as follows:
-<li> bandwidth-package_id - String - Required: No - (Filter condition) Filter by the unique ID of the bandwidth package.</li>
-<li> bandwidth-package-name - String - Required: No - (Filter condition) Filter by the bandwidth package name. Fuzzy filtering is not supported.</li>
-<li> network-type - String - Required: No - (Filter condition) Filter by the bandwidth package type. Valid values: `HIGH_QUALITY_BGP`, `BGP`, `SINGLEISP`, and `ANYCAST`.</li>
-<li> charge-type - String - Required: No - (Filter condition) Filter by the bandwidth package billing mode. Valid values: `TOP5_POSTPAID_BY_MONTH` and `PERCENT95_POSTPAID_BY_MONTH`.</li>
-<li> resource.resource-type - String - Required: No - (Filter condition) Filter by the bandwidth package resource type. Valid values: `Address` and `LoadBalance`.</li>
-<li> resource.resource-id - String - Required: No - (Filter condition) Filter by the bandwidth package resource ID, such as `eip-xxxx` and `lb-xxxx`.</li>
-<li> resource.address-ip - String - Required: No - (Filter condition) Filter by the bandwidth package resource IP.</li>
-<li> tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li> tag-value - String - Required: No - (Filter condition) Filter by tag value.</li>
-<li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. Use a specific tag key to replace `tag-key`.</li>
-                     * @return Filters Each request can have up to 10 `Filters`. `BandwidthPackageIds` and `Filters` cannot be specified at the same time. The specific filter conditions are as follows:
-<li> bandwidth-package_id - String - Required: No - (Filter condition) Filter by the unique ID of the bandwidth package.</li>
-<li> bandwidth-package-name - String - Required: No - (Filter condition) Filter by the bandwidth package name. Fuzzy filtering is not supported.</li>
-<li> network-type - String - Required: No - (Filter condition) Filter by the bandwidth package type. Valid values: `HIGH_QUALITY_BGP`, `BGP`, `SINGLEISP`, and `ANYCAST`.</li>
-<li> charge-type - String - Required: No - (Filter condition) Filter by the bandwidth package billing mode. Valid values: `TOP5_POSTPAID_BY_MONTH` and `PERCENT95_POSTPAID_BY_MONTH`.</li>
-<li> resource.resource-type - String - Required: No - (Filter condition) Filter by the bandwidth package resource type. Valid values: `Address` and `LoadBalance`.</li>
-<li> resource.resource-id - String - Required: No - (Filter condition) Filter by the bandwidth package resource ID, such as `eip-xxxx` and `lb-xxxx`.</li>
-<li> resource.address-ip - String - Required: No - (Filter condition) Filter by the bandwidth package resource IP.</li>
-<li> tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li> tag-value - String - Required: No - (Filter condition) Filter by tag value.</li>
-<li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. Use a specific tag key to replace `tag-key`.</li>
+                     * 获取Each request can have up to 10 `Filters`. parameters do not support specifying `BandwidthPackageIds` and `Filters` at the same time. detailed filter criteria are as follows:.
+<li>bandwidth-package-id - String - required: no - (filter condition) filter by the unique id of the bandwidth package.</li>.
+<li>bandwidth-package-name - String - required: no - (filter criteria) filter by bandwidth package name. fuzzy filtering is not supported.</li>.
+<li>network-type - String - required: no - (filter condition) filter by bandwidth package type. network type can be found in [BandwidthPackage](https://intl.cloud.tencent.com/document/api/215/15824?from_cn_redirect=1#BandwidthPackage).</li>.
+<li>- charge-type - String - required: no - (filter condition) filter by the billing type of the bandwidth package. the billing type can be found in BandwidthPackage (https://intl.cloud.tencent.com/document/api/215/15824?from_cn_redirect=1#BandwidthPackage).</li>.
+<li>resource.resource-type - String - required: no - (filter criteria) filter by bandwidth package resource type. resource types include 'Address' and 'LoadBalance'.</li>.
+<li>resource.resource-id - String - required: no - (filter criteria) filter by bandwidth package resource id. resource id is in the format of 'eip-xxxx','lb-xxxx'.</li>.
+<li>resource.address-ip - String - required: no - filter by bandwidth package resource ip.</li>.
+<li>tag-key - String - required: no - (filter condition) filter according to the tag key.</li>.
+<li>`tag-value` - String - Optional - Filter by the tag value.</li>
+
+<li>tag:tag-key - String - required: no - (filter condition) filter by tag key-value pair. replace tag-key with a specific tag key.</li>.
+                     * @return Filters Each request can have up to 10 `Filters`. parameters do not support specifying `BandwidthPackageIds` and `Filters` at the same time. detailed filter criteria are as follows:.
+<li>bandwidth-package-id - String - required: no - (filter condition) filter by the unique id of the bandwidth package.</li>.
+<li>bandwidth-package-name - String - required: no - (filter criteria) filter by bandwidth package name. fuzzy filtering is not supported.</li>.
+<li>network-type - String - required: no - (filter condition) filter by bandwidth package type. network type can be found in [BandwidthPackage](https://intl.cloud.tencent.com/document/api/215/15824?from_cn_redirect=1#BandwidthPackage).</li>.
+<li>- charge-type - String - required: no - (filter condition) filter by the billing type of the bandwidth package. the billing type can be found in BandwidthPackage (https://intl.cloud.tencent.com/document/api/215/15824?from_cn_redirect=1#BandwidthPackage).</li>.
+<li>resource.resource-type - String - required: no - (filter criteria) filter by bandwidth package resource type. resource types include 'Address' and 'LoadBalance'.</li>.
+<li>resource.resource-id - String - required: no - (filter criteria) filter by bandwidth package resource id. resource id is in the format of 'eip-xxxx','lb-xxxx'.</li>.
+<li>resource.address-ip - String - required: no - filter by bandwidth package resource ip.</li>.
+<li>tag-key - String - required: no - (filter condition) filter according to the tag key.</li>.
+<li>`tag-value` - String - Optional - Filter by the tag value.</li>
+
+<li>tag:tag-key - String - required: no - (filter condition) filter by tag key-value pair. replace tag-key with a specific tag key.</li>.
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Each request can have up to 10 `Filters`. `BandwidthPackageIds` and `Filters` cannot be specified at the same time. The specific filter conditions are as follows:
-<li> bandwidth-package_id - String - Required: No - (Filter condition) Filter by the unique ID of the bandwidth package.</li>
-<li> bandwidth-package-name - String - Required: No - (Filter condition) Filter by the bandwidth package name. Fuzzy filtering is not supported.</li>
-<li> network-type - String - Required: No - (Filter condition) Filter by the bandwidth package type. Valid values: `HIGH_QUALITY_BGP`, `BGP`, `SINGLEISP`, and `ANYCAST`.</li>
-<li> charge-type - String - Required: No - (Filter condition) Filter by the bandwidth package billing mode. Valid values: `TOP5_POSTPAID_BY_MONTH` and `PERCENT95_POSTPAID_BY_MONTH`.</li>
-<li> resource.resource-type - String - Required: No - (Filter condition) Filter by the bandwidth package resource type. Valid values: `Address` and `LoadBalance`.</li>
-<li> resource.resource-id - String - Required: No - (Filter condition) Filter by the bandwidth package resource ID, such as `eip-xxxx` and `lb-xxxx`.</li>
-<li> resource.address-ip - String - Required: No - (Filter condition) Filter by the bandwidth package resource IP.</li>
-<li> tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li> tag-value - String - Required: No - (Filter condition) Filter by tag value.</li>
-<li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. Use a specific tag key to replace `tag-key`.</li>
-                     * @param _filters Each request can have up to 10 `Filters`. `BandwidthPackageIds` and `Filters` cannot be specified at the same time. The specific filter conditions are as follows:
-<li> bandwidth-package_id - String - Required: No - (Filter condition) Filter by the unique ID of the bandwidth package.</li>
-<li> bandwidth-package-name - String - Required: No - (Filter condition) Filter by the bandwidth package name. Fuzzy filtering is not supported.</li>
-<li> network-type - String - Required: No - (Filter condition) Filter by the bandwidth package type. Valid values: `HIGH_QUALITY_BGP`, `BGP`, `SINGLEISP`, and `ANYCAST`.</li>
-<li> charge-type - String - Required: No - (Filter condition) Filter by the bandwidth package billing mode. Valid values: `TOP5_POSTPAID_BY_MONTH` and `PERCENT95_POSTPAID_BY_MONTH`.</li>
-<li> resource.resource-type - String - Required: No - (Filter condition) Filter by the bandwidth package resource type. Valid values: `Address` and `LoadBalance`.</li>
-<li> resource.resource-id - String - Required: No - (Filter condition) Filter by the bandwidth package resource ID, such as `eip-xxxx` and `lb-xxxx`.</li>
-<li> resource.address-ip - String - Required: No - (Filter condition) Filter by the bandwidth package resource IP.</li>
-<li> tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li> tag-value - String - Required: No - (Filter condition) Filter by tag value.</li>
-<li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. Use a specific tag key to replace `tag-key`.</li>
+                     * 设置Each request can have up to 10 `Filters`. parameters do not support specifying `BandwidthPackageIds` and `Filters` at the same time. detailed filter criteria are as follows:.
+<li>bandwidth-package-id - String - required: no - (filter condition) filter by the unique id of the bandwidth package.</li>.
+<li>bandwidth-package-name - String - required: no - (filter criteria) filter by bandwidth package name. fuzzy filtering is not supported.</li>.
+<li>network-type - String - required: no - (filter condition) filter by bandwidth package type. network type can be found in [BandwidthPackage](https://intl.cloud.tencent.com/document/api/215/15824?from_cn_redirect=1#BandwidthPackage).</li>.
+<li>- charge-type - String - required: no - (filter condition) filter by the billing type of the bandwidth package. the billing type can be found in BandwidthPackage (https://intl.cloud.tencent.com/document/api/215/15824?from_cn_redirect=1#BandwidthPackage).</li>.
+<li>resource.resource-type - String - required: no - (filter criteria) filter by bandwidth package resource type. resource types include 'Address' and 'LoadBalance'.</li>.
+<li>resource.resource-id - String - required: no - (filter criteria) filter by bandwidth package resource id. resource id is in the format of 'eip-xxxx','lb-xxxx'.</li>.
+<li>resource.address-ip - String - required: no - filter by bandwidth package resource ip.</li>.
+<li>tag-key - String - required: no - (filter condition) filter according to the tag key.</li>.
+<li>`tag-value` - String - Optional - Filter by the tag value.</li>
+
+<li>tag:tag-key - String - required: no - (filter condition) filter by tag key-value pair. replace tag-key with a specific tag key.</li>.
+                     * @param _filters Each request can have up to 10 `Filters`. parameters do not support specifying `BandwidthPackageIds` and `Filters` at the same time. detailed filter criteria are as follows:.
+<li>bandwidth-package-id - String - required: no - (filter condition) filter by the unique id of the bandwidth package.</li>.
+<li>bandwidth-package-name - String - required: no - (filter criteria) filter by bandwidth package name. fuzzy filtering is not supported.</li>.
+<li>network-type - String - required: no - (filter condition) filter by bandwidth package type. network type can be found in [BandwidthPackage](https://intl.cloud.tencent.com/document/api/215/15824?from_cn_redirect=1#BandwidthPackage).</li>.
+<li>- charge-type - String - required: no - (filter condition) filter by the billing type of the bandwidth package. the billing type can be found in BandwidthPackage (https://intl.cloud.tencent.com/document/api/215/15824?from_cn_redirect=1#BandwidthPackage).</li>.
+<li>resource.resource-type - String - required: no - (filter criteria) filter by bandwidth package resource type. resource types include 'Address' and 'LoadBalance'.</li>.
+<li>resource.resource-id - String - required: no - (filter criteria) filter by bandwidth package resource id. resource id is in the format of 'eip-xxxx','lb-xxxx'.</li>.
+<li>resource.address-ip - String - required: no - filter by bandwidth package resource ip.</li>.
+<li>tag-key - String - required: no - (filter condition) filter according to the tag key.</li>.
+<li>`tag-value` - String - Optional - Filter by the tag value.</li>
+
+<li>tag:tag-key - String - required: no - (filter condition) filter by tag key-value pair. replace tag-key with a specific tag key.</li>.
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -126,15 +130,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Offset. This value defaults to 0. For more information, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
-                     * @return Offset Offset. This value defaults to 0. For more information, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+                     * 获取Offset. This value defaults to 0. For more information on Offset, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
+                     * @return Offset Offset. This value defaults to 0. For more information on Offset, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. This value defaults to 0. For more information, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
-                     * @param _offset Offset. This value defaults to 0. For more information, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+                     * 设置Offset. This value defaults to 0. For more information on Offset, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
+                     * @param _offset Offset. This value defaults to 0. For more information on Offset, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -147,15 +151,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of bandwidth packages returned. This value defaults to 20. The maximum is 100. For more information, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
-                     * @return Limit Number of bandwidth packages returned. This value defaults to 20. The maximum is 100. For more information, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+                     * 获取Number of bandwidth packages returned. This value defaults to 20. The maximum is 100. For more information on Limit, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
+                     * @return Limit Number of bandwidth packages returned. This value defaults to 20. The maximum is 100. For more information on Limit, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of bandwidth packages returned. This value defaults to 20. The maximum is 100. For more information, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
-                     * @param _limit Number of bandwidth packages returned. This value defaults to 20. The maximum is 100. For more information, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+                     * 设置Number of bandwidth packages returned. This value defaults to 20. The maximum is 100. For more information on Limit, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
+                     * @param _limit Number of bandwidth packages returned. This value defaults to 20. The maximum is 100. For more information on Limit, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -176,29 +180,30 @@ namespace TencentCloud
                     bool m_bandwidthPackageIdsHasBeenSet;
 
                     /**
-                     * Each request can have up to 10 `Filters`. `BandwidthPackageIds` and `Filters` cannot be specified at the same time. The specific filter conditions are as follows:
-<li> bandwidth-package_id - String - Required: No - (Filter condition) Filter by the unique ID of the bandwidth package.</li>
-<li> bandwidth-package-name - String - Required: No - (Filter condition) Filter by the bandwidth package name. Fuzzy filtering is not supported.</li>
-<li> network-type - String - Required: No - (Filter condition) Filter by the bandwidth package type. Valid values: `HIGH_QUALITY_BGP`, `BGP`, `SINGLEISP`, and `ANYCAST`.</li>
-<li> charge-type - String - Required: No - (Filter condition) Filter by the bandwidth package billing mode. Valid values: `TOP5_POSTPAID_BY_MONTH` and `PERCENT95_POSTPAID_BY_MONTH`.</li>
-<li> resource.resource-type - String - Required: No - (Filter condition) Filter by the bandwidth package resource type. Valid values: `Address` and `LoadBalance`.</li>
-<li> resource.resource-id - String - Required: No - (Filter condition) Filter by the bandwidth package resource ID, such as `eip-xxxx` and `lb-xxxx`.</li>
-<li> resource.address-ip - String - Required: No - (Filter condition) Filter by the bandwidth package resource IP.</li>
-<li> tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li> tag-value - String - Required: No - (Filter condition) Filter by tag value.</li>
-<li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. Use a specific tag key to replace `tag-key`.</li>
+                     * Each request can have up to 10 `Filters`. parameters do not support specifying `BandwidthPackageIds` and `Filters` at the same time. detailed filter criteria are as follows:.
+<li>bandwidth-package-id - String - required: no - (filter condition) filter by the unique id of the bandwidth package.</li>.
+<li>bandwidth-package-name - String - required: no - (filter criteria) filter by bandwidth package name. fuzzy filtering is not supported.</li>.
+<li>network-type - String - required: no - (filter condition) filter by bandwidth package type. network type can be found in [BandwidthPackage](https://intl.cloud.tencent.com/document/api/215/15824?from_cn_redirect=1#BandwidthPackage).</li>.
+<li>- charge-type - String - required: no - (filter condition) filter by the billing type of the bandwidth package. the billing type can be found in BandwidthPackage (https://intl.cloud.tencent.com/document/api/215/15824?from_cn_redirect=1#BandwidthPackage).</li>.
+<li>resource.resource-type - String - required: no - (filter criteria) filter by bandwidth package resource type. resource types include 'Address' and 'LoadBalance'.</li>.
+<li>resource.resource-id - String - required: no - (filter criteria) filter by bandwidth package resource id. resource id is in the format of 'eip-xxxx','lb-xxxx'.</li>.
+<li>resource.address-ip - String - required: no - filter by bandwidth package resource ip.</li>.
+<li>tag-key - String - required: no - (filter condition) filter according to the tag key.</li>.
+<li>`tag-value` - String - Optional - Filter by the tag value.</li>
+
+<li>tag:tag-key - String - required: no - (filter condition) filter by tag key-value pair. replace tag-key with a specific tag key.</li>.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Offset. This value defaults to 0. For more information, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+                     * Offset. This value defaults to 0. For more information on Offset, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of bandwidth packages returned. This value defaults to 20. The maximum is 100. For more information, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+                     * Number of bandwidth packages returned. This value defaults to 20. The maximum is 100. For more information on Limit, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

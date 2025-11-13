@@ -155,6 +155,35 @@ namespace TencentCloud
                      */
                     bool NameHasBeenSet() const;
 
+                    /**
+                     * 获取Subtitle processing type.
+- 0: ASR recognition subtitle.
+- 1: pure subtitle translation.
+                     * @return ProcessType Subtitle processing type.
+- 0: ASR recognition subtitle.
+- 1: pure subtitle translation.
+                     * 
+                     */
+                    uint64_t GetProcessType() const;
+
+                    /**
+                     * 设置Subtitle processing type.
+- 0: ASR recognition subtitle.
+- 1: pure subtitle translation.
+                     * @param _processType Subtitle processing type.
+- 0: ASR recognition subtitle.
+- 1: pure subtitle translation.
+                     * 
+                     */
+                    void SetProcessType(const uint64_t& _processType);
+
+                    /**
+                     * 判断参数 ProcessType 是否已赋值
+                     * @return ProcessType 是否已赋值
+                     * 
+                     */
+                    bool ProcessTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -188,6 +217,14 @@ namespace TencentCloud
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
+
+                    /**
+                     * Subtitle processing type.
+- 0: ASR recognition subtitle.
+- 1: pure subtitle translation.
+                     */
+                    uint64_t m_processType;
+                    bool m_processTypeHasBeenSet;
 
                 };
             }

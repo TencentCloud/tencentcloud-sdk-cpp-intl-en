@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/SmartSubtitleTaskAsrFullTextResult.h>
 #include <tencentcloud/mps/v20190612/model/SmartSubtitleTaskTransTextResult.h>
+#include <tencentcloud/mps/v20190612/model/PureSubtitleTransResult.h>
 
 
 namespace TencentCloud
@@ -50,22 +51,26 @@ namespace TencentCloud
 
                     /**
                      * 获取Task type. Valid values:
-<li>AsrFullTextRecognition: full speech recognition</li>
-<li>TransTextRecognition: speech translation</li>
+- AsrFullTextRecognition: full speech recognition.
+- TransTextRecognition: speech translation.
+- PureSubtitleTrans: pure subtitle translation.
                      * @return Type Task type. Valid values:
-<li>AsrFullTextRecognition: full speech recognition</li>
-<li>TransTextRecognition: speech translation</li>
+- AsrFullTextRecognition: full speech recognition.
+- TransTextRecognition: speech translation.
+- PureSubtitleTrans: pure subtitle translation.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Task type. Valid values:
-<li>AsrFullTextRecognition: full speech recognition</li>
-<li>TransTextRecognition: speech translation</li>
+- AsrFullTextRecognition: full speech recognition.
+- TransTextRecognition: speech translation.
+- PureSubtitleTrans: pure subtitle translation.
                      * @param _type Task type. Valid values:
-<li>AsrFullTextRecognition: full speech recognition</li>
-<li>TransTextRecognition: speech translation</li>
+- AsrFullTextRecognition: full speech recognition.
+- TransTextRecognition: speech translation.
+- PureSubtitleTrans: pure subtitle translation.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -139,12 +144,38 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool TransTextTaskHasBeenSet() const;
 
+                    /**
+                     * 获取The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return PureSubtitleTransTask The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    PureSubtitleTransResult GetPureSubtitleTransTask() const;
+
+                    /**
+                     * 设置The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _pureSubtitleTransTask The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetPureSubtitleTransTask(const PureSubtitleTransResult& _pureSubtitleTransTask);
+
+                    /**
+                     * 判断参数 PureSubtitleTransTask 是否已赋值
+                     * @return PureSubtitleTransTask 是否已赋值
+                     * 
+                     */
+                    bool PureSubtitleTransTaskHasBeenSet() const;
+
                 private:
 
                     /**
                      * Task type. Valid values:
-<li>AsrFullTextRecognition: full speech recognition</li>
-<li>TransTextRecognition: speech translation</li>
+- AsrFullTextRecognition: full speech recognition.
+- TransTextRecognition: speech translation.
+- PureSubtitleTrans: pure subtitle translation.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -165,6 +196,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     SmartSubtitleTaskTransTextResult m_transTextTask;
                     bool m_transTextTaskHasBeenSet;
+
+                    /**
+                     * The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    PureSubtitleTransResult m_pureSubtitleTransTask;
+                    bool m_pureSubtitleTransTaskHasBeenSet;
 
                 };
             }

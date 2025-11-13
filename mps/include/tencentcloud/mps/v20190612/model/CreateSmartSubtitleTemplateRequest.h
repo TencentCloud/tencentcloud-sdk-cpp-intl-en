@@ -69,107 +69,123 @@ Length limit: 64 characters.
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Video source language for intelligent caption.
-Valid values: 
-zh: Simplified Chinese.
-en: Eenglish.
-Ja: Japanese.
-Ko: Korean.
-zh-PY: Simplified Chinese, English and Cantonese.
-zh-medical: Medical Chinese.
-yue: Cantonese.
-Vi: Vietnamese.
-ms: Malay.
-id: Indonesian.
-fil: Filipino.
-th: Thai.
-pt: Portuguese.
-tr: Turkish.
-ar: Arabic.
-es: Spanish.
-hi: Hindi
-Fr: French.
-de: German.
-zh-dialect: Chinese dialect
-zh_en: Simplified Chinese and English
-prime_zh: Simplified Chinese, Chinese Dialect and English.
-                     * @return VideoSrcLanguage Video source language for intelligent caption.
-Valid values: 
-zh: Simplified Chinese.
-en: Eenglish.
-Ja: Japanese.
-Ko: Korean.
-zh-PY: Simplified Chinese, English and Cantonese.
-zh-medical: Medical Chinese.
-yue: Cantonese.
-Vi: Vietnamese.
-ms: Malay.
-id: Indonesian.
-fil: Filipino.
-th: Thai.
-pt: Portuguese.
-tr: Turkish.
-ar: Arabic.
-es: Spanish.
-hi: Hindi
-Fr: French.
-de: German.
-zh-dialect: Chinese dialect
-zh_en: Simplified Chinese and English
-prime_zh: Simplified Chinese, Chinese Dialect and English.
+                     * 获取Source language of the video with smart subtitles.
+Currently, the following languages are supported:
+`zh`: Simplified Chinese.
+`yue`: Cantonese.
+`zh-PY`: Chinese, English, and Cantonese.
+`zh_medical`: Chinese (medical scenario).
+`zh_dialect`: Chinese dialect.
+`prime_zh`: Chinese, English, and Chinese dialects.
+`zh_en`: Chinese and English.
+`en`: English.
+`ja`: Japanese.
+`ko`: Korean.
+`fr`: French.
+`es`: Spanish.
+`it`: Italian.
+`de`: German.
+`tr`: Turkish.
+`ru`: Russian.
+`pt`: Portuguese (Brazil).
+`pt-PT`: Portuguese (Portugal).
+`vi`: Vietnamese.
+`id`: Indonesian.
+`ms`: Malay.
+`th`: Thai.
+`ar`: Arabic.
+`hi`: Hindi.
+`fil`: Filipino.
+`auto`: automatic recognition (it is only supported in pure subtitle translation).
+                     * @return VideoSrcLanguage Source language of the video with smart subtitles.
+Currently, the following languages are supported:
+`zh`: Simplified Chinese.
+`yue`: Cantonese.
+`zh-PY`: Chinese, English, and Cantonese.
+`zh_medical`: Chinese (medical scenario).
+`zh_dialect`: Chinese dialect.
+`prime_zh`: Chinese, English, and Chinese dialects.
+`zh_en`: Chinese and English.
+`en`: English.
+`ja`: Japanese.
+`ko`: Korean.
+`fr`: French.
+`es`: Spanish.
+`it`: Italian.
+`de`: German.
+`tr`: Turkish.
+`ru`: Russian.
+`pt`: Portuguese (Brazil).
+`pt-PT`: Portuguese (Portugal).
+`vi`: Vietnamese.
+`id`: Indonesian.
+`ms`: Malay.
+`th`: Thai.
+`ar`: Arabic.
+`hi`: Hindi.
+`fil`: Filipino.
+`auto`: automatic recognition (it is only supported in pure subtitle translation).
                      * 
                      */
                     std::string GetVideoSrcLanguage() const;
 
                     /**
-                     * 设置Video source language for intelligent caption.
-Valid values: 
-zh: Simplified Chinese.
-en: Eenglish.
-Ja: Japanese.
-Ko: Korean.
-zh-PY: Simplified Chinese, English and Cantonese.
-zh-medical: Medical Chinese.
-yue: Cantonese.
-Vi: Vietnamese.
-ms: Malay.
-id: Indonesian.
-fil: Filipino.
-th: Thai.
-pt: Portuguese.
-tr: Turkish.
-ar: Arabic.
-es: Spanish.
-hi: Hindi
-Fr: French.
-de: German.
-zh-dialect: Chinese dialect
-zh_en: Simplified Chinese and English
-prime_zh: Simplified Chinese, Chinese Dialect and English.
-                     * @param _videoSrcLanguage Video source language for intelligent caption.
-Valid values: 
-zh: Simplified Chinese.
-en: Eenglish.
-Ja: Japanese.
-Ko: Korean.
-zh-PY: Simplified Chinese, English and Cantonese.
-zh-medical: Medical Chinese.
-yue: Cantonese.
-Vi: Vietnamese.
-ms: Malay.
-id: Indonesian.
-fil: Filipino.
-th: Thai.
-pt: Portuguese.
-tr: Turkish.
-ar: Arabic.
-es: Spanish.
-hi: Hindi
-Fr: French.
-de: German.
-zh-dialect: Chinese dialect
-zh_en: Simplified Chinese and English
-prime_zh: Simplified Chinese, Chinese Dialect and English.
+                     * 设置Source language of the video with smart subtitles.
+Currently, the following languages are supported:
+`zh`: Simplified Chinese.
+`yue`: Cantonese.
+`zh-PY`: Chinese, English, and Cantonese.
+`zh_medical`: Chinese (medical scenario).
+`zh_dialect`: Chinese dialect.
+`prime_zh`: Chinese, English, and Chinese dialects.
+`zh_en`: Chinese and English.
+`en`: English.
+`ja`: Japanese.
+`ko`: Korean.
+`fr`: French.
+`es`: Spanish.
+`it`: Italian.
+`de`: German.
+`tr`: Turkish.
+`ru`: Russian.
+`pt`: Portuguese (Brazil).
+`pt-PT`: Portuguese (Portugal).
+`vi`: Vietnamese.
+`id`: Indonesian.
+`ms`: Malay.
+`th`: Thai.
+`ar`: Arabic.
+`hi`: Hindi.
+`fil`: Filipino.
+`auto`: automatic recognition (it is only supported in pure subtitle translation).
+                     * @param _videoSrcLanguage Source language of the video with smart subtitles.
+Currently, the following languages are supported:
+`zh`: Simplified Chinese.
+`yue`: Cantonese.
+`zh-PY`: Chinese, English, and Cantonese.
+`zh_medical`: Chinese (medical scenario).
+`zh_dialect`: Chinese dialect.
+`prime_zh`: Chinese, English, and Chinese dialects.
+`zh_en`: Chinese and English.
+`en`: English.
+`ja`: Japanese.
+`ko`: Korean.
+`fr`: French.
+`es`: Spanish.
+`it`: Italian.
+`de`: German.
+`tr`: Turkish.
+`ru`: Russian.
+`pt`: Portuguese (Brazil).
+`pt-PT`: Portuguese (Portugal).
+`vi`: Vietnamese.
+`id`: Indonesian.
+`ms`: Malay.
+`th`: Thai.
+`ar`: Arabic.
+`hi`: Hindi.
+`fil`: Filipino.
+`auto`: automatic recognition (it is only supported in pure subtitle translation).
                      * 
                      */
                     void SetVideoSrcLanguage(const std::string& _videoSrcLanguage);
@@ -244,27 +260,59 @@ Length limit: 256 characters.
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Intelligent subtitle file format.
-vtt: WebVTT format.
-srt: SRT format.
-If this field is left blank, no subtitle file will be generated.
-                     * @return SubtitleFormat Intelligent subtitle file format.
-vtt: WebVTT format.
-srt: SRT format.
-If this field is left blank, no subtitle file will be generated.
+                     * 获取Smart subtitle file format:
+- Under the ASR recognition and translation processing type:
+     - vtt: WebVTT format subtitle.
+     - srt: SRT format subtitle.
+     - If this field is unspecified or left blank, no subtitle file will be generated.
+- Under the pure subtitle translation processing type:
+    - original: consistent with the source file.
+    - vtt: WebVTT format subtitle.
+    - srt: SRT format subtitle.
+**Note**:
+- For ASR recognition mode, when 2 or more languages are involved in translation, this field cannot be unspecified or left blank.
+- For pure subtitle translation mode, this field cannot be unspecified or left blank.
+                     * @return SubtitleFormat Smart subtitle file format:
+- Under the ASR recognition and translation processing type:
+     - vtt: WebVTT format subtitle.
+     - srt: SRT format subtitle.
+     - If this field is unspecified or left blank, no subtitle file will be generated.
+- Under the pure subtitle translation processing type:
+    - original: consistent with the source file.
+    - vtt: WebVTT format subtitle.
+    - srt: SRT format subtitle.
+**Note**:
+- For ASR recognition mode, when 2 or more languages are involved in translation, this field cannot be unspecified or left blank.
+- For pure subtitle translation mode, this field cannot be unspecified or left blank.
                      * 
                      */
                     std::string GetSubtitleFormat() const;
 
                     /**
-                     * 设置Intelligent subtitle file format.
-vtt: WebVTT format.
-srt: SRT format.
-If this field is left blank, no subtitle file will be generated.
-                     * @param _subtitleFormat Intelligent subtitle file format.
-vtt: WebVTT format.
-srt: SRT format.
-If this field is left blank, no subtitle file will be generated.
+                     * 设置Smart subtitle file format:
+- Under the ASR recognition and translation processing type:
+     - vtt: WebVTT format subtitle.
+     - srt: SRT format subtitle.
+     - If this field is unspecified or left blank, no subtitle file will be generated.
+- Under the pure subtitle translation processing type:
+    - original: consistent with the source file.
+    - vtt: WebVTT format subtitle.
+    - srt: SRT format subtitle.
+**Note**:
+- For ASR recognition mode, when 2 or more languages are involved in translation, this field cannot be unspecified or left blank.
+- For pure subtitle translation mode, this field cannot be unspecified or left blank.
+                     * @param _subtitleFormat Smart subtitle file format:
+- Under the ASR recognition and translation processing type:
+     - vtt: WebVTT format subtitle.
+     - srt: SRT format subtitle.
+     - If this field is unspecified or left blank, no subtitle file will be generated.
+- Under the pure subtitle translation processing type:
+    - original: consistent with the source file.
+    - vtt: WebVTT format subtitle.
+    - srt: SRT format subtitle.
+**Note**:
+- For ASR recognition mode, when 2 or more languages are involved in translation, this field cannot be unspecified or left blank.
+- For pure subtitle translation mode, this field cannot be unspecified or left blank.
                      * 
                      */
                     void SetSubtitleFormat(const std::string& _subtitleFormat);
@@ -299,22 +347,26 @@ If this field is left blank, no subtitle file will be generated.
 
                     /**
                      * 获取Subtitle translation switch.
-ON: enable translation
-OFF: disable translation
+`ON`: translation enabled.
+`OFF`: translation disabled.
+**Note**: For pure subtitle translation mode, the default value is enabled if the field is unspecified. The field cannot be left blank or set to `OFF`.
                      * @return TranslateSwitch Subtitle translation switch.
-ON: enable translation
-OFF: disable translation
+`ON`: translation enabled.
+`OFF`: translation disabled.
+**Note**: For pure subtitle translation mode, the default value is enabled if the field is unspecified. The field cannot be left blank or set to `OFF`.
                      * 
                      */
                     std::string GetTranslateSwitch() const;
 
                     /**
                      * 设置Subtitle translation switch.
-ON: enable translation
-OFF: disable translation
+`ON`: translation enabled.
+`OFF`: translation disabled.
+**Note**: For pure subtitle translation mode, the default value is enabled if the field is unspecified. The field cannot be left blank or set to `OFF`.
                      * @param _translateSwitch Subtitle translation switch.
-ON: enable translation
-OFF: disable translation
+`ON`: translation enabled.
+`OFF`: translation disabled.
+**Note**: For pure subtitle translation mode, the default value is enabled if the field is unspecified. The field cannot be left blank or set to `OFF`.
                      * 
                      */
                     void SetTranslateSwitch(const std::string& _translateSwitch);
@@ -327,91 +379,103 @@ OFF: disable translation
                     bool TranslateSwitchHasBeenSet() const;
 
                     /**
-                     * 获取Target language for subtitle translation.
-This field takes effect when TranslateSwitch is set to ON.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-fr: French
-es: Spanish
-it: Italian
-de: German
-tr: Turkish
-ru: Russian
-pt: Portuguese
-vi: Vietnamese
-id: Indonesian
-ms: Malay
-th: Thai
-ar: Arabic
-hi: Hindi
-                     * @return TranslateDstLanguage Target language for subtitle translation.
-This field takes effect when TranslateSwitch is set to ON.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-fr: French
-es: Spanish
-it: Italian
-de: German
-tr: Turkish
-ru: Russian
-pt: Portuguese
-vi: Vietnamese
-id: Indonesian
-ms: Malay
-th: Thai
-ar: Arabic
-hi: Hindi
+                     * 获取Subtitle translation target language. This field is valid when the value of TranslateSwitch is `ON`.
+Currently, the following languages are supported:
+`zh`: Simplified Chinese.
+`zh-TW`: Traditional Chinese.
+`en`: English.
+`ja`: Japanese.
+`ko`: Korean.
+`fr`: French.
+`es`: Spanish.
+`it`: Italian.
+`de`: German.
+`tr`: Turkish.
+`ru`: Russian.
+`pt`: Portuguese (Brazil).
+`pt-PT`: Portuguese (Portugal).
+`vi`: Vietnamese.
+`id`: Indonesian.
+`ms`: Malay.
+`th`: Thai.
+`ar`: Arabic.
+`hi`: Hindi.
+`fil`: Filipino.
+**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
+                     * @return TranslateDstLanguage Subtitle translation target language. This field is valid when the value of TranslateSwitch is `ON`.
+Currently, the following languages are supported:
+`zh`: Simplified Chinese.
+`zh-TW`: Traditional Chinese.
+`en`: English.
+`ja`: Japanese.
+`ko`: Korean.
+`fr`: French.
+`es`: Spanish.
+`it`: Italian.
+`de`: German.
+`tr`: Turkish.
+`ru`: Russian.
+`pt`: Portuguese (Brazil).
+`pt-PT`: Portuguese (Portugal).
+`vi`: Vietnamese.
+`id`: Indonesian.
+`ms`: Malay.
+`th`: Thai.
+`ar`: Arabic.
+`hi`: Hindi.
+`fil`: Filipino.
+**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
                      * 
                      */
                     std::string GetTranslateDstLanguage() const;
 
                     /**
-                     * 设置Target language for subtitle translation.
-This field takes effect when TranslateSwitch is set to ON.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-fr: French
-es: Spanish
-it: Italian
-de: German
-tr: Turkish
-ru: Russian
-pt: Portuguese
-vi: Vietnamese
-id: Indonesian
-ms: Malay
-th: Thai
-ar: Arabic
-hi: Hindi
-                     * @param _translateDstLanguage Target language for subtitle translation.
-This field takes effect when TranslateSwitch is set to ON.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-fr: French
-es: Spanish
-it: Italian
-de: German
-tr: Turkish
-ru: Russian
-pt: Portuguese
-vi: Vietnamese
-id: Indonesian
-ms: Malay
-th: Thai
-ar: Arabic
-hi: Hindi
+                     * 设置Subtitle translation target language. This field is valid when the value of TranslateSwitch is `ON`.
+Currently, the following languages are supported:
+`zh`: Simplified Chinese.
+`zh-TW`: Traditional Chinese.
+`en`: English.
+`ja`: Japanese.
+`ko`: Korean.
+`fr`: French.
+`es`: Spanish.
+`it`: Italian.
+`de`: German.
+`tr`: Turkish.
+`ru`: Russian.
+`pt`: Portuguese (Brazil).
+`pt-PT`: Portuguese (Portugal).
+`vi`: Vietnamese.
+`id`: Indonesian.
+`ms`: Malay.
+`th`: Thai.
+`ar`: Arabic.
+`hi`: Hindi.
+`fil`: Filipino.
+**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
+                     * @param _translateDstLanguage Subtitle translation target language. This field is valid when the value of TranslateSwitch is `ON`.
+Currently, the following languages are supported:
+`zh`: Simplified Chinese.
+`zh-TW`: Traditional Chinese.
+`en`: English.
+`ja`: Japanese.
+`ko`: Korean.
+`fr`: French.
+`es`: Spanish.
+`it`: Italian.
+`de`: German.
+`tr`: Turkish.
+`ru`: Russian.
+`pt`: Portuguese (Brazil).
+`pt-PT`: Portuguese (Portugal).
+`vi`: Vietnamese.
+`id`: Indonesian.
+`ms`: Malay.
+`th`: Thai.
+`ar`: Arabic.
+`hi`: Hindi.
+`fil`: Filipino.
+**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
                      * 
                      */
                     void SetTranslateDstLanguage(const std::string& _translateDstLanguage);
@@ -423,6 +487,39 @@ hi: Hindi
                      */
                     bool TranslateDstLanguageHasBeenSet() const;
 
+                    /**
+                     * 获取Subtitle processing type:
+- 0: ASR recognition subtitle.
+- 1: pure subtitle translation.
+**Note**: The default processing type is ASR recognition subtitle if the field is unspecified.
+                     * @return ProcessType Subtitle processing type:
+- 0: ASR recognition subtitle.
+- 1: pure subtitle translation.
+**Note**: The default processing type is ASR recognition subtitle if the field is unspecified.
+                     * 
+                     */
+                    uint64_t GetProcessType() const;
+
+                    /**
+                     * 设置Subtitle processing type:
+- 0: ASR recognition subtitle.
+- 1: pure subtitle translation.
+**Note**: The default processing type is ASR recognition subtitle if the field is unspecified.
+                     * @param _processType Subtitle processing type:
+- 0: ASR recognition subtitle.
+- 1: pure subtitle translation.
+**Note**: The default processing type is ASR recognition subtitle if the field is unspecified.
+                     * 
+                     */
+                    void SetProcessType(const uint64_t& _processType);
+
+                    /**
+                     * 判断参数 ProcessType 是否已赋值
+                     * @return ProcessType 是否已赋值
+                     * 
+                     */
+                    bool ProcessTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -433,30 +530,34 @@ Length limit: 64 characters.
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Video source language for intelligent caption.
-Valid values: 
-zh: Simplified Chinese.
-en: Eenglish.
-Ja: Japanese.
-Ko: Korean.
-zh-PY: Simplified Chinese, English and Cantonese.
-zh-medical: Medical Chinese.
-yue: Cantonese.
-Vi: Vietnamese.
-ms: Malay.
-id: Indonesian.
-fil: Filipino.
-th: Thai.
-pt: Portuguese.
-tr: Turkish.
-ar: Arabic.
-es: Spanish.
-hi: Hindi
-Fr: French.
-de: German.
-zh-dialect: Chinese dialect
-zh_en: Simplified Chinese and English
-prime_zh: Simplified Chinese, Chinese Dialect and English.
+                     * Source language of the video with smart subtitles.
+Currently, the following languages are supported:
+`zh`: Simplified Chinese.
+`yue`: Cantonese.
+`zh-PY`: Chinese, English, and Cantonese.
+`zh_medical`: Chinese (medical scenario).
+`zh_dialect`: Chinese dialect.
+`prime_zh`: Chinese, English, and Chinese dialects.
+`zh_en`: Chinese and English.
+`en`: English.
+`ja`: Japanese.
+`ko`: Korean.
+`fr`: French.
+`es`: Spanish.
+`it`: Italian.
+`de`: German.
+`tr`: Turkish.
+`ru`: Russian.
+`pt`: Portuguese (Brazil).
+`pt-PT`: Portuguese (Portugal).
+`vi`: Vietnamese.
+`id`: Indonesian.
+`ms`: Malay.
+`th`: Thai.
+`ar`: Arabic.
+`hi`: Hindi.
+`fil`: Filipino.
+`auto`: automatic recognition (it is only supported in pure subtitle translation).
                      */
                     std::string m_videoSrcLanguage;
                     bool m_videoSrcLanguageHasBeenSet;
@@ -479,10 +580,18 @@ Length limit: 256 characters.
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Intelligent subtitle file format.
-vtt: WebVTT format.
-srt: SRT format.
-If this field is left blank, no subtitle file will be generated.
+                     * Smart subtitle file format:
+- Under the ASR recognition and translation processing type:
+     - vtt: WebVTT format subtitle.
+     - srt: SRT format subtitle.
+     - If this field is unspecified or left blank, no subtitle file will be generated.
+- Under the pure subtitle translation processing type:
+    - original: consistent with the source file.
+    - vtt: WebVTT format subtitle.
+    - srt: SRT format subtitle.
+**Note**:
+- For ASR recognition mode, when 2 or more languages are involved in translation, this field cannot be unspecified or left blank.
+- For pure subtitle translation mode, this field cannot be unspecified or left blank.
                      */
                     std::string m_subtitleFormat;
                     bool m_subtitleFormatHasBeenSet;
@@ -495,36 +604,49 @@ If this field is left blank, no subtitle file will be generated.
 
                     /**
                      * Subtitle translation switch.
-ON: enable translation
-OFF: disable translation
+`ON`: translation enabled.
+`OFF`: translation disabled.
+**Note**: For pure subtitle translation mode, the default value is enabled if the field is unspecified. The field cannot be left blank or set to `OFF`.
                      */
                     std::string m_translateSwitch;
                     bool m_translateSwitchHasBeenSet;
 
                     /**
-                     * Target language for subtitle translation.
-This field takes effect when TranslateSwitch is set to ON.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-fr: French
-es: Spanish
-it: Italian
-de: German
-tr: Turkish
-ru: Russian
-pt: Portuguese
-vi: Vietnamese
-id: Indonesian
-ms: Malay
-th: Thai
-ar: Arabic
-hi: Hindi
+                     * Subtitle translation target language. This field is valid when the value of TranslateSwitch is `ON`.
+Currently, the following languages are supported:
+`zh`: Simplified Chinese.
+`zh-TW`: Traditional Chinese.
+`en`: English.
+`ja`: Japanese.
+`ko`: Korean.
+`fr`: French.
+`es`: Spanish.
+`it`: Italian.
+`de`: German.
+`tr`: Turkish.
+`ru`: Russian.
+`pt`: Portuguese (Brazil).
+`pt-PT`: Portuguese (Portugal).
+`vi`: Vietnamese.
+`id`: Indonesian.
+`ms`: Malay.
+`th`: Thai.
+`ar`: Arabic.
+`hi`: Hindi.
+`fil`: Filipino.
+**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
                      */
                     std::string m_translateDstLanguage;
                     bool m_translateDstLanguageHasBeenSet;
+
+                    /**
+                     * Subtitle processing type:
+- 0: ASR recognition subtitle.
+- 1: pure subtitle translation.
+**Note**: The default processing type is ASR recognition subtitle if the field is unspecified.
+                     */
+                    uint64_t m_processType;
+                    bool m_processTypeHasBeenSet;
 
                 };
             }

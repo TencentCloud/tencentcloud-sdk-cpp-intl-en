@@ -142,15 +142,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取The Offset. The default value is 0. For more information about `Offset`, see the relevant section in the API documentation.
-                     * @return Offset The Offset. The default value is 0. For more information about `Offset`, see the relevant section in the API documentation.
+                     * 获取The Offset. The default value is 0. For more information on Offset, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
+                     * @return Offset The Offset. The default value is 0. For more information on Offset, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置The Offset. The default value is 0. For more information about `Offset`, see the relevant section in the API documentation.
-                     * @param _offset The Offset. The default value is 0. For more information about `Offset`, see the relevant section in the API documentation.
+                     * 设置The Offset. The default value is 0. For more information on Offset, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
+                     * @param _offset The Offset. The default value is 0. For more information on Offset, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -163,15 +163,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API documentation.
-                     * @return Limit Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API documentation.
+                     * 获取Number of returned results. Default value: 20. Maximum value: 100. For more information on Limit, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
+                     * @return Limit Number of returned results. Default value: 20. Maximum value: 100. For more information on Limit, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API documentation.
-                     * @param _limit Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API documentation.
+                     * 设置Number of returned results. Default value: 20. Maximum value: 100. For more information on Limit, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
+                     * @param _limit Number of returned results. Default value: 20. Maximum value: 100. For more information on Limit, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -212,13 +212,13 @@ namespace TencentCloud
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * The Offset. The default value is 0. For more information about `Offset`, see the relevant section in the API documentation.
+                     * The Offset. The default value is 0. For more information on Offset, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API documentation.
+                     * Number of returned results. Default value: 20. Maximum value: 100. For more information on Limit, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

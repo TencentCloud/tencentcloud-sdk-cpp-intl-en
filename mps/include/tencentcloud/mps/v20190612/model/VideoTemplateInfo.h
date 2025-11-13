@@ -458,27 +458,23 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool VcrfHasBeenSet() const;
 
                     /**
-                     * 获取Average segment duration. Value range: (0-10], unit: second.
-This parameter will be set to automatic if not specified. The segment duration will be automatically selected based on the GOP and other characteristics of the video.
-Note: It can be used only in the container format of hls.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return HlsTime Average segment duration. Value range: (0-10], unit: second.
-This parameter will be set to automatic if not specified. The segment duration will be automatically selected based on the GOP and other characteristics of the video.
-Note: It can be used only in the container format of hls.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Average shard duration. value range: (0-10], unit: second.
+Leaving it blank means auto, which automatically chooses the appropriate segment duration based on video features such as GOP.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HlsTime Average shard duration. value range: (0-10], unit: second.
+Leaving it blank means auto, which automatically chooses the appropriate segment duration based on video features such as GOP.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetHlsTime() const;
 
                     /**
-                     * 设置Average segment duration. Value range: (0-10], unit: second.
-This parameter will be set to automatic if not specified. The segment duration will be automatically selected based on the GOP and other characteristics of the video.
-Note: It can be used only in the container format of hls.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _hlsTime Average segment duration. Value range: (0-10], unit: second.
-This parameter will be set to automatic if not specified. The segment duration will be automatically selected based on the GOP and other characteristics of the video.
-Note: It can be used only in the container format of hls.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Average shard duration. value range: (0-10], unit: second.
+Leaving it blank means auto, which automatically chooses the appropriate segment duration based on video features such as GOP.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _hlsTime Average shard duration. value range: (0-10], unit: second.
+Leaving it blank means auto, which automatically chooses the appropriate segment duration based on video features such as GOP.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHlsTime(const uint64_t& _hlsTime);
@@ -1006,22 +1002,24 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * 获取Video scenario. Valid values: 
-normal: General transcoding scenario: General transcoding and compression scenario.
-pgc: PGC HD TV shows and movies: At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
-materials_video: HD materials: Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
-ugc: UGC content: It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
-e-commerce_video: Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
-educational_video: Education: At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
+- normal: General transcoding scenario. General transcoding and compression scenario.
+- pgc: PGC HD TV shows and movies. At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
+- materials_video: HD materials. Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
+- ugc: UGC content. It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
+- e-commerce_video. Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
+- educational_video. Education. At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
+
 Default value: normal.
 Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @return SceneType Video scenario. Valid values: 
-normal: General transcoding scenario: General transcoding and compression scenario.
-pgc: PGC HD TV shows and movies: At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
-materials_video: HD materials: Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
-ugc: UGC content: It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
-e-commerce_video: Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
-educational_video: Education: At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
+- normal: General transcoding scenario. General transcoding and compression scenario.
+- pgc: PGC HD TV shows and movies. At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
+- materials_video: HD materials. Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
+- ugc: UGC content. It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
+- e-commerce_video. Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
+- educational_video. Education. At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
+
 Default value: normal.
 Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
 Note: This field may return null, indicating that no valid value can be obtained.
@@ -1031,22 +1029,24 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * 设置Video scenario. Valid values: 
-normal: General transcoding scenario: General transcoding and compression scenario.
-pgc: PGC HD TV shows and movies: At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
-materials_video: HD materials: Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
-ugc: UGC content: It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
-e-commerce_video: Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
-educational_video: Education: At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
+- normal: General transcoding scenario. General transcoding and compression scenario.
+- pgc: PGC HD TV shows and movies. At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
+- materials_video: HD materials. Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
+- ugc: UGC content. It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
+- e-commerce_video. Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
+- educational_video. Education. At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
+
 Default value: normal.
 Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _sceneType Video scenario. Valid values: 
-normal: General transcoding scenario: General transcoding and compression scenario.
-pgc: PGC HD TV shows and movies: At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
-materials_video: HD materials: Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
-ugc: UGC content: It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
-e-commerce_video: Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
-educational_video: Education: At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
+- normal: General transcoding scenario. General transcoding and compression scenario.
+- pgc: PGC HD TV shows and movies. At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
+- materials_video: HD materials. Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
+- ugc: UGC content. It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
+- e-commerce_video. Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
+- educational_video. Education. At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
+
 Default value: normal.
 Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
 Note: This field may return null, indicating that no valid value can be obtained.
@@ -1063,19 +1063,21 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * 获取Transcoding policy. Valid values: 
-ultra_compress: Extreme compression: Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
-standard_compress: Comprehensively optimal: Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
-high_compress: Bitrate priority: Prioritizes reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
-low_compress: Image quality priority: Prioritizes ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
+- ultra_compress: Extreme compression. Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
+- standard_compress: Comprehensively optimal. Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
+- high_compress: Bitrate priority. Prioritizes reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
+- low_compress: Image quality priority. Prioritizes ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
+
 Default value: standard_compress. 
 Note: If you need to watch videos on TV, it is recommended not to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
 Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @return CompressType Transcoding policy. Valid values: 
-ultra_compress: Extreme compression: Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
-standard_compress: Comprehensively optimal: Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
-high_compress: Bitrate priority: Prioritizes reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
-low_compress: Image quality priority: Prioritizes ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
+- ultra_compress: Extreme compression. Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
+- standard_compress: Comprehensively optimal. Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
+- high_compress: Bitrate priority. Prioritizes reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
+- low_compress: Image quality priority. Prioritizes ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
+
 Default value: standard_compress. 
 Note: If you need to watch videos on TV, it is recommended not to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
 Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
@@ -1086,19 +1088,21 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * 设置Transcoding policy. Valid values: 
-ultra_compress: Extreme compression: Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
-standard_compress: Comprehensively optimal: Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
-high_compress: Bitrate priority: Prioritizes reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
-low_compress: Image quality priority: Prioritizes ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
+- ultra_compress: Extreme compression. Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
+- standard_compress: Comprehensively optimal. Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
+- high_compress: Bitrate priority. Prioritizes reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
+- low_compress: Image quality priority. Prioritizes ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
+
 Default value: standard_compress. 
 Note: If you need to watch videos on TV, it is recommended not to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
 Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _compressType Transcoding policy. Valid values: 
-ultra_compress: Extreme compression: Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
-standard_compress: Comprehensively optimal: Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
-high_compress: Bitrate priority: Prioritizes reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
-low_compress: Image quality priority: Prioritizes ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
+- ultra_compress: Extreme compression. Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
+- standard_compress: Comprehensively optimal. Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
+- high_compress: Bitrate priority. Prioritizes reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
+- low_compress: Image quality priority. Prioritizes ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
+
 Default value: standard_compress. 
 Note: If you need to watch videos on TV, it is recommended not to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
 Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
@@ -1227,10 +1231,9 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_vcrfHasBeenSet;
 
                     /**
-                     * Average segment duration. Value range: (0-10], unit: second.
-This parameter will be set to automatic if not specified. The segment duration will be automatically selected based on the GOP and other characteristics of the video.
-Note: It can be used only in the container format of hls.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Average shard duration. value range: (0-10], unit: second.
+Leaving it blank means auto, which automatically chooses the appropriate segment duration based on video features such as GOP.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_hlsTime;
                     bool m_hlsTimeHasBeenSet;
@@ -1376,12 +1379,13 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * Video scenario. Valid values: 
-normal: General transcoding scenario: General transcoding and compression scenario.
-pgc: PGC HD TV shows and movies: At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
-materials_video: HD materials: Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
-ugc: UGC content: It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
-e-commerce_video: Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
-educational_video: Education: At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
+- normal: General transcoding scenario. General transcoding and compression scenario.
+- pgc: PGC HD TV shows and movies. At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
+- materials_video: HD materials. Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
+- ugc: UGC content. It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
+- e-commerce_video. Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
+- educational_video. Education. At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
+
 Default value: normal.
 Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
 Note: This field may return null, indicating that no valid value can be obtained.
@@ -1391,10 +1395,11 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * Transcoding policy. Valid values: 
-ultra_compress: Extreme compression: Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
-standard_compress: Comprehensively optimal: Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
-high_compress: Bitrate priority: Prioritizes reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
-low_compress: Image quality priority: Prioritizes ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
+- ultra_compress: Extreme compression. Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
+- standard_compress: Comprehensively optimal. Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
+- high_compress: Bitrate priority. Prioritizes reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
+- low_compress: Image quality priority. Prioritizes ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
+
 Default value: standard_compress. 
 Note: If you need to watch videos on TV, it is recommended not to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
 Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.

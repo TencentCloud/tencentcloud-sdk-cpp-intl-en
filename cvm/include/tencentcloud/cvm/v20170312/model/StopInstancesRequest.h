@@ -66,21 +66,21 @@ namespace TencentCloud
                     /**
                      * 获取(Disused. Please use `StopType` instead.) Whether to forcibly shut down an instance after a normal shutdown fails. Valid values: <br><li>`TRUE`: yes;<br><li>`FALSE`: no<br><br>Default value: `FALSE`. 
                      * @return ForceStop (Disused. Please use `StopType` instead.) Whether to forcibly shut down an instance after a normal shutdown fails. Valid values: <br><li>`TRUE`: yes;<br><li>`FALSE`: no<br><br>Default value: `FALSE`. 
-                     * 
+                     * @deprecated
                      */
                     bool GetForceStop() const;
 
                     /**
                      * 设置(Disused. Please use `StopType` instead.) Whether to forcibly shut down an instance after a normal shutdown fails. Valid values: <br><li>`TRUE`: yes;<br><li>`FALSE`: no<br><br>Default value: `FALSE`. 
                      * @param _forceStop (Disused. Please use `StopType` instead.) Whether to forcibly shut down an instance after a normal shutdown fails. Valid values: <br><li>`TRUE`: yes;<br><li>`FALSE`: no<br><br>Default value: `FALSE`. 
-                     * 
+                     * @deprecated
                      */
                     void SetForceStop(const bool& _forceStop);
 
                     /**
                      * 判断参数 ForceStop 是否已赋值
                      * @return ForceStop 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool ForceStopHasBeenSet() const;
 

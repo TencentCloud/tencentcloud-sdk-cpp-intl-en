@@ -108,23 +108,44 @@ namespace TencentCloud
                     /**
                      * 获取Whether to perform forced shutdown.
                      * @return ForceStop Whether to perform forced shutdown.
-                     * 
+                     * @deprecated
                      */
                     bool GetForceStop() const;
 
                     /**
                      * 设置Whether to perform forced shutdown.
                      * @param _forceStop Whether to perform forced shutdown.
-                     * 
+                     * @deprecated
                      */
                     void SetForceStop(const bool& _forceStop);
 
                     /**
                      * 判断参数 ForceStop 是否已赋值
                      * @return ForceStop 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool ForceStopHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return StopType 
+                     * 
+                     */
+                    std::string GetStopType() const;
+
+                    /**
+                     * 设置
+                     * @param _stopType 
+                     * 
+                     */
+                    void SetStopType(const std::string& _stopType);
+
+                    /**
+                     * 判断参数 StopType 是否已赋值
+                     * @return StopType 是否已赋值
+                     * 
+                     */
+                    bool StopTypeHasBeenSet() const;
 
                 private:
 
@@ -151,6 +172,12 @@ namespace TencentCloud
                      */
                     bool m_forceStop;
                     bool m_forceStopHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_stopType;
+                    bool m_stopTypeHasBeenSet;
 
                 };
             }

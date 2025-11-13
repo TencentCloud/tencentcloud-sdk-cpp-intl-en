@@ -142,6 +142,27 @@ It indicates the end time for recording in UTC format (e.g., `2020-01-01T12:00:0
                      */
                     bool EndTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Effective only when StartType is FIXED_PTS, with a range of 1-8589934592
+                     * @return PTS Effective only when StartType is FIXED_PTS, with a range of 1-8589934592
+                     * 
+                     */
+                    uint64_t GetPTS() const;
+
+                    /**
+                     * 设置Effective only when StartType is FIXED_PTS, with a range of 1-8589934592
+                     * @param _pTS Effective only when StartType is FIXED_PTS, with a range of 1-8589934592
+                     * 
+                     */
+                    void SetPTS(const uint64_t& _pTS);
+
+                    /**
+                     * 判断参数 PTS 是否已赋值
+                     * @return PTS 是否已赋值
+                     * 
+                     */
+                    bool PTSHasBeenSet() const;
+
                 private:
 
                     /**
@@ -170,6 +191,12 @@ It indicates the end time for recording in UTC format (e.g., `2020-01-01T12:00:0
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
+
+                    /**
+                     * Effective only when StartType is FIXED_PTS, with a range of 1-8589934592
+                     */
+                    uint64_t m_pTS;
+                    bool m_pTSHasBeenSet;
 
                 };
             }

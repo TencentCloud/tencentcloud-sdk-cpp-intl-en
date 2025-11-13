@@ -150,6 +150,27 @@ namespace TencentCloud
                      */
                     bool EnhancedServiceHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return UserData 
+                     * 
+                     */
+                    std::string GetUserData() const;
+
+                    /**
+                     * 设置
+                     * @param _userData 
+                     * 
+                     */
+                    void SetUserData(const std::string& _userData);
+
+                    /**
+                     * 判断参数 UserData 是否已赋值
+                     * @return UserData 是否已赋值
+                     * 
+                     */
+                    bool UserDataHasBeenSet() const;
+
                 private:
 
                     /**
@@ -181,6 +202,12 @@ namespace TencentCloud
                      */
                     EnhancedService m_enhancedService;
                     bool m_enhancedServiceHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_userData;
+                    bool m_userDataHasBeenSet;
 
                 };
             }

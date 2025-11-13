@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/SmartSubtitleTaskTransTextSegmentItem.h>
 #include <tencentcloud/mps/v20190612/model/TaskOutputStorage.h>
+#include <tencentcloud/mps/v20190612/model/SubtitleTransResultItem.h>
 
 
 namespace TencentCloud
@@ -115,6 +116,48 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool OutputStorageHasBeenSet() const;
 
+                    /**
+                     * 获取Subtitle file URL.
+                     * @return Path Subtitle file URL.
+                     * 
+                     */
+                    std::string GetPath() const;
+
+                    /**
+                     * 设置Subtitle file URL.
+                     * @param _path Subtitle file URL.
+                     * 
+                     */
+                    void SetPath(const std::string& _path);
+
+                    /**
+                     * 判断参数 Path 是否已赋值
+                     * @return Path 是否已赋值
+                     * 
+                     */
+                    bool PathHasBeenSet() const;
+
+                    /**
+                     * 获取Returned translation result during multilingual translation.	
+                     * @return SubtitleResults Returned translation result during multilingual translation.	
+                     * 
+                     */
+                    std::vector<SubtitleTransResultItem> GetSubtitleResults() const;
+
+                    /**
+                     * 设置Returned translation result during multilingual translation.	
+                     * @param _subtitleResults Returned translation result during multilingual translation.	
+                     * 
+                     */
+                    void SetSubtitleResults(const std::vector<SubtitleTransResultItem>& _subtitleResults);
+
+                    /**
+                     * 判断参数 SubtitleResults 是否已赋值
+                     * @return SubtitleResults 是否已赋值
+                     * 
+                     */
+                    bool SubtitleResultsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -135,6 +178,18 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
+
+                    /**
+                     * Subtitle file URL.
+                     */
+                    std::string m_path;
+                    bool m_pathHasBeenSet;
+
+                    /**
+                     * Returned translation result during multilingual translation.	
+                     */
+                    std::vector<SubtitleTransResultItem> m_subtitleResults;
+                    bool m_subtitleResultsHasBeenSet;
 
                 };
             }

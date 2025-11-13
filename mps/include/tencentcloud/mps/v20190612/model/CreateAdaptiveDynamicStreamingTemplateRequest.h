@@ -211,24 +211,24 @@ When the value is 1.
 1. StreamInfos.N.RemoveVideo=1
 2. StreamInfos.N.RemoveAudio=0
 3. StreamInfos.N.Video.Codec=copy
+
 When the value is 0.
 1. StreamInfos.N.Video.Codec cannot be copy.
 2. StreamInfos.N.Video.Fps cannot be null.
 
 Note:
-
 This value only distinguishes template types. The task uses the values of RemoveAudio and RemoveVideo.
                      * @return PureAudio Indicates whether it is audio-only. 0 means video template, 1 means audio-only template.
 When the value is 1.
 1. StreamInfos.N.RemoveVideo=1
 2. StreamInfos.N.RemoveAudio=0
 3. StreamInfos.N.Video.Codec=copy
+
 When the value is 0.
 1. StreamInfos.N.Video.Codec cannot be copy.
 2. StreamInfos.N.Video.Fps cannot be null.
 
 Note:
-
 This value only distinguishes template types. The task uses the values of RemoveAudio and RemoveVideo.
                      * 
                      */
@@ -240,24 +240,24 @@ When the value is 1.
 1. StreamInfos.N.RemoveVideo=1
 2. StreamInfos.N.RemoveAudio=0
 3. StreamInfos.N.Video.Codec=copy
+
 When the value is 0.
 1. StreamInfos.N.Video.Codec cannot be copy.
 2. StreamInfos.N.Video.Fps cannot be null.
 
 Note:
-
 This value only distinguishes template types. The task uses the values of RemoveAudio and RemoveVideo.
                      * @param _pureAudio Indicates whether it is audio-only. 0 means video template, 1 means audio-only template.
 When the value is 1.
 1. StreamInfos.N.RemoveVideo=1
 2. StreamInfos.N.RemoveAudio=0
 3. StreamInfos.N.Video.Codec=copy
+
 When the value is 0.
 1. StreamInfos.N.Video.Codec cannot be copy.
 2. StreamInfos.N.Video.Fps cannot be null.
 
 Note:
-
 This value only distinguishes template types. The task uses the values of RemoveAudio and RemoveVideo.
                      * 
                      */
@@ -271,19 +271,19 @@ This value only distinguishes template types. The task uses the values of Remove
                     bool PureAudioHasBeenSet() const;
 
                     /**
-                     * 获取HLS segment type. Valid values: <li>ts-segment: HLS+TS segment.</li> <li>ts-byterange: HLS+TS byte range.</li> <li>mp4-segment: HLS+MP4 segment.</li> <li>mp4-byterange: HLS+MP4 byte range.</li> <li>ts-packed-audio: TS+Packed audio.</li> <li>mp4-packed-audio: MP4+Packed audio.</li> Default value: ts-segment.
-Note: The HLS segment format for adaptive bitrate streaming is based on this field.
-                     * @return SegmentType HLS segment type. Valid values: <li>ts-segment: HLS+TS segment.</li> <li>ts-byterange: HLS+TS byte range.</li> <li>mp4-segment: HLS+MP4 segment.</li> <li>mp4-byterange: HLS+MP4 byte range.</li> <li>ts-packed-audio: TS+Packed audio.</li> <li>mp4-packed-audio: MP4+Packed audio.</li> Default value: ts-segment.
-Note: The HLS segment format for adaptive bitrate streaming is based on this field.
+                     * 获取Sharding type. available values: <li>ts-segment: HLS+ts segment</li> <li>ts-byterange: HLS+ts byte range</li> <li>mp4-segment: HLS+mp4 segment</li> <li>mp4-byterange: HLS+mp4 byte range</li> <li>ts-packed-audio: ts+packed audio</li> <li>mp4-packed-audio: mp4+packed audio</li> default value: ts-segment. 
+Note: the shard format of the adaptive bitrate stream is based on this field.
+                     * @return SegmentType Sharding type. available values: <li>ts-segment: HLS+ts segment</li> <li>ts-byterange: HLS+ts byte range</li> <li>mp4-segment: HLS+mp4 segment</li> <li>mp4-byterange: HLS+mp4 byte range</li> <li>ts-packed-audio: ts+packed audio</li> <li>mp4-packed-audio: mp4+packed audio</li> default value: ts-segment. 
+Note: the shard format of the adaptive bitrate stream is based on this field.
                      * 
                      */
                     std::string GetSegmentType() const;
 
                     /**
-                     * 设置HLS segment type. Valid values: <li>ts-segment: HLS+TS segment.</li> <li>ts-byterange: HLS+TS byte range.</li> <li>mp4-segment: HLS+MP4 segment.</li> <li>mp4-byterange: HLS+MP4 byte range.</li> <li>ts-packed-audio: TS+Packed audio.</li> <li>mp4-packed-audio: MP4+Packed audio.</li> Default value: ts-segment.
-Note: The HLS segment format for adaptive bitrate streaming is based on this field.
-                     * @param _segmentType HLS segment type. Valid values: <li>ts-segment: HLS+TS segment.</li> <li>ts-byterange: HLS+TS byte range.</li> <li>mp4-segment: HLS+MP4 segment.</li> <li>mp4-byterange: HLS+MP4 byte range.</li> <li>ts-packed-audio: TS+Packed audio.</li> <li>mp4-packed-audio: MP4+Packed audio.</li> Default value: ts-segment.
-Note: The HLS segment format for adaptive bitrate streaming is based on this field.
+                     * 设置Sharding type. available values: <li>ts-segment: HLS+ts segment</li> <li>ts-byterange: HLS+ts byte range</li> <li>mp4-segment: HLS+mp4 segment</li> <li>mp4-byterange: HLS+mp4 byte range</li> <li>ts-packed-audio: ts+packed audio</li> <li>mp4-packed-audio: mp4+packed audio</li> default value: ts-segment. 
+Note: the shard format of the adaptive bitrate stream is based on this field.
+                     * @param _segmentType Sharding type. available values: <li>ts-segment: HLS+ts segment</li> <li>ts-byterange: HLS+ts byte range</li> <li>mp4-segment: HLS+mp4 segment</li> <li>mp4-byterange: HLS+mp4 byte range</li> <li>ts-packed-audio: ts+packed audio</li> <li>mp4-packed-audio: mp4+packed audio</li> default value: ts-segment. 
+Note: the shard format of the adaptive bitrate stream is based on this field.
                      * 
                      */
                     void SetSegmentType(const std::string& _segmentType);
@@ -348,20 +348,20 @@ When the value is 1.
 1. StreamInfos.N.RemoveVideo=1
 2. StreamInfos.N.RemoveAudio=0
 3. StreamInfos.N.Video.Codec=copy
+
 When the value is 0.
 1. StreamInfos.N.Video.Codec cannot be copy.
 2. StreamInfos.N.Video.Fps cannot be null.
 
 Note:
-
 This value only distinguishes template types. The task uses the values of RemoveAudio and RemoveVideo.
                      */
                     uint64_t m_pureAudio;
                     bool m_pureAudioHasBeenSet;
 
                     /**
-                     * HLS segment type. Valid values: <li>ts-segment: HLS+TS segment.</li> <li>ts-byterange: HLS+TS byte range.</li> <li>mp4-segment: HLS+MP4 segment.</li> <li>mp4-byterange: HLS+MP4 byte range.</li> <li>ts-packed-audio: TS+Packed audio.</li> <li>mp4-packed-audio: MP4+Packed audio.</li> Default value: ts-segment.
-Note: The HLS segment format for adaptive bitrate streaming is based on this field.
+                     * Sharding type. available values: <li>ts-segment: HLS+ts segment</li> <li>ts-byterange: HLS+ts byte range</li> <li>mp4-segment: HLS+mp4 segment</li> <li>mp4-byterange: HLS+mp4 byte range</li> <li>ts-packed-audio: ts+packed audio</li> <li>mp4-packed-audio: mp4+packed audio</li> default value: ts-segment. 
+Note: the shard format of the adaptive bitrate stream is based on this field.
                      */
                     std::string m_segmentType;
                     bool m_segmentTypeHasBeenSet;

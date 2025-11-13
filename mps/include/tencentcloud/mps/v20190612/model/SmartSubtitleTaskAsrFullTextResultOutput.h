@@ -75,6 +75,27 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * 获取Subtitle file path.
+                     * @return Path Subtitle file path.
+                     * 
+                     */
+                    std::string GetPath() const;
+
+                    /**
+                     * 设置Subtitle file path.
+                     * @param _path Subtitle file path.
+                     * 
+                     */
+                    void SetPath(const std::string& _path);
+
+                    /**
+                     * 判断参数 Path 是否已赋值
+                     * @return Path 是否已赋值
+                     * 
+                     */
+                    bool PathHasBeenSet() const;
+
+                    /**
+                     * 获取Subtitle file path.
                      * @return SubtitlePath Subtitle file path.
                      * 
                      */
@@ -123,6 +144,12 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     std::vector<SmartSubtitleTaskAsrFullTextSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;
+
+                    /**
+                     * Subtitle file path.
+                     */
+                    std::string m_path;
+                    bool m_pathHasBeenSet;
 
                     /**
                      * Subtitle file path.

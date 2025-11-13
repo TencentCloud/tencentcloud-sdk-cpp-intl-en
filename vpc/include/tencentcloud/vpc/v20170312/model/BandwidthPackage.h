@@ -69,15 +69,39 @@ namespace TencentCloud
                     bool BandwidthPackageIdHasBeenSet() const;
 
                     /**
-                     * 获取Bandwidth package type. Values: `BGP`, `SINGLEISP`, `ANYCAST`, `SINGLEISP_CMCC`, `SINGLEISP_CTCC`, `SINGLEISP_CUCC`
-                     * @return NetworkType Bandwidth package type. Values: `BGP`, `SINGLEISP`, `ANYCAST`, `SINGLEISP_CMCC`, `SINGLEISP_CTCC`, `SINGLEISP_CUCC`
+                     * 获取Bandwidth package type, includes:
+<li>BGP: General BGP bandwidth package</li>
+<li>HIGH_QUALITY_BGP: Dedicated BGP bandwidth package</li>
+<li>ANYCAST: AIA BGP bandwidth package</li>
+<li>SINGLEISP_CMCC: CMCC bandwidth package</li>
+<li>SINGLEISP_CTCC: CTCC bandwidth package</li>
+<li>SINGLEISP_CUCC: CUCC bandwidth package</li>
+                     * @return NetworkType Bandwidth package type, includes:
+<li>BGP: General BGP bandwidth package</li>
+<li>HIGH_QUALITY_BGP: Dedicated BGP bandwidth package</li>
+<li>ANYCAST: AIA BGP bandwidth package</li>
+<li>SINGLEISP_CMCC: CMCC bandwidth package</li>
+<li>SINGLEISP_CTCC: CTCC bandwidth package</li>
+<li>SINGLEISP_CUCC: CUCC bandwidth package</li>
                      * 
                      */
                     std::string GetNetworkType() const;
 
                     /**
-                     * 设置Bandwidth package type. Values: `BGP`, `SINGLEISP`, `ANYCAST`, `SINGLEISP_CMCC`, `SINGLEISP_CTCC`, `SINGLEISP_CUCC`
-                     * @param _networkType Bandwidth package type. Values: `BGP`, `SINGLEISP`, `ANYCAST`, `SINGLEISP_CMCC`, `SINGLEISP_CTCC`, `SINGLEISP_CUCC`
+                     * 设置Bandwidth package type, includes:
+<li>BGP: General BGP bandwidth package</li>
+<li>HIGH_QUALITY_BGP: Dedicated BGP bandwidth package</li>
+<li>ANYCAST: AIA BGP bandwidth package</li>
+<li>SINGLEISP_CMCC: CMCC bandwidth package</li>
+<li>SINGLEISP_CTCC: CTCC bandwidth package</li>
+<li>SINGLEISP_CUCC: CUCC bandwidth package</li>
+                     * @param _networkType Bandwidth package type, includes:
+<li>BGP: General BGP bandwidth package</li>
+<li>HIGH_QUALITY_BGP: Dedicated BGP bandwidth package</li>
+<li>ANYCAST: AIA BGP bandwidth package</li>
+<li>SINGLEISP_CMCC: CMCC bandwidth package</li>
+<li>SINGLEISP_CTCC: CTCC bandwidth package</li>
+<li>SINGLEISP_CUCC: CUCC bandwidth package</li>
                      * 
                      */
                     void SetNetworkType(const std::string& _networkType);
@@ -90,15 +114,39 @@ namespace TencentCloud
                     bool NetworkTypeHasBeenSet() const;
 
                     /**
-                     * 获取The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
-                     * @return ChargeType The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
+                     * 获取Bandwidth package billing type, includes:
+<li>ENHANCED95_POSTPAID_BY_MONTH: Pay-as-you-go - Enhanced 95th percentile</li>
+<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: Postpaid - Main Traffic Billing</li>
+<li>BANDWIDTH_POSTPAID_BY_DAY: General BGP, Pay-as-you-go - Bandwidth-based</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: Static single-line, Pay-as-you-go - Daily billed</li>
+<li>TOP5_POSTPAID_BY_MONTH: Pay-as-you-go - Monthly top 5th, If you need to use this Bglling mode, please submit a ticket</li>
+
+                     * @return ChargeType Bandwidth package billing type, includes:
+<li>ENHANCED95_POSTPAID_BY_MONTH: Pay-as-you-go - Enhanced 95th percentile</li>
+<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: Postpaid - Main Traffic Billing</li>
+<li>BANDWIDTH_POSTPAID_BY_DAY: General BGP, Pay-as-you-go - Bandwidth-based</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: Static single-line, Pay-as-you-go - Daily billed</li>
+<li>TOP5_POSTPAID_BY_MONTH: Pay-as-you-go - Monthly top 5th, If you need to use this Bglling mode, please submit a ticket</li>
+
                      * 
                      */
                     std::string GetChargeType() const;
 
                     /**
-                     * 设置The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
-                     * @param _chargeType The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
+                     * 设置Bandwidth package billing type, includes:
+<li>ENHANCED95_POSTPAID_BY_MONTH: Pay-as-you-go - Enhanced 95th percentile</li>
+<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: Postpaid - Main Traffic Billing</li>
+<li>BANDWIDTH_POSTPAID_BY_DAY: General BGP, Pay-as-you-go - Bandwidth-based</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: Static single-line, Pay-as-you-go - Daily billed</li>
+<li>TOP5_POSTPAID_BY_MONTH: Pay-as-you-go - Monthly top 5th, If you need to use this Bglling mode, please submit a ticket</li>
+
+                     * @param _chargeType Bandwidth package billing type, includes:
+<li>ENHANCED95_POSTPAID_BY_MONTH: Pay-as-you-go - Enhanced 95th percentile</li>
+<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: Postpaid - Main Traffic Billing</li>
+<li>BANDWIDTH_POSTPAID_BY_DAY: General BGP, Pay-as-you-go - Bandwidth-based</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: Static single-line, Pay-as-you-go - Daily billed</li>
+<li>TOP5_POSTPAID_BY_MONTH: Pay-as-you-go - Monthly top 5th, If you need to use this Bglling mode, please submit a ticket</li>
+
                      * 
                      */
                     void SetChargeType(const std::string& _chargeType);
@@ -216,15 +264,23 @@ namespace TencentCloud
                     bool BandwidthHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Egress 
+                     * 获取Network egress. It defaults to `center_egress1`. Valid values:
+center_egress1,center_egress2,center_egress3
+
+                     * @return Egress Network egress. It defaults to `center_egress1`. Valid values:
+center_egress1,center_egress2,center_egress3
+
                      * 
                      */
                     std::string GetEgress() const;
 
                     /**
-                     * 设置
-                     * @param _egress 
+                     * 设置Network egress. It defaults to `center_egress1`. Valid values:
+center_egress1,center_egress2,center_egress3
+
+                     * @param _egress Network egress. It defaults to `center_egress1`. Valid values:
+center_egress1,center_egress2,center_egress3
+
                      * 
                      */
                     void SetEgress(const std::string& _egress);
@@ -245,13 +301,25 @@ namespace TencentCloud
                     bool m_bandwidthPackageIdHasBeenSet;
 
                     /**
-                     * Bandwidth package type. Values: `BGP`, `SINGLEISP`, `ANYCAST`, `SINGLEISP_CMCC`, `SINGLEISP_CTCC`, `SINGLEISP_CUCC`
+                     * Bandwidth package type, includes:
+<li>BGP: General BGP bandwidth package</li>
+<li>HIGH_QUALITY_BGP: Dedicated BGP bandwidth package</li>
+<li>ANYCAST: AIA BGP bandwidth package</li>
+<li>SINGLEISP_CMCC: CMCC bandwidth package</li>
+<li>SINGLEISP_CTCC: CTCC bandwidth package</li>
+<li>SINGLEISP_CUCC: CUCC bandwidth package</li>
                      */
                     std::string m_networkType;
                     bool m_networkTypeHasBeenSet;
 
                     /**
-                     * The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
+                     * Bandwidth package billing type, includes:
+<li>ENHANCED95_POSTPAID_BY_MONTH: Pay-as-you-go - Enhanced 95th percentile</li>
+<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: Postpaid - Main Traffic Billing</li>
+<li>BANDWIDTH_POSTPAID_BY_DAY: General BGP, Pay-as-you-go - Bandwidth-based</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: Static single-line, Pay-as-you-go - Daily billed</li>
+<li>TOP5_POSTPAID_BY_MONTH: Pay-as-you-go - Monthly top 5th, If you need to use this Bglling mode, please submit a ticket</li>
+
                      */
                     std::string m_chargeType;
                     bool m_chargeTypeHasBeenSet;
@@ -287,7 +355,9 @@ namespace TencentCloud
                     bool m_bandwidthHasBeenSet;
 
                     /**
-                     * 
+                     * Network egress. It defaults to `center_egress1`. Valid values:
+center_egress1,center_egress2,center_egress3
+
                      */
                     std::string m_egress;
                     bool m_egressHasBeenSet;

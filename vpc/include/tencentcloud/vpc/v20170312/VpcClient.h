@@ -2672,8 +2672,7 @@ This API is completed asynchronously. If you need to query the execution result 
                 DescribeBandwidthPackageQuotaOutcomeCallable DescribeBandwidthPackageQuotaCallable(const Model::DescribeBandwidthPackageQuotaRequest& request);
 
                 /**
-                 *This API is used to query resources in a bandwidth package based on the unique package ID. You can filter the result by specifying conditions and paginate the query results.
-
+                 *This API is used to query the list of resources in a Bandwidth Package according to its unique ID, support conditional filtering of query results and paging query.
                  * @param req DescribeBandwidthPackageResourcesRequest
                  * @return DescribeBandwidthPackageResourcesOutcome
                  */

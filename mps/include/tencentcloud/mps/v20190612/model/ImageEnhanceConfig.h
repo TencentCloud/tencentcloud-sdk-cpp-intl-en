@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/SuperResolutionConfig.h>
+#include <tencentcloud/mps/v20190612/model/AdvancedSuperResolutionConfig.h>
 #include <tencentcloud/mps/v20190612/model/ImageDenoiseConfig.h>
 #include <tencentcloud/mps/v20190612/model/ImageQualityEnhanceConfig.h>
 #include <tencentcloud/mps/v20190612/model/ColorEnhanceConfig.h>
@@ -77,6 +78,27 @@ namespace TencentCloud
                      * 
                      */
                     bool SuperResolutionHasBeenSet() const;
+
+                    /**
+                     * 获取Advanced super-resolution configuration.
+                     * @return AdvancedSuperResolutionConfig Advanced super-resolution configuration.
+                     * 
+                     */
+                    AdvancedSuperResolutionConfig GetAdvancedSuperResolutionConfig() const;
+
+                    /**
+                     * 设置Advanced super-resolution configuration.
+                     * @param _advancedSuperResolutionConfig Advanced super-resolution configuration.
+                     * 
+                     */
+                    void SetAdvancedSuperResolutionConfig(const AdvancedSuperResolutionConfig& _advancedSuperResolutionConfig);
+
+                    /**
+                     * 判断参数 AdvancedSuperResolutionConfig 是否已赋值
+                     * @return AdvancedSuperResolutionConfig 是否已赋值
+                     * 
+                     */
+                    bool AdvancedSuperResolutionConfigHasBeenSet() const;
 
                     /**
                      * 获取Denoising configuration.
@@ -236,6 +258,12 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     SuperResolutionConfig m_superResolution;
                     bool m_superResolutionHasBeenSet;
+
+                    /**
+                     * Advanced super-resolution configuration.
+                     */
+                    AdvancedSuperResolutionConfig m_advancedSuperResolutionConfig;
+                    bool m_advancedSuperResolutionConfigHasBeenSet;
 
                     /**
                      * Denoising configuration.

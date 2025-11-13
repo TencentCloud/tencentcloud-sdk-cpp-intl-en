@@ -47,7 +47,7 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>
+                     * 获取Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://www.tencentcloud.com/document/product/362/31636). value range:<br>
 <li>LOCAL_BASIC: Local SATA disk</li>
 <li>LOCAL_SSD: Local NVMe SSD</li>
 <li>CLOUD_BASIC: Cloud SATA disk</li>
@@ -57,7 +57,7 @@ namespace TencentCloud
 <li>CLOUD_HSSD: Enhanced SSD</li>
 <li>CLOUD_TSSD: Tremendous SSD</li>
 Default value: Current disk types with inventory available.
-                     * @return DiskType Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>
+                     * @return DiskType Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://www.tencentcloud.com/document/product/362/31636). value range:<br>
 <li>LOCAL_BASIC: Local SATA disk</li>
 <li>LOCAL_SSD: Local NVMe SSD</li>
 <li>CLOUD_BASIC: Cloud SATA disk</li>
@@ -72,7 +72,7 @@ Default value: Current disk types with inventory available.
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>
+                     * 设置Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://www.tencentcloud.com/document/product/362/31636). value range:<br>
 <li>LOCAL_BASIC: Local SATA disk</li>
 <li>LOCAL_SSD: Local NVMe SSD</li>
 <li>CLOUD_BASIC: Cloud SATA disk</li>
@@ -82,7 +82,7 @@ Default value: Current disk types with inventory available.
 <li>CLOUD_HSSD: Enhanced SSD</li>
 <li>CLOUD_TSSD: Tremendous SSD</li>
 Default value: Current disk types with inventory available.
-                     * @param _diskType Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>
+                     * @param _diskType Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://www.tencentcloud.com/document/product/362/31636). value range:<br>
 <li>LOCAL_BASIC: Local SATA disk</li>
 <li>LOCAL_SSD: Local NVMe SSD</li>
 <li>CLOUD_BASIC: Cloud SATA disk</li>
@@ -105,18 +105,18 @@ Default value: Current disk types with inventory available.
 
                     /**
                      * 获取System disk ID.
-Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.comom/document/product/213/15728?from_cn_redirect=1) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.comom/document/product/213/15730?from_cn_redirect=1).
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.com/document/api/213/33237).
                      * @return DiskId System disk ID.
-Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.comom/document/product/213/15728?from_cn_redirect=1) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.comom/document/product/213/15730?from_cn_redirect=1).
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.com/document/api/213/33237).
                      * 
                      */
                     std::string GetDiskId() const;
 
                     /**
                      * 设置System disk ID.
-Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.comom/document/product/213/15728?from_cn_redirect=1) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.comom/document/product/213/15730?from_cn_redirect=1).
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.com/document/api/213/33237).
                      * @param _diskId System disk ID.
-Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.comom/document/product/213/15728?from_cn_redirect=1) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.comom/document/product/213/15730?from_cn_redirect=1).
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.com/document/api/213/33237).
                      * 
                      */
                     void SetDiskId(const std::string& _diskId);
@@ -198,7 +198,7 @@ Note: This field may return null, indicating that no valid value is found.
                 private:
 
                     /**
-                     * Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>
+                     * Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://www.tencentcloud.com/document/product/362/31636). value range:<br>
 <li>LOCAL_BASIC: Local SATA disk</li>
 <li>LOCAL_SSD: Local NVMe SSD</li>
 <li>CLOUD_BASIC: Cloud SATA disk</li>
@@ -214,7 +214,7 @@ Default value: Current disk types with inventory available.
 
                     /**
                      * System disk ID.
-Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.comom/document/product/213/15728?from_cn_redirect=1) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.comom/document/product/213/15730?from_cn_redirect=1).
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.com/document/api/213/33237).
                      */
                     std::string m_diskId;
                     bool m_diskIdHasBeenSet;

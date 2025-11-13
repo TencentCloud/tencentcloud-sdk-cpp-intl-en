@@ -202,99 +202,119 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool AsrHotWordsLibraryNameHasBeenSet() const;
 
                     /**
-                     * 获取Source language of the video with smart subtitles.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-zh-PY: Chinese-English-Cantonese
-zh-medical: Medical Chinese
-yue: Cantonese
-vi: Vietnamese
-ms: Malay
-id: Indonesian
-fli: Filipino
-th: Thai
-pt: Portuguese
-tr: Turkish
-ar: Arabic
-es: Spanish
-hi: Hindi
-fr: French
-de: German
-zh-dialect: Chinese dialect
-                     * @return VideoSrcLanguage Source language of the video with smart subtitles.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-zh-PY: Chinese-English-Cantonese
-zh-medical: Medical Chinese
-yue: Cantonese
-vi: Vietnamese
-ms: Malay
-id: Indonesian
-fli: Filipino
-th: Thai
-pt: Portuguese
-tr: Turkish
-ar: Arabic
-es: Spanish
-hi: Hindi
-fr: French
-de: German
-zh-dialect: Chinese dialect
+                     * 获取List of source languages of the video with smart subtitles.
+`zh`: Simplified Chinese.
+`yue`: Cantonese.
+`zh-PY`: Chinese, English, and Cantonese.
+`zh_medical`: Chinese (medical scenario).
+`zh_dialect`: Chinese dialect.
+`prime_zh`: Chinese, English, and Chinese dialects.
+`zh_en`: Chinese and English.
+`en`: English.
+`ja`: Japanese.
+`ko`: Korean.
+`fr`: French.
+`es`: Spanish.
+`it`: Italian.
+`de`: German.
+`tr`: Turkish.
+`ru`: Russian.
+`pt`: Portuguese (Brazil).
+`pt-PT`: Portuguese (Portugal).
+`vi`: Vietnamese.
+`id`: Indonesian.
+`ms`: Malay.
+`th`: Thai.
+`ar`: Arabic.
+`hi`: Hindi.
+`fil`: Filipino.
+`auto`: automatic recognition (it is only supported in pure subtitle translation).
+                     * @return VideoSrcLanguage List of source languages of the video with smart subtitles.
+`zh`: Simplified Chinese.
+`yue`: Cantonese.
+`zh-PY`: Chinese, English, and Cantonese.
+`zh_medical`: Chinese (medical scenario).
+`zh_dialect`: Chinese dialect.
+`prime_zh`: Chinese, English, and Chinese dialects.
+`zh_en`: Chinese and English.
+`en`: English.
+`ja`: Japanese.
+`ko`: Korean.
+`fr`: French.
+`es`: Spanish.
+`it`: Italian.
+`de`: German.
+`tr`: Turkish.
+`ru`: Russian.
+`pt`: Portuguese (Brazil).
+`pt-PT`: Portuguese (Portugal).
+`vi`: Vietnamese.
+`id`: Indonesian.
+`ms`: Malay.
+`th`: Thai.
+`ar`: Arabic.
+`hi`: Hindi.
+`fil`: Filipino.
+`auto`: automatic recognition (it is only supported in pure subtitle translation).
                      * 
                      */
                     std::string GetVideoSrcLanguage() const;
 
                     /**
-                     * 设置Source language of the video with smart subtitles.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-zh-PY: Chinese-English-Cantonese
-zh-medical: Medical Chinese
-yue: Cantonese
-vi: Vietnamese
-ms: Malay
-id: Indonesian
-fli: Filipino
-th: Thai
-pt: Portuguese
-tr: Turkish
-ar: Arabic
-es: Spanish
-hi: Hindi
-fr: French
-de: German
-zh-dialect: Chinese dialect
-                     * @param _videoSrcLanguage Source language of the video with smart subtitles.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-zh-PY: Chinese-English-Cantonese
-zh-medical: Medical Chinese
-yue: Cantonese
-vi: Vietnamese
-ms: Malay
-id: Indonesian
-fli: Filipino
-th: Thai
-pt: Portuguese
-tr: Turkish
-ar: Arabic
-es: Spanish
-hi: Hindi
-fr: French
-de: German
-zh-dialect: Chinese dialect
+                     * 设置List of source languages of the video with smart subtitles.
+`zh`: Simplified Chinese.
+`yue`: Cantonese.
+`zh-PY`: Chinese, English, and Cantonese.
+`zh_medical`: Chinese (medical scenario).
+`zh_dialect`: Chinese dialect.
+`prime_zh`: Chinese, English, and Chinese dialects.
+`zh_en`: Chinese and English.
+`en`: English.
+`ja`: Japanese.
+`ko`: Korean.
+`fr`: French.
+`es`: Spanish.
+`it`: Italian.
+`de`: German.
+`tr`: Turkish.
+`ru`: Russian.
+`pt`: Portuguese (Brazil).
+`pt-PT`: Portuguese (Portugal).
+`vi`: Vietnamese.
+`id`: Indonesian.
+`ms`: Malay.
+`th`: Thai.
+`ar`: Arabic.
+`hi`: Hindi.
+`fil`: Filipino.
+`auto`: automatic recognition (it is only supported in pure subtitle translation).
+                     * @param _videoSrcLanguage List of source languages of the video with smart subtitles.
+`zh`: Simplified Chinese.
+`yue`: Cantonese.
+`zh-PY`: Chinese, English, and Cantonese.
+`zh_medical`: Chinese (medical scenario).
+`zh_dialect`: Chinese dialect.
+`prime_zh`: Chinese, English, and Chinese dialects.
+`zh_en`: Chinese and English.
+`en`: English.
+`ja`: Japanese.
+`ko`: Korean.
+`fr`: French.
+`es`: Spanish.
+`it`: Italian.
+`de`: German.
+`tr`: Turkish.
+`ru`: Russian.
+`pt`: Portuguese (Brazil).
+`pt-PT`: Portuguese (Portugal).
+`vi`: Vietnamese.
+`id`: Indonesian.
+`ms`: Malay.
+`th`: Thai.
+`ar`: Arabic.
+`hi`: Hindi.
+`fil`: Filipino.
+`auto`: automatic recognition (it is only supported in pure subtitle translation).
                      * 
                      */
                     void SetVideoSrcLanguage(const std::string& _videoSrcLanguage);
@@ -307,27 +327,35 @@ zh-dialect: Chinese dialect
                     bool VideoSrcLanguageHasBeenSet() const;
 
                     /**
-                     * 获取Smart subtitle file format.
-vtt: WebVTT format
-If this field is left blank, no subtitle file will be generated.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return SubtitleFormat Smart subtitle file format.
-vtt: WebVTT format
-If this field is left blank, no subtitle file will be generated.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Smart subtitle file format:
+- vtt: WebVTT format.
+- srt: SRT format.
+- original: consistent with the source subtitle file (it is used for the pure subtitle translation template).
+- If this field is unspecified or left blank, no subtitle file will be generated.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SubtitleFormat Smart subtitle file format:
+- vtt: WebVTT format.
+- srt: SRT format.
+- original: consistent with the source subtitle file (it is used for the pure subtitle translation template).
+- If this field is unspecified or left blank, no subtitle file will be generated.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSubtitleFormat() const;
 
                     /**
-                     * 设置Smart subtitle file format.
-vtt: WebVTT format
-If this field is left blank, no subtitle file will be generated.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _subtitleFormat Smart subtitle file format.
-vtt: WebVTT format
-If this field is left blank, no subtitle file will be generated.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Smart subtitle file format:
+- vtt: WebVTT format.
+- srt: SRT format.
+- original: consistent with the source subtitle file (it is used for the pure subtitle translation template).
+- If this field is unspecified or left blank, no subtitle file will be generated.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _subtitleFormat Smart subtitle file format:
+- vtt: WebVTT format.
+- srt: SRT format.
+- original: consistent with the source subtitle file (it is used for the pure subtitle translation template).
+- If this field is unspecified or left blank, no subtitle file will be generated.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSubtitleFormat(const std::string& _subtitleFormat);
@@ -407,94 +435,106 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * 获取Target language for subtitle translation.
-This field takes effect when TranslateSwitch is set to ON.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-fr: French
-es: Spanish
-it: Italian
-de: German
-tr: Turkish
-ru: Russian
-pt: Portuguese
-vi: Vietnamese
-id: Indonesian
-ms: Malay
-th: Thai
-ar: Arabic
-hi: Hindi
-Note: This field may return null, indicating that no valid value can be obtained.
+This field is valid when the value of TranslateSwitch is ON.
+`zh`: Simplified Chinese.
+`zh-TW`: Traditional Chinese.
+`en`: English.
+`ja`: Japanese.
+`ko`: Korean.
+`fr`: French.
+`es`: Spanish.
+`it`: Italian.
+`de`: German.
+`tr`: Turkish.
+`ru`: Russian.
+`pt`: Portuguese (Brazil).
+`pt-PT`: Portuguese (Portugal).
+`vi`: Vietnamese.
+`id`: Indonesian.
+`ms`: Malay.
+`th`: Thai.
+`ar`: Arabic.
+`hi`: Hindi.
+`fil`: Filipino.
+**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TranslateDstLanguage Target language for subtitle translation.
-This field takes effect when TranslateSwitch is set to ON.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-fr: French
-es: Spanish
-it: Italian
-de: German
-tr: Turkish
-ru: Russian
-pt: Portuguese
-vi: Vietnamese
-id: Indonesian
-ms: Malay
-th: Thai
-ar: Arabic
-hi: Hindi
-Note: This field may return null, indicating that no valid value can be obtained.
+This field is valid when the value of TranslateSwitch is ON.
+`zh`: Simplified Chinese.
+`zh-TW`: Traditional Chinese.
+`en`: English.
+`ja`: Japanese.
+`ko`: Korean.
+`fr`: French.
+`es`: Spanish.
+`it`: Italian.
+`de`: German.
+`tr`: Turkish.
+`ru`: Russian.
+`pt`: Portuguese (Brazil).
+`pt-PT`: Portuguese (Portugal).
+`vi`: Vietnamese.
+`id`: Indonesian.
+`ms`: Malay.
+`th`: Thai.
+`ar`: Arabic.
+`hi`: Hindi.
+`fil`: Filipino.
+**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTranslateDstLanguage() const;
 
                     /**
                      * 设置Target language for subtitle translation.
-This field takes effect when TranslateSwitch is set to ON.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-fr: French
-es: Spanish
-it: Italian
-de: German
-tr: Turkish
-ru: Russian
-pt: Portuguese
-vi: Vietnamese
-id: Indonesian
-ms: Malay
-th: Thai
-ar: Arabic
-hi: Hindi
-Note: This field may return null, indicating that no valid value can be obtained.
+This field is valid when the value of TranslateSwitch is ON.
+`zh`: Simplified Chinese.
+`zh-TW`: Traditional Chinese.
+`en`: English.
+`ja`: Japanese.
+`ko`: Korean.
+`fr`: French.
+`es`: Spanish.
+`it`: Italian.
+`de`: German.
+`tr`: Turkish.
+`ru`: Russian.
+`pt`: Portuguese (Brazil).
+`pt-PT`: Portuguese (Portugal).
+`vi`: Vietnamese.
+`id`: Indonesian.
+`ms`: Malay.
+`th`: Thai.
+`ar`: Arabic.
+`hi`: Hindi.
+`fil`: Filipino.
+**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _translateDstLanguage Target language for subtitle translation.
-This field takes effect when TranslateSwitch is set to ON.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-fr: French
-es: Spanish
-it: Italian
-de: German
-tr: Turkish
-ru: Russian
-pt: Portuguese
-vi: Vietnamese
-id: Indonesian
-ms: Malay
-th: Thai
-ar: Arabic
-hi: Hindi
-Note: This field may return null, indicating that no valid value can be obtained.
+This field is valid when the value of TranslateSwitch is ON.
+`zh`: Simplified Chinese.
+`zh-TW`: Traditional Chinese.
+`en`: English.
+`ja`: Japanese.
+`ko`: Korean.
+`fr`: French.
+`es`: Spanish.
+`it`: Italian.
+`de`: German.
+`tr`: Turkish.
+`ru`: Russian.
+`pt`: Portuguese (Brazil).
+`pt-PT`: Portuguese (Portugal).
+`vi`: Vietnamese.
+`id`: Indonesian.
+`ms`: Malay.
+`th`: Thai.
+`ar`: Arabic.
+`hi`: Hindi.
+`fil`: Filipino.
+**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTranslateDstLanguage(const std::string& _translateDstLanguage);
@@ -573,6 +613,35 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool AliasNameHasBeenSet() const;
 
+                    /**
+                     * 获取Subtitle processing type.
+- 0: ASR recognition subtitle.
+- 1: pure subtitle translation.
+                     * @return ProcessType Subtitle processing type.
+- 0: ASR recognition subtitle.
+- 1: pure subtitle translation.
+                     * 
+                     */
+                    uint64_t GetProcessType() const;
+
+                    /**
+                     * 设置Subtitle processing type.
+- 0: ASR recognition subtitle.
+- 1: pure subtitle translation.
+                     * @param _processType Subtitle processing type.
+- 0: ASR recognition subtitle.
+- 1: pure subtitle translation.
+                     * 
+                     */
+                    void SetProcessType(const uint64_t& _processType);
+
+                    /**
+                     * 判断参数 ProcessType 是否已赋值
+                     * @return ProcessType 是否已赋值
+                     * 
+                     */
+                    bool ProcessTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -619,37 +688,44 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_asrHotWordsLibraryNameHasBeenSet;
 
                     /**
-                     * Source language of the video with smart subtitles.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-zh-PY: Chinese-English-Cantonese
-zh-medical: Medical Chinese
-yue: Cantonese
-vi: Vietnamese
-ms: Malay
-id: Indonesian
-fli: Filipino
-th: Thai
-pt: Portuguese
-tr: Turkish
-ar: Arabic
-es: Spanish
-hi: Hindi
-fr: French
-de: German
-zh-dialect: Chinese dialect
+                     * List of source languages of the video with smart subtitles.
+`zh`: Simplified Chinese.
+`yue`: Cantonese.
+`zh-PY`: Chinese, English, and Cantonese.
+`zh_medical`: Chinese (medical scenario).
+`zh_dialect`: Chinese dialect.
+`prime_zh`: Chinese, English, and Chinese dialects.
+`zh_en`: Chinese and English.
+`en`: English.
+`ja`: Japanese.
+`ko`: Korean.
+`fr`: French.
+`es`: Spanish.
+`it`: Italian.
+`de`: German.
+`tr`: Turkish.
+`ru`: Russian.
+`pt`: Portuguese (Brazil).
+`pt-PT`: Portuguese (Portugal).
+`vi`: Vietnamese.
+`id`: Indonesian.
+`ms`: Malay.
+`th`: Thai.
+`ar`: Arabic.
+`hi`: Hindi.
+`fil`: Filipino.
+`auto`: automatic recognition (it is only supported in pure subtitle translation).
                      */
                     std::string m_videoSrcLanguage;
                     bool m_videoSrcLanguageHasBeenSet;
 
                     /**
-                     * Smart subtitle file format.
-vtt: WebVTT format
-If this field is left blank, no subtitle file will be generated.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Smart subtitle file format:
+- vtt: WebVTT format.
+- srt: SRT format.
+- original: consistent with the source subtitle file (it is used for the pure subtitle translation template).
+- If this field is unspecified or left blank, no subtitle file will be generated.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_subtitleFormat;
                     bool m_subtitleFormatHasBeenSet;
@@ -674,26 +750,29 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * Target language for subtitle translation.
-This field takes effect when TranslateSwitch is set to ON.
-Supported languages:
-zh: Simplified Chinese
-en: English
-ja: Japanese
-ko: Korean
-fr: French
-es: Spanish
-it: Italian
-de: German
-tr: Turkish
-ru: Russian
-pt: Portuguese
-vi: Vietnamese
-id: Indonesian
-ms: Malay
-th: Thai
-ar: Arabic
-hi: Hindi
-Note: This field may return null, indicating that no valid value can be obtained.
+This field is valid when the value of TranslateSwitch is ON.
+`zh`: Simplified Chinese.
+`zh-TW`: Traditional Chinese.
+`en`: English.
+`ja`: Japanese.
+`ko`: Korean.
+`fr`: French.
+`es`: Spanish.
+`it`: Italian.
+`de`: German.
+`tr`: Turkish.
+`ru`: Russian.
+`pt`: Portuguese (Brazil).
+`pt-PT`: Portuguese (Portugal).
+`vi`: Vietnamese.
+`id`: Indonesian.
+`ms`: Malay.
+`th`: Thai.
+`ar`: Arabic.
+`hi`: Hindi.
+`fil`: Filipino.
+**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_translateDstLanguage;
                     bool m_translateDstLanguageHasBeenSet;
@@ -716,6 +795,14 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     std::string m_aliasName;
                     bool m_aliasNameHasBeenSet;
+
+                    /**
+                     * Subtitle processing type.
+- 0: ASR recognition subtitle.
+- 1: pure subtitle translation.
+                     */
+                    uint64_t m_processType;
+                    bool m_processTypeHasBeenSet;
 
                 };
             }

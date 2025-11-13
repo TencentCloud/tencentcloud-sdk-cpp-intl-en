@@ -187,15 +187,15 @@ Note: `IPv6AddressIds` and `Filters` cannot be specified at the same time.
                     bool TraditionalHasBeenSet() const;
 
                     /**
-                     * 获取Offset. Default: 0. For more information on Offset, see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
-                     * @return Offset Offset. Default: 0. For more information on Offset, see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
+                     * 获取Offset. Default: 0. For more information on Offset, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
+                     * @return Offset Offset. Default: 0. For more information on Offset, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. Default: 0. For more information on Offset, see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
-                     * @param _offset Offset. Default: 0. For more information on Offset, see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
+                     * 设置Offset. Default: 0. For more information on Offset, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
+                     * @param _offset Offset. Default: 0. For more information on Offset, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -208,15 +208,15 @@ Note: `IPv6AddressIds` and `Filters` cannot be specified at the same time.
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of returned results. Default: 20. Maximum: 100. For more information on Limit, see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
-                     * @return Limit Number of returned results. Default: 20. Maximum: 100. For more information on Limit, see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
+                     * 获取Number of returned results. Default: 20. Maximum: 100. For more information on Limit, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
+                     * @return Limit Number of returned results. Default: 20. Maximum: 100. For more information on Limit, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of returned results. Default: 20. Maximum: 100. For more information on Limit, see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
-                     * @param _limit Number of returned results. Default: 20. Maximum: 100. For more information on Limit, see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
+                     * 设置Number of returned results. Default: 20. Maximum: 100. For more information on Limit, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
+                     * @param _limit Number of returned results. Default: 20. Maximum: 100. For more information on Limit, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -269,13 +269,13 @@ Note: `IPv6AddressIds` and `Filters` cannot be specified at the same time.
                     bool m_traditionalHasBeenSet;
 
                     /**
-                     * Offset. Default: 0. For more information on Offset, see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
+                     * Offset. Default: 0. For more information on Offset, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of returned results. Default: 20. Maximum: 100. For more information on Limit, see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
+                     * Number of returned results. Default: 20. Maximum: 100. For more information on Limit, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
