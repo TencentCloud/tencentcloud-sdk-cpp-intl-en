@@ -130,6 +130,27 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
+                     * 获取Aggregation dimension.
+                     * @return GroupBy Aggregation dimension.
+                     * 
+                     */
+                    std::vector<std::string> GetGroupBy() const;
+
+                    /**
+                     * 设置Aggregation dimension.
+                     * @param _groupBy Aggregation dimension.
+                     * 
+                     */
+                    void SetGroupBy(const std::vector<std::string>& _groupBy);
+
+                    /**
+                     * 判断参数 GroupBy 是否已赋值
+                     * @return GroupBy 是否已赋值
+                     * 
+                     */
+                    bool GroupByHasBeenSet() const;
+
+                    /**
                      * 获取Filter criteria.
                      * @return Filters Filter criteria.
                      * 
@@ -170,27 +191,6 @@ namespace TencentCloud
                      * 
                      */
                     bool OrFiltersHasBeenSet() const;
-
-                    /**
-                     * 获取Aggregation dimension.
-                     * @return GroupBy Aggregation dimension.
-                     * 
-                     */
-                    std::vector<std::string> GetGroupBy() const;
-
-                    /**
-                     * 设置Aggregation dimension.
-                     * @param _groupBy Aggregation dimension.
-                     * 
-                     */
-                    void SetGroupBy(const std::vector<std::string>& _groupBy);
-
-                    /**
-                     * 判断参数 GroupBy 是否已赋值
-                     * @return GroupBy 是否已赋值
-                     * 
-                     */
-                    bool GroupByHasBeenSet() const;
 
                     /**
                      * 获取Sort
@@ -410,6 +410,12 @@ The currently supported values are:.
                     bool m_endTimeHasBeenSet;
 
                     /**
+                     * Aggregation dimension.
+                     */
+                    std::vector<std::string> m_groupBy;
+                    bool m_groupByHasBeenSet;
+
+                    /**
                      * Filter criteria.
                      */
                     std::vector<Filter> m_filters;
@@ -420,12 +426,6 @@ The currently supported values are:.
                      */
                     std::vector<Filter> m_orFilters;
                     bool m_orFiltersHasBeenSet;
-
-                    /**
-                     * Aggregation dimension.
-                     */
-                    std::vector<std::string> m_groupBy;
-                    bool m_groupByHasBeenSet;
 
                     /**
                      * Sort

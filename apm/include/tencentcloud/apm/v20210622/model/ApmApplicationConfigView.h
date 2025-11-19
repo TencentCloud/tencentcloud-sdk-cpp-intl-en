@@ -446,6 +446,48 @@ namespace TencentCloud
                      */
                     bool TraceSquashHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the memory threshold for probe fusing.
+                     * @return DisableMemoryUsed Specifies the memory threshold for probe fusing.
+                     * 
+                     */
+                    int64_t GetDisableMemoryUsed() const;
+
+                    /**
+                     * 设置Specifies the memory threshold for probe fusing.
+                     * @param _disableMemoryUsed Specifies the memory threshold for probe fusing.
+                     * 
+                     */
+                    void SetDisableMemoryUsed(const int64_t& _disableMemoryUsed);
+
+                    /**
+                     * 判断参数 DisableMemoryUsed 是否已赋值
+                     * @return DisableMemoryUsed 是否已赋值
+                     * 
+                     */
+                    bool DisableMemoryUsedHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the CPU threshold for probe fusing.
+                     * @return DisableCpuUsed Specifies the CPU threshold for probe fusing.
+                     * 
+                     */
+                    int64_t GetDisableCpuUsed() const;
+
+                    /**
+                     * 设置Specifies the CPU threshold for probe fusing.
+                     * @param _disableCpuUsed Specifies the CPU threshold for probe fusing.
+                     * 
+                     */
+                    void SetDisableCpuUsed(const int64_t& _disableCpuUsed);
+
+                    /**
+                     * 判断参数 DisableCpuUsed 是否已赋值
+                     * @return DisableCpuUsed 是否已赋值
+                     * 
+                     */
+                    bool DisableCpuUsedHasBeenSet() const;
+
                 private:
 
                     /**
@@ -561,6 +603,18 @@ namespace TencentCloud
                      */
                     bool m_traceSquash;
                     bool m_traceSquashHasBeenSet;
+
+                    /**
+                     * Specifies the memory threshold for probe fusing.
+                     */
+                    int64_t m_disableMemoryUsed;
+                    bool m_disableMemoryUsedHasBeenSet;
+
+                    /**
+                     * Specifies the CPU threshold for probe fusing.
+                     */
+                    int64_t m_disableCpuUsed;
+                    bool m_disableCpuUsedHasBeenSet;
 
                 };
             }

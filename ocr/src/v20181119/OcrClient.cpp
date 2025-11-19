@@ -771,6 +771,49 @@ OcrClient::RecognizeBrazilRNMOCROutcomeCallable OcrClient::RecognizeBrazilRNMOCR
     return task->get_future();
 }
 
+OcrClient::RecognizeDetectCardCoordsOutcome OcrClient::RecognizeDetectCardCoords(const RecognizeDetectCardCoordsRequest &request)
+{
+    auto outcome = MakeRequest(request, "RecognizeDetectCardCoords");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RecognizeDetectCardCoordsResponse rsp = RecognizeDetectCardCoordsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RecognizeDetectCardCoordsOutcome(rsp);
+        else
+            return RecognizeDetectCardCoordsOutcome(o.GetError());
+    }
+    else
+    {
+        return RecognizeDetectCardCoordsOutcome(outcome.GetError());
+    }
+}
+
+void OcrClient::RecognizeDetectCardCoordsAsync(const RecognizeDetectCardCoordsRequest& request, const RecognizeDetectCardCoordsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RecognizeDetectCardCoords(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OcrClient::RecognizeDetectCardCoordsOutcomeCallable OcrClient::RecognizeDetectCardCoordsCallable(const RecognizeDetectCardCoordsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RecognizeDetectCardCoordsOutcome()>>(
+        [this, request]()
+        {
+            return this->RecognizeDetectCardCoords(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 OcrClient::RecognizeGeneralInvoiceOutcome OcrClient::RecognizeGeneralInvoice(const RecognizeGeneralInvoiceRequest &request)
 {
     auto outcome = MakeRequest(request, "RecognizeGeneralInvoice");

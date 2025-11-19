@@ -57,6 +57,8 @@
 #include <tencentcloud/ocr/v20181119/model/RecognizeBrazilRNEOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizeBrazilRNMOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizeBrazilRNMOCRResponse.h>
+#include <tencentcloud/ocr/v20181119/model/RecognizeDetectCardCoordsRequest.h>
+#include <tencentcloud/ocr/v20181119/model/RecognizeDetectCardCoordsResponse.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizeGeneralInvoiceRequest.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizeGeneralInvoiceResponse.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizeIndonesiaIDCardOCRRequest.h>
@@ -164,6 +166,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RecognizeBrazilRNMOCRResponse> RecognizeBrazilRNMOCROutcome;
                 typedef std::future<RecognizeBrazilRNMOCROutcome> RecognizeBrazilRNMOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::RecognizeBrazilRNMOCRRequest&, RecognizeBrazilRNMOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizeBrazilRNMOCRAsyncHandler;
+                typedef Outcome<Core::Error, Model::RecognizeDetectCardCoordsResponse> RecognizeDetectCardCoordsOutcome;
+                typedef std::future<RecognizeDetectCardCoordsOutcome> RecognizeDetectCardCoordsOutcomeCallable;
+                typedef std::function<void(const OcrClient*, const Model::RecognizeDetectCardCoordsRequest&, RecognizeDetectCardCoordsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizeDetectCardCoordsAsyncHandler;
                 typedef Outcome<Core::Error, Model::RecognizeGeneralInvoiceResponse> RecognizeGeneralInvoiceOutcome;
                 typedef std::future<RecognizeGeneralInvoiceOutcome> RecognizeGeneralInvoiceOutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::RecognizeGeneralInvoiceRequest&, RecognizeGeneralInvoiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizeGeneralInvoiceAsyncHandler;
@@ -462,6 +467,15 @@ This API is used to set the default request rate limit to 5 requests/second.
                 RecognizeBrazilRNMOCROutcome RecognizeBrazilRNMOCR(const Model::RecognizeBrazilRNMOCRRequest &request);
                 void RecognizeBrazilRNMOCRAsync(const Model::RecognizeBrazilRNMOCRRequest& request, const RecognizeBrazilRNMOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 RecognizeBrazilRNMOCROutcomeCallable RecognizeBrazilRNMOCRCallable(const Model::RecognizeBrazilRNMOCRRequest& request);
+
+                /**
+                 *This API is used to recognize the coordinates of four corners of cards.
+                 * @param req RecognizeDetectCardCoordsRequest
+                 * @return RecognizeDetectCardCoordsOutcome
+                 */
+                RecognizeDetectCardCoordsOutcome RecognizeDetectCardCoords(const Model::RecognizeDetectCardCoordsRequest &request);
+                void RecognizeDetectCardCoordsAsync(const Model::RecognizeDetectCardCoordsRequest& request, const RecognizeDetectCardCoordsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RecognizeDetectCardCoordsOutcomeCallable RecognizeDetectCardCoordsCallable(const Model::RecognizeDetectCardCoordsRequest& request);
 
                 /**
                  *This API is used to recognize various types of invoices or tickets in an image or PDF file. You can also specify a type. 14 types of standard expense reimbursement invoices are supported, including value-added tax (VAT) invoice (special, general, roll, blockchain, and toll), fully digitalized electronic invoice (special and general), non-tax revenue invoice (general receipt and general payment voucher), quota invoice, general machine-printed invoice, car sales invoice (motor vehicle sales invoice and used car invoice), train ticket, taxi receipt, itinerary/receipt of e-ticket for air transportation, bus ticket, ship ticket, toll receipt, and medical invoice (inpatient and outpatient). This API can also be used for intelligent recognition of other types of invoices. To try now, click [here](https://intl.cloud.tencent.com/product/ocr?from_cn_redirect=1).

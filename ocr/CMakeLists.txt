@@ -41,6 +41,7 @@ set(ocr_public_header_model
   include/tencentcloud/ocr/v20181119/model/WordPolygon.h
   include/tencentcloud/ocr/v20181119/model/FlightItem.h
   include/tencentcloud/ocr/v20181119/model/Value.h
+  include/tencentcloud/ocr/v20181119/model/RecognizeDetectCardCoordsResponse.h
   include/tencentcloud/ocr/v20181119/model/SealInfo.h
   include/tencentcloud/ocr/v20181119/model/RecognizePhilippinesVoteIDOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/RecognizeKoreanDrivingLicenseOCRRequest.h
@@ -48,6 +49,7 @@ set(ocr_public_header_model
   include/tencentcloud/ocr/v20181119/model/OtherInvoiceItem.h
   include/tencentcloud/ocr/v20181119/model/SmartStructuralProRequest.h
   include/tencentcloud/ocr/v20181119/model/LicensePlateOCRResponse.h
+  include/tencentcloud/ocr/v20181119/model/RecognizeDetectCardCoordsRequest.h
   include/tencentcloud/ocr/v20181119/model/VatInvoiceItemInfo.h
   include/tencentcloud/ocr/v20181119/model/MainlandPermitOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/RecognizeBrazilCommonOCRRequest.h
@@ -66,7 +68,7 @@ set(ocr_public_header_model
   include/tencentcloud/ocr/v20181119/model/GeneralBasicOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/RecognizeThaiIDCardOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/OtherInvoice.h
-  include/tencentcloud/ocr/v20181119/model/RecognizePhilippinesUMIDOCRRequest.h
+  include/tencentcloud/ocr/v20181119/model/RecognizePhilippinesDrivingLicenseOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/BankCardOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/RecognizePhilippinesSssIDOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/Key.h
@@ -140,6 +142,7 @@ set(ocr_public_header_model
   include/tencentcloud/ocr/v20181119/model/RecognizeBrazilDriverLicenseOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/BrazilCardInfo.h
   include/tencentcloud/ocr/v20181119/model/RecognizeIndonesiaIDCardOCRRequest.h
+  include/tencentcloud/ocr/v20181119/model/CoordsItem.h
   include/tencentcloud/ocr/v20181119/model/VinOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/BrazilRNEInfo.h
   include/tencentcloud/ocr/v20181119/model/MLIDCardOCRResponse.h
@@ -147,7 +150,7 @@ set(ocr_public_header_model
   include/tencentcloud/ocr/v20181119/model/RecognizeThaiPinkCardRequest.h
   include/tencentcloud/ocr/v20181119/model/BankCardOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/RecognizeThaiPinkCardResponse.h
-  include/tencentcloud/ocr/v20181119/model/RecognizePhilippinesDrivingLicenseOCRResponse.h
+  include/tencentcloud/ocr/v20181119/model/RecognizePhilippinesUMIDOCRRequest.h
   )
 
 set(ocr_src
@@ -174,6 +177,7 @@ set(ocr_src
   src/v20181119/model/WordPolygon.cpp
   src/v20181119/model/FlightItem.cpp
   src/v20181119/model/Value.cpp
+  src/v20181119/model/RecognizeDetectCardCoordsResponse.cpp
   src/v20181119/model/SealInfo.cpp
   src/v20181119/model/RecognizePhilippinesVoteIDOCRRequest.cpp
   src/v20181119/model/RecognizeKoreanDrivingLicenseOCRRequest.cpp
@@ -181,6 +185,7 @@ set(ocr_src
   src/v20181119/model/OtherInvoiceItem.cpp
   src/v20181119/model/SmartStructuralProRequest.cpp
   src/v20181119/model/LicensePlateOCRResponse.cpp
+  src/v20181119/model/RecognizeDetectCardCoordsRequest.cpp
   src/v20181119/model/VatInvoiceItemInfo.cpp
   src/v20181119/model/MainlandPermitOCRRequest.cpp
   src/v20181119/model/RecognizeBrazilCommonOCRRequest.cpp
@@ -199,7 +204,7 @@ set(ocr_src
   src/v20181119/model/GeneralBasicOCRResponse.cpp
   src/v20181119/model/RecognizeThaiIDCardOCRResponse.cpp
   src/v20181119/model/OtherInvoice.cpp
-  src/v20181119/model/RecognizePhilippinesUMIDOCRRequest.cpp
+  src/v20181119/model/RecognizePhilippinesDrivingLicenseOCRResponse.cpp
   src/v20181119/model/BankCardOCRRequest.cpp
   src/v20181119/model/RecognizePhilippinesSssIDOCRRequest.cpp
   src/v20181119/model/Key.cpp
@@ -273,6 +278,7 @@ set(ocr_src
   src/v20181119/model/RecognizeBrazilDriverLicenseOCRResponse.cpp
   src/v20181119/model/BrazilCardInfo.cpp
   src/v20181119/model/RecognizeIndonesiaIDCardOCRRequest.cpp
+  src/v20181119/model/CoordsItem.cpp
   src/v20181119/model/VinOCRRequest.cpp
   src/v20181119/model/BrazilRNEInfo.cpp
   src/v20181119/model/MLIDCardOCRResponse.cpp
@@ -280,7 +286,7 @@ set(ocr_src
   src/v20181119/model/RecognizeThaiPinkCardRequest.cpp
   src/v20181119/model/BankCardOCRResponse.cpp
   src/v20181119/model/RecognizeThaiPinkCardResponse.cpp
-  src/v20181119/model/RecognizePhilippinesDrivingLicenseOCRResponse.cpp
+  src/v20181119/model/RecognizePhilippinesUMIDOCRRequest.cpp
   )
 
 set(ocr_include

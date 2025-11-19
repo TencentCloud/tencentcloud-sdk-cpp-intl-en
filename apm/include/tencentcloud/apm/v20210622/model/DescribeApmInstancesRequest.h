@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Filter by business system name.
-                     * @return InstanceName Filter by business system name.
+                     * 获取Filters by business system name, and fuzzy search is supported.
+                     * @return InstanceName Filters by business system name, and fuzzy search is supported.
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Filter by business system name.
-                     * @param _instanceName Filter by business system name.
+                     * 设置Filters by business system name, and fuzzy search is supported.
+                     * @param _instanceName Filters by business system name, and fuzzy search is supported.
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -84,6 +84,27 @@ namespace TencentCloud
                      * 
                      */
                     bool InstanceNameHasBeenSet() const;
+
+                    /**
+                     * 获取Filters by business system ID, and fuzzy search is supported.
+                     * @return InstanceId Filters by business system ID, and fuzzy search is supported.
+                     * 
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置Filters by business system ID, and fuzzy search is supported.
+                     * @param _instanceId Filters by business system ID, and fuzzy search is supported.
+                     * 
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     * 
+                     */
+                    bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Filter by business system id.
@@ -157,10 +178,16 @@ namespace TencentCloud
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Filter by business system name.
+                     * Filters by business system name, and fuzzy search is supported.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
+
+                    /**
+                     * Filters by business system ID, and fuzzy search is supported.
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
 
                     /**
                      * Filter by business system id.

@@ -25,10 +25,10 @@ using namespace std;
 DescribeServiceOverviewRequest::DescribeServiceOverviewRequest() :
     m_metricsHasBeenSet(false),
     m_instanceIdHasBeenSet(false),
-    m_filtersHasBeenSet(false),
     m_groupByHasBeenSet(false),
     m_startTimeHasBeenSet(false),
     m_endTimeHasBeenSet(false),
+    m_filtersHasBeenSet(false),
     m_orderByHasBeenSet(false),
     m_limitHasBeenSet(false),
     m_offsetHasBeenSet(false)
@@ -65,21 +65,6 @@ string DescribeServiceOverviewRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_filtersHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Filters";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
-
-        int i=0;
-        for (auto itr = m_filters.begin(); itr != m_filters.end(); ++itr, ++i)
-        {
-            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
-            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
-        }
-    }
-
     if (m_groupByHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -107,6 +92,21 @@ string DescribeServiceOverviewRequest::ToJsonString() const
         string key = "EndTime";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_endTime, allocator);
+    }
+
+    if (m_filtersHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Filters";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_filters.begin(); itr != m_filters.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
     }
 
     if (m_orderByHasBeenSet)
@@ -174,22 +174,6 @@ bool DescribeServiceOverviewRequest::InstanceIdHasBeenSet() const
     return m_instanceIdHasBeenSet;
 }
 
-vector<Filter> DescribeServiceOverviewRequest::GetFilters() const
-{
-    return m_filters;
-}
-
-void DescribeServiceOverviewRequest::SetFilters(const vector<Filter>& _filters)
-{
-    m_filters = _filters;
-    m_filtersHasBeenSet = true;
-}
-
-bool DescribeServiceOverviewRequest::FiltersHasBeenSet() const
-{
-    return m_filtersHasBeenSet;
-}
-
 vector<string> DescribeServiceOverviewRequest::GetGroupBy() const
 {
     return m_groupBy;
@@ -236,6 +220,22 @@ void DescribeServiceOverviewRequest::SetEndTime(const uint64_t& _endTime)
 bool DescribeServiceOverviewRequest::EndTimeHasBeenSet() const
 {
     return m_endTimeHasBeenSet;
+}
+
+vector<Filter> DescribeServiceOverviewRequest::GetFilters() const
+{
+    return m_filters;
+}
+
+void DescribeServiceOverviewRequest::SetFilters(const vector<Filter>& _filters)
+{
+    m_filters = _filters;
+    m_filtersHasBeenSet = true;
+}
+
+bool DescribeServiceOverviewRequest::FiltersHasBeenSet() const
+{
+    return m_filtersHasBeenSet;
 }
 
 OrderBy DescribeServiceOverviewRequest::GetOrderBy() const

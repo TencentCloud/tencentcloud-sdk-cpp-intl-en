@@ -667,6 +667,27 @@ If the dry run succeeds, the RequestId will be returned.
                     bool DisableApiTerminationHasBeenSet() const;
 
                     /**
+                     * 获取
+                     * @return EnableJumboFrame 
+                     * 
+                     */
+                    bool GetEnableJumboFrame() const;
+
+                    /**
+                     * 设置
+                     * @param _enableJumboFrame 
+                     * 
+                     */
+                    void SetEnableJumboFrame(const bool& _enableJumboFrame);
+
+                    /**
+                     * 判断参数 EnableJumboFrame 是否已赋值
+                     * @return EnableJumboFrame 是否已赋值
+                     * 
+                     */
+                    bool EnableJumboFrameHasBeenSet() const;
+
+                    /**
                      * 获取Custom metadata. specifies that custom metadata key-value pairs can be added when creating a CVM.
 Note: this field is in beta test.
                      * @return Metadata Custom metadata. specifies that custom metadata key-value pairs can be added when creating a CVM.
@@ -903,6 +924,12 @@ If the dry run succeeds, the RequestId will be returned.
                      */
                     bool m_disableApiTermination;
                     bool m_disableApiTerminationHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_enableJumboFrame;
+                    bool m_enableJumboFrameHasBeenSet;
 
                     /**
                      * Custom metadata. specifies that custom metadata key-value pairs can be added when creating a CVM.

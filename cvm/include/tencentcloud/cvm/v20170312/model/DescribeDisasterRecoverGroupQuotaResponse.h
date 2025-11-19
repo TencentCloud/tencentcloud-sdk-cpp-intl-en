@@ -88,14 +88,14 @@ namespace TencentCloud
                     /**
                      * 获取Quota on instances in a switch-type disaster recovery group.
                      * @return CvmInSwGroupQuota Quota on instances in a switch-type disaster recovery group.
-                     * 
+                     * @deprecated
                      */
                     int64_t GetCvmInSwGroupQuota() const;
 
                     /**
                      * 判断参数 CvmInSwGroupQuota 是否已赋值
                      * @return CvmInSwGroupQuota 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool CvmInSwGroupQuotaHasBeenSet() const;
 
@@ -112,6 +112,20 @@ namespace TencentCloud
                      * 
                      */
                     bool CvmInRackGroupQuotaHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return CvmInSwitchGroupQuota 
+                     * 
+                     */
+                    int64_t GetCvmInSwitchGroupQuota() const;
+
+                    /**
+                     * 判断参数 CvmInSwitchGroupQuota 是否已赋值
+                     * @return CvmInSwitchGroupQuota 是否已赋值
+                     * 
+                     */
+                    bool CvmInSwitchGroupQuotaHasBeenSet() const;
 
                 private:
 
@@ -144,6 +158,12 @@ namespace TencentCloud
                      */
                     int64_t m_cvmInRackGroupQuota;
                     bool m_cvmInRackGroupQuotaHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_cvmInSwitchGroupQuota;
+                    bool m_cvmInSwitchGroupQuotaHasBeenSet;
 
                 };
             }

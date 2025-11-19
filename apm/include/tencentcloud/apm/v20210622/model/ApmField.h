@@ -182,6 +182,48 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool CompareValHasBeenSet() const;
 
+                    /**
+                     * 获取Metric Chinese Name
+                     * @return NameCN Metric Chinese Name
+                     * 
+                     */
+                    std::string GetNameCN() const;
+
+                    /**
+                     * 设置Metric Chinese Name
+                     * @param _nameCN Metric Chinese Name
+                     * 
+                     */
+                    void SetNameCN(const std::string& _nameCN);
+
+                    /**
+                     * 判断参数 NameCN 是否已赋值
+                     * @return NameCN 是否已赋值
+                     * 
+                     */
+                    bool NameCNHasBeenSet() const;
+
+                    /**
+                     * 获取Metric English name
+                     * @return NameEN Metric English name
+                     * 
+                     */
+                    std::string GetNameEN() const;
+
+                    /**
+                     * 设置Metric English name
+                     * @param _nameEN Metric English name
+                     * 
+                     */
+                    void SetNameEN(const std::string& _nameEN);
+
+                    /**
+                     * 判断参数 NameEN 是否已赋值
+                     * @return NameEN 是否已赋值
+                     * 
+                     */
+                    bool NameENHasBeenSet() const;
+
                 private:
 
                     /**
@@ -221,6 +263,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_compareVal;
                     bool m_compareValHasBeenSet;
+
+                    /**
+                     * Metric Chinese Name
+                     */
+                    std::string m_nameCN;
+                    bool m_nameCNHasBeenSet;
+
+                    /**
+                     * Metric English name
+                     */
+                    std::string m_nameEN;
+                    bool m_nameENHasBeenSet;
 
                 };
             }

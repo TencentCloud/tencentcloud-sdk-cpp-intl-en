@@ -27,6 +27,8 @@
 #include <tencentcloud/lkeap/v20240522/model/CreateReconstructDocumentFlowResponse.h>
 #include <tencentcloud/lkeap/v20240522/model/CreateSplitDocumentFlowRequest.h>
 #include <tencentcloud/lkeap/v20240522/model/CreateSplitDocumentFlowResponse.h>
+#include <tencentcloud/lkeap/v20240522/model/GetEmbeddingRequest.h>
+#include <tencentcloud/lkeap/v20240522/model/GetEmbeddingResponse.h>
 #include <tencentcloud/lkeap/v20240522/model/GetReconstructDocumentResultRequest.h>
 #include <tencentcloud/lkeap/v20240522/model/GetReconstructDocumentResultResponse.h>
 #include <tencentcloud/lkeap/v20240522/model/GetSplitDocumentResultRequest.h>
@@ -57,6 +59,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateSplitDocumentFlowResponse> CreateSplitDocumentFlowOutcome;
                 typedef std::future<CreateSplitDocumentFlowOutcome> CreateSplitDocumentFlowOutcomeCallable;
                 typedef std::function<void(const LkeapClient*, const Model::CreateSplitDocumentFlowRequest&, CreateSplitDocumentFlowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSplitDocumentFlowAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetEmbeddingResponse> GetEmbeddingOutcome;
+                typedef std::future<GetEmbeddingOutcome> GetEmbeddingOutcomeCallable;
+                typedef std::function<void(const LkeapClient*, const Model::GetEmbeddingRequest&, GetEmbeddingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetEmbeddingAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetReconstructDocumentResultResponse> GetReconstructDocumentResultOutcome;
                 typedef std::future<GetReconstructDocumentResultOutcome> GetReconstructDocumentResultOutcomeCallable;
                 typedef std::function<void(const LkeapClient*, const Model::GetReconstructDocumentResultRequest&, GetReconstructDocumentResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetReconstructDocumentResultAsyncHandler;
@@ -94,6 +99,15 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
                 CreateSplitDocumentFlowOutcome CreateSplitDocumentFlow(const Model::CreateSplitDocumentFlowRequest &request);
                 void CreateSplitDocumentFlowAsync(const Model::CreateSplitDocumentFlowRequest& request, const CreateSplitDocumentFlowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateSplitDocumentFlowOutcomeCallable CreateSplitDocumentFlowCallable(const Model::CreateSplitDocumentFlowRequest& request);
+
+                /**
+                 *This API is used to call the text representation model to convert text into a vector represented by numbers, which can be used in scenarios such as text retrieval, information recommendation, and knowledge mining. There is a single-account call limit control for this API. If you need to increase the concurrency limit, please contact us (https://cloud.tencent.com/act/event/Online_service).
+                 * @param req GetEmbeddingRequest
+                 * @return GetEmbeddingOutcome
+                 */
+                GetEmbeddingOutcome GetEmbedding(const Model::GetEmbeddingRequest &request);
+                void GetEmbeddingAsync(const Model::GetEmbeddingRequest& request, const GetEmbeddingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetEmbeddingOutcomeCallable GetEmbeddingCallable(const Model::GetEmbeddingRequest& request);
 
                 /**
                  *This is an asynchronous API for querying results, which is used to obtain the result of document parsing.

@@ -848,6 +848,405 @@ Account in arrears.
                      */
                     bool StopReasonHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable detection of remote command execution (0 = disabled; 1 = enabled).
+                     * @return IsRemoteCommandExecutionAnalysis Whether to enable detection of remote command execution (0 = disabled; 1 = enabled).
+                     * 
+                     */
+                    int64_t GetIsRemoteCommandExecutionAnalysis() const;
+
+                    /**
+                     * 设置Whether to enable detection of remote command execution (0 = disabled; 1 = enabled).
+                     * @param _isRemoteCommandExecutionAnalysis Whether to enable detection of remote command execution (0 = disabled; 1 = enabled).
+                     * 
+                     */
+                    void SetIsRemoteCommandExecutionAnalysis(const int64_t& _isRemoteCommandExecutionAnalysis);
+
+                    /**
+                     * 判断参数 IsRemoteCommandExecutionAnalysis 是否已赋值
+                     * @return IsRemoteCommandExecutionAnalysis 是否已赋值
+                     * 
+                     */
+                    bool IsRemoteCommandExecutionAnalysisHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable detection of Java webshell execution (0 = disabled; 1 = enabled).
+                     * @return IsMemoryHijackingAnalysis Whether to enable detection of Java webshell execution (0 = disabled; 1 = enabled).
+                     * 
+                     */
+                    int64_t GetIsMemoryHijackingAnalysis() const;
+
+                    /**
+                     * 设置Whether to enable detection of Java webshell execution (0 = disabled; 1 = enabled).
+                     * @param _isMemoryHijackingAnalysis Whether to enable detection of Java webshell execution (0 = disabled; 1 = enabled).
+                     * 
+                     */
+                    void SetIsMemoryHijackingAnalysis(const int64_t& _isMemoryHijackingAnalysis);
+
+                    /**
+                     * 判断参数 IsMemoryHijackingAnalysis 是否已赋值
+                     * @return IsMemoryHijackingAnalysis 是否已赋值
+                     * 
+                     */
+                    bool IsMemoryHijackingAnalysisHasBeenSet() const;
+
+                    /**
+                     * 获取CLS index type. (0 = full-text index; 1 = key-value index).
+                     * @return LogIndexType CLS index type. (0 = full-text index; 1 = key-value index).
+                     * 
+                     */
+                    int64_t GetLogIndexType() const;
+
+                    /**
+                     * 设置CLS index type. (0 = full-text index; 1 = key-value index).
+                     * @param _logIndexType CLS index type. (0 = full-text index; 1 = key-value index).
+                     * 
+                     */
+                    void SetLogIndexType(const int64_t& _logIndexType);
+
+                    /**
+                     * 判断参数 LogIndexType 是否已赋值
+                     * @return LogIndexType 是否已赋值
+                     * 
+                     */
+                    bool LogIndexTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Index key of traceId. It is valid when the CLS index type is key-value index.
+                     * @return LogTraceIdKey Index key of traceId. It is valid when the CLS index type is key-value index.
+                     * 
+                     */
+                    std::string GetLogTraceIdKey() const;
+
+                    /**
+                     * 设置Index key of traceId. It is valid when the CLS index type is key-value index.
+                     * @param _logTraceIdKey Index key of traceId. It is valid when the CLS index type is key-value index.
+                     * 
+                     */
+                    void SetLogTraceIdKey(const std::string& _logTraceIdKey);
+
+                    /**
+                     * 判断参数 LogTraceIdKey 是否已赋值
+                     * @return LogTraceIdKey 是否已赋值
+                     * 
+                     */
+                    bool LogTraceIdKeyHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
+                     * @return IsDeleteAnyFileAnalysis Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
+                     * 
+                     */
+                    int64_t GetIsDeleteAnyFileAnalysis() const;
+
+                    /**
+                     * 设置Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
+                     * @param _isDeleteAnyFileAnalysis Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
+                     * 
+                     */
+                    void SetIsDeleteAnyFileAnalysis(const int64_t& _isDeleteAnyFileAnalysis);
+
+                    /**
+                     * 判断参数 IsDeleteAnyFileAnalysis 是否已赋值
+                     * @return IsDeleteAnyFileAnalysis 是否已赋值
+                     * 
+                     */
+                    bool IsDeleteAnyFileAnalysisHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
+                     * @return IsReadAnyFileAnalysis Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
+                     * 
+                     */
+                    int64_t GetIsReadAnyFileAnalysis() const;
+
+                    /**
+                     * 设置Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
+                     * @param _isReadAnyFileAnalysis Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
+                     * 
+                     */
+                    void SetIsReadAnyFileAnalysis(const int64_t& _isReadAnyFileAnalysis);
+
+                    /**
+                     * 判断参数 IsReadAnyFileAnalysis 是否已赋值
+                     * @return IsReadAnyFileAnalysis 是否已赋值
+                     * 
+                     */
+                    bool IsReadAnyFileAnalysisHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
+                     * @return IsUploadAnyFileAnalysis Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
+                     * 
+                     */
+                    int64_t GetIsUploadAnyFileAnalysis() const;
+
+                    /**
+                     * 设置Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
+                     * @param _isUploadAnyFileAnalysis Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
+                     * 
+                     */
+                    void SetIsUploadAnyFileAnalysis(const int64_t& _isUploadAnyFileAnalysis);
+
+                    /**
+                     * 判断参数 IsUploadAnyFileAnalysis 是否已赋值
+                     * @return IsUploadAnyFileAnalysis 是否已赋值
+                     * 
+                     */
+                    bool IsUploadAnyFileAnalysisHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
+                     * @return IsIncludeAnyFileAnalysis Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
+                     * 
+                     */
+                    int64_t GetIsIncludeAnyFileAnalysis() const;
+
+                    /**
+                     * 设置Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
+                     * @param _isIncludeAnyFileAnalysis Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
+                     * 
+                     */
+                    void SetIsIncludeAnyFileAnalysis(const int64_t& _isIncludeAnyFileAnalysis);
+
+                    /**
+                     * 判断参数 IsIncludeAnyFileAnalysis 是否已赋值
+                     * @return IsIncludeAnyFileAnalysis 是否已赋值
+                     * 
+                     */
+                    bool IsIncludeAnyFileAnalysisHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
+                     * @return IsDirectoryTraversalAnalysis Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
+                     * 
+                     */
+                    int64_t GetIsDirectoryTraversalAnalysis() const;
+
+                    /**
+                     * 设置Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
+                     * @param _isDirectoryTraversalAnalysis Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
+                     * 
+                     */
+                    void SetIsDirectoryTraversalAnalysis(const int64_t& _isDirectoryTraversalAnalysis);
+
+                    /**
+                     * 判断参数 IsDirectoryTraversalAnalysis 是否已赋值
+                     * @return IsDirectoryTraversalAnalysis 是否已赋值
+                     * 
+                     */
+                    bool IsDirectoryTraversalAnalysisHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
+                     * @return IsTemplateEngineInjectionAnalysis Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
+                     * 
+                     */
+                    int64_t GetIsTemplateEngineInjectionAnalysis() const;
+
+                    /**
+                     * 设置Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
+                     * @param _isTemplateEngineInjectionAnalysis Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
+                     * 
+                     */
+                    void SetIsTemplateEngineInjectionAnalysis(const int64_t& _isTemplateEngineInjectionAnalysis);
+
+                    /**
+                     * 判断参数 IsTemplateEngineInjectionAnalysis 是否已赋值
+                     * @return IsTemplateEngineInjectionAnalysis 是否已赋值
+                     * 
+                     */
+                    bool IsTemplateEngineInjectionAnalysisHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
+                     * @return IsScriptEngineInjectionAnalysis Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
+                     * 
+                     */
+                    int64_t GetIsScriptEngineInjectionAnalysis() const;
+
+                    /**
+                     * 设置Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
+                     * @param _isScriptEngineInjectionAnalysis Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
+                     * 
+                     */
+                    void SetIsScriptEngineInjectionAnalysis(const int64_t& _isScriptEngineInjectionAnalysis);
+
+                    /**
+                     * 判断参数 IsScriptEngineInjectionAnalysis 是否已赋值
+                     * @return IsScriptEngineInjectionAnalysis 是否已赋值
+                     * 
+                     */
+                    bool IsScriptEngineInjectionAnalysisHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
+                     * @return IsExpressionInjectionAnalysis Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
+                     * 
+                     */
+                    int64_t GetIsExpressionInjectionAnalysis() const;
+
+                    /**
+                     * 设置Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
+                     * @param _isExpressionInjectionAnalysis Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
+                     * 
+                     */
+                    void SetIsExpressionInjectionAnalysis(const int64_t& _isExpressionInjectionAnalysis);
+
+                    /**
+                     * 判断参数 IsExpressionInjectionAnalysis 是否已赋值
+                     * @return IsExpressionInjectionAnalysis 是否已赋值
+                     * 
+                     */
+                    bool IsExpressionInjectionAnalysisHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
+                     * @return IsJNDIInjectionAnalysis Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
+                     * 
+                     */
+                    int64_t GetIsJNDIInjectionAnalysis() const;
+
+                    /**
+                     * 设置Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
+                     * @param _isJNDIInjectionAnalysis Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
+                     * 
+                     */
+                    void SetIsJNDIInjectionAnalysis(const int64_t& _isJNDIInjectionAnalysis);
+
+                    /**
+                     * 判断参数 IsJNDIInjectionAnalysis 是否已赋值
+                     * @return IsJNDIInjectionAnalysis 是否已赋值
+                     * 
+                     */
+                    bool IsJNDIInjectionAnalysisHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
+                     * @return IsJNIInjectionAnalysis Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
+                     * 
+                     */
+                    int64_t GetIsJNIInjectionAnalysis() const;
+
+                    /**
+                     * 设置Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
+                     * @param _isJNIInjectionAnalysis Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
+                     * 
+                     */
+                    void SetIsJNIInjectionAnalysis(const int64_t& _isJNIInjectionAnalysis);
+
+                    /**
+                     * 判断参数 IsJNIInjectionAnalysis 是否已赋值
+                     * @return IsJNIInjectionAnalysis 是否已赋值
+                     * 
+                     */
+                    bool IsJNIInjectionAnalysisHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
+                     * @return IsWebshellBackdoorAnalysis Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
+                     * 
+                     */
+                    int64_t GetIsWebshellBackdoorAnalysis() const;
+
+                    /**
+                     * 设置Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
+                     * @param _isWebshellBackdoorAnalysis Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
+                     * 
+                     */
+                    void SetIsWebshellBackdoorAnalysis(const int64_t& _isWebshellBackdoorAnalysis);
+
+                    /**
+                     * 判断参数 IsWebshellBackdoorAnalysis 是否已赋值
+                     * @return IsWebshellBackdoorAnalysis 是否已赋值
+                     * 
+                     */
+                    bool IsWebshellBackdoorAnalysisHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
+                     * @return IsDeserializationAnalysis Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
+                     * 
+                     */
+                    int64_t GetIsDeserializationAnalysis() const;
+
+                    /**
+                     * 设置Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
+                     * @param _isDeserializationAnalysis Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
+                     * 
+                     */
+                    void SetIsDeserializationAnalysis(const int64_t& _isDeserializationAnalysis);
+
+                    /**
+                     * 判断参数 IsDeserializationAnalysis 是否已赋值
+                     * @return IsDeserializationAnalysis 是否已赋值
+                     * 
+                     */
+                    bool IsDeserializationAnalysisHasBeenSet() const;
+
+                    /**
+                     * 获取Business system authentication token.
+                     * @return Token Business system authentication token.
+                     * 
+                     */
+                    std::string GetToken() const;
+
+                    /**
+                     * 设置Business system authentication token.
+                     * @param _token Business system authentication token.
+                     * 
+                     */
+                    void SetToken(const std::string& _token);
+
+                    /**
+                     * 判断参数 Token 是否已赋值
+                     * @return Token 是否已赋值
+                     * 
+                     */
+                    bool TokenHasBeenSet() const;
+
+                    /**
+                     * 获取Convergence threshold for URL long segments.
+                     * @return UrlLongSegmentThreshold Convergence threshold for URL long segments.
+                     * 
+                     */
+                    int64_t GetUrlLongSegmentThreshold() const;
+
+                    /**
+                     * 设置Convergence threshold for URL long segments.
+                     * @param _urlLongSegmentThreshold Convergence threshold for URL long segments.
+                     * 
+                     */
+                    void SetUrlLongSegmentThreshold(const int64_t& _urlLongSegmentThreshold);
+
+                    /**
+                     * 判断参数 UrlLongSegmentThreshold 是否已赋值
+                     * @return UrlLongSegmentThreshold 是否已赋值
+                     * 
+                     */
+                    bool UrlLongSegmentThresholdHasBeenSet() const;
+
+                    /**
+                     * 获取Convergence threshold for URL numerical segments.
+                     * @return UrlNumberSegmentThreshold Convergence threshold for URL numerical segments.
+                     * 
+                     */
+                    int64_t GetUrlNumberSegmentThreshold() const;
+
+                    /**
+                     * 设置Convergence threshold for URL numerical segments.
+                     * @param _urlNumberSegmentThreshold Convergence threshold for URL numerical segments.
+                     * 
+                     */
+                    void SetUrlNumberSegmentThreshold(const int64_t& _urlNumberSegmentThreshold);
+
+                    /**
+                     * 判断参数 UrlNumberSegmentThreshold 是否已赋值
+                     * @return UrlNumberSegmentThreshold 是否已赋值
+                     * 
+                     */
+                    bool UrlNumberSegmentThresholdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1077,6 +1476,120 @@ Account in arrears.
                      */
                     int64_t m_stopReason;
                     bool m_stopReasonHasBeenSet;
+
+                    /**
+                     * Whether to enable detection of remote command execution (0 = disabled; 1 = enabled).
+                     */
+                    int64_t m_isRemoteCommandExecutionAnalysis;
+                    bool m_isRemoteCommandExecutionAnalysisHasBeenSet;
+
+                    /**
+                     * Whether to enable detection of Java webshell execution (0 = disabled; 1 = enabled).
+                     */
+                    int64_t m_isMemoryHijackingAnalysis;
+                    bool m_isMemoryHijackingAnalysisHasBeenSet;
+
+                    /**
+                     * CLS index type. (0 = full-text index; 1 = key-value index).
+                     */
+                    int64_t m_logIndexType;
+                    bool m_logIndexTypeHasBeenSet;
+
+                    /**
+                     * Index key of traceId. It is valid when the CLS index type is key-value index.
+                     */
+                    std::string m_logTraceIdKey;
+                    bool m_logTraceIdKeyHasBeenSet;
+
+                    /**
+                     * Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
+                     */
+                    int64_t m_isDeleteAnyFileAnalysis;
+                    bool m_isDeleteAnyFileAnalysisHasBeenSet;
+
+                    /**
+                     * Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
+                     */
+                    int64_t m_isReadAnyFileAnalysis;
+                    bool m_isReadAnyFileAnalysisHasBeenSet;
+
+                    /**
+                     * Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
+                     */
+                    int64_t m_isUploadAnyFileAnalysis;
+                    bool m_isUploadAnyFileAnalysisHasBeenSet;
+
+                    /**
+                     * Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
+                     */
+                    int64_t m_isIncludeAnyFileAnalysis;
+                    bool m_isIncludeAnyFileAnalysisHasBeenSet;
+
+                    /**
+                     * Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
+                     */
+                    int64_t m_isDirectoryTraversalAnalysis;
+                    bool m_isDirectoryTraversalAnalysisHasBeenSet;
+
+                    /**
+                     * Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
+                     */
+                    int64_t m_isTemplateEngineInjectionAnalysis;
+                    bool m_isTemplateEngineInjectionAnalysisHasBeenSet;
+
+                    /**
+                     * Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
+                     */
+                    int64_t m_isScriptEngineInjectionAnalysis;
+                    bool m_isScriptEngineInjectionAnalysisHasBeenSet;
+
+                    /**
+                     * Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
+                     */
+                    int64_t m_isExpressionInjectionAnalysis;
+                    bool m_isExpressionInjectionAnalysisHasBeenSet;
+
+                    /**
+                     * Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
+                     */
+                    int64_t m_isJNDIInjectionAnalysis;
+                    bool m_isJNDIInjectionAnalysisHasBeenSet;
+
+                    /**
+                     * Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
+                     */
+                    int64_t m_isJNIInjectionAnalysis;
+                    bool m_isJNIInjectionAnalysisHasBeenSet;
+
+                    /**
+                     * Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
+                     */
+                    int64_t m_isWebshellBackdoorAnalysis;
+                    bool m_isWebshellBackdoorAnalysisHasBeenSet;
+
+                    /**
+                     * Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
+                     */
+                    int64_t m_isDeserializationAnalysis;
+                    bool m_isDeserializationAnalysisHasBeenSet;
+
+                    /**
+                     * Business system authentication token.
+                     */
+                    std::string m_token;
+                    bool m_tokenHasBeenSet;
+
+                    /**
+                     * Convergence threshold for URL long segments.
+                     */
+                    int64_t m_urlLongSegmentThreshold;
+                    bool m_urlLongSegmentThresholdHasBeenSet;
+
+                    /**
+                     * Convergence threshold for URL numerical segments.
+                     */
+                    int64_t m_urlNumberSegmentThreshold;
+                    bool m_urlNumberSegmentThresholdHasBeenSet;
 
                 };
             }

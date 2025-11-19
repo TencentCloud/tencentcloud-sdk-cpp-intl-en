@@ -88,27 +88,6 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter criteria.
-                     * @return Filters Filter criteria.
-                     * 
-                     */
-                    std::vector<Filter> GetFilters() const;
-
-                    /**
-                     * 设置Filter criteria.
-                     * @param _filters Filter criteria.
-                     * 
-                     */
-                    void SetFilters(const std::vector<Filter>& _filters);
-
-                    /**
-                     * 判断参数 Filters 是否已赋值
-                     * @return Filters 是否已赋值
-                     * 
-                     */
-                    bool FiltersHasBeenSet() const;
-
-                    /**
                      * 获取Aggregation dimension.
                      * @return GroupBy Aggregation dimension.
                      * 
@@ -170,6 +149,27 @@ namespace TencentCloud
                      * 
                      */
                     bool EndTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Filter criteria.
+                     * @return Filters Filter criteria.
+                     * 
+                     */
+                    std::vector<Filter> GetFilters() const;
+
+                    /**
+                     * 设置Filter criteria.
+                     * @param _filters Filter criteria.
+                     * 
+                     */
+                    void SetFilters(const std::vector<Filter>& _filters);
+
+                    /**
+                     * 判断参数 Filters 是否已赋值
+                     * @return Filters 是否已赋值
+                     * 
+                     */
+                    bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Sorting method
@@ -265,12 +265,6 @@ Value: fill in.
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Filter criteria.
-                     */
-                    std::vector<Filter> m_filters;
-                    bool m_filtersHasBeenSet;
-
-                    /**
                      * Aggregation dimension.
                      */
                     std::vector<std::string> m_groupBy;
@@ -287,6 +281,12 @@ Value: fill in.
                      */
                     uint64_t m_endTime;
                     bool m_endTimeHasBeenSet;
+
+                    /**
+                     * Filter criteria.
+                     */
+                    std::vector<Filter> m_filters;
+                    bool m_filtersHasBeenSet;
 
                     /**
                      * Sorting method

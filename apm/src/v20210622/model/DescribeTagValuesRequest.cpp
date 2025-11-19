@@ -25,9 +25,9 @@ using namespace std;
 DescribeTagValuesRequest::DescribeTagValuesRequest() :
     m_tagKeyHasBeenSet(false),
     m_instanceIdHasBeenSet(false),
-    m_filtersHasBeenSet(false),
     m_startTimeHasBeenSet(false),
     m_endTimeHasBeenSet(false),
+    m_filtersHasBeenSet(false),
     m_orFiltersHasBeenSet(false),
     m_typeHasBeenSet(false)
 {
@@ -56,21 +56,6 @@ string DescribeTagValuesRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_filtersHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Filters";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
-
-        int i=0;
-        for (auto itr = m_filters.begin(); itr != m_filters.end(); ++itr, ++i)
-        {
-            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
-            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
-        }
-    }
-
     if (m_startTimeHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -85,6 +70,21 @@ string DescribeTagValuesRequest::ToJsonString() const
         string key = "EndTime";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_endTime, allocator);
+    }
+
+    if (m_filtersHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Filters";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_filters.begin(); itr != m_filters.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
     }
 
     if (m_orFiltersHasBeenSet)
@@ -150,22 +150,6 @@ bool DescribeTagValuesRequest::InstanceIdHasBeenSet() const
     return m_instanceIdHasBeenSet;
 }
 
-vector<Filter> DescribeTagValuesRequest::GetFilters() const
-{
-    return m_filters;
-}
-
-void DescribeTagValuesRequest::SetFilters(const vector<Filter>& _filters)
-{
-    m_filters = _filters;
-    m_filtersHasBeenSet = true;
-}
-
-bool DescribeTagValuesRequest::FiltersHasBeenSet() const
-{
-    return m_filtersHasBeenSet;
-}
-
 int64_t DescribeTagValuesRequest::GetStartTime() const
 {
     return m_startTime;
@@ -196,6 +180,22 @@ void DescribeTagValuesRequest::SetEndTime(const int64_t& _endTime)
 bool DescribeTagValuesRequest::EndTimeHasBeenSet() const
 {
     return m_endTimeHasBeenSet;
+}
+
+vector<Filter> DescribeTagValuesRequest::GetFilters() const
+{
+    return m_filters;
+}
+
+void DescribeTagValuesRequest::SetFilters(const vector<Filter>& _filters)
+{
+    m_filters = _filters;
+    m_filtersHasBeenSet = true;
+}
+
+bool DescribeTagValuesRequest::FiltersHasBeenSet() const
+{
+    return m_filtersHasBeenSet;
 }
 
 vector<Filter> DescribeTagValuesRequest::GetOrFilters() const

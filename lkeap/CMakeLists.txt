@@ -21,6 +21,7 @@ set(lkeap_public_header
 set(lkeap_public_header_model
   include/tencentcloud/lkeap/v20240522/model/CreateSplitDocumentFlowRequest.h
   include/tencentcloud/lkeap/v20240522/model/ReconstructDocumentSSEResponse.h
+  include/tencentcloud/lkeap/v20240522/model/GetEmbeddingRequest.h
   include/tencentcloud/lkeap/v20240522/model/GetReconstructDocumentResultRequest.h
   include/tencentcloud/lkeap/v20240522/model/Usage.h
   include/tencentcloud/lkeap/v20240522/model/CreateSplitDocumentFlowResponse.h
@@ -34,11 +35,13 @@ set(lkeap_public_header_model
   include/tencentcloud/lkeap/v20240522/model/GetSplitDocumentResultResponse.h
   include/tencentcloud/lkeap/v20240522/model/ReconstructDocumentFailedPage.h
   include/tencentcloud/lkeap/v20240522/model/SplitDocumentFailedPage.h
+  include/tencentcloud/lkeap/v20240522/model/GetEmbeddingResponse.h
   include/tencentcloud/lkeap/v20240522/model/QueryRewriteRequest.h
   include/tencentcloud/lkeap/v20240522/model/CreateSplitDocumentFlowConfig.h
   include/tencentcloud/lkeap/v20240522/model/RunRerankResponse.h
   include/tencentcloud/lkeap/v20240522/model/CreateReconstructDocumentFlowResponse.h
   include/tencentcloud/lkeap/v20240522/model/GetSplitDocumentResultRequest.h
+  include/tencentcloud/lkeap/v20240522/model/EmbeddingObject.h
   include/tencentcloud/lkeap/v20240522/model/Message.h
   include/tencentcloud/lkeap/v20240522/model/QueryRewriteResponse.h
   )
@@ -47,6 +50,7 @@ set(lkeap_src
   src/v20240522/LkeapClient.cpp
   src/v20240522/model/CreateSplitDocumentFlowRequest.cpp
   src/v20240522/model/ReconstructDocumentSSEResponse.cpp
+  src/v20240522/model/GetEmbeddingRequest.cpp
   src/v20240522/model/GetReconstructDocumentResultRequest.cpp
   src/v20240522/model/Usage.cpp
   src/v20240522/model/CreateSplitDocumentFlowResponse.cpp
@@ -60,11 +64,13 @@ set(lkeap_src
   src/v20240522/model/GetSplitDocumentResultResponse.cpp
   src/v20240522/model/ReconstructDocumentFailedPage.cpp
   src/v20240522/model/SplitDocumentFailedPage.cpp
+  src/v20240522/model/GetEmbeddingResponse.cpp
   src/v20240522/model/QueryRewriteRequest.cpp
   src/v20240522/model/CreateSplitDocumentFlowConfig.cpp
   src/v20240522/model/RunRerankResponse.cpp
   src/v20240522/model/CreateReconstructDocumentFlowResponse.cpp
   src/v20240522/model/GetSplitDocumentResultRequest.cpp
+  src/v20240522/model/EmbeddingObject.cpp
   src/v20240522/model/Message.cpp
   src/v20240522/model/QueryRewriteResponse.cpp
   )

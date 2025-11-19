@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cvm/v20170312/model/VirtualPrivateCloud.h>
+#include <tencentcloud/cvm/v20170312/model/ChcDeployExtraConfig.h>
 
 
 namespace TencentCloud
@@ -148,6 +149,27 @@ namespace TencentCloud
                      */
                     bool DeploySecurityGroupIdsHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return ChcDeployExtraConfig 
+                     * 
+                     */
+                    ChcDeployExtraConfig GetChcDeployExtraConfig() const;
+
+                    /**
+                     * 设置
+                     * @param _chcDeployExtraConfig 
+                     * 
+                     */
+                    void SetChcDeployExtraConfig(const ChcDeployExtraConfig& _chcDeployExtraConfig);
+
+                    /**
+                     * 判断参数 ChcDeployExtraConfig 是否已赋值
+                     * @return ChcDeployExtraConfig 是否已赋值
+                     * 
+                     */
+                    bool ChcDeployExtraConfigHasBeenSet() const;
+
                 private:
 
                     /**
@@ -179,6 +201,12 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_deploySecurityGroupIds;
                     bool m_deploySecurityGroupIdsHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    ChcDeployExtraConfig m_chcDeployExtraConfig;
+                    bool m_chcDeployExtraConfigHasBeenSet;
 
                 };
             }

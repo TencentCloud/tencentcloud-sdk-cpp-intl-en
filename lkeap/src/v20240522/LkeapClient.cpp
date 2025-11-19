@@ -126,6 +126,49 @@ LkeapClient::CreateSplitDocumentFlowOutcomeCallable LkeapClient::CreateSplitDocu
     return task->get_future();
 }
 
+LkeapClient::GetEmbeddingOutcome LkeapClient::GetEmbedding(const GetEmbeddingRequest &request)
+{
+    auto outcome = MakeRequest(request, "GetEmbedding");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        GetEmbeddingResponse rsp = GetEmbeddingResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return GetEmbeddingOutcome(rsp);
+        else
+            return GetEmbeddingOutcome(o.GetError());
+    }
+    else
+    {
+        return GetEmbeddingOutcome(outcome.GetError());
+    }
+}
+
+void LkeapClient::GetEmbeddingAsync(const GetEmbeddingRequest& request, const GetEmbeddingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->GetEmbedding(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+LkeapClient::GetEmbeddingOutcomeCallable LkeapClient::GetEmbeddingCallable(const GetEmbeddingRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<GetEmbeddingOutcome()>>(
+        [this, request]()
+        {
+            return this->GetEmbedding(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 LkeapClient::GetReconstructDocumentResultOutcome LkeapClient::GetReconstructDocumentResult(const GetReconstructDocumentResultRequest &request)
 {
     auto outcome = MakeRequest(request, "GetReconstructDocumentResult");

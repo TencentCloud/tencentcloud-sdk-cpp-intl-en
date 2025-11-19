@@ -86,27 +86,6 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter criteria.
-                     * @return Filters Filter criteria.
-                     * 
-                     */
-                    std::vector<Filter> GetFilters() const;
-
-                    /**
-                     * 设置Filter criteria.
-                     * @param _filters Filter criteria.
-                     * 
-                     */
-                    void SetFilters(const std::vector<Filter>& _filters);
-
-                    /**
-                     * 判断参数 Filters 是否已赋值
-                     * @return Filters 是否已赋值
-                     * 
-                     */
-                    bool FiltersHasBeenSet() const;
-
-                    /**
                      * 获取Start time (unit: sec).
                      * @return StartTime Start time (unit: sec).
                      * 
@@ -147,6 +126,27 @@ namespace TencentCloud
                      * 
                      */
                     bool EndTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Filter criteria.
+                     * @return Filters Filter criteria.
+                     * 
+                     */
+                    std::vector<Filter> GetFilters() const;
+
+                    /**
+                     * 设置Filter criteria.
+                     * @param _filters Filter criteria.
+                     * 
+                     */
+                    void SetFilters(const std::vector<Filter>& _filters);
+
+                    /**
+                     * 判断参数 Filters 是否已赋值
+                     * @return Filters 是否已赋值
+                     * 
+                     */
+                    bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Or filter criteria.
@@ -205,12 +205,6 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Filter criteria.
-                     */
-                    std::vector<Filter> m_filters;
-                    bool m_filtersHasBeenSet;
-
-                    /**
                      * Start time (unit: sec).
                      */
                     int64_t m_startTime;
@@ -221,6 +215,12 @@ namespace TencentCloud
                      */
                     int64_t m_endTime;
                     bool m_endTimeHasBeenSet;
+
+                    /**
+                     * Filter criteria.
+                     */
+                    std::vector<Filter> m_filters;
+                    bool m_filtersHasBeenSet;
 
                     /**
                      * Or filter criteria.
