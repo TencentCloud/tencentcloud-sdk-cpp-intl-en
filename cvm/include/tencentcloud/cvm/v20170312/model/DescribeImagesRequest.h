@@ -80,7 +80,7 @@ namespace TencentCloud
 <li><strong>tag-value</strong></li>
 <p style="padding-left: 30px;">Filter by the <strong>tag value</strong>.</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
 <li><strong>tag:tag-key</strong></li>
-<p style="padding-left: 30px;">Filter by the <strong>tag key-value pair</strong>. Replace “tag-key” with the actual value. </p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
+<p style="padding-left: 30px;">Filter by the <strong>tag key-value pair</strong>. Replace "tag-key" with the actual value. </p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
                      * @return Filters Filters. Each request can have up to 10 `Filters`, and 5 `Filters.Values` for each filter. `ImageIds` and `Filters` cannot be specified at the same time. See details:
 
 <li><strong>image-id</strong></li>
@@ -96,7 +96,7 @@ namespace TencentCloud
 <li><strong>tag-value</strong></li>
 <p style="padding-left: 30px;">Filter by the <strong>tag value</strong>.</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
 <li><strong>tag:tag-key</strong></li>
-<p style="padding-left: 30px;">Filter by the <strong>tag key-value pair</strong>. Replace “tag-key” with the actual value. </p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
+<p style="padding-left: 30px;">Filter by the <strong>tag key-value pair</strong>. Replace "tag-key" with the actual value. </p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
@@ -117,7 +117,7 @@ namespace TencentCloud
 <li><strong>tag-value</strong></li>
 <p style="padding-left: 30px;">Filter by the <strong>tag value</strong>.</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
 <li><strong>tag:tag-key</strong></li>
-<p style="padding-left: 30px;">Filter by the <strong>tag key-value pair</strong>. Replace “tag-key” with the actual value. </p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
+<p style="padding-left: 30px;">Filter by the <strong>tag key-value pair</strong>. Replace "tag-key" with the actual value. </p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
                      * @param _filters Filters. Each request can have up to 10 `Filters`, and 5 `Filters.Values` for each filter. `ImageIds` and `Filters` cannot be specified at the same time. See details:
 
 <li><strong>image-id</strong></li>
@@ -133,7 +133,7 @@ namespace TencentCloud
 <li><strong>tag-value</strong></li>
 <p style="padding-left: 30px;">Filter by the <strong>tag value</strong>.</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
 <li><strong>tag:tag-key</strong></li>
-<p style="padding-left: 30px;">Filter by the <strong>tag key-value pair</strong>. Replace “tag-key” with the actual value. </p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
+<p style="padding-left: 30px;">Filter by the <strong>tag key-value pair</strong>. Replace "tag-key" with the actual value. </p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -188,15 +188,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Instance type, e.g. `S1.SMALL1`
-                     * @return InstanceType Instance type, e.g. `S1.SMALL1`
+                     * 获取Instance type, e.g. `SA5.MEDIUM2`
+                     * @return InstanceType Instance type, e.g. `SA5.MEDIUM2`
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Instance type, e.g. `S1.SMALL1`
-                     * @param _instanceType Instance type, e.g. `S1.SMALL1`
+                     * 设置Instance type, e.g. `SA5.MEDIUM2`
+                     * @param _instanceType Instance type, e.g. `SA5.MEDIUM2`
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -232,7 +232,7 @@ namespace TencentCloud
 <li><strong>tag-value</strong></li>
 <p style="padding-left: 30px;">Filter by the <strong>tag value</strong>.</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
 <li><strong>tag:tag-key</strong></li>
-<p style="padding-left: 30px;">Filter by the <strong>tag key-value pair</strong>. Replace “tag-key” with the actual value. </p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
+<p style="padding-left: 30px;">Filter by the <strong>tag key-value pair</strong>. Replace "tag-key" with the actual value. </p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
@@ -250,7 +250,7 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Instance type, e.g. `S1.SMALL1`
+                     * Instance type, e.g. `SA5.MEDIUM2`
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;

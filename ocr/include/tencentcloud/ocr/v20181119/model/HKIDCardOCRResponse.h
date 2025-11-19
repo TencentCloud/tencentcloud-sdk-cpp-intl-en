@@ -212,9 +212,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool FakeDetectResultHasBeenSet() const;
 
                     /**
-                     * 获取Base64-encoded identity photo
+                     * 获取Base64-encoded large primary portrait photo from the left side of the new-generation Hong Kong Identity Card.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return HeadImage Base64-encoded identity photo
+                     * @return HeadImage Base64-encoded large primary portrait photo from the left side of the new-generation Hong Kong Identity Card.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -228,12 +228,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool HeadImageHasBeenSet() const;
 
                     /**
-                     * 获取Multiple alarm codes. If the ID card is spoofed, photocopied, or photoshopped, the corresponding alarm code will be returned.
--9102: Alarm for photocopied document
--9103: Alarm for spoofed document
-                     * @return WarningCode Multiple alarm codes. If the ID card is spoofed, photocopied, or photoshopped, the corresponding alarm code will be returned.
--9102: Alarm for photocopied document
--9103: Alarm for spoofed document
+                     * 获取Base64-encoded small secondary portrait photo from the right side of the new-generation Hong Kong Identity Card.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return SmallHeadImage Base64-encoded small secondary portrait photo from the right side of the new-generation Hong Kong Identity Card.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetSmallHeadImage() const;
+
+                    /**
+                     * 判断参数 SmallHeadImage 是否已赋值
+                     * @return SmallHeadImage 是否已赋值
+                     * 
+                     */
+                    bool SmallHeadImageHasBeenSet() const;
+
+                    /**
+                     * 获取This field is deprecated and will always return an empty array. Usage is not recommended.
+                     * @return WarningCode This field is deprecated and will always return an empty array. Usage is not recommended.
                      * @deprecated
                      */
                     std::vector<int64_t> GetWarningCode() const;
@@ -274,6 +286,34 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool WarnCardInfosHasBeenSet() const;
+
+                    /**
+                     * 获取Text information incorporated within the laser-perforated see-through window on the new-generation Hong Kong Identity Card.
+                     * @return WindowEmbeddedText Text information incorporated within the laser-perforated see-through window on the new-generation Hong Kong Identity Card.
+                     * 
+                     */
+                    std::string GetWindowEmbeddedText() const;
+
+                    /**
+                     * 判断参数 WindowEmbeddedText 是否已赋值
+                     * @return WindowEmbeddedText 是否已赋值
+                     * 
+                     */
+                    bool WindowEmbeddedTextHasBeenSet() const;
+
+                    /**
+                     * 获取Versions of the Hong Kong Identity Card: HKID-2018, HKID-2003.
+                     * @return HKIDVersion Versions of the Hong Kong Identity Card: HKID-2018, HKID-2003.
+                     * 
+                     */
+                    std::string GetHKIDVersion() const;
+
+                    /**
+                     * 判断参数 HKIDVersion 是否已赋值
+                     * @return HKIDVersion 是否已赋值
+                     * 
+                     */
+                    bool HKIDVersionHasBeenSet() const;
 
                 private:
 
@@ -351,16 +391,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_fakeDetectResultHasBeenSet;
 
                     /**
-                     * Base64-encoded identity photo
+                     * Base64-encoded large primary portrait photo from the left side of the new-generation Hong Kong Identity Card.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_headImage;
                     bool m_headImageHasBeenSet;
 
                     /**
-                     * Multiple alarm codes. If the ID card is spoofed, photocopied, or photoshopped, the corresponding alarm code will be returned.
--9102: Alarm for photocopied document
--9103: Alarm for spoofed document
+                     * Base64-encoded small secondary portrait photo from the right side of the new-generation Hong Kong Identity Card.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_smallHeadImage;
+                    bool m_smallHeadImageHasBeenSet;
+
+                    /**
+                     * This field is deprecated and will always return an empty array. Usage is not recommended.
                      */
                     std::vector<int64_t> m_warningCode;
                     bool m_warningCodeHasBeenSet;
@@ -378,6 +423,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<int64_t> m_warnCardInfos;
                     bool m_warnCardInfosHasBeenSet;
+
+                    /**
+                     * Text information incorporated within the laser-perforated see-through window on the new-generation Hong Kong Identity Card.
+                     */
+                    std::string m_windowEmbeddedText;
+                    bool m_windowEmbeddedTextHasBeenSet;
+
+                    /**
+                     * Versions of the Hong Kong Identity Card: HKID-2018, HKID-2003.
+                     */
+                    std::string m_hKIDVersion;
+                    bool m_hKIDVersionHasBeenSet;
 
                 };
             }
