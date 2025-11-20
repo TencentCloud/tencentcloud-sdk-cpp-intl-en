@@ -27,7 +27,10 @@ TargetGroupInfo::TargetGroupInfo() :
     m_portHasBeenSet(false),
     m_createdTimeHasBeenSet(false),
     m_updatedTimeHasBeenSet(false),
-    m_associatedRuleHasBeenSet(false)
+    m_associatedRuleHasBeenSet(false),
+    m_protocolHasBeenSet(false),
+    m_scheduleAlgorithmHasBeenSet(false),
+    m_healthCheckHasBeenSet(false)
 {
 }
 
@@ -116,6 +119,43 @@ CoreInternalOutcome TargetGroupInfo::Deserialize(const rapidjson::Value &value)
         m_associatedRuleHasBeenSet = true;
     }
 
+    if (value.HasMember("Protocol") && !value["Protocol"].IsNull())
+    {
+        if (!value["Protocol"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `TargetGroupInfo.Protocol` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_protocol = string(value["Protocol"].GetString());
+        m_protocolHasBeenSet = true;
+    }
+
+    if (value.HasMember("ScheduleAlgorithm") && !value["ScheduleAlgorithm"].IsNull())
+    {
+        if (!value["ScheduleAlgorithm"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `TargetGroupInfo.ScheduleAlgorithm` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_scheduleAlgorithm = string(value["ScheduleAlgorithm"].GetString());
+        m_scheduleAlgorithmHasBeenSet = true;
+    }
+
+    if (value.HasMember("HealthCheck") && !value["HealthCheck"].IsNull())
+    {
+        if (!value["HealthCheck"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `TargetGroupInfo.HealthCheck` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_healthCheck.Deserialize(value["HealthCheck"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_healthCheckHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -184,6 +224,31 @@ void TargetGroupInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document:
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_protocolHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Protocol";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_protocol.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_scheduleAlgorithmHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ScheduleAlgorithm";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_scheduleAlgorithm.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_healthCheckHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HealthCheck";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_healthCheck.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -299,5 +364,53 @@ void TargetGroupInfo::SetAssociatedRule(const vector<AssociationItem>& _associat
 bool TargetGroupInfo::AssociatedRuleHasBeenSet() const
 {
     return m_associatedRuleHasBeenSet;
+}
+
+string TargetGroupInfo::GetProtocol() const
+{
+    return m_protocol;
+}
+
+void TargetGroupInfo::SetProtocol(const string& _protocol)
+{
+    m_protocol = _protocol;
+    m_protocolHasBeenSet = true;
+}
+
+bool TargetGroupInfo::ProtocolHasBeenSet() const
+{
+    return m_protocolHasBeenSet;
+}
+
+string TargetGroupInfo::GetScheduleAlgorithm() const
+{
+    return m_scheduleAlgorithm;
+}
+
+void TargetGroupInfo::SetScheduleAlgorithm(const string& _scheduleAlgorithm)
+{
+    m_scheduleAlgorithm = _scheduleAlgorithm;
+    m_scheduleAlgorithmHasBeenSet = true;
+}
+
+bool TargetGroupInfo::ScheduleAlgorithmHasBeenSet() const
+{
+    return m_scheduleAlgorithmHasBeenSet;
+}
+
+TargetGroupHealthCheck TargetGroupInfo::GetHealthCheck() const
+{
+    return m_healthCheck;
+}
+
+void TargetGroupInfo::SetHealthCheck(const TargetGroupHealthCheck& _healthCheck)
+{
+    m_healthCheck = _healthCheck;
+    m_healthCheckHasBeenSet = true;
+}
+
+bool TargetGroupInfo::HealthCheckHasBeenSet() const
+{
+    return m_healthCheckHasBeenSet;
 }
 

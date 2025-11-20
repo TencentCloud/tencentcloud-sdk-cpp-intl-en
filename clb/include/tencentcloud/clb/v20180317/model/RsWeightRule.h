@@ -113,42 +113,42 @@ namespace TencentCloud
                     /**
                      * 获取Target rule domain name. This parameter does not take effect if LocationId is specified
                      * @return Domain Target rule domain name. This parameter does not take effect if LocationId is specified
-                     * 
+                     * @deprecated
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Target rule domain name. This parameter does not take effect if LocationId is specified
                      * @param _domain Target rule domain name. This parameter does not take effect if LocationId is specified
-                     * 
+                     * @deprecated
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取Target rule URL. This parameter does not take effect if LocationId is specified
                      * @return Url Target rule URL. This parameter does not take effect if LocationId is specified
-                     * 
+                     * @deprecated
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Target rule URL. This parameter does not take effect if LocationId is specified
                      * @param _url Target rule URL. This parameter does not take effect if LocationId is specified
-                     * 
+                     * @deprecated
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool UrlHasBeenSet() const;
 

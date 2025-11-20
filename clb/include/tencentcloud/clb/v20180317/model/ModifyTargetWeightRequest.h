@@ -86,6 +86,27 @@ namespace TencentCloud
                     bool ListenerIdHasBeenSet() const;
 
                     /**
+                     * 获取List of real servers for which to modify the weights
+                     * @return Targets List of real servers for which to modify the weights
+                     * 
+                     */
+                    std::vector<Target> GetTargets() const;
+
+                    /**
+                     * 设置List of real servers for which to modify the weights
+                     * @param _targets List of real servers for which to modify the weights
+                     * 
+                     */
+                    void SetTargets(const std::vector<Target>& _targets);
+
+                    /**
+                     * 判断参数 Targets 是否已赋值
+                     * @return Targets 是否已赋值
+                     * 
+                     */
+                    bool TargetsHasBeenSet() const;
+
+                    /**
                      * 获取Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
                      * @return LocationId Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
                      * 
@@ -149,27 +170,6 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取List of real servers for which to modify the weights
-                     * @return Targets List of real servers for which to modify the weights
-                     * 
-                     */
-                    std::vector<Target> GetTargets() const;
-
-                    /**
-                     * 设置List of real servers for which to modify the weights
-                     * @param _targets List of real servers for which to modify the weights
-                     * 
-                     */
-                    void SetTargets(const std::vector<Target>& _targets);
-
-                    /**
-                     * 判断参数 Targets 是否已赋值
-                     * @return Targets 是否已赋值
-                     * 
-                     */
-                    bool TargetsHasBeenSet() const;
-
-                    /**
                      * 获取New forwarding weight of a real server. Value range: 0-100. Default value: 10. If the Targets.Weight parameter is set, this parameter will not take effect.
                      * @return Weight New forwarding weight of a real server. Value range: 0-100. Default value: 10. If the Targets.Weight parameter is set, this parameter will not take effect.
                      * 
@@ -205,6 +205,12 @@ namespace TencentCloud
                     bool m_listenerIdHasBeenSet;
 
                     /**
+                     * List of real servers for which to modify the weights
+                     */
+                    std::vector<Target> m_targets;
+                    bool m_targetsHasBeenSet;
+
+                    /**
                      * Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
                      */
                     std::string m_locationId;
@@ -221,12 +227,6 @@ namespace TencentCloud
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
-
-                    /**
-                     * List of real servers for which to modify the weights
-                     */
-                    std::vector<Target> m_targets;
-                    bool m_targetsHasBeenSet;
 
                     /**
                      * New forwarding weight of a real server. Value range: 0-100. Default value: 10. If the Targets.Weight parameter is set, this parameter will not take effect.

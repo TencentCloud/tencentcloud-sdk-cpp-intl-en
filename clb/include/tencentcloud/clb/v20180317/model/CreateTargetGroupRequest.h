@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/clb/v20180317/model/TargetGroupInstance.h>
+#include <tencentcloud/clb/v20180317/model/TargetGroupHealthCheck.h>
 
 
 namespace TencentCloud
@@ -127,6 +128,90 @@ namespace TencentCloud
                      */
                     bool TargetGroupInstancesHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return Type 
+                     * 
+                     */
+                    std::string GetType() const;
+
+                    /**
+                     * 设置
+                     * @param _type 
+                     * 
+                     */
+                    void SetType(const std::string& _type);
+
+                    /**
+                     * 判断参数 Type 是否已赋值
+                     * @return Type 是否已赋值
+                     * 
+                     */
+                    bool TypeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Protocol 
+                     * 
+                     */
+                    std::string GetProtocol() const;
+
+                    /**
+                     * 设置
+                     * @param _protocol 
+                     * 
+                     */
+                    void SetProtocol(const std::string& _protocol);
+
+                    /**
+                     * 判断参数 Protocol 是否已赋值
+                     * @return Protocol 是否已赋值
+                     * 
+                     */
+                    bool ProtocolHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return HealthCheck 
+                     * 
+                     */
+                    TargetGroupHealthCheck GetHealthCheck() const;
+
+                    /**
+                     * 设置
+                     * @param _healthCheck 
+                     * 
+                     */
+                    void SetHealthCheck(const TargetGroupHealthCheck& _healthCheck);
+
+                    /**
+                     * 判断参数 HealthCheck 是否已赋值
+                     * @return HealthCheck 是否已赋值
+                     * 
+                     */
+                    bool HealthCheckHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ScheduleAlgorithm 
+                     * 
+                     */
+                    std::string GetScheduleAlgorithm() const;
+
+                    /**
+                     * 设置
+                     * @param _scheduleAlgorithm 
+                     * 
+                     */
+                    void SetScheduleAlgorithm(const std::string& _scheduleAlgorithm);
+
+                    /**
+                     * 判断参数 ScheduleAlgorithm 是否已赋值
+                     * @return ScheduleAlgorithm 是否已赋值
+                     * 
+                     */
+                    bool ScheduleAlgorithmHasBeenSet() const;
+
                 private:
 
                     /**
@@ -152,6 +237,30 @@ namespace TencentCloud
                      */
                     std::vector<TargetGroupInstance> m_targetGroupInstances;
                     bool m_targetGroupInstancesHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_type;
+                    bool m_typeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_protocol;
+                    bool m_protocolHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    TargetGroupHealthCheck m_healthCheck;
+                    bool m_healthCheckHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_scheduleAlgorithm;
+                    bool m_scheduleAlgorithmHasBeenSet;
 
                 };
             }

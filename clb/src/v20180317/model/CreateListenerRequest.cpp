@@ -41,8 +41,12 @@ CreateListenerRequest::CreateListenerRequest() :
     m_maxConnHasBeenSet(false),
     m_maxCpsHasBeenSet(false),
     m_idleConnectTimeoutHasBeenSet(false),
+    m_proxyProtocolHasBeenSet(false),
     m_snatEnableHasBeenSet(false),
-    m_fullEndPortsHasBeenSet(false)
+    m_fullEndPortsHasBeenSet(false),
+    m_h2cSwitchHasBeenSet(false),
+    m_sslCloseSwitchHasBeenSet(false),
+    m_dataCompressModeHasBeenSet(false)
 {
 }
 
@@ -210,6 +214,14 @@ string CreateListenerRequest::ToJsonString() const
         d.AddMember(iKey, m_idleConnectTimeout, allocator);
     }
 
+    if (m_proxyProtocolHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ProxyProtocol";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_proxyProtocol, allocator);
+    }
+
     if (m_snatEnableHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -229,6 +241,30 @@ string CreateListenerRequest::ToJsonString() const
         {
             d[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
+    }
+
+    if (m_h2cSwitchHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "H2cSwitch";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_h2cSwitch, allocator);
+    }
+
+    if (m_sslCloseSwitchHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SslCloseSwitch";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_sslCloseSwitch, allocator);
+    }
+
+    if (m_dataCompressModeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DataCompressMode";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_dataCompressMode.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -527,6 +563,22 @@ bool CreateListenerRequest::IdleConnectTimeoutHasBeenSet() const
     return m_idleConnectTimeoutHasBeenSet;
 }
 
+bool CreateListenerRequest::GetProxyProtocol() const
+{
+    return m_proxyProtocol;
+}
+
+void CreateListenerRequest::SetProxyProtocol(const bool& _proxyProtocol)
+{
+    m_proxyProtocol = _proxyProtocol;
+    m_proxyProtocolHasBeenSet = true;
+}
+
+bool CreateListenerRequest::ProxyProtocolHasBeenSet() const
+{
+    return m_proxyProtocolHasBeenSet;
+}
+
 bool CreateListenerRequest::GetSnatEnable() const
 {
     return m_snatEnable;
@@ -557,6 +609,54 @@ void CreateListenerRequest::SetFullEndPorts(const vector<int64_t>& _fullEndPorts
 bool CreateListenerRequest::FullEndPortsHasBeenSet() const
 {
     return m_fullEndPortsHasBeenSet;
+}
+
+bool CreateListenerRequest::GetH2cSwitch() const
+{
+    return m_h2cSwitch;
+}
+
+void CreateListenerRequest::SetH2cSwitch(const bool& _h2cSwitch)
+{
+    m_h2cSwitch = _h2cSwitch;
+    m_h2cSwitchHasBeenSet = true;
+}
+
+bool CreateListenerRequest::H2cSwitchHasBeenSet() const
+{
+    return m_h2cSwitchHasBeenSet;
+}
+
+bool CreateListenerRequest::GetSslCloseSwitch() const
+{
+    return m_sslCloseSwitch;
+}
+
+void CreateListenerRequest::SetSslCloseSwitch(const bool& _sslCloseSwitch)
+{
+    m_sslCloseSwitch = _sslCloseSwitch;
+    m_sslCloseSwitchHasBeenSet = true;
+}
+
+bool CreateListenerRequest::SslCloseSwitchHasBeenSet() const
+{
+    return m_sslCloseSwitchHasBeenSet;
+}
+
+string CreateListenerRequest::GetDataCompressMode() const
+{
+    return m_dataCompressMode;
+}
+
+void CreateListenerRequest::SetDataCompressMode(const string& _dataCompressMode)
+{
+    m_dataCompressMode = _dataCompressMode;
+    m_dataCompressModeHasBeenSet = true;
+}
+
+bool CreateListenerRequest::DataCompressModeHasBeenSet() const
+{
+    return m_dataCompressModeHasBeenSet;
 }
 
 

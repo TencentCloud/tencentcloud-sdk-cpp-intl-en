@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/clb/v20180317/model/AssociationItem.h>
+#include <tencentcloud/clb/v20180317/model/TargetGroupHealthCheck.h>
 
 
 namespace TencentCloud
@@ -198,6 +199,69 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool AssociatedRuleHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return Protocol 
+                     * 
+                     */
+                    std::string GetProtocol() const;
+
+                    /**
+                     * 设置
+                     * @param _protocol 
+                     * 
+                     */
+                    void SetProtocol(const std::string& _protocol);
+
+                    /**
+                     * 判断参数 Protocol 是否已赋值
+                     * @return Protocol 是否已赋值
+                     * 
+                     */
+                    bool ProtocolHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ScheduleAlgorithm 
+                     * 
+                     */
+                    std::string GetScheduleAlgorithm() const;
+
+                    /**
+                     * 设置
+                     * @param _scheduleAlgorithm 
+                     * 
+                     */
+                    void SetScheduleAlgorithm(const std::string& _scheduleAlgorithm);
+
+                    /**
+                     * 判断参数 ScheduleAlgorithm 是否已赋值
+                     * @return ScheduleAlgorithm 是否已赋值
+                     * 
+                     */
+                    bool ScheduleAlgorithmHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return HealthCheck 
+                     * 
+                     */
+                    TargetGroupHealthCheck GetHealthCheck() const;
+
+                    /**
+                     * 设置
+                     * @param _healthCheck 
+                     * 
+                     */
+                    void SetHealthCheck(const TargetGroupHealthCheck& _healthCheck);
+
+                    /**
+                     * 判断参数 HealthCheck 是否已赋值
+                     * @return HealthCheck 是否已赋值
+                     * 
+                     */
+                    bool HealthCheckHasBeenSet() const;
+
                 private:
 
                     /**
@@ -242,6 +306,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<AssociationItem> m_associatedRule;
                     bool m_associatedRuleHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_protocol;
+                    bool m_protocolHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_scheduleAlgorithm;
+                    bool m_scheduleAlgorithmHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    TargetGroupHealthCheck m_healthCheck;
+                    bool m_healthCheckHasBeenSet;
 
                 };
             }

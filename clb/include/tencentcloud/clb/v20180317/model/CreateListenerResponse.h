@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Array of unique IDs of the created listeners
-                     * @return ListenerIds Array of unique IDs of the created listeners
+                     * 获取Array of the unique IDs of created listeners.
+                     * @return ListenerIds Array of the unique IDs of created listeners.
                      * 
                      */
                     std::vector<std::string> GetListenerIds() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Array of unique IDs of the created listeners
+                     * Array of the unique IDs of created listeners.
                      */
                     std::vector<std::string> m_listenerIds;
                     bool m_listenerIdsHasBeenSet;

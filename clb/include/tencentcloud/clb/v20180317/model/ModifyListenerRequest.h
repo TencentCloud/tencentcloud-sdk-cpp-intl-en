@@ -46,15 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CLB instance ID
-                     * @return LoadBalancerId CLB instance ID
+                     * 获取ID of the CLB instance. You can call the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) API to query the ID.
+                     * @return LoadBalancerId ID of the CLB instance. You can call the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) API to query the ID.
                      * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
-                     * 设置CLB instance ID
-                     * @param _loadBalancerId CLB instance ID
+                     * 设置ID of the CLB instance. You can call the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) API to query the ID.
+                     * @param _loadBalancerId ID of the CLB instance. You can call the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) API to query the ID.
                      * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
@@ -67,15 +67,15 @@ namespace TencentCloud
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
-                     * 获取CLB listener ID
-                     * @return ListenerId CLB listener ID
+                     * 获取ID of the CLB instance listener. You can call the [DescribeListeners](https://intl.cloud.tencent.com/document/product/214/30686?from_cn_redirect=1) API to query the ID.
+                     * @return ListenerId ID of the CLB instance listener. You can call the [DescribeListeners](https://intl.cloud.tencent.com/document/product/214/30686?from_cn_redirect=1) API to query the ID.
                      * 
                      */
                     std::string GetListenerId() const;
 
                     /**
-                     * 设置CLB listener ID
-                     * @param _listenerId CLB listener ID
+                     * 设置ID of the CLB instance listener. You can call the [DescribeListeners](https://intl.cloud.tencent.com/document/product/214/30686?from_cn_redirect=1) API to query the ID.
+                     * @param _listenerId ID of the CLB instance listener. You can call the [DescribeListeners](https://intl.cloud.tencent.com/document/product/214/30686?from_cn_redirect=1) API to query the ID.
                      * 
                      */
                     void SetListenerId(const std::string& _listenerId);
@@ -88,15 +88,15 @@ namespace TencentCloud
                     bool ListenerIdHasBeenSet() const;
 
                     /**
-                     * 获取New listener name
-                     * @return ListenerName New listener name
+                     * 获取New listener name. The maximum length is 255 characters.
+                     * @return ListenerName New listener name. The maximum length is 255 characters.
                      * 
                      */
                     std::string GetListenerName() const;
 
                     /**
-                     * 设置New listener name
-                     * @param _listenerName New listener name
+                     * 设置New listener name. The maximum length is 255 characters.
+                     * @param _listenerName New listener name. The maximum length is 255 characters.
                      * 
                      */
                     void SetListenerName(const std::string& _listenerName);
@@ -172,15 +172,23 @@ namespace TencentCloud
                     bool CertificateHasBeenSet() const;
 
                     /**
-                     * 获取Listener forwarding method. Valid values: WRR, LEAST_CONN.These values respectively indicate weighted round robin and least connections. The default value is WRR.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners. The balancing method for Layer-7 listeners should be modified in the forwarding rules.
-                     * @return Scheduler Listener forwarding method. Valid values: WRR, LEAST_CONN.These values respectively indicate weighted round robin and least connections. The default value is WRR.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners. The balancing method for Layer-7 listeners should be modified in the forwarding rules.
+                     * 获取Listener forwarding method. Valid values: WRR (weighted round-robin), LEAST_CONN (least connections), and IP_HASH (IP address hash).
+They indicate weighted round-robin and least connections, respectively. Default value: WRR.
+Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners. The balancing method for Layer-7 listeners should be modified in the forwarding rules.
+                     * @return Scheduler Listener forwarding method. Valid values: WRR (weighted round-robin), LEAST_CONN (least connections), and IP_HASH (IP address hash).
+They indicate weighted round-robin and least connections, respectively. Default value: WRR.
+Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners. The balancing method for Layer-7 listeners should be modified in the forwarding rules.
                      * 
                      */
                     std::string GetScheduler() const;
 
                     /**
-                     * 设置Listener forwarding method. Valid values: WRR, LEAST_CONN.These values respectively indicate weighted round robin and least connections. The default value is WRR.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners. The balancing method for Layer-7 listeners should be modified in the forwarding rules.
-                     * @param _scheduler Listener forwarding method. Valid values: WRR, LEAST_CONN.These values respectively indicate weighted round robin and least connections. The default value is WRR.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners. The balancing method for Layer-7 listeners should be modified in the forwarding rules.
+                     * 设置Listener forwarding method. Valid values: WRR (weighted round-robin), LEAST_CONN (least connections), and IP_HASH (IP address hash).
+They indicate weighted round-robin and least connections, respectively. Default value: WRR.
+Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners. The balancing method for Layer-7 listeners should be modified in the forwarding rules.
+                     * @param _scheduler Listener forwarding method. Valid values: WRR (weighted round-robin), LEAST_CONN (least connections), and IP_HASH (IP address hash).
+They indicate weighted round-robin and least connections, respectively. Default value: WRR.
+Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners. The balancing method for Layer-7 listeners should be modified in the forwarding rules.
                      * 
                      */
                     void SetScheduler(const std::string& _scheduler);
@@ -235,15 +243,27 @@ namespace TencentCloud
                     bool TargetTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable long connections. This parameter applies only to HTTP and HTTPS listeners.The default value is 0, indicating disabled, and 1 indicates enabled.
-                     * @return KeepaliveEnable Whether to enable long connections. This parameter applies only to HTTP and HTTPS listeners.The default value is 0, indicating disabled, and 1 indicates enabled.
+                     * 获取Whether to enable the persistent connection feature. This parameter applies only to HTTP/HTTPS listeners.
+The default value is 0, indicating disabled, and 1 indicates enabled.
+
+Enable this feature with caution if the maximum number of connections is limited for real servers. This feature is in beta testing. To use it, submit a [beta testing application](https://intl.cloud.tencent.com/apply/p/tsodp6qm21?from_cn_redirect=1).
+                     * @return KeepaliveEnable Whether to enable the persistent connection feature. This parameter applies only to HTTP/HTTPS listeners.
+The default value is 0, indicating disabled, and 1 indicates enabled.
+
+Enable this feature with caution if the maximum number of connections is limited for real servers. This feature is in beta testing. To use it, submit a [beta testing application](https://intl.cloud.tencent.com/apply/p/tsodp6qm21?from_cn_redirect=1).
                      * 
                      */
                     int64_t GetKeepaliveEnable() const;
 
                     /**
-                     * 设置Whether to enable long connections. This parameter applies only to HTTP and HTTPS listeners.The default value is 0, indicating disabled, and 1 indicates enabled.
-                     * @param _keepaliveEnable Whether to enable long connections. This parameter applies only to HTTP and HTTPS listeners.The default value is 0, indicating disabled, and 1 indicates enabled.
+                     * 设置Whether to enable the persistent connection feature. This parameter applies only to HTTP/HTTPS listeners.
+The default value is 0, indicating disabled, and 1 indicates enabled.
+
+Enable this feature with caution if the maximum number of connections is limited for real servers. This feature is in beta testing. To use it, submit a [beta testing application](https://intl.cloud.tencent.com/apply/p/tsodp6qm21?from_cn_redirect=1).
+                     * @param _keepaliveEnable Whether to enable the persistent connection feature. This parameter applies only to HTTP/HTTPS listeners.
+The default value is 0, indicating disabled, and 1 indicates enabled.
+
+Enable this feature with caution if the maximum number of connections is limited for real servers. This feature is in beta testing. To use it, submit a [beta testing application](https://intl.cloud.tencent.com/apply/p/tsodp6qm21?from_cn_redirect=1).
                      * 
                      */
                     void SetKeepaliveEnable(const int64_t& _keepaliveEnable);
@@ -256,15 +276,19 @@ namespace TencentCloud
                     bool KeepaliveEnableHasBeenSet() const;
 
                     /**
-                     * 获取Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
-                     * @return DeregisterTargetRst Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+                     * 获取Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners.
+True: send an RST packet to the client; False: do not send an RST packet to the client.
+                     * @return DeregisterTargetRst Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners.
+True: send an RST packet to the client; False: do not send an RST packet to the client.
                      * 
                      */
                     bool GetDeregisterTargetRst() const;
 
                     /**
-                     * 设置Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
-                     * @param _deregisterTargetRst Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+                     * 设置Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners.
+True: send an RST packet to the client; False: do not send an RST packet to the client.
+                     * @param _deregisterTargetRst Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners.
+True: send an RST packet to the client; False: do not send an RST packet to the client.
                      * 
                      */
                     void SetDeregisterTargetRst(const bool& _deregisterTargetRst);
@@ -277,15 +301,27 @@ namespace TencentCloud
                     bool DeregisterTargetRstHasBeenSet() const;
 
                     /**
-                     * 获取Session persistence type. NORMAL indicates the default session persistence type, and QUIC_CID indicates session persistence by QUIC connection ID. QUIC_CID only supports UDP protocols.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners.
-                     * @return SessionType Session persistence type. NORMAL indicates the default session persistence type, and QUIC_CID indicates session persistence by QUIC connection ID. QUIC_CID only supports UDP protocols.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners.
+                     * 获取Session persistence type. NORMAL: default session persistence type; QUIC_CID: perform session persistence based on QUIC connection ID. If the value is set to QUIC_CID, only the UDP protocol is supported.
+Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners.
+
+Default value: NORMAL.
+                     * @return SessionType Session persistence type. NORMAL: default session persistence type; QUIC_CID: perform session persistence based on QUIC connection ID. If the value is set to QUIC_CID, only the UDP protocol is supported.
+Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners.
+
+Default value: NORMAL.
                      * 
                      */
                     std::string GetSessionType() const;
 
                     /**
-                     * 设置Session persistence type. NORMAL indicates the default session persistence type, and QUIC_CID indicates session persistence by QUIC connection ID. QUIC_CID only supports UDP protocols.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners.
-                     * @param _sessionType Session persistence type. NORMAL indicates the default session persistence type, and QUIC_CID indicates session persistence by QUIC connection ID. QUIC_CID only supports UDP protocols.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners.
+                     * 设置Session persistence type. NORMAL: default session persistence type; QUIC_CID: perform session persistence based on QUIC connection ID. If the value is set to QUIC_CID, only the UDP protocol is supported.
+Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners.
+
+Default value: NORMAL.
+                     * @param _sessionType Session persistence type. NORMAL: default session persistence type; QUIC_CID: perform session persistence based on QUIC connection ID. If the value is set to QUIC_CID, only the UDP protocol is supported.
+Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners.
+
+Default value: NORMAL.
                      * 
                      */
                     void SetSessionType(const std::string& _sessionType);
@@ -320,14 +356,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Maximum number of concurrent connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of concurrent connections for the instance specification. -1 indicates that no limit is set on the concurrent connections at the listener level. Classic network instances do not support this parameter.
+
+Default value: -1, which indicates no limit.
                      * @return MaxConn Maximum number of concurrent connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of concurrent connections for the instance specification. -1 indicates that no limit is set on the concurrent connections at the listener level. Classic network instances do not support this parameter.
+
+Default value: -1, which indicates no limit.
                      * 
                      */
                     int64_t GetMaxConn() const;
 
                     /**
                      * 设置Maximum number of concurrent connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of concurrent connections for the instance specification. -1 indicates that no limit is set on the concurrent connections at the listener level. Classic network instances do not support this parameter.
+
+Default value: -1, which indicates no limit.
                      * @param _maxConn Maximum number of concurrent connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of concurrent connections for the instance specification. -1 indicates that no limit is set on the concurrent connections at the listener level. Classic network instances do not support this parameter.
+
+Default value: -1, which indicates no limit.
                      * 
                      */
                     void SetMaxConn(const int64_t& _maxConn);
@@ -341,14 +385,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Maximum number of new connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of new connections for the instance specification. -1 indicates that no limit is set on the new connections at the listener level. Classic network instances do not support this parameter.
+
+Default value: -1, which indicates no limit.
                      * @return MaxCps Maximum number of new connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of new connections for the instance specification. -1 indicates that no limit is set on the new connections at the listener level. Classic network instances do not support this parameter.
+
+Default value: -1, which indicates no limit.
                      * 
                      */
                     int64_t GetMaxCps() const;
 
                     /**
                      * 设置Maximum number of new connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of new connections for the instance specification. -1 indicates that no limit is set on the new connections at the listener level. Classic network instances do not support this parameter.
+
+Default value: -1, which indicates no limit.
                      * @param _maxCps Maximum number of new connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of new connections for the instance specification. -1 indicates that no limit is set on the new connections at the listener level. Classic network instances do not support this parameter.
+
+Default value: -1, which indicates no limit.
                      * 
                      */
                     void SetMaxCps(const int64_t& _maxCps);
@@ -361,15 +413,15 @@ namespace TencentCloud
                     bool MaxCpsHasBeenSet() const;
 
                     /**
-                     * 获取Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
-                     * @return IdleConnectTimeout Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
+                     * 获取Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Default value: 900. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value greater than 2000, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category). The maximum value can be 3600.
+                     * @return IdleConnectTimeout Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Default value: 900. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value greater than 2000, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category). The maximum value can be 3600.
                      * 
                      */
                     int64_t GetIdleConnectTimeout() const;
 
                     /**
-                     * 设置Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
-                     * @param _idleConnectTimeout Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
+                     * 设置Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Default value: 900. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value greater than 2000, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category). The maximum value can be 3600.
+                     * @param _idleConnectTimeout Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Default value: 900. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value greater than 2000, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category). The maximum value can be 3600.
                      * 
                      */
                     void SetIdleConnectTimeout(const int64_t& _idleConnectTimeout);
@@ -382,15 +434,36 @@ namespace TencentCloud
                     bool IdleConnectTimeoutHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable SNAT.
-                     * @return SnatEnable Whether to enable SNAT.
+                     * 获取
+                     * @return ProxyProtocol 
+                     * 
+                     */
+                    bool GetProxyProtocol() const;
+
+                    /**
+                     * 设置
+                     * @param _proxyProtocol 
+                     * 
+                     */
+                    void SetProxyProtocol(const bool& _proxyProtocol);
+
+                    /**
+                     * 判断参数 ProxyProtocol 是否已赋值
+                     * @return ProxyProtocol 是否已赋值
+                     * 
+                     */
+                    bool ProxyProtocolHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable SNAT. True: enable SNAT; False: do not enable SNAT.
+                     * @return SnatEnable Whether to enable SNAT. True: enable SNAT; False: do not enable SNAT.
                      * 
                      */
                     bool GetSnatEnable() const;
 
                     /**
-                     * 设置Whether to enable SNAT.
-                     * @param _snatEnable Whether to enable SNAT.
+                     * 设置Whether to enable SNAT. True: enable SNAT; False: do not enable SNAT.
+                     * @param _snatEnable Whether to enable SNAT. True: enable SNAT; False: do not enable SNAT.
                      * 
                      */
                     void SetSnatEnable(const bool& _snatEnable);
@@ -402,22 +475,43 @@ namespace TencentCloud
                      */
                     bool SnatEnableHasBeenSet() const;
 
+                    /**
+                     * 获取Data compression mode.
+                     * @return DataCompressMode Data compression mode.
+                     * 
+                     */
+                    std::string GetDataCompressMode() const;
+
+                    /**
+                     * 设置Data compression mode.
+                     * @param _dataCompressMode Data compression mode.
+                     * 
+                     */
+                    void SetDataCompressMode(const std::string& _dataCompressMode);
+
+                    /**
+                     * 判断参数 DataCompressMode 是否已赋值
+                     * @return DataCompressMode 是否已赋值
+                     * 
+                     */
+                    bool DataCompressModeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * CLB instance ID
+                     * ID of the CLB instance. You can call the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) API to query the ID.
                      */
                     std::string m_loadBalancerId;
                     bool m_loadBalancerIdHasBeenSet;
 
                     /**
-                     * CLB listener ID
+                     * ID of the CLB instance listener. You can call the [DescribeListeners](https://intl.cloud.tencent.com/document/product/214/30686?from_cn_redirect=1) API to query the ID.
                      */
                     std::string m_listenerId;
                     bool m_listenerIdHasBeenSet;
 
                     /**
-                     * New listener name
+                     * New listener name. The maximum length is 255 characters.
                      */
                     std::string m_listenerName;
                     bool m_listenerNameHasBeenSet;
@@ -441,7 +535,9 @@ namespace TencentCloud
                     bool m_certificateHasBeenSet;
 
                     /**
-                     * Listener forwarding method. Valid values: WRR, LEAST_CONN.These values respectively indicate weighted round robin and least connections. The default value is WRR.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners. The balancing method for Layer-7 listeners should be modified in the forwarding rules.
+                     * Listener forwarding method. Valid values: WRR (weighted round-robin), LEAST_CONN (least connections), and IP_HASH (IP address hash).
+They indicate weighted round-robin and least connections, respectively. Default value: WRR.
+Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners. The balancing method for Layer-7 listeners should be modified in the forwarding rules.
                      */
                     std::string m_scheduler;
                     bool m_schedulerHasBeenSet;
@@ -459,19 +555,26 @@ namespace TencentCloud
                     bool m_targetTypeHasBeenSet;
 
                     /**
-                     * Whether to enable long connections. This parameter applies only to HTTP and HTTPS listeners.The default value is 0, indicating disabled, and 1 indicates enabled.
+                     * Whether to enable the persistent connection feature. This parameter applies only to HTTP/HTTPS listeners.
+The default value is 0, indicating disabled, and 1 indicates enabled.
+
+Enable this feature with caution if the maximum number of connections is limited for real servers. This feature is in beta testing. To use it, submit a [beta testing application](https://intl.cloud.tencent.com/apply/p/tsodp6qm21?from_cn_redirect=1).
                      */
                     int64_t m_keepaliveEnable;
                     bool m_keepaliveEnableHasBeenSet;
 
                     /**
-                     * Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+                     * Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners.
+True: send an RST packet to the client; False: do not send an RST packet to the client.
                      */
                     bool m_deregisterTargetRst;
                     bool m_deregisterTargetRstHasBeenSet;
 
                     /**
-                     * Session persistence type. NORMAL indicates the default session persistence type, and QUIC_CID indicates session persistence by QUIC connection ID. QUIC_CID only supports UDP protocols.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners.
+                     * Session persistence type. NORMAL: default session persistence type; QUIC_CID: perform session persistence based on QUIC connection ID. If the value is set to QUIC_CID, only the UDP protocol is supported.
+Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners.
+
+Default value: NORMAL.
                      */
                     std::string m_sessionType;
                     bool m_sessionTypeHasBeenSet;
@@ -484,27 +587,43 @@ namespace TencentCloud
 
                     /**
                      * Maximum number of concurrent connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of concurrent connections for the instance specification. -1 indicates that no limit is set on the concurrent connections at the listener level. Classic network instances do not support this parameter.
+
+Default value: -1, which indicates no limit.
                      */
                     int64_t m_maxConn;
                     bool m_maxConnHasBeenSet;
 
                     /**
                      * Maximum number of new connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of new connections for the instance specification. -1 indicates that no limit is set on the new connections at the listener level. Classic network instances do not support this parameter.
+
+Default value: -1, which indicates no limit.
                      */
                     int64_t m_maxCps;
                     bool m_maxCpsHasBeenSet;
 
                     /**
-                     * Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
+                     * Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Default value: 900. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value greater than 2000, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category). The maximum value can be 3600.
                      */
                     int64_t m_idleConnectTimeout;
                     bool m_idleConnectTimeoutHasBeenSet;
 
                     /**
-                     * Whether to enable SNAT.
+                     * 
+                     */
+                    bool m_proxyProtocol;
+                    bool m_proxyProtocolHasBeenSet;
+
+                    /**
+                     * Whether to enable SNAT. True: enable SNAT; False: do not enable SNAT.
                      */
                     bool m_snatEnable;
                     bool m_snatEnableHasBeenSet;
+
+                    /**
+                     * Data compression mode.
+                     */
+                    std::string m_dataCompressMode;
+                    bool m_dataCompressModeHasBeenSet;
 
                 };
             }

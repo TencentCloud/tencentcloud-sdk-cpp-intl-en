@@ -66,21 +66,21 @@ namespace TencentCloud
                     /**
                      * 获取Logset retention period (in days)
                      * @return Period Logset retention period (in days)
-                     * 
+                     * @deprecated
                      */
                     uint64_t GetPeriod() const;
 
                     /**
                      * 设置Logset retention period (in days)
                      * @param _period Logset retention period (in days)
-                     * 
+                     * @deprecated
                      */
                     void SetPeriod(const uint64_t& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool PeriodHasBeenSet() const;
 

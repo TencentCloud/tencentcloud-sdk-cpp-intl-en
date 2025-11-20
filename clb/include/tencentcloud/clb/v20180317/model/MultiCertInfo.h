@@ -89,6 +89,27 @@ namespace TencentCloud
                      */
                     bool CertListHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable client authentication for mutual authentication. ON: enable it; OPTIONAL: client certificate not required. Default value: ON.
+                     * @return SSLVerifyClient Whether to enable client authentication for mutual authentication. ON: enable it; OPTIONAL: client certificate not required. Default value: ON.
+                     * 
+                     */
+                    std::string GetSSLVerifyClient() const;
+
+                    /**
+                     * 设置Whether to enable client authentication for mutual authentication. ON: enable it; OPTIONAL: client certificate not required. Default value: ON.
+                     * @param _sSLVerifyClient Whether to enable client authentication for mutual authentication. ON: enable it; OPTIONAL: client certificate not required. Default value: ON.
+                     * 
+                     */
+                    void SetSSLVerifyClient(const std::string& _sSLVerifyClient);
+
+                    /**
+                     * 判断参数 SSLVerifyClient 是否已赋值
+                     * @return SSLVerifyClient 是否已赋值
+                     * 
+                     */
+                    bool SSLVerifyClientHasBeenSet() const;
+
                 private:
 
                     /**
@@ -102,6 +123,12 @@ namespace TencentCloud
                      */
                     std::vector<CertInfo> m_certList;
                     bool m_certListHasBeenSet;
+
+                    /**
+                     * Whether to enable client authentication for mutual authentication. ON: enable it; OPTIONAL: client certificate not required. Default value: ON.
+                     */
+                    std::string m_sSLVerifyClient;
+                    bool m_sSLVerifyClientHasBeenSet;
 
                 };
             }

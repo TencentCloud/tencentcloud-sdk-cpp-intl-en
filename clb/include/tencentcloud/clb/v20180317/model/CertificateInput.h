@@ -47,15 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
-                     * @return SSLMode Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
+                     * 获取Authentication type. UNIDIRECTIONAL: one-way authentication; MUTUAL: mutual authentication.
+Default value: UNIDIRECTIONAL.
+                     * @return SSLMode Authentication type. UNIDIRECTIONAL: one-way authentication; MUTUAL: mutual authentication.
+Default value: UNIDIRECTIONAL.
                      * 
                      */
                     std::string GetSSLMode() const;
 
                     /**
-                     * 设置Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
-                     * @param _sSLMode Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
+                     * 设置Authentication type. UNIDIRECTIONAL: one-way authentication; MUTUAL: mutual authentication.
+Default value: UNIDIRECTIONAL.
+                     * @param _sSLMode Authentication type. UNIDIRECTIONAL: one-way authentication; MUTUAL: mutual authentication.
+Default value: UNIDIRECTIONAL.
                      * 
                      */
                     void SetSSLMode(const std::string& _sSLMode);
@@ -68,15 +72,36 @@ namespace TencentCloud
                     bool SSLModeHasBeenSet() const;
 
                     /**
-                     * 获取ID of a server certificate. If you leave this parameter empty, you must upload the certificate, including CertContent, CertKey, and CertName.
-                     * @return CertId ID of a server certificate. If you leave this parameter empty, you must upload the certificate, including CertContent, CertKey, and CertName.
+                     * 获取Whether to enable client authentication for mutual authentication. ON: enable it; OPTIONAL: client certificate not required. Default value: ON.
+                     * @return SSLVerifyClient Whether to enable client authentication for mutual authentication. ON: enable it; OPTIONAL: client certificate not required. Default value: ON.
+                     * 
+                     */
+                    std::string GetSSLVerifyClient() const;
+
+                    /**
+                     * 设置Whether to enable client authentication for mutual authentication. ON: enable it; OPTIONAL: client certificate not required. Default value: ON.
+                     * @param _sSLVerifyClient Whether to enable client authentication for mutual authentication. ON: enable it; OPTIONAL: client certificate not required. Default value: ON.
+                     * 
+                     */
+                    void SetSSLVerifyClient(const std::string& _sSLVerifyClient);
+
+                    /**
+                     * 判断参数 SSLVerifyClient 是否已赋值
+                     * @return SSLVerifyClient 是否已赋值
+                     * 
+                     */
+                    bool SSLVerifyClientHasBeenSet() const;
+
+                    /**
+                     * 获取Server certificate ID. If this parameter is not specified, you need to upload a certificate and specify CertContent (server certificate content), CertKey (server certificate key), and CertName (server certificate name).
+                     * @return CertId Server certificate ID. If this parameter is not specified, you need to upload a certificate and specify CertContent (server certificate content), CertKey (server certificate key), and CertName (server certificate name).
                      * 
                      */
                     std::string GetCertId() const;
 
                     /**
-                     * 设置ID of a server certificate. If you leave this parameter empty, you must upload the certificate, including CertContent, CertKey, and CertName.
-                     * @param _certId ID of a server certificate. If you leave this parameter empty, you must upload the certificate, including CertContent, CertKey, and CertName.
+                     * 设置Server certificate ID. If this parameter is not specified, you need to upload a certificate and specify CertContent (server certificate content), CertKey (server certificate key), and CertName (server certificate name).
+                     * @param _certId Server certificate ID. If this parameter is not specified, you need to upload a certificate and specify CertContent (server certificate content), CertKey (server certificate key), and CertName (server certificate name).
                      * 
                      */
                     void SetCertId(const std::string& _certId);
@@ -217,13 +242,20 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
+                     * Authentication type. UNIDIRECTIONAL: one-way authentication; MUTUAL: mutual authentication.
+Default value: UNIDIRECTIONAL.
                      */
                     std::string m_sSLMode;
                     bool m_sSLModeHasBeenSet;
 
                     /**
-                     * ID of a server certificate. If you leave this parameter empty, you must upload the certificate, including CertContent, CertKey, and CertName.
+                     * Whether to enable client authentication for mutual authentication. ON: enable it; OPTIONAL: client certificate not required. Default value: ON.
+                     */
+                    std::string m_sSLVerifyClient;
+                    bool m_sSLVerifyClientHasBeenSet;
+
+                    /**
+                     * Server certificate ID. If this parameter is not specified, you need to upload a certificate and specify CertContent (server certificate content), CertKey (server certificate key), and CertName (server certificate name).
                      */
                     std::string m_certId;
                     bool m_certIdHasBeenSet;

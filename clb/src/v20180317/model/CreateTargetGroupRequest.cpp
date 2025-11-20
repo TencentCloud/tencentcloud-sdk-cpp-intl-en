@@ -26,7 +26,11 @@ CreateTargetGroupRequest::CreateTargetGroupRequest() :
     m_targetGroupNameHasBeenSet(false),
     m_vpcIdHasBeenSet(false),
     m_portHasBeenSet(false),
-    m_targetGroupInstancesHasBeenSet(false)
+    m_targetGroupInstancesHasBeenSet(false),
+    m_typeHasBeenSet(false),
+    m_protocolHasBeenSet(false),
+    m_healthCheckHasBeenSet(false),
+    m_scheduleAlgorithmHasBeenSet(false)
 {
 }
 
@@ -74,6 +78,39 @@ string CreateTargetGroupRequest::ToJsonString() const
             d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(d[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_typeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Type";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_protocolHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Protocol";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_protocol.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_healthCheckHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HealthCheck";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_healthCheck.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_scheduleAlgorithmHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ScheduleAlgorithm";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_scheduleAlgorithm.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -146,6 +183,70 @@ void CreateTargetGroupRequest::SetTargetGroupInstances(const vector<TargetGroupI
 bool CreateTargetGroupRequest::TargetGroupInstancesHasBeenSet() const
 {
     return m_targetGroupInstancesHasBeenSet;
+}
+
+string CreateTargetGroupRequest::GetType() const
+{
+    return m_type;
+}
+
+void CreateTargetGroupRequest::SetType(const string& _type)
+{
+    m_type = _type;
+    m_typeHasBeenSet = true;
+}
+
+bool CreateTargetGroupRequest::TypeHasBeenSet() const
+{
+    return m_typeHasBeenSet;
+}
+
+string CreateTargetGroupRequest::GetProtocol() const
+{
+    return m_protocol;
+}
+
+void CreateTargetGroupRequest::SetProtocol(const string& _protocol)
+{
+    m_protocol = _protocol;
+    m_protocolHasBeenSet = true;
+}
+
+bool CreateTargetGroupRequest::ProtocolHasBeenSet() const
+{
+    return m_protocolHasBeenSet;
+}
+
+TargetGroupHealthCheck CreateTargetGroupRequest::GetHealthCheck() const
+{
+    return m_healthCheck;
+}
+
+void CreateTargetGroupRequest::SetHealthCheck(const TargetGroupHealthCheck& _healthCheck)
+{
+    m_healthCheck = _healthCheck;
+    m_healthCheckHasBeenSet = true;
+}
+
+bool CreateTargetGroupRequest::HealthCheckHasBeenSet() const
+{
+    return m_healthCheckHasBeenSet;
+}
+
+string CreateTargetGroupRequest::GetScheduleAlgorithm() const
+{
+    return m_scheduleAlgorithm;
+}
+
+void CreateTargetGroupRequest::SetScheduleAlgorithm(const string& _scheduleAlgorithm)
+{
+    m_scheduleAlgorithm = _scheduleAlgorithm;
+    m_scheduleAlgorithmHasBeenSet = true;
+}
+
+bool CreateTargetGroupRequest::ScheduleAlgorithmHasBeenSet() const
+{
+    return m_scheduleAlgorithmHasBeenSet;
 }
 
 
