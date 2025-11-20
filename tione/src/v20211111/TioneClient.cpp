@@ -62,24 +62,31 @@ TioneClient::DescribeModelServiceGroupsOutcome TioneClient::DescribeModelService
 
 void TioneClient::DescribeModelServiceGroupsAsync(const DescribeModelServiceGroupsRequest& request, const DescribeModelServiceGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeModelServiceGroups(request), context);
-    };
+    using Req = const DescribeModelServiceGroupsRequest&;
+    using Resp = DescribeModelServiceGroupsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeModelServiceGroups", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TioneClient::DescribeModelServiceGroupsOutcomeCallable TioneClient::DescribeModelServiceGroupsCallable(const DescribeModelServiceGroupsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeModelServiceGroupsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeModelServiceGroups(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeModelServiceGroupsOutcome>>();
+    DescribeModelServiceGroupsAsync(
+    request,
+    [prom](
+        const TioneClient*,
+        const DescribeModelServiceGroupsRequest&,
+        DescribeModelServiceGroupsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

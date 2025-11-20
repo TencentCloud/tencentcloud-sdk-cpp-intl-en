@@ -62,25 +62,32 @@ TrroClient::BatchDeleteDevicesOutcome TrroClient::BatchDeleteDevices(const Batch
 
 void TrroClient::BatchDeleteDevicesAsync(const BatchDeleteDevicesRequest& request, const BatchDeleteDevicesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->BatchDeleteDevices(request), context);
-    };
+    using Req = const BatchDeleteDevicesRequest&;
+    using Resp = BatchDeleteDevicesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "BatchDeleteDevices", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TrroClient::BatchDeleteDevicesOutcomeCallable TrroClient::BatchDeleteDevicesCallable(const BatchDeleteDevicesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<BatchDeleteDevicesOutcome()>>(
-        [this, request]()
-        {
-            return this->BatchDeleteDevices(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<BatchDeleteDevicesOutcome>>();
+    BatchDeleteDevicesAsync(
+    request,
+    [prom](
+        const TrroClient*,
+        const BatchDeleteDevicesRequest&,
+        BatchDeleteDevicesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TrroClient::BatchDeletePolicyOutcome TrroClient::BatchDeletePolicy(const BatchDeletePolicyRequest &request)
@@ -105,25 +112,32 @@ TrroClient::BatchDeletePolicyOutcome TrroClient::BatchDeletePolicy(const BatchDe
 
 void TrroClient::BatchDeletePolicyAsync(const BatchDeletePolicyRequest& request, const BatchDeletePolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->BatchDeletePolicy(request), context);
-    };
+    using Req = const BatchDeletePolicyRequest&;
+    using Resp = BatchDeletePolicyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "BatchDeletePolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TrroClient::BatchDeletePolicyOutcomeCallable TrroClient::BatchDeletePolicyCallable(const BatchDeletePolicyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<BatchDeletePolicyOutcome()>>(
-        [this, request]()
-        {
-            return this->BatchDeletePolicy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<BatchDeletePolicyOutcome>>();
+    BatchDeletePolicyAsync(
+    request,
+    [prom](
+        const TrroClient*,
+        const BatchDeletePolicyRequest&,
+        BatchDeletePolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TrroClient::CreateDeviceOutcome TrroClient::CreateDevice(const CreateDeviceRequest &request)
@@ -148,25 +162,32 @@ TrroClient::CreateDeviceOutcome TrroClient::CreateDevice(const CreateDeviceReque
 
 void TrroClient::CreateDeviceAsync(const CreateDeviceRequest& request, const CreateDeviceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateDevice(request), context);
-    };
+    using Req = const CreateDeviceRequest&;
+    using Resp = CreateDeviceResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateDevice", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TrroClient::CreateDeviceOutcomeCallable TrroClient::CreateDeviceCallable(const CreateDeviceRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateDeviceOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateDevice(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateDeviceOutcome>>();
+    CreateDeviceAsync(
+    request,
+    [prom](
+        const TrroClient*,
+        const CreateDeviceRequest&,
+        CreateDeviceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TrroClient::CreateProjectOutcome TrroClient::CreateProject(const CreateProjectRequest &request)
@@ -191,25 +212,32 @@ TrroClient::CreateProjectOutcome TrroClient::CreateProject(const CreateProjectRe
 
 void TrroClient::CreateProjectAsync(const CreateProjectRequest& request, const CreateProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateProject(request), context);
-    };
+    using Req = const CreateProjectRequest&;
+    using Resp = CreateProjectResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateProject", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TrroClient::CreateProjectOutcomeCallable TrroClient::CreateProjectCallable(const CreateProjectRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateProjectOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateProject(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateProjectOutcome>>();
+    CreateProjectAsync(
+    request,
+    [prom](
+        const TrroClient*,
+        const CreateProjectRequest&,
+        CreateProjectOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TrroClient::DeleteProjectOutcome TrroClient::DeleteProject(const DeleteProjectRequest &request)
@@ -234,25 +262,32 @@ TrroClient::DeleteProjectOutcome TrroClient::DeleteProject(const DeleteProjectRe
 
 void TrroClient::DeleteProjectAsync(const DeleteProjectRequest& request, const DeleteProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteProject(request), context);
-    };
+    using Req = const DeleteProjectRequest&;
+    using Resp = DeleteProjectResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteProject", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TrroClient::DeleteProjectOutcomeCallable TrroClient::DeleteProjectCallable(const DeleteProjectRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteProjectOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteProject(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteProjectOutcome>>();
+    DeleteProjectAsync(
+    request,
+    [prom](
+        const TrroClient*,
+        const DeleteProjectRequest&,
+        DeleteProjectOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TrroClient::DescribeDeviceInfoOutcome TrroClient::DescribeDeviceInfo(const DescribeDeviceInfoRequest &request)
@@ -277,25 +312,32 @@ TrroClient::DescribeDeviceInfoOutcome TrroClient::DescribeDeviceInfo(const Descr
 
 void TrroClient::DescribeDeviceInfoAsync(const DescribeDeviceInfoRequest& request, const DescribeDeviceInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDeviceInfo(request), context);
-    };
+    using Req = const DescribeDeviceInfoRequest&;
+    using Resp = DescribeDeviceInfoResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDeviceInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TrroClient::DescribeDeviceInfoOutcomeCallable TrroClient::DescribeDeviceInfoCallable(const DescribeDeviceInfoRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDeviceInfoOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDeviceInfo(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDeviceInfoOutcome>>();
+    DescribeDeviceInfoAsync(
+    request,
+    [prom](
+        const TrroClient*,
+        const DescribeDeviceInfoRequest&,
+        DescribeDeviceInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TrroClient::DescribeDeviceSessionListOutcome TrroClient::DescribeDeviceSessionList(const DescribeDeviceSessionListRequest &request)
@@ -320,25 +362,32 @@ TrroClient::DescribeDeviceSessionListOutcome TrroClient::DescribeDeviceSessionLi
 
 void TrroClient::DescribeDeviceSessionListAsync(const DescribeDeviceSessionListRequest& request, const DescribeDeviceSessionListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDeviceSessionList(request), context);
-    };
+    using Req = const DescribeDeviceSessionListRequest&;
+    using Resp = DescribeDeviceSessionListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDeviceSessionList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TrroClient::DescribeDeviceSessionListOutcomeCallable TrroClient::DescribeDeviceSessionListCallable(const DescribeDeviceSessionListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDeviceSessionListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDeviceSessionList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDeviceSessionListOutcome>>();
+    DescribeDeviceSessionListAsync(
+    request,
+    [prom](
+        const TrroClient*,
+        const DescribeDeviceSessionListRequest&,
+        DescribeDeviceSessionListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TrroClient::DescribeProjectInfoOutcome TrroClient::DescribeProjectInfo(const DescribeProjectInfoRequest &request)
@@ -363,25 +412,32 @@ TrroClient::DescribeProjectInfoOutcome TrroClient::DescribeProjectInfo(const Des
 
 void TrroClient::DescribeProjectInfoAsync(const DescribeProjectInfoRequest& request, const DescribeProjectInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeProjectInfo(request), context);
-    };
+    using Req = const DescribeProjectInfoRequest&;
+    using Resp = DescribeProjectInfoResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeProjectInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TrroClient::DescribeProjectInfoOutcomeCallable TrroClient::DescribeProjectInfoCallable(const DescribeProjectInfoRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeProjectInfoOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeProjectInfo(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeProjectInfoOutcome>>();
+    DescribeProjectInfoAsync(
+    request,
+    [prom](
+        const TrroClient*,
+        const DescribeProjectInfoRequest&,
+        DescribeProjectInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TrroClient::DescribeProjectListOutcome TrroClient::DescribeProjectList(const DescribeProjectListRequest &request)
@@ -406,25 +462,32 @@ TrroClient::DescribeProjectListOutcome TrroClient::DescribeProjectList(const Des
 
 void TrroClient::DescribeProjectListAsync(const DescribeProjectListRequest& request, const DescribeProjectListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeProjectList(request), context);
-    };
+    using Req = const DescribeProjectListRequest&;
+    using Resp = DescribeProjectListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeProjectList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TrroClient::DescribeProjectListOutcomeCallable TrroClient::DescribeProjectListCallable(const DescribeProjectListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeProjectListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeProjectList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeProjectListOutcome>>();
+    DescribeProjectListAsync(
+    request,
+    [prom](
+        const TrroClient*,
+        const DescribeProjectListRequest&,
+        DescribeProjectListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TrroClient::DescribeRecentSessionListOutcome TrroClient::DescribeRecentSessionList(const DescribeRecentSessionListRequest &request)
@@ -449,25 +512,32 @@ TrroClient::DescribeRecentSessionListOutcome TrroClient::DescribeRecentSessionLi
 
 void TrroClient::DescribeRecentSessionListAsync(const DescribeRecentSessionListRequest& request, const DescribeRecentSessionListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeRecentSessionList(request), context);
-    };
+    using Req = const DescribeRecentSessionListRequest&;
+    using Resp = DescribeRecentSessionListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeRecentSessionList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TrroClient::DescribeRecentSessionListOutcomeCallable TrroClient::DescribeRecentSessionListCallable(const DescribeRecentSessionListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeRecentSessionListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeRecentSessionList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeRecentSessionListOutcome>>();
+    DescribeRecentSessionListAsync(
+    request,
+    [prom](
+        const TrroClient*,
+        const DescribeRecentSessionListRequest&,
+        DescribeRecentSessionListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TrroClient::DescribeSessionStatisticsOutcome TrroClient::DescribeSessionStatistics(const DescribeSessionStatisticsRequest &request)
@@ -492,25 +562,32 @@ TrroClient::DescribeSessionStatisticsOutcome TrroClient::DescribeSessionStatisti
 
 void TrroClient::DescribeSessionStatisticsAsync(const DescribeSessionStatisticsRequest& request, const DescribeSessionStatisticsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeSessionStatistics(request), context);
-    };
+    using Req = const DescribeSessionStatisticsRequest&;
+    using Resp = DescribeSessionStatisticsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeSessionStatistics", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TrroClient::DescribeSessionStatisticsOutcomeCallable TrroClient::DescribeSessionStatisticsCallable(const DescribeSessionStatisticsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeSessionStatisticsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeSessionStatistics(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeSessionStatisticsOutcome>>();
+    DescribeSessionStatisticsAsync(
+    request,
+    [prom](
+        const TrroClient*,
+        const DescribeSessionStatisticsRequest&,
+        DescribeSessionStatisticsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TrroClient::DescribeSessionStatisticsByIntervalOutcome TrroClient::DescribeSessionStatisticsByInterval(const DescribeSessionStatisticsByIntervalRequest &request)
@@ -535,25 +612,32 @@ TrroClient::DescribeSessionStatisticsByIntervalOutcome TrroClient::DescribeSessi
 
 void TrroClient::DescribeSessionStatisticsByIntervalAsync(const DescribeSessionStatisticsByIntervalRequest& request, const DescribeSessionStatisticsByIntervalAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeSessionStatisticsByInterval(request), context);
-    };
+    using Req = const DescribeSessionStatisticsByIntervalRequest&;
+    using Resp = DescribeSessionStatisticsByIntervalResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeSessionStatisticsByInterval", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TrroClient::DescribeSessionStatisticsByIntervalOutcomeCallable TrroClient::DescribeSessionStatisticsByIntervalCallable(const DescribeSessionStatisticsByIntervalRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeSessionStatisticsByIntervalOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeSessionStatisticsByInterval(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeSessionStatisticsByIntervalOutcome>>();
+    DescribeSessionStatisticsByIntervalAsync(
+    request,
+    [prom](
+        const TrroClient*,
+        const DescribeSessionStatisticsByIntervalRequest&,
+        DescribeSessionStatisticsByIntervalOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TrroClient::GetDeviceLicenseOutcome TrroClient::GetDeviceLicense(const GetDeviceLicenseRequest &request)
@@ -578,25 +662,32 @@ TrroClient::GetDeviceLicenseOutcome TrroClient::GetDeviceLicense(const GetDevice
 
 void TrroClient::GetDeviceLicenseAsync(const GetDeviceLicenseRequest& request, const GetDeviceLicenseAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->GetDeviceLicense(request), context);
-    };
+    using Req = const GetDeviceLicenseRequest&;
+    using Resp = GetDeviceLicenseResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "GetDeviceLicense", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TrroClient::GetDeviceLicenseOutcomeCallable TrroClient::GetDeviceLicenseCallable(const GetDeviceLicenseRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<GetDeviceLicenseOutcome()>>(
-        [this, request]()
-        {
-            return this->GetDeviceLicense(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<GetDeviceLicenseOutcome>>();
+    GetDeviceLicenseAsync(
+    request,
+    [prom](
+        const TrroClient*,
+        const GetDeviceLicenseRequest&,
+        GetDeviceLicenseOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TrroClient::GetDevicesOutcome TrroClient::GetDevices(const GetDevicesRequest &request)
@@ -621,25 +712,32 @@ TrroClient::GetDevicesOutcome TrroClient::GetDevices(const GetDevicesRequest &re
 
 void TrroClient::GetDevicesAsync(const GetDevicesRequest& request, const GetDevicesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->GetDevices(request), context);
-    };
+    using Req = const GetDevicesRequest&;
+    using Resp = GetDevicesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "GetDevices", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TrroClient::GetDevicesOutcomeCallable TrroClient::GetDevicesCallable(const GetDevicesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<GetDevicesOutcome()>>(
-        [this, request]()
-        {
-            return this->GetDevices(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<GetDevicesOutcome>>();
+    GetDevicesAsync(
+    request,
+    [prom](
+        const TrroClient*,
+        const GetDevicesRequest&,
+        GetDevicesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TrroClient::GetLicenseStatOutcome TrroClient::GetLicenseStat(const GetLicenseStatRequest &request)
@@ -664,25 +762,32 @@ TrroClient::GetLicenseStatOutcome TrroClient::GetLicenseStat(const GetLicenseSta
 
 void TrroClient::GetLicenseStatAsync(const GetLicenseStatRequest& request, const GetLicenseStatAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->GetLicenseStat(request), context);
-    };
+    using Req = const GetLicenseStatRequest&;
+    using Resp = GetLicenseStatResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "GetLicenseStat", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TrroClient::GetLicenseStatOutcomeCallable TrroClient::GetLicenseStatCallable(const GetLicenseStatRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<GetLicenseStatOutcome()>>(
-        [this, request]()
-        {
-            return this->GetLicenseStat(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<GetLicenseStatOutcome>>();
+    GetLicenseStatAsync(
+    request,
+    [prom](
+        const TrroClient*,
+        const GetLicenseStatRequest&,
+        GetLicenseStatOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TrroClient::GetLicensesOutcome TrroClient::GetLicenses(const GetLicensesRequest &request)
@@ -707,25 +812,32 @@ TrroClient::GetLicensesOutcome TrroClient::GetLicenses(const GetLicensesRequest 
 
 void TrroClient::GetLicensesAsync(const GetLicensesRequest& request, const GetLicensesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->GetLicenses(request), context);
-    };
+    using Req = const GetLicensesRequest&;
+    using Resp = GetLicensesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "GetLicenses", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TrroClient::GetLicensesOutcomeCallable TrroClient::GetLicensesCallable(const GetLicensesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<GetLicensesOutcome()>>(
-        [this, request]()
-        {
-            return this->GetLicenses(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<GetLicensesOutcome>>();
+    GetLicensesAsync(
+    request,
+    [prom](
+        const TrroClient*,
+        const GetLicensesRequest&,
+        GetLicensesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TrroClient::ModifyDeviceOutcome TrroClient::ModifyDevice(const ModifyDeviceRequest &request)
@@ -750,25 +862,32 @@ TrroClient::ModifyDeviceOutcome TrroClient::ModifyDevice(const ModifyDeviceReque
 
 void TrroClient::ModifyDeviceAsync(const ModifyDeviceRequest& request, const ModifyDeviceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyDevice(request), context);
-    };
+    using Req = const ModifyDeviceRequest&;
+    using Resp = ModifyDeviceResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyDevice", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TrroClient::ModifyDeviceOutcomeCallable TrroClient::ModifyDeviceCallable(const ModifyDeviceRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyDeviceOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyDevice(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyDeviceOutcome>>();
+    ModifyDeviceAsync(
+    request,
+    [prom](
+        const TrroClient*,
+        const ModifyDeviceRequest&,
+        ModifyDeviceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TrroClient::ModifyPolicyOutcome TrroClient::ModifyPolicy(const ModifyPolicyRequest &request)
@@ -793,25 +912,32 @@ TrroClient::ModifyPolicyOutcome TrroClient::ModifyPolicy(const ModifyPolicyReque
 
 void TrroClient::ModifyPolicyAsync(const ModifyPolicyRequest& request, const ModifyPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyPolicy(request), context);
-    };
+    using Req = const ModifyPolicyRequest&;
+    using Resp = ModifyPolicyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyPolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TrroClient::ModifyPolicyOutcomeCallable TrroClient::ModifyPolicyCallable(const ModifyPolicyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyPolicyOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyPolicy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyPolicyOutcome>>();
+    ModifyPolicyAsync(
+    request,
+    [prom](
+        const TrroClient*,
+        const ModifyPolicyRequest&,
+        ModifyPolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TrroClient::ModifyProjectOutcome TrroClient::ModifyProject(const ModifyProjectRequest &request)
@@ -836,24 +962,31 @@ TrroClient::ModifyProjectOutcome TrroClient::ModifyProject(const ModifyProjectRe
 
 void TrroClient::ModifyProjectAsync(const ModifyProjectRequest& request, const ModifyProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyProject(request), context);
-    };
+    using Req = const ModifyProjectRequest&;
+    using Resp = ModifyProjectResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyProject", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TrroClient::ModifyProjectOutcomeCallable TrroClient::ModifyProjectCallable(const ModifyProjectRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyProjectOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyProject(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyProjectOutcome>>();
+    ModifyProjectAsync(
+    request,
+    [prom](
+        const TrroClient*,
+        const ModifyProjectRequest&,
+        ModifyProjectOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

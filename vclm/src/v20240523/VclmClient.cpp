@@ -62,25 +62,32 @@ VclmClient::DescribeImageAnimateJobOutcome VclmClient::DescribeImageAnimateJob(c
 
 void VclmClient::DescribeImageAnimateJobAsync(const DescribeImageAnimateJobRequest& request, const DescribeImageAnimateJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeImageAnimateJob(request), context);
-    };
+    using Req = const DescribeImageAnimateJobRequest&;
+    using Resp = DescribeImageAnimateJobResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeImageAnimateJob", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 VclmClient::DescribeImageAnimateJobOutcomeCallable VclmClient::DescribeImageAnimateJobCallable(const DescribeImageAnimateJobRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeImageAnimateJobOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeImageAnimateJob(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeImageAnimateJobOutcome>>();
+    DescribeImageAnimateJobAsync(
+    request,
+    [prom](
+        const VclmClient*,
+        const DescribeImageAnimateJobRequest&,
+        DescribeImageAnimateJobOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 VclmClient::SubmitImageAnimateJobOutcome VclmClient::SubmitImageAnimateJob(const SubmitImageAnimateJobRequest &request)
@@ -105,24 +112,31 @@ VclmClient::SubmitImageAnimateJobOutcome VclmClient::SubmitImageAnimateJob(const
 
 void VclmClient::SubmitImageAnimateJobAsync(const SubmitImageAnimateJobRequest& request, const SubmitImageAnimateJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->SubmitImageAnimateJob(request), context);
-    };
+    using Req = const SubmitImageAnimateJobRequest&;
+    using Resp = SubmitImageAnimateJobResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "SubmitImageAnimateJob", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 VclmClient::SubmitImageAnimateJobOutcomeCallable VclmClient::SubmitImageAnimateJobCallable(const SubmitImageAnimateJobRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<SubmitImageAnimateJobOutcome()>>(
-        [this, request]()
-        {
-            return this->SubmitImageAnimateJob(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<SubmitImageAnimateJobOutcome>>();
+    SubmitImageAnimateJobAsync(
+    request,
+    [prom](
+        const VclmClient*,
+        const SubmitImageAnimateJobRequest&,
+        SubmitImageAnimateJobOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

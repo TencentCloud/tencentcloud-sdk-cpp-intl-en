@@ -62,25 +62,32 @@ TeoClient::CheckCertificateOutcome TeoClient::CheckCertificate(const CheckCertif
 
 void TeoClient::CheckCertificateAsync(const CheckCertificateRequest& request, const CheckCertificateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CheckCertificate(request), context);
-    };
+    using Req = const CheckCertificateRequest&;
+    using Resp = CheckCertificateResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CheckCertificate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::CheckCertificateOutcomeCallable TeoClient::CheckCertificateCallable(const CheckCertificateRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CheckCertificateOutcome()>>(
-        [this, request]()
-        {
-            return this->CheckCertificate(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CheckCertificateOutcome>>();
+    CheckCertificateAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const CheckCertificateRequest&,
+        CheckCertificateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::CreateApplicationProxyOutcome TeoClient::CreateApplicationProxy(const CreateApplicationProxyRequest &request)
@@ -105,25 +112,32 @@ TeoClient::CreateApplicationProxyOutcome TeoClient::CreateApplicationProxy(const
 
 void TeoClient::CreateApplicationProxyAsync(const CreateApplicationProxyRequest& request, const CreateApplicationProxyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateApplicationProxy(request), context);
-    };
+    using Req = const CreateApplicationProxyRequest&;
+    using Resp = CreateApplicationProxyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateApplicationProxy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::CreateApplicationProxyOutcomeCallable TeoClient::CreateApplicationProxyCallable(const CreateApplicationProxyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateApplicationProxyOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateApplicationProxy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateApplicationProxyOutcome>>();
+    CreateApplicationProxyAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const CreateApplicationProxyRequest&,
+        CreateApplicationProxyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::CreateApplicationProxyRuleOutcome TeoClient::CreateApplicationProxyRule(const CreateApplicationProxyRuleRequest &request)
@@ -148,25 +162,32 @@ TeoClient::CreateApplicationProxyRuleOutcome TeoClient::CreateApplicationProxyRu
 
 void TeoClient::CreateApplicationProxyRuleAsync(const CreateApplicationProxyRuleRequest& request, const CreateApplicationProxyRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateApplicationProxyRule(request), context);
-    };
+    using Req = const CreateApplicationProxyRuleRequest&;
+    using Resp = CreateApplicationProxyRuleResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateApplicationProxyRule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::CreateApplicationProxyRuleOutcomeCallable TeoClient::CreateApplicationProxyRuleCallable(const CreateApplicationProxyRuleRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateApplicationProxyRuleOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateApplicationProxyRule(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateApplicationProxyRuleOutcome>>();
+    CreateApplicationProxyRuleAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const CreateApplicationProxyRuleRequest&,
+        CreateApplicationProxyRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::CreateApplicationProxyRulesOutcome TeoClient::CreateApplicationProxyRules(const CreateApplicationProxyRulesRequest &request)
@@ -191,25 +212,32 @@ TeoClient::CreateApplicationProxyRulesOutcome TeoClient::CreateApplicationProxyR
 
 void TeoClient::CreateApplicationProxyRulesAsync(const CreateApplicationProxyRulesRequest& request, const CreateApplicationProxyRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateApplicationProxyRules(request), context);
-    };
+    using Req = const CreateApplicationProxyRulesRequest&;
+    using Resp = CreateApplicationProxyRulesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateApplicationProxyRules", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::CreateApplicationProxyRulesOutcomeCallable TeoClient::CreateApplicationProxyRulesCallable(const CreateApplicationProxyRulesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateApplicationProxyRulesOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateApplicationProxyRules(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateApplicationProxyRulesOutcome>>();
+    CreateApplicationProxyRulesAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const CreateApplicationProxyRulesRequest&,
+        CreateApplicationProxyRulesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::CreateCustomErrorPageOutcome TeoClient::CreateCustomErrorPage(const CreateCustomErrorPageRequest &request)
@@ -234,25 +262,32 @@ TeoClient::CreateCustomErrorPageOutcome TeoClient::CreateCustomErrorPage(const C
 
 void TeoClient::CreateCustomErrorPageAsync(const CreateCustomErrorPageRequest& request, const CreateCustomErrorPageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateCustomErrorPage(request), context);
-    };
+    using Req = const CreateCustomErrorPageRequest&;
+    using Resp = CreateCustomErrorPageResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateCustomErrorPage", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::CreateCustomErrorPageOutcomeCallable TeoClient::CreateCustomErrorPageCallable(const CreateCustomErrorPageRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateCustomErrorPageOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateCustomErrorPage(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateCustomErrorPageOutcome>>();
+    CreateCustomErrorPageAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const CreateCustomErrorPageRequest&,
+        CreateCustomErrorPageOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::CreateDnsRecordOutcome TeoClient::CreateDnsRecord(const CreateDnsRecordRequest &request)
@@ -277,25 +312,32 @@ TeoClient::CreateDnsRecordOutcome TeoClient::CreateDnsRecord(const CreateDnsReco
 
 void TeoClient::CreateDnsRecordAsync(const CreateDnsRecordRequest& request, const CreateDnsRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateDnsRecord(request), context);
-    };
+    using Req = const CreateDnsRecordRequest&;
+    using Resp = CreateDnsRecordResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateDnsRecord", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::CreateDnsRecordOutcomeCallable TeoClient::CreateDnsRecordCallable(const CreateDnsRecordRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateDnsRecordOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateDnsRecord(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateDnsRecordOutcome>>();
+    CreateDnsRecordAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const CreateDnsRecordRequest&,
+        CreateDnsRecordOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::CreateLoadBalancingOutcome TeoClient::CreateLoadBalancing(const CreateLoadBalancingRequest &request)
@@ -320,25 +362,32 @@ TeoClient::CreateLoadBalancingOutcome TeoClient::CreateLoadBalancing(const Creat
 
 void TeoClient::CreateLoadBalancingAsync(const CreateLoadBalancingRequest& request, const CreateLoadBalancingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateLoadBalancing(request), context);
-    };
+    using Req = const CreateLoadBalancingRequest&;
+    using Resp = CreateLoadBalancingResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateLoadBalancing", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::CreateLoadBalancingOutcomeCallable TeoClient::CreateLoadBalancingCallable(const CreateLoadBalancingRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateLoadBalancingOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateLoadBalancing(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateLoadBalancingOutcome>>();
+    CreateLoadBalancingAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const CreateLoadBalancingRequest&,
+        CreateLoadBalancingOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::CreateOriginGroupOutcome TeoClient::CreateOriginGroup(const CreateOriginGroupRequest &request)
@@ -363,25 +412,32 @@ TeoClient::CreateOriginGroupOutcome TeoClient::CreateOriginGroup(const CreateOri
 
 void TeoClient::CreateOriginGroupAsync(const CreateOriginGroupRequest& request, const CreateOriginGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateOriginGroup(request), context);
-    };
+    using Req = const CreateOriginGroupRequest&;
+    using Resp = CreateOriginGroupResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateOriginGroup", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::CreateOriginGroupOutcomeCallable TeoClient::CreateOriginGroupCallable(const CreateOriginGroupRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateOriginGroupOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateOriginGroup(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateOriginGroupOutcome>>();
+    CreateOriginGroupAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const CreateOriginGroupRequest&,
+        CreateOriginGroupOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::CreatePrefetchTaskOutcome TeoClient::CreatePrefetchTask(const CreatePrefetchTaskRequest &request)
@@ -406,25 +462,32 @@ TeoClient::CreatePrefetchTaskOutcome TeoClient::CreatePrefetchTask(const CreateP
 
 void TeoClient::CreatePrefetchTaskAsync(const CreatePrefetchTaskRequest& request, const CreatePrefetchTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreatePrefetchTask(request), context);
-    };
+    using Req = const CreatePrefetchTaskRequest&;
+    using Resp = CreatePrefetchTaskResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreatePrefetchTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::CreatePrefetchTaskOutcomeCallable TeoClient::CreatePrefetchTaskCallable(const CreatePrefetchTaskRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreatePrefetchTaskOutcome()>>(
-        [this, request]()
-        {
-            return this->CreatePrefetchTask(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreatePrefetchTaskOutcome>>();
+    CreatePrefetchTaskAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const CreatePrefetchTaskRequest&,
+        CreatePrefetchTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::CreatePurgeTaskOutcome TeoClient::CreatePurgeTask(const CreatePurgeTaskRequest &request)
@@ -449,25 +512,32 @@ TeoClient::CreatePurgeTaskOutcome TeoClient::CreatePurgeTask(const CreatePurgeTa
 
 void TeoClient::CreatePurgeTaskAsync(const CreatePurgeTaskRequest& request, const CreatePurgeTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreatePurgeTask(request), context);
-    };
+    using Req = const CreatePurgeTaskRequest&;
+    using Resp = CreatePurgeTaskResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreatePurgeTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::CreatePurgeTaskOutcomeCallable TeoClient::CreatePurgeTaskCallable(const CreatePurgeTaskRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreatePurgeTaskOutcome()>>(
-        [this, request]()
-        {
-            return this->CreatePurgeTask(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreatePurgeTaskOutcome>>();
+    CreatePurgeTaskAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const CreatePurgeTaskRequest&,
+        CreatePurgeTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::CreateZoneOutcome TeoClient::CreateZone(const CreateZoneRequest &request)
@@ -492,25 +562,32 @@ TeoClient::CreateZoneOutcome TeoClient::CreateZone(const CreateZoneRequest &requ
 
 void TeoClient::CreateZoneAsync(const CreateZoneRequest& request, const CreateZoneAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateZone(request), context);
-    };
+    using Req = const CreateZoneRequest&;
+    using Resp = CreateZoneResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateZone", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::CreateZoneOutcomeCallable TeoClient::CreateZoneCallable(const CreateZoneRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateZoneOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateZone(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateZoneOutcome>>();
+    CreateZoneAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const CreateZoneRequest&,
+        CreateZoneOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DeleteApplicationProxyOutcome TeoClient::DeleteApplicationProxy(const DeleteApplicationProxyRequest &request)
@@ -535,25 +612,32 @@ TeoClient::DeleteApplicationProxyOutcome TeoClient::DeleteApplicationProxy(const
 
 void TeoClient::DeleteApplicationProxyAsync(const DeleteApplicationProxyRequest& request, const DeleteApplicationProxyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteApplicationProxy(request), context);
-    };
+    using Req = const DeleteApplicationProxyRequest&;
+    using Resp = DeleteApplicationProxyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteApplicationProxy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DeleteApplicationProxyOutcomeCallable TeoClient::DeleteApplicationProxyCallable(const DeleteApplicationProxyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteApplicationProxyOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteApplicationProxy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteApplicationProxyOutcome>>();
+    DeleteApplicationProxyAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DeleteApplicationProxyRequest&,
+        DeleteApplicationProxyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DeleteApplicationProxyRuleOutcome TeoClient::DeleteApplicationProxyRule(const DeleteApplicationProxyRuleRequest &request)
@@ -578,25 +662,32 @@ TeoClient::DeleteApplicationProxyRuleOutcome TeoClient::DeleteApplicationProxyRu
 
 void TeoClient::DeleteApplicationProxyRuleAsync(const DeleteApplicationProxyRuleRequest& request, const DeleteApplicationProxyRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteApplicationProxyRule(request), context);
-    };
+    using Req = const DeleteApplicationProxyRuleRequest&;
+    using Resp = DeleteApplicationProxyRuleResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteApplicationProxyRule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DeleteApplicationProxyRuleOutcomeCallable TeoClient::DeleteApplicationProxyRuleCallable(const DeleteApplicationProxyRuleRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteApplicationProxyRuleOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteApplicationProxyRule(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteApplicationProxyRuleOutcome>>();
+    DeleteApplicationProxyRuleAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DeleteApplicationProxyRuleRequest&,
+        DeleteApplicationProxyRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DeleteDnsRecordsOutcome TeoClient::DeleteDnsRecords(const DeleteDnsRecordsRequest &request)
@@ -621,25 +712,32 @@ TeoClient::DeleteDnsRecordsOutcome TeoClient::DeleteDnsRecords(const DeleteDnsRe
 
 void TeoClient::DeleteDnsRecordsAsync(const DeleteDnsRecordsRequest& request, const DeleteDnsRecordsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteDnsRecords(request), context);
-    };
+    using Req = const DeleteDnsRecordsRequest&;
+    using Resp = DeleteDnsRecordsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteDnsRecords", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DeleteDnsRecordsOutcomeCallable TeoClient::DeleteDnsRecordsCallable(const DeleteDnsRecordsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteDnsRecordsOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteDnsRecords(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteDnsRecordsOutcome>>();
+    DeleteDnsRecordsAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DeleteDnsRecordsRequest&,
+        DeleteDnsRecordsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DeleteLoadBalancingOutcome TeoClient::DeleteLoadBalancing(const DeleteLoadBalancingRequest &request)
@@ -664,25 +762,32 @@ TeoClient::DeleteLoadBalancingOutcome TeoClient::DeleteLoadBalancing(const Delet
 
 void TeoClient::DeleteLoadBalancingAsync(const DeleteLoadBalancingRequest& request, const DeleteLoadBalancingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteLoadBalancing(request), context);
-    };
+    using Req = const DeleteLoadBalancingRequest&;
+    using Resp = DeleteLoadBalancingResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteLoadBalancing", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DeleteLoadBalancingOutcomeCallable TeoClient::DeleteLoadBalancingCallable(const DeleteLoadBalancingRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteLoadBalancingOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteLoadBalancing(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteLoadBalancingOutcome>>();
+    DeleteLoadBalancingAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DeleteLoadBalancingRequest&,
+        DeleteLoadBalancingOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DeleteOriginGroupOutcome TeoClient::DeleteOriginGroup(const DeleteOriginGroupRequest &request)
@@ -707,25 +812,32 @@ TeoClient::DeleteOriginGroupOutcome TeoClient::DeleteOriginGroup(const DeleteOri
 
 void TeoClient::DeleteOriginGroupAsync(const DeleteOriginGroupRequest& request, const DeleteOriginGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteOriginGroup(request), context);
-    };
+    using Req = const DeleteOriginGroupRequest&;
+    using Resp = DeleteOriginGroupResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteOriginGroup", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DeleteOriginGroupOutcomeCallable TeoClient::DeleteOriginGroupCallable(const DeleteOriginGroupRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteOriginGroupOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteOriginGroup(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteOriginGroupOutcome>>();
+    DeleteOriginGroupAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DeleteOriginGroupRequest&,
+        DeleteOriginGroupOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DeleteZoneOutcome TeoClient::DeleteZone(const DeleteZoneRequest &request)
@@ -750,25 +862,32 @@ TeoClient::DeleteZoneOutcome TeoClient::DeleteZone(const DeleteZoneRequest &requ
 
 void TeoClient::DeleteZoneAsync(const DeleteZoneRequest& request, const DeleteZoneAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteZone(request), context);
-    };
+    using Req = const DeleteZoneRequest&;
+    using Resp = DeleteZoneResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteZone", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DeleteZoneOutcomeCallable TeoClient::DeleteZoneCallable(const DeleteZoneRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteZoneOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteZone(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteZoneOutcome>>();
+    DeleteZoneAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DeleteZoneRequest&,
+        DeleteZoneOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeApplicationProxyOutcome TeoClient::DescribeApplicationProxy(const DescribeApplicationProxyRequest &request)
@@ -793,25 +912,32 @@ TeoClient::DescribeApplicationProxyOutcome TeoClient::DescribeApplicationProxy(c
 
 void TeoClient::DescribeApplicationProxyAsync(const DescribeApplicationProxyRequest& request, const DescribeApplicationProxyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeApplicationProxy(request), context);
-    };
+    using Req = const DescribeApplicationProxyRequest&;
+    using Resp = DescribeApplicationProxyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeApplicationProxy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeApplicationProxyOutcomeCallable TeoClient::DescribeApplicationProxyCallable(const DescribeApplicationProxyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeApplicationProxyOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeApplicationProxy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeApplicationProxyOutcome>>();
+    DescribeApplicationProxyAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeApplicationProxyRequest&,
+        DescribeApplicationProxyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeApplicationProxyDetailOutcome TeoClient::DescribeApplicationProxyDetail(const DescribeApplicationProxyDetailRequest &request)
@@ -836,25 +962,32 @@ TeoClient::DescribeApplicationProxyDetailOutcome TeoClient::DescribeApplicationP
 
 void TeoClient::DescribeApplicationProxyDetailAsync(const DescribeApplicationProxyDetailRequest& request, const DescribeApplicationProxyDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeApplicationProxyDetail(request), context);
-    };
+    using Req = const DescribeApplicationProxyDetailRequest&;
+    using Resp = DescribeApplicationProxyDetailResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeApplicationProxyDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeApplicationProxyDetailOutcomeCallable TeoClient::DescribeApplicationProxyDetailCallable(const DescribeApplicationProxyDetailRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeApplicationProxyDetailOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeApplicationProxyDetail(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeApplicationProxyDetailOutcome>>();
+    DescribeApplicationProxyDetailAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeApplicationProxyDetailRequest&,
+        DescribeApplicationProxyDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeBotLogOutcome TeoClient::DescribeBotLog(const DescribeBotLogRequest &request)
@@ -879,25 +1012,32 @@ TeoClient::DescribeBotLogOutcome TeoClient::DescribeBotLog(const DescribeBotLogR
 
 void TeoClient::DescribeBotLogAsync(const DescribeBotLogRequest& request, const DescribeBotLogAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeBotLog(request), context);
-    };
+    using Req = const DescribeBotLogRequest&;
+    using Resp = DescribeBotLogResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeBotLog", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeBotLogOutcomeCallable TeoClient::DescribeBotLogCallable(const DescribeBotLogRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeBotLogOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeBotLog(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeBotLogOutcome>>();
+    DescribeBotLogAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeBotLogRequest&,
+        DescribeBotLogOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeBotManagedRulesOutcome TeoClient::DescribeBotManagedRules(const DescribeBotManagedRulesRequest &request)
@@ -922,25 +1062,32 @@ TeoClient::DescribeBotManagedRulesOutcome TeoClient::DescribeBotManagedRules(con
 
 void TeoClient::DescribeBotManagedRulesAsync(const DescribeBotManagedRulesRequest& request, const DescribeBotManagedRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeBotManagedRules(request), context);
-    };
+    using Req = const DescribeBotManagedRulesRequest&;
+    using Resp = DescribeBotManagedRulesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeBotManagedRules", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeBotManagedRulesOutcomeCallable TeoClient::DescribeBotManagedRulesCallable(const DescribeBotManagedRulesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeBotManagedRulesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeBotManagedRules(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeBotManagedRulesOutcome>>();
+    DescribeBotManagedRulesAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeBotManagedRulesRequest&,
+        DescribeBotManagedRulesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeCnameStatusOutcome TeoClient::DescribeCnameStatus(const DescribeCnameStatusRequest &request)
@@ -965,25 +1112,32 @@ TeoClient::DescribeCnameStatusOutcome TeoClient::DescribeCnameStatus(const Descr
 
 void TeoClient::DescribeCnameStatusAsync(const DescribeCnameStatusRequest& request, const DescribeCnameStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeCnameStatus(request), context);
-    };
+    using Req = const DescribeCnameStatusRequest&;
+    using Resp = DescribeCnameStatusResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeCnameStatus", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeCnameStatusOutcomeCallable TeoClient::DescribeCnameStatusCallable(const DescribeCnameStatusRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeCnameStatusOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeCnameStatus(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeCnameStatusOutcome>>();
+    DescribeCnameStatusAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeCnameStatusRequest&,
+        DescribeCnameStatusOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeDDoSPolicyOutcome TeoClient::DescribeDDoSPolicy(const DescribeDDoSPolicyRequest &request)
@@ -1008,25 +1162,32 @@ TeoClient::DescribeDDoSPolicyOutcome TeoClient::DescribeDDoSPolicy(const Describ
 
 void TeoClient::DescribeDDoSPolicyAsync(const DescribeDDoSPolicyRequest& request, const DescribeDDoSPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDDoSPolicy(request), context);
-    };
+    using Req = const DescribeDDoSPolicyRequest&;
+    using Resp = DescribeDDoSPolicyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDDoSPolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeDDoSPolicyOutcomeCallable TeoClient::DescribeDDoSPolicyCallable(const DescribeDDoSPolicyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDDoSPolicyOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDDoSPolicy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDDoSPolicyOutcome>>();
+    DescribeDDoSPolicyAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeDDoSPolicyRequest&,
+        DescribeDDoSPolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeDDosAttackDataOutcome TeoClient::DescribeDDosAttackData(const DescribeDDosAttackDataRequest &request)
@@ -1051,25 +1212,32 @@ TeoClient::DescribeDDosAttackDataOutcome TeoClient::DescribeDDosAttackData(const
 
 void TeoClient::DescribeDDosAttackDataAsync(const DescribeDDosAttackDataRequest& request, const DescribeDDosAttackDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDDosAttackData(request), context);
-    };
+    using Req = const DescribeDDosAttackDataRequest&;
+    using Resp = DescribeDDosAttackDataResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDDosAttackData", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeDDosAttackDataOutcomeCallable TeoClient::DescribeDDosAttackDataCallable(const DescribeDDosAttackDataRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDDosAttackDataOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDDosAttackData(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDDosAttackDataOutcome>>();
+    DescribeDDosAttackDataAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeDDosAttackDataRequest&,
+        DescribeDDosAttackDataOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeDDosAttackEventOutcome TeoClient::DescribeDDosAttackEvent(const DescribeDDosAttackEventRequest &request)
@@ -1094,25 +1262,32 @@ TeoClient::DescribeDDosAttackEventOutcome TeoClient::DescribeDDosAttackEvent(con
 
 void TeoClient::DescribeDDosAttackEventAsync(const DescribeDDosAttackEventRequest& request, const DescribeDDosAttackEventAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDDosAttackEvent(request), context);
-    };
+    using Req = const DescribeDDosAttackEventRequest&;
+    using Resp = DescribeDDosAttackEventResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDDosAttackEvent", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeDDosAttackEventOutcomeCallable TeoClient::DescribeDDosAttackEventCallable(const DescribeDDosAttackEventRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDDosAttackEventOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDDosAttackEvent(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDDosAttackEventOutcome>>();
+    DescribeDDosAttackEventAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeDDosAttackEventRequest&,
+        DescribeDDosAttackEventOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeDDosAttackEventDetailOutcome TeoClient::DescribeDDosAttackEventDetail(const DescribeDDosAttackEventDetailRequest &request)
@@ -1137,25 +1312,32 @@ TeoClient::DescribeDDosAttackEventDetailOutcome TeoClient::DescribeDDosAttackEve
 
 void TeoClient::DescribeDDosAttackEventDetailAsync(const DescribeDDosAttackEventDetailRequest& request, const DescribeDDosAttackEventDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDDosAttackEventDetail(request), context);
-    };
+    using Req = const DescribeDDosAttackEventDetailRequest&;
+    using Resp = DescribeDDosAttackEventDetailResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDDosAttackEventDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeDDosAttackEventDetailOutcomeCallable TeoClient::DescribeDDosAttackEventDetailCallable(const DescribeDDosAttackEventDetailRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDDosAttackEventDetailOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDDosAttackEventDetail(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDDosAttackEventDetailOutcome>>();
+    DescribeDDosAttackEventDetailAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeDDosAttackEventDetailRequest&,
+        DescribeDDosAttackEventDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeDDosAttackSourceEventOutcome TeoClient::DescribeDDosAttackSourceEvent(const DescribeDDosAttackSourceEventRequest &request)
@@ -1180,25 +1362,32 @@ TeoClient::DescribeDDosAttackSourceEventOutcome TeoClient::DescribeDDosAttackSou
 
 void TeoClient::DescribeDDosAttackSourceEventAsync(const DescribeDDosAttackSourceEventRequest& request, const DescribeDDosAttackSourceEventAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDDosAttackSourceEvent(request), context);
-    };
+    using Req = const DescribeDDosAttackSourceEventRequest&;
+    using Resp = DescribeDDosAttackSourceEventResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDDosAttackSourceEvent", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeDDosAttackSourceEventOutcomeCallable TeoClient::DescribeDDosAttackSourceEventCallable(const DescribeDDosAttackSourceEventRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDDosAttackSourceEventOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDDosAttackSourceEvent(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDDosAttackSourceEventOutcome>>();
+    DescribeDDosAttackSourceEventAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeDDosAttackSourceEventRequest&,
+        DescribeDDosAttackSourceEventOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeDDosAttackTopDataOutcome TeoClient::DescribeDDosAttackTopData(const DescribeDDosAttackTopDataRequest &request)
@@ -1223,25 +1412,32 @@ TeoClient::DescribeDDosAttackTopDataOutcome TeoClient::DescribeDDosAttackTopData
 
 void TeoClient::DescribeDDosAttackTopDataAsync(const DescribeDDosAttackTopDataRequest& request, const DescribeDDosAttackTopDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDDosAttackTopData(request), context);
-    };
+    using Req = const DescribeDDosAttackTopDataRequest&;
+    using Resp = DescribeDDosAttackTopDataResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDDosAttackTopData", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeDDosAttackTopDataOutcomeCallable TeoClient::DescribeDDosAttackTopDataCallable(const DescribeDDosAttackTopDataRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDDosAttackTopDataOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDDosAttackTopData(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDDosAttackTopDataOutcome>>();
+    DescribeDDosAttackTopDataAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeDDosAttackTopDataRequest&,
+        DescribeDDosAttackTopDataOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeDDosMajorAttackEventOutcome TeoClient::DescribeDDosMajorAttackEvent(const DescribeDDosMajorAttackEventRequest &request)
@@ -1266,25 +1462,32 @@ TeoClient::DescribeDDosMajorAttackEventOutcome TeoClient::DescribeDDosMajorAttac
 
 void TeoClient::DescribeDDosMajorAttackEventAsync(const DescribeDDosMajorAttackEventRequest& request, const DescribeDDosMajorAttackEventAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDDosMajorAttackEvent(request), context);
-    };
+    using Req = const DescribeDDosMajorAttackEventRequest&;
+    using Resp = DescribeDDosMajorAttackEventResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDDosMajorAttackEvent", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeDDosMajorAttackEventOutcomeCallable TeoClient::DescribeDDosMajorAttackEventCallable(const DescribeDDosMajorAttackEventRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDDosMajorAttackEventOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDDosMajorAttackEvent(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDDosMajorAttackEventOutcome>>();
+    DescribeDDosMajorAttackEventAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeDDosMajorAttackEventRequest&,
+        DescribeDDosMajorAttackEventOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeDefaultCertificatesOutcome TeoClient::DescribeDefaultCertificates(const DescribeDefaultCertificatesRequest &request)
@@ -1309,25 +1512,32 @@ TeoClient::DescribeDefaultCertificatesOutcome TeoClient::DescribeDefaultCertific
 
 void TeoClient::DescribeDefaultCertificatesAsync(const DescribeDefaultCertificatesRequest& request, const DescribeDefaultCertificatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDefaultCertificates(request), context);
-    };
+    using Req = const DescribeDefaultCertificatesRequest&;
+    using Resp = DescribeDefaultCertificatesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDefaultCertificates", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeDefaultCertificatesOutcomeCallable TeoClient::DescribeDefaultCertificatesCallable(const DescribeDefaultCertificatesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDefaultCertificatesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDefaultCertificates(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDefaultCertificatesOutcome>>();
+    DescribeDefaultCertificatesAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeDefaultCertificatesRequest&,
+        DescribeDefaultCertificatesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeDnsDataOutcome TeoClient::DescribeDnsData(const DescribeDnsDataRequest &request)
@@ -1352,25 +1562,32 @@ TeoClient::DescribeDnsDataOutcome TeoClient::DescribeDnsData(const DescribeDnsDa
 
 void TeoClient::DescribeDnsDataAsync(const DescribeDnsDataRequest& request, const DescribeDnsDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDnsData(request), context);
-    };
+    using Req = const DescribeDnsDataRequest&;
+    using Resp = DescribeDnsDataResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDnsData", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeDnsDataOutcomeCallable TeoClient::DescribeDnsDataCallable(const DescribeDnsDataRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDnsDataOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDnsData(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDnsDataOutcome>>();
+    DescribeDnsDataAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeDnsDataRequest&,
+        DescribeDnsDataOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeDnsRecordsOutcome TeoClient::DescribeDnsRecords(const DescribeDnsRecordsRequest &request)
@@ -1395,25 +1612,32 @@ TeoClient::DescribeDnsRecordsOutcome TeoClient::DescribeDnsRecords(const Describ
 
 void TeoClient::DescribeDnsRecordsAsync(const DescribeDnsRecordsRequest& request, const DescribeDnsRecordsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDnsRecords(request), context);
-    };
+    using Req = const DescribeDnsRecordsRequest&;
+    using Resp = DescribeDnsRecordsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDnsRecords", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeDnsRecordsOutcomeCallable TeoClient::DescribeDnsRecordsCallable(const DescribeDnsRecordsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDnsRecordsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDnsRecords(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDnsRecordsOutcome>>();
+    DescribeDnsRecordsAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeDnsRecordsRequest&,
+        DescribeDnsRecordsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeDnssecOutcome TeoClient::DescribeDnssec(const DescribeDnssecRequest &request)
@@ -1438,25 +1662,32 @@ TeoClient::DescribeDnssecOutcome TeoClient::DescribeDnssec(const DescribeDnssecR
 
 void TeoClient::DescribeDnssecAsync(const DescribeDnssecRequest& request, const DescribeDnssecAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDnssec(request), context);
-    };
+    using Req = const DescribeDnssecRequest&;
+    using Resp = DescribeDnssecResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDnssec", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeDnssecOutcomeCallable TeoClient::DescribeDnssecCallable(const DescribeDnssecRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDnssecOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDnssec(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDnssecOutcome>>();
+    DescribeDnssecAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeDnssecRequest&,
+        DescribeDnssecOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeHostsCertificateOutcome TeoClient::DescribeHostsCertificate(const DescribeHostsCertificateRequest &request)
@@ -1481,25 +1712,32 @@ TeoClient::DescribeHostsCertificateOutcome TeoClient::DescribeHostsCertificate(c
 
 void TeoClient::DescribeHostsCertificateAsync(const DescribeHostsCertificateRequest& request, const DescribeHostsCertificateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeHostsCertificate(request), context);
-    };
+    using Req = const DescribeHostsCertificateRequest&;
+    using Resp = DescribeHostsCertificateResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeHostsCertificate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeHostsCertificateOutcomeCallable TeoClient::DescribeHostsCertificateCallable(const DescribeHostsCertificateRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeHostsCertificateOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeHostsCertificate(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeHostsCertificateOutcome>>();
+    DescribeHostsCertificateAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeHostsCertificateRequest&,
+        DescribeHostsCertificateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeHostsSettingOutcome TeoClient::DescribeHostsSetting(const DescribeHostsSettingRequest &request)
@@ -1524,25 +1762,32 @@ TeoClient::DescribeHostsSettingOutcome TeoClient::DescribeHostsSetting(const Des
 
 void TeoClient::DescribeHostsSettingAsync(const DescribeHostsSettingRequest& request, const DescribeHostsSettingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeHostsSetting(request), context);
-    };
+    using Req = const DescribeHostsSettingRequest&;
+    using Resp = DescribeHostsSettingResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeHostsSetting", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeHostsSettingOutcomeCallable TeoClient::DescribeHostsSettingCallable(const DescribeHostsSettingRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeHostsSettingOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeHostsSetting(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeHostsSettingOutcome>>();
+    DescribeHostsSettingAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeHostsSettingRequest&,
+        DescribeHostsSettingOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeIdentificationOutcome TeoClient::DescribeIdentification(const DescribeIdentificationRequest &request)
@@ -1567,25 +1812,32 @@ TeoClient::DescribeIdentificationOutcome TeoClient::DescribeIdentification(const
 
 void TeoClient::DescribeIdentificationAsync(const DescribeIdentificationRequest& request, const DescribeIdentificationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeIdentification(request), context);
-    };
+    using Req = const DescribeIdentificationRequest&;
+    using Resp = DescribeIdentificationResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeIdentification", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeIdentificationOutcomeCallable TeoClient::DescribeIdentificationCallable(const DescribeIdentificationRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeIdentificationOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeIdentification(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeIdentificationOutcome>>();
+    DescribeIdentificationAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeIdentificationRequest&,
+        DescribeIdentificationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeLoadBalancingOutcome TeoClient::DescribeLoadBalancing(const DescribeLoadBalancingRequest &request)
@@ -1610,25 +1862,32 @@ TeoClient::DescribeLoadBalancingOutcome TeoClient::DescribeLoadBalancing(const D
 
 void TeoClient::DescribeLoadBalancingAsync(const DescribeLoadBalancingRequest& request, const DescribeLoadBalancingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLoadBalancing(request), context);
-    };
+    using Req = const DescribeLoadBalancingRequest&;
+    using Resp = DescribeLoadBalancingResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLoadBalancing", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeLoadBalancingOutcomeCallable TeoClient::DescribeLoadBalancingCallable(const DescribeLoadBalancingRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLoadBalancingOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLoadBalancing(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLoadBalancingOutcome>>();
+    DescribeLoadBalancingAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeLoadBalancingRequest&,
+        DescribeLoadBalancingOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeLoadBalancingDetailOutcome TeoClient::DescribeLoadBalancingDetail(const DescribeLoadBalancingDetailRequest &request)
@@ -1653,25 +1912,32 @@ TeoClient::DescribeLoadBalancingDetailOutcome TeoClient::DescribeLoadBalancingDe
 
 void TeoClient::DescribeLoadBalancingDetailAsync(const DescribeLoadBalancingDetailRequest& request, const DescribeLoadBalancingDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLoadBalancingDetail(request), context);
-    };
+    using Req = const DescribeLoadBalancingDetailRequest&;
+    using Resp = DescribeLoadBalancingDetailResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLoadBalancingDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeLoadBalancingDetailOutcomeCallable TeoClient::DescribeLoadBalancingDetailCallable(const DescribeLoadBalancingDetailRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLoadBalancingDetailOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLoadBalancingDetail(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLoadBalancingDetailOutcome>>();
+    DescribeLoadBalancingDetailAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeLoadBalancingDetailRequest&,
+        DescribeLoadBalancingDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeOriginGroupOutcome TeoClient::DescribeOriginGroup(const DescribeOriginGroupRequest &request)
@@ -1696,25 +1962,32 @@ TeoClient::DescribeOriginGroupOutcome TeoClient::DescribeOriginGroup(const Descr
 
 void TeoClient::DescribeOriginGroupAsync(const DescribeOriginGroupRequest& request, const DescribeOriginGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeOriginGroup(request), context);
-    };
+    using Req = const DescribeOriginGroupRequest&;
+    using Resp = DescribeOriginGroupResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeOriginGroup", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeOriginGroupOutcomeCallable TeoClient::DescribeOriginGroupCallable(const DescribeOriginGroupRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeOriginGroupOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeOriginGroup(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeOriginGroupOutcome>>();
+    DescribeOriginGroupAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeOriginGroupRequest&,
+        DescribeOriginGroupOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeOriginGroupDetailOutcome TeoClient::DescribeOriginGroupDetail(const DescribeOriginGroupDetailRequest &request)
@@ -1739,25 +2012,32 @@ TeoClient::DescribeOriginGroupDetailOutcome TeoClient::DescribeOriginGroupDetail
 
 void TeoClient::DescribeOriginGroupDetailAsync(const DescribeOriginGroupDetailRequest& request, const DescribeOriginGroupDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeOriginGroupDetail(request), context);
-    };
+    using Req = const DescribeOriginGroupDetailRequest&;
+    using Resp = DescribeOriginGroupDetailResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeOriginGroupDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeOriginGroupDetailOutcomeCallable TeoClient::DescribeOriginGroupDetailCallable(const DescribeOriginGroupDetailRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeOriginGroupDetailOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeOriginGroupDetail(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeOriginGroupDetailOutcome>>();
+    DescribeOriginGroupDetailAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeOriginGroupDetailRequest&,
+        DescribeOriginGroupDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeOverviewL7DataOutcome TeoClient::DescribeOverviewL7Data(const DescribeOverviewL7DataRequest &request)
@@ -1782,25 +2062,32 @@ TeoClient::DescribeOverviewL7DataOutcome TeoClient::DescribeOverviewL7Data(const
 
 void TeoClient::DescribeOverviewL7DataAsync(const DescribeOverviewL7DataRequest& request, const DescribeOverviewL7DataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeOverviewL7Data(request), context);
-    };
+    using Req = const DescribeOverviewL7DataRequest&;
+    using Resp = DescribeOverviewL7DataResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeOverviewL7Data", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeOverviewL7DataOutcomeCallable TeoClient::DescribeOverviewL7DataCallable(const DescribeOverviewL7DataRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeOverviewL7DataOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeOverviewL7Data(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeOverviewL7DataOutcome>>();
+    DescribeOverviewL7DataAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeOverviewL7DataRequest&,
+        DescribeOverviewL7DataOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribePrefetchTasksOutcome TeoClient::DescribePrefetchTasks(const DescribePrefetchTasksRequest &request)
@@ -1825,25 +2112,32 @@ TeoClient::DescribePrefetchTasksOutcome TeoClient::DescribePrefetchTasks(const D
 
 void TeoClient::DescribePrefetchTasksAsync(const DescribePrefetchTasksRequest& request, const DescribePrefetchTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribePrefetchTasks(request), context);
-    };
+    using Req = const DescribePrefetchTasksRequest&;
+    using Resp = DescribePrefetchTasksResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribePrefetchTasks", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribePrefetchTasksOutcomeCallable TeoClient::DescribePrefetchTasksCallable(const DescribePrefetchTasksRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribePrefetchTasksOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribePrefetchTasks(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribePrefetchTasksOutcome>>();
+    DescribePrefetchTasksAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribePrefetchTasksRequest&,
+        DescribePrefetchTasksOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribePurgeTasksOutcome TeoClient::DescribePurgeTasks(const DescribePurgeTasksRequest &request)
@@ -1868,25 +2162,32 @@ TeoClient::DescribePurgeTasksOutcome TeoClient::DescribePurgeTasks(const Describ
 
 void TeoClient::DescribePurgeTasksAsync(const DescribePurgeTasksRequest& request, const DescribePurgeTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribePurgeTasks(request), context);
-    };
+    using Req = const DescribePurgeTasksRequest&;
+    using Resp = DescribePurgeTasksResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribePurgeTasks", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribePurgeTasksOutcomeCallable TeoClient::DescribePurgeTasksCallable(const DescribePurgeTasksRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribePurgeTasksOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribePurgeTasks(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribePurgeTasksOutcome>>();
+    DescribePurgeTasksAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribePurgeTasksRequest&,
+        DescribePurgeTasksOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeSecurityPolicyOutcome TeoClient::DescribeSecurityPolicy(const DescribeSecurityPolicyRequest &request)
@@ -1911,25 +2212,32 @@ TeoClient::DescribeSecurityPolicyOutcome TeoClient::DescribeSecurityPolicy(const
 
 void TeoClient::DescribeSecurityPolicyAsync(const DescribeSecurityPolicyRequest& request, const DescribeSecurityPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeSecurityPolicy(request), context);
-    };
+    using Req = const DescribeSecurityPolicyRequest&;
+    using Resp = DescribeSecurityPolicyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeSecurityPolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeSecurityPolicyOutcomeCallable TeoClient::DescribeSecurityPolicyCallable(const DescribeSecurityPolicyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeSecurityPolicyOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeSecurityPolicy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeSecurityPolicyOutcome>>();
+    DescribeSecurityPolicyAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeSecurityPolicyRequest&,
+        DescribeSecurityPolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeSecurityPolicyListOutcome TeoClient::DescribeSecurityPolicyList(const DescribeSecurityPolicyListRequest &request)
@@ -1954,25 +2262,32 @@ TeoClient::DescribeSecurityPolicyListOutcome TeoClient::DescribeSecurityPolicyLi
 
 void TeoClient::DescribeSecurityPolicyListAsync(const DescribeSecurityPolicyListRequest& request, const DescribeSecurityPolicyListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeSecurityPolicyList(request), context);
-    };
+    using Req = const DescribeSecurityPolicyListRequest&;
+    using Resp = DescribeSecurityPolicyListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeSecurityPolicyList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeSecurityPolicyListOutcomeCallable TeoClient::DescribeSecurityPolicyListCallable(const DescribeSecurityPolicyListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeSecurityPolicyListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeSecurityPolicyList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeSecurityPolicyListOutcome>>();
+    DescribeSecurityPolicyListAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeSecurityPolicyListRequest&,
+        DescribeSecurityPolicyListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeSecurityPolicyManagedRulesOutcome TeoClient::DescribeSecurityPolicyManagedRules(const DescribeSecurityPolicyManagedRulesRequest &request)
@@ -1997,25 +2312,32 @@ TeoClient::DescribeSecurityPolicyManagedRulesOutcome TeoClient::DescribeSecurity
 
 void TeoClient::DescribeSecurityPolicyManagedRulesAsync(const DescribeSecurityPolicyManagedRulesRequest& request, const DescribeSecurityPolicyManagedRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeSecurityPolicyManagedRules(request), context);
-    };
+    using Req = const DescribeSecurityPolicyManagedRulesRequest&;
+    using Resp = DescribeSecurityPolicyManagedRulesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeSecurityPolicyManagedRules", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeSecurityPolicyManagedRulesOutcomeCallable TeoClient::DescribeSecurityPolicyManagedRulesCallable(const DescribeSecurityPolicyManagedRulesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeSecurityPolicyManagedRulesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeSecurityPolicyManagedRules(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeSecurityPolicyManagedRulesOutcome>>();
+    DescribeSecurityPolicyManagedRulesAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeSecurityPolicyManagedRulesRequest&,
+        DescribeSecurityPolicyManagedRulesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeSecurityPolicyManagedRulesIdOutcome TeoClient::DescribeSecurityPolicyManagedRulesId(const DescribeSecurityPolicyManagedRulesIdRequest &request)
@@ -2040,25 +2362,32 @@ TeoClient::DescribeSecurityPolicyManagedRulesIdOutcome TeoClient::DescribeSecuri
 
 void TeoClient::DescribeSecurityPolicyManagedRulesIdAsync(const DescribeSecurityPolicyManagedRulesIdRequest& request, const DescribeSecurityPolicyManagedRulesIdAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeSecurityPolicyManagedRulesId(request), context);
-    };
+    using Req = const DescribeSecurityPolicyManagedRulesIdRequest&;
+    using Resp = DescribeSecurityPolicyManagedRulesIdResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeSecurityPolicyManagedRulesId", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeSecurityPolicyManagedRulesIdOutcomeCallable TeoClient::DescribeSecurityPolicyManagedRulesIdCallable(const DescribeSecurityPolicyManagedRulesIdRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeSecurityPolicyManagedRulesIdOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeSecurityPolicyManagedRulesId(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeSecurityPolicyManagedRulesIdOutcome>>();
+    DescribeSecurityPolicyManagedRulesIdAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeSecurityPolicyManagedRulesIdRequest&,
+        DescribeSecurityPolicyManagedRulesIdOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeSecurityPolicyRegionsOutcome TeoClient::DescribeSecurityPolicyRegions(const DescribeSecurityPolicyRegionsRequest &request)
@@ -2083,25 +2412,32 @@ TeoClient::DescribeSecurityPolicyRegionsOutcome TeoClient::DescribeSecurityPolic
 
 void TeoClient::DescribeSecurityPolicyRegionsAsync(const DescribeSecurityPolicyRegionsRequest& request, const DescribeSecurityPolicyRegionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeSecurityPolicyRegions(request), context);
-    };
+    using Req = const DescribeSecurityPolicyRegionsRequest&;
+    using Resp = DescribeSecurityPolicyRegionsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeSecurityPolicyRegions", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeSecurityPolicyRegionsOutcomeCallable TeoClient::DescribeSecurityPolicyRegionsCallable(const DescribeSecurityPolicyRegionsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeSecurityPolicyRegionsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeSecurityPolicyRegions(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeSecurityPolicyRegionsOutcome>>();
+    DescribeSecurityPolicyRegionsAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeSecurityPolicyRegionsRequest&,
+        DescribeSecurityPolicyRegionsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeSecurityPortraitRulesOutcome TeoClient::DescribeSecurityPortraitRules(const DescribeSecurityPortraitRulesRequest &request)
@@ -2126,25 +2462,32 @@ TeoClient::DescribeSecurityPortraitRulesOutcome TeoClient::DescribeSecurityPortr
 
 void TeoClient::DescribeSecurityPortraitRulesAsync(const DescribeSecurityPortraitRulesRequest& request, const DescribeSecurityPortraitRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeSecurityPortraitRules(request), context);
-    };
+    using Req = const DescribeSecurityPortraitRulesRequest&;
+    using Resp = DescribeSecurityPortraitRulesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeSecurityPortraitRules", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeSecurityPortraitRulesOutcomeCallable TeoClient::DescribeSecurityPortraitRulesCallable(const DescribeSecurityPortraitRulesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeSecurityPortraitRulesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeSecurityPortraitRules(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeSecurityPortraitRulesOutcome>>();
+    DescribeSecurityPortraitRulesAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeSecurityPortraitRulesRequest&,
+        DescribeSecurityPortraitRulesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeTimingL4DataOutcome TeoClient::DescribeTimingL4Data(const DescribeTimingL4DataRequest &request)
@@ -2169,25 +2512,32 @@ TeoClient::DescribeTimingL4DataOutcome TeoClient::DescribeTimingL4Data(const Des
 
 void TeoClient::DescribeTimingL4DataAsync(const DescribeTimingL4DataRequest& request, const DescribeTimingL4DataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTimingL4Data(request), context);
-    };
+    using Req = const DescribeTimingL4DataRequest&;
+    using Resp = DescribeTimingL4DataResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTimingL4Data", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeTimingL4DataOutcomeCallable TeoClient::DescribeTimingL4DataCallable(const DescribeTimingL4DataRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTimingL4DataOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTimingL4Data(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTimingL4DataOutcome>>();
+    DescribeTimingL4DataAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeTimingL4DataRequest&,
+        DescribeTimingL4DataOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeTimingL7AnalysisDataOutcome TeoClient::DescribeTimingL7AnalysisData(const DescribeTimingL7AnalysisDataRequest &request)
@@ -2212,25 +2562,32 @@ TeoClient::DescribeTimingL7AnalysisDataOutcome TeoClient::DescribeTimingL7Analys
 
 void TeoClient::DescribeTimingL7AnalysisDataAsync(const DescribeTimingL7AnalysisDataRequest& request, const DescribeTimingL7AnalysisDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTimingL7AnalysisData(request), context);
-    };
+    using Req = const DescribeTimingL7AnalysisDataRequest&;
+    using Resp = DescribeTimingL7AnalysisDataResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTimingL7AnalysisData", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeTimingL7AnalysisDataOutcomeCallable TeoClient::DescribeTimingL7AnalysisDataCallable(const DescribeTimingL7AnalysisDataRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTimingL7AnalysisDataOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTimingL7AnalysisData(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTimingL7AnalysisDataOutcome>>();
+    DescribeTimingL7AnalysisDataAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeTimingL7AnalysisDataRequest&,
+        DescribeTimingL7AnalysisDataOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeTimingL7CacheDataOutcome TeoClient::DescribeTimingL7CacheData(const DescribeTimingL7CacheDataRequest &request)
@@ -2255,25 +2612,32 @@ TeoClient::DescribeTimingL7CacheDataOutcome TeoClient::DescribeTimingL7CacheData
 
 void TeoClient::DescribeTimingL7CacheDataAsync(const DescribeTimingL7CacheDataRequest& request, const DescribeTimingL7CacheDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTimingL7CacheData(request), context);
-    };
+    using Req = const DescribeTimingL7CacheDataRequest&;
+    using Resp = DescribeTimingL7CacheDataResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTimingL7CacheData", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeTimingL7CacheDataOutcomeCallable TeoClient::DescribeTimingL7CacheDataCallable(const DescribeTimingL7CacheDataRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTimingL7CacheDataOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTimingL7CacheData(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTimingL7CacheDataOutcome>>();
+    DescribeTimingL7CacheDataAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeTimingL7CacheDataRequest&,
+        DescribeTimingL7CacheDataOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeTopL7AnalysisDataOutcome TeoClient::DescribeTopL7AnalysisData(const DescribeTopL7AnalysisDataRequest &request)
@@ -2298,25 +2662,32 @@ TeoClient::DescribeTopL7AnalysisDataOutcome TeoClient::DescribeTopL7AnalysisData
 
 void TeoClient::DescribeTopL7AnalysisDataAsync(const DescribeTopL7AnalysisDataRequest& request, const DescribeTopL7AnalysisDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTopL7AnalysisData(request), context);
-    };
+    using Req = const DescribeTopL7AnalysisDataRequest&;
+    using Resp = DescribeTopL7AnalysisDataResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTopL7AnalysisData", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeTopL7AnalysisDataOutcomeCallable TeoClient::DescribeTopL7AnalysisDataCallable(const DescribeTopL7AnalysisDataRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTopL7AnalysisDataOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTopL7AnalysisData(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTopL7AnalysisDataOutcome>>();
+    DescribeTopL7AnalysisDataAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeTopL7AnalysisDataRequest&,
+        DescribeTopL7AnalysisDataOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeTopL7CacheDataOutcome TeoClient::DescribeTopL7CacheData(const DescribeTopL7CacheDataRequest &request)
@@ -2341,25 +2712,32 @@ TeoClient::DescribeTopL7CacheDataOutcome TeoClient::DescribeTopL7CacheData(const
 
 void TeoClient::DescribeTopL7CacheDataAsync(const DescribeTopL7CacheDataRequest& request, const DescribeTopL7CacheDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTopL7CacheData(request), context);
-    };
+    using Req = const DescribeTopL7CacheDataRequest&;
+    using Resp = DescribeTopL7CacheDataResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTopL7CacheData", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeTopL7CacheDataOutcomeCallable TeoClient::DescribeTopL7CacheDataCallable(const DescribeTopL7CacheDataRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTopL7CacheDataOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTopL7CacheData(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTopL7CacheDataOutcome>>();
+    DescribeTopL7CacheDataAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeTopL7CacheDataRequest&,
+        DescribeTopL7CacheDataOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeWebManagedRulesAttackEventsOutcome TeoClient::DescribeWebManagedRulesAttackEvents(const DescribeWebManagedRulesAttackEventsRequest &request)
@@ -2384,25 +2762,32 @@ TeoClient::DescribeWebManagedRulesAttackEventsOutcome TeoClient::DescribeWebMana
 
 void TeoClient::DescribeWebManagedRulesAttackEventsAsync(const DescribeWebManagedRulesAttackEventsRequest& request, const DescribeWebManagedRulesAttackEventsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeWebManagedRulesAttackEvents(request), context);
-    };
+    using Req = const DescribeWebManagedRulesAttackEventsRequest&;
+    using Resp = DescribeWebManagedRulesAttackEventsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeWebManagedRulesAttackEvents", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeWebManagedRulesAttackEventsOutcomeCallable TeoClient::DescribeWebManagedRulesAttackEventsCallable(const DescribeWebManagedRulesAttackEventsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeWebManagedRulesAttackEventsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeWebManagedRulesAttackEvents(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeWebManagedRulesAttackEventsOutcome>>();
+    DescribeWebManagedRulesAttackEventsAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeWebManagedRulesAttackEventsRequest&,
+        DescribeWebManagedRulesAttackEventsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeWebManagedRulesDataOutcome TeoClient::DescribeWebManagedRulesData(const DescribeWebManagedRulesDataRequest &request)
@@ -2427,25 +2812,32 @@ TeoClient::DescribeWebManagedRulesDataOutcome TeoClient::DescribeWebManagedRules
 
 void TeoClient::DescribeWebManagedRulesDataAsync(const DescribeWebManagedRulesDataRequest& request, const DescribeWebManagedRulesDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeWebManagedRulesData(request), context);
-    };
+    using Req = const DescribeWebManagedRulesDataRequest&;
+    using Resp = DescribeWebManagedRulesDataResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeWebManagedRulesData", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeWebManagedRulesDataOutcomeCallable TeoClient::DescribeWebManagedRulesDataCallable(const DescribeWebManagedRulesDataRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeWebManagedRulesDataOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeWebManagedRulesData(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeWebManagedRulesDataOutcome>>();
+    DescribeWebManagedRulesDataAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeWebManagedRulesDataRequest&,
+        DescribeWebManagedRulesDataOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeWebManagedRulesLogOutcome TeoClient::DescribeWebManagedRulesLog(const DescribeWebManagedRulesLogRequest &request)
@@ -2470,25 +2862,32 @@ TeoClient::DescribeWebManagedRulesLogOutcome TeoClient::DescribeWebManagedRulesL
 
 void TeoClient::DescribeWebManagedRulesLogAsync(const DescribeWebManagedRulesLogRequest& request, const DescribeWebManagedRulesLogAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeWebManagedRulesLog(request), context);
-    };
+    using Req = const DescribeWebManagedRulesLogRequest&;
+    using Resp = DescribeWebManagedRulesLogResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeWebManagedRulesLog", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeWebManagedRulesLogOutcomeCallable TeoClient::DescribeWebManagedRulesLogCallable(const DescribeWebManagedRulesLogRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeWebManagedRulesLogOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeWebManagedRulesLog(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeWebManagedRulesLogOutcome>>();
+    DescribeWebManagedRulesLogAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeWebManagedRulesLogRequest&,
+        DescribeWebManagedRulesLogOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeWebManagedRulesTopDataOutcome TeoClient::DescribeWebManagedRulesTopData(const DescribeWebManagedRulesTopDataRequest &request)
@@ -2513,25 +2912,32 @@ TeoClient::DescribeWebManagedRulesTopDataOutcome TeoClient::DescribeWebManagedRu
 
 void TeoClient::DescribeWebManagedRulesTopDataAsync(const DescribeWebManagedRulesTopDataRequest& request, const DescribeWebManagedRulesTopDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeWebManagedRulesTopData(request), context);
-    };
+    using Req = const DescribeWebManagedRulesTopDataRequest&;
+    using Resp = DescribeWebManagedRulesTopDataResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeWebManagedRulesTopData", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeWebManagedRulesTopDataOutcomeCallable TeoClient::DescribeWebManagedRulesTopDataCallable(const DescribeWebManagedRulesTopDataRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeWebManagedRulesTopDataOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeWebManagedRulesTopData(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeWebManagedRulesTopDataOutcome>>();
+    DescribeWebManagedRulesTopDataAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeWebManagedRulesTopDataRequest&,
+        DescribeWebManagedRulesTopDataOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeWebProtectionAttackEventsOutcome TeoClient::DescribeWebProtectionAttackEvents(const DescribeWebProtectionAttackEventsRequest &request)
@@ -2556,25 +2962,32 @@ TeoClient::DescribeWebProtectionAttackEventsOutcome TeoClient::DescribeWebProtec
 
 void TeoClient::DescribeWebProtectionAttackEventsAsync(const DescribeWebProtectionAttackEventsRequest& request, const DescribeWebProtectionAttackEventsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeWebProtectionAttackEvents(request), context);
-    };
+    using Req = const DescribeWebProtectionAttackEventsRequest&;
+    using Resp = DescribeWebProtectionAttackEventsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeWebProtectionAttackEvents", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeWebProtectionAttackEventsOutcomeCallable TeoClient::DescribeWebProtectionAttackEventsCallable(const DescribeWebProtectionAttackEventsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeWebProtectionAttackEventsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeWebProtectionAttackEvents(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeWebProtectionAttackEventsOutcome>>();
+    DescribeWebProtectionAttackEventsAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeWebProtectionAttackEventsRequest&,
+        DescribeWebProtectionAttackEventsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeWebProtectionDataOutcome TeoClient::DescribeWebProtectionData(const DescribeWebProtectionDataRequest &request)
@@ -2599,25 +3012,32 @@ TeoClient::DescribeWebProtectionDataOutcome TeoClient::DescribeWebProtectionData
 
 void TeoClient::DescribeWebProtectionDataAsync(const DescribeWebProtectionDataRequest& request, const DescribeWebProtectionDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeWebProtectionData(request), context);
-    };
+    using Req = const DescribeWebProtectionDataRequest&;
+    using Resp = DescribeWebProtectionDataResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeWebProtectionData", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeWebProtectionDataOutcomeCallable TeoClient::DescribeWebProtectionDataCallable(const DescribeWebProtectionDataRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeWebProtectionDataOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeWebProtectionData(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeWebProtectionDataOutcome>>();
+    DescribeWebProtectionDataAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeWebProtectionDataRequest&,
+        DescribeWebProtectionDataOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeWebProtectionLogOutcome TeoClient::DescribeWebProtectionLog(const DescribeWebProtectionLogRequest &request)
@@ -2642,25 +3062,32 @@ TeoClient::DescribeWebProtectionLogOutcome TeoClient::DescribeWebProtectionLog(c
 
 void TeoClient::DescribeWebProtectionLogAsync(const DescribeWebProtectionLogRequest& request, const DescribeWebProtectionLogAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeWebProtectionLog(request), context);
-    };
+    using Req = const DescribeWebProtectionLogRequest&;
+    using Resp = DescribeWebProtectionLogResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeWebProtectionLog", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeWebProtectionLogOutcomeCallable TeoClient::DescribeWebProtectionLogCallable(const DescribeWebProtectionLogRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeWebProtectionLogOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeWebProtectionLog(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeWebProtectionLogOutcome>>();
+    DescribeWebProtectionLogAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeWebProtectionLogRequest&,
+        DescribeWebProtectionLogOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeZoneDDoSPolicyOutcome TeoClient::DescribeZoneDDoSPolicy(const DescribeZoneDDoSPolicyRequest &request)
@@ -2685,25 +3112,32 @@ TeoClient::DescribeZoneDDoSPolicyOutcome TeoClient::DescribeZoneDDoSPolicy(const
 
 void TeoClient::DescribeZoneDDoSPolicyAsync(const DescribeZoneDDoSPolicyRequest& request, const DescribeZoneDDoSPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeZoneDDoSPolicy(request), context);
-    };
+    using Req = const DescribeZoneDDoSPolicyRequest&;
+    using Resp = DescribeZoneDDoSPolicyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeZoneDDoSPolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeZoneDDoSPolicyOutcomeCallable TeoClient::DescribeZoneDDoSPolicyCallable(const DescribeZoneDDoSPolicyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeZoneDDoSPolicyOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeZoneDDoSPolicy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeZoneDDoSPolicyOutcome>>();
+    DescribeZoneDDoSPolicyAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeZoneDDoSPolicyRequest&,
+        DescribeZoneDDoSPolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeZoneDetailsOutcome TeoClient::DescribeZoneDetails(const DescribeZoneDetailsRequest &request)
@@ -2728,25 +3162,32 @@ TeoClient::DescribeZoneDetailsOutcome TeoClient::DescribeZoneDetails(const Descr
 
 void TeoClient::DescribeZoneDetailsAsync(const DescribeZoneDetailsRequest& request, const DescribeZoneDetailsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeZoneDetails(request), context);
-    };
+    using Req = const DescribeZoneDetailsRequest&;
+    using Resp = DescribeZoneDetailsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeZoneDetails", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeZoneDetailsOutcomeCallable TeoClient::DescribeZoneDetailsCallable(const DescribeZoneDetailsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeZoneDetailsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeZoneDetails(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeZoneDetailsOutcome>>();
+    DescribeZoneDetailsAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeZoneDetailsRequest&,
+        DescribeZoneDetailsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeZoneSettingOutcome TeoClient::DescribeZoneSetting(const DescribeZoneSettingRequest &request)
@@ -2771,25 +3212,32 @@ TeoClient::DescribeZoneSettingOutcome TeoClient::DescribeZoneSetting(const Descr
 
 void TeoClient::DescribeZoneSettingAsync(const DescribeZoneSettingRequest& request, const DescribeZoneSettingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeZoneSetting(request), context);
-    };
+    using Req = const DescribeZoneSettingRequest&;
+    using Resp = DescribeZoneSettingResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeZoneSetting", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeZoneSettingOutcomeCallable TeoClient::DescribeZoneSettingCallable(const DescribeZoneSettingRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeZoneSettingOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeZoneSetting(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeZoneSettingOutcome>>();
+    DescribeZoneSettingAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeZoneSettingRequest&,
+        DescribeZoneSettingOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DescribeZonesOutcome TeoClient::DescribeZones(const DescribeZonesRequest &request)
@@ -2814,25 +3262,32 @@ TeoClient::DescribeZonesOutcome TeoClient::DescribeZones(const DescribeZonesRequ
 
 void TeoClient::DescribeZonesAsync(const DescribeZonesRequest& request, const DescribeZonesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeZones(request), context);
-    };
+    using Req = const DescribeZonesRequest&;
+    using Resp = DescribeZonesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeZones", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DescribeZonesOutcomeCallable TeoClient::DescribeZonesCallable(const DescribeZonesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeZonesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeZones(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeZonesOutcome>>();
+    DescribeZonesAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeZonesRequest&,
+        DescribeZonesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::DownloadL7LogsOutcome TeoClient::DownloadL7Logs(const DownloadL7LogsRequest &request)
@@ -2857,25 +3312,32 @@ TeoClient::DownloadL7LogsOutcome TeoClient::DownloadL7Logs(const DownloadL7LogsR
 
 void TeoClient::DownloadL7LogsAsync(const DownloadL7LogsRequest& request, const DownloadL7LogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DownloadL7Logs(request), context);
-    };
+    using Req = const DownloadL7LogsRequest&;
+    using Resp = DownloadL7LogsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DownloadL7Logs", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::DownloadL7LogsOutcomeCallable TeoClient::DownloadL7LogsCallable(const DownloadL7LogsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DownloadL7LogsOutcome()>>(
-        [this, request]()
-        {
-            return this->DownloadL7Logs(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DownloadL7LogsOutcome>>();
+    DownloadL7LogsAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DownloadL7LogsRequest&,
+        DownloadL7LogsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::IdentifyZoneOutcome TeoClient::IdentifyZone(const IdentifyZoneRequest &request)
@@ -2900,25 +3362,32 @@ TeoClient::IdentifyZoneOutcome TeoClient::IdentifyZone(const IdentifyZoneRequest
 
 void TeoClient::IdentifyZoneAsync(const IdentifyZoneRequest& request, const IdentifyZoneAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->IdentifyZone(request), context);
-    };
+    using Req = const IdentifyZoneRequest&;
+    using Resp = IdentifyZoneResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "IdentifyZone", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::IdentifyZoneOutcomeCallable TeoClient::IdentifyZoneCallable(const IdentifyZoneRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<IdentifyZoneOutcome()>>(
-        [this, request]()
-        {
-            return this->IdentifyZone(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<IdentifyZoneOutcome>>();
+    IdentifyZoneAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const IdentifyZoneRequest&,
+        IdentifyZoneOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::ImportDnsRecordsOutcome TeoClient::ImportDnsRecords(const ImportDnsRecordsRequest &request)
@@ -2943,25 +3412,32 @@ TeoClient::ImportDnsRecordsOutcome TeoClient::ImportDnsRecords(const ImportDnsRe
 
 void TeoClient::ImportDnsRecordsAsync(const ImportDnsRecordsRequest& request, const ImportDnsRecordsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ImportDnsRecords(request), context);
-    };
+    using Req = const ImportDnsRecordsRequest&;
+    using Resp = ImportDnsRecordsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ImportDnsRecords", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::ImportDnsRecordsOutcomeCallable TeoClient::ImportDnsRecordsCallable(const ImportDnsRecordsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ImportDnsRecordsOutcome()>>(
-        [this, request]()
-        {
-            return this->ImportDnsRecords(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ImportDnsRecordsOutcome>>();
+    ImportDnsRecordsAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const ImportDnsRecordsRequest&,
+        ImportDnsRecordsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::ModifyApplicationProxyOutcome TeoClient::ModifyApplicationProxy(const ModifyApplicationProxyRequest &request)
@@ -2986,25 +3462,32 @@ TeoClient::ModifyApplicationProxyOutcome TeoClient::ModifyApplicationProxy(const
 
 void TeoClient::ModifyApplicationProxyAsync(const ModifyApplicationProxyRequest& request, const ModifyApplicationProxyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyApplicationProxy(request), context);
-    };
+    using Req = const ModifyApplicationProxyRequest&;
+    using Resp = ModifyApplicationProxyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyApplicationProxy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::ModifyApplicationProxyOutcomeCallable TeoClient::ModifyApplicationProxyCallable(const ModifyApplicationProxyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyApplicationProxyOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyApplicationProxy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyApplicationProxyOutcome>>();
+    ModifyApplicationProxyAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const ModifyApplicationProxyRequest&,
+        ModifyApplicationProxyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::ModifyApplicationProxyRuleOutcome TeoClient::ModifyApplicationProxyRule(const ModifyApplicationProxyRuleRequest &request)
@@ -3029,25 +3512,32 @@ TeoClient::ModifyApplicationProxyRuleOutcome TeoClient::ModifyApplicationProxyRu
 
 void TeoClient::ModifyApplicationProxyRuleAsync(const ModifyApplicationProxyRuleRequest& request, const ModifyApplicationProxyRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyApplicationProxyRule(request), context);
-    };
+    using Req = const ModifyApplicationProxyRuleRequest&;
+    using Resp = ModifyApplicationProxyRuleResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyApplicationProxyRule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::ModifyApplicationProxyRuleOutcomeCallable TeoClient::ModifyApplicationProxyRuleCallable(const ModifyApplicationProxyRuleRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyApplicationProxyRuleOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyApplicationProxyRule(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyApplicationProxyRuleOutcome>>();
+    ModifyApplicationProxyRuleAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const ModifyApplicationProxyRuleRequest&,
+        ModifyApplicationProxyRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::ModifyApplicationProxyRuleStatusOutcome TeoClient::ModifyApplicationProxyRuleStatus(const ModifyApplicationProxyRuleStatusRequest &request)
@@ -3072,25 +3562,32 @@ TeoClient::ModifyApplicationProxyRuleStatusOutcome TeoClient::ModifyApplicationP
 
 void TeoClient::ModifyApplicationProxyRuleStatusAsync(const ModifyApplicationProxyRuleStatusRequest& request, const ModifyApplicationProxyRuleStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyApplicationProxyRuleStatus(request), context);
-    };
+    using Req = const ModifyApplicationProxyRuleStatusRequest&;
+    using Resp = ModifyApplicationProxyRuleStatusResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyApplicationProxyRuleStatus", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::ModifyApplicationProxyRuleStatusOutcomeCallable TeoClient::ModifyApplicationProxyRuleStatusCallable(const ModifyApplicationProxyRuleStatusRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyApplicationProxyRuleStatusOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyApplicationProxyRuleStatus(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyApplicationProxyRuleStatusOutcome>>();
+    ModifyApplicationProxyRuleStatusAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const ModifyApplicationProxyRuleStatusRequest&,
+        ModifyApplicationProxyRuleStatusOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::ModifyApplicationProxyStatusOutcome TeoClient::ModifyApplicationProxyStatus(const ModifyApplicationProxyStatusRequest &request)
@@ -3115,25 +3612,32 @@ TeoClient::ModifyApplicationProxyStatusOutcome TeoClient::ModifyApplicationProxy
 
 void TeoClient::ModifyApplicationProxyStatusAsync(const ModifyApplicationProxyStatusRequest& request, const ModifyApplicationProxyStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyApplicationProxyStatus(request), context);
-    };
+    using Req = const ModifyApplicationProxyStatusRequest&;
+    using Resp = ModifyApplicationProxyStatusResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyApplicationProxyStatus", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::ModifyApplicationProxyStatusOutcomeCallable TeoClient::ModifyApplicationProxyStatusCallable(const ModifyApplicationProxyStatusRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyApplicationProxyStatusOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyApplicationProxyStatus(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyApplicationProxyStatusOutcome>>();
+    ModifyApplicationProxyStatusAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const ModifyApplicationProxyStatusRequest&,
+        ModifyApplicationProxyStatusOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::ModifyDDoSPolicyOutcome TeoClient::ModifyDDoSPolicy(const ModifyDDoSPolicyRequest &request)
@@ -3158,25 +3662,32 @@ TeoClient::ModifyDDoSPolicyOutcome TeoClient::ModifyDDoSPolicy(const ModifyDDoSP
 
 void TeoClient::ModifyDDoSPolicyAsync(const ModifyDDoSPolicyRequest& request, const ModifyDDoSPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyDDoSPolicy(request), context);
-    };
+    using Req = const ModifyDDoSPolicyRequest&;
+    using Resp = ModifyDDoSPolicyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyDDoSPolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::ModifyDDoSPolicyOutcomeCallable TeoClient::ModifyDDoSPolicyCallable(const ModifyDDoSPolicyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyDDoSPolicyOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyDDoSPolicy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyDDoSPolicyOutcome>>();
+    ModifyDDoSPolicyAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const ModifyDDoSPolicyRequest&,
+        ModifyDDoSPolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::ModifyDDoSPolicyHostOutcome TeoClient::ModifyDDoSPolicyHost(const ModifyDDoSPolicyHostRequest &request)
@@ -3201,25 +3712,32 @@ TeoClient::ModifyDDoSPolicyHostOutcome TeoClient::ModifyDDoSPolicyHost(const Mod
 
 void TeoClient::ModifyDDoSPolicyHostAsync(const ModifyDDoSPolicyHostRequest& request, const ModifyDDoSPolicyHostAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyDDoSPolicyHost(request), context);
-    };
+    using Req = const ModifyDDoSPolicyHostRequest&;
+    using Resp = ModifyDDoSPolicyHostResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyDDoSPolicyHost", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::ModifyDDoSPolicyHostOutcomeCallable TeoClient::ModifyDDoSPolicyHostCallable(const ModifyDDoSPolicyHostRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyDDoSPolicyHostOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyDDoSPolicyHost(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyDDoSPolicyHostOutcome>>();
+    ModifyDDoSPolicyHostAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const ModifyDDoSPolicyHostRequest&,
+        ModifyDDoSPolicyHostOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::ModifyDefaultCertificateOutcome TeoClient::ModifyDefaultCertificate(const ModifyDefaultCertificateRequest &request)
@@ -3244,25 +3762,32 @@ TeoClient::ModifyDefaultCertificateOutcome TeoClient::ModifyDefaultCertificate(c
 
 void TeoClient::ModifyDefaultCertificateAsync(const ModifyDefaultCertificateRequest& request, const ModifyDefaultCertificateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyDefaultCertificate(request), context);
-    };
+    using Req = const ModifyDefaultCertificateRequest&;
+    using Resp = ModifyDefaultCertificateResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyDefaultCertificate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::ModifyDefaultCertificateOutcomeCallable TeoClient::ModifyDefaultCertificateCallable(const ModifyDefaultCertificateRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyDefaultCertificateOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyDefaultCertificate(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyDefaultCertificateOutcome>>();
+    ModifyDefaultCertificateAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const ModifyDefaultCertificateRequest&,
+        ModifyDefaultCertificateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::ModifyDnsRecordOutcome TeoClient::ModifyDnsRecord(const ModifyDnsRecordRequest &request)
@@ -3287,25 +3812,32 @@ TeoClient::ModifyDnsRecordOutcome TeoClient::ModifyDnsRecord(const ModifyDnsReco
 
 void TeoClient::ModifyDnsRecordAsync(const ModifyDnsRecordRequest& request, const ModifyDnsRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyDnsRecord(request), context);
-    };
+    using Req = const ModifyDnsRecordRequest&;
+    using Resp = ModifyDnsRecordResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyDnsRecord", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::ModifyDnsRecordOutcomeCallable TeoClient::ModifyDnsRecordCallable(const ModifyDnsRecordRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyDnsRecordOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyDnsRecord(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyDnsRecordOutcome>>();
+    ModifyDnsRecordAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const ModifyDnsRecordRequest&,
+        ModifyDnsRecordOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::ModifyDnssecOutcome TeoClient::ModifyDnssec(const ModifyDnssecRequest &request)
@@ -3330,25 +3862,32 @@ TeoClient::ModifyDnssecOutcome TeoClient::ModifyDnssec(const ModifyDnssecRequest
 
 void TeoClient::ModifyDnssecAsync(const ModifyDnssecRequest& request, const ModifyDnssecAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyDnssec(request), context);
-    };
+    using Req = const ModifyDnssecRequest&;
+    using Resp = ModifyDnssecResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyDnssec", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::ModifyDnssecOutcomeCallable TeoClient::ModifyDnssecCallable(const ModifyDnssecRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyDnssecOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyDnssec(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyDnssecOutcome>>();
+    ModifyDnssecAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const ModifyDnssecRequest&,
+        ModifyDnssecOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::ModifyHostsCertificateOutcome TeoClient::ModifyHostsCertificate(const ModifyHostsCertificateRequest &request)
@@ -3373,25 +3912,32 @@ TeoClient::ModifyHostsCertificateOutcome TeoClient::ModifyHostsCertificate(const
 
 void TeoClient::ModifyHostsCertificateAsync(const ModifyHostsCertificateRequest& request, const ModifyHostsCertificateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyHostsCertificate(request), context);
-    };
+    using Req = const ModifyHostsCertificateRequest&;
+    using Resp = ModifyHostsCertificateResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyHostsCertificate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::ModifyHostsCertificateOutcomeCallable TeoClient::ModifyHostsCertificateCallable(const ModifyHostsCertificateRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyHostsCertificateOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyHostsCertificate(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyHostsCertificateOutcome>>();
+    ModifyHostsCertificateAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const ModifyHostsCertificateRequest&,
+        ModifyHostsCertificateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::ModifyLoadBalancingOutcome TeoClient::ModifyLoadBalancing(const ModifyLoadBalancingRequest &request)
@@ -3416,25 +3962,32 @@ TeoClient::ModifyLoadBalancingOutcome TeoClient::ModifyLoadBalancing(const Modif
 
 void TeoClient::ModifyLoadBalancingAsync(const ModifyLoadBalancingRequest& request, const ModifyLoadBalancingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyLoadBalancing(request), context);
-    };
+    using Req = const ModifyLoadBalancingRequest&;
+    using Resp = ModifyLoadBalancingResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyLoadBalancing", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::ModifyLoadBalancingOutcomeCallable TeoClient::ModifyLoadBalancingCallable(const ModifyLoadBalancingRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyLoadBalancingOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyLoadBalancing(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyLoadBalancingOutcome>>();
+    ModifyLoadBalancingAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const ModifyLoadBalancingRequest&,
+        ModifyLoadBalancingOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::ModifyLoadBalancingStatusOutcome TeoClient::ModifyLoadBalancingStatus(const ModifyLoadBalancingStatusRequest &request)
@@ -3459,25 +4012,32 @@ TeoClient::ModifyLoadBalancingStatusOutcome TeoClient::ModifyLoadBalancingStatus
 
 void TeoClient::ModifyLoadBalancingStatusAsync(const ModifyLoadBalancingStatusRequest& request, const ModifyLoadBalancingStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyLoadBalancingStatus(request), context);
-    };
+    using Req = const ModifyLoadBalancingStatusRequest&;
+    using Resp = ModifyLoadBalancingStatusResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyLoadBalancingStatus", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::ModifyLoadBalancingStatusOutcomeCallable TeoClient::ModifyLoadBalancingStatusCallable(const ModifyLoadBalancingStatusRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyLoadBalancingStatusOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyLoadBalancingStatus(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyLoadBalancingStatusOutcome>>();
+    ModifyLoadBalancingStatusAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const ModifyLoadBalancingStatusRequest&,
+        ModifyLoadBalancingStatusOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::ModifyOriginGroupOutcome TeoClient::ModifyOriginGroup(const ModifyOriginGroupRequest &request)
@@ -3502,25 +4062,32 @@ TeoClient::ModifyOriginGroupOutcome TeoClient::ModifyOriginGroup(const ModifyOri
 
 void TeoClient::ModifyOriginGroupAsync(const ModifyOriginGroupRequest& request, const ModifyOriginGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyOriginGroup(request), context);
-    };
+    using Req = const ModifyOriginGroupRequest&;
+    using Resp = ModifyOriginGroupResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyOriginGroup", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::ModifyOriginGroupOutcomeCallable TeoClient::ModifyOriginGroupCallable(const ModifyOriginGroupRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyOriginGroupOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyOriginGroup(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyOriginGroupOutcome>>();
+    ModifyOriginGroupAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const ModifyOriginGroupRequest&,
+        ModifyOriginGroupOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::ModifySecurityPolicyOutcome TeoClient::ModifySecurityPolicy(const ModifySecurityPolicyRequest &request)
@@ -3545,25 +4112,32 @@ TeoClient::ModifySecurityPolicyOutcome TeoClient::ModifySecurityPolicy(const Mod
 
 void TeoClient::ModifySecurityPolicyAsync(const ModifySecurityPolicyRequest& request, const ModifySecurityPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifySecurityPolicy(request), context);
-    };
+    using Req = const ModifySecurityPolicyRequest&;
+    using Resp = ModifySecurityPolicyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifySecurityPolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::ModifySecurityPolicyOutcomeCallable TeoClient::ModifySecurityPolicyCallable(const ModifySecurityPolicyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifySecurityPolicyOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifySecurityPolicy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifySecurityPolicyOutcome>>();
+    ModifySecurityPolicyAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const ModifySecurityPolicyRequest&,
+        ModifySecurityPolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::ModifyZoneOutcome TeoClient::ModifyZone(const ModifyZoneRequest &request)
@@ -3588,25 +4162,32 @@ TeoClient::ModifyZoneOutcome TeoClient::ModifyZone(const ModifyZoneRequest &requ
 
 void TeoClient::ModifyZoneAsync(const ModifyZoneRequest& request, const ModifyZoneAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyZone(request), context);
-    };
+    using Req = const ModifyZoneRequest&;
+    using Resp = ModifyZoneResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyZone", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::ModifyZoneOutcomeCallable TeoClient::ModifyZoneCallable(const ModifyZoneRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyZoneOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyZone(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyZoneOutcome>>();
+    ModifyZoneAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const ModifyZoneRequest&,
+        ModifyZoneOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::ModifyZoneCnameSpeedUpOutcome TeoClient::ModifyZoneCnameSpeedUp(const ModifyZoneCnameSpeedUpRequest &request)
@@ -3631,25 +4212,32 @@ TeoClient::ModifyZoneCnameSpeedUpOutcome TeoClient::ModifyZoneCnameSpeedUp(const
 
 void TeoClient::ModifyZoneCnameSpeedUpAsync(const ModifyZoneCnameSpeedUpRequest& request, const ModifyZoneCnameSpeedUpAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyZoneCnameSpeedUp(request), context);
-    };
+    using Req = const ModifyZoneCnameSpeedUpRequest&;
+    using Resp = ModifyZoneCnameSpeedUpResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyZoneCnameSpeedUp", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::ModifyZoneCnameSpeedUpOutcomeCallable TeoClient::ModifyZoneCnameSpeedUpCallable(const ModifyZoneCnameSpeedUpRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyZoneCnameSpeedUpOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyZoneCnameSpeedUp(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyZoneCnameSpeedUpOutcome>>();
+    ModifyZoneCnameSpeedUpAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const ModifyZoneCnameSpeedUpRequest&,
+        ModifyZoneCnameSpeedUpOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::ModifyZoneSettingOutcome TeoClient::ModifyZoneSetting(const ModifyZoneSettingRequest &request)
@@ -3674,25 +4262,32 @@ TeoClient::ModifyZoneSettingOutcome TeoClient::ModifyZoneSetting(const ModifyZon
 
 void TeoClient::ModifyZoneSettingAsync(const ModifyZoneSettingRequest& request, const ModifyZoneSettingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyZoneSetting(request), context);
-    };
+    using Req = const ModifyZoneSettingRequest&;
+    using Resp = ModifyZoneSettingResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyZoneSetting", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::ModifyZoneSettingOutcomeCallable TeoClient::ModifyZoneSettingCallable(const ModifyZoneSettingRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyZoneSettingOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyZoneSetting(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyZoneSettingOutcome>>();
+    ModifyZoneSettingAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const ModifyZoneSettingRequest&,
+        ModifyZoneSettingOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::ModifyZoneStatusOutcome TeoClient::ModifyZoneStatus(const ModifyZoneStatusRequest &request)
@@ -3717,25 +4312,32 @@ TeoClient::ModifyZoneStatusOutcome TeoClient::ModifyZoneStatus(const ModifyZoneS
 
 void TeoClient::ModifyZoneStatusAsync(const ModifyZoneStatusRequest& request, const ModifyZoneStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyZoneStatus(request), context);
-    };
+    using Req = const ModifyZoneStatusRequest&;
+    using Resp = ModifyZoneStatusResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyZoneStatus", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::ModifyZoneStatusOutcomeCallable TeoClient::ModifyZoneStatusCallable(const ModifyZoneStatusRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyZoneStatusOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyZoneStatus(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyZoneStatusOutcome>>();
+    ModifyZoneStatusAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const ModifyZoneStatusRequest&,
+        ModifyZoneStatusOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::ReclaimZoneOutcome TeoClient::ReclaimZone(const ReclaimZoneRequest &request)
@@ -3760,25 +4362,32 @@ TeoClient::ReclaimZoneOutcome TeoClient::ReclaimZone(const ReclaimZoneRequest &r
 
 void TeoClient::ReclaimZoneAsync(const ReclaimZoneRequest& request, const ReclaimZoneAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ReclaimZone(request), context);
-    };
+    using Req = const ReclaimZoneRequest&;
+    using Resp = ReclaimZoneResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ReclaimZone", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::ReclaimZoneOutcomeCallable TeoClient::ReclaimZoneCallable(const ReclaimZoneRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ReclaimZoneOutcome()>>(
-        [this, request]()
-        {
-            return this->ReclaimZone(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ReclaimZoneOutcome>>();
+    ReclaimZoneAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const ReclaimZoneRequest&,
+        ReclaimZoneOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TeoClient::ScanDnsRecordsOutcome TeoClient::ScanDnsRecords(const ScanDnsRecordsRequest &request)
@@ -3803,24 +4412,31 @@ TeoClient::ScanDnsRecordsOutcome TeoClient::ScanDnsRecords(const ScanDnsRecordsR
 
 void TeoClient::ScanDnsRecordsAsync(const ScanDnsRecordsRequest& request, const ScanDnsRecordsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ScanDnsRecords(request), context);
-    };
+    using Req = const ScanDnsRecordsRequest&;
+    using Resp = ScanDnsRecordsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ScanDnsRecords", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TeoClient::ScanDnsRecordsOutcomeCallable TeoClient::ScanDnsRecordsCallable(const ScanDnsRecordsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ScanDnsRecordsOutcome()>>(
-        [this, request]()
-        {
-            return this->ScanDnsRecords(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ScanDnsRecordsOutcome>>();
+    ScanDnsRecordsAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const ScanDnsRecordsRequest&,
+        ScanDnsRecordsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

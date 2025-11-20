@@ -62,25 +62,32 @@ CarClient::ApplyConcurrentOutcome CarClient::ApplyConcurrent(const ApplyConcurre
 
 void CarClient::ApplyConcurrentAsync(const ApplyConcurrentRequest& request, const ApplyConcurrentAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ApplyConcurrent(request), context);
-    };
+    using Req = const ApplyConcurrentRequest&;
+    using Resp = ApplyConcurrentResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ApplyConcurrent", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::ApplyConcurrentOutcomeCallable CarClient::ApplyConcurrentCallable(const ApplyConcurrentRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ApplyConcurrentOutcome()>>(
-        [this, request]()
-        {
-            return this->ApplyConcurrent(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ApplyConcurrentOutcome>>();
+    ApplyConcurrentAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const ApplyConcurrentRequest&,
+        ApplyConcurrentOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::BindConcurrentPackagesToProjectOutcome CarClient::BindConcurrentPackagesToProject(const BindConcurrentPackagesToProjectRequest &request)
@@ -105,25 +112,32 @@ CarClient::BindConcurrentPackagesToProjectOutcome CarClient::BindConcurrentPacka
 
 void CarClient::BindConcurrentPackagesToProjectAsync(const BindConcurrentPackagesToProjectRequest& request, const BindConcurrentPackagesToProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->BindConcurrentPackagesToProject(request), context);
-    };
+    using Req = const BindConcurrentPackagesToProjectRequest&;
+    using Resp = BindConcurrentPackagesToProjectResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "BindConcurrentPackagesToProject", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::BindConcurrentPackagesToProjectOutcomeCallable CarClient::BindConcurrentPackagesToProjectCallable(const BindConcurrentPackagesToProjectRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<BindConcurrentPackagesToProjectOutcome()>>(
-        [this, request]()
-        {
-            return this->BindConcurrentPackagesToProject(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<BindConcurrentPackagesToProjectOutcome>>();
+    BindConcurrentPackagesToProjectAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const BindConcurrentPackagesToProjectRequest&,
+        BindConcurrentPackagesToProjectOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::CreateApplicationOutcome CarClient::CreateApplication(const CreateApplicationRequest &request)
@@ -148,25 +162,32 @@ CarClient::CreateApplicationOutcome CarClient::CreateApplication(const CreateApp
 
 void CarClient::CreateApplicationAsync(const CreateApplicationRequest& request, const CreateApplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateApplication(request), context);
-    };
+    using Req = const CreateApplicationRequest&;
+    using Resp = CreateApplicationResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateApplication", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::CreateApplicationOutcomeCallable CarClient::CreateApplicationCallable(const CreateApplicationRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateApplicationOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateApplication(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateApplicationOutcome>>();
+    CreateApplicationAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const CreateApplicationRequest&,
+        CreateApplicationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::CreateApplicationProjectOutcome CarClient::CreateApplicationProject(const CreateApplicationProjectRequest &request)
@@ -191,25 +212,32 @@ CarClient::CreateApplicationProjectOutcome CarClient::CreateApplicationProject(c
 
 void CarClient::CreateApplicationProjectAsync(const CreateApplicationProjectRequest& request, const CreateApplicationProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateApplicationProject(request), context);
-    };
+    using Req = const CreateApplicationProjectRequest&;
+    using Resp = CreateApplicationProjectResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateApplicationProject", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::CreateApplicationProjectOutcomeCallable CarClient::CreateApplicationProjectCallable(const CreateApplicationProjectRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateApplicationProjectOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateApplicationProject(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateApplicationProjectOutcome>>();
+    CreateApplicationProjectAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const CreateApplicationProjectRequest&,
+        CreateApplicationProjectOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::CreateApplicationSnapshotOutcome CarClient::CreateApplicationSnapshot(const CreateApplicationSnapshotRequest &request)
@@ -234,25 +262,32 @@ CarClient::CreateApplicationSnapshotOutcome CarClient::CreateApplicationSnapshot
 
 void CarClient::CreateApplicationSnapshotAsync(const CreateApplicationSnapshotRequest& request, const CreateApplicationSnapshotAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateApplicationSnapshot(request), context);
-    };
+    using Req = const CreateApplicationSnapshotRequest&;
+    using Resp = CreateApplicationSnapshotResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateApplicationSnapshot", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::CreateApplicationSnapshotOutcomeCallable CarClient::CreateApplicationSnapshotCallable(const CreateApplicationSnapshotRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateApplicationSnapshotOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateApplicationSnapshot(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateApplicationSnapshotOutcome>>();
+    CreateApplicationSnapshotAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const CreateApplicationSnapshotRequest&,
+        CreateApplicationSnapshotOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::CreateApplicationVersionOutcome CarClient::CreateApplicationVersion(const CreateApplicationVersionRequest &request)
@@ -277,25 +312,32 @@ CarClient::CreateApplicationVersionOutcome CarClient::CreateApplicationVersion(c
 
 void CarClient::CreateApplicationVersionAsync(const CreateApplicationVersionRequest& request, const CreateApplicationVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateApplicationVersion(request), context);
-    };
+    using Req = const CreateApplicationVersionRequest&;
+    using Resp = CreateApplicationVersionResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateApplicationVersion", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::CreateApplicationVersionOutcomeCallable CarClient::CreateApplicationVersionCallable(const CreateApplicationVersionRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateApplicationVersionOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateApplicationVersion(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateApplicationVersionOutcome>>();
+    CreateApplicationVersionAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const CreateApplicationVersionRequest&,
+        CreateApplicationVersionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::CreateSessionOutcome CarClient::CreateSession(const CreateSessionRequest &request)
@@ -320,25 +362,32 @@ CarClient::CreateSessionOutcome CarClient::CreateSession(const CreateSessionRequ
 
 void CarClient::CreateSessionAsync(const CreateSessionRequest& request, const CreateSessionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateSession(request), context);
-    };
+    using Req = const CreateSessionRequest&;
+    using Resp = CreateSessionResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateSession", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::CreateSessionOutcomeCallable CarClient::CreateSessionCallable(const CreateSessionRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateSessionOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateSession(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateSessionOutcome>>();
+    CreateSessionAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const CreateSessionRequest&,
+        CreateSessionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::DeleteApplicationOutcome CarClient::DeleteApplication(const DeleteApplicationRequest &request)
@@ -363,25 +412,32 @@ CarClient::DeleteApplicationOutcome CarClient::DeleteApplication(const DeleteApp
 
 void CarClient::DeleteApplicationAsync(const DeleteApplicationRequest& request, const DeleteApplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteApplication(request), context);
-    };
+    using Req = const DeleteApplicationRequest&;
+    using Resp = DeleteApplicationResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteApplication", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::DeleteApplicationOutcomeCallable CarClient::DeleteApplicationCallable(const DeleteApplicationRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteApplicationOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteApplication(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteApplicationOutcome>>();
+    DeleteApplicationAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const DeleteApplicationRequest&,
+        DeleteApplicationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::DeleteApplicationProjectsOutcome CarClient::DeleteApplicationProjects(const DeleteApplicationProjectsRequest &request)
@@ -406,25 +462,32 @@ CarClient::DeleteApplicationProjectsOutcome CarClient::DeleteApplicationProjects
 
 void CarClient::DeleteApplicationProjectsAsync(const DeleteApplicationProjectsRequest& request, const DeleteApplicationProjectsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteApplicationProjects(request), context);
-    };
+    using Req = const DeleteApplicationProjectsRequest&;
+    using Resp = DeleteApplicationProjectsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteApplicationProjects", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::DeleteApplicationProjectsOutcomeCallable CarClient::DeleteApplicationProjectsCallable(const DeleteApplicationProjectsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteApplicationProjectsOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteApplicationProjects(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteApplicationProjectsOutcome>>();
+    DeleteApplicationProjectsAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const DeleteApplicationProjectsRequest&,
+        DeleteApplicationProjectsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::DeleteApplicationVersionOutcome CarClient::DeleteApplicationVersion(const DeleteApplicationVersionRequest &request)
@@ -449,25 +512,32 @@ CarClient::DeleteApplicationVersionOutcome CarClient::DeleteApplicationVersion(c
 
 void CarClient::DeleteApplicationVersionAsync(const DeleteApplicationVersionRequest& request, const DeleteApplicationVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteApplicationVersion(request), context);
-    };
+    using Req = const DeleteApplicationVersionRequest&;
+    using Resp = DeleteApplicationVersionResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteApplicationVersion", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::DeleteApplicationVersionOutcomeCallable CarClient::DeleteApplicationVersionCallable(const DeleteApplicationVersionRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteApplicationVersionOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteApplicationVersion(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteApplicationVersionOutcome>>();
+    DeleteApplicationVersionAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const DeleteApplicationVersionRequest&,
+        DeleteApplicationVersionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::DescribeApplicationFileInfoOutcome CarClient::DescribeApplicationFileInfo(const DescribeApplicationFileInfoRequest &request)
@@ -492,25 +562,32 @@ CarClient::DescribeApplicationFileInfoOutcome CarClient::DescribeApplicationFile
 
 void CarClient::DescribeApplicationFileInfoAsync(const DescribeApplicationFileInfoRequest& request, const DescribeApplicationFileInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeApplicationFileInfo(request), context);
-    };
+    using Req = const DescribeApplicationFileInfoRequest&;
+    using Resp = DescribeApplicationFileInfoResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeApplicationFileInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::DescribeApplicationFileInfoOutcomeCallable CarClient::DescribeApplicationFileInfoCallable(const DescribeApplicationFileInfoRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeApplicationFileInfoOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeApplicationFileInfo(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeApplicationFileInfoOutcome>>();
+    DescribeApplicationFileInfoAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const DescribeApplicationFileInfoRequest&,
+        DescribeApplicationFileInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::DescribeApplicationListOutcome CarClient::DescribeApplicationList(const DescribeApplicationListRequest &request)
@@ -535,25 +612,32 @@ CarClient::DescribeApplicationListOutcome CarClient::DescribeApplicationList(con
 
 void CarClient::DescribeApplicationListAsync(const DescribeApplicationListRequest& request, const DescribeApplicationListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeApplicationList(request), context);
-    };
+    using Req = const DescribeApplicationListRequest&;
+    using Resp = DescribeApplicationListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeApplicationList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::DescribeApplicationListOutcomeCallable CarClient::DescribeApplicationListCallable(const DescribeApplicationListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeApplicationListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeApplicationList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeApplicationListOutcome>>();
+    DescribeApplicationListAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const DescribeApplicationListRequest&,
+        DescribeApplicationListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::DescribeApplicationPathListOutcome CarClient::DescribeApplicationPathList(const DescribeApplicationPathListRequest &request)
@@ -578,25 +662,32 @@ CarClient::DescribeApplicationPathListOutcome CarClient::DescribeApplicationPath
 
 void CarClient::DescribeApplicationPathListAsync(const DescribeApplicationPathListRequest& request, const DescribeApplicationPathListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeApplicationPathList(request), context);
-    };
+    using Req = const DescribeApplicationPathListRequest&;
+    using Resp = DescribeApplicationPathListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeApplicationPathList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::DescribeApplicationPathListOutcomeCallable CarClient::DescribeApplicationPathListCallable(const DescribeApplicationPathListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeApplicationPathListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeApplicationPathList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeApplicationPathListOutcome>>();
+    DescribeApplicationPathListAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const DescribeApplicationPathListRequest&,
+        DescribeApplicationPathListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::DescribeApplicationProjectAdvancedConfigOutcome CarClient::DescribeApplicationProjectAdvancedConfig(const DescribeApplicationProjectAdvancedConfigRequest &request)
@@ -621,25 +712,32 @@ CarClient::DescribeApplicationProjectAdvancedConfigOutcome CarClient::DescribeAp
 
 void CarClient::DescribeApplicationProjectAdvancedConfigAsync(const DescribeApplicationProjectAdvancedConfigRequest& request, const DescribeApplicationProjectAdvancedConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeApplicationProjectAdvancedConfig(request), context);
-    };
+    using Req = const DescribeApplicationProjectAdvancedConfigRequest&;
+    using Resp = DescribeApplicationProjectAdvancedConfigResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeApplicationProjectAdvancedConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::DescribeApplicationProjectAdvancedConfigOutcomeCallable CarClient::DescribeApplicationProjectAdvancedConfigCallable(const DescribeApplicationProjectAdvancedConfigRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeApplicationProjectAdvancedConfigOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeApplicationProjectAdvancedConfig(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeApplicationProjectAdvancedConfigOutcome>>();
+    DescribeApplicationProjectAdvancedConfigAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const DescribeApplicationProjectAdvancedConfigRequest&,
+        DescribeApplicationProjectAdvancedConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::DescribeApplicationProjectsOutcome CarClient::DescribeApplicationProjects(const DescribeApplicationProjectsRequest &request)
@@ -664,25 +762,32 @@ CarClient::DescribeApplicationProjectsOutcome CarClient::DescribeApplicationProj
 
 void CarClient::DescribeApplicationProjectsAsync(const DescribeApplicationProjectsRequest& request, const DescribeApplicationProjectsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeApplicationProjects(request), context);
-    };
+    using Req = const DescribeApplicationProjectsRequest&;
+    using Resp = DescribeApplicationProjectsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeApplicationProjects", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::DescribeApplicationProjectsOutcomeCallable CarClient::DescribeApplicationProjectsCallable(const DescribeApplicationProjectsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeApplicationProjectsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeApplicationProjects(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeApplicationProjectsOutcome>>();
+    DescribeApplicationProjectsAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const DescribeApplicationProjectsRequest&,
+        DescribeApplicationProjectsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::DescribeApplicationStatusOutcome CarClient::DescribeApplicationStatus(const DescribeApplicationStatusRequest &request)
@@ -707,25 +812,32 @@ CarClient::DescribeApplicationStatusOutcome CarClient::DescribeApplicationStatus
 
 void CarClient::DescribeApplicationStatusAsync(const DescribeApplicationStatusRequest& request, const DescribeApplicationStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeApplicationStatus(request), context);
-    };
+    using Req = const DescribeApplicationStatusRequest&;
+    using Resp = DescribeApplicationStatusResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeApplicationStatus", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::DescribeApplicationStatusOutcomeCallable CarClient::DescribeApplicationStatusCallable(const DescribeApplicationStatusRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeApplicationStatusOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeApplicationStatus(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeApplicationStatusOutcome>>();
+    DescribeApplicationStatusAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const DescribeApplicationStatusRequest&,
+        DescribeApplicationStatusOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::DescribeApplicationVersionOutcome CarClient::DescribeApplicationVersion(const DescribeApplicationVersionRequest &request)
@@ -750,25 +862,32 @@ CarClient::DescribeApplicationVersionOutcome CarClient::DescribeApplicationVersi
 
 void CarClient::DescribeApplicationVersionAsync(const DescribeApplicationVersionRequest& request, const DescribeApplicationVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeApplicationVersion(request), context);
-    };
+    using Req = const DescribeApplicationVersionRequest&;
+    using Resp = DescribeApplicationVersionResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeApplicationVersion", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::DescribeApplicationVersionOutcomeCallable CarClient::DescribeApplicationVersionCallable(const DescribeApplicationVersionRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeApplicationVersionOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeApplicationVersion(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeApplicationVersionOutcome>>();
+    DescribeApplicationVersionAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const DescribeApplicationVersionRequest&,
+        DescribeApplicationVersionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::DescribeConcurrentCountOutcome CarClient::DescribeConcurrentCount(const DescribeConcurrentCountRequest &request)
@@ -793,25 +912,32 @@ CarClient::DescribeConcurrentCountOutcome CarClient::DescribeConcurrentCount(con
 
 void CarClient::DescribeConcurrentCountAsync(const DescribeConcurrentCountRequest& request, const DescribeConcurrentCountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeConcurrentCount(request), context);
-    };
+    using Req = const DescribeConcurrentCountRequest&;
+    using Resp = DescribeConcurrentCountResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeConcurrentCount", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::DescribeConcurrentCountOutcomeCallable CarClient::DescribeConcurrentCountCallable(const DescribeConcurrentCountRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeConcurrentCountOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeConcurrentCount(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeConcurrentCountOutcome>>();
+    DescribeConcurrentCountAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const DescribeConcurrentCountRequest&,
+        DescribeConcurrentCountOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::DescribeConcurrentPackagesOutcome CarClient::DescribeConcurrentPackages(const DescribeConcurrentPackagesRequest &request)
@@ -836,25 +962,32 @@ CarClient::DescribeConcurrentPackagesOutcome CarClient::DescribeConcurrentPackag
 
 void CarClient::DescribeConcurrentPackagesAsync(const DescribeConcurrentPackagesRequest& request, const DescribeConcurrentPackagesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeConcurrentPackages(request), context);
-    };
+    using Req = const DescribeConcurrentPackagesRequest&;
+    using Resp = DescribeConcurrentPackagesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeConcurrentPackages", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::DescribeConcurrentPackagesOutcomeCallable CarClient::DescribeConcurrentPackagesCallable(const DescribeConcurrentPackagesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeConcurrentPackagesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeConcurrentPackages(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeConcurrentPackagesOutcome>>();
+    DescribeConcurrentPackagesAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const DescribeConcurrentPackagesRequest&,
+        DescribeConcurrentPackagesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::DescribeConcurrentSummaryOutcome CarClient::DescribeConcurrentSummary(const DescribeConcurrentSummaryRequest &request)
@@ -879,25 +1012,32 @@ CarClient::DescribeConcurrentSummaryOutcome CarClient::DescribeConcurrentSummary
 
 void CarClient::DescribeConcurrentSummaryAsync(const DescribeConcurrentSummaryRequest& request, const DescribeConcurrentSummaryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeConcurrentSummary(request), context);
-    };
+    using Req = const DescribeConcurrentSummaryRequest&;
+    using Resp = DescribeConcurrentSummaryResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeConcurrentSummary", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::DescribeConcurrentSummaryOutcomeCallable CarClient::DescribeConcurrentSummaryCallable(const DescribeConcurrentSummaryRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeConcurrentSummaryOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeConcurrentSummary(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeConcurrentSummaryOutcome>>();
+    DescribeConcurrentSummaryAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const DescribeConcurrentSummaryRequest&,
+        DescribeConcurrentSummaryOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::DescribeCosCredentialOutcome CarClient::DescribeCosCredential(const DescribeCosCredentialRequest &request)
@@ -922,25 +1062,32 @@ CarClient::DescribeCosCredentialOutcome CarClient::DescribeCosCredential(const D
 
 void CarClient::DescribeCosCredentialAsync(const DescribeCosCredentialRequest& request, const DescribeCosCredentialAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeCosCredential(request), context);
-    };
+    using Req = const DescribeCosCredentialRequest&;
+    using Resp = DescribeCosCredentialResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeCosCredential", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::DescribeCosCredentialOutcomeCallable CarClient::DescribeCosCredentialCallable(const DescribeCosCredentialRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeCosCredentialOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeCosCredential(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeCosCredentialOutcome>>();
+    DescribeCosCredentialAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const DescribeCosCredentialRequest&,
+        DescribeCosCredentialOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::DestroySessionOutcome CarClient::DestroySession(const DestroySessionRequest &request)
@@ -965,25 +1112,32 @@ CarClient::DestroySessionOutcome CarClient::DestroySession(const DestroySessionR
 
 void CarClient::DestroySessionAsync(const DestroySessionRequest& request, const DestroySessionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DestroySession(request), context);
-    };
+    using Req = const DestroySessionRequest&;
+    using Resp = DestroySessionResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DestroySession", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::DestroySessionOutcomeCallable CarClient::DestroySessionCallable(const DestroySessionRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DestroySessionOutcome()>>(
-        [this, request]()
-        {
-            return this->DestroySession(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DestroySessionOutcome>>();
+    DestroySessionAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const DestroySessionRequest&,
+        DestroySessionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::ModifyApplicationBaseInfoOutcome CarClient::ModifyApplicationBaseInfo(const ModifyApplicationBaseInfoRequest &request)
@@ -1008,25 +1162,32 @@ CarClient::ModifyApplicationBaseInfoOutcome CarClient::ModifyApplicationBaseInfo
 
 void CarClient::ModifyApplicationBaseInfoAsync(const ModifyApplicationBaseInfoRequest& request, const ModifyApplicationBaseInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyApplicationBaseInfo(request), context);
-    };
+    using Req = const ModifyApplicationBaseInfoRequest&;
+    using Resp = ModifyApplicationBaseInfoResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyApplicationBaseInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::ModifyApplicationBaseInfoOutcomeCallable CarClient::ModifyApplicationBaseInfoCallable(const ModifyApplicationBaseInfoRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyApplicationBaseInfoOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyApplicationBaseInfo(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyApplicationBaseInfoOutcome>>();
+    ModifyApplicationBaseInfoAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const ModifyApplicationBaseInfoRequest&,
+        ModifyApplicationBaseInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::ModifyApplicationProjectOutcome CarClient::ModifyApplicationProject(const ModifyApplicationProjectRequest &request)
@@ -1051,25 +1212,32 @@ CarClient::ModifyApplicationProjectOutcome CarClient::ModifyApplicationProject(c
 
 void CarClient::ModifyApplicationProjectAsync(const ModifyApplicationProjectRequest& request, const ModifyApplicationProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyApplicationProject(request), context);
-    };
+    using Req = const ModifyApplicationProjectRequest&;
+    using Resp = ModifyApplicationProjectResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyApplicationProject", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::ModifyApplicationProjectOutcomeCallable CarClient::ModifyApplicationProjectCallable(const ModifyApplicationProjectRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyApplicationProjectOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyApplicationProject(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyApplicationProjectOutcome>>();
+    ModifyApplicationProjectAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const ModifyApplicationProjectRequest&,
+        ModifyApplicationProjectOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::ModifyApplicationVersionOutcome CarClient::ModifyApplicationVersion(const ModifyApplicationVersionRequest &request)
@@ -1094,25 +1262,32 @@ CarClient::ModifyApplicationVersionOutcome CarClient::ModifyApplicationVersion(c
 
 void CarClient::ModifyApplicationVersionAsync(const ModifyApplicationVersionRequest& request, const ModifyApplicationVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyApplicationVersion(request), context);
-    };
+    using Req = const ModifyApplicationVersionRequest&;
+    using Resp = ModifyApplicationVersionResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyApplicationVersion", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::ModifyApplicationVersionOutcomeCallable CarClient::ModifyApplicationVersionCallable(const ModifyApplicationVersionRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyApplicationVersionOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyApplicationVersion(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyApplicationVersionOutcome>>();
+    ModifyApplicationVersionAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const ModifyApplicationVersionRequest&,
+        ModifyApplicationVersionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::ModifyConcurrentPackageOutcome CarClient::ModifyConcurrentPackage(const ModifyConcurrentPackageRequest &request)
@@ -1137,25 +1312,32 @@ CarClient::ModifyConcurrentPackageOutcome CarClient::ModifyConcurrentPackage(con
 
 void CarClient::ModifyConcurrentPackageAsync(const ModifyConcurrentPackageRequest& request, const ModifyConcurrentPackageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyConcurrentPackage(request), context);
-    };
+    using Req = const ModifyConcurrentPackageRequest&;
+    using Resp = ModifyConcurrentPackageResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyConcurrentPackage", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::ModifyConcurrentPackageOutcomeCallable CarClient::ModifyConcurrentPackageCallable(const ModifyConcurrentPackageRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyConcurrentPackageOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyConcurrentPackage(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyConcurrentPackageOutcome>>();
+    ModifyConcurrentPackageAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const ModifyConcurrentPackageRequest&,
+        ModifyConcurrentPackageOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::ModifyMobileApplicationInfoOutcome CarClient::ModifyMobileApplicationInfo(const ModifyMobileApplicationInfoRequest &request)
@@ -1180,25 +1362,32 @@ CarClient::ModifyMobileApplicationInfoOutcome CarClient::ModifyMobileApplication
 
 void CarClient::ModifyMobileApplicationInfoAsync(const ModifyMobileApplicationInfoRequest& request, const ModifyMobileApplicationInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyMobileApplicationInfo(request), context);
-    };
+    using Req = const ModifyMobileApplicationInfoRequest&;
+    using Resp = ModifyMobileApplicationInfoResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyMobileApplicationInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::ModifyMobileApplicationInfoOutcomeCallable CarClient::ModifyMobileApplicationInfoCallable(const ModifyMobileApplicationInfoRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyMobileApplicationInfoOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyMobileApplicationInfo(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyMobileApplicationInfoOutcome>>();
+    ModifyMobileApplicationInfoAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const ModifyMobileApplicationInfoRequest&,
+        ModifyMobileApplicationInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::ResetConcurrentPackagesOutcome CarClient::ResetConcurrentPackages(const ResetConcurrentPackagesRequest &request)
@@ -1223,25 +1412,32 @@ CarClient::ResetConcurrentPackagesOutcome CarClient::ResetConcurrentPackages(con
 
 void CarClient::ResetConcurrentPackagesAsync(const ResetConcurrentPackagesRequest& request, const ResetConcurrentPackagesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ResetConcurrentPackages(request), context);
-    };
+    using Req = const ResetConcurrentPackagesRequest&;
+    using Resp = ResetConcurrentPackagesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ResetConcurrentPackages", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::ResetConcurrentPackagesOutcomeCallable CarClient::ResetConcurrentPackagesCallable(const ResetConcurrentPackagesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ResetConcurrentPackagesOutcome()>>(
-        [this, request]()
-        {
-            return this->ResetConcurrentPackages(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ResetConcurrentPackagesOutcome>>();
+    ResetConcurrentPackagesAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const ResetConcurrentPackagesRequest&,
+        ResetConcurrentPackagesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::SetApplicationVersionOnlineOutcome CarClient::SetApplicationVersionOnline(const SetApplicationVersionOnlineRequest &request)
@@ -1266,25 +1462,32 @@ CarClient::SetApplicationVersionOnlineOutcome CarClient::SetApplicationVersionOn
 
 void CarClient::SetApplicationVersionOnlineAsync(const SetApplicationVersionOnlineRequest& request, const SetApplicationVersionOnlineAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->SetApplicationVersionOnline(request), context);
-    };
+    using Req = const SetApplicationVersionOnlineRequest&;
+    using Resp = SetApplicationVersionOnlineResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "SetApplicationVersionOnline", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::SetApplicationVersionOnlineOutcomeCallable CarClient::SetApplicationVersionOnlineCallable(const SetApplicationVersionOnlineRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<SetApplicationVersionOnlineOutcome()>>(
-        [this, request]()
-        {
-            return this->SetApplicationVersionOnline(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<SetApplicationVersionOnlineOutcome>>();
+    SetApplicationVersionOnlineAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const SetApplicationVersionOnlineRequest&,
+        SetApplicationVersionOnlineOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::StartPublishStreamOutcome CarClient::StartPublishStream(const StartPublishStreamRequest &request)
@@ -1309,25 +1512,32 @@ CarClient::StartPublishStreamOutcome CarClient::StartPublishStream(const StartPu
 
 void CarClient::StartPublishStreamAsync(const StartPublishStreamRequest& request, const StartPublishStreamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->StartPublishStream(request), context);
-    };
+    using Req = const StartPublishStreamRequest&;
+    using Resp = StartPublishStreamResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "StartPublishStream", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::StartPublishStreamOutcomeCallable CarClient::StartPublishStreamCallable(const StartPublishStreamRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<StartPublishStreamOutcome()>>(
-        [this, request]()
-        {
-            return this->StartPublishStream(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<StartPublishStreamOutcome>>();
+    StartPublishStreamAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const StartPublishStreamRequest&,
+        StartPublishStreamOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::StartPublishStreamWithURLOutcome CarClient::StartPublishStreamWithURL(const StartPublishStreamWithURLRequest &request)
@@ -1352,25 +1562,32 @@ CarClient::StartPublishStreamWithURLOutcome CarClient::StartPublishStreamWithURL
 
 void CarClient::StartPublishStreamWithURLAsync(const StartPublishStreamWithURLRequest& request, const StartPublishStreamWithURLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->StartPublishStreamWithURL(request), context);
-    };
+    using Req = const StartPublishStreamWithURLRequest&;
+    using Resp = StartPublishStreamWithURLResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "StartPublishStreamWithURL", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::StartPublishStreamWithURLOutcomeCallable CarClient::StartPublishStreamWithURLCallable(const StartPublishStreamWithURLRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<StartPublishStreamWithURLOutcome()>>(
-        [this, request]()
-        {
-            return this->StartPublishStreamWithURL(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<StartPublishStreamWithURLOutcome>>();
+    StartPublishStreamWithURLAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const StartPublishStreamWithURLRequest&,
+        StartPublishStreamWithURLOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::StopPublishStreamOutcome CarClient::StopPublishStream(const StopPublishStreamRequest &request)
@@ -1395,25 +1612,32 @@ CarClient::StopPublishStreamOutcome CarClient::StopPublishStream(const StopPubli
 
 void CarClient::StopPublishStreamAsync(const StopPublishStreamRequest& request, const StopPublishStreamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->StopPublishStream(request), context);
-    };
+    using Req = const StopPublishStreamRequest&;
+    using Resp = StopPublishStreamResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "StopPublishStream", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::StopPublishStreamOutcomeCallable CarClient::StopPublishStreamCallable(const StopPublishStreamRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<StopPublishStreamOutcome()>>(
-        [this, request]()
-        {
-            return this->StopPublishStream(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<StopPublishStreamOutcome>>();
+    StopPublishStreamAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const StopPublishStreamRequest&,
+        StopPublishStreamOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CarClient::UnbindConcurrentPackagesFromProjectOutcome CarClient::UnbindConcurrentPackagesFromProject(const UnbindConcurrentPackagesFromProjectRequest &request)
@@ -1438,24 +1662,31 @@ CarClient::UnbindConcurrentPackagesFromProjectOutcome CarClient::UnbindConcurren
 
 void CarClient::UnbindConcurrentPackagesFromProjectAsync(const UnbindConcurrentPackagesFromProjectRequest& request, const UnbindConcurrentPackagesFromProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->UnbindConcurrentPackagesFromProject(request), context);
-    };
+    using Req = const UnbindConcurrentPackagesFromProjectRequest&;
+    using Resp = UnbindConcurrentPackagesFromProjectResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "UnbindConcurrentPackagesFromProject", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CarClient::UnbindConcurrentPackagesFromProjectOutcomeCallable CarClient::UnbindConcurrentPackagesFromProjectCallable(const UnbindConcurrentPackagesFromProjectRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<UnbindConcurrentPackagesFromProjectOutcome()>>(
-        [this, request]()
-        {
-            return this->UnbindConcurrentPackagesFromProject(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<UnbindConcurrentPackagesFromProjectOutcome>>();
+    UnbindConcurrentPackagesFromProjectAsync(
+    request,
+    [prom](
+        const CarClient*,
+        const UnbindConcurrentPackagesFromProjectRequest&,
+        UnbindConcurrentPackagesFromProjectOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

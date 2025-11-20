@@ -62,24 +62,31 @@ AiartClient::ImageToImageOutcome AiartClient::ImageToImage(const ImageToImageReq
 
 void AiartClient::ImageToImageAsync(const ImageToImageRequest& request, const ImageToImageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ImageToImage(request), context);
-    };
+    using Req = const ImageToImageRequest&;
+    using Resp = ImageToImageResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ImageToImage", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 AiartClient::ImageToImageOutcomeCallable AiartClient::ImageToImageCallable(const ImageToImageRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ImageToImageOutcome()>>(
-        [this, request]()
-        {
-            return this->ImageToImage(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ImageToImageOutcome>>();
+    ImageToImageAsync(
+    request,
+    [prom](
+        const AiartClient*,
+        const ImageToImageRequest&,
+        ImageToImageOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

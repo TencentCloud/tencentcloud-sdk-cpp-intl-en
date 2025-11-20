@@ -62,25 +62,32 @@ DmsClient::SendEmailOutcome DmsClient::SendEmail(const SendEmailRequest &request
 
 void DmsClient::SendEmailAsync(const SendEmailRequest& request, const SendEmailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->SendEmail(request), context);
-    };
+    using Req = const SendEmailRequest&;
+    using Resp = SendEmailResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "SendEmail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DmsClient::SendEmailOutcomeCallable DmsClient::SendEmailCallable(const SendEmailRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<SendEmailOutcome()>>(
-        [this, request]()
-        {
-            return this->SendEmail(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<SendEmailOutcome>>();
+    SendEmailAsync(
+    request,
+    [prom](
+        const DmsClient*,
+        const SendEmailRequest&,
+        SendEmailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DmsClient::SendTemplatedEmailOutcome DmsClient::SendTemplatedEmail(const SendTemplatedEmailRequest &request)
@@ -105,24 +112,31 @@ DmsClient::SendTemplatedEmailOutcome DmsClient::SendTemplatedEmail(const SendTem
 
 void DmsClient::SendTemplatedEmailAsync(const SendTemplatedEmailRequest& request, const SendTemplatedEmailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->SendTemplatedEmail(request), context);
-    };
+    using Req = const SendTemplatedEmailRequest&;
+    using Resp = SendTemplatedEmailResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "SendTemplatedEmail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DmsClient::SendTemplatedEmailOutcomeCallable DmsClient::SendTemplatedEmailCallable(const SendTemplatedEmailRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<SendTemplatedEmailOutcome()>>(
-        [this, request]()
-        {
-            return this->SendTemplatedEmail(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<SendTemplatedEmailOutcome>>();
+    SendTemplatedEmailAsync(
+    request,
+    [prom](
+        const DmsClient*,
+        const SendTemplatedEmailRequest&,
+        SendTemplatedEmailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

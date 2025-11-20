@@ -62,24 +62,31 @@ CiamClient::ListUserGroupsOutcome CiamClient::ListUserGroups(const ListUserGroup
 
 void CiamClient::ListUserGroupsAsync(const ListUserGroupsRequest& request, const ListUserGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ListUserGroups(request), context);
-    };
+    using Req = const ListUserGroupsRequest&;
+    using Resp = ListUserGroupsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ListUserGroups", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CiamClient::ListUserGroupsOutcomeCallable CiamClient::ListUserGroupsCallable(const ListUserGroupsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ListUserGroupsOutcome()>>(
-        [this, request]()
-        {
-            return this->ListUserGroups(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ListUserGroupsOutcome>>();
+    ListUserGroupsAsync(
+    request,
+    [prom](
+        const CiamClient*,
+        const ListUserGroupsRequest&,
+        ListUserGroupsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

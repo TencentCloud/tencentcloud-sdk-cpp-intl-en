@@ -62,24 +62,31 @@ CaptchaClient::DescribeCaptchaResultOutcome CaptchaClient::DescribeCaptchaResult
 
 void CaptchaClient::DescribeCaptchaResultAsync(const DescribeCaptchaResultRequest& request, const DescribeCaptchaResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeCaptchaResult(request), context);
-    };
+    using Req = const DescribeCaptchaResultRequest&;
+    using Resp = DescribeCaptchaResultResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeCaptchaResult", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CaptchaClient::DescribeCaptchaResultOutcomeCallable CaptchaClient::DescribeCaptchaResultCallable(const DescribeCaptchaResultRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeCaptchaResultOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeCaptchaResult(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeCaptchaResultOutcome>>();
+    DescribeCaptchaResultAsync(
+    request,
+    [prom](
+        const CaptchaClient*,
+        const DescribeCaptchaResultRequest&,
+        DescribeCaptchaResultOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

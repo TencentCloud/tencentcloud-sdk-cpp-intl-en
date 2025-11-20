@@ -62,25 +62,32 @@ DcdbClient::ActiveHourDCDBInstanceOutcome DcdbClient::ActiveHourDCDBInstance(con
 
 void DcdbClient::ActiveHourDCDBInstanceAsync(const ActiveHourDCDBInstanceRequest& request, const ActiveHourDCDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ActiveHourDCDBInstance(request), context);
-    };
+    using Req = const ActiveHourDCDBInstanceRequest&;
+    using Resp = ActiveHourDCDBInstanceResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ActiveHourDCDBInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::ActiveHourDCDBInstanceOutcomeCallable DcdbClient::ActiveHourDCDBInstanceCallable(const ActiveHourDCDBInstanceRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ActiveHourDCDBInstanceOutcome()>>(
-        [this, request]()
-        {
-            return this->ActiveHourDCDBInstance(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ActiveHourDCDBInstanceOutcome>>();
+    ActiveHourDCDBInstanceAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const ActiveHourDCDBInstanceRequest&,
+        ActiveHourDCDBInstanceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::AssociateSecurityGroupsOutcome DcdbClient::AssociateSecurityGroups(const AssociateSecurityGroupsRequest &request)
@@ -105,25 +112,32 @@ DcdbClient::AssociateSecurityGroupsOutcome DcdbClient::AssociateSecurityGroups(c
 
 void DcdbClient::AssociateSecurityGroupsAsync(const AssociateSecurityGroupsRequest& request, const AssociateSecurityGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->AssociateSecurityGroups(request), context);
-    };
+    using Req = const AssociateSecurityGroupsRequest&;
+    using Resp = AssociateSecurityGroupsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "AssociateSecurityGroups", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::AssociateSecurityGroupsOutcomeCallable DcdbClient::AssociateSecurityGroupsCallable(const AssociateSecurityGroupsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<AssociateSecurityGroupsOutcome()>>(
-        [this, request]()
-        {
-            return this->AssociateSecurityGroups(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<AssociateSecurityGroupsOutcome>>();
+    AssociateSecurityGroupsAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const AssociateSecurityGroupsRequest&,
+        AssociateSecurityGroupsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::CancelDcnJobOutcome DcdbClient::CancelDcnJob(const CancelDcnJobRequest &request)
@@ -148,25 +162,32 @@ DcdbClient::CancelDcnJobOutcome DcdbClient::CancelDcnJob(const CancelDcnJobReque
 
 void DcdbClient::CancelDcnJobAsync(const CancelDcnJobRequest& request, const CancelDcnJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CancelDcnJob(request), context);
-    };
+    using Req = const CancelDcnJobRequest&;
+    using Resp = CancelDcnJobResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CancelDcnJob", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::CancelDcnJobOutcomeCallable DcdbClient::CancelDcnJobCallable(const CancelDcnJobRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CancelDcnJobOutcome()>>(
-        [this, request]()
-        {
-            return this->CancelDcnJob(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CancelDcnJobOutcome>>();
+    CancelDcnJobAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const CancelDcnJobRequest&,
+        CancelDcnJobOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::CloneAccountOutcome DcdbClient::CloneAccount(const CloneAccountRequest &request)
@@ -191,25 +212,32 @@ DcdbClient::CloneAccountOutcome DcdbClient::CloneAccount(const CloneAccountReque
 
 void DcdbClient::CloneAccountAsync(const CloneAccountRequest& request, const CloneAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CloneAccount(request), context);
-    };
+    using Req = const CloneAccountRequest&;
+    using Resp = CloneAccountResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CloneAccount", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::CloneAccountOutcomeCallable DcdbClient::CloneAccountCallable(const CloneAccountRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CloneAccountOutcome()>>(
-        [this, request]()
-        {
-            return this->CloneAccount(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CloneAccountOutcome>>();
+    CloneAccountAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const CloneAccountRequest&,
+        CloneAccountOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::CloseDBExtranetAccessOutcome DcdbClient::CloseDBExtranetAccess(const CloseDBExtranetAccessRequest &request)
@@ -234,25 +262,32 @@ DcdbClient::CloseDBExtranetAccessOutcome DcdbClient::CloseDBExtranetAccess(const
 
 void DcdbClient::CloseDBExtranetAccessAsync(const CloseDBExtranetAccessRequest& request, const CloseDBExtranetAccessAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CloseDBExtranetAccess(request), context);
-    };
+    using Req = const CloseDBExtranetAccessRequest&;
+    using Resp = CloseDBExtranetAccessResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CloseDBExtranetAccess", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::CloseDBExtranetAccessOutcomeCallable DcdbClient::CloseDBExtranetAccessCallable(const CloseDBExtranetAccessRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CloseDBExtranetAccessOutcome()>>(
-        [this, request]()
-        {
-            return this->CloseDBExtranetAccess(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CloseDBExtranetAccessOutcome>>();
+    CloseDBExtranetAccessAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const CloseDBExtranetAccessRequest&,
+        CloseDBExtranetAccessOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::CopyAccountPrivilegesOutcome DcdbClient::CopyAccountPrivileges(const CopyAccountPrivilegesRequest &request)
@@ -277,25 +312,32 @@ DcdbClient::CopyAccountPrivilegesOutcome DcdbClient::CopyAccountPrivileges(const
 
 void DcdbClient::CopyAccountPrivilegesAsync(const CopyAccountPrivilegesRequest& request, const CopyAccountPrivilegesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CopyAccountPrivileges(request), context);
-    };
+    using Req = const CopyAccountPrivilegesRequest&;
+    using Resp = CopyAccountPrivilegesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CopyAccountPrivileges", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::CopyAccountPrivilegesOutcomeCallable DcdbClient::CopyAccountPrivilegesCallable(const CopyAccountPrivilegesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CopyAccountPrivilegesOutcome()>>(
-        [this, request]()
-        {
-            return this->CopyAccountPrivileges(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CopyAccountPrivilegesOutcome>>();
+    CopyAccountPrivilegesAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const CopyAccountPrivilegesRequest&,
+        CopyAccountPrivilegesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::CreateAccountOutcome DcdbClient::CreateAccount(const CreateAccountRequest &request)
@@ -320,25 +362,32 @@ DcdbClient::CreateAccountOutcome DcdbClient::CreateAccount(const CreateAccountRe
 
 void DcdbClient::CreateAccountAsync(const CreateAccountRequest& request, const CreateAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateAccount(request), context);
-    };
+    using Req = const CreateAccountRequest&;
+    using Resp = CreateAccountResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateAccount", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::CreateAccountOutcomeCallable DcdbClient::CreateAccountCallable(const CreateAccountRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateAccountOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateAccount(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateAccountOutcome>>();
+    CreateAccountAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const CreateAccountRequest&,
+        CreateAccountOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::CreateDCDBInstanceOutcome DcdbClient::CreateDCDBInstance(const CreateDCDBInstanceRequest &request)
@@ -363,25 +412,32 @@ DcdbClient::CreateDCDBInstanceOutcome DcdbClient::CreateDCDBInstance(const Creat
 
 void DcdbClient::CreateDCDBInstanceAsync(const CreateDCDBInstanceRequest& request, const CreateDCDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateDCDBInstance(request), context);
-    };
+    using Req = const CreateDCDBInstanceRequest&;
+    using Resp = CreateDCDBInstanceResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateDCDBInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::CreateDCDBInstanceOutcomeCallable DcdbClient::CreateDCDBInstanceCallable(const CreateDCDBInstanceRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateDCDBInstanceOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateDCDBInstance(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateDCDBInstanceOutcome>>();
+    CreateDCDBInstanceAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const CreateDCDBInstanceRequest&,
+        CreateDCDBInstanceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::CreateDedicatedClusterDCDBInstanceOutcome DcdbClient::CreateDedicatedClusterDCDBInstance(const CreateDedicatedClusterDCDBInstanceRequest &request)
@@ -406,25 +462,32 @@ DcdbClient::CreateDedicatedClusterDCDBInstanceOutcome DcdbClient::CreateDedicate
 
 void DcdbClient::CreateDedicatedClusterDCDBInstanceAsync(const CreateDedicatedClusterDCDBInstanceRequest& request, const CreateDedicatedClusterDCDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateDedicatedClusterDCDBInstance(request), context);
-    };
+    using Req = const CreateDedicatedClusterDCDBInstanceRequest&;
+    using Resp = CreateDedicatedClusterDCDBInstanceResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateDedicatedClusterDCDBInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::CreateDedicatedClusterDCDBInstanceOutcomeCallable DcdbClient::CreateDedicatedClusterDCDBInstanceCallable(const CreateDedicatedClusterDCDBInstanceRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateDedicatedClusterDCDBInstanceOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateDedicatedClusterDCDBInstance(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateDedicatedClusterDCDBInstanceOutcome>>();
+    CreateDedicatedClusterDCDBInstanceAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const CreateDedicatedClusterDCDBInstanceRequest&,
+        CreateDedicatedClusterDCDBInstanceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::CreateHourDCDBInstanceOutcome DcdbClient::CreateHourDCDBInstance(const CreateHourDCDBInstanceRequest &request)
@@ -449,25 +512,32 @@ DcdbClient::CreateHourDCDBInstanceOutcome DcdbClient::CreateHourDCDBInstance(con
 
 void DcdbClient::CreateHourDCDBInstanceAsync(const CreateHourDCDBInstanceRequest& request, const CreateHourDCDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateHourDCDBInstance(request), context);
-    };
+    using Req = const CreateHourDCDBInstanceRequest&;
+    using Resp = CreateHourDCDBInstanceResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateHourDCDBInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::CreateHourDCDBInstanceOutcomeCallable DcdbClient::CreateHourDCDBInstanceCallable(const CreateHourDCDBInstanceRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateHourDCDBInstanceOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateHourDCDBInstance(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateHourDCDBInstanceOutcome>>();
+    CreateHourDCDBInstanceAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const CreateHourDCDBInstanceRequest&,
+        CreateHourDCDBInstanceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::CreateOnlineDDLJobOutcome DcdbClient::CreateOnlineDDLJob(const CreateOnlineDDLJobRequest &request)
@@ -492,25 +562,32 @@ DcdbClient::CreateOnlineDDLJobOutcome DcdbClient::CreateOnlineDDLJob(const Creat
 
 void DcdbClient::CreateOnlineDDLJobAsync(const CreateOnlineDDLJobRequest& request, const CreateOnlineDDLJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateOnlineDDLJob(request), context);
-    };
+    using Req = const CreateOnlineDDLJobRequest&;
+    using Resp = CreateOnlineDDLJobResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateOnlineDDLJob", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::CreateOnlineDDLJobOutcomeCallable DcdbClient::CreateOnlineDDLJobCallable(const CreateOnlineDDLJobRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateOnlineDDLJobOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateOnlineDDLJob(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateOnlineDDLJobOutcome>>();
+    CreateOnlineDDLJobAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const CreateOnlineDDLJobRequest&,
+        CreateOnlineDDLJobOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::DeleteAccountOutcome DcdbClient::DeleteAccount(const DeleteAccountRequest &request)
@@ -535,25 +612,32 @@ DcdbClient::DeleteAccountOutcome DcdbClient::DeleteAccount(const DeleteAccountRe
 
 void DcdbClient::DeleteAccountAsync(const DeleteAccountRequest& request, const DeleteAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteAccount(request), context);
-    };
+    using Req = const DeleteAccountRequest&;
+    using Resp = DeleteAccountResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteAccount", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::DeleteAccountOutcomeCallable DcdbClient::DeleteAccountCallable(const DeleteAccountRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteAccountOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteAccount(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteAccountOutcome>>();
+    DeleteAccountAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const DeleteAccountRequest&,
+        DeleteAccountOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::DescribeAccountPrivilegesOutcome DcdbClient::DescribeAccountPrivileges(const DescribeAccountPrivilegesRequest &request)
@@ -578,25 +662,32 @@ DcdbClient::DescribeAccountPrivilegesOutcome DcdbClient::DescribeAccountPrivileg
 
 void DcdbClient::DescribeAccountPrivilegesAsync(const DescribeAccountPrivilegesRequest& request, const DescribeAccountPrivilegesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeAccountPrivileges(request), context);
-    };
+    using Req = const DescribeAccountPrivilegesRequest&;
+    using Resp = DescribeAccountPrivilegesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeAccountPrivileges", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::DescribeAccountPrivilegesOutcomeCallable DcdbClient::DescribeAccountPrivilegesCallable(const DescribeAccountPrivilegesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeAccountPrivilegesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeAccountPrivileges(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeAccountPrivilegesOutcome>>();
+    DescribeAccountPrivilegesAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const DescribeAccountPrivilegesRequest&,
+        DescribeAccountPrivilegesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::DescribeAccountsOutcome DcdbClient::DescribeAccounts(const DescribeAccountsRequest &request)
@@ -621,25 +712,32 @@ DcdbClient::DescribeAccountsOutcome DcdbClient::DescribeAccounts(const DescribeA
 
 void DcdbClient::DescribeAccountsAsync(const DescribeAccountsRequest& request, const DescribeAccountsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeAccounts(request), context);
-    };
+    using Req = const DescribeAccountsRequest&;
+    using Resp = DescribeAccountsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeAccounts", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::DescribeAccountsOutcomeCallable DcdbClient::DescribeAccountsCallable(const DescribeAccountsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeAccountsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeAccounts(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeAccountsOutcome>>();
+    DescribeAccountsAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const DescribeAccountsRequest&,
+        DescribeAccountsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::DescribeBackupFilesOutcome DcdbClient::DescribeBackupFiles(const DescribeBackupFilesRequest &request)
@@ -664,25 +762,32 @@ DcdbClient::DescribeBackupFilesOutcome DcdbClient::DescribeBackupFiles(const Des
 
 void DcdbClient::DescribeBackupFilesAsync(const DescribeBackupFilesRequest& request, const DescribeBackupFilesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeBackupFiles(request), context);
-    };
+    using Req = const DescribeBackupFilesRequest&;
+    using Resp = DescribeBackupFilesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeBackupFiles", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::DescribeBackupFilesOutcomeCallable DcdbClient::DescribeBackupFilesCallable(const DescribeBackupFilesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeBackupFilesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeBackupFiles(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeBackupFilesOutcome>>();
+    DescribeBackupFilesAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const DescribeBackupFilesRequest&,
+        DescribeBackupFilesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::DescribeDBEncryptAttributesOutcome DcdbClient::DescribeDBEncryptAttributes(const DescribeDBEncryptAttributesRequest &request)
@@ -707,25 +812,32 @@ DcdbClient::DescribeDBEncryptAttributesOutcome DcdbClient::DescribeDBEncryptAttr
 
 void DcdbClient::DescribeDBEncryptAttributesAsync(const DescribeDBEncryptAttributesRequest& request, const DescribeDBEncryptAttributesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDBEncryptAttributes(request), context);
-    };
+    using Req = const DescribeDBEncryptAttributesRequest&;
+    using Resp = DescribeDBEncryptAttributesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDBEncryptAttributes", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::DescribeDBEncryptAttributesOutcomeCallable DcdbClient::DescribeDBEncryptAttributesCallable(const DescribeDBEncryptAttributesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDBEncryptAttributesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDBEncryptAttributes(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDBEncryptAttributesOutcome>>();
+    DescribeDBEncryptAttributesAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const DescribeDBEncryptAttributesRequest&,
+        DescribeDBEncryptAttributesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::DescribeDBLogFilesOutcome DcdbClient::DescribeDBLogFiles(const DescribeDBLogFilesRequest &request)
@@ -750,25 +862,32 @@ DcdbClient::DescribeDBLogFilesOutcome DcdbClient::DescribeDBLogFiles(const Descr
 
 void DcdbClient::DescribeDBLogFilesAsync(const DescribeDBLogFilesRequest& request, const DescribeDBLogFilesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDBLogFiles(request), context);
-    };
+    using Req = const DescribeDBLogFilesRequest&;
+    using Resp = DescribeDBLogFilesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDBLogFiles", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::DescribeDBLogFilesOutcomeCallable DcdbClient::DescribeDBLogFilesCallable(const DescribeDBLogFilesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDBLogFilesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDBLogFiles(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDBLogFilesOutcome>>();
+    DescribeDBLogFilesAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const DescribeDBLogFilesRequest&,
+        DescribeDBLogFilesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::DescribeDBParametersOutcome DcdbClient::DescribeDBParameters(const DescribeDBParametersRequest &request)
@@ -793,25 +912,32 @@ DcdbClient::DescribeDBParametersOutcome DcdbClient::DescribeDBParameters(const D
 
 void DcdbClient::DescribeDBParametersAsync(const DescribeDBParametersRequest& request, const DescribeDBParametersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDBParameters(request), context);
-    };
+    using Req = const DescribeDBParametersRequest&;
+    using Resp = DescribeDBParametersResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDBParameters", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::DescribeDBParametersOutcomeCallable DcdbClient::DescribeDBParametersCallable(const DescribeDBParametersRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDBParametersOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDBParameters(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDBParametersOutcome>>();
+    DescribeDBParametersAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const DescribeDBParametersRequest&,
+        DescribeDBParametersOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::DescribeDBSecurityGroupsOutcome DcdbClient::DescribeDBSecurityGroups(const DescribeDBSecurityGroupsRequest &request)
@@ -836,25 +962,32 @@ DcdbClient::DescribeDBSecurityGroupsOutcome DcdbClient::DescribeDBSecurityGroups
 
 void DcdbClient::DescribeDBSecurityGroupsAsync(const DescribeDBSecurityGroupsRequest& request, const DescribeDBSecurityGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDBSecurityGroups(request), context);
-    };
+    using Req = const DescribeDBSecurityGroupsRequest&;
+    using Resp = DescribeDBSecurityGroupsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDBSecurityGroups", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::DescribeDBSecurityGroupsOutcomeCallable DcdbClient::DescribeDBSecurityGroupsCallable(const DescribeDBSecurityGroupsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDBSecurityGroupsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDBSecurityGroups(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDBSecurityGroupsOutcome>>();
+    DescribeDBSecurityGroupsAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const DescribeDBSecurityGroupsRequest&,
+        DescribeDBSecurityGroupsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::DescribeDBSlowLogsOutcome DcdbClient::DescribeDBSlowLogs(const DescribeDBSlowLogsRequest &request)
@@ -879,25 +1012,32 @@ DcdbClient::DescribeDBSlowLogsOutcome DcdbClient::DescribeDBSlowLogs(const Descr
 
 void DcdbClient::DescribeDBSlowLogsAsync(const DescribeDBSlowLogsRequest& request, const DescribeDBSlowLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDBSlowLogs(request), context);
-    };
+    using Req = const DescribeDBSlowLogsRequest&;
+    using Resp = DescribeDBSlowLogsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDBSlowLogs", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::DescribeDBSlowLogsOutcomeCallable DcdbClient::DescribeDBSlowLogsCallable(const DescribeDBSlowLogsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDBSlowLogsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDBSlowLogs(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDBSlowLogsOutcome>>();
+    DescribeDBSlowLogsAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const DescribeDBSlowLogsRequest&,
+        DescribeDBSlowLogsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::DescribeDBSyncModeOutcome DcdbClient::DescribeDBSyncMode(const DescribeDBSyncModeRequest &request)
@@ -922,25 +1062,32 @@ DcdbClient::DescribeDBSyncModeOutcome DcdbClient::DescribeDBSyncMode(const Descr
 
 void DcdbClient::DescribeDBSyncModeAsync(const DescribeDBSyncModeRequest& request, const DescribeDBSyncModeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDBSyncMode(request), context);
-    };
+    using Req = const DescribeDBSyncModeRequest&;
+    using Resp = DescribeDBSyncModeResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDBSyncMode", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::DescribeDBSyncModeOutcomeCallable DcdbClient::DescribeDBSyncModeCallable(const DescribeDBSyncModeRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDBSyncModeOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDBSyncMode(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDBSyncModeOutcome>>();
+    DescribeDBSyncModeAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const DescribeDBSyncModeRequest&,
+        DescribeDBSyncModeOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::DescribeDBTmpInstancesOutcome DcdbClient::DescribeDBTmpInstances(const DescribeDBTmpInstancesRequest &request)
@@ -965,25 +1112,32 @@ DcdbClient::DescribeDBTmpInstancesOutcome DcdbClient::DescribeDBTmpInstances(con
 
 void DcdbClient::DescribeDBTmpInstancesAsync(const DescribeDBTmpInstancesRequest& request, const DescribeDBTmpInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDBTmpInstances(request), context);
-    };
+    using Req = const DescribeDBTmpInstancesRequest&;
+    using Resp = DescribeDBTmpInstancesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDBTmpInstances", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::DescribeDBTmpInstancesOutcomeCallable DcdbClient::DescribeDBTmpInstancesCallable(const DescribeDBTmpInstancesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDBTmpInstancesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDBTmpInstances(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDBTmpInstancesOutcome>>();
+    DescribeDBTmpInstancesAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const DescribeDBTmpInstancesRequest&,
+        DescribeDBTmpInstancesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::DescribeDCDBInstanceDetailOutcome DcdbClient::DescribeDCDBInstanceDetail(const DescribeDCDBInstanceDetailRequest &request)
@@ -1008,25 +1162,32 @@ DcdbClient::DescribeDCDBInstanceDetailOutcome DcdbClient::DescribeDCDBInstanceDe
 
 void DcdbClient::DescribeDCDBInstanceDetailAsync(const DescribeDCDBInstanceDetailRequest& request, const DescribeDCDBInstanceDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDCDBInstanceDetail(request), context);
-    };
+    using Req = const DescribeDCDBInstanceDetailRequest&;
+    using Resp = DescribeDCDBInstanceDetailResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDCDBInstanceDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::DescribeDCDBInstanceDetailOutcomeCallable DcdbClient::DescribeDCDBInstanceDetailCallable(const DescribeDCDBInstanceDetailRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDCDBInstanceDetailOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDCDBInstanceDetail(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDCDBInstanceDetailOutcome>>();
+    DescribeDCDBInstanceDetailAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const DescribeDCDBInstanceDetailRequest&,
+        DescribeDCDBInstanceDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::DescribeDCDBInstanceNodeInfoOutcome DcdbClient::DescribeDCDBInstanceNodeInfo(const DescribeDCDBInstanceNodeInfoRequest &request)
@@ -1051,25 +1212,32 @@ DcdbClient::DescribeDCDBInstanceNodeInfoOutcome DcdbClient::DescribeDCDBInstance
 
 void DcdbClient::DescribeDCDBInstanceNodeInfoAsync(const DescribeDCDBInstanceNodeInfoRequest& request, const DescribeDCDBInstanceNodeInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDCDBInstanceNodeInfo(request), context);
-    };
+    using Req = const DescribeDCDBInstanceNodeInfoRequest&;
+    using Resp = DescribeDCDBInstanceNodeInfoResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDCDBInstanceNodeInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::DescribeDCDBInstanceNodeInfoOutcomeCallable DcdbClient::DescribeDCDBInstanceNodeInfoCallable(const DescribeDCDBInstanceNodeInfoRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDCDBInstanceNodeInfoOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDCDBInstanceNodeInfo(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDCDBInstanceNodeInfoOutcome>>();
+    DescribeDCDBInstanceNodeInfoAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const DescribeDCDBInstanceNodeInfoRequest&,
+        DescribeDCDBInstanceNodeInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::DescribeDCDBInstancesOutcome DcdbClient::DescribeDCDBInstances(const DescribeDCDBInstancesRequest &request)
@@ -1094,25 +1262,32 @@ DcdbClient::DescribeDCDBInstancesOutcome DcdbClient::DescribeDCDBInstances(const
 
 void DcdbClient::DescribeDCDBInstancesAsync(const DescribeDCDBInstancesRequest& request, const DescribeDCDBInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDCDBInstances(request), context);
-    };
+    using Req = const DescribeDCDBInstancesRequest&;
+    using Resp = DescribeDCDBInstancesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDCDBInstances", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::DescribeDCDBInstancesOutcomeCallable DcdbClient::DescribeDCDBInstancesCallable(const DescribeDCDBInstancesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDCDBInstancesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDCDBInstances(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDCDBInstancesOutcome>>();
+    DescribeDCDBInstancesAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const DescribeDCDBInstancesRequest&,
+        DescribeDCDBInstancesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::DescribeDCDBPriceOutcome DcdbClient::DescribeDCDBPrice(const DescribeDCDBPriceRequest &request)
@@ -1137,25 +1312,32 @@ DcdbClient::DescribeDCDBPriceOutcome DcdbClient::DescribeDCDBPrice(const Describ
 
 void DcdbClient::DescribeDCDBPriceAsync(const DescribeDCDBPriceRequest& request, const DescribeDCDBPriceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDCDBPrice(request), context);
-    };
+    using Req = const DescribeDCDBPriceRequest&;
+    using Resp = DescribeDCDBPriceResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDCDBPrice", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::DescribeDCDBPriceOutcomeCallable DcdbClient::DescribeDCDBPriceCallable(const DescribeDCDBPriceRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDCDBPriceOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDCDBPrice(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDCDBPriceOutcome>>();
+    DescribeDCDBPriceAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const DescribeDCDBPriceRequest&,
+        DescribeDCDBPriceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::DescribeDCDBShardsOutcome DcdbClient::DescribeDCDBShards(const DescribeDCDBShardsRequest &request)
@@ -1180,25 +1362,32 @@ DcdbClient::DescribeDCDBShardsOutcome DcdbClient::DescribeDCDBShards(const Descr
 
 void DcdbClient::DescribeDCDBShardsAsync(const DescribeDCDBShardsRequest& request, const DescribeDCDBShardsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDCDBShards(request), context);
-    };
+    using Req = const DescribeDCDBShardsRequest&;
+    using Resp = DescribeDCDBShardsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDCDBShards", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::DescribeDCDBShardsOutcomeCallable DcdbClient::DescribeDCDBShardsCallable(const DescribeDCDBShardsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDCDBShardsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDCDBShards(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDCDBShardsOutcome>>();
+    DescribeDCDBShardsAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const DescribeDCDBShardsRequest&,
+        DescribeDCDBShardsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::DescribeDatabaseObjectsOutcome DcdbClient::DescribeDatabaseObjects(const DescribeDatabaseObjectsRequest &request)
@@ -1223,25 +1412,32 @@ DcdbClient::DescribeDatabaseObjectsOutcome DcdbClient::DescribeDatabaseObjects(c
 
 void DcdbClient::DescribeDatabaseObjectsAsync(const DescribeDatabaseObjectsRequest& request, const DescribeDatabaseObjectsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDatabaseObjects(request), context);
-    };
+    using Req = const DescribeDatabaseObjectsRequest&;
+    using Resp = DescribeDatabaseObjectsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDatabaseObjects", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::DescribeDatabaseObjectsOutcomeCallable DcdbClient::DescribeDatabaseObjectsCallable(const DescribeDatabaseObjectsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDatabaseObjectsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDatabaseObjects(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDatabaseObjectsOutcome>>();
+    DescribeDatabaseObjectsAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const DescribeDatabaseObjectsRequest&,
+        DescribeDatabaseObjectsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::DescribeDatabaseTableOutcome DcdbClient::DescribeDatabaseTable(const DescribeDatabaseTableRequest &request)
@@ -1266,25 +1462,32 @@ DcdbClient::DescribeDatabaseTableOutcome DcdbClient::DescribeDatabaseTable(const
 
 void DcdbClient::DescribeDatabaseTableAsync(const DescribeDatabaseTableRequest& request, const DescribeDatabaseTableAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDatabaseTable(request), context);
-    };
+    using Req = const DescribeDatabaseTableRequest&;
+    using Resp = DescribeDatabaseTableResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDatabaseTable", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::DescribeDatabaseTableOutcomeCallable DcdbClient::DescribeDatabaseTableCallable(const DescribeDatabaseTableRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDatabaseTableOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDatabaseTable(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDatabaseTableOutcome>>();
+    DescribeDatabaseTableAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const DescribeDatabaseTableRequest&,
+        DescribeDatabaseTableOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::DescribeDatabasesOutcome DcdbClient::DescribeDatabases(const DescribeDatabasesRequest &request)
@@ -1309,25 +1512,32 @@ DcdbClient::DescribeDatabasesOutcome DcdbClient::DescribeDatabases(const Describ
 
 void DcdbClient::DescribeDatabasesAsync(const DescribeDatabasesRequest& request, const DescribeDatabasesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDatabases(request), context);
-    };
+    using Req = const DescribeDatabasesRequest&;
+    using Resp = DescribeDatabasesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDatabases", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::DescribeDatabasesOutcomeCallable DcdbClient::DescribeDatabasesCallable(const DescribeDatabasesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDatabasesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDatabases(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDatabasesOutcome>>();
+    DescribeDatabasesAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const DescribeDatabasesRequest&,
+        DescribeDatabasesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::DescribeDcnDetailOutcome DcdbClient::DescribeDcnDetail(const DescribeDcnDetailRequest &request)
@@ -1352,25 +1562,32 @@ DcdbClient::DescribeDcnDetailOutcome DcdbClient::DescribeDcnDetail(const Describ
 
 void DcdbClient::DescribeDcnDetailAsync(const DescribeDcnDetailRequest& request, const DescribeDcnDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDcnDetail(request), context);
-    };
+    using Req = const DescribeDcnDetailRequest&;
+    using Resp = DescribeDcnDetailResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDcnDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::DescribeDcnDetailOutcomeCallable DcdbClient::DescribeDcnDetailCallable(const DescribeDcnDetailRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDcnDetailOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDcnDetail(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDcnDetailOutcome>>();
+    DescribeDcnDetailAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const DescribeDcnDetailRequest&,
+        DescribeDcnDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::DescribeFileDownloadUrlOutcome DcdbClient::DescribeFileDownloadUrl(const DescribeFileDownloadUrlRequest &request)
@@ -1395,25 +1612,32 @@ DcdbClient::DescribeFileDownloadUrlOutcome DcdbClient::DescribeFileDownloadUrl(c
 
 void DcdbClient::DescribeFileDownloadUrlAsync(const DescribeFileDownloadUrlRequest& request, const DescribeFileDownloadUrlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeFileDownloadUrl(request), context);
-    };
+    using Req = const DescribeFileDownloadUrlRequest&;
+    using Resp = DescribeFileDownloadUrlResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeFileDownloadUrl", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::DescribeFileDownloadUrlOutcomeCallable DcdbClient::DescribeFileDownloadUrlCallable(const DescribeFileDownloadUrlRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeFileDownloadUrlOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeFileDownloadUrl(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeFileDownloadUrlOutcome>>();
+    DescribeFileDownloadUrlAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const DescribeFileDownloadUrlRequest&,
+        DescribeFileDownloadUrlOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::DescribeFlowOutcome DcdbClient::DescribeFlow(const DescribeFlowRequest &request)
@@ -1438,25 +1662,32 @@ DcdbClient::DescribeFlowOutcome DcdbClient::DescribeFlow(const DescribeFlowReque
 
 void DcdbClient::DescribeFlowAsync(const DescribeFlowRequest& request, const DescribeFlowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeFlow(request), context);
-    };
+    using Req = const DescribeFlowRequest&;
+    using Resp = DescribeFlowResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeFlow", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::DescribeFlowOutcomeCallable DcdbClient::DescribeFlowCallable(const DescribeFlowRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeFlowOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeFlow(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeFlowOutcome>>();
+    DescribeFlowAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const DescribeFlowRequest&,
+        DescribeFlowOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::DescribeLogFileRetentionPeriodOutcome DcdbClient::DescribeLogFileRetentionPeriod(const DescribeLogFileRetentionPeriodRequest &request)
@@ -1481,25 +1712,32 @@ DcdbClient::DescribeLogFileRetentionPeriodOutcome DcdbClient::DescribeLogFileRet
 
 void DcdbClient::DescribeLogFileRetentionPeriodAsync(const DescribeLogFileRetentionPeriodRequest& request, const DescribeLogFileRetentionPeriodAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLogFileRetentionPeriod(request), context);
-    };
+    using Req = const DescribeLogFileRetentionPeriodRequest&;
+    using Resp = DescribeLogFileRetentionPeriodResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLogFileRetentionPeriod", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::DescribeLogFileRetentionPeriodOutcomeCallable DcdbClient::DescribeLogFileRetentionPeriodCallable(const DescribeLogFileRetentionPeriodRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLogFileRetentionPeriodOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLogFileRetentionPeriod(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLogFileRetentionPeriodOutcome>>();
+    DescribeLogFileRetentionPeriodAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const DescribeLogFileRetentionPeriodRequest&,
+        DescribeLogFileRetentionPeriodOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::DescribeOrdersOutcome DcdbClient::DescribeOrders(const DescribeOrdersRequest &request)
@@ -1524,25 +1762,32 @@ DcdbClient::DescribeOrdersOutcome DcdbClient::DescribeOrders(const DescribeOrder
 
 void DcdbClient::DescribeOrdersAsync(const DescribeOrdersRequest& request, const DescribeOrdersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeOrders(request), context);
-    };
+    using Req = const DescribeOrdersRequest&;
+    using Resp = DescribeOrdersResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeOrders", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::DescribeOrdersOutcomeCallable DcdbClient::DescribeOrdersCallable(const DescribeOrdersRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeOrdersOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeOrders(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeOrdersOutcome>>();
+    DescribeOrdersAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const DescribeOrdersRequest&,
+        DescribeOrdersOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::DescribeProjectSecurityGroupsOutcome DcdbClient::DescribeProjectSecurityGroups(const DescribeProjectSecurityGroupsRequest &request)
@@ -1567,25 +1812,32 @@ DcdbClient::DescribeProjectSecurityGroupsOutcome DcdbClient::DescribeProjectSecu
 
 void DcdbClient::DescribeProjectSecurityGroupsAsync(const DescribeProjectSecurityGroupsRequest& request, const DescribeProjectSecurityGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeProjectSecurityGroups(request), context);
-    };
+    using Req = const DescribeProjectSecurityGroupsRequest&;
+    using Resp = DescribeProjectSecurityGroupsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeProjectSecurityGroups", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::DescribeProjectSecurityGroupsOutcomeCallable DcdbClient::DescribeProjectSecurityGroupsCallable(const DescribeProjectSecurityGroupsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeProjectSecurityGroupsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeProjectSecurityGroups(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeProjectSecurityGroupsOutcome>>();
+    DescribeProjectSecurityGroupsAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const DescribeProjectSecurityGroupsRequest&,
+        DescribeProjectSecurityGroupsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::DestroyDCDBInstanceOutcome DcdbClient::DestroyDCDBInstance(const DestroyDCDBInstanceRequest &request)
@@ -1610,25 +1862,32 @@ DcdbClient::DestroyDCDBInstanceOutcome DcdbClient::DestroyDCDBInstance(const Des
 
 void DcdbClient::DestroyDCDBInstanceAsync(const DestroyDCDBInstanceRequest& request, const DestroyDCDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DestroyDCDBInstance(request), context);
-    };
+    using Req = const DestroyDCDBInstanceRequest&;
+    using Resp = DestroyDCDBInstanceResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DestroyDCDBInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::DestroyDCDBInstanceOutcomeCallable DcdbClient::DestroyDCDBInstanceCallable(const DestroyDCDBInstanceRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DestroyDCDBInstanceOutcome()>>(
-        [this, request]()
-        {
-            return this->DestroyDCDBInstance(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DestroyDCDBInstanceOutcome>>();
+    DestroyDCDBInstanceAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const DestroyDCDBInstanceRequest&,
+        DestroyDCDBInstanceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::DestroyHourDCDBInstanceOutcome DcdbClient::DestroyHourDCDBInstance(const DestroyHourDCDBInstanceRequest &request)
@@ -1653,25 +1912,32 @@ DcdbClient::DestroyHourDCDBInstanceOutcome DcdbClient::DestroyHourDCDBInstance(c
 
 void DcdbClient::DestroyHourDCDBInstanceAsync(const DestroyHourDCDBInstanceRequest& request, const DestroyHourDCDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DestroyHourDCDBInstance(request), context);
-    };
+    using Req = const DestroyHourDCDBInstanceRequest&;
+    using Resp = DestroyHourDCDBInstanceResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DestroyHourDCDBInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::DestroyHourDCDBInstanceOutcomeCallable DcdbClient::DestroyHourDCDBInstanceCallable(const DestroyHourDCDBInstanceRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DestroyHourDCDBInstanceOutcome()>>(
-        [this, request]()
-        {
-            return this->DestroyHourDCDBInstance(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DestroyHourDCDBInstanceOutcome>>();
+    DestroyHourDCDBInstanceAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const DestroyHourDCDBInstanceRequest&,
+        DestroyHourDCDBInstanceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::DisassociateSecurityGroupsOutcome DcdbClient::DisassociateSecurityGroups(const DisassociateSecurityGroupsRequest &request)
@@ -1696,25 +1962,32 @@ DcdbClient::DisassociateSecurityGroupsOutcome DcdbClient::DisassociateSecurityGr
 
 void DcdbClient::DisassociateSecurityGroupsAsync(const DisassociateSecurityGroupsRequest& request, const DisassociateSecurityGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DisassociateSecurityGroups(request), context);
-    };
+    using Req = const DisassociateSecurityGroupsRequest&;
+    using Resp = DisassociateSecurityGroupsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DisassociateSecurityGroups", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::DisassociateSecurityGroupsOutcomeCallable DcdbClient::DisassociateSecurityGroupsCallable(const DisassociateSecurityGroupsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DisassociateSecurityGroupsOutcome()>>(
-        [this, request]()
-        {
-            return this->DisassociateSecurityGroups(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DisassociateSecurityGroupsOutcome>>();
+    DisassociateSecurityGroupsAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const DisassociateSecurityGroupsRequest&,
+        DisassociateSecurityGroupsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::GrantAccountPrivilegesOutcome DcdbClient::GrantAccountPrivileges(const GrantAccountPrivilegesRequest &request)
@@ -1739,25 +2012,32 @@ DcdbClient::GrantAccountPrivilegesOutcome DcdbClient::GrantAccountPrivileges(con
 
 void DcdbClient::GrantAccountPrivilegesAsync(const GrantAccountPrivilegesRequest& request, const GrantAccountPrivilegesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->GrantAccountPrivileges(request), context);
-    };
+    using Req = const GrantAccountPrivilegesRequest&;
+    using Resp = GrantAccountPrivilegesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "GrantAccountPrivileges", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::GrantAccountPrivilegesOutcomeCallable DcdbClient::GrantAccountPrivilegesCallable(const GrantAccountPrivilegesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<GrantAccountPrivilegesOutcome()>>(
-        [this, request]()
-        {
-            return this->GrantAccountPrivileges(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<GrantAccountPrivilegesOutcome>>();
+    GrantAccountPrivilegesAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const GrantAccountPrivilegesRequest&,
+        GrantAccountPrivilegesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::InitDCDBInstancesOutcome DcdbClient::InitDCDBInstances(const InitDCDBInstancesRequest &request)
@@ -1782,25 +2062,32 @@ DcdbClient::InitDCDBInstancesOutcome DcdbClient::InitDCDBInstances(const InitDCD
 
 void DcdbClient::InitDCDBInstancesAsync(const InitDCDBInstancesRequest& request, const InitDCDBInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->InitDCDBInstances(request), context);
-    };
+    using Req = const InitDCDBInstancesRequest&;
+    using Resp = InitDCDBInstancesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "InitDCDBInstances", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::InitDCDBInstancesOutcomeCallable DcdbClient::InitDCDBInstancesCallable(const InitDCDBInstancesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<InitDCDBInstancesOutcome()>>(
-        [this, request]()
-        {
-            return this->InitDCDBInstances(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<InitDCDBInstancesOutcome>>();
+    InitDCDBInstancesAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const InitDCDBInstancesRequest&,
+        InitDCDBInstancesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::IsolateDCDBInstanceOutcome DcdbClient::IsolateDCDBInstance(const IsolateDCDBInstanceRequest &request)
@@ -1825,25 +2112,32 @@ DcdbClient::IsolateDCDBInstanceOutcome DcdbClient::IsolateDCDBInstance(const Iso
 
 void DcdbClient::IsolateDCDBInstanceAsync(const IsolateDCDBInstanceRequest& request, const IsolateDCDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->IsolateDCDBInstance(request), context);
-    };
+    using Req = const IsolateDCDBInstanceRequest&;
+    using Resp = IsolateDCDBInstanceResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "IsolateDCDBInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::IsolateDCDBInstanceOutcomeCallable DcdbClient::IsolateDCDBInstanceCallable(const IsolateDCDBInstanceRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<IsolateDCDBInstanceOutcome()>>(
-        [this, request]()
-        {
-            return this->IsolateDCDBInstance(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<IsolateDCDBInstanceOutcome>>();
+    IsolateDCDBInstanceAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const IsolateDCDBInstanceRequest&,
+        IsolateDCDBInstanceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::IsolateDedicatedDBInstanceOutcome DcdbClient::IsolateDedicatedDBInstance(const IsolateDedicatedDBInstanceRequest &request)
@@ -1868,25 +2162,32 @@ DcdbClient::IsolateDedicatedDBInstanceOutcome DcdbClient::IsolateDedicatedDBInst
 
 void DcdbClient::IsolateDedicatedDBInstanceAsync(const IsolateDedicatedDBInstanceRequest& request, const IsolateDedicatedDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->IsolateDedicatedDBInstance(request), context);
-    };
+    using Req = const IsolateDedicatedDBInstanceRequest&;
+    using Resp = IsolateDedicatedDBInstanceResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "IsolateDedicatedDBInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::IsolateDedicatedDBInstanceOutcomeCallable DcdbClient::IsolateDedicatedDBInstanceCallable(const IsolateDedicatedDBInstanceRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<IsolateDedicatedDBInstanceOutcome()>>(
-        [this, request]()
-        {
-            return this->IsolateDedicatedDBInstance(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<IsolateDedicatedDBInstanceOutcome>>();
+    IsolateDedicatedDBInstanceAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const IsolateDedicatedDBInstanceRequest&,
+        IsolateDedicatedDBInstanceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::IsolateHourDCDBInstanceOutcome DcdbClient::IsolateHourDCDBInstance(const IsolateHourDCDBInstanceRequest &request)
@@ -1911,25 +2212,32 @@ DcdbClient::IsolateHourDCDBInstanceOutcome DcdbClient::IsolateHourDCDBInstance(c
 
 void DcdbClient::IsolateHourDCDBInstanceAsync(const IsolateHourDCDBInstanceRequest& request, const IsolateHourDCDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->IsolateHourDCDBInstance(request), context);
-    };
+    using Req = const IsolateHourDCDBInstanceRequest&;
+    using Resp = IsolateHourDCDBInstanceResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "IsolateHourDCDBInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::IsolateHourDCDBInstanceOutcomeCallable DcdbClient::IsolateHourDCDBInstanceCallable(const IsolateHourDCDBInstanceRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<IsolateHourDCDBInstanceOutcome()>>(
-        [this, request]()
-        {
-            return this->IsolateHourDCDBInstance(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<IsolateHourDCDBInstanceOutcome>>();
+    IsolateHourDCDBInstanceAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const IsolateHourDCDBInstanceRequest&,
+        IsolateHourDCDBInstanceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::KillSessionOutcome DcdbClient::KillSession(const KillSessionRequest &request)
@@ -1954,25 +2262,32 @@ DcdbClient::KillSessionOutcome DcdbClient::KillSession(const KillSessionRequest 
 
 void DcdbClient::KillSessionAsync(const KillSessionRequest& request, const KillSessionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->KillSession(request), context);
-    };
+    using Req = const KillSessionRequest&;
+    using Resp = KillSessionResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "KillSession", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::KillSessionOutcomeCallable DcdbClient::KillSessionCallable(const KillSessionRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<KillSessionOutcome()>>(
-        [this, request]()
-        {
-            return this->KillSession(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<KillSessionOutcome>>();
+    KillSessionAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const KillSessionRequest&,
+        KillSessionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::ModifyAccountConfigOutcome DcdbClient::ModifyAccountConfig(const ModifyAccountConfigRequest &request)
@@ -1997,25 +2312,32 @@ DcdbClient::ModifyAccountConfigOutcome DcdbClient::ModifyAccountConfig(const Mod
 
 void DcdbClient::ModifyAccountConfigAsync(const ModifyAccountConfigRequest& request, const ModifyAccountConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyAccountConfig(request), context);
-    };
+    using Req = const ModifyAccountConfigRequest&;
+    using Resp = ModifyAccountConfigResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyAccountConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::ModifyAccountConfigOutcomeCallable DcdbClient::ModifyAccountConfigCallable(const ModifyAccountConfigRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyAccountConfigOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyAccountConfig(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyAccountConfigOutcome>>();
+    ModifyAccountConfigAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const ModifyAccountConfigRequest&,
+        ModifyAccountConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::ModifyAccountDescriptionOutcome DcdbClient::ModifyAccountDescription(const ModifyAccountDescriptionRequest &request)
@@ -2040,25 +2362,32 @@ DcdbClient::ModifyAccountDescriptionOutcome DcdbClient::ModifyAccountDescription
 
 void DcdbClient::ModifyAccountDescriptionAsync(const ModifyAccountDescriptionRequest& request, const ModifyAccountDescriptionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyAccountDescription(request), context);
-    };
+    using Req = const ModifyAccountDescriptionRequest&;
+    using Resp = ModifyAccountDescriptionResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyAccountDescription", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::ModifyAccountDescriptionOutcomeCallable DcdbClient::ModifyAccountDescriptionCallable(const ModifyAccountDescriptionRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyAccountDescriptionOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyAccountDescription(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyAccountDescriptionOutcome>>();
+    ModifyAccountDescriptionAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const ModifyAccountDescriptionRequest&,
+        ModifyAccountDescriptionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::ModifyAccountPrivilegesOutcome DcdbClient::ModifyAccountPrivileges(const ModifyAccountPrivilegesRequest &request)
@@ -2083,25 +2412,32 @@ DcdbClient::ModifyAccountPrivilegesOutcome DcdbClient::ModifyAccountPrivileges(c
 
 void DcdbClient::ModifyAccountPrivilegesAsync(const ModifyAccountPrivilegesRequest& request, const ModifyAccountPrivilegesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyAccountPrivileges(request), context);
-    };
+    using Req = const ModifyAccountPrivilegesRequest&;
+    using Resp = ModifyAccountPrivilegesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyAccountPrivileges", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::ModifyAccountPrivilegesOutcomeCallable DcdbClient::ModifyAccountPrivilegesCallable(const ModifyAccountPrivilegesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyAccountPrivilegesOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyAccountPrivileges(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyAccountPrivilegesOutcome>>();
+    ModifyAccountPrivilegesAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const ModifyAccountPrivilegesRequest&,
+        ModifyAccountPrivilegesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::ModifyDBEncryptAttributesOutcome DcdbClient::ModifyDBEncryptAttributes(const ModifyDBEncryptAttributesRequest &request)
@@ -2126,25 +2462,32 @@ DcdbClient::ModifyDBEncryptAttributesOutcome DcdbClient::ModifyDBEncryptAttribut
 
 void DcdbClient::ModifyDBEncryptAttributesAsync(const ModifyDBEncryptAttributesRequest& request, const ModifyDBEncryptAttributesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyDBEncryptAttributes(request), context);
-    };
+    using Req = const ModifyDBEncryptAttributesRequest&;
+    using Resp = ModifyDBEncryptAttributesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyDBEncryptAttributes", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::ModifyDBEncryptAttributesOutcomeCallable DcdbClient::ModifyDBEncryptAttributesCallable(const ModifyDBEncryptAttributesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyDBEncryptAttributesOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyDBEncryptAttributes(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyDBEncryptAttributesOutcome>>();
+    ModifyDBEncryptAttributesAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const ModifyDBEncryptAttributesRequest&,
+        ModifyDBEncryptAttributesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::ModifyDBInstanceNameOutcome DcdbClient::ModifyDBInstanceName(const ModifyDBInstanceNameRequest &request)
@@ -2169,25 +2512,32 @@ DcdbClient::ModifyDBInstanceNameOutcome DcdbClient::ModifyDBInstanceName(const M
 
 void DcdbClient::ModifyDBInstanceNameAsync(const ModifyDBInstanceNameRequest& request, const ModifyDBInstanceNameAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyDBInstanceName(request), context);
-    };
+    using Req = const ModifyDBInstanceNameRequest&;
+    using Resp = ModifyDBInstanceNameResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyDBInstanceName", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::ModifyDBInstanceNameOutcomeCallable DcdbClient::ModifyDBInstanceNameCallable(const ModifyDBInstanceNameRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyDBInstanceNameOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyDBInstanceName(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyDBInstanceNameOutcome>>();
+    ModifyDBInstanceNameAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const ModifyDBInstanceNameRequest&,
+        ModifyDBInstanceNameOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::ModifyDBInstanceSecurityGroupsOutcome DcdbClient::ModifyDBInstanceSecurityGroups(const ModifyDBInstanceSecurityGroupsRequest &request)
@@ -2212,25 +2562,32 @@ DcdbClient::ModifyDBInstanceSecurityGroupsOutcome DcdbClient::ModifyDBInstanceSe
 
 void DcdbClient::ModifyDBInstanceSecurityGroupsAsync(const ModifyDBInstanceSecurityGroupsRequest& request, const ModifyDBInstanceSecurityGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyDBInstanceSecurityGroups(request), context);
-    };
+    using Req = const ModifyDBInstanceSecurityGroupsRequest&;
+    using Resp = ModifyDBInstanceSecurityGroupsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyDBInstanceSecurityGroups", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::ModifyDBInstanceSecurityGroupsOutcomeCallable DcdbClient::ModifyDBInstanceSecurityGroupsCallable(const ModifyDBInstanceSecurityGroupsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyDBInstanceSecurityGroupsOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyDBInstanceSecurityGroups(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyDBInstanceSecurityGroupsOutcome>>();
+    ModifyDBInstanceSecurityGroupsAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const ModifyDBInstanceSecurityGroupsRequest&,
+        ModifyDBInstanceSecurityGroupsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::ModifyDBInstancesProjectOutcome DcdbClient::ModifyDBInstancesProject(const ModifyDBInstancesProjectRequest &request)
@@ -2255,25 +2612,32 @@ DcdbClient::ModifyDBInstancesProjectOutcome DcdbClient::ModifyDBInstancesProject
 
 void DcdbClient::ModifyDBInstancesProjectAsync(const ModifyDBInstancesProjectRequest& request, const ModifyDBInstancesProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyDBInstancesProject(request), context);
-    };
+    using Req = const ModifyDBInstancesProjectRequest&;
+    using Resp = ModifyDBInstancesProjectResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyDBInstancesProject", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::ModifyDBInstancesProjectOutcomeCallable DcdbClient::ModifyDBInstancesProjectCallable(const ModifyDBInstancesProjectRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyDBInstancesProjectOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyDBInstancesProject(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyDBInstancesProjectOutcome>>();
+    ModifyDBInstancesProjectAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const ModifyDBInstancesProjectRequest&,
+        ModifyDBInstancesProjectOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::ModifyDBParametersOutcome DcdbClient::ModifyDBParameters(const ModifyDBParametersRequest &request)
@@ -2298,25 +2662,32 @@ DcdbClient::ModifyDBParametersOutcome DcdbClient::ModifyDBParameters(const Modif
 
 void DcdbClient::ModifyDBParametersAsync(const ModifyDBParametersRequest& request, const ModifyDBParametersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyDBParameters(request), context);
-    };
+    using Req = const ModifyDBParametersRequest&;
+    using Resp = ModifyDBParametersResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyDBParameters", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::ModifyDBParametersOutcomeCallable DcdbClient::ModifyDBParametersCallable(const ModifyDBParametersRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyDBParametersOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyDBParameters(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyDBParametersOutcome>>();
+    ModifyDBParametersAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const ModifyDBParametersRequest&,
+        ModifyDBParametersOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::ModifyDBSyncModeOutcome DcdbClient::ModifyDBSyncMode(const ModifyDBSyncModeRequest &request)
@@ -2341,25 +2712,32 @@ DcdbClient::ModifyDBSyncModeOutcome DcdbClient::ModifyDBSyncMode(const ModifyDBS
 
 void DcdbClient::ModifyDBSyncModeAsync(const ModifyDBSyncModeRequest& request, const ModifyDBSyncModeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyDBSyncMode(request), context);
-    };
+    using Req = const ModifyDBSyncModeRequest&;
+    using Resp = ModifyDBSyncModeResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyDBSyncMode", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::ModifyDBSyncModeOutcomeCallable DcdbClient::ModifyDBSyncModeCallable(const ModifyDBSyncModeRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyDBSyncModeOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyDBSyncMode(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyDBSyncModeOutcome>>();
+    ModifyDBSyncModeAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const ModifyDBSyncModeRequest&,
+        ModifyDBSyncModeOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::ModifyInstanceNetworkOutcome DcdbClient::ModifyInstanceNetwork(const ModifyInstanceNetworkRequest &request)
@@ -2384,25 +2762,32 @@ DcdbClient::ModifyInstanceNetworkOutcome DcdbClient::ModifyInstanceNetwork(const
 
 void DcdbClient::ModifyInstanceNetworkAsync(const ModifyInstanceNetworkRequest& request, const ModifyInstanceNetworkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyInstanceNetwork(request), context);
-    };
+    using Req = const ModifyInstanceNetworkRequest&;
+    using Resp = ModifyInstanceNetworkResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyInstanceNetwork", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::ModifyInstanceNetworkOutcomeCallable DcdbClient::ModifyInstanceNetworkCallable(const ModifyInstanceNetworkRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyInstanceNetworkOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyInstanceNetwork(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyInstanceNetworkOutcome>>();
+    ModifyInstanceNetworkAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const ModifyInstanceNetworkRequest&,
+        ModifyInstanceNetworkOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::ModifyInstanceVipOutcome DcdbClient::ModifyInstanceVip(const ModifyInstanceVipRequest &request)
@@ -2427,25 +2812,32 @@ DcdbClient::ModifyInstanceVipOutcome DcdbClient::ModifyInstanceVip(const ModifyI
 
 void DcdbClient::ModifyInstanceVipAsync(const ModifyInstanceVipRequest& request, const ModifyInstanceVipAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyInstanceVip(request), context);
-    };
+    using Req = const ModifyInstanceVipRequest&;
+    using Resp = ModifyInstanceVipResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyInstanceVip", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::ModifyInstanceVipOutcomeCallable DcdbClient::ModifyInstanceVipCallable(const ModifyInstanceVipRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyInstanceVipOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyInstanceVip(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyInstanceVipOutcome>>();
+    ModifyInstanceVipAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const ModifyInstanceVipRequest&,
+        ModifyInstanceVipOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::ModifyInstanceVportOutcome DcdbClient::ModifyInstanceVport(const ModifyInstanceVportRequest &request)
@@ -2470,25 +2862,32 @@ DcdbClient::ModifyInstanceVportOutcome DcdbClient::ModifyInstanceVport(const Mod
 
 void DcdbClient::ModifyInstanceVportAsync(const ModifyInstanceVportRequest& request, const ModifyInstanceVportAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyInstanceVport(request), context);
-    };
+    using Req = const ModifyInstanceVportRequest&;
+    using Resp = ModifyInstanceVportResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyInstanceVport", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::ModifyInstanceVportOutcomeCallable DcdbClient::ModifyInstanceVportCallable(const ModifyInstanceVportRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyInstanceVportOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyInstanceVport(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyInstanceVportOutcome>>();
+    ModifyInstanceVportAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const ModifyInstanceVportRequest&,
+        ModifyInstanceVportOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::ResetAccountPasswordOutcome DcdbClient::ResetAccountPassword(const ResetAccountPasswordRequest &request)
@@ -2513,25 +2912,32 @@ DcdbClient::ResetAccountPasswordOutcome DcdbClient::ResetAccountPassword(const R
 
 void DcdbClient::ResetAccountPasswordAsync(const ResetAccountPasswordRequest& request, const ResetAccountPasswordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ResetAccountPassword(request), context);
-    };
+    using Req = const ResetAccountPasswordRequest&;
+    using Resp = ResetAccountPasswordResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ResetAccountPassword", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::ResetAccountPasswordOutcomeCallable DcdbClient::ResetAccountPasswordCallable(const ResetAccountPasswordRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ResetAccountPasswordOutcome()>>(
-        [this, request]()
-        {
-            return this->ResetAccountPassword(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ResetAccountPasswordOutcome>>();
+    ResetAccountPasswordAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const ResetAccountPasswordRequest&,
+        ResetAccountPasswordOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::SwitchDBInstanceHAOutcome DcdbClient::SwitchDBInstanceHA(const SwitchDBInstanceHARequest &request)
@@ -2556,25 +2962,32 @@ DcdbClient::SwitchDBInstanceHAOutcome DcdbClient::SwitchDBInstanceHA(const Switc
 
 void DcdbClient::SwitchDBInstanceHAAsync(const SwitchDBInstanceHARequest& request, const SwitchDBInstanceHAAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->SwitchDBInstanceHA(request), context);
-    };
+    using Req = const SwitchDBInstanceHARequest&;
+    using Resp = SwitchDBInstanceHAResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "SwitchDBInstanceHA", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::SwitchDBInstanceHAOutcomeCallable DcdbClient::SwitchDBInstanceHACallable(const SwitchDBInstanceHARequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<SwitchDBInstanceHAOutcome()>>(
-        [this, request]()
-        {
-            return this->SwitchDBInstanceHA(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<SwitchDBInstanceHAOutcome>>();
+    SwitchDBInstanceHAAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const SwitchDBInstanceHARequest&,
+        SwitchDBInstanceHAOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::TerminateDedicatedDBInstanceOutcome DcdbClient::TerminateDedicatedDBInstance(const TerminateDedicatedDBInstanceRequest &request)
@@ -2599,25 +3012,32 @@ DcdbClient::TerminateDedicatedDBInstanceOutcome DcdbClient::TerminateDedicatedDB
 
 void DcdbClient::TerminateDedicatedDBInstanceAsync(const TerminateDedicatedDBInstanceRequest& request, const TerminateDedicatedDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->TerminateDedicatedDBInstance(request), context);
-    };
+    using Req = const TerminateDedicatedDBInstanceRequest&;
+    using Resp = TerminateDedicatedDBInstanceResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "TerminateDedicatedDBInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::TerminateDedicatedDBInstanceOutcomeCallable DcdbClient::TerminateDedicatedDBInstanceCallable(const TerminateDedicatedDBInstanceRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<TerminateDedicatedDBInstanceOutcome()>>(
-        [this, request]()
-        {
-            return this->TerminateDedicatedDBInstance(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<TerminateDedicatedDBInstanceOutcome>>();
+    TerminateDedicatedDBInstanceAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const TerminateDedicatedDBInstanceRequest&,
+        TerminateDedicatedDBInstanceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::UpgradeDedicatedDCDBInstanceOutcome DcdbClient::UpgradeDedicatedDCDBInstance(const UpgradeDedicatedDCDBInstanceRequest &request)
@@ -2642,25 +3062,32 @@ DcdbClient::UpgradeDedicatedDCDBInstanceOutcome DcdbClient::UpgradeDedicatedDCDB
 
 void DcdbClient::UpgradeDedicatedDCDBInstanceAsync(const UpgradeDedicatedDCDBInstanceRequest& request, const UpgradeDedicatedDCDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->UpgradeDedicatedDCDBInstance(request), context);
-    };
+    using Req = const UpgradeDedicatedDCDBInstanceRequest&;
+    using Resp = UpgradeDedicatedDCDBInstanceResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "UpgradeDedicatedDCDBInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::UpgradeDedicatedDCDBInstanceOutcomeCallable DcdbClient::UpgradeDedicatedDCDBInstanceCallable(const UpgradeDedicatedDCDBInstanceRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<UpgradeDedicatedDCDBInstanceOutcome()>>(
-        [this, request]()
-        {
-            return this->UpgradeDedicatedDCDBInstance(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<UpgradeDedicatedDCDBInstanceOutcome>>();
+    UpgradeDedicatedDCDBInstanceAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const UpgradeDedicatedDCDBInstanceRequest&,
+        UpgradeDedicatedDCDBInstanceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DcdbClient::UpgradeHourDCDBInstanceOutcome DcdbClient::UpgradeHourDCDBInstance(const UpgradeHourDCDBInstanceRequest &request)
@@ -2685,24 +3112,31 @@ DcdbClient::UpgradeHourDCDBInstanceOutcome DcdbClient::UpgradeHourDCDBInstance(c
 
 void DcdbClient::UpgradeHourDCDBInstanceAsync(const UpgradeHourDCDBInstanceRequest& request, const UpgradeHourDCDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->UpgradeHourDCDBInstance(request), context);
-    };
+    using Req = const UpgradeHourDCDBInstanceRequest&;
+    using Resp = UpgradeHourDCDBInstanceResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "UpgradeHourDCDBInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DcdbClient::UpgradeHourDCDBInstanceOutcomeCallable DcdbClient::UpgradeHourDCDBInstanceCallable(const UpgradeHourDCDBInstanceRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<UpgradeHourDCDBInstanceOutcome()>>(
-        [this, request]()
-        {
-            return this->UpgradeHourDCDBInstance(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<UpgradeHourDCDBInstanceOutcome>>();
+    UpgradeHourDCDBInstanceAsync(
+    request,
+    [prom](
+        const DcdbClient*,
+        const UpgradeHourDCDBInstanceRequest&,
+        UpgradeHourDCDBInstanceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

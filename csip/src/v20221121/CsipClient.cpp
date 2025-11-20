@@ -62,25 +62,32 @@ CsipClient::AddNewBindRoleUserOutcome CsipClient::AddNewBindRoleUser(const AddNe
 
 void CsipClient::AddNewBindRoleUserAsync(const AddNewBindRoleUserRequest& request, const AddNewBindRoleUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->AddNewBindRoleUser(request), context);
-    };
+    using Req = const AddNewBindRoleUserRequest&;
+    using Resp = AddNewBindRoleUserResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "AddNewBindRoleUser", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::AddNewBindRoleUserOutcomeCallable CsipClient::AddNewBindRoleUserCallable(const AddNewBindRoleUserRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<AddNewBindRoleUserOutcome()>>(
-        [this, request]()
-        {
-            return this->AddNewBindRoleUser(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<AddNewBindRoleUserOutcome>>();
+    AddNewBindRoleUserAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const AddNewBindRoleUserRequest&,
+        AddNewBindRoleUserOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::CreateDomainAndIpOutcome CsipClient::CreateDomainAndIp(const CreateDomainAndIpRequest &request)
@@ -105,25 +112,32 @@ CsipClient::CreateDomainAndIpOutcome CsipClient::CreateDomainAndIp(const CreateD
 
 void CsipClient::CreateDomainAndIpAsync(const CreateDomainAndIpRequest& request, const CreateDomainAndIpAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateDomainAndIp(request), context);
-    };
+    using Req = const CreateDomainAndIpRequest&;
+    using Resp = CreateDomainAndIpResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateDomainAndIp", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::CreateDomainAndIpOutcomeCallable CsipClient::CreateDomainAndIpCallable(const CreateDomainAndIpRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateDomainAndIpOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateDomainAndIp(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateDomainAndIpOutcome>>();
+    CreateDomainAndIpAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const CreateDomainAndIpRequest&,
+        CreateDomainAndIpOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::CreateRiskCenterScanTaskOutcome CsipClient::CreateRiskCenterScanTask(const CreateRiskCenterScanTaskRequest &request)
@@ -148,25 +162,32 @@ CsipClient::CreateRiskCenterScanTaskOutcome CsipClient::CreateRiskCenterScanTask
 
 void CsipClient::CreateRiskCenterScanTaskAsync(const CreateRiskCenterScanTaskRequest& request, const CreateRiskCenterScanTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateRiskCenterScanTask(request), context);
-    };
+    using Req = const CreateRiskCenterScanTaskRequest&;
+    using Resp = CreateRiskCenterScanTaskResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateRiskCenterScanTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::CreateRiskCenterScanTaskOutcomeCallable CsipClient::CreateRiskCenterScanTaskCallable(const CreateRiskCenterScanTaskRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateRiskCenterScanTaskOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateRiskCenterScanTask(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateRiskCenterScanTaskOutcome>>();
+    CreateRiskCenterScanTaskAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const CreateRiskCenterScanTaskRequest&,
+        CreateRiskCenterScanTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::DeleteDomainAndIpOutcome CsipClient::DeleteDomainAndIp(const DeleteDomainAndIpRequest &request)
@@ -191,25 +212,32 @@ CsipClient::DeleteDomainAndIpOutcome CsipClient::DeleteDomainAndIp(const DeleteD
 
 void CsipClient::DeleteDomainAndIpAsync(const DeleteDomainAndIpRequest& request, const DeleteDomainAndIpAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteDomainAndIp(request), context);
-    };
+    using Req = const DeleteDomainAndIpRequest&;
+    using Resp = DeleteDomainAndIpResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteDomainAndIp", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::DeleteDomainAndIpOutcomeCallable CsipClient::DeleteDomainAndIpCallable(const DeleteDomainAndIpRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteDomainAndIpOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteDomainAndIp(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteDomainAndIpOutcome>>();
+    DeleteDomainAndIpAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DeleteDomainAndIpRequest&,
+        DeleteDomainAndIpOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::DeleteRiskScanTaskOutcome CsipClient::DeleteRiskScanTask(const DeleteRiskScanTaskRequest &request)
@@ -234,25 +262,32 @@ CsipClient::DeleteRiskScanTaskOutcome CsipClient::DeleteRiskScanTask(const Delet
 
 void CsipClient::DeleteRiskScanTaskAsync(const DeleteRiskScanTaskRequest& request, const DeleteRiskScanTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteRiskScanTask(request), context);
-    };
+    using Req = const DeleteRiskScanTaskRequest&;
+    using Resp = DeleteRiskScanTaskResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteRiskScanTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::DeleteRiskScanTaskOutcomeCallable CsipClient::DeleteRiskScanTaskCallable(const DeleteRiskScanTaskRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteRiskScanTaskOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteRiskScanTask(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteRiskScanTaskOutcome>>();
+    DeleteRiskScanTaskAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DeleteRiskScanTaskRequest&,
+        DeleteRiskScanTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::DescribeCVMAssetInfoOutcome CsipClient::DescribeCVMAssetInfo(const DescribeCVMAssetInfoRequest &request)
@@ -277,25 +312,32 @@ CsipClient::DescribeCVMAssetInfoOutcome CsipClient::DescribeCVMAssetInfo(const D
 
 void CsipClient::DescribeCVMAssetInfoAsync(const DescribeCVMAssetInfoRequest& request, const DescribeCVMAssetInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeCVMAssetInfo(request), context);
-    };
+    using Req = const DescribeCVMAssetInfoRequest&;
+    using Resp = DescribeCVMAssetInfoResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeCVMAssetInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::DescribeCVMAssetInfoOutcomeCallable CsipClient::DescribeCVMAssetInfoCallable(const DescribeCVMAssetInfoRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeCVMAssetInfoOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeCVMAssetInfo(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeCVMAssetInfoOutcome>>();
+    DescribeCVMAssetInfoAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeCVMAssetInfoRequest&,
+        DescribeCVMAssetInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::DescribeCVMAssetsOutcome CsipClient::DescribeCVMAssets(const DescribeCVMAssetsRequest &request)
@@ -320,25 +362,32 @@ CsipClient::DescribeCVMAssetsOutcome CsipClient::DescribeCVMAssets(const Describ
 
 void CsipClient::DescribeCVMAssetsAsync(const DescribeCVMAssetsRequest& request, const DescribeCVMAssetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeCVMAssets(request), context);
-    };
+    using Req = const DescribeCVMAssetsRequest&;
+    using Resp = DescribeCVMAssetsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeCVMAssets", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::DescribeCVMAssetsOutcomeCallable CsipClient::DescribeCVMAssetsCallable(const DescribeCVMAssetsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeCVMAssetsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeCVMAssets(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeCVMAssetsOutcome>>();
+    DescribeCVMAssetsAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeCVMAssetsRequest&,
+        DescribeCVMAssetsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::DescribeClusterPodAssetsOutcome CsipClient::DescribeClusterPodAssets(const DescribeClusterPodAssetsRequest &request)
@@ -363,25 +412,32 @@ CsipClient::DescribeClusterPodAssetsOutcome CsipClient::DescribeClusterPodAssets
 
 void CsipClient::DescribeClusterPodAssetsAsync(const DescribeClusterPodAssetsRequest& request, const DescribeClusterPodAssetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeClusterPodAssets(request), context);
-    };
+    using Req = const DescribeClusterPodAssetsRequest&;
+    using Resp = DescribeClusterPodAssetsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeClusterPodAssets", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::DescribeClusterPodAssetsOutcomeCallable CsipClient::DescribeClusterPodAssetsCallable(const DescribeClusterPodAssetsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeClusterPodAssetsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeClusterPodAssets(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeClusterPodAssetsOutcome>>();
+    DescribeClusterPodAssetsAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeClusterPodAssetsRequest&,
+        DescribeClusterPodAssetsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::DescribeDbAssetInfoOutcome CsipClient::DescribeDbAssetInfo(const DescribeDbAssetInfoRequest &request)
@@ -406,25 +462,32 @@ CsipClient::DescribeDbAssetInfoOutcome CsipClient::DescribeDbAssetInfo(const Des
 
 void CsipClient::DescribeDbAssetInfoAsync(const DescribeDbAssetInfoRequest& request, const DescribeDbAssetInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDbAssetInfo(request), context);
-    };
+    using Req = const DescribeDbAssetInfoRequest&;
+    using Resp = DescribeDbAssetInfoResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDbAssetInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::DescribeDbAssetInfoOutcomeCallable CsipClient::DescribeDbAssetInfoCallable(const DescribeDbAssetInfoRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDbAssetInfoOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDbAssetInfo(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDbAssetInfoOutcome>>();
+    DescribeDbAssetInfoAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeDbAssetInfoRequest&,
+        DescribeDbAssetInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::DescribeDbAssetsOutcome CsipClient::DescribeDbAssets(const DescribeDbAssetsRequest &request)
@@ -449,25 +512,32 @@ CsipClient::DescribeDbAssetsOutcome CsipClient::DescribeDbAssets(const DescribeD
 
 void CsipClient::DescribeDbAssetsAsync(const DescribeDbAssetsRequest& request, const DescribeDbAssetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDbAssets(request), context);
-    };
+    using Req = const DescribeDbAssetsRequest&;
+    using Resp = DescribeDbAssetsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDbAssets", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::DescribeDbAssetsOutcomeCallable CsipClient::DescribeDbAssetsCallable(const DescribeDbAssetsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDbAssetsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDbAssets(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDbAssetsOutcome>>();
+    DescribeDbAssetsAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeDbAssetsRequest&,
+        DescribeDbAssetsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::DescribeDomainAssetsOutcome CsipClient::DescribeDomainAssets(const DescribeDomainAssetsRequest &request)
@@ -492,25 +562,32 @@ CsipClient::DescribeDomainAssetsOutcome CsipClient::DescribeDomainAssets(const D
 
 void CsipClient::DescribeDomainAssetsAsync(const DescribeDomainAssetsRequest& request, const DescribeDomainAssetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDomainAssets(request), context);
-    };
+    using Req = const DescribeDomainAssetsRequest&;
+    using Resp = DescribeDomainAssetsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDomainAssets", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::DescribeDomainAssetsOutcomeCallable CsipClient::DescribeDomainAssetsCallable(const DescribeDomainAssetsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDomainAssetsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDomainAssets(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDomainAssetsOutcome>>();
+    DescribeDomainAssetsAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeDomainAssetsRequest&,
+        DescribeDomainAssetsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::DescribeListenerListOutcome CsipClient::DescribeListenerList(const DescribeListenerListRequest &request)
@@ -535,25 +612,32 @@ CsipClient::DescribeListenerListOutcome CsipClient::DescribeListenerList(const D
 
 void CsipClient::DescribeListenerListAsync(const DescribeListenerListRequest& request, const DescribeListenerListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeListenerList(request), context);
-    };
+    using Req = const DescribeListenerListRequest&;
+    using Resp = DescribeListenerListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeListenerList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::DescribeListenerListOutcomeCallable CsipClient::DescribeListenerListCallable(const DescribeListenerListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeListenerListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeListenerList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeListenerListOutcome>>();
+    DescribeListenerListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeListenerListRequest&,
+        DescribeListenerListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::DescribeOrganizationInfoOutcome CsipClient::DescribeOrganizationInfo(const DescribeOrganizationInfoRequest &request)
@@ -578,25 +662,32 @@ CsipClient::DescribeOrganizationInfoOutcome CsipClient::DescribeOrganizationInfo
 
 void CsipClient::DescribeOrganizationInfoAsync(const DescribeOrganizationInfoRequest& request, const DescribeOrganizationInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeOrganizationInfo(request), context);
-    };
+    using Req = const DescribeOrganizationInfoRequest&;
+    using Resp = DescribeOrganizationInfoResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeOrganizationInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::DescribeOrganizationInfoOutcomeCallable CsipClient::DescribeOrganizationInfoCallable(const DescribeOrganizationInfoRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeOrganizationInfoOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeOrganizationInfo(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeOrganizationInfoOutcome>>();
+    DescribeOrganizationInfoAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeOrganizationInfoRequest&,
+        DescribeOrganizationInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::DescribeOrganizationUserInfoOutcome CsipClient::DescribeOrganizationUserInfo(const DescribeOrganizationUserInfoRequest &request)
@@ -621,25 +712,32 @@ CsipClient::DescribeOrganizationUserInfoOutcome CsipClient::DescribeOrganization
 
 void CsipClient::DescribeOrganizationUserInfoAsync(const DescribeOrganizationUserInfoRequest& request, const DescribeOrganizationUserInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeOrganizationUserInfo(request), context);
-    };
+    using Req = const DescribeOrganizationUserInfoRequest&;
+    using Resp = DescribeOrganizationUserInfoResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeOrganizationUserInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::DescribeOrganizationUserInfoOutcomeCallable CsipClient::DescribeOrganizationUserInfoCallable(const DescribeOrganizationUserInfoRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeOrganizationUserInfoOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeOrganizationUserInfo(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeOrganizationUserInfoOutcome>>();
+    DescribeOrganizationUserInfoAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeOrganizationUserInfoRequest&,
+        DescribeOrganizationUserInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::DescribePublicIpAssetsOutcome CsipClient::DescribePublicIpAssets(const DescribePublicIpAssetsRequest &request)
@@ -664,25 +762,32 @@ CsipClient::DescribePublicIpAssetsOutcome CsipClient::DescribePublicIpAssets(con
 
 void CsipClient::DescribePublicIpAssetsAsync(const DescribePublicIpAssetsRequest& request, const DescribePublicIpAssetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribePublicIpAssets(request), context);
-    };
+    using Req = const DescribePublicIpAssetsRequest&;
+    using Resp = DescribePublicIpAssetsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribePublicIpAssets", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::DescribePublicIpAssetsOutcomeCallable CsipClient::DescribePublicIpAssetsCallable(const DescribePublicIpAssetsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribePublicIpAssetsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribePublicIpAssets(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribePublicIpAssetsOutcome>>();
+    DescribePublicIpAssetsAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribePublicIpAssetsRequest&,
+        DescribePublicIpAssetsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::DescribeRiskCenterAssetViewCFGRiskListOutcome CsipClient::DescribeRiskCenterAssetViewCFGRiskList(const DescribeRiskCenterAssetViewCFGRiskListRequest &request)
@@ -707,25 +812,32 @@ CsipClient::DescribeRiskCenterAssetViewCFGRiskListOutcome CsipClient::DescribeRi
 
 void CsipClient::DescribeRiskCenterAssetViewCFGRiskListAsync(const DescribeRiskCenterAssetViewCFGRiskListRequest& request, const DescribeRiskCenterAssetViewCFGRiskListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeRiskCenterAssetViewCFGRiskList(request), context);
-    };
+    using Req = const DescribeRiskCenterAssetViewCFGRiskListRequest&;
+    using Resp = DescribeRiskCenterAssetViewCFGRiskListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeRiskCenterAssetViewCFGRiskList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::DescribeRiskCenterAssetViewCFGRiskListOutcomeCallable CsipClient::DescribeRiskCenterAssetViewCFGRiskListCallable(const DescribeRiskCenterAssetViewCFGRiskListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeRiskCenterAssetViewCFGRiskListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeRiskCenterAssetViewCFGRiskList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeRiskCenterAssetViewCFGRiskListOutcome>>();
+    DescribeRiskCenterAssetViewCFGRiskListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeRiskCenterAssetViewCFGRiskListRequest&,
+        DescribeRiskCenterAssetViewCFGRiskListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::DescribeRiskCenterAssetViewPortRiskListOutcome CsipClient::DescribeRiskCenterAssetViewPortRiskList(const DescribeRiskCenterAssetViewPortRiskListRequest &request)
@@ -750,25 +862,32 @@ CsipClient::DescribeRiskCenterAssetViewPortRiskListOutcome CsipClient::DescribeR
 
 void CsipClient::DescribeRiskCenterAssetViewPortRiskListAsync(const DescribeRiskCenterAssetViewPortRiskListRequest& request, const DescribeRiskCenterAssetViewPortRiskListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeRiskCenterAssetViewPortRiskList(request), context);
-    };
+    using Req = const DescribeRiskCenterAssetViewPortRiskListRequest&;
+    using Resp = DescribeRiskCenterAssetViewPortRiskListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeRiskCenterAssetViewPortRiskList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::DescribeRiskCenterAssetViewPortRiskListOutcomeCallable CsipClient::DescribeRiskCenterAssetViewPortRiskListCallable(const DescribeRiskCenterAssetViewPortRiskListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeRiskCenterAssetViewPortRiskListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeRiskCenterAssetViewPortRiskList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeRiskCenterAssetViewPortRiskListOutcome>>();
+    DescribeRiskCenterAssetViewPortRiskListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeRiskCenterAssetViewPortRiskListRequest&,
+        DescribeRiskCenterAssetViewPortRiskListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::DescribeRiskCenterAssetViewVULRiskListOutcome CsipClient::DescribeRiskCenterAssetViewVULRiskList(const DescribeRiskCenterAssetViewVULRiskListRequest &request)
@@ -793,25 +912,32 @@ CsipClient::DescribeRiskCenterAssetViewVULRiskListOutcome CsipClient::DescribeRi
 
 void CsipClient::DescribeRiskCenterAssetViewVULRiskListAsync(const DescribeRiskCenterAssetViewVULRiskListRequest& request, const DescribeRiskCenterAssetViewVULRiskListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeRiskCenterAssetViewVULRiskList(request), context);
-    };
+    using Req = const DescribeRiskCenterAssetViewVULRiskListRequest&;
+    using Resp = DescribeRiskCenterAssetViewVULRiskListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeRiskCenterAssetViewVULRiskList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::DescribeRiskCenterAssetViewVULRiskListOutcomeCallable CsipClient::DescribeRiskCenterAssetViewVULRiskListCallable(const DescribeRiskCenterAssetViewVULRiskListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeRiskCenterAssetViewVULRiskListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeRiskCenterAssetViewVULRiskList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeRiskCenterAssetViewVULRiskListOutcome>>();
+    DescribeRiskCenterAssetViewVULRiskListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeRiskCenterAssetViewVULRiskListRequest&,
+        DescribeRiskCenterAssetViewVULRiskListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::DescribeRiskCenterAssetViewWeakPasswordRiskListOutcome CsipClient::DescribeRiskCenterAssetViewWeakPasswordRiskList(const DescribeRiskCenterAssetViewWeakPasswordRiskListRequest &request)
@@ -836,25 +962,32 @@ CsipClient::DescribeRiskCenterAssetViewWeakPasswordRiskListOutcome CsipClient::D
 
 void CsipClient::DescribeRiskCenterAssetViewWeakPasswordRiskListAsync(const DescribeRiskCenterAssetViewWeakPasswordRiskListRequest& request, const DescribeRiskCenterAssetViewWeakPasswordRiskListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeRiskCenterAssetViewWeakPasswordRiskList(request), context);
-    };
+    using Req = const DescribeRiskCenterAssetViewWeakPasswordRiskListRequest&;
+    using Resp = DescribeRiskCenterAssetViewWeakPasswordRiskListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeRiskCenterAssetViewWeakPasswordRiskList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::DescribeRiskCenterAssetViewWeakPasswordRiskListOutcomeCallable CsipClient::DescribeRiskCenterAssetViewWeakPasswordRiskListCallable(const DescribeRiskCenterAssetViewWeakPasswordRiskListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeRiskCenterAssetViewWeakPasswordRiskListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeRiskCenterAssetViewWeakPasswordRiskList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeRiskCenterAssetViewWeakPasswordRiskListOutcome>>();
+    DescribeRiskCenterAssetViewWeakPasswordRiskListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeRiskCenterAssetViewWeakPasswordRiskListRequest&,
+        DescribeRiskCenterAssetViewWeakPasswordRiskListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::DescribeRiskCenterPortViewPortRiskListOutcome CsipClient::DescribeRiskCenterPortViewPortRiskList(const DescribeRiskCenterPortViewPortRiskListRequest &request)
@@ -879,25 +1012,32 @@ CsipClient::DescribeRiskCenterPortViewPortRiskListOutcome CsipClient::DescribeRi
 
 void CsipClient::DescribeRiskCenterPortViewPortRiskListAsync(const DescribeRiskCenterPortViewPortRiskListRequest& request, const DescribeRiskCenterPortViewPortRiskListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeRiskCenterPortViewPortRiskList(request), context);
-    };
+    using Req = const DescribeRiskCenterPortViewPortRiskListRequest&;
+    using Resp = DescribeRiskCenterPortViewPortRiskListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeRiskCenterPortViewPortRiskList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::DescribeRiskCenterPortViewPortRiskListOutcomeCallable CsipClient::DescribeRiskCenterPortViewPortRiskListCallable(const DescribeRiskCenterPortViewPortRiskListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeRiskCenterPortViewPortRiskListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeRiskCenterPortViewPortRiskList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeRiskCenterPortViewPortRiskListOutcome>>();
+    DescribeRiskCenterPortViewPortRiskListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeRiskCenterPortViewPortRiskListRequest&,
+        DescribeRiskCenterPortViewPortRiskListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::DescribeRiskCenterServerRiskListOutcome CsipClient::DescribeRiskCenterServerRiskList(const DescribeRiskCenterServerRiskListRequest &request)
@@ -922,25 +1062,32 @@ CsipClient::DescribeRiskCenterServerRiskListOutcome CsipClient::DescribeRiskCent
 
 void CsipClient::DescribeRiskCenterServerRiskListAsync(const DescribeRiskCenterServerRiskListRequest& request, const DescribeRiskCenterServerRiskListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeRiskCenterServerRiskList(request), context);
-    };
+    using Req = const DescribeRiskCenterServerRiskListRequest&;
+    using Resp = DescribeRiskCenterServerRiskListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeRiskCenterServerRiskList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::DescribeRiskCenterServerRiskListOutcomeCallable CsipClient::DescribeRiskCenterServerRiskListCallable(const DescribeRiskCenterServerRiskListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeRiskCenterServerRiskListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeRiskCenterServerRiskList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeRiskCenterServerRiskListOutcome>>();
+    DescribeRiskCenterServerRiskListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeRiskCenterServerRiskListRequest&,
+        DescribeRiskCenterServerRiskListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::DescribeRiskCenterVULViewVULRiskListOutcome CsipClient::DescribeRiskCenterVULViewVULRiskList(const DescribeRiskCenterVULViewVULRiskListRequest &request)
@@ -965,25 +1112,32 @@ CsipClient::DescribeRiskCenterVULViewVULRiskListOutcome CsipClient::DescribeRisk
 
 void CsipClient::DescribeRiskCenterVULViewVULRiskListAsync(const DescribeRiskCenterVULViewVULRiskListRequest& request, const DescribeRiskCenterVULViewVULRiskListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeRiskCenterVULViewVULRiskList(request), context);
-    };
+    using Req = const DescribeRiskCenterVULViewVULRiskListRequest&;
+    using Resp = DescribeRiskCenterVULViewVULRiskListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeRiskCenterVULViewVULRiskList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::DescribeRiskCenterVULViewVULRiskListOutcomeCallable CsipClient::DescribeRiskCenterVULViewVULRiskListCallable(const DescribeRiskCenterVULViewVULRiskListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeRiskCenterVULViewVULRiskListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeRiskCenterVULViewVULRiskList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeRiskCenterVULViewVULRiskListOutcome>>();
+    DescribeRiskCenterVULViewVULRiskListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeRiskCenterVULViewVULRiskListRequest&,
+        DescribeRiskCenterVULViewVULRiskListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::DescribeRiskCenterWebsiteRiskListOutcome CsipClient::DescribeRiskCenterWebsiteRiskList(const DescribeRiskCenterWebsiteRiskListRequest &request)
@@ -1008,25 +1162,32 @@ CsipClient::DescribeRiskCenterWebsiteRiskListOutcome CsipClient::DescribeRiskCen
 
 void CsipClient::DescribeRiskCenterWebsiteRiskListAsync(const DescribeRiskCenterWebsiteRiskListRequest& request, const DescribeRiskCenterWebsiteRiskListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeRiskCenterWebsiteRiskList(request), context);
-    };
+    using Req = const DescribeRiskCenterWebsiteRiskListRequest&;
+    using Resp = DescribeRiskCenterWebsiteRiskListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeRiskCenterWebsiteRiskList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::DescribeRiskCenterWebsiteRiskListOutcomeCallable CsipClient::DescribeRiskCenterWebsiteRiskListCallable(const DescribeRiskCenterWebsiteRiskListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeRiskCenterWebsiteRiskListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeRiskCenterWebsiteRiskList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeRiskCenterWebsiteRiskListOutcome>>();
+    DescribeRiskCenterWebsiteRiskListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeRiskCenterWebsiteRiskListRequest&,
+        DescribeRiskCenterWebsiteRiskListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::DescribeScanReportListOutcome CsipClient::DescribeScanReportList(const DescribeScanReportListRequest &request)
@@ -1051,25 +1212,32 @@ CsipClient::DescribeScanReportListOutcome CsipClient::DescribeScanReportList(con
 
 void CsipClient::DescribeScanReportListAsync(const DescribeScanReportListRequest& request, const DescribeScanReportListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeScanReportList(request), context);
-    };
+    using Req = const DescribeScanReportListRequest&;
+    using Resp = DescribeScanReportListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeScanReportList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::DescribeScanReportListOutcomeCallable CsipClient::DescribeScanReportListCallable(const DescribeScanReportListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeScanReportListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeScanReportList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeScanReportListOutcome>>();
+    DescribeScanReportListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeScanReportListRequest&,
+        DescribeScanReportListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::DescribeScanTaskListOutcome CsipClient::DescribeScanTaskList(const DescribeScanTaskListRequest &request)
@@ -1094,25 +1262,32 @@ CsipClient::DescribeScanTaskListOutcome CsipClient::DescribeScanTaskList(const D
 
 void CsipClient::DescribeScanTaskListAsync(const DescribeScanTaskListRequest& request, const DescribeScanTaskListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeScanTaskList(request), context);
-    };
+    using Req = const DescribeScanTaskListRequest&;
+    using Resp = DescribeScanTaskListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeScanTaskList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::DescribeScanTaskListOutcomeCallable CsipClient::DescribeScanTaskListCallable(const DescribeScanTaskListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeScanTaskListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeScanTaskList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeScanTaskListOutcome>>();
+    DescribeScanTaskListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeScanTaskListRequest&,
+        DescribeScanTaskListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::DescribeSearchBugInfoOutcome CsipClient::DescribeSearchBugInfo(const DescribeSearchBugInfoRequest &request)
@@ -1137,25 +1312,32 @@ CsipClient::DescribeSearchBugInfoOutcome CsipClient::DescribeSearchBugInfo(const
 
 void CsipClient::DescribeSearchBugInfoAsync(const DescribeSearchBugInfoRequest& request, const DescribeSearchBugInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeSearchBugInfo(request), context);
-    };
+    using Req = const DescribeSearchBugInfoRequest&;
+    using Resp = DescribeSearchBugInfoResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeSearchBugInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::DescribeSearchBugInfoOutcomeCallable CsipClient::DescribeSearchBugInfoCallable(const DescribeSearchBugInfoRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeSearchBugInfoOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeSearchBugInfo(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeSearchBugInfoOutcome>>();
+    DescribeSearchBugInfoAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeSearchBugInfoRequest&,
+        DescribeSearchBugInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::DescribeSubUserInfoOutcome CsipClient::DescribeSubUserInfo(const DescribeSubUserInfoRequest &request)
@@ -1180,25 +1362,32 @@ CsipClient::DescribeSubUserInfoOutcome CsipClient::DescribeSubUserInfo(const Des
 
 void CsipClient::DescribeSubUserInfoAsync(const DescribeSubUserInfoRequest& request, const DescribeSubUserInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeSubUserInfo(request), context);
-    };
+    using Req = const DescribeSubUserInfoRequest&;
+    using Resp = DescribeSubUserInfoResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeSubUserInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::DescribeSubUserInfoOutcomeCallable CsipClient::DescribeSubUserInfoCallable(const DescribeSubUserInfoRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeSubUserInfoOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeSubUserInfo(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeSubUserInfoOutcome>>();
+    DescribeSubUserInfoAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeSubUserInfoRequest&,
+        DescribeSubUserInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::DescribeSubnetAssetsOutcome CsipClient::DescribeSubnetAssets(const DescribeSubnetAssetsRequest &request)
@@ -1223,25 +1412,32 @@ CsipClient::DescribeSubnetAssetsOutcome CsipClient::DescribeSubnetAssets(const D
 
 void CsipClient::DescribeSubnetAssetsAsync(const DescribeSubnetAssetsRequest& request, const DescribeSubnetAssetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeSubnetAssets(request), context);
-    };
+    using Req = const DescribeSubnetAssetsRequest&;
+    using Resp = DescribeSubnetAssetsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeSubnetAssets", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::DescribeSubnetAssetsOutcomeCallable CsipClient::DescribeSubnetAssetsCallable(const DescribeSubnetAssetsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeSubnetAssetsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeSubnetAssets(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeSubnetAssetsOutcome>>();
+    DescribeSubnetAssetsAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeSubnetAssetsRequest&,
+        DescribeSubnetAssetsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::DescribeTaskLogListOutcome CsipClient::DescribeTaskLogList(const DescribeTaskLogListRequest &request)
@@ -1266,25 +1462,32 @@ CsipClient::DescribeTaskLogListOutcome CsipClient::DescribeTaskLogList(const Des
 
 void CsipClient::DescribeTaskLogListAsync(const DescribeTaskLogListRequest& request, const DescribeTaskLogListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTaskLogList(request), context);
-    };
+    using Req = const DescribeTaskLogListRequest&;
+    using Resp = DescribeTaskLogListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTaskLogList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::DescribeTaskLogListOutcomeCallable CsipClient::DescribeTaskLogListCallable(const DescribeTaskLogListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTaskLogListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTaskLogList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTaskLogListOutcome>>();
+    DescribeTaskLogListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeTaskLogListRequest&,
+        DescribeTaskLogListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::DescribeTaskLogURLOutcome CsipClient::DescribeTaskLogURL(const DescribeTaskLogURLRequest &request)
@@ -1309,25 +1512,32 @@ CsipClient::DescribeTaskLogURLOutcome CsipClient::DescribeTaskLogURL(const Descr
 
 void CsipClient::DescribeTaskLogURLAsync(const DescribeTaskLogURLRequest& request, const DescribeTaskLogURLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTaskLogURL(request), context);
-    };
+    using Req = const DescribeTaskLogURLRequest&;
+    using Resp = DescribeTaskLogURLResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTaskLogURL", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::DescribeTaskLogURLOutcomeCallable CsipClient::DescribeTaskLogURLCallable(const DescribeTaskLogURLRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTaskLogURLOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTaskLogURL(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTaskLogURLOutcome>>();
+    DescribeTaskLogURLAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeTaskLogURLRequest&,
+        DescribeTaskLogURLOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::DescribeVULRiskAdvanceCFGListOutcome CsipClient::DescribeVULRiskAdvanceCFGList(const DescribeVULRiskAdvanceCFGListRequest &request)
@@ -1352,25 +1562,32 @@ CsipClient::DescribeVULRiskAdvanceCFGListOutcome CsipClient::DescribeVULRiskAdva
 
 void CsipClient::DescribeVULRiskAdvanceCFGListAsync(const DescribeVULRiskAdvanceCFGListRequest& request, const DescribeVULRiskAdvanceCFGListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeVULRiskAdvanceCFGList(request), context);
-    };
+    using Req = const DescribeVULRiskAdvanceCFGListRequest&;
+    using Resp = DescribeVULRiskAdvanceCFGListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeVULRiskAdvanceCFGList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::DescribeVULRiskAdvanceCFGListOutcomeCallable CsipClient::DescribeVULRiskAdvanceCFGListCallable(const DescribeVULRiskAdvanceCFGListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeVULRiskAdvanceCFGListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeVULRiskAdvanceCFGList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeVULRiskAdvanceCFGListOutcome>>();
+    DescribeVULRiskAdvanceCFGListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeVULRiskAdvanceCFGListRequest&,
+        DescribeVULRiskAdvanceCFGListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::DescribeVpcAssetsOutcome CsipClient::DescribeVpcAssets(const DescribeVpcAssetsRequest &request)
@@ -1395,25 +1612,32 @@ CsipClient::DescribeVpcAssetsOutcome CsipClient::DescribeVpcAssets(const Describ
 
 void CsipClient::DescribeVpcAssetsAsync(const DescribeVpcAssetsRequest& request, const DescribeVpcAssetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeVpcAssets(request), context);
-    };
+    using Req = const DescribeVpcAssetsRequest&;
+    using Resp = DescribeVpcAssetsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeVpcAssets", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::DescribeVpcAssetsOutcomeCallable CsipClient::DescribeVpcAssetsCallable(const DescribeVpcAssetsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeVpcAssetsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeVpcAssets(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeVpcAssetsOutcome>>();
+    DescribeVpcAssetsAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeVpcAssetsRequest&,
+        DescribeVpcAssetsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::ModifyRiskCenterRiskStatusOutcome CsipClient::ModifyRiskCenterRiskStatus(const ModifyRiskCenterRiskStatusRequest &request)
@@ -1438,25 +1662,32 @@ CsipClient::ModifyRiskCenterRiskStatusOutcome CsipClient::ModifyRiskCenterRiskSt
 
 void CsipClient::ModifyRiskCenterRiskStatusAsync(const ModifyRiskCenterRiskStatusRequest& request, const ModifyRiskCenterRiskStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyRiskCenterRiskStatus(request), context);
-    };
+    using Req = const ModifyRiskCenterRiskStatusRequest&;
+    using Resp = ModifyRiskCenterRiskStatusResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyRiskCenterRiskStatus", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::ModifyRiskCenterRiskStatusOutcomeCallable CsipClient::ModifyRiskCenterRiskStatusCallable(const ModifyRiskCenterRiskStatusRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyRiskCenterRiskStatusOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyRiskCenterRiskStatus(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyRiskCenterRiskStatusOutcome>>();
+    ModifyRiskCenterRiskStatusAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const ModifyRiskCenterRiskStatusRequest&,
+        ModifyRiskCenterRiskStatusOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 CsipClient::StopRiskCenterTaskOutcome CsipClient::StopRiskCenterTask(const StopRiskCenterTaskRequest &request)
@@ -1481,24 +1712,31 @@ CsipClient::StopRiskCenterTaskOutcome CsipClient::StopRiskCenterTask(const StopR
 
 void CsipClient::StopRiskCenterTaskAsync(const StopRiskCenterTaskRequest& request, const StopRiskCenterTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->StopRiskCenterTask(request), context);
-    };
+    using Req = const StopRiskCenterTaskRequest&;
+    using Resp = StopRiskCenterTaskResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "StopRiskCenterTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 CsipClient::StopRiskCenterTaskOutcomeCallable CsipClient::StopRiskCenterTaskCallable(const StopRiskCenterTaskRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<StopRiskCenterTaskOutcome()>>(
-        [this, request]()
-        {
-            return this->StopRiskCenterTask(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<StopRiskCenterTaskOutcome>>();
+    StopRiskCenterTaskAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const StopRiskCenterTaskRequest&,
+        StopRiskCenterTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

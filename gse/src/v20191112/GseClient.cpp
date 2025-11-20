@@ -62,25 +62,32 @@ GseClient::CopyFleetOutcome GseClient::CopyFleet(const CopyFleetRequest &request
 
 void GseClient::CopyFleetAsync(const CopyFleetRequest& request, const CopyFleetAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CopyFleet(request), context);
-    };
+    using Req = const CopyFleetRequest&;
+    using Resp = CopyFleetResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CopyFleet", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GseClient::CopyFleetOutcomeCallable GseClient::CopyFleetCallable(const CopyFleetRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CopyFleetOutcome()>>(
-        [this, request]()
-        {
-            return this->CopyFleet(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CopyFleetOutcome>>();
+    CopyFleetAsync(
+    request,
+    [prom](
+        const GseClient*,
+        const CopyFleetRequest&,
+        CopyFleetOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GseClient::CreateGameServerSessionOutcome GseClient::CreateGameServerSession(const CreateGameServerSessionRequest &request)
@@ -105,25 +112,32 @@ GseClient::CreateGameServerSessionOutcome GseClient::CreateGameServerSession(con
 
 void GseClient::CreateGameServerSessionAsync(const CreateGameServerSessionRequest& request, const CreateGameServerSessionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateGameServerSession(request), context);
-    };
+    using Req = const CreateGameServerSessionRequest&;
+    using Resp = CreateGameServerSessionResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateGameServerSession", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GseClient::CreateGameServerSessionOutcomeCallable GseClient::CreateGameServerSessionCallable(const CreateGameServerSessionRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateGameServerSessionOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateGameServerSession(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateGameServerSessionOutcome>>();
+    CreateGameServerSessionAsync(
+    request,
+    [prom](
+        const GseClient*,
+        const CreateGameServerSessionRequest&,
+        CreateGameServerSessionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GseClient::DeleteTimerScalingPolicyOutcome GseClient::DeleteTimerScalingPolicy(const DeleteTimerScalingPolicyRequest &request)
@@ -148,25 +162,32 @@ GseClient::DeleteTimerScalingPolicyOutcome GseClient::DeleteTimerScalingPolicy(c
 
 void GseClient::DeleteTimerScalingPolicyAsync(const DeleteTimerScalingPolicyRequest& request, const DeleteTimerScalingPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteTimerScalingPolicy(request), context);
-    };
+    using Req = const DeleteTimerScalingPolicyRequest&;
+    using Resp = DeleteTimerScalingPolicyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteTimerScalingPolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GseClient::DeleteTimerScalingPolicyOutcomeCallable GseClient::DeleteTimerScalingPolicyCallable(const DeleteTimerScalingPolicyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteTimerScalingPolicyOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteTimerScalingPolicy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteTimerScalingPolicyOutcome>>();
+    DeleteTimerScalingPolicyAsync(
+    request,
+    [prom](
+        const GseClient*,
+        const DeleteTimerScalingPolicyRequest&,
+        DeleteTimerScalingPolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GseClient::DescribeGameServerSessionDetailsOutcome GseClient::DescribeGameServerSessionDetails(const DescribeGameServerSessionDetailsRequest &request)
@@ -191,25 +212,32 @@ GseClient::DescribeGameServerSessionDetailsOutcome GseClient::DescribeGameServer
 
 void GseClient::DescribeGameServerSessionDetailsAsync(const DescribeGameServerSessionDetailsRequest& request, const DescribeGameServerSessionDetailsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeGameServerSessionDetails(request), context);
-    };
+    using Req = const DescribeGameServerSessionDetailsRequest&;
+    using Resp = DescribeGameServerSessionDetailsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeGameServerSessionDetails", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GseClient::DescribeGameServerSessionDetailsOutcomeCallable GseClient::DescribeGameServerSessionDetailsCallable(const DescribeGameServerSessionDetailsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeGameServerSessionDetailsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeGameServerSessionDetails(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeGameServerSessionDetailsOutcome>>();
+    DescribeGameServerSessionDetailsAsync(
+    request,
+    [prom](
+        const GseClient*,
+        const DescribeGameServerSessionDetailsRequest&,
+        DescribeGameServerSessionDetailsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GseClient::DescribeGameServerSessionPlacementOutcome GseClient::DescribeGameServerSessionPlacement(const DescribeGameServerSessionPlacementRequest &request)
@@ -234,25 +262,32 @@ GseClient::DescribeGameServerSessionPlacementOutcome GseClient::DescribeGameServ
 
 void GseClient::DescribeGameServerSessionPlacementAsync(const DescribeGameServerSessionPlacementRequest& request, const DescribeGameServerSessionPlacementAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeGameServerSessionPlacement(request), context);
-    };
+    using Req = const DescribeGameServerSessionPlacementRequest&;
+    using Resp = DescribeGameServerSessionPlacementResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeGameServerSessionPlacement", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GseClient::DescribeGameServerSessionPlacementOutcomeCallable GseClient::DescribeGameServerSessionPlacementCallable(const DescribeGameServerSessionPlacementRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeGameServerSessionPlacementOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeGameServerSessionPlacement(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeGameServerSessionPlacementOutcome>>();
+    DescribeGameServerSessionPlacementAsync(
+    request,
+    [prom](
+        const GseClient*,
+        const DescribeGameServerSessionPlacementRequest&,
+        DescribeGameServerSessionPlacementOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GseClient::DescribeGameServerSessionsOutcome GseClient::DescribeGameServerSessions(const DescribeGameServerSessionsRequest &request)
@@ -277,25 +312,32 @@ GseClient::DescribeGameServerSessionsOutcome GseClient::DescribeGameServerSessio
 
 void GseClient::DescribeGameServerSessionsAsync(const DescribeGameServerSessionsRequest& request, const DescribeGameServerSessionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeGameServerSessions(request), context);
-    };
+    using Req = const DescribeGameServerSessionsRequest&;
+    using Resp = DescribeGameServerSessionsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeGameServerSessions", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GseClient::DescribeGameServerSessionsOutcomeCallable GseClient::DescribeGameServerSessionsCallable(const DescribeGameServerSessionsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeGameServerSessionsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeGameServerSessions(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeGameServerSessionsOutcome>>();
+    DescribeGameServerSessionsAsync(
+    request,
+    [prom](
+        const GseClient*,
+        const DescribeGameServerSessionsRequest&,
+        DescribeGameServerSessionsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GseClient::DescribeInstanceTypesOutcome GseClient::DescribeInstanceTypes(const DescribeInstanceTypesRequest &request)
@@ -320,25 +362,32 @@ GseClient::DescribeInstanceTypesOutcome GseClient::DescribeInstanceTypes(const D
 
 void GseClient::DescribeInstanceTypesAsync(const DescribeInstanceTypesRequest& request, const DescribeInstanceTypesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeInstanceTypes(request), context);
-    };
+    using Req = const DescribeInstanceTypesRequest&;
+    using Resp = DescribeInstanceTypesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeInstanceTypes", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GseClient::DescribeInstanceTypesOutcomeCallable GseClient::DescribeInstanceTypesCallable(const DescribeInstanceTypesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeInstanceTypesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeInstanceTypes(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeInstanceTypesOutcome>>();
+    DescribeInstanceTypesAsync(
+    request,
+    [prom](
+        const GseClient*,
+        const DescribeInstanceTypesRequest&,
+        DescribeInstanceTypesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GseClient::DescribePlayerSessionsOutcome GseClient::DescribePlayerSessions(const DescribePlayerSessionsRequest &request)
@@ -363,25 +412,32 @@ GseClient::DescribePlayerSessionsOutcome GseClient::DescribePlayerSessions(const
 
 void GseClient::DescribePlayerSessionsAsync(const DescribePlayerSessionsRequest& request, const DescribePlayerSessionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribePlayerSessions(request), context);
-    };
+    using Req = const DescribePlayerSessionsRequest&;
+    using Resp = DescribePlayerSessionsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribePlayerSessions", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GseClient::DescribePlayerSessionsOutcomeCallable GseClient::DescribePlayerSessionsCallable(const DescribePlayerSessionsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribePlayerSessionsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribePlayerSessions(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribePlayerSessionsOutcome>>();
+    DescribePlayerSessionsAsync(
+    request,
+    [prom](
+        const GseClient*,
+        const DescribePlayerSessionsRequest&,
+        DescribePlayerSessionsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GseClient::DescribeTimerScalingPoliciesOutcome GseClient::DescribeTimerScalingPolicies(const DescribeTimerScalingPoliciesRequest &request)
@@ -406,25 +462,32 @@ GseClient::DescribeTimerScalingPoliciesOutcome GseClient::DescribeTimerScalingPo
 
 void GseClient::DescribeTimerScalingPoliciesAsync(const DescribeTimerScalingPoliciesRequest& request, const DescribeTimerScalingPoliciesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTimerScalingPolicies(request), context);
-    };
+    using Req = const DescribeTimerScalingPoliciesRequest&;
+    using Resp = DescribeTimerScalingPoliciesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTimerScalingPolicies", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GseClient::DescribeTimerScalingPoliciesOutcomeCallable GseClient::DescribeTimerScalingPoliciesCallable(const DescribeTimerScalingPoliciesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTimerScalingPoliciesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTimerScalingPolicies(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTimerScalingPoliciesOutcome>>();
+    DescribeTimerScalingPoliciesAsync(
+    request,
+    [prom](
+        const GseClient*,
+        const DescribeTimerScalingPoliciesRequest&,
+        DescribeTimerScalingPoliciesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GseClient::EndGameServerSessionAndProcessOutcome GseClient::EndGameServerSessionAndProcess(const EndGameServerSessionAndProcessRequest &request)
@@ -449,25 +512,32 @@ GseClient::EndGameServerSessionAndProcessOutcome GseClient::EndGameServerSession
 
 void GseClient::EndGameServerSessionAndProcessAsync(const EndGameServerSessionAndProcessRequest& request, const EndGameServerSessionAndProcessAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->EndGameServerSessionAndProcess(request), context);
-    };
+    using Req = const EndGameServerSessionAndProcessRequest&;
+    using Resp = EndGameServerSessionAndProcessResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "EndGameServerSessionAndProcess", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GseClient::EndGameServerSessionAndProcessOutcomeCallable GseClient::EndGameServerSessionAndProcessCallable(const EndGameServerSessionAndProcessRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<EndGameServerSessionAndProcessOutcome()>>(
-        [this, request]()
-        {
-            return this->EndGameServerSessionAndProcess(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<EndGameServerSessionAndProcessOutcome>>();
+    EndGameServerSessionAndProcessAsync(
+    request,
+    [prom](
+        const GseClient*,
+        const EndGameServerSessionAndProcessRequest&,
+        EndGameServerSessionAndProcessOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GseClient::GetGameServerSessionLogUrlOutcome GseClient::GetGameServerSessionLogUrl(const GetGameServerSessionLogUrlRequest &request)
@@ -492,25 +562,32 @@ GseClient::GetGameServerSessionLogUrlOutcome GseClient::GetGameServerSessionLogU
 
 void GseClient::GetGameServerSessionLogUrlAsync(const GetGameServerSessionLogUrlRequest& request, const GetGameServerSessionLogUrlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->GetGameServerSessionLogUrl(request), context);
-    };
+    using Req = const GetGameServerSessionLogUrlRequest&;
+    using Resp = GetGameServerSessionLogUrlResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "GetGameServerSessionLogUrl", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GseClient::GetGameServerSessionLogUrlOutcomeCallable GseClient::GetGameServerSessionLogUrlCallable(const GetGameServerSessionLogUrlRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<GetGameServerSessionLogUrlOutcome()>>(
-        [this, request]()
-        {
-            return this->GetGameServerSessionLogUrl(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<GetGameServerSessionLogUrlOutcome>>();
+    GetGameServerSessionLogUrlAsync(
+    request,
+    [prom](
+        const GseClient*,
+        const GetGameServerSessionLogUrlRequest&,
+        GetGameServerSessionLogUrlOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GseClient::GetInstanceAccessOutcome GseClient::GetInstanceAccess(const GetInstanceAccessRequest &request)
@@ -535,25 +612,32 @@ GseClient::GetInstanceAccessOutcome GseClient::GetInstanceAccess(const GetInstan
 
 void GseClient::GetInstanceAccessAsync(const GetInstanceAccessRequest& request, const GetInstanceAccessAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->GetInstanceAccess(request), context);
-    };
+    using Req = const GetInstanceAccessRequest&;
+    using Resp = GetInstanceAccessResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "GetInstanceAccess", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GseClient::GetInstanceAccessOutcomeCallable GseClient::GetInstanceAccessCallable(const GetInstanceAccessRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<GetInstanceAccessOutcome()>>(
-        [this, request]()
-        {
-            return this->GetInstanceAccess(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<GetInstanceAccessOutcome>>();
+    GetInstanceAccessAsync(
+    request,
+    [prom](
+        const GseClient*,
+        const GetInstanceAccessRequest&,
+        GetInstanceAccessOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GseClient::JoinGameServerSessionOutcome GseClient::JoinGameServerSession(const JoinGameServerSessionRequest &request)
@@ -578,25 +662,32 @@ GseClient::JoinGameServerSessionOutcome GseClient::JoinGameServerSession(const J
 
 void GseClient::JoinGameServerSessionAsync(const JoinGameServerSessionRequest& request, const JoinGameServerSessionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->JoinGameServerSession(request), context);
-    };
+    using Req = const JoinGameServerSessionRequest&;
+    using Resp = JoinGameServerSessionResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "JoinGameServerSession", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GseClient::JoinGameServerSessionOutcomeCallable GseClient::JoinGameServerSessionCallable(const JoinGameServerSessionRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<JoinGameServerSessionOutcome()>>(
-        [this, request]()
-        {
-            return this->JoinGameServerSession(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<JoinGameServerSessionOutcome>>();
+    JoinGameServerSessionAsync(
+    request,
+    [prom](
+        const GseClient*,
+        const JoinGameServerSessionRequest&,
+        JoinGameServerSessionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GseClient::JoinGameServerSessionBatchOutcome GseClient::JoinGameServerSessionBatch(const JoinGameServerSessionBatchRequest &request)
@@ -621,25 +712,32 @@ GseClient::JoinGameServerSessionBatchOutcome GseClient::JoinGameServerSessionBat
 
 void GseClient::JoinGameServerSessionBatchAsync(const JoinGameServerSessionBatchRequest& request, const JoinGameServerSessionBatchAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->JoinGameServerSessionBatch(request), context);
-    };
+    using Req = const JoinGameServerSessionBatchRequest&;
+    using Resp = JoinGameServerSessionBatchResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "JoinGameServerSessionBatch", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GseClient::JoinGameServerSessionBatchOutcomeCallable GseClient::JoinGameServerSessionBatchCallable(const JoinGameServerSessionBatchRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<JoinGameServerSessionBatchOutcome()>>(
-        [this, request]()
-        {
-            return this->JoinGameServerSessionBatch(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<JoinGameServerSessionBatchOutcome>>();
+    JoinGameServerSessionBatchAsync(
+    request,
+    [prom](
+        const GseClient*,
+        const JoinGameServerSessionBatchRequest&,
+        JoinGameServerSessionBatchOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GseClient::PutTimerScalingPolicyOutcome GseClient::PutTimerScalingPolicy(const PutTimerScalingPolicyRequest &request)
@@ -664,25 +762,32 @@ GseClient::PutTimerScalingPolicyOutcome GseClient::PutTimerScalingPolicy(const P
 
 void GseClient::PutTimerScalingPolicyAsync(const PutTimerScalingPolicyRequest& request, const PutTimerScalingPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->PutTimerScalingPolicy(request), context);
-    };
+    using Req = const PutTimerScalingPolicyRequest&;
+    using Resp = PutTimerScalingPolicyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "PutTimerScalingPolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GseClient::PutTimerScalingPolicyOutcomeCallable GseClient::PutTimerScalingPolicyCallable(const PutTimerScalingPolicyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<PutTimerScalingPolicyOutcome()>>(
-        [this, request]()
-        {
-            return this->PutTimerScalingPolicy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<PutTimerScalingPolicyOutcome>>();
+    PutTimerScalingPolicyAsync(
+    request,
+    [prom](
+        const GseClient*,
+        const PutTimerScalingPolicyRequest&,
+        PutTimerScalingPolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GseClient::SearchGameServerSessionsOutcome GseClient::SearchGameServerSessions(const SearchGameServerSessionsRequest &request)
@@ -707,25 +812,32 @@ GseClient::SearchGameServerSessionsOutcome GseClient::SearchGameServerSessions(c
 
 void GseClient::SearchGameServerSessionsAsync(const SearchGameServerSessionsRequest& request, const SearchGameServerSessionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->SearchGameServerSessions(request), context);
-    };
+    using Req = const SearchGameServerSessionsRequest&;
+    using Resp = SearchGameServerSessionsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "SearchGameServerSessions", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GseClient::SearchGameServerSessionsOutcomeCallable GseClient::SearchGameServerSessionsCallable(const SearchGameServerSessionsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<SearchGameServerSessionsOutcome()>>(
-        [this, request]()
-        {
-            return this->SearchGameServerSessions(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<SearchGameServerSessionsOutcome>>();
+    SearchGameServerSessionsAsync(
+    request,
+    [prom](
+        const GseClient*,
+        const SearchGameServerSessionsRequest&,
+        SearchGameServerSessionsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GseClient::SetServerReservedOutcome GseClient::SetServerReserved(const SetServerReservedRequest &request)
@@ -750,25 +862,32 @@ GseClient::SetServerReservedOutcome GseClient::SetServerReserved(const SetServer
 
 void GseClient::SetServerReservedAsync(const SetServerReservedRequest& request, const SetServerReservedAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->SetServerReserved(request), context);
-    };
+    using Req = const SetServerReservedRequest&;
+    using Resp = SetServerReservedResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "SetServerReserved", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GseClient::SetServerReservedOutcomeCallable GseClient::SetServerReservedCallable(const SetServerReservedRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<SetServerReservedOutcome()>>(
-        [this, request]()
-        {
-            return this->SetServerReserved(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<SetServerReservedOutcome>>();
+    SetServerReservedAsync(
+    request,
+    [prom](
+        const GseClient*,
+        const SetServerReservedRequest&,
+        SetServerReservedOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GseClient::StartGameServerSessionPlacementOutcome GseClient::StartGameServerSessionPlacement(const StartGameServerSessionPlacementRequest &request)
@@ -793,25 +912,32 @@ GseClient::StartGameServerSessionPlacementOutcome GseClient::StartGameServerSess
 
 void GseClient::StartGameServerSessionPlacementAsync(const StartGameServerSessionPlacementRequest& request, const StartGameServerSessionPlacementAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->StartGameServerSessionPlacement(request), context);
-    };
+    using Req = const StartGameServerSessionPlacementRequest&;
+    using Resp = StartGameServerSessionPlacementResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "StartGameServerSessionPlacement", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GseClient::StartGameServerSessionPlacementOutcomeCallable GseClient::StartGameServerSessionPlacementCallable(const StartGameServerSessionPlacementRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<StartGameServerSessionPlacementOutcome()>>(
-        [this, request]()
-        {
-            return this->StartGameServerSessionPlacement(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<StartGameServerSessionPlacementOutcome>>();
+    StartGameServerSessionPlacementAsync(
+    request,
+    [prom](
+        const GseClient*,
+        const StartGameServerSessionPlacementRequest&,
+        StartGameServerSessionPlacementOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GseClient::StopGameServerSessionPlacementOutcome GseClient::StopGameServerSessionPlacement(const StopGameServerSessionPlacementRequest &request)
@@ -836,25 +962,32 @@ GseClient::StopGameServerSessionPlacementOutcome GseClient::StopGameServerSessio
 
 void GseClient::StopGameServerSessionPlacementAsync(const StopGameServerSessionPlacementRequest& request, const StopGameServerSessionPlacementAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->StopGameServerSessionPlacement(request), context);
-    };
+    using Req = const StopGameServerSessionPlacementRequest&;
+    using Resp = StopGameServerSessionPlacementResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "StopGameServerSessionPlacement", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GseClient::StopGameServerSessionPlacementOutcomeCallable GseClient::StopGameServerSessionPlacementCallable(const StopGameServerSessionPlacementRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<StopGameServerSessionPlacementOutcome()>>(
-        [this, request]()
-        {
-            return this->StopGameServerSessionPlacement(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<StopGameServerSessionPlacementOutcome>>();
+    StopGameServerSessionPlacementAsync(
+    request,
+    [prom](
+        const GseClient*,
+        const StopGameServerSessionPlacementRequest&,
+        StopGameServerSessionPlacementOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GseClient::UpdateBucketAccelerateOptOutcome GseClient::UpdateBucketAccelerateOpt(const UpdateBucketAccelerateOptRequest &request)
@@ -879,25 +1012,32 @@ GseClient::UpdateBucketAccelerateOptOutcome GseClient::UpdateBucketAccelerateOpt
 
 void GseClient::UpdateBucketAccelerateOptAsync(const UpdateBucketAccelerateOptRequest& request, const UpdateBucketAccelerateOptAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->UpdateBucketAccelerateOpt(request), context);
-    };
+    using Req = const UpdateBucketAccelerateOptRequest&;
+    using Resp = UpdateBucketAccelerateOptResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "UpdateBucketAccelerateOpt", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GseClient::UpdateBucketAccelerateOptOutcomeCallable GseClient::UpdateBucketAccelerateOptCallable(const UpdateBucketAccelerateOptRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<UpdateBucketAccelerateOptOutcome()>>(
-        [this, request]()
-        {
-            return this->UpdateBucketAccelerateOpt(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<UpdateBucketAccelerateOptOutcome>>();
+    UpdateBucketAccelerateOptAsync(
+    request,
+    [prom](
+        const GseClient*,
+        const UpdateBucketAccelerateOptRequest&,
+        UpdateBucketAccelerateOptOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GseClient::UpdateBucketCORSOptOutcome GseClient::UpdateBucketCORSOpt(const UpdateBucketCORSOptRequest &request)
@@ -922,25 +1062,32 @@ GseClient::UpdateBucketCORSOptOutcome GseClient::UpdateBucketCORSOpt(const Updat
 
 void GseClient::UpdateBucketCORSOptAsync(const UpdateBucketCORSOptRequest& request, const UpdateBucketCORSOptAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->UpdateBucketCORSOpt(request), context);
-    };
+    using Req = const UpdateBucketCORSOptRequest&;
+    using Resp = UpdateBucketCORSOptResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "UpdateBucketCORSOpt", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GseClient::UpdateBucketCORSOptOutcomeCallable GseClient::UpdateBucketCORSOptCallable(const UpdateBucketCORSOptRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<UpdateBucketCORSOptOutcome()>>(
-        [this, request]()
-        {
-            return this->UpdateBucketCORSOpt(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<UpdateBucketCORSOptOutcome>>();
+    UpdateBucketCORSOptAsync(
+    request,
+    [prom](
+        const GseClient*,
+        const UpdateBucketCORSOptRequest&,
+        UpdateBucketCORSOptOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GseClient::UpdateGameServerSessionOutcome GseClient::UpdateGameServerSession(const UpdateGameServerSessionRequest &request)
@@ -965,24 +1112,31 @@ GseClient::UpdateGameServerSessionOutcome GseClient::UpdateGameServerSession(con
 
 void GseClient::UpdateGameServerSessionAsync(const UpdateGameServerSessionRequest& request, const UpdateGameServerSessionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->UpdateGameServerSession(request), context);
-    };
+    using Req = const UpdateGameServerSessionRequest&;
+    using Resp = UpdateGameServerSessionResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "UpdateGameServerSession", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GseClient::UpdateGameServerSessionOutcomeCallable GseClient::UpdateGameServerSessionCallable(const UpdateGameServerSessionRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<UpdateGameServerSessionOutcome()>>(
-        [this, request]()
-        {
-            return this->UpdateGameServerSession(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<UpdateGameServerSessionOutcome>>();
+    UpdateGameServerSessionAsync(
+    request,
+    [prom](
+        const GseClient*,
+        const UpdateGameServerSessionRequest&,
+        UpdateGameServerSessionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

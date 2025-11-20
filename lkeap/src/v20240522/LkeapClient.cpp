@@ -62,25 +62,32 @@ LkeapClient::CreateReconstructDocumentFlowOutcome LkeapClient::CreateReconstruct
 
 void LkeapClient::CreateReconstructDocumentFlowAsync(const CreateReconstructDocumentFlowRequest& request, const CreateReconstructDocumentFlowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateReconstructDocumentFlow(request), context);
-    };
+    using Req = const CreateReconstructDocumentFlowRequest&;
+    using Resp = CreateReconstructDocumentFlowResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateReconstructDocumentFlow", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LkeapClient::CreateReconstructDocumentFlowOutcomeCallable LkeapClient::CreateReconstructDocumentFlowCallable(const CreateReconstructDocumentFlowRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateReconstructDocumentFlowOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateReconstructDocumentFlow(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateReconstructDocumentFlowOutcome>>();
+    CreateReconstructDocumentFlowAsync(
+    request,
+    [prom](
+        const LkeapClient*,
+        const CreateReconstructDocumentFlowRequest&,
+        CreateReconstructDocumentFlowOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LkeapClient::CreateSplitDocumentFlowOutcome LkeapClient::CreateSplitDocumentFlow(const CreateSplitDocumentFlowRequest &request)
@@ -105,25 +112,32 @@ LkeapClient::CreateSplitDocumentFlowOutcome LkeapClient::CreateSplitDocumentFlow
 
 void LkeapClient::CreateSplitDocumentFlowAsync(const CreateSplitDocumentFlowRequest& request, const CreateSplitDocumentFlowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateSplitDocumentFlow(request), context);
-    };
+    using Req = const CreateSplitDocumentFlowRequest&;
+    using Resp = CreateSplitDocumentFlowResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateSplitDocumentFlow", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LkeapClient::CreateSplitDocumentFlowOutcomeCallable LkeapClient::CreateSplitDocumentFlowCallable(const CreateSplitDocumentFlowRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateSplitDocumentFlowOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateSplitDocumentFlow(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateSplitDocumentFlowOutcome>>();
+    CreateSplitDocumentFlowAsync(
+    request,
+    [prom](
+        const LkeapClient*,
+        const CreateSplitDocumentFlowRequest&,
+        CreateSplitDocumentFlowOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LkeapClient::GetEmbeddingOutcome LkeapClient::GetEmbedding(const GetEmbeddingRequest &request)
@@ -148,25 +162,32 @@ LkeapClient::GetEmbeddingOutcome LkeapClient::GetEmbedding(const GetEmbeddingReq
 
 void LkeapClient::GetEmbeddingAsync(const GetEmbeddingRequest& request, const GetEmbeddingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->GetEmbedding(request), context);
-    };
+    using Req = const GetEmbeddingRequest&;
+    using Resp = GetEmbeddingResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "GetEmbedding", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LkeapClient::GetEmbeddingOutcomeCallable LkeapClient::GetEmbeddingCallable(const GetEmbeddingRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<GetEmbeddingOutcome()>>(
-        [this, request]()
-        {
-            return this->GetEmbedding(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<GetEmbeddingOutcome>>();
+    GetEmbeddingAsync(
+    request,
+    [prom](
+        const LkeapClient*,
+        const GetEmbeddingRequest&,
+        GetEmbeddingOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LkeapClient::GetReconstructDocumentResultOutcome LkeapClient::GetReconstructDocumentResult(const GetReconstructDocumentResultRequest &request)
@@ -191,25 +212,32 @@ LkeapClient::GetReconstructDocumentResultOutcome LkeapClient::GetReconstructDocu
 
 void LkeapClient::GetReconstructDocumentResultAsync(const GetReconstructDocumentResultRequest& request, const GetReconstructDocumentResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->GetReconstructDocumentResult(request), context);
-    };
+    using Req = const GetReconstructDocumentResultRequest&;
+    using Resp = GetReconstructDocumentResultResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "GetReconstructDocumentResult", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LkeapClient::GetReconstructDocumentResultOutcomeCallable LkeapClient::GetReconstructDocumentResultCallable(const GetReconstructDocumentResultRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<GetReconstructDocumentResultOutcome()>>(
-        [this, request]()
-        {
-            return this->GetReconstructDocumentResult(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<GetReconstructDocumentResultOutcome>>();
+    GetReconstructDocumentResultAsync(
+    request,
+    [prom](
+        const LkeapClient*,
+        const GetReconstructDocumentResultRequest&,
+        GetReconstructDocumentResultOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LkeapClient::GetSplitDocumentResultOutcome LkeapClient::GetSplitDocumentResult(const GetSplitDocumentResultRequest &request)
@@ -234,25 +262,32 @@ LkeapClient::GetSplitDocumentResultOutcome LkeapClient::GetSplitDocumentResult(c
 
 void LkeapClient::GetSplitDocumentResultAsync(const GetSplitDocumentResultRequest& request, const GetSplitDocumentResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->GetSplitDocumentResult(request), context);
-    };
+    using Req = const GetSplitDocumentResultRequest&;
+    using Resp = GetSplitDocumentResultResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "GetSplitDocumentResult", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LkeapClient::GetSplitDocumentResultOutcomeCallable LkeapClient::GetSplitDocumentResultCallable(const GetSplitDocumentResultRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<GetSplitDocumentResultOutcome()>>(
-        [this, request]()
-        {
-            return this->GetSplitDocumentResult(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<GetSplitDocumentResultOutcome>>();
+    GetSplitDocumentResultAsync(
+    request,
+    [prom](
+        const LkeapClient*,
+        const GetSplitDocumentResultRequest&,
+        GetSplitDocumentResultOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LkeapClient::QueryRewriteOutcome LkeapClient::QueryRewrite(const QueryRewriteRequest &request)
@@ -277,25 +312,32 @@ LkeapClient::QueryRewriteOutcome LkeapClient::QueryRewrite(const QueryRewriteReq
 
 void LkeapClient::QueryRewriteAsync(const QueryRewriteRequest& request, const QueryRewriteAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->QueryRewrite(request), context);
-    };
+    using Req = const QueryRewriteRequest&;
+    using Resp = QueryRewriteResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "QueryRewrite", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LkeapClient::QueryRewriteOutcomeCallable LkeapClient::QueryRewriteCallable(const QueryRewriteRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<QueryRewriteOutcome()>>(
-        [this, request]()
-        {
-            return this->QueryRewrite(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<QueryRewriteOutcome>>();
+    QueryRewriteAsync(
+    request,
+    [prom](
+        const LkeapClient*,
+        const QueryRewriteRequest&,
+        QueryRewriteOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LkeapClient::ReconstructDocumentSSEOutcome LkeapClient::ReconstructDocumentSSE(const ReconstructDocumentSSERequest &request)
@@ -320,25 +362,32 @@ LkeapClient::ReconstructDocumentSSEOutcome LkeapClient::ReconstructDocumentSSE(c
 
 void LkeapClient::ReconstructDocumentSSEAsync(const ReconstructDocumentSSERequest& request, const ReconstructDocumentSSEAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ReconstructDocumentSSE(request), context);
-    };
+    using Req = const ReconstructDocumentSSERequest&;
+    using Resp = ReconstructDocumentSSEResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ReconstructDocumentSSE", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LkeapClient::ReconstructDocumentSSEOutcomeCallable LkeapClient::ReconstructDocumentSSECallable(const ReconstructDocumentSSERequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ReconstructDocumentSSEOutcome()>>(
-        [this, request]()
-        {
-            return this->ReconstructDocumentSSE(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ReconstructDocumentSSEOutcome>>();
+    ReconstructDocumentSSEAsync(
+    request,
+    [prom](
+        const LkeapClient*,
+        const ReconstructDocumentSSERequest&,
+        ReconstructDocumentSSEOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LkeapClient::RunRerankOutcome LkeapClient::RunRerank(const RunRerankRequest &request)
@@ -363,24 +412,31 @@ LkeapClient::RunRerankOutcome LkeapClient::RunRerank(const RunRerankRequest &req
 
 void LkeapClient::RunRerankAsync(const RunRerankRequest& request, const RunRerankAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->RunRerank(request), context);
-    };
+    using Req = const RunRerankRequest&;
+    using Resp = RunRerankResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "RunRerank", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LkeapClient::RunRerankOutcomeCallable LkeapClient::RunRerankCallable(const RunRerankRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<RunRerankOutcome()>>(
-        [this, request]()
-        {
-            return this->RunRerank(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<RunRerankOutcome>>();
+    RunRerankAsync(
+    request,
+    [prom](
+        const LkeapClient*,
+        const RunRerankRequest&,
+        RunRerankOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

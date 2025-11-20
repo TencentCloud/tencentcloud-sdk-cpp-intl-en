@@ -62,24 +62,31 @@ ControlcenterClient::BatchApplyAccountBaselinesOutcome ControlcenterClient::Batc
 
 void ControlcenterClient::BatchApplyAccountBaselinesAsync(const BatchApplyAccountBaselinesRequest& request, const BatchApplyAccountBaselinesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->BatchApplyAccountBaselines(request), context);
-    };
+    using Req = const BatchApplyAccountBaselinesRequest&;
+    using Resp = BatchApplyAccountBaselinesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "BatchApplyAccountBaselines", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 ControlcenterClient::BatchApplyAccountBaselinesOutcomeCallable ControlcenterClient::BatchApplyAccountBaselinesCallable(const BatchApplyAccountBaselinesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<BatchApplyAccountBaselinesOutcome()>>(
-        [this, request]()
-        {
-            return this->BatchApplyAccountBaselines(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<BatchApplyAccountBaselinesOutcome>>();
+    BatchApplyAccountBaselinesAsync(
+    request,
+    [prom](
+        const ControlcenterClient*,
+        const BatchApplyAccountBaselinesRequest&,
+        BatchApplyAccountBaselinesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

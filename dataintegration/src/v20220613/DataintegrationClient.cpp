@@ -62,24 +62,31 @@ DataintegrationClient::SendMessageOutcome DataintegrationClient::SendMessage(con
 
 void DataintegrationClient::SendMessageAsync(const SendMessageRequest& request, const SendMessageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->SendMessage(request), context);
-    };
+    using Req = const SendMessageRequest&;
+    using Resp = SendMessageResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "SendMessage", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DataintegrationClient::SendMessageOutcomeCallable DataintegrationClient::SendMessageCallable(const SendMessageRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<SendMessageOutcome()>>(
-        [this, request]()
-        {
-            return this->SendMessage(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<SendMessageOutcome>>();
+    SendMessageAsync(
+    request,
+    [prom](
+        const DataintegrationClient*,
+        const SendMessageRequest&,
+        SendMessageOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

@@ -62,25 +62,32 @@ GpmClient::CancelMatchingOutcome GpmClient::CancelMatching(const CancelMatchingR
 
 void GpmClient::CancelMatchingAsync(const CancelMatchingRequest& request, const CancelMatchingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CancelMatching(request), context);
-    };
+    using Req = const CancelMatchingRequest&;
+    using Resp = CancelMatchingResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CancelMatching", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GpmClient::CancelMatchingOutcomeCallable GpmClient::CancelMatchingCallable(const CancelMatchingRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CancelMatchingOutcome()>>(
-        [this, request]()
-        {
-            return this->CancelMatching(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CancelMatchingOutcome>>();
+    CancelMatchingAsync(
+    request,
+    [prom](
+        const GpmClient*,
+        const CancelMatchingRequest&,
+        CancelMatchingOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GpmClient::CreateMatchOutcome GpmClient::CreateMatch(const CreateMatchRequest &request)
@@ -105,25 +112,32 @@ GpmClient::CreateMatchOutcome GpmClient::CreateMatch(const CreateMatchRequest &r
 
 void GpmClient::CreateMatchAsync(const CreateMatchRequest& request, const CreateMatchAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateMatch(request), context);
-    };
+    using Req = const CreateMatchRequest&;
+    using Resp = CreateMatchResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateMatch", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GpmClient::CreateMatchOutcomeCallable GpmClient::CreateMatchCallable(const CreateMatchRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateMatchOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateMatch(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateMatchOutcome>>();
+    CreateMatchAsync(
+    request,
+    [prom](
+        const GpmClient*,
+        const CreateMatchRequest&,
+        CreateMatchOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GpmClient::CreateRuleOutcome GpmClient::CreateRule(const CreateRuleRequest &request)
@@ -148,25 +162,32 @@ GpmClient::CreateRuleOutcome GpmClient::CreateRule(const CreateRuleRequest &requ
 
 void GpmClient::CreateRuleAsync(const CreateRuleRequest& request, const CreateRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateRule(request), context);
-    };
+    using Req = const CreateRuleRequest&;
+    using Resp = CreateRuleResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateRule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GpmClient::CreateRuleOutcomeCallable GpmClient::CreateRuleCallable(const CreateRuleRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateRuleOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateRule(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateRuleOutcome>>();
+    CreateRuleAsync(
+    request,
+    [prom](
+        const GpmClient*,
+        const CreateRuleRequest&,
+        CreateRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GpmClient::DeleteMatchOutcome GpmClient::DeleteMatch(const DeleteMatchRequest &request)
@@ -191,25 +212,32 @@ GpmClient::DeleteMatchOutcome GpmClient::DeleteMatch(const DeleteMatchRequest &r
 
 void GpmClient::DeleteMatchAsync(const DeleteMatchRequest& request, const DeleteMatchAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteMatch(request), context);
-    };
+    using Req = const DeleteMatchRequest&;
+    using Resp = DeleteMatchResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteMatch", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GpmClient::DeleteMatchOutcomeCallable GpmClient::DeleteMatchCallable(const DeleteMatchRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteMatchOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteMatch(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteMatchOutcome>>();
+    DeleteMatchAsync(
+    request,
+    [prom](
+        const GpmClient*,
+        const DeleteMatchRequest&,
+        DeleteMatchOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GpmClient::DeleteRuleOutcome GpmClient::DeleteRule(const DeleteRuleRequest &request)
@@ -234,25 +262,32 @@ GpmClient::DeleteRuleOutcome GpmClient::DeleteRule(const DeleteRuleRequest &requ
 
 void GpmClient::DeleteRuleAsync(const DeleteRuleRequest& request, const DeleteRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteRule(request), context);
-    };
+    using Req = const DeleteRuleRequest&;
+    using Resp = DeleteRuleResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteRule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GpmClient::DeleteRuleOutcomeCallable GpmClient::DeleteRuleCallable(const DeleteRuleRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteRuleOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteRule(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteRuleOutcome>>();
+    DeleteRuleAsync(
+    request,
+    [prom](
+        const GpmClient*,
+        const DeleteRuleRequest&,
+        DeleteRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GpmClient::DescribeDataOutcome GpmClient::DescribeData(const DescribeDataRequest &request)
@@ -277,25 +312,32 @@ GpmClient::DescribeDataOutcome GpmClient::DescribeData(const DescribeDataRequest
 
 void GpmClient::DescribeDataAsync(const DescribeDataRequest& request, const DescribeDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeData(request), context);
-    };
+    using Req = const DescribeDataRequest&;
+    using Resp = DescribeDataResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeData", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GpmClient::DescribeDataOutcomeCallable GpmClient::DescribeDataCallable(const DescribeDataRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDataOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeData(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDataOutcome>>();
+    DescribeDataAsync(
+    request,
+    [prom](
+        const GpmClient*,
+        const DescribeDataRequest&,
+        DescribeDataOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GpmClient::DescribeMatchOutcome GpmClient::DescribeMatch(const DescribeMatchRequest &request)
@@ -320,25 +362,32 @@ GpmClient::DescribeMatchOutcome GpmClient::DescribeMatch(const DescribeMatchRequ
 
 void GpmClient::DescribeMatchAsync(const DescribeMatchRequest& request, const DescribeMatchAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMatch(request), context);
-    };
+    using Req = const DescribeMatchRequest&;
+    using Resp = DescribeMatchResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMatch", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GpmClient::DescribeMatchOutcomeCallable GpmClient::DescribeMatchCallable(const DescribeMatchRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMatchOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMatch(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMatchOutcome>>();
+    DescribeMatchAsync(
+    request,
+    [prom](
+        const GpmClient*,
+        const DescribeMatchRequest&,
+        DescribeMatchOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GpmClient::DescribeMatchCodesOutcome GpmClient::DescribeMatchCodes(const DescribeMatchCodesRequest &request)
@@ -363,25 +412,32 @@ GpmClient::DescribeMatchCodesOutcome GpmClient::DescribeMatchCodes(const Describ
 
 void GpmClient::DescribeMatchCodesAsync(const DescribeMatchCodesRequest& request, const DescribeMatchCodesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMatchCodes(request), context);
-    };
+    using Req = const DescribeMatchCodesRequest&;
+    using Resp = DescribeMatchCodesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMatchCodes", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GpmClient::DescribeMatchCodesOutcomeCallable GpmClient::DescribeMatchCodesCallable(const DescribeMatchCodesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMatchCodesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMatchCodes(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMatchCodesOutcome>>();
+    DescribeMatchCodesAsync(
+    request,
+    [prom](
+        const GpmClient*,
+        const DescribeMatchCodesRequest&,
+        DescribeMatchCodesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GpmClient::DescribeMatchesOutcome GpmClient::DescribeMatches(const DescribeMatchesRequest &request)
@@ -406,25 +462,32 @@ GpmClient::DescribeMatchesOutcome GpmClient::DescribeMatches(const DescribeMatch
 
 void GpmClient::DescribeMatchesAsync(const DescribeMatchesRequest& request, const DescribeMatchesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMatches(request), context);
-    };
+    using Req = const DescribeMatchesRequest&;
+    using Resp = DescribeMatchesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMatches", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GpmClient::DescribeMatchesOutcomeCallable GpmClient::DescribeMatchesCallable(const DescribeMatchesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMatchesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMatches(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMatchesOutcome>>();
+    DescribeMatchesAsync(
+    request,
+    [prom](
+        const GpmClient*,
+        const DescribeMatchesRequest&,
+        DescribeMatchesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GpmClient::DescribeMatchingProgressOutcome GpmClient::DescribeMatchingProgress(const DescribeMatchingProgressRequest &request)
@@ -449,25 +512,32 @@ GpmClient::DescribeMatchingProgressOutcome GpmClient::DescribeMatchingProgress(c
 
 void GpmClient::DescribeMatchingProgressAsync(const DescribeMatchingProgressRequest& request, const DescribeMatchingProgressAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMatchingProgress(request), context);
-    };
+    using Req = const DescribeMatchingProgressRequest&;
+    using Resp = DescribeMatchingProgressResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMatchingProgress", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GpmClient::DescribeMatchingProgressOutcomeCallable GpmClient::DescribeMatchingProgressCallable(const DescribeMatchingProgressRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMatchingProgressOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMatchingProgress(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMatchingProgressOutcome>>();
+    DescribeMatchingProgressAsync(
+    request,
+    [prom](
+        const GpmClient*,
+        const DescribeMatchingProgressRequest&,
+        DescribeMatchingProgressOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GpmClient::DescribeRuleOutcome GpmClient::DescribeRule(const DescribeRuleRequest &request)
@@ -492,25 +562,32 @@ GpmClient::DescribeRuleOutcome GpmClient::DescribeRule(const DescribeRuleRequest
 
 void GpmClient::DescribeRuleAsync(const DescribeRuleRequest& request, const DescribeRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeRule(request), context);
-    };
+    using Req = const DescribeRuleRequest&;
+    using Resp = DescribeRuleResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeRule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GpmClient::DescribeRuleOutcomeCallable GpmClient::DescribeRuleCallable(const DescribeRuleRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeRuleOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeRule(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeRuleOutcome>>();
+    DescribeRuleAsync(
+    request,
+    [prom](
+        const GpmClient*,
+        const DescribeRuleRequest&,
+        DescribeRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GpmClient::DescribeRulesOutcome GpmClient::DescribeRules(const DescribeRulesRequest &request)
@@ -535,25 +612,32 @@ GpmClient::DescribeRulesOutcome GpmClient::DescribeRules(const DescribeRulesRequ
 
 void GpmClient::DescribeRulesAsync(const DescribeRulesRequest& request, const DescribeRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeRules(request), context);
-    };
+    using Req = const DescribeRulesRequest&;
+    using Resp = DescribeRulesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeRules", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GpmClient::DescribeRulesOutcomeCallable GpmClient::DescribeRulesCallable(const DescribeRulesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeRulesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeRules(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeRulesOutcome>>();
+    DescribeRulesAsync(
+    request,
+    [prom](
+        const GpmClient*,
+        const DescribeRulesRequest&,
+        DescribeRulesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GpmClient::DescribeTokenOutcome GpmClient::DescribeToken(const DescribeTokenRequest &request)
@@ -578,25 +662,32 @@ GpmClient::DescribeTokenOutcome GpmClient::DescribeToken(const DescribeTokenRequ
 
 void GpmClient::DescribeTokenAsync(const DescribeTokenRequest& request, const DescribeTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeToken(request), context);
-    };
+    using Req = const DescribeTokenRequest&;
+    using Resp = DescribeTokenResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeToken", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GpmClient::DescribeTokenOutcomeCallable GpmClient::DescribeTokenCallable(const DescribeTokenRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTokenOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeToken(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTokenOutcome>>();
+    DescribeTokenAsync(
+    request,
+    [prom](
+        const GpmClient*,
+        const DescribeTokenRequest&,
+        DescribeTokenOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GpmClient::ModifyMatchOutcome GpmClient::ModifyMatch(const ModifyMatchRequest &request)
@@ -621,25 +712,32 @@ GpmClient::ModifyMatchOutcome GpmClient::ModifyMatch(const ModifyMatchRequest &r
 
 void GpmClient::ModifyMatchAsync(const ModifyMatchRequest& request, const ModifyMatchAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyMatch(request), context);
-    };
+    using Req = const ModifyMatchRequest&;
+    using Resp = ModifyMatchResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyMatch", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GpmClient::ModifyMatchOutcomeCallable GpmClient::ModifyMatchCallable(const ModifyMatchRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyMatchOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyMatch(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyMatchOutcome>>();
+    ModifyMatchAsync(
+    request,
+    [prom](
+        const GpmClient*,
+        const ModifyMatchRequest&,
+        ModifyMatchOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GpmClient::ModifyRuleOutcome GpmClient::ModifyRule(const ModifyRuleRequest &request)
@@ -664,25 +762,32 @@ GpmClient::ModifyRuleOutcome GpmClient::ModifyRule(const ModifyRuleRequest &requ
 
 void GpmClient::ModifyRuleAsync(const ModifyRuleRequest& request, const ModifyRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyRule(request), context);
-    };
+    using Req = const ModifyRuleRequest&;
+    using Resp = ModifyRuleResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyRule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GpmClient::ModifyRuleOutcomeCallable GpmClient::ModifyRuleCallable(const ModifyRuleRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyRuleOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyRule(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyRuleOutcome>>();
+    ModifyRuleAsync(
+    request,
+    [prom](
+        const GpmClient*,
+        const ModifyRuleRequest&,
+        ModifyRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GpmClient::ModifyTokenOutcome GpmClient::ModifyToken(const ModifyTokenRequest &request)
@@ -707,25 +812,32 @@ GpmClient::ModifyTokenOutcome GpmClient::ModifyToken(const ModifyTokenRequest &r
 
 void GpmClient::ModifyTokenAsync(const ModifyTokenRequest& request, const ModifyTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyToken(request), context);
-    };
+    using Req = const ModifyTokenRequest&;
+    using Resp = ModifyTokenResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyToken", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GpmClient::ModifyTokenOutcomeCallable GpmClient::ModifyTokenCallable(const ModifyTokenRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyTokenOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyToken(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyTokenOutcome>>();
+    ModifyTokenAsync(
+    request,
+    [prom](
+        const GpmClient*,
+        const ModifyTokenRequest&,
+        ModifyTokenOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GpmClient::StartMatchingOutcome GpmClient::StartMatching(const StartMatchingRequest &request)
@@ -750,25 +862,32 @@ GpmClient::StartMatchingOutcome GpmClient::StartMatching(const StartMatchingRequ
 
 void GpmClient::StartMatchingAsync(const StartMatchingRequest& request, const StartMatchingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->StartMatching(request), context);
-    };
+    using Req = const StartMatchingRequest&;
+    using Resp = StartMatchingResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "StartMatching", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GpmClient::StartMatchingOutcomeCallable GpmClient::StartMatchingCallable(const StartMatchingRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<StartMatchingOutcome()>>(
-        [this, request]()
-        {
-            return this->StartMatching(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<StartMatchingOutcome>>();
+    StartMatchingAsync(
+    request,
+    [prom](
+        const GpmClient*,
+        const StartMatchingRequest&,
+        StartMatchingOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GpmClient::StartMatchingBackfillOutcome GpmClient::StartMatchingBackfill(const StartMatchingBackfillRequest &request)
@@ -793,24 +912,31 @@ GpmClient::StartMatchingBackfillOutcome GpmClient::StartMatchingBackfill(const S
 
 void GpmClient::StartMatchingBackfillAsync(const StartMatchingBackfillRequest& request, const StartMatchingBackfillAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->StartMatchingBackfill(request), context);
-    };
+    using Req = const StartMatchingBackfillRequest&;
+    using Resp = StartMatchingBackfillResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "StartMatchingBackfill", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GpmClient::StartMatchingBackfillOutcomeCallable GpmClient::StartMatchingBackfillCallable(const StartMatchingBackfillRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<StartMatchingBackfillOutcome()>>(
-        [this, request]()
-        {
-            return this->StartMatchingBackfill(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<StartMatchingBackfillOutcome>>();
+    StartMatchingBackfillAsync(
+    request,
+    [prom](
+        const GpmClient*,
+        const StartMatchingBackfillRequest&,
+        StartMatchingBackfillOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

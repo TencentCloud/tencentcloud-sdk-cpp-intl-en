@@ -62,25 +62,32 @@ TcrClient::CheckInstanceOutcome TcrClient::CheckInstance(const CheckInstanceRequ
 
 void TcrClient::CheckInstanceAsync(const CheckInstanceRequest& request, const CheckInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CheckInstance(request), context);
-    };
+    using Req = const CheckInstanceRequest&;
+    using Resp = CheckInstanceResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CheckInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::CheckInstanceOutcomeCallable TcrClient::CheckInstanceCallable(const CheckInstanceRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CheckInstanceOutcome()>>(
-        [this, request]()
-        {
-            return this->CheckInstance(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CheckInstanceOutcome>>();
+    CheckInstanceAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const CheckInstanceRequest&,
+        CheckInstanceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::CheckInstanceNameOutcome TcrClient::CheckInstanceName(const CheckInstanceNameRequest &request)
@@ -105,25 +112,32 @@ TcrClient::CheckInstanceNameOutcome TcrClient::CheckInstanceName(const CheckInst
 
 void TcrClient::CheckInstanceNameAsync(const CheckInstanceNameRequest& request, const CheckInstanceNameAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CheckInstanceName(request), context);
-    };
+    using Req = const CheckInstanceNameRequest&;
+    using Resp = CheckInstanceNameResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CheckInstanceName", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::CheckInstanceNameOutcomeCallable TcrClient::CheckInstanceNameCallable(const CheckInstanceNameRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CheckInstanceNameOutcome()>>(
-        [this, request]()
-        {
-            return this->CheckInstanceName(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CheckInstanceNameOutcome>>();
+    CheckInstanceNameAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const CheckInstanceNameRequest&,
+        CheckInstanceNameOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::CreateImageAccelerationServiceOutcome TcrClient::CreateImageAccelerationService(const CreateImageAccelerationServiceRequest &request)
@@ -148,25 +162,32 @@ TcrClient::CreateImageAccelerationServiceOutcome TcrClient::CreateImageAccelerat
 
 void TcrClient::CreateImageAccelerationServiceAsync(const CreateImageAccelerationServiceRequest& request, const CreateImageAccelerationServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateImageAccelerationService(request), context);
-    };
+    using Req = const CreateImageAccelerationServiceRequest&;
+    using Resp = CreateImageAccelerationServiceResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateImageAccelerationService", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::CreateImageAccelerationServiceOutcomeCallable TcrClient::CreateImageAccelerationServiceCallable(const CreateImageAccelerationServiceRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateImageAccelerationServiceOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateImageAccelerationService(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateImageAccelerationServiceOutcome>>();
+    CreateImageAccelerationServiceAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const CreateImageAccelerationServiceRequest&,
+        CreateImageAccelerationServiceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::CreateImmutableTagRulesOutcome TcrClient::CreateImmutableTagRules(const CreateImmutableTagRulesRequest &request)
@@ -191,25 +212,32 @@ TcrClient::CreateImmutableTagRulesOutcome TcrClient::CreateImmutableTagRules(con
 
 void TcrClient::CreateImmutableTagRulesAsync(const CreateImmutableTagRulesRequest& request, const CreateImmutableTagRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateImmutableTagRules(request), context);
-    };
+    using Req = const CreateImmutableTagRulesRequest&;
+    using Resp = CreateImmutableTagRulesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateImmutableTagRules", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::CreateImmutableTagRulesOutcomeCallable TcrClient::CreateImmutableTagRulesCallable(const CreateImmutableTagRulesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateImmutableTagRulesOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateImmutableTagRules(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateImmutableTagRulesOutcome>>();
+    CreateImmutableTagRulesAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const CreateImmutableTagRulesRequest&,
+        CreateImmutableTagRulesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::CreateInstanceOutcome TcrClient::CreateInstance(const CreateInstanceRequest &request)
@@ -234,25 +262,32 @@ TcrClient::CreateInstanceOutcome TcrClient::CreateInstance(const CreateInstanceR
 
 void TcrClient::CreateInstanceAsync(const CreateInstanceRequest& request, const CreateInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateInstance(request), context);
-    };
+    using Req = const CreateInstanceRequest&;
+    using Resp = CreateInstanceResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::CreateInstanceOutcomeCallable TcrClient::CreateInstanceCallable(const CreateInstanceRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateInstanceOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateInstance(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateInstanceOutcome>>();
+    CreateInstanceAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const CreateInstanceRequest&,
+        CreateInstanceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::CreateInstanceCustomizedDomainOutcome TcrClient::CreateInstanceCustomizedDomain(const CreateInstanceCustomizedDomainRequest &request)
@@ -277,25 +312,32 @@ TcrClient::CreateInstanceCustomizedDomainOutcome TcrClient::CreateInstanceCustom
 
 void TcrClient::CreateInstanceCustomizedDomainAsync(const CreateInstanceCustomizedDomainRequest& request, const CreateInstanceCustomizedDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateInstanceCustomizedDomain(request), context);
-    };
+    using Req = const CreateInstanceCustomizedDomainRequest&;
+    using Resp = CreateInstanceCustomizedDomainResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateInstanceCustomizedDomain", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::CreateInstanceCustomizedDomainOutcomeCallable TcrClient::CreateInstanceCustomizedDomainCallable(const CreateInstanceCustomizedDomainRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateInstanceCustomizedDomainOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateInstanceCustomizedDomain(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateInstanceCustomizedDomainOutcome>>();
+    CreateInstanceCustomizedDomainAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const CreateInstanceCustomizedDomainRequest&,
+        CreateInstanceCustomizedDomainOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::CreateInstanceTokenOutcome TcrClient::CreateInstanceToken(const CreateInstanceTokenRequest &request)
@@ -320,25 +362,32 @@ TcrClient::CreateInstanceTokenOutcome TcrClient::CreateInstanceToken(const Creat
 
 void TcrClient::CreateInstanceTokenAsync(const CreateInstanceTokenRequest& request, const CreateInstanceTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateInstanceToken(request), context);
-    };
+    using Req = const CreateInstanceTokenRequest&;
+    using Resp = CreateInstanceTokenResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateInstanceToken", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::CreateInstanceTokenOutcomeCallable TcrClient::CreateInstanceTokenCallable(const CreateInstanceTokenRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateInstanceTokenOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateInstanceToken(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateInstanceTokenOutcome>>();
+    CreateInstanceTokenAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const CreateInstanceTokenRequest&,
+        CreateInstanceTokenOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::CreateMultipleSecurityPolicyOutcome TcrClient::CreateMultipleSecurityPolicy(const CreateMultipleSecurityPolicyRequest &request)
@@ -363,25 +412,32 @@ TcrClient::CreateMultipleSecurityPolicyOutcome TcrClient::CreateMultipleSecurity
 
 void TcrClient::CreateMultipleSecurityPolicyAsync(const CreateMultipleSecurityPolicyRequest& request, const CreateMultipleSecurityPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateMultipleSecurityPolicy(request), context);
-    };
+    using Req = const CreateMultipleSecurityPolicyRequest&;
+    using Resp = CreateMultipleSecurityPolicyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateMultipleSecurityPolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::CreateMultipleSecurityPolicyOutcomeCallable TcrClient::CreateMultipleSecurityPolicyCallable(const CreateMultipleSecurityPolicyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateMultipleSecurityPolicyOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateMultipleSecurityPolicy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateMultipleSecurityPolicyOutcome>>();
+    CreateMultipleSecurityPolicyAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const CreateMultipleSecurityPolicyRequest&,
+        CreateMultipleSecurityPolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::CreateNamespaceOutcome TcrClient::CreateNamespace(const CreateNamespaceRequest &request)
@@ -406,25 +462,32 @@ TcrClient::CreateNamespaceOutcome TcrClient::CreateNamespace(const CreateNamespa
 
 void TcrClient::CreateNamespaceAsync(const CreateNamespaceRequest& request, const CreateNamespaceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateNamespace(request), context);
-    };
+    using Req = const CreateNamespaceRequest&;
+    using Resp = CreateNamespaceResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateNamespace", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::CreateNamespaceOutcomeCallable TcrClient::CreateNamespaceCallable(const CreateNamespaceRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateNamespaceOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateNamespace(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateNamespaceOutcome>>();
+    CreateNamespaceAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const CreateNamespaceRequest&,
+        CreateNamespaceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::CreateReplicationInstanceOutcome TcrClient::CreateReplicationInstance(const CreateReplicationInstanceRequest &request)
@@ -449,25 +512,32 @@ TcrClient::CreateReplicationInstanceOutcome TcrClient::CreateReplicationInstance
 
 void TcrClient::CreateReplicationInstanceAsync(const CreateReplicationInstanceRequest& request, const CreateReplicationInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateReplicationInstance(request), context);
-    };
+    using Req = const CreateReplicationInstanceRequest&;
+    using Resp = CreateReplicationInstanceResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateReplicationInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::CreateReplicationInstanceOutcomeCallable TcrClient::CreateReplicationInstanceCallable(const CreateReplicationInstanceRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateReplicationInstanceOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateReplicationInstance(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateReplicationInstanceOutcome>>();
+    CreateReplicationInstanceAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const CreateReplicationInstanceRequest&,
+        CreateReplicationInstanceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::CreateRepositoryOutcome TcrClient::CreateRepository(const CreateRepositoryRequest &request)
@@ -492,25 +562,32 @@ TcrClient::CreateRepositoryOutcome TcrClient::CreateRepository(const CreateRepos
 
 void TcrClient::CreateRepositoryAsync(const CreateRepositoryRequest& request, const CreateRepositoryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateRepository(request), context);
-    };
+    using Req = const CreateRepositoryRequest&;
+    using Resp = CreateRepositoryResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateRepository", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::CreateRepositoryOutcomeCallable TcrClient::CreateRepositoryCallable(const CreateRepositoryRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateRepositoryOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateRepository(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateRepositoryOutcome>>();
+    CreateRepositoryAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const CreateRepositoryRequest&,
+        CreateRepositoryOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::CreateSecurityPolicyOutcome TcrClient::CreateSecurityPolicy(const CreateSecurityPolicyRequest &request)
@@ -535,25 +612,32 @@ TcrClient::CreateSecurityPolicyOutcome TcrClient::CreateSecurityPolicy(const Cre
 
 void TcrClient::CreateSecurityPolicyAsync(const CreateSecurityPolicyRequest& request, const CreateSecurityPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateSecurityPolicy(request), context);
-    };
+    using Req = const CreateSecurityPolicyRequest&;
+    using Resp = CreateSecurityPolicyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateSecurityPolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::CreateSecurityPolicyOutcomeCallable TcrClient::CreateSecurityPolicyCallable(const CreateSecurityPolicyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateSecurityPolicyOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateSecurityPolicy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateSecurityPolicyOutcome>>();
+    CreateSecurityPolicyAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const CreateSecurityPolicyRequest&,
+        CreateSecurityPolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::CreateServiceAccountOutcome TcrClient::CreateServiceAccount(const CreateServiceAccountRequest &request)
@@ -578,25 +662,32 @@ TcrClient::CreateServiceAccountOutcome TcrClient::CreateServiceAccount(const Cre
 
 void TcrClient::CreateServiceAccountAsync(const CreateServiceAccountRequest& request, const CreateServiceAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateServiceAccount(request), context);
-    };
+    using Req = const CreateServiceAccountRequest&;
+    using Resp = CreateServiceAccountResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateServiceAccount", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::CreateServiceAccountOutcomeCallable TcrClient::CreateServiceAccountCallable(const CreateServiceAccountRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateServiceAccountOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateServiceAccount(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateServiceAccountOutcome>>();
+    CreateServiceAccountAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const CreateServiceAccountRequest&,
+        CreateServiceAccountOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::CreateSignatureOutcome TcrClient::CreateSignature(const CreateSignatureRequest &request)
@@ -621,25 +712,32 @@ TcrClient::CreateSignatureOutcome TcrClient::CreateSignature(const CreateSignatu
 
 void TcrClient::CreateSignatureAsync(const CreateSignatureRequest& request, const CreateSignatureAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateSignature(request), context);
-    };
+    using Req = const CreateSignatureRequest&;
+    using Resp = CreateSignatureResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateSignature", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::CreateSignatureOutcomeCallable TcrClient::CreateSignatureCallable(const CreateSignatureRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateSignatureOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateSignature(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateSignatureOutcome>>();
+    CreateSignatureAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const CreateSignatureRequest&,
+        CreateSignatureOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::CreateSignaturePolicyOutcome TcrClient::CreateSignaturePolicy(const CreateSignaturePolicyRequest &request)
@@ -664,25 +762,32 @@ TcrClient::CreateSignaturePolicyOutcome TcrClient::CreateSignaturePolicy(const C
 
 void TcrClient::CreateSignaturePolicyAsync(const CreateSignaturePolicyRequest& request, const CreateSignaturePolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateSignaturePolicy(request), context);
-    };
+    using Req = const CreateSignaturePolicyRequest&;
+    using Resp = CreateSignaturePolicyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateSignaturePolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::CreateSignaturePolicyOutcomeCallable TcrClient::CreateSignaturePolicyCallable(const CreateSignaturePolicyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateSignaturePolicyOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateSignaturePolicy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateSignaturePolicyOutcome>>();
+    CreateSignaturePolicyAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const CreateSignaturePolicyRequest&,
+        CreateSignaturePolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::CreateTagRetentionExecutionOutcome TcrClient::CreateTagRetentionExecution(const CreateTagRetentionExecutionRequest &request)
@@ -707,25 +812,32 @@ TcrClient::CreateTagRetentionExecutionOutcome TcrClient::CreateTagRetentionExecu
 
 void TcrClient::CreateTagRetentionExecutionAsync(const CreateTagRetentionExecutionRequest& request, const CreateTagRetentionExecutionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateTagRetentionExecution(request), context);
-    };
+    using Req = const CreateTagRetentionExecutionRequest&;
+    using Resp = CreateTagRetentionExecutionResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateTagRetentionExecution", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::CreateTagRetentionExecutionOutcomeCallable TcrClient::CreateTagRetentionExecutionCallable(const CreateTagRetentionExecutionRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateTagRetentionExecutionOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateTagRetentionExecution(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateTagRetentionExecutionOutcome>>();
+    CreateTagRetentionExecutionAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const CreateTagRetentionExecutionRequest&,
+        CreateTagRetentionExecutionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::CreateTagRetentionRuleOutcome TcrClient::CreateTagRetentionRule(const CreateTagRetentionRuleRequest &request)
@@ -750,25 +862,32 @@ TcrClient::CreateTagRetentionRuleOutcome TcrClient::CreateTagRetentionRule(const
 
 void TcrClient::CreateTagRetentionRuleAsync(const CreateTagRetentionRuleRequest& request, const CreateTagRetentionRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateTagRetentionRule(request), context);
-    };
+    using Req = const CreateTagRetentionRuleRequest&;
+    using Resp = CreateTagRetentionRuleResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateTagRetentionRule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::CreateTagRetentionRuleOutcomeCallable TcrClient::CreateTagRetentionRuleCallable(const CreateTagRetentionRuleRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateTagRetentionRuleOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateTagRetentionRule(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateTagRetentionRuleOutcome>>();
+    CreateTagRetentionRuleAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const CreateTagRetentionRuleRequest&,
+        CreateTagRetentionRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::CreateWebhookTriggerOutcome TcrClient::CreateWebhookTrigger(const CreateWebhookTriggerRequest &request)
@@ -793,25 +912,32 @@ TcrClient::CreateWebhookTriggerOutcome TcrClient::CreateWebhookTrigger(const Cre
 
 void TcrClient::CreateWebhookTriggerAsync(const CreateWebhookTriggerRequest& request, const CreateWebhookTriggerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateWebhookTrigger(request), context);
-    };
+    using Req = const CreateWebhookTriggerRequest&;
+    using Resp = CreateWebhookTriggerResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateWebhookTrigger", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::CreateWebhookTriggerOutcomeCallable TcrClient::CreateWebhookTriggerCallable(const CreateWebhookTriggerRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateWebhookTriggerOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateWebhookTrigger(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateWebhookTriggerOutcome>>();
+    CreateWebhookTriggerAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const CreateWebhookTriggerRequest&,
+        CreateWebhookTriggerOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DeleteImageOutcome TcrClient::DeleteImage(const DeleteImageRequest &request)
@@ -836,25 +962,32 @@ TcrClient::DeleteImageOutcome TcrClient::DeleteImage(const DeleteImageRequest &r
 
 void TcrClient::DeleteImageAsync(const DeleteImageRequest& request, const DeleteImageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteImage(request), context);
-    };
+    using Req = const DeleteImageRequest&;
+    using Resp = DeleteImageResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteImage", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DeleteImageOutcomeCallable TcrClient::DeleteImageCallable(const DeleteImageRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteImageOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteImage(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteImageOutcome>>();
+    DeleteImageAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DeleteImageRequest&,
+        DeleteImageOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DeleteImageAccelerateServiceOutcome TcrClient::DeleteImageAccelerateService(const DeleteImageAccelerateServiceRequest &request)
@@ -879,25 +1012,32 @@ TcrClient::DeleteImageAccelerateServiceOutcome TcrClient::DeleteImageAccelerateS
 
 void TcrClient::DeleteImageAccelerateServiceAsync(const DeleteImageAccelerateServiceRequest& request, const DeleteImageAccelerateServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteImageAccelerateService(request), context);
-    };
+    using Req = const DeleteImageAccelerateServiceRequest&;
+    using Resp = DeleteImageAccelerateServiceResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteImageAccelerateService", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DeleteImageAccelerateServiceOutcomeCallable TcrClient::DeleteImageAccelerateServiceCallable(const DeleteImageAccelerateServiceRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteImageAccelerateServiceOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteImageAccelerateService(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteImageAccelerateServiceOutcome>>();
+    DeleteImageAccelerateServiceAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DeleteImageAccelerateServiceRequest&,
+        DeleteImageAccelerateServiceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DeleteImmutableTagRulesOutcome TcrClient::DeleteImmutableTagRules(const DeleteImmutableTagRulesRequest &request)
@@ -922,25 +1062,32 @@ TcrClient::DeleteImmutableTagRulesOutcome TcrClient::DeleteImmutableTagRules(con
 
 void TcrClient::DeleteImmutableTagRulesAsync(const DeleteImmutableTagRulesRequest& request, const DeleteImmutableTagRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteImmutableTagRules(request), context);
-    };
+    using Req = const DeleteImmutableTagRulesRequest&;
+    using Resp = DeleteImmutableTagRulesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteImmutableTagRules", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DeleteImmutableTagRulesOutcomeCallable TcrClient::DeleteImmutableTagRulesCallable(const DeleteImmutableTagRulesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteImmutableTagRulesOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteImmutableTagRules(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteImmutableTagRulesOutcome>>();
+    DeleteImmutableTagRulesAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DeleteImmutableTagRulesRequest&,
+        DeleteImmutableTagRulesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DeleteInstanceOutcome TcrClient::DeleteInstance(const DeleteInstanceRequest &request)
@@ -965,25 +1112,32 @@ TcrClient::DeleteInstanceOutcome TcrClient::DeleteInstance(const DeleteInstanceR
 
 void TcrClient::DeleteInstanceAsync(const DeleteInstanceRequest& request, const DeleteInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteInstance(request), context);
-    };
+    using Req = const DeleteInstanceRequest&;
+    using Resp = DeleteInstanceResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DeleteInstanceOutcomeCallable TcrClient::DeleteInstanceCallable(const DeleteInstanceRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteInstanceOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteInstance(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteInstanceOutcome>>();
+    DeleteInstanceAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DeleteInstanceRequest&,
+        DeleteInstanceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DeleteInstanceCustomizedDomainOutcome TcrClient::DeleteInstanceCustomizedDomain(const DeleteInstanceCustomizedDomainRequest &request)
@@ -1008,25 +1162,32 @@ TcrClient::DeleteInstanceCustomizedDomainOutcome TcrClient::DeleteInstanceCustom
 
 void TcrClient::DeleteInstanceCustomizedDomainAsync(const DeleteInstanceCustomizedDomainRequest& request, const DeleteInstanceCustomizedDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteInstanceCustomizedDomain(request), context);
-    };
+    using Req = const DeleteInstanceCustomizedDomainRequest&;
+    using Resp = DeleteInstanceCustomizedDomainResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteInstanceCustomizedDomain", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DeleteInstanceCustomizedDomainOutcomeCallable TcrClient::DeleteInstanceCustomizedDomainCallable(const DeleteInstanceCustomizedDomainRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteInstanceCustomizedDomainOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteInstanceCustomizedDomain(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteInstanceCustomizedDomainOutcome>>();
+    DeleteInstanceCustomizedDomainAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DeleteInstanceCustomizedDomainRequest&,
+        DeleteInstanceCustomizedDomainOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DeleteInstanceTokenOutcome TcrClient::DeleteInstanceToken(const DeleteInstanceTokenRequest &request)
@@ -1051,25 +1212,32 @@ TcrClient::DeleteInstanceTokenOutcome TcrClient::DeleteInstanceToken(const Delet
 
 void TcrClient::DeleteInstanceTokenAsync(const DeleteInstanceTokenRequest& request, const DeleteInstanceTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteInstanceToken(request), context);
-    };
+    using Req = const DeleteInstanceTokenRequest&;
+    using Resp = DeleteInstanceTokenResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteInstanceToken", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DeleteInstanceTokenOutcomeCallable TcrClient::DeleteInstanceTokenCallable(const DeleteInstanceTokenRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteInstanceTokenOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteInstanceToken(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteInstanceTokenOutcome>>();
+    DeleteInstanceTokenAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DeleteInstanceTokenRequest&,
+        DeleteInstanceTokenOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DeleteMultipleSecurityPolicyOutcome TcrClient::DeleteMultipleSecurityPolicy(const DeleteMultipleSecurityPolicyRequest &request)
@@ -1094,25 +1262,32 @@ TcrClient::DeleteMultipleSecurityPolicyOutcome TcrClient::DeleteMultipleSecurity
 
 void TcrClient::DeleteMultipleSecurityPolicyAsync(const DeleteMultipleSecurityPolicyRequest& request, const DeleteMultipleSecurityPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteMultipleSecurityPolicy(request), context);
-    };
+    using Req = const DeleteMultipleSecurityPolicyRequest&;
+    using Resp = DeleteMultipleSecurityPolicyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteMultipleSecurityPolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DeleteMultipleSecurityPolicyOutcomeCallable TcrClient::DeleteMultipleSecurityPolicyCallable(const DeleteMultipleSecurityPolicyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteMultipleSecurityPolicyOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteMultipleSecurityPolicy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteMultipleSecurityPolicyOutcome>>();
+    DeleteMultipleSecurityPolicyAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DeleteMultipleSecurityPolicyRequest&,
+        DeleteMultipleSecurityPolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DeleteNamespaceOutcome TcrClient::DeleteNamespace(const DeleteNamespaceRequest &request)
@@ -1137,25 +1312,32 @@ TcrClient::DeleteNamespaceOutcome TcrClient::DeleteNamespace(const DeleteNamespa
 
 void TcrClient::DeleteNamespaceAsync(const DeleteNamespaceRequest& request, const DeleteNamespaceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteNamespace(request), context);
-    };
+    using Req = const DeleteNamespaceRequest&;
+    using Resp = DeleteNamespaceResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteNamespace", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DeleteNamespaceOutcomeCallable TcrClient::DeleteNamespaceCallable(const DeleteNamespaceRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteNamespaceOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteNamespace(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteNamespaceOutcome>>();
+    DeleteNamespaceAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DeleteNamespaceRequest&,
+        DeleteNamespaceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DeleteReplicationInstanceOutcome TcrClient::DeleteReplicationInstance(const DeleteReplicationInstanceRequest &request)
@@ -1180,25 +1362,32 @@ TcrClient::DeleteReplicationInstanceOutcome TcrClient::DeleteReplicationInstance
 
 void TcrClient::DeleteReplicationInstanceAsync(const DeleteReplicationInstanceRequest& request, const DeleteReplicationInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteReplicationInstance(request), context);
-    };
+    using Req = const DeleteReplicationInstanceRequest&;
+    using Resp = DeleteReplicationInstanceResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteReplicationInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DeleteReplicationInstanceOutcomeCallable TcrClient::DeleteReplicationInstanceCallable(const DeleteReplicationInstanceRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteReplicationInstanceOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteReplicationInstance(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteReplicationInstanceOutcome>>();
+    DeleteReplicationInstanceAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DeleteReplicationInstanceRequest&,
+        DeleteReplicationInstanceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DeleteRepositoryOutcome TcrClient::DeleteRepository(const DeleteRepositoryRequest &request)
@@ -1223,25 +1412,32 @@ TcrClient::DeleteRepositoryOutcome TcrClient::DeleteRepository(const DeleteRepos
 
 void TcrClient::DeleteRepositoryAsync(const DeleteRepositoryRequest& request, const DeleteRepositoryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteRepository(request), context);
-    };
+    using Req = const DeleteRepositoryRequest&;
+    using Resp = DeleteRepositoryResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteRepository", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DeleteRepositoryOutcomeCallable TcrClient::DeleteRepositoryCallable(const DeleteRepositoryRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteRepositoryOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteRepository(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteRepositoryOutcome>>();
+    DeleteRepositoryAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DeleteRepositoryRequest&,
+        DeleteRepositoryOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DeleteRepositoryTagsOutcome TcrClient::DeleteRepositoryTags(const DeleteRepositoryTagsRequest &request)
@@ -1266,25 +1462,32 @@ TcrClient::DeleteRepositoryTagsOutcome TcrClient::DeleteRepositoryTags(const Del
 
 void TcrClient::DeleteRepositoryTagsAsync(const DeleteRepositoryTagsRequest& request, const DeleteRepositoryTagsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteRepositoryTags(request), context);
-    };
+    using Req = const DeleteRepositoryTagsRequest&;
+    using Resp = DeleteRepositoryTagsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteRepositoryTags", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DeleteRepositoryTagsOutcomeCallable TcrClient::DeleteRepositoryTagsCallable(const DeleteRepositoryTagsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteRepositoryTagsOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteRepositoryTags(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteRepositoryTagsOutcome>>();
+    DeleteRepositoryTagsAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DeleteRepositoryTagsRequest&,
+        DeleteRepositoryTagsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DeleteSecurityPolicyOutcome TcrClient::DeleteSecurityPolicy(const DeleteSecurityPolicyRequest &request)
@@ -1309,25 +1512,32 @@ TcrClient::DeleteSecurityPolicyOutcome TcrClient::DeleteSecurityPolicy(const Del
 
 void TcrClient::DeleteSecurityPolicyAsync(const DeleteSecurityPolicyRequest& request, const DeleteSecurityPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteSecurityPolicy(request), context);
-    };
+    using Req = const DeleteSecurityPolicyRequest&;
+    using Resp = DeleteSecurityPolicyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteSecurityPolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DeleteSecurityPolicyOutcomeCallable TcrClient::DeleteSecurityPolicyCallable(const DeleteSecurityPolicyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteSecurityPolicyOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteSecurityPolicy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteSecurityPolicyOutcome>>();
+    DeleteSecurityPolicyAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DeleteSecurityPolicyRequest&,
+        DeleteSecurityPolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DeleteServiceAccountOutcome TcrClient::DeleteServiceAccount(const DeleteServiceAccountRequest &request)
@@ -1352,25 +1562,32 @@ TcrClient::DeleteServiceAccountOutcome TcrClient::DeleteServiceAccount(const Del
 
 void TcrClient::DeleteServiceAccountAsync(const DeleteServiceAccountRequest& request, const DeleteServiceAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteServiceAccount(request), context);
-    };
+    using Req = const DeleteServiceAccountRequest&;
+    using Resp = DeleteServiceAccountResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteServiceAccount", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DeleteServiceAccountOutcomeCallable TcrClient::DeleteServiceAccountCallable(const DeleteServiceAccountRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteServiceAccountOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteServiceAccount(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteServiceAccountOutcome>>();
+    DeleteServiceAccountAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DeleteServiceAccountRequest&,
+        DeleteServiceAccountOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DeleteSignaturePolicyOutcome TcrClient::DeleteSignaturePolicy(const DeleteSignaturePolicyRequest &request)
@@ -1395,25 +1612,32 @@ TcrClient::DeleteSignaturePolicyOutcome TcrClient::DeleteSignaturePolicy(const D
 
 void TcrClient::DeleteSignaturePolicyAsync(const DeleteSignaturePolicyRequest& request, const DeleteSignaturePolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteSignaturePolicy(request), context);
-    };
+    using Req = const DeleteSignaturePolicyRequest&;
+    using Resp = DeleteSignaturePolicyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteSignaturePolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DeleteSignaturePolicyOutcomeCallable TcrClient::DeleteSignaturePolicyCallable(const DeleteSignaturePolicyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteSignaturePolicyOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteSignaturePolicy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteSignaturePolicyOutcome>>();
+    DeleteSignaturePolicyAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DeleteSignaturePolicyRequest&,
+        DeleteSignaturePolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DeleteTagRetentionRuleOutcome TcrClient::DeleteTagRetentionRule(const DeleteTagRetentionRuleRequest &request)
@@ -1438,25 +1662,32 @@ TcrClient::DeleteTagRetentionRuleOutcome TcrClient::DeleteTagRetentionRule(const
 
 void TcrClient::DeleteTagRetentionRuleAsync(const DeleteTagRetentionRuleRequest& request, const DeleteTagRetentionRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteTagRetentionRule(request), context);
-    };
+    using Req = const DeleteTagRetentionRuleRequest&;
+    using Resp = DeleteTagRetentionRuleResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteTagRetentionRule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DeleteTagRetentionRuleOutcomeCallable TcrClient::DeleteTagRetentionRuleCallable(const DeleteTagRetentionRuleRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteTagRetentionRuleOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteTagRetentionRule(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteTagRetentionRuleOutcome>>();
+    DeleteTagRetentionRuleAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DeleteTagRetentionRuleRequest&,
+        DeleteTagRetentionRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DeleteWebhookTriggerOutcome TcrClient::DeleteWebhookTrigger(const DeleteWebhookTriggerRequest &request)
@@ -1481,25 +1712,32 @@ TcrClient::DeleteWebhookTriggerOutcome TcrClient::DeleteWebhookTrigger(const Del
 
 void TcrClient::DeleteWebhookTriggerAsync(const DeleteWebhookTriggerRequest& request, const DeleteWebhookTriggerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteWebhookTrigger(request), context);
-    };
+    using Req = const DeleteWebhookTriggerRequest&;
+    using Resp = DeleteWebhookTriggerResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteWebhookTrigger", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DeleteWebhookTriggerOutcomeCallable TcrClient::DeleteWebhookTriggerCallable(const DeleteWebhookTriggerRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteWebhookTriggerOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteWebhookTrigger(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteWebhookTriggerOutcome>>();
+    DeleteWebhookTriggerAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DeleteWebhookTriggerRequest&,
+        DeleteWebhookTriggerOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DescribeChartDownloadInfoOutcome TcrClient::DescribeChartDownloadInfo(const DescribeChartDownloadInfoRequest &request)
@@ -1524,25 +1762,32 @@ TcrClient::DescribeChartDownloadInfoOutcome TcrClient::DescribeChartDownloadInfo
 
 void TcrClient::DescribeChartDownloadInfoAsync(const DescribeChartDownloadInfoRequest& request, const DescribeChartDownloadInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeChartDownloadInfo(request), context);
-    };
+    using Req = const DescribeChartDownloadInfoRequest&;
+    using Resp = DescribeChartDownloadInfoResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeChartDownloadInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DescribeChartDownloadInfoOutcomeCallable TcrClient::DescribeChartDownloadInfoCallable(const DescribeChartDownloadInfoRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeChartDownloadInfoOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeChartDownloadInfo(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeChartDownloadInfoOutcome>>();
+    DescribeChartDownloadInfoAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DescribeChartDownloadInfoRequest&,
+        DescribeChartDownloadInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DescribeExternalEndpointStatusOutcome TcrClient::DescribeExternalEndpointStatus(const DescribeExternalEndpointStatusRequest &request)
@@ -1567,25 +1812,32 @@ TcrClient::DescribeExternalEndpointStatusOutcome TcrClient::DescribeExternalEndp
 
 void TcrClient::DescribeExternalEndpointStatusAsync(const DescribeExternalEndpointStatusRequest& request, const DescribeExternalEndpointStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeExternalEndpointStatus(request), context);
-    };
+    using Req = const DescribeExternalEndpointStatusRequest&;
+    using Resp = DescribeExternalEndpointStatusResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeExternalEndpointStatus", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DescribeExternalEndpointStatusOutcomeCallable TcrClient::DescribeExternalEndpointStatusCallable(const DescribeExternalEndpointStatusRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeExternalEndpointStatusOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeExternalEndpointStatus(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeExternalEndpointStatusOutcome>>();
+    DescribeExternalEndpointStatusAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DescribeExternalEndpointStatusRequest&,
+        DescribeExternalEndpointStatusOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DescribeGCJobsOutcome TcrClient::DescribeGCJobs(const DescribeGCJobsRequest &request)
@@ -1610,25 +1862,32 @@ TcrClient::DescribeGCJobsOutcome TcrClient::DescribeGCJobs(const DescribeGCJobsR
 
 void TcrClient::DescribeGCJobsAsync(const DescribeGCJobsRequest& request, const DescribeGCJobsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeGCJobs(request), context);
-    };
+    using Req = const DescribeGCJobsRequest&;
+    using Resp = DescribeGCJobsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeGCJobs", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DescribeGCJobsOutcomeCallable TcrClient::DescribeGCJobsCallable(const DescribeGCJobsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeGCJobsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeGCJobs(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeGCJobsOutcome>>();
+    DescribeGCJobsAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DescribeGCJobsRequest&,
+        DescribeGCJobsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DescribeImageAccelerateServiceOutcome TcrClient::DescribeImageAccelerateService(const DescribeImageAccelerateServiceRequest &request)
@@ -1653,25 +1912,32 @@ TcrClient::DescribeImageAccelerateServiceOutcome TcrClient::DescribeImageAcceler
 
 void TcrClient::DescribeImageAccelerateServiceAsync(const DescribeImageAccelerateServiceRequest& request, const DescribeImageAccelerateServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeImageAccelerateService(request), context);
-    };
+    using Req = const DescribeImageAccelerateServiceRequest&;
+    using Resp = DescribeImageAccelerateServiceResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeImageAccelerateService", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DescribeImageAccelerateServiceOutcomeCallable TcrClient::DescribeImageAccelerateServiceCallable(const DescribeImageAccelerateServiceRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeImageAccelerateServiceOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeImageAccelerateService(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeImageAccelerateServiceOutcome>>();
+    DescribeImageAccelerateServiceAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DescribeImageAccelerateServiceRequest&,
+        DescribeImageAccelerateServiceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DescribeImageManifestsOutcome TcrClient::DescribeImageManifests(const DescribeImageManifestsRequest &request)
@@ -1696,25 +1962,32 @@ TcrClient::DescribeImageManifestsOutcome TcrClient::DescribeImageManifests(const
 
 void TcrClient::DescribeImageManifestsAsync(const DescribeImageManifestsRequest& request, const DescribeImageManifestsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeImageManifests(request), context);
-    };
+    using Req = const DescribeImageManifestsRequest&;
+    using Resp = DescribeImageManifestsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeImageManifests", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DescribeImageManifestsOutcomeCallable TcrClient::DescribeImageManifestsCallable(const DescribeImageManifestsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeImageManifestsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeImageManifests(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeImageManifestsOutcome>>();
+    DescribeImageManifestsAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DescribeImageManifestsRequest&,
+        DescribeImageManifestsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DescribeImagesOutcome TcrClient::DescribeImages(const DescribeImagesRequest &request)
@@ -1739,25 +2012,32 @@ TcrClient::DescribeImagesOutcome TcrClient::DescribeImages(const DescribeImagesR
 
 void TcrClient::DescribeImagesAsync(const DescribeImagesRequest& request, const DescribeImagesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeImages(request), context);
-    };
+    using Req = const DescribeImagesRequest&;
+    using Resp = DescribeImagesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeImages", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DescribeImagesOutcomeCallable TcrClient::DescribeImagesCallable(const DescribeImagesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeImagesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeImages(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeImagesOutcome>>();
+    DescribeImagesAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DescribeImagesRequest&,
+        DescribeImagesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DescribeImmutableTagRulesOutcome TcrClient::DescribeImmutableTagRules(const DescribeImmutableTagRulesRequest &request)
@@ -1782,25 +2062,32 @@ TcrClient::DescribeImmutableTagRulesOutcome TcrClient::DescribeImmutableTagRules
 
 void TcrClient::DescribeImmutableTagRulesAsync(const DescribeImmutableTagRulesRequest& request, const DescribeImmutableTagRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeImmutableTagRules(request), context);
-    };
+    using Req = const DescribeImmutableTagRulesRequest&;
+    using Resp = DescribeImmutableTagRulesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeImmutableTagRules", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DescribeImmutableTagRulesOutcomeCallable TcrClient::DescribeImmutableTagRulesCallable(const DescribeImmutableTagRulesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeImmutableTagRulesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeImmutableTagRules(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeImmutableTagRulesOutcome>>();
+    DescribeImmutableTagRulesAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DescribeImmutableTagRulesRequest&,
+        DescribeImmutableTagRulesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DescribeInstanceAllNamespacesOutcome TcrClient::DescribeInstanceAllNamespaces(const DescribeInstanceAllNamespacesRequest &request)
@@ -1825,25 +2112,32 @@ TcrClient::DescribeInstanceAllNamespacesOutcome TcrClient::DescribeInstanceAllNa
 
 void TcrClient::DescribeInstanceAllNamespacesAsync(const DescribeInstanceAllNamespacesRequest& request, const DescribeInstanceAllNamespacesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeInstanceAllNamespaces(request), context);
-    };
+    using Req = const DescribeInstanceAllNamespacesRequest&;
+    using Resp = DescribeInstanceAllNamespacesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeInstanceAllNamespaces", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DescribeInstanceAllNamespacesOutcomeCallable TcrClient::DescribeInstanceAllNamespacesCallable(const DescribeInstanceAllNamespacesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeInstanceAllNamespacesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeInstanceAllNamespaces(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeInstanceAllNamespacesOutcome>>();
+    DescribeInstanceAllNamespacesAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DescribeInstanceAllNamespacesRequest&,
+        DescribeInstanceAllNamespacesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DescribeInstanceCustomizedDomainOutcome TcrClient::DescribeInstanceCustomizedDomain(const DescribeInstanceCustomizedDomainRequest &request)
@@ -1868,25 +2162,32 @@ TcrClient::DescribeInstanceCustomizedDomainOutcome TcrClient::DescribeInstanceCu
 
 void TcrClient::DescribeInstanceCustomizedDomainAsync(const DescribeInstanceCustomizedDomainRequest& request, const DescribeInstanceCustomizedDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeInstanceCustomizedDomain(request), context);
-    };
+    using Req = const DescribeInstanceCustomizedDomainRequest&;
+    using Resp = DescribeInstanceCustomizedDomainResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeInstanceCustomizedDomain", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DescribeInstanceCustomizedDomainOutcomeCallable TcrClient::DescribeInstanceCustomizedDomainCallable(const DescribeInstanceCustomizedDomainRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeInstanceCustomizedDomainOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeInstanceCustomizedDomain(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeInstanceCustomizedDomainOutcome>>();
+    DescribeInstanceCustomizedDomainAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DescribeInstanceCustomizedDomainRequest&,
+        DescribeInstanceCustomizedDomainOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DescribeInstanceStatusOutcome TcrClient::DescribeInstanceStatus(const DescribeInstanceStatusRequest &request)
@@ -1911,25 +2212,32 @@ TcrClient::DescribeInstanceStatusOutcome TcrClient::DescribeInstanceStatus(const
 
 void TcrClient::DescribeInstanceStatusAsync(const DescribeInstanceStatusRequest& request, const DescribeInstanceStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeInstanceStatus(request), context);
-    };
+    using Req = const DescribeInstanceStatusRequest&;
+    using Resp = DescribeInstanceStatusResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeInstanceStatus", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DescribeInstanceStatusOutcomeCallable TcrClient::DescribeInstanceStatusCallable(const DescribeInstanceStatusRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeInstanceStatusOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeInstanceStatus(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeInstanceStatusOutcome>>();
+    DescribeInstanceStatusAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DescribeInstanceStatusRequest&,
+        DescribeInstanceStatusOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DescribeInstanceTokenOutcome TcrClient::DescribeInstanceToken(const DescribeInstanceTokenRequest &request)
@@ -1954,25 +2262,32 @@ TcrClient::DescribeInstanceTokenOutcome TcrClient::DescribeInstanceToken(const D
 
 void TcrClient::DescribeInstanceTokenAsync(const DescribeInstanceTokenRequest& request, const DescribeInstanceTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeInstanceToken(request), context);
-    };
+    using Req = const DescribeInstanceTokenRequest&;
+    using Resp = DescribeInstanceTokenResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeInstanceToken", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DescribeInstanceTokenOutcomeCallable TcrClient::DescribeInstanceTokenCallable(const DescribeInstanceTokenRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeInstanceTokenOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeInstanceToken(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeInstanceTokenOutcome>>();
+    DescribeInstanceTokenAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DescribeInstanceTokenRequest&,
+        DescribeInstanceTokenOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DescribeInstancesOutcome TcrClient::DescribeInstances(const DescribeInstancesRequest &request)
@@ -1997,25 +2312,32 @@ TcrClient::DescribeInstancesOutcome TcrClient::DescribeInstances(const DescribeI
 
 void TcrClient::DescribeInstancesAsync(const DescribeInstancesRequest& request, const DescribeInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeInstances(request), context);
-    };
+    using Req = const DescribeInstancesRequest&;
+    using Resp = DescribeInstancesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeInstances", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DescribeInstancesOutcomeCallable TcrClient::DescribeInstancesCallable(const DescribeInstancesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeInstancesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeInstances(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeInstancesOutcome>>();
+    DescribeInstancesAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DescribeInstancesRequest&,
+        DescribeInstancesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DescribeInternalEndpointsOutcome TcrClient::DescribeInternalEndpoints(const DescribeInternalEndpointsRequest &request)
@@ -2040,25 +2362,32 @@ TcrClient::DescribeInternalEndpointsOutcome TcrClient::DescribeInternalEndpoints
 
 void TcrClient::DescribeInternalEndpointsAsync(const DescribeInternalEndpointsRequest& request, const DescribeInternalEndpointsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeInternalEndpoints(request), context);
-    };
+    using Req = const DescribeInternalEndpointsRequest&;
+    using Resp = DescribeInternalEndpointsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeInternalEndpoints", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DescribeInternalEndpointsOutcomeCallable TcrClient::DescribeInternalEndpointsCallable(const DescribeInternalEndpointsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeInternalEndpointsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeInternalEndpoints(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeInternalEndpointsOutcome>>();
+    DescribeInternalEndpointsAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DescribeInternalEndpointsRequest&,
+        DescribeInternalEndpointsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DescribeNamespacesOutcome TcrClient::DescribeNamespaces(const DescribeNamespacesRequest &request)
@@ -2083,25 +2412,32 @@ TcrClient::DescribeNamespacesOutcome TcrClient::DescribeNamespaces(const Describ
 
 void TcrClient::DescribeNamespacesAsync(const DescribeNamespacesRequest& request, const DescribeNamespacesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeNamespaces(request), context);
-    };
+    using Req = const DescribeNamespacesRequest&;
+    using Resp = DescribeNamespacesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeNamespaces", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DescribeNamespacesOutcomeCallable TcrClient::DescribeNamespacesCallable(const DescribeNamespacesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeNamespacesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeNamespaces(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeNamespacesOutcome>>();
+    DescribeNamespacesAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DescribeNamespacesRequest&,
+        DescribeNamespacesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DescribeRegionsOutcome TcrClient::DescribeRegions(const DescribeRegionsRequest &request)
@@ -2126,25 +2462,32 @@ TcrClient::DescribeRegionsOutcome TcrClient::DescribeRegions(const DescribeRegio
 
 void TcrClient::DescribeRegionsAsync(const DescribeRegionsRequest& request, const DescribeRegionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeRegions(request), context);
-    };
+    using Req = const DescribeRegionsRequest&;
+    using Resp = DescribeRegionsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeRegions", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DescribeRegionsOutcomeCallable TcrClient::DescribeRegionsCallable(const DescribeRegionsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeRegionsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeRegions(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeRegionsOutcome>>();
+    DescribeRegionsAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DescribeRegionsRequest&,
+        DescribeRegionsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DescribeReplicationInstanceCreateTasksOutcome TcrClient::DescribeReplicationInstanceCreateTasks(const DescribeReplicationInstanceCreateTasksRequest &request)
@@ -2169,25 +2512,32 @@ TcrClient::DescribeReplicationInstanceCreateTasksOutcome TcrClient::DescribeRepl
 
 void TcrClient::DescribeReplicationInstanceCreateTasksAsync(const DescribeReplicationInstanceCreateTasksRequest& request, const DescribeReplicationInstanceCreateTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeReplicationInstanceCreateTasks(request), context);
-    };
+    using Req = const DescribeReplicationInstanceCreateTasksRequest&;
+    using Resp = DescribeReplicationInstanceCreateTasksResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeReplicationInstanceCreateTasks", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DescribeReplicationInstanceCreateTasksOutcomeCallable TcrClient::DescribeReplicationInstanceCreateTasksCallable(const DescribeReplicationInstanceCreateTasksRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeReplicationInstanceCreateTasksOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeReplicationInstanceCreateTasks(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeReplicationInstanceCreateTasksOutcome>>();
+    DescribeReplicationInstanceCreateTasksAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DescribeReplicationInstanceCreateTasksRequest&,
+        DescribeReplicationInstanceCreateTasksOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DescribeReplicationInstanceSyncStatusOutcome TcrClient::DescribeReplicationInstanceSyncStatus(const DescribeReplicationInstanceSyncStatusRequest &request)
@@ -2212,25 +2562,32 @@ TcrClient::DescribeReplicationInstanceSyncStatusOutcome TcrClient::DescribeRepli
 
 void TcrClient::DescribeReplicationInstanceSyncStatusAsync(const DescribeReplicationInstanceSyncStatusRequest& request, const DescribeReplicationInstanceSyncStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeReplicationInstanceSyncStatus(request), context);
-    };
+    using Req = const DescribeReplicationInstanceSyncStatusRequest&;
+    using Resp = DescribeReplicationInstanceSyncStatusResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeReplicationInstanceSyncStatus", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DescribeReplicationInstanceSyncStatusOutcomeCallable TcrClient::DescribeReplicationInstanceSyncStatusCallable(const DescribeReplicationInstanceSyncStatusRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeReplicationInstanceSyncStatusOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeReplicationInstanceSyncStatus(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeReplicationInstanceSyncStatusOutcome>>();
+    DescribeReplicationInstanceSyncStatusAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DescribeReplicationInstanceSyncStatusRequest&,
+        DescribeReplicationInstanceSyncStatusOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DescribeReplicationInstancesOutcome TcrClient::DescribeReplicationInstances(const DescribeReplicationInstancesRequest &request)
@@ -2255,25 +2612,32 @@ TcrClient::DescribeReplicationInstancesOutcome TcrClient::DescribeReplicationIns
 
 void TcrClient::DescribeReplicationInstancesAsync(const DescribeReplicationInstancesRequest& request, const DescribeReplicationInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeReplicationInstances(request), context);
-    };
+    using Req = const DescribeReplicationInstancesRequest&;
+    using Resp = DescribeReplicationInstancesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeReplicationInstances", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DescribeReplicationInstancesOutcomeCallable TcrClient::DescribeReplicationInstancesCallable(const DescribeReplicationInstancesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeReplicationInstancesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeReplicationInstances(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeReplicationInstancesOutcome>>();
+    DescribeReplicationInstancesAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DescribeReplicationInstancesRequest&,
+        DescribeReplicationInstancesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DescribeRepositoriesOutcome TcrClient::DescribeRepositories(const DescribeRepositoriesRequest &request)
@@ -2298,25 +2662,32 @@ TcrClient::DescribeRepositoriesOutcome TcrClient::DescribeRepositories(const Des
 
 void TcrClient::DescribeRepositoriesAsync(const DescribeRepositoriesRequest& request, const DescribeRepositoriesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeRepositories(request), context);
-    };
+    using Req = const DescribeRepositoriesRequest&;
+    using Resp = DescribeRepositoriesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeRepositories", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DescribeRepositoriesOutcomeCallable TcrClient::DescribeRepositoriesCallable(const DescribeRepositoriesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeRepositoriesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeRepositories(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeRepositoriesOutcome>>();
+    DescribeRepositoriesAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DescribeRepositoriesRequest&,
+        DescribeRepositoriesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DescribeSecurityPoliciesOutcome TcrClient::DescribeSecurityPolicies(const DescribeSecurityPoliciesRequest &request)
@@ -2341,25 +2712,32 @@ TcrClient::DescribeSecurityPoliciesOutcome TcrClient::DescribeSecurityPolicies(c
 
 void TcrClient::DescribeSecurityPoliciesAsync(const DescribeSecurityPoliciesRequest& request, const DescribeSecurityPoliciesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeSecurityPolicies(request), context);
-    };
+    using Req = const DescribeSecurityPoliciesRequest&;
+    using Resp = DescribeSecurityPoliciesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeSecurityPolicies", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DescribeSecurityPoliciesOutcomeCallable TcrClient::DescribeSecurityPoliciesCallable(const DescribeSecurityPoliciesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeSecurityPoliciesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeSecurityPolicies(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeSecurityPoliciesOutcome>>();
+    DescribeSecurityPoliciesAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DescribeSecurityPoliciesRequest&,
+        DescribeSecurityPoliciesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DescribeServiceAccountsOutcome TcrClient::DescribeServiceAccounts(const DescribeServiceAccountsRequest &request)
@@ -2384,25 +2762,32 @@ TcrClient::DescribeServiceAccountsOutcome TcrClient::DescribeServiceAccounts(con
 
 void TcrClient::DescribeServiceAccountsAsync(const DescribeServiceAccountsRequest& request, const DescribeServiceAccountsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeServiceAccounts(request), context);
-    };
+    using Req = const DescribeServiceAccountsRequest&;
+    using Resp = DescribeServiceAccountsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeServiceAccounts", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DescribeServiceAccountsOutcomeCallable TcrClient::DescribeServiceAccountsCallable(const DescribeServiceAccountsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeServiceAccountsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeServiceAccounts(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeServiceAccountsOutcome>>();
+    DescribeServiceAccountsAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DescribeServiceAccountsRequest&,
+        DescribeServiceAccountsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DescribeTagRetentionExecutionOutcome TcrClient::DescribeTagRetentionExecution(const DescribeTagRetentionExecutionRequest &request)
@@ -2427,25 +2812,32 @@ TcrClient::DescribeTagRetentionExecutionOutcome TcrClient::DescribeTagRetentionE
 
 void TcrClient::DescribeTagRetentionExecutionAsync(const DescribeTagRetentionExecutionRequest& request, const DescribeTagRetentionExecutionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTagRetentionExecution(request), context);
-    };
+    using Req = const DescribeTagRetentionExecutionRequest&;
+    using Resp = DescribeTagRetentionExecutionResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTagRetentionExecution", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DescribeTagRetentionExecutionOutcomeCallable TcrClient::DescribeTagRetentionExecutionCallable(const DescribeTagRetentionExecutionRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTagRetentionExecutionOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTagRetentionExecution(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTagRetentionExecutionOutcome>>();
+    DescribeTagRetentionExecutionAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DescribeTagRetentionExecutionRequest&,
+        DescribeTagRetentionExecutionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DescribeTagRetentionExecutionTaskOutcome TcrClient::DescribeTagRetentionExecutionTask(const DescribeTagRetentionExecutionTaskRequest &request)
@@ -2470,25 +2862,32 @@ TcrClient::DescribeTagRetentionExecutionTaskOutcome TcrClient::DescribeTagRetent
 
 void TcrClient::DescribeTagRetentionExecutionTaskAsync(const DescribeTagRetentionExecutionTaskRequest& request, const DescribeTagRetentionExecutionTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTagRetentionExecutionTask(request), context);
-    };
+    using Req = const DescribeTagRetentionExecutionTaskRequest&;
+    using Resp = DescribeTagRetentionExecutionTaskResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTagRetentionExecutionTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DescribeTagRetentionExecutionTaskOutcomeCallable TcrClient::DescribeTagRetentionExecutionTaskCallable(const DescribeTagRetentionExecutionTaskRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTagRetentionExecutionTaskOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTagRetentionExecutionTask(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTagRetentionExecutionTaskOutcome>>();
+    DescribeTagRetentionExecutionTaskAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DescribeTagRetentionExecutionTaskRequest&,
+        DescribeTagRetentionExecutionTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DescribeTagRetentionRulesOutcome TcrClient::DescribeTagRetentionRules(const DescribeTagRetentionRulesRequest &request)
@@ -2513,25 +2912,32 @@ TcrClient::DescribeTagRetentionRulesOutcome TcrClient::DescribeTagRetentionRules
 
 void TcrClient::DescribeTagRetentionRulesAsync(const DescribeTagRetentionRulesRequest& request, const DescribeTagRetentionRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTagRetentionRules(request), context);
-    };
+    using Req = const DescribeTagRetentionRulesRequest&;
+    using Resp = DescribeTagRetentionRulesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTagRetentionRules", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DescribeTagRetentionRulesOutcomeCallable TcrClient::DescribeTagRetentionRulesCallable(const DescribeTagRetentionRulesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTagRetentionRulesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTagRetentionRules(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTagRetentionRulesOutcome>>();
+    DescribeTagRetentionRulesAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DescribeTagRetentionRulesRequest&,
+        DescribeTagRetentionRulesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DescribeWebhookTriggerOutcome TcrClient::DescribeWebhookTrigger(const DescribeWebhookTriggerRequest &request)
@@ -2556,25 +2962,32 @@ TcrClient::DescribeWebhookTriggerOutcome TcrClient::DescribeWebhookTrigger(const
 
 void TcrClient::DescribeWebhookTriggerAsync(const DescribeWebhookTriggerRequest& request, const DescribeWebhookTriggerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeWebhookTrigger(request), context);
-    };
+    using Req = const DescribeWebhookTriggerRequest&;
+    using Resp = DescribeWebhookTriggerResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeWebhookTrigger", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DescribeWebhookTriggerOutcomeCallable TcrClient::DescribeWebhookTriggerCallable(const DescribeWebhookTriggerRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeWebhookTriggerOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeWebhookTrigger(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeWebhookTriggerOutcome>>();
+    DescribeWebhookTriggerAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DescribeWebhookTriggerRequest&,
+        DescribeWebhookTriggerOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DescribeWebhookTriggerLogOutcome TcrClient::DescribeWebhookTriggerLog(const DescribeWebhookTriggerLogRequest &request)
@@ -2599,25 +3012,32 @@ TcrClient::DescribeWebhookTriggerLogOutcome TcrClient::DescribeWebhookTriggerLog
 
 void TcrClient::DescribeWebhookTriggerLogAsync(const DescribeWebhookTriggerLogRequest& request, const DescribeWebhookTriggerLogAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeWebhookTriggerLog(request), context);
-    };
+    using Req = const DescribeWebhookTriggerLogRequest&;
+    using Resp = DescribeWebhookTriggerLogResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeWebhookTriggerLog", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DescribeWebhookTriggerLogOutcomeCallable TcrClient::DescribeWebhookTriggerLogCallable(const DescribeWebhookTriggerLogRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeWebhookTriggerLogOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeWebhookTriggerLog(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeWebhookTriggerLogOutcome>>();
+    DescribeWebhookTriggerLogAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DescribeWebhookTriggerLogRequest&,
+        DescribeWebhookTriggerLogOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DownloadHelmChartOutcome TcrClient::DownloadHelmChart(const DownloadHelmChartRequest &request)
@@ -2642,25 +3062,32 @@ TcrClient::DownloadHelmChartOutcome TcrClient::DownloadHelmChart(const DownloadH
 
 void TcrClient::DownloadHelmChartAsync(const DownloadHelmChartRequest& request, const DownloadHelmChartAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DownloadHelmChart(request), context);
-    };
+    using Req = const DownloadHelmChartRequest&;
+    using Resp = DownloadHelmChartResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DownloadHelmChart", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DownloadHelmChartOutcomeCallable TcrClient::DownloadHelmChartCallable(const DownloadHelmChartRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DownloadHelmChartOutcome()>>(
-        [this, request]()
-        {
-            return this->DownloadHelmChart(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DownloadHelmChartOutcome>>();
+    DownloadHelmChartAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DownloadHelmChartRequest&,
+        DownloadHelmChartOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::DuplicateImageOutcome TcrClient::DuplicateImage(const DuplicateImageRequest &request)
@@ -2685,25 +3112,32 @@ TcrClient::DuplicateImageOutcome TcrClient::DuplicateImage(const DuplicateImageR
 
 void TcrClient::DuplicateImageAsync(const DuplicateImageRequest& request, const DuplicateImageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DuplicateImage(request), context);
-    };
+    using Req = const DuplicateImageRequest&;
+    using Resp = DuplicateImageResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DuplicateImage", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::DuplicateImageOutcomeCallable TcrClient::DuplicateImageCallable(const DuplicateImageRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DuplicateImageOutcome()>>(
-        [this, request]()
-        {
-            return this->DuplicateImage(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DuplicateImageOutcome>>();
+    DuplicateImageAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const DuplicateImageRequest&,
+        DuplicateImageOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::ManageExternalEndpointOutcome TcrClient::ManageExternalEndpoint(const ManageExternalEndpointRequest &request)
@@ -2728,25 +3162,32 @@ TcrClient::ManageExternalEndpointOutcome TcrClient::ManageExternalEndpoint(const
 
 void TcrClient::ManageExternalEndpointAsync(const ManageExternalEndpointRequest& request, const ManageExternalEndpointAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ManageExternalEndpoint(request), context);
-    };
+    using Req = const ManageExternalEndpointRequest&;
+    using Resp = ManageExternalEndpointResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ManageExternalEndpoint", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::ManageExternalEndpointOutcomeCallable TcrClient::ManageExternalEndpointCallable(const ManageExternalEndpointRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ManageExternalEndpointOutcome()>>(
-        [this, request]()
-        {
-            return this->ManageExternalEndpoint(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ManageExternalEndpointOutcome>>();
+    ManageExternalEndpointAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const ManageExternalEndpointRequest&,
+        ManageExternalEndpointOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::ManageInternalEndpointOutcome TcrClient::ManageInternalEndpoint(const ManageInternalEndpointRequest &request)
@@ -2771,25 +3212,32 @@ TcrClient::ManageInternalEndpointOutcome TcrClient::ManageInternalEndpoint(const
 
 void TcrClient::ManageInternalEndpointAsync(const ManageInternalEndpointRequest& request, const ManageInternalEndpointAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ManageInternalEndpoint(request), context);
-    };
+    using Req = const ManageInternalEndpointRequest&;
+    using Resp = ManageInternalEndpointResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ManageInternalEndpoint", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::ManageInternalEndpointOutcomeCallable TcrClient::ManageInternalEndpointCallable(const ManageInternalEndpointRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ManageInternalEndpointOutcome()>>(
-        [this, request]()
-        {
-            return this->ManageInternalEndpoint(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ManageInternalEndpointOutcome>>();
+    ManageInternalEndpointAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const ManageInternalEndpointRequest&,
+        ManageInternalEndpointOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::ManageReplicationOutcome TcrClient::ManageReplication(const ManageReplicationRequest &request)
@@ -2814,25 +3262,32 @@ TcrClient::ManageReplicationOutcome TcrClient::ManageReplication(const ManageRep
 
 void TcrClient::ManageReplicationAsync(const ManageReplicationRequest& request, const ManageReplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ManageReplication(request), context);
-    };
+    using Req = const ManageReplicationRequest&;
+    using Resp = ManageReplicationResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ManageReplication", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::ManageReplicationOutcomeCallable TcrClient::ManageReplicationCallable(const ManageReplicationRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ManageReplicationOutcome()>>(
-        [this, request]()
-        {
-            return this->ManageReplication(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ManageReplicationOutcome>>();
+    ManageReplicationAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const ManageReplicationRequest&,
+        ManageReplicationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::ModifyImmutableTagRulesOutcome TcrClient::ModifyImmutableTagRules(const ModifyImmutableTagRulesRequest &request)
@@ -2857,25 +3312,32 @@ TcrClient::ModifyImmutableTagRulesOutcome TcrClient::ModifyImmutableTagRules(con
 
 void TcrClient::ModifyImmutableTagRulesAsync(const ModifyImmutableTagRulesRequest& request, const ModifyImmutableTagRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyImmutableTagRules(request), context);
-    };
+    using Req = const ModifyImmutableTagRulesRequest&;
+    using Resp = ModifyImmutableTagRulesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyImmutableTagRules", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::ModifyImmutableTagRulesOutcomeCallable TcrClient::ModifyImmutableTagRulesCallable(const ModifyImmutableTagRulesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyImmutableTagRulesOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyImmutableTagRules(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyImmutableTagRulesOutcome>>();
+    ModifyImmutableTagRulesAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const ModifyImmutableTagRulesRequest&,
+        ModifyImmutableTagRulesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::ModifyInstanceOutcome TcrClient::ModifyInstance(const ModifyInstanceRequest &request)
@@ -2900,25 +3362,32 @@ TcrClient::ModifyInstanceOutcome TcrClient::ModifyInstance(const ModifyInstanceR
 
 void TcrClient::ModifyInstanceAsync(const ModifyInstanceRequest& request, const ModifyInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyInstance(request), context);
-    };
+    using Req = const ModifyInstanceRequest&;
+    using Resp = ModifyInstanceResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::ModifyInstanceOutcomeCallable TcrClient::ModifyInstanceCallable(const ModifyInstanceRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyInstanceOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyInstance(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyInstanceOutcome>>();
+    ModifyInstanceAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const ModifyInstanceRequest&,
+        ModifyInstanceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::ModifyInstanceTokenOutcome TcrClient::ModifyInstanceToken(const ModifyInstanceTokenRequest &request)
@@ -2943,25 +3412,32 @@ TcrClient::ModifyInstanceTokenOutcome TcrClient::ModifyInstanceToken(const Modif
 
 void TcrClient::ModifyInstanceTokenAsync(const ModifyInstanceTokenRequest& request, const ModifyInstanceTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyInstanceToken(request), context);
-    };
+    using Req = const ModifyInstanceTokenRequest&;
+    using Resp = ModifyInstanceTokenResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyInstanceToken", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::ModifyInstanceTokenOutcomeCallable TcrClient::ModifyInstanceTokenCallable(const ModifyInstanceTokenRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyInstanceTokenOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyInstanceToken(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyInstanceTokenOutcome>>();
+    ModifyInstanceTokenAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const ModifyInstanceTokenRequest&,
+        ModifyInstanceTokenOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::ModifyNamespaceOutcome TcrClient::ModifyNamespace(const ModifyNamespaceRequest &request)
@@ -2986,25 +3462,32 @@ TcrClient::ModifyNamespaceOutcome TcrClient::ModifyNamespace(const ModifyNamespa
 
 void TcrClient::ModifyNamespaceAsync(const ModifyNamespaceRequest& request, const ModifyNamespaceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyNamespace(request), context);
-    };
+    using Req = const ModifyNamespaceRequest&;
+    using Resp = ModifyNamespaceResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyNamespace", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::ModifyNamespaceOutcomeCallable TcrClient::ModifyNamespaceCallable(const ModifyNamespaceRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyNamespaceOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyNamespace(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyNamespaceOutcome>>();
+    ModifyNamespaceAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const ModifyNamespaceRequest&,
+        ModifyNamespaceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::ModifyRepositoryOutcome TcrClient::ModifyRepository(const ModifyRepositoryRequest &request)
@@ -3029,25 +3512,32 @@ TcrClient::ModifyRepositoryOutcome TcrClient::ModifyRepository(const ModifyRepos
 
 void TcrClient::ModifyRepositoryAsync(const ModifyRepositoryRequest& request, const ModifyRepositoryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyRepository(request), context);
-    };
+    using Req = const ModifyRepositoryRequest&;
+    using Resp = ModifyRepositoryResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyRepository", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::ModifyRepositoryOutcomeCallable TcrClient::ModifyRepositoryCallable(const ModifyRepositoryRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyRepositoryOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyRepository(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyRepositoryOutcome>>();
+    ModifyRepositoryAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const ModifyRepositoryRequest&,
+        ModifyRepositoryOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::ModifySecurityPolicyOutcome TcrClient::ModifySecurityPolicy(const ModifySecurityPolicyRequest &request)
@@ -3072,25 +3562,32 @@ TcrClient::ModifySecurityPolicyOutcome TcrClient::ModifySecurityPolicy(const Mod
 
 void TcrClient::ModifySecurityPolicyAsync(const ModifySecurityPolicyRequest& request, const ModifySecurityPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifySecurityPolicy(request), context);
-    };
+    using Req = const ModifySecurityPolicyRequest&;
+    using Resp = ModifySecurityPolicyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifySecurityPolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::ModifySecurityPolicyOutcomeCallable TcrClient::ModifySecurityPolicyCallable(const ModifySecurityPolicyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifySecurityPolicyOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifySecurityPolicy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifySecurityPolicyOutcome>>();
+    ModifySecurityPolicyAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const ModifySecurityPolicyRequest&,
+        ModifySecurityPolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::ModifyServiceAccountOutcome TcrClient::ModifyServiceAccount(const ModifyServiceAccountRequest &request)
@@ -3115,25 +3612,32 @@ TcrClient::ModifyServiceAccountOutcome TcrClient::ModifyServiceAccount(const Mod
 
 void TcrClient::ModifyServiceAccountAsync(const ModifyServiceAccountRequest& request, const ModifyServiceAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyServiceAccount(request), context);
-    };
+    using Req = const ModifyServiceAccountRequest&;
+    using Resp = ModifyServiceAccountResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyServiceAccount", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::ModifyServiceAccountOutcomeCallable TcrClient::ModifyServiceAccountCallable(const ModifyServiceAccountRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyServiceAccountOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyServiceAccount(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyServiceAccountOutcome>>();
+    ModifyServiceAccountAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const ModifyServiceAccountRequest&,
+        ModifyServiceAccountOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::ModifyServiceAccountPasswordOutcome TcrClient::ModifyServiceAccountPassword(const ModifyServiceAccountPasswordRequest &request)
@@ -3158,25 +3662,32 @@ TcrClient::ModifyServiceAccountPasswordOutcome TcrClient::ModifyServiceAccountPa
 
 void TcrClient::ModifyServiceAccountPasswordAsync(const ModifyServiceAccountPasswordRequest& request, const ModifyServiceAccountPasswordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyServiceAccountPassword(request), context);
-    };
+    using Req = const ModifyServiceAccountPasswordRequest&;
+    using Resp = ModifyServiceAccountPasswordResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyServiceAccountPassword", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::ModifyServiceAccountPasswordOutcomeCallable TcrClient::ModifyServiceAccountPasswordCallable(const ModifyServiceAccountPasswordRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyServiceAccountPasswordOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyServiceAccountPassword(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyServiceAccountPasswordOutcome>>();
+    ModifyServiceAccountPasswordAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const ModifyServiceAccountPasswordRequest&,
+        ModifyServiceAccountPasswordOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::ModifyTagRetentionRuleOutcome TcrClient::ModifyTagRetentionRule(const ModifyTagRetentionRuleRequest &request)
@@ -3201,25 +3712,32 @@ TcrClient::ModifyTagRetentionRuleOutcome TcrClient::ModifyTagRetentionRule(const
 
 void TcrClient::ModifyTagRetentionRuleAsync(const ModifyTagRetentionRuleRequest& request, const ModifyTagRetentionRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyTagRetentionRule(request), context);
-    };
+    using Req = const ModifyTagRetentionRuleRequest&;
+    using Resp = ModifyTagRetentionRuleResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyTagRetentionRule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::ModifyTagRetentionRuleOutcomeCallable TcrClient::ModifyTagRetentionRuleCallable(const ModifyTagRetentionRuleRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyTagRetentionRuleOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyTagRetentionRule(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyTagRetentionRuleOutcome>>();
+    ModifyTagRetentionRuleAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const ModifyTagRetentionRuleRequest&,
+        ModifyTagRetentionRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::ModifyWebhookTriggerOutcome TcrClient::ModifyWebhookTrigger(const ModifyWebhookTriggerRequest &request)
@@ -3244,25 +3762,32 @@ TcrClient::ModifyWebhookTriggerOutcome TcrClient::ModifyWebhookTrigger(const Mod
 
 void TcrClient::ModifyWebhookTriggerAsync(const ModifyWebhookTriggerRequest& request, const ModifyWebhookTriggerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyWebhookTrigger(request), context);
-    };
+    using Req = const ModifyWebhookTriggerRequest&;
+    using Resp = ModifyWebhookTriggerResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyWebhookTrigger", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::ModifyWebhookTriggerOutcomeCallable TcrClient::ModifyWebhookTriggerCallable(const ModifyWebhookTriggerRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyWebhookTriggerOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyWebhookTrigger(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyWebhookTriggerOutcome>>();
+    ModifyWebhookTriggerAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const ModifyWebhookTriggerRequest&,
+        ModifyWebhookTriggerOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcrClient::RenewInstanceOutcome TcrClient::RenewInstance(const RenewInstanceRequest &request)
@@ -3287,24 +3812,31 @@ TcrClient::RenewInstanceOutcome TcrClient::RenewInstance(const RenewInstanceRequ
 
 void TcrClient::RenewInstanceAsync(const RenewInstanceRequest& request, const RenewInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->RenewInstance(request), context);
-    };
+    using Req = const RenewInstanceRequest&;
+    using Resp = RenewInstanceResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "RenewInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcrClient::RenewInstanceOutcomeCallable TcrClient::RenewInstanceCallable(const RenewInstanceRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<RenewInstanceOutcome()>>(
-        [this, request]()
-        {
-            return this->RenewInstance(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<RenewInstanceOutcome>>();
+    RenewInstanceAsync(
+    request,
+    [prom](
+        const TcrClient*,
+        const RenewInstanceRequest&,
+        RenewInstanceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

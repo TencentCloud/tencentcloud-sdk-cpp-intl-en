@@ -62,25 +62,32 @@ LiveClient::AddDelayLiveStreamOutcome LiveClient::AddDelayLiveStream(const AddDe
 
 void LiveClient::AddDelayLiveStreamAsync(const AddDelayLiveStreamRequest& request, const AddDelayLiveStreamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->AddDelayLiveStream(request), context);
-    };
+    using Req = const AddDelayLiveStreamRequest&;
+    using Resp = AddDelayLiveStreamResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "AddDelayLiveStream", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::AddDelayLiveStreamOutcomeCallable LiveClient::AddDelayLiveStreamCallable(const AddDelayLiveStreamRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<AddDelayLiveStreamOutcome()>>(
-        [this, request]()
-        {
-            return this->AddDelayLiveStream(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<AddDelayLiveStreamOutcome>>();
+    AddDelayLiveStreamAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const AddDelayLiveStreamRequest&,
+        AddDelayLiveStreamOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::AddLiveDomainOutcome LiveClient::AddLiveDomain(const AddLiveDomainRequest &request)
@@ -105,25 +112,32 @@ LiveClient::AddLiveDomainOutcome LiveClient::AddLiveDomain(const AddLiveDomainRe
 
 void LiveClient::AddLiveDomainAsync(const AddLiveDomainRequest& request, const AddLiveDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->AddLiveDomain(request), context);
-    };
+    using Req = const AddLiveDomainRequest&;
+    using Resp = AddLiveDomainResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "AddLiveDomain", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::AddLiveDomainOutcomeCallable LiveClient::AddLiveDomainCallable(const AddLiveDomainRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<AddLiveDomainOutcome()>>(
-        [this, request]()
-        {
-            return this->AddLiveDomain(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<AddLiveDomainOutcome>>();
+    AddLiveDomainAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const AddLiveDomainRequest&,
+        AddLiveDomainOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::AddLiveWatermarkOutcome LiveClient::AddLiveWatermark(const AddLiveWatermarkRequest &request)
@@ -148,25 +162,32 @@ LiveClient::AddLiveWatermarkOutcome LiveClient::AddLiveWatermark(const AddLiveWa
 
 void LiveClient::AddLiveWatermarkAsync(const AddLiveWatermarkRequest& request, const AddLiveWatermarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->AddLiveWatermark(request), context);
-    };
+    using Req = const AddLiveWatermarkRequest&;
+    using Resp = AddLiveWatermarkResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "AddLiveWatermark", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::AddLiveWatermarkOutcomeCallable LiveClient::AddLiveWatermarkCallable(const AddLiveWatermarkRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<AddLiveWatermarkOutcome()>>(
-        [this, request]()
-        {
-            return this->AddLiveWatermark(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<AddLiveWatermarkOutcome>>();
+    AddLiveWatermarkAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const AddLiveWatermarkRequest&,
+        AddLiveWatermarkOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::AuthenticateDomainOwnerOutcome LiveClient::AuthenticateDomainOwner(const AuthenticateDomainOwnerRequest &request)
@@ -191,25 +212,32 @@ LiveClient::AuthenticateDomainOwnerOutcome LiveClient::AuthenticateDomainOwner(c
 
 void LiveClient::AuthenticateDomainOwnerAsync(const AuthenticateDomainOwnerRequest& request, const AuthenticateDomainOwnerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->AuthenticateDomainOwner(request), context);
-    };
+    using Req = const AuthenticateDomainOwnerRequest&;
+    using Resp = AuthenticateDomainOwnerResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "AuthenticateDomainOwner", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::AuthenticateDomainOwnerOutcomeCallable LiveClient::AuthenticateDomainOwnerCallable(const AuthenticateDomainOwnerRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<AuthenticateDomainOwnerOutcome()>>(
-        [this, request]()
-        {
-            return this->AuthenticateDomainOwner(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<AuthenticateDomainOwnerOutcome>>();
+    AuthenticateDomainOwnerAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const AuthenticateDomainOwnerRequest&,
+        AuthenticateDomainOwnerOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::CancelCommonMixStreamOutcome LiveClient::CancelCommonMixStream(const CancelCommonMixStreamRequest &request)
@@ -234,25 +262,32 @@ LiveClient::CancelCommonMixStreamOutcome LiveClient::CancelCommonMixStream(const
 
 void LiveClient::CancelCommonMixStreamAsync(const CancelCommonMixStreamRequest& request, const CancelCommonMixStreamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CancelCommonMixStream(request), context);
-    };
+    using Req = const CancelCommonMixStreamRequest&;
+    using Resp = CancelCommonMixStreamResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CancelCommonMixStream", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::CancelCommonMixStreamOutcomeCallable LiveClient::CancelCommonMixStreamCallable(const CancelCommonMixStreamRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CancelCommonMixStreamOutcome()>>(
-        [this, request]()
-        {
-            return this->CancelCommonMixStream(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CancelCommonMixStreamOutcome>>();
+    CancelCommonMixStreamAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const CancelCommonMixStreamRequest&,
+        CancelCommonMixStreamOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::CreateCommonMixStreamOutcome LiveClient::CreateCommonMixStream(const CreateCommonMixStreamRequest &request)
@@ -277,25 +312,32 @@ LiveClient::CreateCommonMixStreamOutcome LiveClient::CreateCommonMixStream(const
 
 void LiveClient::CreateCommonMixStreamAsync(const CreateCommonMixStreamRequest& request, const CreateCommonMixStreamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateCommonMixStream(request), context);
-    };
+    using Req = const CreateCommonMixStreamRequest&;
+    using Resp = CreateCommonMixStreamResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateCommonMixStream", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::CreateCommonMixStreamOutcomeCallable LiveClient::CreateCommonMixStreamCallable(const CreateCommonMixStreamRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateCommonMixStreamOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateCommonMixStream(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateCommonMixStreamOutcome>>();
+    CreateCommonMixStreamAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const CreateCommonMixStreamRequest&,
+        CreateCommonMixStreamOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::CreateLiveCallbackRuleOutcome LiveClient::CreateLiveCallbackRule(const CreateLiveCallbackRuleRequest &request)
@@ -320,25 +362,32 @@ LiveClient::CreateLiveCallbackRuleOutcome LiveClient::CreateLiveCallbackRule(con
 
 void LiveClient::CreateLiveCallbackRuleAsync(const CreateLiveCallbackRuleRequest& request, const CreateLiveCallbackRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateLiveCallbackRule(request), context);
-    };
+    using Req = const CreateLiveCallbackRuleRequest&;
+    using Resp = CreateLiveCallbackRuleResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateLiveCallbackRule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::CreateLiveCallbackRuleOutcomeCallable LiveClient::CreateLiveCallbackRuleCallable(const CreateLiveCallbackRuleRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateLiveCallbackRuleOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateLiveCallbackRule(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateLiveCallbackRuleOutcome>>();
+    CreateLiveCallbackRuleAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const CreateLiveCallbackRuleRequest&,
+        CreateLiveCallbackRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::CreateLiveCallbackTemplateOutcome LiveClient::CreateLiveCallbackTemplate(const CreateLiveCallbackTemplateRequest &request)
@@ -363,25 +412,32 @@ LiveClient::CreateLiveCallbackTemplateOutcome LiveClient::CreateLiveCallbackTemp
 
 void LiveClient::CreateLiveCallbackTemplateAsync(const CreateLiveCallbackTemplateRequest& request, const CreateLiveCallbackTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateLiveCallbackTemplate(request), context);
-    };
+    using Req = const CreateLiveCallbackTemplateRequest&;
+    using Resp = CreateLiveCallbackTemplateResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateLiveCallbackTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::CreateLiveCallbackTemplateOutcomeCallable LiveClient::CreateLiveCallbackTemplateCallable(const CreateLiveCallbackTemplateRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateLiveCallbackTemplateOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateLiveCallbackTemplate(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateLiveCallbackTemplateOutcome>>();
+    CreateLiveCallbackTemplateAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const CreateLiveCallbackTemplateRequest&,
+        CreateLiveCallbackTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::CreateLivePadRuleOutcome LiveClient::CreateLivePadRule(const CreateLivePadRuleRequest &request)
@@ -406,25 +462,32 @@ LiveClient::CreateLivePadRuleOutcome LiveClient::CreateLivePadRule(const CreateL
 
 void LiveClient::CreateLivePadRuleAsync(const CreateLivePadRuleRequest& request, const CreateLivePadRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateLivePadRule(request), context);
-    };
+    using Req = const CreateLivePadRuleRequest&;
+    using Resp = CreateLivePadRuleResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateLivePadRule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::CreateLivePadRuleOutcomeCallable LiveClient::CreateLivePadRuleCallable(const CreateLivePadRuleRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateLivePadRuleOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateLivePadRule(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateLivePadRuleOutcome>>();
+    CreateLivePadRuleAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const CreateLivePadRuleRequest&,
+        CreateLivePadRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::CreateLivePadTemplateOutcome LiveClient::CreateLivePadTemplate(const CreateLivePadTemplateRequest &request)
@@ -449,25 +512,32 @@ LiveClient::CreateLivePadTemplateOutcome LiveClient::CreateLivePadTemplate(const
 
 void LiveClient::CreateLivePadTemplateAsync(const CreateLivePadTemplateRequest& request, const CreateLivePadTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateLivePadTemplate(request), context);
-    };
+    using Req = const CreateLivePadTemplateRequest&;
+    using Resp = CreateLivePadTemplateResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateLivePadTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::CreateLivePadTemplateOutcomeCallable LiveClient::CreateLivePadTemplateCallable(const CreateLivePadTemplateRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateLivePadTemplateOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateLivePadTemplate(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateLivePadTemplateOutcome>>();
+    CreateLivePadTemplateAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const CreateLivePadTemplateRequest&,
+        CreateLivePadTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::CreateLivePullStreamTaskOutcome LiveClient::CreateLivePullStreamTask(const CreateLivePullStreamTaskRequest &request)
@@ -492,25 +562,32 @@ LiveClient::CreateLivePullStreamTaskOutcome LiveClient::CreateLivePullStreamTask
 
 void LiveClient::CreateLivePullStreamTaskAsync(const CreateLivePullStreamTaskRequest& request, const CreateLivePullStreamTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateLivePullStreamTask(request), context);
-    };
+    using Req = const CreateLivePullStreamTaskRequest&;
+    using Resp = CreateLivePullStreamTaskResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateLivePullStreamTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::CreateLivePullStreamTaskOutcomeCallable LiveClient::CreateLivePullStreamTaskCallable(const CreateLivePullStreamTaskRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateLivePullStreamTaskOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateLivePullStreamTask(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateLivePullStreamTaskOutcome>>();
+    CreateLivePullStreamTaskAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const CreateLivePullStreamTaskRequest&,
+        CreateLivePullStreamTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::CreateLiveRecordOutcome LiveClient::CreateLiveRecord(const CreateLiveRecordRequest &request)
@@ -535,25 +612,32 @@ LiveClient::CreateLiveRecordOutcome LiveClient::CreateLiveRecord(const CreateLiv
 
 void LiveClient::CreateLiveRecordAsync(const CreateLiveRecordRequest& request, const CreateLiveRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateLiveRecord(request), context);
-    };
+    using Req = const CreateLiveRecordRequest&;
+    using Resp = CreateLiveRecordResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateLiveRecord", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::CreateLiveRecordOutcomeCallable LiveClient::CreateLiveRecordCallable(const CreateLiveRecordRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateLiveRecordOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateLiveRecord(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateLiveRecordOutcome>>();
+    CreateLiveRecordAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const CreateLiveRecordRequest&,
+        CreateLiveRecordOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::CreateLiveRecordRuleOutcome LiveClient::CreateLiveRecordRule(const CreateLiveRecordRuleRequest &request)
@@ -578,25 +662,32 @@ LiveClient::CreateLiveRecordRuleOutcome LiveClient::CreateLiveRecordRule(const C
 
 void LiveClient::CreateLiveRecordRuleAsync(const CreateLiveRecordRuleRequest& request, const CreateLiveRecordRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateLiveRecordRule(request), context);
-    };
+    using Req = const CreateLiveRecordRuleRequest&;
+    using Resp = CreateLiveRecordRuleResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateLiveRecordRule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::CreateLiveRecordRuleOutcomeCallable LiveClient::CreateLiveRecordRuleCallable(const CreateLiveRecordRuleRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateLiveRecordRuleOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateLiveRecordRule(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateLiveRecordRuleOutcome>>();
+    CreateLiveRecordRuleAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const CreateLiveRecordRuleRequest&,
+        CreateLiveRecordRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::CreateLiveRecordTemplateOutcome LiveClient::CreateLiveRecordTemplate(const CreateLiveRecordTemplateRequest &request)
@@ -621,25 +712,32 @@ LiveClient::CreateLiveRecordTemplateOutcome LiveClient::CreateLiveRecordTemplate
 
 void LiveClient::CreateLiveRecordTemplateAsync(const CreateLiveRecordTemplateRequest& request, const CreateLiveRecordTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateLiveRecordTemplate(request), context);
-    };
+    using Req = const CreateLiveRecordTemplateRequest&;
+    using Resp = CreateLiveRecordTemplateResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateLiveRecordTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::CreateLiveRecordTemplateOutcomeCallable LiveClient::CreateLiveRecordTemplateCallable(const CreateLiveRecordTemplateRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateLiveRecordTemplateOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateLiveRecordTemplate(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateLiveRecordTemplateOutcome>>();
+    CreateLiveRecordTemplateAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const CreateLiveRecordTemplateRequest&,
+        CreateLiveRecordTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::CreateLiveSnapshotRuleOutcome LiveClient::CreateLiveSnapshotRule(const CreateLiveSnapshotRuleRequest &request)
@@ -664,25 +762,32 @@ LiveClient::CreateLiveSnapshotRuleOutcome LiveClient::CreateLiveSnapshotRule(con
 
 void LiveClient::CreateLiveSnapshotRuleAsync(const CreateLiveSnapshotRuleRequest& request, const CreateLiveSnapshotRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateLiveSnapshotRule(request), context);
-    };
+    using Req = const CreateLiveSnapshotRuleRequest&;
+    using Resp = CreateLiveSnapshotRuleResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateLiveSnapshotRule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::CreateLiveSnapshotRuleOutcomeCallable LiveClient::CreateLiveSnapshotRuleCallable(const CreateLiveSnapshotRuleRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateLiveSnapshotRuleOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateLiveSnapshotRule(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateLiveSnapshotRuleOutcome>>();
+    CreateLiveSnapshotRuleAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const CreateLiveSnapshotRuleRequest&,
+        CreateLiveSnapshotRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::CreateLiveSnapshotTemplateOutcome LiveClient::CreateLiveSnapshotTemplate(const CreateLiveSnapshotTemplateRequest &request)
@@ -707,25 +812,32 @@ LiveClient::CreateLiveSnapshotTemplateOutcome LiveClient::CreateLiveSnapshotTemp
 
 void LiveClient::CreateLiveSnapshotTemplateAsync(const CreateLiveSnapshotTemplateRequest& request, const CreateLiveSnapshotTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateLiveSnapshotTemplate(request), context);
-    };
+    using Req = const CreateLiveSnapshotTemplateRequest&;
+    using Resp = CreateLiveSnapshotTemplateResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateLiveSnapshotTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::CreateLiveSnapshotTemplateOutcomeCallable LiveClient::CreateLiveSnapshotTemplateCallable(const CreateLiveSnapshotTemplateRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateLiveSnapshotTemplateOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateLiveSnapshotTemplate(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateLiveSnapshotTemplateOutcome>>();
+    CreateLiveSnapshotTemplateAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const CreateLiveSnapshotTemplateRequest&,
+        CreateLiveSnapshotTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::CreateLiveTimeShiftRuleOutcome LiveClient::CreateLiveTimeShiftRule(const CreateLiveTimeShiftRuleRequest &request)
@@ -750,25 +862,32 @@ LiveClient::CreateLiveTimeShiftRuleOutcome LiveClient::CreateLiveTimeShiftRule(c
 
 void LiveClient::CreateLiveTimeShiftRuleAsync(const CreateLiveTimeShiftRuleRequest& request, const CreateLiveTimeShiftRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateLiveTimeShiftRule(request), context);
-    };
+    using Req = const CreateLiveTimeShiftRuleRequest&;
+    using Resp = CreateLiveTimeShiftRuleResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateLiveTimeShiftRule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::CreateLiveTimeShiftRuleOutcomeCallable LiveClient::CreateLiveTimeShiftRuleCallable(const CreateLiveTimeShiftRuleRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateLiveTimeShiftRuleOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateLiveTimeShiftRule(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateLiveTimeShiftRuleOutcome>>();
+    CreateLiveTimeShiftRuleAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const CreateLiveTimeShiftRuleRequest&,
+        CreateLiveTimeShiftRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::CreateLiveTimeShiftTemplateOutcome LiveClient::CreateLiveTimeShiftTemplate(const CreateLiveTimeShiftTemplateRequest &request)
@@ -793,25 +912,32 @@ LiveClient::CreateLiveTimeShiftTemplateOutcome LiveClient::CreateLiveTimeShiftTe
 
 void LiveClient::CreateLiveTimeShiftTemplateAsync(const CreateLiveTimeShiftTemplateRequest& request, const CreateLiveTimeShiftTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateLiveTimeShiftTemplate(request), context);
-    };
+    using Req = const CreateLiveTimeShiftTemplateRequest&;
+    using Resp = CreateLiveTimeShiftTemplateResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateLiveTimeShiftTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::CreateLiveTimeShiftTemplateOutcomeCallable LiveClient::CreateLiveTimeShiftTemplateCallable(const CreateLiveTimeShiftTemplateRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateLiveTimeShiftTemplateOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateLiveTimeShiftTemplate(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateLiveTimeShiftTemplateOutcome>>();
+    CreateLiveTimeShiftTemplateAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const CreateLiveTimeShiftTemplateRequest&,
+        CreateLiveTimeShiftTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::CreateLiveTranscodeRuleOutcome LiveClient::CreateLiveTranscodeRule(const CreateLiveTranscodeRuleRequest &request)
@@ -836,25 +962,32 @@ LiveClient::CreateLiveTranscodeRuleOutcome LiveClient::CreateLiveTranscodeRule(c
 
 void LiveClient::CreateLiveTranscodeRuleAsync(const CreateLiveTranscodeRuleRequest& request, const CreateLiveTranscodeRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateLiveTranscodeRule(request), context);
-    };
+    using Req = const CreateLiveTranscodeRuleRequest&;
+    using Resp = CreateLiveTranscodeRuleResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateLiveTranscodeRule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::CreateLiveTranscodeRuleOutcomeCallable LiveClient::CreateLiveTranscodeRuleCallable(const CreateLiveTranscodeRuleRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateLiveTranscodeRuleOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateLiveTranscodeRule(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateLiveTranscodeRuleOutcome>>();
+    CreateLiveTranscodeRuleAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const CreateLiveTranscodeRuleRequest&,
+        CreateLiveTranscodeRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::CreateLiveTranscodeTemplateOutcome LiveClient::CreateLiveTranscodeTemplate(const CreateLiveTranscodeTemplateRequest &request)
@@ -879,25 +1012,32 @@ LiveClient::CreateLiveTranscodeTemplateOutcome LiveClient::CreateLiveTranscodeTe
 
 void LiveClient::CreateLiveTranscodeTemplateAsync(const CreateLiveTranscodeTemplateRequest& request, const CreateLiveTranscodeTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateLiveTranscodeTemplate(request), context);
-    };
+    using Req = const CreateLiveTranscodeTemplateRequest&;
+    using Resp = CreateLiveTranscodeTemplateResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateLiveTranscodeTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::CreateLiveTranscodeTemplateOutcomeCallable LiveClient::CreateLiveTranscodeTemplateCallable(const CreateLiveTranscodeTemplateRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateLiveTranscodeTemplateOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateLiveTranscodeTemplate(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateLiveTranscodeTemplateOutcome>>();
+    CreateLiveTranscodeTemplateAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const CreateLiveTranscodeTemplateRequest&,
+        CreateLiveTranscodeTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::CreateLiveWatermarkRuleOutcome LiveClient::CreateLiveWatermarkRule(const CreateLiveWatermarkRuleRequest &request)
@@ -922,25 +1062,32 @@ LiveClient::CreateLiveWatermarkRuleOutcome LiveClient::CreateLiveWatermarkRule(c
 
 void LiveClient::CreateLiveWatermarkRuleAsync(const CreateLiveWatermarkRuleRequest& request, const CreateLiveWatermarkRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateLiveWatermarkRule(request), context);
-    };
+    using Req = const CreateLiveWatermarkRuleRequest&;
+    using Resp = CreateLiveWatermarkRuleResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateLiveWatermarkRule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::CreateLiveWatermarkRuleOutcomeCallable LiveClient::CreateLiveWatermarkRuleCallable(const CreateLiveWatermarkRuleRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateLiveWatermarkRuleOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateLiveWatermarkRule(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateLiveWatermarkRuleOutcome>>();
+    CreateLiveWatermarkRuleAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const CreateLiveWatermarkRuleRequest&,
+        CreateLiveWatermarkRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::CreateRecordTaskOutcome LiveClient::CreateRecordTask(const CreateRecordTaskRequest &request)
@@ -965,25 +1112,32 @@ LiveClient::CreateRecordTaskOutcome LiveClient::CreateRecordTask(const CreateRec
 
 void LiveClient::CreateRecordTaskAsync(const CreateRecordTaskRequest& request, const CreateRecordTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateRecordTask(request), context);
-    };
+    using Req = const CreateRecordTaskRequest&;
+    using Resp = CreateRecordTaskResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateRecordTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::CreateRecordTaskOutcomeCallable LiveClient::CreateRecordTaskCallable(const CreateRecordTaskRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateRecordTaskOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateRecordTask(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateRecordTaskOutcome>>();
+    CreateRecordTaskAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const CreateRecordTaskRequest&,
+        CreateRecordTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::CreateScreenshotTaskOutcome LiveClient::CreateScreenshotTask(const CreateScreenshotTaskRequest &request)
@@ -1008,25 +1162,32 @@ LiveClient::CreateScreenshotTaskOutcome LiveClient::CreateScreenshotTask(const C
 
 void LiveClient::CreateScreenshotTaskAsync(const CreateScreenshotTaskRequest& request, const CreateScreenshotTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateScreenshotTask(request), context);
-    };
+    using Req = const CreateScreenshotTaskRequest&;
+    using Resp = CreateScreenshotTaskResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateScreenshotTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::CreateScreenshotTaskOutcomeCallable LiveClient::CreateScreenshotTaskCallable(const CreateScreenshotTaskRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateScreenshotTaskOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateScreenshotTask(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateScreenshotTaskOutcome>>();
+    CreateScreenshotTaskAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const CreateScreenshotTaskRequest&,
+        CreateScreenshotTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DeleteLiveCallbackRuleOutcome LiveClient::DeleteLiveCallbackRule(const DeleteLiveCallbackRuleRequest &request)
@@ -1051,25 +1212,32 @@ LiveClient::DeleteLiveCallbackRuleOutcome LiveClient::DeleteLiveCallbackRule(con
 
 void LiveClient::DeleteLiveCallbackRuleAsync(const DeleteLiveCallbackRuleRequest& request, const DeleteLiveCallbackRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteLiveCallbackRule(request), context);
-    };
+    using Req = const DeleteLiveCallbackRuleRequest&;
+    using Resp = DeleteLiveCallbackRuleResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteLiveCallbackRule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DeleteLiveCallbackRuleOutcomeCallable LiveClient::DeleteLiveCallbackRuleCallable(const DeleteLiveCallbackRuleRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteLiveCallbackRuleOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteLiveCallbackRule(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteLiveCallbackRuleOutcome>>();
+    DeleteLiveCallbackRuleAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DeleteLiveCallbackRuleRequest&,
+        DeleteLiveCallbackRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DeleteLiveCallbackTemplateOutcome LiveClient::DeleteLiveCallbackTemplate(const DeleteLiveCallbackTemplateRequest &request)
@@ -1094,25 +1262,32 @@ LiveClient::DeleteLiveCallbackTemplateOutcome LiveClient::DeleteLiveCallbackTemp
 
 void LiveClient::DeleteLiveCallbackTemplateAsync(const DeleteLiveCallbackTemplateRequest& request, const DeleteLiveCallbackTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteLiveCallbackTemplate(request), context);
-    };
+    using Req = const DeleteLiveCallbackTemplateRequest&;
+    using Resp = DeleteLiveCallbackTemplateResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteLiveCallbackTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DeleteLiveCallbackTemplateOutcomeCallable LiveClient::DeleteLiveCallbackTemplateCallable(const DeleteLiveCallbackTemplateRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteLiveCallbackTemplateOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteLiveCallbackTemplate(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteLiveCallbackTemplateOutcome>>();
+    DeleteLiveCallbackTemplateAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DeleteLiveCallbackTemplateRequest&,
+        DeleteLiveCallbackTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DeleteLiveDomainOutcome LiveClient::DeleteLiveDomain(const DeleteLiveDomainRequest &request)
@@ -1137,25 +1312,32 @@ LiveClient::DeleteLiveDomainOutcome LiveClient::DeleteLiveDomain(const DeleteLiv
 
 void LiveClient::DeleteLiveDomainAsync(const DeleteLiveDomainRequest& request, const DeleteLiveDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteLiveDomain(request), context);
-    };
+    using Req = const DeleteLiveDomainRequest&;
+    using Resp = DeleteLiveDomainResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteLiveDomain", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DeleteLiveDomainOutcomeCallable LiveClient::DeleteLiveDomainCallable(const DeleteLiveDomainRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteLiveDomainOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteLiveDomain(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteLiveDomainOutcome>>();
+    DeleteLiveDomainAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DeleteLiveDomainRequest&,
+        DeleteLiveDomainOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DeleteLivePullStreamTaskOutcome LiveClient::DeleteLivePullStreamTask(const DeleteLivePullStreamTaskRequest &request)
@@ -1180,25 +1362,32 @@ LiveClient::DeleteLivePullStreamTaskOutcome LiveClient::DeleteLivePullStreamTask
 
 void LiveClient::DeleteLivePullStreamTaskAsync(const DeleteLivePullStreamTaskRequest& request, const DeleteLivePullStreamTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteLivePullStreamTask(request), context);
-    };
+    using Req = const DeleteLivePullStreamTaskRequest&;
+    using Resp = DeleteLivePullStreamTaskResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteLivePullStreamTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DeleteLivePullStreamTaskOutcomeCallable LiveClient::DeleteLivePullStreamTaskCallable(const DeleteLivePullStreamTaskRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteLivePullStreamTaskOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteLivePullStreamTask(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteLivePullStreamTaskOutcome>>();
+    DeleteLivePullStreamTaskAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DeleteLivePullStreamTaskRequest&,
+        DeleteLivePullStreamTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DeleteLiveRecordOutcome LiveClient::DeleteLiveRecord(const DeleteLiveRecordRequest &request)
@@ -1223,25 +1412,32 @@ LiveClient::DeleteLiveRecordOutcome LiveClient::DeleteLiveRecord(const DeleteLiv
 
 void LiveClient::DeleteLiveRecordAsync(const DeleteLiveRecordRequest& request, const DeleteLiveRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteLiveRecord(request), context);
-    };
+    using Req = const DeleteLiveRecordRequest&;
+    using Resp = DeleteLiveRecordResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteLiveRecord", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DeleteLiveRecordOutcomeCallable LiveClient::DeleteLiveRecordCallable(const DeleteLiveRecordRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteLiveRecordOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteLiveRecord(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteLiveRecordOutcome>>();
+    DeleteLiveRecordAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DeleteLiveRecordRequest&,
+        DeleteLiveRecordOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DeleteLiveRecordRuleOutcome LiveClient::DeleteLiveRecordRule(const DeleteLiveRecordRuleRequest &request)
@@ -1266,25 +1462,32 @@ LiveClient::DeleteLiveRecordRuleOutcome LiveClient::DeleteLiveRecordRule(const D
 
 void LiveClient::DeleteLiveRecordRuleAsync(const DeleteLiveRecordRuleRequest& request, const DeleteLiveRecordRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteLiveRecordRule(request), context);
-    };
+    using Req = const DeleteLiveRecordRuleRequest&;
+    using Resp = DeleteLiveRecordRuleResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteLiveRecordRule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DeleteLiveRecordRuleOutcomeCallable LiveClient::DeleteLiveRecordRuleCallable(const DeleteLiveRecordRuleRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteLiveRecordRuleOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteLiveRecordRule(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteLiveRecordRuleOutcome>>();
+    DeleteLiveRecordRuleAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DeleteLiveRecordRuleRequest&,
+        DeleteLiveRecordRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DeleteLiveRecordTemplateOutcome LiveClient::DeleteLiveRecordTemplate(const DeleteLiveRecordTemplateRequest &request)
@@ -1309,25 +1512,32 @@ LiveClient::DeleteLiveRecordTemplateOutcome LiveClient::DeleteLiveRecordTemplate
 
 void LiveClient::DeleteLiveRecordTemplateAsync(const DeleteLiveRecordTemplateRequest& request, const DeleteLiveRecordTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteLiveRecordTemplate(request), context);
-    };
+    using Req = const DeleteLiveRecordTemplateRequest&;
+    using Resp = DeleteLiveRecordTemplateResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteLiveRecordTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DeleteLiveRecordTemplateOutcomeCallable LiveClient::DeleteLiveRecordTemplateCallable(const DeleteLiveRecordTemplateRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteLiveRecordTemplateOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteLiveRecordTemplate(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteLiveRecordTemplateOutcome>>();
+    DeleteLiveRecordTemplateAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DeleteLiveRecordTemplateRequest&,
+        DeleteLiveRecordTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DeleteLiveSnapshotRuleOutcome LiveClient::DeleteLiveSnapshotRule(const DeleteLiveSnapshotRuleRequest &request)
@@ -1352,25 +1562,32 @@ LiveClient::DeleteLiveSnapshotRuleOutcome LiveClient::DeleteLiveSnapshotRule(con
 
 void LiveClient::DeleteLiveSnapshotRuleAsync(const DeleteLiveSnapshotRuleRequest& request, const DeleteLiveSnapshotRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteLiveSnapshotRule(request), context);
-    };
+    using Req = const DeleteLiveSnapshotRuleRequest&;
+    using Resp = DeleteLiveSnapshotRuleResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteLiveSnapshotRule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DeleteLiveSnapshotRuleOutcomeCallable LiveClient::DeleteLiveSnapshotRuleCallable(const DeleteLiveSnapshotRuleRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteLiveSnapshotRuleOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteLiveSnapshotRule(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteLiveSnapshotRuleOutcome>>();
+    DeleteLiveSnapshotRuleAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DeleteLiveSnapshotRuleRequest&,
+        DeleteLiveSnapshotRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DeleteLiveSnapshotTemplateOutcome LiveClient::DeleteLiveSnapshotTemplate(const DeleteLiveSnapshotTemplateRequest &request)
@@ -1395,25 +1612,32 @@ LiveClient::DeleteLiveSnapshotTemplateOutcome LiveClient::DeleteLiveSnapshotTemp
 
 void LiveClient::DeleteLiveSnapshotTemplateAsync(const DeleteLiveSnapshotTemplateRequest& request, const DeleteLiveSnapshotTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteLiveSnapshotTemplate(request), context);
-    };
+    using Req = const DeleteLiveSnapshotTemplateRequest&;
+    using Resp = DeleteLiveSnapshotTemplateResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteLiveSnapshotTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DeleteLiveSnapshotTemplateOutcomeCallable LiveClient::DeleteLiveSnapshotTemplateCallable(const DeleteLiveSnapshotTemplateRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteLiveSnapshotTemplateOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteLiveSnapshotTemplate(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteLiveSnapshotTemplateOutcome>>();
+    DeleteLiveSnapshotTemplateAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DeleteLiveSnapshotTemplateRequest&,
+        DeleteLiveSnapshotTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DeleteLiveTimeShiftRuleOutcome LiveClient::DeleteLiveTimeShiftRule(const DeleteLiveTimeShiftRuleRequest &request)
@@ -1438,25 +1662,32 @@ LiveClient::DeleteLiveTimeShiftRuleOutcome LiveClient::DeleteLiveTimeShiftRule(c
 
 void LiveClient::DeleteLiveTimeShiftRuleAsync(const DeleteLiveTimeShiftRuleRequest& request, const DeleteLiveTimeShiftRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteLiveTimeShiftRule(request), context);
-    };
+    using Req = const DeleteLiveTimeShiftRuleRequest&;
+    using Resp = DeleteLiveTimeShiftRuleResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteLiveTimeShiftRule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DeleteLiveTimeShiftRuleOutcomeCallable LiveClient::DeleteLiveTimeShiftRuleCallable(const DeleteLiveTimeShiftRuleRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteLiveTimeShiftRuleOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteLiveTimeShiftRule(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteLiveTimeShiftRuleOutcome>>();
+    DeleteLiveTimeShiftRuleAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DeleteLiveTimeShiftRuleRequest&,
+        DeleteLiveTimeShiftRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DeleteLiveTimeShiftTemplateOutcome LiveClient::DeleteLiveTimeShiftTemplate(const DeleteLiveTimeShiftTemplateRequest &request)
@@ -1481,25 +1712,32 @@ LiveClient::DeleteLiveTimeShiftTemplateOutcome LiveClient::DeleteLiveTimeShiftTe
 
 void LiveClient::DeleteLiveTimeShiftTemplateAsync(const DeleteLiveTimeShiftTemplateRequest& request, const DeleteLiveTimeShiftTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteLiveTimeShiftTemplate(request), context);
-    };
+    using Req = const DeleteLiveTimeShiftTemplateRequest&;
+    using Resp = DeleteLiveTimeShiftTemplateResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteLiveTimeShiftTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DeleteLiveTimeShiftTemplateOutcomeCallable LiveClient::DeleteLiveTimeShiftTemplateCallable(const DeleteLiveTimeShiftTemplateRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteLiveTimeShiftTemplateOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteLiveTimeShiftTemplate(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteLiveTimeShiftTemplateOutcome>>();
+    DeleteLiveTimeShiftTemplateAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DeleteLiveTimeShiftTemplateRequest&,
+        DeleteLiveTimeShiftTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DeleteLiveTranscodeRuleOutcome LiveClient::DeleteLiveTranscodeRule(const DeleteLiveTranscodeRuleRequest &request)
@@ -1524,25 +1762,32 @@ LiveClient::DeleteLiveTranscodeRuleOutcome LiveClient::DeleteLiveTranscodeRule(c
 
 void LiveClient::DeleteLiveTranscodeRuleAsync(const DeleteLiveTranscodeRuleRequest& request, const DeleteLiveTranscodeRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteLiveTranscodeRule(request), context);
-    };
+    using Req = const DeleteLiveTranscodeRuleRequest&;
+    using Resp = DeleteLiveTranscodeRuleResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteLiveTranscodeRule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DeleteLiveTranscodeRuleOutcomeCallable LiveClient::DeleteLiveTranscodeRuleCallable(const DeleteLiveTranscodeRuleRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteLiveTranscodeRuleOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteLiveTranscodeRule(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteLiveTranscodeRuleOutcome>>();
+    DeleteLiveTranscodeRuleAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DeleteLiveTranscodeRuleRequest&,
+        DeleteLiveTranscodeRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DeleteLiveTranscodeTemplateOutcome LiveClient::DeleteLiveTranscodeTemplate(const DeleteLiveTranscodeTemplateRequest &request)
@@ -1567,25 +1812,32 @@ LiveClient::DeleteLiveTranscodeTemplateOutcome LiveClient::DeleteLiveTranscodeTe
 
 void LiveClient::DeleteLiveTranscodeTemplateAsync(const DeleteLiveTranscodeTemplateRequest& request, const DeleteLiveTranscodeTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteLiveTranscodeTemplate(request), context);
-    };
+    using Req = const DeleteLiveTranscodeTemplateRequest&;
+    using Resp = DeleteLiveTranscodeTemplateResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteLiveTranscodeTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DeleteLiveTranscodeTemplateOutcomeCallable LiveClient::DeleteLiveTranscodeTemplateCallable(const DeleteLiveTranscodeTemplateRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteLiveTranscodeTemplateOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteLiveTranscodeTemplate(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteLiveTranscodeTemplateOutcome>>();
+    DeleteLiveTranscodeTemplateAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DeleteLiveTranscodeTemplateRequest&,
+        DeleteLiveTranscodeTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DeleteLiveWatermarkOutcome LiveClient::DeleteLiveWatermark(const DeleteLiveWatermarkRequest &request)
@@ -1610,25 +1862,32 @@ LiveClient::DeleteLiveWatermarkOutcome LiveClient::DeleteLiveWatermark(const Del
 
 void LiveClient::DeleteLiveWatermarkAsync(const DeleteLiveWatermarkRequest& request, const DeleteLiveWatermarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteLiveWatermark(request), context);
-    };
+    using Req = const DeleteLiveWatermarkRequest&;
+    using Resp = DeleteLiveWatermarkResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteLiveWatermark", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DeleteLiveWatermarkOutcomeCallable LiveClient::DeleteLiveWatermarkCallable(const DeleteLiveWatermarkRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteLiveWatermarkOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteLiveWatermark(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteLiveWatermarkOutcome>>();
+    DeleteLiveWatermarkAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DeleteLiveWatermarkRequest&,
+        DeleteLiveWatermarkOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DeleteLiveWatermarkRuleOutcome LiveClient::DeleteLiveWatermarkRule(const DeleteLiveWatermarkRuleRequest &request)
@@ -1653,25 +1912,32 @@ LiveClient::DeleteLiveWatermarkRuleOutcome LiveClient::DeleteLiveWatermarkRule(c
 
 void LiveClient::DeleteLiveWatermarkRuleAsync(const DeleteLiveWatermarkRuleRequest& request, const DeleteLiveWatermarkRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteLiveWatermarkRule(request), context);
-    };
+    using Req = const DeleteLiveWatermarkRuleRequest&;
+    using Resp = DeleteLiveWatermarkRuleResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteLiveWatermarkRule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DeleteLiveWatermarkRuleOutcomeCallable LiveClient::DeleteLiveWatermarkRuleCallable(const DeleteLiveWatermarkRuleRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteLiveWatermarkRuleOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteLiveWatermarkRule(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteLiveWatermarkRuleOutcome>>();
+    DeleteLiveWatermarkRuleAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DeleteLiveWatermarkRuleRequest&,
+        DeleteLiveWatermarkRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DeleteRecordTaskOutcome LiveClient::DeleteRecordTask(const DeleteRecordTaskRequest &request)
@@ -1696,25 +1962,32 @@ LiveClient::DeleteRecordTaskOutcome LiveClient::DeleteRecordTask(const DeleteRec
 
 void LiveClient::DeleteRecordTaskAsync(const DeleteRecordTaskRequest& request, const DeleteRecordTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteRecordTask(request), context);
-    };
+    using Req = const DeleteRecordTaskRequest&;
+    using Resp = DeleteRecordTaskResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteRecordTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DeleteRecordTaskOutcomeCallable LiveClient::DeleteRecordTaskCallable(const DeleteRecordTaskRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteRecordTaskOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteRecordTask(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteRecordTaskOutcome>>();
+    DeleteRecordTaskAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DeleteRecordTaskRequest&,
+        DeleteRecordTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeAllStreamPlayInfoListOutcome LiveClient::DescribeAllStreamPlayInfoList(const DescribeAllStreamPlayInfoListRequest &request)
@@ -1739,25 +2012,32 @@ LiveClient::DescribeAllStreamPlayInfoListOutcome LiveClient::DescribeAllStreamPl
 
 void LiveClient::DescribeAllStreamPlayInfoListAsync(const DescribeAllStreamPlayInfoListRequest& request, const DescribeAllStreamPlayInfoListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeAllStreamPlayInfoList(request), context);
-    };
+    using Req = const DescribeAllStreamPlayInfoListRequest&;
+    using Resp = DescribeAllStreamPlayInfoListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeAllStreamPlayInfoList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeAllStreamPlayInfoListOutcomeCallable LiveClient::DescribeAllStreamPlayInfoListCallable(const DescribeAllStreamPlayInfoListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeAllStreamPlayInfoListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeAllStreamPlayInfoList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeAllStreamPlayInfoListOutcome>>();
+    DescribeAllStreamPlayInfoListAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeAllStreamPlayInfoListRequest&,
+        DescribeAllStreamPlayInfoListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeBillBandwidthAndFluxListOutcome LiveClient::DescribeBillBandwidthAndFluxList(const DescribeBillBandwidthAndFluxListRequest &request)
@@ -1782,25 +2062,32 @@ LiveClient::DescribeBillBandwidthAndFluxListOutcome LiveClient::DescribeBillBand
 
 void LiveClient::DescribeBillBandwidthAndFluxListAsync(const DescribeBillBandwidthAndFluxListRequest& request, const DescribeBillBandwidthAndFluxListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeBillBandwidthAndFluxList(request), context);
-    };
+    using Req = const DescribeBillBandwidthAndFluxListRequest&;
+    using Resp = DescribeBillBandwidthAndFluxListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeBillBandwidthAndFluxList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeBillBandwidthAndFluxListOutcomeCallable LiveClient::DescribeBillBandwidthAndFluxListCallable(const DescribeBillBandwidthAndFluxListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeBillBandwidthAndFluxListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeBillBandwidthAndFluxList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeBillBandwidthAndFluxListOutcome>>();
+    DescribeBillBandwidthAndFluxListAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeBillBandwidthAndFluxListRequest&,
+        DescribeBillBandwidthAndFluxListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeConcurrentRecordStreamNumOutcome LiveClient::DescribeConcurrentRecordStreamNum(const DescribeConcurrentRecordStreamNumRequest &request)
@@ -1825,25 +2112,32 @@ LiveClient::DescribeConcurrentRecordStreamNumOutcome LiveClient::DescribeConcurr
 
 void LiveClient::DescribeConcurrentRecordStreamNumAsync(const DescribeConcurrentRecordStreamNumRequest& request, const DescribeConcurrentRecordStreamNumAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeConcurrentRecordStreamNum(request), context);
-    };
+    using Req = const DescribeConcurrentRecordStreamNumRequest&;
+    using Resp = DescribeConcurrentRecordStreamNumResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeConcurrentRecordStreamNum", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeConcurrentRecordStreamNumOutcomeCallable LiveClient::DescribeConcurrentRecordStreamNumCallable(const DescribeConcurrentRecordStreamNumRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeConcurrentRecordStreamNumOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeConcurrentRecordStreamNum(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeConcurrentRecordStreamNumOutcome>>();
+    DescribeConcurrentRecordStreamNumAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeConcurrentRecordStreamNumRequest&,
+        DescribeConcurrentRecordStreamNumOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeDeliverBandwidthListOutcome LiveClient::DescribeDeliverBandwidthList(const DescribeDeliverBandwidthListRequest &request)
@@ -1868,25 +2162,32 @@ LiveClient::DescribeDeliverBandwidthListOutcome LiveClient::DescribeDeliverBandw
 
 void LiveClient::DescribeDeliverBandwidthListAsync(const DescribeDeliverBandwidthListRequest& request, const DescribeDeliverBandwidthListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDeliverBandwidthList(request), context);
-    };
+    using Req = const DescribeDeliverBandwidthListRequest&;
+    using Resp = DescribeDeliverBandwidthListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDeliverBandwidthList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeDeliverBandwidthListOutcomeCallable LiveClient::DescribeDeliverBandwidthListCallable(const DescribeDeliverBandwidthListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDeliverBandwidthListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDeliverBandwidthList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDeliverBandwidthListOutcome>>();
+    DescribeDeliverBandwidthListAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeDeliverBandwidthListRequest&,
+        DescribeDeliverBandwidthListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeGroupProIspPlayInfoListOutcome LiveClient::DescribeGroupProIspPlayInfoList(const DescribeGroupProIspPlayInfoListRequest &request)
@@ -1911,25 +2212,32 @@ LiveClient::DescribeGroupProIspPlayInfoListOutcome LiveClient::DescribeGroupProI
 
 void LiveClient::DescribeGroupProIspPlayInfoListAsync(const DescribeGroupProIspPlayInfoListRequest& request, const DescribeGroupProIspPlayInfoListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeGroupProIspPlayInfoList(request), context);
-    };
+    using Req = const DescribeGroupProIspPlayInfoListRequest&;
+    using Resp = DescribeGroupProIspPlayInfoListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeGroupProIspPlayInfoList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeGroupProIspPlayInfoListOutcomeCallable LiveClient::DescribeGroupProIspPlayInfoListCallable(const DescribeGroupProIspPlayInfoListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeGroupProIspPlayInfoListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeGroupProIspPlayInfoList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeGroupProIspPlayInfoListOutcome>>();
+    DescribeGroupProIspPlayInfoListAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeGroupProIspPlayInfoListRequest&,
+        DescribeGroupProIspPlayInfoListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeHttpStatusInfoListOutcome LiveClient::DescribeHttpStatusInfoList(const DescribeHttpStatusInfoListRequest &request)
@@ -1954,25 +2262,32 @@ LiveClient::DescribeHttpStatusInfoListOutcome LiveClient::DescribeHttpStatusInfo
 
 void LiveClient::DescribeHttpStatusInfoListAsync(const DescribeHttpStatusInfoListRequest& request, const DescribeHttpStatusInfoListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeHttpStatusInfoList(request), context);
-    };
+    using Req = const DescribeHttpStatusInfoListRequest&;
+    using Resp = DescribeHttpStatusInfoListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeHttpStatusInfoList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeHttpStatusInfoListOutcomeCallable LiveClient::DescribeHttpStatusInfoListCallable(const DescribeHttpStatusInfoListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeHttpStatusInfoListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeHttpStatusInfoList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeHttpStatusInfoListOutcome>>();
+    DescribeHttpStatusInfoListAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeHttpStatusInfoListRequest&,
+        DescribeHttpStatusInfoListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveCallbackRulesOutcome LiveClient::DescribeLiveCallbackRules(const DescribeLiveCallbackRulesRequest &request)
@@ -1997,25 +2312,32 @@ LiveClient::DescribeLiveCallbackRulesOutcome LiveClient::DescribeLiveCallbackRul
 
 void LiveClient::DescribeLiveCallbackRulesAsync(const DescribeLiveCallbackRulesRequest& request, const DescribeLiveCallbackRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveCallbackRules(request), context);
-    };
+    using Req = const DescribeLiveCallbackRulesRequest&;
+    using Resp = DescribeLiveCallbackRulesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveCallbackRules", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveCallbackRulesOutcomeCallable LiveClient::DescribeLiveCallbackRulesCallable(const DescribeLiveCallbackRulesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveCallbackRulesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveCallbackRules(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveCallbackRulesOutcome>>();
+    DescribeLiveCallbackRulesAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveCallbackRulesRequest&,
+        DescribeLiveCallbackRulesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveCallbackTemplateOutcome LiveClient::DescribeLiveCallbackTemplate(const DescribeLiveCallbackTemplateRequest &request)
@@ -2040,25 +2362,32 @@ LiveClient::DescribeLiveCallbackTemplateOutcome LiveClient::DescribeLiveCallback
 
 void LiveClient::DescribeLiveCallbackTemplateAsync(const DescribeLiveCallbackTemplateRequest& request, const DescribeLiveCallbackTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveCallbackTemplate(request), context);
-    };
+    using Req = const DescribeLiveCallbackTemplateRequest&;
+    using Resp = DescribeLiveCallbackTemplateResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveCallbackTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveCallbackTemplateOutcomeCallable LiveClient::DescribeLiveCallbackTemplateCallable(const DescribeLiveCallbackTemplateRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveCallbackTemplateOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveCallbackTemplate(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveCallbackTemplateOutcome>>();
+    DescribeLiveCallbackTemplateAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveCallbackTemplateRequest&,
+        DescribeLiveCallbackTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveCallbackTemplatesOutcome LiveClient::DescribeLiveCallbackTemplates(const DescribeLiveCallbackTemplatesRequest &request)
@@ -2083,25 +2412,32 @@ LiveClient::DescribeLiveCallbackTemplatesOutcome LiveClient::DescribeLiveCallbac
 
 void LiveClient::DescribeLiveCallbackTemplatesAsync(const DescribeLiveCallbackTemplatesRequest& request, const DescribeLiveCallbackTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveCallbackTemplates(request), context);
-    };
+    using Req = const DescribeLiveCallbackTemplatesRequest&;
+    using Resp = DescribeLiveCallbackTemplatesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveCallbackTemplates", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveCallbackTemplatesOutcomeCallable LiveClient::DescribeLiveCallbackTemplatesCallable(const DescribeLiveCallbackTemplatesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveCallbackTemplatesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveCallbackTemplates(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveCallbackTemplatesOutcome>>();
+    DescribeLiveCallbackTemplatesAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveCallbackTemplatesRequest&,
+        DescribeLiveCallbackTemplatesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveCertOutcome LiveClient::DescribeLiveCert(const DescribeLiveCertRequest &request)
@@ -2126,25 +2462,32 @@ LiveClient::DescribeLiveCertOutcome LiveClient::DescribeLiveCert(const DescribeL
 
 void LiveClient::DescribeLiveCertAsync(const DescribeLiveCertRequest& request, const DescribeLiveCertAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveCert(request), context);
-    };
+    using Req = const DescribeLiveCertRequest&;
+    using Resp = DescribeLiveCertResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveCert", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveCertOutcomeCallable LiveClient::DescribeLiveCertCallable(const DescribeLiveCertRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveCertOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveCert(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveCertOutcome>>();
+    DescribeLiveCertAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveCertRequest&,
+        DescribeLiveCertOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveCertsOutcome LiveClient::DescribeLiveCerts(const DescribeLiveCertsRequest &request)
@@ -2169,25 +2512,32 @@ LiveClient::DescribeLiveCertsOutcome LiveClient::DescribeLiveCerts(const Describ
 
 void LiveClient::DescribeLiveCertsAsync(const DescribeLiveCertsRequest& request, const DescribeLiveCertsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveCerts(request), context);
-    };
+    using Req = const DescribeLiveCertsRequest&;
+    using Resp = DescribeLiveCertsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveCerts", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveCertsOutcomeCallable LiveClient::DescribeLiveCertsCallable(const DescribeLiveCertsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveCertsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveCerts(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveCertsOutcome>>();
+    DescribeLiveCertsAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveCertsRequest&,
+        DescribeLiveCertsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveDelayInfoListOutcome LiveClient::DescribeLiveDelayInfoList(const DescribeLiveDelayInfoListRequest &request)
@@ -2212,25 +2562,32 @@ LiveClient::DescribeLiveDelayInfoListOutcome LiveClient::DescribeLiveDelayInfoLi
 
 void LiveClient::DescribeLiveDelayInfoListAsync(const DescribeLiveDelayInfoListRequest& request, const DescribeLiveDelayInfoListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveDelayInfoList(request), context);
-    };
+    using Req = const DescribeLiveDelayInfoListRequest&;
+    using Resp = DescribeLiveDelayInfoListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveDelayInfoList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveDelayInfoListOutcomeCallable LiveClient::DescribeLiveDelayInfoListCallable(const DescribeLiveDelayInfoListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveDelayInfoListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveDelayInfoList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveDelayInfoListOutcome>>();
+    DescribeLiveDelayInfoListAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveDelayInfoListRequest&,
+        DescribeLiveDelayInfoListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveDomainOutcome LiveClient::DescribeLiveDomain(const DescribeLiveDomainRequest &request)
@@ -2255,25 +2612,32 @@ LiveClient::DescribeLiveDomainOutcome LiveClient::DescribeLiveDomain(const Descr
 
 void LiveClient::DescribeLiveDomainAsync(const DescribeLiveDomainRequest& request, const DescribeLiveDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveDomain(request), context);
-    };
+    using Req = const DescribeLiveDomainRequest&;
+    using Resp = DescribeLiveDomainResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveDomain", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveDomainOutcomeCallable LiveClient::DescribeLiveDomainCallable(const DescribeLiveDomainRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveDomainOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveDomain(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveDomainOutcome>>();
+    DescribeLiveDomainAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveDomainRequest&,
+        DescribeLiveDomainOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveDomainCertOutcome LiveClient::DescribeLiveDomainCert(const DescribeLiveDomainCertRequest &request)
@@ -2298,25 +2662,32 @@ LiveClient::DescribeLiveDomainCertOutcome LiveClient::DescribeLiveDomainCert(con
 
 void LiveClient::DescribeLiveDomainCertAsync(const DescribeLiveDomainCertRequest& request, const DescribeLiveDomainCertAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveDomainCert(request), context);
-    };
+    using Req = const DescribeLiveDomainCertRequest&;
+    using Resp = DescribeLiveDomainCertResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveDomainCert", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveDomainCertOutcomeCallable LiveClient::DescribeLiveDomainCertCallable(const DescribeLiveDomainCertRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveDomainCertOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveDomainCert(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveDomainCertOutcome>>();
+    DescribeLiveDomainCertAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveDomainCertRequest&,
+        DescribeLiveDomainCertOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveDomainCertBindingsOutcome LiveClient::DescribeLiveDomainCertBindings(const DescribeLiveDomainCertBindingsRequest &request)
@@ -2341,25 +2712,32 @@ LiveClient::DescribeLiveDomainCertBindingsOutcome LiveClient::DescribeLiveDomain
 
 void LiveClient::DescribeLiveDomainCertBindingsAsync(const DescribeLiveDomainCertBindingsRequest& request, const DescribeLiveDomainCertBindingsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveDomainCertBindings(request), context);
-    };
+    using Req = const DescribeLiveDomainCertBindingsRequest&;
+    using Resp = DescribeLiveDomainCertBindingsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveDomainCertBindings", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveDomainCertBindingsOutcomeCallable LiveClient::DescribeLiveDomainCertBindingsCallable(const DescribeLiveDomainCertBindingsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveDomainCertBindingsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveDomainCertBindings(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveDomainCertBindingsOutcome>>();
+    DescribeLiveDomainCertBindingsAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveDomainCertBindingsRequest&,
+        DescribeLiveDomainCertBindingsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveDomainRefererOutcome LiveClient::DescribeLiveDomainReferer(const DescribeLiveDomainRefererRequest &request)
@@ -2384,25 +2762,32 @@ LiveClient::DescribeLiveDomainRefererOutcome LiveClient::DescribeLiveDomainRefer
 
 void LiveClient::DescribeLiveDomainRefererAsync(const DescribeLiveDomainRefererRequest& request, const DescribeLiveDomainRefererAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveDomainReferer(request), context);
-    };
+    using Req = const DescribeLiveDomainRefererRequest&;
+    using Resp = DescribeLiveDomainRefererResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveDomainReferer", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveDomainRefererOutcomeCallable LiveClient::DescribeLiveDomainRefererCallable(const DescribeLiveDomainRefererRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveDomainRefererOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveDomainReferer(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveDomainRefererOutcome>>();
+    DescribeLiveDomainRefererAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveDomainRefererRequest&,
+        DescribeLiveDomainRefererOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveDomainsOutcome LiveClient::DescribeLiveDomains(const DescribeLiveDomainsRequest &request)
@@ -2427,25 +2812,32 @@ LiveClient::DescribeLiveDomainsOutcome LiveClient::DescribeLiveDomains(const Des
 
 void LiveClient::DescribeLiveDomainsAsync(const DescribeLiveDomainsRequest& request, const DescribeLiveDomainsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveDomains(request), context);
-    };
+    using Req = const DescribeLiveDomainsRequest&;
+    using Resp = DescribeLiveDomainsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveDomains", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveDomainsOutcomeCallable LiveClient::DescribeLiveDomainsCallable(const DescribeLiveDomainsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveDomainsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveDomains(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveDomainsOutcome>>();
+    DescribeLiveDomainsAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveDomainsRequest&,
+        DescribeLiveDomainsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveForbidStreamListOutcome LiveClient::DescribeLiveForbidStreamList(const DescribeLiveForbidStreamListRequest &request)
@@ -2470,25 +2862,32 @@ LiveClient::DescribeLiveForbidStreamListOutcome LiveClient::DescribeLiveForbidSt
 
 void LiveClient::DescribeLiveForbidStreamListAsync(const DescribeLiveForbidStreamListRequest& request, const DescribeLiveForbidStreamListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveForbidStreamList(request), context);
-    };
+    using Req = const DescribeLiveForbidStreamListRequest&;
+    using Resp = DescribeLiveForbidStreamListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveForbidStreamList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveForbidStreamListOutcomeCallable LiveClient::DescribeLiveForbidStreamListCallable(const DescribeLiveForbidStreamListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveForbidStreamListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveForbidStreamList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveForbidStreamListOutcome>>();
+    DescribeLiveForbidStreamListAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveForbidStreamListRequest&,
+        DescribeLiveForbidStreamListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLivePlayAuthKeyOutcome LiveClient::DescribeLivePlayAuthKey(const DescribeLivePlayAuthKeyRequest &request)
@@ -2513,25 +2912,32 @@ LiveClient::DescribeLivePlayAuthKeyOutcome LiveClient::DescribeLivePlayAuthKey(c
 
 void LiveClient::DescribeLivePlayAuthKeyAsync(const DescribeLivePlayAuthKeyRequest& request, const DescribeLivePlayAuthKeyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLivePlayAuthKey(request), context);
-    };
+    using Req = const DescribeLivePlayAuthKeyRequest&;
+    using Resp = DescribeLivePlayAuthKeyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLivePlayAuthKey", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLivePlayAuthKeyOutcomeCallable LiveClient::DescribeLivePlayAuthKeyCallable(const DescribeLivePlayAuthKeyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLivePlayAuthKeyOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLivePlayAuthKey(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLivePlayAuthKeyOutcome>>();
+    DescribeLivePlayAuthKeyAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLivePlayAuthKeyRequest&,
+        DescribeLivePlayAuthKeyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLivePullStreamTasksOutcome LiveClient::DescribeLivePullStreamTasks(const DescribeLivePullStreamTasksRequest &request)
@@ -2556,25 +2962,32 @@ LiveClient::DescribeLivePullStreamTasksOutcome LiveClient::DescribeLivePullStrea
 
 void LiveClient::DescribeLivePullStreamTasksAsync(const DescribeLivePullStreamTasksRequest& request, const DescribeLivePullStreamTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLivePullStreamTasks(request), context);
-    };
+    using Req = const DescribeLivePullStreamTasksRequest&;
+    using Resp = DescribeLivePullStreamTasksResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLivePullStreamTasks", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLivePullStreamTasksOutcomeCallable LiveClient::DescribeLivePullStreamTasksCallable(const DescribeLivePullStreamTasksRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLivePullStreamTasksOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLivePullStreamTasks(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLivePullStreamTasksOutcome>>();
+    DescribeLivePullStreamTasksAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLivePullStreamTasksRequest&,
+        DescribeLivePullStreamTasksOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLivePushAuthKeyOutcome LiveClient::DescribeLivePushAuthKey(const DescribeLivePushAuthKeyRequest &request)
@@ -2599,25 +3012,32 @@ LiveClient::DescribeLivePushAuthKeyOutcome LiveClient::DescribeLivePushAuthKey(c
 
 void LiveClient::DescribeLivePushAuthKeyAsync(const DescribeLivePushAuthKeyRequest& request, const DescribeLivePushAuthKeyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLivePushAuthKey(request), context);
-    };
+    using Req = const DescribeLivePushAuthKeyRequest&;
+    using Resp = DescribeLivePushAuthKeyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLivePushAuthKey", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLivePushAuthKeyOutcomeCallable LiveClient::DescribeLivePushAuthKeyCallable(const DescribeLivePushAuthKeyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLivePushAuthKeyOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLivePushAuthKey(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLivePushAuthKeyOutcome>>();
+    DescribeLivePushAuthKeyAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLivePushAuthKeyRequest&,
+        DescribeLivePushAuthKeyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveRecordRulesOutcome LiveClient::DescribeLiveRecordRules(const DescribeLiveRecordRulesRequest &request)
@@ -2642,25 +3062,32 @@ LiveClient::DescribeLiveRecordRulesOutcome LiveClient::DescribeLiveRecordRules(c
 
 void LiveClient::DescribeLiveRecordRulesAsync(const DescribeLiveRecordRulesRequest& request, const DescribeLiveRecordRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveRecordRules(request), context);
-    };
+    using Req = const DescribeLiveRecordRulesRequest&;
+    using Resp = DescribeLiveRecordRulesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveRecordRules", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveRecordRulesOutcomeCallable LiveClient::DescribeLiveRecordRulesCallable(const DescribeLiveRecordRulesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveRecordRulesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveRecordRules(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveRecordRulesOutcome>>();
+    DescribeLiveRecordRulesAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveRecordRulesRequest&,
+        DescribeLiveRecordRulesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveRecordTemplateOutcome LiveClient::DescribeLiveRecordTemplate(const DescribeLiveRecordTemplateRequest &request)
@@ -2685,25 +3112,32 @@ LiveClient::DescribeLiveRecordTemplateOutcome LiveClient::DescribeLiveRecordTemp
 
 void LiveClient::DescribeLiveRecordTemplateAsync(const DescribeLiveRecordTemplateRequest& request, const DescribeLiveRecordTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveRecordTemplate(request), context);
-    };
+    using Req = const DescribeLiveRecordTemplateRequest&;
+    using Resp = DescribeLiveRecordTemplateResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveRecordTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveRecordTemplateOutcomeCallable LiveClient::DescribeLiveRecordTemplateCallable(const DescribeLiveRecordTemplateRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveRecordTemplateOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveRecordTemplate(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveRecordTemplateOutcome>>();
+    DescribeLiveRecordTemplateAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveRecordTemplateRequest&,
+        DescribeLiveRecordTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveRecordTemplatesOutcome LiveClient::DescribeLiveRecordTemplates(const DescribeLiveRecordTemplatesRequest &request)
@@ -2728,25 +3162,32 @@ LiveClient::DescribeLiveRecordTemplatesOutcome LiveClient::DescribeLiveRecordTem
 
 void LiveClient::DescribeLiveRecordTemplatesAsync(const DescribeLiveRecordTemplatesRequest& request, const DescribeLiveRecordTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveRecordTemplates(request), context);
-    };
+    using Req = const DescribeLiveRecordTemplatesRequest&;
+    using Resp = DescribeLiveRecordTemplatesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveRecordTemplates", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveRecordTemplatesOutcomeCallable LiveClient::DescribeLiveRecordTemplatesCallable(const DescribeLiveRecordTemplatesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveRecordTemplatesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveRecordTemplates(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveRecordTemplatesOutcome>>();
+    DescribeLiveRecordTemplatesAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveRecordTemplatesRequest&,
+        DescribeLiveRecordTemplatesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveSnapshotRulesOutcome LiveClient::DescribeLiveSnapshotRules(const DescribeLiveSnapshotRulesRequest &request)
@@ -2771,25 +3212,32 @@ LiveClient::DescribeLiveSnapshotRulesOutcome LiveClient::DescribeLiveSnapshotRul
 
 void LiveClient::DescribeLiveSnapshotRulesAsync(const DescribeLiveSnapshotRulesRequest& request, const DescribeLiveSnapshotRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveSnapshotRules(request), context);
-    };
+    using Req = const DescribeLiveSnapshotRulesRequest&;
+    using Resp = DescribeLiveSnapshotRulesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveSnapshotRules", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveSnapshotRulesOutcomeCallable LiveClient::DescribeLiveSnapshotRulesCallable(const DescribeLiveSnapshotRulesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveSnapshotRulesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveSnapshotRules(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveSnapshotRulesOutcome>>();
+    DescribeLiveSnapshotRulesAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveSnapshotRulesRequest&,
+        DescribeLiveSnapshotRulesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveSnapshotTemplateOutcome LiveClient::DescribeLiveSnapshotTemplate(const DescribeLiveSnapshotTemplateRequest &request)
@@ -2814,25 +3262,32 @@ LiveClient::DescribeLiveSnapshotTemplateOutcome LiveClient::DescribeLiveSnapshot
 
 void LiveClient::DescribeLiveSnapshotTemplateAsync(const DescribeLiveSnapshotTemplateRequest& request, const DescribeLiveSnapshotTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveSnapshotTemplate(request), context);
-    };
+    using Req = const DescribeLiveSnapshotTemplateRequest&;
+    using Resp = DescribeLiveSnapshotTemplateResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveSnapshotTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveSnapshotTemplateOutcomeCallable LiveClient::DescribeLiveSnapshotTemplateCallable(const DescribeLiveSnapshotTemplateRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveSnapshotTemplateOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveSnapshotTemplate(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveSnapshotTemplateOutcome>>();
+    DescribeLiveSnapshotTemplateAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveSnapshotTemplateRequest&,
+        DescribeLiveSnapshotTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveSnapshotTemplatesOutcome LiveClient::DescribeLiveSnapshotTemplates(const DescribeLiveSnapshotTemplatesRequest &request)
@@ -2857,25 +3312,32 @@ LiveClient::DescribeLiveSnapshotTemplatesOutcome LiveClient::DescribeLiveSnapsho
 
 void LiveClient::DescribeLiveSnapshotTemplatesAsync(const DescribeLiveSnapshotTemplatesRequest& request, const DescribeLiveSnapshotTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveSnapshotTemplates(request), context);
-    };
+    using Req = const DescribeLiveSnapshotTemplatesRequest&;
+    using Resp = DescribeLiveSnapshotTemplatesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveSnapshotTemplates", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveSnapshotTemplatesOutcomeCallable LiveClient::DescribeLiveSnapshotTemplatesCallable(const DescribeLiveSnapshotTemplatesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveSnapshotTemplatesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveSnapshotTemplates(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveSnapshotTemplatesOutcome>>();
+    DescribeLiveSnapshotTemplatesAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveSnapshotTemplatesRequest&,
+        DescribeLiveSnapshotTemplatesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveStreamEventListOutcome LiveClient::DescribeLiveStreamEventList(const DescribeLiveStreamEventListRequest &request)
@@ -2900,25 +3362,32 @@ LiveClient::DescribeLiveStreamEventListOutcome LiveClient::DescribeLiveStreamEve
 
 void LiveClient::DescribeLiveStreamEventListAsync(const DescribeLiveStreamEventListRequest& request, const DescribeLiveStreamEventListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveStreamEventList(request), context);
-    };
+    using Req = const DescribeLiveStreamEventListRequest&;
+    using Resp = DescribeLiveStreamEventListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveStreamEventList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveStreamEventListOutcomeCallable LiveClient::DescribeLiveStreamEventListCallable(const DescribeLiveStreamEventListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveStreamEventListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveStreamEventList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveStreamEventListOutcome>>();
+    DescribeLiveStreamEventListAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveStreamEventListRequest&,
+        DescribeLiveStreamEventListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveStreamOnlineListOutcome LiveClient::DescribeLiveStreamOnlineList(const DescribeLiveStreamOnlineListRequest &request)
@@ -2943,25 +3412,32 @@ LiveClient::DescribeLiveStreamOnlineListOutcome LiveClient::DescribeLiveStreamOn
 
 void LiveClient::DescribeLiveStreamOnlineListAsync(const DescribeLiveStreamOnlineListRequest& request, const DescribeLiveStreamOnlineListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveStreamOnlineList(request), context);
-    };
+    using Req = const DescribeLiveStreamOnlineListRequest&;
+    using Resp = DescribeLiveStreamOnlineListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveStreamOnlineList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveStreamOnlineListOutcomeCallable LiveClient::DescribeLiveStreamOnlineListCallable(const DescribeLiveStreamOnlineListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveStreamOnlineListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveStreamOnlineList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveStreamOnlineListOutcome>>();
+    DescribeLiveStreamOnlineListAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveStreamOnlineListRequest&,
+        DescribeLiveStreamOnlineListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveStreamPublishedListOutcome LiveClient::DescribeLiveStreamPublishedList(const DescribeLiveStreamPublishedListRequest &request)
@@ -2986,25 +3462,32 @@ LiveClient::DescribeLiveStreamPublishedListOutcome LiveClient::DescribeLiveStrea
 
 void LiveClient::DescribeLiveStreamPublishedListAsync(const DescribeLiveStreamPublishedListRequest& request, const DescribeLiveStreamPublishedListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveStreamPublishedList(request), context);
-    };
+    using Req = const DescribeLiveStreamPublishedListRequest&;
+    using Resp = DescribeLiveStreamPublishedListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveStreamPublishedList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveStreamPublishedListOutcomeCallable LiveClient::DescribeLiveStreamPublishedListCallable(const DescribeLiveStreamPublishedListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveStreamPublishedListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveStreamPublishedList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveStreamPublishedListOutcome>>();
+    DescribeLiveStreamPublishedListAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveStreamPublishedListRequest&,
+        DescribeLiveStreamPublishedListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveStreamPushInfoListOutcome LiveClient::DescribeLiveStreamPushInfoList(const DescribeLiveStreamPushInfoListRequest &request)
@@ -3029,25 +3512,32 @@ LiveClient::DescribeLiveStreamPushInfoListOutcome LiveClient::DescribeLiveStream
 
 void LiveClient::DescribeLiveStreamPushInfoListAsync(const DescribeLiveStreamPushInfoListRequest& request, const DescribeLiveStreamPushInfoListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveStreamPushInfoList(request), context);
-    };
+    using Req = const DescribeLiveStreamPushInfoListRequest&;
+    using Resp = DescribeLiveStreamPushInfoListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveStreamPushInfoList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveStreamPushInfoListOutcomeCallable LiveClient::DescribeLiveStreamPushInfoListCallable(const DescribeLiveStreamPushInfoListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveStreamPushInfoListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveStreamPushInfoList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveStreamPushInfoListOutcome>>();
+    DescribeLiveStreamPushInfoListAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveStreamPushInfoListRequest&,
+        DescribeLiveStreamPushInfoListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveStreamStateOutcome LiveClient::DescribeLiveStreamState(const DescribeLiveStreamStateRequest &request)
@@ -3072,25 +3562,32 @@ LiveClient::DescribeLiveStreamStateOutcome LiveClient::DescribeLiveStreamState(c
 
 void LiveClient::DescribeLiveStreamStateAsync(const DescribeLiveStreamStateRequest& request, const DescribeLiveStreamStateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveStreamState(request), context);
-    };
+    using Req = const DescribeLiveStreamStateRequest&;
+    using Resp = DescribeLiveStreamStateResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveStreamState", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveStreamStateOutcomeCallable LiveClient::DescribeLiveStreamStateCallable(const DescribeLiveStreamStateRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveStreamStateOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveStreamState(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveStreamStateOutcome>>();
+    DescribeLiveStreamStateAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveStreamStateRequest&,
+        DescribeLiveStreamStateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveTimeShiftBillInfoListOutcome LiveClient::DescribeLiveTimeShiftBillInfoList(const DescribeLiveTimeShiftBillInfoListRequest &request)
@@ -3115,25 +3612,32 @@ LiveClient::DescribeLiveTimeShiftBillInfoListOutcome LiveClient::DescribeLiveTim
 
 void LiveClient::DescribeLiveTimeShiftBillInfoListAsync(const DescribeLiveTimeShiftBillInfoListRequest& request, const DescribeLiveTimeShiftBillInfoListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveTimeShiftBillInfoList(request), context);
-    };
+    using Req = const DescribeLiveTimeShiftBillInfoListRequest&;
+    using Resp = DescribeLiveTimeShiftBillInfoListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveTimeShiftBillInfoList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveTimeShiftBillInfoListOutcomeCallable LiveClient::DescribeLiveTimeShiftBillInfoListCallable(const DescribeLiveTimeShiftBillInfoListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveTimeShiftBillInfoListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveTimeShiftBillInfoList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveTimeShiftBillInfoListOutcome>>();
+    DescribeLiveTimeShiftBillInfoListAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveTimeShiftBillInfoListRequest&,
+        DescribeLiveTimeShiftBillInfoListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveTimeShiftRulesOutcome LiveClient::DescribeLiveTimeShiftRules(const DescribeLiveTimeShiftRulesRequest &request)
@@ -3158,25 +3662,32 @@ LiveClient::DescribeLiveTimeShiftRulesOutcome LiveClient::DescribeLiveTimeShiftR
 
 void LiveClient::DescribeLiveTimeShiftRulesAsync(const DescribeLiveTimeShiftRulesRequest& request, const DescribeLiveTimeShiftRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveTimeShiftRules(request), context);
-    };
+    using Req = const DescribeLiveTimeShiftRulesRequest&;
+    using Resp = DescribeLiveTimeShiftRulesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveTimeShiftRules", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveTimeShiftRulesOutcomeCallable LiveClient::DescribeLiveTimeShiftRulesCallable(const DescribeLiveTimeShiftRulesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveTimeShiftRulesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveTimeShiftRules(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveTimeShiftRulesOutcome>>();
+    DescribeLiveTimeShiftRulesAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveTimeShiftRulesRequest&,
+        DescribeLiveTimeShiftRulesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveTimeShiftTemplatesOutcome LiveClient::DescribeLiveTimeShiftTemplates(const DescribeLiveTimeShiftTemplatesRequest &request)
@@ -3201,25 +3712,32 @@ LiveClient::DescribeLiveTimeShiftTemplatesOutcome LiveClient::DescribeLiveTimeSh
 
 void LiveClient::DescribeLiveTimeShiftTemplatesAsync(const DescribeLiveTimeShiftTemplatesRequest& request, const DescribeLiveTimeShiftTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveTimeShiftTemplates(request), context);
-    };
+    using Req = const DescribeLiveTimeShiftTemplatesRequest&;
+    using Resp = DescribeLiveTimeShiftTemplatesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveTimeShiftTemplates", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveTimeShiftTemplatesOutcomeCallable LiveClient::DescribeLiveTimeShiftTemplatesCallable(const DescribeLiveTimeShiftTemplatesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveTimeShiftTemplatesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveTimeShiftTemplates(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveTimeShiftTemplatesOutcome>>();
+    DescribeLiveTimeShiftTemplatesAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveTimeShiftTemplatesRequest&,
+        DescribeLiveTimeShiftTemplatesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveTranscodeDetailInfoOutcome LiveClient::DescribeLiveTranscodeDetailInfo(const DescribeLiveTranscodeDetailInfoRequest &request)
@@ -3244,25 +3762,32 @@ LiveClient::DescribeLiveTranscodeDetailInfoOutcome LiveClient::DescribeLiveTrans
 
 void LiveClient::DescribeLiveTranscodeDetailInfoAsync(const DescribeLiveTranscodeDetailInfoRequest& request, const DescribeLiveTranscodeDetailInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveTranscodeDetailInfo(request), context);
-    };
+    using Req = const DescribeLiveTranscodeDetailInfoRequest&;
+    using Resp = DescribeLiveTranscodeDetailInfoResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveTranscodeDetailInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveTranscodeDetailInfoOutcomeCallable LiveClient::DescribeLiveTranscodeDetailInfoCallable(const DescribeLiveTranscodeDetailInfoRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveTranscodeDetailInfoOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveTranscodeDetailInfo(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveTranscodeDetailInfoOutcome>>();
+    DescribeLiveTranscodeDetailInfoAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveTranscodeDetailInfoRequest&,
+        DescribeLiveTranscodeDetailInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveTranscodeRulesOutcome LiveClient::DescribeLiveTranscodeRules(const DescribeLiveTranscodeRulesRequest &request)
@@ -3287,25 +3812,32 @@ LiveClient::DescribeLiveTranscodeRulesOutcome LiveClient::DescribeLiveTranscodeR
 
 void LiveClient::DescribeLiveTranscodeRulesAsync(const DescribeLiveTranscodeRulesRequest& request, const DescribeLiveTranscodeRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveTranscodeRules(request), context);
-    };
+    using Req = const DescribeLiveTranscodeRulesRequest&;
+    using Resp = DescribeLiveTranscodeRulesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveTranscodeRules", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveTranscodeRulesOutcomeCallable LiveClient::DescribeLiveTranscodeRulesCallable(const DescribeLiveTranscodeRulesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveTranscodeRulesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveTranscodeRules(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveTranscodeRulesOutcome>>();
+    DescribeLiveTranscodeRulesAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveTranscodeRulesRequest&,
+        DescribeLiveTranscodeRulesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveTranscodeTemplateOutcome LiveClient::DescribeLiveTranscodeTemplate(const DescribeLiveTranscodeTemplateRequest &request)
@@ -3330,25 +3862,32 @@ LiveClient::DescribeLiveTranscodeTemplateOutcome LiveClient::DescribeLiveTransco
 
 void LiveClient::DescribeLiveTranscodeTemplateAsync(const DescribeLiveTranscodeTemplateRequest& request, const DescribeLiveTranscodeTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveTranscodeTemplate(request), context);
-    };
+    using Req = const DescribeLiveTranscodeTemplateRequest&;
+    using Resp = DescribeLiveTranscodeTemplateResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveTranscodeTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveTranscodeTemplateOutcomeCallable LiveClient::DescribeLiveTranscodeTemplateCallable(const DescribeLiveTranscodeTemplateRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveTranscodeTemplateOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveTranscodeTemplate(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveTranscodeTemplateOutcome>>();
+    DescribeLiveTranscodeTemplateAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveTranscodeTemplateRequest&,
+        DescribeLiveTranscodeTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveTranscodeTemplatesOutcome LiveClient::DescribeLiveTranscodeTemplates(const DescribeLiveTranscodeTemplatesRequest &request)
@@ -3373,25 +3912,32 @@ LiveClient::DescribeLiveTranscodeTemplatesOutcome LiveClient::DescribeLiveTransc
 
 void LiveClient::DescribeLiveTranscodeTemplatesAsync(const DescribeLiveTranscodeTemplatesRequest& request, const DescribeLiveTranscodeTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveTranscodeTemplates(request), context);
-    };
+    using Req = const DescribeLiveTranscodeTemplatesRequest&;
+    using Resp = DescribeLiveTranscodeTemplatesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveTranscodeTemplates", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveTranscodeTemplatesOutcomeCallable LiveClient::DescribeLiveTranscodeTemplatesCallable(const DescribeLiveTranscodeTemplatesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveTranscodeTemplatesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveTranscodeTemplates(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveTranscodeTemplatesOutcome>>();
+    DescribeLiveTranscodeTemplatesAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveTranscodeTemplatesRequest&,
+        DescribeLiveTranscodeTemplatesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveTranscodeTotalInfoOutcome LiveClient::DescribeLiveTranscodeTotalInfo(const DescribeLiveTranscodeTotalInfoRequest &request)
@@ -3416,25 +3962,32 @@ LiveClient::DescribeLiveTranscodeTotalInfoOutcome LiveClient::DescribeLiveTransc
 
 void LiveClient::DescribeLiveTranscodeTotalInfoAsync(const DescribeLiveTranscodeTotalInfoRequest& request, const DescribeLiveTranscodeTotalInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveTranscodeTotalInfo(request), context);
-    };
+    using Req = const DescribeLiveTranscodeTotalInfoRequest&;
+    using Resp = DescribeLiveTranscodeTotalInfoResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveTranscodeTotalInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveTranscodeTotalInfoOutcomeCallable LiveClient::DescribeLiveTranscodeTotalInfoCallable(const DescribeLiveTranscodeTotalInfoRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveTranscodeTotalInfoOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveTranscodeTotalInfo(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveTranscodeTotalInfoOutcome>>();
+    DescribeLiveTranscodeTotalInfoAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveTranscodeTotalInfoRequest&,
+        DescribeLiveTranscodeTotalInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveWatermarkOutcome LiveClient::DescribeLiveWatermark(const DescribeLiveWatermarkRequest &request)
@@ -3459,25 +4012,32 @@ LiveClient::DescribeLiveWatermarkOutcome LiveClient::DescribeLiveWatermark(const
 
 void LiveClient::DescribeLiveWatermarkAsync(const DescribeLiveWatermarkRequest& request, const DescribeLiveWatermarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveWatermark(request), context);
-    };
+    using Req = const DescribeLiveWatermarkRequest&;
+    using Resp = DescribeLiveWatermarkResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveWatermark", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveWatermarkOutcomeCallable LiveClient::DescribeLiveWatermarkCallable(const DescribeLiveWatermarkRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveWatermarkOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveWatermark(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveWatermarkOutcome>>();
+    DescribeLiveWatermarkAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveWatermarkRequest&,
+        DescribeLiveWatermarkOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveWatermarkRulesOutcome LiveClient::DescribeLiveWatermarkRules(const DescribeLiveWatermarkRulesRequest &request)
@@ -3502,25 +4062,32 @@ LiveClient::DescribeLiveWatermarkRulesOutcome LiveClient::DescribeLiveWatermarkR
 
 void LiveClient::DescribeLiveWatermarkRulesAsync(const DescribeLiveWatermarkRulesRequest& request, const DescribeLiveWatermarkRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveWatermarkRules(request), context);
-    };
+    using Req = const DescribeLiveWatermarkRulesRequest&;
+    using Resp = DescribeLiveWatermarkRulesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveWatermarkRules", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveWatermarkRulesOutcomeCallable LiveClient::DescribeLiveWatermarkRulesCallable(const DescribeLiveWatermarkRulesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveWatermarkRulesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveWatermarkRules(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveWatermarkRulesOutcome>>();
+    DescribeLiveWatermarkRulesAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveWatermarkRulesRequest&,
+        DescribeLiveWatermarkRulesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeLiveWatermarksOutcome LiveClient::DescribeLiveWatermarks(const DescribeLiveWatermarksRequest &request)
@@ -3545,25 +4112,32 @@ LiveClient::DescribeLiveWatermarksOutcome LiveClient::DescribeLiveWatermarks(con
 
 void LiveClient::DescribeLiveWatermarksAsync(const DescribeLiveWatermarksRequest& request, const DescribeLiveWatermarksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLiveWatermarks(request), context);
-    };
+    using Req = const DescribeLiveWatermarksRequest&;
+    using Resp = DescribeLiveWatermarksResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLiveWatermarks", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeLiveWatermarksOutcomeCallable LiveClient::DescribeLiveWatermarksCallable(const DescribeLiveWatermarksRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLiveWatermarksOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLiveWatermarks(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLiveWatermarksOutcome>>();
+    DescribeLiveWatermarksAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeLiveWatermarksRequest&,
+        DescribeLiveWatermarksOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribePlayErrorCodeDetailInfoListOutcome LiveClient::DescribePlayErrorCodeDetailInfoList(const DescribePlayErrorCodeDetailInfoListRequest &request)
@@ -3588,25 +4162,32 @@ LiveClient::DescribePlayErrorCodeDetailInfoListOutcome LiveClient::DescribePlayE
 
 void LiveClient::DescribePlayErrorCodeDetailInfoListAsync(const DescribePlayErrorCodeDetailInfoListRequest& request, const DescribePlayErrorCodeDetailInfoListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribePlayErrorCodeDetailInfoList(request), context);
-    };
+    using Req = const DescribePlayErrorCodeDetailInfoListRequest&;
+    using Resp = DescribePlayErrorCodeDetailInfoListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribePlayErrorCodeDetailInfoList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribePlayErrorCodeDetailInfoListOutcomeCallable LiveClient::DescribePlayErrorCodeDetailInfoListCallable(const DescribePlayErrorCodeDetailInfoListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribePlayErrorCodeDetailInfoListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribePlayErrorCodeDetailInfoList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribePlayErrorCodeDetailInfoListOutcome>>();
+    DescribePlayErrorCodeDetailInfoListAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribePlayErrorCodeDetailInfoListRequest&,
+        DescribePlayErrorCodeDetailInfoListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribePlayErrorCodeSumInfoListOutcome LiveClient::DescribePlayErrorCodeSumInfoList(const DescribePlayErrorCodeSumInfoListRequest &request)
@@ -3631,25 +4212,32 @@ LiveClient::DescribePlayErrorCodeSumInfoListOutcome LiveClient::DescribePlayErro
 
 void LiveClient::DescribePlayErrorCodeSumInfoListAsync(const DescribePlayErrorCodeSumInfoListRequest& request, const DescribePlayErrorCodeSumInfoListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribePlayErrorCodeSumInfoList(request), context);
-    };
+    using Req = const DescribePlayErrorCodeSumInfoListRequest&;
+    using Resp = DescribePlayErrorCodeSumInfoListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribePlayErrorCodeSumInfoList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribePlayErrorCodeSumInfoListOutcomeCallable LiveClient::DescribePlayErrorCodeSumInfoListCallable(const DescribePlayErrorCodeSumInfoListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribePlayErrorCodeSumInfoListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribePlayErrorCodeSumInfoList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribePlayErrorCodeSumInfoListOutcome>>();
+    DescribePlayErrorCodeSumInfoListAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribePlayErrorCodeSumInfoListRequest&,
+        DescribePlayErrorCodeSumInfoListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeProvinceIspPlayInfoListOutcome LiveClient::DescribeProvinceIspPlayInfoList(const DescribeProvinceIspPlayInfoListRequest &request)
@@ -3674,25 +4262,32 @@ LiveClient::DescribeProvinceIspPlayInfoListOutcome LiveClient::DescribeProvinceI
 
 void LiveClient::DescribeProvinceIspPlayInfoListAsync(const DescribeProvinceIspPlayInfoListRequest& request, const DescribeProvinceIspPlayInfoListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeProvinceIspPlayInfoList(request), context);
-    };
+    using Req = const DescribeProvinceIspPlayInfoListRequest&;
+    using Resp = DescribeProvinceIspPlayInfoListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeProvinceIspPlayInfoList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeProvinceIspPlayInfoListOutcomeCallable LiveClient::DescribeProvinceIspPlayInfoListCallable(const DescribeProvinceIspPlayInfoListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeProvinceIspPlayInfoListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeProvinceIspPlayInfoList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeProvinceIspPlayInfoListOutcome>>();
+    DescribeProvinceIspPlayInfoListAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeProvinceIspPlayInfoListRequest&,
+        DescribeProvinceIspPlayInfoListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeRecordTaskOutcome LiveClient::DescribeRecordTask(const DescribeRecordTaskRequest &request)
@@ -3717,25 +4312,32 @@ LiveClient::DescribeRecordTaskOutcome LiveClient::DescribeRecordTask(const Descr
 
 void LiveClient::DescribeRecordTaskAsync(const DescribeRecordTaskRequest& request, const DescribeRecordTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeRecordTask(request), context);
-    };
+    using Req = const DescribeRecordTaskRequest&;
+    using Resp = DescribeRecordTaskResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeRecordTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeRecordTaskOutcomeCallable LiveClient::DescribeRecordTaskCallable(const DescribeRecordTaskRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeRecordTaskOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeRecordTask(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeRecordTaskOutcome>>();
+    DescribeRecordTaskAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeRecordTaskRequest&,
+        DescribeRecordTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeScreenShotSheetNumListOutcome LiveClient::DescribeScreenShotSheetNumList(const DescribeScreenShotSheetNumListRequest &request)
@@ -3760,25 +4362,32 @@ LiveClient::DescribeScreenShotSheetNumListOutcome LiveClient::DescribeScreenShot
 
 void LiveClient::DescribeScreenShotSheetNumListAsync(const DescribeScreenShotSheetNumListRequest& request, const DescribeScreenShotSheetNumListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeScreenShotSheetNumList(request), context);
-    };
+    using Req = const DescribeScreenShotSheetNumListRequest&;
+    using Resp = DescribeScreenShotSheetNumListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeScreenShotSheetNumList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeScreenShotSheetNumListOutcomeCallable LiveClient::DescribeScreenShotSheetNumListCallable(const DescribeScreenShotSheetNumListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeScreenShotSheetNumListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeScreenShotSheetNumList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeScreenShotSheetNumListOutcome>>();
+    DescribeScreenShotSheetNumListAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeScreenShotSheetNumListRequest&,
+        DescribeScreenShotSheetNumListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeStreamDayPlayInfoListOutcome LiveClient::DescribeStreamDayPlayInfoList(const DescribeStreamDayPlayInfoListRequest &request)
@@ -3803,25 +4412,32 @@ LiveClient::DescribeStreamDayPlayInfoListOutcome LiveClient::DescribeStreamDayPl
 
 void LiveClient::DescribeStreamDayPlayInfoListAsync(const DescribeStreamDayPlayInfoListRequest& request, const DescribeStreamDayPlayInfoListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeStreamDayPlayInfoList(request), context);
-    };
+    using Req = const DescribeStreamDayPlayInfoListRequest&;
+    using Resp = DescribeStreamDayPlayInfoListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeStreamDayPlayInfoList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeStreamDayPlayInfoListOutcomeCallable LiveClient::DescribeStreamDayPlayInfoListCallable(const DescribeStreamDayPlayInfoListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeStreamDayPlayInfoListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeStreamDayPlayInfoList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeStreamDayPlayInfoListOutcome>>();
+    DescribeStreamDayPlayInfoListAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeStreamDayPlayInfoListRequest&,
+        DescribeStreamDayPlayInfoListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeStreamPlayInfoListOutcome LiveClient::DescribeStreamPlayInfoList(const DescribeStreamPlayInfoListRequest &request)
@@ -3846,25 +4462,32 @@ LiveClient::DescribeStreamPlayInfoListOutcome LiveClient::DescribeStreamPlayInfo
 
 void LiveClient::DescribeStreamPlayInfoListAsync(const DescribeStreamPlayInfoListRequest& request, const DescribeStreamPlayInfoListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeStreamPlayInfoList(request), context);
-    };
+    using Req = const DescribeStreamPlayInfoListRequest&;
+    using Resp = DescribeStreamPlayInfoListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeStreamPlayInfoList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeStreamPlayInfoListOutcomeCallable LiveClient::DescribeStreamPlayInfoListCallable(const DescribeStreamPlayInfoListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeStreamPlayInfoListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeStreamPlayInfoList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeStreamPlayInfoListOutcome>>();
+    DescribeStreamPlayInfoListAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeStreamPlayInfoListRequest&,
+        DescribeStreamPlayInfoListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeStreamPushInfoListOutcome LiveClient::DescribeStreamPushInfoList(const DescribeStreamPushInfoListRequest &request)
@@ -3889,25 +4512,32 @@ LiveClient::DescribeStreamPushInfoListOutcome LiveClient::DescribeStreamPushInfo
 
 void LiveClient::DescribeStreamPushInfoListAsync(const DescribeStreamPushInfoListRequest& request, const DescribeStreamPushInfoListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeStreamPushInfoList(request), context);
-    };
+    using Req = const DescribeStreamPushInfoListRequest&;
+    using Resp = DescribeStreamPushInfoListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeStreamPushInfoList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeStreamPushInfoListOutcomeCallable LiveClient::DescribeStreamPushInfoListCallable(const DescribeStreamPushInfoListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeStreamPushInfoListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeStreamPushInfoList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeStreamPushInfoListOutcome>>();
+    DescribeStreamPushInfoListAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeStreamPushInfoListRequest&,
+        DescribeStreamPushInfoListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeTimeShiftRecordDetailOutcome LiveClient::DescribeTimeShiftRecordDetail(const DescribeTimeShiftRecordDetailRequest &request)
@@ -3932,25 +4562,32 @@ LiveClient::DescribeTimeShiftRecordDetailOutcome LiveClient::DescribeTimeShiftRe
 
 void LiveClient::DescribeTimeShiftRecordDetailAsync(const DescribeTimeShiftRecordDetailRequest& request, const DescribeTimeShiftRecordDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTimeShiftRecordDetail(request), context);
-    };
+    using Req = const DescribeTimeShiftRecordDetailRequest&;
+    using Resp = DescribeTimeShiftRecordDetailResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTimeShiftRecordDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeTimeShiftRecordDetailOutcomeCallable LiveClient::DescribeTimeShiftRecordDetailCallable(const DescribeTimeShiftRecordDetailRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTimeShiftRecordDetailOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTimeShiftRecordDetail(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTimeShiftRecordDetailOutcome>>();
+    DescribeTimeShiftRecordDetailAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeTimeShiftRecordDetailRequest&,
+        DescribeTimeShiftRecordDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeTimeShiftStreamListOutcome LiveClient::DescribeTimeShiftStreamList(const DescribeTimeShiftStreamListRequest &request)
@@ -3975,25 +4612,32 @@ LiveClient::DescribeTimeShiftStreamListOutcome LiveClient::DescribeTimeShiftStre
 
 void LiveClient::DescribeTimeShiftStreamListAsync(const DescribeTimeShiftStreamListRequest& request, const DescribeTimeShiftStreamListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTimeShiftStreamList(request), context);
-    };
+    using Req = const DescribeTimeShiftStreamListRequest&;
+    using Resp = DescribeTimeShiftStreamListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTimeShiftStreamList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeTimeShiftStreamListOutcomeCallable LiveClient::DescribeTimeShiftStreamListCallable(const DescribeTimeShiftStreamListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTimeShiftStreamListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTimeShiftStreamList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTimeShiftStreamListOutcome>>();
+    DescribeTimeShiftStreamListAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeTimeShiftStreamListRequest&,
+        DescribeTimeShiftStreamListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeTopClientIpSumInfoListOutcome LiveClient::DescribeTopClientIpSumInfoList(const DescribeTopClientIpSumInfoListRequest &request)
@@ -4018,25 +4662,32 @@ LiveClient::DescribeTopClientIpSumInfoListOutcome LiveClient::DescribeTopClientI
 
 void LiveClient::DescribeTopClientIpSumInfoListAsync(const DescribeTopClientIpSumInfoListRequest& request, const DescribeTopClientIpSumInfoListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTopClientIpSumInfoList(request), context);
-    };
+    using Req = const DescribeTopClientIpSumInfoListRequest&;
+    using Resp = DescribeTopClientIpSumInfoListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTopClientIpSumInfoList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeTopClientIpSumInfoListOutcomeCallable LiveClient::DescribeTopClientIpSumInfoListCallable(const DescribeTopClientIpSumInfoListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTopClientIpSumInfoListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTopClientIpSumInfoList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTopClientIpSumInfoListOutcome>>();
+    DescribeTopClientIpSumInfoListAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeTopClientIpSumInfoListRequest&,
+        DescribeTopClientIpSumInfoListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeTranscodeTaskNumOutcome LiveClient::DescribeTranscodeTaskNum(const DescribeTranscodeTaskNumRequest &request)
@@ -4061,25 +4712,32 @@ LiveClient::DescribeTranscodeTaskNumOutcome LiveClient::DescribeTranscodeTaskNum
 
 void LiveClient::DescribeTranscodeTaskNumAsync(const DescribeTranscodeTaskNumRequest& request, const DescribeTranscodeTaskNumAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTranscodeTaskNum(request), context);
-    };
+    using Req = const DescribeTranscodeTaskNumRequest&;
+    using Resp = DescribeTranscodeTaskNumResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTranscodeTaskNum", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeTranscodeTaskNumOutcomeCallable LiveClient::DescribeTranscodeTaskNumCallable(const DescribeTranscodeTaskNumRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTranscodeTaskNumOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTranscodeTaskNum(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTranscodeTaskNumOutcome>>();
+    DescribeTranscodeTaskNumAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeTranscodeTaskNumRequest&,
+        DescribeTranscodeTaskNumOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeUploadStreamNumsOutcome LiveClient::DescribeUploadStreamNums(const DescribeUploadStreamNumsRequest &request)
@@ -4104,25 +4762,32 @@ LiveClient::DescribeUploadStreamNumsOutcome LiveClient::DescribeUploadStreamNums
 
 void LiveClient::DescribeUploadStreamNumsAsync(const DescribeUploadStreamNumsRequest& request, const DescribeUploadStreamNumsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeUploadStreamNums(request), context);
-    };
+    using Req = const DescribeUploadStreamNumsRequest&;
+    using Resp = DescribeUploadStreamNumsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeUploadStreamNums", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeUploadStreamNumsOutcomeCallable LiveClient::DescribeUploadStreamNumsCallable(const DescribeUploadStreamNumsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeUploadStreamNumsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeUploadStreamNums(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeUploadStreamNumsOutcome>>();
+    DescribeUploadStreamNumsAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeUploadStreamNumsRequest&,
+        DescribeUploadStreamNumsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DescribeVisitTopSumInfoListOutcome LiveClient::DescribeVisitTopSumInfoList(const DescribeVisitTopSumInfoListRequest &request)
@@ -4147,25 +4812,32 @@ LiveClient::DescribeVisitTopSumInfoListOutcome LiveClient::DescribeVisitTopSumIn
 
 void LiveClient::DescribeVisitTopSumInfoListAsync(const DescribeVisitTopSumInfoListRequest& request, const DescribeVisitTopSumInfoListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeVisitTopSumInfoList(request), context);
-    };
+    using Req = const DescribeVisitTopSumInfoListRequest&;
+    using Resp = DescribeVisitTopSumInfoListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeVisitTopSumInfoList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DescribeVisitTopSumInfoListOutcomeCallable LiveClient::DescribeVisitTopSumInfoListCallable(const DescribeVisitTopSumInfoListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeVisitTopSumInfoListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeVisitTopSumInfoList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeVisitTopSumInfoListOutcome>>();
+    DescribeVisitTopSumInfoListAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DescribeVisitTopSumInfoListRequest&,
+        DescribeVisitTopSumInfoListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::DropLiveStreamOutcome LiveClient::DropLiveStream(const DropLiveStreamRequest &request)
@@ -4190,25 +4862,32 @@ LiveClient::DropLiveStreamOutcome LiveClient::DropLiveStream(const DropLiveStrea
 
 void LiveClient::DropLiveStreamAsync(const DropLiveStreamRequest& request, const DropLiveStreamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DropLiveStream(request), context);
-    };
+    using Req = const DropLiveStreamRequest&;
+    using Resp = DropLiveStreamResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DropLiveStream", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::DropLiveStreamOutcomeCallable LiveClient::DropLiveStreamCallable(const DropLiveStreamRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DropLiveStreamOutcome()>>(
-        [this, request]()
-        {
-            return this->DropLiveStream(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DropLiveStreamOutcome>>();
+    DropLiveStreamAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const DropLiveStreamRequest&,
+        DropLiveStreamOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::EnableLiveDomainOutcome LiveClient::EnableLiveDomain(const EnableLiveDomainRequest &request)
@@ -4233,25 +4912,32 @@ LiveClient::EnableLiveDomainOutcome LiveClient::EnableLiveDomain(const EnableLiv
 
 void LiveClient::EnableLiveDomainAsync(const EnableLiveDomainRequest& request, const EnableLiveDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->EnableLiveDomain(request), context);
-    };
+    using Req = const EnableLiveDomainRequest&;
+    using Resp = EnableLiveDomainResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "EnableLiveDomain", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::EnableLiveDomainOutcomeCallable LiveClient::EnableLiveDomainCallable(const EnableLiveDomainRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<EnableLiveDomainOutcome()>>(
-        [this, request]()
-        {
-            return this->EnableLiveDomain(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<EnableLiveDomainOutcome>>();
+    EnableLiveDomainAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const EnableLiveDomainRequest&,
+        EnableLiveDomainOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::ForbidLiveDomainOutcome LiveClient::ForbidLiveDomain(const ForbidLiveDomainRequest &request)
@@ -4276,25 +4962,32 @@ LiveClient::ForbidLiveDomainOutcome LiveClient::ForbidLiveDomain(const ForbidLiv
 
 void LiveClient::ForbidLiveDomainAsync(const ForbidLiveDomainRequest& request, const ForbidLiveDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ForbidLiveDomain(request), context);
-    };
+    using Req = const ForbidLiveDomainRequest&;
+    using Resp = ForbidLiveDomainResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ForbidLiveDomain", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::ForbidLiveDomainOutcomeCallable LiveClient::ForbidLiveDomainCallable(const ForbidLiveDomainRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ForbidLiveDomainOutcome()>>(
-        [this, request]()
-        {
-            return this->ForbidLiveDomain(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ForbidLiveDomainOutcome>>();
+    ForbidLiveDomainAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const ForbidLiveDomainRequest&,
+        ForbidLiveDomainOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::ForbidLiveStreamOutcome LiveClient::ForbidLiveStream(const ForbidLiveStreamRequest &request)
@@ -4319,25 +5012,32 @@ LiveClient::ForbidLiveStreamOutcome LiveClient::ForbidLiveStream(const ForbidLiv
 
 void LiveClient::ForbidLiveStreamAsync(const ForbidLiveStreamRequest& request, const ForbidLiveStreamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ForbidLiveStream(request), context);
-    };
+    using Req = const ForbidLiveStreamRequest&;
+    using Resp = ForbidLiveStreamResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ForbidLiveStream", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::ForbidLiveStreamOutcomeCallable LiveClient::ForbidLiveStreamCallable(const ForbidLiveStreamRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ForbidLiveStreamOutcome()>>(
-        [this, request]()
-        {
-            return this->ForbidLiveStream(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ForbidLiveStreamOutcome>>();
+    ForbidLiveStreamAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const ForbidLiveStreamRequest&,
+        ForbidLiveStreamOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::ModifyLiveCallbackTemplateOutcome LiveClient::ModifyLiveCallbackTemplate(const ModifyLiveCallbackTemplateRequest &request)
@@ -4362,25 +5062,32 @@ LiveClient::ModifyLiveCallbackTemplateOutcome LiveClient::ModifyLiveCallbackTemp
 
 void LiveClient::ModifyLiveCallbackTemplateAsync(const ModifyLiveCallbackTemplateRequest& request, const ModifyLiveCallbackTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyLiveCallbackTemplate(request), context);
-    };
+    using Req = const ModifyLiveCallbackTemplateRequest&;
+    using Resp = ModifyLiveCallbackTemplateResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyLiveCallbackTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::ModifyLiveCallbackTemplateOutcomeCallable LiveClient::ModifyLiveCallbackTemplateCallable(const ModifyLiveCallbackTemplateRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyLiveCallbackTemplateOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyLiveCallbackTemplate(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyLiveCallbackTemplateOutcome>>();
+    ModifyLiveCallbackTemplateAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const ModifyLiveCallbackTemplateRequest&,
+        ModifyLiveCallbackTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::ModifyLiveDomainCertBindingsOutcome LiveClient::ModifyLiveDomainCertBindings(const ModifyLiveDomainCertBindingsRequest &request)
@@ -4405,25 +5112,32 @@ LiveClient::ModifyLiveDomainCertBindingsOutcome LiveClient::ModifyLiveDomainCert
 
 void LiveClient::ModifyLiveDomainCertBindingsAsync(const ModifyLiveDomainCertBindingsRequest& request, const ModifyLiveDomainCertBindingsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyLiveDomainCertBindings(request), context);
-    };
+    using Req = const ModifyLiveDomainCertBindingsRequest&;
+    using Resp = ModifyLiveDomainCertBindingsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyLiveDomainCertBindings", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::ModifyLiveDomainCertBindingsOutcomeCallable LiveClient::ModifyLiveDomainCertBindingsCallable(const ModifyLiveDomainCertBindingsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyLiveDomainCertBindingsOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyLiveDomainCertBindings(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyLiveDomainCertBindingsOutcome>>();
+    ModifyLiveDomainCertBindingsAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const ModifyLiveDomainCertBindingsRequest&,
+        ModifyLiveDomainCertBindingsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::ModifyLiveDomainRefererOutcome LiveClient::ModifyLiveDomainReferer(const ModifyLiveDomainRefererRequest &request)
@@ -4448,25 +5162,32 @@ LiveClient::ModifyLiveDomainRefererOutcome LiveClient::ModifyLiveDomainReferer(c
 
 void LiveClient::ModifyLiveDomainRefererAsync(const ModifyLiveDomainRefererRequest& request, const ModifyLiveDomainRefererAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyLiveDomainReferer(request), context);
-    };
+    using Req = const ModifyLiveDomainRefererRequest&;
+    using Resp = ModifyLiveDomainRefererResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyLiveDomainReferer", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::ModifyLiveDomainRefererOutcomeCallable LiveClient::ModifyLiveDomainRefererCallable(const ModifyLiveDomainRefererRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyLiveDomainRefererOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyLiveDomainReferer(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyLiveDomainRefererOutcome>>();
+    ModifyLiveDomainRefererAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const ModifyLiveDomainRefererRequest&,
+        ModifyLiveDomainRefererOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::ModifyLivePlayAuthKeyOutcome LiveClient::ModifyLivePlayAuthKey(const ModifyLivePlayAuthKeyRequest &request)
@@ -4491,25 +5212,32 @@ LiveClient::ModifyLivePlayAuthKeyOutcome LiveClient::ModifyLivePlayAuthKey(const
 
 void LiveClient::ModifyLivePlayAuthKeyAsync(const ModifyLivePlayAuthKeyRequest& request, const ModifyLivePlayAuthKeyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyLivePlayAuthKey(request), context);
-    };
+    using Req = const ModifyLivePlayAuthKeyRequest&;
+    using Resp = ModifyLivePlayAuthKeyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyLivePlayAuthKey", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::ModifyLivePlayAuthKeyOutcomeCallable LiveClient::ModifyLivePlayAuthKeyCallable(const ModifyLivePlayAuthKeyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyLivePlayAuthKeyOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyLivePlayAuthKey(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyLivePlayAuthKeyOutcome>>();
+    ModifyLivePlayAuthKeyAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const ModifyLivePlayAuthKeyRequest&,
+        ModifyLivePlayAuthKeyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::ModifyLivePlayDomainOutcome LiveClient::ModifyLivePlayDomain(const ModifyLivePlayDomainRequest &request)
@@ -4534,25 +5262,32 @@ LiveClient::ModifyLivePlayDomainOutcome LiveClient::ModifyLivePlayDomain(const M
 
 void LiveClient::ModifyLivePlayDomainAsync(const ModifyLivePlayDomainRequest& request, const ModifyLivePlayDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyLivePlayDomain(request), context);
-    };
+    using Req = const ModifyLivePlayDomainRequest&;
+    using Resp = ModifyLivePlayDomainResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyLivePlayDomain", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::ModifyLivePlayDomainOutcomeCallable LiveClient::ModifyLivePlayDomainCallable(const ModifyLivePlayDomainRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyLivePlayDomainOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyLivePlayDomain(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyLivePlayDomainOutcome>>();
+    ModifyLivePlayDomainAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const ModifyLivePlayDomainRequest&,
+        ModifyLivePlayDomainOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::ModifyLivePullStreamTaskOutcome LiveClient::ModifyLivePullStreamTask(const ModifyLivePullStreamTaskRequest &request)
@@ -4577,25 +5312,32 @@ LiveClient::ModifyLivePullStreamTaskOutcome LiveClient::ModifyLivePullStreamTask
 
 void LiveClient::ModifyLivePullStreamTaskAsync(const ModifyLivePullStreamTaskRequest& request, const ModifyLivePullStreamTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyLivePullStreamTask(request), context);
-    };
+    using Req = const ModifyLivePullStreamTaskRequest&;
+    using Resp = ModifyLivePullStreamTaskResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyLivePullStreamTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::ModifyLivePullStreamTaskOutcomeCallable LiveClient::ModifyLivePullStreamTaskCallable(const ModifyLivePullStreamTaskRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyLivePullStreamTaskOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyLivePullStreamTask(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyLivePullStreamTaskOutcome>>();
+    ModifyLivePullStreamTaskAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const ModifyLivePullStreamTaskRequest&,
+        ModifyLivePullStreamTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::ModifyLivePushAuthKeyOutcome LiveClient::ModifyLivePushAuthKey(const ModifyLivePushAuthKeyRequest &request)
@@ -4620,25 +5362,32 @@ LiveClient::ModifyLivePushAuthKeyOutcome LiveClient::ModifyLivePushAuthKey(const
 
 void LiveClient::ModifyLivePushAuthKeyAsync(const ModifyLivePushAuthKeyRequest& request, const ModifyLivePushAuthKeyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyLivePushAuthKey(request), context);
-    };
+    using Req = const ModifyLivePushAuthKeyRequest&;
+    using Resp = ModifyLivePushAuthKeyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyLivePushAuthKey", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::ModifyLivePushAuthKeyOutcomeCallable LiveClient::ModifyLivePushAuthKeyCallable(const ModifyLivePushAuthKeyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyLivePushAuthKeyOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyLivePushAuthKey(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyLivePushAuthKeyOutcome>>();
+    ModifyLivePushAuthKeyAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const ModifyLivePushAuthKeyRequest&,
+        ModifyLivePushAuthKeyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::ModifyLiveRecordTemplateOutcome LiveClient::ModifyLiveRecordTemplate(const ModifyLiveRecordTemplateRequest &request)
@@ -4663,25 +5412,32 @@ LiveClient::ModifyLiveRecordTemplateOutcome LiveClient::ModifyLiveRecordTemplate
 
 void LiveClient::ModifyLiveRecordTemplateAsync(const ModifyLiveRecordTemplateRequest& request, const ModifyLiveRecordTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyLiveRecordTemplate(request), context);
-    };
+    using Req = const ModifyLiveRecordTemplateRequest&;
+    using Resp = ModifyLiveRecordTemplateResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyLiveRecordTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::ModifyLiveRecordTemplateOutcomeCallable LiveClient::ModifyLiveRecordTemplateCallable(const ModifyLiveRecordTemplateRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyLiveRecordTemplateOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyLiveRecordTemplate(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyLiveRecordTemplateOutcome>>();
+    ModifyLiveRecordTemplateAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const ModifyLiveRecordTemplateRequest&,
+        ModifyLiveRecordTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::ModifyLiveSnapshotTemplateOutcome LiveClient::ModifyLiveSnapshotTemplate(const ModifyLiveSnapshotTemplateRequest &request)
@@ -4706,25 +5462,32 @@ LiveClient::ModifyLiveSnapshotTemplateOutcome LiveClient::ModifyLiveSnapshotTemp
 
 void LiveClient::ModifyLiveSnapshotTemplateAsync(const ModifyLiveSnapshotTemplateRequest& request, const ModifyLiveSnapshotTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyLiveSnapshotTemplate(request), context);
-    };
+    using Req = const ModifyLiveSnapshotTemplateRequest&;
+    using Resp = ModifyLiveSnapshotTemplateResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyLiveSnapshotTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::ModifyLiveSnapshotTemplateOutcomeCallable LiveClient::ModifyLiveSnapshotTemplateCallable(const ModifyLiveSnapshotTemplateRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyLiveSnapshotTemplateOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyLiveSnapshotTemplate(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyLiveSnapshotTemplateOutcome>>();
+    ModifyLiveSnapshotTemplateAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const ModifyLiveSnapshotTemplateRequest&,
+        ModifyLiveSnapshotTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::ModifyLiveTimeShiftTemplateOutcome LiveClient::ModifyLiveTimeShiftTemplate(const ModifyLiveTimeShiftTemplateRequest &request)
@@ -4749,25 +5512,32 @@ LiveClient::ModifyLiveTimeShiftTemplateOutcome LiveClient::ModifyLiveTimeShiftTe
 
 void LiveClient::ModifyLiveTimeShiftTemplateAsync(const ModifyLiveTimeShiftTemplateRequest& request, const ModifyLiveTimeShiftTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyLiveTimeShiftTemplate(request), context);
-    };
+    using Req = const ModifyLiveTimeShiftTemplateRequest&;
+    using Resp = ModifyLiveTimeShiftTemplateResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyLiveTimeShiftTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::ModifyLiveTimeShiftTemplateOutcomeCallable LiveClient::ModifyLiveTimeShiftTemplateCallable(const ModifyLiveTimeShiftTemplateRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyLiveTimeShiftTemplateOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyLiveTimeShiftTemplate(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyLiveTimeShiftTemplateOutcome>>();
+    ModifyLiveTimeShiftTemplateAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const ModifyLiveTimeShiftTemplateRequest&,
+        ModifyLiveTimeShiftTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::ModifyLiveTranscodeTemplateOutcome LiveClient::ModifyLiveTranscodeTemplate(const ModifyLiveTranscodeTemplateRequest &request)
@@ -4792,25 +5562,32 @@ LiveClient::ModifyLiveTranscodeTemplateOutcome LiveClient::ModifyLiveTranscodeTe
 
 void LiveClient::ModifyLiveTranscodeTemplateAsync(const ModifyLiveTranscodeTemplateRequest& request, const ModifyLiveTranscodeTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyLiveTranscodeTemplate(request), context);
-    };
+    using Req = const ModifyLiveTranscodeTemplateRequest&;
+    using Resp = ModifyLiveTranscodeTemplateResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyLiveTranscodeTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::ModifyLiveTranscodeTemplateOutcomeCallable LiveClient::ModifyLiveTranscodeTemplateCallable(const ModifyLiveTranscodeTemplateRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyLiveTranscodeTemplateOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyLiveTranscodeTemplate(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyLiveTranscodeTemplateOutcome>>();
+    ModifyLiveTranscodeTemplateAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const ModifyLiveTranscodeTemplateRequest&,
+        ModifyLiveTranscodeTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::RestartLivePullStreamTaskOutcome LiveClient::RestartLivePullStreamTask(const RestartLivePullStreamTaskRequest &request)
@@ -4835,25 +5612,32 @@ LiveClient::RestartLivePullStreamTaskOutcome LiveClient::RestartLivePullStreamTa
 
 void LiveClient::RestartLivePullStreamTaskAsync(const RestartLivePullStreamTaskRequest& request, const RestartLivePullStreamTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->RestartLivePullStreamTask(request), context);
-    };
+    using Req = const RestartLivePullStreamTaskRequest&;
+    using Resp = RestartLivePullStreamTaskResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "RestartLivePullStreamTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::RestartLivePullStreamTaskOutcomeCallable LiveClient::RestartLivePullStreamTaskCallable(const RestartLivePullStreamTaskRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<RestartLivePullStreamTaskOutcome()>>(
-        [this, request]()
-        {
-            return this->RestartLivePullStreamTask(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<RestartLivePullStreamTaskOutcome>>();
+    RestartLivePullStreamTaskAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const RestartLivePullStreamTaskRequest&,
+        RestartLivePullStreamTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::ResumeDelayLiveStreamOutcome LiveClient::ResumeDelayLiveStream(const ResumeDelayLiveStreamRequest &request)
@@ -4878,25 +5662,32 @@ LiveClient::ResumeDelayLiveStreamOutcome LiveClient::ResumeDelayLiveStream(const
 
 void LiveClient::ResumeDelayLiveStreamAsync(const ResumeDelayLiveStreamRequest& request, const ResumeDelayLiveStreamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ResumeDelayLiveStream(request), context);
-    };
+    using Req = const ResumeDelayLiveStreamRequest&;
+    using Resp = ResumeDelayLiveStreamResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ResumeDelayLiveStream", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::ResumeDelayLiveStreamOutcomeCallable LiveClient::ResumeDelayLiveStreamCallable(const ResumeDelayLiveStreamRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ResumeDelayLiveStreamOutcome()>>(
-        [this, request]()
-        {
-            return this->ResumeDelayLiveStream(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ResumeDelayLiveStreamOutcome>>();
+    ResumeDelayLiveStreamAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const ResumeDelayLiveStreamRequest&,
+        ResumeDelayLiveStreamOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::ResumeLiveStreamOutcome LiveClient::ResumeLiveStream(const ResumeLiveStreamRequest &request)
@@ -4921,25 +5712,32 @@ LiveClient::ResumeLiveStreamOutcome LiveClient::ResumeLiveStream(const ResumeLiv
 
 void LiveClient::ResumeLiveStreamAsync(const ResumeLiveStreamRequest& request, const ResumeLiveStreamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ResumeLiveStream(request), context);
-    };
+    using Req = const ResumeLiveStreamRequest&;
+    using Resp = ResumeLiveStreamResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ResumeLiveStream", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::ResumeLiveStreamOutcomeCallable LiveClient::ResumeLiveStreamCallable(const ResumeLiveStreamRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ResumeLiveStreamOutcome()>>(
-        [this, request]()
-        {
-            return this->ResumeLiveStream(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ResumeLiveStreamOutcome>>();
+    ResumeLiveStreamAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const ResumeLiveStreamRequest&,
+        ResumeLiveStreamOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::StartLivePadStreamOutcome LiveClient::StartLivePadStream(const StartLivePadStreamRequest &request)
@@ -4964,25 +5762,32 @@ LiveClient::StartLivePadStreamOutcome LiveClient::StartLivePadStream(const Start
 
 void LiveClient::StartLivePadStreamAsync(const StartLivePadStreamRequest& request, const StartLivePadStreamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->StartLivePadStream(request), context);
-    };
+    using Req = const StartLivePadStreamRequest&;
+    using Resp = StartLivePadStreamResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "StartLivePadStream", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::StartLivePadStreamOutcomeCallable LiveClient::StartLivePadStreamCallable(const StartLivePadStreamRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<StartLivePadStreamOutcome()>>(
-        [this, request]()
-        {
-            return this->StartLivePadStream(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<StartLivePadStreamOutcome>>();
+    StartLivePadStreamAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const StartLivePadStreamRequest&,
+        StartLivePadStreamOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::StopLivePadStreamOutcome LiveClient::StopLivePadStream(const StopLivePadStreamRequest &request)
@@ -5007,25 +5812,32 @@ LiveClient::StopLivePadStreamOutcome LiveClient::StopLivePadStream(const StopLiv
 
 void LiveClient::StopLivePadStreamAsync(const StopLivePadStreamRequest& request, const StopLivePadStreamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->StopLivePadStream(request), context);
-    };
+    using Req = const StopLivePadStreamRequest&;
+    using Resp = StopLivePadStreamResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "StopLivePadStream", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::StopLivePadStreamOutcomeCallable LiveClient::StopLivePadStreamCallable(const StopLivePadStreamRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<StopLivePadStreamOutcome()>>(
-        [this, request]()
-        {
-            return this->StopLivePadStream(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<StopLivePadStreamOutcome>>();
+    StopLivePadStreamAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const StopLivePadStreamRequest&,
+        StopLivePadStreamOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::StopLiveRecordOutcome LiveClient::StopLiveRecord(const StopLiveRecordRequest &request)
@@ -5050,25 +5862,32 @@ LiveClient::StopLiveRecordOutcome LiveClient::StopLiveRecord(const StopLiveRecor
 
 void LiveClient::StopLiveRecordAsync(const StopLiveRecordRequest& request, const StopLiveRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->StopLiveRecord(request), context);
-    };
+    using Req = const StopLiveRecordRequest&;
+    using Resp = StopLiveRecordResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "StopLiveRecord", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::StopLiveRecordOutcomeCallable LiveClient::StopLiveRecordCallable(const StopLiveRecordRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<StopLiveRecordOutcome()>>(
-        [this, request]()
-        {
-            return this->StopLiveRecord(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<StopLiveRecordOutcome>>();
+    StopLiveRecordAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const StopLiveRecordRequest&,
+        StopLiveRecordOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::StopRecordTaskOutcome LiveClient::StopRecordTask(const StopRecordTaskRequest &request)
@@ -5093,25 +5912,32 @@ LiveClient::StopRecordTaskOutcome LiveClient::StopRecordTask(const StopRecordTas
 
 void LiveClient::StopRecordTaskAsync(const StopRecordTaskRequest& request, const StopRecordTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->StopRecordTask(request), context);
-    };
+    using Req = const StopRecordTaskRequest&;
+    using Resp = StopRecordTaskResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "StopRecordTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::StopRecordTaskOutcomeCallable LiveClient::StopRecordTaskCallable(const StopRecordTaskRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<StopRecordTaskOutcome()>>(
-        [this, request]()
-        {
-            return this->StopRecordTask(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<StopRecordTaskOutcome>>();
+    StopRecordTaskAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const StopRecordTaskRequest&,
+        StopRecordTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::UnBindLiveDomainCertOutcome LiveClient::UnBindLiveDomainCert(const UnBindLiveDomainCertRequest &request)
@@ -5136,25 +5962,32 @@ LiveClient::UnBindLiveDomainCertOutcome LiveClient::UnBindLiveDomainCert(const U
 
 void LiveClient::UnBindLiveDomainCertAsync(const UnBindLiveDomainCertRequest& request, const UnBindLiveDomainCertAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->UnBindLiveDomainCert(request), context);
-    };
+    using Req = const UnBindLiveDomainCertRequest&;
+    using Resp = UnBindLiveDomainCertResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "UnBindLiveDomainCert", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::UnBindLiveDomainCertOutcomeCallable LiveClient::UnBindLiveDomainCertCallable(const UnBindLiveDomainCertRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<UnBindLiveDomainCertOutcome()>>(
-        [this, request]()
-        {
-            return this->UnBindLiveDomainCert(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<UnBindLiveDomainCertOutcome>>();
+    UnBindLiveDomainCertAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const UnBindLiveDomainCertRequest&,
+        UnBindLiveDomainCertOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 LiveClient::UpdateLiveWatermarkOutcome LiveClient::UpdateLiveWatermark(const UpdateLiveWatermarkRequest &request)
@@ -5179,24 +6012,31 @@ LiveClient::UpdateLiveWatermarkOutcome LiveClient::UpdateLiveWatermark(const Upd
 
 void LiveClient::UpdateLiveWatermarkAsync(const UpdateLiveWatermarkRequest& request, const UpdateLiveWatermarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->UpdateLiveWatermark(request), context);
-    };
+    using Req = const UpdateLiveWatermarkRequest&;
+    using Resp = UpdateLiveWatermarkResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "UpdateLiveWatermark", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 LiveClient::UpdateLiveWatermarkOutcomeCallable LiveClient::UpdateLiveWatermarkCallable(const UpdateLiveWatermarkRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<UpdateLiveWatermarkOutcome()>>(
-        [this, request]()
-        {
-            return this->UpdateLiveWatermark(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<UpdateLiveWatermarkOutcome>>();
+    UpdateLiveWatermarkAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const UpdateLiveWatermarkRequest&,
+        UpdateLiveWatermarkOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

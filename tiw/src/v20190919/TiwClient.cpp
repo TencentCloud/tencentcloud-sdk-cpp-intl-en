@@ -62,25 +62,32 @@ TiwClient::ApplyTiwTrialOutcome TiwClient::ApplyTiwTrial(const ApplyTiwTrialRequ
 
 void TiwClient::ApplyTiwTrialAsync(const ApplyTiwTrialRequest& request, const ApplyTiwTrialAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ApplyTiwTrial(request), context);
-    };
+    using Req = const ApplyTiwTrialRequest&;
+    using Resp = ApplyTiwTrialResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ApplyTiwTrial", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::ApplyTiwTrialOutcomeCallable TiwClient::ApplyTiwTrialCallable(const ApplyTiwTrialRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ApplyTiwTrialOutcome()>>(
-        [this, request]()
-        {
-            return this->ApplyTiwTrial(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ApplyTiwTrialOutcome>>();
+    ApplyTiwTrialAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const ApplyTiwTrialRequest&,
+        ApplyTiwTrialOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::CreateApplicationOutcome TiwClient::CreateApplication(const CreateApplicationRequest &request)
@@ -105,25 +112,32 @@ TiwClient::CreateApplicationOutcome TiwClient::CreateApplication(const CreateApp
 
 void TiwClient::CreateApplicationAsync(const CreateApplicationRequest& request, const CreateApplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateApplication(request), context);
-    };
+    using Req = const CreateApplicationRequest&;
+    using Resp = CreateApplicationResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateApplication", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::CreateApplicationOutcomeCallable TiwClient::CreateApplicationCallable(const CreateApplicationRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateApplicationOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateApplication(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateApplicationOutcome>>();
+    CreateApplicationAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const CreateApplicationRequest&,
+        CreateApplicationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::CreateSnapshotTaskOutcome TiwClient::CreateSnapshotTask(const CreateSnapshotTaskRequest &request)
@@ -148,25 +162,32 @@ TiwClient::CreateSnapshotTaskOutcome TiwClient::CreateSnapshotTask(const CreateS
 
 void TiwClient::CreateSnapshotTaskAsync(const CreateSnapshotTaskRequest& request, const CreateSnapshotTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateSnapshotTask(request), context);
-    };
+    using Req = const CreateSnapshotTaskRequest&;
+    using Resp = CreateSnapshotTaskResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateSnapshotTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::CreateSnapshotTaskOutcomeCallable TiwClient::CreateSnapshotTaskCallable(const CreateSnapshotTaskRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateSnapshotTaskOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateSnapshotTask(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateSnapshotTaskOutcome>>();
+    CreateSnapshotTaskAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const CreateSnapshotTaskRequest&,
+        CreateSnapshotTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::CreateTranscodeOutcome TiwClient::CreateTranscode(const CreateTranscodeRequest &request)
@@ -191,25 +212,32 @@ TiwClient::CreateTranscodeOutcome TiwClient::CreateTranscode(const CreateTransco
 
 void TiwClient::CreateTranscodeAsync(const CreateTranscodeRequest& request, const CreateTranscodeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateTranscode(request), context);
-    };
+    using Req = const CreateTranscodeRequest&;
+    using Resp = CreateTranscodeResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateTranscode", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::CreateTranscodeOutcomeCallable TiwClient::CreateTranscodeCallable(const CreateTranscodeRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateTranscodeOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateTranscode(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateTranscodeOutcome>>();
+    CreateTranscodeAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const CreateTranscodeRequest&,
+        CreateTranscodeOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::CreateVideoGenerationTaskOutcome TiwClient::CreateVideoGenerationTask(const CreateVideoGenerationTaskRequest &request)
@@ -234,25 +262,32 @@ TiwClient::CreateVideoGenerationTaskOutcome TiwClient::CreateVideoGenerationTask
 
 void TiwClient::CreateVideoGenerationTaskAsync(const CreateVideoGenerationTaskRequest& request, const CreateVideoGenerationTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateVideoGenerationTask(request), context);
-    };
+    using Req = const CreateVideoGenerationTaskRequest&;
+    using Resp = CreateVideoGenerationTaskResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateVideoGenerationTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::CreateVideoGenerationTaskOutcomeCallable TiwClient::CreateVideoGenerationTaskCallable(const CreateVideoGenerationTaskRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateVideoGenerationTaskOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateVideoGenerationTask(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateVideoGenerationTaskOutcome>>();
+    CreateVideoGenerationTaskAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const CreateVideoGenerationTaskRequest&,
+        CreateVideoGenerationTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::DescribeAPIServiceOutcome TiwClient::DescribeAPIService(const DescribeAPIServiceRequest &request)
@@ -277,25 +312,32 @@ TiwClient::DescribeAPIServiceOutcome TiwClient::DescribeAPIService(const Describ
 
 void TiwClient::DescribeAPIServiceAsync(const DescribeAPIServiceRequest& request, const DescribeAPIServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeAPIService(request), context);
-    };
+    using Req = const DescribeAPIServiceRequest&;
+    using Resp = DescribeAPIServiceResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeAPIService", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::DescribeAPIServiceOutcomeCallable TiwClient::DescribeAPIServiceCallable(const DescribeAPIServiceRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeAPIServiceOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeAPIService(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeAPIServiceOutcome>>();
+    DescribeAPIServiceAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const DescribeAPIServiceRequest&,
+        DescribeAPIServiceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::DescribeApplicationInfosOutcome TiwClient::DescribeApplicationInfos(const DescribeApplicationInfosRequest &request)
@@ -320,25 +362,32 @@ TiwClient::DescribeApplicationInfosOutcome TiwClient::DescribeApplicationInfos(c
 
 void TiwClient::DescribeApplicationInfosAsync(const DescribeApplicationInfosRequest& request, const DescribeApplicationInfosAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeApplicationInfos(request), context);
-    };
+    using Req = const DescribeApplicationInfosRequest&;
+    using Resp = DescribeApplicationInfosResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeApplicationInfos", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::DescribeApplicationInfosOutcomeCallable TiwClient::DescribeApplicationInfosCallable(const DescribeApplicationInfosRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeApplicationInfosOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeApplicationInfos(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeApplicationInfosOutcome>>();
+    DescribeApplicationInfosAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const DescribeApplicationInfosRequest&,
+        DescribeApplicationInfosOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::DescribeApplicationUsageOutcome TiwClient::DescribeApplicationUsage(const DescribeApplicationUsageRequest &request)
@@ -363,25 +412,32 @@ TiwClient::DescribeApplicationUsageOutcome TiwClient::DescribeApplicationUsage(c
 
 void TiwClient::DescribeApplicationUsageAsync(const DescribeApplicationUsageRequest& request, const DescribeApplicationUsageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeApplicationUsage(request), context);
-    };
+    using Req = const DescribeApplicationUsageRequest&;
+    using Resp = DescribeApplicationUsageResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeApplicationUsage", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::DescribeApplicationUsageOutcomeCallable TiwClient::DescribeApplicationUsageCallable(const DescribeApplicationUsageRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeApplicationUsageOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeApplicationUsage(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeApplicationUsageOutcome>>();
+    DescribeApplicationUsageAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const DescribeApplicationUsageRequest&,
+        DescribeApplicationUsageOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::DescribeBoardSDKLogOutcome TiwClient::DescribeBoardSDKLog(const DescribeBoardSDKLogRequest &request)
@@ -406,25 +462,32 @@ TiwClient::DescribeBoardSDKLogOutcome TiwClient::DescribeBoardSDKLog(const Descr
 
 void TiwClient::DescribeBoardSDKLogAsync(const DescribeBoardSDKLogRequest& request, const DescribeBoardSDKLogAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeBoardSDKLog(request), context);
-    };
+    using Req = const DescribeBoardSDKLogRequest&;
+    using Resp = DescribeBoardSDKLogResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeBoardSDKLog", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::DescribeBoardSDKLogOutcomeCallable TiwClient::DescribeBoardSDKLogCallable(const DescribeBoardSDKLogRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeBoardSDKLogOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeBoardSDKLog(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeBoardSDKLogOutcome>>();
+    DescribeBoardSDKLogAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const DescribeBoardSDKLogRequest&,
+        DescribeBoardSDKLogOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::DescribeIMApplicationsOutcome TiwClient::DescribeIMApplications(const DescribeIMApplicationsRequest &request)
@@ -449,25 +512,32 @@ TiwClient::DescribeIMApplicationsOutcome TiwClient::DescribeIMApplications(const
 
 void TiwClient::DescribeIMApplicationsAsync(const DescribeIMApplicationsRequest& request, const DescribeIMApplicationsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeIMApplications(request), context);
-    };
+    using Req = const DescribeIMApplicationsRequest&;
+    using Resp = DescribeIMApplicationsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeIMApplications", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::DescribeIMApplicationsOutcomeCallable TiwClient::DescribeIMApplicationsCallable(const DescribeIMApplicationsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeIMApplicationsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeIMApplications(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeIMApplicationsOutcome>>();
+    DescribeIMApplicationsAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const DescribeIMApplicationsRequest&,
+        DescribeIMApplicationsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::DescribeOnlineRecordOutcome TiwClient::DescribeOnlineRecord(const DescribeOnlineRecordRequest &request)
@@ -492,25 +562,32 @@ TiwClient::DescribeOnlineRecordOutcome TiwClient::DescribeOnlineRecord(const Des
 
 void TiwClient::DescribeOnlineRecordAsync(const DescribeOnlineRecordRequest& request, const DescribeOnlineRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeOnlineRecord(request), context);
-    };
+    using Req = const DescribeOnlineRecordRequest&;
+    using Resp = DescribeOnlineRecordResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeOnlineRecord", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::DescribeOnlineRecordOutcomeCallable TiwClient::DescribeOnlineRecordCallable(const DescribeOnlineRecordRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeOnlineRecordOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeOnlineRecord(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeOnlineRecordOutcome>>();
+    DescribeOnlineRecordAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const DescribeOnlineRecordRequest&,
+        DescribeOnlineRecordOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::DescribeOnlineRecordCallbackOutcome TiwClient::DescribeOnlineRecordCallback(const DescribeOnlineRecordCallbackRequest &request)
@@ -535,25 +612,32 @@ TiwClient::DescribeOnlineRecordCallbackOutcome TiwClient::DescribeOnlineRecordCa
 
 void TiwClient::DescribeOnlineRecordCallbackAsync(const DescribeOnlineRecordCallbackRequest& request, const DescribeOnlineRecordCallbackAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeOnlineRecordCallback(request), context);
-    };
+    using Req = const DescribeOnlineRecordCallbackRequest&;
+    using Resp = DescribeOnlineRecordCallbackResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeOnlineRecordCallback", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::DescribeOnlineRecordCallbackOutcomeCallable TiwClient::DescribeOnlineRecordCallbackCallable(const DescribeOnlineRecordCallbackRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeOnlineRecordCallbackOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeOnlineRecordCallback(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeOnlineRecordCallbackOutcome>>();
+    DescribeOnlineRecordCallbackAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const DescribeOnlineRecordCallbackRequest&,
+        DescribeOnlineRecordCallbackOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::DescribePostpaidUsageOutcome TiwClient::DescribePostpaidUsage(const DescribePostpaidUsageRequest &request)
@@ -578,25 +662,32 @@ TiwClient::DescribePostpaidUsageOutcome TiwClient::DescribePostpaidUsage(const D
 
 void TiwClient::DescribePostpaidUsageAsync(const DescribePostpaidUsageRequest& request, const DescribePostpaidUsageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribePostpaidUsage(request), context);
-    };
+    using Req = const DescribePostpaidUsageRequest&;
+    using Resp = DescribePostpaidUsageResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribePostpaidUsage", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::DescribePostpaidUsageOutcomeCallable TiwClient::DescribePostpaidUsageCallable(const DescribePostpaidUsageRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribePostpaidUsageOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribePostpaidUsage(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribePostpaidUsageOutcome>>();
+    DescribePostpaidUsageAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const DescribePostpaidUsageRequest&,
+        DescribePostpaidUsageOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::DescribeQualityMetricsOutcome TiwClient::DescribeQualityMetrics(const DescribeQualityMetricsRequest &request)
@@ -621,25 +712,32 @@ TiwClient::DescribeQualityMetricsOutcome TiwClient::DescribeQualityMetrics(const
 
 void TiwClient::DescribeQualityMetricsAsync(const DescribeQualityMetricsRequest& request, const DescribeQualityMetricsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeQualityMetrics(request), context);
-    };
+    using Req = const DescribeQualityMetricsRequest&;
+    using Resp = DescribeQualityMetricsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeQualityMetrics", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::DescribeQualityMetricsOutcomeCallable TiwClient::DescribeQualityMetricsCallable(const DescribeQualityMetricsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeQualityMetricsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeQualityMetrics(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeQualityMetricsOutcome>>();
+    DescribeQualityMetricsAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const DescribeQualityMetricsRequest&,
+        DescribeQualityMetricsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::DescribeRecordSearchOutcome TiwClient::DescribeRecordSearch(const DescribeRecordSearchRequest &request)
@@ -664,25 +762,32 @@ TiwClient::DescribeRecordSearchOutcome TiwClient::DescribeRecordSearch(const Des
 
 void TiwClient::DescribeRecordSearchAsync(const DescribeRecordSearchRequest& request, const DescribeRecordSearchAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeRecordSearch(request), context);
-    };
+    using Req = const DescribeRecordSearchRequest&;
+    using Resp = DescribeRecordSearchResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeRecordSearch", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::DescribeRecordSearchOutcomeCallable TiwClient::DescribeRecordSearchCallable(const DescribeRecordSearchRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeRecordSearchOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeRecordSearch(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeRecordSearchOutcome>>();
+    DescribeRecordSearchAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const DescribeRecordSearchRequest&,
+        DescribeRecordSearchOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::DescribeRoomListOutcome TiwClient::DescribeRoomList(const DescribeRoomListRequest &request)
@@ -707,25 +812,32 @@ TiwClient::DescribeRoomListOutcome TiwClient::DescribeRoomList(const DescribeRoo
 
 void TiwClient::DescribeRoomListAsync(const DescribeRoomListRequest& request, const DescribeRoomListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeRoomList(request), context);
-    };
+    using Req = const DescribeRoomListRequest&;
+    using Resp = DescribeRoomListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeRoomList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::DescribeRoomListOutcomeCallable TiwClient::DescribeRoomListCallable(const DescribeRoomListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeRoomListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeRoomList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeRoomListOutcome>>();
+    DescribeRoomListAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const DescribeRoomListRequest&,
+        DescribeRoomListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::DescribeSnapshotTaskOutcome TiwClient::DescribeSnapshotTask(const DescribeSnapshotTaskRequest &request)
@@ -750,25 +862,32 @@ TiwClient::DescribeSnapshotTaskOutcome TiwClient::DescribeSnapshotTask(const Des
 
 void TiwClient::DescribeSnapshotTaskAsync(const DescribeSnapshotTaskRequest& request, const DescribeSnapshotTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeSnapshotTask(request), context);
-    };
+    using Req = const DescribeSnapshotTaskRequest&;
+    using Resp = DescribeSnapshotTaskResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeSnapshotTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::DescribeSnapshotTaskOutcomeCallable TiwClient::DescribeSnapshotTaskCallable(const DescribeSnapshotTaskRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeSnapshotTaskOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeSnapshotTask(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeSnapshotTaskOutcome>>();
+    DescribeSnapshotTaskAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const DescribeSnapshotTaskRequest&,
+        DescribeSnapshotTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::DescribeTIWDailyUsageOutcome TiwClient::DescribeTIWDailyUsage(const DescribeTIWDailyUsageRequest &request)
@@ -793,25 +912,32 @@ TiwClient::DescribeTIWDailyUsageOutcome TiwClient::DescribeTIWDailyUsage(const D
 
 void TiwClient::DescribeTIWDailyUsageAsync(const DescribeTIWDailyUsageRequest& request, const DescribeTIWDailyUsageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTIWDailyUsage(request), context);
-    };
+    using Req = const DescribeTIWDailyUsageRequest&;
+    using Resp = DescribeTIWDailyUsageResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTIWDailyUsage", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::DescribeTIWDailyUsageOutcomeCallable TiwClient::DescribeTIWDailyUsageCallable(const DescribeTIWDailyUsageRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTIWDailyUsageOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTIWDailyUsage(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTIWDailyUsageOutcome>>();
+    DescribeTIWDailyUsageAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const DescribeTIWDailyUsageRequest&,
+        DescribeTIWDailyUsageOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::DescribeTIWRoomDailyUsageOutcome TiwClient::DescribeTIWRoomDailyUsage(const DescribeTIWRoomDailyUsageRequest &request)
@@ -836,25 +962,32 @@ TiwClient::DescribeTIWRoomDailyUsageOutcome TiwClient::DescribeTIWRoomDailyUsage
 
 void TiwClient::DescribeTIWRoomDailyUsageAsync(const DescribeTIWRoomDailyUsageRequest& request, const DescribeTIWRoomDailyUsageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTIWRoomDailyUsage(request), context);
-    };
+    using Req = const DescribeTIWRoomDailyUsageRequest&;
+    using Resp = DescribeTIWRoomDailyUsageResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTIWRoomDailyUsage", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::DescribeTIWRoomDailyUsageOutcomeCallable TiwClient::DescribeTIWRoomDailyUsageCallable(const DescribeTIWRoomDailyUsageRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTIWRoomDailyUsageOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTIWRoomDailyUsage(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTIWRoomDailyUsageOutcome>>();
+    DescribeTIWRoomDailyUsageAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const DescribeTIWRoomDailyUsageRequest&,
+        DescribeTIWRoomDailyUsageOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::DescribeTranscodeOutcome TiwClient::DescribeTranscode(const DescribeTranscodeRequest &request)
@@ -879,25 +1012,32 @@ TiwClient::DescribeTranscodeOutcome TiwClient::DescribeTranscode(const DescribeT
 
 void TiwClient::DescribeTranscodeAsync(const DescribeTranscodeRequest& request, const DescribeTranscodeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTranscode(request), context);
-    };
+    using Req = const DescribeTranscodeRequest&;
+    using Resp = DescribeTranscodeResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTranscode", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::DescribeTranscodeOutcomeCallable TiwClient::DescribeTranscodeCallable(const DescribeTranscodeRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTranscodeOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTranscode(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTranscodeOutcome>>();
+    DescribeTranscodeAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const DescribeTranscodeRequest&,
+        DescribeTranscodeOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::DescribeTranscodeCallbackOutcome TiwClient::DescribeTranscodeCallback(const DescribeTranscodeCallbackRequest &request)
@@ -922,25 +1062,32 @@ TiwClient::DescribeTranscodeCallbackOutcome TiwClient::DescribeTranscodeCallback
 
 void TiwClient::DescribeTranscodeCallbackAsync(const DescribeTranscodeCallbackRequest& request, const DescribeTranscodeCallbackAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTranscodeCallback(request), context);
-    };
+    using Req = const DescribeTranscodeCallbackRequest&;
+    using Resp = DescribeTranscodeCallbackResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTranscodeCallback", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::DescribeTranscodeCallbackOutcomeCallable TiwClient::DescribeTranscodeCallbackCallable(const DescribeTranscodeCallbackRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTranscodeCallbackOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTranscodeCallback(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTranscodeCallbackOutcome>>();
+    DescribeTranscodeCallbackAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const DescribeTranscodeCallbackRequest&,
+        DescribeTranscodeCallbackOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::DescribeTranscodeSearchOutcome TiwClient::DescribeTranscodeSearch(const DescribeTranscodeSearchRequest &request)
@@ -965,25 +1112,32 @@ TiwClient::DescribeTranscodeSearchOutcome TiwClient::DescribeTranscodeSearch(con
 
 void TiwClient::DescribeTranscodeSearchAsync(const DescribeTranscodeSearchRequest& request, const DescribeTranscodeSearchAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTranscodeSearch(request), context);
-    };
+    using Req = const DescribeTranscodeSearchRequest&;
+    using Resp = DescribeTranscodeSearchResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTranscodeSearch", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::DescribeTranscodeSearchOutcomeCallable TiwClient::DescribeTranscodeSearchCallable(const DescribeTranscodeSearchRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTranscodeSearchOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTranscodeSearch(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTranscodeSearchOutcome>>();
+    DescribeTranscodeSearchAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const DescribeTranscodeSearchRequest&,
+        DescribeTranscodeSearchOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::DescribeUsageSummaryOutcome TiwClient::DescribeUsageSummary(const DescribeUsageSummaryRequest &request)
@@ -1008,25 +1162,32 @@ TiwClient::DescribeUsageSummaryOutcome TiwClient::DescribeUsageSummary(const Des
 
 void TiwClient::DescribeUsageSummaryAsync(const DescribeUsageSummaryRequest& request, const DescribeUsageSummaryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeUsageSummary(request), context);
-    };
+    using Req = const DescribeUsageSummaryRequest&;
+    using Resp = DescribeUsageSummaryResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeUsageSummary", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::DescribeUsageSummaryOutcomeCallable TiwClient::DescribeUsageSummaryCallable(const DescribeUsageSummaryRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeUsageSummaryOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeUsageSummary(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeUsageSummaryOutcome>>();
+    DescribeUsageSummaryAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const DescribeUsageSummaryRequest&,
+        DescribeUsageSummaryOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::DescribeUserListOutcome TiwClient::DescribeUserList(const DescribeUserListRequest &request)
@@ -1051,25 +1212,32 @@ TiwClient::DescribeUserListOutcome TiwClient::DescribeUserList(const DescribeUse
 
 void TiwClient::DescribeUserListAsync(const DescribeUserListRequest& request, const DescribeUserListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeUserList(request), context);
-    };
+    using Req = const DescribeUserListRequest&;
+    using Resp = DescribeUserListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeUserList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::DescribeUserListOutcomeCallable TiwClient::DescribeUserListCallable(const DescribeUserListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeUserListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeUserList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeUserListOutcome>>();
+    DescribeUserListAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const DescribeUserListRequest&,
+        DescribeUserListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::DescribeUserResourcesOutcome TiwClient::DescribeUserResources(const DescribeUserResourcesRequest &request)
@@ -1094,25 +1262,32 @@ TiwClient::DescribeUserResourcesOutcome TiwClient::DescribeUserResources(const D
 
 void TiwClient::DescribeUserResourcesAsync(const DescribeUserResourcesRequest& request, const DescribeUserResourcesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeUserResources(request), context);
-    };
+    using Req = const DescribeUserResourcesRequest&;
+    using Resp = DescribeUserResourcesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeUserResources", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::DescribeUserResourcesOutcomeCallable TiwClient::DescribeUserResourcesCallable(const DescribeUserResourcesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeUserResourcesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeUserResources(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeUserResourcesOutcome>>();
+    DescribeUserResourcesAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const DescribeUserResourcesRequest&,
+        DescribeUserResourcesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::DescribeUserStatusOutcome TiwClient::DescribeUserStatus(const DescribeUserStatusRequest &request)
@@ -1137,25 +1312,32 @@ TiwClient::DescribeUserStatusOutcome TiwClient::DescribeUserStatus(const Describ
 
 void TiwClient::DescribeUserStatusAsync(const DescribeUserStatusRequest& request, const DescribeUserStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeUserStatus(request), context);
-    };
+    using Req = const DescribeUserStatusRequest&;
+    using Resp = DescribeUserStatusResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeUserStatus", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::DescribeUserStatusOutcomeCallable TiwClient::DescribeUserStatusCallable(const DescribeUserStatusRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeUserStatusOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeUserStatus(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeUserStatusOutcome>>();
+    DescribeUserStatusAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const DescribeUserStatusRequest&,
+        DescribeUserStatusOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::DescribeVideoGenerationTaskOutcome TiwClient::DescribeVideoGenerationTask(const DescribeVideoGenerationTaskRequest &request)
@@ -1180,25 +1362,32 @@ TiwClient::DescribeVideoGenerationTaskOutcome TiwClient::DescribeVideoGeneration
 
 void TiwClient::DescribeVideoGenerationTaskAsync(const DescribeVideoGenerationTaskRequest& request, const DescribeVideoGenerationTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeVideoGenerationTask(request), context);
-    };
+    using Req = const DescribeVideoGenerationTaskRequest&;
+    using Resp = DescribeVideoGenerationTaskResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeVideoGenerationTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::DescribeVideoGenerationTaskOutcomeCallable TiwClient::DescribeVideoGenerationTaskCallable(const DescribeVideoGenerationTaskRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeVideoGenerationTaskOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeVideoGenerationTask(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeVideoGenerationTaskOutcome>>();
+    DescribeVideoGenerationTaskAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const DescribeVideoGenerationTaskRequest&,
+        DescribeVideoGenerationTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::DescribeVideoGenerationTaskCallbackOutcome TiwClient::DescribeVideoGenerationTaskCallback(const DescribeVideoGenerationTaskCallbackRequest &request)
@@ -1223,25 +1412,32 @@ TiwClient::DescribeVideoGenerationTaskCallbackOutcome TiwClient::DescribeVideoGe
 
 void TiwClient::DescribeVideoGenerationTaskCallbackAsync(const DescribeVideoGenerationTaskCallbackRequest& request, const DescribeVideoGenerationTaskCallbackAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeVideoGenerationTaskCallback(request), context);
-    };
+    using Req = const DescribeVideoGenerationTaskCallbackRequest&;
+    using Resp = DescribeVideoGenerationTaskCallbackResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeVideoGenerationTaskCallback", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::DescribeVideoGenerationTaskCallbackOutcomeCallable TiwClient::DescribeVideoGenerationTaskCallbackCallable(const DescribeVideoGenerationTaskCallbackRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeVideoGenerationTaskCallbackOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeVideoGenerationTaskCallback(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeVideoGenerationTaskCallbackOutcome>>();
+    DescribeVideoGenerationTaskCallbackAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const DescribeVideoGenerationTaskCallbackRequest&,
+        DescribeVideoGenerationTaskCallbackOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::DescribeWhiteboardApplicationConfigOutcome TiwClient::DescribeWhiteboardApplicationConfig(const DescribeWhiteboardApplicationConfigRequest &request)
@@ -1266,25 +1462,32 @@ TiwClient::DescribeWhiteboardApplicationConfigOutcome TiwClient::DescribeWhitebo
 
 void TiwClient::DescribeWhiteboardApplicationConfigAsync(const DescribeWhiteboardApplicationConfigRequest& request, const DescribeWhiteboardApplicationConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeWhiteboardApplicationConfig(request), context);
-    };
+    using Req = const DescribeWhiteboardApplicationConfigRequest&;
+    using Resp = DescribeWhiteboardApplicationConfigResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeWhiteboardApplicationConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::DescribeWhiteboardApplicationConfigOutcomeCallable TiwClient::DescribeWhiteboardApplicationConfigCallable(const DescribeWhiteboardApplicationConfigRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeWhiteboardApplicationConfigOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeWhiteboardApplicationConfig(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeWhiteboardApplicationConfigOutcome>>();
+    DescribeWhiteboardApplicationConfigAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const DescribeWhiteboardApplicationConfigRequest&,
+        DescribeWhiteboardApplicationConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::DescribeWhiteboardBucketConfigOutcome TiwClient::DescribeWhiteboardBucketConfig(const DescribeWhiteboardBucketConfigRequest &request)
@@ -1309,25 +1512,32 @@ TiwClient::DescribeWhiteboardBucketConfigOutcome TiwClient::DescribeWhiteboardBu
 
 void TiwClient::DescribeWhiteboardBucketConfigAsync(const DescribeWhiteboardBucketConfigRequest& request, const DescribeWhiteboardBucketConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeWhiteboardBucketConfig(request), context);
-    };
+    using Req = const DescribeWhiteboardBucketConfigRequest&;
+    using Resp = DescribeWhiteboardBucketConfigResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeWhiteboardBucketConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::DescribeWhiteboardBucketConfigOutcomeCallable TiwClient::DescribeWhiteboardBucketConfigCallable(const DescribeWhiteboardBucketConfigRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeWhiteboardBucketConfigOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeWhiteboardBucketConfig(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeWhiteboardBucketConfigOutcome>>();
+    DescribeWhiteboardBucketConfigAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const DescribeWhiteboardBucketConfigRequest&,
+        DescribeWhiteboardBucketConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::DescribeWhiteboardPushOutcome TiwClient::DescribeWhiteboardPush(const DescribeWhiteboardPushRequest &request)
@@ -1352,25 +1562,32 @@ TiwClient::DescribeWhiteboardPushOutcome TiwClient::DescribeWhiteboardPush(const
 
 void TiwClient::DescribeWhiteboardPushAsync(const DescribeWhiteboardPushRequest& request, const DescribeWhiteboardPushAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeWhiteboardPush(request), context);
-    };
+    using Req = const DescribeWhiteboardPushRequest&;
+    using Resp = DescribeWhiteboardPushResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeWhiteboardPush", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::DescribeWhiteboardPushOutcomeCallable TiwClient::DescribeWhiteboardPushCallable(const DescribeWhiteboardPushRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeWhiteboardPushOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeWhiteboardPush(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeWhiteboardPushOutcome>>();
+    DescribeWhiteboardPushAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const DescribeWhiteboardPushRequest&,
+        DescribeWhiteboardPushOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::DescribeWhiteboardPushCallbackOutcome TiwClient::DescribeWhiteboardPushCallback(const DescribeWhiteboardPushCallbackRequest &request)
@@ -1395,25 +1612,32 @@ TiwClient::DescribeWhiteboardPushCallbackOutcome TiwClient::DescribeWhiteboardPu
 
 void TiwClient::DescribeWhiteboardPushCallbackAsync(const DescribeWhiteboardPushCallbackRequest& request, const DescribeWhiteboardPushCallbackAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeWhiteboardPushCallback(request), context);
-    };
+    using Req = const DescribeWhiteboardPushCallbackRequest&;
+    using Resp = DescribeWhiteboardPushCallbackResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeWhiteboardPushCallback", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::DescribeWhiteboardPushCallbackOutcomeCallable TiwClient::DescribeWhiteboardPushCallbackCallable(const DescribeWhiteboardPushCallbackRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeWhiteboardPushCallbackOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeWhiteboardPushCallback(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeWhiteboardPushCallbackOutcome>>();
+    DescribeWhiteboardPushCallbackAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const DescribeWhiteboardPushCallbackRequest&,
+        DescribeWhiteboardPushCallbackOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::DescribeWhiteboardPushSearchOutcome TiwClient::DescribeWhiteboardPushSearch(const DescribeWhiteboardPushSearchRequest &request)
@@ -1438,25 +1662,32 @@ TiwClient::DescribeWhiteboardPushSearchOutcome TiwClient::DescribeWhiteboardPush
 
 void TiwClient::DescribeWhiteboardPushSearchAsync(const DescribeWhiteboardPushSearchRequest& request, const DescribeWhiteboardPushSearchAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeWhiteboardPushSearch(request), context);
-    };
+    using Req = const DescribeWhiteboardPushSearchRequest&;
+    using Resp = DescribeWhiteboardPushSearchResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeWhiteboardPushSearch", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::DescribeWhiteboardPushSearchOutcomeCallable TiwClient::DescribeWhiteboardPushSearchCallable(const DescribeWhiteboardPushSearchRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeWhiteboardPushSearchOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeWhiteboardPushSearch(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeWhiteboardPushSearchOutcome>>();
+    DescribeWhiteboardPushSearchAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const DescribeWhiteboardPushSearchRequest&,
+        DescribeWhiteboardPushSearchOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::ModifyApplicationOutcome TiwClient::ModifyApplication(const ModifyApplicationRequest &request)
@@ -1481,25 +1712,32 @@ TiwClient::ModifyApplicationOutcome TiwClient::ModifyApplication(const ModifyApp
 
 void TiwClient::ModifyApplicationAsync(const ModifyApplicationRequest& request, const ModifyApplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyApplication(request), context);
-    };
+    using Req = const ModifyApplicationRequest&;
+    using Resp = ModifyApplicationResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyApplication", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::ModifyApplicationOutcomeCallable TiwClient::ModifyApplicationCallable(const ModifyApplicationRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyApplicationOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyApplication(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyApplicationOutcome>>();
+    ModifyApplicationAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const ModifyApplicationRequest&,
+        ModifyApplicationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::ModifyAutoRenewFlagOutcome TiwClient::ModifyAutoRenewFlag(const ModifyAutoRenewFlagRequest &request)
@@ -1524,25 +1762,32 @@ TiwClient::ModifyAutoRenewFlagOutcome TiwClient::ModifyAutoRenewFlag(const Modif
 
 void TiwClient::ModifyAutoRenewFlagAsync(const ModifyAutoRenewFlagRequest& request, const ModifyAutoRenewFlagAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyAutoRenewFlag(request), context);
-    };
+    using Req = const ModifyAutoRenewFlagRequest&;
+    using Resp = ModifyAutoRenewFlagResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyAutoRenewFlag", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::ModifyAutoRenewFlagOutcomeCallable TiwClient::ModifyAutoRenewFlagCallable(const ModifyAutoRenewFlagRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyAutoRenewFlagOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyAutoRenewFlag(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyAutoRenewFlagOutcome>>();
+    ModifyAutoRenewFlagAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const ModifyAutoRenewFlagRequest&,
+        ModifyAutoRenewFlagOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::ModifyWhiteboardApplicationConfigOutcome TiwClient::ModifyWhiteboardApplicationConfig(const ModifyWhiteboardApplicationConfigRequest &request)
@@ -1567,25 +1812,32 @@ TiwClient::ModifyWhiteboardApplicationConfigOutcome TiwClient::ModifyWhiteboardA
 
 void TiwClient::ModifyWhiteboardApplicationConfigAsync(const ModifyWhiteboardApplicationConfigRequest& request, const ModifyWhiteboardApplicationConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyWhiteboardApplicationConfig(request), context);
-    };
+    using Req = const ModifyWhiteboardApplicationConfigRequest&;
+    using Resp = ModifyWhiteboardApplicationConfigResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyWhiteboardApplicationConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::ModifyWhiteboardApplicationConfigOutcomeCallable TiwClient::ModifyWhiteboardApplicationConfigCallable(const ModifyWhiteboardApplicationConfigRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyWhiteboardApplicationConfigOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyWhiteboardApplicationConfig(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyWhiteboardApplicationConfigOutcome>>();
+    ModifyWhiteboardApplicationConfigAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const ModifyWhiteboardApplicationConfigRequest&,
+        ModifyWhiteboardApplicationConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::ModifyWhiteboardBucketConfigOutcome TiwClient::ModifyWhiteboardBucketConfig(const ModifyWhiteboardBucketConfigRequest &request)
@@ -1610,25 +1862,32 @@ TiwClient::ModifyWhiteboardBucketConfigOutcome TiwClient::ModifyWhiteboardBucket
 
 void TiwClient::ModifyWhiteboardBucketConfigAsync(const ModifyWhiteboardBucketConfigRequest& request, const ModifyWhiteboardBucketConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyWhiteboardBucketConfig(request), context);
-    };
+    using Req = const ModifyWhiteboardBucketConfigRequest&;
+    using Resp = ModifyWhiteboardBucketConfigResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyWhiteboardBucketConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::ModifyWhiteboardBucketConfigOutcomeCallable TiwClient::ModifyWhiteboardBucketConfigCallable(const ModifyWhiteboardBucketConfigRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyWhiteboardBucketConfigOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyWhiteboardBucketConfig(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyWhiteboardBucketConfigOutcome>>();
+    ModifyWhiteboardBucketConfigAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const ModifyWhiteboardBucketConfigRequest&,
+        ModifyWhiteboardBucketConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::PauseOnlineRecordOutcome TiwClient::PauseOnlineRecord(const PauseOnlineRecordRequest &request)
@@ -1653,25 +1912,32 @@ TiwClient::PauseOnlineRecordOutcome TiwClient::PauseOnlineRecord(const PauseOnli
 
 void TiwClient::PauseOnlineRecordAsync(const PauseOnlineRecordRequest& request, const PauseOnlineRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->PauseOnlineRecord(request), context);
-    };
+    using Req = const PauseOnlineRecordRequest&;
+    using Resp = PauseOnlineRecordResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "PauseOnlineRecord", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::PauseOnlineRecordOutcomeCallable TiwClient::PauseOnlineRecordCallable(const PauseOnlineRecordRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<PauseOnlineRecordOutcome()>>(
-        [this, request]()
-        {
-            return this->PauseOnlineRecord(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<PauseOnlineRecordOutcome>>();
+    PauseOnlineRecordAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const PauseOnlineRecordRequest&,
+        PauseOnlineRecordOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::ResumeOnlineRecordOutcome TiwClient::ResumeOnlineRecord(const ResumeOnlineRecordRequest &request)
@@ -1696,25 +1962,32 @@ TiwClient::ResumeOnlineRecordOutcome TiwClient::ResumeOnlineRecord(const ResumeO
 
 void TiwClient::ResumeOnlineRecordAsync(const ResumeOnlineRecordRequest& request, const ResumeOnlineRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ResumeOnlineRecord(request), context);
-    };
+    using Req = const ResumeOnlineRecordRequest&;
+    using Resp = ResumeOnlineRecordResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ResumeOnlineRecord", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::ResumeOnlineRecordOutcomeCallable TiwClient::ResumeOnlineRecordCallable(const ResumeOnlineRecordRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ResumeOnlineRecordOutcome()>>(
-        [this, request]()
-        {
-            return this->ResumeOnlineRecord(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ResumeOnlineRecordOutcome>>();
+    ResumeOnlineRecordAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const ResumeOnlineRecordRequest&,
+        ResumeOnlineRecordOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::SetOnlineRecordCallbackOutcome TiwClient::SetOnlineRecordCallback(const SetOnlineRecordCallbackRequest &request)
@@ -1739,25 +2012,32 @@ TiwClient::SetOnlineRecordCallbackOutcome TiwClient::SetOnlineRecordCallback(con
 
 void TiwClient::SetOnlineRecordCallbackAsync(const SetOnlineRecordCallbackRequest& request, const SetOnlineRecordCallbackAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->SetOnlineRecordCallback(request), context);
-    };
+    using Req = const SetOnlineRecordCallbackRequest&;
+    using Resp = SetOnlineRecordCallbackResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "SetOnlineRecordCallback", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::SetOnlineRecordCallbackOutcomeCallable TiwClient::SetOnlineRecordCallbackCallable(const SetOnlineRecordCallbackRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<SetOnlineRecordCallbackOutcome()>>(
-        [this, request]()
-        {
-            return this->SetOnlineRecordCallback(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<SetOnlineRecordCallbackOutcome>>();
+    SetOnlineRecordCallbackAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const SetOnlineRecordCallbackRequest&,
+        SetOnlineRecordCallbackOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::SetOnlineRecordCallbackKeyOutcome TiwClient::SetOnlineRecordCallbackKey(const SetOnlineRecordCallbackKeyRequest &request)
@@ -1782,25 +2062,32 @@ TiwClient::SetOnlineRecordCallbackKeyOutcome TiwClient::SetOnlineRecordCallbackK
 
 void TiwClient::SetOnlineRecordCallbackKeyAsync(const SetOnlineRecordCallbackKeyRequest& request, const SetOnlineRecordCallbackKeyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->SetOnlineRecordCallbackKey(request), context);
-    };
+    using Req = const SetOnlineRecordCallbackKeyRequest&;
+    using Resp = SetOnlineRecordCallbackKeyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "SetOnlineRecordCallbackKey", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::SetOnlineRecordCallbackKeyOutcomeCallable TiwClient::SetOnlineRecordCallbackKeyCallable(const SetOnlineRecordCallbackKeyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<SetOnlineRecordCallbackKeyOutcome()>>(
-        [this, request]()
-        {
-            return this->SetOnlineRecordCallbackKey(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<SetOnlineRecordCallbackKeyOutcome>>();
+    SetOnlineRecordCallbackKeyAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const SetOnlineRecordCallbackKeyRequest&,
+        SetOnlineRecordCallbackKeyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::SetTranscodeCallbackOutcome TiwClient::SetTranscodeCallback(const SetTranscodeCallbackRequest &request)
@@ -1825,25 +2112,32 @@ TiwClient::SetTranscodeCallbackOutcome TiwClient::SetTranscodeCallback(const Set
 
 void TiwClient::SetTranscodeCallbackAsync(const SetTranscodeCallbackRequest& request, const SetTranscodeCallbackAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->SetTranscodeCallback(request), context);
-    };
+    using Req = const SetTranscodeCallbackRequest&;
+    using Resp = SetTranscodeCallbackResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "SetTranscodeCallback", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::SetTranscodeCallbackOutcomeCallable TiwClient::SetTranscodeCallbackCallable(const SetTranscodeCallbackRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<SetTranscodeCallbackOutcome()>>(
-        [this, request]()
-        {
-            return this->SetTranscodeCallback(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<SetTranscodeCallbackOutcome>>();
+    SetTranscodeCallbackAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const SetTranscodeCallbackRequest&,
+        SetTranscodeCallbackOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::SetTranscodeCallbackKeyOutcome TiwClient::SetTranscodeCallbackKey(const SetTranscodeCallbackKeyRequest &request)
@@ -1868,25 +2162,32 @@ TiwClient::SetTranscodeCallbackKeyOutcome TiwClient::SetTranscodeCallbackKey(con
 
 void TiwClient::SetTranscodeCallbackKeyAsync(const SetTranscodeCallbackKeyRequest& request, const SetTranscodeCallbackKeyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->SetTranscodeCallbackKey(request), context);
-    };
+    using Req = const SetTranscodeCallbackKeyRequest&;
+    using Resp = SetTranscodeCallbackKeyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "SetTranscodeCallbackKey", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::SetTranscodeCallbackKeyOutcomeCallable TiwClient::SetTranscodeCallbackKeyCallable(const SetTranscodeCallbackKeyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<SetTranscodeCallbackKeyOutcome()>>(
-        [this, request]()
-        {
-            return this->SetTranscodeCallbackKey(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<SetTranscodeCallbackKeyOutcome>>();
+    SetTranscodeCallbackKeyAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const SetTranscodeCallbackKeyRequest&,
+        SetTranscodeCallbackKeyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::SetVideoGenerationTaskCallbackOutcome TiwClient::SetVideoGenerationTaskCallback(const SetVideoGenerationTaskCallbackRequest &request)
@@ -1911,25 +2212,32 @@ TiwClient::SetVideoGenerationTaskCallbackOutcome TiwClient::SetVideoGenerationTa
 
 void TiwClient::SetVideoGenerationTaskCallbackAsync(const SetVideoGenerationTaskCallbackRequest& request, const SetVideoGenerationTaskCallbackAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->SetVideoGenerationTaskCallback(request), context);
-    };
+    using Req = const SetVideoGenerationTaskCallbackRequest&;
+    using Resp = SetVideoGenerationTaskCallbackResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "SetVideoGenerationTaskCallback", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::SetVideoGenerationTaskCallbackOutcomeCallable TiwClient::SetVideoGenerationTaskCallbackCallable(const SetVideoGenerationTaskCallbackRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<SetVideoGenerationTaskCallbackOutcome()>>(
-        [this, request]()
-        {
-            return this->SetVideoGenerationTaskCallback(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<SetVideoGenerationTaskCallbackOutcome>>();
+    SetVideoGenerationTaskCallbackAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const SetVideoGenerationTaskCallbackRequest&,
+        SetVideoGenerationTaskCallbackOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::SetVideoGenerationTaskCallbackKeyOutcome TiwClient::SetVideoGenerationTaskCallbackKey(const SetVideoGenerationTaskCallbackKeyRequest &request)
@@ -1954,25 +2262,32 @@ TiwClient::SetVideoGenerationTaskCallbackKeyOutcome TiwClient::SetVideoGeneratio
 
 void TiwClient::SetVideoGenerationTaskCallbackKeyAsync(const SetVideoGenerationTaskCallbackKeyRequest& request, const SetVideoGenerationTaskCallbackKeyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->SetVideoGenerationTaskCallbackKey(request), context);
-    };
+    using Req = const SetVideoGenerationTaskCallbackKeyRequest&;
+    using Resp = SetVideoGenerationTaskCallbackKeyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "SetVideoGenerationTaskCallbackKey", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::SetVideoGenerationTaskCallbackKeyOutcomeCallable TiwClient::SetVideoGenerationTaskCallbackKeyCallable(const SetVideoGenerationTaskCallbackKeyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<SetVideoGenerationTaskCallbackKeyOutcome()>>(
-        [this, request]()
-        {
-            return this->SetVideoGenerationTaskCallbackKey(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<SetVideoGenerationTaskCallbackKeyOutcome>>();
+    SetVideoGenerationTaskCallbackKeyAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const SetVideoGenerationTaskCallbackKeyRequest&,
+        SetVideoGenerationTaskCallbackKeyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::SetWhiteboardPushCallbackOutcome TiwClient::SetWhiteboardPushCallback(const SetWhiteboardPushCallbackRequest &request)
@@ -1997,25 +2312,32 @@ TiwClient::SetWhiteboardPushCallbackOutcome TiwClient::SetWhiteboardPushCallback
 
 void TiwClient::SetWhiteboardPushCallbackAsync(const SetWhiteboardPushCallbackRequest& request, const SetWhiteboardPushCallbackAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->SetWhiteboardPushCallback(request), context);
-    };
+    using Req = const SetWhiteboardPushCallbackRequest&;
+    using Resp = SetWhiteboardPushCallbackResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "SetWhiteboardPushCallback", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::SetWhiteboardPushCallbackOutcomeCallable TiwClient::SetWhiteboardPushCallbackCallable(const SetWhiteboardPushCallbackRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<SetWhiteboardPushCallbackOutcome()>>(
-        [this, request]()
-        {
-            return this->SetWhiteboardPushCallback(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<SetWhiteboardPushCallbackOutcome>>();
+    SetWhiteboardPushCallbackAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const SetWhiteboardPushCallbackRequest&,
+        SetWhiteboardPushCallbackOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::SetWhiteboardPushCallbackKeyOutcome TiwClient::SetWhiteboardPushCallbackKey(const SetWhiteboardPushCallbackKeyRequest &request)
@@ -2040,25 +2362,32 @@ TiwClient::SetWhiteboardPushCallbackKeyOutcome TiwClient::SetWhiteboardPushCallb
 
 void TiwClient::SetWhiteboardPushCallbackKeyAsync(const SetWhiteboardPushCallbackKeyRequest& request, const SetWhiteboardPushCallbackKeyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->SetWhiteboardPushCallbackKey(request), context);
-    };
+    using Req = const SetWhiteboardPushCallbackKeyRequest&;
+    using Resp = SetWhiteboardPushCallbackKeyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "SetWhiteboardPushCallbackKey", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::SetWhiteboardPushCallbackKeyOutcomeCallable TiwClient::SetWhiteboardPushCallbackKeyCallable(const SetWhiteboardPushCallbackKeyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<SetWhiteboardPushCallbackKeyOutcome()>>(
-        [this, request]()
-        {
-            return this->SetWhiteboardPushCallbackKey(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<SetWhiteboardPushCallbackKeyOutcome>>();
+    SetWhiteboardPushCallbackKeyAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const SetWhiteboardPushCallbackKeyRequest&,
+        SetWhiteboardPushCallbackKeyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::StartOnlineRecordOutcome TiwClient::StartOnlineRecord(const StartOnlineRecordRequest &request)
@@ -2083,25 +2412,32 @@ TiwClient::StartOnlineRecordOutcome TiwClient::StartOnlineRecord(const StartOnli
 
 void TiwClient::StartOnlineRecordAsync(const StartOnlineRecordRequest& request, const StartOnlineRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->StartOnlineRecord(request), context);
-    };
+    using Req = const StartOnlineRecordRequest&;
+    using Resp = StartOnlineRecordResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "StartOnlineRecord", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::StartOnlineRecordOutcomeCallable TiwClient::StartOnlineRecordCallable(const StartOnlineRecordRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<StartOnlineRecordOutcome()>>(
-        [this, request]()
-        {
-            return this->StartOnlineRecord(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<StartOnlineRecordOutcome>>();
+    StartOnlineRecordAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const StartOnlineRecordRequest&,
+        StartOnlineRecordOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::StartWhiteboardPushOutcome TiwClient::StartWhiteboardPush(const StartWhiteboardPushRequest &request)
@@ -2126,25 +2462,32 @@ TiwClient::StartWhiteboardPushOutcome TiwClient::StartWhiteboardPush(const Start
 
 void TiwClient::StartWhiteboardPushAsync(const StartWhiteboardPushRequest& request, const StartWhiteboardPushAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->StartWhiteboardPush(request), context);
-    };
+    using Req = const StartWhiteboardPushRequest&;
+    using Resp = StartWhiteboardPushResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "StartWhiteboardPush", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::StartWhiteboardPushOutcomeCallable TiwClient::StartWhiteboardPushCallable(const StartWhiteboardPushRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<StartWhiteboardPushOutcome()>>(
-        [this, request]()
-        {
-            return this->StartWhiteboardPush(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<StartWhiteboardPushOutcome>>();
+    StartWhiteboardPushAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const StartWhiteboardPushRequest&,
+        StartWhiteboardPushOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::StopOnlineRecordOutcome TiwClient::StopOnlineRecord(const StopOnlineRecordRequest &request)
@@ -2169,25 +2512,32 @@ TiwClient::StopOnlineRecordOutcome TiwClient::StopOnlineRecord(const StopOnlineR
 
 void TiwClient::StopOnlineRecordAsync(const StopOnlineRecordRequest& request, const StopOnlineRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->StopOnlineRecord(request), context);
-    };
+    using Req = const StopOnlineRecordRequest&;
+    using Resp = StopOnlineRecordResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "StopOnlineRecord", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::StopOnlineRecordOutcomeCallable TiwClient::StopOnlineRecordCallable(const StopOnlineRecordRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<StopOnlineRecordOutcome()>>(
-        [this, request]()
-        {
-            return this->StopOnlineRecord(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<StopOnlineRecordOutcome>>();
+    StopOnlineRecordAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const StopOnlineRecordRequest&,
+        StopOnlineRecordOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TiwClient::StopWhiteboardPushOutcome TiwClient::StopWhiteboardPush(const StopWhiteboardPushRequest &request)
@@ -2212,24 +2562,31 @@ TiwClient::StopWhiteboardPushOutcome TiwClient::StopWhiteboardPush(const StopWhi
 
 void TiwClient::StopWhiteboardPushAsync(const StopWhiteboardPushRequest& request, const StopWhiteboardPushAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->StopWhiteboardPush(request), context);
-    };
+    using Req = const StopWhiteboardPushRequest&;
+    using Resp = StopWhiteboardPushResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "StopWhiteboardPush", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TiwClient::StopWhiteboardPushOutcomeCallable TiwClient::StopWhiteboardPushCallable(const StopWhiteboardPushRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<StopWhiteboardPushOutcome()>>(
-        [this, request]()
-        {
-            return this->StopWhiteboardPush(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<StopWhiteboardPushOutcome>>();
+    StopWhiteboardPushAsync(
+    request,
+    [prom](
+        const TiwClient*,
+        const StopWhiteboardPushRequest&,
+        StopWhiteboardPushOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

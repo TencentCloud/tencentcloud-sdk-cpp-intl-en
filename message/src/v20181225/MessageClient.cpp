@@ -62,24 +62,31 @@ MessageClient::ModifySendChannelOnMsgTypesOutcome MessageClient::ModifySendChann
 
 void MessageClient::ModifySendChannelOnMsgTypesAsync(const ModifySendChannelOnMsgTypesRequest& request, const ModifySendChannelOnMsgTypesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifySendChannelOnMsgTypes(request), context);
-    };
+    using Req = const ModifySendChannelOnMsgTypesRequest&;
+    using Resp = ModifySendChannelOnMsgTypesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifySendChannelOnMsgTypes", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MessageClient::ModifySendChannelOnMsgTypesOutcomeCallable MessageClient::ModifySendChannelOnMsgTypesCallable(const ModifySendChannelOnMsgTypesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifySendChannelOnMsgTypesOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifySendChannelOnMsgTypes(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifySendChannelOnMsgTypesOutcome>>();
+    ModifySendChannelOnMsgTypesAsync(
+    request,
+    [prom](
+        const MessageClient*,
+        const ModifySendChannelOnMsgTypesRequest&,
+        ModifySendChannelOnMsgTypesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

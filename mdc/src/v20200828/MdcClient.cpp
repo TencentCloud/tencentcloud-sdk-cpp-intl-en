@@ -62,25 +62,32 @@ MdcClient::CreateStreamLinkFlowOutcome MdcClient::CreateStreamLinkFlow(const Cre
 
 void MdcClient::CreateStreamLinkFlowAsync(const CreateStreamLinkFlowRequest& request, const CreateStreamLinkFlowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateStreamLinkFlow(request), context);
-    };
+    using Req = const CreateStreamLinkFlowRequest&;
+    using Resp = CreateStreamLinkFlowResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateStreamLinkFlow", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdcClient::CreateStreamLinkFlowOutcomeCallable MdcClient::CreateStreamLinkFlowCallable(const CreateStreamLinkFlowRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateStreamLinkFlowOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateStreamLinkFlow(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateStreamLinkFlowOutcome>>();
+    CreateStreamLinkFlowAsync(
+    request,
+    [prom](
+        const MdcClient*,
+        const CreateStreamLinkFlowRequest&,
+        CreateStreamLinkFlowOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdcClient::CreateStreamLinkInputOutcome MdcClient::CreateStreamLinkInput(const CreateStreamLinkInputRequest &request)
@@ -105,25 +112,32 @@ MdcClient::CreateStreamLinkInputOutcome MdcClient::CreateStreamLinkInput(const C
 
 void MdcClient::CreateStreamLinkInputAsync(const CreateStreamLinkInputRequest& request, const CreateStreamLinkInputAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateStreamLinkInput(request), context);
-    };
+    using Req = const CreateStreamLinkInputRequest&;
+    using Resp = CreateStreamLinkInputResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateStreamLinkInput", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdcClient::CreateStreamLinkInputOutcomeCallable MdcClient::CreateStreamLinkInputCallable(const CreateStreamLinkInputRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateStreamLinkInputOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateStreamLinkInput(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateStreamLinkInputOutcome>>();
+    CreateStreamLinkInputAsync(
+    request,
+    [prom](
+        const MdcClient*,
+        const CreateStreamLinkInputRequest&,
+        CreateStreamLinkInputOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdcClient::CreateStreamLinkOutputInfoOutcome MdcClient::CreateStreamLinkOutputInfo(const CreateStreamLinkOutputInfoRequest &request)
@@ -148,25 +162,32 @@ MdcClient::CreateStreamLinkOutputInfoOutcome MdcClient::CreateStreamLinkOutputIn
 
 void MdcClient::CreateStreamLinkOutputInfoAsync(const CreateStreamLinkOutputInfoRequest& request, const CreateStreamLinkOutputInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateStreamLinkOutputInfo(request), context);
-    };
+    using Req = const CreateStreamLinkOutputInfoRequest&;
+    using Resp = CreateStreamLinkOutputInfoResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateStreamLinkOutputInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdcClient::CreateStreamLinkOutputInfoOutcomeCallable MdcClient::CreateStreamLinkOutputInfoCallable(const CreateStreamLinkOutputInfoRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateStreamLinkOutputInfoOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateStreamLinkOutputInfo(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateStreamLinkOutputInfoOutcome>>();
+    CreateStreamLinkOutputInfoAsync(
+    request,
+    [prom](
+        const MdcClient*,
+        const CreateStreamLinkOutputInfoRequest&,
+        CreateStreamLinkOutputInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdcClient::DeleteStreamLinkFlowOutcome MdcClient::DeleteStreamLinkFlow(const DeleteStreamLinkFlowRequest &request)
@@ -191,25 +212,32 @@ MdcClient::DeleteStreamLinkFlowOutcome MdcClient::DeleteStreamLinkFlow(const Del
 
 void MdcClient::DeleteStreamLinkFlowAsync(const DeleteStreamLinkFlowRequest& request, const DeleteStreamLinkFlowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteStreamLinkFlow(request), context);
-    };
+    using Req = const DeleteStreamLinkFlowRequest&;
+    using Resp = DeleteStreamLinkFlowResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteStreamLinkFlow", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdcClient::DeleteStreamLinkFlowOutcomeCallable MdcClient::DeleteStreamLinkFlowCallable(const DeleteStreamLinkFlowRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteStreamLinkFlowOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteStreamLinkFlow(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteStreamLinkFlowOutcome>>();
+    DeleteStreamLinkFlowAsync(
+    request,
+    [prom](
+        const MdcClient*,
+        const DeleteStreamLinkFlowRequest&,
+        DeleteStreamLinkFlowOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdcClient::DeleteStreamLinkOutputOutcome MdcClient::DeleteStreamLinkOutput(const DeleteStreamLinkOutputRequest &request)
@@ -234,25 +262,32 @@ MdcClient::DeleteStreamLinkOutputOutcome MdcClient::DeleteStreamLinkOutput(const
 
 void MdcClient::DeleteStreamLinkOutputAsync(const DeleteStreamLinkOutputRequest& request, const DeleteStreamLinkOutputAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteStreamLinkOutput(request), context);
-    };
+    using Req = const DeleteStreamLinkOutputRequest&;
+    using Resp = DeleteStreamLinkOutputResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteStreamLinkOutput", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdcClient::DeleteStreamLinkOutputOutcomeCallable MdcClient::DeleteStreamLinkOutputCallable(const DeleteStreamLinkOutputRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteStreamLinkOutputOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteStreamLinkOutput(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteStreamLinkOutputOutcome>>();
+    DeleteStreamLinkOutputAsync(
+    request,
+    [prom](
+        const MdcClient*,
+        const DeleteStreamLinkOutputRequest&,
+        DeleteStreamLinkOutputOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdcClient::DescribeStreamLinkFlowOutcome MdcClient::DescribeStreamLinkFlow(const DescribeStreamLinkFlowRequest &request)
@@ -277,25 +312,32 @@ MdcClient::DescribeStreamLinkFlowOutcome MdcClient::DescribeStreamLinkFlow(const
 
 void MdcClient::DescribeStreamLinkFlowAsync(const DescribeStreamLinkFlowRequest& request, const DescribeStreamLinkFlowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeStreamLinkFlow(request), context);
-    };
+    using Req = const DescribeStreamLinkFlowRequest&;
+    using Resp = DescribeStreamLinkFlowResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeStreamLinkFlow", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdcClient::DescribeStreamLinkFlowOutcomeCallable MdcClient::DescribeStreamLinkFlowCallable(const DescribeStreamLinkFlowRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeStreamLinkFlowOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeStreamLinkFlow(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeStreamLinkFlowOutcome>>();
+    DescribeStreamLinkFlowAsync(
+    request,
+    [prom](
+        const MdcClient*,
+        const DescribeStreamLinkFlowRequest&,
+        DescribeStreamLinkFlowOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdcClient::DescribeStreamLinkFlowLogsOutcome MdcClient::DescribeStreamLinkFlowLogs(const DescribeStreamLinkFlowLogsRequest &request)
@@ -320,25 +362,32 @@ MdcClient::DescribeStreamLinkFlowLogsOutcome MdcClient::DescribeStreamLinkFlowLo
 
 void MdcClient::DescribeStreamLinkFlowLogsAsync(const DescribeStreamLinkFlowLogsRequest& request, const DescribeStreamLinkFlowLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeStreamLinkFlowLogs(request), context);
-    };
+    using Req = const DescribeStreamLinkFlowLogsRequest&;
+    using Resp = DescribeStreamLinkFlowLogsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeStreamLinkFlowLogs", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdcClient::DescribeStreamLinkFlowLogsOutcomeCallable MdcClient::DescribeStreamLinkFlowLogsCallable(const DescribeStreamLinkFlowLogsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeStreamLinkFlowLogsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeStreamLinkFlowLogs(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeStreamLinkFlowLogsOutcome>>();
+    DescribeStreamLinkFlowLogsAsync(
+    request,
+    [prom](
+        const MdcClient*,
+        const DescribeStreamLinkFlowLogsRequest&,
+        DescribeStreamLinkFlowLogsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdcClient::DescribeStreamLinkFlowMediaStatisticsOutcome MdcClient::DescribeStreamLinkFlowMediaStatistics(const DescribeStreamLinkFlowMediaStatisticsRequest &request)
@@ -363,25 +412,32 @@ MdcClient::DescribeStreamLinkFlowMediaStatisticsOutcome MdcClient::DescribeStrea
 
 void MdcClient::DescribeStreamLinkFlowMediaStatisticsAsync(const DescribeStreamLinkFlowMediaStatisticsRequest& request, const DescribeStreamLinkFlowMediaStatisticsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeStreamLinkFlowMediaStatistics(request), context);
-    };
+    using Req = const DescribeStreamLinkFlowMediaStatisticsRequest&;
+    using Resp = DescribeStreamLinkFlowMediaStatisticsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeStreamLinkFlowMediaStatistics", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdcClient::DescribeStreamLinkFlowMediaStatisticsOutcomeCallable MdcClient::DescribeStreamLinkFlowMediaStatisticsCallable(const DescribeStreamLinkFlowMediaStatisticsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeStreamLinkFlowMediaStatisticsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeStreamLinkFlowMediaStatistics(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeStreamLinkFlowMediaStatisticsOutcome>>();
+    DescribeStreamLinkFlowMediaStatisticsAsync(
+    request,
+    [prom](
+        const MdcClient*,
+        const DescribeStreamLinkFlowMediaStatisticsRequest&,
+        DescribeStreamLinkFlowMediaStatisticsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdcClient::DescribeStreamLinkFlowRealtimeStatusOutcome MdcClient::DescribeStreamLinkFlowRealtimeStatus(const DescribeStreamLinkFlowRealtimeStatusRequest &request)
@@ -406,25 +462,32 @@ MdcClient::DescribeStreamLinkFlowRealtimeStatusOutcome MdcClient::DescribeStream
 
 void MdcClient::DescribeStreamLinkFlowRealtimeStatusAsync(const DescribeStreamLinkFlowRealtimeStatusRequest& request, const DescribeStreamLinkFlowRealtimeStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeStreamLinkFlowRealtimeStatus(request), context);
-    };
+    using Req = const DescribeStreamLinkFlowRealtimeStatusRequest&;
+    using Resp = DescribeStreamLinkFlowRealtimeStatusResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeStreamLinkFlowRealtimeStatus", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdcClient::DescribeStreamLinkFlowRealtimeStatusOutcomeCallable MdcClient::DescribeStreamLinkFlowRealtimeStatusCallable(const DescribeStreamLinkFlowRealtimeStatusRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeStreamLinkFlowRealtimeStatusOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeStreamLinkFlowRealtimeStatus(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeStreamLinkFlowRealtimeStatusOutcome>>();
+    DescribeStreamLinkFlowRealtimeStatusAsync(
+    request,
+    [prom](
+        const MdcClient*,
+        const DescribeStreamLinkFlowRealtimeStatusRequest&,
+        DescribeStreamLinkFlowRealtimeStatusOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdcClient::DescribeStreamLinkFlowSRTStatisticsOutcome MdcClient::DescribeStreamLinkFlowSRTStatistics(const DescribeStreamLinkFlowSRTStatisticsRequest &request)
@@ -449,25 +512,32 @@ MdcClient::DescribeStreamLinkFlowSRTStatisticsOutcome MdcClient::DescribeStreamL
 
 void MdcClient::DescribeStreamLinkFlowSRTStatisticsAsync(const DescribeStreamLinkFlowSRTStatisticsRequest& request, const DescribeStreamLinkFlowSRTStatisticsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeStreamLinkFlowSRTStatistics(request), context);
-    };
+    using Req = const DescribeStreamLinkFlowSRTStatisticsRequest&;
+    using Resp = DescribeStreamLinkFlowSRTStatisticsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeStreamLinkFlowSRTStatistics", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdcClient::DescribeStreamLinkFlowSRTStatisticsOutcomeCallable MdcClient::DescribeStreamLinkFlowSRTStatisticsCallable(const DescribeStreamLinkFlowSRTStatisticsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeStreamLinkFlowSRTStatisticsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeStreamLinkFlowSRTStatistics(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeStreamLinkFlowSRTStatisticsOutcome>>();
+    DescribeStreamLinkFlowSRTStatisticsAsync(
+    request,
+    [prom](
+        const MdcClient*,
+        const DescribeStreamLinkFlowSRTStatisticsRequest&,
+        DescribeStreamLinkFlowSRTStatisticsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdcClient::DescribeStreamLinkFlowStatisticsOutcome MdcClient::DescribeStreamLinkFlowStatistics(const DescribeStreamLinkFlowStatisticsRequest &request)
@@ -492,25 +562,32 @@ MdcClient::DescribeStreamLinkFlowStatisticsOutcome MdcClient::DescribeStreamLink
 
 void MdcClient::DescribeStreamLinkFlowStatisticsAsync(const DescribeStreamLinkFlowStatisticsRequest& request, const DescribeStreamLinkFlowStatisticsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeStreamLinkFlowStatistics(request), context);
-    };
+    using Req = const DescribeStreamLinkFlowStatisticsRequest&;
+    using Resp = DescribeStreamLinkFlowStatisticsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeStreamLinkFlowStatistics", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdcClient::DescribeStreamLinkFlowStatisticsOutcomeCallable MdcClient::DescribeStreamLinkFlowStatisticsCallable(const DescribeStreamLinkFlowStatisticsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeStreamLinkFlowStatisticsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeStreamLinkFlowStatistics(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeStreamLinkFlowStatisticsOutcome>>();
+    DescribeStreamLinkFlowStatisticsAsync(
+    request,
+    [prom](
+        const MdcClient*,
+        const DescribeStreamLinkFlowStatisticsRequest&,
+        DescribeStreamLinkFlowStatisticsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdcClient::DescribeStreamLinkFlowsOutcome MdcClient::DescribeStreamLinkFlows(const DescribeStreamLinkFlowsRequest &request)
@@ -535,25 +612,32 @@ MdcClient::DescribeStreamLinkFlowsOutcome MdcClient::DescribeStreamLinkFlows(con
 
 void MdcClient::DescribeStreamLinkFlowsAsync(const DescribeStreamLinkFlowsRequest& request, const DescribeStreamLinkFlowsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeStreamLinkFlows(request), context);
-    };
+    using Req = const DescribeStreamLinkFlowsRequest&;
+    using Resp = DescribeStreamLinkFlowsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeStreamLinkFlows", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdcClient::DescribeStreamLinkFlowsOutcomeCallable MdcClient::DescribeStreamLinkFlowsCallable(const DescribeStreamLinkFlowsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeStreamLinkFlowsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeStreamLinkFlows(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeStreamLinkFlowsOutcome>>();
+    DescribeStreamLinkFlowsAsync(
+    request,
+    [prom](
+        const MdcClient*,
+        const DescribeStreamLinkFlowsRequest&,
+        DescribeStreamLinkFlowsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdcClient::DescribeStreamLinkRegionsOutcome MdcClient::DescribeStreamLinkRegions(const DescribeStreamLinkRegionsRequest &request)
@@ -578,25 +662,32 @@ MdcClient::DescribeStreamLinkRegionsOutcome MdcClient::DescribeStreamLinkRegions
 
 void MdcClient::DescribeStreamLinkRegionsAsync(const DescribeStreamLinkRegionsRequest& request, const DescribeStreamLinkRegionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeStreamLinkRegions(request), context);
-    };
+    using Req = const DescribeStreamLinkRegionsRequest&;
+    using Resp = DescribeStreamLinkRegionsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeStreamLinkRegions", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdcClient::DescribeStreamLinkRegionsOutcomeCallable MdcClient::DescribeStreamLinkRegionsCallable(const DescribeStreamLinkRegionsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeStreamLinkRegionsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeStreamLinkRegions(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeStreamLinkRegionsOutcome>>();
+    DescribeStreamLinkRegionsAsync(
+    request,
+    [prom](
+        const MdcClient*,
+        const DescribeStreamLinkRegionsRequest&,
+        DescribeStreamLinkRegionsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdcClient::ModifyStreamLinkFlowOutcome MdcClient::ModifyStreamLinkFlow(const ModifyStreamLinkFlowRequest &request)
@@ -621,25 +712,32 @@ MdcClient::ModifyStreamLinkFlowOutcome MdcClient::ModifyStreamLinkFlow(const Mod
 
 void MdcClient::ModifyStreamLinkFlowAsync(const ModifyStreamLinkFlowRequest& request, const ModifyStreamLinkFlowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyStreamLinkFlow(request), context);
-    };
+    using Req = const ModifyStreamLinkFlowRequest&;
+    using Resp = ModifyStreamLinkFlowResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyStreamLinkFlow", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdcClient::ModifyStreamLinkFlowOutcomeCallable MdcClient::ModifyStreamLinkFlowCallable(const ModifyStreamLinkFlowRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyStreamLinkFlowOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyStreamLinkFlow(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyStreamLinkFlowOutcome>>();
+    ModifyStreamLinkFlowAsync(
+    request,
+    [prom](
+        const MdcClient*,
+        const ModifyStreamLinkFlowRequest&,
+        ModifyStreamLinkFlowOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdcClient::ModifyStreamLinkInputOutcome MdcClient::ModifyStreamLinkInput(const ModifyStreamLinkInputRequest &request)
@@ -664,25 +762,32 @@ MdcClient::ModifyStreamLinkInputOutcome MdcClient::ModifyStreamLinkInput(const M
 
 void MdcClient::ModifyStreamLinkInputAsync(const ModifyStreamLinkInputRequest& request, const ModifyStreamLinkInputAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyStreamLinkInput(request), context);
-    };
+    using Req = const ModifyStreamLinkInputRequest&;
+    using Resp = ModifyStreamLinkInputResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyStreamLinkInput", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdcClient::ModifyStreamLinkInputOutcomeCallable MdcClient::ModifyStreamLinkInputCallable(const ModifyStreamLinkInputRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyStreamLinkInputOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyStreamLinkInput(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyStreamLinkInputOutcome>>();
+    ModifyStreamLinkInputAsync(
+    request,
+    [prom](
+        const MdcClient*,
+        const ModifyStreamLinkInputRequest&,
+        ModifyStreamLinkInputOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdcClient::ModifyStreamLinkOutputInfoOutcome MdcClient::ModifyStreamLinkOutputInfo(const ModifyStreamLinkOutputInfoRequest &request)
@@ -707,25 +812,32 @@ MdcClient::ModifyStreamLinkOutputInfoOutcome MdcClient::ModifyStreamLinkOutputIn
 
 void MdcClient::ModifyStreamLinkOutputInfoAsync(const ModifyStreamLinkOutputInfoRequest& request, const ModifyStreamLinkOutputInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyStreamLinkOutputInfo(request), context);
-    };
+    using Req = const ModifyStreamLinkOutputInfoRequest&;
+    using Resp = ModifyStreamLinkOutputInfoResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyStreamLinkOutputInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdcClient::ModifyStreamLinkOutputInfoOutcomeCallable MdcClient::ModifyStreamLinkOutputInfoCallable(const ModifyStreamLinkOutputInfoRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyStreamLinkOutputInfoOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyStreamLinkOutputInfo(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyStreamLinkOutputInfoOutcome>>();
+    ModifyStreamLinkOutputInfoAsync(
+    request,
+    [prom](
+        const MdcClient*,
+        const ModifyStreamLinkOutputInfoRequest&,
+        ModifyStreamLinkOutputInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdcClient::StartStreamLinkFlowOutcome MdcClient::StartStreamLinkFlow(const StartStreamLinkFlowRequest &request)
@@ -750,25 +862,32 @@ MdcClient::StartStreamLinkFlowOutcome MdcClient::StartStreamLinkFlow(const Start
 
 void MdcClient::StartStreamLinkFlowAsync(const StartStreamLinkFlowRequest& request, const StartStreamLinkFlowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->StartStreamLinkFlow(request), context);
-    };
+    using Req = const StartStreamLinkFlowRequest&;
+    using Resp = StartStreamLinkFlowResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "StartStreamLinkFlow", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdcClient::StartStreamLinkFlowOutcomeCallable MdcClient::StartStreamLinkFlowCallable(const StartStreamLinkFlowRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<StartStreamLinkFlowOutcome()>>(
-        [this, request]()
-        {
-            return this->StartStreamLinkFlow(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<StartStreamLinkFlowOutcome>>();
+    StartStreamLinkFlowAsync(
+    request,
+    [prom](
+        const MdcClient*,
+        const StartStreamLinkFlowRequest&,
+        StartStreamLinkFlowOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdcClient::StopStreamLinkFlowOutcome MdcClient::StopStreamLinkFlow(const StopStreamLinkFlowRequest &request)
@@ -793,24 +912,31 @@ MdcClient::StopStreamLinkFlowOutcome MdcClient::StopStreamLinkFlow(const StopStr
 
 void MdcClient::StopStreamLinkFlowAsync(const StopStreamLinkFlowRequest& request, const StopStreamLinkFlowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->StopStreamLinkFlow(request), context);
-    };
+    using Req = const StopStreamLinkFlowRequest&;
+    using Resp = StopStreamLinkFlowResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "StopStreamLinkFlow", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdcClient::StopStreamLinkFlowOutcomeCallable MdcClient::StopStreamLinkFlowCallable(const StopStreamLinkFlowRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<StopStreamLinkFlowOutcome()>>(
-        [this, request]()
-        {
-            return this->StopStreamLinkFlow(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<StopStreamLinkFlowOutcome>>();
+    StopStreamLinkFlowAsync(
+    request,
+    [prom](
+        const MdcClient*,
+        const StopStreamLinkFlowRequest&,
+        StopStreamLinkFlowOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

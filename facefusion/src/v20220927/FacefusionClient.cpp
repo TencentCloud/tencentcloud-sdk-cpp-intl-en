@@ -62,25 +62,32 @@ FacefusionClient::FuseFaceOutcome FacefusionClient::FuseFace(const FuseFaceReque
 
 void FacefusionClient::FuseFaceAsync(const FuseFaceRequest& request, const FuseFaceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->FuseFace(request), context);
-    };
+    using Req = const FuseFaceRequest&;
+    using Resp = FuseFaceResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "FuseFace", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 FacefusionClient::FuseFaceOutcomeCallable FacefusionClient::FuseFaceCallable(const FuseFaceRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<FuseFaceOutcome()>>(
-        [this, request]()
-        {
-            return this->FuseFace(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<FuseFaceOutcome>>();
+    FuseFaceAsync(
+    request,
+    [prom](
+        const FacefusionClient*,
+        const FuseFaceRequest&,
+        FuseFaceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 FacefusionClient::QueryVideoFaceFusionJobOutcome FacefusionClient::QueryVideoFaceFusionJob(const QueryVideoFaceFusionJobRequest &request)
@@ -105,25 +112,32 @@ FacefusionClient::QueryVideoFaceFusionJobOutcome FacefusionClient::QueryVideoFac
 
 void FacefusionClient::QueryVideoFaceFusionJobAsync(const QueryVideoFaceFusionJobRequest& request, const QueryVideoFaceFusionJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->QueryVideoFaceFusionJob(request), context);
-    };
+    using Req = const QueryVideoFaceFusionJobRequest&;
+    using Resp = QueryVideoFaceFusionJobResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "QueryVideoFaceFusionJob", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 FacefusionClient::QueryVideoFaceFusionJobOutcomeCallable FacefusionClient::QueryVideoFaceFusionJobCallable(const QueryVideoFaceFusionJobRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<QueryVideoFaceFusionJobOutcome()>>(
-        [this, request]()
-        {
-            return this->QueryVideoFaceFusionJob(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<QueryVideoFaceFusionJobOutcome>>();
+    QueryVideoFaceFusionJobAsync(
+    request,
+    [prom](
+        const FacefusionClient*,
+        const QueryVideoFaceFusionJobRequest&,
+        QueryVideoFaceFusionJobOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 FacefusionClient::SubmitVideoFaceFusionJobOutcome FacefusionClient::SubmitVideoFaceFusionJob(const SubmitVideoFaceFusionJobRequest &request)
@@ -148,24 +162,31 @@ FacefusionClient::SubmitVideoFaceFusionJobOutcome FacefusionClient::SubmitVideoF
 
 void FacefusionClient::SubmitVideoFaceFusionJobAsync(const SubmitVideoFaceFusionJobRequest& request, const SubmitVideoFaceFusionJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->SubmitVideoFaceFusionJob(request), context);
-    };
+    using Req = const SubmitVideoFaceFusionJobRequest&;
+    using Resp = SubmitVideoFaceFusionJobResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "SubmitVideoFaceFusionJob", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 FacefusionClient::SubmitVideoFaceFusionJobOutcomeCallable FacefusionClient::SubmitVideoFaceFusionJobCallable(const SubmitVideoFaceFusionJobRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<SubmitVideoFaceFusionJobOutcome()>>(
-        [this, request]()
-        {
-            return this->SubmitVideoFaceFusionJob(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<SubmitVideoFaceFusionJobOutcome>>();
+    SubmitVideoFaceFusionJobAsync(
+    request,
+    [prom](
+        const FacefusionClient*,
+        const SubmitVideoFaceFusionJobRequest&,
+        SubmitVideoFaceFusionJobOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

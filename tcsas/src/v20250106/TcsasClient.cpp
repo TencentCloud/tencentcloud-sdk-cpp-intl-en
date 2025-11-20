@@ -62,25 +62,32 @@ TcsasClient::AddTeamMemberOutcome TcsasClient::AddTeamMember(const AddTeamMember
 
 void TcsasClient::AddTeamMemberAsync(const AddTeamMemberRequest& request, const AddTeamMemberAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->AddTeamMember(request), context);
-    };
+    using Req = const AddTeamMemberRequest&;
+    using Resp = AddTeamMemberResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "AddTeamMember", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::AddTeamMemberOutcomeCallable TcsasClient::AddTeamMemberCallable(const AddTeamMemberRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<AddTeamMemberOutcome()>>(
-        [this, request]()
-        {
-            return this->AddTeamMember(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<AddTeamMemberOutcome>>();
+    AddTeamMemberAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const AddTeamMemberRequest&,
+        AddTeamMemberOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::ConfigureMNPPreviewOutcome TcsasClient::ConfigureMNPPreview(const ConfigureMNPPreviewRequest &request)
@@ -105,25 +112,32 @@ TcsasClient::ConfigureMNPPreviewOutcome TcsasClient::ConfigureMNPPreview(const C
 
 void TcsasClient::ConfigureMNPPreviewAsync(const ConfigureMNPPreviewRequest& request, const ConfigureMNPPreviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ConfigureMNPPreview(request), context);
-    };
+    using Req = const ConfigureMNPPreviewRequest&;
+    using Resp = ConfigureMNPPreviewResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ConfigureMNPPreview", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::ConfigureMNPPreviewOutcomeCallable TcsasClient::ConfigureMNPPreviewCallable(const ConfigureMNPPreviewRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ConfigureMNPPreviewOutcome()>>(
-        [this, request]()
-        {
-            return this->ConfigureMNPPreview(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ConfigureMNPPreviewOutcome>>();
+    ConfigureMNPPreviewAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const ConfigureMNPPreviewRequest&,
+        ConfigureMNPPreviewOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::CreateApplicationOutcome TcsasClient::CreateApplication(const CreateApplicationRequest &request)
@@ -148,25 +162,32 @@ TcsasClient::CreateApplicationOutcome TcsasClient::CreateApplication(const Creat
 
 void TcsasClient::CreateApplicationAsync(const CreateApplicationRequest& request, const CreateApplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateApplication(request), context);
-    };
+    using Req = const CreateApplicationRequest&;
+    using Resp = CreateApplicationResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateApplication", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::CreateApplicationOutcomeCallable TcsasClient::CreateApplicationCallable(const CreateApplicationRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateApplicationOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateApplication(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateApplicationOutcome>>();
+    CreateApplicationAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const CreateApplicationRequest&,
+        CreateApplicationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::CreateApplicationSensitiveAPIOutcome TcsasClient::CreateApplicationSensitiveAPI(const CreateApplicationSensitiveAPIRequest &request)
@@ -191,25 +212,32 @@ TcsasClient::CreateApplicationSensitiveAPIOutcome TcsasClient::CreateApplication
 
 void TcsasClient::CreateApplicationSensitiveAPIAsync(const CreateApplicationSensitiveAPIRequest& request, const CreateApplicationSensitiveAPIAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateApplicationSensitiveAPI(request), context);
-    };
+    using Req = const CreateApplicationSensitiveAPIRequest&;
+    using Resp = CreateApplicationSensitiveAPIResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateApplicationSensitiveAPI", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::CreateApplicationSensitiveAPIOutcomeCallable TcsasClient::CreateApplicationSensitiveAPICallable(const CreateApplicationSensitiveAPIRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateApplicationSensitiveAPIOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateApplicationSensitiveAPI(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateApplicationSensitiveAPIOutcome>>();
+    CreateApplicationSensitiveAPIAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const CreateApplicationSensitiveAPIRequest&,
+        CreateApplicationSensitiveAPIOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::CreateGlobalDomainACLOutcome TcsasClient::CreateGlobalDomainACL(const CreateGlobalDomainACLRequest &request)
@@ -234,25 +262,32 @@ TcsasClient::CreateGlobalDomainACLOutcome TcsasClient::CreateGlobalDomainACL(con
 
 void TcsasClient::CreateGlobalDomainACLAsync(const CreateGlobalDomainACLRequest& request, const CreateGlobalDomainACLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateGlobalDomainACL(request), context);
-    };
+    using Req = const CreateGlobalDomainACLRequest&;
+    using Resp = CreateGlobalDomainACLResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateGlobalDomainACL", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::CreateGlobalDomainACLOutcomeCallable TcsasClient::CreateGlobalDomainACLCallable(const CreateGlobalDomainACLRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateGlobalDomainACLOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateGlobalDomainACL(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateGlobalDomainACLOutcome>>();
+    CreateGlobalDomainACLAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const CreateGlobalDomainACLRequest&,
+        CreateGlobalDomainACLOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::CreateMNPOutcome TcsasClient::CreateMNP(const CreateMNPRequest &request)
@@ -277,25 +312,32 @@ TcsasClient::CreateMNPOutcome TcsasClient::CreateMNP(const CreateMNPRequest &req
 
 void TcsasClient::CreateMNPAsync(const CreateMNPRequest& request, const CreateMNPAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateMNP(request), context);
-    };
+    using Req = const CreateMNPRequest&;
+    using Resp = CreateMNPResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateMNP", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::CreateMNPOutcomeCallable TcsasClient::CreateMNPCallable(const CreateMNPRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateMNPOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateMNP(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateMNPOutcome>>();
+    CreateMNPAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const CreateMNPRequest&,
+        CreateMNPOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::CreateMNPApprovalOutcome TcsasClient::CreateMNPApproval(const CreateMNPApprovalRequest &request)
@@ -320,25 +362,32 @@ TcsasClient::CreateMNPApprovalOutcome TcsasClient::CreateMNPApproval(const Creat
 
 void TcsasClient::CreateMNPApprovalAsync(const CreateMNPApprovalRequest& request, const CreateMNPApprovalAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateMNPApproval(request), context);
-    };
+    using Req = const CreateMNPApprovalRequest&;
+    using Resp = CreateMNPApprovalResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateMNPApproval", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::CreateMNPApprovalOutcomeCallable TcsasClient::CreateMNPApprovalCallable(const CreateMNPApprovalRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateMNPApprovalOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateMNPApproval(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateMNPApprovalOutcome>>();
+    CreateMNPApprovalAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const CreateMNPApprovalRequest&,
+        CreateMNPApprovalOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::CreateMNPDomainACLOutcome TcsasClient::CreateMNPDomainACL(const CreateMNPDomainACLRequest &request)
@@ -363,25 +412,32 @@ TcsasClient::CreateMNPDomainACLOutcome TcsasClient::CreateMNPDomainACL(const Cre
 
 void TcsasClient::CreateMNPDomainACLAsync(const CreateMNPDomainACLRequest& request, const CreateMNPDomainACLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateMNPDomainACL(request), context);
-    };
+    using Req = const CreateMNPDomainACLRequest&;
+    using Resp = CreateMNPDomainACLResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateMNPDomainACL", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::CreateMNPDomainACLOutcomeCallable TcsasClient::CreateMNPDomainACLCallable(const CreateMNPDomainACLRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateMNPDomainACLOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateMNPDomainACL(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateMNPDomainACLOutcome>>();
+    CreateMNPDomainACLAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const CreateMNPDomainACLRequest&,
+        CreateMNPDomainACLOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::CreateMNPSensitiveAPIPermissionApprovalOutcome TcsasClient::CreateMNPSensitiveAPIPermissionApproval(const CreateMNPSensitiveAPIPermissionApprovalRequest &request)
@@ -406,25 +462,32 @@ TcsasClient::CreateMNPSensitiveAPIPermissionApprovalOutcome TcsasClient::CreateM
 
 void TcsasClient::CreateMNPSensitiveAPIPermissionApprovalAsync(const CreateMNPSensitiveAPIPermissionApprovalRequest& request, const CreateMNPSensitiveAPIPermissionApprovalAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateMNPSensitiveAPIPermissionApproval(request), context);
-    };
+    using Req = const CreateMNPSensitiveAPIPermissionApprovalRequest&;
+    using Resp = CreateMNPSensitiveAPIPermissionApprovalResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateMNPSensitiveAPIPermissionApproval", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::CreateMNPSensitiveAPIPermissionApprovalOutcomeCallable TcsasClient::CreateMNPSensitiveAPIPermissionApprovalCallable(const CreateMNPSensitiveAPIPermissionApprovalRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateMNPSensitiveAPIPermissionApprovalOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateMNPSensitiveAPIPermissionApproval(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateMNPSensitiveAPIPermissionApprovalOutcome>>();
+    CreateMNPSensitiveAPIPermissionApprovalAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const CreateMNPSensitiveAPIPermissionApprovalRequest&,
+        CreateMNPSensitiveAPIPermissionApprovalOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::CreateMNPVersionOutcome TcsasClient::CreateMNPVersion(const CreateMNPVersionRequest &request)
@@ -449,25 +512,32 @@ TcsasClient::CreateMNPVersionOutcome TcsasClient::CreateMNPVersion(const CreateM
 
 void TcsasClient::CreateMNPVersionAsync(const CreateMNPVersionRequest& request, const CreateMNPVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateMNPVersion(request), context);
-    };
+    using Req = const CreateMNPVersionRequest&;
+    using Resp = CreateMNPVersionResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateMNPVersion", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::CreateMNPVersionOutcomeCallable TcsasClient::CreateMNPVersionCallable(const CreateMNPVersionRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateMNPVersionOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateMNPVersion(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateMNPVersionOutcome>>();
+    CreateMNPVersionAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const CreateMNPVersionRequest&,
+        CreateMNPVersionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::CreatePresetKeyOutcome TcsasClient::CreatePresetKey(const CreatePresetKeyRequest &request)
@@ -492,25 +562,32 @@ TcsasClient::CreatePresetKeyOutcome TcsasClient::CreatePresetKey(const CreatePre
 
 void TcsasClient::CreatePresetKeyAsync(const CreatePresetKeyRequest& request, const CreatePresetKeyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreatePresetKey(request), context);
-    };
+    using Req = const CreatePresetKeyRequest&;
+    using Resp = CreatePresetKeyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreatePresetKey", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::CreatePresetKeyOutcomeCallable TcsasClient::CreatePresetKeyCallable(const CreatePresetKeyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreatePresetKeyOutcome()>>(
-        [this, request]()
-        {
-            return this->CreatePresetKey(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreatePresetKeyOutcome>>();
+    CreatePresetKeyAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const CreatePresetKeyRequest&,
+        CreatePresetKeyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::CreateTeamOutcome TcsasClient::CreateTeam(const CreateTeamRequest &request)
@@ -535,25 +612,32 @@ TcsasClient::CreateTeamOutcome TcsasClient::CreateTeam(const CreateTeamRequest &
 
 void TcsasClient::CreateTeamAsync(const CreateTeamRequest& request, const CreateTeamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateTeam(request), context);
-    };
+    using Req = const CreateTeamRequest&;
+    using Resp = CreateTeamResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateTeam", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::CreateTeamOutcomeCallable TcsasClient::CreateTeamCallable(const CreateTeamRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateTeamOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateTeam(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateTeamOutcome>>();
+    CreateTeamAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const CreateTeamRequest&,
+        CreateTeamOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::CreateUserOutcome TcsasClient::CreateUser(const CreateUserRequest &request)
@@ -578,25 +662,32 @@ TcsasClient::CreateUserOutcome TcsasClient::CreateUser(const CreateUserRequest &
 
 void TcsasClient::CreateUserAsync(const CreateUserRequest& request, const CreateUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateUser(request), context);
-    };
+    using Req = const CreateUserRequest&;
+    using Resp = CreateUserResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateUser", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::CreateUserOutcomeCallable TcsasClient::CreateUserCallable(const CreateUserRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateUserOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateUser(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateUserOutcome>>();
+    CreateUserAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const CreateUserRequest&,
+        CreateUserOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DeleteApplicationOutcome TcsasClient::DeleteApplication(const DeleteApplicationRequest &request)
@@ -621,25 +712,32 @@ TcsasClient::DeleteApplicationOutcome TcsasClient::DeleteApplication(const Delet
 
 void TcsasClient::DeleteApplicationAsync(const DeleteApplicationRequest& request, const DeleteApplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteApplication(request), context);
-    };
+    using Req = const DeleteApplicationRequest&;
+    using Resp = DeleteApplicationResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteApplication", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DeleteApplicationOutcomeCallable TcsasClient::DeleteApplicationCallable(const DeleteApplicationRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteApplicationOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteApplication(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteApplicationOutcome>>();
+    DeleteApplicationAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DeleteApplicationRequest&,
+        DeleteApplicationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DeleteApplicationSensitiveAPIOutcome TcsasClient::DeleteApplicationSensitiveAPI(const DeleteApplicationSensitiveAPIRequest &request)
@@ -664,25 +762,32 @@ TcsasClient::DeleteApplicationSensitiveAPIOutcome TcsasClient::DeleteApplication
 
 void TcsasClient::DeleteApplicationSensitiveAPIAsync(const DeleteApplicationSensitiveAPIRequest& request, const DeleteApplicationSensitiveAPIAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteApplicationSensitiveAPI(request), context);
-    };
+    using Req = const DeleteApplicationSensitiveAPIRequest&;
+    using Resp = DeleteApplicationSensitiveAPIResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteApplicationSensitiveAPI", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DeleteApplicationSensitiveAPIOutcomeCallable TcsasClient::DeleteApplicationSensitiveAPICallable(const DeleteApplicationSensitiveAPIRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteApplicationSensitiveAPIOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteApplicationSensitiveAPI(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteApplicationSensitiveAPIOutcome>>();
+    DeleteApplicationSensitiveAPIAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DeleteApplicationSensitiveAPIRequest&,
+        DeleteApplicationSensitiveAPIOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DeleteGlobalDomainOutcome TcsasClient::DeleteGlobalDomain(const DeleteGlobalDomainRequest &request)
@@ -707,25 +812,32 @@ TcsasClient::DeleteGlobalDomainOutcome TcsasClient::DeleteGlobalDomain(const Del
 
 void TcsasClient::DeleteGlobalDomainAsync(const DeleteGlobalDomainRequest& request, const DeleteGlobalDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteGlobalDomain(request), context);
-    };
+    using Req = const DeleteGlobalDomainRequest&;
+    using Resp = DeleteGlobalDomainResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteGlobalDomain", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DeleteGlobalDomainOutcomeCallable TcsasClient::DeleteGlobalDomainCallable(const DeleteGlobalDomainRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteGlobalDomainOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteGlobalDomain(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteGlobalDomainOutcome>>();
+    DeleteGlobalDomainAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DeleteGlobalDomainRequest&,
+        DeleteGlobalDomainOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DeleteMNPOutcome TcsasClient::DeleteMNP(const DeleteMNPRequest &request)
@@ -750,25 +862,32 @@ TcsasClient::DeleteMNPOutcome TcsasClient::DeleteMNP(const DeleteMNPRequest &req
 
 void TcsasClient::DeleteMNPAsync(const DeleteMNPRequest& request, const DeleteMNPAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteMNP(request), context);
-    };
+    using Req = const DeleteMNPRequest&;
+    using Resp = DeleteMNPResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteMNP", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DeleteMNPOutcomeCallable TcsasClient::DeleteMNPCallable(const DeleteMNPRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteMNPOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteMNP(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteMNPOutcome>>();
+    DeleteMNPAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DeleteMNPRequest&,
+        DeleteMNPOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DeleteTeamOutcome TcsasClient::DeleteTeam(const DeleteTeamRequest &request)
@@ -793,25 +912,32 @@ TcsasClient::DeleteTeamOutcome TcsasClient::DeleteTeam(const DeleteTeamRequest &
 
 void TcsasClient::DeleteTeamAsync(const DeleteTeamRequest& request, const DeleteTeamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteTeam(request), context);
-    };
+    using Req = const DeleteTeamRequest&;
+    using Resp = DeleteTeamResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteTeam", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DeleteTeamOutcomeCallable TcsasClient::DeleteTeamCallable(const DeleteTeamRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteTeamOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteTeam(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteTeamOutcome>>();
+    DeleteTeamAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DeleteTeamRequest&,
+        DeleteTeamOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DeleteTeamMemberOutcome TcsasClient::DeleteTeamMember(const DeleteTeamMemberRequest &request)
@@ -836,25 +962,32 @@ TcsasClient::DeleteTeamMemberOutcome TcsasClient::DeleteTeamMember(const DeleteT
 
 void TcsasClient::DeleteTeamMemberAsync(const DeleteTeamMemberRequest& request, const DeleteTeamMemberAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteTeamMember(request), context);
-    };
+    using Req = const DeleteTeamMemberRequest&;
+    using Resp = DeleteTeamMemberResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteTeamMember", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DeleteTeamMemberOutcomeCallable TcsasClient::DeleteTeamMemberCallable(const DeleteTeamMemberRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteTeamMemberOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteTeamMember(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteTeamMemberOutcome>>();
+    DeleteTeamMemberAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DeleteTeamMemberRequest&,
+        DeleteTeamMemberOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DeleteUserOutcome TcsasClient::DeleteUser(const DeleteUserRequest &request)
@@ -879,25 +1012,32 @@ TcsasClient::DeleteUserOutcome TcsasClient::DeleteUser(const DeleteUserRequest &
 
 void TcsasClient::DeleteUserAsync(const DeleteUserRequest& request, const DeleteUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteUser(request), context);
-    };
+    using Req = const DeleteUserRequest&;
+    using Resp = DeleteUserResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteUser", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DeleteUserOutcomeCallable TcsasClient::DeleteUserCallable(const DeleteUserRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteUserOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteUser(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteUserOutcome>>();
+    DeleteUserAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DeleteUserRequest&,
+        DeleteUserOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DescribeApplicationOutcome TcsasClient::DescribeApplication(const DescribeApplicationRequest &request)
@@ -922,25 +1062,32 @@ TcsasClient::DescribeApplicationOutcome TcsasClient::DescribeApplication(const D
 
 void TcsasClient::DescribeApplicationAsync(const DescribeApplicationRequest& request, const DescribeApplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeApplication(request), context);
-    };
+    using Req = const DescribeApplicationRequest&;
+    using Resp = DescribeApplicationResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeApplication", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DescribeApplicationOutcomeCallable TcsasClient::DescribeApplicationCallable(const DescribeApplicationRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeApplicationOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeApplication(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeApplicationOutcome>>();
+    DescribeApplicationAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeApplicationRequest&,
+        DescribeApplicationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DescribeApplicationConfigFileOutcome TcsasClient::DescribeApplicationConfigFile(const DescribeApplicationConfigFileRequest &request)
@@ -965,25 +1112,32 @@ TcsasClient::DescribeApplicationConfigFileOutcome TcsasClient::DescribeApplicati
 
 void TcsasClient::DescribeApplicationConfigFileAsync(const DescribeApplicationConfigFileRequest& request, const DescribeApplicationConfigFileAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeApplicationConfigFile(request), context);
-    };
+    using Req = const DescribeApplicationConfigFileRequest&;
+    using Resp = DescribeApplicationConfigFileResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeApplicationConfigFile", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DescribeApplicationConfigFileOutcomeCallable TcsasClient::DescribeApplicationConfigFileCallable(const DescribeApplicationConfigFileRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeApplicationConfigFileOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeApplicationConfigFile(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeApplicationConfigFileOutcome>>();
+    DescribeApplicationConfigFileAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeApplicationConfigFileRequest&,
+        DescribeApplicationConfigFileOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DescribeApplicationListOutcome TcsasClient::DescribeApplicationList(const DescribeApplicationListRequest &request)
@@ -1008,25 +1162,32 @@ TcsasClient::DescribeApplicationListOutcome TcsasClient::DescribeApplicationList
 
 void TcsasClient::DescribeApplicationListAsync(const DescribeApplicationListRequest& request, const DescribeApplicationListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeApplicationList(request), context);
-    };
+    using Req = const DescribeApplicationListRequest&;
+    using Resp = DescribeApplicationListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeApplicationList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DescribeApplicationListOutcomeCallable TcsasClient::DescribeApplicationListCallable(const DescribeApplicationListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeApplicationListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeApplicationList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeApplicationListOutcome>>();
+    DescribeApplicationListAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeApplicationListRequest&,
+        DescribeApplicationListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DescribeApplicationSensitiveAPIListOutcome TcsasClient::DescribeApplicationSensitiveAPIList(const DescribeApplicationSensitiveAPIListRequest &request)
@@ -1051,25 +1212,32 @@ TcsasClient::DescribeApplicationSensitiveAPIListOutcome TcsasClient::DescribeApp
 
 void TcsasClient::DescribeApplicationSensitiveAPIListAsync(const DescribeApplicationSensitiveAPIListRequest& request, const DescribeApplicationSensitiveAPIListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeApplicationSensitiveAPIList(request), context);
-    };
+    using Req = const DescribeApplicationSensitiveAPIListRequest&;
+    using Resp = DescribeApplicationSensitiveAPIListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeApplicationSensitiveAPIList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DescribeApplicationSensitiveAPIListOutcomeCallable TcsasClient::DescribeApplicationSensitiveAPIListCallable(const DescribeApplicationSensitiveAPIListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeApplicationSensitiveAPIListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeApplicationSensitiveAPIList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeApplicationSensitiveAPIListOutcome>>();
+    DescribeApplicationSensitiveAPIListAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeApplicationSensitiveAPIListRequest&,
+        DescribeApplicationSensitiveAPIListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DescribeGlobalDomainACLOutcome TcsasClient::DescribeGlobalDomainACL(const DescribeGlobalDomainACLRequest &request)
@@ -1094,25 +1262,32 @@ TcsasClient::DescribeGlobalDomainACLOutcome TcsasClient::DescribeGlobalDomainACL
 
 void TcsasClient::DescribeGlobalDomainACLAsync(const DescribeGlobalDomainACLRequest& request, const DescribeGlobalDomainACLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeGlobalDomainACL(request), context);
-    };
+    using Req = const DescribeGlobalDomainACLRequest&;
+    using Resp = DescribeGlobalDomainACLResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeGlobalDomainACL", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DescribeGlobalDomainACLOutcomeCallable TcsasClient::DescribeGlobalDomainACLCallable(const DescribeGlobalDomainACLRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeGlobalDomainACLOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeGlobalDomainACL(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeGlobalDomainACLOutcome>>();
+    DescribeGlobalDomainACLAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeGlobalDomainACLRequest&,
+        DescribeGlobalDomainACLOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DescribeMNPOutcome TcsasClient::DescribeMNP(const DescribeMNPRequest &request)
@@ -1137,25 +1312,32 @@ TcsasClient::DescribeMNPOutcome TcsasClient::DescribeMNP(const DescribeMNPReques
 
 void TcsasClient::DescribeMNPAsync(const DescribeMNPRequest& request, const DescribeMNPAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNP(request), context);
-    };
+    using Req = const DescribeMNPRequest&;
+    using Resp = DescribeMNPResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNP", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DescribeMNPOutcomeCallable TcsasClient::DescribeMNPCallable(const DescribeMNPRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNP(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPOutcome>>();
+    DescribeMNPAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPRequest&,
+        DescribeMNPOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DescribeMNPAllStageVersionsOutcome TcsasClient::DescribeMNPAllStageVersions(const DescribeMNPAllStageVersionsRequest &request)
@@ -1180,25 +1362,32 @@ TcsasClient::DescribeMNPAllStageVersionsOutcome TcsasClient::DescribeMNPAllStage
 
 void TcsasClient::DescribeMNPAllStageVersionsAsync(const DescribeMNPAllStageVersionsRequest& request, const DescribeMNPAllStageVersionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPAllStageVersions(request), context);
-    };
+    using Req = const DescribeMNPAllStageVersionsRequest&;
+    using Resp = DescribeMNPAllStageVersionsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPAllStageVersions", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DescribeMNPAllStageVersionsOutcomeCallable TcsasClient::DescribeMNPAllStageVersionsCallable(const DescribeMNPAllStageVersionsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPAllStageVersionsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPAllStageVersions(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPAllStageVersionsOutcome>>();
+    DescribeMNPAllStageVersionsAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPAllStageVersionsRequest&,
+        DescribeMNPAllStageVersionsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DescribeMNPApprovalListOutcome TcsasClient::DescribeMNPApprovalList(const DescribeMNPApprovalListRequest &request)
@@ -1223,25 +1412,32 @@ TcsasClient::DescribeMNPApprovalListOutcome TcsasClient::DescribeMNPApprovalList
 
 void TcsasClient::DescribeMNPApprovalListAsync(const DescribeMNPApprovalListRequest& request, const DescribeMNPApprovalListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPApprovalList(request), context);
-    };
+    using Req = const DescribeMNPApprovalListRequest&;
+    using Resp = DescribeMNPApprovalListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPApprovalList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DescribeMNPApprovalListOutcomeCallable TcsasClient::DescribeMNPApprovalListCallable(const DescribeMNPApprovalListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPApprovalListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPApprovalList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPApprovalListOutcome>>();
+    DescribeMNPApprovalListAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPApprovalListRequest&,
+        DescribeMNPApprovalListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DescribeMNPCategoryOutcome TcsasClient::DescribeMNPCategory(const DescribeMNPCategoryRequest &request)
@@ -1266,25 +1462,32 @@ TcsasClient::DescribeMNPCategoryOutcome TcsasClient::DescribeMNPCategory(const D
 
 void TcsasClient::DescribeMNPCategoryAsync(const DescribeMNPCategoryRequest& request, const DescribeMNPCategoryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPCategory(request), context);
-    };
+    using Req = const DescribeMNPCategoryRequest&;
+    using Resp = DescribeMNPCategoryResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPCategory", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DescribeMNPCategoryOutcomeCallable TcsasClient::DescribeMNPCategoryCallable(const DescribeMNPCategoryRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPCategoryOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPCategory(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPCategoryOutcome>>();
+    DescribeMNPCategoryAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPCategoryRequest&,
+        DescribeMNPCategoryOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DescribeMNPDomainACLOutcome TcsasClient::DescribeMNPDomainACL(const DescribeMNPDomainACLRequest &request)
@@ -1309,25 +1512,32 @@ TcsasClient::DescribeMNPDomainACLOutcome TcsasClient::DescribeMNPDomainACL(const
 
 void TcsasClient::DescribeMNPDomainACLAsync(const DescribeMNPDomainACLRequest& request, const DescribeMNPDomainACLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPDomainACL(request), context);
-    };
+    using Req = const DescribeMNPDomainACLRequest&;
+    using Resp = DescribeMNPDomainACLResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPDomainACL", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DescribeMNPDomainACLOutcomeCallable TcsasClient::DescribeMNPDomainACLCallable(const DescribeMNPDomainACLRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPDomainACLOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPDomainACL(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPDomainACLOutcome>>();
+    DescribeMNPDomainACLAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPDomainACLRequest&,
+        DescribeMNPDomainACLOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DescribeMNPListOutcome TcsasClient::DescribeMNPList(const DescribeMNPListRequest &request)
@@ -1352,25 +1562,32 @@ TcsasClient::DescribeMNPListOutcome TcsasClient::DescribeMNPList(const DescribeM
 
 void TcsasClient::DescribeMNPListAsync(const DescribeMNPListRequest& request, const DescribeMNPListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPList(request), context);
-    };
+    using Req = const DescribeMNPListRequest&;
+    using Resp = DescribeMNPListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DescribeMNPListOutcomeCallable TcsasClient::DescribeMNPListCallable(const DescribeMNPListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPListOutcome>>();
+    DescribeMNPListAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPListRequest&,
+        DescribeMNPListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DescribeMNPOfflinePackageURLOutcome TcsasClient::DescribeMNPOfflinePackageURL(const DescribeMNPOfflinePackageURLRequest &request)
@@ -1395,25 +1612,32 @@ TcsasClient::DescribeMNPOfflinePackageURLOutcome TcsasClient::DescribeMNPOffline
 
 void TcsasClient::DescribeMNPOfflinePackageURLAsync(const DescribeMNPOfflinePackageURLRequest& request, const DescribeMNPOfflinePackageURLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPOfflinePackageURL(request), context);
-    };
+    using Req = const DescribeMNPOfflinePackageURLRequest&;
+    using Resp = DescribeMNPOfflinePackageURLResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPOfflinePackageURL", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DescribeMNPOfflinePackageURLOutcomeCallable TcsasClient::DescribeMNPOfflinePackageURLCallable(const DescribeMNPOfflinePackageURLRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPOfflinePackageURLOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPOfflinePackageURL(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPOfflinePackageURLOutcome>>();
+    DescribeMNPOfflinePackageURLAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPOfflinePackageURLRequest&,
+        DescribeMNPOfflinePackageURLOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DescribeMNPPreviewOutcome TcsasClient::DescribeMNPPreview(const DescribeMNPPreviewRequest &request)
@@ -1438,25 +1662,32 @@ TcsasClient::DescribeMNPPreviewOutcome TcsasClient::DescribeMNPPreview(const Des
 
 void TcsasClient::DescribeMNPPreviewAsync(const DescribeMNPPreviewRequest& request, const DescribeMNPPreviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPPreview(request), context);
-    };
+    using Req = const DescribeMNPPreviewRequest&;
+    using Resp = DescribeMNPPreviewResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPPreview", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DescribeMNPPreviewOutcomeCallable TcsasClient::DescribeMNPPreviewCallable(const DescribeMNPPreviewRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPPreviewOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPPreview(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPPreviewOutcome>>();
+    DescribeMNPPreviewAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPPreviewRequest&,
+        DescribeMNPPreviewOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DescribeMNPReleasedVersionHistoryOutcome TcsasClient::DescribeMNPReleasedVersionHistory(const DescribeMNPReleasedVersionHistoryRequest &request)
@@ -1481,25 +1712,32 @@ TcsasClient::DescribeMNPReleasedVersionHistoryOutcome TcsasClient::DescribeMNPRe
 
 void TcsasClient::DescribeMNPReleasedVersionHistoryAsync(const DescribeMNPReleasedVersionHistoryRequest& request, const DescribeMNPReleasedVersionHistoryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPReleasedVersionHistory(request), context);
-    };
+    using Req = const DescribeMNPReleasedVersionHistoryRequest&;
+    using Resp = DescribeMNPReleasedVersionHistoryResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPReleasedVersionHistory", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DescribeMNPReleasedVersionHistoryOutcomeCallable TcsasClient::DescribeMNPReleasedVersionHistoryCallable(const DescribeMNPReleasedVersionHistoryRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPReleasedVersionHistoryOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPReleasedVersionHistory(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPReleasedVersionHistoryOutcome>>();
+    DescribeMNPReleasedVersionHistoryAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPReleasedVersionHistoryRequest&,
+        DescribeMNPReleasedVersionHistoryOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DescribeMNPSensitiveAPIPermissionApprovalOutcome TcsasClient::DescribeMNPSensitiveAPIPermissionApproval(const DescribeMNPSensitiveAPIPermissionApprovalRequest &request)
@@ -1524,25 +1762,32 @@ TcsasClient::DescribeMNPSensitiveAPIPermissionApprovalOutcome TcsasClient::Descr
 
 void TcsasClient::DescribeMNPSensitiveAPIPermissionApprovalAsync(const DescribeMNPSensitiveAPIPermissionApprovalRequest& request, const DescribeMNPSensitiveAPIPermissionApprovalAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPSensitiveAPIPermissionApproval(request), context);
-    };
+    using Req = const DescribeMNPSensitiveAPIPermissionApprovalRequest&;
+    using Resp = DescribeMNPSensitiveAPIPermissionApprovalResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPSensitiveAPIPermissionApproval", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DescribeMNPSensitiveAPIPermissionApprovalOutcomeCallable TcsasClient::DescribeMNPSensitiveAPIPermissionApprovalCallable(const DescribeMNPSensitiveAPIPermissionApprovalRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPSensitiveAPIPermissionApprovalOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPSensitiveAPIPermissionApproval(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPSensitiveAPIPermissionApprovalOutcome>>();
+    DescribeMNPSensitiveAPIPermissionApprovalAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPSensitiveAPIPermissionApprovalRequest&,
+        DescribeMNPSensitiveAPIPermissionApprovalOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DescribeMNPSensitiveAPIPermissionApprovalListOutcome TcsasClient::DescribeMNPSensitiveAPIPermissionApprovalList(const DescribeMNPSensitiveAPIPermissionApprovalListRequest &request)
@@ -1567,25 +1812,32 @@ TcsasClient::DescribeMNPSensitiveAPIPermissionApprovalListOutcome TcsasClient::D
 
 void TcsasClient::DescribeMNPSensitiveAPIPermissionApprovalListAsync(const DescribeMNPSensitiveAPIPermissionApprovalListRequest& request, const DescribeMNPSensitiveAPIPermissionApprovalListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPSensitiveAPIPermissionApprovalList(request), context);
-    };
+    using Req = const DescribeMNPSensitiveAPIPermissionApprovalListRequest&;
+    using Resp = DescribeMNPSensitiveAPIPermissionApprovalListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPSensitiveAPIPermissionApprovalList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DescribeMNPSensitiveAPIPermissionApprovalListOutcomeCallable TcsasClient::DescribeMNPSensitiveAPIPermissionApprovalListCallable(const DescribeMNPSensitiveAPIPermissionApprovalListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPSensitiveAPIPermissionApprovalListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPSensitiveAPIPermissionApprovalList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPSensitiveAPIPermissionApprovalListOutcome>>();
+    DescribeMNPSensitiveAPIPermissionApprovalListAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPSensitiveAPIPermissionApprovalListRequest&,
+        DescribeMNPSensitiveAPIPermissionApprovalListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DescribeMNPSensitiveAPIPermissionListOutcome TcsasClient::DescribeMNPSensitiveAPIPermissionList(const DescribeMNPSensitiveAPIPermissionListRequest &request)
@@ -1610,25 +1862,32 @@ TcsasClient::DescribeMNPSensitiveAPIPermissionListOutcome TcsasClient::DescribeM
 
 void TcsasClient::DescribeMNPSensitiveAPIPermissionListAsync(const DescribeMNPSensitiveAPIPermissionListRequest& request, const DescribeMNPSensitiveAPIPermissionListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPSensitiveAPIPermissionList(request), context);
-    };
+    using Req = const DescribeMNPSensitiveAPIPermissionListRequest&;
+    using Resp = DescribeMNPSensitiveAPIPermissionListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPSensitiveAPIPermissionList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DescribeMNPSensitiveAPIPermissionListOutcomeCallable TcsasClient::DescribeMNPSensitiveAPIPermissionListCallable(const DescribeMNPSensitiveAPIPermissionListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPSensitiveAPIPermissionListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPSensitiveAPIPermissionList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPSensitiveAPIPermissionListOutcome>>();
+    DescribeMNPSensitiveAPIPermissionListAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPSensitiveAPIPermissionListRequest&,
+        DescribeMNPSensitiveAPIPermissionListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DescribeMNPVersionOutcome TcsasClient::DescribeMNPVersion(const DescribeMNPVersionRequest &request)
@@ -1653,25 +1912,32 @@ TcsasClient::DescribeMNPVersionOutcome TcsasClient::DescribeMNPVersion(const Des
 
 void TcsasClient::DescribeMNPVersionAsync(const DescribeMNPVersionRequest& request, const DescribeMNPVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPVersion(request), context);
-    };
+    using Req = const DescribeMNPVersionRequest&;
+    using Resp = DescribeMNPVersionResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPVersion", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DescribeMNPVersionOutcomeCallable TcsasClient::DescribeMNPVersionCallable(const DescribeMNPVersionRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPVersionOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPVersion(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPVersionOutcome>>();
+    DescribeMNPVersionAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPVersionRequest&,
+        DescribeMNPVersionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DescribeRoleListOutcome TcsasClient::DescribeRoleList(const DescribeRoleListRequest &request)
@@ -1696,25 +1962,32 @@ TcsasClient::DescribeRoleListOutcome TcsasClient::DescribeRoleList(const Describ
 
 void TcsasClient::DescribeRoleListAsync(const DescribeRoleListRequest& request, const DescribeRoleListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeRoleList(request), context);
-    };
+    using Req = const DescribeRoleListRequest&;
+    using Resp = DescribeRoleListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeRoleList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DescribeRoleListOutcomeCallable TcsasClient::DescribeRoleListCallable(const DescribeRoleListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeRoleListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeRoleList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeRoleListOutcome>>();
+    DescribeRoleListAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeRoleListRequest&,
+        DescribeRoleListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DescribeTeamOutcome TcsasClient::DescribeTeam(const DescribeTeamRequest &request)
@@ -1739,25 +2012,32 @@ TcsasClient::DescribeTeamOutcome TcsasClient::DescribeTeam(const DescribeTeamReq
 
 void TcsasClient::DescribeTeamAsync(const DescribeTeamRequest& request, const DescribeTeamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTeam(request), context);
-    };
+    using Req = const DescribeTeamRequest&;
+    using Resp = DescribeTeamResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTeam", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DescribeTeamOutcomeCallable TcsasClient::DescribeTeamCallable(const DescribeTeamRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTeamOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTeam(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTeamOutcome>>();
+    DescribeTeamAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeTeamRequest&,
+        DescribeTeamOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DescribeTeamListOutcome TcsasClient::DescribeTeamList(const DescribeTeamListRequest &request)
@@ -1782,25 +2062,32 @@ TcsasClient::DescribeTeamListOutcome TcsasClient::DescribeTeamList(const Describ
 
 void TcsasClient::DescribeTeamListAsync(const DescribeTeamListRequest& request, const DescribeTeamListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTeamList(request), context);
-    };
+    using Req = const DescribeTeamListRequest&;
+    using Resp = DescribeTeamListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTeamList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DescribeTeamListOutcomeCallable TcsasClient::DescribeTeamListCallable(const DescribeTeamListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTeamListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTeamList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTeamListOutcome>>();
+    DescribeTeamListAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeTeamListRequest&,
+        DescribeTeamListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DescribeTeamMemberListOutcome TcsasClient::DescribeTeamMemberList(const DescribeTeamMemberListRequest &request)
@@ -1825,25 +2112,32 @@ TcsasClient::DescribeTeamMemberListOutcome TcsasClient::DescribeTeamMemberList(c
 
 void TcsasClient::DescribeTeamMemberListAsync(const DescribeTeamMemberListRequest& request, const DescribeTeamMemberListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTeamMemberList(request), context);
-    };
+    using Req = const DescribeTeamMemberListRequest&;
+    using Resp = DescribeTeamMemberListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTeamMemberList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DescribeTeamMemberListOutcomeCallable TcsasClient::DescribeTeamMemberListCallable(const DescribeTeamMemberListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTeamMemberListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTeamMemberList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTeamMemberListOutcome>>();
+    DescribeTeamMemberListAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeTeamMemberListRequest&,
+        DescribeTeamMemberListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DescribeTempSecret4UploadFile2CosOutcome TcsasClient::DescribeTempSecret4UploadFile2Cos(const DescribeTempSecret4UploadFile2CosRequest &request)
@@ -1868,25 +2162,32 @@ TcsasClient::DescribeTempSecret4UploadFile2CosOutcome TcsasClient::DescribeTempS
 
 void TcsasClient::DescribeTempSecret4UploadFile2CosAsync(const DescribeTempSecret4UploadFile2CosRequest& request, const DescribeTempSecret4UploadFile2CosAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTempSecret4UploadFile2Cos(request), context);
-    };
+    using Req = const DescribeTempSecret4UploadFile2CosRequest&;
+    using Resp = DescribeTempSecret4UploadFile2CosResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTempSecret4UploadFile2Cos", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DescribeTempSecret4UploadFile2CosOutcomeCallable TcsasClient::DescribeTempSecret4UploadFile2CosCallable(const DescribeTempSecret4UploadFile2CosRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTempSecret4UploadFile2CosOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTempSecret4UploadFile2Cos(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTempSecret4UploadFile2CosOutcome>>();
+    DescribeTempSecret4UploadFile2CosAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeTempSecret4UploadFile2CosRequest&,
+        DescribeTempSecret4UploadFile2CosOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DescribeUserOutcome TcsasClient::DescribeUser(const DescribeUserRequest &request)
@@ -1911,25 +2212,32 @@ TcsasClient::DescribeUserOutcome TcsasClient::DescribeUser(const DescribeUserReq
 
 void TcsasClient::DescribeUserAsync(const DescribeUserRequest& request, const DescribeUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeUser(request), context);
-    };
+    using Req = const DescribeUserRequest&;
+    using Resp = DescribeUserResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeUser", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DescribeUserOutcomeCallable TcsasClient::DescribeUserCallable(const DescribeUserRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeUserOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeUser(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeUserOutcome>>();
+    DescribeUserAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeUserRequest&,
+        DescribeUserOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DescribeUserListOutcome TcsasClient::DescribeUserList(const DescribeUserListRequest &request)
@@ -1954,25 +2262,32 @@ TcsasClient::DescribeUserListOutcome TcsasClient::DescribeUserList(const Describ
 
 void TcsasClient::DescribeUserListAsync(const DescribeUserListRequest& request, const DescribeUserListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeUserList(request), context);
-    };
+    using Req = const DescribeUserListRequest&;
+    using Resp = DescribeUserListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeUserList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DescribeUserListOutcomeCallable TcsasClient::DescribeUserListCallable(const DescribeUserListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeUserListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeUserList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeUserListOutcome>>();
+    DescribeUserListAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeUserListRequest&,
+        DescribeUserListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::DisableApplicationSensitiveAPIOutcome TcsasClient::DisableApplicationSensitiveAPI(const DisableApplicationSensitiveAPIRequest &request)
@@ -1997,25 +2312,32 @@ TcsasClient::DisableApplicationSensitiveAPIOutcome TcsasClient::DisableApplicati
 
 void TcsasClient::DisableApplicationSensitiveAPIAsync(const DisableApplicationSensitiveAPIRequest& request, const DisableApplicationSensitiveAPIAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DisableApplicationSensitiveAPI(request), context);
-    };
+    using Req = const DisableApplicationSensitiveAPIRequest&;
+    using Resp = DisableApplicationSensitiveAPIResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DisableApplicationSensitiveAPI", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::DisableApplicationSensitiveAPIOutcomeCallable TcsasClient::DisableApplicationSensitiveAPICallable(const DisableApplicationSensitiveAPIRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DisableApplicationSensitiveAPIOutcome()>>(
-        [this, request]()
-        {
-            return this->DisableApplicationSensitiveAPI(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DisableApplicationSensitiveAPIOutcome>>();
+    DisableApplicationSensitiveAPIAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DisableApplicationSensitiveAPIRequest&,
+        DisableApplicationSensitiveAPIOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::EnableApplicationSensitiveAPIOutcome TcsasClient::EnableApplicationSensitiveAPI(const EnableApplicationSensitiveAPIRequest &request)
@@ -2040,25 +2362,32 @@ TcsasClient::EnableApplicationSensitiveAPIOutcome TcsasClient::EnableApplication
 
 void TcsasClient::EnableApplicationSensitiveAPIAsync(const EnableApplicationSensitiveAPIRequest& request, const EnableApplicationSensitiveAPIAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->EnableApplicationSensitiveAPI(request), context);
-    };
+    using Req = const EnableApplicationSensitiveAPIRequest&;
+    using Resp = EnableApplicationSensitiveAPIResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "EnableApplicationSensitiveAPI", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::EnableApplicationSensitiveAPIOutcomeCallable TcsasClient::EnableApplicationSensitiveAPICallable(const EnableApplicationSensitiveAPIRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<EnableApplicationSensitiveAPIOutcome()>>(
-        [this, request]()
-        {
-            return this->EnableApplicationSensitiveAPI(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<EnableApplicationSensitiveAPIOutcome>>();
+    EnableApplicationSensitiveAPIAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const EnableApplicationSensitiveAPIRequest&,
+        EnableApplicationSensitiveAPIOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::ModifyApplicationOutcome TcsasClient::ModifyApplication(const ModifyApplicationRequest &request)
@@ -2083,25 +2412,32 @@ TcsasClient::ModifyApplicationOutcome TcsasClient::ModifyApplication(const Modif
 
 void TcsasClient::ModifyApplicationAsync(const ModifyApplicationRequest& request, const ModifyApplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyApplication(request), context);
-    };
+    using Req = const ModifyApplicationRequest&;
+    using Resp = ModifyApplicationResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyApplication", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::ModifyApplicationOutcomeCallable TcsasClient::ModifyApplicationCallable(const ModifyApplicationRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyApplicationOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyApplication(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyApplicationOutcome>>();
+    ModifyApplicationAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const ModifyApplicationRequest&,
+        ModifyApplicationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::ModifyGlobalDomainOutcome TcsasClient::ModifyGlobalDomain(const ModifyGlobalDomainRequest &request)
@@ -2126,25 +2462,32 @@ TcsasClient::ModifyGlobalDomainOutcome TcsasClient::ModifyGlobalDomain(const Mod
 
 void TcsasClient::ModifyGlobalDomainAsync(const ModifyGlobalDomainRequest& request, const ModifyGlobalDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyGlobalDomain(request), context);
-    };
+    using Req = const ModifyGlobalDomainRequest&;
+    using Resp = ModifyGlobalDomainResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyGlobalDomain", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::ModifyGlobalDomainOutcomeCallable TcsasClient::ModifyGlobalDomainCallable(const ModifyGlobalDomainRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyGlobalDomainOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyGlobalDomain(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyGlobalDomainOutcome>>();
+    ModifyGlobalDomainAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const ModifyGlobalDomainRequest&,
+        ModifyGlobalDomainOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::ModifyMNPOutcome TcsasClient::ModifyMNP(const ModifyMNPRequest &request)
@@ -2169,25 +2512,32 @@ TcsasClient::ModifyMNPOutcome TcsasClient::ModifyMNP(const ModifyMNPRequest &req
 
 void TcsasClient::ModifyMNPAsync(const ModifyMNPRequest& request, const ModifyMNPAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyMNP(request), context);
-    };
+    using Req = const ModifyMNPRequest&;
+    using Resp = ModifyMNPResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyMNP", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::ModifyMNPOutcomeCallable TcsasClient::ModifyMNPCallable(const ModifyMNPRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyMNPOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyMNP(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyMNPOutcome>>();
+    ModifyMNPAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const ModifyMNPRequest&,
+        ModifyMNPOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::ModifyMNPDomainOutcome TcsasClient::ModifyMNPDomain(const ModifyMNPDomainRequest &request)
@@ -2212,25 +2562,32 @@ TcsasClient::ModifyMNPDomainOutcome TcsasClient::ModifyMNPDomain(const ModifyMNP
 
 void TcsasClient::ModifyMNPDomainAsync(const ModifyMNPDomainRequest& request, const ModifyMNPDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyMNPDomain(request), context);
-    };
+    using Req = const ModifyMNPDomainRequest&;
+    using Resp = ModifyMNPDomainResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyMNPDomain", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::ModifyMNPDomainOutcomeCallable TcsasClient::ModifyMNPDomainCallable(const ModifyMNPDomainRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyMNPDomainOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyMNPDomain(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyMNPDomainOutcome>>();
+    ModifyMNPDomainAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const ModifyMNPDomainRequest&,
+        ModifyMNPDomainOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::ModifyTeamOutcome TcsasClient::ModifyTeam(const ModifyTeamRequest &request)
@@ -2255,25 +2612,32 @@ TcsasClient::ModifyTeamOutcome TcsasClient::ModifyTeam(const ModifyTeamRequest &
 
 void TcsasClient::ModifyTeamAsync(const ModifyTeamRequest& request, const ModifyTeamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyTeam(request), context);
-    };
+    using Req = const ModifyTeamRequest&;
+    using Resp = ModifyTeamResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyTeam", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::ModifyTeamOutcomeCallable TcsasClient::ModifyTeamCallable(const ModifyTeamRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyTeamOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyTeam(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyTeamOutcome>>();
+    ModifyTeamAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const ModifyTeamRequest&,
+        ModifyTeamOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::ModifyTeamMemberOutcome TcsasClient::ModifyTeamMember(const ModifyTeamMemberRequest &request)
@@ -2298,25 +2662,32 @@ TcsasClient::ModifyTeamMemberOutcome TcsasClient::ModifyTeamMember(const ModifyT
 
 void TcsasClient::ModifyTeamMemberAsync(const ModifyTeamMemberRequest& request, const ModifyTeamMemberAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyTeamMember(request), context);
-    };
+    using Req = const ModifyTeamMemberRequest&;
+    using Resp = ModifyTeamMemberResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyTeamMember", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::ModifyTeamMemberOutcomeCallable TcsasClient::ModifyTeamMemberCallable(const ModifyTeamMemberRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyTeamMemberOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyTeamMember(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyTeamMemberOutcome>>();
+    ModifyTeamMemberAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const ModifyTeamMemberRequest&,
+        ModifyTeamMemberOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::ModifyUserOutcome TcsasClient::ModifyUser(const ModifyUserRequest &request)
@@ -2341,25 +2712,32 @@ TcsasClient::ModifyUserOutcome TcsasClient::ModifyUser(const ModifyUserRequest &
 
 void TcsasClient::ModifyUserAsync(const ModifyUserRequest& request, const ModifyUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyUser(request), context);
-    };
+    using Req = const ModifyUserRequest&;
+    using Resp = ModifyUserResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyUser", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::ModifyUserOutcomeCallable TcsasClient::ModifyUserCallable(const ModifyUserRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyUserOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyUser(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyUserOutcome>>();
+    ModifyUserAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const ModifyUserRequest&,
+        ModifyUserOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::ProcessMNPApprovalOutcome TcsasClient::ProcessMNPApproval(const ProcessMNPApprovalRequest &request)
@@ -2384,25 +2762,32 @@ TcsasClient::ProcessMNPApprovalOutcome TcsasClient::ProcessMNPApproval(const Pro
 
 void TcsasClient::ProcessMNPApprovalAsync(const ProcessMNPApprovalRequest& request, const ProcessMNPApprovalAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ProcessMNPApproval(request), context);
-    };
+    using Req = const ProcessMNPApprovalRequest&;
+    using Resp = ProcessMNPApprovalResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ProcessMNPApproval", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::ProcessMNPApprovalOutcomeCallable TcsasClient::ProcessMNPApprovalCallable(const ProcessMNPApprovalRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ProcessMNPApprovalOutcome()>>(
-        [this, request]()
-        {
-            return this->ProcessMNPApproval(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ProcessMNPApprovalOutcome>>();
+    ProcessMNPApprovalAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const ProcessMNPApprovalRequest&,
+        ProcessMNPApprovalOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::ProcessMNPSensitiveAPIPermissionApprovalOutcome TcsasClient::ProcessMNPSensitiveAPIPermissionApproval(const ProcessMNPSensitiveAPIPermissionApprovalRequest &request)
@@ -2427,25 +2812,32 @@ TcsasClient::ProcessMNPSensitiveAPIPermissionApprovalOutcome TcsasClient::Proces
 
 void TcsasClient::ProcessMNPSensitiveAPIPermissionApprovalAsync(const ProcessMNPSensitiveAPIPermissionApprovalRequest& request, const ProcessMNPSensitiveAPIPermissionApprovalAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ProcessMNPSensitiveAPIPermissionApproval(request), context);
-    };
+    using Req = const ProcessMNPSensitiveAPIPermissionApprovalRequest&;
+    using Resp = ProcessMNPSensitiveAPIPermissionApprovalResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ProcessMNPSensitiveAPIPermissionApproval", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::ProcessMNPSensitiveAPIPermissionApprovalOutcomeCallable TcsasClient::ProcessMNPSensitiveAPIPermissionApprovalCallable(const ProcessMNPSensitiveAPIPermissionApprovalRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ProcessMNPSensitiveAPIPermissionApprovalOutcome()>>(
-        [this, request]()
-        {
-            return this->ProcessMNPSensitiveAPIPermissionApproval(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ProcessMNPSensitiveAPIPermissionApprovalOutcome>>();
+    ProcessMNPSensitiveAPIPermissionApprovalAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const ProcessMNPSensitiveAPIPermissionApprovalRequest&,
+        ProcessMNPSensitiveAPIPermissionApprovalOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::ReleaseMNPVersionOutcome TcsasClient::ReleaseMNPVersion(const ReleaseMNPVersionRequest &request)
@@ -2470,25 +2862,32 @@ TcsasClient::ReleaseMNPVersionOutcome TcsasClient::ReleaseMNPVersion(const Relea
 
 void TcsasClient::ReleaseMNPVersionAsync(const ReleaseMNPVersionRequest& request, const ReleaseMNPVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ReleaseMNPVersion(request), context);
-    };
+    using Req = const ReleaseMNPVersionRequest&;
+    using Resp = ReleaseMNPVersionResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ReleaseMNPVersion", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::ReleaseMNPVersionOutcomeCallable TcsasClient::ReleaseMNPVersionCallable(const ReleaseMNPVersionRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ReleaseMNPVersionOutcome()>>(
-        [this, request]()
-        {
-            return this->ReleaseMNPVersion(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ReleaseMNPVersionOutcome>>();
+    ReleaseMNPVersionAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const ReleaseMNPVersionRequest&,
+        ReleaseMNPVersionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::RemoveMNPOutcome TcsasClient::RemoveMNP(const RemoveMNPRequest &request)
@@ -2513,25 +2912,32 @@ TcsasClient::RemoveMNPOutcome TcsasClient::RemoveMNP(const RemoveMNPRequest &req
 
 void TcsasClient::RemoveMNPAsync(const RemoveMNPRequest& request, const RemoveMNPAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->RemoveMNP(request), context);
-    };
+    using Req = const RemoveMNPRequest&;
+    using Resp = RemoveMNPResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "RemoveMNP", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::RemoveMNPOutcomeCallable TcsasClient::RemoveMNPCallable(const RemoveMNPRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<RemoveMNPOutcome()>>(
-        [this, request]()
-        {
-            return this->RemoveMNP(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<RemoveMNPOutcome>>();
+    RemoveMNPAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const RemoveMNPRequest&,
+        RemoveMNPOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcsasClient::RollbackMNPVersionOutcome TcsasClient::RollbackMNPVersion(const RollbackMNPVersionRequest &request)
@@ -2556,24 +2962,31 @@ TcsasClient::RollbackMNPVersionOutcome TcsasClient::RollbackMNPVersion(const Rol
 
 void TcsasClient::RollbackMNPVersionAsync(const RollbackMNPVersionRequest& request, const RollbackMNPVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->RollbackMNPVersion(request), context);
-    };
+    using Req = const RollbackMNPVersionRequest&;
+    using Resp = RollbackMNPVersionResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "RollbackMNPVersion", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcsasClient::RollbackMNPVersionOutcomeCallable TcsasClient::RollbackMNPVersionCallable(const RollbackMNPVersionRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<RollbackMNPVersionOutcome()>>(
-        [this, request]()
-        {
-            return this->RollbackMNPVersion(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<RollbackMNPVersionOutcome>>();
+    RollbackMNPVersionAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const RollbackMNPVersionRequest&,
+        RollbackMNPVersionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

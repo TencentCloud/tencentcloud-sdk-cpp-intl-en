@@ -62,25 +62,32 @@ TcmppClient::AddTeamMemberOutcome TcmppClient::AddTeamMember(const AddTeamMember
 
 void TcmppClient::AddTeamMemberAsync(const AddTeamMemberRequest& request, const AddTeamMemberAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->AddTeamMember(request), context);
-    };
+    using Req = const AddTeamMemberRequest&;
+    using Resp = AddTeamMemberResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "AddTeamMember", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::AddTeamMemberOutcomeCallable TcmppClient::AddTeamMemberCallable(const AddTeamMemberRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<AddTeamMemberOutcome()>>(
-        [this, request]()
-        {
-            return this->AddTeamMember(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<AddTeamMemberOutcome>>();
+    AddTeamMemberAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const AddTeamMemberRequest&,
+        AddTeamMemberOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::CheckGlobalDomainOutcome TcmppClient::CheckGlobalDomain(const CheckGlobalDomainRequest &request)
@@ -105,25 +112,32 @@ TcmppClient::CheckGlobalDomainOutcome TcmppClient::CheckGlobalDomain(const Check
 
 void TcmppClient::CheckGlobalDomainAsync(const CheckGlobalDomainRequest& request, const CheckGlobalDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CheckGlobalDomain(request), context);
-    };
+    using Req = const CheckGlobalDomainRequest&;
+    using Resp = CheckGlobalDomainResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CheckGlobalDomain", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::CheckGlobalDomainOutcomeCallable TcmppClient::CheckGlobalDomainCallable(const CheckGlobalDomainRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CheckGlobalDomainOutcome()>>(
-        [this, request]()
-        {
-            return this->CheckGlobalDomain(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CheckGlobalDomainOutcome>>();
+    CheckGlobalDomainAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const CheckGlobalDomainRequest&,
+        CheckGlobalDomainOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::ConfigureMNPPreviewOutcome TcmppClient::ConfigureMNPPreview(const ConfigureMNPPreviewRequest &request)
@@ -148,25 +162,32 @@ TcmppClient::ConfigureMNPPreviewOutcome TcmppClient::ConfigureMNPPreview(const C
 
 void TcmppClient::ConfigureMNPPreviewAsync(const ConfigureMNPPreviewRequest& request, const ConfigureMNPPreviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ConfigureMNPPreview(request), context);
-    };
+    using Req = const ConfigureMNPPreviewRequest&;
+    using Resp = ConfigureMNPPreviewResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ConfigureMNPPreview", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::ConfigureMNPPreviewOutcomeCallable TcmppClient::ConfigureMNPPreviewCallable(const ConfigureMNPPreviewRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ConfigureMNPPreviewOutcome()>>(
-        [this, request]()
-        {
-            return this->ConfigureMNPPreview(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ConfigureMNPPreviewOutcome>>();
+    ConfigureMNPPreviewAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const ConfigureMNPPreviewRequest&,
+        ConfigureMNPPreviewOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::CreateApplicationOutcome TcmppClient::CreateApplication(const CreateApplicationRequest &request)
@@ -191,25 +212,32 @@ TcmppClient::CreateApplicationOutcome TcmppClient::CreateApplication(const Creat
 
 void TcmppClient::CreateApplicationAsync(const CreateApplicationRequest& request, const CreateApplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateApplication(request), context);
-    };
+    using Req = const CreateApplicationRequest&;
+    using Resp = CreateApplicationResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateApplication", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::CreateApplicationOutcomeCallable TcmppClient::CreateApplicationCallable(const CreateApplicationRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateApplicationOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateApplication(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateApplicationOutcome>>();
+    CreateApplicationAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const CreateApplicationRequest&,
+        CreateApplicationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::CreateApplicationSensitiveAPIOutcome TcmppClient::CreateApplicationSensitiveAPI(const CreateApplicationSensitiveAPIRequest &request)
@@ -234,25 +262,32 @@ TcmppClient::CreateApplicationSensitiveAPIOutcome TcmppClient::CreateApplication
 
 void TcmppClient::CreateApplicationSensitiveAPIAsync(const CreateApplicationSensitiveAPIRequest& request, const CreateApplicationSensitiveAPIAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateApplicationSensitiveAPI(request), context);
-    };
+    using Req = const CreateApplicationSensitiveAPIRequest&;
+    using Resp = CreateApplicationSensitiveAPIResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateApplicationSensitiveAPI", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::CreateApplicationSensitiveAPIOutcomeCallable TcmppClient::CreateApplicationSensitiveAPICallable(const CreateApplicationSensitiveAPIRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateApplicationSensitiveAPIOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateApplicationSensitiveAPI(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateApplicationSensitiveAPIOutcome>>();
+    CreateApplicationSensitiveAPIAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const CreateApplicationSensitiveAPIRequest&,
+        CreateApplicationSensitiveAPIOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::CreateConsoleMNPVersionCompileTaskOutcome TcmppClient::CreateConsoleMNPVersionCompileTask(const CreateConsoleMNPVersionCompileTaskRequest &request)
@@ -277,25 +312,32 @@ TcmppClient::CreateConsoleMNPVersionCompileTaskOutcome TcmppClient::CreateConsol
 
 void TcmppClient::CreateConsoleMNPVersionCompileTaskAsync(const CreateConsoleMNPVersionCompileTaskRequest& request, const CreateConsoleMNPVersionCompileTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateConsoleMNPVersionCompileTask(request), context);
-    };
+    using Req = const CreateConsoleMNPVersionCompileTaskRequest&;
+    using Resp = CreateConsoleMNPVersionCompileTaskResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateConsoleMNPVersionCompileTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::CreateConsoleMNPVersionCompileTaskOutcomeCallable TcmppClient::CreateConsoleMNPVersionCompileTaskCallable(const CreateConsoleMNPVersionCompileTaskRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateConsoleMNPVersionCompileTaskOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateConsoleMNPVersionCompileTask(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateConsoleMNPVersionCompileTaskOutcome>>();
+    CreateConsoleMNPVersionCompileTaskAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const CreateConsoleMNPVersionCompileTaskRequest&,
+        CreateConsoleMNPVersionCompileTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::CreateDomainOutcome TcmppClient::CreateDomain(const CreateDomainRequest &request)
@@ -320,25 +362,32 @@ TcmppClient::CreateDomainOutcome TcmppClient::CreateDomain(const CreateDomainReq
 
 void TcmppClient::CreateDomainAsync(const CreateDomainRequest& request, const CreateDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateDomain(request), context);
-    };
+    using Req = const CreateDomainRequest&;
+    using Resp = CreateDomainResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateDomain", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::CreateDomainOutcomeCallable TcmppClient::CreateDomainCallable(const CreateDomainRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateDomainOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateDomain(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateDomainOutcome>>();
+    CreateDomainAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const CreateDomainRequest&,
+        CreateDomainOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::CreateGlobalDomainOutcome TcmppClient::CreateGlobalDomain(const CreateGlobalDomainRequest &request)
@@ -363,25 +412,32 @@ TcmppClient::CreateGlobalDomainOutcome TcmppClient::CreateGlobalDomain(const Cre
 
 void TcmppClient::CreateGlobalDomainAsync(const CreateGlobalDomainRequest& request, const CreateGlobalDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateGlobalDomain(request), context);
-    };
+    using Req = const CreateGlobalDomainRequest&;
+    using Resp = CreateGlobalDomainResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateGlobalDomain", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::CreateGlobalDomainOutcomeCallable TcmppClient::CreateGlobalDomainCallable(const CreateGlobalDomainRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateGlobalDomainOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateGlobalDomain(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateGlobalDomainOutcome>>();
+    CreateGlobalDomainAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const CreateGlobalDomainRequest&,
+        CreateGlobalDomainOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::CreateGlobalDomainACLOutcome TcmppClient::CreateGlobalDomainACL(const CreateGlobalDomainACLRequest &request)
@@ -406,25 +462,32 @@ TcmppClient::CreateGlobalDomainACLOutcome TcmppClient::CreateGlobalDomainACL(con
 
 void TcmppClient::CreateGlobalDomainACLAsync(const CreateGlobalDomainACLRequest& request, const CreateGlobalDomainACLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateGlobalDomainACL(request), context);
-    };
+    using Req = const CreateGlobalDomainACLRequest&;
+    using Resp = CreateGlobalDomainACLResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateGlobalDomainACL", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::CreateGlobalDomainACLOutcomeCallable TcmppClient::CreateGlobalDomainACLCallable(const CreateGlobalDomainACLRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateGlobalDomainACLOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateGlobalDomainACL(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateGlobalDomainACLOutcome>>();
+    CreateGlobalDomainACLAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const CreateGlobalDomainACLRequest&,
+        CreateGlobalDomainACLOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::CreateMNPOutcome TcmppClient::CreateMNP(const CreateMNPRequest &request)
@@ -449,25 +512,32 @@ TcmppClient::CreateMNPOutcome TcmppClient::CreateMNP(const CreateMNPRequest &req
 
 void TcmppClient::CreateMNPAsync(const CreateMNPRequest& request, const CreateMNPAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateMNP(request), context);
-    };
+    using Req = const CreateMNPRequest&;
+    using Resp = CreateMNPResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateMNP", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::CreateMNPOutcomeCallable TcmppClient::CreateMNPCallable(const CreateMNPRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateMNPOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateMNP(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateMNPOutcome>>();
+    CreateMNPAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const CreateMNPRequest&,
+        CreateMNPOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::CreateMNPApprovalOutcome TcmppClient::CreateMNPApproval(const CreateMNPApprovalRequest &request)
@@ -492,25 +562,32 @@ TcmppClient::CreateMNPApprovalOutcome TcmppClient::CreateMNPApproval(const Creat
 
 void TcmppClient::CreateMNPApprovalAsync(const CreateMNPApprovalRequest& request, const CreateMNPApprovalAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateMNPApproval(request), context);
-    };
+    using Req = const CreateMNPApprovalRequest&;
+    using Resp = CreateMNPApprovalResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateMNPApproval", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::CreateMNPApprovalOutcomeCallable TcmppClient::CreateMNPApprovalCallable(const CreateMNPApprovalRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateMNPApprovalOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateMNPApproval(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateMNPApprovalOutcome>>();
+    CreateMNPApprovalAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const CreateMNPApprovalRequest&,
+        CreateMNPApprovalOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::CreateMNPDomainACLOutcome TcmppClient::CreateMNPDomainACL(const CreateMNPDomainACLRequest &request)
@@ -535,25 +612,32 @@ TcmppClient::CreateMNPDomainACLOutcome TcmppClient::CreateMNPDomainACL(const Cre
 
 void TcmppClient::CreateMNPDomainACLAsync(const CreateMNPDomainACLRequest& request, const CreateMNPDomainACLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateMNPDomainACL(request), context);
-    };
+    using Req = const CreateMNPDomainACLRequest&;
+    using Resp = CreateMNPDomainACLResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateMNPDomainACL", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::CreateMNPDomainACLOutcomeCallable TcmppClient::CreateMNPDomainACLCallable(const CreateMNPDomainACLRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateMNPDomainACLOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateMNPDomainACL(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateMNPDomainACLOutcome>>();
+    CreateMNPDomainACLAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const CreateMNPDomainACLRequest&,
+        CreateMNPDomainACLOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::CreateMNPSensitiveAPIPermissionApprovalOutcome TcmppClient::CreateMNPSensitiveAPIPermissionApproval(const CreateMNPSensitiveAPIPermissionApprovalRequest &request)
@@ -578,25 +662,32 @@ TcmppClient::CreateMNPSensitiveAPIPermissionApprovalOutcome TcmppClient::CreateM
 
 void TcmppClient::CreateMNPSensitiveAPIPermissionApprovalAsync(const CreateMNPSensitiveAPIPermissionApprovalRequest& request, const CreateMNPSensitiveAPIPermissionApprovalAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateMNPSensitiveAPIPermissionApproval(request), context);
-    };
+    using Req = const CreateMNPSensitiveAPIPermissionApprovalRequest&;
+    using Resp = CreateMNPSensitiveAPIPermissionApprovalResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateMNPSensitiveAPIPermissionApproval", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::CreateMNPSensitiveAPIPermissionApprovalOutcomeCallable TcmppClient::CreateMNPSensitiveAPIPermissionApprovalCallable(const CreateMNPSensitiveAPIPermissionApprovalRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateMNPSensitiveAPIPermissionApprovalOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateMNPSensitiveAPIPermissionApproval(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateMNPSensitiveAPIPermissionApprovalOutcome>>();
+    CreateMNPSensitiveAPIPermissionApprovalAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const CreateMNPSensitiveAPIPermissionApprovalRequest&,
+        CreateMNPSensitiveAPIPermissionApprovalOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::CreateMNPVersionOutcome TcmppClient::CreateMNPVersion(const CreateMNPVersionRequest &request)
@@ -621,25 +712,32 @@ TcmppClient::CreateMNPVersionOutcome TcmppClient::CreateMNPVersion(const CreateM
 
 void TcmppClient::CreateMNPVersionAsync(const CreateMNPVersionRequest& request, const CreateMNPVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateMNPVersion(request), context);
-    };
+    using Req = const CreateMNPVersionRequest&;
+    using Resp = CreateMNPVersionResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateMNPVersion", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::CreateMNPVersionOutcomeCallable TcmppClient::CreateMNPVersionCallable(const CreateMNPVersionRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateMNPVersionOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateMNPVersion(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateMNPVersionOutcome>>();
+    CreateMNPVersionAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const CreateMNPVersionRequest&,
+        CreateMNPVersionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::CreateOnlineApplyOutcome TcmppClient::CreateOnlineApply(const CreateOnlineApplyRequest &request)
@@ -664,25 +762,32 @@ TcmppClient::CreateOnlineApplyOutcome TcmppClient::CreateOnlineApply(const Creat
 
 void TcmppClient::CreateOnlineApplyAsync(const CreateOnlineApplyRequest& request, const CreateOnlineApplyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateOnlineApply(request), context);
-    };
+    using Req = const CreateOnlineApplyRequest&;
+    using Resp = CreateOnlineApplyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateOnlineApply", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::CreateOnlineApplyOutcomeCallable TcmppClient::CreateOnlineApplyCallable(const CreateOnlineApplyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateOnlineApplyOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateOnlineApply(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateOnlineApplyOutcome>>();
+    CreateOnlineApplyAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const CreateOnlineApplyRequest&,
+        CreateOnlineApplyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::CreatePlatformAuditOutcome TcmppClient::CreatePlatformAudit(const CreatePlatformAuditRequest &request)
@@ -707,25 +812,32 @@ TcmppClient::CreatePlatformAuditOutcome TcmppClient::CreatePlatformAudit(const C
 
 void TcmppClient::CreatePlatformAuditAsync(const CreatePlatformAuditRequest& request, const CreatePlatformAuditAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreatePlatformAudit(request), context);
-    };
+    using Req = const CreatePlatformAuditRequest&;
+    using Resp = CreatePlatformAuditResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreatePlatformAudit", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::CreatePlatformAuditOutcomeCallable TcmppClient::CreatePlatformAuditCallable(const CreatePlatformAuditRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreatePlatformAuditOutcome()>>(
-        [this, request]()
-        {
-            return this->CreatePlatformAudit(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreatePlatformAuditOutcome>>();
+    CreatePlatformAuditAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const CreatePlatformAuditRequest&,
+        CreatePlatformAuditOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::CreatePresetKeyOutcome TcmppClient::CreatePresetKey(const CreatePresetKeyRequest &request)
@@ -750,25 +862,32 @@ TcmppClient::CreatePresetKeyOutcome TcmppClient::CreatePresetKey(const CreatePre
 
 void TcmppClient::CreatePresetKeyAsync(const CreatePresetKeyRequest& request, const CreatePresetKeyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreatePresetKey(request), context);
-    };
+    using Req = const CreatePresetKeyRequest&;
+    using Resp = CreatePresetKeyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreatePresetKey", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::CreatePresetKeyOutcomeCallable TcmppClient::CreatePresetKeyCallable(const CreatePresetKeyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreatePresetKeyOutcome()>>(
-        [this, request]()
-        {
-            return this->CreatePresetKey(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreatePresetKeyOutcome>>();
+    CreatePresetKeyAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const CreatePresetKeyRequest&,
+        CreatePresetKeyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::CreateSensitiveAPIOutcome TcmppClient::CreateSensitiveAPI(const CreateSensitiveAPIRequest &request)
@@ -793,25 +912,32 @@ TcmppClient::CreateSensitiveAPIOutcome TcmppClient::CreateSensitiveAPI(const Cre
 
 void TcmppClient::CreateSensitiveAPIAsync(const CreateSensitiveAPIRequest& request, const CreateSensitiveAPIAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateSensitiveAPI(request), context);
-    };
+    using Req = const CreateSensitiveAPIRequest&;
+    using Resp = CreateSensitiveAPIResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateSensitiveAPI", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::CreateSensitiveAPIOutcomeCallable TcmppClient::CreateSensitiveAPICallable(const CreateSensitiveAPIRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateSensitiveAPIOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateSensitiveAPI(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateSensitiveAPIOutcome>>();
+    CreateSensitiveAPIAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const CreateSensitiveAPIRequest&,
+        CreateSensitiveAPIOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::CreateSensitiveApiApplyOutcome TcmppClient::CreateSensitiveApiApply(const CreateSensitiveApiApplyRequest &request)
@@ -836,25 +962,32 @@ TcmppClient::CreateSensitiveApiApplyOutcome TcmppClient::CreateSensitiveApiApply
 
 void TcmppClient::CreateSensitiveApiApplyAsync(const CreateSensitiveApiApplyRequest& request, const CreateSensitiveApiApplyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateSensitiveApiApply(request), context);
-    };
+    using Req = const CreateSensitiveApiApplyRequest&;
+    using Resp = CreateSensitiveApiApplyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateSensitiveApiApply", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::CreateSensitiveApiApplyOutcomeCallable TcmppClient::CreateSensitiveApiApplyCallable(const CreateSensitiveApiApplyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateSensitiveApiApplyOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateSensitiveApiApply(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateSensitiveApiApplyOutcome>>();
+    CreateSensitiveApiApplyAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const CreateSensitiveApiApplyRequest&,
+        CreateSensitiveApiApplyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::CreateTeamOutcome TcmppClient::CreateTeam(const CreateTeamRequest &request)
@@ -879,25 +1012,32 @@ TcmppClient::CreateTeamOutcome TcmppClient::CreateTeam(const CreateTeamRequest &
 
 void TcmppClient::CreateTeamAsync(const CreateTeamRequest& request, const CreateTeamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateTeam(request), context);
-    };
+    using Req = const CreateTeamRequest&;
+    using Resp = CreateTeamResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateTeam", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::CreateTeamOutcomeCallable TcmppClient::CreateTeamCallable(const CreateTeamRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateTeamOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateTeam(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateTeamOutcome>>();
+    CreateTeamAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const CreateTeamRequest&,
+        CreateTeamOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::CreateTeamMemberOutcome TcmppClient::CreateTeamMember(const CreateTeamMemberRequest &request)
@@ -922,25 +1062,32 @@ TcmppClient::CreateTeamMemberOutcome TcmppClient::CreateTeamMember(const CreateT
 
 void TcmppClient::CreateTeamMemberAsync(const CreateTeamMemberRequest& request, const CreateTeamMemberAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateTeamMember(request), context);
-    };
+    using Req = const CreateTeamMemberRequest&;
+    using Resp = CreateTeamMemberResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateTeamMember", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::CreateTeamMemberOutcomeCallable TcmppClient::CreateTeamMemberCallable(const CreateTeamMemberRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateTeamMemberOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateTeamMember(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateTeamMemberOutcome>>();
+    CreateTeamMemberAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const CreateTeamMemberRequest&,
+        CreateTeamMemberOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::CreateUserOutcome TcmppClient::CreateUser(const CreateUserRequest &request)
@@ -965,25 +1112,32 @@ TcmppClient::CreateUserOutcome TcmppClient::CreateUser(const CreateUserRequest &
 
 void TcmppClient::CreateUserAsync(const CreateUserRequest& request, const CreateUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateUser(request), context);
-    };
+    using Req = const CreateUserRequest&;
+    using Resp = CreateUserResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateUser", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::CreateUserOutcomeCallable TcmppClient::CreateUserCallable(const CreateUserRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateUserOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateUser(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateUserOutcome>>();
+    CreateUserAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const CreateUserRequest&,
+        CreateUserOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DeleteApplicationOutcome TcmppClient::DeleteApplication(const DeleteApplicationRequest &request)
@@ -1008,25 +1162,32 @@ TcmppClient::DeleteApplicationOutcome TcmppClient::DeleteApplication(const Delet
 
 void TcmppClient::DeleteApplicationAsync(const DeleteApplicationRequest& request, const DeleteApplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteApplication(request), context);
-    };
+    using Req = const DeleteApplicationRequest&;
+    using Resp = DeleteApplicationResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteApplication", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DeleteApplicationOutcomeCallable TcmppClient::DeleteApplicationCallable(const DeleteApplicationRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteApplicationOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteApplication(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteApplicationOutcome>>();
+    DeleteApplicationAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DeleteApplicationRequest&,
+        DeleteApplicationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DeleteApplicationSensitiveAPIOutcome TcmppClient::DeleteApplicationSensitiveAPI(const DeleteApplicationSensitiveAPIRequest &request)
@@ -1051,25 +1212,32 @@ TcmppClient::DeleteApplicationSensitiveAPIOutcome TcmppClient::DeleteApplication
 
 void TcmppClient::DeleteApplicationSensitiveAPIAsync(const DeleteApplicationSensitiveAPIRequest& request, const DeleteApplicationSensitiveAPIAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteApplicationSensitiveAPI(request), context);
-    };
+    using Req = const DeleteApplicationSensitiveAPIRequest&;
+    using Resp = DeleteApplicationSensitiveAPIResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteApplicationSensitiveAPI", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DeleteApplicationSensitiveAPIOutcomeCallable TcmppClient::DeleteApplicationSensitiveAPICallable(const DeleteApplicationSensitiveAPIRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteApplicationSensitiveAPIOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteApplicationSensitiveAPI(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteApplicationSensitiveAPIOutcome>>();
+    DeleteApplicationSensitiveAPIAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DeleteApplicationSensitiveAPIRequest&,
+        DeleteApplicationSensitiveAPIOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DeleteGlobalDomainOutcome TcmppClient::DeleteGlobalDomain(const DeleteGlobalDomainRequest &request)
@@ -1094,25 +1262,32 @@ TcmppClient::DeleteGlobalDomainOutcome TcmppClient::DeleteGlobalDomain(const Del
 
 void TcmppClient::DeleteGlobalDomainAsync(const DeleteGlobalDomainRequest& request, const DeleteGlobalDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteGlobalDomain(request), context);
-    };
+    using Req = const DeleteGlobalDomainRequest&;
+    using Resp = DeleteGlobalDomainResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteGlobalDomain", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DeleteGlobalDomainOutcomeCallable TcmppClient::DeleteGlobalDomainCallable(const DeleteGlobalDomainRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteGlobalDomainOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteGlobalDomain(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteGlobalDomainOutcome>>();
+    DeleteGlobalDomainAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DeleteGlobalDomainRequest&,
+        DeleteGlobalDomainOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DeleteMNPOutcome TcmppClient::DeleteMNP(const DeleteMNPRequest &request)
@@ -1137,25 +1312,32 @@ TcmppClient::DeleteMNPOutcome TcmppClient::DeleteMNP(const DeleteMNPRequest &req
 
 void TcmppClient::DeleteMNPAsync(const DeleteMNPRequest& request, const DeleteMNPAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteMNP(request), context);
-    };
+    using Req = const DeleteMNPRequest&;
+    using Resp = DeleteMNPResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteMNP", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DeleteMNPOutcomeCallable TcmppClient::DeleteMNPCallable(const DeleteMNPRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteMNPOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteMNP(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteMNPOutcome>>();
+    DeleteMNPAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DeleteMNPRequest&,
+        DeleteMNPOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DeleteSensitiveAPIOutcome TcmppClient::DeleteSensitiveAPI(const DeleteSensitiveAPIRequest &request)
@@ -1180,25 +1362,32 @@ TcmppClient::DeleteSensitiveAPIOutcome TcmppClient::DeleteSensitiveAPI(const Del
 
 void TcmppClient::DeleteSensitiveAPIAsync(const DeleteSensitiveAPIRequest& request, const DeleteSensitiveAPIAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteSensitiveAPI(request), context);
-    };
+    using Req = const DeleteSensitiveAPIRequest&;
+    using Resp = DeleteSensitiveAPIResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteSensitiveAPI", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DeleteSensitiveAPIOutcomeCallable TcmppClient::DeleteSensitiveAPICallable(const DeleteSensitiveAPIRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteSensitiveAPIOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteSensitiveAPI(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteSensitiveAPIOutcome>>();
+    DeleteSensitiveAPIAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DeleteSensitiveAPIRequest&,
+        DeleteSensitiveAPIOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DeleteTeamOutcome TcmppClient::DeleteTeam(const DeleteTeamRequest &request)
@@ -1223,25 +1412,32 @@ TcmppClient::DeleteTeamOutcome TcmppClient::DeleteTeam(const DeleteTeamRequest &
 
 void TcmppClient::DeleteTeamAsync(const DeleteTeamRequest& request, const DeleteTeamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteTeam(request), context);
-    };
+    using Req = const DeleteTeamRequest&;
+    using Resp = DeleteTeamResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteTeam", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DeleteTeamOutcomeCallable TcmppClient::DeleteTeamCallable(const DeleteTeamRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteTeamOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteTeam(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteTeamOutcome>>();
+    DeleteTeamAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DeleteTeamRequest&,
+        DeleteTeamOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DeleteTeamMemberOutcome TcmppClient::DeleteTeamMember(const DeleteTeamMemberRequest &request)
@@ -1266,25 +1462,32 @@ TcmppClient::DeleteTeamMemberOutcome TcmppClient::DeleteTeamMember(const DeleteT
 
 void TcmppClient::DeleteTeamMemberAsync(const DeleteTeamMemberRequest& request, const DeleteTeamMemberAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteTeamMember(request), context);
-    };
+    using Req = const DeleteTeamMemberRequest&;
+    using Resp = DeleteTeamMemberResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteTeamMember", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DeleteTeamMemberOutcomeCallable TcmppClient::DeleteTeamMemberCallable(const DeleteTeamMemberRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteTeamMemberOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteTeamMember(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteTeamMemberOutcome>>();
+    DeleteTeamMemberAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DeleteTeamMemberRequest&,
+        DeleteTeamMemberOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DeleteUserOutcome TcmppClient::DeleteUser(const DeleteUserRequest &request)
@@ -1309,25 +1512,32 @@ TcmppClient::DeleteUserOutcome TcmppClient::DeleteUser(const DeleteUserRequest &
 
 void TcmppClient::DeleteUserAsync(const DeleteUserRequest& request, const DeleteUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteUser(request), context);
-    };
+    using Req = const DeleteUserRequest&;
+    using Resp = DeleteUserResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteUser", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DeleteUserOutcomeCallable TcmppClient::DeleteUserCallable(const DeleteUserRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteUserOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteUser(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteUserOutcome>>();
+    DeleteUserAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DeleteUserRequest&,
+        DeleteUserOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeApplicationOutcome TcmppClient::DescribeApplication(const DescribeApplicationRequest &request)
@@ -1352,25 +1562,32 @@ TcmppClient::DescribeApplicationOutcome TcmppClient::DescribeApplication(const D
 
 void TcmppClient::DescribeApplicationAsync(const DescribeApplicationRequest& request, const DescribeApplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeApplication(request), context);
-    };
+    using Req = const DescribeApplicationRequest&;
+    using Resp = DescribeApplicationResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeApplication", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeApplicationOutcomeCallable TcmppClient::DescribeApplicationCallable(const DescribeApplicationRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeApplicationOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeApplication(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeApplicationOutcome>>();
+    DescribeApplicationAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeApplicationRequest&,
+        DescribeApplicationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeApplicationConfigOutcome TcmppClient::DescribeApplicationConfig(const DescribeApplicationConfigRequest &request)
@@ -1395,25 +1612,32 @@ TcmppClient::DescribeApplicationConfigOutcome TcmppClient::DescribeApplicationCo
 
 void TcmppClient::DescribeApplicationConfigAsync(const DescribeApplicationConfigRequest& request, const DescribeApplicationConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeApplicationConfig(request), context);
-    };
+    using Req = const DescribeApplicationConfigRequest&;
+    using Resp = DescribeApplicationConfigResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeApplicationConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeApplicationConfigOutcomeCallable TcmppClient::DescribeApplicationConfigCallable(const DescribeApplicationConfigRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeApplicationConfigOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeApplicationConfig(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeApplicationConfigOutcome>>();
+    DescribeApplicationConfigAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeApplicationConfigRequest&,
+        DescribeApplicationConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeApplicationConfigFileOutcome TcmppClient::DescribeApplicationConfigFile(const DescribeApplicationConfigFileRequest &request)
@@ -1438,25 +1662,32 @@ TcmppClient::DescribeApplicationConfigFileOutcome TcmppClient::DescribeApplicati
 
 void TcmppClient::DescribeApplicationConfigFileAsync(const DescribeApplicationConfigFileRequest& request, const DescribeApplicationConfigFileAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeApplicationConfigFile(request), context);
-    };
+    using Req = const DescribeApplicationConfigFileRequest&;
+    using Resp = DescribeApplicationConfigFileResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeApplicationConfigFile", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeApplicationConfigFileOutcomeCallable TcmppClient::DescribeApplicationConfigFileCallable(const DescribeApplicationConfigFileRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeApplicationConfigFileOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeApplicationConfigFile(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeApplicationConfigFileOutcome>>();
+    DescribeApplicationConfigFileAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeApplicationConfigFileRequest&,
+        DescribeApplicationConfigFileOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeApplicationListOutcome TcmppClient::DescribeApplicationList(const DescribeApplicationListRequest &request)
@@ -1481,25 +1712,32 @@ TcmppClient::DescribeApplicationListOutcome TcmppClient::DescribeApplicationList
 
 void TcmppClient::DescribeApplicationListAsync(const DescribeApplicationListRequest& request, const DescribeApplicationListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeApplicationList(request), context);
-    };
+    using Req = const DescribeApplicationListRequest&;
+    using Resp = DescribeApplicationListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeApplicationList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeApplicationListOutcomeCallable TcmppClient::DescribeApplicationListCallable(const DescribeApplicationListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeApplicationListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeApplicationList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeApplicationListOutcome>>();
+    DescribeApplicationListAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeApplicationListRequest&,
+        DescribeApplicationListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeApplicationMNPVersionAuditListOutcome TcmppClient::DescribeApplicationMNPVersionAuditList(const DescribeApplicationMNPVersionAuditListRequest &request)
@@ -1524,25 +1762,32 @@ TcmppClient::DescribeApplicationMNPVersionAuditListOutcome TcmppClient::Describe
 
 void TcmppClient::DescribeApplicationMNPVersionAuditListAsync(const DescribeApplicationMNPVersionAuditListRequest& request, const DescribeApplicationMNPVersionAuditListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeApplicationMNPVersionAuditList(request), context);
-    };
+    using Req = const DescribeApplicationMNPVersionAuditListRequest&;
+    using Resp = DescribeApplicationMNPVersionAuditListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeApplicationMNPVersionAuditList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeApplicationMNPVersionAuditListOutcomeCallable TcmppClient::DescribeApplicationMNPVersionAuditListCallable(const DescribeApplicationMNPVersionAuditListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeApplicationMNPVersionAuditListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeApplicationMNPVersionAuditList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeApplicationMNPVersionAuditListOutcome>>();
+    DescribeApplicationMNPVersionAuditListAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeApplicationMNPVersionAuditListRequest&,
+        DescribeApplicationMNPVersionAuditListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeApplicationSensitiveAPIListOutcome TcmppClient::DescribeApplicationSensitiveAPIList(const DescribeApplicationSensitiveAPIListRequest &request)
@@ -1567,25 +1812,32 @@ TcmppClient::DescribeApplicationSensitiveAPIListOutcome TcmppClient::DescribeApp
 
 void TcmppClient::DescribeApplicationSensitiveAPIListAsync(const DescribeApplicationSensitiveAPIListRequest& request, const DescribeApplicationSensitiveAPIListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeApplicationSensitiveAPIList(request), context);
-    };
+    using Req = const DescribeApplicationSensitiveAPIListRequest&;
+    using Resp = DescribeApplicationSensitiveAPIListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeApplicationSensitiveAPIList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeApplicationSensitiveAPIListOutcomeCallable TcmppClient::DescribeApplicationSensitiveAPIListCallable(const DescribeApplicationSensitiveAPIListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeApplicationSensitiveAPIListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeApplicationSensitiveAPIList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeApplicationSensitiveAPIListOutcome>>();
+    DescribeApplicationSensitiveAPIListAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeApplicationSensitiveAPIListRequest&,
+        DescribeApplicationSensitiveAPIListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeConsoleMNPVersionCompileTaskOutcome TcmppClient::DescribeConsoleMNPVersionCompileTask(const DescribeConsoleMNPVersionCompileTaskRequest &request)
@@ -1610,25 +1862,32 @@ TcmppClient::DescribeConsoleMNPVersionCompileTaskOutcome TcmppClient::DescribeCo
 
 void TcmppClient::DescribeConsoleMNPVersionCompileTaskAsync(const DescribeConsoleMNPVersionCompileTaskRequest& request, const DescribeConsoleMNPVersionCompileTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeConsoleMNPVersionCompileTask(request), context);
-    };
+    using Req = const DescribeConsoleMNPVersionCompileTaskRequest&;
+    using Resp = DescribeConsoleMNPVersionCompileTaskResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeConsoleMNPVersionCompileTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeConsoleMNPVersionCompileTaskOutcomeCallable TcmppClient::DescribeConsoleMNPVersionCompileTaskCallable(const DescribeConsoleMNPVersionCompileTaskRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeConsoleMNPVersionCompileTaskOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeConsoleMNPVersionCompileTask(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeConsoleMNPVersionCompileTaskOutcome>>();
+    DescribeConsoleMNPVersionCompileTaskAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeConsoleMNPVersionCompileTaskRequest&,
+        DescribeConsoleMNPVersionCompileTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeDomainInfoOutcome TcmppClient::DescribeDomainInfo(const DescribeDomainInfoRequest &request)
@@ -1653,25 +1912,32 @@ TcmppClient::DescribeDomainInfoOutcome TcmppClient::DescribeDomainInfo(const Des
 
 void TcmppClient::DescribeDomainInfoAsync(const DescribeDomainInfoRequest& request, const DescribeDomainInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDomainInfo(request), context);
-    };
+    using Req = const DescribeDomainInfoRequest&;
+    using Resp = DescribeDomainInfoResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDomainInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeDomainInfoOutcomeCallable TcmppClient::DescribeDomainInfoCallable(const DescribeDomainInfoRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDomainInfoOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDomainInfo(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDomainInfoOutcome>>();
+    DescribeDomainInfoAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeDomainInfoRequest&,
+        DescribeDomainInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeDomainTeamListOutcome TcmppClient::DescribeDomainTeamList(const DescribeDomainTeamListRequest &request)
@@ -1696,25 +1962,32 @@ TcmppClient::DescribeDomainTeamListOutcome TcmppClient::DescribeDomainTeamList(c
 
 void TcmppClient::DescribeDomainTeamListAsync(const DescribeDomainTeamListRequest& request, const DescribeDomainTeamListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDomainTeamList(request), context);
-    };
+    using Req = const DescribeDomainTeamListRequest&;
+    using Resp = DescribeDomainTeamListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDomainTeamList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeDomainTeamListOutcomeCallable TcmppClient::DescribeDomainTeamListCallable(const DescribeDomainTeamListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDomainTeamListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDomainTeamList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDomainTeamListOutcome>>();
+    DescribeDomainTeamListAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeDomainTeamListRequest&,
+        DescribeDomainTeamListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeGlobalDomainACLOutcome TcmppClient::DescribeGlobalDomainACL(const DescribeGlobalDomainACLRequest &request)
@@ -1739,25 +2012,32 @@ TcmppClient::DescribeGlobalDomainACLOutcome TcmppClient::DescribeGlobalDomainACL
 
 void TcmppClient::DescribeGlobalDomainACLAsync(const DescribeGlobalDomainACLRequest& request, const DescribeGlobalDomainACLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeGlobalDomainACL(request), context);
-    };
+    using Req = const DescribeGlobalDomainACLRequest&;
+    using Resp = DescribeGlobalDomainACLResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeGlobalDomainACL", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeGlobalDomainACLOutcomeCallable TcmppClient::DescribeGlobalDomainACLCallable(const DescribeGlobalDomainACLRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeGlobalDomainACLOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeGlobalDomainACL(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeGlobalDomainACLOutcome>>();
+    DescribeGlobalDomainACLAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeGlobalDomainACLRequest&,
+        DescribeGlobalDomainACLOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeGlobalDomainListOutcome TcmppClient::DescribeGlobalDomainList(const DescribeGlobalDomainListRequest &request)
@@ -1782,25 +2062,32 @@ TcmppClient::DescribeGlobalDomainListOutcome TcmppClient::DescribeGlobalDomainLi
 
 void TcmppClient::DescribeGlobalDomainListAsync(const DescribeGlobalDomainListRequest& request, const DescribeGlobalDomainListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeGlobalDomainList(request), context);
-    };
+    using Req = const DescribeGlobalDomainListRequest&;
+    using Resp = DescribeGlobalDomainListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeGlobalDomainList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeGlobalDomainListOutcomeCallable TcmppClient::DescribeGlobalDomainListCallable(const DescribeGlobalDomainListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeGlobalDomainListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeGlobalDomainList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeGlobalDomainListOutcome>>();
+    DescribeGlobalDomainListAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeGlobalDomainListRequest&,
+        DescribeGlobalDomainListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeMNPOutcome TcmppClient::DescribeMNP(const DescribeMNPRequest &request)
@@ -1825,25 +2112,32 @@ TcmppClient::DescribeMNPOutcome TcmppClient::DescribeMNP(const DescribeMNPReques
 
 void TcmppClient::DescribeMNPAsync(const DescribeMNPRequest& request, const DescribeMNPAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNP(request), context);
-    };
+    using Req = const DescribeMNPRequest&;
+    using Resp = DescribeMNPResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNP", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeMNPOutcomeCallable TcmppClient::DescribeMNPCallable(const DescribeMNPRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNP(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPOutcome>>();
+    DescribeMNPAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeMNPRequest&,
+        DescribeMNPOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeMNPAllStageVersionsOutcome TcmppClient::DescribeMNPAllStageVersions(const DescribeMNPAllStageVersionsRequest &request)
@@ -1868,25 +2162,32 @@ TcmppClient::DescribeMNPAllStageVersionsOutcome TcmppClient::DescribeMNPAllStage
 
 void TcmppClient::DescribeMNPAllStageVersionsAsync(const DescribeMNPAllStageVersionsRequest& request, const DescribeMNPAllStageVersionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPAllStageVersions(request), context);
-    };
+    using Req = const DescribeMNPAllStageVersionsRequest&;
+    using Resp = DescribeMNPAllStageVersionsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPAllStageVersions", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeMNPAllStageVersionsOutcomeCallable TcmppClient::DescribeMNPAllStageVersionsCallable(const DescribeMNPAllStageVersionsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPAllStageVersionsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPAllStageVersions(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPAllStageVersionsOutcome>>();
+    DescribeMNPAllStageVersionsAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeMNPAllStageVersionsRequest&,
+        DescribeMNPAllStageVersionsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeMNPApprovalListOutcome TcmppClient::DescribeMNPApprovalList(const DescribeMNPApprovalListRequest &request)
@@ -1911,25 +2212,32 @@ TcmppClient::DescribeMNPApprovalListOutcome TcmppClient::DescribeMNPApprovalList
 
 void TcmppClient::DescribeMNPApprovalListAsync(const DescribeMNPApprovalListRequest& request, const DescribeMNPApprovalListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPApprovalList(request), context);
-    };
+    using Req = const DescribeMNPApprovalListRequest&;
+    using Resp = DescribeMNPApprovalListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPApprovalList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeMNPApprovalListOutcomeCallable TcmppClient::DescribeMNPApprovalListCallable(const DescribeMNPApprovalListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPApprovalListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPApprovalList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPApprovalListOutcome>>();
+    DescribeMNPApprovalListAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeMNPApprovalListRequest&,
+        DescribeMNPApprovalListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeMNPBoardOutcome TcmppClient::DescribeMNPBoard(const DescribeMNPBoardRequest &request)
@@ -1954,25 +2262,32 @@ TcmppClient::DescribeMNPBoardOutcome TcmppClient::DescribeMNPBoard(const Describ
 
 void TcmppClient::DescribeMNPBoardAsync(const DescribeMNPBoardRequest& request, const DescribeMNPBoardAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPBoard(request), context);
-    };
+    using Req = const DescribeMNPBoardRequest&;
+    using Resp = DescribeMNPBoardResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPBoard", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeMNPBoardOutcomeCallable TcmppClient::DescribeMNPBoardCallable(const DescribeMNPBoardRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPBoardOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPBoard(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPBoardOutcome>>();
+    DescribeMNPBoardAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeMNPBoardRequest&,
+        DescribeMNPBoardOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeMNPCategoryOutcome TcmppClient::DescribeMNPCategory(const DescribeMNPCategoryRequest &request)
@@ -1997,25 +2312,32 @@ TcmppClient::DescribeMNPCategoryOutcome TcmppClient::DescribeMNPCategory(const D
 
 void TcmppClient::DescribeMNPCategoryAsync(const DescribeMNPCategoryRequest& request, const DescribeMNPCategoryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPCategory(request), context);
-    };
+    using Req = const DescribeMNPCategoryRequest&;
+    using Resp = DescribeMNPCategoryResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPCategory", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeMNPCategoryOutcomeCallable TcmppClient::DescribeMNPCategoryCallable(const DescribeMNPCategoryRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPCategoryOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPCategory(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPCategoryOutcome>>();
+    DescribeMNPCategoryAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeMNPCategoryRequest&,
+        DescribeMNPCategoryOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeMNPDetailOutcome TcmppClient::DescribeMNPDetail(const DescribeMNPDetailRequest &request)
@@ -2040,25 +2362,32 @@ TcmppClient::DescribeMNPDetailOutcome TcmppClient::DescribeMNPDetail(const Descr
 
 void TcmppClient::DescribeMNPDetailAsync(const DescribeMNPDetailRequest& request, const DescribeMNPDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPDetail(request), context);
-    };
+    using Req = const DescribeMNPDetailRequest&;
+    using Resp = DescribeMNPDetailResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeMNPDetailOutcomeCallable TcmppClient::DescribeMNPDetailCallable(const DescribeMNPDetailRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPDetailOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPDetail(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPDetailOutcome>>();
+    DescribeMNPDetailAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeMNPDetailRequest&,
+        DescribeMNPDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeMNPDomainACLOutcome TcmppClient::DescribeMNPDomainACL(const DescribeMNPDomainACLRequest &request)
@@ -2083,25 +2412,32 @@ TcmppClient::DescribeMNPDomainACLOutcome TcmppClient::DescribeMNPDomainACL(const
 
 void TcmppClient::DescribeMNPDomainACLAsync(const DescribeMNPDomainACLRequest& request, const DescribeMNPDomainACLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPDomainACL(request), context);
-    };
+    using Req = const DescribeMNPDomainACLRequest&;
+    using Resp = DescribeMNPDomainACLResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPDomainACL", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeMNPDomainACLOutcomeCallable TcmppClient::DescribeMNPDomainACLCallable(const DescribeMNPDomainACLRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPDomainACLOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPDomainACL(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPDomainACLOutcome>>();
+    DescribeMNPDomainACLAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeMNPDomainACLRequest&,
+        DescribeMNPDomainACLOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeMNPListOutcome TcmppClient::DescribeMNPList(const DescribeMNPListRequest &request)
@@ -2126,25 +2462,32 @@ TcmppClient::DescribeMNPListOutcome TcmppClient::DescribeMNPList(const DescribeM
 
 void TcmppClient::DescribeMNPListAsync(const DescribeMNPListRequest& request, const DescribeMNPListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPList(request), context);
-    };
+    using Req = const DescribeMNPListRequest&;
+    using Resp = DescribeMNPListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeMNPListOutcomeCallable TcmppClient::DescribeMNPListCallable(const DescribeMNPListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPListOutcome>>();
+    DescribeMNPListAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeMNPListRequest&,
+        DescribeMNPListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeMNPManagerDetailOutcome TcmppClient::DescribeMNPManagerDetail(const DescribeMNPManagerDetailRequest &request)
@@ -2169,25 +2512,32 @@ TcmppClient::DescribeMNPManagerDetailOutcome TcmppClient::DescribeMNPManagerDeta
 
 void TcmppClient::DescribeMNPManagerDetailAsync(const DescribeMNPManagerDetailRequest& request, const DescribeMNPManagerDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPManagerDetail(request), context);
-    };
+    using Req = const DescribeMNPManagerDetailRequest&;
+    using Resp = DescribeMNPManagerDetailResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPManagerDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeMNPManagerDetailOutcomeCallable TcmppClient::DescribeMNPManagerDetailCallable(const DescribeMNPManagerDetailRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPManagerDetailOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPManagerDetail(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPManagerDetailOutcome>>();
+    DescribeMNPManagerDetailAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeMNPManagerDetailRequest&,
+        DescribeMNPManagerDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeMNPManagerListOutcome TcmppClient::DescribeMNPManagerList(const DescribeMNPManagerListRequest &request)
@@ -2212,25 +2562,32 @@ TcmppClient::DescribeMNPManagerListOutcome TcmppClient::DescribeMNPManagerList(c
 
 void TcmppClient::DescribeMNPManagerListAsync(const DescribeMNPManagerListRequest& request, const DescribeMNPManagerListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPManagerList(request), context);
-    };
+    using Req = const DescribeMNPManagerListRequest&;
+    using Resp = DescribeMNPManagerListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPManagerList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeMNPManagerListOutcomeCallable TcmppClient::DescribeMNPManagerListCallable(const DescribeMNPManagerListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPManagerListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPManagerList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPManagerListOutcome>>();
+    DescribeMNPManagerListAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeMNPManagerListRequest&,
+        DescribeMNPManagerListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeMNPOfflinePackageURLOutcome TcmppClient::DescribeMNPOfflinePackageURL(const DescribeMNPOfflinePackageURLRequest &request)
@@ -2255,25 +2612,32 @@ TcmppClient::DescribeMNPOfflinePackageURLOutcome TcmppClient::DescribeMNPOffline
 
 void TcmppClient::DescribeMNPOfflinePackageURLAsync(const DescribeMNPOfflinePackageURLRequest& request, const DescribeMNPOfflinePackageURLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPOfflinePackageURL(request), context);
-    };
+    using Req = const DescribeMNPOfflinePackageURLRequest&;
+    using Resp = DescribeMNPOfflinePackageURLResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPOfflinePackageURL", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeMNPOfflinePackageURLOutcomeCallable TcmppClient::DescribeMNPOfflinePackageURLCallable(const DescribeMNPOfflinePackageURLRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPOfflinePackageURLOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPOfflinePackageURL(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPOfflinePackageURLOutcome>>();
+    DescribeMNPOfflinePackageURLAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeMNPOfflinePackageURLRequest&,
+        DescribeMNPOfflinePackageURLOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeMNPPreviewOutcome TcmppClient::DescribeMNPPreview(const DescribeMNPPreviewRequest &request)
@@ -2298,25 +2662,32 @@ TcmppClient::DescribeMNPPreviewOutcome TcmppClient::DescribeMNPPreview(const Des
 
 void TcmppClient::DescribeMNPPreviewAsync(const DescribeMNPPreviewRequest& request, const DescribeMNPPreviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPPreview(request), context);
-    };
+    using Req = const DescribeMNPPreviewRequest&;
+    using Resp = DescribeMNPPreviewResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPPreview", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeMNPPreviewOutcomeCallable TcmppClient::DescribeMNPPreviewCallable(const DescribeMNPPreviewRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPPreviewOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPPreview(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPPreviewOutcome>>();
+    DescribeMNPPreviewAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeMNPPreviewRequest&,
+        DescribeMNPPreviewOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeMNPPrivacyOutcome TcmppClient::DescribeMNPPrivacy(const DescribeMNPPrivacyRequest &request)
@@ -2341,25 +2712,32 @@ TcmppClient::DescribeMNPPrivacyOutcome TcmppClient::DescribeMNPPrivacy(const Des
 
 void TcmppClient::DescribeMNPPrivacyAsync(const DescribeMNPPrivacyRequest& request, const DescribeMNPPrivacyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPPrivacy(request), context);
-    };
+    using Req = const DescribeMNPPrivacyRequest&;
+    using Resp = DescribeMNPPrivacyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPPrivacy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeMNPPrivacyOutcomeCallable TcmppClient::DescribeMNPPrivacyCallable(const DescribeMNPPrivacyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPPrivacyOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPPrivacy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPPrivacyOutcome>>();
+    DescribeMNPPrivacyAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeMNPPrivacyRequest&,
+        DescribeMNPPrivacyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeMNPReleasedVersionHistoryOutcome TcmppClient::DescribeMNPReleasedVersionHistory(const DescribeMNPReleasedVersionHistoryRequest &request)
@@ -2384,25 +2762,32 @@ TcmppClient::DescribeMNPReleasedVersionHistoryOutcome TcmppClient::DescribeMNPRe
 
 void TcmppClient::DescribeMNPReleasedVersionHistoryAsync(const DescribeMNPReleasedVersionHistoryRequest& request, const DescribeMNPReleasedVersionHistoryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPReleasedVersionHistory(request), context);
-    };
+    using Req = const DescribeMNPReleasedVersionHistoryRequest&;
+    using Resp = DescribeMNPReleasedVersionHistoryResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPReleasedVersionHistory", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeMNPReleasedVersionHistoryOutcomeCallable TcmppClient::DescribeMNPReleasedVersionHistoryCallable(const DescribeMNPReleasedVersionHistoryRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPReleasedVersionHistoryOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPReleasedVersionHistory(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPReleasedVersionHistoryOutcome>>();
+    DescribeMNPReleasedVersionHistoryAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeMNPReleasedVersionHistoryRequest&,
+        DescribeMNPReleasedVersionHistoryOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeMNPSensitiveAPIPermissionApprovalOutcome TcmppClient::DescribeMNPSensitiveAPIPermissionApproval(const DescribeMNPSensitiveAPIPermissionApprovalRequest &request)
@@ -2427,25 +2812,32 @@ TcmppClient::DescribeMNPSensitiveAPIPermissionApprovalOutcome TcmppClient::Descr
 
 void TcmppClient::DescribeMNPSensitiveAPIPermissionApprovalAsync(const DescribeMNPSensitiveAPIPermissionApprovalRequest& request, const DescribeMNPSensitiveAPIPermissionApprovalAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPSensitiveAPIPermissionApproval(request), context);
-    };
+    using Req = const DescribeMNPSensitiveAPIPermissionApprovalRequest&;
+    using Resp = DescribeMNPSensitiveAPIPermissionApprovalResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPSensitiveAPIPermissionApproval", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeMNPSensitiveAPIPermissionApprovalOutcomeCallable TcmppClient::DescribeMNPSensitiveAPIPermissionApprovalCallable(const DescribeMNPSensitiveAPIPermissionApprovalRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPSensitiveAPIPermissionApprovalOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPSensitiveAPIPermissionApproval(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPSensitiveAPIPermissionApprovalOutcome>>();
+    DescribeMNPSensitiveAPIPermissionApprovalAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeMNPSensitiveAPIPermissionApprovalRequest&,
+        DescribeMNPSensitiveAPIPermissionApprovalOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeMNPSensitiveAPIPermissionApprovalListOutcome TcmppClient::DescribeMNPSensitiveAPIPermissionApprovalList(const DescribeMNPSensitiveAPIPermissionApprovalListRequest &request)
@@ -2470,25 +2862,32 @@ TcmppClient::DescribeMNPSensitiveAPIPermissionApprovalListOutcome TcmppClient::D
 
 void TcmppClient::DescribeMNPSensitiveAPIPermissionApprovalListAsync(const DescribeMNPSensitiveAPIPermissionApprovalListRequest& request, const DescribeMNPSensitiveAPIPermissionApprovalListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPSensitiveAPIPermissionApprovalList(request), context);
-    };
+    using Req = const DescribeMNPSensitiveAPIPermissionApprovalListRequest&;
+    using Resp = DescribeMNPSensitiveAPIPermissionApprovalListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPSensitiveAPIPermissionApprovalList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeMNPSensitiveAPIPermissionApprovalListOutcomeCallable TcmppClient::DescribeMNPSensitiveAPIPermissionApprovalListCallable(const DescribeMNPSensitiveAPIPermissionApprovalListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPSensitiveAPIPermissionApprovalListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPSensitiveAPIPermissionApprovalList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPSensitiveAPIPermissionApprovalListOutcome>>();
+    DescribeMNPSensitiveAPIPermissionApprovalListAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeMNPSensitiveAPIPermissionApprovalListRequest&,
+        DescribeMNPSensitiveAPIPermissionApprovalListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeMNPSensitiveAPIPermissionListOutcome TcmppClient::DescribeMNPSensitiveAPIPermissionList(const DescribeMNPSensitiveAPIPermissionListRequest &request)
@@ -2513,25 +2912,32 @@ TcmppClient::DescribeMNPSensitiveAPIPermissionListOutcome TcmppClient::DescribeM
 
 void TcmppClient::DescribeMNPSensitiveAPIPermissionListAsync(const DescribeMNPSensitiveAPIPermissionListRequest& request, const DescribeMNPSensitiveAPIPermissionListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPSensitiveAPIPermissionList(request), context);
-    };
+    using Req = const DescribeMNPSensitiveAPIPermissionListRequest&;
+    using Resp = DescribeMNPSensitiveAPIPermissionListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPSensitiveAPIPermissionList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeMNPSensitiveAPIPermissionListOutcomeCallable TcmppClient::DescribeMNPSensitiveAPIPermissionListCallable(const DescribeMNPSensitiveAPIPermissionListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPSensitiveAPIPermissionListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPSensitiveAPIPermissionList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPSensitiveAPIPermissionListOutcome>>();
+    DescribeMNPSensitiveAPIPermissionListAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeMNPSensitiveAPIPermissionListRequest&,
+        DescribeMNPSensitiveAPIPermissionListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeMNPTypeOutcome TcmppClient::DescribeMNPType(const DescribeMNPTypeRequest &request)
@@ -2556,25 +2962,32 @@ TcmppClient::DescribeMNPTypeOutcome TcmppClient::DescribeMNPType(const DescribeM
 
 void TcmppClient::DescribeMNPTypeAsync(const DescribeMNPTypeRequest& request, const DescribeMNPTypeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPType(request), context);
-    };
+    using Req = const DescribeMNPTypeRequest&;
+    using Resp = DescribeMNPTypeResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPType", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeMNPTypeOutcomeCallable TcmppClient::DescribeMNPTypeCallable(const DescribeMNPTypeRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPTypeOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPType(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPTypeOutcome>>();
+    DescribeMNPTypeAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeMNPTypeRequest&,
+        DescribeMNPTypeOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeMNPVersionOutcome TcmppClient::DescribeMNPVersion(const DescribeMNPVersionRequest &request)
@@ -2599,25 +3012,32 @@ TcmppClient::DescribeMNPVersionOutcome TcmppClient::DescribeMNPVersion(const Des
 
 void TcmppClient::DescribeMNPVersionAsync(const DescribeMNPVersionRequest& request, const DescribeMNPVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPVersion(request), context);
-    };
+    using Req = const DescribeMNPVersionRequest&;
+    using Resp = DescribeMNPVersionResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPVersion", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeMNPVersionOutcomeCallable TcmppClient::DescribeMNPVersionCallable(const DescribeMNPVersionRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPVersionOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPVersion(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPVersionOutcome>>();
+    DescribeMNPVersionAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeMNPVersionRequest&,
+        DescribeMNPVersionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeMNPVersionPreviewOutcome TcmppClient::DescribeMNPVersionPreview(const DescribeMNPVersionPreviewRequest &request)
@@ -2642,25 +3062,32 @@ TcmppClient::DescribeMNPVersionPreviewOutcome TcmppClient::DescribeMNPVersionPre
 
 void TcmppClient::DescribeMNPVersionPreviewAsync(const DescribeMNPVersionPreviewRequest& request, const DescribeMNPVersionPreviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeMNPVersionPreview(request), context);
-    };
+    using Req = const DescribeMNPVersionPreviewRequest&;
+    using Resp = DescribeMNPVersionPreviewResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPVersionPreview", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeMNPVersionPreviewOutcomeCallable TcmppClient::DescribeMNPVersionPreviewCallable(const DescribeMNPVersionPreviewRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMNPVersionPreviewOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeMNPVersionPreview(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeMNPVersionPreviewOutcome>>();
+    DescribeMNPVersionPreviewAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeMNPVersionPreviewRequest&,
+        DescribeMNPVersionPreviewOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeOfflineMNPPackageOutcome TcmppClient::DescribeOfflineMNPPackage(const DescribeOfflineMNPPackageRequest &request)
@@ -2685,25 +3112,32 @@ TcmppClient::DescribeOfflineMNPPackageOutcome TcmppClient::DescribeOfflineMNPPac
 
 void TcmppClient::DescribeOfflineMNPPackageAsync(const DescribeOfflineMNPPackageRequest& request, const DescribeOfflineMNPPackageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeOfflineMNPPackage(request), context);
-    };
+    using Req = const DescribeOfflineMNPPackageRequest&;
+    using Resp = DescribeOfflineMNPPackageResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeOfflineMNPPackage", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeOfflineMNPPackageOutcomeCallable TcmppClient::DescribeOfflineMNPPackageCallable(const DescribeOfflineMNPPackageRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeOfflineMNPPackageOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeOfflineMNPPackage(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeOfflineMNPPackageOutcome>>();
+    DescribeOfflineMNPPackageAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeOfflineMNPPackageRequest&,
+        DescribeOfflineMNPPackageOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeOnlineVersionOutcome TcmppClient::DescribeOnlineVersion(const DescribeOnlineVersionRequest &request)
@@ -2728,25 +3162,32 @@ TcmppClient::DescribeOnlineVersionOutcome TcmppClient::DescribeOnlineVersion(con
 
 void TcmppClient::DescribeOnlineVersionAsync(const DescribeOnlineVersionRequest& request, const DescribeOnlineVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeOnlineVersion(request), context);
-    };
+    using Req = const DescribeOnlineVersionRequest&;
+    using Resp = DescribeOnlineVersionResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeOnlineVersion", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeOnlineVersionOutcomeCallable TcmppClient::DescribeOnlineVersionCallable(const DescribeOnlineVersionRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeOnlineVersionOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeOnlineVersion(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeOnlineVersionOutcome>>();
+    DescribeOnlineVersionAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeOnlineVersionRequest&,
+        DescribeOnlineVersionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeRoleDetailOutcome TcmppClient::DescribeRoleDetail(const DescribeRoleDetailRequest &request)
@@ -2771,25 +3212,32 @@ TcmppClient::DescribeRoleDetailOutcome TcmppClient::DescribeRoleDetail(const Des
 
 void TcmppClient::DescribeRoleDetailAsync(const DescribeRoleDetailRequest& request, const DescribeRoleDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeRoleDetail(request), context);
-    };
+    using Req = const DescribeRoleDetailRequest&;
+    using Resp = DescribeRoleDetailResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeRoleDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeRoleDetailOutcomeCallable TcmppClient::DescribeRoleDetailCallable(const DescribeRoleDetailRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeRoleDetailOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeRoleDetail(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeRoleDetailOutcome>>();
+    DescribeRoleDetailAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeRoleDetailRequest&,
+        DescribeRoleDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeRoleListOutcome TcmppClient::DescribeRoleList(const DescribeRoleListRequest &request)
@@ -2814,25 +3262,32 @@ TcmppClient::DescribeRoleListOutcome TcmppClient::DescribeRoleList(const Describ
 
 void TcmppClient::DescribeRoleListAsync(const DescribeRoleListRequest& request, const DescribeRoleListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeRoleList(request), context);
-    };
+    using Req = const DescribeRoleListRequest&;
+    using Resp = DescribeRoleListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeRoleList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeRoleListOutcomeCallable TcmppClient::DescribeRoleListCallable(const DescribeRoleListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeRoleListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeRoleList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeRoleListOutcome>>();
+    DescribeRoleListAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeRoleListRequest&,
+        DescribeRoleListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeSensitiveAPIAuditListOutcome TcmppClient::DescribeSensitiveAPIAuditList(const DescribeSensitiveAPIAuditListRequest &request)
@@ -2857,25 +3312,32 @@ TcmppClient::DescribeSensitiveAPIAuditListOutcome TcmppClient::DescribeSensitive
 
 void TcmppClient::DescribeSensitiveAPIAuditListAsync(const DescribeSensitiveAPIAuditListRequest& request, const DescribeSensitiveAPIAuditListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeSensitiveAPIAuditList(request), context);
-    };
+    using Req = const DescribeSensitiveAPIAuditListRequest&;
+    using Resp = DescribeSensitiveAPIAuditListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeSensitiveAPIAuditList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeSensitiveAPIAuditListOutcomeCallable TcmppClient::DescribeSensitiveAPIAuditListCallable(const DescribeSensitiveAPIAuditListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeSensitiveAPIAuditListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeSensitiveAPIAuditList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeSensitiveAPIAuditListOutcome>>();
+    DescribeSensitiveAPIAuditListAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeSensitiveAPIAuditListRequest&,
+        DescribeSensitiveAPIAuditListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeSensitiveAPIListOutcome TcmppClient::DescribeSensitiveAPIList(const DescribeSensitiveAPIListRequest &request)
@@ -2900,25 +3362,32 @@ TcmppClient::DescribeSensitiveAPIListOutcome TcmppClient::DescribeSensitiveAPILi
 
 void TcmppClient::DescribeSensitiveAPIListAsync(const DescribeSensitiveAPIListRequest& request, const DescribeSensitiveAPIListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeSensitiveAPIList(request), context);
-    };
+    using Req = const DescribeSensitiveAPIListRequest&;
+    using Resp = DescribeSensitiveAPIListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeSensitiveAPIList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeSensitiveAPIListOutcomeCallable TcmppClient::DescribeSensitiveAPIListCallable(const DescribeSensitiveAPIListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeSensitiveAPIListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeSensitiveAPIList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeSensitiveAPIListOutcome>>();
+    DescribeSensitiveAPIListAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeSensitiveAPIListRequest&,
+        DescribeSensitiveAPIListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeSensitiveApiApplyDetailOutcome TcmppClient::DescribeSensitiveApiApplyDetail(const DescribeSensitiveApiApplyDetailRequest &request)
@@ -2943,25 +3412,32 @@ TcmppClient::DescribeSensitiveApiApplyDetailOutcome TcmppClient::DescribeSensiti
 
 void TcmppClient::DescribeSensitiveApiApplyDetailAsync(const DescribeSensitiveApiApplyDetailRequest& request, const DescribeSensitiveApiApplyDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeSensitiveApiApplyDetail(request), context);
-    };
+    using Req = const DescribeSensitiveApiApplyDetailRequest&;
+    using Resp = DescribeSensitiveApiApplyDetailResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeSensitiveApiApplyDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeSensitiveApiApplyDetailOutcomeCallable TcmppClient::DescribeSensitiveApiApplyDetailCallable(const DescribeSensitiveApiApplyDetailRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeSensitiveApiApplyDetailOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeSensitiveApiApplyDetail(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeSensitiveApiApplyDetailOutcome>>();
+    DescribeSensitiveApiApplyDetailAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeSensitiveApiApplyDetailRequest&,
+        DescribeSensitiveApiApplyDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeSensitiveApiAuthListOutcome TcmppClient::DescribeSensitiveApiAuthList(const DescribeSensitiveApiAuthListRequest &request)
@@ -2986,25 +3462,32 @@ TcmppClient::DescribeSensitiveApiAuthListOutcome TcmppClient::DescribeSensitiveA
 
 void TcmppClient::DescribeSensitiveApiAuthListAsync(const DescribeSensitiveApiAuthListRequest& request, const DescribeSensitiveApiAuthListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeSensitiveApiAuthList(request), context);
-    };
+    using Req = const DescribeSensitiveApiAuthListRequest&;
+    using Resp = DescribeSensitiveApiAuthListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeSensitiveApiAuthList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeSensitiveApiAuthListOutcomeCallable TcmppClient::DescribeSensitiveApiAuthListCallable(const DescribeSensitiveApiAuthListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeSensitiveApiAuthListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeSensitiveApiAuthList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeSensitiveApiAuthListOutcome>>();
+    DescribeSensitiveApiAuthListAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeSensitiveApiAuthListRequest&,
+        DescribeSensitiveApiAuthListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeSimpleApplicationInfoListOutcome TcmppClient::DescribeSimpleApplicationInfoList(const DescribeSimpleApplicationInfoListRequest &request)
@@ -3029,25 +3512,32 @@ TcmppClient::DescribeSimpleApplicationInfoListOutcome TcmppClient::DescribeSimpl
 
 void TcmppClient::DescribeSimpleApplicationInfoListAsync(const DescribeSimpleApplicationInfoListRequest& request, const DescribeSimpleApplicationInfoListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeSimpleApplicationInfoList(request), context);
-    };
+    using Req = const DescribeSimpleApplicationInfoListRequest&;
+    using Resp = DescribeSimpleApplicationInfoListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeSimpleApplicationInfoList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeSimpleApplicationInfoListOutcomeCallable TcmppClient::DescribeSimpleApplicationInfoListCallable(const DescribeSimpleApplicationInfoListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeSimpleApplicationInfoListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeSimpleApplicationInfoList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeSimpleApplicationInfoListOutcome>>();
+    DescribeSimpleApplicationInfoListAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeSimpleApplicationInfoListRequest&,
+        DescribeSimpleApplicationInfoListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeSimpleTeamListOutcome TcmppClient::DescribeSimpleTeamList(const DescribeSimpleTeamListRequest &request)
@@ -3072,25 +3562,32 @@ TcmppClient::DescribeSimpleTeamListOutcome TcmppClient::DescribeSimpleTeamList(c
 
 void TcmppClient::DescribeSimpleTeamListAsync(const DescribeSimpleTeamListRequest& request, const DescribeSimpleTeamListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeSimpleTeamList(request), context);
-    };
+    using Req = const DescribeSimpleTeamListRequest&;
+    using Resp = DescribeSimpleTeamListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeSimpleTeamList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeSimpleTeamListOutcomeCallable TcmppClient::DescribeSimpleTeamListCallable(const DescribeSimpleTeamListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeSimpleTeamListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeSimpleTeamList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeSimpleTeamListOutcome>>();
+    DescribeSimpleTeamListAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeSimpleTeamListRequest&,
+        DescribeSimpleTeamListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeTeamOutcome TcmppClient::DescribeTeam(const DescribeTeamRequest &request)
@@ -3115,25 +3612,32 @@ TcmppClient::DescribeTeamOutcome TcmppClient::DescribeTeam(const DescribeTeamReq
 
 void TcmppClient::DescribeTeamAsync(const DescribeTeamRequest& request, const DescribeTeamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTeam(request), context);
-    };
+    using Req = const DescribeTeamRequest&;
+    using Resp = DescribeTeamResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTeam", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeTeamOutcomeCallable TcmppClient::DescribeTeamCallable(const DescribeTeamRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTeamOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTeam(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTeamOutcome>>();
+    DescribeTeamAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeTeamRequest&,
+        DescribeTeamOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeTeamDomainListOutcome TcmppClient::DescribeTeamDomainList(const DescribeTeamDomainListRequest &request)
@@ -3158,25 +3662,32 @@ TcmppClient::DescribeTeamDomainListOutcome TcmppClient::DescribeTeamDomainList(c
 
 void TcmppClient::DescribeTeamDomainListAsync(const DescribeTeamDomainListRequest& request, const DescribeTeamDomainListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTeamDomainList(request), context);
-    };
+    using Req = const DescribeTeamDomainListRequest&;
+    using Resp = DescribeTeamDomainListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTeamDomainList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeTeamDomainListOutcomeCallable TcmppClient::DescribeTeamDomainListCallable(const DescribeTeamDomainListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTeamDomainListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTeamDomainList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTeamDomainListOutcome>>();
+    DescribeTeamDomainListAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeTeamDomainListRequest&,
+        DescribeTeamDomainListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeTeamListOutcome TcmppClient::DescribeTeamList(const DescribeTeamListRequest &request)
@@ -3201,25 +3712,32 @@ TcmppClient::DescribeTeamListOutcome TcmppClient::DescribeTeamList(const Describ
 
 void TcmppClient::DescribeTeamListAsync(const DescribeTeamListRequest& request, const DescribeTeamListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTeamList(request), context);
-    };
+    using Req = const DescribeTeamListRequest&;
+    using Resp = DescribeTeamListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTeamList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeTeamListOutcomeCallable TcmppClient::DescribeTeamListCallable(const DescribeTeamListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTeamListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTeamList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTeamListOutcome>>();
+    DescribeTeamListAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeTeamListRequest&,
+        DescribeTeamListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeTeamMemberListOutcome TcmppClient::DescribeTeamMemberList(const DescribeTeamMemberListRequest &request)
@@ -3244,25 +3762,32 @@ TcmppClient::DescribeTeamMemberListOutcome TcmppClient::DescribeTeamMemberList(c
 
 void TcmppClient::DescribeTeamMemberListAsync(const DescribeTeamMemberListRequest& request, const DescribeTeamMemberListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTeamMemberList(request), context);
-    };
+    using Req = const DescribeTeamMemberListRequest&;
+    using Resp = DescribeTeamMemberListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTeamMemberList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeTeamMemberListOutcomeCallable TcmppClient::DescribeTeamMemberListCallable(const DescribeTeamMemberListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTeamMemberListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTeamMemberList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTeamMemberListOutcome>>();
+    DescribeTeamMemberListAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeTeamMemberListRequest&,
+        DescribeTeamMemberListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeTeamMembersOutcome TcmppClient::DescribeTeamMembers(const DescribeTeamMembersRequest &request)
@@ -3287,25 +3812,32 @@ TcmppClient::DescribeTeamMembersOutcome TcmppClient::DescribeTeamMembers(const D
 
 void TcmppClient::DescribeTeamMembersAsync(const DescribeTeamMembersRequest& request, const DescribeTeamMembersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTeamMembers(request), context);
-    };
+    using Req = const DescribeTeamMembersRequest&;
+    using Resp = DescribeTeamMembersResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTeamMembers", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeTeamMembersOutcomeCallable TcmppClient::DescribeTeamMembersCallable(const DescribeTeamMembersRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTeamMembersOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTeamMembers(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTeamMembersOutcome>>();
+    DescribeTeamMembersAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeTeamMembersRequest&,
+        DescribeTeamMembersOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeTempSecret4UploadFile2CosOutcome TcmppClient::DescribeTempSecret4UploadFile2Cos(const DescribeTempSecret4UploadFile2CosRequest &request)
@@ -3330,25 +3862,32 @@ TcmppClient::DescribeTempSecret4UploadFile2CosOutcome TcmppClient::DescribeTempS
 
 void TcmppClient::DescribeTempSecret4UploadFile2CosAsync(const DescribeTempSecret4UploadFile2CosRequest& request, const DescribeTempSecret4UploadFile2CosAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTempSecret4UploadFile2Cos(request), context);
-    };
+    using Req = const DescribeTempSecret4UploadFile2CosRequest&;
+    using Resp = DescribeTempSecret4UploadFile2CosResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTempSecret4UploadFile2Cos", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeTempSecret4UploadFile2CosOutcomeCallable TcmppClient::DescribeTempSecret4UploadFile2CosCallable(const DescribeTempSecret4UploadFile2CosRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTempSecret4UploadFile2CosOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTempSecret4UploadFile2Cos(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTempSecret4UploadFile2CosOutcome>>();
+    DescribeTempSecret4UploadFile2CosAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeTempSecret4UploadFile2CosRequest&,
+        DescribeTempSecret4UploadFile2CosOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeUserOutcome TcmppClient::DescribeUser(const DescribeUserRequest &request)
@@ -3373,25 +3912,32 @@ TcmppClient::DescribeUserOutcome TcmppClient::DescribeUser(const DescribeUserReq
 
 void TcmppClient::DescribeUserAsync(const DescribeUserRequest& request, const DescribeUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeUser(request), context);
-    };
+    using Req = const DescribeUserRequest&;
+    using Resp = DescribeUserResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeUser", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeUserOutcomeCallable TcmppClient::DescribeUserCallable(const DescribeUserRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeUserOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeUser(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeUserOutcome>>();
+    DescribeUserAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeUserRequest&,
+        DescribeUserOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeUserDetailOutcome TcmppClient::DescribeUserDetail(const DescribeUserDetailRequest &request)
@@ -3416,25 +3962,32 @@ TcmppClient::DescribeUserDetailOutcome TcmppClient::DescribeUserDetail(const Des
 
 void TcmppClient::DescribeUserDetailAsync(const DescribeUserDetailRequest& request, const DescribeUserDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeUserDetail(request), context);
-    };
+    using Req = const DescribeUserDetailRequest&;
+    using Resp = DescribeUserDetailResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeUserDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeUserDetailOutcomeCallable TcmppClient::DescribeUserDetailCallable(const DescribeUserDetailRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeUserDetailOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeUserDetail(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeUserDetailOutcome>>();
+    DescribeUserDetailAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeUserDetailRequest&,
+        DescribeUserDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DescribeUserListOutcome TcmppClient::DescribeUserList(const DescribeUserListRequest &request)
@@ -3459,25 +4012,32 @@ TcmppClient::DescribeUserListOutcome TcmppClient::DescribeUserList(const Describ
 
 void TcmppClient::DescribeUserListAsync(const DescribeUserListRequest& request, const DescribeUserListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeUserList(request), context);
-    };
+    using Req = const DescribeUserListRequest&;
+    using Resp = DescribeUserListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeUserList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DescribeUserListOutcomeCallable TcmppClient::DescribeUserListCallable(const DescribeUserListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeUserListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeUserList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeUserListOutcome>>();
+    DescribeUserListAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DescribeUserListRequest&,
+        DescribeUserListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DisableApplicationSensitiveAPIOutcome TcmppClient::DisableApplicationSensitiveAPI(const DisableApplicationSensitiveAPIRequest &request)
@@ -3502,25 +4062,32 @@ TcmppClient::DisableApplicationSensitiveAPIOutcome TcmppClient::DisableApplicati
 
 void TcmppClient::DisableApplicationSensitiveAPIAsync(const DisableApplicationSensitiveAPIRequest& request, const DisableApplicationSensitiveAPIAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DisableApplicationSensitiveAPI(request), context);
-    };
+    using Req = const DisableApplicationSensitiveAPIRequest&;
+    using Resp = DisableApplicationSensitiveAPIResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DisableApplicationSensitiveAPI", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DisableApplicationSensitiveAPIOutcomeCallable TcmppClient::DisableApplicationSensitiveAPICallable(const DisableApplicationSensitiveAPIRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DisableApplicationSensitiveAPIOutcome()>>(
-        [this, request]()
-        {
-            return this->DisableApplicationSensitiveAPI(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DisableApplicationSensitiveAPIOutcome>>();
+    DisableApplicationSensitiveAPIAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DisableApplicationSensitiveAPIRequest&,
+        DisableApplicationSensitiveAPIOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::DisableTeamDomainOutcome TcmppClient::DisableTeamDomain(const DisableTeamDomainRequest &request)
@@ -3545,25 +4112,32 @@ TcmppClient::DisableTeamDomainOutcome TcmppClient::DisableTeamDomain(const Disab
 
 void TcmppClient::DisableTeamDomainAsync(const DisableTeamDomainRequest& request, const DisableTeamDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DisableTeamDomain(request), context);
-    };
+    using Req = const DisableTeamDomainRequest&;
+    using Resp = DisableTeamDomainResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DisableTeamDomain", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::DisableTeamDomainOutcomeCallable TcmppClient::DisableTeamDomainCallable(const DisableTeamDomainRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DisableTeamDomainOutcome()>>(
-        [this, request]()
-        {
-            return this->DisableTeamDomain(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DisableTeamDomainOutcome>>();
+    DisableTeamDomainAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const DisableTeamDomainRequest&,
+        DisableTeamDomainOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::EnableApplicationSensitiveAPIOutcome TcmppClient::EnableApplicationSensitiveAPI(const EnableApplicationSensitiveAPIRequest &request)
@@ -3588,25 +4162,32 @@ TcmppClient::EnableApplicationSensitiveAPIOutcome TcmppClient::EnableApplication
 
 void TcmppClient::EnableApplicationSensitiveAPIAsync(const EnableApplicationSensitiveAPIRequest& request, const EnableApplicationSensitiveAPIAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->EnableApplicationSensitiveAPI(request), context);
-    };
+    using Req = const EnableApplicationSensitiveAPIRequest&;
+    using Resp = EnableApplicationSensitiveAPIResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "EnableApplicationSensitiveAPI", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::EnableApplicationSensitiveAPIOutcomeCallable TcmppClient::EnableApplicationSensitiveAPICallable(const EnableApplicationSensitiveAPIRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<EnableApplicationSensitiveAPIOutcome()>>(
-        [this, request]()
-        {
-            return this->EnableApplicationSensitiveAPI(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<EnableApplicationSensitiveAPIOutcome>>();
+    EnableApplicationSensitiveAPIAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const EnableApplicationSensitiveAPIRequest&,
+        EnableApplicationSensitiveAPIOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::ModifyApplicationOutcome TcmppClient::ModifyApplication(const ModifyApplicationRequest &request)
@@ -3631,25 +4212,32 @@ TcmppClient::ModifyApplicationOutcome TcmppClient::ModifyApplication(const Modif
 
 void TcmppClient::ModifyApplicationAsync(const ModifyApplicationRequest& request, const ModifyApplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyApplication(request), context);
-    };
+    using Req = const ModifyApplicationRequest&;
+    using Resp = ModifyApplicationResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyApplication", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::ModifyApplicationOutcomeCallable TcmppClient::ModifyApplicationCallable(const ModifyApplicationRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyApplicationOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyApplication(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyApplicationOutcome>>();
+    ModifyApplicationAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const ModifyApplicationRequest&,
+        ModifyApplicationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::ModifyApplicationAppKeyOutcome TcmppClient::ModifyApplicationAppKey(const ModifyApplicationAppKeyRequest &request)
@@ -3674,25 +4262,32 @@ TcmppClient::ModifyApplicationAppKeyOutcome TcmppClient::ModifyApplicationAppKey
 
 void TcmppClient::ModifyApplicationAppKeyAsync(const ModifyApplicationAppKeyRequest& request, const ModifyApplicationAppKeyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyApplicationAppKey(request), context);
-    };
+    using Req = const ModifyApplicationAppKeyRequest&;
+    using Resp = ModifyApplicationAppKeyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyApplicationAppKey", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::ModifyApplicationAppKeyOutcomeCallable TcmppClient::ModifyApplicationAppKeyCallable(const ModifyApplicationAppKeyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyApplicationAppKeyOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyApplicationAppKey(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyApplicationAppKeyOutcome>>();
+    ModifyApplicationAppKeyAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const ModifyApplicationAppKeyRequest&,
+        ModifyApplicationAppKeyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::ModifyApplicationAppUrlOutcome TcmppClient::ModifyApplicationAppUrl(const ModifyApplicationAppUrlRequest &request)
@@ -3717,25 +4312,32 @@ TcmppClient::ModifyApplicationAppUrlOutcome TcmppClient::ModifyApplicationAppUrl
 
 void TcmppClient::ModifyApplicationAppUrlAsync(const ModifyApplicationAppUrlRequest& request, const ModifyApplicationAppUrlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyApplicationAppUrl(request), context);
-    };
+    using Req = const ModifyApplicationAppUrlRequest&;
+    using Resp = ModifyApplicationAppUrlResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyApplicationAppUrl", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::ModifyApplicationAppUrlOutcomeCallable TcmppClient::ModifyApplicationAppUrlCallable(const ModifyApplicationAppUrlRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyApplicationAppUrlOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyApplicationAppUrl(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyApplicationAppUrlOutcome>>();
+    ModifyApplicationAppUrlAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const ModifyApplicationAppUrlRequest&,
+        ModifyApplicationAppUrlOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::ModifyDomainOutcome TcmppClient::ModifyDomain(const ModifyDomainRequest &request)
@@ -3760,25 +4362,32 @@ TcmppClient::ModifyDomainOutcome TcmppClient::ModifyDomain(const ModifyDomainReq
 
 void TcmppClient::ModifyDomainAsync(const ModifyDomainRequest& request, const ModifyDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyDomain(request), context);
-    };
+    using Req = const ModifyDomainRequest&;
+    using Resp = ModifyDomainResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyDomain", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::ModifyDomainOutcomeCallable TcmppClient::ModifyDomainCallable(const ModifyDomainRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyDomainOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyDomain(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyDomainOutcome>>();
+    ModifyDomainAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const ModifyDomainRequest&,
+        ModifyDomainOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::ModifyGlobalDomainOutcome TcmppClient::ModifyGlobalDomain(const ModifyGlobalDomainRequest &request)
@@ -3803,25 +4412,32 @@ TcmppClient::ModifyGlobalDomainOutcome TcmppClient::ModifyGlobalDomain(const Mod
 
 void TcmppClient::ModifyGlobalDomainAsync(const ModifyGlobalDomainRequest& request, const ModifyGlobalDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyGlobalDomain(request), context);
-    };
+    using Req = const ModifyGlobalDomainRequest&;
+    using Resp = ModifyGlobalDomainResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyGlobalDomain", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::ModifyGlobalDomainOutcomeCallable TcmppClient::ModifyGlobalDomainCallable(const ModifyGlobalDomainRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyGlobalDomainOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyGlobalDomain(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyGlobalDomainOutcome>>();
+    ModifyGlobalDomainAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const ModifyGlobalDomainRequest&,
+        ModifyGlobalDomainOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::ModifyMNPOutcome TcmppClient::ModifyMNP(const ModifyMNPRequest &request)
@@ -3846,25 +4462,32 @@ TcmppClient::ModifyMNPOutcome TcmppClient::ModifyMNP(const ModifyMNPRequest &req
 
 void TcmppClient::ModifyMNPAsync(const ModifyMNPRequest& request, const ModifyMNPAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyMNP(request), context);
-    };
+    using Req = const ModifyMNPRequest&;
+    using Resp = ModifyMNPResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyMNP", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::ModifyMNPOutcomeCallable TcmppClient::ModifyMNPCallable(const ModifyMNPRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyMNPOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyMNP(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyMNPOutcome>>();
+    ModifyMNPAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const ModifyMNPRequest&,
+        ModifyMNPOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::ModifyMNPDomainOutcome TcmppClient::ModifyMNPDomain(const ModifyMNPDomainRequest &request)
@@ -3889,25 +4512,32 @@ TcmppClient::ModifyMNPDomainOutcome TcmppClient::ModifyMNPDomain(const ModifyMNP
 
 void TcmppClient::ModifyMNPDomainAsync(const ModifyMNPDomainRequest& request, const ModifyMNPDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyMNPDomain(request), context);
-    };
+    using Req = const ModifyMNPDomainRequest&;
+    using Resp = ModifyMNPDomainResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyMNPDomain", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::ModifyMNPDomainOutcomeCallable TcmppClient::ModifyMNPDomainCallable(const ModifyMNPDomainRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyMNPDomainOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyMNPDomain(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyMNPDomainOutcome>>();
+    ModifyMNPDomainAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const ModifyMNPDomainRequest&,
+        ModifyMNPDomainOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::ModifyMNPStatusOfflineOutcome TcmppClient::ModifyMNPStatusOffline(const ModifyMNPStatusOfflineRequest &request)
@@ -3932,25 +4562,32 @@ TcmppClient::ModifyMNPStatusOfflineOutcome TcmppClient::ModifyMNPStatusOffline(c
 
 void TcmppClient::ModifyMNPStatusOfflineAsync(const ModifyMNPStatusOfflineRequest& request, const ModifyMNPStatusOfflineAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyMNPStatusOffline(request), context);
-    };
+    using Req = const ModifyMNPStatusOfflineRequest&;
+    using Resp = ModifyMNPStatusOfflineResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyMNPStatusOffline", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::ModifyMNPStatusOfflineOutcomeCallable TcmppClient::ModifyMNPStatusOfflineCallable(const ModifyMNPStatusOfflineRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyMNPStatusOfflineOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyMNPStatusOffline(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyMNPStatusOfflineOutcome>>();
+    ModifyMNPStatusOfflineAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const ModifyMNPStatusOfflineRequest&,
+        ModifyMNPStatusOfflineOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::ModifyMNPVersionPreviewOutcome TcmppClient::ModifyMNPVersionPreview(const ModifyMNPVersionPreviewRequest &request)
@@ -3975,25 +4612,32 @@ TcmppClient::ModifyMNPVersionPreviewOutcome TcmppClient::ModifyMNPVersionPreview
 
 void TcmppClient::ModifyMNPVersionPreviewAsync(const ModifyMNPVersionPreviewRequest& request, const ModifyMNPVersionPreviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyMNPVersionPreview(request), context);
-    };
+    using Req = const ModifyMNPVersionPreviewRequest&;
+    using Resp = ModifyMNPVersionPreviewResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyMNPVersionPreview", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::ModifyMNPVersionPreviewOutcomeCallable TcmppClient::ModifyMNPVersionPreviewCallable(const ModifyMNPVersionPreviewRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyMNPVersionPreviewOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyMNPVersionPreview(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyMNPVersionPreviewOutcome>>();
+    ModifyMNPVersionPreviewAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const ModifyMNPVersionPreviewRequest&,
+        ModifyMNPVersionPreviewOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::ModifyOnlineVersionOutcome TcmppClient::ModifyOnlineVersion(const ModifyOnlineVersionRequest &request)
@@ -4018,25 +4662,32 @@ TcmppClient::ModifyOnlineVersionOutcome TcmppClient::ModifyOnlineVersion(const M
 
 void TcmppClient::ModifyOnlineVersionAsync(const ModifyOnlineVersionRequest& request, const ModifyOnlineVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyOnlineVersion(request), context);
-    };
+    using Req = const ModifyOnlineVersionRequest&;
+    using Resp = ModifyOnlineVersionResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyOnlineVersion", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::ModifyOnlineVersionOutcomeCallable TcmppClient::ModifyOnlineVersionCallable(const ModifyOnlineVersionRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyOnlineVersionOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyOnlineVersion(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyOnlineVersionOutcome>>();
+    ModifyOnlineVersionAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const ModifyOnlineVersionRequest&,
+        ModifyOnlineVersionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::ModifyPlatformAuditStatusOutcome TcmppClient::ModifyPlatformAuditStatus(const ModifyPlatformAuditStatusRequest &request)
@@ -4061,25 +4712,32 @@ TcmppClient::ModifyPlatformAuditStatusOutcome TcmppClient::ModifyPlatformAuditSt
 
 void TcmppClient::ModifyPlatformAuditStatusAsync(const ModifyPlatformAuditStatusRequest& request, const ModifyPlatformAuditStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyPlatformAuditStatus(request), context);
-    };
+    using Req = const ModifyPlatformAuditStatusRequest&;
+    using Resp = ModifyPlatformAuditStatusResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyPlatformAuditStatus", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::ModifyPlatformAuditStatusOutcomeCallable TcmppClient::ModifyPlatformAuditStatusCallable(const ModifyPlatformAuditStatusRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyPlatformAuditStatusOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyPlatformAuditStatus(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyPlatformAuditStatusOutcome>>();
+    ModifyPlatformAuditStatusAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const ModifyPlatformAuditStatusRequest&,
+        ModifyPlatformAuditStatusOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::ModifySensitiveAPIAuditStatusOutcome TcmppClient::ModifySensitiveAPIAuditStatus(const ModifySensitiveAPIAuditStatusRequest &request)
@@ -4104,25 +4762,32 @@ TcmppClient::ModifySensitiveAPIAuditStatusOutcome TcmppClient::ModifySensitiveAP
 
 void TcmppClient::ModifySensitiveAPIAuditStatusAsync(const ModifySensitiveAPIAuditStatusRequest& request, const ModifySensitiveAPIAuditStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifySensitiveAPIAuditStatus(request), context);
-    };
+    using Req = const ModifySensitiveAPIAuditStatusRequest&;
+    using Resp = ModifySensitiveAPIAuditStatusResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifySensitiveAPIAuditStatus", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::ModifySensitiveAPIAuditStatusOutcomeCallable TcmppClient::ModifySensitiveAPIAuditStatusCallable(const ModifySensitiveAPIAuditStatusRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifySensitiveAPIAuditStatusOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifySensitiveAPIAuditStatus(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifySensitiveAPIAuditStatusOutcome>>();
+    ModifySensitiveAPIAuditStatusAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const ModifySensitiveAPIAuditStatusRequest&,
+        ModifySensitiveAPIAuditStatusOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::ModifyTeamOutcome TcmppClient::ModifyTeam(const ModifyTeamRequest &request)
@@ -4147,25 +4812,32 @@ TcmppClient::ModifyTeamOutcome TcmppClient::ModifyTeam(const ModifyTeamRequest &
 
 void TcmppClient::ModifyTeamAsync(const ModifyTeamRequest& request, const ModifyTeamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyTeam(request), context);
-    };
+    using Req = const ModifyTeamRequest&;
+    using Resp = ModifyTeamResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyTeam", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::ModifyTeamOutcomeCallable TcmppClient::ModifyTeamCallable(const ModifyTeamRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyTeamOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyTeam(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyTeamOutcome>>();
+    ModifyTeamAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const ModifyTeamRequest&,
+        ModifyTeamOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::ModifyTeamMemberOutcome TcmppClient::ModifyTeamMember(const ModifyTeamMemberRequest &request)
@@ -4190,25 +4862,32 @@ TcmppClient::ModifyTeamMemberOutcome TcmppClient::ModifyTeamMember(const ModifyT
 
 void TcmppClient::ModifyTeamMemberAsync(const ModifyTeamMemberRequest& request, const ModifyTeamMemberAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyTeamMember(request), context);
-    };
+    using Req = const ModifyTeamMemberRequest&;
+    using Resp = ModifyTeamMemberResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyTeamMember", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::ModifyTeamMemberOutcomeCallable TcmppClient::ModifyTeamMemberCallable(const ModifyTeamMemberRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyTeamMemberOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyTeamMember(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyTeamMemberOutcome>>();
+    ModifyTeamMemberAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const ModifyTeamMemberRequest&,
+        ModifyTeamMemberOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::ModifyUserOutcome TcmppClient::ModifyUser(const ModifyUserRequest &request)
@@ -4233,25 +4912,32 @@ TcmppClient::ModifyUserOutcome TcmppClient::ModifyUser(const ModifyUserRequest &
 
 void TcmppClient::ModifyUserAsync(const ModifyUserRequest& request, const ModifyUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyUser(request), context);
-    };
+    using Req = const ModifyUserRequest&;
+    using Resp = ModifyUserResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyUser", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::ModifyUserOutcomeCallable TcmppClient::ModifyUserCallable(const ModifyUserRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyUserOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyUser(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyUserOutcome>>();
+    ModifyUserAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const ModifyUserRequest&,
+        ModifyUserOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::ModifyUserPasswordOutcome TcmppClient::ModifyUserPassword(const ModifyUserPasswordRequest &request)
@@ -4276,25 +4962,32 @@ TcmppClient::ModifyUserPasswordOutcome TcmppClient::ModifyUserPassword(const Mod
 
 void TcmppClient::ModifyUserPasswordAsync(const ModifyUserPasswordRequest& request, const ModifyUserPasswordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyUserPassword(request), context);
-    };
+    using Req = const ModifyUserPasswordRequest&;
+    using Resp = ModifyUserPasswordResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyUserPassword", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::ModifyUserPasswordOutcomeCallable TcmppClient::ModifyUserPasswordCallable(const ModifyUserPasswordRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyUserPasswordOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyUserPassword(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyUserPasswordOutcome>>();
+    ModifyUserPasswordAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const ModifyUserPasswordRequest&,
+        ModifyUserPasswordOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::ProcessMNPApprovalOutcome TcmppClient::ProcessMNPApproval(const ProcessMNPApprovalRequest &request)
@@ -4319,25 +5012,32 @@ TcmppClient::ProcessMNPApprovalOutcome TcmppClient::ProcessMNPApproval(const Pro
 
 void TcmppClient::ProcessMNPApprovalAsync(const ProcessMNPApprovalRequest& request, const ProcessMNPApprovalAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ProcessMNPApproval(request), context);
-    };
+    using Req = const ProcessMNPApprovalRequest&;
+    using Resp = ProcessMNPApprovalResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ProcessMNPApproval", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::ProcessMNPApprovalOutcomeCallable TcmppClient::ProcessMNPApprovalCallable(const ProcessMNPApprovalRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ProcessMNPApprovalOutcome()>>(
-        [this, request]()
-        {
-            return this->ProcessMNPApproval(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ProcessMNPApprovalOutcome>>();
+    ProcessMNPApprovalAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const ProcessMNPApprovalRequest&,
+        ProcessMNPApprovalOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::ProcessMNPSensitiveAPIPermissionApprovalOutcome TcmppClient::ProcessMNPSensitiveAPIPermissionApproval(const ProcessMNPSensitiveAPIPermissionApprovalRequest &request)
@@ -4362,25 +5062,32 @@ TcmppClient::ProcessMNPSensitiveAPIPermissionApprovalOutcome TcmppClient::Proces
 
 void TcmppClient::ProcessMNPSensitiveAPIPermissionApprovalAsync(const ProcessMNPSensitiveAPIPermissionApprovalRequest& request, const ProcessMNPSensitiveAPIPermissionApprovalAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ProcessMNPSensitiveAPIPermissionApproval(request), context);
-    };
+    using Req = const ProcessMNPSensitiveAPIPermissionApprovalRequest&;
+    using Resp = ProcessMNPSensitiveAPIPermissionApprovalResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ProcessMNPSensitiveAPIPermissionApproval", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::ProcessMNPSensitiveAPIPermissionApprovalOutcomeCallable TcmppClient::ProcessMNPSensitiveAPIPermissionApprovalCallable(const ProcessMNPSensitiveAPIPermissionApprovalRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ProcessMNPSensitiveAPIPermissionApprovalOutcome()>>(
-        [this, request]()
-        {
-            return this->ProcessMNPSensitiveAPIPermissionApproval(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ProcessMNPSensitiveAPIPermissionApprovalOutcome>>();
+    ProcessMNPSensitiveAPIPermissionApprovalAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const ProcessMNPSensitiveAPIPermissionApprovalRequest&,
+        ProcessMNPSensitiveAPIPermissionApprovalOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::ReleaseMNPVersionOutcome TcmppClient::ReleaseMNPVersion(const ReleaseMNPVersionRequest &request)
@@ -4405,25 +5112,32 @@ TcmppClient::ReleaseMNPVersionOutcome TcmppClient::ReleaseMNPVersion(const Relea
 
 void TcmppClient::ReleaseMNPVersionAsync(const ReleaseMNPVersionRequest& request, const ReleaseMNPVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ReleaseMNPVersion(request), context);
-    };
+    using Req = const ReleaseMNPVersionRequest&;
+    using Resp = ReleaseMNPVersionResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ReleaseMNPVersion", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::ReleaseMNPVersionOutcomeCallable TcmppClient::ReleaseMNPVersionCallable(const ReleaseMNPVersionRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ReleaseMNPVersionOutcome()>>(
-        [this, request]()
-        {
-            return this->ReleaseMNPVersion(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ReleaseMNPVersionOutcome>>();
+    ReleaseMNPVersionAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const ReleaseMNPVersionRequest&,
+        ReleaseMNPVersionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::RemoveMNPOutcome TcmppClient::RemoveMNP(const RemoveMNPRequest &request)
@@ -4448,25 +5162,32 @@ TcmppClient::RemoveMNPOutcome TcmppClient::RemoveMNP(const RemoveMNPRequest &req
 
 void TcmppClient::RemoveMNPAsync(const RemoveMNPRequest& request, const RemoveMNPAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->RemoveMNP(request), context);
-    };
+    using Req = const RemoveMNPRequest&;
+    using Resp = RemoveMNPResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "RemoveMNP", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::RemoveMNPOutcomeCallable TcmppClient::RemoveMNPCallable(const RemoveMNPRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<RemoveMNPOutcome()>>(
-        [this, request]()
-        {
-            return this->RemoveMNP(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<RemoveMNPOutcome>>();
+    RemoveMNPAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const RemoveMNPRequest&,
+        RemoveMNPOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 TcmppClient::RollbackMNPVersionOutcome TcmppClient::RollbackMNPVersion(const RollbackMNPVersionRequest &request)
@@ -4491,24 +5212,31 @@ TcmppClient::RollbackMNPVersionOutcome TcmppClient::RollbackMNPVersion(const Rol
 
 void TcmppClient::RollbackMNPVersionAsync(const RollbackMNPVersionRequest& request, const RollbackMNPVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->RollbackMNPVersion(request), context);
-    };
+    using Req = const RollbackMNPVersionRequest&;
+    using Resp = RollbackMNPVersionResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "RollbackMNPVersion", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TcmppClient::RollbackMNPVersionOutcomeCallable TcmppClient::RollbackMNPVersionCallable(const RollbackMNPVersionRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<RollbackMNPVersionOutcome()>>(
-        [this, request]()
-        {
-            return this->RollbackMNPVersion(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<RollbackMNPVersionOutcome>>();
+    RollbackMNPVersionAsync(
+    request,
+    [prom](
+        const TcmppClient*,
+        const RollbackMNPVersionRequest&,
+        RollbackMNPVersionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

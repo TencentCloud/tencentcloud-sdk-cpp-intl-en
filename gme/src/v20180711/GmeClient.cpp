@@ -62,25 +62,32 @@ GmeClient::CreateAppOutcome GmeClient::CreateApp(const CreateAppRequest &request
 
 void GmeClient::CreateAppAsync(const CreateAppRequest& request, const CreateAppAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateApp(request), context);
-    };
+    using Req = const CreateAppRequest&;
+    using Resp = CreateAppResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateApp", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GmeClient::CreateAppOutcomeCallable GmeClient::CreateAppCallable(const CreateAppRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateAppOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateApp(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateAppOutcome>>();
+    CreateAppAsync(
+    request,
+    [prom](
+        const GmeClient*,
+        const CreateAppRequest&,
+        CreateAppOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GmeClient::DeleteRoomMemberOutcome GmeClient::DeleteRoomMember(const DeleteRoomMemberRequest &request)
@@ -105,25 +112,32 @@ GmeClient::DeleteRoomMemberOutcome GmeClient::DeleteRoomMember(const DeleteRoomM
 
 void GmeClient::DeleteRoomMemberAsync(const DeleteRoomMemberRequest& request, const DeleteRoomMemberAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteRoomMember(request), context);
-    };
+    using Req = const DeleteRoomMemberRequest&;
+    using Resp = DeleteRoomMemberResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteRoomMember", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GmeClient::DeleteRoomMemberOutcomeCallable GmeClient::DeleteRoomMemberCallable(const DeleteRoomMemberRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteRoomMemberOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteRoomMember(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteRoomMemberOutcome>>();
+    DeleteRoomMemberAsync(
+    request,
+    [prom](
+        const GmeClient*,
+        const DeleteRoomMemberRequest&,
+        DeleteRoomMemberOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GmeClient::DescribeAppStatisticsOutcome GmeClient::DescribeAppStatistics(const DescribeAppStatisticsRequest &request)
@@ -148,25 +162,32 @@ GmeClient::DescribeAppStatisticsOutcome GmeClient::DescribeAppStatistics(const D
 
 void GmeClient::DescribeAppStatisticsAsync(const DescribeAppStatisticsRequest& request, const DescribeAppStatisticsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeAppStatistics(request), context);
-    };
+    using Req = const DescribeAppStatisticsRequest&;
+    using Resp = DescribeAppStatisticsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeAppStatistics", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GmeClient::DescribeAppStatisticsOutcomeCallable GmeClient::DescribeAppStatisticsCallable(const DescribeAppStatisticsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeAppStatisticsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeAppStatistics(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeAppStatisticsOutcome>>();
+    DescribeAppStatisticsAsync(
+    request,
+    [prom](
+        const GmeClient*,
+        const DescribeAppStatisticsRequest&,
+        DescribeAppStatisticsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GmeClient::DescribeApplicationDataOutcome GmeClient::DescribeApplicationData(const DescribeApplicationDataRequest &request)
@@ -191,25 +212,32 @@ GmeClient::DescribeApplicationDataOutcome GmeClient::DescribeApplicationData(con
 
 void GmeClient::DescribeApplicationDataAsync(const DescribeApplicationDataRequest& request, const DescribeApplicationDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeApplicationData(request), context);
-    };
+    using Req = const DescribeApplicationDataRequest&;
+    using Resp = DescribeApplicationDataResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeApplicationData", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GmeClient::DescribeApplicationDataOutcomeCallable GmeClient::DescribeApplicationDataCallable(const DescribeApplicationDataRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeApplicationDataOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeApplicationData(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeApplicationDataOutcome>>();
+    DescribeApplicationDataAsync(
+    request,
+    [prom](
+        const GmeClient*,
+        const DescribeApplicationDataRequest&,
+        DescribeApplicationDataOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GmeClient::DescribeRecordInfoOutcome GmeClient::DescribeRecordInfo(const DescribeRecordInfoRequest &request)
@@ -234,25 +262,32 @@ GmeClient::DescribeRecordInfoOutcome GmeClient::DescribeRecordInfo(const Describ
 
 void GmeClient::DescribeRecordInfoAsync(const DescribeRecordInfoRequest& request, const DescribeRecordInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeRecordInfo(request), context);
-    };
+    using Req = const DescribeRecordInfoRequest&;
+    using Resp = DescribeRecordInfoResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeRecordInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GmeClient::DescribeRecordInfoOutcomeCallable GmeClient::DescribeRecordInfoCallable(const DescribeRecordInfoRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeRecordInfoOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeRecordInfo(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeRecordInfoOutcome>>();
+    DescribeRecordInfoAsync(
+    request,
+    [prom](
+        const GmeClient*,
+        const DescribeRecordInfoRequest&,
+        DescribeRecordInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GmeClient::DescribeTaskInfoOutcome GmeClient::DescribeTaskInfo(const DescribeTaskInfoRequest &request)
@@ -277,25 +312,32 @@ GmeClient::DescribeTaskInfoOutcome GmeClient::DescribeTaskInfo(const DescribeTas
 
 void GmeClient::DescribeTaskInfoAsync(const DescribeTaskInfoRequest& request, const DescribeTaskInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTaskInfo(request), context);
-    };
+    using Req = const DescribeTaskInfoRequest&;
+    using Resp = DescribeTaskInfoResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTaskInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GmeClient::DescribeTaskInfoOutcomeCallable GmeClient::DescribeTaskInfoCallable(const DescribeTaskInfoRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTaskInfoOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTaskInfo(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTaskInfoOutcome>>();
+    DescribeTaskInfoAsync(
+    request,
+    [prom](
+        const GmeClient*,
+        const DescribeTaskInfoRequest&,
+        DescribeTaskInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GmeClient::ModifyAppStatusOutcome GmeClient::ModifyAppStatus(const ModifyAppStatusRequest &request)
@@ -320,25 +362,32 @@ GmeClient::ModifyAppStatusOutcome GmeClient::ModifyAppStatus(const ModifyAppStat
 
 void GmeClient::ModifyAppStatusAsync(const ModifyAppStatusRequest& request, const ModifyAppStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyAppStatus(request), context);
-    };
+    using Req = const ModifyAppStatusRequest&;
+    using Resp = ModifyAppStatusResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyAppStatus", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GmeClient::ModifyAppStatusOutcomeCallable GmeClient::ModifyAppStatusCallable(const ModifyAppStatusRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyAppStatusOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyAppStatus(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyAppStatusOutcome>>();
+    ModifyAppStatusAsync(
+    request,
+    [prom](
+        const GmeClient*,
+        const ModifyAppStatusRequest&,
+        ModifyAppStatusOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GmeClient::ModifyRecordInfoOutcome GmeClient::ModifyRecordInfo(const ModifyRecordInfoRequest &request)
@@ -363,25 +412,32 @@ GmeClient::ModifyRecordInfoOutcome GmeClient::ModifyRecordInfo(const ModifyRecor
 
 void GmeClient::ModifyRecordInfoAsync(const ModifyRecordInfoRequest& request, const ModifyRecordInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyRecordInfo(request), context);
-    };
+    using Req = const ModifyRecordInfoRequest&;
+    using Resp = ModifyRecordInfoResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyRecordInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GmeClient::ModifyRecordInfoOutcomeCallable GmeClient::ModifyRecordInfoCallable(const ModifyRecordInfoRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyRecordInfoOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyRecordInfo(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyRecordInfoOutcome>>();
+    ModifyRecordInfoAsync(
+    request,
+    [prom](
+        const GmeClient*,
+        const ModifyRecordInfoRequest&,
+        ModifyRecordInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GmeClient::StartRecordOutcome GmeClient::StartRecord(const StartRecordRequest &request)
@@ -406,25 +462,32 @@ GmeClient::StartRecordOutcome GmeClient::StartRecord(const StartRecordRequest &r
 
 void GmeClient::StartRecordAsync(const StartRecordRequest& request, const StartRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->StartRecord(request), context);
-    };
+    using Req = const StartRecordRequest&;
+    using Resp = StartRecordResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "StartRecord", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GmeClient::StartRecordOutcomeCallable GmeClient::StartRecordCallable(const StartRecordRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<StartRecordOutcome()>>(
-        [this, request]()
-        {
-            return this->StartRecord(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<StartRecordOutcome>>();
+    StartRecordAsync(
+    request,
+    [prom](
+        const GmeClient*,
+        const StartRecordRequest&,
+        StartRecordOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 GmeClient::StopRecordOutcome GmeClient::StopRecord(const StopRecordRequest &request)
@@ -449,24 +512,31 @@ GmeClient::StopRecordOutcome GmeClient::StopRecord(const StopRecordRequest &requ
 
 void GmeClient::StopRecordAsync(const StopRecordRequest& request, const StopRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->StopRecord(request), context);
-    };
+    using Req = const StopRecordRequest&;
+    using Resp = StopRecordResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "StopRecord", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 GmeClient::StopRecordOutcomeCallable GmeClient::StopRecordCallable(const StopRecordRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<StopRecordOutcome()>>(
-        [this, request]()
-        {
-            return this->StopRecord(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<StopRecordOutcome>>();
+    StopRecordAsync(
+    request,
+    [prom](
+        const GmeClient*,
+        const StopRecordRequest&,
+        StopRecordOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

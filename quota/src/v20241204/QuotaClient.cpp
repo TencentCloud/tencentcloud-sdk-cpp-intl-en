@@ -62,25 +62,32 @@ QuotaClient::CreateAlarmOutcome QuotaClient::CreateAlarm(const CreateAlarmReques
 
 void QuotaClient::CreateAlarmAsync(const CreateAlarmRequest& request, const CreateAlarmAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateAlarm(request), context);
-    };
+    using Req = const CreateAlarmRequest&;
+    using Resp = CreateAlarmResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateAlarm", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 QuotaClient::CreateAlarmOutcomeCallable QuotaClient::CreateAlarmCallable(const CreateAlarmRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateAlarmOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateAlarm(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateAlarmOutcome>>();
+    CreateAlarmAsync(
+    request,
+    [prom](
+        const QuotaClient*,
+        const CreateAlarmRequest&,
+        CreateAlarmOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 QuotaClient::DeleteAlarmOutcome QuotaClient::DeleteAlarm(const DeleteAlarmRequest &request)
@@ -105,25 +112,32 @@ QuotaClient::DeleteAlarmOutcome QuotaClient::DeleteAlarm(const DeleteAlarmReques
 
 void QuotaClient::DeleteAlarmAsync(const DeleteAlarmRequest& request, const DeleteAlarmAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteAlarm(request), context);
-    };
+    using Req = const DeleteAlarmRequest&;
+    using Resp = DeleteAlarmResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteAlarm", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 QuotaClient::DeleteAlarmOutcomeCallable QuotaClient::DeleteAlarmCallable(const DeleteAlarmRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteAlarmOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteAlarm(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteAlarmOutcome>>();
+    DeleteAlarmAsync(
+    request,
+    [prom](
+        const QuotaClient*,
+        const DeleteAlarmRequest&,
+        DeleteAlarmOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 QuotaClient::DescribeAlarmsOutcome QuotaClient::DescribeAlarms(const DescribeAlarmsRequest &request)
@@ -148,25 +162,32 @@ QuotaClient::DescribeAlarmsOutcome QuotaClient::DescribeAlarms(const DescribeAla
 
 void QuotaClient::DescribeAlarmsAsync(const DescribeAlarmsRequest& request, const DescribeAlarmsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeAlarms(request), context);
-    };
+    using Req = const DescribeAlarmsRequest&;
+    using Resp = DescribeAlarmsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeAlarms", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 QuotaClient::DescribeAlarmsOutcomeCallable QuotaClient::DescribeAlarmsCallable(const DescribeAlarmsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeAlarmsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeAlarms(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeAlarmsOutcome>>();
+    DescribeAlarmsAsync(
+    request,
+    [prom](
+        const QuotaClient*,
+        const DescribeAlarmsRequest&,
+        DescribeAlarmsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 QuotaClient::EnableAlarmOutcome QuotaClient::EnableAlarm(const EnableAlarmRequest &request)
@@ -191,25 +212,32 @@ QuotaClient::EnableAlarmOutcome QuotaClient::EnableAlarm(const EnableAlarmReques
 
 void QuotaClient::EnableAlarmAsync(const EnableAlarmRequest& request, const EnableAlarmAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->EnableAlarm(request), context);
-    };
+    using Req = const EnableAlarmRequest&;
+    using Resp = EnableAlarmResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "EnableAlarm", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 QuotaClient::EnableAlarmOutcomeCallable QuotaClient::EnableAlarmCallable(const EnableAlarmRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<EnableAlarmOutcome()>>(
-        [this, request]()
-        {
-            return this->EnableAlarm(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<EnableAlarmOutcome>>();
+    EnableAlarmAsync(
+    request,
+    [prom](
+        const QuotaClient*,
+        const EnableAlarmRequest&,
+        EnableAlarmOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 QuotaClient::UpdateAlarmOutcome QuotaClient::UpdateAlarm(const UpdateAlarmRequest &request)
@@ -234,24 +262,31 @@ QuotaClient::UpdateAlarmOutcome QuotaClient::UpdateAlarm(const UpdateAlarmReques
 
 void QuotaClient::UpdateAlarmAsync(const UpdateAlarmRequest& request, const UpdateAlarmAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->UpdateAlarm(request), context);
-    };
+    using Req = const UpdateAlarmRequest&;
+    using Resp = UpdateAlarmResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "UpdateAlarm", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 QuotaClient::UpdateAlarmOutcomeCallable QuotaClient::UpdateAlarmCallable(const UpdateAlarmRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<UpdateAlarmOutcome()>>(
-        [this, request]()
-        {
-            return this->UpdateAlarm(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<UpdateAlarmOutcome>>();
+    UpdateAlarmAsync(
+    request,
+    [prom](
+        const QuotaClient*,
+        const UpdateAlarmRequest&,
+        UpdateAlarmOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

@@ -62,24 +62,31 @@ RceClient::DescribeRiskAssessmentOutcome RceClient::DescribeRiskAssessment(const
 
 void RceClient::DescribeRiskAssessmentAsync(const DescribeRiskAssessmentRequest& request, const DescribeRiskAssessmentAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeRiskAssessment(request), context);
-    };
+    using Req = const DescribeRiskAssessmentRequest&;
+    using Resp = DescribeRiskAssessmentResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeRiskAssessment", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 RceClient::DescribeRiskAssessmentOutcomeCallable RceClient::DescribeRiskAssessmentCallable(const DescribeRiskAssessmentRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeRiskAssessmentOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeRiskAssessment(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeRiskAssessmentOutcome>>();
+    DescribeRiskAssessmentAsync(
+    request,
+    [prom](
+        const RceClient*,
+        const DescribeRiskAssessmentRequest&,
+        DescribeRiskAssessmentOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

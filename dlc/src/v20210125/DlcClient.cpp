@@ -62,25 +62,32 @@ DlcClient::AddUsersToWorkGroupOutcome DlcClient::AddUsersToWorkGroup(const AddUs
 
 void DlcClient::AddUsersToWorkGroupAsync(const AddUsersToWorkGroupRequest& request, const AddUsersToWorkGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->AddUsersToWorkGroup(request), context);
-    };
+    using Req = const AddUsersToWorkGroupRequest&;
+    using Resp = AddUsersToWorkGroupResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "AddUsersToWorkGroup", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::AddUsersToWorkGroupOutcomeCallable DlcClient::AddUsersToWorkGroupCallable(const AddUsersToWorkGroupRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<AddUsersToWorkGroupOutcome()>>(
-        [this, request]()
-        {
-            return this->AddUsersToWorkGroup(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<AddUsersToWorkGroupOutcome>>();
+    AddUsersToWorkGroupAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const AddUsersToWorkGroupRequest&,
+        AddUsersToWorkGroupOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::AlterDMSDatabaseOutcome DlcClient::AlterDMSDatabase(const AlterDMSDatabaseRequest &request)
@@ -105,25 +112,32 @@ DlcClient::AlterDMSDatabaseOutcome DlcClient::AlterDMSDatabase(const AlterDMSDat
 
 void DlcClient::AlterDMSDatabaseAsync(const AlterDMSDatabaseRequest& request, const AlterDMSDatabaseAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->AlterDMSDatabase(request), context);
-    };
+    using Req = const AlterDMSDatabaseRequest&;
+    using Resp = AlterDMSDatabaseResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "AlterDMSDatabase", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::AlterDMSDatabaseOutcomeCallable DlcClient::AlterDMSDatabaseCallable(const AlterDMSDatabaseRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<AlterDMSDatabaseOutcome()>>(
-        [this, request]()
-        {
-            return this->AlterDMSDatabase(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<AlterDMSDatabaseOutcome>>();
+    AlterDMSDatabaseAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const AlterDMSDatabaseRequest&,
+        AlterDMSDatabaseOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::AttachDataMaskPolicyOutcome DlcClient::AttachDataMaskPolicy(const AttachDataMaskPolicyRequest &request)
@@ -148,25 +162,32 @@ DlcClient::AttachDataMaskPolicyOutcome DlcClient::AttachDataMaskPolicy(const Att
 
 void DlcClient::AttachDataMaskPolicyAsync(const AttachDataMaskPolicyRequest& request, const AttachDataMaskPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->AttachDataMaskPolicy(request), context);
-    };
+    using Req = const AttachDataMaskPolicyRequest&;
+    using Resp = AttachDataMaskPolicyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "AttachDataMaskPolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::AttachDataMaskPolicyOutcomeCallable DlcClient::AttachDataMaskPolicyCallable(const AttachDataMaskPolicyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<AttachDataMaskPolicyOutcome()>>(
-        [this, request]()
-        {
-            return this->AttachDataMaskPolicy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<AttachDataMaskPolicyOutcome>>();
+    AttachDataMaskPolicyAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const AttachDataMaskPolicyRequest&,
+        AttachDataMaskPolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::AttachUserPolicyOutcome DlcClient::AttachUserPolicy(const AttachUserPolicyRequest &request)
@@ -191,25 +212,32 @@ DlcClient::AttachUserPolicyOutcome DlcClient::AttachUserPolicy(const AttachUserP
 
 void DlcClient::AttachUserPolicyAsync(const AttachUserPolicyRequest& request, const AttachUserPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->AttachUserPolicy(request), context);
-    };
+    using Req = const AttachUserPolicyRequest&;
+    using Resp = AttachUserPolicyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "AttachUserPolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::AttachUserPolicyOutcomeCallable DlcClient::AttachUserPolicyCallable(const AttachUserPolicyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<AttachUserPolicyOutcome()>>(
-        [this, request]()
-        {
-            return this->AttachUserPolicy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<AttachUserPolicyOutcome>>();
+    AttachUserPolicyAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const AttachUserPolicyRequest&,
+        AttachUserPolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::AttachWorkGroupPolicyOutcome DlcClient::AttachWorkGroupPolicy(const AttachWorkGroupPolicyRequest &request)
@@ -234,25 +262,32 @@ DlcClient::AttachWorkGroupPolicyOutcome DlcClient::AttachWorkGroupPolicy(const A
 
 void DlcClient::AttachWorkGroupPolicyAsync(const AttachWorkGroupPolicyRequest& request, const AttachWorkGroupPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->AttachWorkGroupPolicy(request), context);
-    };
+    using Req = const AttachWorkGroupPolicyRequest&;
+    using Resp = AttachWorkGroupPolicyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "AttachWorkGroupPolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::AttachWorkGroupPolicyOutcomeCallable DlcClient::AttachWorkGroupPolicyCallable(const AttachWorkGroupPolicyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<AttachWorkGroupPolicyOutcome()>>(
-        [this, request]()
-        {
-            return this->AttachWorkGroupPolicy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<AttachWorkGroupPolicyOutcome>>();
+    AttachWorkGroupPolicyAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const AttachWorkGroupPolicyRequest&,
+        AttachWorkGroupPolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::BindWorkGroupsToUserOutcome DlcClient::BindWorkGroupsToUser(const BindWorkGroupsToUserRequest &request)
@@ -277,25 +312,32 @@ DlcClient::BindWorkGroupsToUserOutcome DlcClient::BindWorkGroupsToUser(const Bin
 
 void DlcClient::BindWorkGroupsToUserAsync(const BindWorkGroupsToUserRequest& request, const BindWorkGroupsToUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->BindWorkGroupsToUser(request), context);
-    };
+    using Req = const BindWorkGroupsToUserRequest&;
+    using Resp = BindWorkGroupsToUserResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "BindWorkGroupsToUser", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::BindWorkGroupsToUserOutcomeCallable DlcClient::BindWorkGroupsToUserCallable(const BindWorkGroupsToUserRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<BindWorkGroupsToUserOutcome()>>(
-        [this, request]()
-        {
-            return this->BindWorkGroupsToUser(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<BindWorkGroupsToUserOutcome>>();
+    BindWorkGroupsToUserAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const BindWorkGroupsToUserRequest&,
+        BindWorkGroupsToUserOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::CancelSparkSessionBatchSQLOutcome DlcClient::CancelSparkSessionBatchSQL(const CancelSparkSessionBatchSQLRequest &request)
@@ -320,25 +362,32 @@ DlcClient::CancelSparkSessionBatchSQLOutcome DlcClient::CancelSparkSessionBatchS
 
 void DlcClient::CancelSparkSessionBatchSQLAsync(const CancelSparkSessionBatchSQLRequest& request, const CancelSparkSessionBatchSQLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CancelSparkSessionBatchSQL(request), context);
-    };
+    using Req = const CancelSparkSessionBatchSQLRequest&;
+    using Resp = CancelSparkSessionBatchSQLResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CancelSparkSessionBatchSQL", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::CancelSparkSessionBatchSQLOutcomeCallable DlcClient::CancelSparkSessionBatchSQLCallable(const CancelSparkSessionBatchSQLRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CancelSparkSessionBatchSQLOutcome()>>(
-        [this, request]()
-        {
-            return this->CancelSparkSessionBatchSQL(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CancelSparkSessionBatchSQLOutcome>>();
+    CancelSparkSessionBatchSQLAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const CancelSparkSessionBatchSQLRequest&,
+        CancelSparkSessionBatchSQLOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::CancelTaskOutcome DlcClient::CancelTask(const CancelTaskRequest &request)
@@ -363,25 +412,32 @@ DlcClient::CancelTaskOutcome DlcClient::CancelTask(const CancelTaskRequest &requ
 
 void DlcClient::CancelTaskAsync(const CancelTaskRequest& request, const CancelTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CancelTask(request), context);
-    };
+    using Req = const CancelTaskRequest&;
+    using Resp = CancelTaskResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CancelTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::CancelTaskOutcomeCallable DlcClient::CancelTaskCallable(const CancelTaskRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CancelTaskOutcome()>>(
-        [this, request]()
-        {
-            return this->CancelTask(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CancelTaskOutcome>>();
+    CancelTaskAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const CancelTaskRequest&,
+        CancelTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::CheckDataEngineConfigPairsValidityOutcome DlcClient::CheckDataEngineConfigPairsValidity(const CheckDataEngineConfigPairsValidityRequest &request)
@@ -406,25 +462,32 @@ DlcClient::CheckDataEngineConfigPairsValidityOutcome DlcClient::CheckDataEngineC
 
 void DlcClient::CheckDataEngineConfigPairsValidityAsync(const CheckDataEngineConfigPairsValidityRequest& request, const CheckDataEngineConfigPairsValidityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CheckDataEngineConfigPairsValidity(request), context);
-    };
+    using Req = const CheckDataEngineConfigPairsValidityRequest&;
+    using Resp = CheckDataEngineConfigPairsValidityResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CheckDataEngineConfigPairsValidity", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::CheckDataEngineConfigPairsValidityOutcomeCallable DlcClient::CheckDataEngineConfigPairsValidityCallable(const CheckDataEngineConfigPairsValidityRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CheckDataEngineConfigPairsValidityOutcome()>>(
-        [this, request]()
-        {
-            return this->CheckDataEngineConfigPairsValidity(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CheckDataEngineConfigPairsValidityOutcome>>();
+    CheckDataEngineConfigPairsValidityAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const CheckDataEngineConfigPairsValidityRequest&,
+        CheckDataEngineConfigPairsValidityOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::CheckDataEngineImageCanBeRollbackOutcome DlcClient::CheckDataEngineImageCanBeRollback(const CheckDataEngineImageCanBeRollbackRequest &request)
@@ -449,25 +512,32 @@ DlcClient::CheckDataEngineImageCanBeRollbackOutcome DlcClient::CheckDataEngineIm
 
 void DlcClient::CheckDataEngineImageCanBeRollbackAsync(const CheckDataEngineImageCanBeRollbackRequest& request, const CheckDataEngineImageCanBeRollbackAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CheckDataEngineImageCanBeRollback(request), context);
-    };
+    using Req = const CheckDataEngineImageCanBeRollbackRequest&;
+    using Resp = CheckDataEngineImageCanBeRollbackResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CheckDataEngineImageCanBeRollback", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::CheckDataEngineImageCanBeRollbackOutcomeCallable DlcClient::CheckDataEngineImageCanBeRollbackCallable(const CheckDataEngineImageCanBeRollbackRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CheckDataEngineImageCanBeRollbackOutcome()>>(
-        [this, request]()
-        {
-            return this->CheckDataEngineImageCanBeRollback(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CheckDataEngineImageCanBeRollbackOutcome>>();
+    CheckDataEngineImageCanBeRollbackAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const CheckDataEngineImageCanBeRollbackRequest&,
+        CheckDataEngineImageCanBeRollbackOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::CheckDataEngineImageCanBeUpgradeOutcome DlcClient::CheckDataEngineImageCanBeUpgrade(const CheckDataEngineImageCanBeUpgradeRequest &request)
@@ -492,25 +562,32 @@ DlcClient::CheckDataEngineImageCanBeUpgradeOutcome DlcClient::CheckDataEngineIma
 
 void DlcClient::CheckDataEngineImageCanBeUpgradeAsync(const CheckDataEngineImageCanBeUpgradeRequest& request, const CheckDataEngineImageCanBeUpgradeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CheckDataEngineImageCanBeUpgrade(request), context);
-    };
+    using Req = const CheckDataEngineImageCanBeUpgradeRequest&;
+    using Resp = CheckDataEngineImageCanBeUpgradeResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CheckDataEngineImageCanBeUpgrade", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::CheckDataEngineImageCanBeUpgradeOutcomeCallable DlcClient::CheckDataEngineImageCanBeUpgradeCallable(const CheckDataEngineImageCanBeUpgradeRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CheckDataEngineImageCanBeUpgradeOutcome()>>(
-        [this, request]()
-        {
-            return this->CheckDataEngineImageCanBeUpgrade(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CheckDataEngineImageCanBeUpgradeOutcome>>();
+    CheckDataEngineImageCanBeUpgradeAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const CheckDataEngineImageCanBeUpgradeRequest&,
+        CheckDataEngineImageCanBeUpgradeOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::CheckGrantedPermissionOutcome DlcClient::CheckGrantedPermission(const CheckGrantedPermissionRequest &request)
@@ -535,25 +612,32 @@ DlcClient::CheckGrantedPermissionOutcome DlcClient::CheckGrantedPermission(const
 
 void DlcClient::CheckGrantedPermissionAsync(const CheckGrantedPermissionRequest& request, const CheckGrantedPermissionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CheckGrantedPermission(request), context);
-    };
+    using Req = const CheckGrantedPermissionRequest&;
+    using Resp = CheckGrantedPermissionResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CheckGrantedPermission", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::CheckGrantedPermissionOutcomeCallable DlcClient::CheckGrantedPermissionCallable(const CheckGrantedPermissionRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CheckGrantedPermissionOutcome()>>(
-        [this, request]()
-        {
-            return this->CheckGrantedPermission(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CheckGrantedPermissionOutcome>>();
+    CheckGrantedPermissionAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const CheckGrantedPermissionRequest&,
+        CheckGrantedPermissionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::CopyDLCTableOutcome DlcClient::CopyDLCTable(const CopyDLCTableRequest &request)
@@ -578,25 +662,32 @@ DlcClient::CopyDLCTableOutcome DlcClient::CopyDLCTable(const CopyDLCTableRequest
 
 void DlcClient::CopyDLCTableAsync(const CopyDLCTableRequest& request, const CopyDLCTableAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CopyDLCTable(request), context);
-    };
+    using Req = const CopyDLCTableRequest&;
+    using Resp = CopyDLCTableResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CopyDLCTable", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::CopyDLCTableOutcomeCallable DlcClient::CopyDLCTableCallable(const CopyDLCTableRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CopyDLCTableOutcome()>>(
-        [this, request]()
-        {
-            return this->CopyDLCTable(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CopyDLCTableOutcome>>();
+    CopyDLCTableAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const CopyDLCTableRequest&,
+        CopyDLCTableOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::CreateCHDFSBindingProductOutcome DlcClient::CreateCHDFSBindingProduct(const CreateCHDFSBindingProductRequest &request)
@@ -621,25 +712,32 @@ DlcClient::CreateCHDFSBindingProductOutcome DlcClient::CreateCHDFSBindingProduct
 
 void DlcClient::CreateCHDFSBindingProductAsync(const CreateCHDFSBindingProductRequest& request, const CreateCHDFSBindingProductAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateCHDFSBindingProduct(request), context);
-    };
+    using Req = const CreateCHDFSBindingProductRequest&;
+    using Resp = CreateCHDFSBindingProductResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateCHDFSBindingProduct", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::CreateCHDFSBindingProductOutcomeCallable DlcClient::CreateCHDFSBindingProductCallable(const CreateCHDFSBindingProductRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateCHDFSBindingProductOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateCHDFSBindingProduct(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateCHDFSBindingProductOutcome>>();
+    CreateCHDFSBindingProductAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const CreateCHDFSBindingProductRequest&,
+        CreateCHDFSBindingProductOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::CreateDLCTableOutcome DlcClient::CreateDLCTable(const CreateDLCTableRequest &request)
@@ -664,25 +762,32 @@ DlcClient::CreateDLCTableOutcome DlcClient::CreateDLCTable(const CreateDLCTableR
 
 void DlcClient::CreateDLCTableAsync(const CreateDLCTableRequest& request, const CreateDLCTableAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateDLCTable(request), context);
-    };
+    using Req = const CreateDLCTableRequest&;
+    using Resp = CreateDLCTableResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateDLCTable", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::CreateDLCTableOutcomeCallable DlcClient::CreateDLCTableCallable(const CreateDLCTableRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateDLCTableOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateDLCTable(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateDLCTableOutcome>>();
+    CreateDLCTableAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const CreateDLCTableRequest&,
+        CreateDLCTableOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::CreateDMSDatabaseOutcome DlcClient::CreateDMSDatabase(const CreateDMSDatabaseRequest &request)
@@ -707,25 +812,32 @@ DlcClient::CreateDMSDatabaseOutcome DlcClient::CreateDMSDatabase(const CreateDMS
 
 void DlcClient::CreateDMSDatabaseAsync(const CreateDMSDatabaseRequest& request, const CreateDMSDatabaseAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateDMSDatabase(request), context);
-    };
+    using Req = const CreateDMSDatabaseRequest&;
+    using Resp = CreateDMSDatabaseResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateDMSDatabase", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::CreateDMSDatabaseOutcomeCallable DlcClient::CreateDMSDatabaseCallable(const CreateDMSDatabaseRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateDMSDatabaseOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateDMSDatabase(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateDMSDatabaseOutcome>>();
+    CreateDMSDatabaseAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const CreateDMSDatabaseRequest&,
+        CreateDMSDatabaseOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::CreateDataEngineOutcome DlcClient::CreateDataEngine(const CreateDataEngineRequest &request)
@@ -750,25 +862,32 @@ DlcClient::CreateDataEngineOutcome DlcClient::CreateDataEngine(const CreateDataE
 
 void DlcClient::CreateDataEngineAsync(const CreateDataEngineRequest& request, const CreateDataEngineAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateDataEngine(request), context);
-    };
+    using Req = const CreateDataEngineRequest&;
+    using Resp = CreateDataEngineResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateDataEngine", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::CreateDataEngineOutcomeCallable DlcClient::CreateDataEngineCallable(const CreateDataEngineRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateDataEngineOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateDataEngine(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateDataEngineOutcome>>();
+    CreateDataEngineAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const CreateDataEngineRequest&,
+        CreateDataEngineOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::CreateDataMaskStrategyOutcome DlcClient::CreateDataMaskStrategy(const CreateDataMaskStrategyRequest &request)
@@ -793,25 +912,32 @@ DlcClient::CreateDataMaskStrategyOutcome DlcClient::CreateDataMaskStrategy(const
 
 void DlcClient::CreateDataMaskStrategyAsync(const CreateDataMaskStrategyRequest& request, const CreateDataMaskStrategyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateDataMaskStrategy(request), context);
-    };
+    using Req = const CreateDataMaskStrategyRequest&;
+    using Resp = CreateDataMaskStrategyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateDataMaskStrategy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::CreateDataMaskStrategyOutcomeCallable DlcClient::CreateDataMaskStrategyCallable(const CreateDataMaskStrategyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateDataMaskStrategyOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateDataMaskStrategy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateDataMaskStrategyOutcome>>();
+    CreateDataMaskStrategyAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const CreateDataMaskStrategyRequest&,
+        CreateDataMaskStrategyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::CreateInternalTableOutcome DlcClient::CreateInternalTable(const CreateInternalTableRequest &request)
@@ -836,25 +962,32 @@ DlcClient::CreateInternalTableOutcome DlcClient::CreateInternalTable(const Creat
 
 void DlcClient::CreateInternalTableAsync(const CreateInternalTableRequest& request, const CreateInternalTableAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateInternalTable(request), context);
-    };
+    using Req = const CreateInternalTableRequest&;
+    using Resp = CreateInternalTableResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateInternalTable", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::CreateInternalTableOutcomeCallable DlcClient::CreateInternalTableCallable(const CreateInternalTableRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateInternalTableOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateInternalTable(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateInternalTableOutcome>>();
+    CreateInternalTableAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const CreateInternalTableRequest&,
+        CreateInternalTableOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::CreateResultDownloadOutcome DlcClient::CreateResultDownload(const CreateResultDownloadRequest &request)
@@ -879,25 +1012,32 @@ DlcClient::CreateResultDownloadOutcome DlcClient::CreateResultDownload(const Cre
 
 void DlcClient::CreateResultDownloadAsync(const CreateResultDownloadRequest& request, const CreateResultDownloadAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateResultDownload(request), context);
-    };
+    using Req = const CreateResultDownloadRequest&;
+    using Resp = CreateResultDownloadResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateResultDownload", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::CreateResultDownloadOutcomeCallable DlcClient::CreateResultDownloadCallable(const CreateResultDownloadRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateResultDownloadOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateResultDownload(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateResultDownloadOutcome>>();
+    CreateResultDownloadAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const CreateResultDownloadRequest&,
+        CreateResultDownloadOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::CreateSparkAppOutcome DlcClient::CreateSparkApp(const CreateSparkAppRequest &request)
@@ -922,25 +1062,32 @@ DlcClient::CreateSparkAppOutcome DlcClient::CreateSparkApp(const CreateSparkAppR
 
 void DlcClient::CreateSparkAppAsync(const CreateSparkAppRequest& request, const CreateSparkAppAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateSparkApp(request), context);
-    };
+    using Req = const CreateSparkAppRequest&;
+    using Resp = CreateSparkAppResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateSparkApp", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::CreateSparkAppOutcomeCallable DlcClient::CreateSparkAppCallable(const CreateSparkAppRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateSparkAppOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateSparkApp(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateSparkAppOutcome>>();
+    CreateSparkAppAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const CreateSparkAppRequest&,
+        CreateSparkAppOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::CreateSparkAppTaskOutcome DlcClient::CreateSparkAppTask(const CreateSparkAppTaskRequest &request)
@@ -965,25 +1112,32 @@ DlcClient::CreateSparkAppTaskOutcome DlcClient::CreateSparkAppTask(const CreateS
 
 void DlcClient::CreateSparkAppTaskAsync(const CreateSparkAppTaskRequest& request, const CreateSparkAppTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateSparkAppTask(request), context);
-    };
+    using Req = const CreateSparkAppTaskRequest&;
+    using Resp = CreateSparkAppTaskResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateSparkAppTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::CreateSparkAppTaskOutcomeCallable DlcClient::CreateSparkAppTaskCallable(const CreateSparkAppTaskRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateSparkAppTaskOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateSparkAppTask(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateSparkAppTaskOutcome>>();
+    CreateSparkAppTaskAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const CreateSparkAppTaskRequest&,
+        CreateSparkAppTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::CreateSparkSessionBatchSQLOutcome DlcClient::CreateSparkSessionBatchSQL(const CreateSparkSessionBatchSQLRequest &request)
@@ -1008,25 +1162,32 @@ DlcClient::CreateSparkSessionBatchSQLOutcome DlcClient::CreateSparkSessionBatchS
 
 void DlcClient::CreateSparkSessionBatchSQLAsync(const CreateSparkSessionBatchSQLRequest& request, const CreateSparkSessionBatchSQLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateSparkSessionBatchSQL(request), context);
-    };
+    using Req = const CreateSparkSessionBatchSQLRequest&;
+    using Resp = CreateSparkSessionBatchSQLResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateSparkSessionBatchSQL", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::CreateSparkSessionBatchSQLOutcomeCallable DlcClient::CreateSparkSessionBatchSQLCallable(const CreateSparkSessionBatchSQLRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateSparkSessionBatchSQLOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateSparkSessionBatchSQL(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateSparkSessionBatchSQLOutcome>>();
+    CreateSparkSessionBatchSQLAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const CreateSparkSessionBatchSQLRequest&,
+        CreateSparkSessionBatchSQLOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::CreateStoreLocationOutcome DlcClient::CreateStoreLocation(const CreateStoreLocationRequest &request)
@@ -1051,25 +1212,32 @@ DlcClient::CreateStoreLocationOutcome DlcClient::CreateStoreLocation(const Creat
 
 void DlcClient::CreateStoreLocationAsync(const CreateStoreLocationRequest& request, const CreateStoreLocationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateStoreLocation(request), context);
-    };
+    using Req = const CreateStoreLocationRequest&;
+    using Resp = CreateStoreLocationResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateStoreLocation", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::CreateStoreLocationOutcomeCallable DlcClient::CreateStoreLocationCallable(const CreateStoreLocationRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateStoreLocationOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateStoreLocation(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateStoreLocationOutcome>>();
+    CreateStoreLocationAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const CreateStoreLocationRequest&,
+        CreateStoreLocationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::CreateTaskOutcome DlcClient::CreateTask(const CreateTaskRequest &request)
@@ -1094,25 +1262,32 @@ DlcClient::CreateTaskOutcome DlcClient::CreateTask(const CreateTaskRequest &requ
 
 void DlcClient::CreateTaskAsync(const CreateTaskRequest& request, const CreateTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateTask(request), context);
-    };
+    using Req = const CreateTaskRequest&;
+    using Resp = CreateTaskResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::CreateTaskOutcomeCallable DlcClient::CreateTaskCallable(const CreateTaskRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateTaskOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateTask(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateTaskOutcome>>();
+    CreateTaskAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const CreateTaskRequest&,
+        CreateTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::CreateTasksOutcome DlcClient::CreateTasks(const CreateTasksRequest &request)
@@ -1137,25 +1312,32 @@ DlcClient::CreateTasksOutcome DlcClient::CreateTasks(const CreateTasksRequest &r
 
 void DlcClient::CreateTasksAsync(const CreateTasksRequest& request, const CreateTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateTasks(request), context);
-    };
+    using Req = const CreateTasksRequest&;
+    using Resp = CreateTasksResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateTasks", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::CreateTasksOutcomeCallable DlcClient::CreateTasksCallable(const CreateTasksRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateTasksOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateTasks(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateTasksOutcome>>();
+    CreateTasksAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const CreateTasksRequest&,
+        CreateTasksOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::CreateUserOutcome DlcClient::CreateUser(const CreateUserRequest &request)
@@ -1180,25 +1362,32 @@ DlcClient::CreateUserOutcome DlcClient::CreateUser(const CreateUserRequest &requ
 
 void DlcClient::CreateUserAsync(const CreateUserRequest& request, const CreateUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateUser(request), context);
-    };
+    using Req = const CreateUserRequest&;
+    using Resp = CreateUserResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateUser", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::CreateUserOutcomeCallable DlcClient::CreateUserCallable(const CreateUserRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateUserOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateUser(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateUserOutcome>>();
+    CreateUserAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const CreateUserRequest&,
+        CreateUserOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::CreateWorkGroupOutcome DlcClient::CreateWorkGroup(const CreateWorkGroupRequest &request)
@@ -1223,25 +1412,32 @@ DlcClient::CreateWorkGroupOutcome DlcClient::CreateWorkGroup(const CreateWorkGro
 
 void DlcClient::CreateWorkGroupAsync(const CreateWorkGroupRequest& request, const CreateWorkGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateWorkGroup(request), context);
-    };
+    using Req = const CreateWorkGroupRequest&;
+    using Resp = CreateWorkGroupResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateWorkGroup", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::CreateWorkGroupOutcomeCallable DlcClient::CreateWorkGroupCallable(const CreateWorkGroupRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateWorkGroupOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateWorkGroup(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateWorkGroupOutcome>>();
+    CreateWorkGroupAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const CreateWorkGroupRequest&,
+        CreateWorkGroupOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DeleteCHDFSBindingProductOutcome DlcClient::DeleteCHDFSBindingProduct(const DeleteCHDFSBindingProductRequest &request)
@@ -1266,25 +1462,32 @@ DlcClient::DeleteCHDFSBindingProductOutcome DlcClient::DeleteCHDFSBindingProduct
 
 void DlcClient::DeleteCHDFSBindingProductAsync(const DeleteCHDFSBindingProductRequest& request, const DeleteCHDFSBindingProductAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteCHDFSBindingProduct(request), context);
-    };
+    using Req = const DeleteCHDFSBindingProductRequest&;
+    using Resp = DeleteCHDFSBindingProductResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteCHDFSBindingProduct", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DeleteCHDFSBindingProductOutcomeCallable DlcClient::DeleteCHDFSBindingProductCallable(const DeleteCHDFSBindingProductRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteCHDFSBindingProductOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteCHDFSBindingProduct(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteCHDFSBindingProductOutcome>>();
+    DeleteCHDFSBindingProductAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DeleteCHDFSBindingProductRequest&,
+        DeleteCHDFSBindingProductOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DeleteDataEngineOutcome DlcClient::DeleteDataEngine(const DeleteDataEngineRequest &request)
@@ -1309,25 +1512,32 @@ DlcClient::DeleteDataEngineOutcome DlcClient::DeleteDataEngine(const DeleteDataE
 
 void DlcClient::DeleteDataEngineAsync(const DeleteDataEngineRequest& request, const DeleteDataEngineAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteDataEngine(request), context);
-    };
+    using Req = const DeleteDataEngineRequest&;
+    using Resp = DeleteDataEngineResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteDataEngine", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DeleteDataEngineOutcomeCallable DlcClient::DeleteDataEngineCallable(const DeleteDataEngineRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteDataEngineOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteDataEngine(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteDataEngineOutcome>>();
+    DeleteDataEngineAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DeleteDataEngineRequest&,
+        DeleteDataEngineOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DeleteDataMaskStrategyOutcome DlcClient::DeleteDataMaskStrategy(const DeleteDataMaskStrategyRequest &request)
@@ -1352,25 +1562,32 @@ DlcClient::DeleteDataMaskStrategyOutcome DlcClient::DeleteDataMaskStrategy(const
 
 void DlcClient::DeleteDataMaskStrategyAsync(const DeleteDataMaskStrategyRequest& request, const DeleteDataMaskStrategyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteDataMaskStrategy(request), context);
-    };
+    using Req = const DeleteDataMaskStrategyRequest&;
+    using Resp = DeleteDataMaskStrategyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteDataMaskStrategy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DeleteDataMaskStrategyOutcomeCallable DlcClient::DeleteDataMaskStrategyCallable(const DeleteDataMaskStrategyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteDataMaskStrategyOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteDataMaskStrategy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteDataMaskStrategyOutcome>>();
+    DeleteDataMaskStrategyAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DeleteDataMaskStrategyRequest&,
+        DeleteDataMaskStrategyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DeleteSparkAppOutcome DlcClient::DeleteSparkApp(const DeleteSparkAppRequest &request)
@@ -1395,25 +1612,32 @@ DlcClient::DeleteSparkAppOutcome DlcClient::DeleteSparkApp(const DeleteSparkAppR
 
 void DlcClient::DeleteSparkAppAsync(const DeleteSparkAppRequest& request, const DeleteSparkAppAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteSparkApp(request), context);
-    };
+    using Req = const DeleteSparkAppRequest&;
+    using Resp = DeleteSparkAppResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteSparkApp", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DeleteSparkAppOutcomeCallable DlcClient::DeleteSparkAppCallable(const DeleteSparkAppRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteSparkAppOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteSparkApp(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteSparkAppOutcome>>();
+    DeleteSparkAppAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DeleteSparkAppRequest&,
+        DeleteSparkAppOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DeleteThirdPartyAccessUserOutcome DlcClient::DeleteThirdPartyAccessUser(const DeleteThirdPartyAccessUserRequest &request)
@@ -1438,25 +1662,32 @@ DlcClient::DeleteThirdPartyAccessUserOutcome DlcClient::DeleteThirdPartyAccessUs
 
 void DlcClient::DeleteThirdPartyAccessUserAsync(const DeleteThirdPartyAccessUserRequest& request, const DeleteThirdPartyAccessUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteThirdPartyAccessUser(request), context);
-    };
+    using Req = const DeleteThirdPartyAccessUserRequest&;
+    using Resp = DeleteThirdPartyAccessUserResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteThirdPartyAccessUser", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DeleteThirdPartyAccessUserOutcomeCallable DlcClient::DeleteThirdPartyAccessUserCallable(const DeleteThirdPartyAccessUserRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteThirdPartyAccessUserOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteThirdPartyAccessUser(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteThirdPartyAccessUserOutcome>>();
+    DeleteThirdPartyAccessUserAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DeleteThirdPartyAccessUserRequest&,
+        DeleteThirdPartyAccessUserOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DeleteUserOutcome DlcClient::DeleteUser(const DeleteUserRequest &request)
@@ -1481,25 +1712,32 @@ DlcClient::DeleteUserOutcome DlcClient::DeleteUser(const DeleteUserRequest &requ
 
 void DlcClient::DeleteUserAsync(const DeleteUserRequest& request, const DeleteUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteUser(request), context);
-    };
+    using Req = const DeleteUserRequest&;
+    using Resp = DeleteUserResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteUser", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DeleteUserOutcomeCallable DlcClient::DeleteUserCallable(const DeleteUserRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteUserOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteUser(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteUserOutcome>>();
+    DeleteUserAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DeleteUserRequest&,
+        DeleteUserOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DeleteUsersFromWorkGroupOutcome DlcClient::DeleteUsersFromWorkGroup(const DeleteUsersFromWorkGroupRequest &request)
@@ -1524,25 +1762,32 @@ DlcClient::DeleteUsersFromWorkGroupOutcome DlcClient::DeleteUsersFromWorkGroup(c
 
 void DlcClient::DeleteUsersFromWorkGroupAsync(const DeleteUsersFromWorkGroupRequest& request, const DeleteUsersFromWorkGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteUsersFromWorkGroup(request), context);
-    };
+    using Req = const DeleteUsersFromWorkGroupRequest&;
+    using Resp = DeleteUsersFromWorkGroupResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteUsersFromWorkGroup", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DeleteUsersFromWorkGroupOutcomeCallable DlcClient::DeleteUsersFromWorkGroupCallable(const DeleteUsersFromWorkGroupRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteUsersFromWorkGroupOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteUsersFromWorkGroup(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteUsersFromWorkGroupOutcome>>();
+    DeleteUsersFromWorkGroupAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DeleteUsersFromWorkGroupRequest&,
+        DeleteUsersFromWorkGroupOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DeleteWorkGroupOutcome DlcClient::DeleteWorkGroup(const DeleteWorkGroupRequest &request)
@@ -1567,25 +1812,32 @@ DlcClient::DeleteWorkGroupOutcome DlcClient::DeleteWorkGroup(const DeleteWorkGro
 
 void DlcClient::DeleteWorkGroupAsync(const DeleteWorkGroupRequest& request, const DeleteWorkGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteWorkGroup(request), context);
-    };
+    using Req = const DeleteWorkGroupRequest&;
+    using Resp = DeleteWorkGroupResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteWorkGroup", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DeleteWorkGroupOutcomeCallable DlcClient::DeleteWorkGroupCallable(const DeleteWorkGroupRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteWorkGroupOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteWorkGroup(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteWorkGroupOutcome>>();
+    DeleteWorkGroupAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DeleteWorkGroupRequest&,
+        DeleteWorkGroupOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeAdvancedStoreLocationOutcome DlcClient::DescribeAdvancedStoreLocation(const DescribeAdvancedStoreLocationRequest &request)
@@ -1610,25 +1862,32 @@ DlcClient::DescribeAdvancedStoreLocationOutcome DlcClient::DescribeAdvancedStore
 
 void DlcClient::DescribeAdvancedStoreLocationAsync(const DescribeAdvancedStoreLocationRequest& request, const DescribeAdvancedStoreLocationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeAdvancedStoreLocation(request), context);
-    };
+    using Req = const DescribeAdvancedStoreLocationRequest&;
+    using Resp = DescribeAdvancedStoreLocationResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeAdvancedStoreLocation", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeAdvancedStoreLocationOutcomeCallable DlcClient::DescribeAdvancedStoreLocationCallable(const DescribeAdvancedStoreLocationRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeAdvancedStoreLocationOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeAdvancedStoreLocation(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeAdvancedStoreLocationOutcome>>();
+    DescribeAdvancedStoreLocationAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeAdvancedStoreLocationRequest&,
+        DescribeAdvancedStoreLocationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeDLCCatalogAccessOutcome DlcClient::DescribeDLCCatalogAccess(const DescribeDLCCatalogAccessRequest &request)
@@ -1653,25 +1912,32 @@ DlcClient::DescribeDLCCatalogAccessOutcome DlcClient::DescribeDLCCatalogAccess(c
 
 void DlcClient::DescribeDLCCatalogAccessAsync(const DescribeDLCCatalogAccessRequest& request, const DescribeDLCCatalogAccessAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDLCCatalogAccess(request), context);
-    };
+    using Req = const DescribeDLCCatalogAccessRequest&;
+    using Resp = DescribeDLCCatalogAccessResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDLCCatalogAccess", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeDLCCatalogAccessOutcomeCallable DlcClient::DescribeDLCCatalogAccessCallable(const DescribeDLCCatalogAccessRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDLCCatalogAccessOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDLCCatalogAccess(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDLCCatalogAccessOutcome>>();
+    DescribeDLCCatalogAccessAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeDLCCatalogAccessRequest&,
+        DescribeDLCCatalogAccessOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeDLCTableOutcome DlcClient::DescribeDLCTable(const DescribeDLCTableRequest &request)
@@ -1696,25 +1962,32 @@ DlcClient::DescribeDLCTableOutcome DlcClient::DescribeDLCTable(const DescribeDLC
 
 void DlcClient::DescribeDLCTableAsync(const DescribeDLCTableRequest& request, const DescribeDLCTableAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDLCTable(request), context);
-    };
+    using Req = const DescribeDLCTableRequest&;
+    using Resp = DescribeDLCTableResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDLCTable", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeDLCTableOutcomeCallable DlcClient::DescribeDLCTableCallable(const DescribeDLCTableRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDLCTableOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDLCTable(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDLCTableOutcome>>();
+    DescribeDLCTableAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeDLCTableRequest&,
+        DescribeDLCTableOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeDLCTableListOutcome DlcClient::DescribeDLCTableList(const DescribeDLCTableListRequest &request)
@@ -1739,25 +2012,32 @@ DlcClient::DescribeDLCTableListOutcome DlcClient::DescribeDLCTableList(const Des
 
 void DlcClient::DescribeDLCTableListAsync(const DescribeDLCTableListRequest& request, const DescribeDLCTableListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDLCTableList(request), context);
-    };
+    using Req = const DescribeDLCTableListRequest&;
+    using Resp = DescribeDLCTableListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDLCTableList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeDLCTableListOutcomeCallable DlcClient::DescribeDLCTableListCallable(const DescribeDLCTableListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDLCTableListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDLCTableList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDLCTableListOutcome>>();
+    DescribeDLCTableListAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeDLCTableListRequest&,
+        DescribeDLCTableListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeDMSDatabaseOutcome DlcClient::DescribeDMSDatabase(const DescribeDMSDatabaseRequest &request)
@@ -1782,25 +2062,32 @@ DlcClient::DescribeDMSDatabaseOutcome DlcClient::DescribeDMSDatabase(const Descr
 
 void DlcClient::DescribeDMSDatabaseAsync(const DescribeDMSDatabaseRequest& request, const DescribeDMSDatabaseAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDMSDatabase(request), context);
-    };
+    using Req = const DescribeDMSDatabaseRequest&;
+    using Resp = DescribeDMSDatabaseResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDMSDatabase", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeDMSDatabaseOutcomeCallable DlcClient::DescribeDMSDatabaseCallable(const DescribeDMSDatabaseRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDMSDatabaseOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDMSDatabase(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDMSDatabaseOutcome>>();
+    DescribeDMSDatabaseAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeDMSDatabaseRequest&,
+        DescribeDMSDatabaseOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeDMSDatabaseListOutcome DlcClient::DescribeDMSDatabaseList(const DescribeDMSDatabaseListRequest &request)
@@ -1825,25 +2112,32 @@ DlcClient::DescribeDMSDatabaseListOutcome DlcClient::DescribeDMSDatabaseList(con
 
 void DlcClient::DescribeDMSDatabaseListAsync(const DescribeDMSDatabaseListRequest& request, const DescribeDMSDatabaseListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDMSDatabaseList(request), context);
-    };
+    using Req = const DescribeDMSDatabaseListRequest&;
+    using Resp = DescribeDMSDatabaseListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDMSDatabaseList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeDMSDatabaseListOutcomeCallable DlcClient::DescribeDMSDatabaseListCallable(const DescribeDMSDatabaseListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDMSDatabaseListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDMSDatabaseList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDMSDatabaseListOutcome>>();
+    DescribeDMSDatabaseListAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeDMSDatabaseListRequest&,
+        DescribeDMSDatabaseListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeDataEngineOutcome DlcClient::DescribeDataEngine(const DescribeDataEngineRequest &request)
@@ -1868,25 +2162,32 @@ DlcClient::DescribeDataEngineOutcome DlcClient::DescribeDataEngine(const Describ
 
 void DlcClient::DescribeDataEngineAsync(const DescribeDataEngineRequest& request, const DescribeDataEngineAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDataEngine(request), context);
-    };
+    using Req = const DescribeDataEngineRequest&;
+    using Resp = DescribeDataEngineResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDataEngine", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeDataEngineOutcomeCallable DlcClient::DescribeDataEngineCallable(const DescribeDataEngineRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDataEngineOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDataEngine(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDataEngineOutcome>>();
+    DescribeDataEngineAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeDataEngineRequest&,
+        DescribeDataEngineOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeDataEngineImageVersionsOutcome DlcClient::DescribeDataEngineImageVersions(const DescribeDataEngineImageVersionsRequest &request)
@@ -1911,25 +2212,32 @@ DlcClient::DescribeDataEngineImageVersionsOutcome DlcClient::DescribeDataEngineI
 
 void DlcClient::DescribeDataEngineImageVersionsAsync(const DescribeDataEngineImageVersionsRequest& request, const DescribeDataEngineImageVersionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDataEngineImageVersions(request), context);
-    };
+    using Req = const DescribeDataEngineImageVersionsRequest&;
+    using Resp = DescribeDataEngineImageVersionsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDataEngineImageVersions", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeDataEngineImageVersionsOutcomeCallable DlcClient::DescribeDataEngineImageVersionsCallable(const DescribeDataEngineImageVersionsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDataEngineImageVersionsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDataEngineImageVersions(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDataEngineImageVersionsOutcome>>();
+    DescribeDataEngineImageVersionsAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeDataEngineImageVersionsRequest&,
+        DescribeDataEngineImageVersionsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeDataEnginePythonSparkImagesOutcome DlcClient::DescribeDataEnginePythonSparkImages(const DescribeDataEnginePythonSparkImagesRequest &request)
@@ -1954,25 +2262,32 @@ DlcClient::DescribeDataEnginePythonSparkImagesOutcome DlcClient::DescribeDataEng
 
 void DlcClient::DescribeDataEnginePythonSparkImagesAsync(const DescribeDataEnginePythonSparkImagesRequest& request, const DescribeDataEnginePythonSparkImagesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDataEnginePythonSparkImages(request), context);
-    };
+    using Req = const DescribeDataEnginePythonSparkImagesRequest&;
+    using Resp = DescribeDataEnginePythonSparkImagesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDataEnginePythonSparkImages", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeDataEnginePythonSparkImagesOutcomeCallable DlcClient::DescribeDataEnginePythonSparkImagesCallable(const DescribeDataEnginePythonSparkImagesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDataEnginePythonSparkImagesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDataEnginePythonSparkImages(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDataEnginePythonSparkImagesOutcome>>();
+    DescribeDataEnginePythonSparkImagesAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeDataEnginePythonSparkImagesRequest&,
+        DescribeDataEnginePythonSparkImagesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeDataEnginesScaleDetailOutcome DlcClient::DescribeDataEnginesScaleDetail(const DescribeDataEnginesScaleDetailRequest &request)
@@ -1997,25 +2312,32 @@ DlcClient::DescribeDataEnginesScaleDetailOutcome DlcClient::DescribeDataEnginesS
 
 void DlcClient::DescribeDataEnginesScaleDetailAsync(const DescribeDataEnginesScaleDetailRequest& request, const DescribeDataEnginesScaleDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDataEnginesScaleDetail(request), context);
-    };
+    using Req = const DescribeDataEnginesScaleDetailRequest&;
+    using Resp = DescribeDataEnginesScaleDetailResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDataEnginesScaleDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeDataEnginesScaleDetailOutcomeCallable DlcClient::DescribeDataEnginesScaleDetailCallable(const DescribeDataEnginesScaleDetailRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDataEnginesScaleDetailOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDataEnginesScaleDetail(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDataEnginesScaleDetailOutcome>>();
+    DescribeDataEnginesScaleDetailAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeDataEnginesScaleDetailRequest&,
+        DescribeDataEnginesScaleDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeDataMaskStrategiesOutcome DlcClient::DescribeDataMaskStrategies(const DescribeDataMaskStrategiesRequest &request)
@@ -2040,25 +2362,32 @@ DlcClient::DescribeDataMaskStrategiesOutcome DlcClient::DescribeDataMaskStrategi
 
 void DlcClient::DescribeDataMaskStrategiesAsync(const DescribeDataMaskStrategiesRequest& request, const DescribeDataMaskStrategiesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDataMaskStrategies(request), context);
-    };
+    using Req = const DescribeDataMaskStrategiesRequest&;
+    using Resp = DescribeDataMaskStrategiesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeDataMaskStrategies", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeDataMaskStrategiesOutcomeCallable DlcClient::DescribeDataMaskStrategiesCallable(const DescribeDataMaskStrategiesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDataMaskStrategiesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDataMaskStrategies(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeDataMaskStrategiesOutcome>>();
+    DescribeDataMaskStrategiesAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeDataMaskStrategiesRequest&,
+        DescribeDataMaskStrategiesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeEngineUsageInfoOutcome DlcClient::DescribeEngineUsageInfo(const DescribeEngineUsageInfoRequest &request)
@@ -2083,25 +2412,32 @@ DlcClient::DescribeEngineUsageInfoOutcome DlcClient::DescribeEngineUsageInfo(con
 
 void DlcClient::DescribeEngineUsageInfoAsync(const DescribeEngineUsageInfoRequest& request, const DescribeEngineUsageInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeEngineUsageInfo(request), context);
-    };
+    using Req = const DescribeEngineUsageInfoRequest&;
+    using Resp = DescribeEngineUsageInfoResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeEngineUsageInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeEngineUsageInfoOutcomeCallable DlcClient::DescribeEngineUsageInfoCallable(const DescribeEngineUsageInfoRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeEngineUsageInfoOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeEngineUsageInfo(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeEngineUsageInfoOutcome>>();
+    DescribeEngineUsageInfoAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeEngineUsageInfoRequest&,
+        DescribeEngineUsageInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeForbiddenTableProOutcome DlcClient::DescribeForbiddenTablePro(const DescribeForbiddenTableProRequest &request)
@@ -2126,25 +2462,32 @@ DlcClient::DescribeForbiddenTableProOutcome DlcClient::DescribeForbiddenTablePro
 
 void DlcClient::DescribeForbiddenTableProAsync(const DescribeForbiddenTableProRequest& request, const DescribeForbiddenTableProAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeForbiddenTablePro(request), context);
-    };
+    using Req = const DescribeForbiddenTableProRequest&;
+    using Resp = DescribeForbiddenTableProResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeForbiddenTablePro", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeForbiddenTableProOutcomeCallable DlcClient::DescribeForbiddenTableProCallable(const DescribeForbiddenTableProRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeForbiddenTableProOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeForbiddenTablePro(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeForbiddenTableProOutcome>>();
+    DescribeForbiddenTableProAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeForbiddenTableProRequest&,
+        DescribeForbiddenTableProOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeJobOutcome DlcClient::DescribeJob(const DescribeJobRequest &request)
@@ -2169,25 +2512,32 @@ DlcClient::DescribeJobOutcome DlcClient::DescribeJob(const DescribeJobRequest &r
 
 void DlcClient::DescribeJobAsync(const DescribeJobRequest& request, const DescribeJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeJob(request), context);
-    };
+    using Req = const DescribeJobRequest&;
+    using Resp = DescribeJobResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeJob", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeJobOutcomeCallable DlcClient::DescribeJobCallable(const DescribeJobRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeJobOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeJob(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeJobOutcome>>();
+    DescribeJobAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeJobRequest&,
+        DescribeJobOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeJobsOutcome DlcClient::DescribeJobs(const DescribeJobsRequest &request)
@@ -2212,25 +2562,32 @@ DlcClient::DescribeJobsOutcome DlcClient::DescribeJobs(const DescribeJobsRequest
 
 void DlcClient::DescribeJobsAsync(const DescribeJobsRequest& request, const DescribeJobsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeJobs(request), context);
-    };
+    using Req = const DescribeJobsRequest&;
+    using Resp = DescribeJobsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeJobs", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeJobsOutcomeCallable DlcClient::DescribeJobsCallable(const DescribeJobsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeJobsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeJobs(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeJobsOutcome>>();
+    DescribeJobsAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeJobsRequest&,
+        DescribeJobsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeLakeFsDirSummaryOutcome DlcClient::DescribeLakeFsDirSummary(const DescribeLakeFsDirSummaryRequest &request)
@@ -2255,25 +2612,32 @@ DlcClient::DescribeLakeFsDirSummaryOutcome DlcClient::DescribeLakeFsDirSummary(c
 
 void DlcClient::DescribeLakeFsDirSummaryAsync(const DescribeLakeFsDirSummaryRequest& request, const DescribeLakeFsDirSummaryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLakeFsDirSummary(request), context);
-    };
+    using Req = const DescribeLakeFsDirSummaryRequest&;
+    using Resp = DescribeLakeFsDirSummaryResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLakeFsDirSummary", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeLakeFsDirSummaryOutcomeCallable DlcClient::DescribeLakeFsDirSummaryCallable(const DescribeLakeFsDirSummaryRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLakeFsDirSummaryOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLakeFsDirSummary(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLakeFsDirSummaryOutcome>>();
+    DescribeLakeFsDirSummaryAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeLakeFsDirSummaryRequest&,
+        DescribeLakeFsDirSummaryOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeLakeFsInfoOutcome DlcClient::DescribeLakeFsInfo(const DescribeLakeFsInfoRequest &request)
@@ -2298,25 +2662,32 @@ DlcClient::DescribeLakeFsInfoOutcome DlcClient::DescribeLakeFsInfo(const Describ
 
 void DlcClient::DescribeLakeFsInfoAsync(const DescribeLakeFsInfoRequest& request, const DescribeLakeFsInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeLakeFsInfo(request), context);
-    };
+    using Req = const DescribeLakeFsInfoRequest&;
+    using Resp = DescribeLakeFsInfoResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeLakeFsInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeLakeFsInfoOutcomeCallable DlcClient::DescribeLakeFsInfoCallable(const DescribeLakeFsInfoRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeLakeFsInfoOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeLakeFsInfo(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeLakeFsInfoOutcome>>();
+    DescribeLakeFsInfoAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeLakeFsInfoRequest&,
+        DescribeLakeFsInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeOtherCHDFSBindingListOutcome DlcClient::DescribeOtherCHDFSBindingList(const DescribeOtherCHDFSBindingListRequest &request)
@@ -2341,25 +2712,32 @@ DlcClient::DescribeOtherCHDFSBindingListOutcome DlcClient::DescribeOtherCHDFSBin
 
 void DlcClient::DescribeOtherCHDFSBindingListAsync(const DescribeOtherCHDFSBindingListRequest& request, const DescribeOtherCHDFSBindingListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeOtherCHDFSBindingList(request), context);
-    };
+    using Req = const DescribeOtherCHDFSBindingListRequest&;
+    using Resp = DescribeOtherCHDFSBindingListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeOtherCHDFSBindingList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeOtherCHDFSBindingListOutcomeCallable DlcClient::DescribeOtherCHDFSBindingListCallable(const DescribeOtherCHDFSBindingListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeOtherCHDFSBindingListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeOtherCHDFSBindingList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeOtherCHDFSBindingListOutcome>>();
+    DescribeOtherCHDFSBindingListAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeOtherCHDFSBindingListRequest&,
+        DescribeOtherCHDFSBindingListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeQueryOutcome DlcClient::DescribeQuery(const DescribeQueryRequest &request)
@@ -2384,25 +2762,32 @@ DlcClient::DescribeQueryOutcome DlcClient::DescribeQuery(const DescribeQueryRequ
 
 void DlcClient::DescribeQueryAsync(const DescribeQueryRequest& request, const DescribeQueryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeQuery(request), context);
-    };
+    using Req = const DescribeQueryRequest&;
+    using Resp = DescribeQueryResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeQuery", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeQueryOutcomeCallable DlcClient::DescribeQueryCallable(const DescribeQueryRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeQueryOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeQuery(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeQueryOutcome>>();
+    DescribeQueryAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeQueryRequest&,
+        DescribeQueryOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeResultDownloadOutcome DlcClient::DescribeResultDownload(const DescribeResultDownloadRequest &request)
@@ -2427,25 +2812,32 @@ DlcClient::DescribeResultDownloadOutcome DlcClient::DescribeResultDownload(const
 
 void DlcClient::DescribeResultDownloadAsync(const DescribeResultDownloadRequest& request, const DescribeResultDownloadAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeResultDownload(request), context);
-    };
+    using Req = const DescribeResultDownloadRequest&;
+    using Resp = DescribeResultDownloadResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeResultDownload", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeResultDownloadOutcomeCallable DlcClient::DescribeResultDownloadCallable(const DescribeResultDownloadRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeResultDownloadOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeResultDownload(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeResultDownloadOutcome>>();
+    DescribeResultDownloadAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeResultDownloadRequest&,
+        DescribeResultDownloadOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeSessionImageVersionOutcome DlcClient::DescribeSessionImageVersion(const DescribeSessionImageVersionRequest &request)
@@ -2470,25 +2862,32 @@ DlcClient::DescribeSessionImageVersionOutcome DlcClient::DescribeSessionImageVer
 
 void DlcClient::DescribeSessionImageVersionAsync(const DescribeSessionImageVersionRequest& request, const DescribeSessionImageVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeSessionImageVersion(request), context);
-    };
+    using Req = const DescribeSessionImageVersionRequest&;
+    using Resp = DescribeSessionImageVersionResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeSessionImageVersion", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeSessionImageVersionOutcomeCallable DlcClient::DescribeSessionImageVersionCallable(const DescribeSessionImageVersionRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeSessionImageVersionOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeSessionImageVersion(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeSessionImageVersionOutcome>>();
+    DescribeSessionImageVersionAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeSessionImageVersionRequest&,
+        DescribeSessionImageVersionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeSparkAppJobOutcome DlcClient::DescribeSparkAppJob(const DescribeSparkAppJobRequest &request)
@@ -2513,25 +2912,32 @@ DlcClient::DescribeSparkAppJobOutcome DlcClient::DescribeSparkAppJob(const Descr
 
 void DlcClient::DescribeSparkAppJobAsync(const DescribeSparkAppJobRequest& request, const DescribeSparkAppJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeSparkAppJob(request), context);
-    };
+    using Req = const DescribeSparkAppJobRequest&;
+    using Resp = DescribeSparkAppJobResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeSparkAppJob", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeSparkAppJobOutcomeCallable DlcClient::DescribeSparkAppJobCallable(const DescribeSparkAppJobRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeSparkAppJobOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeSparkAppJob(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeSparkAppJobOutcome>>();
+    DescribeSparkAppJobAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeSparkAppJobRequest&,
+        DescribeSparkAppJobOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeSparkAppJobsOutcome DlcClient::DescribeSparkAppJobs(const DescribeSparkAppJobsRequest &request)
@@ -2556,25 +2962,32 @@ DlcClient::DescribeSparkAppJobsOutcome DlcClient::DescribeSparkAppJobs(const Des
 
 void DlcClient::DescribeSparkAppJobsAsync(const DescribeSparkAppJobsRequest& request, const DescribeSparkAppJobsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeSparkAppJobs(request), context);
-    };
+    using Req = const DescribeSparkAppJobsRequest&;
+    using Resp = DescribeSparkAppJobsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeSparkAppJobs", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeSparkAppJobsOutcomeCallable DlcClient::DescribeSparkAppJobsCallable(const DescribeSparkAppJobsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeSparkAppJobsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeSparkAppJobs(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeSparkAppJobsOutcome>>();
+    DescribeSparkAppJobsAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeSparkAppJobsRequest&,
+        DescribeSparkAppJobsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeSparkAppTasksOutcome DlcClient::DescribeSparkAppTasks(const DescribeSparkAppTasksRequest &request)
@@ -2599,25 +3012,32 @@ DlcClient::DescribeSparkAppTasksOutcome DlcClient::DescribeSparkAppTasks(const D
 
 void DlcClient::DescribeSparkAppTasksAsync(const DescribeSparkAppTasksRequest& request, const DescribeSparkAppTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeSparkAppTasks(request), context);
-    };
+    using Req = const DescribeSparkAppTasksRequest&;
+    using Resp = DescribeSparkAppTasksResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeSparkAppTasks", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeSparkAppTasksOutcomeCallable DlcClient::DescribeSparkAppTasksCallable(const DescribeSparkAppTasksRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeSparkAppTasksOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeSparkAppTasks(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeSparkAppTasksOutcome>>();
+    DescribeSparkAppTasksAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeSparkAppTasksRequest&,
+        DescribeSparkAppTasksOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeSparkSessionBatchSqlLogOutcome DlcClient::DescribeSparkSessionBatchSqlLog(const DescribeSparkSessionBatchSqlLogRequest &request)
@@ -2642,25 +3062,32 @@ DlcClient::DescribeSparkSessionBatchSqlLogOutcome DlcClient::DescribeSparkSessio
 
 void DlcClient::DescribeSparkSessionBatchSqlLogAsync(const DescribeSparkSessionBatchSqlLogRequest& request, const DescribeSparkSessionBatchSqlLogAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeSparkSessionBatchSqlLog(request), context);
-    };
+    using Req = const DescribeSparkSessionBatchSqlLogRequest&;
+    using Resp = DescribeSparkSessionBatchSqlLogResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeSparkSessionBatchSqlLog", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeSparkSessionBatchSqlLogOutcomeCallable DlcClient::DescribeSparkSessionBatchSqlLogCallable(const DescribeSparkSessionBatchSqlLogRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeSparkSessionBatchSqlLogOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeSparkSessionBatchSqlLog(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeSparkSessionBatchSqlLogOutcome>>();
+    DescribeSparkSessionBatchSqlLogAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeSparkSessionBatchSqlLogRequest&,
+        DescribeSparkSessionBatchSqlLogOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeStoreLocationOutcome DlcClient::DescribeStoreLocation(const DescribeStoreLocationRequest &request)
@@ -2685,25 +3112,32 @@ DlcClient::DescribeStoreLocationOutcome DlcClient::DescribeStoreLocation(const D
 
 void DlcClient::DescribeStoreLocationAsync(const DescribeStoreLocationRequest& request, const DescribeStoreLocationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeStoreLocation(request), context);
-    };
+    using Req = const DescribeStoreLocationRequest&;
+    using Resp = DescribeStoreLocationResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeStoreLocation", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeStoreLocationOutcomeCallable DlcClient::DescribeStoreLocationCallable(const DescribeStoreLocationRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeStoreLocationOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeStoreLocation(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeStoreLocationOutcome>>();
+    DescribeStoreLocationAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeStoreLocationRequest&,
+        DescribeStoreLocationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeSubUserAccessPolicyOutcome DlcClient::DescribeSubUserAccessPolicy(const DescribeSubUserAccessPolicyRequest &request)
@@ -2728,25 +3162,32 @@ DlcClient::DescribeSubUserAccessPolicyOutcome DlcClient::DescribeSubUserAccessPo
 
 void DlcClient::DescribeSubUserAccessPolicyAsync(const DescribeSubUserAccessPolicyRequest& request, const DescribeSubUserAccessPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeSubUserAccessPolicy(request), context);
-    };
+    using Req = const DescribeSubUserAccessPolicyRequest&;
+    using Resp = DescribeSubUserAccessPolicyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeSubUserAccessPolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeSubUserAccessPolicyOutcomeCallable DlcClient::DescribeSubUserAccessPolicyCallable(const DescribeSubUserAccessPolicyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeSubUserAccessPolicyOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeSubUserAccessPolicy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeSubUserAccessPolicyOutcome>>();
+    DescribeSubUserAccessPolicyAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeSubUserAccessPolicyRequest&,
+        DescribeSubUserAccessPolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeTablesNameOutcome DlcClient::DescribeTablesName(const DescribeTablesNameRequest &request)
@@ -2771,25 +3212,32 @@ DlcClient::DescribeTablesNameOutcome DlcClient::DescribeTablesName(const Describ
 
 void DlcClient::DescribeTablesNameAsync(const DescribeTablesNameRequest& request, const DescribeTablesNameAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTablesName(request), context);
-    };
+    using Req = const DescribeTablesNameRequest&;
+    using Resp = DescribeTablesNameResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTablesName", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeTablesNameOutcomeCallable DlcClient::DescribeTablesNameCallable(const DescribeTablesNameRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTablesNameOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTablesName(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTablesNameOutcome>>();
+    DescribeTablesNameAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeTablesNameRequest&,
+        DescribeTablesNameOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeTaskResultOutcome DlcClient::DescribeTaskResult(const DescribeTaskResultRequest &request)
@@ -2814,25 +3262,32 @@ DlcClient::DescribeTaskResultOutcome DlcClient::DescribeTaskResult(const Describ
 
 void DlcClient::DescribeTaskResultAsync(const DescribeTaskResultRequest& request, const DescribeTaskResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTaskResult(request), context);
-    };
+    using Req = const DescribeTaskResultRequest&;
+    using Resp = DescribeTaskResultResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTaskResult", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeTaskResultOutcomeCallable DlcClient::DescribeTaskResultCallable(const DescribeTaskResultRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTaskResultOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTaskResult(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTaskResultOutcome>>();
+    DescribeTaskResultAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeTaskResultRequest&,
+        DescribeTaskResultOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeTaskStatisticsOutcome DlcClient::DescribeTaskStatistics(const DescribeTaskStatisticsRequest &request)
@@ -2857,25 +3312,32 @@ DlcClient::DescribeTaskStatisticsOutcome DlcClient::DescribeTaskStatistics(const
 
 void DlcClient::DescribeTaskStatisticsAsync(const DescribeTaskStatisticsRequest& request, const DescribeTaskStatisticsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTaskStatistics(request), context);
-    };
+    using Req = const DescribeTaskStatisticsRequest&;
+    using Resp = DescribeTaskStatisticsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTaskStatistics", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeTaskStatisticsOutcomeCallable DlcClient::DescribeTaskStatisticsCallable(const DescribeTaskStatisticsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTaskStatisticsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTaskStatistics(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTaskStatisticsOutcome>>();
+    DescribeTaskStatisticsAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeTaskStatisticsRequest&,
+        DescribeTaskStatisticsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeTasksOutcome DlcClient::DescribeTasks(const DescribeTasksRequest &request)
@@ -2900,25 +3362,32 @@ DlcClient::DescribeTasksOutcome DlcClient::DescribeTasks(const DescribeTasksRequ
 
 void DlcClient::DescribeTasksAsync(const DescribeTasksRequest& request, const DescribeTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTasks(request), context);
-    };
+    using Req = const DescribeTasksRequest&;
+    using Resp = DescribeTasksResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTasks", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeTasksOutcomeCallable DlcClient::DescribeTasksCallable(const DescribeTasksRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTasksOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTasks(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTasksOutcome>>();
+    DescribeTasksAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeTasksRequest&,
+        DescribeTasksOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeThirdPartyAccessUserOutcome DlcClient::DescribeThirdPartyAccessUser(const DescribeThirdPartyAccessUserRequest &request)
@@ -2943,25 +3412,32 @@ DlcClient::DescribeThirdPartyAccessUserOutcome DlcClient::DescribeThirdPartyAcce
 
 void DlcClient::DescribeThirdPartyAccessUserAsync(const DescribeThirdPartyAccessUserRequest& request, const DescribeThirdPartyAccessUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeThirdPartyAccessUser(request), context);
-    };
+    using Req = const DescribeThirdPartyAccessUserRequest&;
+    using Resp = DescribeThirdPartyAccessUserResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeThirdPartyAccessUser", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeThirdPartyAccessUserOutcomeCallable DlcClient::DescribeThirdPartyAccessUserCallable(const DescribeThirdPartyAccessUserRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeThirdPartyAccessUserOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeThirdPartyAccessUser(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeThirdPartyAccessUserOutcome>>();
+    DescribeThirdPartyAccessUserAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeThirdPartyAccessUserRequest&,
+        DescribeThirdPartyAccessUserOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeUpdatableDataEnginesOutcome DlcClient::DescribeUpdatableDataEngines(const DescribeUpdatableDataEnginesRequest &request)
@@ -2986,25 +3462,32 @@ DlcClient::DescribeUpdatableDataEnginesOutcome DlcClient::DescribeUpdatableDataE
 
 void DlcClient::DescribeUpdatableDataEnginesAsync(const DescribeUpdatableDataEnginesRequest& request, const DescribeUpdatableDataEnginesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeUpdatableDataEngines(request), context);
-    };
+    using Req = const DescribeUpdatableDataEnginesRequest&;
+    using Resp = DescribeUpdatableDataEnginesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeUpdatableDataEngines", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeUpdatableDataEnginesOutcomeCallable DlcClient::DescribeUpdatableDataEnginesCallable(const DescribeUpdatableDataEnginesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeUpdatableDataEnginesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeUpdatableDataEngines(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeUpdatableDataEnginesOutcome>>();
+    DescribeUpdatableDataEnginesAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeUpdatableDataEnginesRequest&,
+        DescribeUpdatableDataEnginesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeUserDataEngineConfigOutcome DlcClient::DescribeUserDataEngineConfig(const DescribeUserDataEngineConfigRequest &request)
@@ -3029,25 +3512,32 @@ DlcClient::DescribeUserDataEngineConfigOutcome DlcClient::DescribeUserDataEngine
 
 void DlcClient::DescribeUserDataEngineConfigAsync(const DescribeUserDataEngineConfigRequest& request, const DescribeUserDataEngineConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeUserDataEngineConfig(request), context);
-    };
+    using Req = const DescribeUserDataEngineConfigRequest&;
+    using Resp = DescribeUserDataEngineConfigResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeUserDataEngineConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeUserDataEngineConfigOutcomeCallable DlcClient::DescribeUserDataEngineConfigCallable(const DescribeUserDataEngineConfigRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeUserDataEngineConfigOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeUserDataEngineConfig(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeUserDataEngineConfigOutcome>>();
+    DescribeUserDataEngineConfigAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeUserDataEngineConfigRequest&,
+        DescribeUserDataEngineConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeUserInfoOutcome DlcClient::DescribeUserInfo(const DescribeUserInfoRequest &request)
@@ -3072,25 +3562,32 @@ DlcClient::DescribeUserInfoOutcome DlcClient::DescribeUserInfo(const DescribeUse
 
 void DlcClient::DescribeUserInfoAsync(const DescribeUserInfoRequest& request, const DescribeUserInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeUserInfo(request), context);
-    };
+    using Req = const DescribeUserInfoRequest&;
+    using Resp = DescribeUserInfoResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeUserInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeUserInfoOutcomeCallable DlcClient::DescribeUserInfoCallable(const DescribeUserInfoRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeUserInfoOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeUserInfo(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeUserInfoOutcome>>();
+    DescribeUserInfoAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeUserInfoRequest&,
+        DescribeUserInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeUserRolesOutcome DlcClient::DescribeUserRoles(const DescribeUserRolesRequest &request)
@@ -3115,25 +3612,32 @@ DlcClient::DescribeUserRolesOutcome DlcClient::DescribeUserRoles(const DescribeU
 
 void DlcClient::DescribeUserRolesAsync(const DescribeUserRolesRequest& request, const DescribeUserRolesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeUserRoles(request), context);
-    };
+    using Req = const DescribeUserRolesRequest&;
+    using Resp = DescribeUserRolesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeUserRoles", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeUserRolesOutcomeCallable DlcClient::DescribeUserRolesCallable(const DescribeUserRolesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeUserRolesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeUserRoles(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeUserRolesOutcome>>();
+    DescribeUserRolesAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeUserRolesRequest&,
+        DescribeUserRolesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeUserTypeOutcome DlcClient::DescribeUserType(const DescribeUserTypeRequest &request)
@@ -3158,25 +3662,32 @@ DlcClient::DescribeUserTypeOutcome DlcClient::DescribeUserType(const DescribeUse
 
 void DlcClient::DescribeUserTypeAsync(const DescribeUserTypeRequest& request, const DescribeUserTypeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeUserType(request), context);
-    };
+    using Req = const DescribeUserTypeRequest&;
+    using Resp = DescribeUserTypeResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeUserType", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeUserTypeOutcomeCallable DlcClient::DescribeUserTypeCallable(const DescribeUserTypeRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeUserTypeOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeUserType(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeUserTypeOutcome>>();
+    DescribeUserTypeAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeUserTypeRequest&,
+        DescribeUserTypeOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeUsersOutcome DlcClient::DescribeUsers(const DescribeUsersRequest &request)
@@ -3201,25 +3712,32 @@ DlcClient::DescribeUsersOutcome DlcClient::DescribeUsers(const DescribeUsersRequ
 
 void DlcClient::DescribeUsersAsync(const DescribeUsersRequest& request, const DescribeUsersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeUsers(request), context);
-    };
+    using Req = const DescribeUsersRequest&;
+    using Resp = DescribeUsersResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeUsers", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeUsersOutcomeCallable DlcClient::DescribeUsersCallable(const DescribeUsersRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeUsersOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeUsers(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeUsersOutcome>>();
+    DescribeUsersAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeUsersRequest&,
+        DescribeUsersOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeWorkGroupInfoOutcome DlcClient::DescribeWorkGroupInfo(const DescribeWorkGroupInfoRequest &request)
@@ -3244,25 +3762,32 @@ DlcClient::DescribeWorkGroupInfoOutcome DlcClient::DescribeWorkGroupInfo(const D
 
 void DlcClient::DescribeWorkGroupInfoAsync(const DescribeWorkGroupInfoRequest& request, const DescribeWorkGroupInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeWorkGroupInfo(request), context);
-    };
+    using Req = const DescribeWorkGroupInfoRequest&;
+    using Resp = DescribeWorkGroupInfoResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeWorkGroupInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeWorkGroupInfoOutcomeCallable DlcClient::DescribeWorkGroupInfoCallable(const DescribeWorkGroupInfoRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeWorkGroupInfoOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeWorkGroupInfo(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeWorkGroupInfoOutcome>>();
+    DescribeWorkGroupInfoAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeWorkGroupInfoRequest&,
+        DescribeWorkGroupInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DescribeWorkGroupsOutcome DlcClient::DescribeWorkGroups(const DescribeWorkGroupsRequest &request)
@@ -3287,25 +3812,32 @@ DlcClient::DescribeWorkGroupsOutcome DlcClient::DescribeWorkGroups(const Describ
 
 void DlcClient::DescribeWorkGroupsAsync(const DescribeWorkGroupsRequest& request, const DescribeWorkGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeWorkGroups(request), context);
-    };
+    using Req = const DescribeWorkGroupsRequest&;
+    using Resp = DescribeWorkGroupsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeWorkGroups", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DescribeWorkGroupsOutcomeCallable DlcClient::DescribeWorkGroupsCallable(const DescribeWorkGroupsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeWorkGroupsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeWorkGroups(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeWorkGroupsOutcome>>();
+    DescribeWorkGroupsAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DescribeWorkGroupsRequest&,
+        DescribeWorkGroupsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DetachUserPolicyOutcome DlcClient::DetachUserPolicy(const DetachUserPolicyRequest &request)
@@ -3330,25 +3862,32 @@ DlcClient::DetachUserPolicyOutcome DlcClient::DetachUserPolicy(const DetachUserP
 
 void DlcClient::DetachUserPolicyAsync(const DetachUserPolicyRequest& request, const DetachUserPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DetachUserPolicy(request), context);
-    };
+    using Req = const DetachUserPolicyRequest&;
+    using Resp = DetachUserPolicyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DetachUserPolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DetachUserPolicyOutcomeCallable DlcClient::DetachUserPolicyCallable(const DetachUserPolicyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DetachUserPolicyOutcome()>>(
-        [this, request]()
-        {
-            return this->DetachUserPolicy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DetachUserPolicyOutcome>>();
+    DetachUserPolicyAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DetachUserPolicyRequest&,
+        DetachUserPolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DetachWorkGroupPolicyOutcome DlcClient::DetachWorkGroupPolicy(const DetachWorkGroupPolicyRequest &request)
@@ -3373,25 +3912,32 @@ DlcClient::DetachWorkGroupPolicyOutcome DlcClient::DetachWorkGroupPolicy(const D
 
 void DlcClient::DetachWorkGroupPolicyAsync(const DetachWorkGroupPolicyRequest& request, const DetachWorkGroupPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DetachWorkGroupPolicy(request), context);
-    };
+    using Req = const DetachWorkGroupPolicyRequest&;
+    using Resp = DetachWorkGroupPolicyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DetachWorkGroupPolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DetachWorkGroupPolicyOutcomeCallable DlcClient::DetachWorkGroupPolicyCallable(const DetachWorkGroupPolicyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DetachWorkGroupPolicyOutcome()>>(
-        [this, request]()
-        {
-            return this->DetachWorkGroupPolicy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DetachWorkGroupPolicyOutcome>>();
+    DetachWorkGroupPolicyAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DetachWorkGroupPolicyRequest&,
+        DetachWorkGroupPolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DropDLCTableOutcome DlcClient::DropDLCTable(const DropDLCTableRequest &request)
@@ -3416,25 +3962,32 @@ DlcClient::DropDLCTableOutcome DlcClient::DropDLCTable(const DropDLCTableRequest
 
 void DlcClient::DropDLCTableAsync(const DropDLCTableRequest& request, const DropDLCTableAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DropDLCTable(request), context);
-    };
+    using Req = const DropDLCTableRequest&;
+    using Resp = DropDLCTableResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DropDLCTable", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DropDLCTableOutcomeCallable DlcClient::DropDLCTableCallable(const DropDLCTableRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DropDLCTableOutcome()>>(
-        [this, request]()
-        {
-            return this->DropDLCTable(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DropDLCTableOutcome>>();
+    DropDLCTableAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DropDLCTableRequest&,
+        DropDLCTableOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DropDMSDatabaseOutcome DlcClient::DropDMSDatabase(const DropDMSDatabaseRequest &request)
@@ -3459,25 +4012,32 @@ DlcClient::DropDMSDatabaseOutcome DlcClient::DropDMSDatabase(const DropDMSDataba
 
 void DlcClient::DropDMSDatabaseAsync(const DropDMSDatabaseRequest& request, const DropDMSDatabaseAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DropDMSDatabase(request), context);
-    };
+    using Req = const DropDMSDatabaseRequest&;
+    using Resp = DropDMSDatabaseResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DropDMSDatabase", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DropDMSDatabaseOutcomeCallable DlcClient::DropDMSDatabaseCallable(const DropDMSDatabaseRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DropDMSDatabaseOutcome()>>(
-        [this, request]()
-        {
-            return this->DropDMSDatabase(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DropDMSDatabaseOutcome>>();
+    DropDMSDatabaseAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DropDMSDatabaseRequest&,
+        DropDMSDatabaseOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::DropDMSTableOutcome DlcClient::DropDMSTable(const DropDMSTableRequest &request)
@@ -3502,25 +4062,32 @@ DlcClient::DropDMSTableOutcome DlcClient::DropDMSTable(const DropDMSTableRequest
 
 void DlcClient::DropDMSTableAsync(const DropDMSTableRequest& request, const DropDMSTableAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DropDMSTable(request), context);
-    };
+    using Req = const DropDMSTableRequest&;
+    using Resp = DropDMSTableResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DropDMSTable", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::DropDMSTableOutcomeCallable DlcClient::DropDMSTableCallable(const DropDMSTableRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DropDMSTableOutcome()>>(
-        [this, request]()
-        {
-            return this->DropDMSTable(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DropDMSTableOutcome>>();
+    DropDMSTableAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const DropDMSTableRequest&,
+        DropDMSTableOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::GenerateCreateMangedTableSqlOutcome DlcClient::GenerateCreateMangedTableSql(const GenerateCreateMangedTableSqlRequest &request)
@@ -3545,25 +4112,32 @@ DlcClient::GenerateCreateMangedTableSqlOutcome DlcClient::GenerateCreateMangedTa
 
 void DlcClient::GenerateCreateMangedTableSqlAsync(const GenerateCreateMangedTableSqlRequest& request, const GenerateCreateMangedTableSqlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->GenerateCreateMangedTableSql(request), context);
-    };
+    using Req = const GenerateCreateMangedTableSqlRequest&;
+    using Resp = GenerateCreateMangedTableSqlResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "GenerateCreateMangedTableSql", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::GenerateCreateMangedTableSqlOutcomeCallable DlcClient::GenerateCreateMangedTableSqlCallable(const GenerateCreateMangedTableSqlRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<GenerateCreateMangedTableSqlOutcome()>>(
-        [this, request]()
-        {
-            return this->GenerateCreateMangedTableSql(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<GenerateCreateMangedTableSqlOutcome>>();
+    GenerateCreateMangedTableSqlAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const GenerateCreateMangedTableSqlRequest&,
+        GenerateCreateMangedTableSqlOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::GetOptimizerPolicyOutcome DlcClient::GetOptimizerPolicy(const GetOptimizerPolicyRequest &request)
@@ -3588,25 +4162,32 @@ DlcClient::GetOptimizerPolicyOutcome DlcClient::GetOptimizerPolicy(const GetOpti
 
 void DlcClient::GetOptimizerPolicyAsync(const GetOptimizerPolicyRequest& request, const GetOptimizerPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->GetOptimizerPolicy(request), context);
-    };
+    using Req = const GetOptimizerPolicyRequest&;
+    using Resp = GetOptimizerPolicyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "GetOptimizerPolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::GetOptimizerPolicyOutcomeCallable DlcClient::GetOptimizerPolicyCallable(const GetOptimizerPolicyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<GetOptimizerPolicyOutcome()>>(
-        [this, request]()
-        {
-            return this->GetOptimizerPolicy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<GetOptimizerPolicyOutcome>>();
+    GetOptimizerPolicyAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const GetOptimizerPolicyRequest&,
+        GetOptimizerPolicyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::GrantDLCCatalogAccessOutcome DlcClient::GrantDLCCatalogAccess(const GrantDLCCatalogAccessRequest &request)
@@ -3631,25 +4212,32 @@ DlcClient::GrantDLCCatalogAccessOutcome DlcClient::GrantDLCCatalogAccess(const G
 
 void DlcClient::GrantDLCCatalogAccessAsync(const GrantDLCCatalogAccessRequest& request, const GrantDLCCatalogAccessAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->GrantDLCCatalogAccess(request), context);
-    };
+    using Req = const GrantDLCCatalogAccessRequest&;
+    using Resp = GrantDLCCatalogAccessResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "GrantDLCCatalogAccess", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::GrantDLCCatalogAccessOutcomeCallable DlcClient::GrantDLCCatalogAccessCallable(const GrantDLCCatalogAccessRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<GrantDLCCatalogAccessOutcome()>>(
-        [this, request]()
-        {
-            return this->GrantDLCCatalogAccess(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<GrantDLCCatalogAccessOutcome>>();
+    GrantDLCCatalogAccessAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const GrantDLCCatalogAccessRequest&,
+        GrantDLCCatalogAccessOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::ModifyAdvancedStoreLocationOutcome DlcClient::ModifyAdvancedStoreLocation(const ModifyAdvancedStoreLocationRequest &request)
@@ -3674,25 +4262,32 @@ DlcClient::ModifyAdvancedStoreLocationOutcome DlcClient::ModifyAdvancedStoreLoca
 
 void DlcClient::ModifyAdvancedStoreLocationAsync(const ModifyAdvancedStoreLocationRequest& request, const ModifyAdvancedStoreLocationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyAdvancedStoreLocation(request), context);
-    };
+    using Req = const ModifyAdvancedStoreLocationRequest&;
+    using Resp = ModifyAdvancedStoreLocationResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyAdvancedStoreLocation", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::ModifyAdvancedStoreLocationOutcomeCallable DlcClient::ModifyAdvancedStoreLocationCallable(const ModifyAdvancedStoreLocationRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyAdvancedStoreLocationOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyAdvancedStoreLocation(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyAdvancedStoreLocationOutcome>>();
+    ModifyAdvancedStoreLocationAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const ModifyAdvancedStoreLocationRequest&,
+        ModifyAdvancedStoreLocationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::ModifyDataEngineDescriptionOutcome DlcClient::ModifyDataEngineDescription(const ModifyDataEngineDescriptionRequest &request)
@@ -3717,25 +4312,32 @@ DlcClient::ModifyDataEngineDescriptionOutcome DlcClient::ModifyDataEngineDescrip
 
 void DlcClient::ModifyDataEngineDescriptionAsync(const ModifyDataEngineDescriptionRequest& request, const ModifyDataEngineDescriptionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyDataEngineDescription(request), context);
-    };
+    using Req = const ModifyDataEngineDescriptionRequest&;
+    using Resp = ModifyDataEngineDescriptionResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyDataEngineDescription", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::ModifyDataEngineDescriptionOutcomeCallable DlcClient::ModifyDataEngineDescriptionCallable(const ModifyDataEngineDescriptionRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyDataEngineDescriptionOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyDataEngineDescription(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyDataEngineDescriptionOutcome>>();
+    ModifyDataEngineDescriptionAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const ModifyDataEngineDescriptionRequest&,
+        ModifyDataEngineDescriptionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::ModifyGovernEventRuleOutcome DlcClient::ModifyGovernEventRule(const ModifyGovernEventRuleRequest &request)
@@ -3760,25 +4362,32 @@ DlcClient::ModifyGovernEventRuleOutcome DlcClient::ModifyGovernEventRule(const M
 
 void DlcClient::ModifyGovernEventRuleAsync(const ModifyGovernEventRuleRequest& request, const ModifyGovernEventRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyGovernEventRule(request), context);
-    };
+    using Req = const ModifyGovernEventRuleRequest&;
+    using Resp = ModifyGovernEventRuleResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyGovernEventRule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::ModifyGovernEventRuleOutcomeCallable DlcClient::ModifyGovernEventRuleCallable(const ModifyGovernEventRuleRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyGovernEventRuleOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyGovernEventRule(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyGovernEventRuleOutcome>>();
+    ModifyGovernEventRuleAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const ModifyGovernEventRuleRequest&,
+        ModifyGovernEventRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::ModifySparkAppOutcome DlcClient::ModifySparkApp(const ModifySparkAppRequest &request)
@@ -3803,25 +4412,32 @@ DlcClient::ModifySparkAppOutcome DlcClient::ModifySparkApp(const ModifySparkAppR
 
 void DlcClient::ModifySparkAppAsync(const ModifySparkAppRequest& request, const ModifySparkAppAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifySparkApp(request), context);
-    };
+    using Req = const ModifySparkAppRequest&;
+    using Resp = ModifySparkAppResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifySparkApp", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::ModifySparkAppOutcomeCallable DlcClient::ModifySparkAppCallable(const ModifySparkAppRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifySparkAppOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifySparkApp(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifySparkAppOutcome>>();
+    ModifySparkAppAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const ModifySparkAppRequest&,
+        ModifySparkAppOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::ModifySparkAppBatchOutcome DlcClient::ModifySparkAppBatch(const ModifySparkAppBatchRequest &request)
@@ -3846,25 +4462,32 @@ DlcClient::ModifySparkAppBatchOutcome DlcClient::ModifySparkAppBatch(const Modif
 
 void DlcClient::ModifySparkAppBatchAsync(const ModifySparkAppBatchRequest& request, const ModifySparkAppBatchAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifySparkAppBatch(request), context);
-    };
+    using Req = const ModifySparkAppBatchRequest&;
+    using Resp = ModifySparkAppBatchResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifySparkAppBatch", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::ModifySparkAppBatchOutcomeCallable DlcClient::ModifySparkAppBatchCallable(const ModifySparkAppBatchRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifySparkAppBatchOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifySparkAppBatch(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifySparkAppBatchOutcome>>();
+    ModifySparkAppBatchAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const ModifySparkAppBatchRequest&,
+        ModifySparkAppBatchOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::ModifyUserOutcome DlcClient::ModifyUser(const ModifyUserRequest &request)
@@ -3889,25 +4512,32 @@ DlcClient::ModifyUserOutcome DlcClient::ModifyUser(const ModifyUserRequest &requ
 
 void DlcClient::ModifyUserAsync(const ModifyUserRequest& request, const ModifyUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyUser(request), context);
-    };
+    using Req = const ModifyUserRequest&;
+    using Resp = ModifyUserResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyUser", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::ModifyUserOutcomeCallable DlcClient::ModifyUserCallable(const ModifyUserRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyUserOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyUser(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyUserOutcome>>();
+    ModifyUserAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const ModifyUserRequest&,
+        ModifyUserOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::ModifyUserTypeOutcome DlcClient::ModifyUserType(const ModifyUserTypeRequest &request)
@@ -3932,25 +4562,32 @@ DlcClient::ModifyUserTypeOutcome DlcClient::ModifyUserType(const ModifyUserTypeR
 
 void DlcClient::ModifyUserTypeAsync(const ModifyUserTypeRequest& request, const ModifyUserTypeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyUserType(request), context);
-    };
+    using Req = const ModifyUserTypeRequest&;
+    using Resp = ModifyUserTypeResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyUserType", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::ModifyUserTypeOutcomeCallable DlcClient::ModifyUserTypeCallable(const ModifyUserTypeRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyUserTypeOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyUserType(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyUserTypeOutcome>>();
+    ModifyUserTypeAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const ModifyUserTypeRequest&,
+        ModifyUserTypeOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::ModifyWorkGroupOutcome DlcClient::ModifyWorkGroup(const ModifyWorkGroupRequest &request)
@@ -3975,25 +4612,32 @@ DlcClient::ModifyWorkGroupOutcome DlcClient::ModifyWorkGroup(const ModifyWorkGro
 
 void DlcClient::ModifyWorkGroupAsync(const ModifyWorkGroupRequest& request, const ModifyWorkGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyWorkGroup(request), context);
-    };
+    using Req = const ModifyWorkGroupRequest&;
+    using Resp = ModifyWorkGroupResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyWorkGroup", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::ModifyWorkGroupOutcomeCallable DlcClient::ModifyWorkGroupCallable(const ModifyWorkGroupRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyWorkGroupOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyWorkGroup(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyWorkGroupOutcome>>();
+    ModifyWorkGroupAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const ModifyWorkGroupRequest&,
+        ModifyWorkGroupOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::QueryResultOutcome DlcClient::QueryResult(const QueryResultRequest &request)
@@ -4018,25 +4662,32 @@ DlcClient::QueryResultOutcome DlcClient::QueryResult(const QueryResultRequest &r
 
 void DlcClient::QueryResultAsync(const QueryResultRequest& request, const QueryResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->QueryResult(request), context);
-    };
+    using Req = const QueryResultRequest&;
+    using Resp = QueryResultResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "QueryResult", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::QueryResultOutcomeCallable DlcClient::QueryResultCallable(const QueryResultRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<QueryResultOutcome()>>(
-        [this, request]()
-        {
-            return this->QueryResult(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<QueryResultOutcome>>();
+    QueryResultAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const QueryResultRequest&,
+        QueryResultOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::QueryTaskCostDetailOutcome DlcClient::QueryTaskCostDetail(const QueryTaskCostDetailRequest &request)
@@ -4061,25 +4712,32 @@ DlcClient::QueryTaskCostDetailOutcome DlcClient::QueryTaskCostDetail(const Query
 
 void DlcClient::QueryTaskCostDetailAsync(const QueryTaskCostDetailRequest& request, const QueryTaskCostDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->QueryTaskCostDetail(request), context);
-    };
+    using Req = const QueryTaskCostDetailRequest&;
+    using Resp = QueryTaskCostDetailResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "QueryTaskCostDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::QueryTaskCostDetailOutcomeCallable DlcClient::QueryTaskCostDetailCallable(const QueryTaskCostDetailRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<QueryTaskCostDetailOutcome()>>(
-        [this, request]()
-        {
-            return this->QueryTaskCostDetail(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<QueryTaskCostDetailOutcome>>();
+    QueryTaskCostDetailAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const QueryTaskCostDetailRequest&,
+        QueryTaskCostDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::RegisterThirdPartyAccessUserOutcome DlcClient::RegisterThirdPartyAccessUser(const RegisterThirdPartyAccessUserRequest &request)
@@ -4104,25 +4762,32 @@ DlcClient::RegisterThirdPartyAccessUserOutcome DlcClient::RegisterThirdPartyAcce
 
 void DlcClient::RegisterThirdPartyAccessUserAsync(const RegisterThirdPartyAccessUserRequest& request, const RegisterThirdPartyAccessUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->RegisterThirdPartyAccessUser(request), context);
-    };
+    using Req = const RegisterThirdPartyAccessUserRequest&;
+    using Resp = RegisterThirdPartyAccessUserResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "RegisterThirdPartyAccessUser", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::RegisterThirdPartyAccessUserOutcomeCallable DlcClient::RegisterThirdPartyAccessUserCallable(const RegisterThirdPartyAccessUserRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<RegisterThirdPartyAccessUserOutcome()>>(
-        [this, request]()
-        {
-            return this->RegisterThirdPartyAccessUser(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<RegisterThirdPartyAccessUserOutcome>>();
+    RegisterThirdPartyAccessUserAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const RegisterThirdPartyAccessUserRequest&,
+        RegisterThirdPartyAccessUserOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::RenewDataEngineOutcome DlcClient::RenewDataEngine(const RenewDataEngineRequest &request)
@@ -4147,25 +4812,32 @@ DlcClient::RenewDataEngineOutcome DlcClient::RenewDataEngine(const RenewDataEngi
 
 void DlcClient::RenewDataEngineAsync(const RenewDataEngineRequest& request, const RenewDataEngineAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->RenewDataEngine(request), context);
-    };
+    using Req = const RenewDataEngineRequest&;
+    using Resp = RenewDataEngineResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "RenewDataEngine", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::RenewDataEngineOutcomeCallable DlcClient::RenewDataEngineCallable(const RenewDataEngineRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<RenewDataEngineOutcome()>>(
-        [this, request]()
-        {
-            return this->RenewDataEngine(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<RenewDataEngineOutcome>>();
+    RenewDataEngineAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const RenewDataEngineRequest&,
+        RenewDataEngineOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::RestartDataEngineOutcome DlcClient::RestartDataEngine(const RestartDataEngineRequest &request)
@@ -4190,25 +4862,32 @@ DlcClient::RestartDataEngineOutcome DlcClient::RestartDataEngine(const RestartDa
 
 void DlcClient::RestartDataEngineAsync(const RestartDataEngineRequest& request, const RestartDataEngineAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->RestartDataEngine(request), context);
-    };
+    using Req = const RestartDataEngineRequest&;
+    using Resp = RestartDataEngineResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "RestartDataEngine", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::RestartDataEngineOutcomeCallable DlcClient::RestartDataEngineCallable(const RestartDataEngineRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<RestartDataEngineOutcome()>>(
-        [this, request]()
-        {
-            return this->RestartDataEngine(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<RestartDataEngineOutcome>>();
+    RestartDataEngineAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const RestartDataEngineRequest&,
+        RestartDataEngineOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::RevokeDLCCatalogAccessOutcome DlcClient::RevokeDLCCatalogAccess(const RevokeDLCCatalogAccessRequest &request)
@@ -4233,25 +4912,32 @@ DlcClient::RevokeDLCCatalogAccessOutcome DlcClient::RevokeDLCCatalogAccess(const
 
 void DlcClient::RevokeDLCCatalogAccessAsync(const RevokeDLCCatalogAccessRequest& request, const RevokeDLCCatalogAccessAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->RevokeDLCCatalogAccess(request), context);
-    };
+    using Req = const RevokeDLCCatalogAccessRequest&;
+    using Resp = RevokeDLCCatalogAccessResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "RevokeDLCCatalogAccess", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::RevokeDLCCatalogAccessOutcomeCallable DlcClient::RevokeDLCCatalogAccessCallable(const RevokeDLCCatalogAccessRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<RevokeDLCCatalogAccessOutcome()>>(
-        [this, request]()
-        {
-            return this->RevokeDLCCatalogAccess(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<RevokeDLCCatalogAccessOutcome>>();
+    RevokeDLCCatalogAccessAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const RevokeDLCCatalogAccessRequest&,
+        RevokeDLCCatalogAccessOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::RollbackDataEngineImageOutcome DlcClient::RollbackDataEngineImage(const RollbackDataEngineImageRequest &request)
@@ -4276,25 +4962,32 @@ DlcClient::RollbackDataEngineImageOutcome DlcClient::RollbackDataEngineImage(con
 
 void DlcClient::RollbackDataEngineImageAsync(const RollbackDataEngineImageRequest& request, const RollbackDataEngineImageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->RollbackDataEngineImage(request), context);
-    };
+    using Req = const RollbackDataEngineImageRequest&;
+    using Resp = RollbackDataEngineImageResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "RollbackDataEngineImage", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::RollbackDataEngineImageOutcomeCallable DlcClient::RollbackDataEngineImageCallable(const RollbackDataEngineImageRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<RollbackDataEngineImageOutcome()>>(
-        [this, request]()
-        {
-            return this->RollbackDataEngineImage(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<RollbackDataEngineImageOutcome>>();
+    RollbackDataEngineImageAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const RollbackDataEngineImageRequest&,
+        RollbackDataEngineImageOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::SuspendResumeDataEngineOutcome DlcClient::SuspendResumeDataEngine(const SuspendResumeDataEngineRequest &request)
@@ -4319,25 +5012,32 @@ DlcClient::SuspendResumeDataEngineOutcome DlcClient::SuspendResumeDataEngine(con
 
 void DlcClient::SuspendResumeDataEngineAsync(const SuspendResumeDataEngineRequest& request, const SuspendResumeDataEngineAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->SuspendResumeDataEngine(request), context);
-    };
+    using Req = const SuspendResumeDataEngineRequest&;
+    using Resp = SuspendResumeDataEngineResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "SuspendResumeDataEngine", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::SuspendResumeDataEngineOutcomeCallable DlcClient::SuspendResumeDataEngineCallable(const SuspendResumeDataEngineRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<SuspendResumeDataEngineOutcome()>>(
-        [this, request]()
-        {
-            return this->SuspendResumeDataEngine(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<SuspendResumeDataEngineOutcome>>();
+    SuspendResumeDataEngineAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const SuspendResumeDataEngineRequest&,
+        SuspendResumeDataEngineOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::SwitchDataEngineOutcome DlcClient::SwitchDataEngine(const SwitchDataEngineRequest &request)
@@ -4362,25 +5062,32 @@ DlcClient::SwitchDataEngineOutcome DlcClient::SwitchDataEngine(const SwitchDataE
 
 void DlcClient::SwitchDataEngineAsync(const SwitchDataEngineRequest& request, const SwitchDataEngineAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->SwitchDataEngine(request), context);
-    };
+    using Req = const SwitchDataEngineRequest&;
+    using Resp = SwitchDataEngineResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "SwitchDataEngine", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::SwitchDataEngineOutcomeCallable DlcClient::SwitchDataEngineCallable(const SwitchDataEngineRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<SwitchDataEngineOutcome()>>(
-        [this, request]()
-        {
-            return this->SwitchDataEngine(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<SwitchDataEngineOutcome>>();
+    SwitchDataEngineAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const SwitchDataEngineRequest&,
+        SwitchDataEngineOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::SwitchDataEngineImageOutcome DlcClient::SwitchDataEngineImage(const SwitchDataEngineImageRequest &request)
@@ -4405,25 +5112,32 @@ DlcClient::SwitchDataEngineImageOutcome DlcClient::SwitchDataEngineImage(const S
 
 void DlcClient::SwitchDataEngineImageAsync(const SwitchDataEngineImageRequest& request, const SwitchDataEngineImageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->SwitchDataEngineImage(request), context);
-    };
+    using Req = const SwitchDataEngineImageRequest&;
+    using Resp = SwitchDataEngineImageResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "SwitchDataEngineImage", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::SwitchDataEngineImageOutcomeCallable DlcClient::SwitchDataEngineImageCallable(const SwitchDataEngineImageRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<SwitchDataEngineImageOutcome()>>(
-        [this, request]()
-        {
-            return this->SwitchDataEngineImage(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<SwitchDataEngineImageOutcome>>();
+    SwitchDataEngineImageAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const SwitchDataEngineImageRequest&,
+        SwitchDataEngineImageOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::UnbindWorkGroupsFromUserOutcome DlcClient::UnbindWorkGroupsFromUser(const UnbindWorkGroupsFromUserRequest &request)
@@ -4448,25 +5162,32 @@ DlcClient::UnbindWorkGroupsFromUserOutcome DlcClient::UnbindWorkGroupsFromUser(c
 
 void DlcClient::UnbindWorkGroupsFromUserAsync(const UnbindWorkGroupsFromUserRequest& request, const UnbindWorkGroupsFromUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->UnbindWorkGroupsFromUser(request), context);
-    };
+    using Req = const UnbindWorkGroupsFromUserRequest&;
+    using Resp = UnbindWorkGroupsFromUserResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "UnbindWorkGroupsFromUser", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::UnbindWorkGroupsFromUserOutcomeCallable DlcClient::UnbindWorkGroupsFromUserCallable(const UnbindWorkGroupsFromUserRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<UnbindWorkGroupsFromUserOutcome()>>(
-        [this, request]()
-        {
-            return this->UnbindWorkGroupsFromUser(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<UnbindWorkGroupsFromUserOutcome>>();
+    UnbindWorkGroupsFromUserAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const UnbindWorkGroupsFromUserRequest&,
+        UnbindWorkGroupsFromUserOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::UpdateDataEngineOutcome DlcClient::UpdateDataEngine(const UpdateDataEngineRequest &request)
@@ -4491,25 +5212,32 @@ DlcClient::UpdateDataEngineOutcome DlcClient::UpdateDataEngine(const UpdateDataE
 
 void DlcClient::UpdateDataEngineAsync(const UpdateDataEngineRequest& request, const UpdateDataEngineAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->UpdateDataEngine(request), context);
-    };
+    using Req = const UpdateDataEngineRequest&;
+    using Resp = UpdateDataEngineResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "UpdateDataEngine", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::UpdateDataEngineOutcomeCallable DlcClient::UpdateDataEngineCallable(const UpdateDataEngineRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<UpdateDataEngineOutcome()>>(
-        [this, request]()
-        {
-            return this->UpdateDataEngine(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<UpdateDataEngineOutcome>>();
+    UpdateDataEngineAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const UpdateDataEngineRequest&,
+        UpdateDataEngineOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::UpdateDataEngineConfigOutcome DlcClient::UpdateDataEngineConfig(const UpdateDataEngineConfigRequest &request)
@@ -4534,25 +5262,32 @@ DlcClient::UpdateDataEngineConfigOutcome DlcClient::UpdateDataEngineConfig(const
 
 void DlcClient::UpdateDataEngineConfigAsync(const UpdateDataEngineConfigRequest& request, const UpdateDataEngineConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->UpdateDataEngineConfig(request), context);
-    };
+    using Req = const UpdateDataEngineConfigRequest&;
+    using Resp = UpdateDataEngineConfigResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "UpdateDataEngineConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::UpdateDataEngineConfigOutcomeCallable DlcClient::UpdateDataEngineConfigCallable(const UpdateDataEngineConfigRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<UpdateDataEngineConfigOutcome()>>(
-        [this, request]()
-        {
-            return this->UpdateDataEngineConfig(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<UpdateDataEngineConfigOutcome>>();
+    UpdateDataEngineConfigAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const UpdateDataEngineConfigRequest&,
+        UpdateDataEngineConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::UpdateDataMaskStrategyOutcome DlcClient::UpdateDataMaskStrategy(const UpdateDataMaskStrategyRequest &request)
@@ -4577,25 +5312,32 @@ DlcClient::UpdateDataMaskStrategyOutcome DlcClient::UpdateDataMaskStrategy(const
 
 void DlcClient::UpdateDataMaskStrategyAsync(const UpdateDataMaskStrategyRequest& request, const UpdateDataMaskStrategyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->UpdateDataMaskStrategy(request), context);
-    };
+    using Req = const UpdateDataMaskStrategyRequest&;
+    using Resp = UpdateDataMaskStrategyResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "UpdateDataMaskStrategy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::UpdateDataMaskStrategyOutcomeCallable DlcClient::UpdateDataMaskStrategyCallable(const UpdateDataMaskStrategyRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<UpdateDataMaskStrategyOutcome()>>(
-        [this, request]()
-        {
-            return this->UpdateDataMaskStrategy(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<UpdateDataMaskStrategyOutcome>>();
+    UpdateDataMaskStrategyAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const UpdateDataMaskStrategyRequest&,
+        UpdateDataMaskStrategyOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::UpdateRowFilterOutcome DlcClient::UpdateRowFilter(const UpdateRowFilterRequest &request)
@@ -4620,25 +5362,32 @@ DlcClient::UpdateRowFilterOutcome DlcClient::UpdateRowFilter(const UpdateRowFilt
 
 void DlcClient::UpdateRowFilterAsync(const UpdateRowFilterRequest& request, const UpdateRowFilterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->UpdateRowFilter(request), context);
-    };
+    using Req = const UpdateRowFilterRequest&;
+    using Resp = UpdateRowFilterResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "UpdateRowFilter", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::UpdateRowFilterOutcomeCallable DlcClient::UpdateRowFilterCallable(const UpdateRowFilterRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<UpdateRowFilterOutcome()>>(
-        [this, request]()
-        {
-            return this->UpdateRowFilter(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<UpdateRowFilterOutcome>>();
+    UpdateRowFilterAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const UpdateRowFilterRequest&,
+        UpdateRowFilterOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::UpdateUserDataEngineConfigOutcome DlcClient::UpdateUserDataEngineConfig(const UpdateUserDataEngineConfigRequest &request)
@@ -4663,25 +5412,32 @@ DlcClient::UpdateUserDataEngineConfigOutcome DlcClient::UpdateUserDataEngineConf
 
 void DlcClient::UpdateUserDataEngineConfigAsync(const UpdateUserDataEngineConfigRequest& request, const UpdateUserDataEngineConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->UpdateUserDataEngineConfig(request), context);
-    };
+    using Req = const UpdateUserDataEngineConfigRequest&;
+    using Resp = UpdateUserDataEngineConfigResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "UpdateUserDataEngineConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::UpdateUserDataEngineConfigOutcomeCallable DlcClient::UpdateUserDataEngineConfigCallable(const UpdateUserDataEngineConfigRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<UpdateUserDataEngineConfigOutcome()>>(
-        [this, request]()
-        {
-            return this->UpdateUserDataEngineConfig(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<UpdateUserDataEngineConfigOutcome>>();
+    UpdateUserDataEngineConfigAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const UpdateUserDataEngineConfigRequest&,
+        UpdateUserDataEngineConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DlcClient::UpgradeDataEngineImageOutcome DlcClient::UpgradeDataEngineImage(const UpgradeDataEngineImageRequest &request)
@@ -4706,24 +5462,31 @@ DlcClient::UpgradeDataEngineImageOutcome DlcClient::UpgradeDataEngineImage(const
 
 void DlcClient::UpgradeDataEngineImageAsync(const UpgradeDataEngineImageRequest& request, const UpgradeDataEngineImageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->UpgradeDataEngineImage(request), context);
-    };
+    using Req = const UpgradeDataEngineImageRequest&;
+    using Resp = UpgradeDataEngineImageResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "UpgradeDataEngineImage", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DlcClient::UpgradeDataEngineImageOutcomeCallable DlcClient::UpgradeDataEngineImageCallable(const UpgradeDataEngineImageRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<UpgradeDataEngineImageOutcome()>>(
-        [this, request]()
-        {
-            return this->UpgradeDataEngineImage(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<UpgradeDataEngineImageOutcome>>();
+    UpgradeDataEngineImageAsync(
+    request,
+    [prom](
+        const DlcClient*,
+        const UpgradeDataEngineImageRequest&,
+        UpgradeDataEngineImageOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

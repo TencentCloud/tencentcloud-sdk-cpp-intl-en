@@ -62,25 +62,32 @@ AsrClient::CreateRecTaskOutcome AsrClient::CreateRecTask(const CreateRecTaskRequ
 
 void AsrClient::CreateRecTaskAsync(const CreateRecTaskRequest& request, const CreateRecTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateRecTask(request), context);
-    };
+    using Req = const CreateRecTaskRequest&;
+    using Resp = CreateRecTaskResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateRecTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 AsrClient::CreateRecTaskOutcomeCallable AsrClient::CreateRecTaskCallable(const CreateRecTaskRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateRecTaskOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateRecTask(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateRecTaskOutcome>>();
+    CreateRecTaskAsync(
+    request,
+    [prom](
+        const AsrClient*,
+        const CreateRecTaskRequest&,
+        CreateRecTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 AsrClient::DescribeTaskStatusOutcome AsrClient::DescribeTaskStatus(const DescribeTaskStatusRequest &request)
@@ -105,24 +112,31 @@ AsrClient::DescribeTaskStatusOutcome AsrClient::DescribeTaskStatus(const Describ
 
 void AsrClient::DescribeTaskStatusAsync(const DescribeTaskStatusRequest& request, const DescribeTaskStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTaskStatus(request), context);
-    };
+    using Req = const DescribeTaskStatusRequest&;
+    using Resp = DescribeTaskStatusResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeTaskStatus", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 AsrClient::DescribeTaskStatusOutcomeCallable AsrClient::DescribeTaskStatusCallable(const DescribeTaskStatusRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeTaskStatusOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTaskStatus(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeTaskStatusOutcome>>();
+    DescribeTaskStatusAsync(
+    request,
+    [prom](
+        const AsrClient*,
+        const DescribeTaskStatusRequest&,
+        DescribeTaskStatusOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

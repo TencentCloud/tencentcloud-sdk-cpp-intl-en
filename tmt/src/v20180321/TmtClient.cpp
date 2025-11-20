@@ -62,24 +62,31 @@ TmtClient::TextTranslateOutcome TmtClient::TextTranslate(const TextTranslateRequ
 
 void TmtClient::TextTranslateAsync(const TextTranslateRequest& request, const TextTranslateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->TextTranslate(request), context);
-    };
+    using Req = const TextTranslateRequest&;
+    using Resp = TextTranslateResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "TextTranslate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 TmtClient::TextTranslateOutcomeCallable TmtClient::TextTranslateCallable(const TextTranslateRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<TextTranslateOutcome()>>(
-        [this, request]()
-        {
-            return this->TextTranslate(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<TextTranslateOutcome>>();
+    TextTranslateAsync(
+    request,
+    [prom](
+        const TmtClient*,
+        const TextTranslateRequest&,
+        TextTranslateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

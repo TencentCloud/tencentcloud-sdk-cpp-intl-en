@@ -62,25 +62,32 @@ IpClient::AllocateCustomerCreditOutcome IpClient::AllocateCustomerCredit(const A
 
 void IpClient::AllocateCustomerCreditAsync(const AllocateCustomerCreditRequest& request, const AllocateCustomerCreditAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->AllocateCustomerCredit(request), context);
-    };
+    using Req = const AllocateCustomerCreditRequest&;
+    using Resp = AllocateCustomerCreditResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "AllocateCustomerCredit", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 IpClient::AllocateCustomerCreditOutcomeCallable IpClient::AllocateCustomerCreditCallable(const AllocateCustomerCreditRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<AllocateCustomerCreditOutcome()>>(
-        [this, request]()
-        {
-            return this->AllocateCustomerCredit(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<AllocateCustomerCreditOutcome>>();
+    AllocateCustomerCreditAsync(
+    request,
+    [prom](
+        const IpClient*,
+        const AllocateCustomerCreditRequest&,
+        AllocateCustomerCreditOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 IpClient::CreateAccountOutcome IpClient::CreateAccount(const CreateAccountRequest &request)
@@ -105,25 +112,32 @@ IpClient::CreateAccountOutcome IpClient::CreateAccount(const CreateAccountReques
 
 void IpClient::CreateAccountAsync(const CreateAccountRequest& request, const CreateAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateAccount(request), context);
-    };
+    using Req = const CreateAccountRequest&;
+    using Resp = CreateAccountResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateAccount", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 IpClient::CreateAccountOutcomeCallable IpClient::CreateAccountCallable(const CreateAccountRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateAccountOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateAccount(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateAccountOutcome>>();
+    CreateAccountAsync(
+    request,
+    [prom](
+        const IpClient*,
+        const CreateAccountRequest&,
+        CreateAccountOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 IpClient::GetCountryCodesOutcome IpClient::GetCountryCodes(const GetCountryCodesRequest &request)
@@ -148,25 +162,32 @@ IpClient::GetCountryCodesOutcome IpClient::GetCountryCodes(const GetCountryCodes
 
 void IpClient::GetCountryCodesAsync(const GetCountryCodesRequest& request, const GetCountryCodesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->GetCountryCodes(request), context);
-    };
+    using Req = const GetCountryCodesRequest&;
+    using Resp = GetCountryCodesResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "GetCountryCodes", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 IpClient::GetCountryCodesOutcomeCallable IpClient::GetCountryCodesCallable(const GetCountryCodesRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<GetCountryCodesOutcome()>>(
-        [this, request]()
-        {
-            return this->GetCountryCodes(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<GetCountryCodesOutcome>>();
+    GetCountryCodesAsync(
+    request,
+    [prom](
+        const IpClient*,
+        const GetCountryCodesRequest&,
+        GetCountryCodesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 IpClient::QueryCreditAllocationHistoryOutcome IpClient::QueryCreditAllocationHistory(const QueryCreditAllocationHistoryRequest &request)
@@ -191,25 +212,32 @@ IpClient::QueryCreditAllocationHistoryOutcome IpClient::QueryCreditAllocationHis
 
 void IpClient::QueryCreditAllocationHistoryAsync(const QueryCreditAllocationHistoryRequest& request, const QueryCreditAllocationHistoryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->QueryCreditAllocationHistory(request), context);
-    };
+    using Req = const QueryCreditAllocationHistoryRequest&;
+    using Resp = QueryCreditAllocationHistoryResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "QueryCreditAllocationHistory", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 IpClient::QueryCreditAllocationHistoryOutcomeCallable IpClient::QueryCreditAllocationHistoryCallable(const QueryCreditAllocationHistoryRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<QueryCreditAllocationHistoryOutcome()>>(
-        [this, request]()
-        {
-            return this->QueryCreditAllocationHistory(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<QueryCreditAllocationHistoryOutcome>>();
+    QueryCreditAllocationHistoryAsync(
+    request,
+    [prom](
+        const IpClient*,
+        const QueryCreditAllocationHistoryRequest&,
+        QueryCreditAllocationHistoryOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 IpClient::QueryCustomersCreditOutcome IpClient::QueryCustomersCredit(const QueryCustomersCreditRequest &request)
@@ -234,25 +262,32 @@ IpClient::QueryCustomersCreditOutcome IpClient::QueryCustomersCredit(const Query
 
 void IpClient::QueryCustomersCreditAsync(const QueryCustomersCreditRequest& request, const QueryCustomersCreditAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->QueryCustomersCredit(request), context);
-    };
+    using Req = const QueryCustomersCreditRequest&;
+    using Resp = QueryCustomersCreditResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "QueryCustomersCredit", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 IpClient::QueryCustomersCreditOutcomeCallable IpClient::QueryCustomersCreditCallable(const QueryCustomersCreditRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<QueryCustomersCreditOutcome()>>(
-        [this, request]()
-        {
-            return this->QueryCustomersCredit(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<QueryCustomersCreditOutcome>>();
+    QueryCustomersCreditAsync(
+    request,
+    [prom](
+        const IpClient*,
+        const QueryCustomersCreditRequest&,
+        QueryCustomersCreditOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 IpClient::QueryPartnerCreditOutcome IpClient::QueryPartnerCredit(const QueryPartnerCreditRequest &request)
@@ -277,24 +312,31 @@ IpClient::QueryPartnerCreditOutcome IpClient::QueryPartnerCredit(const QueryPart
 
 void IpClient::QueryPartnerCreditAsync(const QueryPartnerCreditRequest& request, const QueryPartnerCreditAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->QueryPartnerCredit(request), context);
-    };
+    using Req = const QueryPartnerCreditRequest&;
+    using Resp = QueryPartnerCreditResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "QueryPartnerCredit", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 IpClient::QueryPartnerCreditOutcomeCallable IpClient::QueryPartnerCreditCallable(const QueryPartnerCreditRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<QueryPartnerCreditOutcome()>>(
-        [this, request]()
-        {
-            return this->QueryPartnerCredit(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<QueryPartnerCreditOutcome>>();
+    QueryPartnerCreditAsync(
+    request,
+    [prom](
+        const IpClient*,
+        const QueryPartnerCreditRequest&,
+        QueryPartnerCreditOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

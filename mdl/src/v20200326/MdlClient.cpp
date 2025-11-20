@@ -62,25 +62,32 @@ MdlClient::CreateStreamLiveChannelOutcome MdlClient::CreateStreamLiveChannel(con
 
 void MdlClient::CreateStreamLiveChannelAsync(const CreateStreamLiveChannelRequest& request, const CreateStreamLiveChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateStreamLiveChannel(request), context);
-    };
+    using Req = const CreateStreamLiveChannelRequest&;
+    using Resp = CreateStreamLiveChannelResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateStreamLiveChannel", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::CreateStreamLiveChannelOutcomeCallable MdlClient::CreateStreamLiveChannelCallable(const CreateStreamLiveChannelRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateStreamLiveChannelOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateStreamLiveChannel(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateStreamLiveChannelOutcome>>();
+    CreateStreamLiveChannelAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const CreateStreamLiveChannelRequest&,
+        CreateStreamLiveChannelOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::CreateStreamLiveInputOutcome MdlClient::CreateStreamLiveInput(const CreateStreamLiveInputRequest &request)
@@ -105,25 +112,32 @@ MdlClient::CreateStreamLiveInputOutcome MdlClient::CreateStreamLiveInput(const C
 
 void MdlClient::CreateStreamLiveInputAsync(const CreateStreamLiveInputRequest& request, const CreateStreamLiveInputAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateStreamLiveInput(request), context);
-    };
+    using Req = const CreateStreamLiveInputRequest&;
+    using Resp = CreateStreamLiveInputResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateStreamLiveInput", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::CreateStreamLiveInputOutcomeCallable MdlClient::CreateStreamLiveInputCallable(const CreateStreamLiveInputRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateStreamLiveInputOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateStreamLiveInput(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateStreamLiveInputOutcome>>();
+    CreateStreamLiveInputAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const CreateStreamLiveInputRequest&,
+        CreateStreamLiveInputOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::CreateStreamLiveInputSecurityGroupOutcome MdlClient::CreateStreamLiveInputSecurityGroup(const CreateStreamLiveInputSecurityGroupRequest &request)
@@ -148,25 +162,32 @@ MdlClient::CreateStreamLiveInputSecurityGroupOutcome MdlClient::CreateStreamLive
 
 void MdlClient::CreateStreamLiveInputSecurityGroupAsync(const CreateStreamLiveInputSecurityGroupRequest& request, const CreateStreamLiveInputSecurityGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateStreamLiveInputSecurityGroup(request), context);
-    };
+    using Req = const CreateStreamLiveInputSecurityGroupRequest&;
+    using Resp = CreateStreamLiveInputSecurityGroupResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateStreamLiveInputSecurityGroup", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::CreateStreamLiveInputSecurityGroupOutcomeCallable MdlClient::CreateStreamLiveInputSecurityGroupCallable(const CreateStreamLiveInputSecurityGroupRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateStreamLiveInputSecurityGroupOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateStreamLiveInputSecurityGroup(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateStreamLiveInputSecurityGroupOutcome>>();
+    CreateStreamLiveInputSecurityGroupAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const CreateStreamLiveInputSecurityGroupRequest&,
+        CreateStreamLiveInputSecurityGroupOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::CreateStreamLivePlanOutcome MdlClient::CreateStreamLivePlan(const CreateStreamLivePlanRequest &request)
@@ -191,25 +212,32 @@ MdlClient::CreateStreamLivePlanOutcome MdlClient::CreateStreamLivePlan(const Cre
 
 void MdlClient::CreateStreamLivePlanAsync(const CreateStreamLivePlanRequest& request, const CreateStreamLivePlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateStreamLivePlan(request), context);
-    };
+    using Req = const CreateStreamLivePlanRequest&;
+    using Resp = CreateStreamLivePlanResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateStreamLivePlan", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::CreateStreamLivePlanOutcomeCallable MdlClient::CreateStreamLivePlanCallable(const CreateStreamLivePlanRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateStreamLivePlanOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateStreamLivePlan(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateStreamLivePlanOutcome>>();
+    CreateStreamLivePlanAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const CreateStreamLivePlanRequest&,
+        CreateStreamLivePlanOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::CreateStreamLiveWatermarkOutcome MdlClient::CreateStreamLiveWatermark(const CreateStreamLiveWatermarkRequest &request)
@@ -234,25 +262,32 @@ MdlClient::CreateStreamLiveWatermarkOutcome MdlClient::CreateStreamLiveWatermark
 
 void MdlClient::CreateStreamLiveWatermarkAsync(const CreateStreamLiveWatermarkRequest& request, const CreateStreamLiveWatermarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateStreamLiveWatermark(request), context);
-    };
+    using Req = const CreateStreamLiveWatermarkRequest&;
+    using Resp = CreateStreamLiveWatermarkResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateStreamLiveWatermark", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::CreateStreamLiveWatermarkOutcomeCallable MdlClient::CreateStreamLiveWatermarkCallable(const CreateStreamLiveWatermarkRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateStreamLiveWatermarkOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateStreamLiveWatermark(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateStreamLiveWatermarkOutcome>>();
+    CreateStreamLiveWatermarkAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const CreateStreamLiveWatermarkRequest&,
+        CreateStreamLiveWatermarkOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::DeleteStreamLiveChannelOutcome MdlClient::DeleteStreamLiveChannel(const DeleteStreamLiveChannelRequest &request)
@@ -277,25 +312,32 @@ MdlClient::DeleteStreamLiveChannelOutcome MdlClient::DeleteStreamLiveChannel(con
 
 void MdlClient::DeleteStreamLiveChannelAsync(const DeleteStreamLiveChannelRequest& request, const DeleteStreamLiveChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteStreamLiveChannel(request), context);
-    };
+    using Req = const DeleteStreamLiveChannelRequest&;
+    using Resp = DeleteStreamLiveChannelResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteStreamLiveChannel", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::DeleteStreamLiveChannelOutcomeCallable MdlClient::DeleteStreamLiveChannelCallable(const DeleteStreamLiveChannelRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteStreamLiveChannelOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteStreamLiveChannel(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteStreamLiveChannelOutcome>>();
+    DeleteStreamLiveChannelAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const DeleteStreamLiveChannelRequest&,
+        DeleteStreamLiveChannelOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::DeleteStreamLiveInputOutcome MdlClient::DeleteStreamLiveInput(const DeleteStreamLiveInputRequest &request)
@@ -320,25 +362,32 @@ MdlClient::DeleteStreamLiveInputOutcome MdlClient::DeleteStreamLiveInput(const D
 
 void MdlClient::DeleteStreamLiveInputAsync(const DeleteStreamLiveInputRequest& request, const DeleteStreamLiveInputAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteStreamLiveInput(request), context);
-    };
+    using Req = const DeleteStreamLiveInputRequest&;
+    using Resp = DeleteStreamLiveInputResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteStreamLiveInput", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::DeleteStreamLiveInputOutcomeCallable MdlClient::DeleteStreamLiveInputCallable(const DeleteStreamLiveInputRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteStreamLiveInputOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteStreamLiveInput(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteStreamLiveInputOutcome>>();
+    DeleteStreamLiveInputAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const DeleteStreamLiveInputRequest&,
+        DeleteStreamLiveInputOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::DeleteStreamLiveInputSecurityGroupOutcome MdlClient::DeleteStreamLiveInputSecurityGroup(const DeleteStreamLiveInputSecurityGroupRequest &request)
@@ -363,25 +412,32 @@ MdlClient::DeleteStreamLiveInputSecurityGroupOutcome MdlClient::DeleteStreamLive
 
 void MdlClient::DeleteStreamLiveInputSecurityGroupAsync(const DeleteStreamLiveInputSecurityGroupRequest& request, const DeleteStreamLiveInputSecurityGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteStreamLiveInputSecurityGroup(request), context);
-    };
+    using Req = const DeleteStreamLiveInputSecurityGroupRequest&;
+    using Resp = DeleteStreamLiveInputSecurityGroupResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteStreamLiveInputSecurityGroup", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::DeleteStreamLiveInputSecurityGroupOutcomeCallable MdlClient::DeleteStreamLiveInputSecurityGroupCallable(const DeleteStreamLiveInputSecurityGroupRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteStreamLiveInputSecurityGroupOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteStreamLiveInputSecurityGroup(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteStreamLiveInputSecurityGroupOutcome>>();
+    DeleteStreamLiveInputSecurityGroupAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const DeleteStreamLiveInputSecurityGroupRequest&,
+        DeleteStreamLiveInputSecurityGroupOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::DeleteStreamLivePlanOutcome MdlClient::DeleteStreamLivePlan(const DeleteStreamLivePlanRequest &request)
@@ -406,25 +462,32 @@ MdlClient::DeleteStreamLivePlanOutcome MdlClient::DeleteStreamLivePlan(const Del
 
 void MdlClient::DeleteStreamLivePlanAsync(const DeleteStreamLivePlanRequest& request, const DeleteStreamLivePlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteStreamLivePlan(request), context);
-    };
+    using Req = const DeleteStreamLivePlanRequest&;
+    using Resp = DeleteStreamLivePlanResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteStreamLivePlan", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::DeleteStreamLivePlanOutcomeCallable MdlClient::DeleteStreamLivePlanCallable(const DeleteStreamLivePlanRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteStreamLivePlanOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteStreamLivePlan(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteStreamLivePlanOutcome>>();
+    DeleteStreamLivePlanAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const DeleteStreamLivePlanRequest&,
+        DeleteStreamLivePlanOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::DeleteStreamLiveWatermarkOutcome MdlClient::DeleteStreamLiveWatermark(const DeleteStreamLiveWatermarkRequest &request)
@@ -449,25 +512,32 @@ MdlClient::DeleteStreamLiveWatermarkOutcome MdlClient::DeleteStreamLiveWatermark
 
 void MdlClient::DeleteStreamLiveWatermarkAsync(const DeleteStreamLiveWatermarkRequest& request, const DeleteStreamLiveWatermarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteStreamLiveWatermark(request), context);
-    };
+    using Req = const DeleteStreamLiveWatermarkRequest&;
+    using Resp = DeleteStreamLiveWatermarkResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteStreamLiveWatermark", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::DeleteStreamLiveWatermarkOutcomeCallable MdlClient::DeleteStreamLiveWatermarkCallable(const DeleteStreamLiveWatermarkRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteStreamLiveWatermarkOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteStreamLiveWatermark(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteStreamLiveWatermarkOutcome>>();
+    DeleteStreamLiveWatermarkAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const DeleteStreamLiveWatermarkRequest&,
+        DeleteStreamLiveWatermarkOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::DescribeStreamLiveChannelOutcome MdlClient::DescribeStreamLiveChannel(const DescribeStreamLiveChannelRequest &request)
@@ -492,25 +562,32 @@ MdlClient::DescribeStreamLiveChannelOutcome MdlClient::DescribeStreamLiveChannel
 
 void MdlClient::DescribeStreamLiveChannelAsync(const DescribeStreamLiveChannelRequest& request, const DescribeStreamLiveChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeStreamLiveChannel(request), context);
-    };
+    using Req = const DescribeStreamLiveChannelRequest&;
+    using Resp = DescribeStreamLiveChannelResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeStreamLiveChannel", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::DescribeStreamLiveChannelOutcomeCallable MdlClient::DescribeStreamLiveChannelCallable(const DescribeStreamLiveChannelRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeStreamLiveChannelOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeStreamLiveChannel(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeStreamLiveChannelOutcome>>();
+    DescribeStreamLiveChannelAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const DescribeStreamLiveChannelRequest&,
+        DescribeStreamLiveChannelOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::DescribeStreamLiveChannelAlertsOutcome MdlClient::DescribeStreamLiveChannelAlerts(const DescribeStreamLiveChannelAlertsRequest &request)
@@ -535,25 +612,32 @@ MdlClient::DescribeStreamLiveChannelAlertsOutcome MdlClient::DescribeStreamLiveC
 
 void MdlClient::DescribeStreamLiveChannelAlertsAsync(const DescribeStreamLiveChannelAlertsRequest& request, const DescribeStreamLiveChannelAlertsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeStreamLiveChannelAlerts(request), context);
-    };
+    using Req = const DescribeStreamLiveChannelAlertsRequest&;
+    using Resp = DescribeStreamLiveChannelAlertsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeStreamLiveChannelAlerts", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::DescribeStreamLiveChannelAlertsOutcomeCallable MdlClient::DescribeStreamLiveChannelAlertsCallable(const DescribeStreamLiveChannelAlertsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeStreamLiveChannelAlertsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeStreamLiveChannelAlerts(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeStreamLiveChannelAlertsOutcome>>();
+    DescribeStreamLiveChannelAlertsAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const DescribeStreamLiveChannelAlertsRequest&,
+        DescribeStreamLiveChannelAlertsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::DescribeStreamLiveChannelInputStatisticsOutcome MdlClient::DescribeStreamLiveChannelInputStatistics(const DescribeStreamLiveChannelInputStatisticsRequest &request)
@@ -578,25 +662,32 @@ MdlClient::DescribeStreamLiveChannelInputStatisticsOutcome MdlClient::DescribeSt
 
 void MdlClient::DescribeStreamLiveChannelInputStatisticsAsync(const DescribeStreamLiveChannelInputStatisticsRequest& request, const DescribeStreamLiveChannelInputStatisticsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeStreamLiveChannelInputStatistics(request), context);
-    };
+    using Req = const DescribeStreamLiveChannelInputStatisticsRequest&;
+    using Resp = DescribeStreamLiveChannelInputStatisticsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeStreamLiveChannelInputStatistics", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::DescribeStreamLiveChannelInputStatisticsOutcomeCallable MdlClient::DescribeStreamLiveChannelInputStatisticsCallable(const DescribeStreamLiveChannelInputStatisticsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeStreamLiveChannelInputStatisticsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeStreamLiveChannelInputStatistics(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeStreamLiveChannelInputStatisticsOutcome>>();
+    DescribeStreamLiveChannelInputStatisticsAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const DescribeStreamLiveChannelInputStatisticsRequest&,
+        DescribeStreamLiveChannelInputStatisticsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::DescribeStreamLiveChannelLogsOutcome MdlClient::DescribeStreamLiveChannelLogs(const DescribeStreamLiveChannelLogsRequest &request)
@@ -621,25 +712,32 @@ MdlClient::DescribeStreamLiveChannelLogsOutcome MdlClient::DescribeStreamLiveCha
 
 void MdlClient::DescribeStreamLiveChannelLogsAsync(const DescribeStreamLiveChannelLogsRequest& request, const DescribeStreamLiveChannelLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeStreamLiveChannelLogs(request), context);
-    };
+    using Req = const DescribeStreamLiveChannelLogsRequest&;
+    using Resp = DescribeStreamLiveChannelLogsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeStreamLiveChannelLogs", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::DescribeStreamLiveChannelLogsOutcomeCallable MdlClient::DescribeStreamLiveChannelLogsCallable(const DescribeStreamLiveChannelLogsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeStreamLiveChannelLogsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeStreamLiveChannelLogs(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeStreamLiveChannelLogsOutcome>>();
+    DescribeStreamLiveChannelLogsAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const DescribeStreamLiveChannelLogsRequest&,
+        DescribeStreamLiveChannelLogsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::DescribeStreamLiveChannelOutputStatisticsOutcome MdlClient::DescribeStreamLiveChannelOutputStatistics(const DescribeStreamLiveChannelOutputStatisticsRequest &request)
@@ -664,25 +762,32 @@ MdlClient::DescribeStreamLiveChannelOutputStatisticsOutcome MdlClient::DescribeS
 
 void MdlClient::DescribeStreamLiveChannelOutputStatisticsAsync(const DescribeStreamLiveChannelOutputStatisticsRequest& request, const DescribeStreamLiveChannelOutputStatisticsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeStreamLiveChannelOutputStatistics(request), context);
-    };
+    using Req = const DescribeStreamLiveChannelOutputStatisticsRequest&;
+    using Resp = DescribeStreamLiveChannelOutputStatisticsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeStreamLiveChannelOutputStatistics", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::DescribeStreamLiveChannelOutputStatisticsOutcomeCallable MdlClient::DescribeStreamLiveChannelOutputStatisticsCallable(const DescribeStreamLiveChannelOutputStatisticsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeStreamLiveChannelOutputStatisticsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeStreamLiveChannelOutputStatistics(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeStreamLiveChannelOutputStatisticsOutcome>>();
+    DescribeStreamLiveChannelOutputStatisticsAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const DescribeStreamLiveChannelOutputStatisticsRequest&,
+        DescribeStreamLiveChannelOutputStatisticsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::DescribeStreamLiveChannelsOutcome MdlClient::DescribeStreamLiveChannels(const DescribeStreamLiveChannelsRequest &request)
@@ -707,25 +812,32 @@ MdlClient::DescribeStreamLiveChannelsOutcome MdlClient::DescribeStreamLiveChanne
 
 void MdlClient::DescribeStreamLiveChannelsAsync(const DescribeStreamLiveChannelsRequest& request, const DescribeStreamLiveChannelsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeStreamLiveChannels(request), context);
-    };
+    using Req = const DescribeStreamLiveChannelsRequest&;
+    using Resp = DescribeStreamLiveChannelsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeStreamLiveChannels", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::DescribeStreamLiveChannelsOutcomeCallable MdlClient::DescribeStreamLiveChannelsCallable(const DescribeStreamLiveChannelsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeStreamLiveChannelsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeStreamLiveChannels(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeStreamLiveChannelsOutcome>>();
+    DescribeStreamLiveChannelsAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const DescribeStreamLiveChannelsRequest&,
+        DescribeStreamLiveChannelsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::DescribeStreamLiveInputOutcome MdlClient::DescribeStreamLiveInput(const DescribeStreamLiveInputRequest &request)
@@ -750,25 +862,32 @@ MdlClient::DescribeStreamLiveInputOutcome MdlClient::DescribeStreamLiveInput(con
 
 void MdlClient::DescribeStreamLiveInputAsync(const DescribeStreamLiveInputRequest& request, const DescribeStreamLiveInputAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeStreamLiveInput(request), context);
-    };
+    using Req = const DescribeStreamLiveInputRequest&;
+    using Resp = DescribeStreamLiveInputResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeStreamLiveInput", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::DescribeStreamLiveInputOutcomeCallable MdlClient::DescribeStreamLiveInputCallable(const DescribeStreamLiveInputRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeStreamLiveInputOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeStreamLiveInput(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeStreamLiveInputOutcome>>();
+    DescribeStreamLiveInputAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const DescribeStreamLiveInputRequest&,
+        DescribeStreamLiveInputOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::DescribeStreamLiveInputSecurityGroupOutcome MdlClient::DescribeStreamLiveInputSecurityGroup(const DescribeStreamLiveInputSecurityGroupRequest &request)
@@ -793,25 +912,32 @@ MdlClient::DescribeStreamLiveInputSecurityGroupOutcome MdlClient::DescribeStream
 
 void MdlClient::DescribeStreamLiveInputSecurityGroupAsync(const DescribeStreamLiveInputSecurityGroupRequest& request, const DescribeStreamLiveInputSecurityGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeStreamLiveInputSecurityGroup(request), context);
-    };
+    using Req = const DescribeStreamLiveInputSecurityGroupRequest&;
+    using Resp = DescribeStreamLiveInputSecurityGroupResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeStreamLiveInputSecurityGroup", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::DescribeStreamLiveInputSecurityGroupOutcomeCallable MdlClient::DescribeStreamLiveInputSecurityGroupCallable(const DescribeStreamLiveInputSecurityGroupRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeStreamLiveInputSecurityGroupOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeStreamLiveInputSecurityGroup(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeStreamLiveInputSecurityGroupOutcome>>();
+    DescribeStreamLiveInputSecurityGroupAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const DescribeStreamLiveInputSecurityGroupRequest&,
+        DescribeStreamLiveInputSecurityGroupOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::DescribeStreamLiveInputSecurityGroupsOutcome MdlClient::DescribeStreamLiveInputSecurityGroups(const DescribeStreamLiveInputSecurityGroupsRequest &request)
@@ -836,25 +962,32 @@ MdlClient::DescribeStreamLiveInputSecurityGroupsOutcome MdlClient::DescribeStrea
 
 void MdlClient::DescribeStreamLiveInputSecurityGroupsAsync(const DescribeStreamLiveInputSecurityGroupsRequest& request, const DescribeStreamLiveInputSecurityGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeStreamLiveInputSecurityGroups(request), context);
-    };
+    using Req = const DescribeStreamLiveInputSecurityGroupsRequest&;
+    using Resp = DescribeStreamLiveInputSecurityGroupsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeStreamLiveInputSecurityGroups", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::DescribeStreamLiveInputSecurityGroupsOutcomeCallable MdlClient::DescribeStreamLiveInputSecurityGroupsCallable(const DescribeStreamLiveInputSecurityGroupsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeStreamLiveInputSecurityGroupsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeStreamLiveInputSecurityGroups(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeStreamLiveInputSecurityGroupsOutcome>>();
+    DescribeStreamLiveInputSecurityGroupsAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const DescribeStreamLiveInputSecurityGroupsRequest&,
+        DescribeStreamLiveInputSecurityGroupsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::DescribeStreamLiveInputsOutcome MdlClient::DescribeStreamLiveInputs(const DescribeStreamLiveInputsRequest &request)
@@ -879,25 +1012,32 @@ MdlClient::DescribeStreamLiveInputsOutcome MdlClient::DescribeStreamLiveInputs(c
 
 void MdlClient::DescribeStreamLiveInputsAsync(const DescribeStreamLiveInputsRequest& request, const DescribeStreamLiveInputsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeStreamLiveInputs(request), context);
-    };
+    using Req = const DescribeStreamLiveInputsRequest&;
+    using Resp = DescribeStreamLiveInputsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeStreamLiveInputs", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::DescribeStreamLiveInputsOutcomeCallable MdlClient::DescribeStreamLiveInputsCallable(const DescribeStreamLiveInputsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeStreamLiveInputsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeStreamLiveInputs(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeStreamLiveInputsOutcome>>();
+    DescribeStreamLiveInputsAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const DescribeStreamLiveInputsRequest&,
+        DescribeStreamLiveInputsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::DescribeStreamLivePlansOutcome MdlClient::DescribeStreamLivePlans(const DescribeStreamLivePlansRequest &request)
@@ -922,25 +1062,32 @@ MdlClient::DescribeStreamLivePlansOutcome MdlClient::DescribeStreamLivePlans(con
 
 void MdlClient::DescribeStreamLivePlansAsync(const DescribeStreamLivePlansRequest& request, const DescribeStreamLivePlansAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeStreamLivePlans(request), context);
-    };
+    using Req = const DescribeStreamLivePlansRequest&;
+    using Resp = DescribeStreamLivePlansResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeStreamLivePlans", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::DescribeStreamLivePlansOutcomeCallable MdlClient::DescribeStreamLivePlansCallable(const DescribeStreamLivePlansRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeStreamLivePlansOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeStreamLivePlans(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeStreamLivePlansOutcome>>();
+    DescribeStreamLivePlansAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const DescribeStreamLivePlansRequest&,
+        DescribeStreamLivePlansOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::DescribeStreamLiveRegionsOutcome MdlClient::DescribeStreamLiveRegions(const DescribeStreamLiveRegionsRequest &request)
@@ -965,25 +1112,32 @@ MdlClient::DescribeStreamLiveRegionsOutcome MdlClient::DescribeStreamLiveRegions
 
 void MdlClient::DescribeStreamLiveRegionsAsync(const DescribeStreamLiveRegionsRequest& request, const DescribeStreamLiveRegionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeStreamLiveRegions(request), context);
-    };
+    using Req = const DescribeStreamLiveRegionsRequest&;
+    using Resp = DescribeStreamLiveRegionsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeStreamLiveRegions", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::DescribeStreamLiveRegionsOutcomeCallable MdlClient::DescribeStreamLiveRegionsCallable(const DescribeStreamLiveRegionsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeStreamLiveRegionsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeStreamLiveRegions(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeStreamLiveRegionsOutcome>>();
+    DescribeStreamLiveRegionsAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const DescribeStreamLiveRegionsRequest&,
+        DescribeStreamLiveRegionsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::DescribeStreamLiveTranscodeDetailOutcome MdlClient::DescribeStreamLiveTranscodeDetail(const DescribeStreamLiveTranscodeDetailRequest &request)
@@ -1008,25 +1162,32 @@ MdlClient::DescribeStreamLiveTranscodeDetailOutcome MdlClient::DescribeStreamLiv
 
 void MdlClient::DescribeStreamLiveTranscodeDetailAsync(const DescribeStreamLiveTranscodeDetailRequest& request, const DescribeStreamLiveTranscodeDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeStreamLiveTranscodeDetail(request), context);
-    };
+    using Req = const DescribeStreamLiveTranscodeDetailRequest&;
+    using Resp = DescribeStreamLiveTranscodeDetailResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeStreamLiveTranscodeDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::DescribeStreamLiveTranscodeDetailOutcomeCallable MdlClient::DescribeStreamLiveTranscodeDetailCallable(const DescribeStreamLiveTranscodeDetailRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeStreamLiveTranscodeDetailOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeStreamLiveTranscodeDetail(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeStreamLiveTranscodeDetailOutcome>>();
+    DescribeStreamLiveTranscodeDetailAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const DescribeStreamLiveTranscodeDetailRequest&,
+        DescribeStreamLiveTranscodeDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::DescribeStreamLiveWatermarkOutcome MdlClient::DescribeStreamLiveWatermark(const DescribeStreamLiveWatermarkRequest &request)
@@ -1051,25 +1212,32 @@ MdlClient::DescribeStreamLiveWatermarkOutcome MdlClient::DescribeStreamLiveWater
 
 void MdlClient::DescribeStreamLiveWatermarkAsync(const DescribeStreamLiveWatermarkRequest& request, const DescribeStreamLiveWatermarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeStreamLiveWatermark(request), context);
-    };
+    using Req = const DescribeStreamLiveWatermarkRequest&;
+    using Resp = DescribeStreamLiveWatermarkResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeStreamLiveWatermark", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::DescribeStreamLiveWatermarkOutcomeCallable MdlClient::DescribeStreamLiveWatermarkCallable(const DescribeStreamLiveWatermarkRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeStreamLiveWatermarkOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeStreamLiveWatermark(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeStreamLiveWatermarkOutcome>>();
+    DescribeStreamLiveWatermarkAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const DescribeStreamLiveWatermarkRequest&,
+        DescribeStreamLiveWatermarkOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::DescribeStreamLiveWatermarksOutcome MdlClient::DescribeStreamLiveWatermarks(const DescribeStreamLiveWatermarksRequest &request)
@@ -1094,25 +1262,32 @@ MdlClient::DescribeStreamLiveWatermarksOutcome MdlClient::DescribeStreamLiveWate
 
 void MdlClient::DescribeStreamLiveWatermarksAsync(const DescribeStreamLiveWatermarksRequest& request, const DescribeStreamLiveWatermarksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeStreamLiveWatermarks(request), context);
-    };
+    using Req = const DescribeStreamLiveWatermarksRequest&;
+    using Resp = DescribeStreamLiveWatermarksResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeStreamLiveWatermarks", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::DescribeStreamLiveWatermarksOutcomeCallable MdlClient::DescribeStreamLiveWatermarksCallable(const DescribeStreamLiveWatermarksRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeStreamLiveWatermarksOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeStreamLiveWatermarks(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeStreamLiveWatermarksOutcome>>();
+    DescribeStreamLiveWatermarksAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const DescribeStreamLiveWatermarksRequest&,
+        DescribeStreamLiveWatermarksOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::GetAbWatermarkPlayUrlOutcome MdlClient::GetAbWatermarkPlayUrl(const GetAbWatermarkPlayUrlRequest &request)
@@ -1137,25 +1312,32 @@ MdlClient::GetAbWatermarkPlayUrlOutcome MdlClient::GetAbWatermarkPlayUrl(const G
 
 void MdlClient::GetAbWatermarkPlayUrlAsync(const GetAbWatermarkPlayUrlRequest& request, const GetAbWatermarkPlayUrlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->GetAbWatermarkPlayUrl(request), context);
-    };
+    using Req = const GetAbWatermarkPlayUrlRequest&;
+    using Resp = GetAbWatermarkPlayUrlResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "GetAbWatermarkPlayUrl", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::GetAbWatermarkPlayUrlOutcomeCallable MdlClient::GetAbWatermarkPlayUrlCallable(const GetAbWatermarkPlayUrlRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<GetAbWatermarkPlayUrlOutcome()>>(
-        [this, request]()
-        {
-            return this->GetAbWatermarkPlayUrl(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<GetAbWatermarkPlayUrlOutcome>>();
+    GetAbWatermarkPlayUrlAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const GetAbWatermarkPlayUrlRequest&,
+        GetAbWatermarkPlayUrlOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::ModifyStreamLiveChannelOutcome MdlClient::ModifyStreamLiveChannel(const ModifyStreamLiveChannelRequest &request)
@@ -1180,25 +1362,32 @@ MdlClient::ModifyStreamLiveChannelOutcome MdlClient::ModifyStreamLiveChannel(con
 
 void MdlClient::ModifyStreamLiveChannelAsync(const ModifyStreamLiveChannelRequest& request, const ModifyStreamLiveChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyStreamLiveChannel(request), context);
-    };
+    using Req = const ModifyStreamLiveChannelRequest&;
+    using Resp = ModifyStreamLiveChannelResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyStreamLiveChannel", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::ModifyStreamLiveChannelOutcomeCallable MdlClient::ModifyStreamLiveChannelCallable(const ModifyStreamLiveChannelRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyStreamLiveChannelOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyStreamLiveChannel(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyStreamLiveChannelOutcome>>();
+    ModifyStreamLiveChannelAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const ModifyStreamLiveChannelRequest&,
+        ModifyStreamLiveChannelOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::ModifyStreamLiveInputOutcome MdlClient::ModifyStreamLiveInput(const ModifyStreamLiveInputRequest &request)
@@ -1223,25 +1412,32 @@ MdlClient::ModifyStreamLiveInputOutcome MdlClient::ModifyStreamLiveInput(const M
 
 void MdlClient::ModifyStreamLiveInputAsync(const ModifyStreamLiveInputRequest& request, const ModifyStreamLiveInputAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyStreamLiveInput(request), context);
-    };
+    using Req = const ModifyStreamLiveInputRequest&;
+    using Resp = ModifyStreamLiveInputResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyStreamLiveInput", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::ModifyStreamLiveInputOutcomeCallable MdlClient::ModifyStreamLiveInputCallable(const ModifyStreamLiveInputRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyStreamLiveInputOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyStreamLiveInput(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyStreamLiveInputOutcome>>();
+    ModifyStreamLiveInputAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const ModifyStreamLiveInputRequest&,
+        ModifyStreamLiveInputOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::ModifyStreamLiveInputSecurityGroupOutcome MdlClient::ModifyStreamLiveInputSecurityGroup(const ModifyStreamLiveInputSecurityGroupRequest &request)
@@ -1266,25 +1462,32 @@ MdlClient::ModifyStreamLiveInputSecurityGroupOutcome MdlClient::ModifyStreamLive
 
 void MdlClient::ModifyStreamLiveInputSecurityGroupAsync(const ModifyStreamLiveInputSecurityGroupRequest& request, const ModifyStreamLiveInputSecurityGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyStreamLiveInputSecurityGroup(request), context);
-    };
+    using Req = const ModifyStreamLiveInputSecurityGroupRequest&;
+    using Resp = ModifyStreamLiveInputSecurityGroupResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyStreamLiveInputSecurityGroup", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::ModifyStreamLiveInputSecurityGroupOutcomeCallable MdlClient::ModifyStreamLiveInputSecurityGroupCallable(const ModifyStreamLiveInputSecurityGroupRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyStreamLiveInputSecurityGroupOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyStreamLiveInputSecurityGroup(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyStreamLiveInputSecurityGroupOutcome>>();
+    ModifyStreamLiveInputSecurityGroupAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const ModifyStreamLiveInputSecurityGroupRequest&,
+        ModifyStreamLiveInputSecurityGroupOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::ModifyStreamLiveWatermarkOutcome MdlClient::ModifyStreamLiveWatermark(const ModifyStreamLiveWatermarkRequest &request)
@@ -1309,25 +1512,32 @@ MdlClient::ModifyStreamLiveWatermarkOutcome MdlClient::ModifyStreamLiveWatermark
 
 void MdlClient::ModifyStreamLiveWatermarkAsync(const ModifyStreamLiveWatermarkRequest& request, const ModifyStreamLiveWatermarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyStreamLiveWatermark(request), context);
-    };
+    using Req = const ModifyStreamLiveWatermarkRequest&;
+    using Resp = ModifyStreamLiveWatermarkResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyStreamLiveWatermark", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::ModifyStreamLiveWatermarkOutcomeCallable MdlClient::ModifyStreamLiveWatermarkCallable(const ModifyStreamLiveWatermarkRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyStreamLiveWatermarkOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyStreamLiveWatermark(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyStreamLiveWatermarkOutcome>>();
+    ModifyStreamLiveWatermarkAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const ModifyStreamLiveWatermarkRequest&,
+        ModifyStreamLiveWatermarkOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::QueryInputStreamStateOutcome MdlClient::QueryInputStreamState(const QueryInputStreamStateRequest &request)
@@ -1352,25 +1562,32 @@ MdlClient::QueryInputStreamStateOutcome MdlClient::QueryInputStreamState(const Q
 
 void MdlClient::QueryInputStreamStateAsync(const QueryInputStreamStateRequest& request, const QueryInputStreamStateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->QueryInputStreamState(request), context);
-    };
+    using Req = const QueryInputStreamStateRequest&;
+    using Resp = QueryInputStreamStateResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "QueryInputStreamState", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::QueryInputStreamStateOutcomeCallable MdlClient::QueryInputStreamStateCallable(const QueryInputStreamStateRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<QueryInputStreamStateOutcome()>>(
-        [this, request]()
-        {
-            return this->QueryInputStreamState(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<QueryInputStreamStateOutcome>>();
+    QueryInputStreamStateAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const QueryInputStreamStateRequest&,
+        QueryInputStreamStateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::StartStreamLiveChannelOutcome MdlClient::StartStreamLiveChannel(const StartStreamLiveChannelRequest &request)
@@ -1395,25 +1612,32 @@ MdlClient::StartStreamLiveChannelOutcome MdlClient::StartStreamLiveChannel(const
 
 void MdlClient::StartStreamLiveChannelAsync(const StartStreamLiveChannelRequest& request, const StartStreamLiveChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->StartStreamLiveChannel(request), context);
-    };
+    using Req = const StartStreamLiveChannelRequest&;
+    using Resp = StartStreamLiveChannelResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "StartStreamLiveChannel", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::StartStreamLiveChannelOutcomeCallable MdlClient::StartStreamLiveChannelCallable(const StartStreamLiveChannelRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<StartStreamLiveChannelOutcome()>>(
-        [this, request]()
-        {
-            return this->StartStreamLiveChannel(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<StartStreamLiveChannelOutcome>>();
+    StartStreamLiveChannelAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const StartStreamLiveChannelRequest&,
+        StartStreamLiveChannelOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 MdlClient::StopStreamLiveChannelOutcome MdlClient::StopStreamLiveChannel(const StopStreamLiveChannelRequest &request)
@@ -1438,24 +1662,31 @@ MdlClient::StopStreamLiveChannelOutcome MdlClient::StopStreamLiveChannel(const S
 
 void MdlClient::StopStreamLiveChannelAsync(const StopStreamLiveChannelRequest& request, const StopStreamLiveChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->StopStreamLiveChannel(request), context);
-    };
+    using Req = const StopStreamLiveChannelRequest&;
+    using Resp = StopStreamLiveChannelResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "StopStreamLiveChannel", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 MdlClient::StopStreamLiveChannelOutcomeCallable MdlClient::StopStreamLiveChannelCallable(const StopStreamLiveChannelRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<StopStreamLiveChannelOutcome()>>(
-        [this, request]()
-        {
-            return this->StopStreamLiveChannel(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<StopStreamLiveChannelOutcome>>();
+    StopStreamLiveChannelAsync(
+    request,
+    [prom](
+        const MdlClient*,
+        const StopStreamLiveChannelRequest&,
+        StopStreamLiveChannelOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 

@@ -62,25 +62,32 @@ DomainClient::BatchModifyIntlDomainDNSOutcome DomainClient::BatchModifyIntlDomai
 
 void DomainClient::BatchModifyIntlDomainDNSAsync(const BatchModifyIntlDomainDNSRequest& request, const BatchModifyIntlDomainDNSAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->BatchModifyIntlDomainDNS(request), context);
-    };
+    using Req = const BatchModifyIntlDomainDNSRequest&;
+    using Resp = BatchModifyIntlDomainDNSResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "BatchModifyIntlDomainDNS", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DomainClient::BatchModifyIntlDomainDNSOutcomeCallable DomainClient::BatchModifyIntlDomainDNSCallable(const BatchModifyIntlDomainDNSRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<BatchModifyIntlDomainDNSOutcome()>>(
-        [this, request]()
-        {
-            return this->BatchModifyIntlDomainDNS(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<BatchModifyIntlDomainDNSOutcome>>();
+    BatchModifyIntlDomainDNSAsync(
+    request,
+    [prom](
+        const DomainClient*,
+        const BatchModifyIntlDomainDNSRequest&,
+        BatchModifyIntlDomainDNSOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DomainClient::BatchModifyIntlDomainInfoOutcome DomainClient::BatchModifyIntlDomainInfo(const BatchModifyIntlDomainInfoRequest &request)
@@ -105,25 +112,32 @@ DomainClient::BatchModifyIntlDomainInfoOutcome DomainClient::BatchModifyIntlDoma
 
 void DomainClient::BatchModifyIntlDomainInfoAsync(const BatchModifyIntlDomainInfoRequest& request, const BatchModifyIntlDomainInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->BatchModifyIntlDomainInfo(request), context);
-    };
+    using Req = const BatchModifyIntlDomainInfoRequest&;
+    using Resp = BatchModifyIntlDomainInfoResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "BatchModifyIntlDomainInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DomainClient::BatchModifyIntlDomainInfoOutcomeCallable DomainClient::BatchModifyIntlDomainInfoCallable(const BatchModifyIntlDomainInfoRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<BatchModifyIntlDomainInfoOutcome()>>(
-        [this, request]()
-        {
-            return this->BatchModifyIntlDomainInfo(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<BatchModifyIntlDomainInfoOutcome>>();
+    BatchModifyIntlDomainInfoAsync(
+    request,
+    [prom](
+        const DomainClient*,
+        const BatchModifyIntlDomainInfoRequest&,
+        BatchModifyIntlDomainInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DomainClient::CheckIntlDomainNewOutcome DomainClient::CheckIntlDomainNew(const CheckIntlDomainNewRequest &request)
@@ -148,25 +162,32 @@ DomainClient::CheckIntlDomainNewOutcome DomainClient::CheckIntlDomainNew(const C
 
 void DomainClient::CheckIntlDomainNewAsync(const CheckIntlDomainNewRequest& request, const CheckIntlDomainNewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CheckIntlDomainNew(request), context);
-    };
+    using Req = const CheckIntlDomainNewRequest&;
+    using Resp = CheckIntlDomainNewResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CheckIntlDomainNew", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DomainClient::CheckIntlDomainNewOutcomeCallable DomainClient::CheckIntlDomainNewCallable(const CheckIntlDomainNewRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CheckIntlDomainNewOutcome()>>(
-        [this, request]()
-        {
-            return this->CheckIntlDomainNew(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CheckIntlDomainNewOutcome>>();
+    CheckIntlDomainNewAsync(
+    request,
+    [prom](
+        const DomainClient*,
+        const CheckIntlDomainNewRequest&,
+        CheckIntlDomainNewOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DomainClient::CreateIntlDomainBatchOutcome DomainClient::CreateIntlDomainBatch(const CreateIntlDomainBatchRequest &request)
@@ -191,25 +212,32 @@ DomainClient::CreateIntlDomainBatchOutcome DomainClient::CreateIntlDomainBatch(c
 
 void DomainClient::CreateIntlDomainBatchAsync(const CreateIntlDomainBatchRequest& request, const CreateIntlDomainBatchAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateIntlDomainBatch(request), context);
-    };
+    using Req = const CreateIntlDomainBatchRequest&;
+    using Resp = CreateIntlDomainBatchResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateIntlDomainBatch", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DomainClient::CreateIntlDomainBatchOutcomeCallable DomainClient::CreateIntlDomainBatchCallable(const CreateIntlDomainBatchRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateIntlDomainBatchOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateIntlDomainBatch(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateIntlDomainBatchOutcome>>();
+    CreateIntlDomainBatchAsync(
+    request,
+    [prom](
+        const DomainClient*,
+        const CreateIntlDomainBatchRequest&,
+        CreateIntlDomainBatchOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DomainClient::CreateIntlPhoneEmailOutcome DomainClient::CreateIntlPhoneEmail(const CreateIntlPhoneEmailRequest &request)
@@ -234,25 +262,32 @@ DomainClient::CreateIntlPhoneEmailOutcome DomainClient::CreateIntlPhoneEmail(con
 
 void DomainClient::CreateIntlPhoneEmailAsync(const CreateIntlPhoneEmailRequest& request, const CreateIntlPhoneEmailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateIntlPhoneEmail(request), context);
-    };
+    using Req = const CreateIntlPhoneEmailRequest&;
+    using Resp = CreateIntlPhoneEmailResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateIntlPhoneEmail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DomainClient::CreateIntlPhoneEmailOutcomeCallable DomainClient::CreateIntlPhoneEmailCallable(const CreateIntlPhoneEmailRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateIntlPhoneEmailOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateIntlPhoneEmail(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateIntlPhoneEmailOutcome>>();
+    CreateIntlPhoneEmailAsync(
+    request,
+    [prom](
+        const DomainClient*,
+        const CreateIntlPhoneEmailRequest&,
+        CreateIntlPhoneEmailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DomainClient::CreateIntlTemplateOutcome DomainClient::CreateIntlTemplate(const CreateIntlTemplateRequest &request)
@@ -277,25 +312,32 @@ DomainClient::CreateIntlTemplateOutcome DomainClient::CreateIntlTemplate(const C
 
 void DomainClient::CreateIntlTemplateAsync(const CreateIntlTemplateRequest& request, const CreateIntlTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateIntlTemplate(request), context);
-    };
+    using Req = const CreateIntlTemplateRequest&;
+    using Resp = CreateIntlTemplateResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "CreateIntlTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DomainClient::CreateIntlTemplateOutcomeCallable DomainClient::CreateIntlTemplateCallable(const CreateIntlTemplateRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateIntlTemplateOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateIntlTemplate(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<CreateIntlTemplateOutcome>>();
+    CreateIntlTemplateAsync(
+    request,
+    [prom](
+        const DomainClient*,
+        const CreateIntlTemplateRequest&,
+        CreateIntlTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DomainClient::DeleteIntlPhoneEmailOutcome DomainClient::DeleteIntlPhoneEmail(const DeleteIntlPhoneEmailRequest &request)
@@ -320,25 +362,32 @@ DomainClient::DeleteIntlPhoneEmailOutcome DomainClient::DeleteIntlPhoneEmail(con
 
 void DomainClient::DeleteIntlPhoneEmailAsync(const DeleteIntlPhoneEmailRequest& request, const DeleteIntlPhoneEmailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteIntlPhoneEmail(request), context);
-    };
+    using Req = const DeleteIntlPhoneEmailRequest&;
+    using Resp = DeleteIntlPhoneEmailResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteIntlPhoneEmail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DomainClient::DeleteIntlPhoneEmailOutcomeCallable DomainClient::DeleteIntlPhoneEmailCallable(const DeleteIntlPhoneEmailRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteIntlPhoneEmailOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteIntlPhoneEmail(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteIntlPhoneEmailOutcome>>();
+    DeleteIntlPhoneEmailAsync(
+    request,
+    [prom](
+        const DomainClient*,
+        const DeleteIntlPhoneEmailRequest&,
+        DeleteIntlPhoneEmailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DomainClient::DeleteIntlTemplateOutcome DomainClient::DeleteIntlTemplate(const DeleteIntlTemplateRequest &request)
@@ -363,25 +412,32 @@ DomainClient::DeleteIntlTemplateOutcome DomainClient::DeleteIntlTemplate(const D
 
 void DomainClient::DeleteIntlTemplateAsync(const DeleteIntlTemplateRequest& request, const DeleteIntlTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteIntlTemplate(request), context);
-    };
+    using Req = const DeleteIntlTemplateRequest&;
+    using Resp = DeleteIntlTemplateResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DeleteIntlTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DomainClient::DeleteIntlTemplateOutcomeCallable DomainClient::DeleteIntlTemplateCallable(const DeleteIntlTemplateRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteIntlTemplateOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteIntlTemplate(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DeleteIntlTemplateOutcome>>();
+    DeleteIntlTemplateAsync(
+    request,
+    [prom](
+        const DomainClient*,
+        const DeleteIntlTemplateRequest&,
+        DeleteIntlTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DomainClient::DescribeIntlBatchDetailStatusOutcome DomainClient::DescribeIntlBatchDetailStatus(const DescribeIntlBatchDetailStatusRequest &request)
@@ -406,25 +462,32 @@ DomainClient::DescribeIntlBatchDetailStatusOutcome DomainClient::DescribeIntlBat
 
 void DomainClient::DescribeIntlBatchDetailStatusAsync(const DescribeIntlBatchDetailStatusRequest& request, const DescribeIntlBatchDetailStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeIntlBatchDetailStatus(request), context);
-    };
+    using Req = const DescribeIntlBatchDetailStatusRequest&;
+    using Resp = DescribeIntlBatchDetailStatusResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeIntlBatchDetailStatus", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DomainClient::DescribeIntlBatchDetailStatusOutcomeCallable DomainClient::DescribeIntlBatchDetailStatusCallable(const DescribeIntlBatchDetailStatusRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeIntlBatchDetailStatusOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeIntlBatchDetailStatus(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeIntlBatchDetailStatusOutcome>>();
+    DescribeIntlBatchDetailStatusAsync(
+    request,
+    [prom](
+        const DomainClient*,
+        const DescribeIntlBatchDetailStatusRequest&,
+        DescribeIntlBatchDetailStatusOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DomainClient::DescribeIntlBatchOperationLogsOutcome DomainClient::DescribeIntlBatchOperationLogs(const DescribeIntlBatchOperationLogsRequest &request)
@@ -449,25 +512,32 @@ DomainClient::DescribeIntlBatchOperationLogsOutcome DomainClient::DescribeIntlBa
 
 void DomainClient::DescribeIntlBatchOperationLogsAsync(const DescribeIntlBatchOperationLogsRequest& request, const DescribeIntlBatchOperationLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeIntlBatchOperationLogs(request), context);
-    };
+    using Req = const DescribeIntlBatchOperationLogsRequest&;
+    using Resp = DescribeIntlBatchOperationLogsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeIntlBatchOperationLogs", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DomainClient::DescribeIntlBatchOperationLogsOutcomeCallable DomainClient::DescribeIntlBatchOperationLogsCallable(const DescribeIntlBatchOperationLogsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeIntlBatchOperationLogsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeIntlBatchOperationLogs(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeIntlBatchOperationLogsOutcome>>();
+    DescribeIntlBatchOperationLogsAsync(
+    request,
+    [prom](
+        const DomainClient*,
+        const DescribeIntlBatchOperationLogsRequest&,
+        DescribeIntlBatchOperationLogsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DomainClient::DescribeIntlDomainOutcome DomainClient::DescribeIntlDomain(const DescribeIntlDomainRequest &request)
@@ -492,25 +562,32 @@ DomainClient::DescribeIntlDomainOutcome DomainClient::DescribeIntlDomain(const D
 
 void DomainClient::DescribeIntlDomainAsync(const DescribeIntlDomainRequest& request, const DescribeIntlDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeIntlDomain(request), context);
-    };
+    using Req = const DescribeIntlDomainRequest&;
+    using Resp = DescribeIntlDomainResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeIntlDomain", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DomainClient::DescribeIntlDomainOutcomeCallable DomainClient::DescribeIntlDomainCallable(const DescribeIntlDomainRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeIntlDomainOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeIntlDomain(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeIntlDomainOutcome>>();
+    DescribeIntlDomainAsync(
+    request,
+    [prom](
+        const DomainClient*,
+        const DescribeIntlDomainRequest&,
+        DescribeIntlDomainOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DomainClient::DescribeIntlDomainBatchDetailsOutcome DomainClient::DescribeIntlDomainBatchDetails(const DescribeIntlDomainBatchDetailsRequest &request)
@@ -535,25 +612,32 @@ DomainClient::DescribeIntlDomainBatchDetailsOutcome DomainClient::DescribeIntlDo
 
 void DomainClient::DescribeIntlDomainBatchDetailsAsync(const DescribeIntlDomainBatchDetailsRequest& request, const DescribeIntlDomainBatchDetailsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeIntlDomainBatchDetails(request), context);
-    };
+    using Req = const DescribeIntlDomainBatchDetailsRequest&;
+    using Resp = DescribeIntlDomainBatchDetailsResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeIntlDomainBatchDetails", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DomainClient::DescribeIntlDomainBatchDetailsOutcomeCallable DomainClient::DescribeIntlDomainBatchDetailsCallable(const DescribeIntlDomainBatchDetailsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeIntlDomainBatchDetailsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeIntlDomainBatchDetails(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeIntlDomainBatchDetailsOutcome>>();
+    DescribeIntlDomainBatchDetailsAsync(
+    request,
+    [prom](
+        const DomainClient*,
+        const DescribeIntlDomainBatchDetailsRequest&,
+        DescribeIntlDomainBatchDetailsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DomainClient::DescribeIntlDomainListOutcome DomainClient::DescribeIntlDomainList(const DescribeIntlDomainListRequest &request)
@@ -578,25 +662,32 @@ DomainClient::DescribeIntlDomainListOutcome DomainClient::DescribeIntlDomainList
 
 void DomainClient::DescribeIntlDomainListAsync(const DescribeIntlDomainListRequest& request, const DescribeIntlDomainListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeIntlDomainList(request), context);
-    };
+    using Req = const DescribeIntlDomainListRequest&;
+    using Resp = DescribeIntlDomainListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeIntlDomainList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DomainClient::DescribeIntlDomainListOutcomeCallable DomainClient::DescribeIntlDomainListCallable(const DescribeIntlDomainListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeIntlDomainListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeIntlDomainList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeIntlDomainListOutcome>>();
+    DescribeIntlDomainListAsync(
+    request,
+    [prom](
+        const DomainClient*,
+        const DescribeIntlDomainListRequest&,
+        DescribeIntlDomainListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DomainClient::DescribeIntlDomainPriceNewListOutcome DomainClient::DescribeIntlDomainPriceNewList(const DescribeIntlDomainPriceNewListRequest &request)
@@ -621,25 +712,32 @@ DomainClient::DescribeIntlDomainPriceNewListOutcome DomainClient::DescribeIntlDo
 
 void DomainClient::DescribeIntlDomainPriceNewListAsync(const DescribeIntlDomainPriceNewListRequest& request, const DescribeIntlDomainPriceNewListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeIntlDomainPriceNewList(request), context);
-    };
+    using Req = const DescribeIntlDomainPriceNewListRequest&;
+    using Resp = DescribeIntlDomainPriceNewListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeIntlDomainPriceNewList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DomainClient::DescribeIntlDomainPriceNewListOutcomeCallable DomainClient::DescribeIntlDomainPriceNewListCallable(const DescribeIntlDomainPriceNewListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeIntlDomainPriceNewListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeIntlDomainPriceNewList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeIntlDomainPriceNewListOutcome>>();
+    DescribeIntlDomainPriceNewListAsync(
+    request,
+    [prom](
+        const DomainClient*,
+        const DescribeIntlDomainPriceNewListRequest&,
+        DescribeIntlDomainPriceNewListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DomainClient::DescribeIntlPhoneEmailListOutcome DomainClient::DescribeIntlPhoneEmailList(const DescribeIntlPhoneEmailListRequest &request)
@@ -664,25 +762,32 @@ DomainClient::DescribeIntlPhoneEmailListOutcome DomainClient::DescribeIntlPhoneE
 
 void DomainClient::DescribeIntlPhoneEmailListAsync(const DescribeIntlPhoneEmailListRequest& request, const DescribeIntlPhoneEmailListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeIntlPhoneEmailList(request), context);
-    };
+    using Req = const DescribeIntlPhoneEmailListRequest&;
+    using Resp = DescribeIntlPhoneEmailListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeIntlPhoneEmailList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DomainClient::DescribeIntlPhoneEmailListOutcomeCallable DomainClient::DescribeIntlPhoneEmailListCallable(const DescribeIntlPhoneEmailListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeIntlPhoneEmailListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeIntlPhoneEmailList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeIntlPhoneEmailListOutcome>>();
+    DescribeIntlPhoneEmailListAsync(
+    request,
+    [prom](
+        const DomainClient*,
+        const DescribeIntlPhoneEmailListRequest&,
+        DescribeIntlPhoneEmailListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DomainClient::DescribeIntlTemplateOutcome DomainClient::DescribeIntlTemplate(const DescribeIntlTemplateRequest &request)
@@ -707,25 +812,32 @@ DomainClient::DescribeIntlTemplateOutcome DomainClient::DescribeIntlTemplate(con
 
 void DomainClient::DescribeIntlTemplateAsync(const DescribeIntlTemplateRequest& request, const DescribeIntlTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeIntlTemplate(request), context);
-    };
+    using Req = const DescribeIntlTemplateRequest&;
+    using Resp = DescribeIntlTemplateResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeIntlTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DomainClient::DescribeIntlTemplateOutcomeCallable DomainClient::DescribeIntlTemplateCallable(const DescribeIntlTemplateRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeIntlTemplateOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeIntlTemplate(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeIntlTemplateOutcome>>();
+    DescribeIntlTemplateAsync(
+    request,
+    [prom](
+        const DomainClient*,
+        const DescribeIntlTemplateRequest&,
+        DescribeIntlTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DomainClient::DescribeIntlTemplateListOutcome DomainClient::DescribeIntlTemplateList(const DescribeIntlTemplateListRequest &request)
@@ -750,25 +862,32 @@ DomainClient::DescribeIntlTemplateListOutcome DomainClient::DescribeIntlTemplate
 
 void DomainClient::DescribeIntlTemplateListAsync(const DescribeIntlTemplateListRequest& request, const DescribeIntlTemplateListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeIntlTemplateList(request), context);
-    };
+    using Req = const DescribeIntlTemplateListRequest&;
+    using Resp = DescribeIntlTemplateListResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "DescribeIntlTemplateList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DomainClient::DescribeIntlTemplateListOutcomeCallable DomainClient::DescribeIntlTemplateListCallable(const DescribeIntlTemplateListRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeIntlTemplateListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeIntlTemplateList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<DescribeIntlTemplateListOutcome>>();
+    DescribeIntlTemplateListAsync(
+    request,
+    [prom](
+        const DomainClient*,
+        const DescribeIntlTemplateListRequest&,
+        DescribeIntlTemplateListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DomainClient::ModifyOwnerIntlBatchOutcome DomainClient::ModifyOwnerIntlBatch(const ModifyOwnerIntlBatchRequest &request)
@@ -793,25 +912,32 @@ DomainClient::ModifyOwnerIntlBatchOutcome DomainClient::ModifyOwnerIntlBatch(con
 
 void DomainClient::ModifyOwnerIntlBatchAsync(const ModifyOwnerIntlBatchRequest& request, const ModifyOwnerIntlBatchAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyOwnerIntlBatch(request), context);
-    };
+    using Req = const ModifyOwnerIntlBatchRequest&;
+    using Resp = ModifyOwnerIntlBatchResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "ModifyOwnerIntlBatch", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DomainClient::ModifyOwnerIntlBatchOutcomeCallable DomainClient::ModifyOwnerIntlBatchCallable(const ModifyOwnerIntlBatchRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyOwnerIntlBatchOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyOwnerIntlBatch(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<ModifyOwnerIntlBatchOutcome>>();
+    ModifyOwnerIntlBatchAsync(
+    request,
+    [prom](
+        const DomainClient*,
+        const ModifyOwnerIntlBatchRequest&,
+        ModifyOwnerIntlBatchOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DomainClient::RenewIntlDomainBatchOutcome DomainClient::RenewIntlDomainBatch(const RenewIntlDomainBatchRequest &request)
@@ -836,25 +962,32 @@ DomainClient::RenewIntlDomainBatchOutcome DomainClient::RenewIntlDomainBatch(con
 
 void DomainClient::RenewIntlDomainBatchAsync(const RenewIntlDomainBatchRequest& request, const RenewIntlDomainBatchAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->RenewIntlDomainBatch(request), context);
-    };
+    using Req = const RenewIntlDomainBatchRequest&;
+    using Resp = RenewIntlDomainBatchResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "RenewIntlDomainBatch", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DomainClient::RenewIntlDomainBatchOutcomeCallable DomainClient::RenewIntlDomainBatchCallable(const RenewIntlDomainBatchRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<RenewIntlDomainBatchOutcome()>>(
-        [this, request]()
-        {
-            return this->RenewIntlDomainBatch(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<RenewIntlDomainBatchOutcome>>();
+    RenewIntlDomainBatchAsync(
+    request,
+    [prom](
+        const DomainClient*,
+        const RenewIntlDomainBatchRequest&,
+        RenewIntlDomainBatchOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DomainClient::SendIntlPhoneEmailCodeOutcome DomainClient::SendIntlPhoneEmailCode(const SendIntlPhoneEmailCodeRequest &request)
@@ -879,25 +1012,32 @@ DomainClient::SendIntlPhoneEmailCodeOutcome DomainClient::SendIntlPhoneEmailCode
 
 void DomainClient::SendIntlPhoneEmailCodeAsync(const SendIntlPhoneEmailCodeRequest& request, const SendIntlPhoneEmailCodeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->SendIntlPhoneEmailCode(request), context);
-    };
+    using Req = const SendIntlPhoneEmailCodeRequest&;
+    using Resp = SendIntlPhoneEmailCodeResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "SendIntlPhoneEmailCode", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DomainClient::SendIntlPhoneEmailCodeOutcomeCallable DomainClient::SendIntlPhoneEmailCodeCallable(const SendIntlPhoneEmailCodeRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<SendIntlPhoneEmailCodeOutcome()>>(
-        [this, request]()
-        {
-            return this->SendIntlPhoneEmailCode(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<SendIntlPhoneEmailCodeOutcome>>();
+    SendIntlPhoneEmailCodeAsync(
+    request,
+    [prom](
+        const DomainClient*,
+        const SendIntlPhoneEmailCodeRequest&,
+        SendIntlPhoneEmailCodeOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DomainClient::SetIntlDomainAutoRenewOutcome DomainClient::SetIntlDomainAutoRenew(const SetIntlDomainAutoRenewRequest &request)
@@ -922,25 +1062,32 @@ DomainClient::SetIntlDomainAutoRenewOutcome DomainClient::SetIntlDomainAutoRenew
 
 void DomainClient::SetIntlDomainAutoRenewAsync(const SetIntlDomainAutoRenewRequest& request, const SetIntlDomainAutoRenewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->SetIntlDomainAutoRenew(request), context);
-    };
+    using Req = const SetIntlDomainAutoRenewRequest&;
+    using Resp = SetIntlDomainAutoRenewResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "SetIntlDomainAutoRenew", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DomainClient::SetIntlDomainAutoRenewOutcomeCallable DomainClient::SetIntlDomainAutoRenewCallable(const SetIntlDomainAutoRenewRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<SetIntlDomainAutoRenewOutcome()>>(
-        [this, request]()
-        {
-            return this->SetIntlDomainAutoRenew(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<SetIntlDomainAutoRenewOutcome>>();
+    SetIntlDomainAutoRenewAsync(
+    request,
+    [prom](
+        const DomainClient*,
+        const SetIntlDomainAutoRenewRequest&,
+        SetIntlDomainAutoRenewOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DomainClient::TransferInIntlDomainBatchOutcome DomainClient::TransferInIntlDomainBatch(const TransferInIntlDomainBatchRequest &request)
@@ -965,25 +1112,32 @@ DomainClient::TransferInIntlDomainBatchOutcome DomainClient::TransferInIntlDomai
 
 void DomainClient::TransferInIntlDomainBatchAsync(const TransferInIntlDomainBatchRequest& request, const TransferInIntlDomainBatchAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->TransferInIntlDomainBatch(request), context);
-    };
+    using Req = const TransferInIntlDomainBatchRequest&;
+    using Resp = TransferInIntlDomainBatchResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "TransferInIntlDomainBatch", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DomainClient::TransferInIntlDomainBatchOutcomeCallable DomainClient::TransferInIntlDomainBatchCallable(const TransferInIntlDomainBatchRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<TransferInIntlDomainBatchOutcome()>>(
-        [this, request]()
-        {
-            return this->TransferInIntlDomainBatch(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<TransferInIntlDomainBatchOutcome>>();
+    TransferInIntlDomainBatchAsync(
+    request,
+    [prom](
+        const DomainClient*,
+        const TransferInIntlDomainBatchRequest&,
+        TransferInIntlDomainBatchOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DomainClient::TransferProhibitionIntlBatchOutcome DomainClient::TransferProhibitionIntlBatch(const TransferProhibitionIntlBatchRequest &request)
@@ -1008,25 +1162,32 @@ DomainClient::TransferProhibitionIntlBatchOutcome DomainClient::TransferProhibit
 
 void DomainClient::TransferProhibitionIntlBatchAsync(const TransferProhibitionIntlBatchRequest& request, const TransferProhibitionIntlBatchAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->TransferProhibitionIntlBatch(request), context);
-    };
+    using Req = const TransferProhibitionIntlBatchRequest&;
+    using Resp = TransferProhibitionIntlBatchResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "TransferProhibitionIntlBatch", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DomainClient::TransferProhibitionIntlBatchOutcomeCallable DomainClient::TransferProhibitionIntlBatchCallable(const TransferProhibitionIntlBatchRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<TransferProhibitionIntlBatchOutcome()>>(
-        [this, request]()
-        {
-            return this->TransferProhibitionIntlBatch(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<TransferProhibitionIntlBatchOutcome>>();
+    TransferProhibitionIntlBatchAsync(
+    request,
+    [prom](
+        const DomainClient*,
+        const TransferProhibitionIntlBatchRequest&,
+        TransferProhibitionIntlBatchOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
 DomainClient::UpdateProhibitionIntlBatchOutcome DomainClient::UpdateProhibitionIntlBatch(const UpdateProhibitionIntlBatchRequest &request)
@@ -1051,24 +1212,31 @@ DomainClient::UpdateProhibitionIntlBatchOutcome DomainClient::UpdateProhibitionI
 
 void DomainClient::UpdateProhibitionIntlBatchAsync(const UpdateProhibitionIntlBatchRequest& request, const UpdateProhibitionIntlBatchAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->UpdateProhibitionIntlBatch(request), context);
-    };
+    using Req = const UpdateProhibitionIntlBatchRequest&;
+    using Resp = UpdateProhibitionIntlBatchResponse;
 
-    Executor::GetInstance()->Submit(new Runnable(fn));
+    DoRequestAsync<Req, Resp>(
+        "UpdateProhibitionIntlBatch", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
 }
 
 DomainClient::UpdateProhibitionIntlBatchOutcomeCallable DomainClient::UpdateProhibitionIntlBatchCallable(const UpdateProhibitionIntlBatchRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<UpdateProhibitionIntlBatchOutcome()>>(
-        [this, request]()
-        {
-            return this->UpdateProhibitionIntlBatch(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
+    const auto prom = std::make_shared<std::promise<UpdateProhibitionIntlBatchOutcome>>();
+    UpdateProhibitionIntlBatchAsync(
+    request,
+    [prom](
+        const DomainClient*,
+        const UpdateProhibitionIntlBatchRequest&,
+        UpdateProhibitionIntlBatchOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
 }
 
