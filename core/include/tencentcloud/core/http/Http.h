@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2019 Tencent. All Rights Reserved.
+ * Copyright (c) 2017-2019 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,6 +22,8 @@
 
 namespace TencentCloud
 {
+    class HttpClient;
+
     class Http
     {
     private:
@@ -52,6 +54,8 @@ namespace TencentCloud
     private:
         HeaderCollection m_headers;
         std::string m_body;
+
+        friend class HttpClient;
     };
 }
 #endif // !TENCENTCLOUD_CORE_HTTP_HTTPMESSAGE_H_

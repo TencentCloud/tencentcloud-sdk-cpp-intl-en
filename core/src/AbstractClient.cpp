@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2019 Tencent. All Rights Reserved.
+ * Copyright (c) 2017-2019 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -116,7 +116,7 @@ HttpClient::HttpResponseOutcome AbstractClient::DoRequest(const std::string &act
     string endpoint = httpProfile.GetEndpoint();
     if (endpoint == "")
         endpoint = m_endpoint;
-    
+
     string::size_type pos = endpoint.find_first_of(".");
     if (pos != string::npos)
         m_service = endpoint.substr(0, pos);
@@ -131,7 +131,7 @@ HttpClient::HttpResponseOutcome AbstractClient::DoRequest(const std::string &act
     HttpProfile::Scheme scheme = httpProfile.GetProtocol();
     if (scheme == HttpProfile::Scheme::HTTP)
         url.SetScheme("http");
-        
+
     HttpRequest httpRequest(url);
     httpRequest.SetMethod(HttpRequest::Method::POST);
     httpRequest.SetBody(body);
@@ -165,6 +165,9 @@ HttpClient::HttpResponseOutcome AbstractClient::DoRequest(const std::string &act
     GenerateSignature(httpRequest);
     m_httpClient->SetReqTimeout(httpProfile.GetReqTimeout()*1000);
     m_httpClient->SetConnectTimeout(httpProfile.GetConnectTimeout()*1000);
+
+    m_httpClient->SetCaInfo(httpProfile.GetCaInfo());
+    m_httpClient->SetCaPath(httpProfile.GetCaPath());
 
     return m_httpClient->SendRequest(httpRequest);
 }
