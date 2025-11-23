@@ -803,6 +803,48 @@ Specifies the serverless version.
                     bool DynamicDiskConfigHasBeenSet() const;
 
                     /**
+                     * 获取Specifies the system maintenance time.
+                     * @return SystemMaintenanceTime Specifies the system maintenance time.
+                     * 
+                     */
+                    std::string GetSystemMaintenanceTime() const;
+
+                    /**
+                     * 设置Specifies the system maintenance time.
+                     * @param _systemMaintenanceTime Specifies the system maintenance time.
+                     * 
+                     */
+                    void SetSystemMaintenanceTime(const std::string& _systemMaintenanceTime);
+
+                    /**
+                     * 判断参数 SystemMaintenanceTime 是否已赋值
+                     * @return SystemMaintenanceTime 是否已赋值
+                     * 
+                     */
+                    bool SystemMaintenanceTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the maximum size of messages at the instance level.
+                     * @return MaxMessageByte Specifies the maximum size of messages at the instance level.
+                     * 
+                     */
+                    uint64_t GetMaxMessageByte() const;
+
+                    /**
+                     * 设置Specifies the maximum size of messages at the instance level.
+                     * @param _maxMessageByte Specifies the maximum size of messages at the instance level.
+                     * 
+                     */
+                    void SetMaxMessageByte(const uint64_t& _maxMessageByte);
+
+                    /**
+                     * 判断参数 MaxMessageByte 是否已赋值
+                     * @return MaxMessageByte 是否已赋值
+                     * 
+                     */
+                    bool MaxMessageByteHasBeenSet() const;
+
+                    /**
                      * 获取Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
                      * @return InstanceChargeType Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
                      * 
@@ -1266,6 +1308,18 @@ Specifies the serverless version.
                      */
                     DynamicDiskConfig m_dynamicDiskConfig;
                     bool m_dynamicDiskConfigHasBeenSet;
+
+                    /**
+                     * Specifies the system maintenance time.
+                     */
+                    std::string m_systemMaintenanceTime;
+                    bool m_systemMaintenanceTimeHasBeenSet;
+
+                    /**
+                     * Specifies the maximum size of messages at the instance level.
+                     */
+                    uint64_t m_maxMessageByte;
+                    bool m_maxMessageByteHasBeenSet;
 
                     /**
                      * Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.

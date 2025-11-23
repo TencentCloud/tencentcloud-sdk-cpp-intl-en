@@ -400,6 +400,27 @@ namespace TencentCloud
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取Time type for message saving. valid values: CreateTime/LogAppendTime.
+                     * @return LogMsgTimestampType Time type for message saving. valid values: CreateTime/LogAppendTime.
+                     * 
+                     */
+                    std::string GetLogMsgTimestampType() const;
+
+                    /**
+                     * 设置Time type for message saving. valid values: CreateTime/LogAppendTime.
+                     * @param _logMsgTimestampType Time type for message saving. valid values: CreateTime/LogAppendTime.
+                     * 
+                     */
+                    void SetLogMsgTimestampType(const std::string& _logMsgTimestampType);
+
+                    /**
+                     * 判断参数 LogMsgTimestampType 是否已赋值
+                     * @return LogMsgTimestampType 是否已赋值
+                     * 
+                     */
+                    bool LogMsgTimestampTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -503,6 +524,12 @@ namespace TencentCloud
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Time type for message saving. valid values: CreateTime/LogAppendTime.
+                     */
+                    std::string m_logMsgTimestampType;
+                    bool m_logMsgTimestampTypeHasBeenSet;
 
                 };
             }

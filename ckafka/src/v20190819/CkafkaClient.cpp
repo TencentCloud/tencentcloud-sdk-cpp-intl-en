@@ -790,6 +790,106 @@ CkafkaClient::DeleteAclOutcomeCallable CkafkaClient::DeleteAclCallable(const Del
     return prom->get_future();
 }
 
+CkafkaClient::DeleteAclRuleOutcome CkafkaClient::DeleteAclRule(const DeleteAclRuleRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteAclRule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteAclRuleResponse rsp = DeleteAclRuleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteAclRuleOutcome(rsp);
+        else
+            return DeleteAclRuleOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteAclRuleOutcome(outcome.GetError());
+    }
+}
+
+void CkafkaClient::DeleteAclRuleAsync(const DeleteAclRuleRequest& request, const DeleteAclRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteAclRuleRequest&;
+    using Resp = DeleteAclRuleResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteAclRule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CkafkaClient::DeleteAclRuleOutcomeCallable CkafkaClient::DeleteAclRuleCallable(const DeleteAclRuleRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteAclRuleOutcome>>();
+    DeleteAclRuleAsync(
+    request,
+    [prom](
+        const CkafkaClient*,
+        const DeleteAclRuleRequest&,
+        DeleteAclRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CkafkaClient::DeleteGroupOutcome CkafkaClient::DeleteGroup(const DeleteGroupRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteGroup");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteGroupResponse rsp = DeleteGroupResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteGroupOutcome(rsp);
+        else
+            return DeleteGroupOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteGroupOutcome(outcome.GetError());
+    }
+}
+
+void CkafkaClient::DeleteGroupAsync(const DeleteGroupRequest& request, const DeleteGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteGroupRequest&;
+    using Resp = DeleteGroupResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteGroup", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CkafkaClient::DeleteGroupOutcomeCallable CkafkaClient::DeleteGroupCallable(const DeleteGroupRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteGroupOutcome>>();
+    DeleteGroupAsync(
+    request,
+    [prom](
+        const CkafkaClient*,
+        const DeleteGroupRequest&,
+        DeleteGroupOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CkafkaClient::DeleteInstancePostOutcome CkafkaClient::DeleteInstancePost(const DeleteInstancePostRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteInstancePost");
@@ -1240,48 +1340,48 @@ CkafkaClient::DescribeAclRuleOutcomeCallable CkafkaClient::DescribeAclRuleCallab
     return prom->get_future();
 }
 
-CkafkaClient::DescribeAppInfoOutcome CkafkaClient::DescribeAppInfo(const DescribeAppInfoRequest &request)
+CkafkaClient::DescribeCkafkaVersionOutcome CkafkaClient::DescribeCkafkaVersion(const DescribeCkafkaVersionRequest &request)
 {
-    auto outcome = MakeRequest(request, "DescribeAppInfo");
+    auto outcome = MakeRequest(request, "DescribeCkafkaVersion");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        DescribeAppInfoResponse rsp = DescribeAppInfoResponse();
+        DescribeCkafkaVersionResponse rsp = DescribeCkafkaVersionResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return DescribeAppInfoOutcome(rsp);
+            return DescribeCkafkaVersionOutcome(rsp);
         else
-            return DescribeAppInfoOutcome(o.GetError());
+            return DescribeCkafkaVersionOutcome(o.GetError());
     }
     else
     {
-        return DescribeAppInfoOutcome(outcome.GetError());
+        return DescribeCkafkaVersionOutcome(outcome.GetError());
     }
 }
 
-void CkafkaClient::DescribeAppInfoAsync(const DescribeAppInfoRequest& request, const DescribeAppInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void CkafkaClient::DescribeCkafkaVersionAsync(const DescribeCkafkaVersionRequest& request, const DescribeCkafkaVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    using Req = const DescribeAppInfoRequest&;
-    using Resp = DescribeAppInfoResponse;
+    using Req = const DescribeCkafkaVersionRequest&;
+    using Resp = DescribeCkafkaVersionResponse;
 
     DoRequestAsync<Req, Resp>(
-        "DescribeAppInfo", request, {{{"Content-Type", "application/json"}}},
+        "DescribeCkafkaVersion", request, {{{"Content-Type", "application/json"}}},
         [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
         {
             handler(this, req, std::move(resp), context);
         });
 }
 
-CkafkaClient::DescribeAppInfoOutcomeCallable CkafkaClient::DescribeAppInfoCallable(const DescribeAppInfoRequest &request)
+CkafkaClient::DescribeCkafkaVersionOutcomeCallable CkafkaClient::DescribeCkafkaVersionCallable(const DescribeCkafkaVersionRequest &request)
 {
-    const auto prom = std::make_shared<std::promise<DescribeAppInfoOutcome>>();
-    DescribeAppInfoAsync(
+    const auto prom = std::make_shared<std::promise<DescribeCkafkaVersionOutcome>>();
+    DescribeCkafkaVersionAsync(
     request,
     [prom](
         const CkafkaClient*,
-        const DescribeAppInfoRequest&,
-        DescribeAppInfoOutcome resp,
+        const DescribeCkafkaVersionRequest&,
+        DescribeCkafkaVersionOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -2640,6 +2740,56 @@ CkafkaClient::InquireCkafkaPriceOutcomeCallable CkafkaClient::InquireCkafkaPrice
     return prom->get_future();
 }
 
+CkafkaClient::InstanceScalingDownOutcome CkafkaClient::InstanceScalingDown(const InstanceScalingDownRequest &request)
+{
+    auto outcome = MakeRequest(request, "InstanceScalingDown");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        InstanceScalingDownResponse rsp = InstanceScalingDownResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return InstanceScalingDownOutcome(rsp);
+        else
+            return InstanceScalingDownOutcome(o.GetError());
+    }
+    else
+    {
+        return InstanceScalingDownOutcome(outcome.GetError());
+    }
+}
+
+void CkafkaClient::InstanceScalingDownAsync(const InstanceScalingDownRequest& request, const InstanceScalingDownAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const InstanceScalingDownRequest&;
+    using Resp = InstanceScalingDownResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "InstanceScalingDown", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CkafkaClient::InstanceScalingDownOutcomeCallable CkafkaClient::InstanceScalingDownCallable(const InstanceScalingDownRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<InstanceScalingDownOutcome>>();
+    InstanceScalingDownAsync(
+    request,
+    [prom](
+        const CkafkaClient*,
+        const InstanceScalingDownRequest&,
+        InstanceScalingDownOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CkafkaClient::ModifyAclRuleOutcome CkafkaClient::ModifyAclRule(const ModifyAclRuleRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyAclRule");
@@ -2940,6 +3090,56 @@ CkafkaClient::ModifyPasswordOutcomeCallable CkafkaClient::ModifyPasswordCallable
     return prom->get_future();
 }
 
+CkafkaClient::ModifyRoutineMaintenanceTaskOutcome CkafkaClient::ModifyRoutineMaintenanceTask(const ModifyRoutineMaintenanceTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyRoutineMaintenanceTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyRoutineMaintenanceTaskResponse rsp = ModifyRoutineMaintenanceTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyRoutineMaintenanceTaskOutcome(rsp);
+        else
+            return ModifyRoutineMaintenanceTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyRoutineMaintenanceTaskOutcome(outcome.GetError());
+    }
+}
+
+void CkafkaClient::ModifyRoutineMaintenanceTaskAsync(const ModifyRoutineMaintenanceTaskRequest& request, const ModifyRoutineMaintenanceTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyRoutineMaintenanceTaskRequest&;
+    using Resp = ModifyRoutineMaintenanceTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyRoutineMaintenanceTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CkafkaClient::ModifyRoutineMaintenanceTaskOutcomeCallable CkafkaClient::ModifyRoutineMaintenanceTaskCallable(const ModifyRoutineMaintenanceTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyRoutineMaintenanceTaskOutcome>>();
+    ModifyRoutineMaintenanceTaskAsync(
+    request,
+    [prom](
+        const CkafkaClient*,
+        const ModifyRoutineMaintenanceTaskRequest&,
+        ModifyRoutineMaintenanceTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CkafkaClient::ModifyTopicAttributesOutcome CkafkaClient::ModifyTopicAttributes(const ModifyTopicAttributesRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyTopicAttributes");
@@ -3032,6 +3232,56 @@ CkafkaClient::SendMessageOutcomeCallable CkafkaClient::SendMessageCallable(const
         const CkafkaClient*,
         const SendMessageRequest&,
         SendMessageOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CkafkaClient::UpgradeBrokerVersionOutcome CkafkaClient::UpgradeBrokerVersion(const UpgradeBrokerVersionRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpgradeBrokerVersion");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpgradeBrokerVersionResponse rsp = UpgradeBrokerVersionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpgradeBrokerVersionOutcome(rsp);
+        else
+            return UpgradeBrokerVersionOutcome(o.GetError());
+    }
+    else
+    {
+        return UpgradeBrokerVersionOutcome(outcome.GetError());
+    }
+}
+
+void CkafkaClient::UpgradeBrokerVersionAsync(const UpgradeBrokerVersionRequest& request, const UpgradeBrokerVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const UpgradeBrokerVersionRequest&;
+    using Resp = UpgradeBrokerVersionResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "UpgradeBrokerVersion", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CkafkaClient::UpgradeBrokerVersionOutcomeCallable CkafkaClient::UpgradeBrokerVersionCallable(const UpgradeBrokerVersionRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<UpgradeBrokerVersionOutcome>>();
+    UpgradeBrokerVersionAsync(
+    request,
+    [prom](
+        const CkafkaClient*,
+        const UpgradeBrokerVersionRequest&,
+        UpgradeBrokerVersionOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

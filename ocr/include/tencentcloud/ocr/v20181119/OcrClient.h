@@ -23,6 +23,8 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/ocr/v20181119/model/ApplyCardVerificationExternalRequest.h>
+#include <tencentcloud/ocr/v20181119/model/ApplyCardVerificationExternalResponse.h>
 #include <tencentcloud/ocr/v20181119/model/BankCardOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/BankCardOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/ExtractDocMultiRequest.h>
@@ -31,6 +33,8 @@
 #include <tencentcloud/ocr/v20181119/model/GeneralAccurateOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/GeneralBasicOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/GeneralBasicOCRResponse.h>
+#include <tencentcloud/ocr/v20181119/model/GetCardVerificationExternalResultRequest.h>
+#include <tencentcloud/ocr/v20181119/model/GetCardVerificationExternalResultResponse.h>
 #include <tencentcloud/ocr/v20181119/model/HKIDCardOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/HKIDCardOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/HmtResidentPermitOCRRequest.h>
@@ -115,6 +119,9 @@ namespace TencentCloud
                 OcrClient(const Credential &credential, const std::string &region);
                 OcrClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::ApplyCardVerificationExternalResponse> ApplyCardVerificationExternalOutcome;
+                typedef std::future<ApplyCardVerificationExternalOutcome> ApplyCardVerificationExternalOutcomeCallable;
+                typedef std::function<void(const OcrClient*, const Model::ApplyCardVerificationExternalRequest&, ApplyCardVerificationExternalOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ApplyCardVerificationExternalAsyncHandler;
                 typedef Outcome<Core::Error, Model::BankCardOCRResponse> BankCardOCROutcome;
                 typedef std::future<BankCardOCROutcome> BankCardOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::BankCardOCRRequest&, BankCardOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> BankCardOCRAsyncHandler;
@@ -127,6 +134,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::GeneralBasicOCRResponse> GeneralBasicOCROutcome;
                 typedef std::future<GeneralBasicOCROutcome> GeneralBasicOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::GeneralBasicOCRRequest&, GeneralBasicOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> GeneralBasicOCRAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetCardVerificationExternalResultResponse> GetCardVerificationExternalResultOutcome;
+                typedef std::future<GetCardVerificationExternalResultOutcome> GetCardVerificationExternalResultOutcomeCallable;
+                typedef std::function<void(const OcrClient*, const Model::GetCardVerificationExternalResultRequest&, GetCardVerificationExternalResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetCardVerificationExternalResultAsyncHandler;
                 typedef Outcome<Core::Error, Model::HKIDCardOCRResponse> HKIDCardOCROutcome;
                 typedef std::future<HKIDCardOCROutcome> HKIDCardOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::HKIDCardOCRRequest&, HKIDCardOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> HKIDCardOCRAsyncHandler;
@@ -236,6 +246,369 @@ namespace TencentCloud
 
 
                 /**
+                 *This API is used for general recognition of overseas cards.
+
+The following list details the countries or regions, document types supported by the overseas document recognition API and whether the back side of the document is required:
+
+<table>
+<thead>
+<tr>
+<td style="width:200px">Nationality</td>
+<td style="width:200px">CardType</td>
+<td style="width:200px">Whether the Back Side is Required</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Argentina</td>
+<td>Driver's License</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Argentina</td>
+<td>National ID Card</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Argentina</td>
+<td>Passport</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Australia</td>
+<td>Driver's License</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Australia</td>
+<td>National ID Card</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Australia</td>
+<td>Passport</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Australia</td>
+<td>Residence Permit</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Bangladesh</td>
+<td>Driver's License</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Bangladesh</td>
+<td>National ID Card</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Bangladesh</td>
+<td>Passport</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Cambodia</td>
+<td>Driver's License</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Cambodia</td>
+<td>National ID Card</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Cambodia</td>
+<td>Passport</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Canada</td>
+<td>Driver's License</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Canada</td>
+<td>National ID Card</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Canada</td>
+<td>Passport</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Canada</td>
+<td>Residence Permit</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Chile</td>
+<td>Driver's License</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Chile</td>
+<td>National ID Card</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Chile</td>
+<td>Passport</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Germany</td>
+<td>Driver's License</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Germany</td>
+<td>National ID Card</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Germany</td>
+<td>Passport</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Germany</td>
+<td>Residence Permit</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Mexico</td>
+<td>Driver's License</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Mexico</td>
+<td>National ID Card</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Mexico</td>
+<td>Passport</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Myanmar</td>
+<td>Driver's License</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Myanmar</td>
+<td>National ID Card</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Myanmar</td>
+<td>Passport</td>
+<td>No</td>
+</tr>
+<tr>
+<td>New Zealand</td>
+<td>Driver's License</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>New Zealand</td>
+<td>National ID Card</td>
+<td>No</td>
+</tr>
+<tr>
+<td>New Zealand</td>
+<td>Passport</td>
+<td>No</td>
+</tr>
+<tr>
+<td>New Zealand</td>
+<td>Residence Permit</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Nigeria</td>
+<td>Driver's License</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Nigeria</td>
+<td>National ID Card</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Nigeria</td>
+<td>Passport</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Nigeria</td>
+<td>Residence Permit</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Pakistan</td>
+<td>Driver's License</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Pakistan</td>
+<td>National ID Card</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Pakistan</td>
+<td>Passport</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Russia</td>
+<td>Driver's License</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Russia</td>
+<td>National ID Card</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Russia</td>
+<td>Passport</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Singapore</td>
+<td>Driver's License</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Singapore</td>
+<td>National ID Card</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Singapore</td>
+<td>Passport</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Singapore</td>
+<td>Residence Permit</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Indonesia</td>
+<td>National ID Card</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Indonesia</td>
+<td>Driver's License</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Hong Kong, China</td>
+<td>Identity Card</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Thailand</td>
+<td>National ID Card</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Thailand</td>
+<td>Driver's License</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Malaysia</td>
+<td>National ID Card</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Malaysia</td>
+<td>Driver's License</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Singapore</td>
+<td>National ID Card</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Singapore</td>
+<td>Driver's License</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Philippines</td>
+<td>National ID Card</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Philippines</td>
+<td>Driver's License</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Japan</td>
+<td>National ID Card</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Japan</td>
+<td>Driver's License</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Macau, China</td>
+<td>Identity Card</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Taiwan, China</td>
+<td>Identity Card</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Bangladesh</td>
+<td>National ID Card</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Nigeria</td>
+<td>National ID Card</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Nigeria</td>
+<td>Driver's License</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Pakistan</td>
+<td>National ID Card</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Pakistan</td>
+<td>Driver's License</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+                 * @param req ApplyCardVerificationExternalRequest
+                 * @return ApplyCardVerificationExternalOutcome
+                 */
+                ApplyCardVerificationExternalOutcome ApplyCardVerificationExternal(const Model::ApplyCardVerificationExternalRequest &request);
+                void ApplyCardVerificationExternalAsync(const Model::ApplyCardVerificationExternalRequest& request, const ApplyCardVerificationExternalAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ApplyCardVerificationExternalOutcomeCallable ApplyCardVerificationExternalCallable(const Model::ApplyCardVerificationExternalRequest& request);
+
+                /**
                  *This API is used to detect and recognize key fields such as the card number, bank information, and expiration date on mainstream bank cards in Mainland China.
 
 This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
@@ -288,6 +661,15 @@ This API is not fully available for the time being. For more information, please
                 GeneralBasicOCROutcome GeneralBasicOCR(const Model::GeneralBasicOCRRequest &request);
                 void GeneralBasicOCRAsync(const Model::GeneralBasicOCRRequest& request, const GeneralBasicOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 GeneralBasicOCROutcomeCallable GeneralBasicOCRCallable(const Model::GeneralBasicOCRRequest& request);
+
+                /**
+                 *This API is used to obtain document recognition results.
+                 * @param req GetCardVerificationExternalResultRequest
+                 * @return GetCardVerificationExternalResultOutcome
+                 */
+                GetCardVerificationExternalResultOutcome GetCardVerificationExternalResult(const Model::GetCardVerificationExternalResultRequest &request);
+                void GetCardVerificationExternalResultAsync(const Model::GetCardVerificationExternalResultRequest& request, const GetCardVerificationExternalResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetCardVerificationExternalResultOutcomeCallable GetCardVerificationExternalResultCallable(const Model::GetCardVerificationExternalResultRequest& request);
 
                 /**
                  *This API is used to recognize key fields on the photo side of a Hong Kong (China) identity card, including name in Chinese, name in English, telecode for name, date of birth, gender, document symbol, date of the first issue, date of the last receipt, identity card number, and permanent residency attribute. 

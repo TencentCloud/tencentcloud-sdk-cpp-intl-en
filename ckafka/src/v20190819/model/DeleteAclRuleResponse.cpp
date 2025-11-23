@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/ckafka/v20190819/model/DescribeAppInfoResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/DeleteAclRuleResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,12 +23,12 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ckafka::V20190819::Model;
 using namespace std;
 
-DescribeAppInfoResponse::DescribeAppInfoResponse() :
+DeleteAclRuleResponse::DeleteAclRuleResponse() :
     m_resultHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DescribeAppInfoResponse::Deserialize(const string &payload)
+CoreInternalOutcome DeleteAclRuleResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -64,18 +64,11 @@ CoreInternalOutcome DescribeAppInfoResponse::Deserialize(const string &payload)
 
     if (rsp.HasMember("Result") && !rsp["Result"].IsNull())
     {
-        if (!rsp["Result"].IsObject())
+        if (!rsp["Result"].IsInt64())
         {
-            return CoreInternalOutcome(Core::Error("response `Result` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Result` IsInt64=false incorrectly").SetRequestId(requestId));
         }
-
-        CoreInternalOutcome outcome = m_result.Deserialize(rsp["Result"]);
-        if (!outcome.IsSuccess())
-        {
-            outcome.GetError().SetRequestId(requestId);
-            return outcome;
-        }
-
+        m_result = rsp["Result"].GetInt64();
         m_resultHasBeenSet = true;
     }
 
@@ -83,7 +76,7 @@ CoreInternalOutcome DescribeAppInfoResponse::Deserialize(const string &payload)
     return CoreInternalOutcome(true);
 }
 
-string DescribeAppInfoResponse::ToJsonString() const
+string DeleteAclRuleResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
@@ -94,8 +87,7 @@ string DescribeAppInfoResponse::ToJsonString() const
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Result";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
-        m_result.ToJsonObject(value[key.c_str()], allocator);
+        value.AddMember(iKey, m_result, allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -110,12 +102,12 @@ string DescribeAppInfoResponse::ToJsonString() const
 }
 
 
-AppIdResponse DescribeAppInfoResponse::GetResult() const
+int64_t DeleteAclRuleResponse::GetResult() const
 {
     return m_result;
 }
 
-bool DescribeAppInfoResponse::ResultHasBeenSet() const
+bool DeleteAclRuleResponse::ResultHasBeenSet() const
 {
     return m_resultHasBeenSet;
 }

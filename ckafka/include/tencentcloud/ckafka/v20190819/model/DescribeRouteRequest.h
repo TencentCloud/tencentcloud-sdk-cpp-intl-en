@@ -84,6 +84,27 @@ namespace TencentCloud
                      */
                     bool RouteIdHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies whether to display the primary route. when true, the routing list will additionally display the primary route information during instance creation (not affected by InternalFlag or UsedFor parameter filtering).	
+                     * @return MainRouteFlag Specifies whether to display the primary route. when true, the routing list will additionally display the primary route information during instance creation (not affected by InternalFlag or UsedFor parameter filtering).	
+                     * 
+                     */
+                    bool GetMainRouteFlag() const;
+
+                    /**
+                     * 设置Specifies whether to display the primary route. when true, the routing list will additionally display the primary route information during instance creation (not affected by InternalFlag or UsedFor parameter filtering).	
+                     * @param _mainRouteFlag Specifies whether to display the primary route. when true, the routing list will additionally display the primary route information during instance creation (not affected by InternalFlag or UsedFor parameter filtering).	
+                     * 
+                     */
+                    void SetMainRouteFlag(const bool& _mainRouteFlag);
+
+                    /**
+                     * 判断参数 MainRouteFlag 是否已赋值
+                     * @return MainRouteFlag 是否已赋值
+                     * 
+                     */
+                    bool MainRouteFlagHasBeenSet() const;
+
                 private:
 
                     /**
@@ -97,6 +118,12 @@ namespace TencentCloud
                      */
                     int64_t m_routeId;
                     bool m_routeIdHasBeenSet;
+
+                    /**
+                     * Specifies whether to display the primary route. when true, the routing list will additionally display the primary route information during instance creation (not affected by InternalFlag or UsedFor parameter filtering).	
+                     */
+                    bool m_mainRouteFlag;
+                    bool m_mainRouteFlagHasBeenSet;
 
                 };
             }

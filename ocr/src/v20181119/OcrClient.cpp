@@ -40,6 +40,56 @@ OcrClient::OcrClient(const Credential &credential, const string &region, const C
 }
 
 
+OcrClient::ApplyCardVerificationExternalOutcome OcrClient::ApplyCardVerificationExternal(const ApplyCardVerificationExternalRequest &request)
+{
+    auto outcome = MakeRequest(request, "ApplyCardVerificationExternal");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ApplyCardVerificationExternalResponse rsp = ApplyCardVerificationExternalResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ApplyCardVerificationExternalOutcome(rsp);
+        else
+            return ApplyCardVerificationExternalOutcome(o.GetError());
+    }
+    else
+    {
+        return ApplyCardVerificationExternalOutcome(outcome.GetError());
+    }
+}
+
+void OcrClient::ApplyCardVerificationExternalAsync(const ApplyCardVerificationExternalRequest& request, const ApplyCardVerificationExternalAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ApplyCardVerificationExternalRequest&;
+    using Resp = ApplyCardVerificationExternalResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ApplyCardVerificationExternal", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+OcrClient::ApplyCardVerificationExternalOutcomeCallable OcrClient::ApplyCardVerificationExternalCallable(const ApplyCardVerificationExternalRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ApplyCardVerificationExternalOutcome>>();
+    ApplyCardVerificationExternalAsync(
+    request,
+    [prom](
+        const OcrClient*,
+        const ApplyCardVerificationExternalRequest&,
+        ApplyCardVerificationExternalOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 OcrClient::BankCardOCROutcome OcrClient::BankCardOCR(const BankCardOCRRequest &request)
 {
     auto outcome = MakeRequest(request, "BankCardOCR");
@@ -232,6 +282,56 @@ OcrClient::GeneralBasicOCROutcomeCallable OcrClient::GeneralBasicOCRCallable(con
         const OcrClient*,
         const GeneralBasicOCRRequest&,
         GeneralBasicOCROutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+OcrClient::GetCardVerificationExternalResultOutcome OcrClient::GetCardVerificationExternalResult(const GetCardVerificationExternalResultRequest &request)
+{
+    auto outcome = MakeRequest(request, "GetCardVerificationExternalResult");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        GetCardVerificationExternalResultResponse rsp = GetCardVerificationExternalResultResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return GetCardVerificationExternalResultOutcome(rsp);
+        else
+            return GetCardVerificationExternalResultOutcome(o.GetError());
+    }
+    else
+    {
+        return GetCardVerificationExternalResultOutcome(outcome.GetError());
+    }
+}
+
+void OcrClient::GetCardVerificationExternalResultAsync(const GetCardVerificationExternalResultRequest& request, const GetCardVerificationExternalResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const GetCardVerificationExternalResultRequest&;
+    using Resp = GetCardVerificationExternalResultResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "GetCardVerificationExternalResult", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+OcrClient::GetCardVerificationExternalResultOutcomeCallable OcrClient::GetCardVerificationExternalResultCallable(const GetCardVerificationExternalResultRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<GetCardVerificationExternalResultOutcome>>();
+    GetCardVerificationExternalResultAsync(
+    request,
+    [prom](
+        const OcrClient*,
+        const GetCardVerificationExternalResultRequest&,
+        GetCardVerificationExternalResultOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

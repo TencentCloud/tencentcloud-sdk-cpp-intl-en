@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Zone list
-                     * @return ZoneList Zone list
+                     * 获取<P>Specifies the zone list.</p>.
+                     * @return ZoneList <P>Specifies the zone list.</p>.
                      * 
                      */
                     std::vector<ZoneInfo> GetZoneList() const;
 
                     /**
-                     * 设置Zone list
-                     * @param _zoneList Zone list
+                     * 设置<P>Specifies the zone list.</p>.
+                     * @param _zoneList <P>Specifies the zone list.</p>.
                      * 
                      */
                     void SetZoneList(const std::vector<ZoneInfo>& _zoneList);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool ZoneListHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of instances to be purchased
-                     * @return MaxBuyInstanceNum Maximum number of instances to be purchased
+                     * 获取<P>Maximum number of instances that can be purchased.</p>.
+                     * @return MaxBuyInstanceNum <P>Maximum number of instances that can be purchased.</p>.
                      * 
                      */
                     int64_t GetMaxBuyInstanceNum() const;
 
                     /**
-                     * 设置Maximum number of instances to be purchased
-                     * @param _maxBuyInstanceNum Maximum number of instances to be purchased
+                     * 设置<P>Maximum number of instances that can be purchased.</p>.
+                     * @param _maxBuyInstanceNum <P>Maximum number of instances that can be purchased.</p>.
                      * 
                      */
                     void SetMaxBuyInstanceNum(const int64_t& _maxBuyInstanceNum);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool MaxBuyInstanceNumHasBeenSet() const;
 
                     /**
-                     * 获取Maximum bandwidth in MB/S
-                     * @return MaxBandwidth Maximum bandwidth in MB/S
+                     * 获取<p>Maximum purchase bandwidth in Mb/s.</p>.
+                     * @return MaxBandwidth <p>Maximum purchase bandwidth in Mb/s.</p>.
                      * 
                      */
                     int64_t GetMaxBandwidth() const;
 
                     /**
-                     * 设置Maximum bandwidth in MB/S
-                     * @param _maxBandwidth Maximum bandwidth in MB/S
+                     * 设置<p>Maximum purchase bandwidth in Mb/s.</p>.
+                     * @param _maxBandwidth <p>Maximum purchase bandwidth in Mb/s.</p>.
                      * 
                      */
                     void SetMaxBandwidth(const int64_t& _maxBandwidth);
@@ -113,15 +113,15 @@ namespace TencentCloud
                     bool MaxBandwidthHasBeenSet() const;
 
                     /**
-                     * 获取Pay-as-you-go unit price
-                     * @return UnitPrice Pay-as-you-go unit price
+                     * 获取<P>Unit price for postpayment.</p>.
+                     * @return UnitPrice <P>Unit price for postpayment.</p>.
                      * 
                      */
                     Price GetUnitPrice() const;
 
                     /**
-                     * 设置Pay-as-you-go unit price
-                     * @param _unitPrice Pay-as-you-go unit price
+                     * 设置<P>Unit price for postpayment.</p>.
+                     * @param _unitPrice <P>Unit price for postpayment.</p>.
                      * 
                      */
                     void SetUnitPrice(const Price& _unitPrice);
@@ -134,15 +134,15 @@ namespace TencentCloud
                     bool UnitPriceHasBeenSet() const;
 
                     /**
-                     * 获取Pay-as-you-go unit message price
-                     * @return MessagePrice Pay-as-you-go unit message price
+                     * 获取<P>Message unit price for postpayment.</p>.
+                     * @return MessagePrice <P>Message unit price for postpayment.</p>.
                      * 
                      */
                     Price GetMessagePrice() const;
 
                     /**
-                     * 设置Pay-as-you-go unit message price
-                     * @param _messagePrice Pay-as-you-go unit message price
+                     * 设置<P>Message unit price for postpayment.</p>.
+                     * @param _messagePrice <P>Message unit price for postpayment.</p>.
                      * 
                      */
                     void SetMessagePrice(const Price& _messagePrice);
@@ -155,15 +155,15 @@ namespace TencentCloud
                     bool MessagePriceHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the user-exclusive cluster info.
-                     * @return ClusterInfo Specifies the user-exclusive cluster info.
+                     * 获取<P>User-Exclusive cluster information.</p>.
+                     * @return ClusterInfo <P>User-Exclusive cluster information.</p>.
                      * 
                      */
                     std::vector<ClusterInfo> GetClusterInfo() const;
 
                     /**
-                     * 设置Specifies the user-exclusive cluster info.
-                     * @param _clusterInfo Specifies the user-exclusive cluster info.
+                     * 设置<P>User-Exclusive cluster information.</p>.
+                     * @param _clusterInfo <P>User-Exclusive cluster information.</p>.
                      * 
                      */
                     void SetClusterInfo(const std::vector<ClusterInfo>& _clusterInfo);
@@ -176,15 +176,15 @@ namespace TencentCloud
                     bool ClusterInfoHasBeenSet() const;
 
                     /**
-                     * 获取Purchase the standard version configuration.
-                     * @return Standard Purchase the standard version configuration.
+                     * 获取<P>Specifies the standard version configuration to purchase.</p>.
+                     * @return Standard <P>Specifies the standard version configuration to purchase.</p>.
                      * 
                      */
                     std::string GetStandard() const;
 
                     /**
-                     * 设置Purchase the standard version configuration.
-                     * @param _standard Purchase the standard version configuration.
+                     * 设置<P>Specifies the standard version configuration to purchase.</p>.
+                     * @param _standard <P>Specifies the standard version configuration to purchase.</p>.
                      * 
                      */
                     void SetStandard(const std::string& _standard);
@@ -197,15 +197,15 @@ namespace TencentCloud
                     bool StandardHasBeenSet() const;
 
                     /**
-                     * 获取Purchase the standard version S2 configuration.
-                     * @return StandardS2 Purchase the standard version S2 configuration.
+                     * 获取<P>Specifies the purchase of standard version s2 configuration.</p>.
+                     * @return StandardS2 <P>Specifies the purchase of standard version s2 configuration.</p>.
                      * 
                      */
                     std::string GetStandardS2() const;
 
                     /**
-                     * 设置Purchase the standard version S2 configuration.
-                     * @param _standardS2 Purchase the standard version S2 configuration.
+                     * 设置<P>Specifies the purchase of standard version s2 configuration.</p>.
+                     * @param _standardS2 <P>Specifies the purchase of standard version s2 configuration.</p>.
                      * 
                      */
                     void SetStandardS2(const std::string& _standardS2);
@@ -218,15 +218,15 @@ namespace TencentCloud
                     bool StandardS2HasBeenSet() const;
 
                     /**
-                     * 获取Specifies the configuration for purchasing the professional edition.
-                     * @return Profession Specifies the configuration for purchasing the professional edition.
+                     * 获取<P>Specifies the configuration for purchasing professional edition.</p>.
+                     * @return Profession <P>Specifies the configuration for purchasing professional edition.</p>.
                      * 
                      */
                     std::string GetProfession() const;
 
                     /**
-                     * 设置Specifies the configuration for purchasing the professional edition.
-                     * @param _profession Specifies the configuration for purchasing the professional edition.
+                     * 设置<P>Specifies the configuration for purchasing professional edition.</p>.
+                     * @param _profession <P>Specifies the configuration for purchasing professional edition.</p>.
                      * 
                      */
                     void SetProfession(const std::string& _profession);
@@ -239,15 +239,15 @@ namespace TencentCloud
                     bool ProfessionHasBeenSet() const;
 
                     /**
-                     * 获取Purchase physical dedicated edition configuration.
-                     * @return Physical Purchase physical dedicated edition configuration.
+                     * 获取<P>Purchase physical dedicated edition configuration.</p>.
+                     * @return Physical <P>Purchase physical dedicated edition configuration.</p>.
                      * 
                      */
                     std::string GetPhysical() const;
 
                     /**
-                     * 设置Purchase physical dedicated edition configuration.
-                     * @param _physical Purchase physical dedicated edition configuration.
+                     * 设置<P>Purchase physical dedicated edition configuration.</p>.
+                     * @param _physical <P>Purchase physical dedicated edition configuration.</p>.
                      * 
                      */
                     void SetPhysical(const std::string& _physical);
@@ -260,15 +260,15 @@ namespace TencentCloud
                     bool PhysicalHasBeenSet() const;
 
                     /**
-                     * 获取Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. abandoned, meaningless.
-                     * @return PublicNetwork Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. abandoned, meaningless.
+                     * 获取<p>Specifies the public network bandwidth. valid values: 3Mbps to 999Mbps. only supported in pro edition. abandoned, meaningless.</p>.
+                     * @return PublicNetwork <p>Specifies the public network bandwidth. valid values: 3Mbps to 999Mbps. only supported in pro edition. abandoned, meaningless.</p>.
                      * 
                      */
                     std::string GetPublicNetwork() const;
 
                     /**
-                     * 设置Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. abandoned, meaningless.
-                     * @param _publicNetwork Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. abandoned, meaningless.
+                     * 设置<p>Specifies the public network bandwidth. valid values: 3Mbps to 999Mbps. only supported in pro edition. abandoned, meaningless.</p>.
+                     * @param _publicNetwork <p>Specifies the public network bandwidth. valid values: 3Mbps to 999Mbps. only supported in pro edition. abandoned, meaningless.</p>.
                      * 
                      */
                     void SetPublicNetwork(const std::string& _publicNetwork);
@@ -281,15 +281,15 @@ namespace TencentCloud
                     bool PublicNetworkHasBeenSet() const;
 
                     /**
-                     * 获取Configures the public network bandwidth.
-                     * @return PublicNetworkLimit Configures the public network bandwidth.
+                     * 获取<P>Public network bandwidth configuration.</p>.
+                     * @return PublicNetworkLimit <P>Public network bandwidth configuration.</p>.
                      * 
                      */
                     std::string GetPublicNetworkLimit() const;
 
                     /**
-                     * 设置Configures the public network bandwidth.
-                     * @param _publicNetworkLimit Configures the public network bandwidth.
+                     * 设置<P>Public network bandwidth configuration.</p>.
+                     * @param _publicNetworkLimit <P>Public network bandwidth configuration.</p>.
                      * 
                      */
                     void SetPublicNetworkLimit(const std::string& _publicNetworkLimit);
@@ -302,15 +302,15 @@ namespace TencentCloud
                     bool PublicNetworkLimitHasBeenSet() const;
 
                     /**
-                     * 获取Request ID.
-                     * @return RequestId Request ID.
+                     * 获取<p>Request Id.</p>.
+                     * @return RequestId <p>Request Id.</p>.
                      * 
                      */
                     std::string GetRequestId() const;
 
                     /**
-                     * 设置Request ID.
-                     * @param _requestId Request ID.
+                     * 设置<p>Request Id.</p>.
+                     * @param _requestId <p>Request Id.</p>.
                      * 
                      */
                     void SetRequestId(const std::string& _requestId);
@@ -323,15 +323,15 @@ namespace TencentCloud
                     bool RequestIdHasBeenSet() const;
 
                     /**
-                     * 获取Pagination Offset
-                     * @return Offset Pagination Offset
+                     * 获取<P>Specifies the pagination offset.</p>.
+                     * @return Offset <P>Specifies the pagination offset.</p>.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination Offset
-                     * @param _offset Pagination Offset
+                     * 设置<P>Specifies the pagination offset.</p>.
+                     * @param _offset <P>Specifies the pagination offset.</p>.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -344,15 +344,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Pagination Limit
-                     * @return Limit Pagination Limit
+                     * 获取<P>Specifies the pagination limit.</p>.
+                     * @return Limit <P>Specifies the pagination limit.</p>.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Pagination Limit
-                     * @param _limit Pagination Limit
+                     * 设置<P>Specifies the pagination limit.</p>.
+                     * @param _limit <P>Specifies the pagination limit.</p>.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -365,15 +365,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Mandatory. input tag.
-                     * @return ForceCheckTag Mandatory. input tag.
+                     * 获取<P>Specifies whether the tag is mandatory.</p>.
+                     * @return ForceCheckTag <P>Specifies whether the tag is mandatory.</p>.
                      * 
                      */
                     bool GetForceCheckTag() const;
 
                     /**
-                     * 设置Mandatory. input tag.
-                     * @param _forceCheckTag Mandatory. input tag.
+                     * 设置<P>Specifies whether the tag is mandatory.</p>.
+                     * @param _forceCheckTag <P>Specifies whether the tag is mandatory.</p>.
                      * 
                      */
                     void SetForceCheckTag(const bool& _forceCheckTag);
@@ -388,97 +388,97 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Zone list
+                     * <P>Specifies the zone list.</p>.
                      */
                     std::vector<ZoneInfo> m_zoneList;
                     bool m_zoneListHasBeenSet;
 
                     /**
-                     * Maximum number of instances to be purchased
+                     * <P>Maximum number of instances that can be purchased.</p>.
                      */
                     int64_t m_maxBuyInstanceNum;
                     bool m_maxBuyInstanceNumHasBeenSet;
 
                     /**
-                     * Maximum bandwidth in MB/S
+                     * <p>Maximum purchase bandwidth in Mb/s.</p>.
                      */
                     int64_t m_maxBandwidth;
                     bool m_maxBandwidthHasBeenSet;
 
                     /**
-                     * Pay-as-you-go unit price
+                     * <P>Unit price for postpayment.</p>.
                      */
                     Price m_unitPrice;
                     bool m_unitPriceHasBeenSet;
 
                     /**
-                     * Pay-as-you-go unit message price
+                     * <P>Message unit price for postpayment.</p>.
                      */
                     Price m_messagePrice;
                     bool m_messagePriceHasBeenSet;
 
                     /**
-                     * Specifies the user-exclusive cluster info.
+                     * <P>User-Exclusive cluster information.</p>.
                      */
                     std::vector<ClusterInfo> m_clusterInfo;
                     bool m_clusterInfoHasBeenSet;
 
                     /**
-                     * Purchase the standard version configuration.
+                     * <P>Specifies the standard version configuration to purchase.</p>.
                      */
                     std::string m_standard;
                     bool m_standardHasBeenSet;
 
                     /**
-                     * Purchase the standard version S2 configuration.
+                     * <P>Specifies the purchase of standard version s2 configuration.</p>.
                      */
                     std::string m_standardS2;
                     bool m_standardS2HasBeenSet;
 
                     /**
-                     * Specifies the configuration for purchasing the professional edition.
+                     * <P>Specifies the configuration for purchasing professional edition.</p>.
                      */
                     std::string m_profession;
                     bool m_professionHasBeenSet;
 
                     /**
-                     * Purchase physical dedicated edition configuration.
+                     * <P>Purchase physical dedicated edition configuration.</p>.
                      */
                     std::string m_physical;
                     bool m_physicalHasBeenSet;
 
                     /**
-                     * Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. abandoned, meaningless.
+                     * <p>Specifies the public network bandwidth. valid values: 3Mbps to 999Mbps. only supported in pro edition. abandoned, meaningless.</p>.
                      */
                     std::string m_publicNetwork;
                     bool m_publicNetworkHasBeenSet;
 
                     /**
-                     * Configures the public network bandwidth.
+                     * <P>Public network bandwidth configuration.</p>.
                      */
                     std::string m_publicNetworkLimit;
                     bool m_publicNetworkLimitHasBeenSet;
 
                     /**
-                     * Request ID.
+                     * <p>Request Id.</p>.
                      */
                     std::string m_requestId;
                     bool m_requestIdHasBeenSet;
 
                     /**
-                     * Pagination Offset
+                     * <P>Specifies the pagination offset.</p>.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Pagination Limit
+                     * <P>Specifies the pagination limit.</p>.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Mandatory. input tag.
+                     * <P>Specifies whether the tag is mandatory.</p>.
                      */
                     bool m_forceCheckTag;
                     bool m_forceCheckTagHasBeenSet;

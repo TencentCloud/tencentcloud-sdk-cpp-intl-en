@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_CKAFKA_V20190819_MODEL_DESCRIBEAPPINFORESPONSE_H_
-#define TENCENTCLOUD_CKAFKA_V20190819_MODEL_DESCRIBEAPPINFORESPONSE_H_
+#ifndef TENCENTCLOUD_CKAFKA_V20190819_MODEL_INSTANCESCALINGDOWNRESPONSE_H_
+#define TENCENTCLOUD_CKAFKA_V20190819_MODEL_INSTANCESCALINGDOWNRESPONSE_H_
 
 #include <string>
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/ckafka/v20190819/model/AppIdResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/ScalingDownResp.h>
 
 
 namespace TencentCloud
@@ -33,23 +33,23 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * DescribeAppInfo response structure.
+                * InstanceScalingDown response structure.
                 */
-                class DescribeAppInfoResponse : public AbstractModel
+                class InstanceScalingDownResponse : public AbstractModel
                 {
                 public:
-                    DescribeAppInfoResponse();
-                    ~DescribeAppInfoResponse() = default;
+                    InstanceScalingDownResponse();
+                    ~InstanceScalingDownResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Returned list of eligible `AppId`
-                     * @return Result Returned list of eligible `AppId`
+                     * 获取Returned results.
+                     * @return Result Returned results.
                      * 
                      */
-                    AppIdResponse GetResult() const;
+                    ScalingDownResp GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
@@ -61,9 +61,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Returned list of eligible `AppId`
+                     * Returned results.
                      */
-                    AppIdResponse m_result;
+                    ScalingDownResp m_result;
                     bool m_resultHasBeenSet;
 
                 };
@@ -72,4 +72,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_CKAFKA_V20190819_MODEL_DESCRIBEAPPINFORESPONSE_H_
+#endif // !TENCENTCLOUD_CKAFKA_V20190819_MODEL_INSTANCESCALINGDOWNRESPONSE_H_

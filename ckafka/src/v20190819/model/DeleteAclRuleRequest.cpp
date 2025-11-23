@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/ckafka/v20190819/model/DescribeAppInfoRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/DeleteAclRuleRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -22,33 +22,33 @@
 using namespace TencentCloud::Ckafka::V20190819::Model;
 using namespace std;
 
-DescribeAppInfoRequest::DescribeAppInfoRequest() :
-    m_offsetHasBeenSet(false),
-    m_limitHasBeenSet(false)
+DeleteAclRuleRequest::DeleteAclRuleRequest() :
+    m_instanceIdHasBeenSet(false),
+    m_ruleNameHasBeenSet(false)
 {
 }
 
-string DescribeAppInfoRequest::ToJsonString() const
+string DeleteAclRuleRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
     rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
-    if (m_offsetHasBeenSet)
+    if (m_instanceIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Offset";
+        string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_offset, allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_limitHasBeenSet)
+    if (m_ruleNameHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Limit";
+        string key = "RuleName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_limit, allocator);
+        d.AddMember(iKey, rapidjson::Value(m_ruleName.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -59,36 +59,36 @@ string DescribeAppInfoRequest::ToJsonString() const
 }
 
 
-int64_t DescribeAppInfoRequest::GetOffset() const
+string DeleteAclRuleRequest::GetInstanceId() const
 {
-    return m_offset;
+    return m_instanceId;
 }
 
-void DescribeAppInfoRequest::SetOffset(const int64_t& _offset)
+void DeleteAclRuleRequest::SetInstanceId(const string& _instanceId)
 {
-    m_offset = _offset;
-    m_offsetHasBeenSet = true;
+    m_instanceId = _instanceId;
+    m_instanceIdHasBeenSet = true;
 }
 
-bool DescribeAppInfoRequest::OffsetHasBeenSet() const
+bool DeleteAclRuleRequest::InstanceIdHasBeenSet() const
 {
-    return m_offsetHasBeenSet;
+    return m_instanceIdHasBeenSet;
 }
 
-int64_t DescribeAppInfoRequest::GetLimit() const
+string DeleteAclRuleRequest::GetRuleName() const
 {
-    return m_limit;
+    return m_ruleName;
 }
 
-void DescribeAppInfoRequest::SetLimit(const int64_t& _limit)
+void DeleteAclRuleRequest::SetRuleName(const string& _ruleName)
 {
-    m_limit = _limit;
-    m_limitHasBeenSet = true;
+    m_ruleName = _ruleName;
+    m_ruleNameHasBeenSet = true;
 }
 
-bool DescribeAppInfoRequest::LimitHasBeenSet() const
+bool DeleteAclRuleRequest::RuleNameHasBeenSet() const
 {
-    return m_limitHasBeenSet;
+    return m_ruleNameHasBeenSet;
 }
 
 

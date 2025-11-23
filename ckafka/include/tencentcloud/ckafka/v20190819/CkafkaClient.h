@@ -53,6 +53,10 @@
 #include <tencentcloud/ckafka/v20190819/model/CreateUserResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteAclRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteAclResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/DeleteAclRuleRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/DeleteAclRuleResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/DeleteGroupRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/DeleteGroupResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteInstancePostRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteInstancePostResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteInstancePreRequest.h>
@@ -71,8 +75,8 @@
 #include <tencentcloud/ckafka/v20190819/model/DescribeACLResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeAclRuleRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeAclRuleResponse.h>
-#include <tencentcloud/ckafka/v20190819/model/DescribeAppInfoRequest.h>
-#include <tencentcloud/ckafka/v20190819/model/DescribeAppInfoResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/DescribeCkafkaVersionRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/DescribeCkafkaVersionResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeCkafkaZoneRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeCkafkaZoneResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeConsumerGroupRequest.h>
@@ -127,6 +131,8 @@
 #include <tencentcloud/ckafka/v20190819/model/FetchMessageListByTimestampResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/InquireCkafkaPriceRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/InquireCkafkaPriceResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/InstanceScalingDownRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/InstanceScalingDownResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/ModifyAclRuleRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/ModifyAclRuleResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/ModifyDatahubTopicRequest.h>
@@ -139,10 +145,14 @@
 #include <tencentcloud/ckafka/v20190819/model/ModifyInstancePreResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/ModifyPasswordRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/ModifyPasswordResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/ModifyRoutineMaintenanceTaskRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/ModifyRoutineMaintenanceTaskResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/ModifyTopicAttributesRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/ModifyTopicAttributesResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/SendMessageRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/SendMessageResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/UpgradeBrokerVersionRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/UpgradeBrokerVersionResponse.h>
 
 
 namespace TencentCloud
@@ -202,6 +212,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteAclResponse> DeleteAclOutcome;
                 typedef std::future<DeleteAclOutcome> DeleteAclOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DeleteAclRequest&, DeleteAclOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAclAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteAclRuleResponse> DeleteAclRuleOutcome;
+                typedef std::future<DeleteAclRuleOutcome> DeleteAclRuleOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::DeleteAclRuleRequest&, DeleteAclRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAclRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteGroupResponse> DeleteGroupOutcome;
+                typedef std::future<DeleteGroupOutcome> DeleteGroupOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::DeleteGroupRequest&, DeleteGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteGroupAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteInstancePostResponse> DeleteInstancePostOutcome;
                 typedef std::future<DeleteInstancePostOutcome> DeleteInstancePostOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DeleteInstancePostRequest&, DeleteInstancePostOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteInstancePostAsyncHandler;
@@ -229,9 +245,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAclRuleResponse> DescribeAclRuleOutcome;
                 typedef std::future<DescribeAclRuleOutcome> DescribeAclRuleOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DescribeAclRuleRequest&, DescribeAclRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAclRuleAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeAppInfoResponse> DescribeAppInfoOutcome;
-                typedef std::future<DescribeAppInfoOutcome> DescribeAppInfoOutcomeCallable;
-                typedef std::function<void(const CkafkaClient*, const Model::DescribeAppInfoRequest&, DescribeAppInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAppInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCkafkaVersionResponse> DescribeCkafkaVersionOutcome;
+                typedef std::future<DescribeCkafkaVersionOutcome> DescribeCkafkaVersionOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::DescribeCkafkaVersionRequest&, DescribeCkafkaVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCkafkaVersionAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCkafkaZoneResponse> DescribeCkafkaZoneOutcome;
                 typedef std::future<DescribeCkafkaZoneOutcome> DescribeCkafkaZoneOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DescribeCkafkaZoneRequest&, DescribeCkafkaZoneOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCkafkaZoneAsyncHandler;
@@ -313,6 +329,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::InquireCkafkaPriceResponse> InquireCkafkaPriceOutcome;
                 typedef std::future<InquireCkafkaPriceOutcome> InquireCkafkaPriceOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::InquireCkafkaPriceRequest&, InquireCkafkaPriceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquireCkafkaPriceAsyncHandler;
+                typedef Outcome<Core::Error, Model::InstanceScalingDownResponse> InstanceScalingDownOutcome;
+                typedef std::future<InstanceScalingDownOutcome> InstanceScalingDownOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::InstanceScalingDownRequest&, InstanceScalingDownOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InstanceScalingDownAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyAclRuleResponse> ModifyAclRuleOutcome;
                 typedef std::future<ModifyAclRuleOutcome> ModifyAclRuleOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::ModifyAclRuleRequest&, ModifyAclRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAclRuleAsyncHandler;
@@ -331,12 +350,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyPasswordResponse> ModifyPasswordOutcome;
                 typedef std::future<ModifyPasswordOutcome> ModifyPasswordOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::ModifyPasswordRequest&, ModifyPasswordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyPasswordAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyRoutineMaintenanceTaskResponse> ModifyRoutineMaintenanceTaskOutcome;
+                typedef std::future<ModifyRoutineMaintenanceTaskOutcome> ModifyRoutineMaintenanceTaskOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::ModifyRoutineMaintenanceTaskRequest&, ModifyRoutineMaintenanceTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRoutineMaintenanceTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyTopicAttributesResponse> ModifyTopicAttributesOutcome;
                 typedef std::future<ModifyTopicAttributesOutcome> ModifyTopicAttributesOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::ModifyTopicAttributesRequest&, ModifyTopicAttributesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyTopicAttributesAsyncHandler;
                 typedef Outcome<Core::Error, Model::SendMessageResponse> SendMessageOutcome;
                 typedef std::future<SendMessageOutcome> SendMessageOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::SendMessageRequest&, SendMessageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SendMessageAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpgradeBrokerVersionResponse> UpgradeBrokerVersionOutcome;
+                typedef std::future<UpgradeBrokerVersionOutcome> UpgradeBrokerVersionOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::UpgradeBrokerVersionRequest&, UpgradeBrokerVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpgradeBrokerVersionAsyncHandler;
 
 
 
@@ -476,6 +501,24 @@ namespace TencentCloud
                 DeleteAclOutcomeCallable DeleteAclCallable(const Model::DeleteAclRequest& request);
 
                 /**
+                 *This API is used to delete an ACL rule.
+                 * @param req DeleteAclRuleRequest
+                 * @return DeleteAclRuleOutcome
+                 */
+                DeleteAclRuleOutcome DeleteAclRule(const Model::DeleteAclRuleRequest &request);
+                void DeleteAclRuleAsync(const Model::DeleteAclRuleRequest& request, const DeleteAclRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteAclRuleOutcomeCallable DeleteAclRuleCallable(const Model::DeleteAclRuleRequest& request);
+
+                /**
+                 *Delete consumer groups.
+                 * @param req DeleteGroupRequest
+                 * @return DeleteGroupOutcome
+                 */
+                DeleteGroupOutcome DeleteGroup(const Model::DeleteGroupRequest &request);
+                void DeleteGroupAsync(const Model::DeleteGroupRequest& request, const DeleteGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteGroupOutcomeCallable DeleteGroupCallable(const Model::DeleteGroupRequest& request);
+
+                /**
                  *This API is used to delete post-payment instances. It directly performs instance termination by calling API deletion without associating connectors and tasks in pre-check.
                  * @param req DeleteInstancePostRequest
                  * @return DeleteInstancePostOutcome
@@ -557,13 +600,13 @@ namespace TencentCloud
                 DescribeAclRuleOutcomeCallable DescribeAclRuleCallable(const Model::DescribeAclRuleRequest& request);
 
                 /**
-                 *This API is used to query the user list.
-                 * @param req DescribeAppInfoRequest
-                 * @return DescribeAppInfoOutcome
+                 *This API is used to query instance version information.
+                 * @param req DescribeCkafkaVersionRequest
+                 * @return DescribeCkafkaVersionOutcome
                  */
-                DescribeAppInfoOutcome DescribeAppInfo(const Model::DescribeAppInfoRequest &request);
-                void DescribeAppInfoAsync(const Model::DescribeAppInfoRequest& request, const DescribeAppInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeAppInfoOutcomeCallable DescribeAppInfoCallable(const Model::DescribeAppInfoRequest& request);
+                DescribeCkafkaVersionOutcome DescribeCkafkaVersion(const Model::DescribeCkafkaVersionRequest &request);
+                void DescribeCkafkaVersionAsync(const Model::DescribeCkafkaVersionRequest& request, const DescribeCkafkaVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCkafkaVersionOutcomeCallable DescribeCkafkaVersionCallable(const Model::DescribeCkafkaVersionRequest& request);
 
                 /**
                  *This API is used to view the AZ list of Ckafka.
@@ -810,6 +853,15 @@ This API is used to get the list of topics in a CKafka instance of a user.
                 InquireCkafkaPriceOutcomeCallable InquireCkafkaPriceCallable(const Model::InquireCkafkaPriceRequest& request);
 
                 /**
+                 *This API is used to perform downsizing on a pay-as-you-go instance.
+                 * @param req InstanceScalingDownRequest
+                 * @return InstanceScalingDownOutcome
+                 */
+                InstanceScalingDownOutcome InstanceScalingDown(const Model::InstanceScalingDownRequest &request);
+                void InstanceScalingDownAsync(const Model::InstanceScalingDownRequest& request, const InstanceScalingDownAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                InstanceScalingDownOutcomeCallable InstanceScalingDownCallable(const Model::InstanceScalingDownRequest& request);
+
+                /**
                  *This API is used to modify ACL policy, currently only support whether to apply preset rules to newly-added topics.
                  * @param req ModifyAclRuleRequest
                  * @return ModifyAclRuleOutcome
@@ -864,6 +916,15 @@ This API is used to get the list of topics in a CKafka instance of a user.
                 ModifyPasswordOutcomeCallable ModifyPasswordCallable(const Model::ModifyPasswordRequest& request);
 
                 /**
+                 *This API is used to set automated ops attributes.
+                 * @param req ModifyRoutineMaintenanceTaskRequest
+                 * @return ModifyRoutineMaintenanceTaskOutcome
+                 */
+                ModifyRoutineMaintenanceTaskOutcome ModifyRoutineMaintenanceTask(const Model::ModifyRoutineMaintenanceTaskRequest &request);
+                void ModifyRoutineMaintenanceTaskAsync(const Model::ModifyRoutineMaintenanceTaskRequest& request, const ModifyRoutineMaintenanceTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyRoutineMaintenanceTaskOutcomeCallable ModifyRoutineMaintenanceTaskCallable(const Model::ModifyRoutineMaintenanceTaskRequest& request);
+
+                /**
                  *This API is used to modify topic attributes.
                  * @param req ModifyTopicAttributesRequest
                  * @return ModifyTopicAttributesOutcome
@@ -880,6 +941,15 @@ This API is used to get the list of topics in a CKafka instance of a user.
                 SendMessageOutcome SendMessage(const Model::SendMessageRequest &request);
                 void SendMessageAsync(const Model::SendMessageRequest& request, const SendMessageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 SendMessageOutcomeCallable SendMessageCallable(const Model::SendMessageRequest& request);
+
+                /**
+                 *This API is used to upgrade the broker version.
+                 * @param req UpgradeBrokerVersionRequest
+                 * @return UpgradeBrokerVersionOutcome
+                 */
+                UpgradeBrokerVersionOutcome UpgradeBrokerVersion(const Model::UpgradeBrokerVersionRequest &request);
+                void UpgradeBrokerVersionAsync(const Model::UpgradeBrokerVersionRequest& request, const UpgradeBrokerVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpgradeBrokerVersionOutcomeCallable UpgradeBrokerVersionCallable(const Model::UpgradeBrokerVersionRequest& request);
 
             };
         }

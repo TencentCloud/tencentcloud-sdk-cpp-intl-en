@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/ckafka/v20190819/model/DescribeRouteRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/DescribeCkafkaVersionRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -22,14 +22,12 @@
 using namespace TencentCloud::Ckafka::V20190819::Model;
 using namespace std;
 
-DescribeRouteRequest::DescribeRouteRequest() :
-    m_instanceIdHasBeenSet(false),
-    m_routeIdHasBeenSet(false),
-    m_mainRouteFlagHasBeenSet(false)
+DescribeCkafkaVersionRequest::DescribeCkafkaVersionRequest() :
+    m_instanceIdHasBeenSet(false)
 {
 }
 
-string DescribeRouteRequest::ToJsonString() const
+string DescribeCkafkaVersionRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
@@ -44,22 +42,6 @@ string DescribeRouteRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_routeIdHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "RouteId";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_routeId, allocator);
-    }
-
-    if (m_mainRouteFlagHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "MainRouteFlag";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_mainRouteFlag, allocator);
-    }
-
 
     rapidjson::StringBuffer buffer;
     rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
@@ -68,52 +50,20 @@ string DescribeRouteRequest::ToJsonString() const
 }
 
 
-string DescribeRouteRequest::GetInstanceId() const
+string DescribeCkafkaVersionRequest::GetInstanceId() const
 {
     return m_instanceId;
 }
 
-void DescribeRouteRequest::SetInstanceId(const string& _instanceId)
+void DescribeCkafkaVersionRequest::SetInstanceId(const string& _instanceId)
 {
     m_instanceId = _instanceId;
     m_instanceIdHasBeenSet = true;
 }
 
-bool DescribeRouteRequest::InstanceIdHasBeenSet() const
+bool DescribeCkafkaVersionRequest::InstanceIdHasBeenSet() const
 {
     return m_instanceIdHasBeenSet;
-}
-
-int64_t DescribeRouteRequest::GetRouteId() const
-{
-    return m_routeId;
-}
-
-void DescribeRouteRequest::SetRouteId(const int64_t& _routeId)
-{
-    m_routeId = _routeId;
-    m_routeIdHasBeenSet = true;
-}
-
-bool DescribeRouteRequest::RouteIdHasBeenSet() const
-{
-    return m_routeIdHasBeenSet;
-}
-
-bool DescribeRouteRequest::GetMainRouteFlag() const
-{
-    return m_mainRouteFlag;
-}
-
-void DescribeRouteRequest::SetMainRouteFlag(const bool& _mainRouteFlag)
-{
-    m_mainRouteFlag = _mainRouteFlag;
-    m_mainRouteFlagHasBeenSet = true;
-}
-
-bool DescribeRouteRequest::MainRouteFlagHasBeenSet() const
-{
-    return m_mainRouteFlagHasBeenSet;
 }
 
 

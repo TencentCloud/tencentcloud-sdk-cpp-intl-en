@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/ckafka/v20190819/model/DescribeRouteRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/DeleteGroupRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -22,14 +22,13 @@
 using namespace TencentCloud::Ckafka::V20190819::Model;
 using namespace std;
 
-DescribeRouteRequest::DescribeRouteRequest() :
+DeleteGroupRequest::DeleteGroupRequest() :
     m_instanceIdHasBeenSet(false),
-    m_routeIdHasBeenSet(false),
-    m_mainRouteFlagHasBeenSet(false)
+    m_groupHasBeenSet(false)
 {
 }
 
-string DescribeRouteRequest::ToJsonString() const
+string DeleteGroupRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
@@ -44,20 +43,12 @@ string DescribeRouteRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_routeIdHasBeenSet)
+    if (m_groupHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "RouteId";
+        string key = "Group";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_routeId, allocator);
-    }
-
-    if (m_mainRouteFlagHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "MainRouteFlag";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_mainRouteFlag, allocator);
+        d.AddMember(iKey, rapidjson::Value(m_group.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -68,52 +59,36 @@ string DescribeRouteRequest::ToJsonString() const
 }
 
 
-string DescribeRouteRequest::GetInstanceId() const
+string DeleteGroupRequest::GetInstanceId() const
 {
     return m_instanceId;
 }
 
-void DescribeRouteRequest::SetInstanceId(const string& _instanceId)
+void DeleteGroupRequest::SetInstanceId(const string& _instanceId)
 {
     m_instanceId = _instanceId;
     m_instanceIdHasBeenSet = true;
 }
 
-bool DescribeRouteRequest::InstanceIdHasBeenSet() const
+bool DeleteGroupRequest::InstanceIdHasBeenSet() const
 {
     return m_instanceIdHasBeenSet;
 }
 
-int64_t DescribeRouteRequest::GetRouteId() const
+string DeleteGroupRequest::GetGroup() const
 {
-    return m_routeId;
+    return m_group;
 }
 
-void DescribeRouteRequest::SetRouteId(const int64_t& _routeId)
+void DeleteGroupRequest::SetGroup(const string& _group)
 {
-    m_routeId = _routeId;
-    m_routeIdHasBeenSet = true;
+    m_group = _group;
+    m_groupHasBeenSet = true;
 }
 
-bool DescribeRouteRequest::RouteIdHasBeenSet() const
+bool DeleteGroupRequest::GroupHasBeenSet() const
 {
-    return m_routeIdHasBeenSet;
-}
-
-bool DescribeRouteRequest::GetMainRouteFlag() const
-{
-    return m_mainRouteFlag;
-}
-
-void DescribeRouteRequest::SetMainRouteFlag(const bool& _mainRouteFlag)
-{
-    m_mainRouteFlag = _mainRouteFlag;
-    m_mainRouteFlagHasBeenSet = true;
-}
-
-bool DescribeRouteRequest::MainRouteFlagHasBeenSet() const
-{
-    return m_mainRouteFlagHasBeenSet;
+    return m_groupHasBeenSet;
 }
 
 
